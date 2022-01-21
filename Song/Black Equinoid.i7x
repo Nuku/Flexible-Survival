@@ -18,21 +18,25 @@ to say equine attack:
 		if a random chance of 2 in 3 succeeds: [Will mate with females, otherwise oral]
 			if Player is female:
 				if Cunt Depth of Player < 15 or Cunt Tightness of Player < 10:
-					say "     She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [BodyName of Player] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of Player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.";
-					say "     As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat. 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim before overflowing with gallons of seed.[impregchance]";
+					say "     She flips you over onto your belly and hefts your ass up into the air before yanking your clothes down to your knees. You look over your shoulder just in time to see her grab your [TailSpeciesName of Player in lower case] ass and pull it back towards a frighteningly erect horse cock. It pushes against your [cunt size desc of Player] petals, then rudely inches in past them. Her grip is like velvet covered iron, not allowing you to escape from the sudden pain of the huge member invading your snatch. She thumps forward, starting to rock despite the resistance, using those hugely muscled hips of hers to stretch you.";
+					say "     As she pistons into you, the pain begins to slowly ebb as pleasure creeps in. You can feel your passage growing damp and hot as she gives your ass a firm swat. 'Dirty outside wench,' she growls in an ear like a curse as she pulls you back against a rough shove, slamming her hips into yours, the shaft feeling like it's pushing into your belly from the inside. You feel the potent tool swell, then explode in terrific waves of heat into your womb, filling you to the brim before overflowing with gallons of seed.";
 					if "Male Preferred" is not listed in feats of Player and ( "Modest Organs" is not listed in feats of Player and Cunt Depth of Player > 7 ), increase Cunt Depth of Player by 1;
 					if "Male Preferred" is not listed in feats of Player and ( "Modest Organs" is not listed in feats of Player and Cunt Tightness of Player > 7 ), increase Cunt Tightness of Player by 2;
 				else:
-					say "     She hefts up your body, one hand sliding along one of your thighs towards the knee, lifting that knee up and exposing your [cunt size desc of Player] sex to her view. She lines herself up, then slides easily into your wet cunt, rocking against you. Despite the hugeness of her equine member, your body sucks it up eagerly, squelching in loud wet sounds with every inward jab as she begins to pant and snort like a stallion winning a race. She grabs at your belly from behind with one hand, the other still holding your knee up as she makes your body jiggle and quake with the force of her rutting. Her vigorous bucking brings immense pleasure to you both as your accommodating form welcomes that flat-headed shaft into its perfect embrace, squeezing along it as she crashes into you. She pushes in to the hilt, her heavy balls radiating heat across your thighs as they contract powerfully. Your belly swells as gallons of thick horse cum flood into your waiting passage. The horse woman neighs her approval, then nips an ear. 'Perhaps there is a place for you,' she admits grudgingly before setting you down. [one of]'I could always use another servant.'[or]'You might make an adequate breeder for the herd.'[or]'You'd make a fine broodmare.'[at random][impregchance]";
+					say "     She hefts up your body, one hand sliding along one of your thighs towards the knee, lifting that knee up and exposing your [cunt size desc of Player] sex to her view. She lines herself up, then slides easily into your wet cunt, rocking against you. Despite the hugeness of her equine member, your body sucks it up eagerly, squelching in loud wet sounds with every inward jab as she begins to pant and snort like a stallion winning a race. She grabs at your belly from behind with one hand, the other still holding your knee up as she makes your body jiggle and quake with the force of her rutting. Her vigorous bucking brings immense pleasure to you both as your accommodating form welcomes that flat-headed shaft into its perfect embrace, squeezing along it as she crashes into you. She pushes in to the hilt, her heavy balls radiating heat across your thighs as they contract powerfully. Your belly swells as gallons of thick horse cum flood into your waiting passage. The horse woman neighs her approval, then nips an ear. 'Perhaps there is a place for you,' she admits grudgingly before setting you down. [one of]'I could always use another servant.'[or]'You might make an adequate breeder for the herd.'[or]'You'd make a fine broodmare.'[at random]";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Black Equinoid";
 			else:
 				say "     She snorts loudly as she looks you over, then pushes you to the ground on your knees. 'Stay,' she orders in a tone that does not encourage argument. She leans back a bit and runs her thick fingers along her long, excited shaft, pulling the flesh along the stiff core in long but fast motions. She leaks heavy pre and pauses long enough to scoop it up and run it along the member, allowing her to rock her hips against the motions more quickly, the shaft bobbing close enough to kiss as the fluid emerges faster and faster. Her heavy balls sway and jostle with every pump as she stares at you almost unblinkingly, snorting louder as the tension hits the breaking point. With a loud neigh, the shaft bulges at the base, rippling up towards the top before painting your world white, her hot, sticky fluids raining across your face and front in a great deluge of horse cum, leaving you drenched with the horse's proof of virility. With a dismissive snort, she rises and clops off.";
+				CreatureSexAftermath "Player" receives "Bukkake" from "Black Equinoid";
 		else: [Guaranteed oral]
 			say "     She snorts loudly as she looks you over, then pushes you to the ground on your knees. 'Stay,' she orders in a tone that does not encourage argument. She leans back a bit and runs her thick fingers along her long, excited shaft, pulling the flesh along the stiff core in long but fast motions. She leaks heavy pre and pauses long enough to scoop it up and run it along the member, allowing her to rock her hips against the motions more quickly, the shaft bobbing close enough to kiss as the fluid emerges faster and faster. Her heavy balls sway and jostle with every pump as she stares at you almost unblinkingly, snorting louder as the tension hits the breaking point. With a loud neigh, the shaft bulges at the base, rippling up towards the top before painting your world white, her hot, sticky fluids raining across your face and front in a great deluge of virile horse cum, leaving you drenched with the horse's proof of fertility. With a dismissive snort, she rises and clops off.";
+			CreatureSexAftermath "Player" receives "Bukkake" from "Black Equinoid";
 
 to say beattheequinoid:
 	if Player is male and Cock Length of Player > 5 and a random number between 40 and 90 < Libido of Player:
 		say "     The black furred equine sinks to the ground, then slumps over, panting and defeated. The battle, having gotten your blood pumping, has left your [cock size desc of Player], [Cock of Player] cock engorged and throbbing. Before you can even think otherwise, you jump atop her and pin down her shoulders. She groans softly and reaches up to push you off, but ends up wrapping her arms around you instead. Even as you bring your hard rod into position, she spreads her legs for you and whinnies softly in anticipation, moaning as your glans slips in under her ballsack and presses into her wet pussy[if Cock Length of Player < 12]. Her equinoid pussy is very accommodating, letting your penis in easily, but still grips you rather nicely as she clenches down around it in need of being filled[else if Cock Length of Player < 20]. Her equinoid pussy is very accommodating, taking in your large penis easily, but still grips you rather nicely in her need to be filled[else]. Her equinoid pussy stretches a little to take your huge member, but is quite accommodating. She moans and grips you even harder, reaching a hard and messy orgasm even as you're still pushing deeper into her thick-lipped sex[end if].";
 		say "     Her long, equine cock rests across her body, twitching and spurting precum across the underside of her huge breasts as you pound into her. Quite aroused by the sight of this once-strong warrior reduced to a horny slut beneath you, it doesn't take long for the rhythmic contractions to push you over the edge. You drive hard into her sweltering depths, blasting your hot seed into her pussy. She arches her back and cums hard as well, painting her body with equine seed as you fill her. '[one of]Oh yes, breed me you great warrior[or]Fill me with your seed[or]Put your strong colt in me[or]Breed me like your mare[or]Oh, breed me you powerful stud[at random]!' she whinnies loudly. You do your best to satisfy her request, draining your balls into her before withdrawing. As you rise to your feet, she moans softly and simply lays there, rubbing her well-filled belly with a smile on her face. You can't help but grin, knowing another of her tribe will have to replace her on patrol if you've just knocked her up.";
+		CreatureSexAftermath "Black Equinoid" receives "PussyFuck" from "Player";
 		now equinoiddefeat is 0;
 		decrease Libido of Player by Libido of Player / 5;
 		increase morale of Player by 1;
@@ -64,7 +68,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Horse"; [name of the overall species of the infection, used for children, ...]
 	add "Black Equinoid" to infections of EquineList;
 	add "Black Equinoid" to infections of FurryList;
 	add "Black Equinoid" to infections of NatureList;
@@ -129,107 +133,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 3 - Endings

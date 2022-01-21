@@ -97,6 +97,8 @@ to say promptsay:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	if ObserveAvailable of x is true:
+		say "[link][bracket]Observe[close bracket][as]observe[end link] ";
 	say "[link][bracket]Save[close bracket][as]save[end link] ";
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
 	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
@@ -248,6 +250,7 @@ To showstats (x - Person):
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
 		say ", [link]Feats[as]FeatsList[end link]";
+	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
 		say ", [link]Offspring[as]ListOffspring[end link][line break]";
 	else:

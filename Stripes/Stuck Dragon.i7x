@@ -241,7 +241,7 @@ to say dragonesssex:
 			now dragonessfuck is 2;
 			say ". 'Oh, no! You ARE one of those mindless beasts and you ARE going to violate me! Please don't put your big... throbbing... manhood in my defenseless... and wet... pussy!' she moans as you keep grinding against her wet, sensitive pussy lips. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries over her half-hearted protests. Her cries and her body's reaction clearly tells you she wants and needs this and you shove your [cock size desc of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan.";
 		else:
-			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [CockName of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
+			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [Cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
 		if Cock Length of Player < 20:
 			say "     'You evil monster! How could you? Oh yeah, that feels great... er... horrible! I said it feels horrible!' she cries out before catching herself. 'Mmm, now pound me harder... I mean, stop you vile creature!' the dragoness roars. She's obviously having trouble controlling the urges of her body as you pump your cock into her again and again. Her wide pussy squeezes around your cock, throbbing around you with the pulse of her blood through her huge body. As you fuck her, you lick and kiss at her huge rear, rubbing your body against her to stimulate your trapped lover further. Her body responds on its own, her large cunt overflowing with juices and her inner walls rippling and tugging at your cock, pulling hard on you to keep fucking her.";
 		else:
@@ -413,7 +413,7 @@ Carry out dragonfreeing:
 		else:
 			LineBreak;
 			say "     You smile and decide to let [Christy] continue to grind her pussy against your face. Your head becomes soaked with her love juices as her arousal builds. [Christy] starts to let out loud roars of pleasure as she grinds her pussy against you at a faster and faster pace. Your nose brushes against her clit with each grinding motion she makes. The scent of her snatch is actually quite pleasant. You lick and lap at her large cunt, enjoying the taste of her hot juices.";
-			say "     [Christy] finally orgasms and she lets out an ear-splitting roar. Her pussy lips suddenly grip the sides of your head and yank it all the way into her pussy. The muscles of her love canal squeeze your head tightly and start to quickly pull more of your body inside as [Christy]'s body is hit by one orgasm after another. Alarmed by this new development, you finally start yelling at [Christy] to try to get her to stop. Unfortunately, [Christy] is so overcome by the pleasure that she is oblivious. You struggle and squirm inside her, but from the increase in her lustful roaring, it seems to only have increased her ecstasy[if Player is not neuter]. The feeling of her vaginal walls squeezing and pulling at you, along with her arousing scent, soon become too much for you and you moan in delight, cumming as well. [Christy]'s huge pussy pulls and tugs your body until your feet are pulled inside with a wet slurp noise, then you're forced to curl up inside her womb. You're not sure how much time passes, but eventually you wake up in a small, dark, and cramped room.";
+			say "     [Christy] finally orgasms and she lets out an ear-splitting roar. Her pussy lips suddenly grip the sides of your head and yank it all the way into her pussy. The muscles of her love canal squeeze your head tightly and start to quickly pull more of your body inside as [Christy]'s body is hit by one orgasm after another. Alarmed by this new development, you finally start yelling at [Christy] to try to get her to stop. Unfortunately, [Christy] is so overcome by the pleasure that she is oblivious. You struggle and squirm inside her, but from the increase in her lustful roaring, it seems to only have increased her ecstasy[if Player is not neuter]. The feeling of her vaginal walls squeezing and pulling at you, along with her arousing scent, soon become too much for you and you moan in delight, cumming as well[end if]. [Christy]'s huge pussy pulls and tugs your body until your feet are pulled inside with a wet slurp noise, then you're forced to curl up inside her womb. You're not sure how much time passes, but eventually you wake up in a small, dark, and cramped room.";
 			move player to Small Dark Room;
 	else:
 		say "     You don't have something slimy to free her with.";
@@ -1210,6 +1210,11 @@ to say mchristysexmenu:
 		now title entry is "Oral w/CV";
 		now sortorder entry is 6;
 		now description entry is "make some room in his balls for you";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Direct CV";
+		now sortorder entry is 7;
+		now description entry is "ask him to get you inside his balls, without emptying them first";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1244,6 +1249,8 @@ to say mchristysexmenu:
 				else if nam is "Oral w/CV":
 					say "[mchristy_oral0]";
 					say "[mchristy_cv1]";
+				else if nam is "Direct CV":
+					say "[mchristy_cv2]";
 				if HP of Christy is 54 and dragontype > 2, say "[mchristy_cv0]";
 				if HP of Christy < 54, increase HP of Christy by 1;
 		else:
@@ -1333,16 +1340,18 @@ to say mchristy_bottom1:
 	say "     It takes you a while to recover from the powerful orgasm and slip your spent shaft free of the dragon's creamy bottom[if Ball Size of Player < 20]. A trickle of your gooey load leaks from his messy hole and you can't resist giving him a brief fingering to hear him moan[else]. A rivulet of your gooey load flows gradually from his messy hole and you can't resist giving him a brief fingering to hear him moan[end if]. 'I still can't get over how good that feels. Oh, I feel so naughty for loving it,' he says with a bright blush even as he wiggles his ass to better enjoy the feel of your seed pooled inside his well-fucked hole.";
 	NPCSexAftermath Christy receives "AssFuck" from Player;
 
+MChristyVore is a number that varies. MChristyVore is usually 0. [@Tag:NotSaved]
+[This counts towards how many times Chris CVs the player when asked to CV them directly]
 
 to say mchristy_cv0:
-	say "     'That's really left me drained. Empty even. You know...' he says, pausing long as he gently presses your face to his still cock. Cum still leaks slowly from his yawning slit. '...that thing that happened... back when I first got my cock... the idea of doing it again just keeps coming back. I mean, it was strange and weird and a little bit scary, but it also felt soooo good.' The spicy scent and taste, coupled with your lingering arousal from your recent fun, leaves you all too happy to agree. And why wouldn't you? It had been strangely exciting and arousing for you as well.";
-	say "     Grabbing his manhood, already still and full again at the thought of taking you into it, you press your lips to his cum slit, licking and kissing on and into it. The gooey dregs of his last orgasm leak out over you, helping to get you slick for what is to come. As before, once his cum slit yawns wider, you slip first a few fingers and eventually your whole hand into it. His urethra squeezes around it, pulling inwards and you only resist enough to heighten the pleasure that comes with each inch pulled in. You add your other hand, letting both arms get drawn in. Your head and shoulders soon follow with a grunt and a gooey squelch. With your head buried in that tugging tunnel of flesh, the taste and scent of the dragon's musk becomes all pervasive.";
+	say "     'That's really left me drained. Empty even. You know...' he says, pausing long as he gently presses your face to his still cock. Cum leaks slowly from his yawning slit. '...that thing that happened... back when I first got my cock... the idea of doing it again just keeps coming back. I mean, it was strange and weird and a little bit scary, but it also felt soooo good.' The spicy scent and taste, coupled with your lingering arousal from your recent fun, leaves you all too happy to agree. And why wouldn't you? It had been strangely exciting and arousing for you as well.";
+	say "     Grabbing his manhood, full again at the thought of taking you into it, you press your lips to his cum slit, licking and kissing it. The gooey dregs of his last orgasm leak out over you, helping to get you slick for what is to come. As before, once his cum slit yawns wider, you slip a few fingers and eventually your whole hand into it. His urethra squeezes around it, pulling inwards, and you only resist enough to heighten [Christy]'s pleasure. You add your other hand, letting both arms get drawn in. Your head and shoulders soon follow with a grunt and a gooey squelch. With your head buried in that tugging tunnel of flesh, the taste and scent of the dragon's musk becomes all consuming.";
 	WaitLineBreak;
-	say "     With the wide point of your shoulders crossed, the advance of your torso and then your hips into him is fairly swift. You can feel the wet kiss of his urethral slit sliding a little further down your [bodytype of Player] body with each passing moment. And while your reaction should be one of fear or panic at being thusly consumed, you are instead filled with an almost overpowering lust. The strange procedure is bizarrely erotic and has you squirming in pleasure, especially once that wet grip slides over your loins[if Player is male]. The press of his urethral walls against your stiff member makes your manhood quake with need[else]. The firm squeezing around your hips and the slick precum wetting your folds turns you on immensely[end if].";
-	say "     Your hands, arms and eventually the rest of you makes the journey past the base of his cock into his groin and eventually around and down again. Sliding into the still snug but more open space of his ballsack, you land in a pool of thick semen as you nestle down in his massive testicle. Having minimal freedom of movement now, you [if Player is herm]grab your cock and stuff some fingers into your pussy[else if Player is male]grab your cock[else]stuff some fingers into your pussy[end if], masturbating frantically to relieve your pent-up arousal from the sensual delight you've been subjected to. Your motion makes the pendulous chamber you're in sway and the dragon moans in satisfaction, probably well aware of your actions and aroused by them. Given the way the swaying increases, [Christy]'s probably rubbing himself to get off. Knowing you might be expelled soon, you quicken your pace and pull out all the stops to get off before then so you might cum in that virile cum factory.";
+	say "     With the wide point of your shoulders slipping in, the advance of your torso and hips is fairly swift. You can feel the wet kiss of his urethral slit sliding a little further down your [bodytype of Player] body with each passing moment. And while your reaction should be one of fear or panic at being consumed, you are instead filled with an overpowering lust. The process is erotic, in a bizarre way, and has you squirming in pleasure, especially once that wet grip slides over your loins[if Player is male]. The press of his urethral walls against your stiff member makes your manhood quake with need[else]. The firm squeezing around your hips, and the slick precum wetting your folds, drives your lust ever higher[end if].";
+	say "     Your hands, arms and eventually the rest of you makes the journey past the base of his cock and into his groin. You are moved up, down, and in various other directions before sliding into the still snug, but more open, space of his ballsack. You land in a pool of thick semen as you nestle down in his massive testicle. Having minimal freedom of movement now, you [if Player is herm]grab your cock and stuff some fingers into your pussy[else if Player is male]grab your cock[else]stuff some fingers into your pussy[end if], masturbating frantically to relieve your pent-up arousal. Your motion makes the pendulous chamber sway and the dragon moan in satisfaction. Given the way the swaying increases, [Christy]'s probably rubbing himself to get off. Knowing you might be expelled soon, you quicken your pace and pull out all the stops, wanting to really fill that chamber up before you're ejected.";
 	WaitLineBreak;
-	say "     You manage to achieve climax shortly before him[if Player is herm]spraying your [Cum Load Size of Player] load into his sperm factory and adding your feminine juices to the mess soaking your crotch[else if Player is male]spraying your [Cum Load Size of Player] load into his sperm factory[else]adding your feminine juices to the mess soaking your crotch[end if]. The dragon's eruption follows soon after, the squeeze and surge of fluid around you catapulting your waning orgasm back into full force even as you're driven back through his seminal plumbing. Pushed along by fluid pressure, you're splattered with a fresh rush of liquid as you pass his prostate, adding to the richness of its flavor and allowing it to carry you more smoothly onwards. You are expelled with eruptive force moments later with eruptive force, shot several feet as part of the dragon's torrential release.";
-	say "     After recovering from his mighty orgasm, he strides over to you. 'I'm sorry if that was a little quick this time. Once I had you in there and you were in there -ah- enjoying it, it just felt so good that I had to play with myself. I know I shouldn't have been, but I'm such a naughty dragon and I'd been wanting to do this since that first time and I couldn't hold back from enjoying it. I... uhh... appreciate you indulging me,' he says, nuzzling your sticky face, stealing a lick of his own semen as he does. This gets him to continue licking, using his large tongue to clean every inch of you before finally stopping so the two of you might rest and recover.";
+	say "     You manage to achieve climax shortly before him, [if Player is herm]spraying your [Cum Load Size of Player] load into his sperm factory and adding your feminine juices to the mess soaking your crotch[else if Player is male]spraying your [Cum Load Size of Player] load into his sperm factory[else]adding your feminine juices to the mess soaking your crotch[end if]. The dragon's eruption then comes, his balls squeezing around you as the bubbling cum pushes you up. Moved along by the fluids, you're splattered with a fresh rush of liquid as you pass his prostate. You're then catapulted the rest of the way, your body shot several feet from [Christy]'s crotch, as part of the dragon's torrential release.";
+	say "     After recovering from his mighty orgasm, he strides over to you. 'I'm sorry if that was a little quick this time. Once I had you in there, and you were in there -ah- enjoying it, it just felt so good. I know I shouldn't have been so fast, but I'm such a naughty dragon, and I've been wanting to do this since that first time. I couldn't hold back from enjoying it. I... uhh... appreciate you indulging me,' he says, nuzzling your sticky face, stealing a lick of his own semen as he does. This gets him to continue licking, using his large tongue to clean every inch of you before finally stopping. You're both then left to simply relax, recovering from the explosive fun.";
 	now tempnum is 1;
 	say "[dragonchange2]";
 	now tempnum is 0;
@@ -1350,15 +1359,48 @@ to say mchristy_cv0:
 	now HP of Christy is 55;
 
 to say mchristy_cv1:
-	say "     With that rather filling foreplay done, you and [Christy] get on to the main event when he slides his strong tail across your back and presses your back back to his drained cock. 'Mmm... Now that you've left me feeling empty, I think we'll have you fill me back up,' he rumbles as his cum slit yawns open. Your face gets sucked in by the eager tunnel of flesh, the slick mess covering you allowing you to slip in rather easily. Recalling how much fun you've had the other times, you only playfully struggle, caressing his large glans as you pull back against the inexorable tug drawing you in. As you continue in past your shoulders, you move your arms to your sides and start squirming and wriggling as you go. This draws some pleasured rumbles and roars from the randy dragon. His urethral walls squeeze and tug at you, pulling you steadily deeper.";
-	say "     When that voracious cum slit reaches your hips, your own pleasure increases as that slick, squeezing flesh sliding over your loins[if Player is male]. The press of his urethral walls against your stiff member makes your manhood quake with need[else]. The firm squeezing around your hips and the slick precum wetting your folds turns you on immensely[end if]. And your arousal continues to grow as you slip further and further into his cock and beyond, eventually ending up deposited into his snug ballsack.";
-	say "     Having a little room to maneuver now that you're in warm, wet embrace of his testicle, you curl up in a comfortable position and [if Player is herm]grab your cock and stuff some fingers into your pussy[else if Player is male]grab your cock[else]stuff some fingers into your pussy[end if]. You masturbate at a casual pace, enjoying the warmth and scent coming from all around you. Even so, you get off fairly quickly after your long, pleasurable journey to get here. After cumming and [if Player is herm]spraying your [Cum Load Size of Player] load into his sperm factory and adding your feminine juices to the mess soaking your crotch[else if Player is male]spraying your [Cum Load Size of Player] load into his sperm factory[else]adding your feminine juices to the mess soaking your crotch[end if], you drift off into sticky bliss, soaking in a slowly refilling pool of draconic semen. While you do not drown in the sticky fluids, you do get woozy and end up passing out into a bliss-out haze.";
+	say "     With that rather filling foreplay done, you and [Christy] get on to the main event. He slides his strong tail across your back and presses you against his drained cock. 'Mmm... Now that you've left me feeling empty, I think we'll have you fill me back up,' he rumbles as his cum slit yawns open. Your face gets sucked in by the eager tunnel of flesh, the slick mess covering you allows you to slip in rather easily. Recalling how much fun you've had the other times, you only playfully struggle, caressing his large glans as you pull back against the inexorable tug. As you continue in past your shoulders, you move your arms to your sides and start squirming as you go. This draws some pleasured rumbles and roars from the randy dragon. His urethral walls squeeze and tug at you, pulling you steadily deeper.";
+	say "     Your pleasure spikes as that slick, squeezing flesh slides over your loins[if Player is male]. The press of his urethral walls against your stiff member makes your manhood quake with need[else]. The firm squeezing around your hips, and the slick precum wetting your folds, turns you on immensely[end if]. And your arousal continues to grow as you slip further and further into his cock and beyond, eventually ending up deposited in his snug ballsack.";
+	say "     Having a little room to maneuver, now that you're in the warm, wet embrace of his testicle, you curl up in a comfortable position and [if Player is herm]grab your cock and stuff some fingers into your pussy[else if Player is male]grab your cock[else]stuff some fingers into your pussy[end if]. You masturbate at a casual pace, enjoying the warmth and scent coming from all around you. Even with the slow speed, you get off fairly quickly. You were already quite on edge after the long, lustful journey here, afterall. After cumming and [if Player is herm]spraying your [Cum Load Size of Player] load into his sperm factory, and adding your feminine juices to the mess soaking your crotch[else if Player is male]spraying your [Cum Load Size of Player] load into his sperm factory[else]adding your feminine juices to the mess soaking your crotch[end if], you drift off into sticky bliss, soaking in a slowly refilling pool of draconic semen. While you do not drown in the sticky fluids, you do get woozy and end up passing into a blissed-out haze.";
 	WaitLineBreak;
-	say "     It is difficult to tell how long you remain within the dragon's balls, but eventually a growth in movement and heat around you partially rouses you. You shift and squirm inside the tight confines as best you can, hearing an increase in the muffled noises of what must be the dragon playing with himself. You start stimulating the inside of the dragon's testicle, rubbing against its slick flesh, helping to increase his pleasure until he's driven to orgasm. And with that, the process you underwent to get here is reversed, though at a much higher speed. Pushed out along with a massive blast of dragon cum, you are pumped messily out onto a crumpled and sticky mat of cardboard boxes. You are covered head to toe in the dragon's musky payload, panting for air even as you swallow down the slimy seed, which [Christy] helps to lick from your messy body.";
+	say "     It is difficult to tell how long you have been within the dragon's balls, but eventually, a growth in movement and heat partially rouses you. You shift and squirm inside the tight confines as best you can, hearing an increase in the muffled noises of what must be the dragon playing with himself. You start stimulating the inside of the dragon's testicle, rubbing against its slick flesh, helping to drive him to his own orgasm. And with that, you're sucked out of his balls. You're pushed out along with a massive blast of dragon cum, your body firing messily out onto a crumpled and sticky mat of cardboard boxes. You are covered head to toe in the dragon's musky payload, panting for air even as you swallow down the slimy seed, which [Christy] helps to lick from your messy body.";
 	now tempnum is 1;
 	say "[dragonchange2]";
 	now tempnum is 0;
 	follow the turnpass rule;
+
+to say mchristy_cv2:
+	increase MChristyVore by 1; [Each time this event is done, it adds 1 to the variable of MChristyVore]
+	say "     With your idea spelled out to [Christy], your body begins to tingle. His eyes look up and down your body, drinking you in. He then gives you a grin as his baritone reply sounds out, 'Of course. I can do that.' It's then just moments of waiting before he shoves his cock your way. The constantly dribbling urethra is then quickly met by your tongue. You lap and suck at every inch of his leaking tip, and you wrap your arms around the big cockhead as you dig in. To you, it's a gourmet meal. To him, it's an unholy pleasure that draws out moan after moan. There's nothing quite like it for either of you, and as your head sinks a bit into his tip, you gorge on his precum even more than before. You lap and suckle on each new inch of internal cockflesh you get access to.";
+	say "     It's then that the first undulation occurs. The pulsing draws you in, yanks you in up to your shoulders. You can't smell or taste anything other than [Christy]'s fluids, and as you go deeper, you can't imagine anything other than his essence. Your shoulders are soon yanked in, too. Then your upper arms slip inside, all while your mouth is constantly sucking and licking at the internal walls of his urethra. Your lower arms go next, then your hands, and finally the cock pulls in your hips. As you descend deeper into him, your hands wiggle and rub at his insides, causing ever more undulations. Your legs get slurped up, and finally, your feet are pulled inside.";
+	WaitLineBreak;
+	say "     As the walls rub against you, pushing you deeper and deeper, your body lights up with lust. Your hips begin to uncontrollably hump and grind against the warm flesh pressing against you. You tingle all over as your writhe around in the massive cock, but you're continuously slurped ever deeper, twisting back and forth as you slide along [Christy]'s insides. You then go through a brief sense of falling before splashing into a pool of cum. Your body is compressed from every angle. So you're left to lick and suck at the inner walls of his testicle, your hips stuck constantly humping at the slick interior.";
+	say "     Your body fills with unspeakable lust, need and obsession. You know you have to keep worshiping this man's innards, to keep humping at his cum-slick walls, but that's all your mind knows, all your mind thinks of. However, you're eventually even more constrained by [Christy]'s insides. Everything tightens around you, keeping you even more pinned in the gurgling mess of cum, and as it gurgles even more, you feel a momentary floating sensation. You then shoot straight up, then down, then in a half circle, and finally, you are pushed along in a straight line. Cum pools around you as you're fired out of the slick cock, your body splattering into a waiting puddle of cum. You grunt and moan out as your [if player is male]dick pulses and adds its own load to the pool[else if player is female]pussy quivers and dribbles out its own cum to add to the load surrounding you[else]entire body quivers and you reach a full body climax, everything tingling[end if].";
+	WaitLineBreak;
+	say "     'Mmmm. That was a perfect experience,' [Christy] declared";
+	if MChristyVore is 1:
+		say ". You feel yourself becoming just a bit less solid, a bit more spongey for a few moments, but then you feel yourself return to normal.";
+	else if MChristyVore is 2:
+		say ". You feel yourself almost disolve into the pool of cum as your hands trail over your body, but just as you feel like you are starting to lose your sapience, you resolidify. Is there a chance this could actually keep getting worse? Perhaps [bold type]you should be more careful...[roman type][line break]";
+	else if MChristyVore is 3: [bad end time]
+		say ". But right after that, you find yourself crawling right back towards [Christy]'s cock, all higher thought thoroughly squeezed from your mind. Your body is dissolving, becoming far more pliable, and as you push your head right against the urethra, you easily slip inside. [Christy] seems shocked, but he doesn't do anything to slow your new journey inside him. The cock sucks you in far faster than ever before. Your shoulders are sucked inside, then every other inch of you follows after in less than a minute. It takes little time to slip down his cock, even less to go along the tube leading to one of his testicles. You then splash right into the near empty ball, your body quickly conforming to the squeezing and pulsing interior.";
+		say "     Your legs shrink, lowering you more and more towards the bottom of the sphere, and soon your arms and torso do the same. Everything irreversibly changes, and you're soon just looking up at the top of the pulsing ball, only your senses remaining. You can see, hear, taste, smell and feel. Gurgling and bubbling fills and covers you, leaves you with a constant dopey feeling, a constant lust. You are now the very representation of sex, of need, of breeding. You then feel yourself bubbling up, rising as the testicle squeezes around you, pushing you up, and up, and up, through [Christy]'s pipes. You feel like you're cumming, like your entire body is orgasming at once, and it never stops. Even when you go flying from the cock, splattering a nearby wall, you feel like you're still cumming.";
+		WaitLineBreak;
+		say "     Even when soldiers come in and see your bubbling, liquid form, you keep cumming. Even when those soldiers are then sucked into [Christy]'s waiting cock, you keep cumming. You never stop, not even after he has devoured dozens more, using you as musky, alluring bait to draw in more meals. He never stops, and neither does your orgasm.";
+		WaitLineBreak;
+		now battleground is "Void";
+		the Player was ended by "Christy";
+		trigger ending "Cum Waste";
+		end the story saying "You were turned into cum while inside Christopher's balls.";
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Cum Waste"	"BadEnd"	"Cum-Digested"	Cum Waste rule	20	false
+
+This is the Cum Waste rule:
+	if ending "Cum Waste" is triggered:
+		say "     You spend the rest of your days as a mere waste of cum, stuck in a neverending orgasm.";
+
 
 Section 14 - Placeholder infections
 
@@ -1370,7 +1412,6 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
-	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	add "Horny Dragon" to infections of ReptileList;
 	add "Horny Dragon" to infections of FurryList;
 	add "Horny Dragon" to infections of MagicalList;
@@ -1380,6 +1421,7 @@ When Play begins:
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
 	add "Horny Dragon" to infections of OviImpregnatorList;
+	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	now enemy title entry is "Horny Dragon";
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -1416,7 +1458,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
@@ -1435,107 +1477,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Table of Random Critters (continued)
@@ -1611,107 +1553,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 15 - Heat Table

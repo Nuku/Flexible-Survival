@@ -83,7 +83,7 @@ Part 4 - Sissifier Gel
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"sissifier gel"	"A small bottle of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
+"sissifier gel"	"A small tub of slimy pink goo. The label says that it will shrink your cock but will not remove it. External use only."	0	sissifier gel
 
 sissifier gel is a grab object. It is temporary.
 
@@ -422,7 +422,7 @@ The descmod of zephyr protective riot shield is "You hold the riot shield in you
 The slot of zephyr protective riot shield is "shield".
 
 to say RiotShieldProtectDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]riotshieldAttackMode[end link] though, and direct your shield to more offensive purposes instead.";
+	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for defending yourself with. You might [link]change your mind[as]RSAttackMode[end link] though, and direct your shield to more offensive purposes instead.";
 
 the scent of the zephyr protective riot shield is "     The zephyr protective riot shield smells faintly of suppressive authority.".
 
@@ -443,11 +443,10 @@ an everyturn rule:
 
 riotshieldAttackMode is an action applying to one topic.
 
-understand "riotshieldAttackMode" as riotshieldAttackMode.
+understand "RSAttackMode" as riotshieldAttackMode.
 
 check riotshieldAttackMode:
-	if carried of zephyr protective riot shield < 1:
-		say "     What shield? You're not holding one right now.";
+	if carried of zephyr protective riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldAttackMode:
 	if zephyr protective riot shield is equipped:

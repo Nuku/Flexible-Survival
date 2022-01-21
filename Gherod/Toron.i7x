@@ -6,6 +6,12 @@ Version 3 of Toron by Gherod begins here.
 [Version 2 - Added Tentacular Slushie as a drink. Buffed some drink effects, adjusting negatives accordingly.]
 [Version 3 . Added the Tonics.]
 
+postimport rule:
+	if "Connected Hellfire Corridor" is listed in traits of Toron:
+		connect Hellfire Corridor;
+	if player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
+		connect Hellfire Corridor;
+
 [***********************************************************]
 Section 1 - Toron NPC
 [***********************************************************]
@@ -74,6 +80,11 @@ to say ToronTalkMenu:
 	now description entry is "Have Toron craft a special tonic for you";
 	[]
 	choose a blank row in table of fucking options;
+	now title entry is "Request an exotic escort";
+	now sortorder entry is 1;
+	now description entry is "Browse the exotic escorts catalog";
+	[]
+	choose a blank row in table of fucking options;
 	now title entry is "Recent events";
 	now sortorder entry is 2;
 	now description entry is "Request an update on what's going on";
@@ -111,6 +122,12 @@ to say ToronTalkMenu:
 		now sortorder entry is 8;
 		now description entry is "Ask if he knows Xaedihr";
 	[]
+	if Resolution of DamienIntro >= 5:
+		choose a blank row in table of fucking options;
+		now title entry is "About Damien";
+		now sortorder entry is 8;
+		now description entry is "Ask Toron about some details regarding the scavenger you met";
+	[]
 	if resolution of Ambush The Purifier < 99 and HP of Araqiel is 1 or HP of Araqiel is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "About that odd Angel...";
@@ -121,13 +138,19 @@ to say ToronTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Mogdraz and Araqiel";
 		now sortorder entry is 10;
-		now description entry is "Ask Toron what he knows about the relationship between these two.";
+		now description entry is "Ask Toron what he knows about the relationship between these two";
+	[]
+	if VRDarkTyrantTracker > -1:
+		choose a blank row in table of fucking options;
+		now title entry is "About what you unleashed in the Void";
+		now sortorder entry is 11;
+		now description entry is "He's not going to be happy about it... but maybe he can help you";
 	[]
 	if abyssal remnant is owned:
 		choose a blank row in table of fucking options;
 		now title entry is "Restore Abyssal Remnant";
-		now sortorder entry is 11;
-		now description entry is "Show Toron what is left of the sword you found in the Void Realm and hope for a restore.";
+		now sortorder entry is 12;
+		now description entry is "Show Toron what is left of the sword you found in the Void Realm and hope for a restore";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -146,29 +169,36 @@ to say ToronTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Order a drink"):
 					say "[ToronTalkDrinks]";
-				if (nam is "Order a tonic"):
+				else if (nam is "Order a tonic"):
 					say "[ToronTalkTonic]";
 					now ToronDoneTalking is true;
-				if (nam is "Recent events"):
+				else if (nam is "Request an exotic escort"):
+					say "[ToronTalkExoticEscortsMenu]"; [on Hellfire Workers file]
+					now ToronDoneTalking is true;
+				else if (nam is "Recent events"):
 					say "[ToronTalkNews]";
 					now ToronDoneTalking is true;
-				if (nam is "Himself"):
+				else if (nam is "Himself"):
 					say "[ToronTalkHimself]";
-				if (nam is "His work"):
+				else if (nam is "His work"):
 					say "[ToronTalkWork]";
-				if (nam is "Void Realm"):
+				else if (nam is "Void Realm"):
 					say "[ToronTalkVR]";
-				if (nam is "Sex"):
+				else if (nam is "Sex"):
 					say "[ToronTalkSex]";
-				if (nam is "History with Mogdraz"):
+				else if (nam is "History with Mogdraz"):
 					say "[ToronTalkMogdraz]";
-				if (nam is "About Xaedihr"):
+				else if (nam is "About Xaedihr"):
 					say "[ToronTalkXaedihr]";
-				if (nam is "About that odd Angel..."):
+				else if (nam is "About Damien"):
+					say "[ToronTalkDamien]"; [on Damien file]
+				else if (nam is "About that odd Angel..."):
 					say "[ToronTalkPurifier]"; [on Araqiel file]
-				if (nam is "Mogdraz and Araqiel"):
+				else if (nam is "Mogdraz and Araqiel"):
 					say "[ToronTalkMogdrazAraqiel]"; [on Araqiel file]
-				if (nam is "Restore Abyssal Remnant"):
+				else if (nam is "About what you unleashed in the Void"):
+					say "[ToronTalkDarkTyrant]"; [on Fallen King file]
+				else if (nam is "Restore Abyssal Remnant"):
 					say "[ToronTalkAE]";
 				wait for any key;
 				if ToronDoneTalking is false:
@@ -241,6 +271,7 @@ to say ToronTalkWork:
 to say ToronTalkVR:
 	say "     Given the fact this Club ends up being the destination of many void travelers in the dimensional vicinity (or whatever they come from), you ask Toron a bit more about that. He does not seem too eager to inform you of anything specific, but he does start to speak. 'They come from the void, indeed. It was our point of arrival when we traveled from our former dimension. If you are curious about it, however...' - he makes a pause and eyes you with a very serious look - 'While I don't recommend it... You may find the entrance to the Void Realm past the door behind me. If anyone asks, say Toron let you in. But do be careful out there, that place is not for the faint of mind. Bring me any secrets you find.'";
 	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]west of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
+	TraitGain "Connected Hellfire Corridor" for Toron;
 	connect Hellfire Corridor;
 
 to say ToronTalkSex:
@@ -260,7 +291,7 @@ to say ToronTalkXaedihr:
 	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete. Secrets are not cheap.'";
 
 to say ToronTalkAE:
-	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. When you show the broken hilt to him, his eyes widen. 'You... You didn't do that, did you?!' he asks, and all you can say in response is... not denying the obvious. 'I really hope the seal is not that broken, then. If what you released from pulling that sword got out, it would be the end of the world... probably of all existence... I don't want to think about that. I believe it is imperative that we restore this sword and slay that creature at once! Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
+	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. 'Yes, I could restore the [']what you shouldn't have pulled from a completely and utterly isolated part of the Void Realm['] to its former glory. Not that I should, but whatever, what's done is done. Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
 	say "     'I would need around... [bold type]25 Null Essences[roman type] to restore this. Yes, that should be enough.'";
 	if carried of null essence > 24:
 		LineBreak;

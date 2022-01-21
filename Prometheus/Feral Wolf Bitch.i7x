@@ -1,9 +1,21 @@
-Version 1 of Feral Wolf Bitch by Prometheus begins here.
+Feral Wolf Bitch by Prometheus begins here.
 [Based off of Feral Wolf Male by Stripes]
 [Primarily written by Lost Directions]
 
 "Adds a Feral Wolf Bitch to Flexible Survival's Wandering Monsters table"
 
+to say GenerateTrophyList_Feral_Wolf_Bitch:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "wolf bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Section 1 - Creature Responses
 
@@ -105,6 +117,7 @@ to say BeatFeralWolfBitch:
 						say "[FeralWolfBitchFemaleSex]";
 					else:
 						say "[FeralWolfBitchNonsexTame]";
+				now Fang is Female;
 				now HP of Fang is 1;
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
@@ -166,7 +179,7 @@ to say FeralWolfBitchVictorySex:
 				say "     . (Y=Ride, N=Fuck)";
 				if Player consents:
 					say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-					say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+					say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 					say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 					CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 				else:
@@ -182,7 +195,7 @@ to say FeralWolfBitchVictorySex:
 			if Player is female:
 				LineBreak;
 				say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-				say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+				say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 				say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 				CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 			else:
@@ -262,18 +275,18 @@ When Play begins:
 	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 0; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 8; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
+	now Breast Size entry is 1; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 2;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "wolf fem-cum";
+	now loot entry is "wolf bitch fur";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "wolf bitch milk";
 	now CumItem entry is "wolf fem-cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Feral_Wolf_Bitch]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -282,109 +295,9 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is "Feral Wolf Male"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is ""; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 3 - Endings
@@ -424,14 +337,30 @@ This is the FemaleFang's Beta rule:
 
 
 
-Section 4 - Wolf Fem-cum
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch fur"	"A tuft of black, gray, and brown fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	wolf bitch fur
+
+wolf bitch fur is a grab object.
+It is temporary.
+wolf bitch fur is infectious.
+Strain of wolf bitch fur is "Feral Wolf Bitch".
+Usedesc of wolf bitch fur is "[WolfBitchFurUse]";
+
+to say WolfBitchFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+
+instead of sniffing wolf bitch fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "wolf fem-cum"	"A vial of thick, musky, clear liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf fem-cum
 
 wolf fem-cum is a grab object. wolf fem-cum is cum.
-Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Bitch".
+Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Male".
 
 instead of sniffing wolf fem-cum:
 	say "The wolf fem-cum smells of wolves and pussy, naturally.";
@@ -443,6 +372,22 @@ to say Wolf Fem-cum use:
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Wolf Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	wolf bitch milk
 
+wolf bitch milk is a grab object.
+wolf bitch milk is milky.
+Purified of wolf bitch milk is "distilled milk".
+wolf bitch milk is infectious.
+Strain of wolf bitch milk is "Feral Wolf Bitch".
+Usedesc of wolf bitch milk is "[wolf bitch milk use]";
+
+to say wolf bitch milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the wolf milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing wolf bitch milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Feral Wolf Bitch ends here.

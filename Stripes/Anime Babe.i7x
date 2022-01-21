@@ -39,6 +39,7 @@ to say losetoanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Parasitic Plant";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if Player is male and CockName of Player is "Tentacle Horror":
 		say "As she stands over you, you are given a good view of her [one of]pink[or]white[or]blue[or]kitty[at random]panties. This causes your prehensile cock to stir to life. Compelled by the great, universal attraction between anime babes and tentacles, your slimy cock extends in length and lunges up into her, tearing her panties and thrusting into her, causing her giggles to turn to a surprised moan. Her hips tremble as she squirms in mid-air as your tentacle cock thrusts and pounds at her.";
 		say "     Getting weak in the knees, she falls atop you, making it all the easier for you to fuck your would-be assailant[if anallevel > 1 and Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else if Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1 and Cock Count of Player is 2 and a random chance of 2 in 5 succeeds]. Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole[else if Cock Count of Player is 2]. Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[end if]. Your body, lost in the lust of fucking such a prize catch so suitable for your altered penis, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random][if Cock Count of Player > 1]. Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[else]. Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if]. Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there leaking your slimy cum from her well-used body.";
@@ -46,6 +47,7 @@ to say losetoanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Tentacle Horror";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if Player is male and TailName of Player is "Cerberus":
 		say "As she stands over you, you are given a good view of her [one of]pink[or]white[or]blue[or]kitty[at random]panties. This causes your tailcock to stir to life. Compelled by the great, universal attraction between anime babes and tentacles, your hidden cock extends in length and lunges up into her, tearing her panties and thrusting into her, causing her giggles to turn to a surprised moan. Her hips tremble as she squirms in mid-air as your tentacle cock thrusts and pounds at her.";
 		say "     Getting weak in the knees, she falls atop you, making it all the easier for you to fuck your would-be assailant[if anallevel > 1 and Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else if Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1 and Cock Count of Player is 2 and a random chance of 2 in 5 succeeds]. Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole[else if Cock Count of Player is 2]. Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[end if]. Your body, lost in the lust of fucking such a prize catch so suitable for your altered penis, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random][if Cock Count of Player > 1]. Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[else]. Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if]. Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there leaking your infernal cum from her well-used body.";
@@ -53,14 +55,18 @@ to say losetoanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Cerberus";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if BodyName of Player is "Squid":
 		say "As she stands over you, you are given a good view of her [one of]pink[or]white[or]blue[or]kitty[at random]panties. This causes your tentacle limbs to stir to life. Compelled by the great, universal attraction between anime babes and tentacles, your tentacles reach up and lunges up into her, tearing her panties and thrusting into her, causing her giggles to turn to a surprised moan. Her hips tremble as she squirms in mid-air as your tentacles thrusts and pounds at her.";
 		if Player is male and CockName of Player is "Squid":
 			say "     Getting weak in the knees, she falls atop you, making it all the easier for you to fuck your would-be assailant[if anallevel > 1 and Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else if Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1 and Cock Count of Player is 2 and a random chance of 2 in 5 succeeds]. Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole while one of your tentacle limbs finds its way into her mouth and down her throat[else if Cock Count of Player is 2]. Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1]. Your other tentacle limbs find their way to her ass and mouth, pushing into her other orifices[else]. One of your tentacle limbs finds its way to her mouth and pushes down her throat as you fuck her[end if]. Your body, lost in the lust of fucking such a prize catch so suitable for your altered form, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random][if Cock Count of Player > 1]. Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[else]. Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if][if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well[end if]. Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there leaking your sticky cum from her well-used body.";
+			CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 		else if Player is male:
 			say "     Getting weak in the knees, she falls atop you, making it all the easier for you to assault your would-be assailant. Swapping the tentacle at her pussy for your cock, you start fucking her while your tentacle limbs hold her down[if anallevel > 1]. Another of your tentacle limbs extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else]. Another of your tentacle limbs extends itself and dives into her mouth and down her throat as you fuck her[end if]. Your body, lost in the lust of playing with such a prize catch so suitable for your altered form, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random]. Your twisting tendrils, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well. You don't stop until you've gotten off several times, giggling happily as you do[end if]. Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there, her holes gaping from your fun with her.";
+			CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 		else:
 			say "     Getting weak in the knees, she falls atop you, making it all the easier for you to assault your would-be assailant[if anallevel > 1]. Another of your tentacle limbs extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else]. Another of your tentacle limbs extends itself and dives into her mouth and down her throat as you fuck her[end if]. Your body, lost in the lust of playing with such a prize catch so suitable for your altered form, grips her close and fondles her [one of]ass, making her moan[or]breasts, playing with her nipples[at random]. Your twisting tendrils, as if craving the anime girl's sexy body, pound away at her until she's cum several times[if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well. You don't stop until you've gotten off several times, giggling happily as you do[end if]. Finished with her, you push her aside and get up, staggering off in a lust-filled daze and leaving her lying there, her holes gaping from your tentacular fun with her.";
+			CreatureSexAftermath "Anime Babe" receives "Other" from "Player";
 		decrease humanity of Player by 2;
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
@@ -72,10 +78,13 @@ to say losetoanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Squid";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if Player is male:
 		say "Looking you over, she pulls out your [cock size desc of Player] [Cock of Player] shaft and strokes it to full hardness. Straddling your lap, she plunges her body down onto your cock[if Cock Length of Player > 20], taking it all in with apparent ease[end if] and riding you hard. She presses your face to her bosom. Your lips wrap around her nipple and suckles on it, causing additional moans from the sexy girl riding you. She works your cock hard with her cunt, driving you into herself until you cum loudly, pumping your hot load into her. Once she's gotten what she wants, she swats you with her paper fan, calling you a pervert and driving you off with several angry bashes.";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else:
 		say "Looking you over, she grabs your hand and presses it to her pussy, urging you to finger her dripping cunt. As you do this, she presses your face to her bosom. Your lips wrap around her nipple and suckles on it, causing additional moans from the sexy girl riding you. She grinds down onto your hand and has several quick climaxes that leave your hand and lap soaked in her juices by the time she's done with you and satisfied. Once she's gotten what she wants, she swats you with her paper fan, calling you a pervert and driving you off with several angry bashes.";
+		CreatureSexAftermath "Player" receives "OralPussy" from "Anime Babe";
 
 
 to say beattheanimebabe:
@@ -90,6 +99,7 @@ to say beattheanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Parasitic Plant";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if Player is male and CockName of Player is "Tentacle Horror":
 		now noanimebabesex is 0;
 		say "The choice is taken out of your hands as your slimy cock reacts to the anime girl's presence, rising and squirming with building arousal. Unable to control yourself, you flip up her skirt and pull down her [one of]pink[or]white[or]blue[or]kitty[at random] panties, uncovering her juicy little cunt. Clean and hairless, it seems to call to your tentacle cock as if she was made to be fucked by tentacles.";
@@ -98,6 +108,7 @@ to say beattheanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Tentacle Horror";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if Player is male and TailName of Player is "Cerberus":
 		now noanimebabesex is 0;
 		say "The choice is taken out of your hands as your tailcock reacts to the anime girl's presence, rising and squirming with building arousal. Unable to control yourself, you flip up her skirt and pull down her [one of]pink[or]white[or]blue[or]kitty[at random] panties, uncovering her juicy little cunt. Clean and hairless, it seems to call to your tentacle cock as if she was made to be fucked by tentacles.";
@@ -106,15 +117,19 @@ to say beattheanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Cerberus";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if BodyName of Player is "Squid":
 		now noanimebabesex is 0;
 		say "The choice is taken out of your hands as your squid limbs reacts to the anime girl's presence, rising and squirming with building excitement. Unable to control yourself, you flip up her skirt and pull down her [one of]pink[or]white[or]blue[or]kitty[at random] panties, uncovering her juicy little cunt. Clean and hairless, it seems to call to your limbs as if she was made to be fucked by tentacles.";
 		if Player is male and CockName of Player is "Squid":
 			say "     She squeals and squirms as your twisting cock pushes into her juicy cunt, moaning loudly in obvious pleasure despite her struggles. Pinning her down by her shoulders, you let your prehensile cock do its thing, sliding in and out of her, pounding into the horny girl beneath you[if anallevel > 1 and Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else if Cock Count of Player > 2]. Another of your tentacle cocks extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1 and Cock Count of Player is 2 and a random chance of 2 in 5 succeeds]. Your other tentacle cock wriggles around to her asshole and thrusts into her tight pucker, fucking her pink little hole while one of your tentacle limbs finds its way into her mouth and down her throat[else if Cock Count of Player is 2]. Your other tentacle cock extends itself and dives into her mouth and down her throat as you fuck her[else if anallevel > 1]. Your other tentacle limbs find their way to her ass and mouth, pushing into her other orifices[else]. One of your tentacle limbs finds its way to her mouth and pushes down her throat as you fuck her[end if][if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well[end if][if Cock Count of Player > 1]. Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[else]. Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if]. You leave her lying there, sticky with your cephalopod cum as she lies there moaning in delight.";
+			CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 		else if Player is male:
 			say "     She squeals and squirms as you swap your tentacle for your cock and start fucking her properly. Pinning her down by her shoulders, you pound into the horny girl beneath you[if anallevel > 1]. Another of your tentacle limbs extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else]. Another of your tentacle limbs extends itself and dives into her mouth and down her throat as you fuck her[end if][if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well[end if][if Cock Count of Player > 1]. Your twisting shafts, as if craving the anime girl's sexy body, pound away at her until you finally cum, pumping her full of your semen[else]. Your twisting shafts, as if craving the anime girl's sexy body, pounds away at her until you finally cum, pumping her full of your semen[end if]. You leave her lying there, sticky with your cephalopod cum as she lies there moaning in delight.";
+			CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 		else:
 			say "     She squeals and squirms as your twisting tentacle pushes into her juicy cunt, moaning loudly in obvious pleasure despite her struggles. Pinning her down by her shoulders, you let your prehensile limb do its thing, sliding in and out of her, pounding into the horny girl beneath you[if anallevel > 1]. Another of your tentacle limbs extends itself and dives into her mouth while a third pushes past her tight pucker to fuck her ass[else]. Another of your tentacle limbs extends itself and dives into her mouth and down her throat as you fuck her[end if]. Your twisting tendrils, as if craving the anime girl's sexy body, pound away at her until she's cum several times[if Player is female]. Lost in your waves of lust, you drive a tentacle into your own juicy cunt, fucking yourself as well. You don't stop until you've gotten off several times, giggling happily as you do[end if]. Finished with her, you leave her lying there, her holes gaping from your tentacular fun with her.";
+			CreatureSexAftermath "Anime Babe" receives "Other" from "Player";
 		decrease humanity of Player by 2;
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
@@ -127,6 +142,7 @@ to say beattheanimebabe:
 		increase Libido of Player by 5;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Squid";
+		CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 	else if noanimebabesex > 2:
 		say "Despite the temptation to use the girl for some sexual relief, you are able to restrain yourself as you have with the others of her kind. You instead let the beaten girl run away crying.";
 	else if Player is male:
@@ -140,8 +156,10 @@ to say beattheanimebabe:
 			say "     Following your baser instincts, you leap onto the sexy girl and pull up her skirt. She squirms and gives a squeal of 'Ecchi', but also giggles and [']accidentally['] pops open her shirt, exposing her shapely melons and perky pink nipples. With such an invitation, you grin and grab her breasts, squeezing them and lean down, licking at her nipples. She bites her lip, trying to hold back a moan, but eventually failing and crying out as you suck hard on one of them.";
 			if a random chance of 2 in 5 succeeds:
 				say "     Your hand dives under her skirt, flipping it up again and yanking down her [one of]pink[or]white[or]blue[or]kitty[at random] panties this time, exposing her tight, hairless little cunt. Already very wet, your fingers slip easily into her, making her moan and squeal delightfully. You continue these lecherous actions, driving her through several climaxes as you occasionally pause in one to stroke your [if Cock Count of Player > 1]cocks[else]own cock[end if]. Eventually, you cum across the sexy girl's [one of]breasts, coating them in your semen. She seems particularly delighted by this and rubs your cum across her tits and continues to play with herself even after you get up to leave[or]crotch, coating her cute pussy in your semen. She squirms as each shot splatters across her and moans happily as you pull her panties back up over the mess. She continues to play with herself, rubbing over her messy panties and squeezing her bosom even after you get up to leave[at random].";
+				CreatureSexAftermath "Anime Babe" receives "Other" from "Player";
 			else:
 				say "     Your hand dives under her skirt, flipping it up again and yanking down her [one of]pink[or]white[or]blue[or]kitty[at random] panties this time, exposing her tight, hairless little cunt. Already very wet, your fingers slip easily into her, making her moan and squeal delightfully. Satisfied that you've gotten her nice and ready, you move atop her and thrust your [cock size desc of Player] [Cock of Player] cock into her, making her arch her back and squeeze her tits. She moans as you pound away at her[if Cock Length of Player > 30], even your [cock size desc of Player] shaft able to push its way into her with some effort and much pleasure for the sexy female[else if Cock Length of Player > 20], your [cock size desc of Player] taking a little work to get into the sexy female, but bringing considerable pleasure to the both of you as you do[end if][if Cock Count of Player > 2 and anallevel > 1]. After a few thrusts, you pull out and move your slick cock to her little x pucker, pushing it into her ass as you sink another cock into her pussy, double-penetrating her[else if Cock Count of Player is 2 and anallevel > 1]. After a few thrusts, you pull out and move your slick cock to her little x pucker, pushing it into her ass as you sink another cock into her pussy, double-penetrating her[end if]. You bring your hands back up to her bosom, playing with her tits and licking her nipples as you fuck her. Eventually, it all becomes too much and you cum into the horny anime babe, filling her with your creamy seed. Done, you pull out and get up, leaving her there panting and leaking your seed from her recently stuffed hole[if Cock Count of Player > 1 and anallevel > 1]s[end if].";
+				CreatureSexAftermath "Anime Babe" receives "PussyFuck" from "Player";
 		else:
 			say "     Able to restrain yourself, you let the beaten girl run away crying.";
 			increase noanimebabesex by 1;
@@ -151,6 +169,7 @@ to say beattheanimebabe:
 			now noanimebabesex is 0;
 			say "     Following your baser instincts, you leap onto the sexy girl and pull up her skirt. She squirms and gives a squeal of 'Ecchi', but also giggles and [']accidentally['] pops open her shirt, exposing her shapely melons and perky pink nipples. With such an invitation, you grin and grab her breasts, squeezing them and lean down, licking at her nipples. She bites her lip, trying to hold back a moan, but eventually failing and crying out as you suck hard on one of them.";
 			say "     Your hand dives under her skirt, flipping it up again and yanking down her [one of]pink[or]white[or]blue[or]kitty[at random] panties this time, exposing her tight, hairless little cunt. Already very wet, your fingers slip easily into her, making her moan and squeal delightfully. You continue these lecherous actions while grinding your pussy down across her smooth, glossy leg before grabbing one of her hands and guiding it to your pussy so she can finger you as you play with her. She does so eagerly and you both enjoy several wet, sticky climaxes that leave you satisfied, at least for the moment. When you get up, she continues to play with herself, licking your juices from her fingers while rubbing her clit.";
+			CreatureSexAftermath "Anime Babe" receives "Other" from "Player";
 		else:
 			say "     Able to restrain yourself, you let the beaten girl run away crying.";
 			increase noanimebabesex by 1;
@@ -165,7 +184,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Human"; [name of the overall species of the infection, used for children, ...]
 	add "Anime Babe" to infections of FemaleList;
 	add "Anime Babe" to infections of BipedalList;
 	now Name entry is "Anime Babe"; [Name of your new Monster]
@@ -224,107 +243,7 @@ When Play begins:
 	now altcombat entry is "animebabe"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 3 - Alt Combat
@@ -390,7 +309,7 @@ This is the Anime Babe Infection rule:
 					say "     And moments later, that's when things really start to pick up for you. A cute babe runs into you and actually talks to you and you mumble and bumble around and even accidentally touch her breast and even after she's smacked you and sent you flying, she seems to like you and want to be your friend. And things cascade from there, as you meet her similarly cute and sexy friends in quick succession (all of whom are different archetypes, but always pretty), and despite your always seeming to screw up or accidentally groping them or walking in on them undressing and thereby upsetting them, they all seem to be really into you as well despite your blandness and lack of character. And while you can never quite seem to decide on which one should be your girlfriend, they always enjoy sneaking into your room and having a wild romp with you. There's the occasionally argument when one comes to find you in the throes of passion with another of her friends - you always seem to get hurt during those mishaps - but it's all back to normal the next morning.";
 					say "     Despite the occasional punch that sends you flying, it's a good life.";
 				else:
-					say "     As your old life slips further and further away, you end up wandering off into the city in search of... something. You stumble around for a while with little direction until you stumble across a small, fuzzy, kawaii creature of indeterminate species. As you're befriending it, some other guy comes in with a few little critters of his own, demanding that you turn over your new friend to him and a battle between your Pet Critters (tm) ensues, which yours winds soundly.";
+					say "     As your old life slips further and further away, you end up wandering off into the city in search of... something. You stumble around for a while with little direction until you stumble across a small, fuzzy, kawaii creature of indeterminate species. As you're befriending it, some other guy comes in with a few little critters of his own, demanding that you turn over your new friend to him and a battle between your Pet Critters (tm) ensues, which yours wins soundly.";
 					say "     And with this, your purpose is found, collecting, training and battling your ever-growing collection of little Pet Critters (tm) against other handlers. You make friends, allies and enemies as you seek to become the best of them all. All in all, it is a fun and adventurous time with lots of G-rated fun (with loads of outtakes cut by the censors).";
 			else:
 				say "     As your old life slips further and further away, you end up wandering off into the city in search of some purpose to your mixed-up existence. You stumble around for a while, having many a misadventure - often seeming to involve tentacles. Eventually, you wander onto campus and, before you know it, you're pulled into a classroom with a bunch of other misfit anime people and critters like yourself. There are nerds, weird girls, yankees, stuck-up bitches (that are actually part dog), sports chicks and many others. It is a wild and raucous place where little actual learning seems to happen despite having a stern, lion-headed teacher who roars at you all when you get too far out of line.";

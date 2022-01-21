@@ -328,7 +328,7 @@ to say sexwithsnow02:	[Anal on Snow]
 	say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants. She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle. 'Mmm.. I'm in the mood for something different, hon? How about you take the back door and stuff my tight nut hole?' she asks with a grin. 'What's the problem? Can't a girl-boy want something a little kinkier?' She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening. Will you take her up on her offer?";
 	if Player consents:
 		say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench. Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready. As you sink your throbbing shaft into her, you grip her hips and press yourself to her back. 'Ohhh... that's so [if Cock Length of Player < 10]nice[else]big[end if]. Do me, baby! Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of Player] [Cock of Player] cock before pushing herself further onto it. Needing no more encouragement, you start pounding away at the eager herm.";
-		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [CockName of Player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
+		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [Cock of Player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
 		now Wild Squirrels is active;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
@@ -338,9 +338,9 @@ to say sexwithsnow02:	[Anal on Snow]
 
 to say sexwithsnow03:	[Vaginal on player]
 	setmonster "Hyper Squirrel";
-	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [BodyName of Player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
-	say "     She brushes the tip of the member against your [cunt size desc of Player] [CockName of Player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
-	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [Skin of Player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [BodyName of Player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
+	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [TailSpeciesName of Player in lower case] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
+	say "     She brushes the tip of the member against your [cunt size desc of Player] [Cock of Player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
+	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [Skin of Player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [BodyType of Player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
 	now Wild Squirrels is active;
 
 to say sexwithsnow04:	[Anal on player]
@@ -365,7 +365,7 @@ to say sexwithsnow06:	[Fellatio]
 	say "     'I feel like these need a work out,' she says, reaching below her legs to slowly rub over her distended balls through her pants. She gives off a soft chittering sigh as soft churning is heard, her cum factories ramping up production even as she leers at you lustfully. 'You are going to pucker up and give me a big ole kiss where it counts,' she insists, undoing her pants and letting her huge pink member bob into the air, demanding attention.";
 	say "     Give her what she wants?";
 	if Player consents:
-		say "     You help Snow up onto a counter where she leans back against a pile of books and runs her hands down her form, cupping her large member and caressing along it before she directs it up at you. You run your fingers along the excited member, drawing a soft, appreciative chitter from Snow as she half lids her eyes. Your tongue flicks over the sensitive tool, lapping up the precum as it flows. It is strangely sweet across your tongue with a tangy hit almost hidden in it. You wrap your [FaceName of Player] lips around it and begin to suckle softly at the head, letting your tongue taste of the prefluids as they flow more powerfully with every touch.";
+		say "     You help Snow up onto a counter where she leans back against a pile of books and runs her hands down her form, cupping her large member and caressing along it before she directs it up at you. You run your fingers along the excited member, drawing a soft, appreciative chitter from Snow as she half lids her eyes. Your tongue flicks over the sensitive tool, lapping up the precum as it flows. It is strangely sweet across your tongue with a tangy hit almost hidden in it. You wrap your [FaceSpeciesName of Player in lower case] lips around it and begin to suckle softly at the head, letting your tongue taste of the prefluids as they flow more powerfully with every touch.";
 		say "     Your fingertips find her bulging veins, tracing them as you lightly stroke the member, feeling its heat and angry throbbing. Snow is moaning and cooing with delight at the attention, her breath short and rapid as she watches you fellate her with gusto. As you sink down along the tool, she suddenly grabs at you, yelping, then shrieking. You can see her balls lurch visibly, then your mouth is flooded with huge blasts of cum, pouring in salty sprays into your waiting gullet as she rocks her hips into you, trying to bury as much of her tool into you as she can, left panting and exhausted, but with a happy smile on her face.";
 	else:
 		say "     She looks at you a bit hurt, and lowers a hand to rub at her balls lightly, 'Well damn, don't go getting a girl all riled up just to shoot her down. Excuse me, I need some alone time,' and she retreats to the far corner of the area. Not long after, soft indecent sounds begin to be heard.";
@@ -572,7 +572,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 80; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
@@ -591,107 +591,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 6 - Endings

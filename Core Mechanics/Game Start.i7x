@@ -134,18 +134,18 @@ To regularstart: [normal start method]
 				else:
 					now clearnomore is 0;
 			-- 12:
-				if NewGraphicsInteger is 1:
-					now graphics is true; [technically not necessary, but nice to have for edge cases]
-					now NewGraphics is true;
-					now NewGraphicsInteger is 2;
-				else if NewGraphicsInteger is 2:
+				if NewGraphicsInteger is 2: [side window]
 					now graphics is false;
 					now NewGraphics is false;
-					now NewGraphicsInteger is 0;
-				else if NewGraphicsInteger is 0:
+					now NewGraphicsInteger is 0; [off]
+				else if NewGraphicsInteger is 0: [off]
 					now graphics is true;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 1;
+					now NewGraphics is true;
+					now NewGraphicsInteger is 1; [inline]
+				else if NewGraphicsInteger is 1: [inline]
+					now graphics is true; [technically not necessary, but nice to have for edge cases]
+					now NewGraphics is true;
+					now NewGraphicsInteger is 2; [side window]
 			-- 13:
 				say "[set_invcolumns]";
 			-- 99:
@@ -208,16 +208,37 @@ to say gsopt_start:
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
 	[Code for letting player select graphics window size]
 	if NewGraphics is true:
-		say "You have enabled the graphics side window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this proportion now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
 		clear the screen;
 	say "Want more details on the game and updates? ----- [bold type]https://blog.flexiblesurvival.com/[roman type]  ------[line break][line break]";
 	WaitLineBreak;
@@ -230,11 +251,13 @@ to say gsopt_start:
 		now white briefs is equipped;
 		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Caught Outside":
 		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
 		ItemGain black jeans by 1 silently;
 		now black jeans are equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Rescuer Stranded":
 		ItemGain camo shirt by 1 silently;
 		now camo shirt is equipped;
@@ -244,6 +267,7 @@ to say gsopt_start:
 		now black boxer briefs are equipped;
 		ItemGain black combat boots by 1 silently;
 		now black combat boots is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Forgotten":
 		ItemGain blue sleeveless shirt by 1 silently;
 		now blue sleeveless shirt is equipped;
@@ -253,6 +277,7 @@ to say gsopt_start:
 		now white briefs is equipped;
 		ItemGain brown loafers by 1 silently;
 		now brown loafers is equipped;
+		ItemGain Broken Smartphone by 1 silently;
 	else if scenario is "Researcher":
 		ItemGain white t-shirt by 1 silently;
 		now white t-shirt is equipped;
@@ -294,6 +319,7 @@ to say gsopt_start:
 		increase score by 100;
 		now BlindMode is true;
 	if scenario is "Bunker":
+		ItemGain Broken Smartphone by 1 silently;
 		say "     You remember how it went down. Satellite, gone, Internet, offline. The power was the last thing to go, just a precious hour later. People wandered the streets, confused, panicked. Then they came. Monsters. Freaks. They'd grab people. Some got mauled on the spot and others were dragged off. You managed to escape to safety here - the old bunker. You remember seeing that stupid bunker sign for years, who knew remembering it would save your life? You waited for others to come. Surely you were not the only one to remember?";
 		say "     You've waited in the dark for others or rescue to come, but to no avail. You're not sure how long you've been down here, but the sounds have long since died away. You've eaten a good portion of the food and water. No choice but to go out and greet the city. At least you have your [bold type]backpack[roman type] and your [bold type]watch[roman type]. How bad could it be?";
 	else if scenario is "Caught Outside":
@@ -311,16 +337,16 @@ to say gsopt_start:
 		say "     The helicopter brought you into the devastated city. Ruin and strange creatures milled about beneath you as you flew over at high speed. This place has been written off as a loss, but there was rumor they'd take it back. You only have so much time to investigate, and you plan to make the most of it.";
 		say "     You're let down beside an old bunker. It would serve as your base of operations, and would be where they'd pick you up when it was over. You should be scared, but you just can't seem to muster that sensation. They gave you booster shots against the nanites as well as a few supplies and a promise of others joining you soon. You know what you are doing. They will be so proud of what you find. Maybe you can figure out a way to stop this from happening again in other cities.";
 	else if scenario is "Running with Wolves":
-		say "     Hearing a massive racket, you find yourself waking up next to a fallen tree in your bed. It completely destroyed your house while you slept, thankfully you find that you are completely unharmed despite what happened. You have been living in this city since you were born, but this is the first time your house has been totaled by a fallen tree. You find that all the places where you store your clothes are blocked or totally smashed through leaving you with only your pajamas and what was hanging nearby that also was miraculously spared that you immediately grab and put on, your backpack and the watch inside of it. Climbing out of the wreckage of your former home and walking out onto the sidewalk in your bare feet, you find that your home isn't the only one that was ruined by tree damage. looking around you notice that in the space of a single night huge trees had grown through many of the houses, lawns, and even in the middle of the street. As you stand awestruck by the incredibly surreal sight of a forest having appeared from out of nowhere, you are brought back to your senses by many of your neighbors coming from their houses and their hysterical screaming about the damages.";
-		say "     And then it happens, the sound of howling echoing through the forest air. At first you wonder if someone's dog got loose, but then you hear the sound of many paws and growls letting you know that these aren't just any ordinary dogs. A pack of wolves running full force ambushes you and your neighbors, your mind temporarily blanks out. snapping back to reality you find that a wolf has jumped at you, biting your shoulder and using its claws to shred your pajama top. As you fall over shaking your arm to try and dislodge it, the wolf lets go of your shoulder and uses its teeth to catch your pants and underwear ripping it shreds with its claws.";
+		say "     Hearing a massive racket, you find yourself waking up next to a fallen tree in your bed. It completely destroyed your house while you slept, thankfully you find that you are completely unharmed despite what happened. You have been living in this city since you were born, but this is the first time your house has been totaled by a fallen tree. You find that all the places where you store your clothes are blocked or totally smashed through leaving you with only your pajamas and what was hanging nearby that also was miraculously spared that you immediately grab and put on, your backpack and the watch inside of it. Climbing out of the wreckage of your former home and walking out onto the sidewalk in your bare feet, you find that your home isn't the only one that was ruined by tree damage. Looking around you notice that in the space of a single night huge trees had grown through many of the houses, lawns, and even in the middle of the street. As you stand awestruck by the incredibly surreal sight of a forest having appeared from out of nowhere, you are brought back to your senses by many of your neighbors coming from their houses and their hysterical screaming about the damages.";
+		say "     And then it happens, the sound of howling echoing through the forest air. At first you wonder if someone's dog got loose, but then you hear the sound of many paws and growls letting you know that these aren't just any ordinary dogs. A pack of wolves running full force ambushes you and your neighbors, your mind temporarily blanks out. Snapping back to reality, you find that a wolf has jumped at you, biting your shoulder and using its claws to shred your pajama top. As you fall over shaking your arm to try and dislodge it, the wolf lets go of your shoulder and uses its teeth to catch your pants and underwear ripping it shreds with its claws.";
 		WaitLineBreak;
 		if MaleList is warded or MaleList is banned:
 			say "     You find that your shoulder is healing itself, that being a cold comfort, being that you have fallen on your ass in terror as the wolf that shredded your clothes stalks closer, out of the corner of your eye you notice that one of your neighbors is getting their head wedged into the cunt of a nearby wolf, being transformed into looking just like the wolf on top of them. Your eyes move forwards towards the wolf that is now standing above you, its cunt slick in ready anticipation, obviously looking forward to doing to you the same as what was done to your neighbor. It puts its paws around your head, brutally humping your face, practically jilling itself with your nose and mouth, this activity doesn't last long before the wolf reaches its climax, spraying the inside of your nose holes and all over your front with her girlcum.";
 		else:
 			say "     You find your shoulder is rapidly mending itself, one good thing at least, with you being bare-ass nude and prostrating in hopes that you won't be totally ripped to shreds like your pajamas were, offhandedly noticing out of the side of your vision one of your neighbors getting a wolf's red rocket shoved into their ass. You watch in horror as the neighbor's body starts to change to look the same as the wolf that is fucking them, however now they seem to be enjoying themselves. As you return your eyes to look at the wolf that was assaulting you, you find that it is now standing over you it's cock completely at the ready, it's length menacing you. The wolf wastes no time in shoving its dick into your mouth and roughly face fucking you for all your worth, however it doesn't take all that long before it begins to shudder as it climaxes and sprays some of its seed down your throat, ungently pulling itself out and covering your back and face with its semen.";
-		say "     Realizing that what happened with your neighbor is going to happen to you, you get up and run for all your worth, heading for anywhere but here, not even looking back to see if you are being chased. After running what feels to be a marathon, avoiding and escaping from the various mutants, you find yourself in an alley near a library. as you start to recall something, your thoughts are interrupted by a massive pain resounding throughout your entire body causing you to black out. Waking up, you find that not much time has passed, you try to stand up only to find that your legs no longer work the same way that they did before you passed out. Looking back you find that while you slept your body had changed into that of a fluffy feral wolf, all the way from your paws down to the tip of your tail, looks like you are going to have to get used to walking on all fours from now on. Just to be sure you pad over to a nearby puddle and take a look at the surface, you find that your face is that of a feral wolf with matching eyes and a wolfish tongue to go with it.";
+		say "     Realizing that what happened with your neighbor is going to happen to you, you get up and run for all your worth, heading for anywhere but here, not even looking back to see if you are being chased. After running what feels to be a marathon, avoiding and escaping from the various mutants, you find yourself in an alley near a library. As you start to recall something, your thoughts are interrupted by a massive pain resounding throughout your entire body causing you to black out. Waking up, you find that not much time has passed, you try to stand up only to find that your legs no longer work the same way that they did before you passed out. Looking back you find that while you slept your body had changed into that of a fluffy feral wolf, all the way from your paws down to the tip of your tail, looks like you are going to have to get used to walking on all fours from now on. Just to be sure you pad over to a nearby puddle and take a look at the surface, you find that your face is that of a feral wolf with matching eyes and a wolfish tongue to go with it.";
 		WaitLineBreak;
-		say "     Looking up from the puddle you realize that you managed to find your way to what you think will be safety, an old bunker located under a library. Once upon a time it was an abbey but was renovated into a library. you remember seeing that stupid bunker sign for years, you never thought it would actually come in handy, but now that the shit hit the fan, you find that you are actually happy, overjoyed even to see that sign and the safety it promotes. You make your way up to the library entrance, almost the happiest you've ever been as you open one of the dual doors and enter. As you enter the library, you find that it looks very much intact, no signs of damage or habitation by crazed infected. Moving inwards and taking a few steps, you notice a shadowy figure lurking amidst the bookshelves. you can feel what could only be described as terror charging down your spine as you realize that it is a feral wolf much like the ones you just got done fleeing from. Instinct taking over, your legs moving to the ready, your back and tail up, your face twisted as you growl. Your opponent responds in kind, growling and barking in much the same manner, their stance showing they have no intention of backing down or retreating.";
+		say "     Looking up from the puddle you realize that you managed to find your way to what you think will be safety, an old bunker located under a library. Once upon a time it was an abbey but was renovated into a library. You remember seeing that stupid bunker sign for years, you never thought it would actually come in handy, but now that the shit hit the fan, you find that you are actually happy, overjoyed even to see that sign and the safety it promotes. You make your way up to the library entrance, almost the happiest you've ever been as you open one of the dual doors and enter. As you enter the library, you find that it looks very much intact, no signs of damage or habitation by crazed infected. Moving inwards and taking a few steps, you notice a shadowy figure lurking amidst the bookshelves. You can feel what could only be described as terror charging down your spine as you realize that it is a feral wolf much like the ones you just got done fleeing from. Instinct taking over, your legs moving to the ready, your back and tail up, your face twisted as you growl. Your opponent responds in kind, growling and barking in much the same manner, their stance showing they have no intention of backing down or retreating.";
 		say "     Both you and the stranger start circling each other, sizing each other up and looking for potential openings. The tension is so thick between the two of you, it could be cut with a knife. Any mistake could lead to being completely defeated, with that in mind, you meet them head on. A fury of claws and teeth, scratching and biting, tackles and barrel rolls, neither side giving an inch, as both of you battle for the bunker. Eventually though, one must win, and the other will have lost.";
 		say "     [bold type]By the time the dust clears, who has won?[roman type][line break]";
 		LineBreak;
@@ -336,24 +362,25 @@ to say gsopt_start:
 			else:
 				say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
 		if calcnumber is 1: [Alpha Fang]
-			now hp of Fang is 4;
+			now HP of Fang is 4;
 		else if calcnumber is 2: [Vanilla Fang]
-			now hp of Fang is 1;
+			now HP of Fang is 1;
 		else if calcnumber is 3: [Omega Fang]
-			now hp of Fang is 2;
+			now HP of Fang is 2;
 		say "     [bold type]It is only after the battle is over that you have time to see what sex they are. After a quick look you see that they are...[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Male.";
 		say "     ([link]N[as]n[end link]) - Female.";
 		if Player consents: [Male Fang]
-			if hp of Fang is 4: [Alpha]
+			if HP of Fang is 4: [Alpha]
 				increase Cock Length of Fang by 2;
 				increase Ball Size of Fang by 1;
-			else if hp of Fang is 2: [Omega]
+			else if HP of Fang is 2: [Omega]
 				decrease Cock Length of Fang by 2;
 				decrease Ball Size of Fang by 1;
 		else: [Female Fang]
-			if hp of Fang is 4: [Alpha]
+			now Fang is Female;
+			if HP of Fang is 4: [Alpha]
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -367,7 +394,7 @@ to say gsopt_start:
 				now Virgin of Fang is false;
 				now PenileVirgin of Fang is true;
 				SetFemalePronouns for Fang;
-			else if hp of Fang is 1: [Vanilla]
+			else if HP of Fang is 1: [Vanilla]
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -375,13 +402,13 @@ to say gsopt_start:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 2;
 				now Clit Size of Fang is 3;
 				now Virgin of Fang is false;
 				now PenileVirgin of Fang is true;
 				SetFemalePronouns for Fang;
-			else if hp of Fang is 2: [Omega]
+			else if HP of Fang is 2: [Omega]
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -389,7 +416,7 @@ to say gsopt_start:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 3;
 				now Clit Size of Fang is 2;
 				now Virgin of Fang is false;
@@ -400,7 +427,7 @@ to say gsopt_start:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents: [Sex]
-			if hp of Fang is 4: [Alpha Fang]
+			if HP of Fang is 4: [Alpha Fang]
 				if Fang is Male: [Male Fang]
 					if player is male: [Anal]
 						say "     Having been completely defeated, you are now at the mercy of the other wolf. You can barely stand, let alone struggle after running the gauntlet and getting beat down by the final boss. Your opponent realizes this as well, looking you over while deciding what to do. He seems to come to a conclusion as you notice his cock slip from its sheath, possibly from his building arousal at having completely broken a potential rival. The wolf having beaten you moves around to your behind and lifts it using his paws, taking just a moment to admire it before starting to hump your ass with gusto, pushing his dick into your sphincter as you partially let out a squeak in response to your anus getting violated.";
@@ -413,13 +440,13 @@ to say gsopt_start:
 						NPCSexAftermath Player receives "PussyFuck" from Fang;
 				else if Fang is Female: [Female Fang]
 					if player is male: [Face Sitting]
-						say "     Your opponent claiming victory, silently looks you over, thinking what to do from here. You however are completely unable to move after getting your ass handed to you, leaving yourself vulnerable to whatever whims that your opponent may have for you. Finally making up her mind she grunts as she uses her paws to roll your unresponsive body onto your back, taking a moment to look you over fully. She then pads her way over you until your muzzle is level with her pussy, hesitating for a moment she then jams her cunt down. Now using your muzzle as a makeshift dildo, slightly gasping as she uses her paws to angle your head in just the right way as to hit her G-spot. You are currently a passenger in your own body, unable to move, unable to speak, only able to wait and hope that the wolf on top of you remembers that living things need to breathe eventually. which thankfully she does, as she momentarily lifts herself up off your muzzle and lowers her head growling a single word into your ear 'Mine.'";
+						say "     Your opponent claiming victory, silently looks you over, thinking what to do from here. You however are completely unable to move after getting your ass handed to you, leaving yourself vulnerable to whatever whims that your opponent may have for you. Finally making up her mind she grunts as she uses her paws to roll your unresponsive body onto your back, taking a moment to look you over fully. She then pads her way over you until your muzzle is level with her pussy, hesitating for a moment she then jams her cunt down. Now using your muzzle as a makeshift dildo, slightly gasping as she uses her paws to angle your head in just the right way as to hit her G-spot. You are currently a passenger in your own body, unable to move, unable to speak, only able to wait and hope that the wolf on top of you remembers that living things need to breathe eventually. Which thankfully she does, as she momentarily lifts herself up off your muzzle and lowers her head growling a single word into your ear 'Mine.'";
 						say "     Now no longer having your vision obscured by pussy, you breathe once more and notice that her body has grown larger, her eight breasts seem fuller, and her thighs seem thicker, more built for child birth and dominating others through snu snu. After making her claim, she returns your muzzle into her pussy and starts really going at it, desperately trying to bring herself to climax, in which very soon she does arrive, spraying her girlcum all over your face and body, covering you in her scent and marking you as hers. You still can't move though and now that you are finally done, your last remains of energy leave you as your body finally says it doesn't want do any more, and you pass out for a while.";
 						NPCSexAftermath Player receives "OralPussy" from Fang;
 					else if player is female: [Tribbing]
 						say "     Having been bested in battle in addition to running the gauntlet getting to the library, you are completely wiped, leaving you as silly putty in your opponent's paws. She rolls you onto your back and examines you, admiring the spoils of her victory. As if coming to a conclusion, she moves her body over you until she is practically hugging you using all four of her paws. Your once-opponent, now looks you in the eyes, her bright yellow eyes looking into yours, her nose now touching yours, her breath warming your mouth. Despite her blatant invasion of your space, you don't have the strength to do anything about it, not even able to move your lips to speak. As if understanding your current situation, she uses one of her front paws to open your maw just enough for her to lock muzzles with you, giving a rather passionate french kiss. As she does this, she also puts her paw back where it was and moves her hips until her second pair of lips start kissing yours. You can only moan into her maw as she starts to gently move her hips, humping you and frenching your cunts together.";
 						say "     Slowly, she builds the tempo, girations speeding up as her tongue wrestles your own. Even while your pleasure is building you notice that she seems to be changing, her body has grown larger, her chest that holds her eight nipples seem stronger, and her thighs seem thicker, more built for child birth and dominating others. As you notice this, she pulls her muzzle from yours and softly growls a single word, 'Mine'. She then pushes your head to expose your neck and gently wraps her mouth around it to bring the point across, even if you could still move, you wouldn't be able to contest the issue. She then removes her mouth from your neck and back into frenching you, satisfied at your lack of argument, still humping cunt-to-cunt, in an effort to bring you both to a climax. This stretches on for minutes until her movements become erratic and her breath becomes heavy, her body starts to quake, until she begins to hump erratically, also bringing you to orgasm as well. Both of you launch your fluids all over your body, claiming you as hers, unable to move, you lay there as she cuddles you, also getting the shared fluids onto her.";
-			else if hp of Fang is 1: [Vanilla Fang]
+			else if HP of Fang is 1: [Vanilla Fang]
 				if Fang is Male: [Male Fang]
 					if player is male: [Anal]
 						say "     Both having battled your hardest, it seemed like the struggle would never end, but somehow you manage to win, even if just barely so. As you look over your bruised rival, you can feel your canine instincts crying out for you to show this male in your territory who is boss and claim what is due. Standing over him, your mind paints a vivid picture on what your body desires, your shaft slipping from it's sheath, now menacing him with a glimpse of the anal ravaging to come. Having had your mind made up for you by your inner beast, you maneuver your conquest until his body is resting on the stairs, leaving his belly fur and crotch exposed, at just the right height for what you have in mind. Gathering saliva into your muzzle, you spit onto your dick and move your body on top of his, lightly grasping his exposed neck with your maw while hugging him using your front paws and aiming your cock towards his vulnerable tail star.";
@@ -439,7 +466,7 @@ to say gsopt_start:
 						say "     You momentarily look her over wondering just what to do, getting an idea, you begin to lick her muzzle, at first just to get her ready for what is coming next, but you end up getting into it so far as to get lulled into french kissing with a rather heated tongue wrestling match. While neither of you actually win at tongue wrestling, you find yourself getting wet, dripping fluids from your cunt onto hers. Even though you find yourself wanting to continue kissing, you really must be getting on with the main event, moving yourself until your hips, and by extension your cunt are hovering over their muzzle. At first they think you want them to use their tongue, licking you grooves and probing your crannies, getting you ready enough for whatever kinky play they think you may have in mind, as they stop and stare with their luminous yellow eyes in anticipation.";
 						say "     You don't leave her in suspense any longer as you shove your hips down and begin fucking yourself wildy with her muzzle, being as ready and worked up as you are, you don't last long. Feeling your impending orgasm, you spin yourself on all fours until your girl cum trajectory is aimed at your exposed partner's belly fur, swirling the inside of your cunt with her muzzle as well, acting as the last straw as you lift your hips up and climax sending your fluids all over her exposed body, bathing her with your scent. Having brought yourself to a smashing orgasm and claimed a rather irritated beta in the process, you lay down next to her, resting for the moment.";
 						NPCSexAftermath Fang receives "OralPussy" from Player;
-			else if hp of Fang is 2: [Omega Fang]
+			else if HP of Fang is 2: [Omega Fang]
 				if Fang is Male: [Male Fang]
 					if player is male: [Frotting]
 						say "     Having dominated your rival, you wrap him in your embrace while peering deep into his beautiful luminous yellow eyes as your bodies rub against each other. His face the very picture of confusion as he returns your hug in kind, his tail slowly starting to wag from enjoyment in spite of the outcome from the earlier battle. Minutes pass as the pieces inside your mind fit together into a plan for how you wanted this to go, said conclusion spurs you into sliding your muzzle over his, leading into a passionate kiss, your saliva covered tongue moving itself around on the inside of his mouth, tasting his own saliva and mixing the two as you move both of your paw-hands up to your entwined muzzles. You move your muzzle from his taking a bit of combined saliva with you, allowing it to dribble onto your waiting paw-hands that you move downwards to begin to slather the two sheaths and pairs of balls, causing two canine cocks to show themselves as you inch slowly upwards slathering them both in saliva until you feel satisfied enough, returning into the embrace and sandwiching the twin erections between your furry bodies as you and he resume locking muzzles.";
@@ -459,22 +486,22 @@ to say gsopt_start:
 						say "     Having defeated your opponent and proven yourself the victor, you are left with the question on what to do next as you survey them. Coming to a conclusion you roll her onto her back, pausing a moment to take in the beauty of the wolfess in a way that you weren't able to in the midst of the brawl, in a moment of instinctual driven curiosity you lower your head and begin sniffing slightly at her exposed belly fur in an attempt to pick up on something that your mind hasn't yet put into cognitive thought on what you are looking for. Regardless of the private musing going through your mind on why you are sniffing someone you met for the first time ever, you move your head lower and get to winding and prepping your partner up by lubricating her exposed pussy with your saliva drenched tongue, probing here and there while enjoying her reactionary shudders, making sure to coat it with a layer thick enough for the both of you.";
 						say "     After being sure of the outside, you begin to dig deeper, with slow yet full strokes of the tongue, making sure not only to get everywhere but also to probe her depths in an attempt to find her sweet spot and get some sexy moans out of her. Feeling that you managed to work her up enough, you pull your face from between her pussy lips and position yourself until being face-to-face and cunt-to-cunt with the sexy wolfess, looking into her eyes for a prolonged moment before inflicting a sudden tickle attack, causing her to burst into a fit of laughter. Using that moment of her muzzle being open, you lock muzzles with her, making her gasp in surprise, despite her initial surprise she returns the kiss. Now that your partner is getting into the swing of things you decide to get to the main event as you begin to hump her fast and furiously, making sure that most of the grinding goes to her cunt, both of your muzzles resound with moans as she starts to hump in return. Both of you being wound up means that both the sloppy sounds of sex and the heavy breathing wont last for much longer before things come to a peak as you can feel your muscles tensing and your partner shuddering as you and her begin to squirt your girlcum onto each other, robbing you both of energy, leaving you both limp and embracing each other.";
 		else:
-			if hp of Fang is 4:
+			if HP of Fang is 4:
 				say "     You find yourself on your back, completely battered, bruised and ultimately defeated. Realizing that you are probably not going to walk out of this intact or at all, you look around for some means of escape and try to lift yourself up, only to have your opponents paw come crashing down next to your muzzle, as [PosPro of Fang] maw momentarily clamps around your neck softly enough to act as a warning, letting you know that there is no escape. Fearfully looking up at the wolf situated above you, meeting [PosPro of Fang] gaze as you find yourself momentarily mesmerized by [PosPro of Fang] luminous yellow eyes as [SubjectPro of Fang] examines your own, as if looking for something that isn't readily apparent by examining other parts of you. With a low growl, you could almost swear [SubjectPro of Fang] mumbles something like 'this will do' as [SubjectPro of Fang] decides that [SubjectPro of Fang] is finished staring you down. You think that perhaps [SubjectPro of Fang] will let you up after finding that you no longer have the will to fight, you are apparently wrong as [PosPro of Fang] paw moves from beside your head to hold down your chest as [SubjectPro of Fang] says with a deep growl, 'Be mine or be gone.' [PosProCap of Fang] message clear in that if you want to live in the library and its bunker, it will be under [ObjectPro of Fang]. Not wanting to be left to the mercy of the mutants rampaging outside, you nod your head in agreement.";
-			else if hp of Fang is 1:
+			else if HP of Fang is 1:
 				say "     As the battle seemed to come to a head, you begin to worry that you might be done for. Just as the thoughts cross your mind, your opponent loses their footing, nearly collapsing on the spot. Being that you both are at your limits and ready to keel over, you try to think of a way to finish this without the both of you ending in a double knockout. After a brief moment of silence that seems to stretch uncomfortably long, you decide that it would be best to try and persuade [ObjectPro of Fang] that any further fighting would end badly for the both of us. Thinking on the best words to continue with, you proceed to claim that it would actually be better to work together to survive than weaken each other to the point of the both of us being easy prey for anything that should decide to enter between now and when we finally recover. Falling silent, you wonder if you managed to make your case well enough as the silence grows uncomfortably long, so long in fact that you worry that your opponent might notice that you are beginning to break out into a cold sweat. A few more tense minutes of [ObjectPro of Fang] looking you over pass in silence before [SubjectPro of Fang] finally comes to a conclusion as [SubjectPro of Fang] fully collapses, looking up at you with obvious frustration as [SubjectPro of Fang] grumbles and agrees to work together. With a sigh of relief you also end up collapsing in a tired sweaty heap to rest, happy that you are no longer alone in the midst of the apocalypse.";
-			else if hp of Fang is 2:
+			else if HP of Fang is 2:
 				say "     As the once opponent collapses into unconsciousness on the floor in front of you, the flood of beastial insticts almost completely subside except for the little whisper that tells you that you should dominate [ObjectPro of Fang] sexually and completely, letting [ObjectPro of Fang] know what exactly what [PosPro of Fang] place will consist of from now on. You push that thought away as you decide how you want to go about dealing with [ObjectPro of Fang] as you look [ObjectPro of Fang] over, slightly feeling apologetic about drowning in the flow of your instincts earlier and its violent outcome. Hiding your guilt behind a poker face, you rouse [ObjectPro of Fang] from [PosPro of Fang] slumber by lightly smacking the side of [PosPro of Fang] muzzle with your paw, intently staring at [ObjectPro of Fang] as [SubjectPro of Fang] slowly wakes with a disoriented-yet-silent contemplation. The moment [SubjectPro of Fang] partially opens [PosPro of Fang] eyes, you put one of your paws on [PosPro of Fang] chest, holding [ObjectPro of Fang] down and staring at [ObjectPro of Fang] intently, letting [ObjectPro of Fang] know that there isn't going to be any escape from [PosPro of Fang] current situation. At the look you give, [SubjectPro of Fang] seems to decide that being calm and listening to what you have to say would be a good idea. Clearing your throat, you tell [ObjectPro of Fang] that despite the fight both of you just had, you don't really have any hard feelings against [ObjectPro of Fang]. Being that it's insanely dangerous outside, it feels like it would be unusually cruel to toss [ObjectPro of Fang] out just because [SubjectPro of Fang] lost. Considering that it is safer together than alone, It would be a good idea to at least give [ObjectPro of Fang] the opportunity to live here and serve under you.' as you look at [ObjectPro of Fang] slightly wondering what [PosPro of Fang] answer will be. With a soft sigh, [SubjectPro of Fang] nods in agreement to be your omega.";
 	if scenario is "Running with Wolves":
 		WaitLineBreak;
-		if hp of Fang is 4:
+		if HP of Fang is 4:
 			say "     Having been beaten in battle and dominated completely, you meekly stare back at [ObjectPro of Fang] waiting for [ObjectPro of Fang] to give [PosPro of Fang] first order, that... never came. You both sit there and awkwardly stare at each other in silence, wondering what to do next. After a bit more silent staring, you decide to break the silence by introducing your name and asking for [PosPro of Fang]. [SubjectProCap of Fang] is silent for a few more moments. You gather your thoughts and ask whether he has forgotten his name. [SubjectProCap of Fang] nods once in affirmative. Having gotten the answer, you ask permission to give him a name so that you have something to call him by. [SubjectProCap of Fang] thinks for another moment or two and nods in affirmative. You, having your alpha's consent, decide to call [ObjectPro of Fang], rather uncreatively, Fang. [SubjectProCap of Fang] thinks in silence for a few more moments, and nods [PosPro of Fang] approval. Fang, noticing that you are about to pass out, tells you to go rest in the bunker, Fang stays and watches the entrance in case any more survivors show up. You then pad your way down into the bunker, swaying all the way, and pass out on one of the cots.";
 			WaitLineBreak;
 			say "     You finally manage to open your eyes, but your vision is blurry and unfocused, your body filled with the echoes of aches and pains from yesterday's events of getting beaten and raped by a wolf, a tiring sprint of desperation, your sudden transformation into a feral wolf, and getting beaten further and getting heavily dominated, claimed, and shown your place by your new alpha. The first thing you notice after your vision scans the room is a large black and grayish form, trying to focus, your vision finally clears to show you that it is actually your alpha who was waiting for you to awaken. You slowly sit up and move off the cot until you are looking up at Fang attentively. Seeing that you are recovered, Fang continues to say to you 'if you go outside, be on the lookout for other survivors.' apparently finished, Fang pads out of the bunker.";
 		else if hp of Fang is 1:
-			say "     After proving yourself as Alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, to which [SubjectPro of Fang] looks down onto the floor and hesitantly states that [SubjectPro of Fang] cannot remember [PosPro of Fang] old name. You being really tired from everything and of everything, decide to uncreatively call [ObjectPro of Fang] Fang, taking a nearby rope and using your paw-hands to clumsily fashion it into a make-shift leash, and tie it to a nearby post telling [ObjectPro of Fang] to guard the entrance. [SubjectProCap of Fang] silently does as [ObjectPro of Fang] is told, also taking a few moments to clean [if Fang is Male]himself [else if hp of Fang is 1]herself [end if]off. you pad your way down to the bunker where you immediately pass out the moment you lay on a cot.";
+			say "     After proving yourself as Alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, to which [SubjectPro of Fang] looks down onto the floor and hesitantly states that [SubjectPro of Fang] cannot remember [PosPro of Fang] old name. You being really tired from everything and of everything, decide to uncreatively call [ObjectPro of Fang] Fang, taking a nearby rope and using your paw-hands to clumsily fashion it into a make-shift leash, and tie it to a nearby post telling [ObjectPro of Fang] to guard the entrance. [SubjectProCap of Fang] silently does as [ObjectPro of Fang] is told, also taking a few moments to clean [if Fang is Male]himself [else if hp of Fang is 1]herself [end if]off. You pad your way down to the bunker where you immediately pass out the moment you lay on a cot.";
 			WaitLineBreak;
-			say "     You wake up in the same position you went to sleep in, yawning while still slightly drowsy yet still able to look around at your surroundings. You suppose it isn't really a dream as you find yourself still in a bunker, as you look around you hear something padding down the stairs. that being your new lupine beta, sitting down in front of you, Fang begins to speak 'things quieted down after last night.' pausing for a moment before continuing 'it would be a good idea to bring back other survivors.', fang clearly finished, pads back towards the entrance.";
+			say "     You wake up in the same position you went to sleep in, yawning while still slightly drowsy yet still able to look around at your surroundings. You suppose it isn't really a dream as you find yourself still in a bunker, as you look around you hear something padding down the stairs, that being your new lupine beta, sitting down in front of you, Fang begins to speak 'things quieted down after last night.' pausing for a moment before continuing 'it would be a good idea to bring back other survivors.', Fang clearly finished, pads back towards the entrance.";
 		else if hp of Fang is 2:
 			say "     Having thoroughly proven your dominance as the alpha, you ask [ObjectPro of Fang] what [PosPro of Fang] name is, [SubjectPro of Fang] hesitantly tells you that [SubjectPro of Fang] is unable to remember [PosPro of Fang] name. So you do your first duty as alpha and name [ObjectPro of Fang] a rather uncreative name, the name being Fang. Having given [ObjectPro of Fang], [PosPro of Fang] name, you give [ObjectPro of Fang] [PosPro of Fang] first order and duty, to guard the entrance. Fang barks an affirmative and goes to a nearby spot to lick him/her self clean and watch over the door. You, being incredibly exhausted from everything that went on, pad your way to the bunker where you pass out on one of the cots.";
 			WaitLineBreak;
@@ -548,26 +575,43 @@ to say silent_start:
 		now graphics is false;
 		now NewGraphics is false;
 	if NewGraphics is true: [Defined when play begins below, but MUST be here to alter the view when restoring from the menu]
-		now the graphics window proportion is NewGraphicsRatio;
-		build graphics window;
-		[now the graphics window pixel count is 1;]
-		follow the ngraphics_blank rule;
-		follow the current graphics drawing rule;
-		now NewGraphicsOpened is true;
-	clear the screen;
-	if NewGraphics is true:
-		say "[bold type]Graphic Window Proportion[roman type][line break]";
-		say "You have enabled the new graphics window. This will be on the right side of your screen and will always take up a proportion of the main screen.[line break]";
-		say "Please choose this value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
+		say "[bold type]Graphic Window Position and Proportion[roman type][line break]";
+		say "You have enabled the new graphics window. This will be on the selected side of your screen and will always take up a proportion of the main screen.[line break]";
+		say "Please choose the position value now. (0 = right side, 1 = left side, 2 = above, 3 = below)[line break]";
+		while 1 is 1:
+			say "(0-3)>[run paragraph on]";
+			get a number;
+			if calcnumber > -1 and calcnumber < 4:
+				break;
+			else:
+				say "Invalid Entry. Please enter a number between 0 and 3.";
+		now NewGraphicsPosition is calcnumber;
+		say "Please choose the proportion value now. Enter a number between 5 - 90. This will represent the percentage of your main screen that the graphics side-window will take up. We recommend somewhere around 30.[line break]";
 		while 1 is 1:
 			say "(5-90)>[run paragraph on]";
 			get a number;
 			if calcnumber > 4 and calcnumber < 91:
 				break;
 			else:
-				say "Invalid Entry. Please enter a number between 5 and 90";
+				say "Invalid Entry. Please enter a number between 5 and 90.";
 		now NewGraphicsRatio is calcnumber;
 		clear the screen;
+		now the graphics window proportion is NewGraphicsRatio;
+		if NewGraphicsPosition is:
+			-- 0:
+				now graphics window position is g-right;
+			-- 1:
+				now graphics window position is g-left;
+			-- 2:
+				now graphics window position is g-above;
+			-- 3:
+				now graphics window position is g-below;
+		reconstruct graphics window;
+		[now the graphics window pixel count is 1;]
+		follow the ngraphics_blank rule;
+		follow the current graphics drawing rule;
+		now NewGraphicsOpened is true;
+	clear the screen;
 	say "Just a moment. There are a few more things to prepare...";
 	WaitLineBreak;
 	if scenario is "Bunker":
@@ -649,6 +693,11 @@ Chapter 2 - Player Name
 
 Chapter 3 - Character Customization
 
+[
+Maybe I should add a second menu choice after that, explaining:
+"There are some parts of the game that apply alternate infections if a character has one of the following feats. For example, going for "Horny Dragon" instead of "Slutty Dragoness" if "Male Preferred" is present. You can gain these feats during gameplay, but for your convenience, they can also be activated right here. Please note that this is not a lock, nor does it exclude getting other infections. It simply nudges those code decision points that are set up for it one way or another."
+]
+
 to newplayercustomizationmenu:
 	if Name of Player is not "DebugTesting": [reduced menu until the new system goes live]
 		now calcnumber is -1;
@@ -658,7 +707,7 @@ to newplayercustomizationmenu:
 			say "[line break][bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Player Starting Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else if StartingGender is 2]Female[else if StartingGender is 3]Trans-Woman[else if StartingGender is 4]Trans-Man[else if StartingGender is 5]Male Herm[else if StartingGender is 6]Female Herm[end if][roman type][line break]";
 			say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Male[else if GenderLock is 4]Female[else if GenderLock is 5]Trans-Woman[else if GenderLock is 6]Trans-Man[else if GenderLock is 7]Male Herm[else if GenderLock is 8]Female Herm[else if GenderLock is 9]Always Cocky[else if GenderLock is 10]Always a Pussy[else if GenderLock is 11]Single Sexed[else if GenderLock is 12]Flat Chested[else if GenderLock is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always a Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -687,7 +736,7 @@ to newplayercustomizationmenu:
 			clear the screen;
 			say "[line break][bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Gender Settings & Orientation[as]1[end link][line break]";
-			say "(2) [link]Body Configuration Lock[as]2[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Male[else if GenderLock is 4]Female[else if GenderLock is 5]Trans-Woman[else if GenderLock is 6]Trans-Man[else if GenderLock is 7]Male Herm[else if GenderLock is 8]Female Herm[else if GenderLock is 9]Always Cocky[else if GenderLock is 10]Always a Pussy[else if GenderLock is 11]Single Sexed[else if GenderLock is 12]Flat Chested[else if GenderLock is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(2) [link]Body Configuration Lock[as]2[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always a Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(3) [link]Player Sexual Experience[as]3[end link]: [playervirginsay][line break]";
 			say "(4) [link]Player Hair[as]4[end link]: Head Hair: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player]; [if Player is Hasbeard]Beard: [Beard Style of Player];[end if] Body Hair: [Body Hair Adjective of Player][line break]";
 			say "(5) [link]Eye Color[as]5[end link]: [Eye Color of Player][line break]";
@@ -859,49 +908,27 @@ to genderlockmenu:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Select a cody configuration lock:[roman type][line break]";
+		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
-		say "(2) [link]Random[as]2[end link] - Fond of Excitement? A random lock is chosen for you at game start!";
+		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
 		say "[line break]";
-		say "[bold type]Standard:[roman type][line break]";
-		say "(3) [link]Male[as]3[end link] - You will always have a flat chest and male genitalia.";
-		say "(4) [link]Female[as]4[end link] - You will always have a flat chest and female genitalia.";
-		say "[line break]";
-		say "[bold type]Hybrid:[roman type][line break]";
-		say "(5) [link]Trans-Woman[as]5[end link] - You will always have breasts and male genitalia.";
-		say "(6) [link]Trans-Man[as]6[end link] - You will always have a flat chest and female genitalia.";
-		say "(7) [link]Male Herm[as]7[end link] - You will always have a flat chest and both male and female genitalia.";
-		say "(8) [link]Female Herm[as]8[end link] - You will always have breasts and both male and female genitalia.";
-		say "[line break]";
-		say "[bold type]Loose:[roman type][line break]";
-		say "(9) [link]Always Cocky[as]9[end link] - Regardless of mutation, you always retain some male anatomy.";
-		say "(10) [link]Always a Pussy[as]10[end link] - Regardless of mutation, you always retain some female anatomy.";
-		say "(11) [link]Single Sexed[as]11[end link] - Regardless of mutation, you will never be a herm.";
-		say "(12) [link]Flat Chested[as]12[end link] - Regardless of mutation, you never gain breasts.";
-		say "(13) [link]Simplified Masculine[as]13[end link] - Flat Chested + Single-Sexed.";
+		say "(3) [link]Unchanging[as]3[end link] - Preserve selected starting gender.";
+		say "(4) [link]Always Cocky[as]4[end link] - Your body will never give up its cock (if it has one, or gains one).";
+		say "(5) [link]Always a Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
+		say "(6) [link]Single Sexed[as]6[end link] - Regardless of mutation, you will never be a herm but remain male or female, with the right chest to match.";
+		say "(7) [link]Flat Chested[as]7[end link] - Regardless of mutation, you never gain breasts.";
+		say "(8) [link]Simplified Masculine[as]8[end link] - Flat Chested + Single-Sexed.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-13)>[run paragraph on]";
+			say "Choice? (0-8)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 13:
+			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			else:
 				say "Invalid Entry";
 		if calcnumber is not 0:
 			now GenderLock is calcnumber;
-			if GenderLock is 3:
-				now StartingGender is 1;
-			else if GenderLock is 4:
-				now StartingGender is 2;
-			else if GenderLock is 5:
-				now StartingGender is 3;
-			else if GenderLock is 6:
-				now StartingGender is 4;
-			else if GenderLock is 7:
-				now StartingGender is 5;
-			else if GenderLock is 8:
-				now StartingGender is 6;
 			now gsexit is 1;
 		else:
 			now gsexit is 1;
@@ -909,60 +936,54 @@ to genderlockmenu:
 to startgenderlockget:
 	say "Locking Gender...";
 	if GenderLock is 2:
-		now GenderLock is a random number between 3 and 11;
-	if GenderLock > 1:
-		if GenderLock is 3:
-			say "Locked to male body configuration (flat chest, single sexed with a cock, no pussy).";
+		now GenderLock is a random number between 4 and 8;
+	if GenderLock is 3:
+		if StartingGender is 1:
+			say "Locked to body configuration: flat chest, single sexed with a cock, no pussy.";
 			add "Always Cocky" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Flat Chested" to feats of Player;
-			now StartingGender is 1;
-		else if GenderLock is 4:
-			say "Locked to female body configuration (breasts, single sexed with a pussy, no cock).";
+		else if StartingGender is 2:
+			say "Locked to body configuration: breasts, single sexed with a pussy, no cock.";
 			add "Always A Pussy" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Breasts" to feats of Player;
-			now StartingGender is 2;
-		else if GenderLock is 5:
-			say "Locked to trans-woman body configuration (breasts, single sexed with a cock, no pussy).";
+		else if StartingGender is 3:
+			say "Locked to body configuration: breasts, single sexed with a cock, no pussy.";
 			add "Always Cocky" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Breasts" to feats of Player;
-			now StartingGender is 3;
-		else if GenderLock is 6:
-			say "Locked to trans-man body configuration (flat chested, single sexed with a pussy, no cock).";
+		else if StartingGender is 4:
+			say "Locked to body configuration: flat chested, single sexed with a pussy, no cock.";
 			add "Always A Pussy" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Flat Chested" to feats of Player;
-			now StartingGender is 4;
-		else if GenderLock is 7:
-			say "Locked to male-herm body configuration (flat chested, both genitals).";
+		else if StartingGender is 5:
+			say "Locked to body configuration: flat chested, both genitals.";
 			add "Herm Preferred" to feats of Player;
 			add "Flat Chested" to feats of Player;
-			now StartingGender is 5;
-		else if GenderLock is 8:
-			say "Locked to female herm body configuration (breasts, both genitals).";
+		else if StartingGender is 6:
+			say "Locked to body configuration: breasts, both genitals.";
 			add "Herm Preferred" to feats of Player;
 			add "Breasts" to feats of Player;
-			now StartingGender is 6;
-		else if GenderLock is 9:
-			say "Male genitals locked in.";
-			add "Always Cocky" to feats of Player;
-		else if GenderLock is 10:
-			say "Female genitals locked in.";
-			add "Always A Pussy" to feats of Player;
-		else if GenderLock is 11:
-			say "Locked to a singular gender at a time.";
-			add "Single Sexed" to feats of Player;
-		else if GenderLock is 12:
-			say "Locked to be flat chested.";
-			add "Flat Chested" to feats of Player;
-			now Breast Size of Player is 0;
-		else if GenderLock is 13:
-			say "Locked to flat-chested male or trans-male.";
-			add "Single Sexed" to feats of Player;
-			add "Flat Chested" to feats of Player;
-			now Breast Size of Player is 0;
+	else if GenderLock is 4:
+		say "Male genitals locked in.";
+		add "Always Cocky" to feats of Player;
+	else if GenderLock is 5:
+		say "Female genitals locked in.";
+		add "Always A Pussy" to feats of Player;
+	else if GenderLock is 6:
+		say "Locked to a singular gender at a time.";
+		add "Single Sexed" to feats of Player;
+	else if GenderLock is 7:
+		say "Locked to be flat chested.";
+		add "Flat Chested" to feats of Player;
+		now Breast Size of Player is 0;
+	else if GenderLock is 8:
+		say "Locked to flat-chested male or trans-male.";
+		add "Single Sexed" to feats of Player;
+		add "Flat Chested" to feats of Player;
+		now Breast Size of Player is 0;
 
 Chapter 4 - Stats
 
@@ -974,13 +995,13 @@ to say gsopt_1:
 	while gsexit is 0:
 		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
-		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Represents your raw physical might and your ability to deal damage.";
-		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Affects your likelihood to hit and dodge.";
-		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases your total health pool and your overall endurance.";
-		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
-		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(7) [link]Random[as]7[end link]: Randomize your stat points upon creation.";
+		say "(1) [link]Strength[as]1[end link] = [if MainStat is 1][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Represents your raw physical might and your ability to deal damage.";
+		say "(2) [link]Dexterity[as]2[end link] = [if MainStat is 2][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Affects your likelihood to hit and dodge.";
+		say "(3) [link]Stamina[as]3[end link] = [if MainStat is 3][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases your total health pool and your overall endurance.";
+		say "(4) [link]Charisma[as]4[end link] = [if MainStat is 4][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Deals with social interactions with NPCs and your pets, and affects your morale.";
+		say "(5) [link]Intelligence[as]5[end link] = [if MainStat is 5][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link] = [if MainStat is 6][bold type]17[roman type][else if MainStat is 7]??[run paragraph on][else]12[end if] - Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
+		say "(7) [link]Random[as]7[end link] - Randomize your stat points upon creation.";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
@@ -1263,7 +1284,7 @@ to say gsopt_4:
 		say "[bold type]Difficulty Modes:[roman type][line break]";
 		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if HardMode is true]On[else]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
 		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if NoHealMode is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn. Medkits and healing boosters heal more though.";
-		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for specific supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
+		say "(3) [link]Blind Mode[as]3[end link]: [bold type][if BlindMode is true]On[else]Off[end if][roman type][line break]     Blind Mode prevents hunting and scavenging for supplies. You have a significantly increased chance of encountering something of interest while exploring though.";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
 			say "Choice? (0-3)>[run paragraph on]";

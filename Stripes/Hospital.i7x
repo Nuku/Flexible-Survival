@@ -520,48 +520,40 @@ understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 DoctorMouseProgress is a number that varies.
 
-Description of Doctor Mouse is "     Dr Mouse is a small, white mouse with red eyes and a pink nose and ears. He's only about three feet tall, and that's to the top of his ears. He's dressed in a white labcoat that goes almost to the floor with his rodent-like feet and thin tail poking out from underneath it. He is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.".
-The icon of Doctor Mouse is the figure of DrMouse_icon.
+Description of Doctor Mouse is "[DrMouseDesc]".
+
+to say DrMouseDesc:
+	project Figure of DrMouse_clothed_icon;
+	say "     Dr. Mouse is a slender, white mouse with red eyes and a pink nose and ears. He's dressed in a white labcoat and doctor's attire, with a thin tail poking out behind his back. Most of the time he is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
 
 Conversation of Doctor Mouse is { "Squeak!" }.
 
-the scent of Doctor Mouse is "The small lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
+the scent of Doctor Mouse is "The lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 
 the linkaction of Doctor Mouse is "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link][if hospquest >= 14], [link]volunteer[end link][end if][line break]";
 
-
 to say meetdrmouse:
-	say "     Unable to see more than a few work tables and testing equipment, you slip through the open door to get a better look. Inside is more of the same, through part of the room has been cleared away. Some of it seems to be in active use, with several beakers simmering over burners or sitting on running auto-stirrers.";
-	say "     You start to take another slow step into the room when a noise to one side startles you. There is a pair of those mismatched chimeras in here. They moan lustfully and try to crawl towards you, but are held back by collars around their necks. They are chained to a workbench in the far corner.";
-	WaitLineBreak;
-	project the figure of DrMouse_icon;
-	say "     You breathe a sigh of relief and turn back to the room, startled again by the sight of a white mouse poking his large head up over one of the tables. This creature stares at you with blood red eyes as you are both frozen in surprise. You start to raise your weapon slowly, but the mouse smiles happily and claps his hands together with glee.";
-	WaitLineBreak;
-	say "     'This is such an unexpected surprise. Do please come in. The creatures of this hospital rarely provide good company.' As the mouse moves around the work table, you can see his head barely clears it at all, only about three feet tall at the ears. He grabs a wooden stool and pulls it over, scraping it across the floor. As he climbs up to get a seat, he adds, 'you should call me Doctor Mouse, I guess. A new name for a new me,' he chuckles as he scrambles into the seat with some effort and motions for you to pull one up as well.";
-	say "     'I'm quite surprised you made it up here. It's quite a mess downstairs and the creatures stop anyone from venturing in. You should tell me what is happening out in the city. I've not been able to leave here since the infection struck. Far too dangerous for a little guy like me out there. And so much to do here, studying the nanite infection. It has such a capacity for healing.' He starts to babble a little, perhaps from being isolated in here.";
+	project Figure of DrMouse_clothed_icon;
+	say "     Unable to see more than a few work tables and testing equipment, you slip through the open door to get a better look. Inside is more of the same, through part of the room has been cleared away. Some of it seems to be in active use, with several beakers simmering over burners or sitting on running auto-stirrers. You start to take another slow step into the room when a noise to one side startles you. There is a pair of those mismatched chimeras in here. They moan lustfully and try to crawl towards you, but are held back by collars around their necks. They are chained to a workbench in the far corner. You breathe a sigh of relief and turn back to the room, startled again by the sight of a white mouse poking his large head up over one of the tables. This creature stares at you with blood red eyes as you are both frozen in surprise. You start to raise your weapon slowly, but the mouse smiles happily and claps his hands together with glee.";
+	say "     'This is such an unexpected surprise. Do please come in. The creatures of this hospital rarely provide good company.' As the mouse moves around the work table, you can see his head barely clears it at all, only about three feet tall at the ears. He grabs a wooden stool and pulls it over, scraping it across the floor. As he climbs up to get a seat, he adds, 'you should call me Doctor Mouse, I guess. A new name for a new me,' he chuckles as he scrambles into the seat with some effort and motions for you to pull one up as well. 'I'm quite surprised you made it up here. It's quite a mess downstairs and the creatures stop anyone from venturing in. You should tell me what is happening out in the city. I've not been able to leave here since the infection struck. Far too dangerous for a guy like me out there. And so much to do here, studying the nanite infection. It has such a capacity for healing.' He starts to babble a little, perhaps from being isolated in here.";
 	WaitLineBreak;
 	if scenario is "Researcher":
-		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Huh? You did? Most peculiar. How did you come to discover this? Ah, I see. You are a researcher, not unlike myself. Though, I guess I don't look much like one, despite my lab coat,' he titters a little, whiskers all atwitch. 'You do seem more a collector than an actual scientist though. Paid to gather samples, are you? Well still, even your limited expertise will be most welcome.";
+		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Huh? You did? Most peculiar. How did you come to discover this? Ah, I see. You are a researcher, not unlike myself. Though, I guess I don't look much like one, despite my lab coat,' he titters a little, whiskers all atwitch. 'You do seem more a collector than an actual scientist though. Paid to gather samples, are you? Well still, even your limited expertise will be most welcome. ";
 	else if HP of Doctor Matt is 100:
-		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Nanites are microscopic machines. These little buggers are smaller than a red blood cell and they are altering people's bodies according to whatever whimsy their programming is telling them to do at any given moment. There are a variety of strains, as you have no doubt seen. Most strains are in conflict with one another, though some appear to be able to live in symbiosis.";
-		say "     Almost universally, the nanites alter their hosts form and push them with increased sexual growth and carnal desires, most likely to further spread that nanite strain. There have also been a wide range of, for lack of a better term, evolutionary traits that the nanites introduce to increase their host's potential success in this regard. Universally though, the nanites bring with them an increased rate of healing.";
+		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Nanites are microscopic machines. These little buggers are smaller than a red blood cell and they are altering people's bodies according to whatever whimsy their programming is telling them to do at any given moment. There are a variety of strains, as you have no doubt seen. Most strains are in conflict with one another, though some appear to be able to live in symbiosis. Almost universally, the nanites alter their hosts form and push them with increased sexual growth and carnal desires, most likely to further spread that nanite strain. There have also been a wide range of, for lack of a better term, evolutionary traits that the nanites introduce to increase their host's potential success in this regard. Universally though, the nanites bring with them an increased rate of healing. ";
 	else:
-		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Huh? You did? Most peculiar. How did you come to discover this? You don't look like a scientist. Though, I guess I don't look much like one, despite my lab coat,' he titters a little, whiskers all atwitch.";
-		say "     You start to tell him that you have met another scientist in the city who's been trying to deal with the nanites and find a way to eradicate them. 'Oh no, that won't do at all,' Dr Mouse exclaims. 'That would be most unfortunate. The nanites are what's keeping many of their hosts, the people out there, alive right now.";
+		say "     'The cause of all this are nanites of some unknown origin. I bet you didn't know that. Huh? You did? Most peculiar. How did you come to discover this? You don't look like a scientist. Though, I guess I don't look much like one, despite my lab coat,' he titters a little, whiskers all atwitch. You start to tell him that you have met another scientist in the city who's been trying to deal with the nanites and find a way to eradicate them. 'Oh no, that won't do at all,' Dr Mouse exclaims. 'That would be most unfortunate. The nanites are what's keeping many of their hosts, the people out there, alive right now. ";
+	say "'The nanites are constantly at work, making adjustments and repairs to their hosts. If they are injured, the nanites speed the recovery. You have probably noticed it in yourself. It is quite evident in them,' he says, pointing to the pair of chimera, who have taken to mating with one another now that it's become clear that they won't get to play with the new arrival.";
+	say "     'The human body, or any living organism for that matter, is a well-crafted and balanced machine that took millions of years to create and perfect. And humans are far from perfect machines even now. We break down. We age. Our bodies fail us. For example, there is a constant balance maintained in the blood of salinity, pH, oxygenation, nutrients, hormones and so forth. Changes to any of these may improve function somewhere, but severely harm it elsewhere, even fatally so. But everything is interconnected and works as a whole. 'Once you start changing things around and reprogramming how we're constructed, that delicate balance gets thrown off. I'm quite certain that the nanites, by constantly working and repairing their hosts, are keeping them from experiencing the deleterious effects of their body's changes. I fear, if they were somehow removed or shut down suddenly, many of the hosts would no longer be able to sustain themselves. Or at least at this stage of development, perhaps. It's hard to say. So much of this is based off observational assumptions. I need more hard data,' he says, striking the table with a weak thud.";
 	WaitLineBreak;
-	say "     'The nanites are constantly at work, making adjustments and repairs to their hosts. If they are injured, the nanites speed the recovery. You have probably noticed it in yourself. It is quite evident in them,' he says, pointing to the pair of chimera, who have taken to mating with one another now that it's become clear that they won't get to play with the new arrival.";
-	say "     'The human body, or any living organizm for that matter, is a well-crafted and balanced machine that took millions of years to create and perfect. And humans are far from perfect machines even now. We break down. We age. Our bodies fail us. For example, there is a constant balance maintained in the blood of salinity, pH, oxygenation, nutrients, hormones and so forth. Changes to any of these may improve function somewhere, but severely harm it elsewhere, even fatally so. But everything is interconnected and works as a whole.";
-	say "     'Once you start changing things around and reprogramming how we're constructed, that delicate balance gets thrown off. I'm quite certain that the nanites, by constantly working and repairing their hosts, are keeping them from experiencing the deleterious effects of their body's changes. I fear, if they were somehow removed or shut down suddenly, many of the hosts would no longer be able to sustain themselves. Or at least at this stage of development, perhaps. It's hard to say. So much of this is based off observational assumptions. I need more hard data,' he says, striking the table with a weak thud.";
-	WaitLineBreak;
-	say "     'And that's why I need to continue my research. I need to learn more about the nanites, how they are changing their hosts and the capacity of their healing factor.' He smiles up at you, twitching his whiskers. 'And that is why I am so glad to see you. I am in need of more equipment to analyze the nanites.' He waves to his lab. 'I have a wide array of medical equipment here, but the nanites are machines and there are limits to what I can discover about them with it.";
-	say "     'You seem very resourceful and may be able to find a device I need to further my analysis. While I have been able to learn much from working on them,' he says, waving off-handedly at the noisily mating pair, 'I have carried that research about as far as I can and need to move in a new direction to learn more.'";
+	say "     'And that's why I need to continue my research. I need to learn more about the nanites, how they are changing their hosts and the capacity of their healing factor.' He smiles up at you, twitching his whiskers. 'And that is why I am so glad to see you. I am in need of more equipment to analyze the nanites.' He waves to his lab. 'I have a wide array of medical equipment here, but the nanites are machines and there are limits to what I can discover about them with it. 'You seem very resourceful and may be able to find a device I need to further my analysis. While I have been able to learn much from working on them,' he says, waving off-handedly at the noisily mating pair, 'I have carried that research about as far as I can and need to move in a new direction to learn more.'";
 	say "     Doctor Mouse tells you about the kind of scientific device he is looking for and describes its appearance in detail, as well as gives you a crude drawing for reference. He pushes it into your hands and babbles something about some kind of reward for you and adds that the stairwell to his lab will be unlocked for you[if Outside Trevor Labs is known]. You look it over and think to yourself that you may be able to find one at Trevor Labs easily enough[end if].";
 	wait for any key;
 	now hospquest is 2;
 	increase score by 25;
 
-
 Instead of conversing the Doctor Mouse:
+	project Figure of DrMouse_clothed_icon;
 	if hospquest is 0:
 		say "ERROR 0: 'My dear boy/girl, I don't believe you should be here yet.'";
 	else if hospquest is 1:
@@ -1089,7 +1081,7 @@ to say hosploss:
 			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. Finding you radically transformed and succumbing, he helps take you to a nearby, unoccupied building. There, he beds down with you, having sex with you again and again, turning you into another cute, girly raccoon like him, as it is the only thing he can do for you.";
 			say "[totalcoonification]";
 		else:
-			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [BodyName of Player] body, asserts its dominance over the new you.";
+			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [BodyType of Player] body, asserts its dominance over the new you.";
 	else if hospquest is 10:		[Refused upon offer]
 		say "     You groan, still in some pain from the rough handling as you try to get up. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. He wraps his arm around you and helps you stand, leading you away from this blighted place.";
 		if pink raccoon is tamed:
@@ -1266,7 +1258,7 @@ to say tlranaway:
 	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
-	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
+		now HP of Susan is 50;
 	now hospquest is 12;
 	now the player is in Hidden Lab;
 	say "[posttlscene]";
@@ -1284,7 +1276,7 @@ to say tlloss:
 	now Orthas is nowhere;
 	if Susan is visible:
 		move susan to Hidden Lab;
-	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
+		now HP of Susan is 50;
 	now hospquest is 12;
 	now the player is in Hidden Lab;
 	say "[posttlscene]";
@@ -1367,12 +1359,11 @@ to say tlvictory:
 	increase score by 50;
 	LineBreak;
 	wait for any key;
-	move Doctor Matt to dark basement;
+	now Doctor Matt is nowhere;
 	move infection terminal to Hidden Lab;
 	if Susan is visible:
 		move susan to Hidden Lab;
 		now HP of Susan is 50;
-	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
 	now hospquest is 12;
 	now the player is in Hidden Lab;
 	say "[posttlscene]";
@@ -1400,33 +1391,6 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 			move player to Loading Dock;
 	else:
 		now player is in Trevor Labs Lobby;
-
-Table of GameRoomIDs (continued)
-Object	Name
-Loading Dock	"Loading Dock"
-
-Loading Dock is a room.
-Description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
-
-undergroundlab is a door. undergroundlab is dangerous.
-undergroundlab is below Loading Dock.
-darkbasement2 is below undergroundlab.
-The marea of undergroundlab is "Sealed". Description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
-
-the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
-
-aroundthehill is a door. aroundthehill is east from Loading Dock.
-darkbasement2 is east of aroundthehill.
-
-instead of going east from Loading Dock:
-	move player to Outside Trevor Labs;
-
-Table of GameRoomIDs (continued)
-Object	Name
-darkbasement2	"darkbasement2"
-
-darkbasement2 is a room. [placeholder room for the doors]
-
 
 to say posttlscene:
 	say "     Returning to the hospital, you are greeted by Dr Mouse on the helipad. As he and the orderlies escort you [if Susan is visible]and Susan [end if]down to his lab, you relate to him your [if HP of Doctor Matt is 101]partial [end if]success at Trevor Labs. The mouse is [if HP of Doctor Matt > 101]very [end if]pleased with the results.";

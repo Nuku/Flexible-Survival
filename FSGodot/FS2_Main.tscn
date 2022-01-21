@@ -1,0 +1,832 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Fonts/plex_mono_15.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/InputProcessor.gd" type="Script" id=4]
+[ext_resource path="res://scripts/FS2_Main.gd" type="Script" id=5]
+[ext_resource path="res://scripts/LocationProcessor.gd" type="Script" id=6]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/GreyAbbeyLibrary.gd" type="Script" id=7]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/GreyAbbeyLobby.gd" type="Script" id=8]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/Bunker.gd" type="Script" id=9]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/CommunalShower.gd" type="Script" id=10]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/UndergroundRestroom.gd" type="Script" id=11]
+[ext_resource path="res://Locations/GreyAbbeyLibrary/Rooms/MaintainenceStoreroom.gd" type="Script" id=12]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.054902, 0.054902, 0.054902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.168627, 0.164706, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.168627, 0.164706, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.168627, 0.164706, 0.172549, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="FS2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GraphicsProcessor" type="Node" parent="."]
+
+[node name="RoomCard" type="PanelContainer" parent="GraphicsProcessor"]
+margin_left = 7.0
+margin_top = -198.0
+margin_right = 321.0
+margin_bottom = -89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="GraphicsProcessor/RoomCard"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 307.0
+margin_bottom = 102.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VRoomContainer" type="VBoxContainer" parent="GraphicsProcessor/RoomCard/MarginContainer"]
+margin_right = 300.0
+margin_bottom = 95.0
+
+[node name="RoomNameLabel" type="Label" parent="GraphicsProcessor/RoomCard/MarginContainer/VRoomContainer"]
+margin_right = 300.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "room label name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomBodyLabel" type="Label" parent="GraphicsProcessor/RoomCard/MarginContainer/VRoomContainer"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 300, 0 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Room Body"
+autowrap = true
+
+[node name="InputProcessor" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="LocationProcessor" type="Node" parent="." groups=["save"]]
+script = ExtResource( 6 )
+
+[node name="GreyAbbeyLibrary" type="Node" parent="LocationProcessor"]
+script = ExtResource( 7 )
+
+[node name="Bunker" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 9 )
+room_name = "Bunker"
+room_description = "Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to rest upon.
+One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like. The small sink taking up a corner of the room seems  to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go up. Your own personal room is to the south. It's technically just a maintenance storeroom, but at least it's private."
+north_exit = true
+north_room_name = "Communal Shower"
+northeast_exit = true
+northeast_room_name = "Underground Restroom"
+southwest_exit = true
+southwest_room_name = "Maintenece Storeroom"
+up_exit = true
+up_room_name = "Grey Abbey Lobby"
+
+[node name="MaintenenceStoreroom" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 12 )
+room_name = "Maintenece Storeroom"
+room_description = "The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by most standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of in or on top of them, but you may find a use for the extra storage space in time."
+northeast_exit = true
+northeast_room_name = "Bunker"
+
+[node name="CommunalShower" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 10 )
+room_name = "Communal Shower"
+room_description = "The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is that everything is covered in smooth, checkered tile. There's a short bench near the entrance for people to sit on as they undress. This is separated from the shower area proper by a concrete dividing wall, serving as a privacy screen for those entering and drying off. Turning the corner, you see that five showerheads have been affixed to the back wall for several people to wash themselves at once. There's a subtle depression in the floor - enough to direct water to a central drain, but not enough to feel unsteady when standing on it. Around the shower is a raised border that serves as an additional safeguard from flooding the surrounding area."
+south_exit = true
+south_room_name = "Bunker"
+
+[node name="GreyAbbeyLobby" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 8 )
+room_name = "Grey Abbey Lobby"
+room_description = "This former abbey has been rebuilt to become a mid-sized library. The architecture and design shows its origins despite the renovations made. A number of simple yet elegant columns, wall sconces, and several other of the original features have been left untouched to give the library some 'character'. The central room has a reception desk at the front, with long rows of bookshelves stretching out behind it and to the sides. A computer sits on the front desk, although without power, it isn't of any help right now. Small seating groups of chairs and sofas make the library quite a nice place to hang out in and read.
+
+There is an upper story to the library overhanging the ground floor, accessible through two stairways to the left and right, not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the north is a room with some white sheets covering assorted furniture. To the south is a glass window through which you are able to make out a dilapidated computer lab. Heading east will lead further into the library"
+down_exit = true
+down_room_name = "Bunker"
+
+[node name="UndergroundRestroom" type="Node" parent="LocationProcessor/GreyAbbeyLibrary"]
+script = ExtResource( 11 )
+room_name = "Underground Restroom"
+room_description = "This room is very barebones - a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water (or anything, really) under the tightly closing lid, only what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like - or smell."
+southwest_exit = true
+southwest_room_name = "Bunker"
+
+[node name="MainPanel" type="PanelContainer" parent="."]
+margin_left = 2.0
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel"]
+margin_right = 1278.0
+margin_bottom = 720.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1268.0
+margin_bottom = 710.0
+
+[node name="IngameMenu" type="PanelContainer" parent="MainPanel/MarginContainer/HBoxContainer"]
+margin_right = 114.0
+margin_bottom = 700.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_styles/panel = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu"]
+margin_right = 114.0
+margin_bottom = 700.0
+custom_constants/margin_right = 3
+custom_constants/margin_top = 3
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 111.0
+margin_bottom = 697.0
+
+[node name="MenuButton" type="MenuButton" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/VBoxContainer"]
+margin_right = 108.0
+margin_bottom = 14.0
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/normal = SubResource( 3 )
+text = "Menu"
+
+[node name="StatHBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 111.0
+margin_bottom = 697.0
+
+[node name="StatBox" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer"]
+margin_top = 610.0
+margin_right = 76.0
+margin_bottom = 694.0
+size_flags_horizontal = 3
+size_flags_vertical = 10
+custom_constants/separation = 0
+
+[node name="strength" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_right = 76.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( -293.68, 76 )
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Strength"
+
+[node name="Dexterity" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_top = 14.0
+margin_right = 76.0
+margin_bottom = 28.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Dexterity"
+
+[node name="Stamina" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_top = 28.0
+margin_right = 76.0
+margin_bottom = 42.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Stamina"
+
+[node name="Charisma" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_top = 42.0
+margin_right = 76.0
+margin_bottom = 56.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Charisma"
+
+[node name="Intelligence" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_top = 56.0
+margin_right = 76.0
+margin_bottom = 70.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Intelligence"
+
+[node name="Perception" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatBox"]
+margin_top = 70.0
+margin_right = 76.0
+margin_bottom = 84.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Perception"
+
+[node name="StatValueBox" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer"]
+margin_left = 80.0
+margin_top = 610.0
+margin_right = 108.0
+margin_bottom = 694.0
+size_flags_horizontal = 3
+size_flags_vertical = 10
+custom_constants/separation = 0
+
+[node name="strengthv" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_right = 28.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( -293.68, 76 )
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="Dexterityv" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_top = 14.0
+margin_right = 28.0
+margin_bottom = 28.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="Staminav" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_top = 28.0
+margin_right = 28.0
+margin_bottom = 42.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="Charismav" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_top = 42.0
+margin_right = 28.0
+margin_bottom = 56.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="Intelligencev" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_top = 56.0
+margin_right = 28.0
+margin_bottom = 70.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="Perceptionv" type="Label" parent="MainPanel/MarginContainer/HBoxContainer/IngameMenu/MarginContainer/StatHBoxContainer/StatValueBox"]
+margin_top = 70.0
+margin_right = 28.0
+margin_bottom = 84.0
+size_flags_vertical = 10
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "0"
+
+[node name="CenterVBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer"]
+margin_left = 118.0
+margin_right = 1258.0
+margin_bottom = 700.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WindowHBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer"]
+margin_right = 1140.0
+margin_bottom = 531.0
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextPanel" type="PanelContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer"]
+margin_right = 617.0
+margin_bottom = 531.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer/TextPanel"]
+margin_right = 617.0
+margin_bottom = 531.0
+custom_constants/margin_right = 3
+custom_constants/margin_top = 3
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer/TextPanel/MarginContainer"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 614.0
+margin_bottom = 528.0
+size_flags_horizontal = 3
+scroll_horizontal_enabled = false
+
+[node name="TextHistory" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer/TextPanel/MarginContainer/ScrollContainer"]
+margin_right = 611.0
+size_flags_horizontal = 3
+
+[node name="GraphicsPanel" type="PanelContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/WindowHBoxContainer"]
+margin_left = 621.0
+margin_right = 1140.0
+margin_bottom = 531.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.84
+custom_styles/panel = SubResource( 4 )
+
+[node name="ButtonPanel" type="PanelContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer"]
+margin_top = 535.0
+margin_right = 1140.0
+margin_bottom = 700.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.31
+custom_styles/panel = SubResource( 5 )
+
+[node name="ButtonPanelOrganizer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel"]
+margin_right = 1140.0
+margin_bottom = 165.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionPanelOrganizer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer"]
+margin_right = 617.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.68
+
+[node name="MainButtonOrganizer" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer"]
+margin_right = 348.0
+margin_bottom = 165.0
+
+[node name="ButtonRow1" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer"]
+margin_right = 348.0
+margin_bottom = 52.0
+size_flags_vertical = 3
+
+[node name="NextButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
+margin_right = 84.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="smell" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
+margin_left = 88.0
+margin_right = 172.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Smell"
+
+[node name="Examine" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
+margin_left = 176.0
+margin_right = 260.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Examine"
+
+[node name="Button4" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1"]
+margin_left = 264.0
+margin_right = 348.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRow2" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer"]
+margin_top = 56.0
+margin_right = 348.0
+margin_bottom = 108.0
+size_flags_vertical = 3
+
+[node name="hbutton2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow2"]
+margin_right = 84.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+keep_pressed_outside = true
+text = "AAAAAAAA"
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow2"]
+margin_left = 88.0
+margin_right = 172.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+
+[node name="Button3" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow2"]
+margin_left = 176.0
+margin_right = 260.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow2"]
+margin_left = 264.0
+margin_right = 348.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRow3" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer"]
+margin_top = 112.0
+margin_right = 348.0
+margin_bottom = 165.0
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3"]
+margin_right = 84.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+
+[node name="Button5" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3"]
+margin_left = 88.0
+margin_right = 172.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "AAAAAAAA"
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3"]
+margin_left = 176.0
+margin_right = 260.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3"]
+margin_left = 264.0
+margin_right = 348.0
+margin_bottom = 53.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.65
+custom_colors/font_color_disabled = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirectionalButtonOrganizer" type="HBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer"]
+margin_left = 621.0
+margin_right = 1140.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.57
+alignment = 1
+
+[node name="DButtonColumn1" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer"]
+margin_right = 170.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+alignment = 1
+
+[node name="NorthwestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+margin_right = 170.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
+text = "Northwest"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+margin_top = 56.0
+margin_right = 170.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
+keep_pressed_outside = true
+text = "West"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SouthwestButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1"]
+margin_top = 113.0
+margin_right = 170.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_constants/hseparation = 13
+custom_styles/focus = SubResource( 6 )
+text = "Southwest"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonColumn2" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer"]
+margin_left = 174.0
+margin_right = 344.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+alignment = 1
+
+[node name="NorthButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+margin_right = 170.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "North"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+margin_top = 42.0
+margin_right = 170.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+keep_pressed_outside = true
+text = "Up"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+margin_top = 85.0
+margin_right = 170.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Down"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SouthButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2"]
+margin_top = 127.0
+margin_right = 170.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "South"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DButtonColumn3" type="VBoxContainer" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer"]
+margin_left = 348.0
+margin_right = 519.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+alignment = 1
+
+[node name="NortheastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+margin_right = 171.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Northeast"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+margin_top = 56.0
+margin_right = 171.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+keep_pressed_outside = true
+text = "East"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoutheastButton" type="Button" parent="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3"]
+margin_top = 113.0
+margin_right = 171.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_disabled = Color( 0.168627, 0.164706, 0.172549, 1 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_hover = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_colors/font_color_pressed = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_styles/focus = SubResource( 6 )
+text = "Southeast"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="input_processors_node_references_sent" from="." to="InputProcessor" method="_on_FS2_input_processors_node_references_sent"]
+[connection signal="next_button_pressed" from="InputProcessor" to="." method="_on_InputProcessor_next_button_pressed"]
+[connection signal="room_switch_intended" from="InputProcessor" to="LocationProcessor" method="handle_room_switch"]
+[connection signal="directional_button_draw_needed" from="LocationProcessor" to="InputProcessor" method="_on_LocationProcessor_directional_button_draw_needed"]
+[connection signal="response_generated" from="LocationProcessor" to="." method="process_generated_response"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/Bunker" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/MaintenenceStoreroom" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/CommunalShower" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/GreyAbbeyLobby" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="room_information_sent" from="LocationProcessor/GreyAbbeyLibrary/UndergroundRestroom" to="LocationProcessor" method="_on_room_information_sent"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/NextButton" to="InputProcessor" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow1/Examine" to="InputProcessor" method="_on_Examine_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3/Button3" to="InputProcessor" method="_on_Button3_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/ActionPanelOrganizer/MainButtonOrganizer/ButtonRow3/Button4" to="InputProcessor" method="_on_Button4_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/NorthwestButton" to="InputProcessor" method="_on_NorthwestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/WestButton" to="InputProcessor" method="_on_WestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn1/SouthwestButton" to="InputProcessor" method="_on_SouthwestButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/NorthButton" to="InputProcessor" method="_on_NorthButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/UpButton" to="InputProcessor" method="_on_UpButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/DownButton" to="InputProcessor" method="_on_DownButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn2/SouthButton" to="InputProcessor" method="_on_SouthButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/NortheastButton" to="InputProcessor" method="_on_NortheastButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/EastButton" to="InputProcessor" method="_on_EastButton_pressed"]
+[connection signal="pressed" from="MainPanel/MarginContainer/HBoxContainer/CenterVBoxContainer/ButtonPanel/ButtonPanelOrganizer/DirectionalButtonOrganizer/DButtonColumn3/SoutheastButton" to="InputProcessor" method="_on_SoutheastButton_pressed"]

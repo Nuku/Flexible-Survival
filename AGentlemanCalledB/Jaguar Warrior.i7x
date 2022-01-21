@@ -23,6 +23,7 @@ Section 1 - Creature Responses
 hoodequipped is a number that varies.[@Tag:NotSaved]
 
 to say losetoJaguarWarrior:
+	project the Figure of Tehuantl_Male_hard_icon;
 	say "     [if HP of Player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
 	if anallevel is 3 and a random chance of 1 in 3 succeeds:
 		say "[JagWarVic_Anal]";
@@ -59,6 +60,7 @@ to say beattheJaguarWarrior:
 
 to say JaguarWarriorDesc:
 	setmongender 3;      [creature is male]
+	project the Figure of Tehuantl_Male_clothed_icon;
 	if HP of Tehuantl is 0 and inasituation is false:
 		say "     As you wander the halls of the museum, your attention is drawn to a large broken display case. What remains of the exhibit appears to document a powerful Aztec military unit known as jaguar warriors. As you wonder where the contents of the display case might have ended up you hear a low, rumbling growl behind you. Turning quickly to face this potential threat you [run paragraph on]";
 		now HP of Tehuantl is 1;
@@ -95,7 +97,7 @@ to say JagWarVic_Oral:
 	say "     Sated, the jaguar finally pulls his still twitching cock from your mouth in one quick motion, the sharp barbs sending one last ripple of pain through you as he does so. You slump to the floor as the powerful male releases your head, leaving you to recover from the encounter as he stalks off into the museum.";
 	NPCSexAftermath Player receives "OralCock" from Tehuantl;
 
-to say JaguarWarriorCaptured:
+to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him]
 	say "     The jaguar's weapon and shield clatter to the floor as your last blow sends him reeling. He stumbles backwards, barely managing to catch himself on a nearby display case. Trembling slightly, the large feline looks you in the eyes for a moment before his head drops in submission. You feel a surge of energy rush through you as the jaguar warrior finally acknowledges you as his better and you step forward to claim your hard-earned prize. You knock the jaguar's arm away from the display case he's supporting himself with and watch with satisfaction as he falls to one knee. With a low rumble emanating from somewhere inside you, you step around the beaten feline and press your foot against the middle of his back, pushing him to his hands and knees. Seeing himself be put in this position, Tehuantl himself actually pulls his spotted tail aside, exposing his tight ass to you in a submissive gesture.";
 	now sextablerun is 0;
 	say "     [bold type]Feeling like you could do... something to cement your mastery over this muscled feline, you let your thoughts wander through all the possibilities.[roman type][line break]";
@@ -182,6 +184,7 @@ to say TehuantlTameNonSexF:
 	say "[TameTehuantl]";
 
 to say TehuantlTameSex1: [player rubs balls, then fucks his ass -> male T]
+	project the Figure of Tehuantl_Male_hard_icon;
 	say "     Stroking a hand over the jaguar warrior's firm and muscled buttocks, you dip in a finger between their furry curves and brush it over his back door, drawing a little mewl as he tenses up. Quite sensitive, this feline - a clear sign of a virgin at anal sex. You almost stay right there, as the idea of playing with his ass a little springs up in your mind, but eventually decide to shift your hand deeper, on top of the tin globes of his balls. Cupping the jaguar's family jewels, you weigh them in your hand and comment that he's quite the virile kitty - and that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls, cock and ass - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
 	say "     The jaguar makes no attempt to resist as you position your [cock size desc of Player] [Cock of Player] cock at his rear, merely releasing a whimpering mewl as you tease his outer ring with the tip of your member. You groan in pleasure as you begin pushing into his tight opening, slowly driving your entire length into the whimpering kitty beneath you. As your hips meet his ass you lean forward over your plaything, reaching around his body to grasp his cock, hard and ready despite his current situation. As you gently stroke his cock you feel the feline barbs adorning it, finding them strangely soft and pliant. After teasing the beaten kitty for a short while you begin giving him a proper fucking, gripping his hips tightly as you pound into his tight bottom relentlessly[if Player is barbed], delighting in his yowls of pleasure and pain as your barbed shaft pistons in and out of his tight hole[end if]. You roar in pleasure as you rapidly push yourself to climax, holding the jaguar's ass tightly to your body as you unleash your [Cum Load Size of Player] load into his bowels while his own seed splatters onto the museum floor beneath him. As your climax begins to subside [if Player is barbed]the jaguar releases one last weak whimper as you pull yourself from his tight ass, your barbs scraping along his inner walls one last time before you[else]you pull yourself from the jaguar's tight ass and[end if] allow him to fall to the floor.";
 	NPCSexAftermath Tehuantl receives "AssFuck" from Player;
@@ -191,17 +194,18 @@ to say TehuantlTameSex1: [player rubs balls, then fucks his ass -> male T]
 	say "[TameTehuantl]";
 
 to say TehuantlTameSex2: [player rubs balls, then rides his dick -> male T]
-		say "     Twisting your upper body and leaning back a little, you reach out and cup the jaguar's family jewels. His furry balls are warm and delightfully soft against your skin - at the same time as they are nicely full and weighty. You just have to comment that he's quite the virile kitty - then add that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls and cock - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
-		say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
-		WaitLineBreak;
-		say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. Oh yeah - winning this fight really was worth it! You ride the muscled feline with great pleasure, playing your hands over his strong arms and ribbed abs. Quite a hunk - and he's all yours! A roar in pleasure rises in your throat you rapidly push yourself to a breathtaking climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of feline cum into you.";
-		say "     The jaguar's orgasm lasts a long while, with more and more of his potent seed gushing into your depths. The constant throb inside your body and twitching of his nubby barbs against your inner walls keeps the high from your own climax going - reducing you to the strength of a kitten from all the pleasure. Yet despite this, your sexual partner still does nothing to gain the upper hand. Clearly, he has learned his lesson - and is feeling far too good right now to care that he's gonna be your pet. In fact, the exhausted feline starts rumbling in a pleasant purr and looks up at you with adoration. Very nice - and you immediately get another idea what he can do for you next. Raising your hips a little, you slide off the barbed shaft in your pussy and move up to his head on your knees, leaving a trail of dripping cum all over his belly fur. Coming to kneel over his face, there is no hesitation at all for your boy-toy to start licking, eating his load out of your pussy.";
-		WaitLineBreak;
-		say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
-		NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
-		NPCSexAftermath Tehuantl receives "OralPussy" from Player;
-		say "[TameTehuantl]";
-		now HP of Tehuantl is 50; [male jaguar pet]
+	project the Figure of Tehuantl_Male_hard_icon;
+	say "     Twisting your upper body and leaning back a little, you reach out and cup the jaguar's family jewels. His furry balls are warm and delightfully soft against your skin - at the same time as they are nicely full and weighty. You just have to comment that he's quite the virile kitty - then add that he shouldn't worry too much about his fate. Sure, he's yours now, as are his balls and cock - but there's no reason this shouldn't be enjoyable for the both of you. And with that, you start to gently caress him with your hand, drawing a little surprised mewl as you do so. As you proceed to fondle him, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
+	say "     When you let go of him and rise to reposition yourself, the jaguar makes no attempt to escape, merely releasing a whimpering mewl as you take hold of his feline shaft, hard and ready despite his current situation. As you gently stroke his cock, you feel the feline barbs adorning it, strangely soft and pliant despite their sharp appearance. Satisfied that your plaything is ready for some fun, you position his cock just outside your [cunt size desc of Player] cunt and slowly lower yourself down onto it with another rumble of delight, the feeling of his soft barbs gently teasing your inner walls only adding to the pleasant sensation. As the jaguar's entire length is hilted inside you, you lean forward once again, gripping his shoulders tightly as you begin to ride his shaft roughly.";
+	WaitLineBreak;
+	say "     You moan and gasp in pleasure as you rise and fall along the stimulating barbed shaft while the jaguar groans and mewls beneath you. Oh yeah - winning this fight really was worth it! You ride the muscled feline with great pleasure, playing your hands over his strong arms and ribbed abs. Quite a hunk - and he's all yours! A roar in pleasure rises in your throat you rapidly push yourself to a breathtaking climax, your pussy clamping down tight around the feline member as your orgasm strikes, pushing the jaguar to climax as well. His entire form shudders beneath you as his warm load pulses into your body. Even as your climax begins to subside and you begin rocking your body against the shivering jaguar once again, his pulsing member continues to fire spurt after spurt of feline cum into you.";
+	say "     The jaguar's orgasm lasts a long while, with more and more of his potent seed gushing into your depths. The constant throb inside your body and twitching of his nubby barbs against your inner walls keeps the high from your own climax going - reducing you to the strength of a kitten from all the pleasure. Yet despite this, your sexual partner still does nothing to gain the upper hand. Clearly, he has learned his lesson - and is feeling far too good right now to care that he's gonna be your pet. In fact, the exhausted feline starts rumbling in a pleasant purr and looks up at you with adoration. Very nice - and you immediately get another idea what he can do for you next. Raising your hips a little, you slide off the barbed shaft in your pussy and move up to his head on your knees, leaving a trail of dripping cum all over his belly fur. Coming to kneel over his face, there is no hesitation at all for your boy-toy to start licking, eating his load out of your pussy.";
+	WaitLineBreak;
+	say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
+	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+	NPCSexAftermath Tehuantl receives "OralPussy" from Player;
+	say "[TameTehuantl]";
+	now HP of Tehuantl is 50; [male jaguar pet]
 
 to say TehuantlTameSex3: [player rubs nipples, then fucks his ass and pussy -> female T]
 	say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
@@ -305,7 +309,7 @@ When Play begins:
 	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 10;          [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 6;            [ Width in inches of female sex the infection will try to give a player. ]
+	now Cunt Tightness entry is 6; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 35;               [ Target libido the infection will rise towards. ]
 	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
@@ -323,109 +327,6 @@ When Play begins:
 	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
-	[ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say JagBodyDesc:
 	if hoodequipped is 0:

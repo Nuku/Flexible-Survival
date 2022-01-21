@@ -78,7 +78,12 @@ Version 2 of Urik by Wahn begins here.
 [ "Selective Breeding": discouraged from all sex that you don't plan for him        ]
 [ "Molestation Detox": discouraged from fight-sex                                   ]
 
-[ TODO: Add event where Urik finds the remains of a friend, who melted at the outbreak ]
+[ Collection of Ideas and Snippets                                                  ]
+[ - Event where Urik finds the remains of a friend, who melted at the outbreak      ]
+[ - Let Urik tell the player about his favorite times of fucking people             ]
+[   (pre infection rapes, orc interactions, etc.)                                   ]
+[ - Have another event with the orc researcher and get some orc cum protein shake/  ]
+[   strength supplement from him that doesn't make people addicted or turn them     ]
 
 
 CandyUrikInteraction is a number that varies.
@@ -162,7 +167,7 @@ Ball Count of Urik is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Urik is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Urik is 0. [number of cunts]
 Cunt Depth of Urik is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Urik is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Urik is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Urik is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Urik is false.
@@ -215,6 +220,9 @@ to say UrikTalkMenu:
 		say "     As you approach the large orc, Urik gives you a glance up and down, followed by a grunt. He shifts his stance a little, right hand bunching up to a fist and starting to rise, only to drop by his side and relax again as he aborts a reflexive fist-bump. 'So... hey,' the towering brute says instead, nodding to you, apparently unsure about how to act given your relative rank and position. 'Guess you're my boss now, eh?' he adds, his voice surprisingly free of defiance. You're about to answer when suddenly one of the other orcs in the drunken mob simply steps between Urik and yourself, rudely interrupting as he tries to shoulder past. And he really does only [italic type]try[roman type] to do so, as your newly won orc companion intercepts him with one hand on his chest. 'We're talking here, dipshit!' Urik growls, clamping his fingers around the somewhat smaller intruder's neck and literally lifting him off the ground. The next thing that happens is that the orc gets flung face-first into the nearby wall, hitting it with a thud, then crumpling unconscious to the floor.";
 		say "     The punishment that Boghrim put Urik through seems to have had a peculiar effect on the orc warrior, as he clearly didn't become a typical orc breeder, what with them being smaller, much more pliable and submissive. 'Fucker,' Urik grunts at the knocked-out orc, then turns back to you. 'No respect in some of these punks,' he comments. 'So, as I was saying, I'm all yours boss. Just tell me what you want me to do.' With that said, the orc's gaze flicks down to your crotch for a few seconds, and he subconsciously runs the tip of his tongue over his lips. From the looks of it, he's become a breeder in at least that aspect of things, inheriting the craving for cum they all have. It'll remain to be seen if this will remain the full extent of his transition, or if Urik's behavior is just an intermediary stage to something else.";
 		now PlayerMet of Urik is true;
+	else if "Broken" is listed in Traits of Urik:
+		say "     'Nothing much to say, you own me, I'm your slut,' the disgraced orc warrior says in a submissive tone. 'How do you want to fuck me next?'";
+		stop the action;
 	LineBreak;
 	project the figure of Urik_clothed_icon;
 	say "     [bold type]What do you want to talk with Urik about?[roman type][line break]";
@@ -319,13 +327,13 @@ to say UrikTalkMenu:
 		now sortorder entry is 70;
 		now description entry is "Offer Urik the chance to be your combat companion";
 	[]
-	if Perception of Urik is 1 or Perception of Urik is 2 or Perception of Urik is 4:
+	if Perception of Urik is 1 or Perception of Urik is 2 or Perception of Urik is 4: [1st + 2nd trip past the wyvern tree, then beer quest]
 		choose a blank row in table of fucking options;
 		now title entry is "Take him up on the looting trip he suggested";
 		now sortorder entry is 71;
 		now description entry is "Set out to get some nice loot with Urik";
 	[]
-	if Urik is in Main Hall and Loyalty of Urik > 0: [Urik is in the orc lair]
+	if Urik is in Main Hall and Loyalty of Urik > 0 and orc supersized breeder is not listed in companionList of Player: [Urik is in the orc lair]
 		choose a blank row in table of fucking options;
 		now title entry is "Send him to the library";
 		now sortorder entry is 99;
@@ -343,12 +351,11 @@ to say UrikTalkMenu:
 		now sortorder entry is 101;
 		now description entry is "Hand Urik a bottle of potent orcish cum to sate his cravings";
 	[]
-	[
-	choose a blank row in table of fucking options;
-	now title entry is "Ask him about what orc cum does for him"; [TODO: write this scene (rut/heat for Urik, orc cum effects - drunk + bulking up breeders + ...)]
-	now sortorder entry is 102;
-	now description entry is "Inquire about effects of orc cum on Urik";
-	]
+	if PlayerFriended of Urik is true or PlayerControlled of Urik is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him about what drinking orc cum does";
+		now sortorder entry is 102;
+		now description entry is "Inquire about effects of orc cum on Urik";
 	[]
 	if PlayerFriended of Urik is true or PlayerControlled of Urik is true:
 		choose a blank row in table of fucking options;
@@ -382,7 +389,7 @@ to say UrikTalkMenu:
 					say "[UrikTalk_Preferences]";
 				else if nam is "Talk with him about men":
 					say "[UrikTalk_Guys]";
-				else if nam is "Talk with him about women":
+				else if nam is "Talk with him about other genders":
 					say "[UrikTalk_Trans]";
 				else if nam is "Let him tell you the full story of that biker cop":
 					say "[UrikTalk_BikerCop]";
@@ -412,6 +419,8 @@ to say UrikTalkMenu:
 					say "[UrikRenameMenu]";
 				else if nam is "Give him a bottle of orc cum":
 					say "[UrikCumDelivery]";
+				else if nam is "Ask him about what drinking orc cum does":
+					say "[UrikCumEffects]";
 				else if nam is "Him getting pregnant":
 					say "[UrikPregDiscussion]";
 					if PlayerControlled of Urik is true:
@@ -426,6 +435,17 @@ to say UrikTalkMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+
+to say UrikCumEffects:
+	say "     Stepping up to the towering, muscular orc, you tell him that you're interested in the effects of orc cum. The orc looks at you[if PlayerControlled of Urik is true] with a calculating expression, [else], [end if]then makes a hand-waving gesture and grunts. 'What doesn't it do!? It's... potent stuff. Having pumped a lot of loads into guys, and now swallowed more than a few, I think I might actually know as much about it as anyone[if PlayerFriended of Urik is true]. Or more, because I'm not constantly stoned out of my mind being bred.' [else]. Being made into a cumslut does give one an inside view of it, I can tell you.' [end if]Letting out a snort at finding himself being the 'knowledgeable expert' on orc cum, Urik raises his eyebrows and looks at you. He clears his throat after licking his lips, then says, 'Well, the obvious thing even the dumbest brick-head of an orc can tell you is that it makes people drunk as fuck, very pliable and horny! As you wrestle someone, you just rub pre on their mouth or back door, and before long, they'll be in no condition to resist anymore! Then you take em home or seal the deal by breeding them right then and there!'";
+	say "     Shrugging his broad shoulders, the large orc adds, 'Though that's the easy, lazy way to get your lay. A welcoming breeder is one thing, but when it comes to breaking in a new guy, I like taking him to the mat while they've still got that fire inside him, you know?! Have him struggling all throughout a good wrestle, whimpering that he's not gay. Tensing his asshole as my dick presses against it, leaking pre on his pucker and feeling it tremble. Then BAM, you ram in and show the guy that he's nothing but your bitch! Hearing him yell in shock as he's broken in! Hah, it's so much fun to have a former 'top' pinned down under me, his hole stretched around my dick! Seeing a muscle stud's eyes go wide as your load splashes into him after a hard pounding really is the best!' Urik grins broadly as he says this, eyes having a far-away look to them for a moment as he seems to remember his favorite encounters in the recent past.";
+	WaitLineBreak;
+	say "     'So yeah, drunk and horny, all that good shit. And of course, if they become a breeder or just after a day or three, the guys you breed have their tummies swelling with an orcling. Maybe even twins if you really gave it to him good, or after a gangbang with a bunch of tops. Being pumped full of load after load kicks that off, making a breeding pouch in em, I mean. I remember there was one guy someone brought in who took almost a week to fully transform - stayed mostly human for a few days before he went green. Even so, he had his first little one the very next day after reaching the lair.' He gets a bit of a thoughtful expression for a moment, then adds, 'You know, I dumped loads in a fair number of breeders in the lair, and lots of guys outside of it. Mostly just once for the latter ones, so I don't think any of it took, but... I've been wondering if some of the breeder's orclings were mine. It's been a regret of mine, having become old without ever having had family. Mh, maybe if Dec had lived, we'd have adopted someone after settling down.'";
+	say "     The orc looks at the ground for a second, thinking, with his expression darkening quickly and him adding, 'But even if some orclings were mine, it didn't count for much in the [if Urik is not in Main Hall]old [end if]lair. The mob of guys kinda just absorbed any new warrior and any new orc never really was [italic type]mine[roman type]. Never had the chance to get to know em before they became just another rowdy punk.' Urik runs a hand through his long, black hair, biting his lip as he reaches back to rub his own buttocks for a second. 'As for being on the other end... man, there's nothing coming even close to describe how amazing orc cum is! You desire it, crave it, and only that will hit your special itch. Might just be orcs for the next one, but... when I chug down a good mouthful of creamy cum, it's like my asshole is itching for more to be shot into it. Fill me good, knock me up. Like... yeah, like a bitch in heat, kinda.'";
+	WaitLineBreak;
+	say "     'Personally, it also makes my dick hard as a rock, and I kinda want to sink that into someone. Not as urgently as getting my ass stuffed, but it's a proper drive to rut!' He grabs his crotch with a grin, as if to whip out his cock to demonstrate, then winks at you. 'Like [if Hunger of Chris is 0]that other orc you brought in[else]Chris[end if] for example - having a [if Libido of Chris is 1]breeder[else]stud[end if] right here in the library with me, strolling past with [if libido of chris is 1]his fertile ass[else]the faint smell of orc cum in the air after he jerks off[end if]... that drives me wild!' Urik snorts, then looks at you once more before he says, 'But there's more - remember all those breeders in the lair? If you think of it, they look like muscular gym bunnies even though most of what they do is lie around all day and get boned! Turns out orc cum really bulks you up too! Been feeling it myself a bit, lately.' ";
+	say "     That said, Urik takes a pose and flexes, making the muscles under his skin bulge to show his massive, herculean physique. Thinking back to the first time you ran into him, you got to admit that he looks even more toned than back then. 'Orclings work the same, pretty much. The little ones are born shredded as fuck - no wonder, marinating in all the loads that are pumped into their breeder daddies. Might actually be that the more loads the breeders get, the bigger the orc warriors that come out. From what the others told me, the first day after the breakout was a nonstop gangbang with everyone filling the piggies they overwhelmed. And the firstborn are among the stronger orcs - you know, Yatur, Koghh, Mul, and so on.'";
+	TraitGain "Orc Cum Lore" for Urik;
 
 to say UrikTalk1: [chatting over a drink]
 	say "     Urik says, '[one of]I still can't believe Boghrim did this to me. And all over that stupid little breeder...'[or]I'd never have believed how good it feels to be fucked before.'[at random]"; [more to be added]
@@ -788,7 +808,7 @@ to say UrikTalk_Companion: [companion Urik]
 	now orc supersized breeder is tamed;
 
 to say UrikTalk_Looting:
-	if Player is not booked:
+	if Urik is not booked and Urik is not bunkered:
 		if Perception of Urik < 3:
 			say "     You think about taking Urik up for a looting excursion, but then remember that the place he wants to go to is fairly close to the library. Also, he doesn't have his bag with him right now. Maybe take it up again when you're actually in the Grey Abbey Library.";
 		else if Perception of Urik is 4:
@@ -1293,11 +1313,10 @@ to say Henry_Choice:
 			say "Man, I think someone just doesn't want us to have a good time. I bet if we went to the other place, that'd be a catastrophe too. Let's just go back to the library.' The trip back is fairly quiet, with the orc not in the mood to talk as you trot along.";
 		TraitGain "Henry Survived" for Urik;
 
-
-
 to say UrikTalk_LibraryTransfer: [send him to the library]
 	say "     Urik listens to your instructions with a quiet intensity that makes it clear he commits the directions to the library to his memory. 'Okay [UrikPlayerAddress], I'll go there straight away.' With a playful slap at his muscled buttocks, you send him off into the city.";
-	move Urik to Sitting Area;
+	now Urik is nowhere;
+	TraitGain "Library Move Underway" for Urik;
 
 to say UrikRenameMenu:
 	say "     [bold type]What should Urik use to address you in the future?[roman type][line break]";
@@ -1518,6 +1537,7 @@ to say UrikSexMenu:
 			if calcnumber is 1:
 				LineBreak;
 				say "[UrikFirstFuck_Lair]";
+				TraitGain "Broken" for Urik;
 				now PlayerFucked of Urik is true;
 				now Loyalty of Urik is -1; [cuts out any of the library content]
 			else:
@@ -1920,14 +1940,175 @@ to say UrikSex_Submission: [player submits to Urik - bad end if the player treat
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 1):
+instead of navigating Grey Abbey Library while ("Library Move Underway" is listed in Traits of Urik and Loyalty of Urik is 1):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Urik Arrival[line break]";
 	project the Figure of Urik_clothed_icon;
-	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.' The two of you talk a little more about what's going on around the library, then Urik goes upstairs to hang out in his new place.";
+	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
+	if (number of bunkered people + number of booked people > 2): [anyone there besides just Urik?]
+		if (number of bunkered people + number of booked people > 3):
+			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call everyone in the building together, to explain what Urik is doing here. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
+		else if (number of bunkered people + number of booked people is 3):
+			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call the other inhabitant of the building to join you, explaining what Urik is doing here. [bold type]Soon, you have laid out how things will go, getting the following reaction:[roman type][line break]";
+		else:
+			say "     The two of you talk a little more about what's going on around the library, then Urik goes upstairs to hang out in his new place.";
+		LineBreak;
+		if Alexandra is booked or Alexandra is bunkered:
+			say "     Alexandra crosses her arms and looks Urik up and down, then says in an unimpressed tone, 'I don't know about this one, seen tougher dudes out there. Sure you don't want to take him back to the shop and get a bigger one?' Grunting at the challenge, Urik meets her gaze, with the two of them staring at each other for half a minute before Urik snorts. 'I like you, bitch! You're just the right kind of dog for this city!'";
+			WaitBreakReactions;
+		if Amy is booked or Amy is bunkered:
+			say "     Amy strolls right up to the towering orc, standing very close and gazing up at him with wide open eyes. 'Wow, you're so big. Like a giant... but, are you a bad guy? I read some things about... you know, people with tusks.' Urik chuckles and pats her head. 'Don't believe everything in a book. You've got nothing to fear from myself, little lady.' After she walks away soon after, he remarks, 'Cute doggie.'";
+			WaitBreakReactions;
+		if Blanche is booked or Blanche is bunkered:
+			say "     Blanche approaches Urik with more than a little caution, her eyes wide. 'Hello. I'm Blanche,' she greets him with a wave. Only looking at her for a moment and finding nothing of particular interest to him, the orc simply replies. 'Urik,' offering her a hand that dwarfs her own as she shakes it. 'Pleased to meet you,' the wolfess says before sensing that Urik is barely interested in getting to know her. With a mental shrug, Blanche walks off again, the orc not paying her any more notice.";
+			TraitGain "Blanche - Disinterested" for Urik;
+			TraitGain "Urik - Large Orc" for Blanche;
+			WaitBreakReactions;
+		if Brutus is booked or Brutus is bunkered:
+			if DBCaptureQuestVar is 5: [controlled]
+				if "Master's Bite" is listed in Traits of demon brute:
+					say "     Brutus steps up, inserting himself between Urik and yourself. He gives Urik a stare, as if measuring the orc's strength and worth, then reaches out to offer a hand to shake. As they grasp hands, you can see muscles flex on both of their arms as they begin to squeeze as hard as they can. Eventually, Brutus nods and ends the little dick-measuring contest and grunts, 'You'll do.'";
+				else if Resolution of Demonic Redemption is 7: [somewhat pacified]
+					say "     Brutus throws a grim stare at Urik, simply standing where he is and not saying anything. The large orc gives him the finger and then ignores him.";
+				else: [standard hateful captive]
+					say "     Throwing piercing stares at Urik, your captive demon Brutus growls, 'More meat! Once I break free, I'll rape you both into bleeding wrecks!' The orc gives him the middle finger and shoots back, 'Better men have tried, fucker!'";
+			else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+				say "     Looking over at Urik, your demon companion Brutus gives the orc a nod, acknowledging someone who can match his strength. The orc raises one eyebrow and nods back to the demon, exchanging a greeting without saying a word.";
+			WaitBreakReactions;
+		if Candy is booked or Candy is bunkered:
+			say "     'I know who I want to man-handle me now! Hellllooo muscle daddy!' Candy calls out in a teasing tone, shaking his hips and tail as he saunters up to Urik. As the candy coon trap starts to grope the much larger male's crotch, the orc comments amusedly, 'So, you're the local buttslut then? I usually prefer men whose balls have already dropped, but I can see the appeal of a happy and available breeding hole.' Candy snorts and steps back a step, then winks at Urik and replies, 'Sure thing, daddy. I'll be waiting for you.' With that, he sashays away, flipping his skirt up to show his butt to the orc before turning a corner behind the bookshelves.";
+			WaitBreakReactions;
+		if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+			say "     Your pink raccoon pet comes up to Urik, looking at him with adoration and going right in to squeeze the orc's leg muscles and grope his bulge. The next thing after that is him dropping to all fours, ass raised high and presenting his asshole to the green-skinned brute. Urik chuckles and says, 'Eager as a breeder, hah! I'll find you when I want to drop a load.' Then he shoos away the mostly mindless pet you allowed Dr. Mouse to create.";
+			WaitBreakReactions;
+		if Carl is booked or Carl is bunkered:
+			say "     Carl stiffens warily as he looks at Urik, then addresses you with the question, 'Sure it's wise to bring someone like him here? Imagine him going berserk suddenly if his lust overwh-' Urik scoffs and interrupts, 'Speak for yourself, you overgrown sled dog! Seen a fuckton more mutts in animal fuck-piles than rampaging orcs. Also, hell of a way to talk about a veteran. Served my time too, you know!' Carl opens his mouth, then closes it suddenly, staring at the orc in surprise. 'I - uhm... sorry,' he starts to stumble over his words, until Urik adds, 'It's fine, don't get your tail in a twist! More of a twist than it already is, hah!' and offers a large hand for the husky to shake, burying the hatchet between them.";
+			WaitBreakReactions;
+		if Chris is booked or Chris is bunkered: [TODO: include Player-Dad status]
+			if Libido of Chris is 0: [half-orc]
+				say "     Chris strolls right up to Urik, looking up at the larger male and offering him a hand to shake. 'Hey there and welcome to the library! I'm Chris!' Despite the his welcoming words, it is immediately apparent to both yourself as well as Urik that he's fairly tense as he stands before the taller man, most likely a result of Val's warnings about other orcs. 'Relax, I'm not gonna eat ya, kid!' the much bigger orc snorts and grabs Chris's hand, squeezing it firmly. The half-orc relaxes at least a little, but still seems quite aware of their comparative sizes as he exchanges more words with Urik. 'We can hang out sometime, and have a talk, orc to orc!' Chris says at the end, then makes his exit. After watching Chris walk away Urik comments, 'Friendly kid. Don't think I've ever seen an orc that was so... human. Is he some kind of half-breed or so?'";
+				TraitGain "Chris - Knows Half-Orc" for Urik;
+				TraitGain "Urik - Knows Neutral" for Chris;
+			else if Libido of Chris is 1: [orc breeder]
+				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+					say "     Chris walks up to Urik, then shily raises a hand, stretches it forward a little and pulling it back before touching the orc's crotch. Chuckling, Urik tells him, 'My eyes are up here, you know!' Prompted like that, Chris finally pulls his gaze away from Urik's bulge and glances up at him, saying 'Hello... uhm, Urik. I'm Chris. Are you a breeder too? I didn't think a warrior would talk to me.' The larger orc snorts somewhat nervously, brushing away his question and instead saying, 'Don't you worry your pretty little head about that! I know you must be itching to worship all this!' With that, he waves a hand in front of the rippling muscles of his chest, then reaches out to run his big fingers through the long hair on Chris's head. Grabbing hold of the smooth strands in his fist, you can see the corners of Urik mouth rise into a lusty smirk as he remembers the good times he had making use of breeder boys just like this. Yet then he pauses, glancing over to you as a reminder of just what brought him here to this place. Letting go immediately, Urik instead just pats Chris on the head gently and says, 'Run along now, little breeder. I'm sure we'll see each other plenty.' Nodding eagerly, the orc breeder does as he was told.";
+					TraitGain "Chris - Knows Slut Breeder" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
+				else: [happy breeder]
+					say "     Chris walks up to Urik, then shily raises a hand, waiting for the orc to take it, while his eyes at the same time flick down to linger on the orc's crotch for a moment or two several times. Chuckling, Urik tells him, 'My eyes are up here, you know!' Letting out an embarrassed laugh, Chris quickly pulls his gaze away from Urik's bulge and meets his gaze fully, saying 'Hey there! It's nice to meet you. I'm Chris!' The bigger orc's widen a little in surprise at the talkativeness of this breeder, and Chris quickly shoots another sentence afterwards, 'Maybe we can hang out sometime?' Urik catches himself before long and replies, 'Yeah, sure. Why not. We can... talk, and stuff.' Chris smiles at him, 'Awesome! See you then, big guy!' With that, the orc breeder gives a little wave and walks away, leaving Urik to look after him with a thoughtful expression on his face. 'You know, I think that's the most words I ever exchanged with a breeder. Don't know how to feel about that. It's odd, but kinda nice too.'";
+					TraitGain "Chris - Knows Happy Breeder" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
+			else if Libido of Chris is 2: [orc warrior]
+				if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits: [player's subbing for Chris, orc got rougher] [TODO: split out subby dad?]
+					say "     Chris strides up to Urik, coming fairly close before the two of them size each other up. The older orc is a fair bit bigger than Chris, which is saying a lot, given that Chris out-masses most bodybuilders. Grunting in recognition of each other's strength, Chris still tries a sudden chest-bump against the other orc, as if trying to push him over. Urik pushes right back, grunting into Chris's face with his tusks bared. No matter what his role to you, the orc is far from ready to just give in to others.";
+					TraitGain "Chris - Knows Dom" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
+				else: [Bro/Bro with Benefits/Dad with Benefits - more chill warrior] [TODO: Expand on this]
+					say "     Chris strides up to Urik, coming fairly close before the two of them size each other up. The older orc is a fair bit bigger than Chris, which is saying a lot, given that Chris out-masses most bodybuilders. 'Nice bod, dude!' Chris acknowledges Urik's muscular physique, then raises a hand to exchange a fist-bump and a nod.";
+					TraitGain "Chris - Knows Bro" for Urik;
+					TraitGain "Urik - Knows Neutral" for Chris;
+			WaitBreakReactions;
+		if Colleen is booked or Colleen is bunkered:
+			if SarahSlut < 2: [not transformed, or only a little]
+				say "     'I think I'll keep my distance, thank you,' Colleen comments, looking at Urik with suspicion. He huffs, 'You got nothing that interests me, sugartits!' and dismisses her with a wave of his hand.";
+			else:
+				say "     'You're not going to let him fuck me, are you? His cock must be enormous!' Colleen comments, looking at Urik with suspicion. He huffs, 'You got nothing that interests me, sugartits!' and dismisses her with a wave of his hand.";
+			WaitBreakReactions;
+		if David is booked or David is bunkered:
+			say "     Staring open-mouthed at the muscled bulk of the newcomer, David catches himself staring and shakes his head, as if to clear it. Then he moistens his lips and swallows, steeling himself to walk up to Urik and giving him a nod in greeting. 'Private David Jackson, nice to meet you.' Smiling at the soldier, the orc replies, 'You can call me Urik. Don't worry, I don't bite - unless you ask nicely.' The human soldier blushes and laughs, his eyes widening as he realizes the orc wasn't exactly joking. 'Err... yeah, I'm good. See you later.' With that, he backs away, not taking his eyes off Urik before he's several feet away.";
+			WaitBreakReactions;
+		if Denise is booked or Denise is bunkered:
+			say "     With a flutter of her wings, Denise lands on top of one of the long bookshelves, sitting there and looking over at Urik. She seems fairly wary of getting too close to such a large man. Urik glances up to her and calls out, 'You know, I'm not a bad guy. No need to hide. Uhm... you got nice feathers. Very blue and all.' She fans out a wing and gives a hint of a shy smile, then folds it back in again, still not coming down.";
+			WaitBreakReactions;
+		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+			if HP of Elijah is 99: [evil]
+				say "     Studying Urik for a moment with a smirk on his face, Elijah asks, 'So, why's a big brute like you taking orders? Or are you a whiny bitch on the inside?' Urik gives him the middle finger and replies, 'Trying to be bossy, pretty-boy? Fuck off!' The fallen angel gives Urik a dark stare, muttering under his breath, 'We'll see about you, asshole!' as he walks away in a huff.";
+			else: [good]
+				say "     Walking up to Urik, Elijah gives the orc a friendly smile and says, 'May you find peace here.' Raising one eyebrow, Urik replies, 'Dude, you've [italic type]seen[roman type] what's going on in the city? Big whup about peace - now it's survival of the strongest!' The angel lets out a sigh, ruffling his feathers a bit to console himself. 'I - I hope people can get over that. You got to believe, you know! How about we talk about this some more, later?' With a strained smile, he waves to the orc and leaves soon after that.";
+			WaitBreakReactions;
+		if Eric is booked or Eric is bunkered:
+			if HP of Eric > 0 and HP of Eric < 21:
+				say "     Looking at the huge, muscular orc, Eric appears to decide that it'd be best if he keeps his distance. The young man quickly vanishes behind the bookshelf he looked out from.";
+			else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+				say "     Looking at the huge, muscular orc, Eric approaches cautiously before saying, 'Hey there, big guy. Uhm... welcome to the library?' The young man shakes hands with Urik, then goes back to what he was doing before.";
+			WaitBreakReactions;
+		if Fang is booked or Fang is bunkered:
+			say "     Fang pads closer, sniffing the air and looking at Urik, then appears to decide that the orc isn't an immediate threat and sits down, keeping an eye on the orc. 'Urban wolves, eh? Reclaiming civilization for the wild, I guess?' Urik comments, glancing at Fang with a raised eyebrow.";
+			WaitBreakReactions;
+		if HP of Fiona > 4:
+			say "     Seemingly appearing from a dark corner in which she was hiding, Fiona stalks closer on all fours, then brushes up against Urik's legs and purrs. He smiles and bends down to pet her while saying, 'Pspspss - ouch!' In typical feline fashion, she's bitten him (lightly) after he barely touched her, followed by dashing away a little, then looking over her shoulder and purring more to draw him closer again. Shaking his hand, Urik grunts at her, 'You can forget about that, you little bitch. I like nice cats, not hormonal pussy monsters!'";
+			WaitBreakReactions;
+		if Gabriel is booked or Gabriel is bunkered:
+			say "     Curious about the orc, Gabriel comes closer and says hello. At the same time, Urik takes in the angel's body, collar and the wrist- and ankle-cuffs, letting out a lewd chuckle. 'Tamed him yourself, didcha?' Reaching up to touch his collar, Gabriel lowers his head submissively and says, '[Master] showed me what I was made for.' He stands there, with Urik's hungry gaze focused on him, until the orc says, 'Nice!' Then the angel goes back to where he came from.";
+			WaitBreakReactions;
+		if Hayato is booked or Hayato is bunkered:
+			say "     Walking up to Urik and showing a friendly expression, Hayato shakes his hand and introduces himself, then adds, 'Kinda nice to see that I'm not the only one who ended up in primary colors. Crazy times, eh?' Urik smirks, then shrugs. 'I kinda like it, being green!' He gives the oni a friendly pat on the arm, adding, 'Red's your color, too! Kinda makes me wonder if you'd have yellow kids if I knocked you up!' Hayato's eyes bulge as he takes in these words, with his mouth opening and closing in shock. 'Oh, haha...' he laughs embarrassedly, then walks off, not realizing that Urik could actually impregnate him.";
+			WaitBreakReactions;
+		if Helen is booked or Helen is bunkered:
+			say "     Dashing towards Urik on all fours, Helen goes in to sniff him, then licks his hand as he leans down to reach for her with a somewhat puzzled expression. 'Is this a dog or something? Or did you go through a lot of training with her?' the orc asks, then pats her head when you confirm her origins. [if Lust of Helen > 3]'New friend?' she suddenly asks, followed by a happy bark as Urik says, 'Sure, I always liked well-trained dogs.' [end if]Afterwards, Helen happily runs off.";
+			WaitBreakReactions;
+		if Hobo is booked or Hobo is bunkered:
+			say "     Hobo rushes up to meet the new person with his tongue hanging out of the side of his mouth. Urik leans down to let him sniff his hand, then proceeds to give the dog's ears a good scratch while releasing a warm chuckle.";
+			WaitBreakReactions;
+		if Honey is booked or Honey is bunkered:
+			say "     Honey buzzes through the air stopping just inches away from Urik's face and inspecting him before quickly saying, 'Hi mister! You're really big' before giggling into her hands and flying away.";
+			WaitBreakReactions;
+		if Korvin is booked or Korvin is bunkered:
+			if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+				say "     Leaning against the end of a bookshelf and keeping his distance, Korvin looks to you after just a quick glance at Urik. With you having broken him in to be submissive to you, it seems the German shepherd is looking to take his queues on how to treat Urik from yourself and isn't really interested in talking with him.";
+			else:
+				say "     Leaning against the end of a bookshelf and keeping his distance, Korvin gives Urik a wary glance, then nods to him. 'I'll just... stay out of your way, big guy, alright?' Then the usually so cocky German shepherd ducks around the corner and makes himself scarce. After he is gone, Urik grunts and glances to you. 'Mh, he looks like the type of guy that's fun to tussle with, but then that reaction... someone abuse your dog before? Saw the scar on his muzzle, and all.' You nod in confirmation and explain that you found him like that, wild in the streets, which draws some anger from the orc - not at you, but rather the people who did things to Korvin.";
+			WaitBreakReactions;
+		if Klauz is booked or Klauz is bunkered:
+			say "     Klauz stays sitting on a nearby sofa for a long while, casually licking a paw and stroking it over his head-fur while throwing a sidelong glance or two in the direction of the orc. Then eventually, he gets up and saunters closer, sniffing the air as he draws circles around Urik, that end up with him brushing up against the tall man's legs. As he rubs his fur against the orc, spreading his scent all over the man, the felinoid purrs like an idling motor, drawing Urik to bend down and pet him. 'Affectionate pussycat, isn't he?'";
+			WaitBreakReactions;
+		if Malik is booked or Malik is bunkered:
+			say "     Malik struts up to Urik, grinning at the other orc and saying, 'Hey man, nice to meet'cha!' He gives the taller man a fist-bump, then goes on to say, 'Wow, you're shredded as fuck! I wanna bulk up just like you!' Urik chuckles and raises one arm to flex and show off, then pat's Malik's shoulder. 'Sure thing, kid. We should work out together sometime!' They exchange some more words with each other, until Malik eventually makes his goodbyes and walks off.";
+			WaitBreakReactions;
+		if Nadia is booked or Nadia is bunkered:
+			say "     Nadia gives Urik a shy smile and waves to him in greeting. 'Hello there. I - I hope you'll want to be a nice neighbor? Just want to have a nice, secure nest, you know.' Raising his eyebrows, Urik replies, 'Okay then, I'll be sure to put a stomp on any egg-thieves coming in, that what you wanted to hear?' The anthro bird smiles in relief and adds, 'Thank you! I'll have to think of some way to pay you back. Talk to you later...' With that said, she walks off, a thoughtful expression on her face. 'Got a bit of a one-track mind, that one, eh?' Urik comments and shrugs.";
+			WaitBreakReactions;
+		if Rane is booked or Rane is bunkered:
+			say "     Sauntering up to the orc with a smirk on his face, Rane nods to Urik and says, 'Hey there, name's Rane. Guess I'm getting some competition for picking up guys around here, knowing that orcs don't go for women, eh? I personally like either, hah! Or are you more of an bottom yourself, my man?' Scrunching up his features at the last question, Urik gives Rane a stare and snorts derisively. 'Shows how much you know, blue man. A typical orc breeders is shorter and less muscular, about shoulder-height for me! And I'd like to see you try competing with me!' The blue oni chuckles at the combative reply and says, 'Okay, it's on then - we'll see who gets laid first, and by whom!' With a wink at Urik, he turns around and struts off.";
+			WaitBreakReactions;
+		if Ryousei is booked or Ryousei is bunkered:
+			say "     Ryousei walks up to Urik with measured steps, eyes focused on the orc as if taking stock of how he holds himself, his strength and experience. When the tiger soon comes to a halt before Urik, he gives a shallow bow in greeting. 'Greetings Urik, my name is Ryousei. I recognize you as a fellow warrior, and do hope we will have the chance to talk over tea sometime.' Glancing over to you, the tiger adds, 'For all its barbarism and oddly sexual customs, your world continues to surprise me. I did not believe I could ever have a civil conversation with one of the blood-ragers of the Southern Wastes - or this world's equivalent, at least.' Eyebrows drawing together, Urik stares at the tiger and asks, 'Wait a minute - are you calling me some sort of savage?' Ryousei raises one paw in a pacifying gesture and shakes his head. 'My apologies, I was just making a comparison to my own home plane. No offense meant, I assure you. I'll gladly discuss this with you later.' With another bow to both of you, Ryousei then makes his exit. Urik grumbles under his breath as he watches the feline leave."; [TODO: Adjust Ryo/Xerxes scene a bit to let Xerxes give consent (awesome fruit, etc.)]
+			WaitBreakReactions;
+		if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+			say "     Sarah confidently strides up to Urik and offers her hand in greeting. 'It's always good to see more sane people come here. I'm sure if we hold together we'll make it out of this too!' Himself being fairly at home in the chaos that has spread throughout the city, the orc gives a casual shrug and shakes the husky's hand as he replies, 'I wouldn't worry too much about that. I can punch out anyone coming in to try something in here!' Sarah gapes at Urik open-mouthed as she takes in his words, then gives her rebuttal a moment after. 'But what about all the innocents that cannot protect themselves?' Shrugging, the orc replies flippantly, 'They're not my problem, are they?' Scrunching up her muzzle, the husky can only shake her head and then storms off."; [TODO: add "expected better from a woman" in the Sarah/Alexandra clash]
+			WaitBreakReactions;
+		if Spike is booked or Spike is bunkered:
+			say "     Walking closer and looking at Urik with big eyes, Spike asks, 'So is he going to be muscle for our crew? No one will be able to stop us together!' Raising one eyebrow, the orc replies, 'If so, what do you think you can contribute? Must be travel entertainment or for crawling into narrow holes, with nothing but that weak beanpole physique to speak for you.' Dismayed at not being taken seriously, Spike throws back, 'Hey! I can fight!' As Urik flat out starts laughing, the dobie stomps off to sulk somewhere else."; [TODO: add "beanpole" to Spike's later scenes]
+			WaitBreakReactions;
+		if Sturm is booked or Sturm is bunkered:
+			say "     Sturm regards the approaching orc with evident caution, his fur bristling even if he manages to keep his expression relatively civil. 'And who's this? Giving the orcs a chance at experiencing being enslaved?' he addresses you. 'I'm no-one's slave, wolf,' Urik growls in response, advancing menacingly towards him. 'Call it what you want. You'll never get rid of the scent that clings to you now. You may be bigger and tougher than most orcs I've seen, but you've been on the receiving end against your will,' Sturm calmly replies, nonetheless remaining out of reach. Before the situation can get out of hand, you get Urik's attention, the orc remembering that he shouldn't start a fight this soon, even if he would probably win. Taking a deep breath, Urik calms himself. 'Give it time. I'll have you on all fours like the dog that you are,' he says threateningly towards Sturm. The wolf glares back with a steely gaze but thinks better of baiting him again. Deciding he has better things to do, Sturm leaves to check on his mother, Urik watching him leave with a calculating expression.";
+			TraitGain "Sturm - Mouthy Doggy" for Urik;
+			TraitGain "Urik - Brute" for Sturm;
+			WaitBreakReactions;
+		if Sven is booked or Sven is bunkered:
+			if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+				say "     Coming up to the large orc, Sven looks up to Urik's face and says, 'Wow, you're really big. Nice to meet you.' Bravely sticking out his hand in greeting, he shakes with Urik. Having picked up on the snow leopard's accent, the orc warrior asks, 'So, where are you from?' 'I'm from Norway and an exchange student,' Sven replies. 'Guess you didn't expect turning into a pussycat or roaming fighting random people in the streets when you picked the US to travel to, eh?' The two of them chat a little bit before Sven eventually makes an exit, going back to what he was doing before.";
+			else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+				say "     Stepping out from behind a tall bookshelf, Sven saunters over towards Urik and yourself, swinging his hips a little as he does so. 'Wow, you're... you're so big!' he says in awe as he reaches Urik, realizing just how much the orc is towering over him. 'That I am!' Urik confirms with a chuckle, then reaches out to run a finger along Sven's jawline and touches the collar around his neck when the slender male looks up. 'Like being a good little pet, eh?' he asks and strokes over the feline anthro's head, with Sven leaning into his touch and purring loudly. A casual glance down to his crotch, you can see the snow leopard's cock starting to push out of his sheath a little too. When he leaves a little while later, Urik chuckles and says, 'Cute, for a femboy.'";
+			else:
+				say "     Shily stepping out from behind a tall bookshelf, Sven keeps his extra long and thick tail raised before himself, partly hiding behind it. 'Wow, you're... you're so big!' he says in awe, staring at the orc towering over him. 'That I am!' Urik confirms with a chuckle. Having picked up on the snow leopard's accent, the orc warrior asks, 'So, where are you from?' 'I - uhm, I'm from Norway. An... an exchange student,' Sven replies, somewhat tongue-tied after being put on the spot. 'Guess you didn't expect turning into a pussycat or roaming fighting random people in the streets when you picked the US to travel to, eh?' When he leaves after exchanging some more words, the orc lets out a snort, coupled with a roll of his eyes. 'Hah, femboys...'";
+			WaitBreakReactions;
+		if Tehuantl is booked or Tehuantl is bunkered:
+			if Tehuantl is male:
+				say "     Tehuantl steps into view from between the bookshelves, bearing his shield and Aztec sword as he walks up to the orc. The jaguar warrior comes to stand before him, sizing up Urik for a long moment before giving him a smile that bares the feline's fangs. 'You are strong, this is good. I will gladly call you brother, as another warslave honor-bound to the master.' Having said what he wanted, the anthro warrior turns and strides away, leaving Urik looking after him with a somewhat befuddled expression. 'Err... what was that? He looked like some sort of reenactor to me at first, but...' You quickly explain where and how you met Tehuantl, and that he genuinely believes to be an authentic Aztec warrior. 'Huh, never a dull moment in this city, eh? He's got a nice bod though, even if he's loopy.'"; [TODO: adjust after reworking Tehuantl as a character, and/or the Korvin/Tehuantl scene]
+			else:
+				say "     Tehuantl steps into view from between the bookshelves, walking up to the orc with her hips swaying side to side. She smiles at Urik, holding her upper body in a pose that exposes her breasts quite nicely. Of course, this holds little interest for the orc, who looks more bored than anything else. Seeing her charms fail makes the jaguar-woman's smile waver a little, before she catches herself and gives Urik a bow of her head. 'Welcome to this place to you,' she says, then makes her exit soon after.";
+			WaitBreakReactions;
+		if Xerxes is booked or Xerxes is bunkered:
+			say "     Dashing towards Urik on all fours, Xerxes goes in to sniff him, then licks his hand as he leans down to reach for the human dog with a somewhat puzzled expression. 'Is this a dog or something? Or did you go through a lot of training with him?' the orc asks, then pats the young man's head when you confirm his origins. 'Sweet little package he turned into,' Urik comments and lets his hand slide down Xerxes's back, [if Lust of Xerxes > 6]tracing the tattooed leash's path across his smooth skin, then finally [end if]giving the human dog's ass a squeeze that is happily received. [if Lust of Xerxes > 3]'Like new friend!' Xerxes proclaims suddenly, wiggling his rear a little to rub against the orc's palm. [end if]A little while later, the transformed canine trots off to relax in one of his favorite spots.";
+			WaitBreakReactions;
+		now IntroReactionCounter is 0; [reset]
+		TraitGain "Introduced" for Urik;
+	remove "Library Move Underway" from Traits of Urik;
+	move Urik to Sitting Area;
 	now Loyalty of Urik is 2; [arrived safely and had a talk with the player]
 
 instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 2 and a random chance of 1 in 3 succeeds):
@@ -1975,7 +2156,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Territory Marker	"Territory Marker"
 
-Territory Marker is a person. [for easy saving, and in vase some variables are needed in the future]
+Territory Marker is a person. [for easy saving, and in case some variables are needed in the future]
 Description of Territory Marker is "[MarkerDesc]".
 
 to say MarkerDesc:
@@ -2244,6 +2425,56 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
 
+
+[ ------------------------------------------------------------------------------------------------ ]
+
+[
+instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Loyalty of Urik > 8 and Urik is booked and Korvin is booked and "Relationship_Talk_Done" is listed in Traits of Korvin):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	if debugactive is 1:
+		say "     DEBUG: Urik meets Korvin[line break]";
+	say "     Making your way through the city on the way back to your home base in the Grey Abbey Library, you soon see the familiar shape rise up before you. Thankfully your trip was fairly uneventful, as you managed to avoid the attention from the more hostile infected, and others went out of your way or were 'busy' fucking each other's brains out. Crossing the street [if Territory Marker is in Main & 7th Street]and walking past the territory marker for your 'tribe' that Urik put up[end if] you stride up the broad steps in front of the library door and enter the building, with the heavy front door swinging shut with a comforting thud behind you. You start to relax, having reached your safe home territory, but before you can do much more than start to put down some of your gear, two voices call out to you almost at the same time:";
+	say "     The first one is Korvin's, saying, 'Hey [if Player is not defaultnamed][name of Player][else]boss[end if], welcome back!' Your German shepherd is lurking around between the bookshelves a little bit further back on the right, putting down a book and starting to come closer with his tail wagging behind his back. The second voice belongs to Urik, who must have heard you come in, as he strolls down the stairs from above and is on the left half of the splitting stairway as he calls, 'Welcome [if Player is not defaultnamed][name of Player][else]chief[end if]! Been pretty quiet while you were out.' Approaching from two directions, the men size each other up with sidelong glances at each other, then come to stand before you, with some feet distance between them. Seems like they never really talked with each other in any meaningful way before, despite living in the same building. If you had to guess why, you'd say that Korvin likely stayed well out of the way of the much larger orc - for all his usual cocky arrogance, the anthro wouldn't want to chance being abused.";
+	WaitLineBreak;
+	say "     Seems like it's well past time that you introduce the two of them to each other, so you ";
+	if "Relationship_Lover" is listed in Traits of Korvin and "Private Breeder" is listed in Traits of Urik: [two boyfriends]
+		say "...<choice point - threeway relationship, or each separate for the player>...";
+	else if "Relationship_Lover" is listed in Traits of Korvin: [Korvin's the special one]
+		say "...Urik's your warrior bro";
+	else if "Private Breeder" is listed in Traits of Urik: [Urik's the special one]
+		if "Relationship_Tool" is listed in Traits of Korvin: [Korvin's just trash]
+			say "...Urik doesn't have to respect Korvin...";
+		else if "Relationship_Bro" is listed in Traits of Korvin: [Korvin's a bro]
+			say "...Urik should respect Korvin";
+	else: [neither of them is taken off limits]
+		say "...";
+]
+
+[ "Everything Goes": he may fuck or be fucked by other people                       ]
+[ "Stud": he may fuck other people                                                  ]
+[ "Private Breeder": he may not touch others                                        ]
+[ "Selective Breeding": discouraged from all sex that you don't plan for him        ]
+[ "Molestation Detox": discouraged from fight-sex                                   ]
+
+
+[ Relationship Memory Traits for Korvin:                                                                     ]
+["Relationship_Bro" - Player and Korvin are buddies, might fuck someone together, no committed relationship  ]
+["Relationship_Lover" - Player told Korvin they want more, committed relatinship, etc.                       ]
+["Relationship_Tool" - Player uses Korvin and expects him to do as he's told                                 ]
+
+[ Sex Rules for Korvin in the Library + Bunker                                                               ]
+["Library_free fucks" - Korvin may fuck anyone in the library freely - as long as he doesn't force it        ]
+[   + "Relationship_Lover" + "Harem Master" Player Feat - lover may fuck your harem too                      ]
+[   + "Relationship_Bro" + "Harem Master" Player Feat - bro may fuck your harem too                          ]
+["Library_no fucks" - Korvin should not fuck anyone in the library                                           ]
+[   + "Harem Master" feat for the player - no access for him                                                 ]
+["Library_bitched out" - Korvin is free game for anyone                                                      ]
+["Library_private lover" - Player wants to be the main partner of Korvin, only threesomes allowed (maybe)    ]
+[   + "Harem Master" player feat - sharing the Harem together                                                ]
+
+
 instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Perception of Urik is 3 and a random chance of 1 in 3 succeeds): [Urik wants beer]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
@@ -2402,6 +2633,122 @@ after going to Sitting Area while (Urik is in Sitting Area and Gregory is in Sit
 	else:
 		say "     Shrugging to yourself, you turn your attention elsewhere.";
 		add "Gregory_Stretching_Ignored" to Traits of Urik;
+
+
+to say GreyAbbeyLibraryObservation_Urik:
+	project the figure of Urik_clothed_icon;
+	say "     [bold type]What are you interested in watching?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if PlayerFriended of Urik is true:
+		choose a blank row in table of fucking options;
+		now title entry is "Story - Neighborhood Patrol";
+		now sortorder entry is 1;
+		now description entry is "Watch what he does outside of the library (following him)";
+	[]
+	if LastFuck of Urik - turns > 4 and PlayerFriended of Urik is true and Loyalty of Urik > 8:
+		choose a blank row in table of fucking options;
+		now title entry is "Sex (Gay) - Intruder Troubles (Husky)";
+		now sortorder entry is 2;
+		now description entry is "Watch him deal with an intruder";
+	[
+	if LastFuck of Urik - turns > 4:
+		choose a blank row in table of fucking options;
+		now title entry is "Sex (Gay) - Boning Candy";
+		now sortorder entry is 3;
+		now description entry is "Watch Urik fuck Candy";
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				let DoneTalking be false;
+				now sextablerun is 1;
+				if nam is "Story - Neighborhood Patrol":
+					say "[UrikObservation_NeighborhoodPatrol]";
+				else if nam is "Sex (Gay) - Intruder Troubles (Husky)":
+					say "[UrikObservation_IntruderTroubles]";
+				else if nam is "Sex (Gay) - Boning Candy":
+					say "[UrikObservation_BoningCandy]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say UrikObservation_NeighborhoodPatrol:
+	say "     Taking position in an out of the way spot from which you have a good view, you settle down to wait what will happen - and before long, Urik comes strolling down the stairs from the upper level of the library. Apparently he's not content with just sitting around all day and instead has decided to go out for a while. Curiosity about the things the orc will be doing while you're not with him, you follow unobtrusively, keeping a suitable distance. It's not actually that hard, as Urik strides down the street with cocksure confidence, secure in his knowledge that he's among the biggest and baddest that roam the streets anywhere close to the library. He doesn't really scout or look behind him, instead just walking along and checking out this or that when the mood strikes him. The quite varied creatures that populate the streets do their best to stay out of the way of the towering brute, with many hiding and others running off with frightened shouts once they see him, which draws amused chuckles from Urik.";
+	let RandomEncounter be a random number from 1 to 2;
+	if RandomEncounter is 1: [trader]
+		say "     After the orc turns a corner on his way, you have to hurry a bit to catch up and not lose sight of him for too long. By the time you glance around the corner, you see several partially human and other completely transformed beings hurrying away, past you and along the street that Urik turned into. It's not hard to spot where they all came from, as there is a trading cart set up beneath the roof of a gas station one house down on the right. The location provides cover against flying observers, which is all the more important these days, now that numerous flying things inhabit the city. Seems all the customers decided to get going while the going was good, with the trader being unable to do the same, given the cumbersome construction of their vehicle, consisting of two shopping carts strapped together side by side and laden with all sorts of stuff.";
+		WaitLineBreak;
+		say "     The person owning the cart is covered almost completely in a stitched-together, hooded robe, but they appear to be some sort of lizard, judging from the tail sticking out on the back, and the scaly hands gripping the handles as they try to drag their cart away. With one wheel getting stuck in a crack in the ground, that attempt fails miserably, and Urik easily closes the distance. When the trader snatches up a handcrafted spear (really just a broom-handle with a kitchen knife taped to one end) to brandish it while shouting to keep away, the orc stops and puts his hands on his hips, looking down at the much smaller being. 'Really? And what do you think you can do with that?!' he asks in an amused, challenging tone, then brings his large hands together, cracking his knuckles loudly. The spear waves a bit in the air as the hands holding it tremble, allowing Urik to push it aside easily and step closer. You can't quite make out what the trader says when he does so.";
+		say "     'Relax, you're not my type, and I don't have an interest in plundering all your shit,' Urik replies, waving a hand at the various wares in the cart, then pausing and plucking one item out. Is that a watermelon? No, a giant apple! 'Though I could use a bite, and you're offering free samples, ain't that right?!' The crunch as he takes a bite from the apple right after that makes it clear that this was a statement rather than a question. The next few minutes are filled with a short conversation between Urik and the lizard, which you can't follow too closely from a distance, what with the orc chewing loudly and also speaking with a full mouth. The next clearly understandable bit is when Urik finishes his snack and says, 'So, keep your business open, no problem. Just remember who owns the neighborhood and offer some samples, eh?' Then he sets out to continue walking, leaving the trader behind.";
+		TraitGain "Protection Racket" for Urik; [player knows that Urik is taking stuff from people nearby - a little bit, at least]
+	else if RandomEncounter is 2: [hyenas]
+		say "     At some point during Urik's trip, the sounds of two motors can be heard in the near distance, quickly followed by two motorbikes arriving onto a crossroads ahead, then turning the corner to ride further down the road, away from the road you are walking on. The riders of the bikes are two anthro hyenas in leather jackets, weaving their machines around the various wrecked cars and piles of trash, with passersby jumping out of the way as the felines cut things fairly closely and arrogantly jeer at people to get out of the way. Something about the two of them seems to draw Urik's interest, as he begins to jog after them, actually making good headway in following them, given that they've got to navigate slowly due to the mid-apocalyptic road conditions. When the hyenas soon pull into a side alleyway and shut down their engines, Urik's behind less than a minute, with you arriving soon after him and glancing around the corner.";
+		WaitLineBreak;
+		say "     You can see the orc standing about twenty feet into the alley, with the hyenas about the same distance further ahead. They apparently do not appreciate being followed, as one of them is just pulling a baseball bat from a holster on the side of the bike, the other has a length of chain in their hands, swinging the end threateningly in the air. 'What'cha want, you big fucker? You gonna start some beef?' the hyena herm with the bat calls out to Urik, who replies, 'Not if you don't, sugartits! I just like a nice bike and wanted to have a closer look at yours.' The second hyena jeers back, 'Why, you gonna try to steal em? Fat chance, we just got these and we're not giving them up! The previous owners sure don't need em anymore, hah!' Shrugging his broad shoulders, the orc says, 'Bit small for me these days, I'm afraid. And the guy who let a good classic machine like yours get to that state deserves whatever you dished out for him.'";
+		say "     The left hyena replies, 'Wait - what?! Is there something wrong with this thing?' Urik snorts and points at the other bike, 'Didn't you hear the difference to your bitch-friend's machine? You should have a good, smooth roar, not that extra sound. The fucker must have let her gathering dust in a garage without taking care of the bike. Got a vacuum leak, plain and simple!' Hyena number two chuckles and comments, 'So much for getting first pick and taking the flashy one, eh? You picked the broken piece of crap, haha!' The other hyena grumbles at her compatriot, with Urik throwing in, 'It's not that bad, actually. Fairly easy fix...' That said, he saunters up to them, wholly unconcerned about the weapons still in their hands, and in short notice, he's pointing out the things that are wrong with the engine. As the three of them continue talking some more, the hyenas eventually pull out some beers from an under-seat storage compartment, offering them to Urik to fix what he can. Eventually, the little meeting breaks up on moderately amicable terms, with the hyenas riding away to a much improved sounding roar of both bikes.";
+		TraitGain "Hyena Bike Mechanic" for Urik;
+	WaitLineBreak;
+	say "     The rest of his excursion is fairly similar to before, with Urik strolling about. Given that he looms a head or three over almost everyone on the streets, he is given a quite respectful - or frightened - reception. A little while later, his route swings back around to the library, with you following and stopping in the entrance area, barely catching sight of the orc as he goes back upstairs.";
+
+to say UrikObservation_IntruderTroubles:
+	project Figure of HuskyAlpha_soft_icon;
+	say "     You take position and casually observe, soon seeing Urik wander down the stairs from his usual haunts on the first floor and starting to browse in the magazine shelves. Picking out a motorcycle mag, the big orc strolls over to a sofa situated towards the middle of the room, just on the back side of the large branching staircase. Sitting down and leaning back comfortably, he then starts to read. As the minutes tick on while you observe the orc slowly flipping through the pages, you wonder if you should give up on your pursuit as it is getting somewhat boring - but almost as if fate had heard your thoughts, [if Alexandra is booked and Fang is booked]just a little while after you saw Alexandra and Fang leave, with her doing whatever in the rec room and him likely taking a leak in the back garden, [else if Alexandra is booked]just a little while after you saw Alexandra leave to do whatever in the rec room, [else if Fang is booked]just a little while after you saw Fang leave to take a leak in the back garden, [else]a moment later [end if]the entrance door is pushed open somewhat forcefully, with an anthro husky striding inside as if he owns the place. He has a cursory, lazy glance around, completely missing you while doing so, given your hidden position. Urik is completely outside of his line of sight too, with the stairway between the orc and the entrance.";
+	if "Husky Intruder Caught" is not listed in Traits of Urik:
+		say "     Arrogant confidence is thick in the muscular canine's voice as he says to himself, 'Let's see if the little bitch was right about there being a kitchen in here!' ";
+	else:
+		say "     Arrogant confidence is thick in the muscular canine's voice as he says to himself, 'Let's find that asshole who roughed up my packmate!' ";
+	say "With that said, he turns slightly left, walking towards the doorway in the northern wall. Seems like he's got at least some idea how the place is laid out. Meanwhile, Urik has quietly laid down his magazine on ground, still open on the page he was on, as he apparently intends to continue reading in a bit. Standing next to the back corner of the stairs, he simply waits for the intruder to stroll past him, at which point the orc snatches the husky by one arm and the scruff of his neck, then swings the anthro dog in an arch clean over his own head. The male husky barely has time to start a shocked and surprised whine before he impacts on the couch with a resounding THUD that drives the air from his lungs.";
+	WaitLineBreak;
+	project Figure of Urik_naked_icon;
+	say "     Dazed for a few seconds before he can start pushing himself up, the anthro finds himself staring at the green, thickly muscled legs that come into his line of sight first, followed by a glance up at the grinning orc, accompanied by the words, 'Oh shit!' Urik snorts in amusement, raising one eyebrow as he looks at the other man. [if Territory Marker is in Main & 7th Street]'So, I guess you're too stupid to read, eh? Must have strolled right past the marker I put up outside!' [end if]Grabbing the husky by the neck-fur and pulling him up, far enough to have his face on the level of Urik's crotch, the orc says, 'Would'a thought that word gets around which places one shouldn't try to rob. You new around here? Freshly transformed and a bit soft in the head or something?' At that point, the husky's pride pushes him to protest, bursting out with, 'Hey! No, I -' That his how far he gets before the orc clamps a hand around his muzzle, effortlessly shutting him up completely.";
+	say "     'Nah, you're not that much of an idiot who just wanders in here blindly. I bet you're here to pay tribute to the true bosses of this whole area, ain't that right?!' With that, the large orc pulls the husky's head forward, rubbing it against his own crotch and making the canine huff his musky scent. The intruder puts both of his hands on Urik's thick thighs, trying to brace against them and push himself away from the orc's crotch and the growing erection there, without much success. After a few more moments of literally rubbing the intruder's nose in the trouble he's gotten himself into, Urik then ";
+	if "Molestation Detox" is listed in Traits of Urik: [not supposed to force people]
+		say "hesitates for a second before clearing his throat. 'Though I guess I shouldn't just take you like this. Promised to try to be nicer about fucking random dudes, and I'll hold to that. So let me ask then...' At that point, he bares his crotch fully, gripping the base of his pretty enormous and thick cock, then whacking it softly against the tip of the husky's muzzle, brushing off a glistening drop of pre against his wet nose. 'Wanna take my cock? Trust me, you'll love it!'";
+		WaitLineBreak;
+		say "     Staring wide-eyed and fearfully at the orc's erection, the husky shakes his head as much as he's able to while still having his muzzle held shut and making grunting noises. 'Scared little bitch,' Urik comments in a huff, then adds, 'You know I can't just let you stroll out of here though, right? That'd give ideas to others. Little bit of body paint should do the trick, hah!' With that said, the orc begins to jerk himself off rapidly, keeping a tight grip on the husky's head as he does so. It doesn't take long before he pushes himself over the edge and lets thick strings of cum fly, painting his captive from head to toe and plastering quite a bit of fur to his skin. One Urik's orgasm ebbs off, the husky is then unceremoniously carried to the entrance of the library and flung through once the door has been pulled open. Given the nanite's healing abilities, bouncing down several stairs and landing in the dust of the sidewalk shouldn't result in any lasting damage for the canine, though the clinging scent of orc cum all over his body might result in a grievous hit to his reputation. Urik meanwhile only snorts and turns away from the entrance after closing it, then saunters to his sofa and goes back to reading the magazine.";
+		CreatureSexAftermath "Husky Alpha" receives "Stroking" from "Urik";
+	else if "Private Breeder" is listed in Traits of Urik: [reserved lover for the player]
+		say "blows out his breath and adds, 'Well, if that's what you were after, I gotta disappoint you, doggo. Got a special someone, and I'm not in the market for others.' The husky lets out a sound somewhere between surprise and relief, ears perking up a little in hope to be let go, but Urik still holds on to him with an iron grip. 'You know I can't just let you stroll out of here though, right? That'd give ideas to others. Little bit of body paint should do the trick, hah!'";
+		WaitLineBreak;
+		say "     The next thing Urik does is baring his crotch fully, which frees his enormous cock to swing up and smack against his abs. Then he closes his eyes and starts to jerk off furiously, panting and grunting some thing under his breath. You think you can make out your name in what he says, so the big orc seems to imagining you as he touches himself. It doesn't take long before he pushes himself over the edge and lets thick strings of cum fly, painting his captive from head to toe and plastering quite a bit of fur to his skin. One Urik's orgasm ebbs off, the husky is then unceremoniously carried to the entrance of the library and flung through once the door has been pulled open. Given the nanite's healing abilities, bouncing down several stairs and landing in the dust of the sidewalk shouldn't result in any lasting damage for the canine, though the clinging scent of orc cum all over his body might result in a grievous hit to his reputation. Urik meanwhile only snorts and turns away from the entrance after closing it, then saunters to his sofa and goes back to reading the magazine.";
+		CreatureSexAftermath "Husky Alpha" receives "Stroking" from "Urik";
+	else if "Selective Breeding" is listed in Traits of Urik: [not supposed to cum in people - saved for breeding those that the player wants knocked up]
+		say "blows out his breath and adds, 'Too bad my cum's reserved for special purposes, doggo. So you won't get to feel this shaft up your ass or muzzle.' The husky lets out a sound somewhere between surprise and relief, ears perking up a little in hope to be let go, but Urik still holds on to him with an iron grip. 'You know I can't just let you stroll out of here though, right? That'd give ideas to others. And you can still show your submission in another way!'";
+		WaitLineBreak;
+		say "     The next thing Urik does is baring his crotch fully, then kicking off his clothing, after which he man-handles the husky to lay upside-down on the couch, head dangling just over the edge. Before the guy can say anything, Urik kneels over him, legs left and right of the intruder's body and with his crack just above the dog's muzzle. 'Get licking, mutt! And you better be good!' Urik grunts demandingly, reaching down to push the husky's muzzle against his rear. With little choice in the matter, the canine proceeds to do what he must, lapping at Urik's trembling asshole, which the big green brute clearly enjoys quite a bit. While letting the husky tease his asshole with his tongue, Urik milks his own cock in a slow, controlled tempo, resulting in a steady leakage of pre-cum from his dickhead, which he smears gleefully onto the husky under him.";
+		say "     Even while holding back from cumming, the orc enjoys playing around with his captive quite a bit, so it takes a moderately long time before he finally proclaims, 'That's enough,' and dis-mounts the husky. Next, the intruder is unceremoniously carried to the entrance of the library and flung through once the door has been pulled open. Given the nanite's healing abilities, bouncing down several stairs and landing in the dust of the sidewalk shouldn't result in any lasting damage for the canine, though the clinging scent of orc's pre all over his body might result in a grievous hit to his reputation. Urik meanwhile only snorts and turns away from the entrance after closing it, then saunters to his sofa and goes back to reading the magazine.";
+		CreatureSexAftermath "Husky Alpha" receives "Stroking" from "Urik";
+	else if "Everything Goes" is listed in Traits of Urik or "Stud" is listed in Traits of Urik: [free to dump a load in the husky]
+		say "chuckles and adds, 'Okay, time to pay up for bursting in here, doggo!' That said, he bares his crotch fully, gripping the base of his pretty enormous and thick cock, then whacking it softly against the tip of the husky's muzzle, brushing off a glistening drop of pre against his wet nose. 'Open up!' the orc demands, softening his grip on the intruder's muzzle, but the canine keeps his jaws clamped shut, shaking his head determinedly.";
+		WaitLineBreak;
+		say "     'Tough luck! And don't you dare think about biting - or I'll rip you a new asshole!' Urik grunts aggressively, digging in his thumb and fingers on both sides of the husky's jaw and forcing it open, then jamming the thick shaft of his erection into the mouth of the anthro. As his cock glides over the soft, wet tongue of his captive, the horny orc leaks more pre-cum, which is quickly absorbed by the dog. It is only a question of time before his initial resistance ebbs off and the potent effects of orc pre and cum show themselves. Far from his previous macho self, the husky begins to readily accept the thick cock, even pushing his own head forwards to take more of it. Before long, Urik advances to grabbing the back of the canine's head and throat-fucking him, with his thick erection really bulging out the husky's neck every time it slides in.";
+		say "     Between the relentless oral assault and a steady trickle of aphrodisiac-laden pre down his gullet, the intruder is put into a semiconscious, lusty haze, his own canine shaft rock hard while he is used as Urik's cock-sheath. Hammering forward into the receptive muzzle and making his big balls smack the anthro's chin in a steady rhythm, Urik builds up to harsher and harsher fucking as his lust builds to the inevitable climax. 'It's coming, bitch-boy! Your first load of orc cum!' the big brute of a man soon shouts, clamping both hands onto the husky's head as he rams himself home fully, then starts to unload into the guy's stomach, giving him a hearty, protein-laden meal. Glug, glug, glug, you can see the guy's throat move - thinking at first he's swallowing before you realize that that's from the throb of Urik's cock alone, bulging out every time another spurt is delivered.";
+		WaitLineBreak;
+		say "     The load is so big that Urik has to pull out in the midst of it, relenting to the captive doesn't pass out from sheer lack of oxygen. Of course, even as Urik's cock leaves the husky's mouth with a wet slurp, the orc never stops cumming, instead splattering the intruder's front with rich streaks of semen. The husky collapses before Urik, panting desperately for air, and the orc waits for him to recover at least a little. Next, the intruder is unceremoniously carried to the entrance of the library and flung through once the door has been pulled open. Given the nanite's healing abilities, bouncing down several stairs and landing in the dust of the sidewalk shouldn't result in any lasting damage for the canine, though the clinging scent of orc's pre all over his body might result in a grievous hit to his reputation. Urik meanwhile only snorts and turns away from the entrance after closing it, then saunters to his sofa and goes back to reading the magazine.";
+		CreatureSexAftermath "Husky Alpha" receives "OralCock" from "Urik";
+		TraitGain "Husky Intruder Dosed" for Urik; [he was made to swallow a load, so is at least moderately craving orc cum]
+	TraitGain "Husky Intruder Caught" for Urik;
+
+
+to say UrikObservation_BoningCandy:
+	say "...";
 
 Section 6 - Endings
 

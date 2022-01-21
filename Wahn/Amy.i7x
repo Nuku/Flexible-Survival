@@ -128,9 +128,9 @@ instead of conversing the Amy:
 	else if HP of Amy is 2 or HP of Amy is 10: [matured]
 		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[at random]";
 	else if (HP of Amy is 11):[fucked]
-		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]I can't stop thinking about the last time with you. Could we do that again?[or]I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?[at random]";
+		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?[at random]";
 	else if (HP of Amy is 12):[has puppies]
-		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I can't stop thinking about the last time with you. Could we do that again?'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'I can't wait to do it again with you.'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'Thanks for knocking me up - I love having your puppies.'[at random]";
+		say "     Amy says [one of]'Thanks for bringing me here. I realize now how dangerous our trip through the city was.'[or]'I wonder how mother is doing. I wasn't with her all that long, but now that I think back, she didn't have anything on her mind except... well, sex.'[or]'Woof! Woof!' Then she laughs and adds 'Just kidding.'[or]'So much interesting stuff to read in here...'[or]'How were things before the nanites spread? The stories in the books seem... more peaceful, mostly.'[or]'I sometimes get all wet just thinking about sex. I guess that's something I inherited from mom, hm?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[or]'One of the pups shredded a book - I hope that's not too bad.'[or]'Aren't the little ones cute?'[at random]";
 	else:
 		say "ERROR-Amy-[HP of Amy]C: She isn't in one of the states she should be in! Please report how you got to this message.";
 
@@ -343,10 +343,10 @@ to say AmyNPCSexTable:
 						else:[basic Xerxes]
 							say "     Almost before you're finished telling him to 'Go for it', Xerxes is on top of Amy, his muscular chest against her back as he hugs her tightly and grinds his crotch against her body. Being a natural in the typical 'doggie-style', his shaft quickly finds her dripping opening and plunges deep into the husky's body. Xerxes fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure. This soon drives Amy's arousal to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 						say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4]. Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
-						if Lust of Amy is 0:
+						if Lust of Amy is 0: [not pregnant]
 							let AmyPregchance be a random number from 1 to 20;
-							if AmyPregchance > 13:
-								now Lust of Amy is 24;
+							if AmyPregchance > 13: [30% chance]
+								now Lust of Amy is 24; [24 turns till birth]
 						now thirst of Amy is 1;
 						NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 					else:[Xerxes forbidden]
@@ -475,7 +475,7 @@ to say AmyNPCSexTable:
 			else:
 				say "[AmyNPCSexTable]";
 		-- 3: [Fang]
-			if Fang is in Grey Abbey Library:
+			if Fang is in Grey Abbey Library and Fang is Male:
 				if XP of Amy is 0 and HP of Fang > 1:[first interest of Fang in her]
 					if HP of Fang < 5:
 						say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Her head is leaned back, eyes closed, and she moans silently to herself. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... close to her, slowly stalking forward is Fang, his canine shaft hanging erect under his black-furred body. Then suddenly, he pounces the young husky, making her give a surprised yip that leads over to a lust-filled gasp as the wolf sinks his cock deep into her pussy with the first thrust. As deep in the grip of her own libido as she is, Amy just accepts the virile male on top of her, moaning as he starts rutting her with urgent movements.";
@@ -1226,6 +1226,7 @@ to say AmyFirstFuck:
 		say "     Wanting to distract her from the pain of losing her virginity, you give her another deep kiss, move a hand to cup one of her upper breasts - and then make a quick downward thrust with the dildo, only stopping as the rubber balls at its base touch her crotch. There is only a short yip from Amy as her hymen is broken by the invading member, the moment of pain drowned out almost instantly by the pleasurable sensations of being kissed, touched and fucked. She starts moaning again as you move the toy inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though you ache for some release of your own, so you get on top of her in 69 position. Without any prompting, Amy starts licking you again, driving you to higher and higher arousal. Being her first time having sex, and you already aroused from taking care of Amy, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with. Just moments later, you experience your own climax, the young husky's talented tongue driving you over the edge.";
 		WaitLineBreak;
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
+		NPCSexAftermath Amy receives "PussyDildoFuck" from Player;
 		NPCSexAftermath Amy receives "OralPussy" from Player;
 		NPCSexAftermath Player receives "OralPussy" from Amy;
 	else: [neuter]
@@ -1467,7 +1468,7 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 		WaitLineBreak;
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Amy's mattress. The big cat and husky girl separate from each other too, then lie down next to you, with Amy cuddling up to the felinoid's soft and warm belly fur. Purring as loud as an idling motor, the big cat starts licking her fur. Looks as if he wants to spread his scent over all of the husky's body.";
 		NPCSexAftermath Klauz receives "AssFuck" from Player;
-	if Fang is in the Grey Abbey Library:
+	if Fang is in the Grey Abbey Library and Fang is Male:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Vanilla or Omega Fang]
 			if XP of Amy is 0:

@@ -26,7 +26,7 @@ To adjustdefaulthelp: [changes table from Basic Help Menu by Emily Short to bett
 	now the title in row 2 of Table of Instruction Options is "What to do with >";
 	now the description in row 2 of Table of Instruction Options is "The > sign is where the game says, 'Okay, what do you want to do now?' You may respond by typing an instruction -- usually an imperative verb, possibly followed by prepositions and objects. So, for instance, LOOK, LOOK AT FISH, TAKE FISH.";
 	now the title in row 1 of Table of Basic Help Options is "Q to quit help, enter to select entry";
-	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if your at the top.";
+	now the description in row 1 of Table of Basic Help Options is "Use arrows to navigate the help menu.[line break]Enter selects the entry that is marked with the >[line break]Q will take you back one level of help, or leave the help system if you're at the top.";
 
 
 Help ends here.

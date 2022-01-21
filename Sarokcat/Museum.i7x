@@ -1,9 +1,12 @@
-Version 2 of Museum by Sarokcat begins here.
+Version 3 of Museum by Sarokcat begins here.
 [ Version 2.1 - Another F/F variation ]
+[ Version 3 - Reworked Museum layout & added Roman Wing - Gherod]
 
 "Adds an adventuring area to Flexible Survival with a Sphinx and some searching."
 
-Section 1 - Museum environment
+[**************************************************]
+Section 1 - Museum Environment
+[**************************************************]
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -21,7 +24,7 @@ to say museumdesc:
 instead of sniffing Museum Foyer:
 	say "The museum smells of ancient things come to life once more.";
 
-Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous.
+[Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous.
 
 Museum entry is east of Museum foyer.
 
@@ -32,7 +35,140 @@ Museum interior	"Museum interior"
 Museum interior is a room.
 Museum interior is east of Museum entry.
 
-The marea of Museum entry is "Museum".
+The marea of Museum entry is "Museum".]
+
+[**************************************************]
+Section 1-1 - Museum Environment WEST
+[**************************************************]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum West Hallway	"Museum West Hallway"
+
+Museum West Hallway is a room.
+Museum West Hallway is west of Museum Foyer.
+The earea of Museum West Hallway is "Museum".
+
+Description of Museum West Hallway is "[Museum West Hallway desc]".
+
+to say Museum West Hallway desc:
+	say "     The hallway to the west leads to the western section of the museum, ending in a hub further ahead. There is little decoration in this corridor, full with a puzzling silence only interrupted by your footsteps. You can see the occasional portrait of a historical figure and paintings of people from different eras hanging on the walls, as you pass by.";
+
+instead of sniffing Museum West Hallway:
+	say "     It smells of old and ancient, still.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum West Hub	"Museum West Hub"
+
+Museum West Hub is a room.
+Museum West Hub is west of Museum West Hallway.
+The earea of Museum West Hub is "Museum".
+
+Description of Museum West Hub is "[Museum West Hub desc]".
+
+to say Museum West Hub desc:
+	say "     The western hub is an ample room with several paintings and sculptures from historical origins, which are likely to serve as an introduction to their respective wings. It is a quite silent place, the only thing audible in the entire vicinity being your footsteps as you make your way through the also scentless hub. It seems to link different sections with dedicated themes centered around anthropology, one of them the [bold type]Roman Wing[roman type] located to the [bold type]south[roman type], ";
+	if Resolution of LarsCenturionHelmet is 0:
+		say "past a roman centurion helmet sitting atop a display stand and directly beside the wall, near its grand doors. Perhaps this area is worthy of exploration?";
+	else:
+		say "past a display stand beside the wall, where a roman centurion helmet used to be sitting atop, near its grand doors.";
+
+instead of sniffing Museum West Hub:
+	say "     It smells of old and ancient, still.";
+
+[**************************************************]
+Section 1-2 - Museum Environment NORTH
+[**************************************************]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum North Hallway	"Museum North Hallway"
+
+Museum North Hallway is a room.
+Museum North Hallway is north of Museum Foyer.
+The earea of Museum North Hallway is "Museum".
+
+Description of Museum North Hallway is "[Museum North Hallway desc]".
+
+to say Museum North Hallway desc:
+	say "     The hallway to the north leads to the northern section of the museum, ending in a hub further ahead. The decoration in this corridor is, up to some point, merely cosmetic, and there is the occasional tapping or creaking sound coming from inside the walls, which is somewhat upsetting. Sometimes, you can see paintings of mythological creatures on the walls, or, at least, of strange and unique animals that probably existed long ago.";
+
+instead of sniffing Museum North Hallway:
+	say "     It smells of old and ancient, still.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum North Hub	"Museum North Hub"
+
+Museum North Hub is a room.
+Museum North Hub is north of Museum North Hallway.
+The earea of Museum North Hub is "Museum".
+
+Description of Museum North Hub is "[Museum North Hub desc]".
+
+to say Museum North Hub desc:
+	say "     The northern hub leads to a darker section of the museum, probably due to several lamps being blown and not working anymore, the only light being the one barely making it through the closed windows. You would have to open them if you wanted some more visibility, where you decide to go. The air is still and nothing makes a sound in the surrounding vicinity, except for the rooms linked to this hub. Some of the portraits in the walls, from what you can see, suggest this section is dedicated to either mythology or nature... Perhaps both. You could explore this particular area with relative safety, if you were careful to not be surprised by anything strange.";
+
+instead of sniffing Museum North Hub:
+	say "     It smells of old and ancient, still.";
+
+[**************************************************]
+Section 1-3 - Museum Environment EAST
+[**************************************************]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum East Hallway	"Museum East Hallway"
+
+Museum East Hallway is a room.
+Museum East Hallway is east of Museum Foyer.
+The earea of Museum East Hallway is "Museum".
+
+Description of Museum East Hallway is "[Museum East Hallway desc]".
+
+to say Museum East Hallway desc:
+	say "     The hallway to the east leads to the eastern section of the museum, ending in a hub further ahead. It looks severely more empty than the other sections in the museum, and the only sound you can hear is a systematic ticking, resembling that of a large clock, from somewhere unknown. The stillness of the air demands for caution as you walk by.";
+
+instead of sniffing Museum East Hallway:
+	say "     It smells of old and ancient, still.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum East Hub	"Museum East Hub"
+
+Museum East Hub is a room.
+Museum East Hub is east of Museum East Hallway.
+The earea of Museum East Hub is "Museum".
+
+Description of Museum East Hub is "[Museum East Hub desc]".
+
+to say Museum East Hub desc:
+	say "     The eastern hub seems broader than the others, due to being comparatively empty. It, however, still leads to a myriad of different adjacent rooms. The few objects in display seem to be old contraptions, devices and other odd antique things that you do not quite understand, suggesting that this section seems to be more directed towards historical science advances and inventions. If you were an expert, you could probably tell which epoch each of these belong to, or which area in science they are supposed to serve. Nothing else here seems particularly interesting or worthy of note, but it could require closer inspection.";
+
+instead of sniffing Museum West Hub:
+	say "     It smells of old and ancient, still.";
+
+[**************************************************]
+Section 1-4 - Museum Environment SOUTH
+[**************************************************]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum Greenery	"Museum Greenery"
+
+Museum Greenery is a room.
+Museum Greenery is south of Museum Foyer.
+
+Description of Museum Greenery is "[Museum Greenery desc]".
+
+to say Museum Greenery Desc:
+	say "     South of the Museum Foyer lies this outside section, which includes the entrance to the building upon walking up some large stairs in front of it. In your immediate proximity, you can still see the outside of the eastern and western wings of the museum stretching ahead, and surrounding this area, there is a lot of green due to the natural landscape, untouched by any sort of human construction, and a garden that welcomes any eager visitor who arrives at the front. It all feels quite peaceful, causing a lingering, pleasant temptation to just stay here for a longer while, but you know better than to give in to apparent comfort in times like these.";
+
+instead of sniffing Museum Greenery:
+	say "     This area smells like fresh and clean air, the outside section of the museum feeling much lighter and pleasant on your nostrils.";
+
+Section 2 - Valerie
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -149,7 +285,7 @@ instead of fucking Valerie:
 				NPCSexAftermath Valerie receives "OralPussy" from Player;
 				NPCSexAftermath Player receives "OralPussy" from Valerie;
 			else:
-				say "     Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if Nipple Count of Player > 0 and Breast Size of Player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of Player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[else]. She runs her lightly raspy tongue across your [SkinName of Player] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
+				say "     Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if Nipple Count of Player > 0 and Breast Size of Player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of Player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[else]. She runs her lightly raspy tongue across your [SkinSpeciesName of Player in lower case] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
 				say "     Quite worked up now after all the teasing, you moan in delight as that feline tongue of hers slides across your already excited folds. She takes several more licks across your pussy before pushing it right into your needy cunt, lapping into you to get your feminine juices. You run your hands over the sphinx's head, moaning in pleasure and encouraging her to continue. She turns out to be a very clever lover, using her mouth and paws in many interesting and pleasurable ways. She is also very teasing about it, drawing you back from the edge of your peak several times, leaving you almost begging for her for more before she finally drives you to a crashing orgasm with some particularly artful tonguework. You are left exhausted and panting on the floor as the grinning sphinx climbs back onto the information desk. She grins smugly as she rests atop it, licking her lips and grooming her paws clean of your juices.";
 				NPCSexAftermath Valerie receives "OralPussy" from Player;
 			infect "Sphinx";

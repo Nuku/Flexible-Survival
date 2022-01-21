@@ -84,6 +84,12 @@ to say JoeyTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Take him out into the city for training";
 	[]
+	[if Libido of Joey > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Attitude";
+		now sortorder entry is 2;
+		now description entry is "Discuss his changed attitude";]
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -103,6 +109,8 @@ to say JoeyTalkMenu:
 					say "[JoeyTalk1]";
 				if (nam is "Training"):
 					say "[JoeyTalk2]";
+				if (name is "Attitude"):
+					say "[JoeyTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -123,11 +131,17 @@ to say JoeyTalk1: [talk about him]
 to say JoeyTalk2: [training]
 	say "[JoeyTraining]";
 
+to say JoeyTalk3: [attitude]
+	if Libido of Joey is 1: [warrior]
+		say "     A";
+	else: [slut]
+		say "     A";
+
 Section 3 - Sex
 
 instead of fucking the Joey:
 	say "     'I don't know, maybe we should just focus on my training right now.'";
-	[if (lastfuck of Joey - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	if (lastfuck of Joey - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Joey looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
 	else if Libido of Joey is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
@@ -135,20 +149,19 @@ instead of fucking the Joey:
 		say "     As you ask about getting intimate, Joey immediately looks interested, and waits for you to say more.";
 		WaitLineBreak;
 		say "[JoeySexMenu]";
-	]
 
 to say JoeySexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male: [only males and herms can get a blowjob]
+	if Player is male and Libido of Joey is 1: [only males and herms can get a blowjob, libido req is temporary until other scene complete]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
 		now description entry is "Let Joey suck you off";
 	[]
-	choose a blank row in table of fucking options;
+	[choose a blank row in table of fucking options;
 	now title entry is "Suck Joey off"; [anyone can blow him]
 	now sortorder entry is 2;
 	now description entry is "Taste his feline shaft";
@@ -159,6 +172,21 @@ to say JoeySexMenu:
 		now sortorder entry is 3;
 		now description entry is "Take Joey's ass for a ride";
 	[]
+	if Libido of Joey is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Get fucked by Joey";
+		now sortorder entry is 4;
+		now description entry is "Have the tough catboy rail you";
+	if (Libido of Joey is 1 and Player is male):
+		choose a blank row in table of fucking options;
+		now title entry is "Jerk each other off";
+		now sortorder entry is 5;
+		now description entry is "See how well your hands can take care of each other";
+	if Libido of Joey is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Tease Joey";
+		now sortorder entry is 6;
+		now description entry is "Touch the cute catboy until he can't take it";]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -180,6 +208,12 @@ to say JoeySexMenu:
 					say "[JoeySex2]";
 				if (nam is "Fuck the catboy"):
 					say "[JoeySex3]";
+				if (nam is "Get fucked by Joey"):
+					say "[JoeySex4]";
+				if (nam is "Jerk each other off"):
+					say "[JoeySex5]";
+				if (nam is "Tease Joey"):
+					say "[JoeySex6]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -190,16 +224,37 @@ to say JoeySexMenu:
 	clear the screen and hyperlink list;
 
 to say JoeySex1: [oral on the player]
-	say "     Text";
-	NPCSexAftermath Joey receives "OralCock" from Player;
+	if Libido of Joey is 1: [Just bros being bros]
+		say "     You ask Joey if he wouldn't mind giving you a hand with a particularly hard issue, or better yet a mouth. He laughs easily at your pick up line, but just as quickly nods. 'You've already done a lot for me, coach, and after all what's one blowjob between friends?' Rather than waste any words answering his own rhetorical question, or waiting for a response from you, Joey is already getting down onto his knees and admiring the so-called issue you brought to his attention. 'You've got a [if Cock Length of Player > 5]pretty nice[else]really cute[end if] cock there, coach. Let me clean it up a bit for you, hmm?";
+		say "     Even as he speaks to you, Joey is already gently stroking your shaft. The moment he finishes, however, he leans in closer and starts putting his mouth to a better use. He opens his oral assault with a series of licks up and down the shaft, the texture of his feline tongue distinct enough to make you shiver in pleasure. Each time he moves along your member it seems like an entirely new experience, and soon he begins mixing in other techniques. A quick kiss against the shaft here, a light suckle at the tip there, occasionally dragging his lips down along the side of your member as he savors it. The combination of each of the lewd attacks he is making on your cock are more than enough to tease you towards completion, but before you can hit that peak, he pulls back and gives you an exaggerated wink. 'Don't worry, I'll finish you off in style.'";
+		say "     True to his word, the catboy changes his approach and immediately dives in fully to the action. He starts this renewed assault with his lips just resting at the head of your shaft, almost like what he'd been doing earlier, but quickly follows by diving downward, engulfing your cock with apparent ease. Compared to what you've seen him do before, his efforts are far more skilled. He must have been practicing, somehow, and you couldn't be happier with the results. Eventually his bobbing starts to bear fruit, and you can't hold back any longer. Your shaft gives in the same moment you do, and starts to spurt down his feline throat. He swallows eagerly, each motion adding to the pleasure of your climax, until he finally pulls back just before you finish, leaving a single trailing line of release across his face. ";
+	else: [Giving him what he wants]
+		say "     Before you ask verbally, you instead shake your hips just enough to cause your shaft to sway back and forth. The catboy in front of you can't help but follow the motion with his eyes, and just like that you already know he'd agree. Rather than waste any more time, you simply gesture to your cock and allow him to get to work.";
+		NPCSexAftermath Joey receives "OralCock" from Player;
 
 to say JoeySex2: [oral on Joey]
-	say "     Text";
-	NPCSexAftermath Player receives "OralCock" from Joey;
+	if Libido of Joey is 1: [friendly version]
+		say "     Text";
+	else: [sub Joey version]
+		say "     Text";
+		NPCSexAftermath Player receives "OralCock" from Joey;
 
 to say JoeySex3: [Joey fucked]
-	say "     Text";
+	if Libido of Joey is 1: [Power bottom]
+		say "     Text";
+	else: [Doggy style]
+		say "     Text";
 	NPCSexAftermath Joey receives "AssFuck" from Player;
+
+to say JoeySex4: [player fucked]
+	say "     Text";
+	NPCSexAftermath Player receives "AssFuck" from Joey;
+
+to say JoeySex5: [mutual handjobs]
+	say "     Text";
+
+to say JoeySex6: [teasing]
+	say "     Text";
 
 Section 4 - Events
 

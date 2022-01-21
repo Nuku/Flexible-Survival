@@ -6,6 +6,7 @@ Version 2 of Alt Combat by Core Mechanics begins here.
 
 Part 0 - Basic variables
 
+Dam is a number that varies.
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
@@ -446,7 +447,7 @@ This is the player attack rule:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of Player], hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of Player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of Player] body[or]Drawing strength from your [BodyName of Player] body, you attack[or]You attack using your [BodyName of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodyName of Player] form's natural defenses[at random], hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of Player] body[or]Drawing strength from your [BodySpeciesName of Player in lower case] body, you attack[or]You attack using your [BodySpeciesName of Player in lower case] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodySpeciesName of Player in lower case] form's natural defenses[at random], hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of Player or "Martial Artist" is listed in feats of Player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [EnemyNameOrTitle] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -469,7 +470,7 @@ This is the player attack rule:
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [TailName of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
+				say "[line break]You make an additional attack using your [TailSpeciesName of Player in lower case] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row MonsterID from Table of Random Critters;
 		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12 and bonusattacks < 2:
@@ -615,7 +616,7 @@ This is the player seduce rule:
 		say "DEBUG: Seduction Bonus (Player) [seduce bonus][line break]";
 	let the seduction defense bonus be ( 20 - (monsterLibido divided by 3) ) + ( lev entry * 2 ) + monmindbonus - 10;
 	if Debug is at level 10:
-		say "DEBUG: Seduction seduction defense bonus (Enemy) [seduction defense bonus][line break]";
+		say "DEBUG: Seduction defense bonus (Enemy) [seduction defense bonus][line break]";
 	let the combat bonus be seduce bonus - seduction defense bonus;
 	if Debug is at level 10:
 		say "DEBUG: Combat Bonus (Player) [Combat bonus][line break]";
@@ -1347,7 +1348,14 @@ to win:
 			now ok is 1;
 		else:
 			now ok is 0;
-	if ok is 1, say "[defeated entry]";
+	if ok is 1:
+		say "[defeated entry]";
+		[
+		if fightoutcome is 10:
+			say "[defeated entry]";
+		else if fightoutcome is 11:
+			say "[seduced entry]";
+		]
 	[XP Earnings]
 	increase XP of Player by lev entry times two;
 	if ssxpa is true:
@@ -1491,13 +1499,14 @@ to TrophyLootFunction: [generates either a trophy prompt or loot for the player]
 	else: [Defaulting back to the old Loot System]
 		if Debug is at level 10:
 			say "Debug: Loot Fork activated.";
-		let randomdropchance be lootchance entry;
-		let z be 0;
-		if randomdropchance is 100: [always drops = no need to run all the maths]
-			ItemGain loot entry by 1;
-		else if randomdropchance > 0:
-			if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+		if loot entry is not "": [no empty loot entries]
+			let randomdropchance be lootchance entry;
+			let z be 0;
+			if randomdropchance is 100: [always drops = no need to run all the maths]
 				ItemGain loot entry by 1;
+			else if randomdropchance > 0:
+				if a random chance of (randomdropchance + LootBonus) in 100 succeeds:
+					ItemGain loot entry by 1;
 
 to SpecialTrophyCheck (TrophyName - text):
 	if TrophyName is:
@@ -1592,6 +1601,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hump"	retaliation rule	--	--	humping rule	100	--	--	--	--	--
 "ftaurpounce"	retaliation rule	--	--	ftaurpounce rule	20	--	--	--	--	--
 "firebreath"	firebreath rule	--	--	--	--	--	--	--	--	--
+"latexhug"	retaliation rule	--	--	latexhug rule	20	--	--	--	--	--
 
 Chapter 2 - Sample/Basic Rules
 
@@ -1619,7 +1629,7 @@ Part 2 - Alternate Attack Example - Bearhug
 
 this is the bearhug rule:
 	choose row MonsterID from Table of Random Critters;
-	if Name entry is "Snake" or Name entry is "Naga":		[crushing coils]
+	if Name entry is "Snake" or Name entry is "Naga" or Name entry is "Inflatable Snake":		[crushing coils]
 		say "The [one of][EnemyNameOrTitle][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before squeezes the fight right out of you.";
 	else:									[crushing arms]
 		say "The [EnemyNameOrTitle] manages to grab you in its powerful arms and holds you in a vice-like bear hug! You will need to break free before it squeezes the fight right out of you.";
@@ -1637,7 +1647,7 @@ this is the bearhug rule:
 			WaitLineBreak;
 			let num1 be a random number between 0 and ( Strength of Player + level of Player );
 			let num2 be a random number between 1 and ( str entry + lev entry );
-			if Name entry is "Snake" or Name entry is "Naga":
+			if Name entry is "Snake" or Name entry is "Naga" or Name entry is "Inflatable Snake":
 				say "As your opponent continues to crush you with its powerful coils, you struggle to break free: ";
 			else:
 				say "As your opponent continues to crush you with its powerful arms, you struggle to break free: ";
@@ -1886,5 +1896,34 @@ this is the firebreath rule:
 			increase firebreathcount by a random number between 2 and 6;
 			if firebreathcount > 40, now firebreathcount is 40;
 		retaliate;
+
+Part 9 - Alternate Attack Example - Latex Smother
+[ Basically the same as bearhug but uses dex check to slip out instead of strength check to break free]
+
+this is the latexhug rule:
+	choose row MonsterID from Table of Random Critters;
+	if Name entry is "Latex Frog":
+		say "The latex frog leaps onto you, wrapping its legs around you with its sticky feet gripping tight!";
+	else:
+		say "The [EnemyNameOrTitle] rushes forward and wraps itself tight around you.";
+	say "As you struggle to escape, the latex [one of]flows and expands around[or]oozes across and squeezes at[at random] your body. You will need to slip free before you're smothered!";
+	WaitLineBreak;
+	let freedom be 0;
+	while HP of Player > 0 and freedom is 0:
+		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg / round]
+		now damagein is dam;
+		say "[noarmorabsorbancy]"; [ignores armor]
+		decrease HP of Player by ( dam - absorb );
+		say "Despite your struggle, [one of]the latex continues to spread over your body[or]the latex squeezes tigher around you[at random], further immobilizing you. [special-style-2][dam][roman type] damage! ([HP of Player]/[maxHP of Player] HP)[line break]";
+		if HP of Player > 0:
+			WaitLineBreak;
+			let num1 be a random number between 0 and ( Dexterity of Player + level of Player );
+			let num2 be a random number between 1 and ( dex entry + lev entry );
+			say "You struggle to slip free as the latex [one of]continues to expand over your body[or]envelopes your body[at random]: ";
+			if num1 > num2:
+				say "You manage to find a hole in the latex and squeeze out before it closes completely around you.";
+				now freedom is 1;
+			else:
+				say "You struggle to find a way out of the latex, but feel weaker as it continues to surround and engulf you.";
 
 Alt Combat ends here.

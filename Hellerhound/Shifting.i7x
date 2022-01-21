@@ -138,19 +138,23 @@ To transform:
 	if SkinName of Player is not Name entry:
 		say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 		now SkinName of Player is Name entry;
+		now SkinSpeciesName of Player is Species Name entry;
 		now Skin of Player is skin entry;
 	if FaceName of Player is not Name entry:
 		say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 		now FaceName of Player is Name entry;
+		now FaceSpeciesName of Player is Species Name entry;
 		now Face of Player is face entry;
 	if TailName of Player is not Name entry:
 		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 		now TailName of Player is Name entry;
+		now TailSpeciesName of Player is Species Name entry;
 		now tail of Player is tail entry;
 	follow the breast change rule;
 	if BodyName of Player is not Name entry:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 		now BodyName of Player is Name entry;
+		now BodySpeciesName of Player is Species Name entry;
 		now Body of Player is body entry;
 		if there is a scale in row MonsterID of the Table of Random Critters:
 			now scalevalue of Player is scale entry;
@@ -175,6 +179,7 @@ To transform:
 	if CockName of Player is not Name entry:
 		if Player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 		now CockName of Player is Name entry;
+		now CockSpeciesName of Player is Species Name entry;
 		now Cock of Player is cock entry;
 	if strength of Player < str entry:
 		say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";

@@ -65,10 +65,12 @@ to say losetoymguy:
 		say "     Having beaten the stuffing out of you, the studly mink unknots his cravat with something almost like disinterest as a deckhand pulls off your gear and clothing. Too weak to resist, you allow yourself to be stripped bare and laid out.";
 	if Player is female:
 		say "     Eyeing your wet cunt, the mink gives his cock a stroke to milk out a few fat droplets of precum in anticipation. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he lowers himself onto you. Though he seems awful self-centered, he's well mannered enough to balance his weight on his elbows instead of you! That seems the extent of his manners, though, as you get no warning before he plunges his fat cock into you! If it didn't feel so damn good to have that well-formed cock jammed to the hilt, you might be tempted to complain! With a soft chuff and a roll of his hips, the mink begins to fuck you with smooth motions. The mixed juices of your cunt and his dribbling cock slick things up nicely and allow such a fluid breeding!";
-		say "     He completely ignores your body or your pleasure in favor of his own, even going so far to growl and snap when you lift up for a desperate kiss. Despite his selfish nature, the pleasure from being bred stokes a fire from your clit to the ridges of your womb within! As if sensing your deep excitement, the mink churrs quietly to you as his pace quickens. 'Don't think for a moment my litter entitles you to a slice of the inheritance.' His grin is humorless as he continues to pound in deep, his orgasm on the way. With a deep rolling bark he sinks in as deep as his hips will bear, massive nuts cradled against your thighs. The warmth of his seed is almost agonizing as he fills your cunt to the brim, streams of it bubbling out to splatter on the deck. With a sigh he pulls out and leaves you well fucked and dribbling, returning to his yacht.[impregchance]";
+		say "     He completely ignores your body or your pleasure in favor of his own, even going so far to growl and snap when you lift up for a desperate kiss. Despite his selfish nature, the pleasure from being bred stokes a fire from your clit to the ridges of your womb within! As if sensing your deep excitement, the mink churrs quietly to you as his pace quickens. 'Don't think for a moment my litter entitles you to a slice of the inheritance.' His grin is humorless as he continues to pound in deep, his orgasm on the way. With a deep rolling bark he sinks in as deep as his hips will bear, massive nuts cradled against your thighs. The warmth of his seed is almost agonizing as he fills your cunt to the brim, streams of it bubbling out to splatter on the deck. With a sigh he pulls out and leaves you well fucked and dribbling, returning to his yacht.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
 	else:
 		say "     Noting your lack of a tight cunt, the mink rotates his paw, the deckhand helpfully flipping you over. 'In this dirty town I suppose I have no choice but to slum a bit.' The insult is coldly smug, but you're in no position to complain as he kicks your legs apart to expose your dimpled asshole. He kneels between your legs, getting a grip on your spread thighs. Without so much as a by-your-leave he rocks his cock forward and your ass backwards to meet it! Without regard for your comfort, the mink pushes his thick slicked-up cock in at a steady pace deep into your asshole! Such upfront rape should horrify you, but thanks to the nanites your cock is rock-hard as he starts to smoothly fuck you senseless!";
-		say "     He completely ignores your body or your pleasure in favor of his own, even being cruel enough to slap your hand down if you attempt to give your cock a stroking. Despite his selfish nature, the pleasure from being bred stokes a fire from your toes to ears as he expertly saws in and out of your ass! His grip tightens as his strokes speed up, hammering your ass harder with that shapely cock! 'You're almost as tight as the Cayaman resort boys!' He snickers, and lunges forward with a snarl, his fat nuts nestling against your thighs as he impales you as deep as he can drive. With a satisfied sigh, he unloads his massive torrent of hot, fertile seed deep into your asshole, filling your guts with warmth! It's just enough, barely, to push you over the edge, your neglected cock splattering milky ropes across the dock timbers. His load spent, the mink withdraws and leaves you to collapse, already walking back to his yacht.[impregchance]";
+		say "     He completely ignores your body or your pleasure in favor of his own, even being cruel enough to slap your hand down if you attempt to give your cock a stroking. Despite his selfish nature, the pleasure from being bred stokes a fire from your toes to ears as he expertly saws in and out of your ass! His grip tightens as his strokes speed up, hammering your ass harder with that shapely cock! 'You're almost as tight as the Cayaman resort boys!' He snickers, and lunges forward with a snarl, his fat nuts nestling against your thighs as he impales you as deep as he can drive. With a satisfied sigh, he unloads his massive torrent of hot, fertile seed deep into your asshole, filling your guts with warmth! It's just enough, barely, to push you over the edge, your neglected cock splattering milky ropes across the dock timbers. His load spent, the mink withdraws and leaves you to collapse, already walking back to his yacht.";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Yuppie Mink";
 
 to say beattheymg:
 	if Libido of Player < 30:
@@ -83,8 +85,10 @@ to say beattheymgirl:
 	say "     The uppity mink lady looks positively confused as she is beaten into submission. 'This is preposterous! I am too important and rich for this!' Before she can continue, you deftly slap her down to reinforce your control.";
 	if Player is male: [male or herm]
 		say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, beckoning to your hard cock! You descend on her like a severe market correction, pinning her down against the rough planks of the dock. She yelps, her tits bouncing up and out of the sportsbra to jiggle in the salty air. They look so delectable, but you cannot resist the siren song of that hot snatch! There is a deep pleasure to be had from putting the bratty mustelid in her place, roughly fucking her like some low-class bimbo until at last you spurt your hot cum deep inside! You snicker at the thought of impregnating her with a scandalous mixed-breed litter as you draw back out, admiring how her cunt bubbles with your cum.";
+		CreatureSexAftermath "Yuppie Mink" receives "PussyFuck" from "Player";
 	else if Player is female: [female]
 		say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, mirroring your own excited gash! Without a word you just take hold of her tiny ears and yank that angular muzzle right up against your snatch! At first she struggle a bit, but after a box to the ears she gets the picture! Her tiny tongue is small but skillful, and hot as the shining sun! By flexing your arms, you get her into a good cunt-lapping rhythm that brings you to a happy gushing orgasm before too long! Satisfied, you shove the sticky splattered mink aside and return to your adventure!";
+		CreatureSexAftermath "Yuppie Mink" receives "OralPussy" from "Player";
 	else:
 		say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
@@ -92,8 +96,10 @@ to say beattheymguy:
 	say "     The poor mink fellow sinks down to his knees, jaunty cap sliding off to clatter across the deck. It splashes into the water, forlornly.";
 	if Player is male: [male]
 		say "     Your cock is rock hard in anticipation as you kneel down and flip the mink over. His short tail presents no obstacle to revealing his puckered tailhole, which winks at you as the poor male gasps for breath. You show him the same mercy he would have shown you - none. Your cock is lubed with drizzles of your precum, and that is all you need to press deep inside the defeated man! His soft humiliated moan is drowned out by your happy growl, as the yuppie mink is very tight and very hot! Before long you are jackhammering the poor ermine hard enough to make your balls slap together with wet sexual sounds! Like the nice person you are, you grope underneath his hips, finding his fat mink-fucker, giving it a few strokes. Somehow you manage to time your orgasms together completely by accident, splattering his jizz across the dock as you fill his guts with cum! After you're fully sated, a single shove decouples you and after a dick-shake, it's time to hit the adventuring trail!";
+		CreatureSexAftermath "Yuppie Mink" receives "AssFuck" from "Player";
 	else if Player is female: [female]
-		say "     You admire the well-tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he'll think twice before attacking you![impregchance]";
+		say "     You admire the well-tenderized mink, one hand dropping down to fondle your needy cunt. Despite the violence, his cock is still throbbing and ready for action - an elegantly curved and shapely mass of thick cunt-pleasing pole. It is simply too tempting to pass up, and you give in to your own carnal desires for that thick cock! With a happy sigh, you straddle the mink's slender hips and guide that fat cunt-spreader to your lips, hissing gently as it spreads your cunt. It feels so hot and thick, filling you wonderfully with sheer animal pleasure! Using his supple body as your anchor, you start bouncing on it, riding it like a throbbing dildo until at last you come to a screaming orgasm! Weakly, he mirrors your intense pleasure, weakly groaning as his fat cock pumps a massive load into your steamy snatch! After a few moments of recovery, you pry yourself off him, snickering as you dribble a mixture of juices all over his fancy jacket. Maybe next time he'll think twice before attacking you!";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Yuppie Mink";
 	else:
 		say "     Having nothing to work with, you leave the beaten mink to be ravaged by dock-workers or merchants as fate decides.";
 
@@ -107,7 +113,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mink"; [name of the overall species of the infection, used for children, ...]
 	add "Yuppie Mink" to infections of MustelidList;
 	add "Yuppie Mink" to infections of FurryList;
 	add "Yuppie Mink" to infections of NatureList;
@@ -153,7 +159,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
-	now Cunt Tightness entry is 6; [ Width of female sex infection will try and give you ]
+	now Cunt Tightness entry is 6; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
@@ -172,107 +178,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 3 - Endings

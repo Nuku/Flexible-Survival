@@ -13,77 +13,80 @@ to say hawkmandesc:
 	setmongender 3;  [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
+		say ""; [details are taken care of at the event source]
+	else:
+		say "     As you wander through the city streets, you hear a whistling sound from above and look up to see a powerful avian form swooping down towards you. You jump back as it lands right in front of you and get a closer look at the anthro raptor's body as he stalks towards you on taloned feet. The strange bird-man has large, hawk-like wings stretching out from his back, clearly flight-ready given the creature's aerial approach. He is covered in a rather soft and beautiful looking plumage of brown, layered feathers with ivory-white countershading. The obviously male creature is half-erect as he cocks his avian head to the side appraisingly, and you swear you can see a lecherous grin stretching across his beak as he leaps forward to attack.";
 
 to say Hawkman wins:
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	now nohawkmansex is 0;
-	if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
-		if Player is not female and a random chance of 3 in 5 succeeds:
-			if HP of Player > 0:
-				say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";
-			else:
-				say "     The hawkman grins proudly upon your defeat and he wastes no time in leaping forward, knocking your exhausted form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as you squirm ineffectually, he gives a cawing laugh. 'Prey, I'm going to make you my hen,' he says teasingly, nipping at your neck while grinding his stiffened member against your rear meaningfully. He reaches around and fondles your [if Player is male]manhood, causing it to react involuntarily[else]bare groin, causing you to moan involuntarily[end if].";
-			say "     You are manhandled onto all fours by the lustful bird even as your own arousal heightens[if HP of Player <= 0] despite yourself[end if]. His wings enfold around you possessively, keeping his prey/plaything safely trapped/enclosed. The true context of the situation becomes increasingly blurred for you as a growing need to allow the hawkman to fuck you overwhelms your reason as his masculine scent and confident, possessive manner affect your nanite-addled mind. He chuckles and pumps his cock eagerly when you reach back and spread your cheeks, baring your waiting pucker to [if HP of Player > 0]your dominant lover[else]the victorious raptor[end if]. From that point, he wastes little time in mounting you, burying his narrow pink cock in your exposed behind and causing you to moan in pleasure.";
-			WaitLineBreak;
-			say "     Having the avian organ inside you feels wonderful, the hawkman thrusting it skillfully and energetically into your hot hole. Your anal passage grows increasingly wet as his precum lubes you up, allowing him to fuck you harder and faster still, much to your mutual delight. You lean your chest forward and stretch your arms out, effectively raising your ass and allowing him to penetrate deeper [if HP of Player > 0]like some lustful he-hen to this studly hawk[else]into his captured man-slut prey[end if]. You pant and moan beneath him as he fucks you, his virile rod pulsing and throbbing inside you[if Player is male]. Your prostate thrums from the stimulation and your balls throb with arousal until finally spilling over in a loud and lustful orgasm. The hawkman chuckles as you climax[else]. Your body quivers with unfocused ecstasy as the stimulation eventually makes you cry out. The hawkman chuckles at your uncontrolled response[end if], nipping firmly at your shoulder and neck, and drives himself deep into you, spraying his hot load into your ass. You can't help but moan and blush a bit at how good it feels to have his semen flowing into your bowels [if HP of Player > 0]as he cums in his horny lover[else]of his misused prey[end if].[movichance]";
-			say "     When he pulls out, you flop over onto your side with a dazed, contented smile on your face and a trickle of hawk seed leaking from your well-used hole. After wiping his spent shaft across your hip, he takes flight, leaving you to gradually recover your wits - though you feel a lingering longing for the confident male to reclaim you again soon.";
-			CreatureSexAftermath "Player" receives "AssFuck" from "Hawkman Male";
-		else:
-			say "     The hawkman's beak spreads open in a wide grin as you finally stop fighting him. He wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your [if Player is female]already damp female opening[else]exposed behind[end if]. You feel strangely comfortable and protected as he buries himself in your waiting [if Player is female]passage[else]hole[end if], and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak.";
-			say "     The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places. The almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely, feathered sides. It isn't long before you are gasping and shuddering in [if Player is not neuter]orgasm[else]ecstasy[end if] underneath him as he fills your [bodydesc of Player] body with his wonderful avian seed. You can feel it flowing into you to pool inside your [if Player is female]womb[else]bowels[end if]. Your [bodytype of Player] body responds eagerly to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you. The hawkman rubs his beak over your well-used body a few times before taking to the air again. As you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon...[ovichance]";
-			CreatureSexAftermath "Player" receives "[if player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
+		say ""; [details are taken care of at the event source]
 	else:
-		say "     Knocking you to the ground, the hawkman screams his triumph, strutting around you in a particularly avian stride. As you sit up, the birdman pushes you back down with one taloned foot before taking to the sky again. Dizzy and rubbing the bump at the back of your head, you can only stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed. The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
+		now nohawkmansex is 0;
+		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
+			if Player is not female and a random chance of 3 in 5 succeeds:
+				if HP of Player > 0:
+					say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";
+				else:
+					say "     The hawkman grins proudly upon your defeat and he wastes no time in leaping forward, knocking your exhausted form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as you squirm ineffectually, he gives a cawing laugh. 'Prey, I'm going to make you my hen,' he says teasingly, nipping at your neck while grinding his stiffened member against your rear meaningfully. He reaches around and fondles your [if Player is male]manhood, causing it to react involuntarily[else]bare groin, causing you to moan involuntarily[end if].";
+				say "     You are manhandled onto all fours by the lustful bird even as your own arousal heightens[if HP of Player <= 0] despite yourself[end if]. His wings enfold around you possessively, keeping his prey/plaything safely trapped/enclosed. The true context of the situation becomes increasingly blurred for you as a growing need to allow the hawkman to fuck you overwhelms your reason as his masculine scent and confident, possessive manner affect your nanite-addled mind. He chuckles and pumps his cock eagerly when you reach back and spread your cheeks, baring your waiting pucker to [if HP of Player > 0]your dominant lover[else]the victorious raptor[end if]. From that point, he wastes little time in mounting you, burying his narrow pink cock in your exposed behind and causing you to moan in pleasure.";
+				WaitLineBreak;
+				say "     Having the avian organ inside you feels wonderful, the hawkman thrusting it skillfully and energetically into your hot hole. Your anal passage grows increasingly wet as his precum lubes you up, allowing him to fuck you harder and faster still, much to your mutual delight. You lean your chest forward and stretch your arms out, effectively raising your ass and allowing him to penetrate deeper [if HP of Player > 0]like some lustful he-hen to this studly hawk[else]into his captured man-slut prey[end if]. You pant and moan beneath him as he fucks you, his virile rod pulsing and throbbing inside you[if Player is male]. Your prostate thrums from the stimulation and your balls throb with arousal until finally spilling over in a loud and lustful orgasm. The hawkman chuckles as you climax[else]. Your body quivers with unfocused ecstasy as the stimulation eventually makes you cry out. The hawkman chuckles at your uncontrolled response[end if], nipping firmly at your shoulder and neck, and drives himself deep into you, spraying his hot load into your ass. You can't help but moan and blush a bit at how good it feels to have his semen flowing into your bowels [if HP of Player > 0]as he cums in his horny lover[else]of his misused prey[end if].[movichance]";
+				say "     When he pulls out, you flop over onto your side with a dazed, contented smile on your face and a trickle of hawk seed leaking from your well-used hole. After wiping his spent shaft across your hip, he takes flight, leaving you to gradually recover your wits - though you feel a lingering longing for the confident male to reclaim you again soon.";
+				CreatureSexAftermath "Player" receives "AssFuck" from "Hawkman Male";
+			else:
+				say "     The hawkman's beak spreads open in a wide grin as you finally stop fighting him. He wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your [if Player is female]already damp female opening[else]exposed behind[end if]. You feel strangely comfortable and protected as he buries himself in your waiting [if Player is female]passage[else]hole[end if], and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak.";
+				say "     The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places. The almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely, feathered sides. It isn't long before you are gasping and shuddering in [if Player is not neuter]orgasm[else]ecstasy[end if] underneath him as he fills your [bodydesc of Player] body with his wonderful avian seed. You can feel it flowing into you to pool inside your [if Player is female]womb[else]bowels[end if]. Your [bodytype of Player] body responds eagerly to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you. The hawkman rubs his beak over your well-used body a few times before taking to the air again. As you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon...[ovichance]";
+				CreatureSexAftermath "Player" receives "[if player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
+		else:
+			say "     Knocking you to the ground, the hawkman screams his triumph, strutting around you in a particularly avian stride. As you sit up, the birdman pushes you back down with one taloned foot before taking to the sky again. Dizzy and rubbing the bump at the back of your head, you can only stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed. The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
 
 To say Hawkman loses:
 	if inasituation is true:
-		stop the action; [details are taken care of at the event source]
-	if hawkmanbeaten < 3:
-		say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all his striking power, and as he hops back and takes to the sky again to flee, you wonder if his bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+		say ""; [details are taken care of at the event source]
 	else:
-		say "     With a final, vicious blow, you knock the hawkman back. Prepared for the avian's escape attempt, you reach out and grab him by the ankle as he starts to flap his wings. Too weak, you pull him down, slamming him to the ground, leaving the anthro avian vulnerable to you.";
-		now sextablerun is 0;
-		say "     [bold type]What do you want to do to your captive?[roman type][line break]";
-		blank out the whole of table of fucking options;
-		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Milk him for cum";
-		now sortorder entry is 1;
-		now description entry is "Fill a bottle with some rich hawkman male cum";
-		[]
-		if Player is male:
+		if hawkmanbeaten < 3:
+			say "     With one last vicious blow, you knock the hawkman back, the creature seemingly surprisingly fragile for all his striking power, and as he hops back and takes to the sky again to flee, you wonder if his bones are just as delicate as most birds... Sighing you turn to continue on your way, though you resolve to keep a better eye on the sky above just in case more of those surprisingly sexy hawkmen are in the area.";
+		else:
+			say "     With a final, vicious blow, you knock the hawkman back. Prepared for the avian's escape attempt, you reach out and grab him by the ankle as he starts to flap his wings. Too weak, you pull him down, slamming him to the ground, leaving the anthro avian vulnerable to you.";
+			now sextablerun is 0;
+			say "     [bold type]What do you want to do to your captive?[roman type][line break]";
+			blank out the whole of table of fucking options;
+			[]
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck him";
-			now sortorder entry is 2;
-			now description entry is "Screw the defeated hawkman";
-		[]
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Leave him be[as]0[end link][line break]";
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
+			now title entry is "Milk him for cum";
+			now sortorder entry is 1;
+			now description entry is "Fill a bottle with some rich hawkman male cum";
+			[]
+			if Player is male:
+				choose a blank row in table of fucking options;
+				now title entry is "Fuck him";
+				now sortorder entry is 2;
+				now description entry is "Screw the defeated hawkman";
+			[]
+			repeat with y running from 1 to number of filled rows in table of fucking options:
+				choose row y from the table of fucking options;
+				say "[link][y] - [title entry][as][y][end link][line break]";
+			say "[link]0 - Leave him be[as]0[end link][line break]";
+			while sextablerun is 0:
+				say "Pick the corresponding number> [run paragraph on]";
+				get a number;
+				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+					now current menu selection is calcnumber;
+					choose row calcnumber in table of fucking options;
+					say "[title entry]: [description entry]?";
+					if Player consents:
+						let nam be title entry;
+						now sextablerun is 1;
+						if nam is "Milk him for cum":
+							say "[HawkmanCumMilking]";
+						else if nam is "Fuck him":
+							say "[HawkmanAssfuck]";
+				else if calcnumber is 0:
+					say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
 					now sextablerun is 1;
-					if nam is "Milk him for cum":
-						say "[HawkmanCumMilking]";
-					else if nam is "Fuck him":
-						say "[HawkmanAssfuck]";
-			else if calcnumber is 0:
-				say "     To reinforce your victory, you pull a few feathers from the bird's tail, making him squawk in pain.";
-				now sextablerun is 1;
-			else:
-				say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
-	increase hawkmanbeaten by 1;
+				else:
+					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
+		increase hawkmanbeaten by 1;
 
 to say HawkmanCumMilking:
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you decide to take what you want from the defeated avian instead of letting him force it upon you. Slamming his shoulders down firmly, you tell the weakened bird to stay, then reach for his crotch and start rubbing it. As his tapering shaft starts to fill out under your touch, the hawkman's indignant squawks die down before too much longer, with your former opponent beginning grind against your hand. He still struggles a little bit, wanting to be dominant and on top, but you growl at him until he stops resisting. Only then do you take the hand that was pressing down on his chest away, using it to caress his balls instead. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the rapid beat of his heart.";
@@ -179,108 +182,6 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is "Hawkman Male"; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 4; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 2; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is "your eyes grow a bit and become exceptionally sharp while your ears get smaller and smaller until their exterior parts vanish. Cream and colored feathers sprout from your skin, with a bit of a ruffle around your neck. Finally, a wicked beak pushes forward to give you the head of a hawk"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is "a sharp-beaked hawk with [Head Color of Player] feathers"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is "avian"; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is "feathered"; [one word descriptive adjective]
-	now Head Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "neck-ruffle of feathers"; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 0; [hair length in inches]
-	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is "cream-colored"; [one word color descriptor]
-	now Hair Style entry is "buzzcut"; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is "yellow"; [one word color descriptor]
-	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 10;
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is "blunt"; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is "pink"; [one word color descriptor]
-	now Tongue Length entry is 7; [length in inches]
-	now Torso Change entry is "it narrows a bit, with tan and brown feathers starting to sprout out of your skin, giving you a spotted coat"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is "narrow, with a spotted coat of [Torso Color of Player] feathers"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is "avian"; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is "feathered tummy"; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is "tan and brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is "spotted"; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is "perky"; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is "pink"; [one word color descriptor]
-	now Nipple Shape entry is "oval"; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is "a pair of wings sprouts out of it, with cream-colored feathers on the underside and tan color on the back"; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is "the pair of cream and tan feathered wings growing from beneath your shoulder blades"; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is "your fingernails grow into sharp claws and grey scales spread over your hands and lower arms"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is "covered in [Arms Color of Player] feathers down to the elbow, with small, grey scales from there down to your clawed hands"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is "scaled"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is "they shift into the digitigrade stance of an anthro bird with brown feathers, complete with clawed feet"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro bird, with [Legs Color of Player] feathers covering them from your hips down to the clawed feet"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is "it becomes well-rounded and brown feathers sprout all over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered short brown feathers"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
-	now Ass Skin Adjective entry is "feathered";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is "a fan of long brown feathers sprout sprout from your tailbone"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is "fan of long [Tail Color of Player] feathers"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is "pink"; [one word color descriptor]
-	now Cock Count entry is 1;
-	now Cock Girth entry is 2; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 8; [length in inches]
-	now Cock Change entry is "it takes on a slender and pointy appearance, tapering all the way from the base to the tip"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is [Cock Color of Player] and looks fairly slender, taping all the way from the base to the tip"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Adjective entry is "avian"; [one word adjective: avian/canine/...]
-	now Cock Color entry is "pink"; [one word color descriptor]
-	now Ball Count entry is 2;
-	now Ball Size entry is 2; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is "balls in a feathered, tight sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0;
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Change entry is "it takes on a triangular appearance, complete with a clit at the top"; [partial sentence that fits in: "Your cunt [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "is [Cunt Color of Player]-colored and triangular in shape, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Adjective entry is "avian"; [one word adjective: avian/canine/...]
-	now Cunt Color entry is "pink"; [one word color descriptor]
-	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
-
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -355,108 +256,6 @@ When Play begins:
 	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "Hawkman"; [name of the overall species of the infection, used for children, ...]
-	now Name entry is "Hawkman Female"; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 3; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 7; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 7; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is "your eyes grow a bit and become exceptionally sharp while your ears get smaller and smaller until their exterior parts vanish. Cream and colored feathers sprout from your skin, with a bit of a ruffle around your neck. Finally, a wicked beak pushes forward to give you the head of a hawk"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is "a sharp-beaked hawk with [Head Color of Player] feathers"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is "avian"; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is "feathered"; [one word descriptive adjective]
-	now Head Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "neck-ruffle of feathers"; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 0; [hair length in inches]
-	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is "cream-colored"; [one word color descriptor]
-	now Hair Style entry is "buzzcut"; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is "yellow"; [one word color descriptor]
-	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 10; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 10;
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is "blunt"; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is "pink"; [one word color descriptor]
-	now Tongue Length entry is 7; [length in inches]
-	now Torso Change entry is "it narrows a bit, with tan and brown feathers starting to sprout out of your skin, giving you a spotted coat"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is "narrow, with a spotted coat of [Torso Color of Player] feathers"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is "avian"; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is "feathered tummy"; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is "tan and brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is "spotted"; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is "perky"; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 2; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is "pink"; [one word color descriptor]
-	now Nipple Shape entry is "oval"; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is "a pair of wings sprouts out of it, with cream-colored feathers on the underside and tan color on the back"; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is "the pair of cream and tan feathered wings growing from beneath your shoulder blades"; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is "your fingernails grow into sharp claws and grey scales spread over your hands and lower arms"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is "covered in [Arms Color of Player] feathers down to the elbow, with small, grey scales from there down to your clawed hands"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is "scaled"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is "they shift into the digitigrade stance of an anthro bird with brown feathers, complete with clawed feet"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro bird, with [Legs Color of Player] feathers covering them from your hips down to the clawed feet"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is "it becomes well-rounded and brown feathers sprout all over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered short brown feathers"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
-	now Ass Skin Adjective entry is "feathered";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is "a fan of long brown feathers sprout from your tailbone"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is "fan of long [Tail Color of Player] feathers"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is "brown"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is "pink"; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Change entry is "it takes on a slender and pointy appearance, tapering all the way from the base to the tip"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is [Cock Color of Player] and looks fairly slender, taping all the way from the base to the tip"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Adjective entry is "avian"; [one word adjective: avian/canine/...]
-	now Cock Color entry is "pink"; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 2; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is "balls in a feathered, tight sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 1;
-	now Cunt Depth entry is 8;
-	now Cunt Tightness entry is 2;
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Change entry is "it takes on a triangular appearance, complete with a clit at the top"; [partial sentence that fits in: "Your cunt [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "is [Cunt Color of Player]-colored and triangular in shape, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Adjective entry is "avian"; [one word adjective: avian/canine/...]
-	now Cunt Color entry is "pink"; [one word color descriptor]
-	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 Section 3 - Item Drop
 

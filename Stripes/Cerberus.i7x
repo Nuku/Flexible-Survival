@@ -30,18 +30,20 @@ to say losetocerberus:
 	else:					[beaten]
 		say "     Beaten by the strange, three-headed dog-beast, you are knocked to the ground. The three snarling heads sniff and nuzzle over you, inspecting their prize. You try to resist as those maws drool onto you, showing three vicious sets of teeth. The hermaphrodite canine pushes your legs apart with her large paws and sniffs at your crotch.";
 	if Player is herm:		[HERM]
-		say "     The trio of heads bark happily at having found another herm to play with. They start licking at your face happily and she eagerly picks you up and starts rubbing her hard cock against you. Pushing you onto all fours, the three-headed beast mounts you and drives her large, canine cock into your pussy without delay. The dog heads howls happily and she takes your [CockName of Player] penis in one paw while fucking you like an animal. The central head bites down on the back of your neck while the other two take your upper arms, keeping you trapped beneath them while she fucks you with her cock-ended tail. Not that you could resist anyhow, with that wonderful cock pumping inside you and that doggy knot swelling and locking you like a bitch to the big dog creature atop you. Lost in the lustful pleasure of the wild fucking, you cum hard as the Cerberus herm pumps her seed into your womb, fully claiming you as her bitch. Your cum paints the ground beneath you as you're bred by your powerful lover.";
-		say "[impregchance]";
+		say "     The trio of heads bark happily at having found another herm to play with. They start licking at your face happily and she eagerly picks you up and starts rubbing her hard cock against you. Pushing you onto all fours, the three-headed beast mounts you and drives her large, canine cock into your pussy without delay. The dog heads howls happily and she takes your [Cock of Player] penis in one paw while fucking you like an animal. The central head bites down on the back of your neck while the other two take your upper arms, keeping you trapped beneath them while she fucks you with her cock-ended tail. Not that you could resist anyhow, with that wonderful cock pumping inside you and that doggy knot swelling and locking you like a bitch to the big dog creature atop you. Lost in the lustful pleasure of the wild fucking, you cum hard as the Cerberus herm pumps her seed into your womb, fully claiming you as her bitch. Your cum paints the ground beneath you as you're bred by your powerful lover.";
 		say "     When the knot finally goes down, the canine herm pops it out of you and a waterfall of doggy seed flows from your well-used hole. You moan softly and pass out, lost in the bliss of being so thoroughly bred by the mythic beast.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
 	else if Player is female:				[FEMALE]
 		say "     The trio of heads bark happily at having found a female to breed. They licking at your face and she eagerly picks you up and rolls you over onto your back. The large creature climbs atop you, rubbing her hard cock against your belly. The three-headed herm mounts you, driving that large cock at the end of her tail into your pussy without further delay. The heads howl in pleasure and she starts fucking you like an animal. The two side heads latch onto your breasts and start sucking and licking at your nipples, making you moan. As you do, the central head kisses you with its canine muzzle, pushing its long, slobbery tongue into your mouth. her powerful body keeps you pinned down while she fucks you, keeping you trapped beneath her. Not that you could resist anyhow, with that wonderful cock pumping inside you and that doggy knot swelling and locking you like a bitch to the big dog creature atop you. Lost in the lustful pleasure of the wild fucking, you cum hard as the Cerberus herm pumps her seed into your womb, fully claiming you as her bitch. Your cum paints the ground beneath you as you're bred by your powerful, bestial lover.";
-		say "[impregchance]";
 		say "     When the knot finally goes down, the canine herm pops it out of you and a waterfall of doggy seed flows from your well-used hole. You moan softly and pass out, lost in the bliss of being so thoroughly bred by the mythic beast.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
 	else:								[MALE]
 		if HP of Player > 0:		[male submit]
 			say "     The trio of heads growl in disappointment at having only found a male, but at least it is one willing to play with her. 'And perhaps, with a little help, he'll become more fun to play with in the future,' the heads discuss, nodding to one another. She pushes you to your knees and strokes a paw over her thick tail, bringing the cock at its end to your lips. You lick your lips as you eye the huge, throbbing meat. You should be concerned given its great size, but its musky, arousing scent is overwhelming. Soon you're licking and kissing along it, running your tongue up and down its length. You suck eagerly at its pointed tip, drinking down her precum. When she takes your head in her paws, she guides your mouth over her cock, steadily driving it down your throat until the whole thing is stuffed down into you. You ache a little from its size, but that hardly seems to matter as you're all too eager to accept that as long as you have that big bone buried in you. You suck and lick until finally she cums hard, blasting half her load into your belly and the rest across your face when she pulls out. You fall back, cumming hard all over yourself as you collapse, panting for breath and passing out. You drift off into wild, wet dreams. Perhaps, if you are lucky, you will awaken as a beast like her and be able to please the powerful Cerberus as her bitch as those dreams make you long to be.";
+			CreatureSexAftermath "Player" receives "OralCock" from "Cerberus";
 		else:				[male beaten]
 			say "     The trio of heads growl at having only found a male. She seems to have a conversation between her three heads for a moment before reaching down and picking you up. You're too beaten up to resist her at that point as she forces you to drink from her breast, feeding you her infected milk. As the tainted milk gets you aroused, she grabs your stiffening cock and spears her wet pussy down onto it. 'If only you were a herm or female, then we could really have some fun.' She holds you tightly and doesn't make any attempt to ride your cock and prevents you from thrusting into her, letting her leaking juices soak into you while you drink down her milk until you pass out from your injuries into wild, wet dreams. Perhaps, if you are lucky, you will awaken a beast like her and be able to please the powerful Cerberus as her bitch as those dreams make you long to be.";
+			CreatureSexAftermath "Cerberus" receives "PussyFuck" from "Player";
 		increase Libido of Player by 12;
 		follow the sex change rule;
 
@@ -113,16 +115,19 @@ to say beatthecerberus:
 		say "     Able to resist her wanton display, she whines softly in disappointment as you turn and walk off, getting back to accomplishing your other goals.";
 
 to say cerberus3oral:
-	say "     Your [Cock Count of Player] cocks twitch in anticipation of shared oral satisfaction from the triple-headed herm you've captured. You step up to her and present your throbbing rods to her, grabbing her middle head and pulling her wet muzzle over one of your cocks. She, having eyed your numerous penises hungrily as you approached, sets to licking and sucking at it eagerly. The other two nuzzle in and seek out erections of their own to suck upon. Your eyes roll back in your head, moaning in pleasure as the triple muzzles lick at your throbbing cocks with their canine tongues[if Cock Length of Player < 9]. The three heads bump and press at one another, each trying to take as much of the cock they're sucking into their muzzle[else]. Your lengthy [CockName of Player] cocks allow all three heads to suck comfortably at your cocks, lavishing them with attention[end if][if Cock Count of Player > 3]. The muzzles swap around from time to time to one of your other free cocks, sharing them all around between them[end if].";
+	say "     Your [Cock Count of Player] cocks twitch in anticipation of shared oral satisfaction from the triple-headed herm you've captured. You step up to her and present your throbbing rods to her, grabbing her middle head and pulling her wet muzzle over one of your cocks. She, having eyed your numerous penises hungrily as you approached, sets to licking and sucking at it eagerly. The other two nuzzle in and seek out erections of their own to suck upon. Your eyes roll back in your head, moaning in pleasure as the triple muzzles lick at your throbbing cocks with their canine tongues[if Cock Length of Player < 9]. The three heads bump and press at one another, each trying to take as much of the cock they're sucking into their muzzle[else]. Your lengthy [Cock of Player] cocks allow all three heads to suck comfortably at your cocks, lavishing them with attention[end if][if Cock Count of Player > 3]. The muzzles swap around from time to time to one of your other free cocks, sharing them all around between them[end if].";
 	say "     You are unable to hold back against all this simultaneous attention to your multiple genitals and soon cry out in orgasm. You pump your hot seed into those eager, canine muzzles, pumping your load into the eager Cerberus herm's maws. her muzzles licks their chops happily and she pads off, satisfied with the tasty treat her trio of heads got to share.";
+	CreatureSexAftermath "Cerberus" receives "OralCock" from "Player";
 
 to say cerberusfuck:
 	if Libido of Player > 55 and player is female, now cerberusarousal is 1;
-	say "     Fingering her cunt, you press her down onto her back with your other hand. The lustful creature obeys readily, somehow sensing she'll receive some form of release. As you move into position, you keep pumping those fingers into her while your other hand strokes over your growing erection, getting it fully hard. Once you're ready, you slip your wet digits out and spread her canine muff with them as you guide your stiff [CockName of Player] cock into her.";
+	say "     Fingering her cunt, you press her down onto her back with your other hand. The lustful creature obeys readily, somehow sensing she'll receive some form of release. As you move into position, you keep pumping those fingers into her while your other hand strokes over your growing erection, getting it fully hard. Once you're ready, you slip your wet digits out and spread her canine muff with them as you guide your stiff [Cock of Player] cock into her.";
 	say "     You move your hands to her many breasts, stroking over them as you watch her three canine heads pant and whine in pleasure. As you drive your cock into that wet, canine pussy again and again, you moan in pleasure. You tease and pinch her many nipples, watching as her milk starts to flow from them[if cerberusarousal is 1]. As your pleasure continues to grow, you find yourself unable to resist the beast's tail and guide it to your dripping pussy even as you fuck her own. You push it into you, taking several inches in one go, then letting it pound away at you, driving your meat down into her snatch[end if].";
 	say "     You keep thrusting into her, enjoying the feel of her hot, squeezing pussy around your cock. her body squirms in delight beneath you as you pound away at his until finally you thrust hard into her one last time and start pumping your cum into her. She growls in pleasure from her three muzzles and cums as well, sending quivers through her pussy to milk you for all you'll give[if cerberusarousal is 1]. her cock thrusts hard into you one last time, tying with you and unleashing her hot seed deep inside you, painting the walls of your womb with her virile semen[end if].";
-	if cerberusarousal is 1, say "[impregchance]";
 	say "     You collapse atop the mythic creature, panting and moaning happily as her three muzzles lick and kiss at you with their slobbery tongues. Eventually, your cock grows soft and you pop it free of her well-bred hole[if cerberusarousal is 1]. her cock slips free from your pussy as the knot goes down, releasing her tail from you[end if]. She gets up slowly and heads off, quite satisfied after her rather rough encounter with you.";
+	if cerberusarousal is 1:
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
+	CreatureSexAftermath "Cerberus" receives "PussyFuck" from "Player";
 
 to say cerberusride:
 	if Libido of Player > 55 and player is male, now cerberusarousal is 1;
@@ -130,12 +135,15 @@ to say cerberusride:
 	say "     Running your hand over her tail, your push her to roll over with the other. The lustful creature obeys readily, somehow sensing she'll receive some form of release. You sit atop her waist and move her tail into position, lining it up with your [if Player is female]wet cunt[else]tight pucker[end if]. You rub back against it, smearing her leaking pre against your hole before pushing that tailcock into you where you most need it. You moan softly as you guide her thick meat into you, then release the tail once it's far enough to start thrusting into you on its own.";
 	say "     You move your hands to her many breasts, stroking over them as you watch her three canine heads pant and whine in pleasure. As that ridged, canine cock plows into you again and again, you moan in pleasure. You tease and pinch her many nipples, watching as her milk starts to flow from them[if cerberusarousal is 1]. As your pleasure continues to grow, you find yourself lusting for more and you shift your hips and thrust your own cock into her wet snatch, fucking her even as you have her fuck you[else if cerberusarousal is 2]. As your pleasure continues to build, you find yourself lusting for more and bring your tailcock into position, guiding it into her wet snatch, fucking her even as you have her fuck you[end if].";
 	say "     You keep this up as you start clenching and relaxing your [if Player is female]pussy[else]anus[end if] around her cock until finally she drives her knot into you, locking that twisted, canine cock into you. She growls in pleasure from her three muzzles and unleashes her hot seed into your [if Player is female]womb[else]ass[end if], filling you with her virile semen[if cerberusarousal > 0]. You drive your own cock deep into her and unleash as well, pumping your seed into her waiting womb[end if].";
-	say "[impregchance]";
 	say "     You collapse atop the mythic creature, panting and moaning happily as her three muzzles lick and kiss at you with their slobbery tongues. Eventually, her knot goes down and you are back to pop her tail free, releasing a gush of her seed before you can clench down to keep the rest of it in you. She gets up slowly and heads off, quite satisfied after her rather rough encounter with you.";
+	if cerberusarousal > 0:
+		CreatureSexAftermath "Cerberus" receives "PussyFuck" from "Player";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Cerberus";
 
 to say cerberusfemmeoral:
 	say "     Preferring to get set those canine tongues to work, you spread your legs and guide the middle head between your thighs, pressing her wet nose to your wetter pussy. She starts lapping at your dripping folds obediently and is soon diving her tongue into you. You moan happily and run your fingers over her canine head. her other heads, as if getting jealous of the treat the center one is enjoying, start nudging and bumping against it, trying to push it out of the way so they can have a taste[if Cunt Count of Player > 1]. Despite having several pussies, there's still only really room for one to easily get at them at a time, though the others take what swipes they can with their long tongues[end if]. Soon enough, the three heads are taking turns, though it seems they each want to keep your dripping juices all to themselves. The middle one, given its position, gets the most time lapping at your cunt[sfn].";
 	say "     All this licking from the competing heads, who seem to be going all out to please you so you'll let that head keep at it longer, drives you to great heights of pleasure, cumming hard several times, soaking those broad, canine muzzles in your juices again and again. Eventually, you've had as much as you can take, becoming too oversensitive and very fulfilled and have to push her heads back. They whine in frustration and she grabs her tail and they all start licking at in instead, fighting for the chance to suck it off. You leave her like that, lost in her own lustful, internal squabble.";
+	CreatureSexAftermath "Cerberus" receives "OralPussy" from "Player";
 
 
 to say cerberusdesc:
@@ -184,7 +192,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Cerberus"; [name of the overall species of the infection, used for children, ...]
 	add "Cerberus" to infections of CanineList;
 	add "Cerberus" to infections of FurryList;
 	add "Cerberus" to infections of FeralList;
@@ -251,107 +259,7 @@ When Play begins:
 	now altcombat entry is "cerberus"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 

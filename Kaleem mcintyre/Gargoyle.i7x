@@ -9,11 +9,13 @@ Section 1 - Creature Responses
 
 to say gargoyledesc:
 	setmongender 3; [creature is male]
-	say "A flutter of wings has you ducking for cover just in time for you to find a fascinating creature dropping down from the sky to land gracefully in front of you. With beautiful gray skin strapped tight over numerous muscles you look over the bare form of this horrible monster and realize what you're dealing with. The gargoyle stands with wings spread and a menacing glare pointed in your direction. [one of]The creature warbles at you quietly, seeming to want to challenge you, though you're not sure why[or]A hissing growl has your nerves buzzing as you see the monster snarling at you heatedly[or]A hiss and then flap of the monster's wings has you on guard as you feel the need to fight come over you[at random].";
+	project the Figure of Gargoyle_soft_icon;
+	say "     A flutter of wings has you ducking for cover just in time for you to find a fascinating creature dropping down from the sky to land gracefully in front of you. With beautiful gray skin strapped tight over numerous muscles you look over the bare form of this inhuman monster and realize what you're dealing with. The gargoyle stands with wings spread and a menacing glare pointed in your direction. [one of]The creature warbles at you quietly, seeming to want to challenge you, though you're not sure why[or]A hissing growl has your nerves buzzing as you see the monster snarling at you heatedly[or]A hiss and then flap of the monster's wings has you on guard as you feel the need to fight come over you[at random].";
 
 to say gargoyle attack:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project the Figure of Gargoyle_hard_icon;
 	say "     A sweep of well polished claws against your chest sends you reeling back onto the ground in defeat. Seeing you lying there before it spread out prone in defeat the gargoyle smiles down at your with its beautifully monstrous face, a startling sight in and of itself since there is nothing merciful in the creature's solid black eyes. The gargoyle soon smirks at you when you try to move yourself to get up onto your feet, but both it and you know that your strength is gone right about now. Coal colored eyes shimmering down at you with an inhuman glee you suddenly feel as though you may have bitten off more than you can chew as your nose catches a slightly musky scent wafting into the air. Dropping your gaze south you whimper at the sight of the creature's powerfully flexing cock dribbling a straight line of precum down onto the ground in front of it.";
 	WaitLineBreak;
 	if Player is female:
@@ -35,6 +37,7 @@ to say gargoyle attack:
 To say gargoyle loss:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project the Figure of Gargoyle_hard_icon;
 	say "     Stunned that it could be defeated by you, the gargoyle kneels down on one knee and then looks up at you with both awe and respect on its beautifully monstrous face while displaying itself fully for your approval. ";
 	if Player is male and Libido of Player > 45:
 		say "Looking over the creature, you find yourself tempted to have your way with this strange, powerful monster.";
@@ -45,14 +48,12 @@ To say gargoyle loss:
 		if Player consents:
 			LineBreak;
 			say "     An upturned wave of your hand has the gargoyle rising up to its two digitigrade feet and a smile tips at your lips as you watch the obedient beast do as commanded. Your eyes roam onto the beautiful gray marble-like skin of the creature from head down to toe and without thinking you find your hands reaching out to touch the gargoyle all over as you physically inspect its neck, chest, torso, back and then behind onto its surprisingly leathery feeling wings. Like an artisan having finished a masterpiece you feel charged by the dominance you have over the creature - the gargoyle unmoving from where it stands as it lets you survey it fully - and without any warning your greedy hands go down to lift the monster's serpentine tail up and out of the way, fascination having given birth to arousal. Your eyes lock in onto the tailhole of the creature - nestled securely between the cheeks of its gray rump - and quickly you find your [Cock of Player] shaft growing hard with eager need to mark the beast before you with your personal symbol.";
-			WaitLineBreak;
 			say "     Without speaking a word, you bring yourself as close to the monster as you can before wrapping your arms down and around the sides of the gargoyle's expansive wings. The leathery extensions fold close to allow you complete access to the creature and soon your [Cock of Player] rod is wedging itself into the gargoyle's puckered depths. Slipping in with some effort, the tightness of the marble hard pucker giving you a bit of trouble at first, you soon find yourself sheathed completely into the gargoyle as the monster loosens itself up to you, its master. A warble-like noise pierces the air around you and again you find yourself smiling as you know exactly what that sound means. Bucking your hips ever so slightly into the beast you soon find a steady rhythm at which to work while having your way with your muscular marble-like Adonis.";
 			WaitLineBreak;
-			say "     Arms clenching tight around the gargoyle you are quick to slake your lust onto the creature that thought it could best you in combat. The raw urge to show the gargoyle its place underneath you makes you growl low into your throat as you hammer your hips vehemently into the monster. A shudder comes from the beast and without having to look you know that its impressive cock, which you had spared little glance at before, is now hard and leaking between the creature's thighs. Feeling as though you might get more fun out of a halfway acquiescent submissive you reach one hand around to stroke at the gargoyle's needy shaft with slow and steady curls of your fingertips. Slick with precum and hard like polished stone with ripened balls swaying liberally between its legs, you don't bother to think as you grip the creature into a crushing grip while pounding your way into the deeper recesses of its gray colored ass. All forms of civility leaving your mind and actions as you chisel a new set of grooves into the monsters deeper reaches. A tight flex of muscles along your length and soon you and your gargoyle pet are filling the area around you with the songs of male pleasure as both of your climb up higher and higher to the zenith that is climax.";
+			say "     Arms clenching tight around the gargoyle you are quick to slake your lust onto the creature that thought it could best you in combat. The raw urge to show the gargoyle its place underneath you makes you growl low into your throat as you hammer your hips vehemently into the monster. A shudder comes from the beast and without having to look you know that its impressive cock, which you had spared little glance at before, is now hard and leaking between the creature's thighs. Feeling as though you might get more fun out of a halfway acquiescent submissive you reach one hand around to stroke at the gargoyle's needy shaft with slow and steady curls of your fingertips. Slick with precum and hard like polished stone with ripened balls swaying liberally between its legs, you don't bother to think as you grip the creature into a crushing grip while pounding your way into the deeper recesses of its gray colored ass. All forms of civility leaving your mind and actions as you chisel a new set of grooves into the monsters deeper reaches.";
+			say "     A tight flex of muscles along your length and soon you and your gargoyle pet are filling the area around you with the songs of male pleasure as both of your climb up higher and higher to the zenith that is climax. The shared moment soon comes to an end however, when you feel a tingle go through your stomach signaling your oncoming orgasm. Not wanting to come before feeling your monstrous slave covering your hand with its juice you slip your hand down onto the gargoyle's nuts and then give the low hanging orbs a firm squeeze. Like a cannon going off the creature sprays its load across your hand, after you reach up to cover the head of its cock with your fingers, and then onto the ground in several streaming burst just as a reverberating yowl splits the air between the both of you. Instantly the vice of the gargoyle's rectum locks up around you sending your eyes up almost into the back of your head as you arch and then hiss out your explosive climax into the beast's ears.";
 			WaitLineBreak;
-			say "     The shared moment soon comes to an end however, when you feel a tingle go through your stomach signaling your oncoming orgasm. Not wanting to come before feeling your monstrous slave covering your hand with its juice you slip your hand down onto the gargoyle's nuts and then give the low hanging orbs a firm squeeze. Like a cannon going off the creature sprays its load across your hand, after you reach up to cover the head of its cock with your fingers, and then onto the ground in several streaming burst just as a reverberating yowl splits the air between the both of you. Instantly the vice of the gargoyle's rectum locks up around you sending your eyes up almost into the back of your head as you arch and then hiss out your explosive climax into the beast's earfins. Grunting and panting like a man climbing a mountain you soon find your cum staining the inside of the gargoyle's ass and then trailing down around your thighs as you pull yourself out to look at what you've just accomplished. Long trails of musky fluid ooze out of the beast's backside to become small rivers and without warning your hand is reaching down to caress the mess you have just made. Polishing the gargoyle's ass you find yourself writing your initials out with the white [']ink['] as you leave a mark on the creature that will last for a while in both the monster's mind and body.";
-			WaitLineBreak;
-			say "     Once done you take a few steps back from the other and then walk around to have a look at the creature only to see the gargoyle purring in utter delight while staring forward into the vacant distance. Deciding that you've had enough of [']admiring['] your statue-like pet you take your leave of the gargoyle, but not before cleaning your wet hand off on the monster's face.";
+			say "     Grunting and panting like a man climbing a mountain you soon find your cum staining the inside of the gargoyle's ass and then trailing down around your thighs as you pull yourself out to look at what you've just accomplished. Long trails of musky fluid ooze out of the beast's backside to become small rivers and without warning your hand is reaching down to caress the mess you have just made. Polishing the gargoyle's ass you find yourself writing your initials out with the white [']ink['] as you leave a mark on the creature that will last for a while in both the monster's mind and body. Once done you take a few steps back from the other and then walk around to have a look at the creature only to see the gargoyle panting in utter delight while staring forward into the vacant distance. Deciding that you've had enough of [']admiring['] your statue-like pet you take your leave of the gargoyle, but not before cleaning your wet hand off on the monster's face.";
 			CreatureSexAftermath "Gargoyle" receives "AssFuck" from "Player";
 		else:
 			LineBreak;
@@ -116,7 +117,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
@@ -135,107 +136,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 Section 3 - Endings

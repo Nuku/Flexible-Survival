@@ -30,7 +30,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 South Sewer Tunnel	"South Sewer Tunnel"
 
-South Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction it heads, you ascertain that it leads down to the sea. This must be the major drainage duct.[line break][if Perception of Player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?[end if]".
+South Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot South is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction it heads, you ascertain that it leads down to the sea. This must be the major drainage duct.[line break][if Perception of Player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?[end if]".
 
 before entering South Sewer Tunnel for the first time:
 	say "You fall down onto the floor with a solid thud. Ouch. Aw crap, you can't find a ladder. Looks like you will have to find another way out.";
@@ -46,7 +46,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 North Sewer Tunnel	"North Sewer Tunnel"
 
-North Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction the tunnel heads towards, you ascertain that it comes from the mall. This must be the north segment of the major drainage duct.[line break][if Perception of Player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?". North Sewer Tunnel is north of South Sewer Tunnel. North Sewer Tunnel is below Red Grate.
+North Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot South is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction the tunnel heads towards, you ascertain that it comes from the mall. This must be the north segment of the major drainage duct.[line break][if Perception of Player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?". North Sewer Tunnel is north of South Sewer Tunnel. North Sewer Tunnel is below Red Grate.
 
 
 

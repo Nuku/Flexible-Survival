@@ -1,10 +1,11 @@
-Version 2 of Giant by Gherod begins here.
+Version 4 of Giant by Gherod begins here.
 
 "Adds Giant to Flexible Survival."
 
 [ Original by Stripes ]
 [ Version 2 - Reworked Giant, added and polished scenes - Gherod ]
 [ Version 3 - Giant stats nerfed. Expanded with Victory scenes - Gherod]
+[ Version 4 - Started a personal quest for the Giant]
 
 Section 1 - Creature Responses
 
@@ -24,6 +25,8 @@ to say giantdesc:
 	else:
 		say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.";
 		say "     He hasn't spotted you yet, giving you time to consider your options in the face of such a situation. It seems you could always just [bold type]ignore the giant man and get out of there[roman type] before he has the chance to see you. However, if you're interested in [bold type]observing him[roman type], there are a few areas with tall vegetation where you can conceal yourself in to watch what he's doing from a safe distance. Alternatively, if you're brave enough, you can just [bold type]go talk to him[roman type], but if you think words won't work with him, you can always attempt to [bold type]fight[roman type] the towering, forty feet tall of a burly muscular man that could probably stomp you flat with one strike... Ill-advised, unless you're into being crushed and instigating aggression.";
+		if carried of zookeeper ring > 0:
+			say "     [bold type]You seem to be carrying the giant zookeeper's ring with you, making it possibly safe to approach him as long as you show it.[roman type][line break]";
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Walk away.";
 		say "     [link](2)[as]2[end link] - Hide and watch.";
@@ -46,11 +49,28 @@ to say giantdesc:
 			now combat abort is 1;
 			say "[WatchTheGiant]";
 		else if calcnumber is 3:
-			say "     He's still a human, alright? Even though he grew several feet tall, he must be capable of comunication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
-			say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
-			WaitLineBreak;
-			now combat abort is 1;
-			say "[WalkToGiant]";
+			if carried of zookeeper ring > 0:
+				say "     He is still a human, and you happen to have something he might like. Would you want to show the giant the ring you found?";
+				Linebreak;
+				say "     ([link]Y[as]y[end link]) - Yes, show him the ring.";
+				say "     ([link]N[as]n[end link]) - No need for that.";
+				if player consents:
+					Linebreak;
+					now combat abort is 1;
+					say "[ApproachTheGiant]";
+				else:
+					LineBreak;
+					say "     You have decided to not show him the ring and just continue to approach him like you usually would. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+					say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
+					WaitLineBreak;
+					now combat abort is 1;
+					say "[WalkToGiant]";
+			else:
+				say "     He is still a human. Even though he grew several feet tall, he must be capable of communication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+				say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
+				WaitLineBreak;
+				now combat abort is 1;
+				say "[WalkToGiant]";
 		else if calcnumber is 4:
 			say "     He will never be expecting you to come out of nowhere and attack, as you have the element of surprise! Bolstering up all your courage, bravado and enormous will to fight, you leap out of hiding and rush straight into the giant, delivering a totally unpredictable strike to his heel! You keep your flurry of attacks steady, in hopes to bring your enemy down swiftly. But as the giant looks over you while frowning his eyebrows, you realize this isn't being very effective. Having finally detected your presence, the giant [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks loudly, saying that you're being bad and will regret trying to smack him -[at random] and attempts to grab you with one of his meaty fists! Luckily you're able to dodge him, but he doesn't sound very happy...";
 
@@ -148,7 +168,7 @@ to say WatchTheGiant:
 	let randomnumber be a random number from 1 to 5;
 	if randomnumber is:
 		-- 1:
-			say "     It seems that you caught the giant on his break, and in the middle of what he likes to call [']playtime['] with some of the critters he's treating. At first, it looks like he's simply jerking off, but in the middle of his fist is an anthro [one of]zebra[or]giraffe[or]rhino[or]tiger[at random] being spread open and full body stretched on the gigantic cock that is almost splitting them in half. It's incredible how they're basically being used as living fleshlights, their insides rearranged to accomodate the massive size of the dong that's bulging out of their shapes. You can hear the giant man moaning as he slides them down and up his shaft vigorously, as they squirm and cry out of their distended forms.";
+			say "     It seems that you caught the giant on his break, and in the middle of what he likes to call [']playtime['] with some of the critters he's treating. At first, it looks like he's simply jerking off, but in the middle of his fist is an anthro [one of]zebra[or]giraffe[or]rhino[or]tiger[at random] being spread open and full body stretched on the gigantic cock that is almost splitting them in half. It's incredible how they're basically being used as living fleshlights, their insides rearranged to accommodate the massive size of the dong that's bulging out of their shapes. You can hear the giant man moaning as he slides them down and up his shaft vigorously, as they squirm and cry out of their distended forms.";
 			say "     Such display leaves you rather bothered, even more so when the overgrown human male finally reaches his orgasm, cum spewing through the animal's mouth and leaking from their orifices, as they swell to hold all of the jizz that is being deposited inside them, ending up in a form that's more similar to a meat balloon that the giant discards back in their pen to [']rest[']. Surely they will need it after being plowed like that by a monstrous several foot long cock.";
 		-- 2:
 			say "     Looks like the giant is tidying up things around the zoo. Though he's not just cleaning around, no, he's obsessively rearranging objects and other types of things too large for an average person to move around. Nothing seems to be right to him as he spends long minutes trying to get everything the way he wants. But you don't complain, as while he does all this, you get a privileged view at his enormous butt whenever he bends over to grab something off the ground, or to keep aligning stuff. It's almost scary the fact his pucker could fit someone of [if scalevalue of player < 5]your size[else]a normal size[end if] and seal them shut fully buried in his gigantic ass. Actually, you can't help but wonder if that actually already happened.";
@@ -175,20 +195,20 @@ to say SubmitToGiant:
 				SubmitGiantAss;
 
 to SubmitHumanGiantFuck:
-	say "     As if only realizing now that you're a giant like him, albeit much smaller, he lifts you up to your feet. 'Wait a second... You must be that new recruit I was promised! It's about time you got here! Things are a real mess, I really needed an extra pair of hands.' he admits, and you can't help but look confused as to why he's thinking you're some sort of reinforcement when you really just attacked him in plain sight. 'Though you were very bad, attacking me like that! We don't even know eachother, yet...' he says, eyeing you from head to toe, before adding 'I think you need your first training lesson.' in the end of his speech. His words fall heavily on you as he bends you over his knee, your ass pointing outwards as he [if player is not naked]removes whatever gear you have covering it and [end if]lands his large, meaty hand on top of your buttcheeks, a loud smack sound storming audibly.";
+	say "     As if only realizing now that you're a giant like him, albeit much smaller, he lifts you up to your feet. 'Wait a second... You must be that new recruit I was promised! It's about time you got here! Things are a real mess, I really needed an extra pair of hands.' he admits, and you can't help but look confused as to why he's thinking you're some sort of reinforcement when you really just attacked him in plain sight. 'Though you were very bad, attacking me like that! We don't even know each other, yet...' he says, eyeing you from head to toe, before adding 'I think you need your first training lesson.' in the end of his speech. His words fall heavily on you as he bends you over his knee, your ass pointing outwards as he [if player is not naked]removes whatever gear you have covering it and [end if]lands his large, meaty hand on top of your buttcheeks, a loud smack sound storming audibly.";
 	say "     'Here you have to obey and respect me, you hear? Maybe this spanking will make sure you do.' he says, as he keeps hitting your ass with vigor, each cheek turning red and burning with pain by the second he keeps slapping your rear. You can't help but grunt, squirm and protest, to no avail, as he continues to spank you as if nothing was happening. 'You were a very bad [boygirl]... I don't think you've had enough.' his taunts continue, and soon, it's not just slapping, but one of his thick fingers actually finding its way between your cheeks, pushing itself inside your anus way faster than what you would find ideal. He keeps burying the entire length of his index inside you while shaking his hand a bit, to make sure you feel that huge wiggling finger stretching your hole.";
 	WaitLineBreak;
 	say "     'You like that? Think you can take any more?' he asks, but not really awaiting an answer, instead shoving another finger, distending your pucker to painfully wide measures, to which you can only grunt in discontent. The giant pays no mind to you, only continuing to torture your ass as he sees fit, enjoying watching you cry and squirm under his grasp. Your cheeks are still burning hot, and now your hole feels like it's being ripped apart. 'Why are you not standing still while receiving your training? Guess you need more spanking!' he lets you know before rapidly pulling his fingers out of your ass and landing strong, loud slaps, which hurt even more than the first. He spanks you so hard that eventually your skin becomes numb of such pain, and he often alternates from spanking to fingering, whichever makes you cry more...";
 	say "     Though there is something that saves you from getting tortured anymore. There seems to be a runaway critter than he needs to chase before they get away. 'Alright, training's over. Hope you have learned your lesson, small fry. Now get back to work while I'm gone.' he orders, after putting you on the ground to chase after the escapee. You're left sore and with the biggest pain in the ass, quite literally.";
 
 to SubmitGiantCock:
-	say "     He brings you to his eye level, [if player is not naked]taking every gear you might have had on off and throwing it away[else]rotating your fully exposed body, having a good look at you[end if], to appreciate your shape and so little size compared to his. 'Since you quickly understood that you're no match for someone like me, your punishment will be more fun. For me, at least.' he says, licking his lips with an enormous tongue surging from beneath, before bringing you close to his mouth and give you a long, hard lick all over your body, enough to cover you in his slick saliva. You're fearing the worst when he opens his mouth and gives you a clear view of his gaping maw, looking terrifying from your perpesctive, but he doesn't seem to actually bring you any closer to his mouth. Instead, he pulls you away slightly, enough to be able to look at you once more.";
+	say "     He brings you to his eye level, [if player is not naked]taking every gear you might have had on off and throwing it away[else]rotating your fully exposed body, having a good look at you[end if], to appreciate your shape and so little size compared to his. 'Since you quickly understood that you're no match for someone like me, your punishment will be more fun. For me, at least.' he says, licking his lips with an enormous tongue surging from beneath, before bringing you close to his mouth and give you a long, hard lick all over your body, enough to cover you in his slick saliva. You're fearing the worst when he opens his mouth and gives you a clear view of his gaping maw, looking terrifying from your perspective, but he doesn't seem to actually bring you any closer to his mouth. Instead, he pulls you away slightly, enough to be able to look at you once more.";
 	say "     'It would be easy for me to swallow you whole, even!' he says, laughing at you, before adding 'But I have other plans for you...' With that said, he begins to lower you, slowly, past his muscular chest... then over his abs... and onto his naked bottom, as he sits on the ground. Having you tight on his grip, he stretches his legs forward, slightly split, getting comfortable as he yet continues to lower you. When you think he's going to put you down, the direction of his movements change, and you're being brought closer and closer to his enormous cock, with a massive set of balls underneath it, each probably as big as you are tall! 'Enjoying the view down there? Maybe you'd like to take a closer look...' he says, as once more he pushes you in the direction of his junk, his manly scent becoming overwhelming to you...";
 	WaitLineBreak;
 	say "     Eventually, you're smothered against his warm and plump sack, emanating his scent so intensely that you can only feel slightly lightheaded. He doesn't stop there, however. Lying you down on the ground, facing up, just before his nuts, he releases you from his grasp, but your short period of freedom is suddenly terminated when the giant lifts his cum factories and drops them right on top of you, effectively trapping all your body underneath his huge and heavy orbs, only leaving your head out. 'How do you like that, huh? Enjoying the full size and weight of my balls on you? I hope you do, because you're gonna stay there while I work on this cock.' he taunts you, grinning as he gives his monstrous dong a good couple of strokes.";
-	say "     Powerless and unable to move, you can only attempt to wiggle your way out, although his scent is intoxicating, and his balls start feeling incredibly warm around you... Not to mention that everytime you squirm, it seems to excite the giant even further. He begins to stroke with vigor, his nuts bouncing slightly with each hand movement, and their whole weight coming down on you in a serious threat to crush you flat. 'Mmm... you feel good against my testes... Maybe I should keep you as a plaything.' he says, while rubbing his girthy shaft, sliding his hand up and down, slowly and steadily... Soon, a single drop of precum escapes his slit, and since he's a gigantic man, that drop is possibly the size of your face, slowly making its way down his long shaft, slipping in the space between his balls, and descending at the pace of a snail right towards you...";
+	say "     Powerless and unable to move, you can only attempt to wiggle your way out, although his scent is intoxicating, and his balls start feeling incredibly warm around you... Not to mention that every time you squirm, it seems to excite the giant even further. He begins to stroke with vigor, his nuts bouncing slightly with each hand movement, and their whole weight coming down on you in a serious threat to crush you flat. 'Mmm... you feel good against my testes... Maybe I should keep you as a plaything.' he says, while rubbing his girthy shaft, sliding his hand up and down, slowly and steadily... Soon, a single drop of precum escapes his slit, and since he's a gigantic man, that drop is possibly the size of your face, slowly making its way down his long shaft, slipping in the space between his balls, and descending at the pace of a snail right towards you...";
 	WaitLineBreak;
-	say "     You have no choice but to patiently await for that drop of precum to fall right on top of you, soaking your entire head and neck with such a salty and thick liquid. It's impressive how a tiny little drop of precum from his dick can threaten to drown you, albeit being quite tasty. So much in fact that you're licking your lips and attempting to taste it with the best of your efforts. 'You liked that? There's a lot more where that came from...' he says, continuing to stroke his titanic dick as more precum is building on top of his glans. With a squeeze, he brings out a few more drops, which fall down his shaft the same way towrds you. This time, a lot more of the stuff... So much that he has to wipe it off your face, as you're struggling to breathe.";
+	say "     You have no choice but to patiently await for that drop of precum to fall right on top of you, soaking your entire head and neck with such a salty and thick liquid. It's impressive how a tiny little drop of precum from his dick can threaten to drown you, albeit being quite tasty. So much in fact that you're licking your lips and attempting to taste it with the best of your efforts. 'You liked that? There's a lot more where that came from...' he says, continuing to stroke his titanic dick as more precum is building on top of his glans. With a squeeze, he brings out a few more drops, which fall down his shaft the same way towards you. This time, a lot more of the stuff... So much that he has to wipe it off your face, as you're struggling to breathe.";
 	say "     'So puny and vulnerable now... I could let you drown by just letting my precum cover you. That will teach you not to bother me in the future!' he says to you, laughing as he strokes faster and faster... By the sound and trembling his balls are making, he must be getting close. It must be his cum sloshing around and getting ready to be shot out. He keeps you there, trapped underneath, as his movements become harder and even faster, each swing making his enormous nuts pressure against you at nearly painful levels, so much that you can almost feel yourself bouncing together with his sack. 'Ohh... I hope you enjoy the bath...' he says, before pulling you from underneath his orbs, holding you in place in the ground, and pointing his cock at you...!";
 	WaitLineBreak;
 	say "     It is only a matter of seconds until he shouts 'Fuck... Yeah!' as a ridiculous amount of thick cum is shot in your direction, the first spurt enough to completely cover your body as he keeps on pumping out more and more, further covering you in white jizz until the very last drop leaves his prick. You're left to roll over and desperately attempt to free your nose and mouth in order to breathe, only to slip and sink further in the massive poodle formed by the giant's fluids. He grunts as he squeezes his shaft thorough, enjoying seeing you struggle to get his cum out of your covered face. 'You need help with that?' he says, as he once again grabs you with his huge hand, brings you over his mouth and licks you in every inch and corner of your body, tasting his own man juice.";
@@ -196,9 +216,9 @@ to SubmitGiantCock:
 		say "     But... he doesn't seem to be done with you, yet...";
 		WaitLineBreak;
 		say "     'That felt good... but you know... Now my balls are empty...' he says, with a wicked grin forming between his lips as he keeps stroking his still hard shaft. 'I might need something, or someone, to fill them up again... Oh, don't worry, you'll enjoy it in there. It's nice and warm.' You almost can't believe your eyes as you're once more brought down to his junk, and instead of being directed towards his balls around his shaft, he intends to shove you down IN through his gaping slit! Without any further ado, the giant only makes the initial effort to fit your feet in his pee hole, then simply begins to push you down slowly as he lets out a pleasure moan. 'Down my dick you go...' he lets you know, pushing you deeper as your ankles and calves begin to sink in the hot, fleshy tunnel that keeps clenching and pulsing around your legs.";
-		say "     As more of you sinks in deeper, the harder his dick throbs, even harder than before, and you feel yourself being pushed lower into his urethra with minimal effort from the giant, as if his cock was doing all the work for him. He barely even exerts any force from his fingers, letting gravity and his cock pulsing over and over slurp you down until your waist in the slowest way possible. There's a wide grin on his face as he sees you being swallowed alive by his own manhood, down to your chest, as he forces your arms inside as well with a painful grip around you. He uses this to keep pushing you in, and soon, you have sunk down to your neck. He lifts your chin with a single finger and makes you look at him one last time. His wide, teethy grin as he moans in pleasure are the last things you perceive before he makes one final push with his index, submerging you completely in darkness as his slit closes above your head.";
+		say "     As more of you sinks in deeper, the harder his dick throbs, even harder than before, and you feel yourself being pushed lower into his urethra with minimal effort from the giant, as if his cock was doing all the work for him. He barely even exerts any force from his fingers, letting gravity and his cock pulsing over and over slurp you down until your waist in the slowest way possible. There's a wide grin on his face as he sees you being swallowed alive by his own manhood, down to your chest, as he forces your arms inside as well with a painful grip around you. He uses this to keep pushing you in, and soon, you have sunk down to your neck. He lifts your chin with a single finger and makes you look at him one last time. His wide, toothy grin as he moans in pleasure are the last things you perceive before he makes one final push with his index, submerging you completely in darkness as his slit closes above your head.";
 		WaitLineBreak;
-		say "     You're left to sink in deeper and deeper, the walls of his shaft throbbing and ondulating around you as the air becomes damp, moist and hot. The sensation is suffocating as you're hopelessly brought to the base of his cock, only to slip down into one of his testicles, eagerly awaiting your arrival. You can hear and feel his moans vibrating through his enormous body, and suddenly, the fleshy walls around twist and twirl with you inside, as he seems to be squeezing and fondling his own balls to feel your tiny body constrained within. 'There you go... Hope you enjoy the stay in my balls, little fry.' he says, sarcastically, as he torments you with additional rubbing and squeezing, sending you in sickening twirls while you feel your entire body rubbing against the inside of his gonads. It's not long until they begin to refill with his cum, and soon, you're bathing in a pool of it once more...";
+		say "     You're left to sink in deeper and deeper, the walls of his shaft throbbing and undulating around you as the air becomes damp, moist and hot. The sensation is suffocating as you're hopelessly brought to the base of his cock, only to slip down into one of his testicles, eagerly awaiting your arrival. You can hear and feel his moans vibrating through his enormous body, and suddenly, the fleshy walls around twist and twirl with you inside, as he seems to be squeezing and fondling his own balls to feel your tiny body constrained within. 'There you go... Hope you enjoy the stay in my balls, little fry.' he says, sarcastically, as he torments you with additional rubbing and squeezing, sending you in sickening twirls while you feel your entire body rubbing against the inside of his gonads. It's not long until they begin to refill with his cum, and soon, you're bathing in a pool of it once more...";
 		say "     This ordeal continues for hours and hours, his scorching hot semen taking your entire body in as it begins to fill his balls completely once again, threatening to fully submerge you... Eventually, you lose track of time, and you begin to feel your skin seemingly melt and give in to the digestive properties of his warm, hungry cum, that is soon covering you from head to toe... It is then that you lose conscience, blacking out as your senses diminish.";
 		WaitLineBreak;
 		follow the turnpass rule;
@@ -210,10 +230,10 @@ to SubmitGiantCock:
 		say "     'Hope you have learned your lesson!' he tells you, laughing at your so vulnerable state. 'Now get out of my face before I regret not squashing you like a bug.' he says, while throwing you away back into the forest. Luckily, a nearby bush cushions your fall, though you don't escape without a few bruises and cuts. That's fine, better than being crushed by a gigantic man, one could wonder[if player is not naked]... You're also able to find the gear he stripped away from you, so you put it back on and prepare to leave[end if]...";
 
 to SubmitGiantAss:
-	say "     He brings you to his eye level, [if player is not naked]taking every gear you might have had on off and throwing it away[else]rotating your fully exposed body, having a good look at you[end if], to appreciate your shape and so little size compared to his. 'Since you quickly understood that you're no match for someone like me, your punishment will be more fun. For me, at least.' he says, licking his lips with an enormous tongue surging from beneath, before bringing you close to his mouth and give you a long, hard lick all over your body, enough to cover you in his slick saliva. You're fearing the worst when he opens his mouth and gives you a clear view of his gaping maw, looking terrifying from your perpesctive, but he doesn't seem to actually bring you any closer to his mouth. Instead, he pulls you away slightly, enough to be able to look at you once more.";
+	say "     He brings you to his eye level, [if player is not naked]taking every gear you might have had on off and throwing it away[else]rotating your fully exposed body, having a good look at you[end if], to appreciate your shape and so little size compared to his. 'Since you quickly understood that you're no match for someone like me, your punishment will be more fun. For me, at least.' he says, licking his lips with an enormous tongue surging from beneath, before bringing you close to his mouth and give you a long, hard lick all over your body, enough to cover you in his slick saliva. You're fearing the worst when he opens his mouth and gives you a clear view of his gaping maw, looking terrifying from your perspective, but he doesn't seem to actually bring you any closer to his mouth. Instead, he pulls you away slightly, enough to be able to look at you once more.";
 	say "     'It would be easy for me to swallow you whole, even!' he says, laughing at you, before adding 'But I have other plans for you...' With that said, he begins to lower you, slowly, past his muscular chest... then over his abs... and over his naked bottom... legs... It really is a long trip down to the ground, where he sits you. Although, you have a very, very strange feeling about this, since the giant is kneeling above you, keeping you between both his legs and giving you a complete view of his growing cock and expansive ass, clouding you in darkness. 'How do you feel about having a giant ass all for yourself, eh?' he threats you as his colossal rear hovers above you. The last thing you are able to see is that hungry-looking pucker between his asscheeks approaching you at an alarming pace, before it sits right on top of you, engulfing your whole face in it.";
 	WaitLineBreak;
-	say "     With your world enclosed in the space between the giant's enormous buttocks, things get really hot, very literally, as the musky air around nearly suffocates you with its intense humidity. 'You better wiggle for me! And start licking my ass to make up for your intrusion.' his voice booms out to you, and you have no choice but to comply. He truly has a big anus, twitching at you with every touch you lay on it, and loves to thoroughly slurp at your face everytime the giant man grinds his ass against you. Sweat covers your body as you give your best to appease the giant, lest you want to risk being grinded until nothing more of you is left. With your tongue, you give it a tentative lick, which the zookeeper replies with yet another hump against your face. 'Was that your tongue? Fuck, that felt good...'";
+	say "     With your world enclosed in the space between the giant's enormous buttocks, things get really hot, very literally, as the musky air around nearly suffocates you with its intense humidity. 'You better wiggle for me! And start licking my ass to make up for your intrusion.' his voice booms out to you, and you have no choice but to comply. He truly has a big anus, twitching at you with every touch you lay on it, and loves to thoroughly slurp at your face every time the giant man grinds his ass against you. Sweat covers your body as you give your best to appease the giant, lest you want to risk being grinded until nothing more of you is left. With your tongue, you give it a tentative lick, which the zookeeper replies with yet another hump against your face. 'Was that your tongue? Fuck, that felt good...'";
 	say "     This continues for a while longer, with mostly you being smothered under a gigantic ass, forced to please his hole like the pint-sized plaything you are to him. Rubbing, kissing and licking are all on table when it comes to obliging his demands, and you can tell this whole situation pleases him a lot, were it not for the jerking motions that you can feel towards your side, as well as his grunts. But the more excited he gets, the more relaxed his pucker seems, and given your size difference, that could prove problematic...";
 	if vorelevel > 1 and scalevalue of player < 5: [anal vore possibility]
 		Linebreak;
@@ -234,9 +254,9 @@ to SubmitGiantAssNormal:
 
 to SubmitGiantAssAV:
 	say "     He grinds his ass against you repeatedly, and soon, the fleshy orifice is enveloping you. No matter how much you wiggle and kick around, it doesn't seem to have any effect, and given how much the zookeeper is moaning, it just seems to further excite him. He then lets his ass rest on you heavily as you're forcingly pinned down right underneath the asshole, and you feel your head and hands sinking in the moist flesh that only seems to be pulling you in with each twitching movement. The more you move, the deeper you sink, and before you know it, half of your body is going inside his ass, with only your legs left kicking the air.";
-	say "     Grunting with the ecstacy your presence in his anal entrace is providing, the giant helps himself by helping you go in, pushing your body with his fingers until you're fully shoved inside. His pucker shuts behind you, holding you inside firmly within the moist, warm and fleshy walls throbbing all around you. The air inside is so hot that you feel like you've been pushed into an oven, but the zookeeper seems to really enjoy having you there. You can feel his whole jerking movements getting more intense by the time he is feeling your presence squirming against his prostate, and you know when he is about to burst.";
+	say "     Grunting with the ecstasy your presence in his anal entrance is providing, the giant helps himself by helping you go in, pushing your body with his fingers until you're fully shoved inside. His pucker shuts behind you, holding you inside firmly within the moist, warm and fleshy walls throbbing all around you. The air inside is so hot that you feel like you've been pushed into an oven, but the zookeeper seems to really enjoy having you there. You can feel his whole jerking movements getting more intense by the time he is feeling your presence squirming against his prostate, and you know when he is about to burst.";
 	WaitLineBreak;
-	say "     Your surrondings twitch and pulse at each spurt the giant shoots out of his cock, and his grunts echo all around you. For what looks like a full minute, you are thoroughly squeezed and wiggled about as he cums, humping his hips into the air with all the intensity that came with his excitement. 'Ohh yes!!! That was fucking good...! Phew...' he pauses to take a breath, rubbing his asscheek tenderly and making your new resting place bobble around. 'I hope you enjoy your stay... Because you're not leaving anytime soon, little ant!' he threatens you mockingly, and actually decides to keep you inside his torturous fleshy tunnel that squeezes and constricts you all over, rubbing against your naked body without cease...";
+	say "     Your surroundings twitch and pulse at each spurt the giant shoots out of his cock, and his grunts echo all around you. For what looks like a full minute, you are thoroughly squeezed and wiggled about as he cums, humping his hips into the air with all the intensity that came with his excitement. 'Ohh yes!!! That was fucking good...! Phew...' he pauses to take a breath, rubbing his asscheek tenderly and making your new resting place bobble around. 'I hope you enjoy your stay... Because you're not leaving anytime soon, little ant!' he threatens you mockingly, and actually decides to keep you inside his torturous fleshy tunnel that squeezes and constricts you all over, rubbing against your naked body without cease...";
 	say "     In what seems to be hours, you're left inside his ass, scorching hot flesh clenching constantly against you, making it a living hell for you...";
 	WaitLineBreak;
 	follow the turnpass rule;
@@ -326,7 +346,168 @@ to say WalkToGiant:
 				say "the nearby roundabout. He muses over where to put you, looking between the lion pit and the snake house before finally settling on the latter. Opening the door, he roughly shoves you inside before heading off in search of other wayward animals with a smile on his face. You moan wetly, but cannot get up, too overfull with the giant's cum, forcing you to wait there until your body's drained and absorbed his heavy load. Thankfully this place seems unoccupied, at least for the moment.";
 				move player to Snake House;
 
-Section 2 - Creature Insertion
+Section 2 - Events
+
+MissingGiantRingCooldown is a number that varies. MissingGiantRingCooldown is usually 20000. [@Tag:NotSaved]
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing Giant Ring	"Missing Giant Ring"
+
+Missing Giant Ring is a situation.
+ResolveFunction of Missing Giant Ring is "[ResolveEvent Missing Giant Ring]".
+Sarea of Missing Giant Ring is "Zoo".
+
+to say ResolveEvent Missing Giant Ring:
+	if Resolution of Missing Giant Ring is 0:
+		say "     As you look around the zoo for interesting things, you notice a rather gigantic human, not so far from your position, bending over some small trees and moving whole trunks and leaves around, as if looking for something. This giant man seems so focused on his current task that he really does not see you approaching, out of curiosity. Although, you must be careful to not alert him of your position, as that could be quite a problem. It is likely to be the zookeeper, unless there is some other giant human you do not know about, and he seems to be mumbling something about a [']shiny ring thing[']. He does not seem to be having any luck in finding it, though, and judging by the way he grunts and looks around, it is also annoying him.";
+		say "     Perhaps you should stay clear from this area, in general, at least while the giant is roaming about. Though, say, if you ever found this object he is looking for so desperately, would there be any chance for you to befriend him? It might be worth a try, if you intend to get in better terms with the massive zookeeper. You doubt he would recognize you immediately, but if he truly cares about this object, he will think twice before just attacking you... Hopefully.";
+		LineBreak;
+		say "     [bold type]Do you care about befriending the giant, at all? You could just ignore and forget this[roman type]. Whatever object he lost, it will probably be very difficult to find, anyway.";
+		say "     ([link]Y[as]y[end link]) - You will try to look for it, later.";
+		say "     ([link]N[as]n[end link]) - Just forget this, it is not worth your time.";
+		if Player consents: [event proceeds when found again]
+			Linebreak;
+			say "     Maybe it could be good to have a giant friend in this place, even though there is an almost impossible task between you and it. But you have decided to give it a try after the giant retreats.";
+			now Resolution of Missing Giant Ring is 1;
+		else: [event solves here]
+			LineBreak;
+			say "     Yes, it does seem like just a waste of time. You have got more important things to do, and you do not care about making friends with this particular giant person.";
+			now Resolution of Missing Giant Ring is 99;
+			now Missing Giant Ring is resolved;
+	else if Resolution of Missing Giant Ring is 1:
+		say "     While you walk around this particular area of the zoo, you begin to notice several small tilted trees and bushes that look half-plucked from the ground, suggesting that this might not be natural. As you think a little more about it, you remember that time when you spotted the giant zookeeper looking for something. It seems that you could put some effort in searching for that [']shiny ring thing['] he was mumbling about, though there is a wide area to cover... With so many plants, bushes and trees, he could have dropped it absolutely anywhere! This will definitely be a difficult task, if you decide to go with it.";
+		if MissingGiantRingCooldown - turns < 7:
+			say "     But due to your most recent attempt, you are pretty tired and cannot be bothered to go for another search. If you still want to continue, it would be probably for the best to try again on the next day or later, when your energy is back.";
+		else: [continue]
+			say "     There are quite a few possibilities. You could look for it on your own, even though you do not really know how such a ring would look like, or perhaps ask for a companion's help. If perceiving things is something you are good at, luck might strike you well enough to lead your eyes straight into the giant's valuable object, but if not, someone with magic would probably be able to assist you the best. After all, magic usually offers so many ways to cheat! The question is... Did you bring anyone who could do that for you?";
+			LineBreak;
+			MissingGiantRingQuestion;
+
+to MissingGiantRingQuestion:
+	say "     [bold type]What shall be your plan of action?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Look for it by yourself (Perception Roll).";
+	say "     [link](2)[as]2[end link] - Ask a companion for help, if you have one.";
+	say "     [link](3)[as]3[end link] - Do nothing, for now.";
+	say "     [link](4)[as]4[end link] - Desist. This will get you nowhere.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to attempt looking for the ring by yourself, [link]2[end link] to ask a companion for help, [link]3[end link] to not do anything, for now, or [link]4[end link] to quit this quest for good.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     Maybe you will be in luck! Who knows? Trying never hurt anyone... Right, that might not be entirely true, but this task should be safe enough, as long as you are not approached by anyone or anything undesirable. With that in mind, you proceed to keep your eyes open for a shiny thing that could look like a ring...";
+		WaitLineBreak;
+		let bonus be (( perception of player minus 10 ) divided by 2);
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Perception Check):[line break]";
+		if diceroll + bonus >= 19:
+			say "     You spend a long time looking in every bush, even climbing whatever trees you manage, just to catch a gimple of a gleaming thing here and there that looked nothing like a ring. Frustration begins to build up as you fail again and again, but before all hope is gone, you notice another shiny object lying in the middle of some outgrown bush. At first, you almost think about not even bothering looking there, but you decide to give it a go before you call it quits. But, to your surprise, this is not just a shiny rock nor a piece of shattered glass, not even an empty bottle nor a lost coin. This is actually a [bold type]ring[roman type]! You almost cannot believe it! You found it!";
+			say "     Or, at least, you hope you did. You hope this is the actual ring the giant zookeeper was looking for. Looking closer at it, you see it has an inscription in it, perhaps someone's name. Unfortunately, it is a little dirty and worn out, so you cannot spell it out properly. Maybe he was engaged to someone? Either way, speculation will not do you any good. Thanks to this, you might have a way to befriend him, or at least have a token to show him so he does not mistake you for a random critter.";
+			now Resolution of Missing Giant Ring is 2;
+			ItemGain zookeeper ring by 1;
+			now Missing Giant Ring is resolved;
+		else:
+			say "     Despite your very, very best efforts at trying to find anything remotely resembling a shiny ring, you fail miserably. The zoo is such a large area with so many things a tiny little object could go into that this seems nearly impossible for anyone with only basic senses. Maybe you should give up, for now, and return later, once you have cleared your head. This was quite exhausting and frustrating...";
+			now MissingGiantRingCooldown is turns;
+	else if calcnumber is 2:
+		LineBreak;
+		if demonologist is listed in companionList of Player: [Xaedihr]
+			say "     Looking at your companion and how lost you seem regarding this situation, you ask them for help. And with you happens to be Xaedihr, who does not seem amused by any of this. 'Oh. No. Really? No, you're not going to ask me to use magic to locate a... You are just doing that, aren't you?' he asks, incredulous, and you nod, with the best pleading look and eyelash fluttering you can do. 'I can't believe this... If this wasn't such a menial and effortless task for me, I would've refused, but I'd rather see you with the damn thing in your hands rather than having to come back here every day to look for it. In any case... This will only take a minute.'";
+			say "     With several gestures and words in a language you do not know, Xaedihr focuses on his own incantations until gleaming red spots begin to appear all around you. Then, some begin to disappear, leaving only a couple of glowing dots in the near vicinity. 'Anything that has the shape of a ring and gives out some shine is marked with a spell. That should make it easier for you to find it.' Indeed, knowing exactly where to go is a great advantage over having to look for things by yourself. The first dot you go for happens to not be what you are looking for, as it is not an actual ring. You continue towards the other one and, indeed, you find it. An actual [bold type]ring[roman type] and THE ring!";
+			WaitLineBreak;
+			say "     Or, at least, you hope you did. You hope this is the actual ring the giant zookeeper was looking for. Looking closer at it, you see it has an inscription in it, perhaps someone's name. Unfortunately, it is a little dirty and worn out, so you cannot spell it out properly. Maybe he was engaged to someone? Either way, speculation will not do you any good. Thanks to this, you might have a way to befriend him, or at least have a token to show him so he does not mistake you for a random critter.";
+			say "     Oh, and you make sure to thank Xaedihr for his assistance. 'No need to mention it. In fact, I'd prefer if you didn't mention it, at all. Anything you do with that ring is not my responsibility,' he says, dismissing your appreciation in his own usual fashion";
+			now Resolution of Missing Giant Ring is 2;
+			ItemGain zookeeper ring by 1;
+			now Missing Giant Ring is resolved;
+		else:
+			say "     Looking at your companion and how lost you seem regarding this situation, you ask them for help. Unfortunately, they seem as clueless as you. Maybe someone who could cast magic would be of better help.";
+			WaitLineBreak;
+			MissingGiantRingQuestion;
+	else if calcnumber is 3:
+		say "     You cannot really bother yourself with this, today, so you decide to simply leave it for another time.";
+	else if calcnumber is 4:
+		say "     You stopped caring about this ring. Perhaps there is no ring, even, and you have just been looking for it in vain. Whatever the case may be, you quit this quest and will never look back.";
+		now Resolution of Missing Giant Ring is 99;
+		now Missing Giant Ring is resolved;
+
+to say ApproachTheGiant:
+	say "     Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He is not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he seems to stop for a second. The ring you are holding in your hands has caught the giant's attention.";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'Is that...?' his voice booms towards you as he crouches down to take a closer look. 'You're not just some mindless critter... Have you been here for long?' You wonder how long you have been roaming the zoo while having to be wary of the giant, but you just tell him enough to sate his curiosity. 'Ah, you are exploring this place. I see... And you happened to find my ring!' You nod, and explain that you have seen him looking for an object that seemed important. Additionally, you also thought it could be a way for him to not mistake you for a random creature if you offered him a gift he would like. 'Ooh... I have mistaken you in the past for something else? I'm so sorry... It is really difficult to tell you all little things apart while being of this size...'";
+		WaitLineBreak;
+		say "     Indeed, you are amazed that he can even hear you, at all, although he seems to be struggling with it, despite your loud and clear tone. 'It's really good to see someone who cares, though. It surely gets lonely in here...' he admits, and it is not so surprising, given the limitations due to his titanic size. 'Don't suppose you'd mind if I held you in my hands? Just for some time? I'd like to... thank you properly, little person!' Thank you properly, he said, and that could mean something more than just holding you close to him. In fact, you could really just let him pick you up, but you can also tell him you would only like to give him the ring and be on your way. Certainly, the giant man, as lonely as he is, could want something more intimate with the first friendly stranger he found.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Let him pick you up.";
+		say "     ([link]N[as]n[end link]) - Just give him the ring and leave.";
+		if Player consents: [Giant picks up the player and they have some fun cuddling]
+			Linebreak;
+			say "[ApproachTheGiantPickUp]";
+		else:
+			LineBreak;
+			say "     Actually, you are just here to give him the ring that belongs to him, so you politely tell him that. 'Oh... I'm sorry if I offended you, little [guygal], that wasn't my intention. But... I have to still thank you for the gesture!' He then gives you a little more distance. 'You can keep it. I would end up losing it, anyway, and if you keep visiting, showing that could help me telling you apart from the other critters. My memory's bad and it's hard to see tiny things such as you... Anyway, I'll let you be on your way! Hope we meet again...' the giant says, before standing up and beginning to walk the other way, each step making the ground shake beneath you.";
+			say "     Well, if anything, you now have a way to tell the giant that you mean no harm and avoid an unfortunate confrontation, as you get to keep his ring with his consent. That could be useful.";
+		now Resolution of Missing Giant Ring is 3;
+	else:
+		say "     'Ah, friend! It is you! I'm glad you kept the ring, or I would have mistaken you again for something else!' he cheerfully says, his voice nearly blowing your feet off the ground. 'Did you need anything? Or just came to spend some time with big ol' me? I surely appreciate some company!' It seems the giant's cock is slowly raising to an erection as his eyes continue to follow you. You get the idea he is offering to pick you up for more than just a chat.";
+		LineBreak;
+		say "     [bold type]Do you let him?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Let him pick you up.";
+		say "     ([link]N[as]n[end link]) - You came just to say hi.";
+		if Player consents: [Giant picks up the player and they have some fun cuddling]
+			LineBreak;
+			say "[ApproachTheGiantPickUp]";
+		else:
+			LineBreak;
+			say "     Actually, you were just passing by and wanted to say hi, so you tell him that, and he smiles. 'Oh, you're nice! Alright, I'll leave you be, then! Just be careful out there, with all the crazy little creatures being mischievous and all...' And then, there he goes, taking giant steps away from you while making the ground beneath you shake with each.";
+
+to say ApproachTheGiantPickUp:
+	say "     But of course you would let him get his giant hands on you, and he gladly does so. With a big smile on his face, thanks to you allowing him to pick you up, he carefully wraps his thick fingers around your body and lifts you off the ground. You find yourself being brought closer to the massive man, who seems very glad to have you here.";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'So, where are you from? Around? From outside? You got caught in all this craziness just like I did, right?' he asks, and you do tell him a bit about yourself, which seems to please the giant. 'Yeah I don't know what really happened, I was a worker here just leading a normal life when suddenly people started to turn into animals. And then the animals escaped, leaving only the people who became the animals, and always horny all the time. Then I touched something weird and began to grow! And it wouldn't stop! And for some reason, the jacket I had on grew, too...' The giant man begins to speak and never ends, each word faster than the last. You can clearly see he does not get to talk to anyone, at all...";
+		say "     'And I've also been fucking horny, like, crazy horny! I know this is horrible, but sometimes I just pick some random animal person and end up using them as sex toys, I just can't help it... It turns me on using someone so much smaller than me. Do you know why this happened?!' You tell him what you know, with only the details he is capable to process. 'Nanites? What's that? Some sort of disease? That sounds so weird, I don't think I wanna know more! Besides, I'm used to being big, now, and feeling good...' It does take a great effort at getting used to being so massive, but you commend him for that. The zookeeper smiles and rubs against your chest with his large finger. 'Thanks for talking to me. You're really cute, too...'";
+		WaitLineBreak;
+		say "     Following this, you notice the big man looking at you a little lustfully, his large pupils dilated and licking his lips as his breathing grows a little deeper. The giant also seems to blush, at some point. 'Well, as I told you, I... Am really horny all the time. Do you... Think I could play with you? I-I'd prefer that, instead of having to use someone against their will... I always feel really guilty afterwards...'";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Let the Giant relieve himself with you.";
+		say "     ([link]N[as]n[end link]) - You would rather not have that happen.";
+		if player consents:
+			LineBreak;
+			say "     That would be alright, for you, so you nod and let the giant man have his fun with you. 'I'm really, really turned on by you, little thing...'";
+			ApproachTheGiantPickUpSex;
+		else:
+			LineBreak;
+			say "     Unfortunately, you would rather be on your way, now. You are understanding about his loneliness, but you do have places to be and things to do, so you let him know that. 'Aw... Okay... That's fine, little person, I won't insist. But if you change your mind, I'll be here...' he replies, with disappointment in his voice, as he puts you back down. You only now noticed that he had a massive boner while he was chatting with you, which he proceeds to hide in embarassment. 'I'll... attend to stuff, I suppose. See you around! Oh, and... keep the ring with you, so I can tell you apart from other critters more easily.' You think the giant then leaves to masturbate on his own while you get to retreat without having to get involved.";
+	else:
+		say "     'You're such a cute tiny thing... It really turns me on knowing you enjoy this, too...'";
+		ApproachTheGiantPickUpSex;
+
+to ApproachTheGiantPickUpSex:
+	say "     The zookeeper is already tugging on his enormous manhood by the time you allow him to [']use['] you for a fun time. You cannot help but look at it once he gives you free sight of it, that huge member just throbbing and leaking before your eyes, leaving anyone amazed at its truly titanic proportions. 'Do you like it? Maybe I could let you play with it... See what you can do with a cock this big!' He then brings you over to his penis, that warm and rock solid skin quickly overwhelming you along an intoxicating musky scent. His enormous shaft is, of course, accompanied by a massive, heavy sack with two full orbs contained within, and their sheer weight would be enough to easily crush you underneath. His transformation clearly gave him a fair share of growth on his junk, too.";
+	say "     It seems that any movement you make excites the man further, and it reaches a point where it is so hard that it feels like warm pulsating rock in your hands. 'O-oh... T-that feels really good... Y-you're so tiny...' That shaft alone is thicker than your body and taller than you, forcing you to hug it tight as you attempt to climb towards the tip. It seems the giant man loves watching you struggle with his size, but he does lean back enough to help shift gravity slightly, making it easier for you to get on top of his throbbing dick. Additionally, it appears that your weight is enough to tilt his erection a little towards his abs, making it easier for you to attain a comfortable balance.";
+	say "     Having finally succeeded in your climb, you manage to make it to the gleaming tip, which is oozing a thick droplet of precum by the time you arrive. 'You're making me leak... T-that's gonna cause a flood... O-oh...' he moans, and even more with just a few rubs, some kisses and the friction between your body and that enormous cock of his, everything just further exciting him and making him harder. The more his gigantic log throbs, the more it drools all over you, slicky fluid simply coating your head and descending over the rest of your body as you provide all the lavish good sensations. 'Y-you're gonna get drenched, too... That's so much precum... A-are you gonna be oka-...? A-ah...!'";
+	WaitLineBreak;
+	say "     You reach a point that you are merely bouncing your body up and down and humping against his shaft, stimulating the massive dick in as much ways, inches and corners as you can. The momentum is emphasized by the pace that you keep increasing, excitement and lust taking over your mind for a while, causing you to run your tongue over the precum covered glans that assault your buds with a taste of salt. 'Fuck, yes, d-don't stop... You're... Fuck...' The giant cannot even bring himself to speak, moans instead replacing any word he could mutter, as you feel his entire member beginning to tremble and throb at an increasing rate. 'I-if you keep that up, I'll... I'll...' The zookeeper fails to finish his sentence as a sudden explosion of cum is shot upwards like a powerful geyser, making it rain all around you. Each spurt thicker than the last until it reaches a peak, during what seems like a minute!";
+	say "     'C-cum a lot...! Fuck, I'm cumming a lot! I-it doesn't... stop...!' He goes on and grabs his cock, helplessly jerking it off as he forgets about you, for moments, which is quite... not a very good thing. Lost in his lusts, his load gets all over you, quickly covering you as he just points the rest of his extensive orgasm to you and sinks you in a thick puddle of jizz. Almost indiscernible from the rest of your surroundings, which is just creamy cum, the giant panics for moments, after his orgasm begins to subside. 'Oh no! Fuck! Little thing, are you okay?!' he rushes to pick you up and wipe most of that stubborn cum out of your body. 'I covered you in it! Let me help you!'";
+	WaitLineBreak;
+	say "     He is, actually, really eager to help, and by help, he really means licking you clean with his large tongue, rubbing that slick organ of his all across your body, including your [if player is male]cock[else if player is female]pussy[else]chest and sensitive areas[end if] with surprisingly accuracy. He keeps doing so, over and over again, each lick slower, more sensual, skillful and precise... He truly wants to lick you until there is no hint of his cum left on your skin, but the way he does it is so arousing that you are brought closer and closer to your climax. 'Don't worry, little [guygal], I'll clean up the mess I made on you, I won't stop until you're pristine clean!' He does not really hear any of your warnings as you approach your orgasm...";
+	say "     'You dirty [guygal]... You really got a lot of cum on you... I need to lick you good...' he says, almost whispering, as he presses his tongue down on you even harder, over all that brings pleasure to you, so persistently, almost as if he knew what he was doing to turn you on so much... You cannot hold it, anymore. Within just a few moments, you";
+	if player is male:
+		say "cum right in his mouth, and he does not even flinch at it, only receiving your load with a pleasant hum as his huge lips wrap around your cock. 'Mmmh... What was that? Did you just... cum? From my licking? That's... cute, little thing... It tasted really good...'";
+	else:
+		say "being to quiver and moan as this surge of intense pleasure strikes you like a truck rolling over you. 'O-oh! D-did I... Did I just do something wrong? A-are you hurt? Oh... I see what... I didn't know this would excite you so much... That's really... cute, little thing!'";
+	WaitLineBreak;
+	say "     Once his task is done, he puts you down besides the small lake of cum he made. 'I gotta get this clean before an accident happens! Or before I have a swarm of critters coming to lick and bathe on it, like it already happened, once... And I just ended up covering them on the stuff, again... I-it's a really hard cycle to break, uh... Yeah, see you around, friend!'";
+	if Resolution of Missing Giant Ring is 2:
+		say "     'Oh, and... keep the ring with you, so I can tell you apart from other critters more easily,' the giant adds, before you can go grab your things and get ready to leave.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Human Giant";
+
+Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -396,109 +577,22 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
-Section 3 - Items
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"zookeeper ring"	"A small ring that no longer fits the zookeeper's hands, as he has grown into a giant. Perhaps you could use this to help him tell you apart from other critters."	0	zookeeper ring
+
+zookeeper ring is a grab object. It is not temporary.
+Usedesc of zookeeper ring is "[zookeeper ring use]";
+
+to say zookeeper ring use:
+	say "     You see no point in putting the ring on. It would be better to just keep it safely stocked in your inventory.";
+
+instead of sniffing zookeeper ring:
+		say "The ring has a metallic smell to it.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -513,13 +607,10 @@ to say giant essence use:
 	if "Iron Stomach" is not listed in Feats of Player:
 		infect "Human Giant";
 
+instead of sniffing giant essence:
+	say "It smells pretty much like cum, and more strongly than most.";
 
-instead of sniffing hellfire seed:
-	say "The demonic semen smells sweet, a little like burnt cream.";
-
-
-
-Section 4 - Endings
+Section 5 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

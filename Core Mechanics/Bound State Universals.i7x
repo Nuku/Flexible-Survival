@@ -1,5 +1,18 @@
 Bound State Universals by Core Mechanics begins here.
 
+boundsegment is a number that varies.
+boundmod is a number that varies.
+boundcounter is a number that varies.
+
+
+lustatt is a number that varies. lustatt is usually 0.
+struggleatt is a number that varies. struggleatt is usually 0.
+bsextimer is a number that varies. bsextimer is usually 0.
+boundstate is a truth state that varies. boundstate is usually false.
+psycheadjust is a number that varies. psycheadjust is usually 0.
+lustadjust is a number that varies. lustadjust is usually 0.
+
+
 Section 1 - Routines
 
 to cleanboundmemory: [Zeroes out all variables used in bound states]
@@ -57,5 +70,23 @@ to wyvhumanityroll: [Pending a rename - it's used in all standard vore sanity ro
 Section 2 - Templates
 
 [Not Yet Implemented!]
+
+Section 3 - Modifiers
+
+to libidoeval:
+	if "Horny Bastard" is listed in feats of Player: [lust adjust check]
+		now lustadjust is 1;
+	else if "Cold Fish" is listed in feats of Player:
+		now lustadjust is -1;
+	else:
+		now lustadjust is 0;
+
+to psycheeval:
+	if "Weak Psyche" is listed in feats of Player: [psyche adjust check]
+		now psycheadjust is 1;
+	else if "Strong Psyche" is listed in feats of Player:
+		now psycheadjust is -1;
+	else:
+		now psycheadjust is 0;
 
 Bound State Universals ends here.

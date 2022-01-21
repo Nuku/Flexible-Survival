@@ -32,7 +32,7 @@ instead of conversing Rod Mallrat:
 		say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 		now rodhosp is 1;
 	else if AlexProgress is 2 and HP of Ronda is not 100:
-		say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised[if HP of ronda is 0 or HP of Ronda is 10]. Go talk to my girl, she knows where he is.'[else].' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
+		say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised[if HP of Ronda is 0 or HP of Ronda is 10]. Go talk to my girl, she knows where he is.'[else].' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 	else if HP of Ronda is 0:
 		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know. Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
 	else if HP of Ronda is 1 or HP of Ronda is 2:
@@ -117,7 +117,7 @@ object	name
 Ronda Mallrat	"Ronda Mallrat"
 
 Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
-Description of Ronda Mallrat is "[rondadesc]".
+Description of Ronda Mallrat is "[Rondadesc]".
 Conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
 
@@ -127,7 +127,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		now the icon of Ronda is figure of RondaSR_icon;
 
 
-to say rondadesc:
+to say Rondadesc:
 	if HP of Ronda is 0:
 		project Figure of Ronda_icon;
 		say "You have no idea if she was shapely before her infection, but she is now, with wide hips, narrow waist, and the latest of mall rat fashions. She wears a bright button that declares, 'I am a taken girl.' Aww. Her naked pink tail flickers with an unending energy as she looks about with active interest. Her lips are stained a deep red and her claws are all manicured and covered in sparkling motes. She takes care of herself, clearly. Even her white and spotted fur is glossy and healthy looking.";
@@ -143,11 +143,11 @@ to say rondadesc:
 the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home[else]Ronda smells of slutty rats, cheap perfume and lots of sex[end if].".
 
 instead of conversing Ronda Mallrat:
-	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
+	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and Rondahosp is 0:
 		project Figure of Ronda_icon;
 		say "     'You asking about those macho hairball rejects from Shock Therapy? Suzie and Anna were talking to them after they rolled in here like they owned the place. Just a little playful flirting to tease their boys. No harm in it. But the kitties started getting fresh. They offered them a ride in their swanky helicopter, which was tempting, but that'd mean leaving the mall, so the girls said [']No way['].'";
 		say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it. By that point, their boyfriends had had enough and rallied the troops to deal with them. That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening. We kicked the lot of them out. They came poking back once or twice, but they're not allowed to shop here anymore. We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
-		now rondahosp is 1;
+		now Rondahosp is 1;
 	else if HP of Ronda is 0:
 		project Figure of Ronda_icon;
 		say "[one of]'Hey there, sugar, you just call me Ronda.'[or]'You meet Rod? He's my boy. You be nice to him, or I will be very... upset.'[or]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[at random]";
@@ -181,14 +181,14 @@ to say sexwithRonda:
 
 Section 3 - Unleashing the Slut Rats
 
-instead of trading the demon seed when the current action involves the ronda:
+instead of trading the demon seed when the current action involves the Ronda:
 	if HP of Ronda is 0:
 		project the figure of RondaSR_icon;
 		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.";
 		say "     The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with newfound virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 		ItemLoss demon seed by 1;
 		now Ronda is nowhere;
-		now HP of ronda is 1;
+		now HP of Ronda is 1;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Slut Rat":
@@ -210,9 +210,9 @@ instead of going to Mall FoodCourt while ( HP of Ronda is 1 and lastfuck of rod 
 	if FurryList is banned or FemaleList is banned or HermList is banned or HumorousList is banned or MaleList is banned:
 		say "     Rod seems particularly down and you go over to talk to him. He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda. 'But the spooky dog-woman said nothing could be done for her. She had some weird, mumbo-jumbo explanation. Something about needing the creatures that have been banned or something. So, I guess nothing can be done for her.' With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
 		say "     (This quest requires that Furry, Girl, Guy, Hermaphrodite and Humorous content all be unbanned.)[line break]";
-		now HP of ronda is 2;
+		now HP of Ronda is 2;
 	else:
-		now HP of ronda is 3;
+		now HP of Ronda is 3;
 		say "     Rod comes up to you as you arrive. He seems a little more animate than he's been of late, if still rather disheveled. 'Hey, can I ask a favor? I was, like, you know, totally missing Ronda. You know about Ronda, dontcha? She was there when those infected rats popped up and swarmed the place. You must've missed it, but it was a bad scene, dude.' You keep quiet, thinking it best that Rod and the other rats not know about your part in that incident. 'But yeah, there I was, totally bummed, when I went [']Dude!['] and got this brainwave to talk to that weird dog-girl at that creepy shop. She was all spooky and stuff, but she said there might be a way to help Ronda. But that's when she told me that I'd need to get some stuff out in the city, and I'm not to keen on leaving the mall, you know. So brainwave number two comes and I'm thinking my friend can help me with it. So that's where you come in.' Feeling a little guilty about what happened, you agree to visit the shop on the west side of the Atrium and see what needs to be done.";
 
 instead of conversing the Nermine while ( HP of Ronda is 3 and nerminetalk > 0 ):
@@ -223,9 +223,9 @@ instead of conversing the Nermine while ( HP of Ronda is 3 and nerminetalk > 0 )
 
 before conversing the Nermine while HP of Ronda is 5:
 	if lizard juice is owned and awesomest fruit is owned:
-		say "[rondaitems]" instead;
+		say "[Rondaitems]" instead;
 
-to say rondaitems:
+to say Rondaitems:
 	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter. She smiles happily and takes them. 'And now it is time to be talking about Nermine's payment for this. The last items Nermine is needing complete the cure are to be found in a private collection in the city. Downtown, there is high rise condo of private art collector. He is keeping veil and staff in his penthouse suite. Nermine is wanting you to be collecting them for her. Veil needed to complete cure, staff is payment. One trip for both. Easy for one working so hard to make amends.";
 	now HP of Ronda is 6;
 	now Art Collector is active;
@@ -234,9 +234,9 @@ to say rondaitems:
 	ItemLoss awesomest fruit by 1;
 
 before conversing the Nermine while HP of Ronda is 7:
-	say "[rondaitems2]" instead;
+	say "[Rondaitems2]" instead;
 
-to say rondaitems2:
+to say Rondaitems2:
 	say "     Nermine smiles as you hand over the items to her, examining them with a critical eye. 'The delightful guest is being most helpful in this. The staff of Tiresias will be looking good in Nermine's collection,' she says, placing the seemingly ordinary stick in the case. 'It is an unfortunate requirement to be burning the veil, but having one prize is better than none.' With that, she takes it and the other items you gathered as well as a collection of other small items which probably belonged to Ronda into the back to prepare them. When she finally emerges some time later, she hands a vial of gray fluid to you. 'This is to be given to the Ronda-rat. It will be purging the dark power within her. Be careful, this being just the one chance for her, and it will not work on another. There are no further of the needed supplies to replicate it again, at least not in this city.";
 	now HP of Ronda is 8;
 
@@ -319,9 +319,9 @@ to say ResolveEvent Art Collector:
 
 Chapter 3 - The Rescue Attempt
 
-rondafight is a number that varies.
+Rondafight is a number that varies.
 
-to say rondarescue:
+to say RondaRescue:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -332,7 +332,7 @@ to say rondarescue:
 	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus]+[level of Ronda] -- [dice + bonus + level of Ronda]: vs 17.";
-	if dice + bonus + level of ronda < 17:
+	if dice + bonus + level of Ronda < 17:
 		increase level of Ronda by 2;
 		say "     Looking around the various rats in the den at the moment, you aren't able to spot one with Ronda's red heart on their fur. You try to keep a mental list of who you've already checked, though it's hard to tell the slutty rats apart at times.";
 	else:
@@ -358,12 +358,12 @@ to say rondarescue:
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			LineBreak;
-			say "[helpingronda]";
+			say "[helpingRonda]";
 		else:
 			LineBreak;
 			say "[helpingrod]";
 
-to say helpingronda:
+to say helpingRonda:
 	say "     Perhaps it's just your current, slut rat nature talking, but the idea of turning the tables around on Rod and getting him infected sounds very tempting. You pull Ronda into another wet and chocolatey kiss, telling her that's a wonderful idea. You end up dropping the vial on the floor and it breaks open, unnoticed by you both as you kiss and grope one another. With your bodies and loins grinding against one another, you almost begin having sex, but manage to focus to remember that you need to invite a third rat down here for your threesome.";
 	say "     You and Ronda slip out of the den and make your way back towards the connection into the mall, playfully groping and pinching each other along the way. When you get close to the hole, you have Ronda wait out of sight around a corner while you proceed up into the Smith Haven Mall. Trying not to attract unwanted attention, you head over to Rod, who looks hopeful at your return. You quickly tell him to stay quiet before telling him that you've found Ronda. Making an excuse that getting everyone excited about Ronda's escape would actually just get in the way, you tell him that his poor, sweet girl's hurt and needs his help to make it the rest of the way. You add with a nudge and a wink that this is his chance to be the big hero for her. Excited all the more at that, he quickly grabs your wrist and rushes towards the hole. You follow along, letting him take the lead back beneath the mall.";
 	WaitLineBreak;
@@ -416,24 +416,24 @@ to say helpingronda:
 to say helpingrod:
 	say "     You start to tell her that's Rod's waiting for her to come back to the Mall. As you try to explain that you've found a way to change her back, she shakes her head at that and grinds her hard cock against you harder. 'Change? Why would I want to change? We're the sexiest beasts on the planet. Mmm... enough talking. Let's fuck, sweet stuff,' she rumbles, grinding her hard cock against you. You'll have to fight her before you can get her to take it.";
 	LineBreak;
-	now rondafight is 3;
+	now Rondafight is 3;
 	now inasituation is true;
 	challenge "Slut Rat";
 	now inasituation is false;
-	if rondafight is 3:
+	if Rondafight is 3:
 		say "     As you make an attempt to flee from the slut rat, your hand gets knocked by hers, sending the vial tumbling to the ground and breaking. Its contents spill out onto the dirty floor, ending any hope of saving her. Ronda follows you briefly before heading back to the main group, what brief moment of clarity she had is gone forever. Having successfully gotten away from her, all you can do is make your way back up to the mall food court.";
 		move player to Mall Foodcourt;
 		say "     Back up in the mall, you head over to Rod and give him the bad news that Ronda was too far gone to be saved. Heartbroken, the depressed rat slumps off somewhere to be alone for a while.";
 		now HP of Ronda is 99;
-		now rondafight is 0;
-	else if rondafight is 2:
+		now Rondafight is 0;
+	else if Rondafight is 2:
 		say "     After being beaten by Ronda and in the ensuing wild romp, the small vial is knocked aside and shatters, spilling its contents onto the dirty floor, ending any hope of saving her. Once she's sated herself, she heads back to the main group, what brief moment of clarity she had is gone forever. After you recover, you make your way back up to the food court.";
 		move player to Mall Foodcourt;
 		say "     Back up in the mall, you head over to Rod and give him the bad news that Ronda was too far gone to be saved. Heartbroken, the depressed rat slumps off somewhere to be alone for a while.";
 		now HP of Ronda is 99;
-		now rondafight is 0;
-	else if rondafight is 1:
-		now rondafight is 0;
+		now Rondafight is 0;
+	else if Rondafight is 1:
+		now Rondafight is 0;
 		now HP of Ronda is 10;
 		move Ronda to Mall Atrium;
 		increase score by 50;

@@ -110,7 +110,7 @@ to say HellDemon loses:
 			now description entry is "Make him blow you and take it down his throat";
 		[]
 			choose a blank row in table of fucking options;
-			now title entry is "Fuck his muscley ass";
+			now title entry is "Fuck his muscly ass";
 			now sortorder entry is 3;
 			now description entry is "Prepare his hole and give him a hard pounding";
 		[]
@@ -155,7 +155,7 @@ to say HellDemon loses:
 						say "[HellDemonBJ]";
 					if (nam is "Facefuck the demon"):
 						say "[HellDemonFacefuck]";
-					if (nam is "Fuck his muscley ass"):
+					if (nam is "Fuck his muscly ass"):
 						say "[HellDemonFuck]";
 					if (nam is "Offer your ass for his pleasure"):
 						say "[HellDemonAnal]";
@@ -252,7 +252,7 @@ to say HellDemonAnal:
 to say HellDemonCun:
 	project Figure of HellfireDemon_hard_icon;
 	say "     Thinking what you should do with the sexy devil, your eyes end up locked on his. As you observe his face, his handsome and masculine features, you feel a soft warmth on your groin as an idea slips into your mind, taking over your thoughts. The demon shows a grin at you, as if knowing what you're thinking, and walks up to you, ready to give your cheek a gentle stroke. 'Oh, I know that look... But I figure you need encouragement.' he says, sliding one of his meaty hands between your legs, pressing against your crotch so nicely as he begins to take a seat on the ground. He's now looking up at you, licking his lips to show his long demonic tongue, and by a will that is almost not yours, [if player is not naked]you slide down your lower gear and take off your clothes, [else]you give your exposed womanhood a soft rub, [end if]and walk over the demon. He leans back as your pussy hovers above his face, his expression rather eager as your arousal keeps building up.";
-	say "     Slowly, you duck above his head, your thighs on each side as you grind your labia across his lips. The demon lets out a pleased hum as he gives you a kiss, your moistered vulva tingling in response as lust starts to take over. He doesn't disappoint with his oral skills either, the pointy and long tongue of a demon being one of the most pleasurable things that could have ever entered you at this stage, wiggling and squirming around so nicely that you feel every inch and bit of your sex thoroughly stimulated, and you can hear him sucking in your juices rather hungrily. Pressing against his face harder only seems to encourage him to tonguefuck you, and soon you find yourself actually riding his tongue, so buried deep in you that you can't help but moan at the joyful sensations happening in your womanhood.";
+	say "     Slowly, you duck above his head, your thighs on each side as you grind your labia across his lips. The demon lets out a pleased hum as he gives you a kiss, your moistened vulva tingling in response as lust starts to take over. He doesn't disappoint with his oral skills either, the pointy and long tongue of a demon being one of the most pleasurable things that could have ever entered you at this stage, wiggling and squirming around so nicely that you feel every inch and bit of your sex thoroughly stimulated, and you can hear him sucking in your juices rather hungrily. Pressing against his face harder only seems to encourage him to tonguefuck you, and soon you find yourself actually riding his tongue, so buried deep in you that you can't help but moan at the joyful sensations happening in your womanhood.";
 	WaitLineBreak;
 	if player is dominant:
 		say "     Now wouldn't it be nice to have such a powerful demonic creature at your service to provide you such a godlike cunnilingus anytime you craved a lengthy and wiggling hot tongue in you? Only if you had him as your personal slave, satisfying all your whims and needs, such a strong devil at your permanent service, performing this well at all tasks you order him to carry on for you... Only if you could have that, you could keep riding this demon's face all you wanted, for as long as you desired...";
@@ -289,7 +289,7 @@ to say HellDemonPussy:
 to say HellDemonXMale:
 	project Figure of HellfireDemon_soft_icon;
 	say "     With a quick glance over your companion, you give Xaedihr a sign to step ahead as he eyes you with mischief. 'Oh, kind of you to think of me. It was getting boring to see you take all the fun for yourself...' he comments, while simultaneously performing an arcane gesture, causing his signature dark tendrils to raise from the ground and slowly wrapping themselves around the red devil's legs. 'What's this?! A sorcerer?! No, come on, we can talk about this, I'm sure?' he protests, but soon his words turn into moans as his throbbing meat, still restrained underneath his barely fitting jockstrap, is held and stroked by a single tendril slipping itself around his shaft. This makes him weak on the knees, and with a slight push, he's brought down on all fours. Though as this clearly isn't enough to satisfy the half-demon, he also makes sure he removes the jockstrap, while guiding you to walk over the sexy devil's rear, a delightful muscle ass now fully exposed to you.";
-	say "     'Now that looks like a tasty sight. And since I'm a generous person, I'll let you have it as I facefuck him. You know I love a mouth wrapped around my dick.' says Xaedihr, winking at you suggestively. With a pat on the devil's powerful glutes, you feel up his butt in all of its glory as the sorcerer takes his own manhood out, slapping it on the demon's face before sliding it in between his lips. You hear grunts from the other side as the helpless hellspawn is forced to take a footlong of a cock in his throat, being held by his large horns, while you're ready to bring your [cock of player] penis between the muscle cheeks. His hole, twitching and surprisingly eager, feels warm and slick, inviting you to put your cock in and enjoy the tight feeling around your shaft in any way you see fit. Without any further ado, you do so, thrusting into his ass until you're all the way in, your pelvis hiting his butt with your cock resting inside.";
+	say "     'Now that looks like a tasty sight. And since I'm a generous person, I'll let you have it as I facefuck him. You know I love a mouth wrapped around my dick.' says Xaedihr, winking at you suggestively. With a pat on the devil's powerful glutes, you feel up his butt in all of its glory as the sorcerer takes his own manhood out, slapping it on the demon's face before sliding it in between his lips. You hear grunts from the other side as the helpless hellspawn is forced to take a footlong of a cock in his throat, being held by his large horns, while you're ready to bring your [cock of player] penis between the muscle cheeks. His hole, twitching and surprisingly eager, feels warm and slick, inviting you to put your cock in and enjoy the tight feeling around your shaft in any way you see fit. Without any further ado, you do so, thrusting into his ass until you're all the way in, your pelvis hitting his butt with your cock resting inside.";
 	WaitLineBreak;
 	project Figure of HellfireDemon_hard_icon;
 	say "     'How are you feeling down there, demon slut? Getting double tagged and tentacle raped, what's not to enjoy...?' Xaedihr keeps teasing the sexy devil as his tendrils fully embrace the demon's thick body, further stimulating his throbbing meat as you keep on fucking his ass hard and deep. He's basically being supported by the sorcerer's magic, making it feel so easy for you to pound and thrust to your heart's content. Grabbing him by the hips to aid the momentum, you pick up the pace in order to feel a much greater sensation, going so deep in the devil that he can't help but twitch his asshole around your shaft, grunting with a mouth full of Xaedihr's cock. 'What's the matter? My bud is fucking you too hard? Shame you can't talk and complain about it...' he teases once more, tightening his grip around the demon's horns and pulling his face towards himself, leaving only the balls out as his entire shaft gets buried inside the devil's mouth.";
@@ -300,7 +300,7 @@ to say HellDemonXMale:
 	if player consents:
 		LineBreak;
 		say "     With a nod, you agree on trading places with your friend. Pulling out your cock out of the crimson devil's ass, you walk over to Xaedihr's spot as he moves to yours with a few steps, the demon being too overwhelmed with ecstasy to make any sounds other than moaning and grunting. Now on his frontal side, you bring your meatstick over those soft and warm lips, push it in between them as his long tongue twirls around your cock, and take hold of his big horns to give him the facefuck he deserves. In the meantime, the half-demon doesn't waste any time in covering the hole you've left unfilled, shoving all of his twelve inches inside the hellspawn's ass without an issue at all, grinning in satisfaction. 'Fuck, he's tight... Even when warmed up...' Pleased with the sensation of the demon's pucker clenching around his length, Xaedihr gives the muscle ass a loud slap, making him let out a groan with your dick in his mouth.";
-		say "     How that almost sets you off, feeling his deep voice vibrating through your shaft, making you throb with pleasure and all the much eager to thrust into his throat. And his horns are so convenient to aid you in this, making such great handles to help you pound his sorry mouth until you have nearly driven yourself close to climax. Definitely doesn't help seeing your sorcerer friend pounding the demon's ass on the other side as he makes eyecontact with you, sending a wink and a charming smirk that makes you throb even harder. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's mouth and make him swallow up your cum until the very last drop.";
+		say "     How that almost sets you off, feeling his deep voice vibrating through your shaft, making you throb with pleasure and all the much eager to thrust into his throat. And his horns are so convenient to aid you in this, making such great handles to help you pound his sorry mouth until you have nearly driven yourself close to climax. Definitely doesn't help seeing your sorcerer friend pounding the demon's ass on the other side as he makes eye contact with you, sending a wink and a charming smirk that makes you throb even harder. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's mouth and make him swallow up your cum until the very last drop.";
 		WaitLineBreak;
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's mouth as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums in his ass, and all you can imagine is his insides getting covered completely by the virile mage as he pounds that rear hard and deep. Inevitably, you feel the demon's grunts as all this happens, he too hitting the edge and making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' says Xaedihr, as he is slowly pulling out his cock from the demon's abused hole, a stream of his load following right after and leaking down to the muscle glutes. You do the same, pulling out of his mouth and finally letting the hunky devil take a breath.";
 		CreatureSexAftermath "Hellfire Demon" receives "OralCock" from "Player";
@@ -308,7 +308,7 @@ to say HellDemonXMale:
 	else:
 		LineBreak;
 		say "     Shaking your head, you let him know you want to keep the ass to yourself. 'Huh, alright. All the better for me.' he replies, with a wink and a grin as he proceeds to continue to facefuck the hunky devil as eagerly as before. After all, his hole clenching around your length is feeling so good, you don't really want to pull out now. Instead, you want to continue fucking this delicious ass while Xaedihr keeps making the demon choke and grunt with his twelve inches fully buried inside his throat. He's leaning his head back with just the happiest pleasure face as he's feeling the crimson devil's throat muscles around his thick shaft, then returning to pound his face as if it was the ass you're fucking by the other side.";
-		say "     As the spitroast fucking continues, you eventually hit signs that you're getting closer the more you thrust, as once can only last so long. Slowing down the pace, you try to let Xaedihr know that you really want to cum, and he gets you with a suggestive, teasing nod with a smirk drawn on his face. He makes a couple more poundings at half the speed and he too looks to be close. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload insde this sexy devil's ass and coat his insides until left leaking your cum from his anus. Just the image of his pucker twitching open as your seed slowly makes its way out from where it was deposited sends your cock into a hard frenzy, so ready to explode.";
+		say "     As the spitroast fucking continues, you eventually hit signs that you're getting closer the more you thrust, as once can only last so long. Slowing down the pace, you try to let Xaedihr know that you really want to cum, and he gets you with a suggestive, teasing nod with a smirk drawn on his face. He makes a couple more poundings at half the speed and he too looks to be close. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's ass and coat his insides until left leaking your cum from his anus. Just the image of his pucker twitching open as your seed slowly makes its way out from where it was deposited sends your cock into a hard frenzy, so ready to explode.";
 		WaitLineBreak;
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's ass as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums down his throat, and you can hear the sexy devil gulping down every single drop of it. 'Fuck yes... Swallow all of it, demon slut... That's right...' says Xaedihr, amidst some grunting, as the demon too hits the edge, making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' he continues, slowly pulling out his cock from between the hellspawn's lips, finally letting the hunky devil take a breath. You do the same, pulling out of his ass as a stream of your load follows right out of his abused hole, leaking down to the muscle glutes.";
 	say "     'Now this was hot. Hope you took some lessons, hellfire boy.' teases your sorcerer friend, leaving a rather humiliated demon silent as he lies down on the ground, right on his own messy puddle of cum as Xaedihr's tendrils return to their own void. He only lets out a defeated grunt, but you can tell he secretly enjoyed being used like that, both his mouth and ass used and abused for a good while. 'I think we should do this again, totally. Hope you're down for that anytime, bud.' he tells you, and you think he's actually eager to do it again. Perhaps he is, given how much he gets off from dominating demons... A charming fellow, this man.";
@@ -320,7 +320,7 @@ to say HellDemonXMale:
 
 to LJockstrapPickup:
 	if carried of leather jockstrap < 1:
-		say "     Though while that happens, you happen to come accross the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you hadn't paid attention. It smells greatly of his sweet musk... There's no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it's in good conditions.";
+		say "     Though while that happens, you happen to come across the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you hadn't paid attention. It smells greatly of his sweet musk... There's no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it's in good conditions.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Pick it up.";
 		say "     ([link]N[as]n[end link]) - Just leave it.";
@@ -338,7 +338,7 @@ to say HellDemon Desc:
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
 		if Hellfire Club is known:
-			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the antecipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
+			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
 		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
 			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
 		else:
@@ -396,7 +396,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 80;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "hellfire demon horn shard";               [ Dropped item, blank for none. Case sensitive. ]
@@ -415,107 +415,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 Section 4-1 - Items
 

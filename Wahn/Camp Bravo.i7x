@@ -48,7 +48,7 @@ to say ResolveEvent Trickster's Masterpiece:
 	if graphics is true:
 		project the figure of TinyTim_In_Action_icon;
 		WaitLineBreak;
-	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have. [if PlayerMet of Diego is true]And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[else if diegochanged is 0]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[else]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
+	say "     You stay quite a while, watching the soldiers take care of each other and then being bred one after another by the minotaur. In the end a whole squad of them gathers at the edge of the camp, fully clothed and with weapons and equipment, but standing and acting a bit strangely from the feeling of loads of cum and butt plugs inside their asses. Then they move out towards the closest checkpoint of the containment barrier around the city. You wonder what their superiors will say about this plan and the 'cargo' each soldier carries with him, should they even make it at all with all that active minotaur cum wearing down whatever defenses they do have. [if PlayerMet of Diego is false]And who might the trickster have been who sold them on this improbable tall tale? It would certainly be interesting to meet him - or her - or it[else if diegochanged is 0]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing his hand in this, you'd say it's one of the best Diego's done yet[else]Certainly an awesome trick, to sell them all on this highly improbable story and plan. Recognizing her hand in this, you'd say it's one of the best Diego's done yet[end if].";
 	LineBreak;
 	say "     Certainly worth another visit... you just hope you can find your way back to the [bold type]camp[roman type] with all the chaos on the streets of this city.";
 	WaitLineBreak;
@@ -222,7 +222,7 @@ Ball Count of Private Marc Orwell is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Private Marc Orwell is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Private Marc Orwell is 0. [number of cunts]
 Cunt Depth of Private Marc Orwell is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Private Marc Orwell is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Private Marc Orwell is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Private Marc Orwell is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Private Marc Orwell is false.
@@ -561,7 +561,7 @@ Ball Count of Elaine is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Elaine is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Elaine is 1. [number of cunts]
 Cunt Depth of Elaine is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Elaine is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Elaine is 3. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Elaine is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Elaine is false.
@@ -833,7 +833,7 @@ Ball Count of Sergeant Alexander is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sergeant Alexander is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sergeant Alexander is 0. [number of cunts]
 Cunt Depth of Sergeant Alexander is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Sergeant Alexander is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Sergeant Alexander is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Sergeant Alexander is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Sergeant Alexander is false.
@@ -1166,7 +1166,7 @@ Ball Count of Tiny Tim is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Tiny Tim is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Tiny Tim is 0. [number of cunts]
 Cunt Depth of Tiny Tim is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Tiny Tim is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Tiny Tim is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Tiny Tim is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Tiny Tim is false.

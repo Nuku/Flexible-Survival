@@ -12,6 +12,20 @@ Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
 Description of Entrance to the Red Light District is "[RedLightDesc]".
 
+
+Red Light Street is a door. "To the south is the rest of the city." It is dangerous.
+
+Red Light Street is south of Entrance to the Red Light District.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Exploring the City Dummy Room	"Exploring the City Dummy Room"
+
+Exploring the City Dummy Room is a room.
+Exploring the City Dummy Room is south of Red Light Street.
+
+The marea of Red Light Street is "Outside".
+
 after looking while player is in Entrance to the Red Light District:
 	if findwires < 2 and fixedgens < 3:
 		project the Figure of Map_RedLight_Nopower_6_icon;
@@ -24,7 +38,7 @@ to say RedLightDesc:
 	else:
 		project the Figure of Map_RedLight_6_icon;
 	say "     This street corner marks the beginning of the city's Red Light District. Normal buildings, stores and offices give way to an area that seems old, grimy and somewhat abandoned, given that the colorful neon lights of numerous adult establishments hang dark and powerless on their buildings. Caution seems advised hereabouts, as the area is an obvious hive of perverts and sex addicts, with the infection outbreak just having pushed things to new extremes.";
-	say "     To the south, you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way east and west along the boundary road seems relatively safe - or you could [bold type][link]explore[as]explore[end link][roman type] the twisting streets of this old part of the city that lie north of where you stand, with all the dangers that may hold.";
+	say "     To the [Bold Type]south[roman type], you could wander back out into the surrounding city and possibly find a safer place to be. Alternatively, the way [Bold Type]east[roman type] and [Bold Type]west[roman type] along the boundary road seems relatively safe - or you could [bold type][link]explore[as]explore[end link][roman type] the twisting streets of this old part of the city that lie [Bold Type]north[roman type] of where you stand, with all the dangers that may hold.";
 
 instead of smelling Entrance to the Red Light District:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
@@ -45,7 +59,7 @@ after looking while player is in Boundary Street East:
 		project the Figure of Map_RedLight_5_icon;
 
 to say RedLightBoundaryEastDesc:
-	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and towards the east, a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either. To the southeast lies an apartment building with a busted front door, which nevertheless looks more lived-in than most of the other buildings all around.";
+	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. Some piles of uncollected trash litter the street, and towards the [Bold Type]east[roman type], a modestly sized chapel rises above the surrounding buildings. Sadly, its white walls are marred by the signs of a recent fire within, with the flames having licked out of the shattered windows to blacken areas above and besides them. The large inverted pentagram that someone has clawed into the timbers of the wooden front door tells you that what befell the chapel wasn't an accident either. To the [Bold Type]southeast[roman type] lies an apartment building with a busted front door, which nevertheless looks more lived-in than most of the other buildings all around.";
 
 instead of smelling Boundary Street East:
 	say "     The aroma of fire and ash is ever-present in your nose, so close to the burned chapel. Of course, this doesn't reduce the other scents present, so you can also smell sex, with a musky scent of arousal hanging thick in the air.";
@@ -170,7 +184,7 @@ after looking while player is in Boundary Street West:
 		project the Figure of Map_RedLight_7_icon;
 
 to say RedLightBoundaryWestDesc:
-	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. The area you are in is dominated by a big rig truck lying on its side, wedging its bulky length between the buildings on both sides and creating a formidable barrier that impedes any further progress west. In all likelihood, the driver crashed it sometime during the initial outbreak of the nanite contagion. Towards the northwest, just short of where the cab of the truck has buried itself halfway in a wall, you can see the door of a store that survived the devastation seemingly intact.";
+	say "     You're on a road that runs along the border to the red light district, marked by prominent [']SEX SEX SEX['] neon signs along the facades of a number of buildings on one street side. Though without power to support the alluring shine of all the signage, it just seems kinda dingy. The area you are in is dominated by a big rig truck lying on its side, wedging its bulky length between the buildings on both sides and creating a formidable barrier that impedes any further progress [Bold Type]west[roman type]. In all likelihood, the driver crashed it sometime during the initial outbreak of the nanite contagion. Towards the [Bold Type]northwest[roman type], just short of where the cab of the truck has buried itself halfway in a wall, you can see the door of a store that survived the devastation seemingly intact.";
 
 instead of smelling Boundary Street West:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
@@ -212,7 +226,7 @@ after looking while player is in Northern Street 2:
 		project the Figure of Map_RedLight_10_icon;
 
 to say RedLightNorthStreet2Desc:
-	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. Towards the northeast, there is a thinner street where an ominous, faint red light dims through. Traveling south would lead you towards the crossroad marking the entrance to the Red Light District.";
+	say "     You're in the middle of the northern road, coming across a building with neon signs saying [']TOYS['], alongside a pair of handcuffs, indicating this must have been some kind of store for the kinky fans of sex toys. Besides it, there's still a small pile of uncollected trash. Towards the [Bold Type]northeast[roman type], there is a thinner street where an ominous, faint red light dims through. Traveling [Bold Type]south[roman type] would lead you towards the crossroad marking the entrance to the Red Light District.";
 
 instead of smelling Northern Street 2:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
@@ -233,9 +247,9 @@ after looking while player is in Crimson Street:
 		project the Figure of Map_RedLight_11_icon;
 
 to say RedLightCrimsonStreetDesc:
-	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here if you want to stay on the main paths, unless any of these buildings are of any interest to you at some point. Southeast of you is a dark alley you can pass through, however.";
+	say "     You have arrived at the entrance of the Crimson Street, in which a strange and ominous red light dims through with no logical explanation. It seems pretty empty and oddly silent, without anything of interest at the first glance. All the buildings here look either abandoned or looted, although everything looks mysteriously clean, unlike the other streets. Staying here gives you an offsetting feeling you can't quite specify, but besides that, it seems you cannot proceed any further from here if you want to stay on the main paths, unless any of these buildings are of any interest to you at some point. [Bold Type]Southeast[roman type] of you is a dark alley you can pass through, however.";
 	if Hellfire Club is known:
-		say "     The Hellfire Club stands at a visible range from your position, to the north, and you could enter it at any point.";
+		say "     The Hellfire Club stands at a visible range from your position, to the [Bold Type]north[roman type], and you could enter it at any point.";
 
 instead of smelling Crimson Street:
 	say "     There's an unsettling sweet smell around here, rather captivating the more you try to feel it. It's not perfume, nor anything of the sort, but it strikes you as something seductively demonic in nature.";
@@ -250,7 +264,7 @@ The earea of Dark Alley is "Red".
 Description of Dark Alley is "[RedLightDarkAlleyDesc]".
 
 to say RedLightDarkAlleyDesc:
-	say "     You arrive at an oddly dark alleyway, in which you can see a few garbage containers and plenty of trash scattered all along the path. One of the very first few things you notice is that it does not smell particularly good, and that is quite understandable given the amount of junk within your proximity. You can head deeper inside and turn southwest to arrive at an extension of the alleyway, or make your way towards the Crimson Street, to the northwest.";
+	say "     You arrive at an oddly dark alleyway, in which you can see a few garbage containers and plenty of trash scattered all along the path. One of the very first few things you notice is that it does not smell particularly good, and that is quite understandable given the amount of junk within your proximity. You can head deeper inside and turn [Bold Type]southwest[roman type] to arrive at an extension of the alleyway, or make your way towards the Crimson Street, to the [Bold Type]northwest[roman type].";
 
 instead of smelling Dark Alley:
 	say "     The smell is bad, like piles of garbage that remained here for a long time.";
@@ -267,7 +281,7 @@ The earea of Narrow Alley is "Red".
 Description of Narrow Alley is "[RedLightNarrowAlleyDesc]".
 
 to say RedLightNarrowAlleyDesc:
-	say "     This is one particularly narrow alley, with nothing out of the ordinary despite its low width. It is quite silent in here, as well, and the path seems relatively clean, with only a few useless objects lying around the walls, some damaged beyond recognition. If you walk deeper ahead, you can make a turn into another alleyway, to the northeast. This area also connects back to the Northern Street, if you wish to return to a broader area.";
+	say "     This is one particularly narrow alley, with nothing out of the ordinary despite its low width. It is quite silent in here, as well, and the path seems relatively clean, with only a few useless objects lying around the walls, some damaged beyond recognition. If you walk deeper ahead, you can make a turn into another alleyway, to the [Bold Type]northeast[roman type]. This area also connects back to the Northern Street in the [Bold Type]southwest[roman type] and [Bold Type]northwest[roman type], if you wish to return to a broader area.";
 
 instead of smelling Narrow Alley:
 	say "     You cannot pick any specific scent in here... other than a very strong musky scent. This must be one of those frequent sex encounter spots.";

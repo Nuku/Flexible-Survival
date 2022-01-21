@@ -57,34 +57,34 @@ to say LoseToFeralDog:
 		if Player is herm: 			  [Yes = HERM Identified!]
 			say "     Backing up you place your arms up and lay your back down on the cold ground below, fully submitting to the canine beast. Before you can act further, surging forward the dog tears off your underclothes with sharp canines. Leaping atop your form at a moments notice the mutts cock has since grown to its full eight inch erectness with a bulging red knot at the base. Thrusting wildly at your tummy the feral covers your neck and face in doggy kisses and slobber. The musky smell of the beast filling your senses and better judgement as he finds home in your cunt. Throwing your head back at the sudden penetration the dog hilts himself to the knot inside you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic red cock ruts into your tender sex the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips the beast slips his long canine tongue into your mouth as his rough tongue tangles with your own. It explores every inch of your mouth and waves of tasty slobber follows, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive cunt. Letting his tongue withdraw from your mouth with a trail of saliva the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust the dog hilts himself in you again and continues to push, popping his huge swollen knot into your soaked cunt you let out a shriek of pleasure and clamp down around his hot doggy cock and climax. You shoot your own load all over your chest as you spasm around the canine's member. Following with you and stuck firmly inside your heavenly sex the feral cums as well. Pumping load after load of fertile canine cum into you the dog growls into your neck as he breeds you like a good bitch.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax the dog stays in his dominant missionary position as your sex milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as it slides out of your well-fucked pussy and then trots off, seemingly content with its breeding. You lay there for a while, rubbing your cum-slicked lips as dog jizz runs down your thighs before getting up and going on your way.";
 		else if Player is female: [Yes = FEMALE Identified!]
 			say "     Backing up, you place your arms up and lay back down on the cold ground, fully submitting to the canine beast. Before you can act further, the dog surges forward, tearing off your underclothes with sharp canines. Leaping atop your form at a moment's notice, the mutt's cock has since grown to its full eight inch erectness with a bulging, red knot at the base. Thrusting wildly at your tummy, the feral covers your neck and face in doggy kisses and slobber. The musky smell of the beast fills your senses and better judgement as he finds home in your cunt. Throwing your head back at the sudden penetration, the dog hilts himself to the knot inside of you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic, red cock ruts into your tender sex, the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips, the beast slips his long, rough canine tongue into your mouth, tangling it with your own. It explores every inch of your mouth, and waves of tasty slobber follows, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive cunt. Letting his tongue withdraw from your mouth with a trail of saliva, the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust, the dog hilts himself in you again and continues to push, popping his huge, swollen knot into your soaked cunt. You let out a shriek of pleasure and clamp down around his hot doggy cock and climax. Still stuck firmly inside of your heavenly sex, the feral follows right after you and cums as well. Pumping load after load of fertile canine cum into you, the dog growls into your neck as he breeds you like a good bitch.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax, the dog stays in his dominant missionary position as your sex milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as he slides out of your well-fucked pussy and then trots off, seemingly content with his breeding. You lay there for a while, rubbing your cum-slicked lips as dog jizz runs down your thighs, before getting up and going on your way.";
 		else if Player is male: [Yes = MALE Identified!]
 			say "     Backing up, you place your arms up and lay back down on the cold ground, fully submitting to the canine beast. Before you can act further, the dog surges forward, tearing off your underclothes with sharp canines. Leaping atop your form at a moment's notice, the mutt's cock has since grown to its full eight inch erectness with a bulging, red knot at the base. Thrusting wildly at your tummy, the feral covers your neck and face in doggy kisses and slobber. The musky smell of the beast fills your senses and better judgement as he finds home in your ass. Throwing your head back at the sudden penetration, the dog hilts himself to the knot inside of you in one lucky hump before he pulls back and resumes thrusting. As the dog's exotic, red cock ruts into your tender anus, the feral beast continues to lick and kiss your face and neck. Hammering into you, you're overcome with a feral base lust and start to moan and yip like a bitch in heat.";
 			say "     Taking advantage of your parted lips, the beast slips his long, rough canine tongue into your mouth, tangling it with your own. It explores every inch of your mouth, and waves of tasty slobber follows, only further exciting you. As the feral beast essentially spit roasts you, he begins to speed up, humping with incredible speed into your receptive ass. Letting his tongue withdraw from your mouth with a trail of saliva, the mutt bites down on your neck, enough to hold you firmly but not enough to draw blood. With one final massive thrust, the dog hilts himself in you again and continues to push, popping his huge, swollen knot into your abused hole. You let out a shriek of pleasure and clamp down around his hot doggy cock, and you shoot your own load all over your chest as you spasm around the canine's member. Still stuck firmly inside of your heavenly sex, the feral follows right after you and cums as well. Pumping load after load of fertile canine cum into you, the dog growls into your neck as he breeds you like a good bitch.";
-			mimpregchance;
+			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mutt";
 			WaitLineBreak;
 			say "     Coming down from your climax the dog stays in his dominant missionary position as your tender butt milks the last drops of his dog seed into you. He resumes covering your face in wet kisses while waiting for his large knot to deflate in you. You faithfully make out with your canine mate until he slips out of your sensitive lips. You let out a moan as he slides out of your well-fucked ass and then trots off, seemingly content with his breeding. You lay there for a while, rubbing your cum-slicked hole as dog jizz runs down your thighs, before getting up and going on your way.";
 	else: 										  [PLAYER LOST THE FIGHT!]
 		if Player is herm: [Yes = HERM Identified!]
 			say "     Covered in scratches and bites you fall on your back struggling to crawl away. Mid-crawl the feral dog leaps atop your back and digs his jaws into your neck pinching tightly but not quite drawing blood. The dog's tongue laps at your neck covering it in slobber as his hind legs yank down any obstructions you have between the canine and his prize. He humps wildly at your raised ass rubbing his fully erect dog cock between your ass cheeks. Before long he hits his mark, thrusting into your cunt and smashing his knot against your wet lips the dog growls and barks as he fucks you. You moan as the canine pounds into you, you begin to pant as the feral beast dominates and breeds your now willing body. Thrusting your ass back against the dog in time with his wild humps you bark in pleasure as the male mutt pushes into you further, popping his swollen knot into your abused pussy lips.";
 			say "     You throw your head back as he locks inside you, now humping in short sporadic bursts. The beast doesn't last much longer, slamming into you one last time and flooding your womb with thick spurts of canine seed. You moan in surprise and pleasure as you clamp down around his invading member, milking your mates doggy cock as if it were all that mattered. You find your own orgasm, jetting your load on the ground below and splattering on your lower half. Panting warm drool on your back the dog leaps off your back a moment later yanking his still hard cock from your abused cunt. A tide of seed flows out of you and onto the ground below, soaking your thighs and legs in sticky cum. Looking back at your beast you see him turning a corner and wandering off, likely searching for another bitch to breed.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 		else if Player is female: [Yes = FEMALE Identified!]
 			say "     Covered in scratches and bites, you fall on your back, struggling to crawl away. Mid-crawl, the feral dog leaps atop your back and digs his jaws into your neck, pinching tightly but not quite enough to draw blood. The dog's tongue laps at your neck, covering it in slobber, as his hind legs yank down any obstructions you have between the canine and his prize. He humps wildly at your raised ass, rubbing his fully erect dog cock between your ass cheeks. Before long, he hits his mark, thrusting into your cunt and smashing his knot against your wet lips. The dog growls and barks as he fucks you. You moan as the canine pounds into you, and you begin to pant as the feral beast dominates and breeds your now willing body. Thrusting your ass back against the dog in time with his wild humps, you bark in pleasure as the male mutt pushes into you further, popping his swollen knot into your abused pussy lips.";
 			say "     You throw your head back as he locks inside of you, now humping in short, sporadic bursts. The beast doesn't last much longer, slamming into you one last time and flooding your womb with thick spurts of canine seed. You moan in surprise and pleasure as you clamp down around his invading member, milking your mate's doggy cock as if it were all that mattered. Panting warm drool on your back, the dog leaps off of your back a moment later, yanking his still hard cock from your abused cunt. A tide of seed flows out of you and onto the ground below, soaking your thighs and legs in sticky cum. Looking back at your beast, you see him turning a corner and wandering off, likely searching for another bitch to breed.";
-			fimpregchance;
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 		else if Player is male: [Yes = MALE Identified!]
 			say "     Covered in scratches and bites you fall on your back struggling to crawl away. Mid-crawl the feral dog leaps atop your back and digs his jaws into your neck pinching tightly but not quite drawing blood. The dog's tongue laps at your neck covering it in slobber as his hind legs yank down any obstructions you have between the canine and his prize. He humps wildly at your raised ass rubbing his fully erect dog cock between your ass cheeks. Before long he hits his mark, thrusting into your tight ass and smashing his knot against your anal ring the dog growls and barks as he fucks you. You moan as the canine pounds into you, you begin to pant as the feral beast dominates and breeds your now willing body. Thrusting your ass back against the dog in time with his wild humps you bark in pleasure as the male mutt pushes into you further, popping his swollen knot into your abused asshole.";
 			say "     You throw your head back as he locks inside you, now humping in short sporadic bursts. The beast doesn't last much longer, slamming into you one last time and flooding your innards with thick spurts of canine seed. You moan in surprise and pleasure as you clamp down around his invading member, milking your mates doggy cock as if it were all that mattered. You find your own orgasm, jetting your load on the ground below and splattering on your lower half. Panting warm drool on your back the dog leaps off your back a moment later yanking his still hard cock from your abused ass. A tide of seed flows out of you and onto the ground below, soaking your thighs and legs in sticky cum. Looking back at your beast you see him turning a corner and wondering off, likely searching for another bitch to breed.";
-			mimpregchance;
+			CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mutt";
 	increase FeralMuttDominance by 1; [one extra step towards dominance]
 	if FeralMuttDominance > 2:
 		now Mutt Pack Attack is active; [active when they reach level 3 dominance]
@@ -288,7 +288,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dog"; [name of the overall species of the infection, used for children, ...]
 	add "Feral Mutt" to infections of CanineList;
 	add "Feral Mutt" to infections of FurryList;
 	add "Feral Mutt" to infections of NatureList;
@@ -335,7 +335,7 @@ When Play begins:
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
@@ -354,107 +354,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 
@@ -467,7 +367,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Mutt"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dog"; [name of the overall species of the infection, used for children, ...]
 	add "Mutt Pack" to infections of CanineList;
 	add "Mutt Pack" to infections of FurryList;
 	add "Mutt Pack" to infections of NatureList;
@@ -514,7 +414,7 @@ When Play begins:
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
@@ -533,107 +433,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 
@@ -754,21 +554,21 @@ to say PackDominanceScenes:
 		WaitLineBreak;
 		say "     While swallowing down gulps of feral seed, some of it dripping down your neck and chest you feel more warm seed cover your hand. The pit bull you were jerking whines out and shoots his load over your hand. You clean off the mutt who is now slightly swaying above you and drink down what remaining seed there is. You're sure to lick your hand clean from the pit bull as well, mixing the delicious seed together in your mouth. When you're finished the mutts back off, the one tied inside you yanking his knotted cock free in a mixture of pain and pleasure. A wave of white canine spunk flows out of your abused pussy as he does.";
 		say "     Not a minute after barely having had time to recover another dog leaps onto your back burying his canine dong into you. You yell out in surprise but sigh pleasantly as you're once again fucked. And as you look up you see from your ground position you see four still hard dog cocks before, each nearly a foot in size. You lick your lips and get to work on your duties as a bitch. When they're finally done with you, you've been fucked senseless. Your cunt is stretched wide and is leaking globs of feral seed from it, running down your thighs and dripping onto the ground below while your cock is drained and leaking a few final drops of white seed. You're slightly delirious from the constant fuck but are positively glowing, biting your lower lip and fondling your ruined pussy while thinking about the next time. It seems the dogs have all wandered off, leaving you to recover on your own time...";
-		fimpregchance;
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 	else if Player is female:
 		say "     It tastes salty and delicious, the red dog cock throbs in your mouth as you slowly start sucking. Two of the other mutts have leaned in and started to lap at your chest, your dangling nipples licked and drooled over by rough doggy tongues. And out of the corner of your eye you see the final mutt, a big brown pit bull, sitting near you, whining quietly as he watches you. You smile around a spit slicked red rocket and wrap your hand around the pit bulls waiting man-meat. He groans in pleasure and humps up into your hand. All the while the brown mutt who had dominated you from the start continues to plow into your soaking sex.";
 		say "     The dogs knot constantly pushed against your lips the mutt thrusts one last time, hard. He shoves his entire knot into you in one final thrust. Your eyes shoot open and you climax suddenly, screaming around the dog cock you're currently slobbering over as you clamp down around the thick canine member fucking you. As you cum, so does the dog now locked inside you. He shoots what feels like a gallon of potent dog seed into your womb. Rope after thick, white rope of seed shoots into you and coats your walls, not a drop of it able to leak out around his knot bulging your stomach slightly. Not shortly after the meaty member you're sucking also explodes into your mouth. Most of it shooting down your throat while some of it overflows your mouth and leaks down your chin.";
 		WaitLineBreak;
 		say "     While swallowing down gulps of feral seed, some of it dripping down your neck and chest you feel more warm seed cover your hand. The pit bull you were jerking whines out and shoots his load over your hand. You clean off the mutt who is now slightly swaying above you and drink down what remaining seed there is. You're sure to lick your hand clean from the pit bull as well, mixing the delicious seed together in your mouth. When you're finished the mutts back off, the one tied inside you yanking his knotted cock free in a mixture of pain and pleasure. A wave of white canine spunk flows out of your abused pussy as he does.";
 		say "     Not a minute after barely having had time to recover another dog leaps onto your back burying his canine dong into you. You yell out in surprise but sigh pleasantly as you're once again fucked. And as you look up you see from your ground position you see four still hard dog cocks before, each nearly a foot in size. You lick your lips and get to work on your duties as a bitch. When they're finally done with you, you've been fucked senseless. Your cunt is stretched wide and is leaking globs of feral seed from it, running down your thighs and dripping onto the ground below. You're slightly delirious from the constant fuck but are positively glowing, biting your lower lip and fondling your ruined pussy while thinking about the next time. It seems the dogs have all wandered off, leaving you to recover on your own time...";
-		fimpregchance;
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mutt";
 	else if Player is male:
 		say "     It tastes salty and delicious, the red dog cock throbs in your mouth as you slowly start sucking. Two of the other mutts have leaned in and started to lap at your chest, your sensitive nipples licked and drooled over by rough doggy tongues. And out of the corner of your eye you see the final mutt, a big brown pit bull, sitting near you, whining quietly as he watches you. You smile around a spit slicked red rocket and wrap your hand around the pit bulls waiting man-meat. He groans in pleasure and humps up into your hand. All the while the brown mutt who had dominated you from the start continues to plow into your soaking sex while your throbbing member flops back and forth.";
 		say "     The dogs knot constantly pushed against your asshole the mutt thrusts one last time, hard. He shoves his entire knot into you in one final thrust. Your eyes shoot open and you climax suddenly, screaming around the dog cock you're currently slobbering over as you clamp down around the thick canine member fucking you and shoot your load onto the ground below you, splattering your knees with your own seed. As you cum, so does the dog now locked inside you. He shoots what feels like a gallon of potent dog seed into your innards. Rope after thick, white rope of seed shoots into you and coats your walls, not a drop of it able to leak out around his knot bulging your stomach slightly. Not shortly after the meaty member you're sucking also explodes into your mouth. Most of it shooting down your throat while some of it overflows your mouth and leaks down your chin.";
 		WaitLineBreak;
 		say "     While swallowing down gulps of feral seed, some of it dripping down your neck and chest you feel more warm seed cover your hand. The pit bull you were jerking whines out and shoots his load over your hand. You clean off the mutt who is now slightly swaying above you and drink down what remaining seed there is. You're sure to lick your hand clean from the pit bull as well, mixing the delicious seed together in your mouth. When you're finished the mutts back off, the one tied inside you yanking his knotted cock free in a mixture of pain and pleasure. A wave of white canine spunk flows out of your abused ass as he does.";
 		say "     Not a minute after barely having had time to recover another dog leaps onto your back burying his canine dong into you. You yell out in surprise but sigh pleasantly as you're once again fucked. And as you look up you see from your ground position you see four still hard dog cocks before, each nearly a foot in size. You lick your lips and get to work on your duties as a bitch. When they're finally done with you, you've been fucked senseless. Your rear end is stretched wide and is leaking globs of feral seed from it, running down your thighs and balls while some just drips onto the ground below while your cock is drained and leaking a few final drops of white seed. You're slightly delirious from the constant fuck but are positively glowing, biting your lower lip and fondling your ruined asshole while thinking about the next time. It seems the dogs have all wandered off, leaving you to recover on your own time...";
-		mimpregchance;
+		CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mutt";
 
 to say LoseToMuttPack:
 	setmonster "Feral Mutt";

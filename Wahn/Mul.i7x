@@ -29,7 +29,7 @@ Ball Count of Mul is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Mul is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Mul is 0. [number of cunts]
 Cunt Depth of Mul is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Mul is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Mul is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Mul is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Mul is false.
@@ -729,7 +729,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow Klauz to mount Mul";
 	[]
-	if (Fang is in Grey Abbey Library and HP of Fang > 1 and HP of Fang < 100):
+	if (Fang is in Grey Abbey Library and Fang is Male and HP of Fang > 1 and HP of Fang < 100):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Fang fuck Mul";
 		now sortorder entry is 7;

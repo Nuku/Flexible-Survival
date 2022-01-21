@@ -82,6 +82,7 @@ to say ResolveEvent Orcish Slave Raid:
 						WaitLineBreak;
 						say "     Your inner orc tells you that you should just keep the well-bred fox for yourself, as a start of a whole harem of men to fuck, though you realize that that's not an option as you contemplate it for a second. By now, the three other orcs are rested again, and you're also a bit tired from just having come, so a fight is far less certain. So with a sigh, you surrender the handsome fox back to the three slavers, then watch his limp, exhausted form being carried off over the leader's shoulder. His shapely ass and cum-dripping hole is the last you see of the fox before the orcs turn a corner and move out of sight.";
 						move Val to Slave Cell 1;
+						now ValPregnancy is 1;
 						now ValPregCounter is 48;
 						now thirst of Val is 2;
 						now SlaveRaidEncounters is 2;
@@ -202,6 +203,7 @@ to say RunFromOrcSlavers:
 		now Resolution of Orcish Slave Raid is 3; [ran]
 		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
 		move Val to Slave Cell 1;
+		now ValPregnancy is 1;
 		now ValPregCounter is 48;
 		now thirst of Val is 1;
 		now SlaveRaidEncounters is 2; [fox enslaved]
@@ -221,6 +223,7 @@ to say SubmitToOrcSlavers:
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if Player is purefemale]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if Player is purefemale]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and just enjoy the other one' and they unceremoniously turn around and leave, carrying their captive with them.";
 					move Val to Slave Cell 1;
+					now ValPregnancy is 1;
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
@@ -231,6 +234,7 @@ to say SubmitToOrcSlavers:
 			LineBreak;
 			say "     [bold type]WRITER'S NOTE: Since you've selected [']less anal['], you won't be dragged off to the orc lair, as the main way of orc reproduction is anal sex. It's all man on man action in there! Should you want to play through this content nevertheless, adjust your anal settings and hunt for the event again.[roman type][line break]";
 			move Val to Slave Cell 1;
+			now ValPregnancy is 1;
 			now ValPregCounter is 48;
 			now thirst of Val is 1;
 			now SlaveRaidEncounters is 2;
@@ -262,6 +266,7 @@ to say SubmitToOrcRaid:
 	move player to Slave Cell 2;
 	now OrcSlaverCaptureTime is turns;
 	move Val to Slave Cell 1;
+	now ValPregnancy is 1;
 	now ValPregCounter is 48;
 	now thirst of Val is 1;
 	now SlaveRaidEncounters is 2;
@@ -290,6 +295,7 @@ to say LoseToOrcSlavers:
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if Player is purefemale]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if Player is purefemale]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and just enjoy the other one' and they unceremoniously turn around and leave, carrying their captive with them.";
 					move Val to Slave Cell 1;
+					now ValPregnancy is 1;
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
@@ -300,6 +306,7 @@ to say LoseToOrcSlavers:
 			LineBreak;
 			say "     [bold type]WRITER'S NOTE: Since you've selected [']less anal['], you won't be dragged off to the orc lair, as the main way of orc reproduction is anal sex. It's all man on man action in there! Should you want to play through this content nevertheless, adjust your anal settings and hunt for the event again.[roman type][line break]";
 			move Val to Slave Cell 1;
+			now ValPregnancy is 1;
 			now ValPregCounter is 48;
 			now thirst of Val is 1;
 			now SlaveRaidEncounters is 2;
@@ -334,6 +341,7 @@ to say LoseToOrcRaid:
 	move player to Slave Cell 2;
 	now OrcSlaverCaptureTime is turns;
 	move Val to Slave Cell 1;
+	now ValPregnancy is 1;
 	now ValPregCounter is 48;
 	now thirst of Val is 1;
 	now SlaveRaidEncounters is 2;

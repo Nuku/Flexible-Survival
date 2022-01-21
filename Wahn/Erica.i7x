@@ -224,7 +224,7 @@ Ball Count of Erica is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Erica is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Erica is 1. [number of cunts]
 Cunt Depth of Erica is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Erica is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of Erica is 2. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of Erica is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Erica is false.
@@ -712,7 +712,7 @@ instead of going down from Grey Abbey Library while (Level of Erica > 0 and Leve
 		say "     Putting your arms around Erica and holding her, you console the young woman with calm words, explaining to her that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Erica, but she doesn't need to know that). Telling Erica just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave her to get back to her bunk.";
 		now Level of Erica is 99;
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and Fang is Male and (HP of Erica is 1) and (lastfuck of Erica - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

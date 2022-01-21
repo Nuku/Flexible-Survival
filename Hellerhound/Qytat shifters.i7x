@@ -13,8 +13,8 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		connect Shifting Room;
 
 to connect Shifting Room:
-	change the north exit of Qytat Plaza to Shifting Room;
-	change the south exit of Shifting Room to Qytat Plaza;
+	change the southeast exit of Qytat Plaza to Shifting Room;
+	change the northwest exit of Shifting Room to Qytat Plaza;
 
 
 to say shiftingroom:

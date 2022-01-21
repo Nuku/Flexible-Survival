@@ -124,7 +124,7 @@ to say ocelotloss_bt_o2:	[sub on dom - oral]
 		say "     He turns out to be a very eager and obedient kitty, listening to your every request to go faster or slower, to lick or to suck as best suits your changing desires as your arousal grows. His cute muzzle and agile little tongue work hard to please you in so many delightful ways[if Player is male]. You even have him switch cocks a few times, making sure you'll be completely satisfied[end if][if Cunt Count of Player > 1]. You also direct him on how to best finger and tease your pussies, not that he seems to need much encouragement on that score either[else if Cunt Count of Player is 1]. You also direct him on how to best finger and tease your pussy, not that he seems to need much encouragement on that score either[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Petting his head and complimenting him for his fine work, you bring your other hand to your breasts, playing with them as you watch the little slave kitty suck you off[else]. Petting his head and complimenting him on his fine work, you scritch the kitty's ears and eagerly tell him to keep it up[end if]. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 		say "     Eventually you can't hold back any longer and, giving him permission to cum as well, you unleash your hot load into the kitty's muzzle[if Player is male] and across his body[end if][if Ball Size of Player > 6]. You pump so much cum into the small feline that he's so bloated and overfull that some eventually has to bubble out around your [cock size desc of Player] shaft[else if Ball Size of Player > 6]. You pump so much cum into the small feline that he's left bloated and overfull[else if Ball Size of Player > 4]. You pump so much cum into the small feline that he has a bit of a bulge in his tummy from it all[end if]. When you're drained and [if Cock Length of Player > 24 or Ball Size of Player > 4]he's managed to pull[else]he's pulled[end if] your spent shaft from his throat, you're left worn out, but very fulfilled. You give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random][if Ball Size of Player > 6].' The overloaded ocelot staggers off slowly[else if Ball Size of Player > 4].' The stuffed ocelot sloshing slightly as he heads off[else].' The well-fed ocelot heads off[end if], grooming his face with a paw to get any stray cum that leaked out.";
 	else:
-		say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot keeps this up, lavishing attention upon your [cunt size desc of Player] pussy. 'Mmmm... You're just in a bad mood because you need some relief. Just relax and let the subby kitty take care of this beautiful pussy of yours,' he purrs before kissing your clit again and slowly lapping across your folds. His dainty paws glide across your flesh, rubbing over your [CockName of Player] pussy with his softly furred fingertips[if Cunt Depth of Player > 24]. Presented with such a huge cunt to please, the attentive kitty dives in eagerly, pushing his whole paw deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your bulging button[else if Cunt Depth of Player > 15]. Presented with such a large cunt to please, the attentive kitty dives in eagerly, pushing several fingers fully inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your swollen button[else if Cunt Depth of Player > 8]. Presented with your engorged cunt to please, the attentive kitty dives in eagerly, pushing a pair of fingers deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your plump button[else]. The attentive kitty dives in eagerly, pushing a finger deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your hot button[end if].";
+		say "     The [if scalevalue of Player > 2]smaller[else]small[end if] ocelot keeps this up, lavishing attention upon your [cunt size desc of Player] pussy. 'Mmmm... You're just in a bad mood because you need some relief. Just relax and let the subby kitty take care of this beautiful pussy of yours,' he purrs before kissing your clit again and slowly lapping across your folds. His dainty paws glide across your flesh, rubbing over your [CuntSpeciesName of Player in lower case] pussy with his softly furred fingertips[if Cunt Depth of Player > 24]. Presented with such a huge cunt to please, the attentive kitty dives in eagerly, pushing his whole paw deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your bulging button[else if Cunt Depth of Player > 15]. Presented with such a large cunt to please, the attentive kitty dives in eagerly, pushing several fingers fully inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your swollen button[else if Cunt Depth of Player > 8]. Presented with your engorged cunt to please, the attentive kitty dives in eagerly, pushing a pair of fingers deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your plump button[else]. The attentive kitty dives in eagerly, pushing a finger deep inside you while his raspy tongue runs up and down. He rumbles and purrs happily as he works to please you, his purring sending delightful shivers through your hot button[end if].";
 		say "     He turns out to be a very eager and obedient kitty, listening to your every request to go faster or slower, where to rub and where to lick as best suits your changing desires as your arousal grows. His cute muzzle and agile little tongue work hard to please you in so many delightful ways[if Cunt Count of Player > 1]. You even have him switch cunts a few times, making sure you'll be completely satisfied[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Petting his head and complimenting him for his fine work, you bring your other hand to your breasts, playing with them as you watch the little slave kitty eat you out[else]. Petting his head and complimenting him on his fine work, you scritch the kitty's ears and eagerly tell him to keep it up[end if]. It makes you wish he was yours, but he's clearly already got an owner who's trained him well. You'll just have to find another to keep, then.";
 		say "     Eventually you can't hold back any longer and, giving him permission to cum as well, you arch your back and cry out in orgasm, soaking the kitty's muzzle and paw in your juices[if Cunt Depth of Player > 36]. In your throws of passion, you inadvertently end up pushing the kitty's head partway into your giant pussy, but he takes this in stride, licking across your inner walls as they spasm around his face[else if Cunt Depth of Player > 24]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle into your enlarge pussy, but he takes this in stride, licking across your inner walls as they spasm around his furry muzzle[else if Cunt Depth of Player > 15]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle squarely against your twitching folds, pulling his tongue into you, but he takes this in stride, licking and lapping inside your spasming inner walls[else]. In your throws of passion, you inadvertently end up pushing the kitty's muzzle squarely against your twitching folds, pressing his tongue against it, but he takes this in stride, lavishing attention upon your clit[end if]. When you finally release him and flop back onto the ground, he smiles up at you while licking his wet muzzle[if Cunt Depth of Player > 24]. His head is literally soaked in your juices, making a mess of the exotic kitty's fur[else if Cunt Depth of Player > 15]. His face is literally soaked in your juices, making a mess of the exotic kitty's fur[else]. His muzzle is quite soaked with your juices, making a mess of the exotic kitty's fur[end if]. You, meanwhile, are left feeling worn out, but very fulfilled. You give the kitty a kiss, a pat on the rear and send him on his way. '[one of]I need to get back to my master[or]I'd best hurry back to my master[or]I should go find my master[or]I can't wait to tell my master all about this. I have to go find him[at random],' he purrs. 'Maybe once you've got a kitty fucktoy of your own [one of]we can play again[or]you and my master can share[or]you'd like to meet him[or]you can watch us play together[at random][if Cunt Depth of Player > 24].' The rather damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else if Cunt Depth of Player > 15].' The somewhat damp ocelot pads away slowly, working to groom his face with a paw to both settle his fur and taste more of your juices[else].' The somewhat scruffy ocelot pads away slowly, working to groom his muzzle with a paw to both settle his fur and taste more of your juices[end if].";
 
@@ -369,7 +369,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Ocelot"; [name of the overall species of the infection, used for children, ...]
 	add "Ocelot" to infections of FelineList;
 	add "Ocelot" to infections of FurryList;
 	add "Ocelot" to infections of NatureList;
@@ -434,107 +434,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 

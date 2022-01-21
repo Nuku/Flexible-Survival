@@ -83,7 +83,7 @@ instead of conversing the Homaru:
 			now Homarusearch is 70;
 			now Homarutalk is 1;
 		else:
-			say "     Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [FaceName of Player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it ten minutes ago. Unless the other was some kind of fortune teller or prophet, that should have been impossible... right? Or maybe he was spying on you?";
+			say "     Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [FaceSpeciesName of Player in lower case] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it ten minutes ago. Unless the other was some kind of fortune teller or prophet, that should have been impossible... right? Or maybe he was spying on you?";
 			say "     Pulling out a manila folder, Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that, these said groups worked to grab up as many uninfected people as they can to use them for... well, let's just say it wasn't for good things.'";
 			say "     You ask Homaru to elaborate. The other man lowers the folder in front of him and then sweeps a hand through his spiky hair as he tries to find the right words to say. 'You know how kinky everything is outside right now?' You nod at this. 'Well, it seems as though there are some people more immune to what's going on than others, or at least partially appear to be so.' You get a feeling for what Homaru is saying as the man starts to flush deep red and bite at his lower lip.";
 			WaitLineBreak;
@@ -173,7 +173,6 @@ carry out delaymilitary:
 
 Section 4 - Homaru Search
 
-Dam is a number that varies.
 Homarusearching is a number that varies.
 Findfirefighter is a number that varies.
 Homarusearch is a number that varies.

@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/plex_mono_15.tres" type="DynamicFont" id=1]
+
+[node name="RoomCard" type="PanelContainer"]
+margin_top = -205.0
+margin_right = 314.0
+margin_bottom = -82.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 307.0
+margin_bottom = 116.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VRoomContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 300.0
+margin_bottom = 109.0
+
+[node name="RoomNameLabel" type="Label" parent="MarginContainer/VRoomContainer"]
+margin_right = 300.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "room label name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RoomBodyLabel" type="Label" parent="MarginContainer/VRoomContainer"]
+margin_top = 25.0
+margin_right = 300.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 300, 0 )
+custom_colors/font_color = Color( 0.952941, 0.537255, 0.0470588, 1 )
+text = "Room Body"
+autowrap = true

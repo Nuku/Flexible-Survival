@@ -71,6 +71,9 @@ Version 1 of David by Wahn begins here.
 [   0: nothing yet                                                      ]
 [   1: Had sexy fun with Marc                                           ]
 
+[ Lore Bits                                                             ]
+[ Was a member of the Osprey Scouts                                     ]
+
 
 RyouseiDavidInteraction is a number that varies.
 lastRyouseiDavidInteraction is a number that varies. lastRyouseiDavidInteraction is usually 10000.
@@ -312,7 +315,7 @@ Ball Count of David is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of David is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of David is 0. [number of cunts]
 Cunt Depth of David is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of David is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Cunt Tightness of David is 0. [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
 Clit Size of David is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of David is false.
@@ -568,9 +571,9 @@ to say DavidTalk1: [chatting]
 		say "     David says 'As you can see, the sample gathering is still going well. It's unbelievable how much stamina Tiny Tim has. [if CampBravoWomenAllowed is 1]Several of the female soldiers got sent out as well by now, their bellies already swelling with minotaur calves.' [end if][if Adam is in Quartermaster's Tent]The quartermaster had a half-minotaur son too - he's in her tent helping her out.' [end if]";
 	if HP of David is 4: [in the bunker]
 		if SarahPups > 3:
-			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Grey Abbey Library]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
+			say "     David says 'Sarah's puppies keep trying to chew up my boots. They're sweet and all, but sometimes they get on my nerves. I've been going up into the library to get some peace and quiet and read[if Fang is in the Grey Abbey Library and Fang is Male]. Of course, there your wolf keeps staring at me like he wants to mount me[end if].'";
 		else:
-			say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Grey Abbey Library]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
+			say "     David says 'Pretty quiet down here in the bunker. I've been going up into the library to grab a book or two to read[if Fang is in the Grey Abbey Library and Fang is Male]. And your wolf kept looking at me all the time like he wanted to mount me[end if].'";
 
 to say DavidTalk2: [send him to the bunker]
 	say "     David gives you a salute and says [if thirst of David is 20]'See you there, baby.' [else]'As you wish, sir.' [end if]before going to collect his clothes and equipment.";

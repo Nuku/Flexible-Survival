@@ -13,7 +13,7 @@ Player has a truth state called FemaleHermInterest. FemaleHermInterest is usuall
 Part 2 - Setting Menu
 
 UsePlayerSexualOrientationMenu is an action applying to nothing.
-understand "adjust player interests" as UsePlayerSexualOrientationMenu.
+understand "adjust player orientation" as UsePlayerSexualOrientationMenu.
 
 carry out UsePlayerSexualOrientationMenu:
 	PlayerSexualOrientationMenu;
@@ -24,12 +24,12 @@ to PlayerSexualOrientationMenu:
 	while OrientationMenuExit is 0:
 		clear the screen;
 		say "[bold type]Interested in: (select Yes for all that apply)[roman type][line break]";
-		say "(1) [link]Males (penis)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(2) [link]Trans Males (male with vagina)[as]2[end link] - [if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(1) [link]Males (cock)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(2) [link]Trans Males (flat chest, pussy)[as]2[end link] - [if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "(3) [link]Females (pussy)[as]3[end link] - [if FemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(4) [link]Trans Females (female with penis)[as]4[end link] - [if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(5) [link]MaleHerms (both vagina + penis)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
-		say "(6) [link]FemaleHerms (both vagina + penis, and boobs)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(4) [link]Trans Females (breasts, cock)[as]4[end link] - [if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(5) [link]MaleHerms (flat chest, cock, pussy)[as]5[end link] - [if MaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(6) [link]FemaleHerms (breasts, cock, pussy)[as]6[end link] - [if FemaleHermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 2 is 2:

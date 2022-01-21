@@ -38,8 +38,13 @@ AnalVirgin of Hanu is true.
 PenileVirgin of Hanu is true.
 SexuallyExperienced of Hanu is false.
 MainInfection of Hanu is "".
-Description of Hanu is "[hanuDesc]";
+Description of Hanu is "[hanuDesc]".
+Conversation of Hanu is { "<Placeholder>" }.
 
+
+[if "Monkey" is not listed in EncounteredEnemies of Player:
+	Monkey King Service is resolved.]
+	
 to say hanuDesc:
 	if Monkey Duel is unresolved:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[at random].";
@@ -87,8 +92,12 @@ instead of conversing Hanu:
 			Increase maxHP of Player by 5;
 			Increase score by 5;
 			now Monkey Duel is active;
-	else if Monkey Duel is unresolved and (Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved):
-		monkeyDuel;
+	else if Monkey Duel is unresolved:
+		say "     [one of]'May I bother you for a moment, my young pupil?' Hanu asks after you exchange greetings. 'Rumors of a rather turbulent martial artist causing a stir at the museum has reached my ears. Would you be so kind as to investigate? I want to stir that young fool back to the good path, while there is still time.'[or]'Hello, my dear pupil. Did you manage to find more about that monkey causing a riot at the museum?'[stopping]";
+		if Monkey King Service is resolved or "Monkey" is listed in EncounteredEnemies of Player:
+			monkeyDuel;
+		else:
+			say "     You tell Hanu that [one of]while you do not promise anything, you will keep an eye out for the monkey, the next time you explore the museum.[or]you have not found anything yet.[stopping]";
 	else if the resolution of Monkey Duel is not 1:
 		say "[one of]     'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]     'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]     'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]     'Better.'[or]     'Ook,' Hanu replies plaintively.[line break]     'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
 	else:
@@ -175,80 +184,78 @@ ResolveFunction of Monkey Duel is "".
 Monkey Duel is inactive.
 Sarea of Monkey Duel is "Nowhere".
 
+[Step 1 - Hanu asks you to investigate
+Step 2 - Ingratiate yourself to the MK if this is not done PlayerMet
+Step 3 - Duel]
+Monkey Duel has a number called step. The step of monkey duel is 0.
+
 to MonkeyDuel:
-	say "     'About time you showed up[if Player is not defaultnamed], [name of Player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have a habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
-	say "     The monkey's words make you remember about your (mis)adventures with the only other monkey you know. [bold type]Should you bring up Wukong's existence to Hanu?[roman type][line break]";
+	if Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved:
+		say "     This 'young monkey' unmistakenly refers to Wukong. You tell your zen interlocutor about your adventures with the self-proclaimed 'Monkey King'.";
+	else:
+		say "     This 'young monkey' unmistakenly refers to Wukong. You tell your zen interlocutor about your unfortunate encounters with the arrogant simian.";
+	say "     'What an interesting story you have, my dear pupil. And worrying too.' He puts a hand to his chin, pensive. 'This [']Wukong['] person seems quite the brash ruffian, and violent too. He is completely misusing his natural talents[if Loyalty of Wukong is 2]. And to top it off, it seems that he encouraged you to follow his ways[else]. And to top it off, it seems that you had to take responsibility for his actions instead of me[end if]. You did good to bring the existence of this person to my attention.'";
+	say "     'I need to take responsibility as well, and bring him to reason. It is time for me to go on a journey to the Museum. [bold type]Will you accompany me?[roman type]'[line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - As long as you skip another meditation session.";
-	say "     ([link]N[as]n[end link]) - No more monkey business.";
+	say "     ([link]Y[as]y[end link]) - Yes.";
+	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
 		LineBreak;
-		say "     'The Monkey King? At the Museum?' Hanu remains silent a short moment, before smiling softly. 'What an interesting story you have, my dear pupil. And worrying too.' He puts a hand to his chin, pensive. 'This [']Wukong['] person seems quite the brash ruffian, and violent too. He is completely misusing his natural talents[if Loyalty of Wukong is 2]. And to top it off, it seems that he encouraged you to follow his ways[else]. And to top it off, it seems that you had to take responsibility for his actions instead of me[end if]. You did good to bring the existence of this person to my attention.'";
-		say "     'I need to take responsibility as well, and bring him to reason. It is time for me to go on a journey to the Museum. [bold type]Will you accompany me?[roman type]'[line break]";
+		say "     'Good,' Hanu nods. 'And I have the best tool for the situation at end. Wait for me at the entrance of the Museum.'";
+		say "     A moment later, you arrive at the rendezvous point. Hanu meets you a dozen minutes later. He came with his own martial arts staff, but also with a heavy-looking collar. Noticing your interest for the item, Hanu hands it to you. The collar is mostly leather, albeit you notice a thick metallic thread running around the inner side, and a small block at the back of the collar, with a lightning bolt sticker on it. 'Yes, this is what you think it is,' the monkey says. 'A [']crown['] of some sort, for our brash king, like in the story. Now, let us not waste time.'";
+		WaitLineBreak;
+		say "     You guide Hanu to the Asian exposition, and its tacky decorum. As usual, Wukong is there to welcome you. [if Loyalty of Wukong is 2]'If it is not my most trusted servant. And who are you bringing with you? A new friend?'[else]'You little pile of manure! How dare you show your face to me?! And who did you bring? An imposter?'[end if]";
+		say "     'My name is Hanu,' the other monkey introduces himself. 'And I am here to teach you some manners.'";
+		say "     'We finally meet. It does not matter. I finished breeding my own little court, and I will have them take over this [']Zoo['] place for me. Bring it, you fart!' Wukong growls as he launches himself on his opponent.";
+		say "     The two monkeys engage in a spectacular brawn, filled with acrobatics and intricate martial art moves. You feel as if you have been drawn in a wuxia movie. The fight began with the two warriors evenly matched; Wukong's offensive and powerful strikes meet the fluid moves and the counter-attacks of Hanu. As the battle goes on, Hanu is slowly getting the upper hand, conserving his stamina against his brasher opponent.";
+		say "     Wukong initiates a desperate-looking series of blow, pressuring Hanu backwards. You suddenly realize that it is part of his plan as Hanu's backwalk leads him closer and closer to a now-empty podium. [bold type]This battle can only have one winner, and it will depend on if you warn Hanu or stay quiet and let the battle unfold. What do you do?[roman type][line break]";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes.";
-		say "     ([link]N[as]n[end link]) - No.";
+		say "     ([link]Y[as]y[end link]) - 'The podium behind you! Watch out!'";
+		say "     ([link]N[as]n[end link]) - Long live the king.";
 		if Player consents:
 			LineBreak;
-			say "     'Good,' Hanu nods. 'And I have the best tool for the situation at end. Wait for me at the entrance of the Museum.'";
-			say "     A moment later, you arrive at the rendezvous point. Hanu meets you a dozen minutes later. He came with his own martial arts staff, but also with a heavy-looking collar. Noticing your interest for the item, Hanu hands it to you. The collar is mostly leather, albeit you notice a thick metallic thread running around the inner side, and a small block at the back of the collar, with a lightning bolt sticker on it. 'Yes, this is what you think it is,' the monkey says. 'A [']crown['] of some sort, for our brash king, like in the story. Now, let us not waste time.'";
+			say "     For a moment, you fear that Hanu did not hear you. But, just as he was about to bump the furniture, he does a gracious backflip over the object, Wukong's staff missing the target by a hair's breath. Taken by his momentum, Wukong leaves his face open to a counter-strike, an opportunity that Hanu does not wastes. His own weapon bongs loudly against the other monkey's cranium, sending its own flying in the air.";
+			say "     As soon as the monkey king touches the ground, his kin is already on him and clips the heavy shock collar on his neck. 'Wha- what is thi-guuuuh!' A pained and panicked Wukong tries to remove the collar, but the item has been padlocked and his efforts are useless.";
 			WaitLineBreak;
-			say "     You guide Hanu to the Asian exposition, and its tacky decorum. As usual, Wukong is there to welcome you. [if Loyalty of Wukong is 2]'If it is not my most trusted servant. And who are you bringing with you? A new friend?'[else]'You little pile of manure! How dare you show your face to me?! And who did you bring? An imposter?'[end if]";
-			say "     'My name is Hanu,' the other monkey introduces himself. 'And I am here to teach you some manners.'";
-			say "     'We finally meet. It does not matter. I finished breeding my own little court, and I will have them take over this [']Zoo['] place for me. Bring it, you fart!' Wukong growls as he launches himself on his opponent.";
-			say "     The two monkeys engage in a spectacular brawn, filled with acrobatics and intricate martial art moves. You feel as if you have been drawn in a wuxia movie. The fight began with the two warriors evenly matched; Wukong's offensive and powerful strikes meet the fluid moves and the counter-attacks of Hanu. As the battle goes on, Hanu is slowly getting the upper hand, conserving his stamina against his brasher opponent.";
-			say "     Wukong initiates a desperate-looking series of blow, pressuring Hanu backwards. You suddenly realize that it is part of his plan as Hanu's backwalk leads him closer and closer to a now-empty podium. [bold type]This battle can only have one winner, and it will depend on if you warn Hanu or stay quiet and let the battle unfold. What do you do?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - 'The podium behind you! Watch out!'";
-			say "     ([link]N[as]n[end link]) - Long live the king.";
-			if Player consents:
-				LineBreak;
-				say "     For a moment, you fear that Hanu did not hear you. But, just as he was about to bump the furniture, he does a gracious backflip over the object, Wukong's staff missing the target by a hair's breath. Taken by his momentum, Wukong leaves his face open to a counter-strike, an opportunity that Hanu does not wastes. His own weapon bongs loudly against the other monkey's cranium, sending its own flying in the air.";
-				say "     As soon as the monkey king touches the ground, his kin is already on him and clips the heavy shock collar on his neck. 'Wha- what is thi-guuuuh!' A pained and panicked Wukong tries to remove the collar, but the item has been padlocked and his efforts are useless.";
-				WaitLineBreak;
-				say "     'All is well that ends well,' Hanu says, playing with the collar's remote in his hands.";
-				say "     'Get. This. Thing. Off! Guaaak!' Wukong shouts at him, before another zap shuts him off.";
-				say "     'I shall bring you home and teach the manners befitting a [italic type]real[roman type] martial artist,' the monkey king's new master claims. 'I will teach you to control your emotions and your lust.'";
-				say "     'You bastard! Put me down. My men will look me for anyway, and you should prey that they do not find you, you-owowOw! Stop! Stop with this colla-arg!'";
-				say "     'You should visit us, when you have time. To check on our friend's training. I will have him tamed in no time, you'll see.";
-				say "     On these words, Hanu leaves you, a bruised and reluctant Wukong on his shoulders. A short moment after, you also make your way to the museum's lobby.";
-				WaitLineBreak;
-				move player to Museum;
-				now Resolution of Monkey Duel is 1; [Hanu won]
-				say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type][line break]";
-			else:
-				LineBreak;
-				say "     'Hanu's back bumps into the podium. Hanu is distracted for a second. Long enough for Wukong to pole-vault in the air with his staff and drop-kick Hanu. You see the older monkey fly in the air, toppling the podium and crashing into an exposition case behind. While Hanu crawls on the ground, knocked out, Wukong notices the shock collar, that Hanu dropped on the floor during his fall. 'Well, that is interesting.'";
-				say "     Hanu gets back on his feet, but is too groggy to prevent Wukong from clipping the collar around his neck. 'What did you put on my... Oh...' Hanu watches Wukong playing with the collar's remote. 'W-wait, please dnnnng!' Hanu falls to his knees, hands grabbing his neck in pain as electricity runs through the restraint.";
-				say "     'What an interesting toy, indeed,' Wukong says. 'Did you intend to use this on me, you knave?'";
-				say "     'Nnn... Gh. I, I-aaargh!' Another electric discharge makes Hanu writhe on the ground. As he falls on his back, you and Wukong notice something quite embarrassing.";
-				say "     'Oh my. Are you having an erection? Is being humiliated so exciting?' Wukong asks.";
-				if Loyalty of Wukong is 2:
-					say "     Finally taking notice of you, Wukong looks in your direction. 'I did not think you were the one to bring gifts, [if Player is not defaultnamed][name of Player][else]my friend[end if]. And here you are, offering me a new pet, just for me.' The golden-furred monkey runs up to you and steals a kiss from your lips. 'Hee hee. You know, while you were gone, I went out and made a number of followers. I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done.' Wukong grabs Hanu by the collar. 'Just be careful. I tried to tell them about you, but they hardly listen. Not really quality servant material, unlike you. Take care~.' Once the two monkeys are gone, you also make your way to the museum's lobby.";
-				else:
-					say "     Finally taking notice of you, Wukong looks in your direction. '[if Player is not defaultnamed][name of Player][else]You[end if]... I did not forget the humiliation that you put me through. 'While you were away, I went out and made a number of followers. First, I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done. After that, I will come for [italic type]you[roman type]. Just you wait.' Wukong grabs Hanu by the collar, and disappear into the museum. Once the two monkeys are gone, you also make your way to the museum's lobby.";
-				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type][line break]";
-				WaitLineBreak;
-				move player to Museum;
-				now Resolution of Monkey Duel is 2; [Wukong won]
+			say "     'All is well that ends well,' Hanu says, playing with the collar's remote in his hands.";
+			say "     'Get. This. Thing. Off! Guaaak!' Wukong shouts at him, before another zap shuts him off.";
+			say "     'I shall bring you home and teach the manners befitting a [italic type]real[roman type] martial artist,' the monkey king's new master claims. 'I will teach you to control your emotions and your lust.'";
+			say "     'You bastard! Put me down. My men will look me for anyway, and you should prey that they do not find you, you-owowOw! Stop! Stop with this colla-arg!'";
+			say "     'You should visit us, when you have time. To check on our friend's training. I will have him tamed in no time, you'll see.";
+			say "     On these words, Hanu leaves you, a bruised and reluctant Wukong on his shoulders. A short moment after, you also make your way to the museum's lobby.";
+			WaitLineBreak;
+			move player to Museum;
+			now Resolution of Monkey Duel is 1; [Hanu won]
+			say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type][line break]";
 		else:
 			LineBreak;
-			say "     'Well that was... Blunt,' Hanu reacts. 'But do not worry. I am sure that I can hold my own against our young [']friend[']. Wish me luck, my pupil.' You were about to correct him but Hanu was already on his way to the museum. Shaking your head, you finish your walk, wondering how the whole affair will conclude. A while after, the air fills with monkey noises and people shouting. What happened?";
-			say "     Heading to the entrance, you have barely the time to hide behind a tree as a pair of thuggish-looking monkeys walk by. You eavesdrop their conversation:";
-			say "'So, that's where that asshole came from?'";
-			say "     'Yeah. The King wants us to make this place our turf while the other guy has been driven away. Apparently, he will come here in a few days to visit.'";
-			say "     'With his new bitch?'";
-			say "     'Heh heh. Nothing better than to twist the knife in the wound, right?'";
-			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type][line break]";
-			now Resolution of Monkey Duel is 3; [left the monkeys to fight]
-		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
-		now the area corresponding to a name of "Monkey Thug" in the Table of Random Critters is "Zoo";
-		move Wukong to Monkey House;
-		now Monkey Duel is resolved;
+			say "     'Hanu's back bumps into the podium. Hanu is distracted for a second. Long enough for Wukong to pole-vault in the air with his staff and drop-kick Hanu. You see the older monkey fly in the air, toppling the podium and crashing into an exposition case behind. While Hanu crawls on the ground, knocked out, Wukong notices the shock collar, that Hanu dropped on the floor during his fall. 'Well, that is interesting.'";
+			say "     Hanu gets back on his feet, but is too groggy to prevent Wukong from clipping the collar around his neck. 'What did you put on my... Oh...' Hanu watches Wukong playing with the collar's remote. 'W-wait, please dnnnng!' Hanu falls to his knees, hands grabbing his neck in pain as electricity runs through the restraint.";
+			say "     'What an interesting toy, indeed,' Wukong says. 'Did you intend to use this on me, you knave?'";
+			say "     'Nnn... Gh. I, I-aaargh!' Another electric discharge makes Hanu writhe on the ground. As he falls on his back, you and Wukong notice something quite embarrassing.";
+			say "     'Oh my. Are you having an erection? Is being humiliated so exciting?' Wukong asks.";
+			if Loyalty of Wukong is 2:
+				say "     Finally taking notice of you, Wukong looks in your direction. 'I did not think you were the one to bring gifts, [if Player is not defaultnamed][name of Player][else]my friend[end if]. And here you are, offering me a new pet, just for me.' The golden-furred monkey runs up to you and steals a kiss from your lips. 'Hee hee. You know, while you were gone, I went out and made a number of followers. I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done.' Wukong grabs Hanu by the collar. 'Just be careful. I tried to tell them about you, but they hardly listen. Not really quality servant material, unlike you. Take care~.' Once the two monkeys are gone, you also make your way to the museum's lobby.";
+			else:
+				say "     Finally taking notice of you, Wukong looks in your direction. '[if Player is not defaultnamed][name of Player][else]You[end if]... I did not forget the humiliation that you put me through. 'While you were away, I went out and made a number of followers. First, I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done. After that, I will come for [italic type]you[roman type]. Just you wait.' Wukong grabs Hanu by the collar, and disappear into the museum. Once the two monkeys are gone, you also make your way to the museum's lobby.";
+			say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type][line break]";
+			WaitLineBreak;
+			move player to Museum;
+			now Resolution of Monkey Duel is 2; [Wukong won]
 	else:
 		LineBreak;
-		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction. 'You are hiding something from me, aren't you? It does not matter. Talk to me again once you are ready to divulge your little secret.'";
-
+		say "     'Well that was... Blunt,' Hanu reacts. 'But do not worry. I am sure that I can hold my own against our young [']friend[']. Wish me luck, my pupil.' You were about to correct him but Hanu was already on his way to the museum. Shaking your head, you finish your walk, wondering how the whole affair will conclude. A while after, the air fills with monkey noises and people shouting. What happened?";
+		say "     Heading to the entrance, you have barely the time to hide behind a tree as a pair of thuggish-looking monkeys walk by. You eavesdrop their conversation:";
+		say "'So, that's where that asshole came from?'";
+		say "     'Yeah. The King wants us to make this place our turf while the other guy has been driven away. Apparently, he will come here in a few days to visit.'";
+		say "     'With his new bitch?'";
+		say "     'Heh heh. Nothing better than to twist the knife in the wound, right?'";
+		say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type][line break]";
+		now Resolution of Monkey Duel is 3; [left the monkeys to fight]
+	now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
+	now the area corresponding to a name of "Monkey Thug" in the Table of Random Critters is "Zoo";
+	move Wukong to Monkey House;
+	now Monkey Duel is resolved;
 
 
 Section 3 - Monster infections
@@ -328,107 +335,7 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
 
 
 
@@ -560,7 +467,7 @@ to say beatWukongThugs_useACock:
 
 to say beatWukongThugs_worship:
 	say "     You grab each of the thugs by the air, and pull them in a small pile. They look at you, some of them asking for forgiveness, some evening offering you their clothes and their jewelry as compensation. You refuse all of this, and explain to them that all this scuffle made you sweaty. As you offer them your naked body, you give a simple order: lick; and a simple threat: if you feel the mere tip of a cock or a finger graze your orifice[if Player is female]s[end if], you will mess them so bad that golden dentures might be a good idea for their next jewelry shopping. They seem to understand as they surround you, some kneeling, some standing, and start servicing you.";
-	say "     You feel tongues and fingers slip against your [BodyName of Player] body. Your arms, your legs, your torso, every place is taken care off, and those monkeys are not half-bad at it. You encourage some of them at exploring every nook and cranny by crossing your arms behind your head. As you had predicted, the monkeys are slowly emboldened by the situation, and soon you feel too soft noses digging at your armpits, followed by tongues. You sigh in pleasure, especially when the simians start to take interest in your sexy bits. They are hesitant at first, and you do watch what they are doing, but you are soon rewarded by many tongues and fingers exploring under your legs. True to your demand, the fingers simply caress and pinch, but it is more than enough. Everything is tended to, from [if Player is herm]the tip of your cock to the base of your shaft and your balls, to your now dripping pussy and clit[else if Player is male]the tip of your cock to the base of your shaft and your balls[else]your aching clit to the inner side of your labia[end if]. Several of them share each of your [breast size desc of Player] breasts, flicking their tongues over your nipples. You even feel a tongue probe around your anus, but by now you are comfortable enough to let it explore your taint.";
+	say "     You feel tongues and fingers slip against your [BodyType of Player] body. Your arms, your legs, your torso, every place is taken care off, and those monkeys are not half-bad at it. You encourage some of them at exploring every nook and cranny by crossing your arms behind your head. As you had predicted, the monkeys are slowly emboldened by the situation, and soon you feel too soft noses digging at your armpits, followed by tongues. You sigh in pleasure, especially when the simians start to take interest in your sexy bits. They are hesitant at first, and you do watch what they are doing, but you are soon rewarded by many tongues and fingers exploring under your legs. True to your demand, the fingers simply caress and pinch, but it is more than enough. Everything is tended to, from [if Player is herm]the tip of your cock to the base of your shaft and your balls, to your now dripping pussy and clit[else if Player is male]the tip of your cock to the base of your shaft and your balls[else]your aching clit to the inner side of your labia[end if]. Several of them share each of your [breast size desc of Player] breasts, flicking their tongues over your nipples. You even feel a tongue probe around your anus, but by now you are comfortable enough to let it explore your taint.";
 	WaitLineBreak;
 	say "     Their gender does not matter. Male, female, in between, you do not care at all as they do an excellent job. They bring you slowly to a powerful orgasm, yet it is one of the softest you had yet experienced. Instead of a big wave of pleasure crashing into you, it feels like a vase slowly overflowing with intensity. Mouths press to take everything you have to give down there, and you grab the nearest piece of monkey fur you can find and hold it as if your life depended on it. Eventually, your orgasm subsides, and you take your leave from the gang after having them promise that you would not catch them at doing mischief again. A part of you doubt they will actually listen, and another part actually does not mind.";
 
@@ -612,7 +519,8 @@ Table of GameRoomIDs (continued)
 Object	Name
 Monkey House	"Monkey House"
 
-Monkey house is south of Main Path 2.
+Monkey house is northwest of Main Path 1.
+Monkey house is east of Border Wall.
 The earea of Main Path 2 is "Zoo".
 Description of Monkey House is "[monkeyHouseDesc]".
 
@@ -621,5 +529,8 @@ to say monkeyHouseDesc:
 		say "     The zoo's monkey house was originally an exhibit for monkeys and apes, and formerly a makeshift dojo. Now that Wukong has taken over, the house turned into a throne room, with the golden monkey sitting on his cushioned sit, in the middle. His thugs occasionally come to give him reports, and leave with new orders.";
 	else:
 		say "     The zoo's monkey house seems to have been repurposed. The glass panels have been removed, and one of the exhibits have been repurposed into a makeshift dojo. A suspended tire is the only artifact of the original place; judging by the cot installed in it, it is Hanu's resting place.";
+
+after looking while player is in Monkey house:
+	project the Figure of Map_Zoo_7_icon;
 
 Hanu ends here.

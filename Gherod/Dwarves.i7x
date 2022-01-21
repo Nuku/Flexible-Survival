@@ -182,27 +182,27 @@ to CTunnel2Trap:
 		say "     Amidst your breathy moans, you manage to let him know that you want his load in your ass, [if player is submissive]and saying this made you blush[else]and you can't believe you actually said that[end if], as it feels somewhat degrading in a way. The stocky short man throws a chuckle as he hears you, pushing his cock deep inside you once more and tightening his grip on both sides of your hips. 'As you wish, my [boygirl]. I was hoping you'd pick that one.' he teases you while picking up the pace with him pounding your ass, without any slowing down. He doesn't last long, as within several seconds, he lets out a beastly grunt as you feel a thick shot of cum coating the insides of your back entrance, before he proceeds to shove his cock completely in you with few sporadic thrusts.";
 		say "     You feel his entire load, spurt after spurt, being delivered inside you for the next minute it's being pumped out of his dick and into you. Doing your best to endure his thickness pulsing in your hole, you have only to wait until his orgasm subsides. A drop of semen leaks from your used fuckhole, followed by some more as he pulls back. 'Fuuuck yeah! It's been fucking long since I had a good release like this. This was great! You've done really well, my [boygirl]!' he praises you, giving your butt a playful slap, his dick still resting between your ass cheeks and dropping a few more traces of cum onto your back.";
 		WaitLineBreak;
-	say "     'Now I suppose I have to free you, huh...' he says in a reluctant tone, pushing his meat back in his pants and redressing himself. 'Well, let's have a look around first. Gotta thank you somehow for getting me rid of any traps on the way to some treasure.' You immediately protest, accusing him of breaking the deal, but he stops you right there. 'Come on, I did you a favor... Imagine what would it be hanging in there for so long without a good fuck? I'd be crazy!' he mocks you, walking towards the big blanket you saw before falling into the trap. He uncovers it, revealing a big stonehammer in pristine conditions, probably the only usable thing in here! 'Oh my... Now this is worth my trip here. Were you taking this?' he turns to you, asking you the question with a sarcastic tone. 'Well, guess not anymore.'";
-	say "     He takes the stonehammer with him, leaving you behind with a naughty smirk. 'Pray that the dwarves find you here, who knows if you'll get a gangbang from them. That'd be fun to watch, but I guess that's not what will happen!' he laughs, leaving the room and you behind, still hanging in the air stuck with the ropes, and with your spoils! You curse him with your words, but he's nowhere to be seen anymore. Furious - and also because he fucked you and didn't have the decency to get you off as well - you let out an enraged movement with your arm. And you must be in luck, as the device comes crumbling apart just when you do that, sending you to hit the floor with the ropes still wrapped around you, but not tense anymore, allowing you to move your hands and arms around to untie yourself.";
+	say "     'Now I suppose I have to free you, huh...' he says in a reluctant tone, pushing his meat back in his pants and redressing himself. 'Well, let's have a look around first. Gotta thank you somehow for getting me rid of any traps on the way to some treasure.' You immediately protest, accusing him of breaking the deal, but he stops you right there. 'Come on, I did you a favor... Imagine what would it be hanging in there for so long without a good fuck? I'd be crazy!' he mocks you, walking towards the big blanket you saw before falling into the trap. He uncovers it, revealing a big stone hammer in pristine conditions, probably the only usable thing in here! 'Oh my... Now this is worth my trip here. Were you taking this?' he turns to you, asking you the question with a sarcastic tone. 'Well, guess not anymore.'";
+	say "     He takes the stone hammer with him, leaving you behind with a naughty smirk. 'Pray that the dwarves find you here, who knows if you'll get a gangbang from them. That'd be fun to watch, but I guess that's not what will happen!' he laughs, leaving the room and you behind, still hanging in the air stuck with the ropes, and with your spoils! You curse him with your words, but he's nowhere to be seen anymore. Furious - and also because he fucked you and didn't have the decency to get you off as well - you let out an enraged movement with your arm. And you must be in luck, as the device comes crumbling apart just when you do that, sending you to hit the floor with the ropes still wrapped around you, but not tense anymore, allowing you to move your hands and arms around to untie yourself.";
 	WaitLineBreak;
 	say "     It takes you a bit to get free from the trap, so you're not able to chase the dwarf. Nonetheless, you think you had enough of this place for a day and proceed to walk to the exit. You'll have to find this guy if you want to get your hands on what is deservingly yours.";
 	now Resolution of Collapsed Tunnel is 3; [scavenger has the greathammer, dwarves provoked]
 	now Collapsed Tunnel is resolved;
 
 to CTunnel3: [player successfully gets past the trap]
-	say "     Now your way to your treasure is free! Eagerly, you walk towards the spot where you saw your spoils, hopeful that it will be enough to call this exploration worth it. Pulling the blanket away, your eyes widen as they land on a large stonehammer made of gold and in pristine conditions! You can't believe that you've stumbled on a weapon like this, beautiful and seemingly deadly! Looks like a great opportunity to acquire yourself a brand new means of beating your enemies, but the question is... [bold type]Do you actually want to steal from the dwarves and take this weapon with you?[roman type] That might provoke them... [bold type]but if you leave it here like nothing happened, they might just never come out of hiding.[roman type] What will you do?";
+	say "     Now your way to your treasure is free! Eagerly, you walk towards the spot where you saw your spoils, hopeful that it will be enough to call this exploration worth it. Pulling the blanket away, your eyes widen as they land on a large stone hammer made of gold and in pristine conditions! You can't believe that you've stumbled on a weapon like this, beautiful and seemingly deadly! Looks like a great opportunity to acquire yourself a brand new means of beating your enemies, but the question is... [bold type]Do you actually want to steal from the dwarves and take this weapon with you?[roman type] That might provoke them... [bold type]but if you leave it here like nothing happened, they might just never come out of hiding.[roman type] What will you do?";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take the weapon with you.";
 	say "     ([link]N[as]n[end link]) - Leave it there. You have no interest in provoking the dwarves.";
 	if player consents:
 		LineBreak;
-		say "     This is too good to pass. It is a two-handed weapon made addorned with gold, one of the most beautiful weapons you've ever seen. Plus, it looks pretty strong! No way you're going to leave this here, to remain forgotten and risking it ending up in the wrong hands. Carefully, you remove it from its resting place. You already knew it would be heavy, but not this heavy! Nonetheless, you're strong enough to carry it with you. Now it's only a matter of returning to the tunnel and get the hell out of here before someone notices anything missing, or see you carrying something that isn't supposedly yours.";
+		say "     This is too good to pass. It is a two-handed weapon made adorned with gold, one of the most beautiful weapons you've ever seen. Plus, it looks pretty strong! No way you're going to leave this here, to remain forgotten and risking it ending up in the wrong hands. Carefully, you remove it from its resting place. You already knew it would be heavy, but not this heavy! Nonetheless, you're strong enough to carry it with you. Now it's only a matter of returning to the tunnel and get the hell out of here before someone notices anything missing, or see you carrying something that isn't supposedly yours.";
 		ItemGain golden greathammer by 1;
 		now Resolution of Collapsed Tunnel is 4; [player got out with the greathammer, dwarves provoked]
 		now Collapsed Tunnel is resolved;
 	else:
 		LineBreak;
-		say "     It's not a good idea. You'll end up provoking an entire civilation for just a hammer. As beautiful and powerful as it may be, it's guarded for a reason, so you put the blanket on it again and get ready to take your leave. You've had enough of this place for a day, and don't think there's anything else to do here, so you walk towards the exit and call it done.";
+		say "     It's not a good idea. You'll end up provoking an entire civilization for just a hammer. As beautiful and powerful as it may be, it's guarded for a reason, so you put the blanket on it again and get ready to take your leave. You've had enough of this place for a day, and don't think there's anything else to do here, so you walk towards the exit and call it done.";
 		now Resolution of Collapsed Tunnel is 3; [player didn't take the greathammer, so the scavenger did, eventually]
 		now Collapsed Tunnel is resolved;
 
@@ -260,7 +260,7 @@ to say DwarfQuest3: [continuation]
 				DwarfQuestQuestion2;
 		else:
 			LineBreak;
-			say "     That will be all from him. This dwarf means trouble everytime you cross paths, so you might as well let him know that you're not interested in anything he has to say. 'Oh, come on! It will be fun! And profittable!' After some insistence, you manage to shove him away. Eventually he had to give up pestering you, right? 'Well, alright. I guess I'll do it on my own, then. Good luck with your... business, whatever it is.' That's the excuse you gave him, and even though he didn't buy it, he is walking away from you, leaving you in peace. Though, you feel like you've lost a good chance at befriending him... Maybe forever. You never trusted him anyway, you suppose...";
+			say "     That will be all from him. This dwarf means trouble every time you cross paths, so you might as well let him know that you're not interested in anything he has to say. 'Oh, come on! It will be fun! And profitable!' After some insistence, you manage to shove him away. Eventually he had to give up pestering you, right? 'Well, alright. I guess I'll do it on my own, then. Good luck with your... business, whatever it is.' That's the excuse you gave him, and even though he didn't buy it, he is walking away from you, leaving you in peace. Though, you feel like you've lost a good chance at befriending him... Maybe forever. You never trusted him anyway, you suppose...";
 			now Resolution of Collapsed Tunnel is 99;
 	else:
 		LineBreak;
@@ -316,7 +316,7 @@ to DwarfQuestQuestion2: [Player is not a dwarf]
 			say "Invalid choice. Type [link]1[end link] to accept and have sex with him, [link]2[end link] to accept and drink his ale, [link]3[end link] to postpone your decision or [link]4[end link] to refuse the deal for good.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Is there any better way to do this other than receiving the transformation right from the source? Besides, the dwarf seems eager to utilize this method, and you totally know why... Looks like all you have to do is let him know, and you do so by approach him and groping his sizable bulge, already throbbing in anticipation. 'So you wanna do it this way, too? I mean... I'm glad you chose this option, too.' he says, as he grabs you for... not a kiss, as you were expecting at first, but instead guiding you straight to his crotch, pulling your face right against it as he undoes his belt. Might as well open your mouth and let that consealed bump of throbbing meat in your mouth, which seems to excite the short man even more, feeling the warmth of your lips and tongue wrapped around his thick boner before he manages to slide his pants off.";
+		say "     Is there any better way to do this other than receiving the transformation right from the source? Besides, the dwarf seems eager to utilize this method, and you totally know why... Looks like all you have to do is let him know, and you do so by approach him and groping his sizable bulge, already throbbing in anticipation. 'So you wanna do it this way, too? I mean... I'm glad you chose this option, too.' he says, as he grabs you for... not a kiss, as you were expecting at first, but instead guiding you straight to his crotch, pulling your face right against it as he undoes his belt. Might as well open your mouth and let that concealed bump of throbbing meat in your mouth, which seems to excite the short man even more, feeling the warmth of your lips and tongue wrapped around his thick boner before he manages to slide his pants off.";
 		say "     You pull out for mere seconds as his dick jumps out of the prison it was in, then back in your mouth as you give the dwarf a hungry blowjob. This time, you're wanting to get transformed into one like him, eager to drain the cum out of his balls as much as you can, and amidst moans and grunts, he lets you know he wants to do exactly that for you. Grabbing you by both sides of your head, the bearded dwarf rams his entire thick length down your throat, forcing you to take every inch inside your mouth, then proceed to fuck your face as his plump balls swing heavily, back and forth, against your chin. 'Fuck yeah... Hope you're ready to swallow lots of dwarf spunk... It's gonna taste so good.' he tells you, and you can't help but believe his words, as if your body was craving for that creamy seed...";
 		WaitLineBreak;
 		say "     He facefucks you for a long period of time before wanting to use your ass too, holding up his first orgasm as much as he can. Obviously, he's enjoying the perfect excuse to fuck you over and over, but he competently does so, as skilled as he is. Turning you around, as naked as you are by now, he easily shoves his wet cock inside your pucker, grabbing you by the hips and thrusting slowly at first, increasing his rhythm progressively... 'Can't wait to fill you up... How many times you think I need to cum in you? Maybe five? I could do it all day... hehe...' he says, chuckling, while ballsdeep in you, pounding your butt vigorously like the virile dwarf man he is. Though, eventually, you feel like he's getting close, as his grunting gets more intense.";
@@ -518,12 +518,12 @@ to WWDKingdom:
 	say "     As you continue further ahead, past the turn towards the treasury vault, the sound of people talking and footsteps echo through the walls. This only means you're approaching an urban center, which is the dwarven kingdom. You can't see it yet, as the climb is still long, but eventually you make it to the end, leaving the underground rocky corridors behind. This place is... Still underground, but it's very wide and well illuminated, despite that. Their constructions don't spread in width, but more in depth. Divided by districts, some above, others below, this civilization seems incredibly well organized within the available space. 'As I've said, dwarves are a resourceful bunch. They can pull off anything they set their minds to.' says your partner, who seems absolutely mesmerized by the landscape that the city forms in front of you.";
 	say "     Yogdrak then points at one specific building. 'There. That's where they're going to host the wedding. Must be the... Order of the dwarf knights or whatever embassy. I mean, it's always an order, isn't it?' he informs you, and it's very possible they have some kind of neo-medieval designation for their kingdom's organs. This specific edifice has an [']U['] shape, so it is possible that the ceremony is being held in a cloister on the backside of the building. That means you will have to get past the entrance and all the knights keeping guard by the frontside of the place. But first things first, you will have to enter the city, which shouldn't be too difficult. You're both looking like dwarves, and the infection is not widely known by them, luckily for you.";
 	WaitLineBreak;
-	say "     As you have predicted, it was fairly easy to get inside the permises. Nobody asked a question about your identities, and you are seen just like normal dwarves. 'Hehe, no one suspects a thing. Managed to slip inside so easily right under their noses. I can already feel that gorgeous in my hands...' says Yogdrak, clearly daydreaming about his much wanted greathammer. He is very possessive about it, you can't help but wonder if that will pose a problem in the end... But that shouldn't be your worry, right now. Past the way between the tunnel leading back to the surface and the first signs of civilization, you eventually enter the city. Houses are mainly built with stone, as you would have guessed, a type of material that is quite abundant for a race that lives underground and is consistently mining. It's then obvious where the excess amount of rock goes to.";
-	say "     You don't think they have any kind of widely distributed power source in here. From what you see, it's only steam-based technology with the use of coal, and mostly used for smelters, lights and fire. This is really an otherwordly place. 'They live for their work. I bet some of them never get tired of mining and building. Such fascinating men and women, don't you agree? Although... It's curious how you don't see as many female dwarves around, isn't it? Do they keep their women in the kitchens like the sexist pricks back in our society from some time ago? Or perhaps... Men mine and women cook? I can't say which one I'd prefer.' He surely asks questions about the dwarves' ways of living, but the answers will have to be left for another time. You're approaching the Knights' Embassy, where the wedding will be hosted.";
+	say "     As you have predicted, it was fairly easy to get inside the premises. Nobody asked a question about your identities, and you are seen just like normal dwarves. 'Hehe, no one suspects a thing. Managed to slip inside so easily right under their noses. I can already feel that gorgeous in my hands...' says Yogdrak, clearly daydreaming about his much wanted greathammer. He is very possessive about it, you can't help but wonder if that will pose a problem in the end... But that shouldn't be your worry, right now. Past the way between the tunnel leading back to the surface and the first signs of civilization, you eventually enter the city. Houses are mainly built with stone, as you would have guessed, a type of material that is quite abundant for a race that lives underground and is consistently mining. It's then obvious where the excess amount of rock goes to.";
+	say "     You don't think they have any kind of widely distributed power source in here. From what you see, it's only steam-based technology with the use of coal, and mostly used for smelters, lights and fire. This is really an otherworldly place. 'They live for their work. I bet some of them never get tired of mining and building. Such fascinating men and women, don't you agree? Although... It's curious how you don't see as many female dwarves around, isn't it? Do they keep their women in the kitchens like the sexist pricks back in our society from some time ago? Or perhaps... Men mine and women cook? I can't say which one I'd prefer.' He surely asks questions about the dwarves' ways of living, but the answers will have to be left for another time. You're approaching the Knights' Embassy, where the wedding will be hosted.";
 	WaitLineBreak;
 	if Resolution of Wedding Wreckers is 0 or Resolution of Wedding Wreckers is 2 or Resolution of Wedding Wreckers is 4: [no armor]
 		say "     Now, onto the sneaking part. How are you going to do this? That's a good question. The entire place is filled with guards, and entrance is not gained so easily. 'Heh, looks like we'll have to do some wall jumping and pray nobody sees us. This place is really out in the open.' says Yogdrak, with a lot of hidden positivity in his speech, you're certain. No irony at all. But none of that will help you get past the security and inside the building, so you both lay out an infiltration plan, study the best angles to get inside unseen, and calculate your chances meticulously. After a good while, you arrive at a conclusion that you both agree with. 'Alright, let's go for that corner. The wall isn't that hard to climb, and there isn't a lot of vigilance in that area.' With the lack of a safer approach, this is what you decide to do.";
-		say "     Approaching the targeted area, both you and Yogdrak swiftly move towards the assigned positions. Indeed, the wall isn't that much hard to climb, as it isn't that very tall and you've got some support with a few objects laying around, as well as cover from neighboring edifices. Very conviniently, but you suppose the dwarves never really had any urgency in analyzing every single vulnerability spot of a single building. All the better for you, though. With enough effort, you manage to find a climbable path and bring yourself upwards, with one foot on top of a crate and your hands pulling your weight to the upperside of the wall. Then, you help Yogdrak the same way, and quickly, you fall down to the other side.";
+		say "     Approaching the targeted area, both you and Yogdrak swiftly move towards the assigned positions. Indeed, the wall isn't that much hard to climb, as it isn't that very tall and you've got some support with a few objects laying around, as well as cover from neighboring edifices. Very conveniently, but you suppose the dwarves never really had any urgency in analyzing every single vulnerability spot of a single building. All the better for you, though. With enough effort, you manage to find a climbable path and bring yourself upwards, with one foot on top of a crate and your hands pulling your weight to the upper side of the wall. Then, you help Yogdrak the same way, and quickly, you fall down to the other side.";
 		WaitLineBreak;
 		let bonus be (( dexterity of player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -572,8 +572,6 @@ to WWKEmbassy:
 			say "     'So we have to watch two random dwarves getting married, now. Yay.' he says, pretty annoyed at your decision, but he kind of respects it. He's just not happy with it one bit, often looking at the hammer instead while your eyes are fixated on the ceremony going.";
 		WaitLineBreak;
 		WWCeremony;
-		WaitLineBreak;
-		WWEnd;
 	else:
 		LineBreak;
 		say "     With your prize so close, you can't really bother yourself with watching the rest of the ceremony. Not now, at least. 'Yeah, let's go get the hammer and piss off. No time to watch two random dudes getting married.' Yogdrak doesn't seem to care, either.";
@@ -653,7 +651,7 @@ to WWEnd:
 	else if calcnumber is 3: [do not take the hammer]
 		say "     You stop Yogdrak by grabbing his arm and pulling it away. Obviously, this reaction makes him frown his eyebrows at you. 'Are you crazy? What did you jut do?' Trying to explain him why you don't want to take the hammer will be difficult, even more convincing him that this is the best decision. But you give your best shot at warning him about the consequences of taking this weapon with you.";
 		if Resolution of Collapsed Tunnel < 17: [Yogdrak betrays the player]
-			say "     'What, you're worried about ruining a fucking couple's wedding? You have to be joking. If I knew you were this sensitive, I'd have knocked you down for good.' He ignores you from that point on, and grabs the greathammer without your help. 'I suppose I should thank you for the mispleasure of working with you. And I'm not going to leave this here. You won't stop me either.' With a surge of strength, the dwarf smacks your head with the big hammer, knocking you out as he runs away with it.";
+			say "     'What, you're worried about ruining a fucking couple's wedding? You have to be joking. If I knew you were this sensitive, I'd have knocked you down for good.' He ignores you from that point on, and grabs the greathammer without your help. 'I suppose I should thank you for the displeasure of working with you. And I'm not going to leave this here. You won't stop me either.' With a surge of strength, the dwarf smacks your head with the big hammer, knocking you out as he runs away with it.";
 			say "     You take some time to recover from that strike, and just as you manage to stand up, Yogdrak is gone without a trace. And to make things worse, people are starting to come inside the room... And they see you, with the greathammer being gone. This is definitely not a good place to be right now, so you start running as fast as you can out of there before anyone can catch you! By the time you make it across the tables of food, you manage to get out of the area and storm through the streets of the dwarven kingdom, back to where you came from. Guards from the embassy attempt to chase you down, but you're much faster with your regular clothing than them with their armors.";
 			WaitLineBreak;
 			say "     Fortunately, you manage to reach the tunnel and slip inside the underground corridors, tracing your steps back to the surface after an exhausting sprinting for your life. That narrow passage leading to the trapdoor where this all began is still clear, so you are able to proceed further in and leave out, back to the surface. Just to be safe, you push a boulder towards the top of the entry in order to lock it down, hopefully as long as it stays there. Finally, you can have some time to breathe and enjoy the scenery of the surface, much brighter, plants all around, and with a much clearer atmosphere. You really worked out some sweat!";
@@ -708,7 +706,7 @@ to DwarfFucksOral:
 	say "     'Now, time to put your mouth to work. And you better do it right!' he says while positioning himself just above your head, which stands tall enough to reach his still covered bulge. The dwarf makes sure you feel his erection growing larger in his pants by pulling your face straight towards it. 'That's it, be a good [boygirl] for me and smell my junk. Bet you're liking this, aren't you?' the dwarf keeps teasing you as his tool hardens so much that it starts feeling constricted for the short man, as if begging for release out of those pants. 'I think I'm gonna love shoving this down your throat... Making you choke on it as you take it deep down... all the way...!' You sense eagerness in your burly captor's raspy voice [if player is submissive], making you want to taste his cock even more than you already did, [end if]as he starts undoing his large belt, dropping his gear on the ground followed by the pants.";
 	say "     With a quick slide, the dwarf's raging boner is given its much awaited fresh air, only throbbing and reaching its prime state of hardiness a few seconds later. Now, [if player is submissive]as he has you glancing all over his meat like a dog awaiting his long deserved treat,[else]as you're taking a good look at his meat,[end if] you notice that, despite it belonging to a rather short man in height, it actually has a considerable size of nine inches, veiny and thick as a beer can. However, the stocky man doesn't let you admire it for long. Although he takes great joy in [if player is submissive]seeing you so mesmerized by his pulsing length[else]seeing you impressed with this unexpected outcome[end if], he decides to slide his thick and large hand behind your head and pull you once more towards him, forcing you to wrap your lips around his rather wide prick. 'You gotta do better than that, my [boygirl]. How else am I supposed to fuck your face?' he taunts as he forces more and more of his length inside you, slowly reaching over your throat and keeping you from breathing soon enough.";
 	WaitLineBreak;
-	say "     He doesn't stop there. Once he has a good grasp of your head with both his hands, he lets go a sexual grunt as he makes you swallow his cock to the very end. 'Oohh, fuck... yeah! Feels so good being balls deep on someone...!' You really begin squirming and moaning for air, but the dwarf keeps your nose buried in his curly pubes for a good while before he starts pulling out slowly. With barely a second to catch your breath, he doesn't let you rest as his tool finds itself sinking in your mouth once again. Having to open wide to contain so much dick within your mouth makes your jaw ache, and your neck bulges out everytime he thrusts in deep into your esophagus. It's not the length, but rather the thickness, that turns this into such a difficult task to handle, [if player is submissive]but you do your best to please the muscular dwarf with all your ability, only to hear him praise your efforts, which fills you with excitement[else]but you attempt to endure it as much as you can, your efforts not going unnoticed[end if].";
+	say "     He doesn't stop there. Once he has a good grasp of your head with both his hands, he lets go a sexual grunt as he makes you swallow his cock to the very end. 'Oohh, fuck... yeah! Feels so good being balls deep on someone...!' You really begin squirming and moaning for air, but the dwarf keeps your nose buried in his curly pubes for a good while before he starts pulling out slowly. With barely a second to catch your breath, he doesn't let you rest as his tool finds itself sinking in your mouth once again. Having to open wide to contain so much dick within your mouth makes your jaw ache, and your neck bulges out every time he thrusts in deep into your esophagus. It's not the length, but rather the thickness, that turns this into such a difficult task to handle, [if player is submissive]but you do your best to please the muscular dwarf with all your ability, only to hear him praise your efforts, which fills you with excitement[else]but you attempt to endure it as much as you can, your efforts not going unnoticed[end if].";
 	say "     'Ahh... who's a good [boygirl]? Taking my cock so well like that... Next time I catch you here, I might... O-oh... Fuck... You're gonna make me cum down that filthy throat, you little bitch...' Holding your head tight, the short-sized man keeps jerking his hips against your face, his plump ballsack swinging back and forth and hitting your chin. His increasingly louder grunts are an indicative of his orgasm approaching, and you know you're going to have to deal with a large load. 'I'm gonna fill you up... Fuck yeah...! I'm... Cumming!!' With this said, both his hands are on each side of your head when he pushes his cock as deep inside as possible. You don't even get to taste the warm seed he's shooting directly into your stomach, but you can definitely feel his thick manhood pulsing with pleasure as the jizz leaves it with each spurt.";
 	WaitLineBreak;
 	say "     At some point, he pulls out of your mouth, your face flushed and released altogether as gravity wins over your strength to avoid hitting the ground with the back of your head. Standing and looking down at you is the dwarf with his still half-hard length, shaking any leftovers of his cum still oozing down his cock towards your face as he lets out a mischievous chuckle. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
@@ -740,7 +738,7 @@ to DwarfFacesit:
 	say "     Though it's your nose almost completely buried inside his fuzzy ass, he grinds his anus all over your face, with a tendency to just kiss your lips back as he demands you to use your tongue on him. Without any further ado, you oblige him [if player is submissive]eagerly, as his commands turn you on[else]reluctantly, but with enough effort so that he is satisfied[end if], and press your wet tongue inside his asshole, to which he immediately lets out a pleased grunt. 'Yes! That's it! Oooh you're hitting the spot, lick it all over, my [boygirl]! I could kiss you right now, but might as well do it with my ass!' he teases you, pressing his hairy butt against your face harder as you're hold in place under him, your tongue condemned to lick and worship his hungry hole.";
 	WaitLineBreak;
 	say "     You're effectively making out with his bum, and he's grinding it really hard against your face, wanting to take anything he wants, and sometimes you find yourself being forced to pull your tongue out of his hole and feel your own saliva being rubbed all across your nose and cheeks. He keeps doing this over and over again, so excited that you think he's actually getting off from feeling your face between his hairy buttocks. At some point, he is barely letting you breathe, his compact ass still managing to cover most of your nose with each movement, and eventually returns to your lips. 'Tonguefuck me, bitch! I'm not leaving until you make me cum with that tongue!' he orders you with his manly deep voice, making your soul trembling.";
-	say "     Doing your best to fuck the dwarf's ass with your tongue, you push it deep in and back out as fast as you can, trying to give him a really good time just like he demands, though that makes his ass wiggle and grind against you even harder. You figure that must be your work exciting the short burly man even further, though you can feel him shaking above you, as if he was jerking off to your efforts. If you keep it up, he might just cum, so you put your best effort, shoving your tongue in, wiggling, licking his insides as good as you can, making the dwarf moan in ecstacy. He really likes getting rimmed, it seems, as he's now also pulling your head against the crevice between his hairy cheeks. 'You're fucking great at this... I'm about to cum!'";
+	say "     Doing your best to fuck the dwarf's ass with your tongue, you push it deep in and back out as fast as you can, trying to give him a really good time just like he demands, though that makes his ass wiggle and grind against you even harder. You figure that must be your work exciting the short burly man even further, though you can feel him shaking above you, as if he was jerking off to your efforts. If you keep it up, he might just cum, so you put your best effort, shoving your tongue in, wiggling, licking his insides as good as you can, making the dwarf moan in ecstasy. He really likes getting rimmed, it seems, as he's now also pulling your head against the crevice between his hairy cheeks. 'You're fucking great at this... I'm about to cum!'";
 	WaitLineBreak;
 	say "     It's not long from when he says that to the actual orgasm. Within a few moments, he's grunting and moaning in beastly manners, shooting his load all over your chest, and as this happens, you feel his asshole clenching around your tongue with each shot. 'Fuuuuck yeah! Damn! I was fucking needing this! You're such a good seat for my fuzzy ass, my [boygirl]! Will definitely consider doing this more often to you.' he taunts you, still sitting on your face as he squeezes his cock out of any leftovers of cum, all landing on your body. 'Damn... I would keep you... but you know... I have no place of my own and I don't wanna share you with anyone else who ends up passing by, so... I'll let you go. You can always come back for me by yourself, ain't that right?' Laughing, he gets ready to leave by standing up, shoving his wide cock out of view back into his underwear, pulling his pants back up and tightening the belt, all this while eyeing you from above. 'See you later, bitch [boygirl]!' he shouts, carrying his stone hammer by his shoulder and walking away.";
 	say "     You're left with your face flushed, catching your breath after this ordeal, and take some time to recover before you can stand up.";
@@ -996,201 +994,6 @@ When Play begins:
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
-
-[Section 3-1 - Dwarf Knight
-
-to say DwarfKnight wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ";
-		else: [player loses]
-			say "     ";
-
-to say DwarfKnight loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
-
-to say DwarfKnight Desc:
-	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
-
-Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is false;
-	now Species Name entry is "Dwarf";
-	add "True_Dwarf_Male" to infections of HumanList;
-	add "True_Dwarf_Male" to infections of HistoricalList;
-	add "True_Dwarf_Male" to infections of MaleList;
-	add "True_Dwarf_Male" to infections of BipedalList;
-	now Name entry is "True_Dwarf_Male";
-	now enemy title entry is "Dwarf Knight"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "[one of]He charges towards you with his sword! Luckily, you manage to get out with a slight cut.[or]He swings his sword around, hitting you with agonizing pain.[or]The short armored dwarf manages to smack you with his sword's pommel as you're off guard, leaving your head aching.[at random]";
-	now defeated entry is "[DwarfKnight loses]";
-	now victory entry is "[DwarfKnight wins]";
-	now desc entry is "[DwarfKnight Desc]";
-	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
-	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
-	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
-	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a that of a middle-aged man, with a stocky and muscular build. Looking down, you notice your legs being much shorter than the rest of your body, making you standing half the height of an average human"; [ format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it gets rougher, becoming hairy and peach toned"; [ format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it gets tight and fuzzy, with compact muscled glutes"; [ format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;
-	now dex entry is 18;
-	now sta entry is 20;
-	now per entry is 15;
-	now int entry is 10;
-	now cha entry is 11;
-	now sex entry is "Male";
-	now HP entry is 85;
-	now lev entry is 10;
-	now wdam entry is 10;
-	now area entry is "Nowhere";         [ Case sensitive]
-	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now Cock Length entry is 8;
-	now Ball Size entry is 2;          [ Size of balls ]
-	now Nipple Count entry is 2;             [ Number of nipples. ]
-	now Breast Size entry is 0;         [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now SeductionImmune entry is false;
-	now libido entry is 10;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;
-	now resbypass entry is false;
-	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";
-	now BannedStatus entry is false;
-]
 
 Section 4-1 - Items
 

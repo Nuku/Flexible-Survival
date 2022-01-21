@@ -196,6 +196,18 @@ instead of purifying an infected sword:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"ancient gladius"	"A somewhat old-looking sword, only about 25 inches long, with a double edge on its blade and a cutting tip. It is, however, very sturdy and easy to wield, good to stab and slash any foe in close range."	4	ancient gladius
+
+ancient gladius is an armament. It is not temporary.
+It has a weapon "[one of]your roman blade[or]your ancient gladius[or]your steel blade[at random]".
+Weapon Damage of ancient gladius is 14.
+Weapon Type of ancient gladius is "Melee".
+Objsize of ancient gladius is 3.
+Hitbonus of ancient gladius is 1. [mastercraft]
+Scent of the ancient gladius is "The blade smells of metal polish. It is an antique, after all.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
 "viking sword"	"A beautifully crafted sword, about 30 inches long, with a keen edge to its blade. The favorite weapon of your Viking wife, Sonya, it became yours as you married. Better take good care of it - it's a pretty good weapon, well-balanced... and there might be some marital problems ahead if you let it rust or lose it."	5	viking sword
 
 viking sword is an armament. It is not temporary.
@@ -508,15 +520,14 @@ Hitbonus of zephyr bashing riot shield is 0. [nothing special]
 Scent of the zephyr bashing riot shield is "The zephyr protective riot shield smells faintly of suppressive authority.".
 
 to say RiotShieldAttackDesc:
-	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]riotshieldProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
+	say "     A black shield that zephyr's riot security use to suppress threats. This one is yours, and you've chosen to use it for bashing people out of the way. You might [link]change your mind[as]RSProtectMode[end link] though, and direct your shield to more defensive purposes instead.";
 
 riotshieldProtectMode is an action applying to one topic.
 
-understand "riotshieldProtectMode" as riotshieldProtectMode.
+understand "RSProtectMode" as riotshieldProtectMode.
 
 check riotshieldProtectMode:
-	if carried of zephyr bashing riot shield < 1:
-		say "     What shield? You're not holding one right now.";
+	if carried of zephyr bashing riot shield < 1, say "     What shield? You're not holding one right now." instead;
 
 carry out riotshieldProtectMode:
 	if zephyr bashing riot shield is equipped:
