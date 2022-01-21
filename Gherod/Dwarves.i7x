@@ -976,7 +976,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 50;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dwarven ale";               [ Dropped item, blank for none. Case sensitive. ]
@@ -994,99 +994,6 @@ When Play begins:
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-Section 3-1 - Dwarf Knight
-
-to say DwarfKnight wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ";
-		else: [player loses]
-			say "     ";
-
-to say DwarfKnight loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
-
-to say DwarfKnight Desc:
-	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
-
-Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is false;
-	now Species Name entry is "Dwarf";
-	add "True_Dwarf_Male" to infections of HumanList;
-	add "True_Dwarf_Male" to infections of HistoricalList;
-	add "True_Dwarf_Male" to infections of MaleList;
-	add "True_Dwarf_Male" to infections of BipedalList;
-	now Name entry is "True_Dwarf_Male";
-	now enemy title entry is "Dwarf Knight"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "[one of]He charges towards you with his sword! Luckily, you manage to get out with a slight cut.[or]He swings his sword around, hitting you with agonizing pain.[or]The short armored dwarf manages to smack you with his sword's pommel as you're off guard, leaving your head aching.[at random]";
-	now defeated entry is "[DwarfKnight loses]";
-	now victory entry is "[DwarfKnight wins]";
-	now desc entry is "[DwarfKnight Desc]";
-	now face entry is "a weathered middle-aged man's, rugged and long-bearded, with short and shaggy dark brown hair hugging the top of your head";
-	now body entry is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
-	now skin entry is "peach toned and rough"; [ format as "Your body is covered in (your text) skin"]
-	now tail entry is "You have a hairy, compact muscled butt"; [ write a whole Sentence or leave blank. ]
-	now cock entry is "human"; [ format as "You have a 'size' (your text) cock ]
-	now face change entry is "it shapes itself into a weathered male visage, rugged features and a long full beard growing out of your jaw and chin. Your hair becomes very short and dyed in a dark brown color"; [ format as "Your face feels funny as (your text)." ]
-	now body change entry is "it is reshaped into a that of a middle-aged man, with a stocky and muscular build. Looking down, you notice your legs being much shorter than the rest of your body, making you standing half the height of an average human"; [ format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it gets rougher, becoming hairy and peach toned"; [ format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it gets tight and fuzzy, with compact muscled glutes"; [ format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes human-shaped"; [ format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;
-	now dex entry is 18;
-	now sta entry is 20;
-	now per entry is 15;
-	now int entry is 10;
-	now cha entry is 11;
-	now sex entry is "Male";
-	now HP entry is 85;
-	now lev entry is 10;
-	now wdam entry is 10;
-	now area entry is "Nowhere";         [ Case sensitive]
-	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now Cock Length entry is 8;
-	now Ball Size entry is 2;          [ Size of balls ]
-	now Nipple Count entry is 2;             [ Number of nipples. ]
-	now Breast Size entry is 0;         [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
-	now SeductionImmune entry is false;
-	now libido entry is 10;             [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 50;          [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "stocky"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "dwarf";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;
-	now resbypass entry is false;
-	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";
-	now BannedStatus entry is false;
-]
 
 Section 4-1 - Items
 
