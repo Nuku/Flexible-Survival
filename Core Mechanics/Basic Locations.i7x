@@ -286,12 +286,51 @@ The earea of Looted Shops is "Outside".
 Description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:
-	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the [link]southwest[end link], a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium['].";
+	say "     You wander down the center of the empty 7th Street to stay away from the piles of trash and shards from shattered shop windows that dominate the sidewalk on both sides. There are barely any windows that haven't been vandalized, and many of the doors were torn out of their frames or clawed to pieces. You can't say if the destruction stemmed from pure malice or just some overly large creature making an entrance; it doesn't matter which really, as the result is the same. In the [link]southwest[end link], a thin path has been cleared through the trash and debris, leading to a shop that seems to have been of continuing interest of someone - or alternatively the target of some scavengers. The sign above the door declares it to be [']George's Animal Emporium[']. Towards the [link]west[end link] 7th Street leads on through the city.";
 	if "Henry Recruited" is listed in Traits of Urik:
-		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the [link]nort[end link] accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
+		say "     Someone appears to have cleared away a patch of trash and rubble recently, making the entrance of a store to the [link]north[end link] accessible. While the sign above the door declares it to be some sort of flower shop, the plywood board used to cover a broken window next to a newly hung door bears the words 'Henry's Brewery', above a spray-painted depiction of a muscular black man with a large hammer. The stylized image of a snarling orc face in the lower left corner lets you guess that Urik put this here.";
 
 instead of sniffing Looted Shops:
 	say "     The cans and sacks of trash that have been rotting out on the curb for more than two weeks fill your nose with many scents, none of them particularly pleasant.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Bend in 7th Street	"Bend in 7th Street"
+
+[TODO: connect when the SlutStorage Location is complete]
+[
+Bend in 7th Street is west of Looted Shops.
+]
+The earea of Bend in 7th Street is "Outside".
+Description of Bend in 7th Street is "[Bend7thDesc]".
+
+to say Bend7thDesc:
+	say "     7th Street has a bend in the section you're standing in right now, surrounded by fairly nondescript and boring-looking buildings. The area looks pretty quiet and empty, almost as if it was just a normal day. Before long, this impression is dispelled by the not too far away noise of some creature in a mating rut though, and if you look closely, you can see some scraps of abandoned clothing here and there, evidence of the ongoing nanite apocalypse.";
+	say "     Towards the [link]east[end link] you can see the row of looted shops that you passed earlier flanking the street, while the roadway continues on towards the [link]northwest[end link].";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Northwest 7th Street	"Northwest 7th Street"
+
+Northwest 7th Street is northwest of Bend in 7th Street.
+The earea of Northwest 7th Street is "Outside".
+Description of Northwest 7th Street is "[NW7thDesc]".
+
+to say NW7thDesc:
+	say "     7th Street continues straight in this section, both towards the northwest and southeast, still surrounded by fairly nondescript and boring-looking buildings. One place catches your eye though - there's a 'Store Everything' business advertising itself to the west. Looks like an expansive facility too, complete with a wall around the complex, and a secure-looking gate out of thick metal bars at the front. At the gate and beyond, you can see some activity of a few people coming and going, all of which seems oddly 'normal' in the usually lawless city.";
+	say "     Towards the [link]west[end link] you can step up to the storage place, or go back [link]southeast[end link] to the bend in 7th Street.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Store Everything	"Store Everything"
+
+Store Everything is west of Northwest 7th Street.
+The earea of Store Everything is "Outside".
+Description of Store Everything is "[StoreEverythingDesc]".
+
+to say StoreEverythingDesc:
+	say "     The 'Store Everything' facility you're standing in front of seems to have made it through the nanite apocalypse pretty well so far, from what you can see. Though not unchanged, as a sign that read 'Personal Storage Solutions' has been modified by crossing out some letters with spray-paint, so it now declares 'Person Storage Solutions'. The whole complex looks fairly secure, what with its high wall, as well as a closed gate consisting of sturdy metal bars. A similarly constructed door next to it provides entry on foot, if someone lets you in that is - as the 'ring for entry' sign next to the buzzer proclaims. Right now that might not be necessary though, as a goo person is standing just a few steps beyond the door, next to a metal post holding the buttons to unlock the door.";
+	say "     Towards the [link]east[end link] you can get back to 7th Street again.";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -805,5 +844,42 @@ Wandering the Plains is a room.
 
 the scent of the Wandering the Plains is "The dry plains smell lightly of dry grasses and disturbed earth. There is little of man-made origin to smell on the air except the scents coming from the city behind you.".
 
+
+
+
+Table of GameRoomIDs (continued)
+Object	Name
+Loading Dock	"Loading Dock"
+
+Loading Dock is a room.
+Description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
+The earea of Loading Dock is "Sealed".
+
+the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
+
+When Play begins:
+	change east exit of Loading Dock to Outside Trevor Labs;
+
+basement portal is a door. basement portal is dangerous.
+Down of Trevor Labs Lobby is basement portal.
+
+basement security door is a door. basement security door is dangerous.
+Down of Loading Dock is basement security door.
+
+Table of GameRoomIDs (continued)
+Object	Name
+dark basement	"dark basement"
+
+dark basement is a room.
+dark basement is below basement portal.
+The marea of basement portal is "Sealed". The basement portal is open. Description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement" and "portal" as the basement portal.
+
+Table of GameRoomIDs (continued)
+Object	Name
+darkbasement2	"darkbasement2"
+
+darkbasement2 is a room. [placeholder room for the doors]
+darkbasement2 is below basement security door.
+The marea of basement security door is "Sealed". The basement security door is open. Description of Basement security door is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement", "portal" and "door" as the basement security door.
 
 Basic Locations ends here.

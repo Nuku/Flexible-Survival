@@ -66,7 +66,7 @@ Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
-Table of GameEndings (continued)
+Table of GameEndings[ (continued)]
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 --	--	--	--	0	false
 
@@ -177,6 +177,9 @@ Name(text)	Type(text)
 "Dolphinlist"	"list of text"
 "lbcomplist"	"list of text"
 "ndmlist"	"list of text"
+"StoredSluts_Female"	"list of text"
+"StoredSluts_Male"	"list of text"
+"StoredSluts_Herm"	"list of text"
 "absorb"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"

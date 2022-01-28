@@ -358,7 +358,7 @@ To Say slutratdenscene:
 	else:
 		increase SlutRatDenVisitTimes by 1;
 	if HP of Ronda is 9 and BodyName of Player is "Slut Rat":
-		say "[rondarescue]";
+		say "[RondaRescue]";
 
 
 Section 2 - Slut Rat Welcome

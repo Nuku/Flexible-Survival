@@ -292,11 +292,14 @@ to say WerewolfBruteLair:
 	say "     You quickly lose track of time as they toss you around, fuck your face, your [if player is female]holes[else]hole[end if], and even rubbing their meats on other parts of your body while they wait, all eager to put you on for a ride or mount you for hours and hours... They do not even address you as anything in particular, just using you as a fucktoy and filling you up with more loads until you cannot even walk. Your entire body feels so swollen that you can only roll around at some point, spread your legs for the next werewolf to fuck you silly while you choke on some other's cock, all while being utterly covered in lupine jizz, smelling like beast fluids and sweat. This mess drags on for what feels like the whole night...";
 	follow the turnpass rule;
 	follow the turnpass rule;
-	say "     Eventually, the brutes fall asleep and you manage to escape, leaving a trail of their cum wherever you go, as it is still leaking out of you. It takes a while until you can, somehow, process everything well enough to allow yourself to walk around, but you are going to feel like you have just arrived from a banquet for a good while... With the soreness of an all-out orgy you will not soon forget.";
+	say "     Eventually, it all comes to a stop, but you cannot even tell how many werewolves have nutted inside you, only that you find it difficult to walk on your own. That is, because your legs are shaking and have barely enough strength to move an inch. When you look around you, the realization that you have been, essentially, captured by the beasts comes down to your mind. They seem to have put you in a sort of oubliette kind of dungeon underneath the pit where you had the orgy. In here there are a multitude of other people, in various shapes and sizes, who you can barely see, but they all seem to either be fucking, jerking off or not paying any attention to anything else around them.";
+	say "     And now it seems you have been added to the werewolves['] collection. Can you, and should you, try to escape this place?";
 	CreatureSexAftermath "Player" receives "OralCock" from "Werewolf Brute";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
 	if player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Werewolf Brute";
+	WaitLineBreak;
+	move player to Lair Of The Lupines Oubliette;
 
 Section 3 - Creature Insertion
 

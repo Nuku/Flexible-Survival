@@ -693,6 +693,11 @@ Chapter 2 - Player Name
 
 Chapter 3 - Character Customization
 
+[
+Maybe I should add a second menu choice after that, explaining:
+"There are some parts of the game that apply alternate infections if a character has one of the following feats. For example, going for "Horny Dragon" instead of "Slutty Dragoness" if "Male Preferred" is present. You can gain these feats during gameplay, but for your convenience, they can also be activated right here. Please note that this is not a lock, nor does it exclude getting other infections. It simply nudges those code decision points that are set up for it one way or another."
+]
+
 to newplayercustomizationmenu:
 	if Name of Player is not "DebugTesting": [reduced menu until the new system goes live]
 		now calcnumber is -1;

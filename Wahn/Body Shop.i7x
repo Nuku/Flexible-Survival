@@ -346,7 +346,7 @@ to say MoreauFaceBuy:
 
 to MoreauFaceSelection:
 	LineBreak;
-	say "What face do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What face do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -457,7 +457,7 @@ to say MoreauBodyBuy:
 
 to MoreauBodySelection:
 	LineBreak;
-	say "What body do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What body do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -569,7 +569,7 @@ to say MoreauSkinBuy:
 
 to MoreauSkinSelection:
 	LineBreak;
-	say "What skin do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What skin do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -680,7 +680,7 @@ to say MoreauTailBuy:
 
 to MoreauTailSelection:
 	LineBreak;
-	say "What tail do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What tail do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -791,7 +791,7 @@ to say MoreauCrotchBuy:
 
 to MoreauCockSelection:
 	LineBreak;
-	say "What cock do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What cock do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
