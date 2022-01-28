@@ -1269,6 +1269,19 @@ to say BasicEricSex:
 			say "     'Time to have sex with your personal gender-switched freak again?' Eric says, looking at you in disdain. 'I should hate you for making me do this - but my pussy gets wet just thinking about it...' With a sigh, he strips off his clothing and looks to you, waiting for orders.";
 			say "[EricSexMenu]";
 
+to say StoredSlut_Eric:
+	choose a row with name of "Eric" in the Table of StoredSluts;
+	if Sluttyness entry is 1: [normal]
+		say "     Eric is standing in one of the far corners of the room, his back to the wall, and gives you a disdainful look. He is naked, as you left him, with his hands quickly moving to cover his crotch as if to shield it from your presence. 'Time to have sex with your personal gender-switched freak again?' Eric throws at you, his voice full of impotent anger. 'I should hate you, for what you did! And then you put me in here! But, but somehow I can't help myself from... from... gah, get it over with then.' With a sigh, he takes a hesitant step forward, then another, moving closer to the mattress. Almost looks like he fears you'll take him on the cold concrete if he resists.";
+	else if Sluttyness entry is 2: [medium]
+		say "     Eric must have been dozing on the mattress when Mortimer unlocked the door, as he's just sitting up, blinking his eyes drowsily to look at you. For a second, his arms start moving as if to cover his naked body, but then he seems to give up on it. The slender cuntboy lets out a quiet sigh, then moves to kneel in the center of the mattress, glancing to you as if waiting for a command. 'Back for more, eh?' he asks, more resigned to this treatment by now.";
+	else if Sluttyness entry is 3: [high]
+		say "     Eric is sitting on the edge of the mattress, glancing up from where his hands are between his slightly spread legs. Apparently he was stroking himself when you decided to pay him a visit here. You can't help but wonder a little if that is a result of him accepting his role as your slut more and more, or if it is just a result of sheer boredom, as he's literally got nothing else to do in here. Who cares in the end though - as long as he's compliant and available for some fun with you right now.";
+	say "[StoredSlut_EricSexMenu]";
+
+to say StoredSlut_EricSexMenu:
+	say "...";
+
 to say EricSexMenu:
 	if HP of Eric < 20:
 		project the Figure of Eric_Naked_happy_icon;
