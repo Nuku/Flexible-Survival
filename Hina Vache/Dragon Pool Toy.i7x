@@ -9,7 +9,7 @@ Section 1 - Creature Responses
 
 to say DragonPoolToyDesc:
 	setmongender 5; [creature is herm]
-	if dragonpooltoyfound:  [If the player had already encountered a Dragon Pool Toy]
+	if dragonpooltoyfound is true:  [If the player had already encountered a Dragon Pool Toy]
 		say "     As you wander the area, you soon find yourself back at the trash pile. Just as before, the Dragon Pool Toy remains motionless on top of the junk. Knowing full well that it is a trap, you merely stare at the beast for a few moments before turning and starting to walk away. A quick series of squeaks is heard behind you. Turning around rapidly, you have just enough time to dodge its attempted tackle. Once more, the dragon rears up and lets out its 'ferocious' squeak of a roar as it prepares to attack.";
 		now dragonpooltoyfound is true;
 	else:   [First time meeting. Surprises player with a sneak attack]
