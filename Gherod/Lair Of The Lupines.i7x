@@ -40,7 +40,7 @@ to say Hidden Rock Cavern Entrance Desc:
 		say "     [bold type]You have a feeling that you probably should not venture forth, if anyone happens to live deeper inside...[roman type][line break]";
 
 instead of smelling Hidden Rock Cavern Entrance:
-	say "     This place smells like greenery and nature.";
+	say "     This place smells like greenery and nature, but with a faint odor of... wolves?";
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -455,6 +455,12 @@ to say RodionTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Ask about his sexual preferences";
 	[]
+	if Energy of Rodion is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "A gift for Jett";
+		now sortorder entry is 99;
+		now description entry is "Rodion mentioned you could do something to make Jett like you more. Ask him about it";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -476,6 +482,8 @@ to say RodionTalkMenu:
 					say "[RodionTalkPack]";
 				else if (nam is "His sexual preferences"):
 					say "[RodionTalkSex]";
+				else if (nam is "A gift for Jett"):
+					say "[RodionTalkJettGift]";
 				wait for any key;
 				if RodionDoneTalking is false:
 					say "[RodionTalkMenu]"; [looping back to keep talking with him]
@@ -947,28 +955,69 @@ instead of fucking Wyatt:
 	if Libido of Wyatt is 0:
 		say "     You think about making a move on him, but looking at him again, you realize it might not be a good idea to do such a thing without speaking to him first.";
 	else:
-		if player is female and breast size of player > 0:
-			if lastfuck of Wyatt - turns < 4:
-				say "     You make a move on Wyatt, but given your recent exchange, he dismisses your advances. 'Yeah, I'm sorry. We're fucking horny all the time, but even us werewolf brutes need some time to cooldown, you know... But you can come back later.'";
-			else:
-				say "     You make a move on Wyatt, and he seems more than receptive to you. 'Oh, so you wanna have some fun together, eh? I'm down. What's on your mind?'";
-				WaitLineBreak;
-				say "[WyattSexMenu]";
+		if "Player Male to Female" is listed in traits of Wyatt: [variant for players Wyatt knows he transformed]
+			if FaceName of Player is "Husky Bitch" and BodyName of Player is "Husky Bitch" and Player is purefemale: [Player retains their female husky appearance]
+				now Perception of Wyatt is 2; [Happens when player makes a move on Wyatt while looking like a Husky Bitch after MtF. Wyatt will remember the player as such the last time they had sex]
+				if lastfuck of Wyatt - turns < 4:
+					say "     You make a move on Wyatt, but given that you have been together recently, he seems a little hesitant. 'Hey hottie... Do you mind coming back later? Right now I'm a little spent, sorry... But I promise to make it up to you.'";
+				else:
+					say "     You make a move on Wyatt, and he seems more than receptive to you. 'How's my favorite husky lover doing? I like that you keep taking good care of yourself... In fact, that alone gets me in the mood. What did you have in mind?'";
+					WaitLineBreak;
+					say "[WyattSexMenu]";
+			else if player is female and breast size of player > 0:
+				if lastfuck of Wyatt - turns < 4:
+					if Perception of Wyatt is 2: [first time Wyatt sees player as something other than female husky since the transformation or a time he saw the player looking like a female husky]
+						say "     You make a move on Wyatt, but given that you have been together recently, he seems a little hesitant. Plus, he notices your different appearance. 'Hey hottie... Uh... You look a bit different! Have you been taking care of yourself properly? I'd... recommend you don't get near any other males because... I would hate to see you lose those hot feminine curves of yours.' You tell the athletic werewolf that everything is still in place, despite the changes you have gone through lately. 'That's alright, you're still hot, and I'd still fuck you senseless... if I wasn't so spent from last time. Mind, maybe... coming back later? I promise to make it up to you.'";
+						now Perception of Wyatt is 1; [still perceives the player as female, now knowing they look different, thus no longer commenting on that fact as long as it persists in this state]
+					else if Perception of Wyatt is 1:
+						say "     You make a move on Wyatt, but given that you have been together recently, he seems a little hesitant. 'Hey hottie... Do you mind coming back later? Right now I'm a little spent, sorry... But I promise to make it up to you.'";
+				else:
+					if Perception of Wyatt is 2:
+						say "     You make a move on Wyatt, and he seems more than receptive to you, despite your different looks since he helped you transform. 'Oh, hey there... I see you've gotten a little different! Have you been taking care of yourself properly? I'd... recommend you don't get near any other males because... I would hate to see you lose those hot feminine curves of yours.' You tell the athletic werewolf that everything is still in place, despite the changes you have gone through lately. 'Ah, screw it, you're still hot and I still wanna fuck you. What did you have in mind?'";
+						now Perception of Wyatt is 1;
+					else if Perception of Wyatt is 1:
+						say "     You make a move on Wyatt, and he seems more than receptive to you. 'How's my beautiful lover doing? At least still keeping away from nasty transformatives, I see. That's really good... So, what did you have in mind?'";
+					WaitLineBreak;
+					say "[WyattSexMenu]";
+			else: [player did not maintain the gender nor the transformation, may lead to a special MtF scene reusing the original scene for an easily accessible and complete Husky Bitch TF]
+				say "     You attempt to make a move on Wyatt, but given the changes you have gone through, completely altering your appearance and body in the process, he does not reciprocate in the way you would wish. 'Uh... I see you went back with your decision... That's fine, I guess, uh... If that's what you want. Although I can't say it gets me in the mood, sorry. If you wanna keep having fun with me, you gotta put in the effort. Maybe just think on what you'll be missing out.' It seems the werewolf is turned off by your change in looks, although he does not seem to have gone away yet.";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Apologize for not being cautious about your transformation.";
+				say "     ([link]N[as]n[end link]) - Excuse yourself.";
+				if Player consents:
+					say "     Guilt strikes you as you perceive the disappointment in Wyatt's eyes, and you are quick to apologize to him for your carelessness. 'Hm... If you really mean it, then maybe we can still fix that...' He approaches you slowly, locking his gaze on yours, then as you feel his touch above your shoulder, he pulls you to him, closer to that strong body covered in soft dark grey fur. 'Let's head over my bedroom. I'll give you what you need.' Before you know it, he has a strong hold of you as you are led to his private quarters...";
+					WaitLineBreak;
+					say "[WyattSpecialMtF]";
+				else:
+					say "     As it seems, Wyatt is not keen on having any fun with you looking the way you look, so you simply excuse yourself and leave. 'Oh, so that's it? You're just leaving? And here I thought we had something going on since that... Well, whatever. Just hope you're happier, at least.' He then says nothing more as you simply proceed to retreat.";
 		else:
-			if lastfuck of Wyatt - turns < 8:
-				say "     You make a move on Wyatt, but due to your recent exchange, he dismisses your advances. 'No, I'm not feeling like it. I already had enough. Try some other dude around here, they may be more than happy to take on your offer.'";
+			if player is female and breast size of player > 0:
+				if lastfuck of Wyatt - turns < 4:
+					say "     You make a move on Wyatt, but given your recent exchange, he dismisses your advances. 'Yeah, I'm sorry. We're fucking horny all the time, but even us werewolf brutes need some time to cooldown, you know... But you can come back later.'";
+				else:
+					say "     You make a move on Wyatt, and he seems more than receptive to you. 'Oh, so you wanna have some fun together, eh? I'm down. What's on your mind?'";
+					WaitLineBreak;
+					say "[WyattSexMenu]";
 			else:
-				say "     You make a move on Wyatt, which despite his preferences, seems to get him thinking. 'Well... You do seem nice enough and willing to make me feel good. I guess we can do something...'";
-				WaitLineBreak;
-				say "[WyattSexMenu]";
+				if lastfuck of Wyatt - turns < 8:
+					say "     You make a move on Wyatt, but due to your recent exchange, he dismisses your advances. 'No, I'm not feeling like it. I already had enough. Try some other dude around here, they may be more than happy to take on your offer.'";
+				else:
+					say "     You make a move on Wyatt, which despite his preferences, seems to get him thinking. 'Well... You do seem nice enough and willing to make me feel good. I guess we can do something...'";
+					WaitLineBreak;
+					say "[WyattSexMenu]";
 
 to say WyattSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Offer to blow him";
+	now title entry is "Compliment his body";
 	now sortorder entry is 1;
+	now description entry is "Show him appreciation";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer to blow him";
+	now sortorder entry is 2;
 	now description entry is "Give Wyatt a blowjob";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -986,7 +1035,9 @@ to say WyattSexMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Offer to blow him"):
+				if (nam is "Compliment his body"):
+					say "[WyattSexBodyWorship]";
+				else if (nam is "Offer to blow him"):
 					say "[WyattSexBlowjob]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -996,6 +1047,64 @@ to say WyattSexMenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+
+to say WyattSexBodyWorship:
+	say "     Looking over Wyatt's impressive physique, a thought crosses your mind as your eyes travel through his musculature, admiring every inch and corner of his mighty lean strength. The interest is evident in your gaze and the werewolf is quick to notice. 'Well, you've been looking at me for a while, is there anything you wanna say?' he asks, although you can tell the intentions behind his words as he gives you a teasing grin, bringing his paw-like hands over his hips and putting his muscular furred chest in full display. He even makes his pecs bounce with a great deal of amusement as he waits for an answer, noticing your eyes following the motions. When your focus finally returns, you tell him that you just think his body is quite attractive.";
+	say "     He raises his arms and brings his hands behind his head, giving your yearning sight a bit of muscle flexing to show off a bit more. 'Is that so? I couldn't tell by the way you're looking at me or anything...' his tone is clearly sarcastic, but the amusement in his expression leads you to believe he actually likes this";
+	if player is female and breast size of player > 0: [female scene]
+		say ". 'So you like muscular guys? Strong and lean like me? Bet these muscles would feel amazing around that pretty body of yours... Well, you've got something I like too,' he means your breasts, as his eyes also stare back at you. Just the idea of the confident beastman in front of you taking interest in your body makes you unexplainably bothered, leaving you to figure out if you either like it or not. You also think his loincloth is hanging a little higher than usual.";
+		WaitLineBreak;
+		say "     'Tell you what... I'll let you touch me if you let me touch you. And there's no backing away once you're within my reach... But don't worry, I'll treat you right. The way none of these brutes can do...' You exchange looks silently for a while after he finishes speaking, and the decision lies on you to, perhaps, enjoy a body worship session. You will give Wyatt something to play with too, judging by the way he so thirstily looking at your tits.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Readily approach him.";
+		say "     ([link]N[as]n[end link]) - Try to cut this out.";
+		if Player consents:
+			say "     There is no way you can resist such a handsome werewolf, especially when he is purposefully teasing you. In fact, you do not even give it much thought as your body begins to bring you closer, step after step. Wyatt only observes you moving, then slowly raises his arms once more. 'Come on, don't be shy. Take what you want.' As temptation takes the reins, you place your hands over the werewolf's biceps, which puts a grin of mischief in his muzzle. You get so distracted feeling up the bump of muscle that you barely notice him moving his hand over your chest, giving your breasts a firm, yet gentle, squeeze, followed by a sequence of rubbing that nearly gets you moaning. 'A deal's a deal,' he says, although you can tell this turns him on.";
+			say "     'Nice ones you've got... But as you were so hypnotized by my body, how about you rub it all over? It might earn you a [']little['] reward in the end.' You have little to say against the werewolf's suggestion...";
+			WyattSexBodyWorshipContinued;
+		else:
+			say "     You really only intended to compliment him, which led you to inadvertently let the whole situation escalate. As you realize this might get to something you do not want at the moment, you try excusing yourself and apologize Wyatt for the awkward moment. He drops the cocky attitude the minute you express discomfort. 'Oh, no worries... Maybe I misread your intentions and that's on me. Although... you can look at me anytime, I don't mind it at all,' he replies, smiling, as he still confidently stands, yet no longer explicitly teasing you with his body. 'Or perhaps some other time, then? Well, I don't intend to insist, but... I confess I'd like to spend some good time with you. Frankly, you're hot... And really nice...' His voice changes to a low, velvety and smooth tone at his last words.";
+			say "     He still hopes to change your mind, with smooth talk and bedroom eyes, while patiently awaiting any further words from you.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Change your mind and, even if hesitantly, step towards him.";
+			say "     ([link]N[as]n[end link]) - Keep your decision and excuse yourself.";
+			if Player consents:
+				say "     In your own defense, it is hard to resist such a handsome werewolf, especially when he is purposefully teasing you. In fact, you do not even give it much thought as your body begins to bring you closer, step after step. Wyatt only observes you moving, then slowly raises his arms once more. 'Come on, don't be shy. Take what you want.' As temptation takes the reins, you place your hands over the werewolf's biceps, which puts a grin of mischief in his muzzle. You get so distracted feeling up the bump of muscle that you barely notice him moving his hand over your chest, giving your breasts a firm, yet gentle, squeeze, followed by a sequence of rubbing that nearly gets you moaning. 'A deal's a deal,' he says, although you can tell this turns him on.";
+				WyattSexBodyWorshipContinued;
+			else:
+				say "     Deciding to keep your decision, you thank him for the compliment and excuse yourself once more, indicating him that you shall be leaving. He does not hide his disappointment, but makes no further attempts at convincing you. 'Alright, then. Thanks for coming by! You're a really nice sight to have any time of the day.' The werewolf then nods as you head somewhere else.";
+	else: [male scene]
+		say ". 'So you're into muscular guys, huh? Bet you wished you were this hot and lean... Or maybe you just like being handled like a good little bitch by a stronger dominant male.' Now, Wyatt is clearly provoking you, however, you cannot help but keep staring, the whole situation leaving you unexplainably bothered. 'You're just desperate to feel me up all over, ain't that right? Heh... I can't really judge you. All the other werewolves are so readily available to fuck anyone who offers on request... it gets boring after a while. So easy to get...'";
+		WaitLineBreak;
+		say "     He keeps putting on a show by flexing his bulging biceps while looking at you right in the eye. 'Although, seeing you looking at me like a sad puppy makes me feel bad... So I might let you touch me. Maybe you just need to get closer to a real man to realize you might better fit the role of a female... I mean to just give you something to consider, of course.' You exchange looks silently for a while after he finishes speaking, and the decision lies on you to, perhaps, enjoy a body worship session. Alternatively, you can just walk away, in case you do not like the tone of what is happening.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Readily approach him.";
+		say "     ([link]N[as]n[end link]) - Cut this out.";
+		if Player consents:
+			say "     There is no way you can resist such a handsome werewolf, especially when he is purposefully teasing you. In fact, you do not even give it much thought as your body begins to bring you closer, step after step. Wyatt only observes you moving, then slowly raises his arms once more. 'Come on, don't be shy. I know you wanna feel me up.' As temptation takes the reins, you place your hands over the werewolf's biceps, which puts a grin of mischief in his muzzle. 'Strong and solid, aren't they?' he asks, flexing them against your palms. 'I guess you could be a good [boygirl] for me and make sure I enjoy a nice massage. Bet you wouldn't want to waste such a generous offer...' he suggests, knowing you have little to say against it.";
+			WyattSexBodyWorshipContinued;
+		else:
+			say "     You really only intended to compliment him, which led you to inadvertently let the whole situation escalate. As you realize this might get to something you do not want at the moment, you try excusing yourself and apologize Wyatt for the awkward moment. He hears you and laughs, playing it cool even after you have expressed discomfort. 'That's alright, I'm happy to have given you something to remember, at least. I guess I'll see you around, then.' The werewolf then drops his pose, pats you on the shoulder and lets you leave.";
+
+to WyattSexBodyWorshipContinued:
+	WaitLineBreak;
+	say "     Being given green card to simply feel up the handsome wolfman means you can really just go all out. As you have given his biceps a good amount of rubbing, your hands begin to trail towards his furred chest. His pectoral muscles are quite sizable, not bodybuilder sized but still of a significant measure. They feel solid against your touch, but the soft fur, shorter and brighter in this section, improves this pleasant experience. Everytime he breathes in, you feel his chest expand, all while you keep rubbing his pecs. Eventually, you reach out for his nipples, which turn out to be somewhat sensitive to the werewolf. 'There's something you could do...' he speaks as you feel him reaching for the back of your head, slowly pulling you closer to his chest.";
+	say "     He does not stop it until your lips collide with the surface of one of his furred pecs, then led to that very same nipple you were teasing just a few moments ago. 'Just helping you free your hands...' The werewolf smiles as you bring your tongue into play, wiggling it across that sensitive nub as you proceed to move your hands across the sides of his torso. As any werewolf brute, he is big[if scalevalue of player > 3], even for you[end if], due to how well he takes care of his body. All those muscles had a nice mass overall, which you feel up at every corner while your lips remain planted on his pecs. You also give his abs a rub, noticing how popped and rock solid they are, ondulating your touch with every bump of muscle.";
+	WaitLineBreak;
+	say "     With your focus so taken by such a beautiful body, you take some time to notice movement happening through one of his arms. Between you and him is his hard cock, which you turn down to look at. He is jerking himself off as you worship him, and given how hard it looks, everything points towards that you are doing a good job. Soon enough, Wyatt gently pulls your face back to his pecs, wanting you keep licking at his nips. 'Keep up the good work, [mister]...' This is all the encouragement you need to do your very best at moving your tongue around them, feeling his deep breaths pushing against your mouth while your head keeps locked between that large slab of muscle and the thick paw-like hand.";
+	if player is female and breast size of player > 0:
+		say "     'I could breed you all fucking day... Make you mine forever. Fuck, I know I want to...'";
+	else:
+		say "     'I could almost fuck your ass, [boygirl]... Maybe I will, if you keep being this well-behaved...'";
+	WaitLineBreak;
+	say "     Amidst his lusty words, he hastens his movements, jerking faster and faster. You think he might be getting closer, and your hands cannot have enough of that hot body, continuing to rub him all over while you are still stuck sucking on his chest. 'Yeah, worship me... You wanted it, and now you have it...' It comes to a point you also feel his entire body moving as he strokes so fast and hard, breathing deep and moaning lowly. You feel the pressure on the back of your skull disappearing as Wyatt brings his hand over his, and unsure if by a product of lust or sheer willingness to please in any way, you move your face over his furred armpit. His cock throbs compulsively then, his abs harden and he gets a bit louder, all a sign that you must have just done something he really, really likes.";
+	say "     'Fuck...! I'm gonna c-...! A-aah...!' the werewolf moans as he shoots his load right across you, his spurts of thick lupine cum ending up in the floor at a significant distance from where you both are standing. They are a significant amount, and his climax lasts for almost a full minute. He can barely keep standing as his legs bend, his fists clench, his whole body tenses up and he nearly begins howling. 'Oh fuck... I made a mess... Wasn't expecting this to turn me on so much. Shit, I better clean it up before someone comes by...' He takes a few last deep breaths as he squeezes the last drops out of his cock, contemplating the next minutes he will spend trying to clean the floor.";
+	WaitLineBreak;
+	if player is female and breast size of player > 0:
+		say "     'Thanks, hottie. That was fucking hot... I promise that one of these days I'll pay you back. You're not gonna want to leave...' he teases, giving you a wink and light tap on your butt while you are within his reach. It is probably for the best to leave Wyatt to his cleaning before someone, indeed, comes by and sees all this mess.";
+	else:
+		say "     'You're off the hook for now, [mister]... But keep staring at me like that and I might have to do something about it. I might be straight, but a hole's still a hole...' He shows you such a predatory glare that it gives you the chills, and suddenly you are not sure if this arouses or absolutely terrifies you. Still, you nod to him and decide to leave him be, as he has a lot of cleaning to do.";
+	NPCSexAftermath Wyatt receives "Other" from Player;
 
 to say WyattSexBlowjob:
 	say "     As you wonder what you would like to do with the athletic werewolf brute, you consider asking him if he would like to simply get blown, since you feel like giving him a blowjob.";
@@ -1026,34 +1135,6 @@ to say WyattSexBlowjob:
 	NPCSexAftermath Player receives "OralCock" from Wyatt;
 
 Section 3 - Events
-
-[Jett stops the player from leaving the first time]
-instead of going up from Lair Of The Lupines Pit while Resolution of Discover The Werewolves Den is 0:
-	say "     As you try to sneak through this hub, which leads deeper into a dark passage that you suppose could be an exit, you hear movement coming in your direction. Quickly, you start glancing around for a place to hide, but when you can finally react, it is too late. A strong, masculine and rough voice speaks to you, coming from the biggest werewolf brute you have ever seen, standing right in front of you and keeping you from leaving. 'Now, now... where do you think you're going?' he asks, crossing is very muscular arms in front of his chest and looking down on you with a grin on his lupine muzzle, wagging his fluffy tail slowly behind his monstrous legs. The sheer size of his furred sheath is almost terrifying, with how massive it is, and you can smell him from here, an intoxicating masculine scent that gets you weak on the knees.";
-	say "     In reality, his mere presence is making your blood flow, arousing you at each passing second. You try to shake that feeling away as your heart races faster, excitement fueling your body from every angle and inch, tempting you to drop your chance at escaping this place, and from the looks of the huge werewolf brute in front of you, he knows exactly what effect he is having on you. 'And here I was thinking my comrades['] hospitality was so unmatched nobody ain't leaving our humble abode... I guess not everyone shares this sentiment.' You instantly feel apologetic, even without any real reason to be, but suddenly, you feel unworthy of his generosity. It is quite difficult to think clearly when he smells this good, but you have enough resolve to focus on not begging him to ravage you right in this spot and, instead, converse with him.";
-	WaitLineBreak;
-	say "     You try to explain how you came to be here, that some werewolf brought you here after you faced one in the wilderness, and since then, you have been fucked by plenty of them so many times that you lost count. He hears you, and while he looks intimidating, he does not look hostile, actually paying attention to you. 'My boys know how to enjoy themselves, that's for sure. Usually, however, any slaves they capture stay in the oubliette until they're left with nothing in their brains. In all honesty, it bores them, that's why they keep bringing in new people. Now, you don't really have to stay, although you haven't started begging for my dick just yet. You've got more resolve than most, heheh...'";
-	say "     The massive werewolf gives the base of his sheath a little scratching, which makes it dandle heavily between his legs. He must be the hungest of them all, without a doubt. As your eyes laid on it for quite some time, he chuckled as he noticed you staring directly at his crotch. 'If you do stay, however, I'll let you play with it. If you manage to not turn into a brainless little slut afterwards, I'll even adopt you as my personal servant. If you do lose your mind, though, it's just sex slave for you. I imagine you wouldn't mind either...' His grin widens, but he then returns to a more serious tone, once more crossing his arms and no longer teasing you for entertainment.";
-	WaitLineBreak;
-	say "     'Alright, enough fooling around. I'm Jett, the alpha of the pack. You wanna leave, you're free to do so, as long as you keep the location of this place a secret. I'm not as pleasant when people fuck with me. If I've got to make someone pay for betraying me, they'll wish they had thought twice before being such fools. I'm sure you can tell I can rip anyone in half with these...' he then flexes both his arms, biceps as massive as your whole head, maybe even a little bigger than that. 'Can always squeeze them between my quads if my arms won't do the job, heheh... In short, Jett will be your best friend if you behave and follow the rules, but if you double-cross him... You're in for a lot of pain. So, remember that, and you'll be fine.'";
-	say "     Nodding at his declaration, he then gives you a friendlier smile. 'Good thing you understand. There's [bold type]another rule when nagivating through my lair. You gotta be naked[roman type]. No arguing there. My boys all hang out with nothing covering their sexy bodies, so you should follow their example. No smuggling weird shit either, and no picking fights with any of my lads. If you wanna fight someone, you'll fight me, and you won't like it. Got that too?' You nod again, to his pleasure. 'Good. Now, do as you please. I'll be here, keeping watch. You always have to get through me to enter, so [bold type]make sure you're all bare naked[roman type] before trying to walk inside.'";
-	WaitLineBreak;
-	say "     After he made sure you understood everything he said, he lets you pass, heading for a seat on a large couch that seems to have been chosen for his size, specifically.";
-	if player is submissive:
-		say "     [italic type]'But you do look like a very, very good [boygirl], so I'm sure you won't disappoint me. And if you keep me thinking that way about you, then I'll let you sit on my lap whenever you're in need of an alpha werewolf brute to take care of you... I'll even let you lean your head between these...' He gives you bedroom eyes as he widen his manspread, leaning back on his couch, giving out that confident attitude as he even makes his huge pecs bounce, seeming like they have a mind of their own. 'I don't make that offer to just anyone...'[roman type][line break]";
-		now Loyalty of Jett is 10;
-		WaitLineBreak;
-	say "     You are now free to get out or go back in, as long as you follow Jett's aforementioned rules. You also know how to get here, as you will note the place's location once you leave through the dark passage [bold type]west[roman type] of here.";
-	move player to Lair Of The Lupines Main Hub;
-	AddNavPoint Hidden Rock Cavern Entrance;
-	now Resolution of Discover The Werewolves Den is 1;
-	now Find The Werewolves Den is resolved;
-	connect LupinesPit;
-	move Jett to Lair Of The Lupines Main Hub;
-	move Elstan to Lair Of The Lupines Pit;
-	move Kirnon to Lair Of The Lupines Pit;
-	move Rodion to Lair Of The Lupines Kitchen;
-	move Wyatt to Lair Of The Lupines Common Room;
 
 Section 3-1 - Oubliette Scenes
 
@@ -1112,7 +1193,7 @@ to say WerewolfBruteLairCaptor:
 	else:
 		LineBreak;
 		say "     How could you refuse all those cocks?! Big, thick, juicy and, most importantly, all throbbing hard, yearning for your attention and all around you... Even the scent feels like a heavenly dream that only leaves you aroused at the thought of offering pleasure to so many at once. Your captor sees how hungrily you eye all his werewolf comrades and assumes you have made your decision. 'My pup wants to take them all like a champ? Well, boys... you're in luck. Looks like someone's insatiable!' He the pulls you away from his cock and beckons his comrades to come closer. 'C'mon, y'all! Make yourselves at home! Everyone gets some head!' The boys begin to approach with their cocks in hand, eager to put you to work.";
-		say "     As their manhoods come close to your face, your mouth instinctively opens to welcome them, the girthy red meats filling your mouth, each on their own turn, as you go by them one by one. You usually keep your hands on two, one on each, and your lips wrapped around another at the center. Occasionally, the werewolf whose cock is in your mouth begins to thrust enthusiastically, nearly making you gag as his sizeable erection invades your throat in such a rude manner... But, in all honesty, it does not bother you at all. The sexual energy surrounding the werewolf brutes is so high that it intoxicates you, making you thoroughly enjoy every second a cock is past your lips, the others pulsating in your grasp.";
+		say "     As their manhoods come close to your face, your mouth instinctively opens to welcome them, the girthy red meats filling your mouth, each on their own turn, as you go by them one by one. You usually keep your hands on two, one on each, and your lips wrapped around another at the center. Occasionally, the werewolf whose cock is in your mouth begins to thrust enthusiastically, nearly making you gag as his sizable erection invades your throat in such a rude manner... But, in all honesty, it does not bother you at all. The sexual energy surrounding the werewolf brutes is so high that it intoxicates you, making you thoroughly enjoy every second a cock is past your lips, the others pulsating in your grasp.";
 		WaitLineBreak;
 		say "     'Looks like my pup's gonna be a popular cocksucker, ain't that right?' says your captor, who proceeds to grab your head and pull it away from the cock you were sucking on, despite his mate's protests, without really caring much about it. 'Can't help but be a little slut for some werewolf cock, huh? he asks you, looking into your eyes before he slides his meatlog in your mouth, allowing you only to nod... Though you really did not think too much about it, either, 'Yeah... I know... Bet you'd love to stick around and be all my brothers['] cum dump. Let them fuck you by night, cup their growing balls by day, when they're asleep, making sure they build up some huge loads to put in you... Your dream life, right?'";
 		say "     'Fuck, bro. That talk's turning me on...' says one of his mates, whose cock you are actually grabbing, 'Yeah, you keep talking like that, we might just have to keep [ObjectPro] around for longer...' another says, stroking himself right besides you, 'And cum all over [ObjectPro], too...' says the other one who is getting a handjob from you. 'You want our loads, pup? Wanna earn yourself a coating of wolf juice? Heh... bet you do.' He does not wait for your answer and simply pulls his dick out of your mouth, taking matters into his own hands, quite literally. You are encouraged to stroke the other cocks as fast as you can, and within only a few seconds, the cum rain kicks in. 'Here it comes, pup!' shouts your captor, and before you know it, you are being utterly covered by ridiculous amounts of cum!";
@@ -1170,7 +1251,103 @@ to say WerewolfBruteLairKirnonAssWorship:
 	if Libido of Kirnon is 1:
 		now Libido of Kirnon is 2;
 
-Section 3-2 - Wyatt Special Scenes
+Section 3-2 - Jett Special Scenes
+
+[Jett stops the player from leaving the first time]
+instead of going up from Lair Of The Lupines Pit while Resolution of Discover The Werewolves Den is 0:
+	say "     As you try to sneak through this hub, which leads deeper into a dark passage that you suppose could be an exit, you hear movement coming in your direction. Quickly, you start glancing around for a place to hide, but when you can finally react, it is too late. A strong, masculine and rough voice speaks to you, coming from the biggest werewolf brute you have ever seen, standing right in front of you and keeping you from leaving. 'Now, now... where do you think you're going?' he asks, crossing is very muscular arms in front of his chest and looking down on you with a grin on his lupine muzzle, wagging his fluffy tail slowly behind his monstrous legs. The sheer size of his furred sheath is almost terrifying, with how massive it is, and you can smell him from here, an intoxicating masculine scent that gets you weak on the knees.";
+	say "     In reality, his mere presence is making your blood flow, arousing you at each passing second. You try to shake that feeling away as your heart races faster, excitement fueling your body from every angle and inch, tempting you to drop your chance at escaping this place, and from the looks of the huge werewolf brute in front of you, he knows exactly what effect he is having on you. 'And here I was thinking my comrades['] hospitality was so unmatched nobody ain't leaving our humble abode... I guess not everyone shares this sentiment.' You instantly feel apologetic, even without any real reason to be, but suddenly, you feel unworthy of his generosity. It is quite difficult to think clearly when he smells this good, but you have enough resolve to focus on not begging him to ravage you right in this spot and, instead, converse with him.";
+	WaitLineBreak;
+	say "     You try to explain how you came to be here, that some werewolf brought you here after you faced one in the wilderness, and since then, you have been fucked by plenty of them so many times that you lost count. He hears you, and while he looks intimidating, he does not look hostile, actually paying attention to you. 'My boys know how to enjoy themselves, that's for sure. Usually, however, any slaves they capture stay in the oubliette until they're left with nothing in their brains. In all honesty, it bores them, that's why they keep bringing in new people. Now, you don't really have to stay, although you haven't started begging for my dick just yet. You've got more resolve than most, heheh...'";
+	say "     The massive werewolf gives the base of his sheath a little scratching, which makes it dandle heavily between his legs. He must be the hungest of them all, without a doubt. As your eyes laid on it for quite some time, he chuckled as he noticed you staring directly at his crotch. 'If you do stay, however, I'll let you play with it. If you manage to not turn into a brainless little slut afterwards, I'll even adopt you as my personal servant. If you do lose your mind, though, it's just sex slave for you. I imagine you wouldn't mind either...' His grin widens, but he then returns to a more serious tone, once more crossing his arms and no longer teasing you for entertainment.";
+	WaitLineBreak;
+	say "     'Alright, enough fooling around. I'm Jett, the alpha of the pack. You wanna leave, you're free to do so, as long as you keep the location of this place a secret. I'm not as pleasant when people fuck with me. If I've got to make someone pay for betraying me, they'll wish they had thought twice before being such fools. I'm sure you can tell I can rip anyone in half with these...' he then flexes both his arms, biceps as massive as your whole head, maybe even a little bigger than that. 'Can always squeeze them between my quads if my arms won't do the job, heheh... In short, Jett will be your best friend if you behave and follow the rules, but if you double-cross him... You're in for a lot of pain. So, remember that, and you'll be fine.'";
+	say "     Nodding at his declaration, he then gives you a friendlier smile. 'Good thing you understand. There's [bold type]another rule when nagivating through my lair. You gotta be naked[roman type]. No arguing there. My boys all hang out with nothing covering their sexy bodies, so you should follow their example. No smuggling weird shit either, and no picking fights with any of my lads. If you wanna fight someone, you'll fight me, and you won't like it. Got that too?' You nod again, to his pleasure. 'Good. Now, do as you please. I'll be here, keeping watch. You always have to get through me to enter, so [bold type]make sure you're all bare naked[roman type] before trying to walk inside.'";
+	WaitLineBreak;
+	say "     After he made sure you understood everything he said, he lets you pass, heading for a seat on a large couch that seems to have been chosen for his size, specifically.";
+	if player is submissive:
+		say "     [italic type]'But you do look like a very, very good [boygirl], so I'm sure you won't disappoint me. And if you keep me thinking that way about you, then I'll let you sit on my lap whenever you're in need of an alpha werewolf brute to take care of you... I'll even let you lean your head between these...' He gives you bedroom eyes as he widen his manspread, leaning back on his couch, giving out that confident attitude as he even makes his huge pecs bounce, seeming like they have a mind of their own. 'I don't make that offer to just anyone...' You think he probably caught on your submissive instincts, and he may have actually really liked that.[roman type][line break]";
+		now Loyalty of Jett is 10;
+		WaitLineBreak;
+	say "     You are now free to get out or go back in, as long as you follow Jett's aforementioned rules. You also know how to get here, as you will note the place's location once you leave through the dark passage [bold type]west[roman type] of here.";
+	move player to Lair Of The Lupines Main Hub;
+	AddNavPoint Hidden Rock Cavern Entrance;
+	now Resolution of Discover The Werewolves Den is 1;
+	now Find The Werewolves Den is resolved;
+	connect LupinesPit;
+	move Jett to Lair Of The Lupines Main Hub;
+	move Elstan to Lair Of The Lupines Pit;
+	move Kirnon to Lair Of The Lupines Pit;
+	move Rodion to Lair Of The Lupines Kitchen;
+	move Wyatt to Lair Of The Lupines Common Room;
+
+Table of GameEventIDs (continued)
+Object	Name
+JettDominance	"JettDominance"
+
+JettDominance is a situation.
+ResolveFunction of JettDominance is "". Sarea of JettDominance is "Nowhere".
+
+Section 3-3 - Rodion Special Scenes
+
+Table of GameEventIDs (continued)
+Object	Name
+RodionEvents	"RodionEvents"
+
+RodionEvents is a situation.
+ResolveFunction of RodionEvents is "". Sarea of RodionEvents is "Nowhere".
+
+to say RodionTalkJettGift:
+	now RodionDoneTalking is true;
+	say "     As you remember one of your conversations with Rodion about Jett, the alpha werewolf, regarding a gift he would like, you decide to ask him more about that. The burly werewolf chuckles and smiles at your question, enthusiasm visible in his eyes. 'Oh, so you do want to make Jett like you, is that right? Hah, well! It is true, I can help you.' He then stops what he is doing and leads you over to a counter in the deepest corner of the kitchen, and you get the feeling you are about to prepare some food with him. However, he only turns to you and begins to talk. 'There is one type of cake that Jett never refuses when presented. I must dare say, it is the only one he cannot resist. Would you please close the door as I make preparations?'";
+	say "     Surely, a cake would require some ingredients to be placed on the counter for use. Though, you are wondering why he did not close the door before moving all the way to this side of the kitchen. Perhaps you should just [bold type]go close the door[roman type]? Or did [bold type]you want to take care of something else[roman type] before committing to this?";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Go close the door.";
+	say "     ([link]N[as]n[end link]) - Excuse yourself and leave.";
+	if Player consents:
+		LineBreak;
+		say "     By his request, you nod to him and let him know that you shall, indeed, be closing the door for him. 'Thank you! This shouldn't take long to set up,' he says, smiling and nodding, as you turn your back and, with several steps, arrive at the door to close it. You do so discretely, as to not alert anyone else outside, just in case. The door is a bit heavy, though, so it takes you a while until you manage to fully close it. It now feels a bit stuck, but you should be able to open it back if you were not trying to be so careful, or just ask Rodion. He is a strong and burly guy, surely a heavy door would be no match for him. Speaking of him, he does not seem to be making a sound. You hear no cabinets nor any movement for a while, but anyway, you are done closing it, now it is time to turn back and...'";
+		say "     'Gotta get that door fixed sometime. Sorry about that!' says Rodion as your eyes finally land on him in such an unexpected sight. The burly werewolf brute has one of his legs on top of the counter with his bare and massive furry ass pointed towards you, all spread out and exposing his soft butthole. His fuzzy tail wags happily as he looks at you, holding his head with one hand on the counter as he beckons you to come. 'Thought I'd give you a personal demonstration. Don't be shy! It's alright to come closer...' You are not so sure this is the type of [']cake['] you were expecting, but since the opportunity presents itself... Do you [bold type]wish to go along with this[roman type] or should you just [bold type]tell him you have to be elsewhere?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Go along and approach Rodion's ass.";
+		say "     ([link]N[as]n[end link]) - Maybe you should just leave.";
+		if Player consents:
+			say "     Not minding where this is going, you walk towards Rodion as he answers with another big smile. You can only notice how huge his ass is when you finally get closer, so plump and massive, with each buttcheek popping out like fat bubbles. It is so round and soft, with the consistency of a powerful sizable ass and a perfect blend of muscle and fat. 'This is his favorite. Oh, and don't mind the size of mine, he doesn't discriminate. What counts is the intention, your willingness to provide him with something personal, putting yourself vulnerable for him... And giving him a tasty snack in the process.' You remain there, observing Rodion attentively as he speaks, your eyes following his buttcheeks bouncing up and down as he moves his ass teasingly.";
+			say "     With one hand, he grabs one of his asscheeks and spreads it further to the side, giving you an even clearer view of his hole. It looks very soft and receptive, and it even winks at you. 'He likes a good show too, so make sure you put on a really nice one. For the ladies, or if you just happen to have a pussy on you, just let him see how moist and juicy it is, as he will prefer to go for it. But for those without one, just show him he can own your ass and eat it for as long as he pleases. He has got such a long and nice tongue too, great reach... I got so excited I couldn't stop grinding my butt on his muzzle, wanting more of that skillful tongue in me...' As he continues speaking, his hole begins to throb in need...";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Give him a lick, then [']devour his cake['].";
+			say "     ([link]N[as]n[end link]) - Just thank him for the demonstration.";
+			if Player consents:
+				say "     You respectfully step closer to that marvelous ass, placing one hand atop one of his bubbly buttcheeks to give it a slow and steady rub. This, as a sign that you intend to approach him, makes the werewolf moan softly, and he makes no move to stop you either. Following your initial intention, you lean over your head between his buns, right on that warm area, putting your tongue out to press against his winking hole. Its softness shows how receptive his ass is, and he seems to have great control over it, enough to relax his anal muscles and allow your tongue to dig deeper inside. As you wiggle it, Rodion only moans in pleasure, mindlessly pressing his ass back against your face, as if beckoning you to continue.";
+				say "     Having received such a positive feedback, you carry on eating the burly wolfman's ass out, now fully committed to accept his offering, and place both hands on his buttcheeks. With your head properly tucked in between them, you provide Rodion a full experience of ass worship and rimming that just sets his cravings skyrocketing. His breathing gets immediately more intense as pleasure begins to overtake him, that sensitive pucker of his yearning more and more for your attention, and you do not let him down. By digging your tongue so deep inside him, licking at the inner walls of his butthole and pushing even further ahead, you manage to drive the cook insane with lust. He cannot help but jerk himself off, causing his hole to throb around your tongue as his prostate pulsates.";
+				WaitLineBreak;
+				say "     It does not take you a lot to realize this might be one of Rodion's favorite things, getting his ass eaten out so voraciously, and you make sure you do not disappoint. 'Fuck...' an almost whispering word escapes his lips amidst a moan, the werewolf barely able to hold himself against such an experience, one which you can clearly see that turns him on beyond anything. You really put on a lot of effort into devouring his ass by pressing your whole face against it, squashing your lips on that hole and pushing your tongue in, wiggling and flicking it around. Thanks to the immensely positive reception Rodion shows before your commitment, confidence prevails in you, causing you to feel like the best ass licker in town.";
+				say "     This is set to last for a considerable amount of time, as you follow up with lots of licking and butt massaging, causing Rodion to further lean himself over the counter so you can have even better access to his rear. His fluffy tail wags around excitedly at the pleasure he is receiving, though a fair bit above you so it does not brush against you constantly. He completely loses himself in the nearly a lusty stupor as he continues to stroke his own cock. 'Feels so fucking good... Ooh... P-please, don't stop...' he begs, and your gestures imply that you will not even consider stopping while that tasty grand ass is practically hugging your face. Instead, you lift his buttocks and get more of your mouth pushed against his soft hole.";
+				WaitLineBreak;
+				say "     The whole thing starts looking like you just have the cook's ass laying on top of your face, both of his legs having found their way up the counter as Rodion holds himself onto the wall at the end of it. He also wiggles and grinds his ass against your face, much alike how he said he did to Jett, although you think the big alpha had a much easier time managing this whole situation. With such enthusiasm, if he was actually sitting on your face, you would probably be in trouble, completely overwhelmed by his sheer size, strength and weight. But the circumstances, right now, actually help you, giving you the simple freedom of movement to continue eating his ass, getting a good taste of how his enormous buttcheeks would feel around your face.";
+				say "     'Fuck, I'm... Getting close... Pleeease, don't stop now...!' He picks up the pace then, and you fully bury your tongue inside his ass, to the very last inch you can push, and begin to wiggle and lick at his insides with as much enthusiasm as you can muster. This proves to be very effective as Rodion's moans increase in both frequency and volume, his ass now seriously grinding against your face, and then, his pucker begins to throb as he warns 'I'm cumming, fuck... Yes!' You dare not to slow down, not even one bit, as your tongue continues to wiggle as fast as you can make it, and you feel his orgasm with each throb of his anal ring. Rodion shoots his load all the way while your face is still filling the space between his buttocks.";
+				WaitLineBreak;
+				say "     He pants as the last drops leak from his dick, you finally pulling away and standing up to face the burly werewolf. 'Phew, that... That was really hot! Fuck, you're good at this...' Rodion then slowly gets off the counter and looks at the mess he has made, a little embarassed of the whole situation. 'I should probably clean this up before it dries, or... someone sees this! Doing this in the kitchen, of all places, I'm...' he stops talking, grabs a cloth and begins to clean up the cum, which now you get to see, and it was actually a lot. The cook keeps making sure there is no drop left on his counter, almost in an obsessive manner. You approach him and ask if he is alright, as he seems quite distressed...";
+				say "     'O-oh? I am, yes! I... I just don't know what came over me! I have no idea why I did that, I suppose I must've been-...' You then stop him and let him know that you actually enjoyed this, or you would not have taken the step to pleasure him like you did. He looks back at you and smiles after a while, seemingly calming himself down. 'Okay, maybe... Maybe I needed that. I'm glad you didn't think of it as inappropriate, even though it probably was... You know, most werewolves here are expected to be tops and I... I prefer the other way around. It messes me up when I don't manage to keep hold of myself... But thank you! You're really nice! We could probably do this again sometime... I-if you want.'";
+				WaitLineBreak;
+				say "     With the awkwardness out of the way, Rodion returns to his cheerful self. 'Alright, so... I guess you get the idea of what Jett likes the most, yeah? If you do this, then let me know how it goes! I'm sure he'll like it a lot!' Now that the quite hands-on demonstration of what to offer Jett is done, you have absolute certainty of what kind of [']cake['] Rodion meant. Perhaps [bold type]you could try this plan with the alpha werewolf to make him like you more[roman type], but you feel like [bold type]you have actually bonded with the burly werewolf cook[roman type] a little as well[roman type]. Only time will tell how this will develop.";
+				now Resolution of RodionEvents is 1; [Begins Rodion's Events]
+			else:
+				say "     The idea is clear and you get it, so you proceed to politely thank him. Rodion takes a moment to come back to himself as he hears you speak. 'Oh, right! Yeah, that's pretty much it!' he says, getting out of the counter and recomposing himself. 'Uhm... I got a little carried away there, I'll admit! But indeed, it should be everything you need to impress Jett, if you so wish. He loves eating a nice and big cake, yeah!' It seems that, translating what he just said, Jett appreciates a good amount of supple ass. In all honesty, it does not surprise you.";
+				say "     'Well, you seem like you have seen a lot of stuff out there, maybe you'll be successful once you wish to present him a gift like this. That is, if that's your intention, of course.' Perhaps [bold type]you now know how to try to make Jett like you more[roman type]. Rodion seems happy to have helped you in some way, even though his methods were a little excessively visual.";
+				now Resolution of RodionEvents is 99; [Terminates Rodion's Events]
+			now Resolution of JettDominance is 1; [Advances Jett's dominant path]
+		else:
+			say "     You tell him, without the intention to sound rude, that this is not exactly what you had in mind when he spoke of a cake and a gift. 'Oh! I... apologize!' he says, immediately recomposing himself, getting out of the counter and putting his apron back. 'I'm so sorry! I... It seems I've got the wrong message! Well, uh... This is sort of embarassing, really! I thought you'd like a personal demonstration on how to give Jett what he really likes, but... I, well, t-this is pretty much it, really. He loves eating a nice cake, yeah!' You cannot help but think that Rodion really seems embarassed that you refused his generous approach, but it seems that, translating what he just said, Jett appreciates a good amount of supple ass. In all honesty, it does not surprise you.";
+			say "     'Well, you seem like you have seen a lot of stuff out there, maybe you'll be successful once you wish to present him a gift like this. That is, if that's your intention, of course.' Perhaps [bold type]you now know how to try to make Jett like you more[roman type], but this whole situation was a little odd. You take note of what you learned and excuse yourself, thanking Rodion in the process... As awkward as it may have been.";
+			now Resolution of RodionEvents is 99; [Terminates Rodion's Events]
+			now Resolution of JettDominance is 1; [But still advances Jett's dominant path]
+		now Energy of Rodion is 3;
+	else:
+		LineBreak;
+		say "     You tell Rodion that you just remembered you had to take care of something before going further with this, since it might take some time and you want to make sure you are ready. He accepts your reasons wholeheartedly and nods. 'Oh, yes, it would take some time, so I understand if you have other responsibilities to attend to before we do this. I'll be happy to show you my cake another time then! Just let me know.' With that said, you finally excuse yourself and proceed to leave the kitchen.";
+
+Section 3-4 - Wyatt Special Scenes
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -1281,6 +1458,7 @@ to WyattSpecialVoyeurFemaleRoute:
 	say "     It feels like Wyatt is asking you to be his lover, though he does not want to pressure you on that matter. You tell him that is fine and that you shall give him an answer later, once you give it some thought. It is a rather odd request, though, as you have not known each other for that long, but the werewolf must be feeling quite lonely. With some words of comfort, you manage to maintain that smile on his face as you finish cleaning yourself from the mess he has made, getting ready to leave. 'You're leaving? Yeah, I should bring the husky girl back to the pit, she can't just stay here... But hey, I really enjoyed this. I hope we can... repeat it.'";
 	WaitLineBreak;
 	say "     You cannot deny that a part of your mind is telling you that you really want to repeat this, as the unexplainable desire that struck you before rises again at the mere thought of it. There was something odd about his scent when he was fucking you, almost addictive in its nature... But you must shake these thoughts away as you move to leave, saying goodbye to Wyatt.";
+	NPCSexAftermath Player receives "PussyFuck" from Wyatt;
 	now Resolution of WyattRomance is 1;
 
 to WyattSpecialVoyeurMaleRoute:
@@ -1343,6 +1521,7 @@ to WyattSpecialVoyeurMaleRoute:
 		say "     It feels like Wyatt is asking you to be his lover, though he does not want to pressure you on that matter. You tell him that is fine and that you shall give him an answer later, once you give it some thought and experiment with this new... body. It is a rather odd request, though, as you have not known each other for that long, but the werewolf must be feeling quite lonely, and he did just cause your gender to change. With some words of comfort, you manage to maintain that smile on his face as you finish cleaning yourself from the mess he has made, getting ready to leave. 'You're leaving? Yeah, I should bring the other husky girl back to the pit, she can't just stay here... But hey, I really enjoyed this. I hope we can... repeat it. The sex part, I mean.";
 		WaitLineBreak;
 		say "     You cannot deny that a part of your mind is telling you that you really want to repeat this, as the unexplainable desire that struck you before rises again at the mere thought of it. There was something odd about his scent when he was changing you, then fucking you, almost addictive in its nature... But you must shake these thoughts away as you move to leave, saying goodbye to Wyatt. It takes you a while to get used to how your body moves, but you are quick enough to adapt.";
+		NPCSexAftermath Player receives "PussyFuck" from Wyatt;
 		now Resolution of WyattRomance is 1;
 		TraitGain "Player Male to Female" for Wyatt;
 	else:
@@ -1350,5 +1529,54 @@ to WyattSpecialVoyeurMaleRoute:
 		say "     'Shit, I'm sorry... I... don't know what got into me... I-I didn't mean to force myself upon you...' You tell him it is alright, you would just prefer to keep your appearance, and if that does not work for him, it is fine. You were the one to walk up on him and behave inappropriately, in the first place. 'Yeah... Let's... just forget this happened, alright? I'm gonna take this husky back to the pit and... You should go, too.' With you both agreeing that you should just part ways for now, you proceed to say your goodbyes as you walk out of Wyatt's room.";
 		say "     Perhaps some things are just not meant to be.";
 		now Resolution of WyattRomance is 99;
+
+to say WyattSpecialMtF:
+	say "     The minute the werewolf pushes you into his bedroom, he closes the door behind you and proceeds to push you atop his bed. He takes his loincloth off at that moment, revealing the soft, but thick, furred sheath hanging between his strong thighs. 'Seems like you've been a bad girl... So I'm not going to be as gentle.' From a drawer he pulls, he also takes a bottle full of a creamy white liquid, which you know very well what it is. 'And something also tells me you just do this on purpose... Maybe you like when I pin you down under me and make you drink some random husky dude's cum. Maybe you love seeing your body regain its womanly curves, feeling that wet pussy return to its due place, then to get stretched and fucked by me just as if it was your first time.'";
+	say "     Then, Wyatt laughs as he walks up to you. Slowly, his body meets up with yours as he climbs on top of the bed, placing himself just above you, his knees on each side of your shape, properly pinning you down under him as his weight settles in. 'Well... It's funny how much I'm into that too. How I like seeing you becoming a beautiful woman just for me. So... I'll gladly make you turn into a girl... As many times as necessary... Over and over again. Maybe one day you'll realize that is your true form. Otherwise... Why would you keep coming back to me? You just can't help it, can you...?' His musky scent is now much stronger than before, already leaving you slightly lightheaded. 'I bet you look forward to the day I finally claim you as my very own personal fucktoy. Shaped to my likes. Perfected for my pleasure...'";
+	WaitLineBreak;
+	say "     As he seems to be done teasing you, the werewolf finally grabs the bottle of husky cum he kept with him, which is still at least three quarters full, and opens it, with the evident intent of making you drink its contents. The brute leans over on top of you, with more of his body keeping you pinned down, holds your head up and brings the bottle to your lips. Amidst all this, you can feel his throbbing shaft against your midriff, its warmth obviously clashing against your average body temperature. 'There's still a lot left in it. I'd say... you can have it all.' As he finishes speaking, a grin forms across his muzzle as he pours the husky cum into your mouth and looks in your eyes with evident lust. Your mind cannot even consider the possibility of refusing the brute's will, as you feel utterly subdued by him.";
+	say "     When your tongue makes contact with the creamy liquid, you begin to feel unexplainably ecstatic. It is not long until its saltiness beings to slowly travel down your mouth, and when the husky cum fills it, you proceed to swallow it. Wyatt is actually very careful with this as to not make you choke on it, turning this into an actual pleasant experience as you savor that seed's taste to its maximum. 'I gave it a little spice, this time. Make sure you get everything, right to the last drop...'";
+	WaitLineBreak;
+	infect "Husky Bitch";
+	say "     You begin to feel its effects in your body soon enough, but you still have a lot of cum to chug down. Wyatt keeps the bottle inclined so you can have more, the canine cum still steadily being poured into your mouth...";
+	WaitLineBreak;
+	infect "Husky Bitch";
+	say "     As the transformation gradually takes place, your lust spikes drastically the more you drink, which in turn also arouses the werewolf...";
+	WaitLineBreak;
+	infect "Husky Bitch";
+	say "     'Only half way to go now...' he says, already mindlessly stroking himself while holding the bottle with one hand. There is a fiery, unexplainable desire for his cock hitting you all of the sudden...";
+	WaitLineBreak;
+	infect "Husky Bitch";
+	say "     You yet continue to drink it diligently, just as you are told, your body remaining receptive to the changes... And you are just feeling more and more horny... Its taste is so addictive...";
+	WaitLineBreak;
+	infect "Husky Bitch";
+	say "     'What a good girl! You're almost done... Come on, just a little more...";
+	WaitLineBreak; [To avoid Latex TF and to reaffirm normal female husky infection. Also to remove cock and add a vagina, in case the previous infections don't make that happen]
+	now FaceName of Player is "Husky Bitch";
+	now Face of Player is "slim, feminine muzzle and large, perky ears over a canine";
+	now BodyName of Player is "Husky Bitch";
+	now Body of Player is "that of a bipedal dog, with digitigrade legs and paw-like hands";
+	now SkinName of Player is "Husky Bitch";
+	now Skin of Player is "[one of]softly furred[or]densely furred[or]white-furred[at random]";
+	now TailName of Player is "Husky Bitch";
+	now Tail of Player is "You have a long and fluffy dog's tail swaying behind you";
+	now Cock Count of Player is 0;
+	now Ball Size of Player is 0;
+	now Cock Length of Player is 0;
+	now Cunt Count of Player is 1;
+	now Cunt Depth of Player is 10;
+	now Cunt Tightness of Player is 3;
+	now Breast Size of Player is 4;
+	now Nipple Count of Player is 4;
+	say "     You do not even realize that you have reached the end of the bottle's contents until nothing more drops in your mouth, instead having to see Wyatt putting it away with a huge smile on his face as he sees your new form before him. 'That's more like it. Back to being a beautiful husky girl for her werewolf man.' he exclaims, immediately pressing his dong between your legs and your newly acquired pussy, already craving for its first cock. 'I'm fucking throbbing...' the werewolf moans, pushing his large cock against your wet curls as you feel his hands over your breasts, gently squeezing and rubbing them all over. His scent is so powerful, so great, that you practically beg him to enter you with your body language, moaning helplessly at his touch. This really excites him, until he finally pushes his cock into you, slowly and carefully, as he releases a grunt of joy.";
+	WaitLineBreak;
+	say "     The brute, with his large girth, pushes your curls open in a delightful stretch, inch by inch burying more of his length inside you. It is evident that the lean werewolf is extremely turned on by you, and perhaps even more with the whole situation that preceded your transformation, putting on all the effort he can muster to provide you as much pleasure as possible. He keeps you trapped in his arms, his sexual desire taking the reins, further emphasized by each throb his manhood gives every time he licks your face. No a single word is shared between you two, only his thrusts against your sex as he feels your pussy wrapped around more and more of his cock.";
+	say "     Every moment he is inside you is passionate and fiery, though his gentle manners drop as your pussy grows accustomed to the intrusion. With every thrust comes a harder and deeper one, progressively picking up the pace as the werewolf becomes more assertive in his moves. You feel that large cock of his in its hardest state, pulsating inside you, going back and forth with persistence and force, a vigor Wyatt shows during the entire time. With deep thrusts he fills you with his girth, pushing as much as he can of his member inside you, never letting go of you. His heartbeat joins yours as his hulking furred body tightens yours in his grasp, fucking you even harder, even faster...";
+	WaitLineBreak;
+	say "     You can tell the male is so aroused that his entire focus shifts towards the insides of your womanhood, quivering around his sizable dick as he continues to fuck you. The lust overtaking you, clouding your every thought and judgement, only drives you towards your orgasm as the werewolf carries on, his manhood throbbing excitedly at the sight of your climax. He looks at you with the happiest smile as you only squirm and quiver in utter bliss, still feeling his hard meat inside you, and you absolutely cannot help it. Your erogenous regions feel so delightfully sensitive that everytime he rubs your breasts or his cock gives out a throb and moves a mere inch, you feel overwhelmed with pleasure.";
+	say "     Seeing you so lost in it greatly arouses the werewolf, who then is startled by several consecutive throbbings that his cock begins to give. 'Grrr... I wish I could breed you, but... F-Fuck!' He hastily pulls his cock out of you and, within nearly a fraction of seconds, he blows his load with so much force it rains all over your body in several spurts. You think some of it might have flown over your head and hit the wall, and a glance would confirm your suspicions. Wyatt cums so much and so hard that you are given a full body coating of the stuff, his orgasm lasting close to a full minute. He then only remains there, panting, his cock still hard and leaking its last drops, on his knees above you and atop the bed.";
+	WaitLineBreak;
+	say "     'Well, fuck. That was fun! Just... be careful with whom you fuck with. While this is fun, it's kind of a drag to milk a husky dude for that much cum so often. And I do prefer fucking you looking like this. A perfect, hot girl ready to be put in bed and fucked senseless.' As the thrill of sex ends, you see that Wyatt seems to have returned to his usual self with a big smile on his muzzle. He even helps you get all cleaned up and ready to return outside, but not before giving you a long, deep and passionate kiss against the wall right next to the door. 'Make sure you keep coming back. You're always fun to hang out with. And fuck... Hard and deep...' he ends, shooting a wink at you as he gives your butt a little playful slap.";
+	NPCSexAftermath Player receives "PussyFuck" from Wyatt;
 
 Lair Of The Lupines ends here.
