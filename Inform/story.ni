@@ -804,7 +804,7 @@ Include Gordon by Rikaeus.
 Include Gregory by Wahn.
 Include Gryphon Characters by SgtPepper234.
 Include Gus by Hyliad.
-Include Gwen by Stripes.
+Include Gwen by Prometheus.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
@@ -861,7 +861,7 @@ Include Mary by Luneth.
 Include Master Mind by Stripes.
 Include Master-of-Hell-Quest by Luneth.
 Include Matriarch NPC by Stripes.
-Include Meredith by Stripes.
+Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
@@ -938,7 +938,7 @@ Include Toron by Gherod.
 Include Tristian by Verath.
 Include Urik by Wahn.
 Include Val by Wahn.
-Include Vanessa by Stripes.
+Include Vanessa by Prometheus.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
 Include Voria by Kurainyx.
