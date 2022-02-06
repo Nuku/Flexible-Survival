@@ -255,10 +255,10 @@ name	desc	weight	object
 
 nerdy mouse fur is a grab object. It is temporary.
 Usedesc of nerdy mouse fur is "[NerdyMouseFurUse]".
-nerdy mouse fur is infectious. Strain of nerdy mouse fur is "Nerdy Mouse".
 
 to say NerdyMouseFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Nerdy Mouse";
 
 instead of sniffing nerdy mouse fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

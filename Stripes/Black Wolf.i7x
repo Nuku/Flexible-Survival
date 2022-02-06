@@ -217,12 +217,11 @@ name	desc	weight	object
 
 black wolf fur is a grab object.
 It is temporary.
-black wolf fur is infectious.
-Strain of black wolf fur is "Black Wolf".
 Usedesc of black wolf fur is "[black wolf fur use]";
 
 to say black wolf fur use:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Black Wolf";
 
 instead of sniffing black wolf fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

@@ -38,6 +38,7 @@ to say Smilodon Male Wins:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Sabretooth_naked_icon;
 		if HP of Player > 0: [player submitted]
 			if player is submissive:
 				say "     As you drop to your knees and raise your hands up in surrender, the big feline retracts his claws and approaches you, putting a paw over your chin and pulling you close to his soft fur, nearly pinning you down under his big body as he forces you to sit on the ground and below him. 'Skipping the fighting, then, isn't it? Good [boygirl]... I'm a catman made for love, not for war.' he says, giving the side of your waist a tap. 'Now come touch me... I know you want to.' he adds, grabbing your hand and rubbing it across his chest, having you feel his soft fur under your palms. 'Petting the cat is much better than fighting him, yeah? Bet you want him to give you a big treat...' adds the smilodon with a predatory grin, as things are about to get dirtier...";
@@ -92,6 +93,7 @@ to say Smilodon Male Loses:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Sabretooth_naked_icon;
 		say "     After sweat and pain following your intense fight with the large feline, you seem to have finally brought him to his place, as he throws the fight and stops attacking you. 'Grr... You're strong. Gave me a beating, there...' he says, and you realize he is actually struggling with moving. 'I gotta take a rest, here...' He takes a seat against a nearby tree, with his legs spread to each side and feet resting against the dirt, exposing his sizable privates directly into your sight. You can swear his balls just bounced and his sheath pulsed as he looks at you with bedroom feline eyes. 'I suppose you ain't bitch material at all, but maybe we can be buds? I'm really sore right now, so you can go... or stay with me a while. I promise I'm good company...' he says, trying to tease you with a very unsubtle flashing of his slowly growing erection...";
 		LineBreak;
 		say "     [bold type]Do you want to join the male smilodon?[roman type][line break]";
@@ -147,6 +149,7 @@ to say Smilodon Male Desc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Sabretooth_clothed_icon;
 		say "     In front of you stands a large feline male, with an appearance resembling a smilodon from the ice age, except this one's standing on two strong legs supporting his bulky furred body, very much like a werebeast. He sports a pair of long fangs coming out of his mouth, menacingly sharp, emphasizing the fierce look in his feline and fuzzy muzzle, and his muscular body is covered in golden fur with brown stripes and spots, only attaining a lighter color around his front torso. He also has a short brown mane coming from behind his head towards his lower back, and on his behind sticks out a small but fuzzy tail, barely moving. His equipment is quite sizable, with a thick sheath and a pair of hanging nuts that would make some males jealous, inevitably drawing your eyes in as he walks towards you intimidatingly.";
 		if player is not dominant and scalevalue of player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
 			if Lust of Ranfer < 2:
@@ -891,12 +894,11 @@ name	desc	weight	object
 
 smilodon male fur is a grab object.
 It is temporary.
-smilodon male fur is infectious.
-Strain of smilodon male fur is "Smilodon Male".
 Usedesc of smilodon male fur is "[SmilodonMaleFurUse]";
 
 to say SmilodonMaleFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Smilodon Male";
 
 instead of sniffing smilodon male fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

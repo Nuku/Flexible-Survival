@@ -465,12 +465,11 @@ name	desc	weight	object
 
 male wolf fur is a grab object.
 It is temporary.
-male wolf fur is infectious.
-Strain of male wolf fur is "Feral Wolf Male".
 Usedesc of male wolf fur is "[MaleWolfFurUse]";
 
 to say MaleWolfFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Feral Wolf Male";
 
 instead of sniffing male wolf fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
