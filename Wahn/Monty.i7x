@@ -144,6 +144,7 @@ instead of conversing Monty:
 	say "[MontyTalkMenu]";
 
 to say MontyTalkMenu:
+	project Figure of Monty_clothed_icon;
 	Let TalkDone be false;
 	say "     [bold type]What do you want to talk about with Monty?[roman type][line break]";
 	now sextablerun is 0;
@@ -174,7 +175,7 @@ to say MontyTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Ask about things he's seen in the city";
 	now sortorder entry is 5;
-	now description entry is "Lean about what he's encountered out in the streets";
+	now description entry is "Learn about what he's encountered out in the streets";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Discuss the minotaur";
@@ -244,7 +245,9 @@ to say MontyTalkMenu:
 					say "[MontyTalk6]";
 				if TalkDone is false:
 					say "[MontyTalkMenu]";
-				wait for any key;
+					wait for any key;
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
@@ -650,12 +653,12 @@ Instead of fucking Monty:
 			now title entry is "Let Monty fuck your pussy";
 			now sortorder entry is 3;
 			now description entry is "Let the black soldier breed you";
-		[]
+		[
 		choose a blank row in table of fucking options;
 		now title entry is "Let Monty fuck your ass";
 		now sortorder entry is 4;
 		now description entry is "Let the black soldier fill your ass with his seed";
-		[]
+		]
 		choose a blank row in table of fucking options;
 		now title entry is "Finger Monty's ass";
 		now sortorder entry is 5;
@@ -964,6 +967,7 @@ to say MontySex9: [toy workout2 - out in the camp]
 	say "     With a wide smile on your face, you nod, then push your bundle forward against his chest so he can take it. Laughing out loud and shaking his head, Monty adds, 'God, the amount of crazy shit going on since this whole thing started is just mindboggling. Fine, fine...' With that said, he sets down the clothing on the desk, then starts to dress himself - not without letting out some sudden gasps and panting though, as one move or another makes the rubber toy up his ass shift a little and rub the soldier's insides. While pulling on parts of his uniform, he casually comments, 'You know, I was doing perfectly fine and making good progress 'transporting the sample' out of the city...'  Monty makes air-quotes as he says this and rolls his eyes, making it perfectly clear what he thinks of the situation going on in Camp Bravo. Blowing out his breath, he smirks at you and goes on, '...until [italic type]someone[roman type] got their fingers on my plug.'";
 	say "     'Still, I - uhm, don't mind how it worked out, in retrospect. Yeah, sure - I'm still having to follow insane orders from Major Peabrain, but... him proscribing 'extra training' for me has been a blast. Mostly thanks to your efforts, hah. Thanks for that, bro.' After the admission, he looks around for a second, then asks, 'So... Uhm, have you seen my boots?' Sheepishly, he runs a hand over his head and scratches the back of his neck. With a grin, you point him the right way, watching amusedly as he draws in a sudden breath when bending over to grab and slip into them. Then finally, he's ready. With a wave of your arm, you bid him to walk in front of you, moving back towards the unconventional back entrance of the office. This of course gives you a very nice view of his round ass, enticing even while hidden within his pants right now. Soon, you're inside the crashed bus, with Monty pausing at the back end of it. While he glances outside through the cracked windows, you can hear him murmur to himself under his breath, 'Relax, it's just a normal stroll through the camp. Nothing weird going on here, not at all.'";
 	WaitLineBreak;
+	project Figure of Monty_clothed_icon;
 	say "     Having made sure that no one is in sight, the black solder climbs out the shattered window as usual. Well, except for the fairly well-sized butt plug up his rear end right now, which shifts in position a little as he swings his leg up to exit the bus. Pressing his lips together tightly to suppress a moan, Monty pushes himself to get on with it. A moment later, you've both climbed onto the crate outside the bus, and from there onto the cracked asphalt of this parking lot turned military encampment. You smile at Monty and suggest a nice little round trip through the main throughfares of the camp. Raising his eyebrows as he looks at you, the soldier blows out his breath and replies, 'In for a dime, in for a dollar I guess. Off we go then.' With that said, he steels his face into not betraying anything and sets off at a brisk pace, with you following just a few steps behind. Besides the fact that he's moving a bit stiffly, you have to admit that the man is really doing quite well.";
 	say "     The path leads you between the rows of tents, passing a few soldiers along the way that Monty acknowledges but avoids talking to. His serious expression and determined stride appears enough to convince them that he must be on the way to perform some sort of order, allowing the two of you to make good progress through the camp. Just a little while later, your circuit is already three quarters over, having brought you to just passing the front entrance of Camp Bravo. Then it happens: A sudden, lust-filled bellow and its accompanying grunt of a soldier experiencing his first reaming by a huge minotaur dick echo through the camp, making Monty flinch in surprise. As he does so, the soldier hunk's inner muscles clench tight as he loses his concentration, then relax again - a little too much, as you can see the rounded base of the plug outlined on the seat of his pants.";
 	WaitLineBreak;
@@ -973,6 +977,7 @@ to say MontySex9: [toy workout2 - out in the camp]
 	say "     'I- I think we should get back, quickly. Don't think it'll go down fully, while you know what is up there,' the black man tells you somewhat tensely and then starts walking again, with you following along. Yet just as you are about to pass the second tent along the way, a voice rings out from inside. 'Oh hey, Monty! Can I ask you something?' Your companion pauses mid-step, then decides to step closer to the blond-haired soldier standing at the entrance of the tent. You think he wants to make it less likely for the other guy to look too closely at his hips. Then he asks, 'Sure, Darren. What's up?' The young man opens his mouth to say something, then pauses and throws you a look. 'Err... no offense, but it's kinda private. Could you give us a moment?' Monty nods to you in a plea to go along so he can get this over with, so you shrug and stroll away from the tent a little. Standing there alone, inside the camp right next to its entrance, you let your gaze wander from your left to the right, and see one of the soldiers guarding the entrance, Marc Orwell, not too far away, looking right at you.";
 	say "     As you start to wonder how long he's been there, his position providing a great viewpoint of this area of the camp, the broad grin spreading over his face tells you that the gay soldier must have seen it all. He throws you a playful wink, then strolls up to join you. 'Well, that looked like an interesting situation! Something sure had Monty all hot and bothered.' Marc smirks a little before he continues, 'Well, I've seen that kind of walk often enough, really. We both know what it is. Congratulations, hah!' Amicably giving your chest a light fist-bump in acknowledgment, he asks, 'Just how [italic type]did[roman type] you get him to open up? I thought our sexy hunk was straight as an arrow. He never even registered it when I gave him some... looks, in the communal showers. I mean, how could I not? That cock is to die for! And he's got a sweet ass too!'";
 	LineBreak;
+	project Figure of MarcOrwell_icon;
 	say "     [bold type]Marc seems friendly enough, and quite interested in Monty. Though with as promiscuous as he clearly is, you think it may be a good idea to say something now, if you're minded to establish some boundaries.[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Ask Marc nicely to give you some space. You want to see if you can convince Monty to do... more, than simply play around a bit.";
 	say "     [link](2)[as]2[end link] - Wink at him and say that he just needs to wait a little, as Monty might soon be a bit more open to recognizing other men's interest in himself.";
@@ -1013,6 +1018,7 @@ to say MontySex9: [toy workout2 - out in the camp]
 		say "You explain that Marc actually has been having an interest in him, circling like a very gay shark - but he doesn't have to worry, as you told the man to leave Monty alone. Eyes widening, the soldier by your side gives a little snort, then taps your side lightly with his elbow. 'Thanks. Good to have someone looking out for me.' He doesn't say any more, simply continuing on in his fast pace as he seems to want to get back quickly. ";
 	say "As he climbs into the bus you can hear him openly panting - not from exhaustion, but rather in arousal. Your trip wasn't long after all, but it sure seems to have been a workout for his self-control.";
 	WaitLineBreak;
+	project Figure of Monty_naked_icon;
 	say "     'Fuuuckk!' Monty groans loudly the moment he steps into the office building, his fingers flying to his crotch. Popping the button of his pants, he shoves them down, freeing the long and hard shaft of his erect cock to swing up and stand straight, flicking a long string of pre-cum through the air. 'Darren's a good buddy, but he's got the worst timing! He wanted to talk about the weird feelings that his own preparation for minotaur duty brought on! He was a bit freaked out by it, and worrying about what'll happen when his time comes up. Man, and I had to listen to him go on and on while standing there with a humongous plug up my rear!' Reaching down to wrap a hand around his cock, Monty shakes his head. 'God, as he was stumbling over his words to describe finding a 'weird but good' spot in his ass, I could feel my own prostate throbbing against the toy. Really had to dig deep to give him some halfway intelligible advice.'";
 	say "     Blowing out his breath, he continues, 'Darren was painfully relieved to hear me say it's natural, and I took the first chance I got to get out of there! Will have to go back and have a proper talk with him when I'm not blue-balled as fuck, with my insides stretched wide.' Snickering as he shakes his head, the soldier moves one hand behind his back, gripping the base of the butt plug to pull on it, then thrusting it back inside. Monty clearly enjoys this more than a little bit, moaning loudly while playing with his rear, but at the same time, he can't seem to decide what to do with his other hand, as he switches back and forth several time between jerking his cock and fondling his balls. You watch the black man pleasuring himself for a moment, before he finally looks up and glances to the side, meeting your gaze. 'Uhm... could you give me a hand? I kinda need three at the moment.'";
 	WaitLineBreak;
