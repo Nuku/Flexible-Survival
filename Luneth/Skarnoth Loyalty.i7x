@@ -725,7 +725,7 @@ to say ThirdEventFinale:
 
 Section 4 - Final Event
 
-after going to Half-Renovated Room while (Skarnoth is booked and Loyalty of Skarnoth is 12 and "Unchained" is listed in Traits of Skarnoth and SkarnothMasterSlave is 3):
+after going to Half-Renovated Room while (Skarnoth is booked and Loyalty of Skarnoth is 13 and "Unchained" is listed in Traits of Skarnoth and SkarnothMasterSlave is 3):
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     Walking into the spare room, you see a passed out Skarnoth just sprawled out on his throne. Slowly walking up to the demon as to not awaken just yet, you notice that the hellspawn must be having a [']very['] happy dream, well if the massive erection is anything to go by. Slowly reaching over with a smirk on your face, you touch his thick demon dick and enjoy the way that the slight amount of friction causes it to pulsate. Applying a bit more pressure causes Skarnoth to moan out in his sleep, oddly enough the word that he moaned out was your name. Leaning in close to his ear, you ask the demon what does he want you to do? 'Mmm I want you to use, I want to please you!' You smile at how much Skarnoth has grown from the... acquired taste that he used to be. 'You freed me [master].' That last comment catches you off guard and you remove your hand from the hellspawns morning wood.";
@@ -788,6 +788,7 @@ after going to Half-Renovated Room while (Skarnoth is booked and Loyalty of Skar
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+	now Loyalty of Skarnoth is 14;
 
 [to say SkarnothFourthEvent_FinalDrug01:
 [Alright this should involve feeding Skarnoth some bliss and go from a simple sexual lapdance to a more "extreme" version. this should also be the first introduction to the triplets getting horny while they watch you and their former master]
@@ -809,7 +810,7 @@ to say SkarnothFourthEvent_FinalDance01: [this one will be a bit more traditiona
 
 Section 5 - Final Event Dom Skarnoth
 
-after going to Half-Renovated Room while (Player is male and Skarnoth is booked and Loyalty of Skarnoth is 12 and "Unchained" is listed in Traits of Skarnoth and SkarnothMasterSlave < 1):
+after going to Half-Renovated Room while (Player is male and Skarnoth is booked and Loyalty of Skarnoth is 13 and "Unchained" is listed in Traits of Skarnoth and SkarnothMasterSlave < 1):
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     Stepping into the half-renovated room, you're quickly ambushed from the side and pushed up against one of the walls. A smooth yet rough voice like crushed velvet begins to whisper into your ear, 'Well what do we have here, has my little [master] come to check up on his property?' While Skarnoth's words coincide with his position as your slave, his tone however tells quite a different story. Unfortunately your body begins to react to the demon's close proximity before you're able to find your voice, 'What's the matter [master]?' Feeling one the hellspawn's clawed hands grab firmly around your hip, you have no doubt that the male knows [']exactly['] what he's doing. In an attempt to gain control of the situation, you finally manage to speak up and with a quiver in your voice you inform Skarnoth that it's your job to check on your slave from time to time.";
@@ -903,6 +904,7 @@ after going to Half-Renovated Room while (Player is male and Skarnoth is booked 
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+	now Loyalty of Skarnoth is 14;
 
 to say SkarnothFourthEvent_FinalDom01: [Lust - get the coon all turned on as skarnoth uses the female]
 	say "     The glow that surrounds Skarnoth's body starts to seep from his form and pours into you. As his aura enters you,";
