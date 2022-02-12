@@ -482,12 +482,11 @@ name	desc	weight	object
 
 werewolf brute fur is a grab object.
 It is temporary.
-werewolf brute fur is infectious.
-Strain of werewolf brute fur is "Werewolf Brute".
 Usedesc of werewolf brute fur is "[WWBruteFurUse]";
 
 to say WWBruteFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Werewolf Brute";
 
 instead of sniffing werewolf brute fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

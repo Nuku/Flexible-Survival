@@ -95,8 +95,6 @@ when play begins:
 
 to prepforfight:		[Do all the pre-fight setup, reset values, and then display the image (if any) and the monster description]
 	choose row MonsterID from Table of Random Critters;
-	if Name entry is not listed in EncounteredEnemies of Player:
-		add Name entry to EncounteredEnemies of Player;
 	now combat abort is 0;
 	setmongender 0; [clear monster gender]
 	now skipretaliate is false;
@@ -744,6 +742,8 @@ Chapter 6 - Flee
 
 This is the flee rule:
 	choose row MonsterID from the Table of Random Critters;
+	if Name entry is not listed in EncounteredEnemies of Player:
+		add Name entry to EncounteredEnemies of Player;
 	if rubber sneakers are equipped:
 		LibidoBoost 20;
 		if Libido of Player >= 100:
@@ -1221,6 +1221,8 @@ Part 8 - Loss and Victory
 
 to win:
 	choose row MonsterID from Table of Random Critters;
+	if Name entry is not listed in EncounteredEnemies of Player:
+		add Name entry to EncounteredEnemies of Player;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
@@ -1401,6 +1403,8 @@ to win:
 
 To lose:
 	choose row MonsterID from the Table of Random Critters;
+	if Name entry is not listed in EncounteredEnemies of Player:
+		add Name entry to EncounteredEnemies of Player;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;

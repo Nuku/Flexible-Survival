@@ -45,7 +45,8 @@ Figure of CentaurStallion_soft_icon is the file "CentaurStallion_soft.jpg".
 Figure of CentaurMare_icon is the file "CentaurMare.jpg".
 Figure of Collie_clothed_icon is the file "Collie_clothed.jpg".
 Figure of Collie_naked_icon is the file "Collie_naked.jpg".
-Figure of Cougar_icon is the file "Cougar_ig.jpg".
+Figure of Cougar_clothed_icon is the file "Cougar_clothed.jpg".
+Figure of Cougar_naked_icon is the file "Cougar_naked.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
 Figure of Donkeywoman_clothed_icon is the file "Donkeywoman_clothed.jpg".
@@ -160,6 +161,8 @@ Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of Saber_Kitty_icon is the file "Saber Kitty.jpg".
 Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
 Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
+Figure of Sabretooth_clothed_icon is the file "Sabretooth_clothed.jpg".
+Figure of Sabretooth_naked_icon is the file "Sabretooth_naked.jpg".
 Figure of SeaDragoness_NSFW_icon is the file "Sea Dragoness_NSFW.jpg".
 Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
@@ -1251,7 +1254,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Colleen_clothed"	Figure of Colleen_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Colleen_naked"	Figure of Colleen_naked_icon	"SteppeCrow"	g-white	"normal"
 "Corbin_face"	Figure of Corbin_face_icon	"SineAlas"	g-white	"normal"
-"Cougar"	Figure of Cougar_icon	"catnamedfish"	g-white	"normal"
 "Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
@@ -1502,6 +1504,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-white	"normal"
 "Monty_postcombat"	Figure of Monty_postcombat_icon	"Obieblu"	g-white	"normal"
 "Monty_face"	Figure of Monty_face_icon	"Obieblu"	g-white	"normal"
+"Monty_clothed"	Figure of Monty_clothed_icon	"Obieblu"	g-white	"normal"
 "Monty_naked"	Figure of Monty_naked_icon	"Obieblu"	g-white	"normal"
 "Moreau_face"	Figure of Moreau_face_icon	"Lytta"	g-black	"normal"
 "Moreau_hard"	Figure of Moreau_hard_icon	"Lytta"	g-black	"normal"
@@ -1559,6 +1562,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Saber Kitty"	Figure of Saber_Kitty_icon	"Vashaa"	g-White	"normal"
 "Sabretooth_hard"	Figure of Sabretooth_hard_icon	"Vashaa"	g-White	"normal"
 "Sabretooth_soft"	Figure of Sabretooth_soft_icon	"Vashaa"	g-White	"normal"
+"Sabretooth_clothed"	Figure of Sabretooth_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Sabretooth_naked"	Figure of Sabretooth_naked_icon	"SteppeCrow"	g-white	"normal"
 "Sally"	Figure of Sally_icon	"Furball"	g-white	"normal"
 "Sand Man"	Figure of SandMan_icon	"Rastear"	g-black	"normal"
 "Sandy"	Figure of sandy_icon	""	g-white	"normal"
@@ -1580,6 +1585,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Shadow Beast Male"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
 "Smooth Collie Shemale_clothed"	Figure of Collie_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Smooth Collie Shemale_naked"	Figure of Collie_naked_icon	"SteppeCrow"	g-white	"normal"
+"Cougar_clothed"	Figure of Cougar_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Cougar_naked"	Figure of Cougar_naked_icon	"SteppeCrow"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"
@@ -2206,7 +2213,8 @@ carry out artistcredits:
 	say "     Cerberus by Anonymous[line break]";
 	say "     Cheetah Woman by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Chocolate Lab by SparklePens @ furaffinity.net[line break]";
-	say "     Cougar by catnamedfish @ furaffinity.net[line break]";
+	say "     Cougar (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
+[	say "     Cougar by catnamedfish @ furaffinity.net[line break]";]
 	say "     Dark Elf by Nokturnalkittie @ https://www.furaffinity.net/user/nokturnalkittie/[line break]";
 	say "     Demon Brute by Lay @ y-gallery.net[line break]";
 	say "     Doberman Cop by TheRedAngel @ furaffinity.net[line break]";
@@ -2278,7 +2286,8 @@ carry out artistcredits:
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
-	say "     Sabretooth by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sabretooth (feral) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sabretooth (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
 	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";

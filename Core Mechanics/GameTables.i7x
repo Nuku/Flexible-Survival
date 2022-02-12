@@ -39,7 +39,25 @@ Table of JournalNotes
 Date(number)	Note (text)
 with 1000 blank rows
 
-Part 5 - ID Tables (for the Export/Import System)
+Part 5 - Slut Storage
+
+[PaymentType 0 = Mortimer harvests fluids]
+[PaymentType 1 = Player has to pay 1 bottle/week]
+
+Table of StoredSluts
+Name(text)	PaymentType(number)	Resistant(truth state)	Sluttyness(number)
+with 1000 blank rows
+
+[
+	Choose a blank row from Table of StoredSluts;
+	now name entry is "Name";
+	now PaymentType entry is 1;
+	now Resistant entry is false;
+	now Sluttyness entry is 1;
+]
+
+
+Part 6 - ID Tables (for the Export/Import System)
 
 [All character IDs - used for export/import system]
 Table of GameCharacterIDs

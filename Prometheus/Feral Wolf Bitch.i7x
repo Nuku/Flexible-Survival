@@ -445,12 +445,11 @@ name	desc	weight	object
 
 wolf bitch fur is a grab object.
 It is temporary.
-wolf bitch fur is infectious.
-Strain of wolf bitch fur is "Feral Wolf Bitch".
 Usedesc of wolf bitch fur is "[WolfBitchFurUse]";
 
 to say WolfBitchFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Feral Wolf Bitch";
 
 instead of sniffing wolf bitch fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

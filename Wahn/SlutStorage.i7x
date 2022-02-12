@@ -1,11 +1,23 @@
 SlutStorage by Wahn begins here.
 
 [ Hunger of Mortimer - number of bottles due]
+[ Energy of Mortimer - counting the days for payment]
 
 
 StoredSluts_Female is a list of text that varies.
 StoredSluts_Male is a list of text that varies.
 StoredSluts_Herm is a list of text that varies.
+
+an everyturn rule:
+	let Slut_PaymentsDue be 0;
+	repeat with X running from 1 to number of filled rows in Table of StoredSluts:
+		choose row X from the Table of StoredSluts;
+		increase Slut_PaymentsDue by PaymentType entry;
+	if Slut_PaymentsDue > 0 and (TimekeepingVar is 1 or TimekeepingVar is -7): [1+ sluts stored, midnight]
+		increase Energy of Mortimer by 1;
+		if Energy of Mortimer > 7:
+			now Energy of Mortimer is 1; [reset to starting a new count]
+			increase Hunger of Mortimer by Slut_PaymentsDue; [+1 bottle required for each slut that needs to be paid]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -118,7 +130,6 @@ instead of conversing Mortimer:
 	else:
 		say "[MortimerTalkMenu]";
 
-
 to say MortimerTalkMenu:
 	let TalkDone be false;
 	now sextablerun is 0;
@@ -217,11 +228,17 @@ to say Mortimer_FemaleSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Sarah" is listed in StoredSluts_Female:
+	if there is a name of "Sarah" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Sarah";
 		now sortorder entry is 1;
 		now description entry is "Visit the husky slut to have some fun";
+	[]
+	if there is a name of "Eric" in the Table of StoredSluts:
+		choose a blank row in table of fucking options;
+		now title entry is "Eric";
+		now sortorder entry is 1;
+		now description entry is "Visit the cuntboy to have some fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -238,8 +255,11 @@ to say Mortimer_FemaleSlutsMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+				say "     After you make your choice, Mortimer splits off a part of himself to lead you while the rest of him stays behind to man the gate. The complex is fairly expansive and you go through twists and turns in eerily similar-looking passages between countless storage units before the goo person finally announces. 'Here we go, this is it! I'll wait here until you're 'done'.' With that said, Mortimer gives you an oily grin, then unlocks the door and lets you stroll inside, pulling down the shutter to give you privacy in the storage unit. Glancing around, you see very little inside it - mainly a big mattress, and some food and drink laid out near the entrance.";
 				if nam is "Sarah":
 					say "[StoredSlut_Sarah]";
+				else if nam is "Eric":
+					say "[StoredSlut_Eric]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -250,6 +270,9 @@ to say Mortimer_FemaleSlutsMenu:
 	clear the screen and hyperlink list;
 
 to say StoredSlut_Sarah:
+	say "...";
+
+to say StoredSlut_Eric:
 	say "...";
 
 
