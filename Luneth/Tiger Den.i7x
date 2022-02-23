@@ -17,6 +17,8 @@ Object	Name
 TDen_Entrance	"TDen_Entrance"
 
 TDen_Entrance is a room. It is fasttravel. TDen_Entrance is not sleepsafe. It is private.
+understand "Tiger Den" as TDen_Entrance.
+understand "Tiger Den Entrance" as TDen_Entrance.
 understand "Tiger's Den" as TDen_Entrance.
 understand "Tiger's Den Entrance" as TDen_Entrance.
 RoomID of TDen_Entrance is "TDen_Entrance".
