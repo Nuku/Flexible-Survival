@@ -359,10 +359,10 @@ to say sexwithFang:
 		if HP of Fang is 2:
 			say "[MaleFangOmegaSexMenu]";
 		else if HP of Fang is 3:
-			say "[MaleFangAlphaSex1]";
+			say "[MaleFangAlphaSexMenu]";
 			FangInfect;
 		else if HP of Fang is 4:
-			say "[MaleFangAlphaSex2]";
+			say "[MaleFangAlphaSexMenu]";
 			FangInfect;
 		else if HP of Fang is 5:
 			say "[MaleFangBetaSexMenu]";
@@ -481,12 +481,13 @@ to say MaleFangOmegaSexMenu:
 					say "[MaleFangOmegaSex6]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say MaleFangOmegaSex1: [suck wolf cock]
@@ -621,12 +622,13 @@ to say FemaleFangOmegaSexMenu:
 					say "[FemaleFangOmegaSex5]";
 				else if nam is "SBL Fuck":
 					say "[FemaleFangOmegaSex6]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say FemaleFangOmegaSex1: [Cuddle the wolf]
@@ -681,6 +683,81 @@ to say FemaleFangOmegaSex6: [assfuck Fang as Skunkbeast]
 	NPCSexAftermath Fang receives "AssFuck" from Player;
 
 Section 2.2.1 - Male Alpha Fang Sexxxings [Sort of Placeholders]
+
+to say MaleFangAlphaSexMenu:
+	if a random chance of 1 in 2 succeeds:
+		if hp of Fang is 3:
+			say "[MaleFangAlphaSex1]";
+		else if hp of Fang is 4:
+			say "[MaleFangAlphaSex2]";
+	else:
+		if debugactive is 1:
+			say "     DEBUG -> Alpha Fang Sex Menu";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Suck Wolf Cock";
+		now sortorder entry is 1;
+		now description entry is "Please your Alpha with your mouth";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Be Mounted";
+		now sortorder entry is 2;
+		now description entry is "Let your Alpha mount you";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Threesome with Sandra";
+		now sortorder entry is 3;
+		now description entry is "Invite the bunny-girl in on the action";
+		[]
+		if HyperSerumTracker is 2 and player is not neuter and Fang is in Courtyard:
+			choose a blank row in table of fucking options;
+			now title entry is "Hyper Sex";
+			now sortorder entry is 4;
+			now description entry is "Have some hyper-dicked fun with your Alpha";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Fang's Choice";
+		now sortorder entry is 3;
+		now description entry is "Let your Alpha choose";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Suck Wolf Cock":
+						say "[MaleFangAlphaOral]";
+					else if nam is "Be Mounted":
+						say "[MaleFangAlphaFucked]";
+					else if nam is "Threesome with Sandra":
+						say "[MaleFangAlphaTrio]";
+					else if nam is "Hyper Sex":
+						say "[MaleFangAlphaHyperSex]";
+					else if nam is "Fang's Choice":
+						if hp of Fang is 3:
+							say "[MaleFangAlphaSex1]";
+						else if hp of Fang is 4:
+							say "[MaleFangAlphaSex2]";
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 
 to say MaleFangAlphaSex1:
 	if debugactive is 1:
@@ -780,6 +857,81 @@ to say MaleFangAlphaFuckedSBL:
 		NPCSexAftermath Player receives "AssFuck" from Fang;
 	FangInfect;
 
+to say MaleFangAlphaHyperSex:
+	say "     Remembering your past experience with your Alpha being hyper-endowed, you find yourself peering hopefully beneath him in case his cock has regained its prodigious size. Unfortunately, it is still its regular size, a part of your mind finding amusement at a foot-long penis being disappointingly small. You let out a sigh at the conundrum that you find yourself in, catching Fang's attention. He looks at you in askance and you embarrassedly explain your thoughts, avoiding meeting his eye in case you cause offense. His response is to push you over on your side with his head[if size of player > 3], your superior size meaning little against his projection of authority[end if], leaving you to sprawl across the floor unceremoniously to look up at your Alpha with some trepidation. What is he going to do to you? Have you insulted him despite your best efforts? Surprisingly, he merely growls, 'Hands. Rub. Now.'";
+	say "     You quickly comply, shuffling beneath him to carry out his order, or at least what you think his order was, beginning to caress and stroke his fuzzy sheath and balls. The air around you is laden with his pheromones, the scent of his sweat and natural musk flooding your nose with each breath to the point of being able to taste your Alpha's aroma in the back of your mouth, making you feel strangely settled and safe. You hope that he will let you suck him off soon so that you can sample his flavor even more intimately, but for now you settle for merely running your hands over his junk. You can feel the weight of his orbs in your palm, the promise of their potent load conveyed by how they fill your hands with their warmth. Meanwhile your other hand strokes up and down his plump sheath, coaxing his cock as it slides out and slides wetly over your fingers, leaving a thin film of pre in its wake. You find your mouth involuntarily watering at the sight of it, your earlier thoughts of blowing him returning. 'Suck,' you hear Fang command, almost as if rewarding your impure desires.";
+	WaitLineBreak;
+	say "     Bringing your tongue to the point of his cock, you begin by softly suckling the tip, dribbles of pre coating your tongue as you swirl it around, the flavor so much more intense than what you could gain by just inhaling his scent. Your Alpha shifts around restlessly as you continue, making you smile that you could cause such a reaction with how gently you are treating him. However, you decide that it is not your place to tease Fang and soon engulf as much of his shaft as you can in your mouth, bobbing your head back and forth at a moderate pace, the wolf occasionally thrusting slightly in time with your movements. You find your nose pressed into the thick, fluffy fur of his tummy, the scent of sex overlapping with his potent natural pheremones. While such cloying smells might have once caused you to gag, now you close your eyes and almost revel in them as they are smeared across your face as you blow your Alpha, leaving an olfactory marker of his claim on you.";
+	say "     Each time you bring your head forward and swallow more of Fang's penis, you are sure that you must soon be about to reach the base, especially with how it seems to be squeezing farther and farther down your throat. It takes you a moment to realize that not only does it feel like it is longer than you remember, but that your jaw seems to be struggling to contain its girth too. Upon opening your eyes, you have an epiphany; your Alpha has been hyper-fied again. You doubt that you have even half of his length buried in your maw, especially if the size of his magnificent balls are anything to go by, but you are conscious that there is nothing to say that he has finished growing either so after a few more seconds of blowing him, you hastily pull your mouth from his turgid erection so as to avoid choking, having to crawl back just so that you can do so. As you look up into Fang's eyes, you find him wolfishly smirking down at you. 'Large enough yet?' he asks, swaying so that the head of his penis slaps you in the cheek. All you can do is nod as you look at him excitedly. 'Good. Present,' he barks.";
+	WaitLineBreak;
+	say "     Rolling onto all fours, you wait for your Alpha to mount you, your shivers of anticipation indistinguishable from your quivers of fear. You may know that you are going to enjoy this, but you are also conscious that there will be pain too. A shadow falls over you, swiftly being followed by the soft sensation of fur against the back of your thighs and a damp feeling within the cleft of your ass. You can guess what this is by the way it pulses and throbs and by the occasional splatter of wetness against the base of your spine. [if size of player < 5]Though you are sure that Fang could mount you without resting his weight atop you, he nonetheless clambers on top of you to assert his authority[else]Fang clambers on top of you, his weight atop you a reminder of his authority[end if], his front paws around your shoulders while his cock probes for the entrance into your most intimate depths. No less eager to mate with you than you are to be bred by him, Fang licks your ear with a deep carnal passion, the tickle of his breath a sharp contrast to the intense feeling of penetration that you are sure is only seconds away.";
+	if player is female: [Female and Herm]
+		say "     [bold type]Do you wish Fang to penetrate your pussy or your ass?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Pussy.";
+		say "     ([link]N[as]n[end link]) - Ass.";
+		if Player consents: [Vaginal Penetration] [Subject to change to make it more different from the anal scenes]
+			say "     Shifting your body slightly, you ensure that his next tentative thrust catches on the entrance to your slickened cunt, gasping as the distinctive shape of his cock momentarily brushes over your engorged clit [if player is herm]and the underside of your own pulsing shaft [end if]before plunging into the warm, wet embrace of your vagina, its girth causing you to grunt in pain before the pleasure smothers it, turning your exclamation into a moan of ecstasy at the intense feeling of being stretched. The heady aroma of his musk surrounds the pair of you as he pounds into you, the motion of your bodies doing little to dispel and spread the pheromones that his exertion only further produces. Were someone watching, which is always a possibility, they would see the rapturous expression on your face, the strands of saliva spilling from the corners of your mouth that threaten to snap with each frenzied thrust, and the possessive manner in which your Alpha grasps the nape of your neck between his teeth, not hard enough to break the skin, but definitely firm enough that it will leave a mark for the nanites to repair.";
+			if "Twisted Capacity" is listed in the feats of Player:
+				say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your birth canal, and maybe even your womb, to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually you feel the weight of his balls bump against the back of your legs and Fang pauses for a few moments, signaling that your Alpha has hilted himself bar his knot within you. Almost hesitantly, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your pussy. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+				WaitLineBreak;
+				say "     A nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you, feral snarls mixing with the muffled slap of his groin against your flank, battering his knot against the lips of your vulva and [if player is herm]causing your shaft to sway in time and [end if]forcing another stream of juices from your pussy past his invading member. You push back against his thrusts as best you can, frantically egging him on to breed you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your [if player is herm]own cock throb and jerk up to slap against your tummy while your pussy clenches in sympathetic [else]pussy clench in [end if]excitement. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+				say "     Knowing what is to come and that you are capable of taking his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds it against your hole. Repeatedly, he pummels your cunt , relentlessly trying to gain entry, confident that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he forces your pussy to surrender to his will and you feel it stretch to inhuman proportions as his knot squeezes through, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your womb with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his knot preventing even a single drop to leak as it molds your vaginal walls around it.";
+				WaitLineBreak;
+				say "     The combination of the pressure from his cum filling every corner of your womb, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your pussy around his cock hopefully heightening his own pleasure. [if player is herm]Trapped between your body and the ground, your cock shoots its load, semen smearing over your chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the the deluge that will inevitably spill when Fang eventually pulls out of your vagina. [end if]Even after you have finished, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, he is in a different hole and the flow of his seed into your womb seems to stop just short of anything so drastic and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+				say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for his tie to fade and for the resulting ocean of semen to flow forth from your cunt. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping pussy, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+			else: [No Twisted capacity][Subject to change]
+				say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your birth canal, and possibly your womb, to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually however, you feel a sharp pain as he collides with your cervix, making you grit your teeth in order to avoid crying out and Fang pauses, contemplating what to do. Almost hesitantly, still recovering from being filled to capacity, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your pussy. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+				WaitLineBreak;
+				say "     Having come to a conclusion, a nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you as much as he can without hurting you too much, feral snarls mixing with the muffled slap of his balls swinging forward to collide with your thighs, [if player is herm]causing your shaft to sway in time and [end if]forcing another stream of juices from your pussy past his invading member. You push back against his thrusts as best you can, frantically egging him on to breed you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your [if player is herm]own cock throb and jerk up to slap against your tummy while your pussy clenches in sympathetic [else]pussy clench in [end if]excitement. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+				say "     Knowing what is to come and that you aren't going to have to handle his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds deep in your cunt. Repeatedly, he slams into you, vainly hoping to fit just a little more inside of you and that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he relents and accepts your body's limits, settling for shoving as much of his swollen shaft into the tight embrace of your pussy, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your womb with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his shaft swollen enough itself to prevent even a single drop to leak, further demonstrating its girth.";
+				WaitLineBreak;
+				say "     The combination of the pressure from his cum filling every corner of your womb, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your pussy around his cock hopefully heightening his own pleasure. [if player is herm]Trapped between your body and the ground, your cock shoots its load, semen smearing over your chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the the deluge that will inevitably spill when Fang eventually pulls out of your vagina. [end if]Even after you have finished, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, he is in a different hole and the flow of his seed into your womb seems to stop just short of anything so drastic and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+				say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for him to pull out and for the resulting ocean of semen to flow forth from your cunt. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping pussy, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+			NPCSexAftermath Player receives "OralCock" from Fang;
+			NPCSexAftermath Player receives "PussyFuck" from Fang;
+		else: [Anal Penetration]
+			say "     Shifting your body slightly, you ensure that his next tentative thrust catches on the ring of your sphincter, gasping as the distinctive shape of his cock spears into the depths of your heated bowels, its girth causing you to grunt in pain before the pleasure smothers it, turning your exclamation into a moan of ecstasy at the intense feeling of being stretched[if player is herm]. The pressure against your prostate causes your own erection to momentarily harden further, your arousal being heightened by the manner in which you are being claimed[end if].The heady aroma of his musk surrounds the pair of you as he pounds into you, the motion of your bodies doing little to dispel and spread the pheromones that his exertion only further produces. Were someone watching, which is always a possibility, they would see the rapturous expression on your face, the strands of saliva spilling from the corners of your mouth that threaten to snap with each frenzied thrust, and the possessive manner in which your Alpha grasps the nape of your neck between his teeth, not hard enough to break the skin, but definitely firm enough that it will leave a mark for the nanites to repair.";
+			if "Twisted Capacity" is listed in the feats of Player:
+				say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your bowels to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually you feel the weight of his balls bump against the back of your legs and Fang pauses for a few moments, signaling that your Alpha has hilted himself bar his knot within you. Almost hesitantly, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your ass. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+				WaitLineBreak;
+				say "     A nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you, feral snarls mixing with the muffled slap of his groin against your flank, battering his knot against your sphincter and [if player is herm]causing your shaft to sway in time and [end if]forcing another stream of juices from your pussy. You push back against his thrusts as best you can, frantically egging him on to ravage you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your [if player is herm]own cock throb and jerk up to slap against your tummy while your pussy clenches in sympathetic [else]pussy clench in [end if]excitement. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+				say "     Knowing what is to come and that you are capable of taking his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds it against your hole. Repeatedly, he slams against your entrance, relentlessly trying to gain entry, confident that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he forces your asshole to surrender to his will and you feel it stretch to inhuman proportions as his knot squeezes through, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your bowels with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his knot preventing even a single drop to leak as it molds your passage around it.";
+				WaitLineBreak;
+				say "     The combination of the pressure from his cum filling every cavity of your guts, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your ass around his cock as your cunt squeezes [if player is herm]and you shoot your load [end if]hopefully heightening his own pleasure. [if player is herm]Trapped between your body and the ground, your semen smears over your chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the the deluge that will inevitably spill when Fang eventually pulls out of your ass. [end if]Even after you have finished, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, the flow of his seed into your bowels seems to stop just short of this and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+				say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for his tie to fade and for the resulting ocean of semen to flow forth from your ass. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping anus, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+			else: [No Twisted capacity][Subject to change]
+				say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your bowels to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually however, you feel a sharp pain as he reaches as far into you as he can, making you grit your teeth in order to avoid crying out and Fang pauses, contemplating what to do. Almost hesitantly, still recovering from being filled to capacity, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your ass. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+				WaitLineBreak;
+				say "     Having come to a conclusion, a nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you as much as he can without hurting you too much, feral snarls mixing with the muffled slap of his balls swinging forward to collide with your thighs, [if player is herm]causing your shaft to sway in time and [end if]forcing another stream of juices from your pussy. You push back against his thrusts as best you can, frantically egging him on to ravage you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your [if player is herm]own cock throb and jerk up to slap against your tummy while your pussy clenches in sympathetic [else]pussy clench in [end if]excitement. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+				say "     Knowing what is to come and that you aren't going to have to handle his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds deep in your gut. Repeatedly, he slams into you, vainly hoping to fit just a little more inside of you and that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he relents and accepts your body's limits, settling for shoving as much of his swollen shaft into the tight embrace of your anus, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your bowels with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his shaft swollen enough itself to prevent even a single drop to leak, further demonstrating its girth.";
+				WaitLineBreak;
+				say "     The combination of the pressure from his cum filling every cavity of your guts, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your ass around his cock as your cunt squeezes [if player is herm]and you shoot your load [end if]hopefully heightening his own pleasure. [if player is herm]Trapped between your body and the ground, your semen smears over your chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the deluge that will inevitably spill when Fang eventually pulls out of your ass. [end if]Even after you have finished, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, the flow of his seed into your bowels seems to stop just short of this and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+				say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for him to pull out and for the resulting ocean of semen to flow forth from your ass. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping anus, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+			NPCSexAftermath Player receives "OralCock" from Fang;
+			NPCSexAftermath Player receives "AssFuck" from Fang;
+	else: [Male]
+		WaitLineBreak;
+		say "     Shifting your body slightly, you ensure that his next tentative thrust catches on the ring of your sphincter, gasping as the distinctive shape of his cock spears into the depths of your heated bowels, its girth causing you to grunt in pain before the pleasure smothers it, turning your exclamation into a moan of ecstasy at the intense feeling of being stretched. The pressure against your prostate causes your own erection to momentarily harden further, your arousal being heightened by the manner in which you are being claimed. The heady aroma of his musk surrounds the pair of you as he pounds into you, the motion of your bodies doing little to dispel and spread the pheromones that his exertion only further produces. Were someone watching, which is always a possibility, they would see the rapturous expression on your face, the strands of saliva spilling from the corners of your mouth that threaten to snap with each frenzied thrust, and the possessive manner in which your Alpha grasps the nape of your neck between his teeth, not hard enough to break the skin, but definitely firm enough that it will leave a mark for the nanites to repair.";
+		if "Twisted Capacity" is listed in the feats of Player:
+			say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your bowels to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually you feel the weight of his balls bump against the back of your legs and Fang pauses for a few moments, signaling that your Alpha has hilted himself bar his knot within you. Almost hesitantly, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your ass. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+			WaitLineBreak;
+			say "     A nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you, feral snarls mixing with the muffled slap of his groin against your flank, battering his knot against your sphincter and causing your shaft to sway in time. You push back against his thrusts as best you can, frantically egging him on to ravage you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your own cock throb and jerk up to slap against your tummy. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+			say "     Knowing what is to come and that you are capable of taking his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds it against your hole. Repeatedly, he slams against your entrance, relentlessly trying to gain entry, confident that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he forces your asshole to surrender to his will and you feel it stretch to inhuman proportions as his knot squeezes through, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your bowels with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his knot preventing even a single drop to leak as it molds your passage around it.";
+			WaitLineBreak;
+			say "     The combination of the pressure from his cum filling every cavity of your guts, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your ass around his cock as you shoot your load hopefully heightening his own pleasure. Trapped between your body and the ground, your semen smears over your [if breast size of Player > 0]breasts [end if]chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the the deluge that will inevitably spill when Fang eventually pulls out of your ass. Even after you have finished cumming, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, the flow of his seed into your bowels seems to stop just short of this and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+			say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for his tie to fade and for the resulting ocean of semen to flow forth from your ass. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping anus, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+		else: [No Twisted capacity][Subject to change]
+			say "     Despite the feeling of rapturous torture that it elicits in your body, Fang's cock plunges impossibly deep into your body and you silently thank the nanites for ensuring that he doesn't tear you in half or otherwise harm you. Despite the occasional jab of pain as his cock forces your bowels to shift to suit him, the experience is largely one of euphoria and soul-jarring ecstasy. Eventually however, you feel a sharp pain as he reaches as far into you as he can, making you grit your teeth in order to avoid crying out and Fang pauses, contemplating what to do. Almost hesitantly, still recovering from being filled to capacity, you look down to see how much your stomach is bulging with the imposing bone that has been buried in your ass. Though it is nowhere near as gargantuan as you might expect, your tummy is nevertheless significantly domed from Fang's cock and you tentatively rub a hand over it, softly laughing when you feel his penis stir and shift as you push against it from the outside.";
+			WaitLineBreak;
+			say "     Having come to a conclusion, a nip to one of your ears conveys a command from your Alpha to prepare yourself for him to resume thrusting, giving you time to press your chest to the ground and brace your arms. Not a second later, he begins to hammer himself into you as much as he can without hurting you too much, feral snarls mixing with the muffled slap of his balls swinging forward to collide with your thighs, your shaft swaying in time. You push back against his thrusts as best you can, frantically egging him on to ravage you and to satisfy all of his lusts with your body. Perhaps reacting to your goading words, Fang presses a paw to the back of your head, pushing your face more firmly into the ground, growling possessively into your ear, 'Mine.' At his words, you feel your own cock throb and jerk up to slap against your tummy. His thrusts becoming more erratic and irregular, you surmise that Fang is rapidly approaching orgasm, a primal delight flooding your mind at fulfilling the needs of your Alpha.";
+			say "     Knowing what is to come and that you aren't going to have to handle his obscenely-sized knot, you brace yourself against the ground, groaning from the bottom of your lungs each time he grinds deep in your gut. Repeatedly, he slams into you, vainly hoping to fit just a little more inside of you and that eventually your body will submit to him whether it wants to or not. Eventually, with an accompanying euphoric wail from you, he relents and accepts your body's limits, settling for shoving as much of his swollen shaft into the tight embrace of your anus, saliva dripping from your mouth as you are momentarily put into an almost catatonic state. As you feel his cock swell and pulse as his climax breaks, you instinctually spread your legs even further, now almost flat against the ground. Soon gouts of hot, virile seed flood into your bowels with enough force that you can feel it against the palm of your hand on your tummy as the volume of it begins to cause you to swell, his shaft swollen enough itself to prevent even a single drop to leak, further demonstrating its girth.";
+			WaitLineBreak;
+			say "     The combination of the pressure from his cum filling every cavity of your guts, the satisfaction of having brought your Alpha to orgasm, and the friction of his every movement soon causes you to climax as well, each clench of your ass around his cock as you shoot your load hopefully heightening his own pleasure. Trapped between your body and the ground, your semen smears over your [if breast size of Player > 0]breasts [end if]chest and through the dirt, making quite a mess of you, though this will no doubt pale in comparison the the deluge that will inevitably spill when Fang eventually pulls out of your ass. Even after you have finished cumming, he continues to pump more and more inside your struggling body, memories of your first coupling with him after he found the briefcase and how it spilled from your mouth when there was nowhere else for it to go. Unfortunately, or perhaps fortunately, the flow of his seed into your bowels seems to stop just short of this and you are left to lie there and come to terms with your ballooned belly while your Alpha rests on top of you, no doubt exhausted from your vigorous mating.";
+			say "     Fatigued, but still holding onto consciousness, you exchange a few kisses with you Alpha as you wait for him to pull out and for the resulting ocean of semen to flow forth from your ass. So engrossed in this thought, you don't realize how much time has passed when you are stirred by Fang shifting on top of you, his movements causing a sharp tugging from where the two of you are joined. With an obscene slurp, his cock slips from your now gaping anus, its original proportions restored. The same can not be said for the surge of pearlescent fluid that follows, the potent scent undeniably his as it splashes onto the ground, coating your legs and groin even as the pool rapidly begins to spread. Though it coats his paws, Fang for the most part manages to avoid being bathed in his own essence, imperiously looking down at you with some relish as you allow his seed to mark you as having been bred by him. Thankfully, with being outside, the ground soon hungrily absorbs this excess of fluids, allowing you to enjoy your post-coital moment with Fang before cleaning yourself off under a hosepipe in preparation for what you want to do next.";
+		NPCSexAftermath Player receives "OralCock" from Fang;
+		NPCSexAftermath Player receives "AssFuck" from Fang;
+
 to say MaleFangWSContent:
 	if FangWS is 0:
 		say "     As Fang pads off, you notice his cock still stiff and leaking between his legs as he pads towards [if Fang is in Courtyard]one of the trees[else]the door to slip outside[end if]. Surmising that he must be [if Fang is in Courtyard]about to mark his territory[else]slipping out to mark his territory around the outside of the library[end if], an idea pops into your head to have the wolf mark something else that belongs to him.";
@@ -807,6 +959,60 @@ to say MaleFangWSContent:
 Section 2.2.2 - Female Alpha Fang Sexxxings [Sort of Placeholders]
 
 to say FemaleFangAlphaSexMenu:
+	if a random chance of 1 in 2 succeeds:
+		say "[FemaleFangAlphaSex1]";
+	else:
+		if debugactive is 1:
+			say "     DEBUG -> Alpha Fang Sex Menu";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Eat Her Out";
+		now sortorder entry is 1;
+		now description entry is "Please your Alpha with your mouth";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Wolf Mating";
+		now sortorder entry is 2;
+		now description entry is "Let your Alpha ride you";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Fang's Choice";
+		now sortorder entry is 3;
+		now description entry is "Let your Alpha choose";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Eat Her Out":
+						say "[FemaleFangAlphaOral]";
+					else if nam is "Wolf Mating":
+						say "[FemaleFangAlphaFucked]";
+					else if nam is "Fang's Choice":
+						say "[FemaleFangAlphaSex1]";
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+
+to say FemaleFangAlphaSex1:
 	if debugactive is 1:
 		say "     DEBUG -> Female Alpha Fang Sex";
 	if lust of Fang is even:
@@ -904,6 +1110,11 @@ to say MaleFangBetaSexMenu:
 		now sortorder entry is 6;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Wolf Cuddles";
+	now sortorder entry is 7;
+	now description entry is "In the mood to cuddle with the big wolf";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -931,12 +1142,15 @@ to say MaleFangBetaSexMenu:
 					say "[MaleFangBetaSex5]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				else if nam is "Wolf Cuddles":
+					say "[MaleFangBetaSex7]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say MaleFangBetaSex1: [suck wolf cock]
@@ -984,6 +1198,11 @@ to say MaleFangBetaSex5: [assfuck Fang]
 	say "     Deciding that you want to top the wolf, you stroke your throbbing cock and call with Fang over. Noticing your erection, the wolf comes over obediently and starts licking at it, slathering his slobbering tongue all over it. You stroke his head and rumble in pleasure, only stopping him once you're good and slick. Ordering him to turn, you get him to raise his tail for you, an action which he does eagerly, glancing excitedly back at you. Climbing atop the big wolf, you line yourself up with his tight pucker and sink yourself into him. He releases a soft moan and presses himself back against you. You nibble his ear and whisper what a good guard he's been and how pleased you are with him. You pound your cock into him firmly, adding how happy you are with his tight ass and that's such a good beta for bending over and taking his alpha's cock. Reaching around, you wrap your hand around his shaft, finding it hard and throbbing, enjoying the good, hard fuck he's getting. Pumping hard and fast, you get him to howl under you as you thrust hard into his ass and unleash your hot cum, painting his insides with your seed, claiming him once more as yours. The wolf's semen sprays onto the [if Fang is in Courtyard]ground[else]floor[end if], forming a large puddle of thick, white wolfcum.";
 	now Libido of Player is ( ( Libido of Player * 2 ) / 5 );
 	NPCSexAftermath Fang receives "AssFuck" from Player;
+
+to say MaleFangBetaSex7: [wolf cuddling]
+	if debugactive is 1:
+		say "     DEBUG -> Cuddle Vanilla Fang";
+	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocalypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn, you find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at him, the more you think that some cuddling is just what the doctor ordered. With that in mind, you call Fang over to you. Not even a minute has passed after Fang sat in front of you, before finding yourself face-deep in his fur coat, your head rubbing against his furry form and your nose snuffling, attempting to rub his scent all over so as to capture some of the warm fuzzies contained within. Your limbs however seem tohave a life of their own as they move this way and that, stroking and petting, fondling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur, almost attempting to jump into it as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled, yet his tail wagging like mad. However, you can't stay and cuddle forever, instead proceeding to go about what you were planning before mental exhaustion struck.";
 
 [See Section 3 for Fang & Sandra Sex]
 
@@ -1049,18 +1268,19 @@ to say FemaleFangBetaSexMenu:
 					say "[FemaleFangBetaSex4]";
 				else if nam is "Mount Fang":
 					say "[FemaleFangBetaSex5]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say FemaleFangBetaSex1: [wolf cuddles]
 	if debugactive is 1:
 		say "     DEBUG -> Cuddle Beta Fang";
-	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocolypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn. You find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at her, the more you think that some cuddling is just what the doctor ordered, with that in mind you call Fang over to you. Not even a minute had passed after Fang sat in front of you, before finding yourself face-deep in her fur coat, your head rubbing against her furry form and your nose snuffling as if attempting to rub her scent all over as to capture some of the warm fuzzies contained within. Your limbs however seem to move with a life of their own as they move this way and that, stroking and petting, fondeling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur as if attempting to jump into it, as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled but yet her tail wagging like mad, you however can't stay and cuddle forever, you proceed to go about what you were planning before depression struck";
+	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocalypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn, you find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at her, the more you think that some cuddling is just what the doctor ordered. With that in mind you call Fang over to you. Not even a minute had passed after Fang sat in front of you, before finding yourself face-deep in her fur coat, your head rubbing against her furry form and your nose snuffling, attempting to rub her scent all over so as to capture some of the warm fuzzies contained within. Your limbs however seem to have a life of their own as they move this way and that, stroking and petting, fondling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur, almost attempting to jump into it as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled, yet her tail wagging like mad. However, you can't stay and cuddle forever, instead proceeding to go about what you were planning before mental exhaustion struck.";
 	increase Libido of Player by 10;
 	if Libido of Player > 100, now Libido of Player is 100;
 
@@ -1149,6 +1369,11 @@ to say MaleFangSexMenu:
 		now sortorder entry is 7;
 		now description entry is "See if Sandra wants to play with the big, bad wolf again";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Wolf Cuddles";
+	now sortorder entry is 8;
+	now description entry is "In the mood to cuddle with the big wolf";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1178,12 +1403,15 @@ to say MaleFangSexMenu:
 					say "[MaleFangSex6]";
 				else if nam is "Fang and Sandra":
 					say "[MaleFangSandraSex]";
+				else if nam is "Wolf Cuddles":
+					say "[MaleFangSex8]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say MaleFangSex1: [suck wolf cock]
@@ -1258,6 +1486,14 @@ to say MaleFangSex6: [assfuck Fang as Skunkbeast]
 	now Libido of Player is Libido of Player / 2;
 	NPCSexAftermath Fang receives "AssFuck" from Player;
 
+to say MaleFangSex8: [wolf cuddling]
+	if debugactive is 1:
+		say "     DEBUG -> Cuddle Vanilla Fang";
+	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocalypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn, you find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at him, the more you think that some cuddling is just what the doctor ordered. With that in mind, you call Fang over to you. Not even a minute has passed after Fang sat in front of you, before finding yourself face-deep in his fur coat, your head rubbing against his furry form and your nose snuffling, attempting to rub his scent all over so as to capture some of the warm fuzzies contained within. Your limbs however seem tohave a life of their own as they move this way and that, stroking and petting, fondling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur, almost attempting to jump into it as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled, yet his tail wagging like mad. However, you can't stay and cuddle forever, instead proceeding to go about what you were planning before mental exhaustion struck.";
+	if HP of Fang < 2:
+		increase FangBetaCounter by 1;
+		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";
+
 
 Section 2.4.2 - Female Vanilla Fang Sexxxings [Sort of Placeholders]
 
@@ -1328,18 +1564,19 @@ to say FemaleFangSexMenu:
 					say "[FemaleFangSex5]";
 				else if nam is "SBL Fuck":
 					say "[FemaleFangSex6]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say FemaleFangSex1: [wolf cuddling]
 	if debugactive is 1:
 		say "     DEBUG -> Cuddle Vanilla Fang";
-	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocalypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn. You find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at her, the more you think that some cuddling is just what the doctor ordered, with that in mind you call Fang over to you. Not even a minute had passed after Fang sat in front of you, before finding yourself face-deep in her fur coat, your head rubbing against her furry form and your nose snuffling as if attempting to rub her scent all over as to capture some of the warm fuzzies contained within. Your limbs however seem to move with a life of their own as they move this way and that, stroking and petting, fondling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur as if attempting to jump into it, as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled but yet her tail wagging like mad, you however can't stay and cuddle forever, you proceed to go about what you were planning before depression struck.";
+	say "     Feeling tired from the many trials, encounters, debauchery, and pressure from surviving in the midst of a nanite apocalypse, your body, heavy from the weight of it all, your mind, sluggish from the cold reality that seems to cover every corner of life no matter where you turn, you find your gaze wandering to focus on your guard wolf, on that warm, soft fur coat, those luminous amber eyes, four springy padded paws, complete with a soft fluffy tail. The more you look at her, the more you think that some cuddling is just what the doctor ordered. With that in mind you call Fang over to you. Not even a minute had passed after Fang sat in front of you, before finding yourself face-deep in her fur coat, your head rubbing against her furry form and your nose snuffling, attempting to rub her scent all over so as to capture some of the warm fuzzies contained within. Your limbs however seem to have a life of their own as they move this way and that, stroking and petting, fondling fur and letting it glide across your many wandering digits. You find your lower body attempting to push yourself into Fang's fur, almost attempting to jump into it as if to try and become one with the fluff. After a few minutes of being overwhelmed by the need to snuggle, you get a hold of yourself enough to finish by giving Fang a loving embrace, feeling much better about yourself and about life. You look back at Fang, slightly disheveled, yet her tail wagging like mad. However, you can't stay and cuddle forever, instead proceeding to go about what you were planning before mental exhaustion struck.";
 	if HP of Fang < 2:
 		increase FangBetaCounter by 1;
 		say "     [Bold type]You get the impression that Fang likes you a little more.[roman type][line break]";

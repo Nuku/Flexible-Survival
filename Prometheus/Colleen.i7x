@@ -3,7 +3,30 @@ Version 4 of Colleen by Prometheus begins here.
 [Version 2.4 - Meredith preg dialog & Gwen dialog]
 [Version 3 - Partial re-write by Wahn to conform to the new Sarah path]
 [Version 4 - Husky-fication for Colleen while Sarah is Sane by Prometheus ]
+[Version 4.0.1 - Ending for Colleen, Vanessa, Meredith, and Gwen in Vanessa's file.]
+
 "Adds a military NPC to Flexible Survival with a variety of responses and goals."
+
+[ hp of Colleen ]
+[ 0 - Not transformed ]
+[ 1 - Colleen Transformed while Sarah is Sane ]
+[ 2 - ]
+
+[ ColleenAlpha ]
+[ 0 - Not Alpha Husky ]
+[ 1 - Progress towards ALpha Colleen? ]
+[ 2 - Progress towards ALpha Colleen? ]
+[ 3+ - Alpha Colleen]
+
+[ ColleenSlut]
+[ 0 - Not a slut ]
+[ 1 - Rejected as pet of player. Puts her on the path to potentially become Alpha Colleen]
+
+[ ColleenCollared ]
+[ 0 - Not collared ]
+[ 1 - Collared]
+
+[ ColleenSpray ]
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Strike From the Deep is resolved:
@@ -821,6 +844,8 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Husky Alpha Infection"	"Infection"	""	Husky Alpha Infection rule	1000	false
 
 This is the Husky Bitch with Colleen rule:
+	if one of the endings in { "Gang's All Here Epilogue", "Fallen Unit Epilogue", "Sergeant & Corporal Epilogue" } is triggered:
+		make no decision;
 	if Player has a body of "Husky Bitch":
 		if ColleenAlpha > 2:
 			trigger ending "Husky Bitch with Colleen"; [Exclude normal 'Husky Bitch Infection' ending]
@@ -851,6 +876,8 @@ This is the Husky Bitch with Colleen rule:
 				say "     You wonder sometimes about the other husky male you ran into at one point, and find yourself strangely disappointed at how unsuited your new body is for joining their pack, neither strong and alpha like, nor nice and female for them to fuck, you somehow can't help but feel like something of a failure...";
 
 This is the Colleen's Bunker Epilogue rule:
+	if one of the endings in { "Gang's All Here Epilogue", "Fallen Unit Epilogue", "Sergeant & Corporal Epilogue" } is triggered:
+		make no decision;
 	if hp of Colleen is 0:
 		if Player has a body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
 			trigger ending "Colleen's Bunker Epilogue";
@@ -894,7 +921,7 @@ This is the Colleen's Bunker Epilogue rule:
 					say "     After getting you and Sarah out of the city, you enjoy being the alpha of your small pack, especially once you add the normal husky dog to your group. And while at it can be hard to make ends meet and support your pack properly at first, your dominant attitude soon has you landing better and better jobs, until eventually you are well situated to support the entire pack. Once that happens you find yourself eyeing your co workers speculatively, wondering just how much better they would look as properly trained husky sluts themselves, after all, now seems like it might be a good time to start expanding the pack again...";
 
 This is the Colleen's Solo Epilogue rule:
-	if Player has a non-shifting body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ):	[***This is an imperfect solution]
+	if Player has a non-shifting body of "Husky Alpha" and ( Colleen is bunkered or Sarah is bunkered ) or (one of the endings in { "Gang's All Here Epilogue", "Fallen Unit Epilogue", "Sergeant & Corporal Epilogue" } is triggered):	[***This is an imperfect solution]
 		make no decision;
 	if ColleenSlut is 1:
 		trigger ending "Colleen's Solo Epilogue";
@@ -929,6 +956,8 @@ This is the Husky Alpha Infection rule:
 				say "     Once you and the others are treated and released, you set up a new home for yourselves as the new pack the military was kind enough to gather for you. With your stronger alpha infection in the presence of so many other huskies, your infection soon overpowers the treatment to make you non-infectious. Having already gathered a large pack of your own, you set to work on the lone male you found. While at the military base, you made certain to ensnare this very rare male husky as part of your group. You mate with him numerous times and train him to take charge and dominate the other submissive husky girls, working him to gradually become an alpha male for the pack. But you make certain he knows his place and maintain enough of his submissive nature to keep yourself as his mistress as well. With so many females already gathered for him to breed, your pack only occasionally enjoys adding a new female from time to time, helping to hide the hidden cell of canine infection. It is with the second and third generation that there's a surge of huskies, your pack's numerous offspring spreading out and forming lesser packs of their own by infecting others.";
 
 This is the Colleen's Human Epilogue rule:
+	if one of the endings in { "Gang's All Here Epilogue", "Fallen Unit Epilogue", "Sergeant & Corporal Epilogue", "Gang's All Here Epilogue", "Fallen Unit Epilogue", "Sergeant & Corporal Epilogue" } is triggered:
+		make no decision;
 	if ColleenFound is 1 and hp of Colleen is 0: [brought into the library, not transformed]
 		trigger ending "Colleen's Human Epilogue";
 		if humanity of Player < 10:

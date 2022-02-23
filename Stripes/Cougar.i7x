@@ -7,6 +7,7 @@ Section 1 - Creature Responses
 cougarfight is a number that varies.
 
 to say losetocougar:
+	project Figure of Cougar_naked_icon;
 	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you. Her strong body holds you down as she rubs herself against you. Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock on your skin.";
 	if wslevel is 3 and a random chance of 2 in 5 succeeds:
@@ -32,6 +33,7 @@ to say cougartop:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
 
 to say beatthecougar:
+	project Figure of Cougar_naked_icon;
 	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < Libido of Player:
@@ -58,6 +60,7 @@ to say beatthecougar:
 
 
 to say cougardesc:
+	project Figure of Cougar_clothed_icon;
 	setmongender 5;
 	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 

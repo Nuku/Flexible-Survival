@@ -88,18 +88,18 @@ character number breast size of player in cupsize | the player's breast size as 
 
 
 ## ANNEX 2: STATUS OF PLAY AND ENVIRONMENTAL PROPERTIES
-These are used as part of conditional statements or clauses to alter scenes based on player/environmental properties. They can be coupled with otherwise if and otherwise for greater variation or 'and/or/not' can be used to make further variations and combinations. If they do not contain any quotation marks for exact text (`"`), then they can also be built into say statements by being enclosed in square brackets, such as `[if cocks of player > 0]` and closed with `[end if]`. In some cases, there are multiple ways to check the same info, in those cases, I've separated the options by an italicized or.
+These are used as part of conditional statements or clauses to alter scenes based on player/environmental properties. They can be coupled with otherwise if and otherwise for greater variation or 'and/or/not' can be used to make further variations and combinations. If they do not contain any quotation marks for exact text (`"`), then they can also be built into say statements by being enclosed in square brackets, such as `[if Cock Count of player > 0]` and closed with `[end if]`. In some cases, there are multiple ways to check the same info, in those cases, I've separated the options by an italicized or.
 
 For your own sanity, only include a few of these variations in any given scene at most, as some will be more relevant than others to the events you're creating. Some writers have preferences to the aspects they like to highlight about the scene in this manner, so don't feel you have to use all the same ones as everyone else.
 
 ### Genitals
-* `if player is male` *or* `if cocks of player > 0` | does the player have any cocks? (male/herm)
+* `if player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
 * `if player is female` *or* `if cunts of player > 0` | does the player have any cunts? (female/herm)
 * `if player is herm` *or* `if cunts of player > 0 and cocks of player > 0` | does the player have both cock and cunt? (herm)
 * `if player is neuter` *or* `if cunts of player is 0 and cocks of player is 0` | does the player have no cunt and no cock? (neuter)
-* `if cocks of player is 1` | does the player have a single cock?
-* `if cocks of player > 1` | does the player have multiple cocks?
-* `if cocks of player > 2` | does the player have 3 or more cocks?
+* `if Cock Count of player is 1` | does the player have a single cock?
+* `if Cock Count of player > 1` | does the player have multiple cocks?
+* `if Cock Count of player > 2` | does the player have 3 or more cocks?
 * `if cock length of player > 6` | does the player have a cock that is 7 inches or more?
 * `if cock length of player < 10` | does the player have a cock that is under 10 inches?
 * `if cock length of player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)

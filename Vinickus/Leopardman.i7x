@@ -327,12 +327,14 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Spotted fur"	"A small tuft of black and yellow fur, it is very soft and seems like it would feel nice against your skin."	1	  Spotted fur
 
-Spotted fur is a grab object. Understand "fur" as Spotted fur. Spotted fur is infectious. Strain of Spotted fur is "Leopardman".
+Spotted fur is a grab object. Understand "fur" as Spotted fur.
 
 instead of sniffing Spotted fur:
 	say "The tuft of fur smells faintly of the powerful feline it came from.";
 
-Usedesc of Spotted fur is "You take out the strangely attractive small tuft of fur you acquired earlier, rolling the soft fur between your fingers, you find the feel of the fur to be strongly sensual. Enjoying the pleasant feel of the fur, you begin to slowly rub the small bundle of fur over your skin, the silken soft fur tuft tickling your cheeks and chest as you trail it lightly over them several times, making you smile happily. After several passes however you go to trail it along your cheek again, only to realize the fur tuft is no longer there, looking down, you see where bits of the leopardlike fur have anchored themselves into your skin, giving you a small patch of sensual fur of your own to stroke, and you can almost feel the leopardlike changes moving throughout the rest of your body...";
+instead of using Spotted fur:
+	say "     You take out the strangely attractive small tuft of fur you acquired earlier, rolling the soft fur between your fingers, you find the feel of the fur to be strongly sensual. Enjoying the pleasant feel of the fur, you begin to slowly rub the small bundle of fur over your skin, the silken soft fur tuft tickling your cheeks and chest as you trail it lightly over them several times, making you smile happily. After several passes however you go to trail it along your cheek again, only to realize the fur tuft is no longer there, looking down, you see where bits of the leopardlike fur have anchored themselves into your skin, giving you a small patch of sensual fur of your own to stroke, and you can almost feel the leopardlike changes moving throughout the rest of your body...";
+	infect "Leopardman";
 
 
 Section 3 - Endings

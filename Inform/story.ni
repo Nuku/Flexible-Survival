@@ -238,6 +238,7 @@ Include Power Plant by Hellerhound.
 Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
+Include SlutStorage by Wahn.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
@@ -552,6 +553,7 @@ Include Koghh by Wahn.
 Include Komodo Dragon by Stripes.
 Include Latex Ermine by Stripes.
 Include Latex Fox by Nuku Valente.
+Include Latex Frog by Soggi.
 Include Latex Mistress by Stripes.
 Include Latex Wolf by Stripes.
 Include Leopardman by Vinickus.
@@ -693,6 +695,7 @@ Include Wolftaur by Sarokcat.
 Include Wolverine Guard by Stripes.
 Include Wrestling Wolf by Guest Writers.
 Include Wyvern by Damaged.
+Include Wyvern Patriarch by Gherod.
 Include Xeno by Stripes.
 Include Yamato Dragon by Blue Bishop.
 Include Yamato Dragoness by Blue Bishop.
@@ -801,7 +804,7 @@ Include Gordon by Rikaeus.
 Include Gregory by Wahn.
 Include Gryphon Characters by SgtPepper234.
 Include Gus by Hyliad.
-Include Gwen by Stripes.
+Include Gwen by Prometheus.
 Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
@@ -858,7 +861,7 @@ Include Mary by Luneth.
 Include Master Mind by Stripes.
 Include Master-of-Hell-Quest by Luneth.
 Include Matriarch NPC by Stripes.
-Include Meredith by Stripes.
+Include Meredith by Prometheus.
 Include Micaela by Stripes.
 Include Midnight by Luneth.
 Include Milo by CrimsonAsh.
@@ -935,7 +938,7 @@ Include Toron by Gherod.
 Include Tristian by Verath.
 Include Urik by Wahn.
 Include Val by Wahn.
-Include Vanessa by Stripes.
+Include Vanessa by Prometheus.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
 Include Voria by Kurainyx.

@@ -278,7 +278,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "tuft of chin fur"	"A soft piece of chinchilla fur."	1	tuft of chin fur
 
-tuft of chin fur is a grab object. tuft of chin fur is infectious. Strain of tuft of chin fur is "Chinchilla".
+tuft of chin fur is a grab object.
 
 instead of sniffing tuft of chin fur:
 	say "This soft fur smells a little dusty, but quite nice.";
@@ -298,5 +298,6 @@ to say tuft of chin fur use:
 		now sex entry is "Female";
 	say "     You feel inclined to rub the chinchilla tuft against your [bodytype of Player] form. The material is exceedingly soft, and makes you feel a little better, though doing this has caused the infectious fur to dissipate into your skin...";
 	if morale of Player < 30, increase morale of Player by 5;
+	infect "Chinchilla";
 
 Cute Chinchilla Girl ends here.

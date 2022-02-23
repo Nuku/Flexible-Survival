@@ -1,6 +1,9 @@
-Version 1 of Gwen by Stripes begins here.
+Version 1 of Gwen by Prometheus begins here.
 [Version 1 - Basic event and NPC]
 [Version 1.1 - Minor maintenance and character relocation - Luneth]
+[Version 1.1.1 - Moved to Prometheus's folder. Ending for Colleen, Vanessa, Meredith, and Gwen in Vanessa's file.]
+
+[Originally by Stripes]
 
 "Adds centaur 'foal' NPC named Gwen to the Flexible Survival game."
 

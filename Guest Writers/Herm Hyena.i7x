@@ -352,12 +352,11 @@ name	desc	weight	object
 
 hyena herm fur is a grab object.
 It is temporary.
-hyena herm fur is infectious.
-Strain of hyena herm fur is "Hyena Herm".
 Usedesc of hyena herm fur is "[HyenaHermFurUse]";
 
 to say HyenaHermFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Hyena Herm";
 
 instead of sniffing hyena herm fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

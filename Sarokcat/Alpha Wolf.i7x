@@ -361,12 +361,11 @@ name	desc	weight	object
 
 alpha wolf fur is a grab object.
 It is temporary.
-alpha wolf fur is infectious.
-Strain of alpha wolf fur is "Alpha Wolf".
 Usedesc of alpha wolf fur is "[AlphaWolfFurUse]";
 
 to say AlphaWolfFurUse:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Alpha Wolf";
 
 instead of sniffing alpha wolf fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";

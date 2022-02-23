@@ -1,6 +1,9 @@
-Version 2 of Meredith by Stripes begins here.
+Version 2 of Meredith by Prometheus begins here.
 [Version 2 - Pregnancy and Gwen]
 [Version 2.1 - Minor maintenance and character relocation - Luneth]
+[Version 2.1.1 - Moved to Prometheus's folder. Ending for Colleen, Vanessa, Meredith, and Gwen in Vanessa's file.]
+
+[Originally by Stripes]
 
 "Adds another member of the paratrooper squad triggered by Vanessa to Flexible Survival."
 
@@ -310,7 +313,7 @@ to say Meredith_tfaccident:
 	say "     She holds the vial up to look at it against the fluorescent lights of the library, examining the murky, metallic fluid. 'Regardless, it's humbling that something so small can cause such chaos, isn't it? Tiny ma-ahhh!' While looking at the vial, it slips from her hand, breaking open and spilling out on the ground. Thankfully neither of you were hit. 'Oh, that was close. Better clean that up before someone steps in it.' Pulling on some thick gloves, she wipes the mess up with a rag and sets it aside.";
 	say "     'Now, where was I?' she mumbles, flipping through her extensive notes. Not finding what she's looking for, she sits back on her bunk and goes from one binder to the next. 'Ah, here we go. So as I was saying, the nanites are small machines only a few nanometers across. This means they're no room for them to house all the... ahhh... all the...' she trails off as she fidgets in her seat and tugs at the collar of her shirt as she gets quite flush in the face. 'You'll have to excuse me, I'm feeling quite out of sorts all of a sudden,' she mumbles before releasing a moan out of the blue. Looking at her behind, she eeps and sits up violently, revealing she'd sat on the nanite-suffused rag. From the silvery stain on the seat of her pants and the nub of an equine tail that's tearing its way free of them, it's clear she's accidentally infected herself.";
 	say "     She moans again, hand pressing at her crotch and rubbing firmly over the fabric covering it. 'Oh my! I knew this could be intense, but it is most unexpectedly pleasurable.' As you watch, her tail slowly extends itself as chestnut hair covers it until it has blossomed into fullness. As this is happening, you almost miss the subtle changes to her ears as they become more pointed and their tips darken a little. She wobbles briefly and you quickly grab her for support before she falls. Raising the cuff of her pantleg as she shakes off a now ill-fitting shoe, it is revealed that her feet have become hooves and her ankles are equine in shape. Her skin is darker and a fine coat of furry hair grows to cover it, affecting the lower six inches or so of her leg before the process slows to a halt and her changes have run their course.";
-	say "     'This is quite the unfortunate turn of events. I'd hoped to remain uninfected at least until I'd had a chance to complete my observations.' She looks herself over as she wobbles on her unfamiliar hooves for a few steps. As infection strains go, it's not so bad though,' she says, giving her tail an experimental flick. 'By Newton, I should be chronicling this!' she exclaims loudly. 'I need to write down every detail of my transformation immediately.' And with that, she grabs a notepad and dashes off to the washroom, probably to give herself a more thorough examination in private.";
+	say "     'This is quite the unfortunate turn of events. I'd hoped to remain uninfected at least until I'd had a chance to complete my observations.' She looks herself over as she wobbles on her unfamiliar hooves for a few steps. 'As infection strains go, it's not so bad though,' she says, giving her tail an experimental flick. 'By Newton, I should be chronicling this!' she exclaims loudly. 'I need to write down every detail of my transformation immediately.' And with that, she grabs a notepad and dashes off to the washroom, probably to give herself a more thorough examination in private.";
 	now lastfuck of Meredith is turns + 8;
 	increase HP of Meredith by 1;
 
@@ -627,5 +630,9 @@ an everyturn rule:
 				now XP of Meredith is 0;
 				increase level of Meredith by 1;
 
+
+Section 6 - Endings
+
+[See Section 5 of Vanessa]
 
 Meredith ends here.

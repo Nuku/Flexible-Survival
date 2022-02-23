@@ -14,6 +14,17 @@ object	name
 Brooke	"Brooke"
 
 Brooke is a man. Brooke is in The Palomino.
+[Basic Interaction states as of game start]
+PlayerMet of Brooke is false.
+PlayerRomanced of Brooke is false.
+PlayerFriended of Brooke is false.
+PlayerControlled of Brooke is false.
+PlayerFucked of Brooke is false.
+OralVirgin of Brooke is false.
+Virgin of Brooke is true.
+AnalVirgin of Brooke is false.
+PenileVirgin of Brooke is false.
+SexuallyExperienced of Brooke is true.
 Description of Brooke is "[brookedesc]".
 Conversation of Brooke is { "Sneak off with me?" }.
 brookeandrewtalk is a truth state that varies. brookeandrewtalk is usually false.

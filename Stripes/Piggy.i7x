@@ -212,12 +212,11 @@ name	desc	weight	object
 
 piggy fur is a grab object.
 It is temporary.
-piggy fur is infectious.
-Strain of piggy fur is "Piggy".
 Usedesc of piggy fur is "[piggy fur use]";
 
 to say piggy fur use:
 	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Piggy".
 
 instead of sniffing piggy fur:
 	say "The fur has a pleasing, not too strong, animal-like scent.";
