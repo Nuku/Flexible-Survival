@@ -56,6 +56,7 @@ Chapter 1 - Definitions
 
 Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
 
+
 Chapter 2 - Prompt
 
 When play begins:
@@ -109,8 +110,32 @@ to say promptsay:
 		say "[link][bracket]Enemy Stats[close bracket][as]ShowEncounteredEnemies[end link] ";
 	say "[line break]";
 	say "Exits:";
+	let vdirections be a list of text; [helps sort valid directions, which can't be sorted itself because it is an inbuilt inform constant.]
 	repeat with nam running through valid directions:
-		say " [link][printed name of nam][end link]";
+		if nam is:
+			-- North:
+			add "North" to vdirections;
+			-- Northeast:
+				add "Northeast" to vdirections;
+			-- Northwest:
+				add "Northwest" to vdirections;
+			-- South:
+				add "South" to vdirections;
+			-- Southeast:
+				add "Southeast" to vdirections;
+			-- Southwest:
+				add "Southwest" to vdirections;
+			-- West:
+				add "West" to vdirections;
+			-- East:
+				add "East" to vdirections;
+			-- Up:
+				add "Up" to vdirections;
+			-- Down:
+				add "Down" to vdirections;
+	sort vdirections in reverse order;
+	repeat with vdir running through vdirections:
+		say " [link][vdir][end link]";
 	if location of Player is fasttravel and earea of location of Player is "void":
 		say " [bracket][link]nav[end link][close bracket]";
 	else if location of Player is fasttravel:
