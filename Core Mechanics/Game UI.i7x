@@ -114,9 +114,17 @@ to say promptsay:
 	repeat with nam running through valid directions:
 		if nam is:
 			-- North:
-				add "North" to vdirections;
+			add "North" to vdirections;
+			-- Northeast:
+				add "Northeast" to vdirections;
+			-- Northwest:
+				add "Northwest" to vdirections;
 			-- South:
 				add "South" to vdirections;
+			-- Southeast:
+				add "Southeast" to vdirections;
+			-- Southwest:
+				add "Southwest" to vdirections;
 			-- West:
 				add "West" to vdirections;
 			-- East:
