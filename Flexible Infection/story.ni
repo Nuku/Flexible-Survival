@@ -3810,7 +3810,7 @@ Section - Boar Man
 
 A boar man is a infection model. Description of a boar man is "This man appear to be a rather fat boar creature, but closer examination reveals his stocky frame carries a good deal of muscle as well. But the stench is absolutely horrid." The TF table of a boar man is Table 12.
 
-Plural of boar man is boar men.
+The plural of boar man is boar men.
 
 The move rate of a boar man is 2.
 The attack rate of a boar man is 2.
