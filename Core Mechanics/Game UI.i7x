@@ -133,6 +133,8 @@ to say promptsay:
 				add "Up" to vdirections;
 			-- Down:
 				add "Down" to vdirections;
+			-- otherwise:
+				add "Error: unknown direction detected, report this bug on discord: " to vdirections;
 	sort vdirections in reverse order;
 	repeat with vdir running through vdirections:
 		say " [link][vdir][end link]";
