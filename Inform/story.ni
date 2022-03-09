@@ -337,7 +337,6 @@ Include More Misc Events by Kaleem mcintyre.
 Include Murder Mystery by Rikaeus.
 Include Museum Events by Sarokcat.
 Include Museum Rounds by Stripes.
-Include Nemean Lion by Prometheus.
 Include New Events by Sarokcat.
 Include Ninja Events by Tanaka.
 Include Odd Weapons by Hellerhound.
@@ -427,6 +426,7 @@ Include Caveman by Guest Writers.
 Include Centaur Mare by Stripes.
 Include Centaur Stallion by Stripes.
 Include Cerberus by Stripes.
+Include Ceryneian Forms by Prometheus.
 Include Cheetah by Sarokcat.
 Include Chocolate Lab by Stripes.
 Include Clockwork Fox by Stripes.
@@ -588,6 +588,7 @@ Include Naga by Nuku Valente.
 Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
 Include Nekomimi Boy by Prometheus.
+Include Nemean Lion by Prometheus.
 Include Nerdy Mouse by Guest Writers.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
@@ -897,7 +898,7 @@ Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include Reece by Luneth.
 Include RexxyEvent by AGentlemanCalledB.
-Include Richard by Rikaeus.
+Include Richard by Wahn.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
 Include Sally by Stripes.

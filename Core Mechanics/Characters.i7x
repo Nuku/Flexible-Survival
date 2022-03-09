@@ -48,7 +48,7 @@ A person has a number called Androginity. Androginity is usually 5.
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 
 A person has a number called Mouth Length. Mouth Length is usually 5.
-A person has a number called Mouth Circumference. Mouth Circumference is usually 7.
+A person has a number called Mouth Circumference. Mouth Circumference is usually 3.
 A person has a number called Tongue Length. Tongue Length is usually 3.
 A person has a number called Breast Size. Breast Size is usually 0.
 A person has a number called Nipple Count. Nipple Count is usually 2.

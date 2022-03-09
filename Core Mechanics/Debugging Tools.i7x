@@ -473,7 +473,7 @@ to PrereqAnalyze (X - situation):
 		else:
 			say "[Resolution of Prereq2 of X] is listed in [Prereq2Resolution of X][line break]";
 		LineBreak;
-	if Prereq2 of X is not nothing:
+	if Prereq3 of X is not nothing:
 		say "Prereq3: [Prereq3 of X] - ";
 		if Prereq3 of X is resolved:
 			say "resolved";
