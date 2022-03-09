@@ -478,12 +478,12 @@ to say SylviaTalk8: [Twelve Labours]
 			say "     You would have thought my words would have sunk in the first time, but I suppose you are rather distracted at times. Take a companion with you when you fight it or you will likely find it a lot tougher to defeat. If you forget again, feel free to ask. It doesn't really take me much time to repeat myself. I wish you luck.";
 		else:
 			say "     'Still going with those? I'm impressed. Just don't take after Herakles too closely. Killing your family in a fit of madness is not something you want to copy. But to give you a little more help, the second labor is the Lernean Hydra. Herakles initially tried to defeat it through brute force but it just continued to get stronger and grow more heads. It wasn't until Iolaos aided him by cauterising the wounds as each head was cut off that he was finally able to slay it. I doubt that you will need to be burning any neck-stumps, but I would advise taking a friend or pet with you or you are going to find it a lot harder to overcome. That is as long as it is symbolic, otherwise your survival is in the hands of the gods. Oh, and stay away from the blood. Really nasty stuff. I'm sure that you'll be fine. Don't forget to enjoy yourself as you risk your life.'";
-	[else if TwelveLaborsStage is 3:
+	else if TwelveLaborsStage is 3:
 		if "Twelve Labours Explained" is listed in traits of Sylvia:
-			say "     ";
+			say "     'You might want to improve your memory, especially given the nature of this labor, but I suppose none of us can be perfect. This is probably an endurance test, so pursue the deer wherever it goes. Assuming that it began in the Urban Forest, I would say that it would likely go to the beach, the zoo, the park, and the plains, but don't take my word for it necessarily. Just remember, some things are easier in [bold type]hindsight[roman type].'";
 		else:
-			say "     ";
-	else if TwelveLaborsStage is 4:
+			say "     'I'm glad that the hydra didn't melt you or anything like that. I would have missed you, as I'm sure that others would too, but on to the matter at hand. The Third Labor of Herakles. If my memory is accurate, that should be the Hind of Ceryneia, yes? It is highly likely that she will be in the Urban Forest given that that is the place with the most trees, but as I'm sure that you will know if you are familiar with Greek mythology, she is very likely to make you pursue her around the city. You shouldn't have to fight anything, but don't wear yourself out as this is likely to test your endurance and perseverance. Hopefully with the [bold type]benefit of hindsight[roman type], you'll be able to look back on this and be proud of yourself.";
+	[else if TwelveLaborsStage is 4:
 		if "Twelve Labours Explained" is listed in traits of Sylvia:
 			say "     ";
 		else:

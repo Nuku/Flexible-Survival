@@ -3,6 +3,9 @@ Version 5 of Hospital by Stripes begins here.
 "Adds a Hospital area with new monsters and a quest addition to Flexible Survival"
 
 
+a postimport rule:
+	if hospquest is 13 and mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
+		now mattcollection is 2; [incomplete sample handin, no further samples available]
 
 Section 1 - City Hospital
 
@@ -1039,6 +1042,8 @@ to say hospranaway:
 	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
+	if mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
+		now mattcollection is 2; [incomplete sample handin, no further samples available]
 
 to say hosploss:
 	now hospbattlelost is 1;
@@ -1093,6 +1098,8 @@ to say hosploss:
 	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
+	if mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
+		now mattcollection is 2; [incomplete sample handin, no further samples available]
 	follow the turnpass rule;
 
 
@@ -1221,6 +1228,8 @@ to say hospvictory:
 	now HP of Doctor Mouse is 2;
 	now Locked stairwell is locked;
 	now hospquest is 13;
+	if mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
+		now mattcollection is 2; [incomplete sample handin, no further samples available]
 	increase the score by 50;
 	if HP of Doctor Matt is not 100:
 		now player is in Primary Lab;

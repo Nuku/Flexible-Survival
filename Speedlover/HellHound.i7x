@@ -17,7 +17,7 @@ after looking while player is in Overgrown Area:
 	project the Figure of Map_Beach_11_icon;
 
 to say OvergrownBlockDesc:
-	if daytimer is night:	[night]
+	if daytimer is night and "Ceryneian Blessed - Anthro" is not listed in traits of Player or "Ceryneian Blessed - Feral" is not listed in traits of Player or "Ceryneian Blessed - Taur" is not listed in traits of Player:	[night]
 		say "     At this time of night it's far too dark to make out much of the unlit, overgrown area.";
 		if houndfromhell is true and isHellhound is false:
 			say "[meetHellhound]";

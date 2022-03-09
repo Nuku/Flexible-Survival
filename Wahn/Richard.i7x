@@ -1,5 +1,6 @@
-Version 1 of Richard by Rikaeus begins here.
-[Version 1 - Creation of Richard the NPC]
+Version 1 of Richard by Wahn begins here.
+[ Originally authored by Rikaeus                     ]
+[ Version 1 - Creation of Richard the NPC            ]
 
 RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
@@ -59,7 +60,7 @@ Section 2 - Talking with Richard
 
 instead of conversing the Richard:
 	if SatyrFratRichardRelationship < 4: [should be not yet available]
-		say "     ERROR: Richard shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [SatyrFratRichardRelationship]";
+		say "     ERROR: Richard shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please on the FS Discord and quote this tracking number for easier bugfixing: [SatyrFratRichardRelationship]";
 	else:
 		say "     As you walk up to Richard, who's on his computer, he turns to you with a smile. 'What's up?' he asks you, turning his chair to face you.";
 		wait for any key;
@@ -109,7 +110,7 @@ to say RichardTalkMenu:
 	clear the screen and hyperlink list;
 
 to say RichardSatyr:
-	say "     As soon as you mention his satyr body his smile widens big time. 'Oh, I absolutely love it!' Richard says excitedly, running a hand through his goatee. When he says that though he moves to palm the bulge of his pants. 'I was already above average before the transformation, but now I'm much bigger!' the guy says, a hint of lust in his voice. To your disappointment though, he pulls his hand away before he can start getting hard. However, your frown is wiped off your face when he pulls you into a rough kiss. 'I'm thankful that you gave me this gift,' the male says before winking at you and turning back to his essay";
+	say "     As soon as you mention his satyr body his smile widens big time. 'Oh, I absolutely love it!' Richard says excitedly, running a hand through his goatee. When he says that though he moves to palm the bulge of his pants. 'I was already above average before the transformation, but now I'm much bigger!' the guy says, a hint of lust in his voice. To your disappointment though, he pulls his hand away before he can start getting hard. However, your frown is wiped off your face when he pulls you into a rough kiss. 'I'm thankful that you gave me this gift,' the male says before winking at you and turning back to his essay.";
 
 to say RichardCollege:
 	say "     Richard quirks eyebrow at you when you mention college. 'Well, you know that I like spending my night time at the fraternity....' he trails off. You nod at him but ask him what he does during the day time. The satyr boy gives you an odd look and gestures to his computer. 'As you can see, I go to class in the day time. Right now I'm working on my chemistry paper,' the male tells you. Richard chuckles when he notices the confused look on your face. 'You're probably wondering why I'm still going to college during the apocalypse. Well, I still want to graduate, and the people here are still offering that, at a severely reduced price too!' He laughs. What does he mean by that exactly? 'Well, instead of money, they want food or water now. Which I can get easier than cash,' he replies. Noticing that you've distracted him from his essay he apologizes and tells you he needs to get back to work. You tell him it's no problem and step away.";
