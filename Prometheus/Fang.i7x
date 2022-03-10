@@ -566,11 +566,10 @@ to say FemaleFangOmegaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "In the mood to cuddle with the big wolf";
 	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Wolf Fingering";
-		now sortorder entry is 2;
-		now description entry is "Finger Fang vaginally";
+	choose a blank row in table of fucking options;
+	now title entry is "Wolf Fingering";
+	now sortorder entry is 2;
+	now description entry is "Finger Fang vaginally";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Analingus";
@@ -1220,11 +1219,10 @@ to say FemaleFangBetaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "In the mood to cuddle with the big wolf";
 	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Wolf Fingering";
-		now sortorder entry is 2;
-		now description entry is "Finger Fang vaginally";
+	choose a blank row in table of fucking options;
+	now title entry is "Wolf Fingering";
+	now sortorder entry is 2;
+	now description entry is "Finger Fang vaginally";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Analingus";
@@ -1508,11 +1506,10 @@ to say FemaleFangSexMenu:
 	now sortorder entry is 1;
 	now description entry is "In the mood to cuddle the big wolf";
 	[]
-	if Player is female:
-		choose a blank row in table of fucking options;
-		now title entry is "Wolf Fingering";
-		now sortorder entry is 2;
-		now description entry is "Finger Fang vaginally";
+	choose a blank row in table of fucking options;
+	now title entry is "Wolf Fingering";
+	now sortorder entry is 2;
+	now description entry is "Finger Fang vaginally";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Analingus";

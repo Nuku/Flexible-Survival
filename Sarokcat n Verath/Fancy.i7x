@@ -422,6 +422,10 @@ To say nightmaremagic:
 	if jackalmantf > 0:
 		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can't see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
 		stop the action;
+	if "Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player:
+		say "     As you swallow the liquid, you begin to retch, your body seemingly rejecting the foul fluid. Convulsing, you see images flash before your eyes, dark rituals and visions of terror that you don't remember a moment later. 'Resist the taint,' a voice spits, though you are unable to see who said it. Eventually, your body calms and you look down, panting from exertion, to see what effect the vial's contents has had on your body, finding that you look exactly the same, the blessing of the Olympians seemingly protecting you against the Nightmare's influence while you are in Ceryneian deer. Surprisingly, as you look down at your hand, you see that the vial is still full, making you wonder whether you even drank it in the first place. You decide to stow it away again, wondering whether you would be better off trying again when you are in another form...";
+		ItemGain Nightmare Vial by 1;
+		stop the action;
 	if jackalboytf > 0:
 		now nerminetalk is 1;
 		now jackalboytf is 5;

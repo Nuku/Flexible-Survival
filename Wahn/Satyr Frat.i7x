@@ -300,6 +300,28 @@ to say SatyrFratSexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
 
+[
+Things to add:
+
+Beer Pong
+
+Bring drinks to an upper room with frat guys (beer, expand to wine) - Female Player can pass Cha test to make them mess around with each other
+Stage 1: Beer (normal drunk)
+Stage 1a: Turn topic to sexual matters, one guy brings vid of a past conquest, some guys jerk off, one leaves, one doesn't
+Stage 1b: Bring up frat stories
+Stage 1c: Go down to grab more wine (leads to stage 2)
+Stage 2: wine drunk (horny)
+
+- guys would bitch about girlfriends (upsides of just hanging out with other guys)
+-
+
+Introduce a nice, but fairly sexual woman
+- Player walks past with armful of beers, she steps up and picks one, offers fun later (wink wink)
+	> Player reacts in some way (positive, platonic, asshole)
+- Player can offer use of her to other guys upstairs to get them to do stuff
+
+]
+
 to say SatyrFratSex1: [drinking]
 	say "     Snatching a freshly filled drink from the bar in front of Kerr, you shout out 'Phi Alpha Nu Forever!' and down the cup, drawing a loud cheer from everyone in the room. Now that you've got their attention, you go through a little spiel of praising their accomplishments (getting things mostly right by bringing up what you see on trophies and flags on the wall) - but also insinuating that they may or may not be able to hold their liquor. Before long, you've got three studly hunks of football players stepping forward to defend the frat's honor... and you guide them straight to the bar where a widely grinning Kerr is lining up shot glasses and cutting limes. As he fills one after another of them with golden-yellow Tequila, all four of the contestants take your places at the counter and get ready to drink.";
 	say "     Surrounded by an excited and active crowd, you look at each other, three human guys and you - then the chant of 'Drink! Drink! Drink!' raises among the students. That's your cue - putting some salt on your hand and licking it off, you throw back the first shot with a single move, then hammer the glass down and bite into a slice of lime. Fire-water trickles down your throat as the sour taste hits our mouth, making you twitch and grunt out loud as warmth spreads through your insides. Yeah, that's just like it! Rolling your head from side to side, you reach out to take the next glass. Shot after shot is filled and hammered back and soon, the first of your four is out of the race, swaying for a moment before onlookers have to catch him to keep him from collapsing on the floor. With that guy half-dragged and half-stumbling to a couch, it's down to three now.";
