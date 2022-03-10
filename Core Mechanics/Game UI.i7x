@@ -114,7 +114,7 @@ to say promptsay:
 	repeat with nam running through valid directions:
 		if nam is:
 			-- North:
-			add "North" to vdirections;
+				add "North" to vdirections;
 			-- Northeast:
 				add "Northeast" to vdirections;
 			-- Northwest:
@@ -133,8 +133,12 @@ to say promptsay:
 				add "Up" to vdirections;
 			-- Down:
 				add "Down" to vdirections;
+			-- Inside:
+				add "Inside" to vdirections;
+			-- Outside:
+				add "Outside" to vdirections;
 			-- otherwise:
-				add "Error: unknown direction detected, report this bug on discord: " to vdirections;
+				add "Error: unknown direction detected, report this bug on discord: [printed name of nam]" to vdirections;
 	sort vdirections in reverse order;
 	repeat with vdir running through vdirections:
 		say " [link][vdir][end link]";
