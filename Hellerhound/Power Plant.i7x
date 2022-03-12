@@ -38,7 +38,7 @@ to say ResolveEvent Generator Parts:
 		now foundparts is 1;
 		now Resolution of Generator Parts is 1; [found the pile]
 	else if foundparts is 1:
-		say "     You find the pile of gear again and see that it has grown further. Inspecting the collection of spark plugs, metal parts and electronic components, you spot some circuit boards that are ochre in color and seem fairly old. A closer look reveals the inscription 'West Hills Power Plant' on them, which tells you where these belong at least. Just in case they could provide useful if your path brings you to the power plant, you pack the small pieces of electronics in your backpack.";
+		say "     You find the pile of gear again and see that it has grown further. Inspecting the collection of spark plugs, metal parts and electronic components, you spot some circuit boards that are ochre in color and seem fairly old. A closer look reveals the inscription 'West Hills Power Plant' on them, which tells you where these belong at least. Just in case they might prove useful at the power plant, you pack the small pieces of electronics in your backpack.";
 		now Generator Parts is resolved;
 		now Resolution of Generator Parts is 2; [grabbed the power plant chips]
 		now foundparts is 2;
