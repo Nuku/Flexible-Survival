@@ -1,7 +1,8 @@
-Version 1 of Nerdy Mouse by Guest Writers begins here.
+Version 1 of Nerdy Mouse by Wahn begins here.
 [Original by McRabid]
 [Version 0.5 - Touch-ups and framework for player victory sex created.]
 [Version 1 - Moved to Guest Writers]
+[Version 2 - Moved to Wahn in preparation of some work on him]
 
 "Adds a Nerdy Mouse creature to Flexible Survival's Wandering Monsters table"
 
@@ -88,7 +89,7 @@ When Play begins:
 	add "Nerdy Mouse" to infections of TailList;
 	now Name entry is "Nerdy Mouse";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy Name entry is "Wesley"; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The mouse blocks another attack from you, while shouting 'Barrier!' by using his messenger bag as a shield. OUCH! What does he have in there anyway?[or]Seemingly recalling a self-defense class, the mouse shouts 'I don't know you! This is my purse!' as he manages to deliver a swift, and very painful, kick right to your groin.[or]'Look behind you! A three-headed monkey!' The mouse shouts, pointing behind you. You turn to look and find nothing, your pride is wounded for falling for the oldest trick in the book, further punctuated by a heady thump of his satchel bag onto your head![or]The mouse flails his balled up fists in your general direction. It would be almost comical if he wasn't actually hitting you.[or]The mouse flails his heavy bag wildly while blocking his face. '[mnfacequote]!' he squeaks with fear. The bag ends up clocking you in the side of the head with a heavy thud.[or]The nerdy mouse swings his little fists wildly with his eyes squeezed tightly shut, some of his frantic blows hitting you.[at random]";
 	now defeated entry is "[beatthenerdymouse]";
