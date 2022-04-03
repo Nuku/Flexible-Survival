@@ -15,6 +15,7 @@ ktcockmatch is a truth state that varies.
 ktcockmatch is usually false.          [ Checks for matching player cock while using the 'Know Thyself' feat. ]
 automaticcombatcheck is a number that varies. [ Used to mark if combat actions are not being chosen by the player. ]
 inafight is a number that varies.		[ Used to detect if Player is in a fight (item use) ]
+infectbypass is a truth state that varies. [Used to disable infections for non-sexual combat losses]
 skipretaliate is a truth state that varies. [Used to detect if a monster will be denied a chance to retaliate.]
 avoidance is a number that varies.		[ Used to track if a player automatically avoids an attack. ]
 gascloud is a number that varies.		[ Tracks the ongoing strength of a player's ambient gas cloud. ]
@@ -1415,7 +1416,7 @@ To lose:
 		if scenario is "Researcher" and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
 			say "";
 		else:
-			if non-infectious entry is false:
+			if non-infectious entry is false and infectbypass is false:
 				if there is no Cross-Infection in row MonsterID of Table of Random Critters or Cross-Infection entry is "": [cross-infection does not exist or empty]
 					infect; [regular infect]
 				else: [Cross-Infection found]
@@ -1441,6 +1442,7 @@ To lose:
 	decrease the score by 1;
 	decrease Morale of Player by 3;
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
+	now infectbypass is false; [reset]
 
 to RefreshLootBonus:
 	now LootBonus is 0; [reset]

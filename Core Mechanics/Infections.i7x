@@ -1079,6 +1079,29 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 	else if debugactive is 1 and Silence is 0:
 		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
+Part 6 - Humanification Function (for Player reset)
+
+to Humanify_Player:
+	now TailName of Target is "Human";
+	now TailSpeciesName of Target is "Human";
+	now Tail of Target is "";
+	now SkinName of Target is "Human";
+	now SkinSpeciesName of Target is "Human";
+	now Skin of Target is "smooth";
+	now FaceName of Target is "Human";
+	now FaceSpeciesName of Target is "Human";
+	now Face of Target is "charmingly human";
+	now BodyName of Target is "Human";
+	now BodySpeciesName of Target is "Human";
+	now Body of Target is "charmingly human";
+	now CockName of Target is "Human";
+	now CockSpeciesName of Target is "Human";
+	now Cock of Target is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+	now scalevalue of Target is 3;
+	now bodydesc of Target is "[one of]average[or]normal[or]unchanged[at random]";
+	now bodytype of Target is "Human";
+	now SleepRhythm of Player is 0;
+
 Part 10 - Infection Overview Terminal
 
 Instead of examining the infection terminal:
