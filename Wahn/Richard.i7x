@@ -4,7 +4,7 @@ Version 1 of Richard by Wahn begins here.
 
 RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
+a postimport rule:
 	if SatyrFratRichardRelationship is 4 and RichardRoomConnection is 0: [event resolved the right way, room not connected yet]
 		change the east exit of Tenvale College Dorms to Richard's Room; [connecting the location to the travel room]
 		change the west exit of Richard's Room to Tenvale College Dorms; [connecting the location to the travel room]

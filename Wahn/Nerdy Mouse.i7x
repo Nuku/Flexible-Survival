@@ -13,6 +13,7 @@ to say nerdymousedesc:
 	if inasituation is true:
 		say ""; [dealt with at the source of the event]
 	else:
+		project Figure of Nerdy Mouse_clothed_icon;
 		say "     As you're exploring the Campus Quad you almost literally collide with a short brown mouse [one of]with his nose buried in a book[or]absorbed with a handheld game system[or]reading a comic book[at random]. He's wearing thick circular glasses, a t-shirt [one of]reading 'I get +8 on all of my intelligence rolls'[or]reading 'l337'[or]with a picture of a blue police box[or]with a picture of a wizard casting a spell[at random], a pair of blue jeans and carries a large messenger bag.";
 		say "     The mouse stares at you from behind his large glasses for a moment before letting out a startled squeak and jumping away from you. He adopts an almost comical boxing stance before speaking. 'I... I'm not afraid of you stupid bullies anymore! [one of]Allons-y[or]Engage[or]Excelsior[or]Let's get dangerous[or]Roll for initiative[at random]!' he cries, charging in with his arms flailing and his eyes tightly closed.";
 

@@ -366,19 +366,34 @@ to MoreauFaceSelection:
 	now description entry is "Buy yourself a satyr head, complete with goatee";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German shepherd's muzzle";
+	now title entry is "A fennec's face";
 	now sortorder entry is 4;
+	now description entry is "Buy yourself a fennec head, complete with large ears";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's face";
+	now sortorder entry is 5;
+	now description entry is "Buy yourself a naga head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German shepherd's muzzle";
+	now sortorder entry is 6;
 	now description entry is "Buy yourself a canine head";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus's face";
-	now sortorder entry is 5;
+	now sortorder entry is 7;
 	now description entry is "Buy yourself a beautiful visage";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard muzzle";
-	now sortorder entry is 6;
+	now sortorder entry is 8;
 	now description entry is "Get a feline face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid-person's face";
+	now sortorder entry is 9;
+	now description entry is "Get a squid face";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -401,12 +416,18 @@ to MoreauFaceSelection:
 					setmonster "Blue Gryphon Herm";
 				-- "A satyr's face":
 					setmonster "Satyr";
+				-- "A fennec's face":
+					setmonster "Fennec";
+				-- "A naga's face":
+					setmonster "Naga";
 				-- "German Shepherd Male":
 					setmonster "German Shepherd Male";
 				-- "A succubus's face":
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
+				-- "A squid-person's face":
+					setmonster "Squid";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				wait for any key;
@@ -433,6 +454,10 @@ to say MoreauFaceBuyPayment:
 		if FaceName of Player is not Name entry:
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
 			now Face of Player is face entry;
 			now BodyShopGuaranteedFace is Name entry;
 			FeatGain "Body Shop Guarantee - Face";
@@ -477,19 +502,34 @@ to MoreauBodySelection:
 	now description entry is "Get a satyr body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro German shepherd";
+	now title entry is "Fennec";
 	now sortorder entry is 4;
+	now description entry is "Get a fennec body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga";
+	now sortorder entry is 5;
+	now description entry is "Get a naga body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro German shepherd";
+	now sortorder entry is 6;
 	now description entry is "Get an anthro canine body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Succubus";
-	now sortorder entry is 5;
+	now sortorder entry is 7;
 	now description entry is "Get a winged succubus body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anthro snow leopard";
-	now sortorder entry is 6;
+	now sortorder entry is 8;
 	now description entry is "Get an anthro feline body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro squid";
+	now sortorder entry is 9;
+	now description entry is "Get an anthro squid body";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -512,12 +552,18 @@ to MoreauBodySelection:
 					setmonster "Blue Gryphon Herm";
 				-- "Satyr":
 					setmonster "Satyr";
+				-- "Fennec":
+					setmonster "Fennec";
+				-- "Naga":
+					setmonster "Naga";
 				-- "Anthro German shepherd":
 					setmonster "German Shepherd Male";
 				-- "Succubus":
 					setmonster "Succubus";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
+				-- "Anthro squid":
+					setmonster "Squid";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				wait for any key;
@@ -544,6 +590,10 @@ to say MoreauBodyBuyPayment:
 		if BodyName of Player is not Name entry:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
 			now Body of Player is body entry;
 			now BodyShopGuaranteedBody is Name entry;
 			attributeinfect; [sets the new attributes]
@@ -589,19 +639,34 @@ to MoreauSkinSelection:
 	now description entry is "Get skin and furry legs";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "German Shepherd fur";
+	now title entry is "Fennec fur";
 	now sortorder entry is 4;
+	now description entry is "Get fennec fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga scales";
+	now sortorder entry is 5;
+	now description entry is "Get naga scales";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "German Shepherd fur";
+	now sortorder entry is 6;
 	now description entry is "Get German shepherd fur";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Succubus skin";
-	now sortorder entry is 5;
+	now sortorder entry is 7;
 	now description entry is "Get flawless skin";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Snow leopard fur";
-	now sortorder entry is 6;
+	now sortorder entry is 8;
 	now description entry is "Get spotted white fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Squid skin";
+	now sortorder entry is 9;
+	now description entry is "Get squid skin";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -624,12 +689,18 @@ to MoreauSkinSelection:
 					setmonster "Blue Gryphon Herm";
 				-- "Satyr's skin and fur":
 					setmonster "Satyr";
+				-- "Fennec fur":
+					setmonster "Fennec";
+				-- "Naga scales":
+					setmonster "Naga";
 				-- "German Shepherd fur":
 					setmonster "German Shepherd Male";
 				-- "Succubus skin":
 					setmonster "Succubus";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
+				-- "Squid skin":
+					setmonster "Squid";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				wait for any key;
@@ -656,6 +727,10 @@ to say MoreauSkinBuyPayment:
 		if SkinName of Player is not Name entry:
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
 			now Skin of Player is skin entry;
 			now BodyShopGuaranteedSkin is Name entry;
 			FeatGain "Body Shop Guarantee - Skin";
@@ -700,19 +775,34 @@ to MoreauTailSelection:
 	now description entry is "Get a satyr tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German shepherd tail";
+	now title entry is "A fennec tail";
 	now sortorder entry is 4;
+	now description entry is "Get a fennec tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga tail";
+	now sortorder entry is 5;
+	now description entry is "Get a naga tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German shepherd tail";
+	now sortorder entry is 6;
 	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus ass";
-	now sortorder entry is 5;
+	now sortorder entry is 7;
 	now description entry is "Get a firm succubus ass";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard tail";
-	now sortorder entry is 6;
+	now sortorder entry is 8;
 	now description entry is "Get a snow leopard tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid booty";
+	now sortorder entry is 9;
+	now description entry is "Get a squid ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -735,12 +825,18 @@ to MoreauTailSelection:
 					setmonster "Blue Gryphon Herm";
 				-- "A satyr's tail":
 					setmonster "Satyr";
+				-- "A fennec's tail":
+					setmonster "Fennec";
+				-- "A naga's tail":
+					setmonster "Naga";
 				-- "A German shepherd tail":
 					setmonster "German Shepherd Male";
 				-- "A succubus ass":
 					setmonster "Succubus";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
+				-- "A squid booty":
+					setmonster "Squid";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				wait for any key;
@@ -767,6 +863,10 @@ to say MoreauTailBuyPayment:
 		if TailName of Player is not Name entry:
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now tail of Player is tail entry;
 			now BodyShopGuaranteedTail is Name entry;
 			FeatGain "Body Shop Guarantee - Tail";
@@ -811,19 +911,34 @@ to MoreauCockSelection:
 	now description entry is "Get a satyr crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German shepherd groin";
+	now title entry is "A fennec's groin";
 	now sortorder entry is 4;
+	now description entry is "Get a fennec crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's groin";
+	now sortorder entry is 5;
+	now description entry is "Get a naga crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A German shepherd's groin";
+	now sortorder entry is 6;
 	now description entry is "Get a German shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus's groin";
-	now sortorder entry is 5;
-	now description entry is "Get a firm succubus crotch";
+	now sortorder entry is 7;
+	now description entry is "Get a succubus crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A snow leopard groin";
-	now sortorder entry is 6;
+	now title entry is "A snow leopard's groin";
+	now sortorder entry is 8;
 	now description entry is "Get a snow leopard crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid's groin";
+	now sortorder entry is 9;
+	now description entry is "Get a squid crotch";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -846,12 +961,18 @@ to MoreauCockSelection:
 					setmonster "Blue Gryphon Herm";
 				-- "A satyr's groin":
 					setmonster "Satyr";
-				-- "A German shepherd groin":
+				-- "A fennec's groin":
+					setmonster "Fennec";
+				-- "A naga's groin":
+					setmonster "Naga";
+				-- "A German shepherd's groin":
 					setmonster "German Shepherd Male";
 				-- "A succubus's groin":
 					setmonster "Succubus";
-				-- "A snow leopard groin":
+				-- "A snow leopard's groin":
 					setmonster "Snow Leopard";
+				-- "A squid's groin":
+					setmonster "Squid";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				wait for any key;
@@ -880,6 +1001,10 @@ to say MoreauCrotchBuyPayment:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
+		if Species Name entry is not "":
+			now CockSpeciesName of Player is Species Name entry;
+		else:
+			now CockSpeciesName of Player is Name entry;
 		now BodyShopGuaranteedCrotch is Name entry;
 		FeatGain "Body Shop Guarantee - Crotch";
 		say "[line break][MoreauBuySuccessful]";
@@ -980,6 +1105,10 @@ An everyturn rule:
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
 			now Face of Player is face entry;
 	if "Body Shop Guarantee - Body" is listed in feats of Player:
 		if (BodyName of Player is "Jackalman" or BodyName of Player is "Jackalboy" or BodyName of Player is "Nightmare" or BodyName of Player is "Hellhound"):
@@ -991,6 +1120,10 @@ An everyturn rule:
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
 			now Body of Player is body entry;
 			attributeinfect; [sets the new attributes]
 	if "Body Shop Guarantee - Skin" is listed in feats of Player:
@@ -1006,6 +1139,10 @@ An everyturn rule:
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
 			now Skin of Player is skin entry;
 	if "Body Shop Guarantee - Tail" is listed in feats of Player:
 		if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
@@ -1020,6 +1157,10 @@ An everyturn rule:
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now tail of Player is tail entry;
 	if "Body Shop Guarantee - Crotch" is listed in feats of Player:
 		if (CockName of Player is "Jackalman" or CockName of Player is "Jackalboy" or CockName of Player is "Nightmare" or CockName of Player is "Hellhound"):
@@ -1034,6 +1175,10 @@ An everyturn rule:
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your crotch [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
+			if Species Name entry is not "":
+				now CockSpeciesName of Player is Species Name entry;
+			else:
+				now CockSpeciesName of Player is Name entry;
 			now Cock of Player is cock entry;
 
 Section 5 - Events

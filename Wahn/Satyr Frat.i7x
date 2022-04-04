@@ -32,13 +32,15 @@ RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
 a postimport rule:
 	if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99 and SatyrFratRoomConnection is 0:
-		change the East exit of Greek Street to PAN Frat Living Room;
-		change the West exit of PAN Frat Living Room to Greek Street;
+		change the East exit of Greek Street to Satyr Frat Dummy Room;
+		change the West exit of Satyr Frat Dummy Room to Greek Street;
 		now SatyrFratRoomConnection is 1; [room connected]
+	[
 	if SatyrFratRichardRelationship is 4 and RichardRoomConnection is 0:
 		change the Southwest exit of PAN Frat First Floor to Richard's Room; [connecting the location to the travel room]
 		change the Northeast exit of Richard's Room to PAN Frat First Floor; [connecting the location to the travel room]
 		now RichardRoomConnection is 1; [room connected]
+	]
 
 to say Satyr Frat Party:
 	now battleground is "void";
@@ -96,8 +98,8 @@ to say Satyr Frat Party:
 			now SatyrFratRichardRelationship is 2;
 			now Let's Party is active;
 		if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99:
-			change the East exit of Greek Street to PAN Frat Living Room;
-			change the West exit of PAN Frat Living Room to Greek Street;
+			change the East exit of Greek Street to Satyr Frat Dummy Room;
+			change the West exit of Satyr Frat Dummy Room to Greek Street;
 		now Resolution of Free Drink is 1; [Player got the Satyrs in]
 	else:
 		LineBreak;

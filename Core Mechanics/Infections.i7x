@@ -1082,24 +1082,24 @@ to setmonster ( x - text ) silence state is (Silence - a number): [puts an infec
 Part 6 - Humanification Function (for Player reset)
 
 to Humanify_Player:
-	now TailName of Target is "Human";
-	now TailSpeciesName of Target is "Human";
-	now Tail of Target is "";
-	now SkinName of Target is "Human";
-	now SkinSpeciesName of Target is "Human";
-	now Skin of Target is "smooth";
-	now FaceName of Target is "Human";
-	now FaceSpeciesName of Target is "Human";
-	now Face of Target is "charmingly human";
-	now BodyName of Target is "Human";
-	now BodySpeciesName of Target is "Human";
-	now Body of Target is "charmingly human";
-	now CockName of Target is "Human";
-	now CockSpeciesName of Target is "Human";
-	now Cock of Target is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-	now scalevalue of Target is 3;
-	now bodydesc of Target is "[one of]average[or]normal[or]unchanged[at random]";
-	now bodytype of Target is "Human";
+	now TailName of Player is "Human";
+	now TailSpeciesName of Player is "Human";
+	now Tail of Player is "";
+	now SkinName of Player is "Human";
+	now SkinSpeciesName of Player is "Human";
+	now Skin of Player is "smooth";
+	now FaceName of Player is "Human";
+	now FaceSpeciesName of Player is "Human";
+	now Face of Player is "charmingly human";
+	now BodyName of Player is "Human";
+	now BodySpeciesName of Player is "Human";
+	now Body of Player is "charmingly human";
+	now CockName of Player is "Human";
+	now CockSpeciesName of Player is "Human";
+	now Cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+	now scalevalue of Player is 3;
+	now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
+	now bodytype of Player is "Human";
 	now SleepRhythm of Player is 0;
 
 Part 10 - Infection Overview Terminal
