@@ -589,7 +589,7 @@ Include Naiad by Wahn.
 Include Naughty Nurse by Stripes.
 Include Nekomimi Boy by Prometheus.
 Include Nemean Lion by Prometheus.
-Include Nerdy Mouse by Guest Writers.
+Include Nerdy Mouse by Wahn.
 Include Nightmare by Sarokcat.
 Include Ocelot by Stripes.
 Include Ogres by Lyall.

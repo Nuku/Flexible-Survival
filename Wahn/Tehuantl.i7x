@@ -92,13 +92,15 @@ to say TehuantlSex:
 			project the Figure of Tehuantl_Male_clothed_icon;
 			say "     Tehuantl rubs himself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if Player is female]her[else]his[end if] servant again, I need some time to recuperate please.'";
 		else: [female]
+			project the Figure of Tehuantl_Female_Face_icon;
 			say "     Tehuantl rubs herself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if Player is female]her[else]his[end if] pussycat again, I think it would be nicer for both of us if we took a break.'";
 	else:
 		if HP of Tehuantl < 50:
-			project the Figure of Tehuantl_Male_hard_icon;
+			project the Figure of Tehuantl_Female_Face_icon;
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random], you consider having some fun with her.";
 			say "[TehuantlSexMenu]";
 		else:
+			project the Figure of Tehuantl_Male_clothed_icon;
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing himself, paying particular attention to his groin[or]lounging around the library[at random], you consider having some fun with the muscular jaguar.";
 			say "[TehuantlSexMenu]";
 

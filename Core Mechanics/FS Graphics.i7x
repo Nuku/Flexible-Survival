@@ -135,6 +135,8 @@ Figure of MentalMice_icon is the file "Mental_Mice.jpg".
 Figure of MessyPig_icon is the file "FS_MessyPig.jpg".
 Figure of Minotaur_hard_icon is the file "Minotaur_hard.jpg".
 Figure of Minotaur_naked_icon is the file "Minotaur_naked.jpg".
+Figure of Nerdy Mouse_clothed_icon is the file "Nerdy Mouse_clothed.jpg".
+Figure of Nerdy Mouse_hard_icon is the file "Nerdy Mouse_hard.jpg".
 Figure of Naga_icon is the file "Naga.jpg".
 Figure of Nightmare_hard_icon is the file "Nightmare_hard.jpg".
 Figure of Nightmare_soft_icon is the file "Nightmare_soft.jpg".
@@ -1517,6 +1519,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Moreau_face"	Figure of Moreau_face_icon	"Lytta"	g-black	"normal"
 "Moreau_hard"	Figure of Moreau_hard_icon	"Lytta"	g-black	"normal"
 "Moreau_soft"	Figure of Moreau_soft_icon	"Lytta"	g-black	"normal"
+"Nerdy Mouse_clothed"	Figure of Nerdy Mouse_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Nerdy Mouse_hard"	Figure of Nerdy Mouse_hard_icon	"SteppeCrow"	g-white	"normal"
 "Mul_clothed"	Figure of Mul_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Mul_naked"	Figure of Mul_naked_icon	"Kupo Klein"	g-white	"normal"
 "Mul_face"	Figure of Mul_face_icon	"Kupo Klein"	g-black	"normal"

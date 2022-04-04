@@ -30,15 +30,17 @@ SatyressStage is a number that varies.
 SatyrFratRoomConnection is a number that varies.[@Tag:NotSaved]
 RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
-an everyturn rule:
+a postimport rule:
 	if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99 and SatyrFratRoomConnection is 0:
-		change the south exit of Greek Street to Satyr Frat Dummy Room;
-		change the north exit of Satyr Frat Dummy Room to Greek Street;
+		change the East exit of Greek Street to Satyr Frat Dummy Room;
+		change the West exit of Satyr Frat Dummy Room to Greek Street;
 		now SatyrFratRoomConnection is 1; [room connected]
+	[
 	if SatyrFratRichardRelationship is 4 and RichardRoomConnection is 0:
-		change the east exit of Tenvale College Dorms to Richard's Room; [connecting the location to the travel room]
-		change the west exit of Richard's Room to Tenvale College Dorms; [connecting the location to the travel room]
+		change the Southwest exit of PAN Frat First Floor to Richard's Room; [connecting the location to the travel room]
+		change the Northeast exit of Richard's Room to PAN Frat First Floor; [connecting the location to the travel room]
 		now RichardRoomConnection is 1; [room connected]
+	]
 
 to say Satyr Frat Party:
 	now battleground is "void";
@@ -74,7 +76,7 @@ to say Satyr Frat Party:
 			now SatyrFratPartyStage is 1;
 			now SatyrFratRichardRelationship is 99;
 			now Let's Party is active;
-		if calcnumber is 2: [lying]
+		else if calcnumber is 2: [lying]
 			LineBreak;
 			say "     Running up to the young human man on quick hooves, you do a bit of play-acting as if you're out of breath, then pant that you saw a group of incubi climbing over the fence behind the house. The athletic young man's eyes widen in alarm and he says 'What?! Where? And who are -' Quickly interrupting him before he can really think about anything, you tell him to come quickly and run past the garage of the frat-house, turning the corner towards the backyard. And it works - the frat party guardian follows you a moment later, leaving his post to check out your imaginary incubi.";
 			say "     Though as it turns out, they're not as imaginary as you thought - there actually are two incubi climbing over the fence! What a coincidence. Dropping down into the garden, they take up poses that show off their inhumanly perfect bodies and await you and the frat-member behind you calmly. 'Didn't I say there'd be a delicious banquet of studs in here? I'll take the left one,' one of them says to the other, then they attack...";
@@ -90,17 +92,19 @@ to say Satyr Frat Party:
 				now SatyrFratPartyStage is 2;
 			now SatyrFratRichardRelationship is 1;
 			now Let's Party is active;
-		if calcnumber is 3: [sex]
+		else if calcnumber is 3: [sex]
 			LineBreak;
 			say "[SatyrFratSex]";
 			now SatyrFratRichardRelationship is 2;
 			now Let's Party is active;
 		if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99:
-			change the south exit of Greek Street to Satyr Frat Dummy Room;
-			change the north exit of Satyr Frat Dummy Room to Greek Street;
+			change the East exit of Greek Street to Satyr Frat Dummy Room;
+			change the West exit of Satyr Frat Dummy Room to Greek Street;
+		now Resolution of Free Drink is 1; [Player got the Satyrs in]
 	else:
 		LineBreak;
 		say "     Maybe it's for the best that the two of them won't manage to pass their infective wine to dozens of frat members here on the campus. With a well-meant suggestion of just taking their wine barrel and enjoying the contents themselves, you leave the satyrs and turn your attention back to more important matters.";
+		now Resolution of Free Drink is -3; [declined to help the Satyrs get in]
 
 to say SatyrFratSex:
 	if Player is male:
@@ -197,7 +201,7 @@ when play begins:
 to say ResolveEvent Let's Party:
 	SatyrFratPartyVisit;
 
-instead of going south from Greek Street while (SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99):
+instead of going east from Greek Street while (SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99):
 	SatyrFratPartyVisit;
 
 to SatyrFratPartyVisit:

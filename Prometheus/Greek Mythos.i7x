@@ -673,22 +673,8 @@ To say CeryneianTransformation:
 		StatChange "Intelligence" by -4;
 		StatChange "Perception" by -6;
 		StatChange "Charisma" by -6;
-		now TailName of Player is "Human";
-		now TailSpeciesName of Player is "Human";
-		now Tail of Player is "";
-		now SkinName of Player is "Human";
-		now SkinSpeciesName of Player is "Human";
-		now Skin of Player is "smooth";
-		now FaceName of Player is "Human";
-		now FaceSpeciesName of Player is "Human";
-		now Face of Player is "charmingly human";
-		now BodyName of Player is "Human";
-		now BodySpeciesName of Player is "Human";
-		now Body of Player is "charmingly human";
+		Humanify_Player;
 		attributeinfect "Human";
-		now CockName of Player is "Human";
-		now CockSpeciesName of Player is "Human";
-		now Cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
 		stop the action;
 	else: [Player is not currently a Ceryneian Transformation]
 		if Nightmaretf > 0: [Nightmare]

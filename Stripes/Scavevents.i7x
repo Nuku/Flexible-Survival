@@ -632,6 +632,7 @@ to say ResolveEvent Free Drink:
 			else:
 				LineBreak;
 				say "     You shake your head and tell the two of them that you can't come with [']em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
+				now Resolution of Free Drink is -2; [declined going to the party]
 		else:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
 			LineBreak;
@@ -643,6 +644,7 @@ to say ResolveEvent Free Drink:
 			else:
 				LineBreak;
 				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";
+				now Resolution of Free Drink is -2; [declined going to the party]
 			decrease thirst of Player by 10;
 			if thirst of Player < 0, now thirst of Player is 0;
 			SanLoss 5;
@@ -654,6 +656,7 @@ to say ResolveEvent Free Drink:
 	else:
 		LineBreak;
 		say "     Deciding it'd be best not to drink, they shrug. 'Your loss,' the laugh and take hefty drinks before getting back to work.";
+		now Resolution of Free Drink is -1; [declined drink]
 	now Free Drink is resolved;
 
 Section 13 - Liefeld's Disease
