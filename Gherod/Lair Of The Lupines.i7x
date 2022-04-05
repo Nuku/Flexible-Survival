@@ -1,9 +1,10 @@
-Version 2 of Lair Of The Lupines by Gherod begins here.
+Version 3 of Lair Of The Lupines by Gherod begins here.
 
 "Adds the lair of the werewolf brutes as a set of locations, as well as related NPCs, to the game."
 
 [Version 1 - File released]
 [Version 2 - Vastly expanded Wyatt with new sex scenes. More progress on Jett's questline.]
+[Version 3 - 1 new Jett and Elstan sex scenes each]
 
 Section 1 - The Rooms
 
@@ -28,6 +29,9 @@ a postimport rule:
 		move Kirnon to Lair Of The Lupines Pit;
 		move Rodion to Lair Of The Lupines Kitchen;
 		move Wyatt to Lair Of The Lupines Common Room;
+
+a postimport rule:
+	now Sterile of Wyatt is false;
 
 [---]
 
@@ -380,23 +384,99 @@ to say JettAlphaTalkPack:
 		say "     You ask Jett about the pack he leads and what he thinks of them all, and he takes a moment to consider his answer. 'I'd say... They're okay, mostly. Many of them used to be soldiers, so they've had no trouble accepting someone to call the shots. Some others, though... Well, you know Elstan, for instance. Although I've been realizing that I've probably not been the best leader for him, and this is why he doesn't see me as one. Well, looking back at my attitude when I first addressed you, I can see why. I think I've been letting my animalistic side out too much and should probably consider the fact I'm dealing with a pack of people, not just horny werewolves. Even if they are, indeed, horny werewolves, but you get my point. Either way, what I said about him in the past... Do please try to get along with him. Even if he's difficult. I'm sure deep down he's a good guy.'";
 		say "     Considering it might be wise to tell Jett about the way Elstan treats you, you then rethink that decision and just let him know that you will try your best to get along with everyone. That leaves a smile on his muzzle.";
 	else:
-		say "     You ask Jett about the pack he leads and what he thinks of them all, and he takes a moment to consider his answer. 'I'd say... They're okay, mostly. Many of them used to be soldiers, so they've had no trouble accepting someone to call the shots. Some others, though... They're probably some spoiled brat who got turned into a big hung werewolf and think they're some big shit. They ain't worth anything unless they're sitting here, on my spot...' he then pauses to give you a grin, 'Or, you know, sitting on me like good little puppy slaves. I consider a good sub above that jackass, if I'm honest.' You wonder who he is talking about, specifically, as he seems to be referring to someone. He realizes this and tells you, 'I'm sure you'll meet him, eventually. Or you probably have, already. I don't care. Just don't reinforce his delusions, he ain't worth it when you've got something a lot better, right here...'";
-		if loyalty of Jett > 9:
-			say "     [italic type]'Especially a sexy cuteface such as you, who deserves proper treatment... Like all the good [boygirl]s who earn Jett's love and respect.'[roman type][line break]";
+		say "     You ask Jett about the pack he leads and what he thinks of them all, and he takes a moment to consider his answer. 'I'd say... They're okay, mostly. Many of them used to be soldiers, so they've had no trouble accepting someone to call the shots. Some others, though... They're probably some spoiled brat who got turned into a big hung werewolf and think they're some big shit. They ain't worth anything unless they're sitting here, on my spot...' he then pauses to give you a grin, 'Or, you know, sitting on me like good little puppy slaves. I consider a good sub above that jackass, if I'm honest.' You wonder who he is talking about, specifically, as he seems to be referring to someone. He realizes this and tells you, 'I'm sure you'll meet him, eventually. Or you probably have, already. I don't care. Just don't reinforce his delusions, he ain't worth it. The guy has to learn some manners.'";
 
 to say JettAlphaTalkSex:
 	if loyalty of Jett >= 20:
-		say "     Referring to the subject of sex, you decide to talk to him about it. While he would previously give you a much more eager response, he simply looks at you with a big smile and says 'I'm into anything you want as long as you're happy. And I mean... anything. I'm pretty sure I can do any kink I'm asked for someone I care about. And... you're on that list.' He tightens his embrace on you for brief seconds, reinforcing his words.";
+		say "     Referring to the subject of sex, you decide to talk to him about it. While he would previously give you a much more eager response, he simply looks at you with a big smile and says 'I'm into anything you want as long as you're happy. And I mean... anything. I'm pretty sure I can do any kink I'm asked for someone I care about. And... you're on that list.' He tightens his embrace on you for brief seconds, reinforcing his words. 'But yeah, into a lot of stuff myself.'";
+		say "     'Specifically, it's what I think I've already told you. Muscle and body worship, facefucking, facesitting, a little bit of cuddling, domination, knocking up subs full of cum, and... I've tried some stuff with a special kind of mushrooms that makes people smaller. There's fun things that can be done with significant size differences like that, stuff I've personally never even imagined, but... Some of that stuff is really hot. We could try it out sometime, if you're into that. No limits here, it's just whatever you'd be into.'";
 	else:
-		say "     Referring to Jett's favorite subject, you decide to have a bit of sex talk with him. His eyes shine as a wide smirk forms across his muzzle, enthusiasm evident the moment you bring up this matter. 'I've got quite a lot of things I like doing to my good lads... Between putting them to worship my muscles, my pits, pecs, feet, dick, balls, even my ass, sitting on them, choking them on my cock, smothering them with my body and feeling them squirm under me, filling them up with fucktons of loads until they look pregnant of triplets and cough it out from their mouths... Well fuck, I've even eaten some of my slaves and that got me fucking boned up! Guess I'm fucking depraved, huh...' While Jett got so carried away talking about what he likes, you've seen that his dick jumped to attention amidst conversation, hanging half-hard.";
-		say "     'Well, shit, talking about this gets me hard everytime. Though I'm only down to do things my subs like, too. There's no point in dominating one if I don't see them losing their minds over it, heheh... Anyway, I'd be happy to explore this whole list with a very, very good slave...'";
-		if loyalty of Jett > 9:
-			say "     [italic type]'And so far... I've been popping raging boners just from thinking of you. Can't say the same for everyone... Makes you a special case.'[roman type][line break]";
+		say "     Referring to Jett's favorite subject, you decide to have a bit of sex talk with him. His eyes shine as a wide smirk forms across his muzzle, enthusiasm evident the moment you bring up this matter. 'I've got quite a lot of things I like doing to my good lads... Between putting them to worship my muscles, my pits, pecs, feet, dick, balls, even my ass, sitting on them, choking them on my cock, smothering them with my body and feeling them squirm under me, filling them up with fucktons of loads until they look pregnant of triplets and cough it out from their mouths... You know, any stuff I can imagine that sounds fun enough.' While Jett got so carried away talking about what he likes, you've seen that his dick jumped to attention amidst conversation, hanging half-hard.";
+		say "     'Well, shit, talking about this gets me hard everytime. Though I'm only down to do things my subs like, too. There's no point in dominating one if I don't see them losing their minds over it. Hate a partner that only cares about that stuff and has no mind of its own. I appreciate a spark in people.'";
 
 Section 2-1-2 - Jett Sex
 
 instead of fucking Jett:
-	say "     << Author's note: This is not possible, yet. Will be added in a future update. >>";
+	if Loyalty of Jett < 10:
+		say "     You really do not think you are at that level with the alpha. Perhaps you should think it over before making such advances on Jett without having earned some level of respect. Maybe you should ask someone who is closer to him what you can do to earn his respect. The cook, for example, would be an idea.";
+	else if Loyalty of Jett > 9 and Loyalty of Jett < 20:
+		say "     Despite seeing how receptive he seems to be of you, you cannot help but think something is still off. Maybe you should ask someone who is closer to him what you can do to breach his shell. The cook, for example, would be an idea.";
+	else if Loyalty of Jett >= 20:
+		say "     Now that the air between you is lighter, you are confident enough to ask him if he would be interested in having some fun with you. He nods and replies with a smile, 'Oh, ";
+		if Libido of Jett is 0:
+			say "for sure. I've been looking forward to this a while ago, actually. I feel like it'd be fun with you... Hm, I even have a suggestion, if you would like to come with me?'";
+			say "     Do you want to go with Jett right now? It is likely that he will bring you to his chambers and go through some [']unfinished business['] with you.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Go for it.";
+			say "     ([link]N[as]n[end link]) - Not right now.";
+			if Player consents:
+				say "     You nod, showing your interest in this proposal of his. 'Oh, I'm sure it won't come as a surprise. We've already talked about it... Well, you did. And it actually got me thinking... It'd be rude of me to refuse such a gift, so I thought... I gotta appreciate it for real.' With that said, Jett gives you a tap on the side of your butt.";
+				WaitLineBreak;
+				now Libido of Jett is 1;
+				say "[JettAlphaSex69Scene]";
+			else:
+				say "     You decide against it, at least for now. He gives you an understanding nod. 'Alright, if you have the time and the energy for it, let me know.'";
+		else:
+			say "but of course! I'm always happy to have some fun with you, and it's always entertaining. What's on your mind?";
+			say "[JettAlphaSexMenu]";
+
+to say JettAlphaSexMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Go for a 69";
+	now sortorder entry is 1;
+	now description entry is "Get Jett to eat you out while you suck his dick";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Go for a 69"):
+					say "[JettAlphaSex69Scene]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding against this, you excuse yourself away from Jett. He nods respectfully.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say JettAlphaSex69Scene:
+	say "     With both your intentions made clear, you and Jett proceed to retreat into his chambers once more, through a discrete pathway parting from the main hub into a corridor, then into a door, which he unlocks. Then, you are led to his internal apartment's hallway and through a few extra-sized divisions. As you take a turn into to the bedroom, Jett pulls you to him and begins to make out with you, without further words. You get a taste of his tongue's nimbleness as it voraciously invades your mouth, skillful enough to leave you longing for more. Your bodies join one another in a tight embrace as the massive werewolf holds you gently, then carries you to the comfortable bed that awaits your passionate lovemaking.";
+	say "     In fact, Jett seems to be the most passionate werewolf in the entire lair, reminding you of a gentle giant as he handles your body with such care. But you have both come here with one specific thing in mind, and as such, the alpha brute lies down on the bed, legs still past the edge of the mattress and with his back turned down, and holds you on top of him. With formidable strength and absolutely no effort, he raises you and lines up your [if player is female]womanhood[else]ass[end if] with his muzzle, then descends your body in a way that you end up sitting right on his muzzle. You kind of have to find some balance amidst all this, but the grip he keeps on your hips helps you remain atop his face.";
+	WaitLineBreak;
+	say "     Immediately, you feel that furred long muzzle of his pressed between your buttcheeks and tongue seeking your [if player is female]moistened labia[else]hole[end if], and it definitely does not disappoint. Without holding back once, the alpha werewolf begins to eat you out like a famished beast, pushing that slick organ of his deep into you as it wiggles against the walls of your [if player is female]pussy[else]bottom insides[end if]. All this does not come without a pleasant extra, however, as you get a great and broad view of Jett's muscular body down below, especially that absolutely massive red cock of his throbbing compulsively at every other second, oozing copious amounts of precum, and accompanied by a huge set of balls that you can only see the girth of from here.";
+	if PlayerFucked of Elstan is true:
+		say "[italic type]. It is all even bigger than Elstan's... Though you should probably not mention that to either of them, and especially not him[roman type].";
+	else:
+		say ". It is probably safe to assume he is, indeed, the hungest and most virile of all the werewolves...";
+	say "     All the stimuli, both visual and sensorial, combined brings you a lot of joyous pleasure, so much that you cannot help yourself but moan as your sensitive [if player is female]woman bits are[else]pucker is[end if]played with, licked and tonguefucked so masterfully that even your breath becomes desperate. Everything feels so good, the way he can reach so deep inside you, caressing just the right spots[if player is female] within your vagina[else if player is male], even managing to reach your prostate[else]within your fleshy tunnel[end if], and he does not ever stop. He is so dedicated to it that he refuses to give you a break, even if you dared asking and pretended you wanted one. In fact, you want this to never end...";
+	WaitLineBreak;
+	say "     Suddenly, you feel a thick, powerful hand pushing you forward, and you find yourself facing that almost monstrous shaft mere inches away from your eyes. Your arms have fallen forward against the werewolf's lower body, and now your hands remain in reach of such magnificent meat. With little doubt about what you should do, you press your lips against that pulsating rod, soon bringing your tongue into play and proceed to... worship it, would be the right expression. Every inch, coated in sweet precum, must be touched, caressed and appreciated with the best of your abilities, with your hands and mouth, so that you can really make Jett happy. Judging by how solid his erection is, you think you may be on the right track, if not even completely certain.";
+	if player is male:
+		say "     [italic type]To reciprocate your attention, one of the alpha's hands moves towards your [cock of player] cock as Jett decides to jerk you off, slowly but firmly and steadily, which, combined with all the tonguing you are getting, makes you absolutely lose your mind. His touch seems to escalate the more intensely you rub and suck on that big dick of his, but it is so massive you can really just lick at the sides and suck on the tip comfortably. This seems to be enough to please the werewolf, however, as he makes your penis feel so good with his fuzzy paw-like hand, showing surprising dexterity and precision for something so thick and large. It certainly confirms that Jett had never lost his touch and lovemaking skills.";
+		say "     With your hole still thoroughly stimulated during all this and your cock being stroked so good, you can barely focus on providing oral attention to that well deserving monster cock of his, but he seems to take delight on torturing you with pleasure. It also means that you can not last that much longer either, so eventually, your body speaks for itself. Jett gets this and begins to stroke you harder, tongue you deeper - not knowing that was still even possible! - and it fully commits. You cum right there, all over the alpha werewolf's fuzzy chest, moaning with your lips still wrapped around his dick. 'Mmh... You might... wanna watch out...' he warns you, though during your lust stupor, you fail to process that information in time before...";
+	else:
+		say "     [italic type]To reciprocate your attention, one of the alpha's hands moves towards your chest as Jett decides to fondle it, slowly but firmly and steadily, which, combined with all the tonguing you are getting, makes you absolutely lose your mind. His touch seems to escalate the more intensely you rub and suck on that big dick of his, but it is so massive you can really just lick at the sides and suck on the tip comfortably. This seems to be enough to please the werewolf, however, as he makes your [if breast size of player > 0]tits[else]pecs[end if] feel so good with his fingers all over your nipples, as sensitive as they are. Such dexterity and attention certainly confirms that Jett had never lost his touch and lovemaking skills.";
+		say "     With your [if player is female]pussy[else]hole[end if] still thoroughly stimulated during all this and your erogenous zones feeling properly appreciated, you can barely focus on providing oral attention to that well deserving monster cock of his, but he seems to take delight on torturing you with pleasure. It also means that you can not last that much longer either, so eventually, your body speaks for itself. Jett gets this and begins to intensify his gestures, tongue you deeper - not knowing that was still even possible! - and it fully commits. You hit your climax right there, moaning with your lips still wrapped around his dick as this wave of pleasure surges through you. 'Mmh... You might... wanna watch out...' he warns you, though during your lust stupor, you fail to process that information in time before...";
+	WaitLineBreak;
+	say "     ... Well, before you are showered by a real alpha werewolf's load, that is, shooting all over your body (and, in consequence, his, as you are on top of him still) with a nearly continuous stream of creamy white jizz. 'Hnng... Yeah, that's... what I meant. Fuck, feels good...' he moans and grunts as spurt after spurt leaves him and lands directly on the both of you, making a mess of the ceiling, sheets and even floor. This big guy's load surely matches his size, and you have earned a personal demonstration of that.";
+	say "     With the deed done, Jett chuckles as he helps you get up. He is very attentive to your needs and even brings you a relatively clean towel for you to get rid of that mess all over your body. 'Hey, I've enjoyed myself, hope you did too. And don't mind the mess, I'll take care of it.' Once you are all cleaned up and set to leave, Jett escorts you out of his chambers and lets you go... after giving your butt another loving tap.";
+	NPCSexAftermath Player receives "OralCock" from Jett;
 
 Section 2-2 - Rodion
 
@@ -693,8 +773,71 @@ Section 2-3-2 - Elstan Sex
 instead of fucking Elstan:
 	if Libido of Elstan <= 1:
 		say "     You make an advance on Elstan, but he simply pushes you aside, looking angry. 'What the fuck do you think you're doing? You're not gonna get anything from me when you fucking want, bitch.' It looks like that will not work with him.";
+	else if Libido of Elstan is 1:
+		say "     You make an advance on Elstan, but he does not feel keen on letting you get any closer to him. 'What do you think this is? You ask and you get it? Fuck no. Go back to your hole and, if I feel like it, I might come pick you up.' It seems you will have to follow his rules if you want to get any of that meat.";
+	else if Libido of Elstan is 2:
+		if lastfuck of Elstan - turns < 4:
+			say "     You make an advance on Elstan, which you gain enough confidence for, given your past encounters. He does not shove you off, but since you were just together recently, the muscular werewolf does not seem to be in the mood. 'Didn't you have enough already? I gotta do some workout, beat it.'";
+		else:
+			say "     You make an advance on Elstan, which you gain enough confidence for, given your past encounters. Once, he would push you away and tell you off, but now, the muscular werewolf cannot help himself but get turned on at how much craving you show for him. 'Wow, you really do like being my bitch, huh? Want it so badly you keep asking me for it... Alright, let's have some fun then. I'll let you suggest some way I can use you, as I'm in such a good mood.'";
+			WaitLineBreak;
+			say "[ElstanSexMenu]";
+
+to say ElstanSexMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Worship his muscles";
+	now sortorder entry is 1;
+	now description entry is "Give his body some deserved appreciation";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Worship his muscles"):
+					say "[ElstanSexMuscleWorship]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Figuring that you may have preferred to do something else with your time, you excuse yourself. 'Well, then stop fucking wasting my time!' he replies, annoyed.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say ElstanSexMuscleWorship:
+	say "     You start by simply complimenting his body, appreciating all the hard work he has been putting in those big muscles, so large and powerful that not even his thick coat of fur can smooth them out. Amidst that, you even say the magic words, that he could easily rival their alpha werewolf. This alone is enough to form a wide grin on Elstan's face as he starts flexing his whole body, looking over himself as he listens to you. 'Yeah... I'm the biggest, strongest and smartest of all the werewolves in here. I'm glad you recognize that. You're, at least, not a dumb bitch.' You even tell him more, that with such might and brain, everyone should adore and worship him, going as far as to tell him he really is the sexiest fucker in the entire region.";
+	say "     The only reason you continue to wash him with compliments, unless you actually and genuinely meant all of it, is that every nice word seems to make that sizable and thick red prick of his perk up more and more, to the point he has got a throbbing boner, prompting the werewolf to look at you with bedroom eyes. 'Fuck, you learn quickly too... Seems like you know just how to woo me,' he says to you in a deep and soft tone that makes your tummy rumble, all while he walks up to you and pushes you against a wall. He leans over towards you, his muzzle mere inches away from your face, arms pushing against the rocky surface behind you... and he speaks again, almost whispering, 'And are you gonna do something about it, or is that all talk and no action?'";
+	WaitLineBreak;
+	say "     Hearing his words and feeling the air around you heat up, you begin to feel like you are nearly drowning in a sea of pheromones, with that musky, beastlike scent of Elstan's sweat, which is so masculine and powerful that your loins begin to cry in need of touch";
+	if player is submissive:
+		say ". This [italic type]is certainly enough to alter your expression, as you cannot help but look back into his eyes with a pleading and helpless gaze, which only flares the almost predatory glare Elstan has over you. It evidently turns him on, knowing how easily your submissive instincts dance to his whims, at his command, eager to please him[roman type]";
 	else:
-		say "     You make an advance on Elstan, but he does not feel keen on letting you get any closer to him. 'What do you think this is? You ask and you get it? Fuck no. Go back to your hole and, if I feel like it, I might come pick you up.' It seems you will have to follow his rules if you want to get any of that meat again.";
+		say ". This evidently rubs him just right, knowing how easily he can turn you on and have his way, even when he simply lets his body speak.";
+	say ". Being this close to him only further suggests to your mind that you should actually put your words into deeds, even more as you sort of subconsciously place your hands over the sides of his wide torso and slowly slide them upwards. The werewolf lets out a low growl as you touch him, then you become aware of what you are doing and simply proceed with it, going over his fuzzy pectorals and realizing how massive each muscle pec feels in your grasp.";
+	say "     'Hrr... Should bend you over and spread that [if player is female]pussy[else]ass[end if] wide open right here... But this gets me so fucking hard...' he says, amidst more growling, and then you find your head being pulled into his furred chest, your lips colliding with the nipple underneath all that coat. Something big and throbbing comes in contact with your neck, keeping your head in place, and that is actually his enormous bicep as he wraps his arm around your skull. 'Suck on them, rub me all over, fucking worship me like your life depended on it.' You are effectively trapped in the spot between his right pec and his armpit, left with no other option but to suck on that seemingly very sensitive nipple. So, you do exactly that, wrapping your lips around that meaty nub and wiggling your tongue all around, practically suckling on it.";
+	WaitLineBreak;
+	say "     'Fuck... Yeah, that's a good little bitch... do it like I'm your god, because I fucking am.' You want him to miss nothing you can eagerly provide, putting everything you can into worshipping the werewolf. The size of his muscles alone is smothering you a little, but it all adds to your excitement, moreover with your generous touch all over his other pec and all the way down to his abs. This is especially enjoyable as you simply close your eyes and feel up his size and bulk, noticing how truly massive this guy is. Every muscle is rock solid, bulging out delightfully in pure mass and sheer might, a physique that would embarass the average bodybuilder back in the days. Even the werewolves' thighs are of an impressive width, though with all the movement you are making, your forearm occasionally collides with the huge cock down below, throbbing in response.";
+	say "     Elstan's breathing gets deeper and more desperate, such is the intense lust boiling within the beast. 'Grab me, grope me, fucking feel up this body... You wanted it, didn't you?! Now you got it, don't hold back...' He flexes harder against, well, your entire body as he leans against you, almost squashing you against the wall as he holds you as close as you can get to him. You are not just sucking on his nipples anymore, figuring that he may prefer a broader approach around the entire area between his arms and chest, including the bicep, with lots of slobbering licks and kisses. This happens while you, simultaneously, grope him in the other pec, the bicep in the other arm, that side of his torso, and even his glutes. During all this, you never purposefully touch his junk. Not once, apart from the accidental ones.";
+	WaitLineBreak;
+	say "     Because you focus purely on his body. You are here to worship his physique, and your mind is dead set on that. But amidst your actions, you find yourself suddenly locked under the werewolf's armpits, pulled into them as your face gets buried in a very warm pit of masculinity, a scent so powerful that it makes you knees weak. Then, Elstan begins to breathe hastily and grunt like he is just having an orgasm... 'Fuck, I'm cumming... Fuck!' Well, no, he really is having one. With only all this body worship that you were not even done with, Elstan came hands-free against the wall, your doubts cleared once you feel some of the warm liquid hit you from the side, where his sizable member keeps throbbing against. And a lot of it.";
+	say "     He keeps on grunting as an almost seemingly endless stream of werewolf jizz coats both the wall behind you and the right side of your body, all this while you get choked under his pit due to the overpowering grip of his muscular arms. Elstan loosens it once he feels you are squirming around too much, but that causes you to inhale all that hot musky scent at once, leaving you very lightheaded. In a reflex, you hold yourself onto the wall behind you, accidentally splashing some of the cum in there with your whole arm and hand. Elstan starts chuckling as he steps back, admiring the mess he has just made. 'That's a fucking good bitch. Keep that up and you might even earn my tolerance. It's been a while since someone made me cum like that... hands-free.'";
+	WaitLineBreak;
+	say "     The light brown werewolf then pats you on the head as he is about to leave. 'Definitely put me in a good mood. Now get outta my sight before that changes.' You hastily retreat before his threats mean anything real. The mess he has made is still there, however. Maybe he'll just get someone to clean it up... In some manner.";
+	NPCSexAftermath Elstan receives "Other" from Player;
 
 Section 2-4 - Kirnon
 
@@ -965,7 +1108,7 @@ to say WyattTalkMenu:
 	clear the screen and hyperlink list;
 
 to say WyattTalkHimself:
-	say "     You ask him about himself, as you intend to get to know him a bit better, and he seems happy to tell you a few things. 'Sure thing. I'm Wyatt, nice to meet you.' He then nods as you also introduce yourself. 'Someone with manners is a rare sight these days. Most just wanna get down to fuck on spot and don't bother getting to know who they're fucking with. I'm glad you're different... Or at least you gave a good first impression.' He puts on a cool smile as he leans back against a wall. 'You're like... sort of Jett's guest or something? I'm cool with that. It's nice that he doesn't mind different people visiting us occasionally. Most people who end up being brought here either want to say on that pit hole or run away.'";
+	say "     You ask him about himself, as you intend to get to know him a bit better, and he seems happy to tell you a few things. 'Sure thing. I'm Wyatt, nice to meet you.' He then nods as you also introduce yourself. 'Someone with manners is a rare sight these days. Most just wanna get down to fuck on spot and don't bother getting to know who they're fucking with. I'm glad you're different... Or at least you gave a good first impression.' He puts on a cool smile as he leans back against a wall. 'You're like... sort of Jett's guest or something? I'm cool with that. It's nice that he doesn't mind different people visiting us occasionally. Most people who end up being brought here either want to stay in that pit hole or run away.'";
 	say "     This is not strange, as many succumb to their desires easily or panic right away and try hard to flee. You tell him you are just different and prefer keeping an open mind. 'An open mind, you say? That's refreshing to hear. I think you and I could get along just fine, [mister].";
 	if Energy of Wyatt is 0:
 		now Energy of Wyatt is 1;
@@ -1259,10 +1402,10 @@ to say WyattDominantSexFemale:
 	say "     With that said, he pulls his balls from your mouth and shoves his cock back in, thrusting into your throat. This time, he is even rougher, holding your skull with both his hands and fucking your face like he was already ballsdeep in your ass. 'Swallow that cock now, you'll be fine if you do...' You even feel his sack bouncing back and forth against your chin, the pounding power so strong you begin to drop some tears as you struggle to keep up. You do as he says, using your throat to swallow that cock and avoid gagging on it, feeling it bulge in your neck as he continues to facefuck you. Eventually, the werewolf tires of this and pulls out, but not without leaving you gasping for air.";
 	say "     'Well fuck... That got me excited! Think now you're ready to get bred... I bet that's what you're really wanting right now, huh?' Upon receiving his command, you turn around and offer him your rear, butt up as you drop on all fours. You recalled that he wanted to take you doggy style, so you get in position. 'Love when my toys remember their place...' he comments, pleased to see you ready for him to get behind you and line up his dick with your womanhood. Then, he begins to press against it with only your juices serving as lubricant, and pushes slowly... 'Hope you're ready to take it, babe... I won't pull out until you're all filled up. Not even if you beg me to stop...'";
 	WaitLineBreak;
-	say "     You are sure he will follow through with his word, so you brace for the upcoming insertion, which is already happening. His girthy dong pushes your wet curls outwards bit by bit as he buries more of it inside you, [if scalevalue of player < 4]grunting at the tightness of your pussy's insides around his cock[else]enjoying your pussy's good reception of his cock[end if]. 'Fuuck yeah...! You take me so well, babe... Can't wait to fill you up with my pups...' By now, his hands are grabbing your hips and he is pulling you to him, going deeper and deeper into you, until you begin to feel the swollen knot against your stretched pucker. 'You could have this everyday... I wouldn't mind making you my permanent bitch... Fuck, I'd love it... Put you on a leash and make you mine...'";
+	say "     You are sure he will follow through with his word, so you brace for the upcoming insertion, which is already happening. His girthy dong pushes your wet curls outwards bit by bit as he buries more of it inside you, [if scalevalue of player < 4]grunting at the tightness of your pussy's insides around his cock[else]enjoying your pussy's good reception of his cock[end if]. 'Fuuck yeah...! You take me so well, babe... Can't wait to fill you up with my pups...' By now, his hands are grabbing your hips and he is pulling you to him, going deeper and deeper into you, until you begin to feel the swollen knot against your stretched labia. 'You could have this everyday... I wouldn't mind making you my permanent bitch... Fuck, I'd love it... Put you on a leash and make you mine...'";
 	say "     Then, you feel Wyatt pulling out... only to thrust back in, and will only repeat these movements for the rest of your encounter, at first in a steady manner, then slowly rising the rhythm. His grasp on you remains tight and firm, not letting you back off nor move away any inch, keeping you in place to take that dick over and over... He goes at it even faster, hitting your cunt like a battering ram, pounding you with so much force that you think you might need several days to recover afterwards. This moment is all his, his pleasure placed atop yours, although you cannot help but enjoy the pounding, your vaginal walls all being thoroughly stimulated by the werewolf's significant girth, enhancing your experience even further. You are thoroughly fucked for so long that you lose track of time, all the way until Wyatt begins show signs of near stamina depletion.";
 	WaitLineBreak;
-	say "     You hear him pant as his movements get more sluggish, but a sudden push startles you as his knot gets inside you. He then leans his body over yours, pushing you towards the ground and placing his arm around your collarbones and chest, one hand over your tits and fondling them, although embracing you so tight you could think he was just about to choke you. Then, the werewolf howls in pleasure as he orgasms inside you, depositing a great amount of cum into your bowels, every single drop until the last. This triggers your climax as well, as you are struck by a massive wave of pleasure that causes your entire self to quiver and squirm in complete bliss. This goes on for a good while until Wyatt drops down on top of you, breathing heavily for the first few moments.";
+	say "     You hear him pant as his movements get more sluggish, but a sudden push startles you as his knot gets inside you. He then leans his body over yours, pushing you towards the ground and placing his arm around your collarbones and chest, one hand over your tits and fondling them, although embracing you so tight you could think he was just about to choke you. Then, the werewolf howls in pleasure as he orgasms inside you, depositing a great amount of cum into your womb, every single drop until the last. This triggers your climax as well, as you are struck by a massive wave of pleasure that causes your entire self to quiver and squirm in complete bliss. This goes on for a good while until Wyatt drops down on top of you, breathing heavily for the first few moments.";
 	say "     'Fuck, babe... That was fucking hot... I could get used to this, you know...' You then feel him lick your neck affectionately as he patiently waits for his knot to deflate, resting atop you while you two snuggle on the ground.";
 	WaitLineBreak;
 	say "     It takes a while, but eventually, he pulls out of you and stands up, helping you in the process. 'Hope we can do this again. It's kinda hot thinking of forcing you down on me and making you take my cock and load... Fuck, I might enjoy this more than I though I would... Uh, better find a safeword! What do you think of periwinkle? Or... Mallet! Ah, well, just think of some, I'm sure it could come in handy, yeah?'";
@@ -1464,7 +1607,7 @@ ResolveFunction of JettDominance is "". Sarea of JettDominance is "Nowhere".
 
 to say JettAlphaTalkOfferGift:
 	if Resolution of JettDominance is 1:
-		say "     As you recall your encounter with the cook, Rodion, back at the kitchen, you think that perhaps this is the right time to make your [']specia['] offer to the alpha werewolf, who is just sitting on his couch, staring at you with that usual smug grin of his. Something about this makes you feel dirty, but of a good kind, and your heart skips a beat due to the rush of the antecipation. Once he sees you are still hesitating, only having considered in silence what you shall be doing next, he tilts his fuzzy head and leans forward slightly, 'Is there any problem? All of a sudden you look anxious for something...' Jett keeps his eyes on you as you think of a reply, on top of everything else, and you figure the best solution is to tell him all about it.";
+		say "     As you recall your encounter with the cook, Rodion, back at the kitchen, you think that perhaps this is the right time to make your [']special['] offer to the alpha werewolf, who is just sitting on his couch, staring at you with that usual smug grin of his. Something about this makes you feel dirty, but of a good kind, and your heart skips a beat due to the rush of the antecipation. Once he sees you are still hesitating, only having considered in silence what you shall be doing next, he tilts his fuzzy head and leans forward slightly, 'Is there any problem? All of a sudden you look anxious for something...' Jett keeps his eyes on you as you think of a reply, on top of everything else, and you figure the best solution is to tell him all about it.";
 		say "     'Oh, I see... So you've befriended Rodion? That's good to know, I'm pleased that you've been getting along with my crew. And it even seems he's revealed you a way to personally gift me. I've to say I'm flattered you went into such trouble just to find something I liked... Does that mean you intend to make an offer as well?' His smile is nicer than you would expect, and you do not feel so intimidated now. You really just want him to like you, and if that is the way you must do it, then why not give it a shot? You nod to his question, replying positively, and he chuckles amusedly. 'Oh, I see... Now I truly am flattered. Well, then do me a favor, if you will.' You nod once more, displaying your availability to receive his request.";
 		WaitLineBreak;
 		say "     'As you know, I'm also a gatekeeper, so I can't really leave this place too often before things start going wild. Who knows who might come across that entrance while I'm not looking. Back when you arrived, it was merely one of my grunts who caught you snooping outside, so I didn't really pay much attention, though we've had... problems before, with undesired guests, so my vigilance has been even greater ever since. This to say... I would love to accept your gift, but I must find a replacement for my current post, just for a while...' His eyes look over you as he leans back to his couch, a hint of a smirk beginning to show on his muzzle, and you begin to fear what this request is, for some reason.";

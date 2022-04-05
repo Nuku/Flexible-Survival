@@ -483,16 +483,7 @@ carry out ColleenSpraying:
 				say "     'You want to undo some of these wonderful changes? That sounds pretty strange to me...' Colleen says with a sad look on her husky face. 'Well OK, I suppose, but I won't use it on either myself or your pet there,' she says with a gesture at where your happy little bitch is sitting in the corner. 'It is waaay too much fun being a bitch for us to want to be anything else... but I suppose I can still use it on you if you want.'";
 				if Player consents:
 					say "     'Well OK, here goes nothing,' the husky slut says nervously as she uncaps the small spray bottle, being careful to make sure it is pointed well away from her, before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
-					now Face of Player is "human";
-					now FaceName of Player is "human";
-					now Body of Player is "human";
-					now BodyName of Player is "human";
-					now Skin of Player is "human";
-					now SkinName of Player is "human";
-					now scalevalue of Player is 3;
-					now bodydesc of Player is "unchanged";
-					now bodytype of Player is "human";
-					now SleepRhythm of Player is 0;
+					Humanify_Player;
 					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
@@ -502,16 +493,7 @@ carry out ColleenSpraying:
 				say "     'Well OK, I admit the spray might still work on you, but it certainly won't work on your little pet over there, and I definitely feel too good to want to use it on myself, so I can use it on you if you really want me to... But it seems so boring if you ask me...' Colleen says as she pants slightly, her tail wagging eagerly behind her, obviously enjoying her infection and probably hoping you do as well. Do you ask her to spray you anyways?";
 				if Player consents:
 					say "     'Well OK, here goes nothing,' Colleen says with a drooping tail as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
-					now Face of Player is "human";
-					now FaceName of Player is "human";
-					now Body of Player is "human";
-					now BodyName of Player is "human";
-					now Skin of Player is "human";
-					now SkinName of Player is "human";
-					now scalevalue of Player is 3;
-					now bodydesc of Player is "unchanged";
-					now bodytype of Player is "human";
-					now SleepRhythm of Player is 0;
+					Humanify_Player;
 					SanBoost 20;
 					increase ColleenSpray by 1;
 					stop the action;
@@ -525,58 +507,26 @@ carry out ColleenSpraying:
 					now ColleenSpray is 3;
 				else:
 					say "     'Well OK, you're the boss, and it probably would have only been a temporary fix for her anyways, so here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
-					now Face of Player is "human";
-					now FaceName of Player is "human";
-					now Body of Player is "human";
-					now BodyName of Player is "human";
-					now Skin of Player is "human";
-					now SkinName of Player is "human";
-					now scalevalue of Player is 3;
-					now bodydesc of Player is "unchanged";
-					now bodytype of Player is "human";
-					now SleepRhythm of Player is 0;
+					Humanify_Player;
 					SanBoost 20;
 					increase ColleenSpray by 1;
 			else:
 				say "     'Well OK, the spray bottle is full so it should still work on you. Want me to spray you now?'";
 				if Player consents:
 					say "     'Well OK, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
-					now Face of Player is "human";
-					now FaceName of Player is "human";
-					now Body of Player is "human";
-					now BodyName of Player is "human";
-					now Skin of Player is "human";
-					now SkinName of Player is "human";
-					now scalevalue of Player is 3;
-					now bodydesc of Player is "unchanged";
-					now bodytype of Player is "human";
-					now SleepRhythm of Player is 0;
+					Humanify_Player;
 					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
 					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
 		else:
 			say "     'Well OK, here goes nothing,' Colleen says as she uncaps the small spray bottle before spraying you with the strange antiseptic smelling liquid. You can feel the strange liquid burn and tingle as it sinks into your body. Surprisingly, you find yourself feeling a little better and more human almost immediately.";
-			now Face of Player is "human";
-			now FaceName of Player is "human";
-			now Body of Player is "human";
-			now BodyName of Player is "human";
-			now Skin of Player is "human";
-			now SkinName of Player is "human";
-			now scalevalue of Player is 3;
-			now bodydesc of Player is "unchanged";
-			now bodytype of Player is "human";
-			now SleepRhythm of Player is 0;
+			Humanify_Player;
 			SanBoost 20;
 			increase ColleenSpray by 1;
 	else if ColleenSpray is 1:
 		say "     'OK, let's try that again! I only have about enough for one more dose after this,' Colleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time. Perhaps the chemicals are losing their effectiveness?";
-		now Body of Player is "human";
-		now BodyName of Player is "human";
-		now scalevalue of Player is 3;
-		now bodydesc of Player is "unchanged";
-		now bodytype of Player is "human";
-		now SleepRhythm of Player is 0;
+		Humanify_Player;
 		SanBoost 20;
 		increase ColleenSpray by 1;
 	else if ColleenSpray is 2:
