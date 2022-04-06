@@ -457,11 +457,6 @@ to say gsd_generic_vsex_00:
 		now description entry is "Make him suck you off";
 	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Suck him off";
-		now sortorder entry is 3;
-		now description entry is "Give him a happy ending";
-	[]
-		choose a blank row in table of fucking options;
 		now title entry is "Ride his dick";
 		now sortorder entry is 3;
 		now description entry is "Spear your ass on that dick";
@@ -476,6 +471,11 @@ to say gsd_generic_vsex_00:
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "Make him eat you out";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Suck him off";
+	now sortorder entry is 3;
+	now description entry is "Give him a happy ending";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Put his tongue to work on your ass";
