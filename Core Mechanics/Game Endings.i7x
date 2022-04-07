@@ -147,6 +147,7 @@ when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
+	say "[link][bracket]Restart[close bracket][end link] [link][bracket]Restore[close bracket][as]restore[end link] [link][bracket]Undo[close bracket][end link]";
 	say "----------";
 	follow the self examine rule;
 	LineBreak;
@@ -178,6 +179,7 @@ when play ends:
 	say "https://flexiblesurvival.com/[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
+
 
 to ratetheplayer:
 	if GenderLock is 1 and score > 0:

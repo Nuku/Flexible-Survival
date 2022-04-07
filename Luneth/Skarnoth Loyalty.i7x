@@ -805,7 +805,7 @@ to say SkarnothFourthEvent_FinalDance01: [this one will be a bit more traditiona
 	say "     'Really?!' The look of happiness on his face actually wins you over completely to trying this out and you nod your head in agreement. 'That's great! All you have to do is form a pact with me, kinda like what I did with the imps.' You ask how exactly you're supposed to form this pact and Skarnoth eyes light up, 'Just tell me what I am and them lay your claim!' Smiling, you tell the demon that he's yours and pull him down by one of his horns and claim his lips. Your whole body feels like it's being engulfed in fire at first, but eventually it begins to die down and you are left with a feeling of warmth in your chest. Skarnoth quickly rises off of you in excitement, 'It worked! Alright so where should we go!? Should we go beat someone up?! Ooo or maybe try and take on some major league demon?!' You roll your eyes at the hellspawn's antics, but one thing is for sure, this will definitely be an adventure.";
 	FeatGain "Spiritual Devourer";
 	statchange "Strength" by 2;
-	statchange "Endurance" by 2;
+	statchange "Stamina" by 2;
 	statchange "Dexterity" by 2;
 
 Section 5 - Final Event Dom Skarnoth

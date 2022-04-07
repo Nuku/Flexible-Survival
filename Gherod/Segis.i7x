@@ -282,6 +282,10 @@ Sarea of Activate Strange Android is "Red".
 
 ADACooldown is a number that varies. ADACooldown is usually 20000.[@Tag:NotSaved]
 
+a postimport rule: [rule for those who have successfully activated Segis to import a resolved state of the related event]
+	if dragon android is tamed:
+		now Activate Strange Android is resolved;
+
 to say ResolveEvent Activate Strange Android:
 	say "     Recalling where you stashed that broken android body, you decide to head there to see if it continues to be well hidden. It is close to the same space where you fought it, and its origins remain a mystery to you. It does not take long to find your way back there, and it appears that nobody even came through this way since a long while ago. A spot with little movement is all you could ask to hide such a valuable thing, considering that this must be very high tech stuff...";
 	WaitLineBreak;
@@ -424,6 +428,7 @@ to ADASuccess:
 	add "Tamed" to Traits of dragon android;
 	now dragon android is tamed;
 	move Segis to Maintenance Storeroom;
+	now Activate Strange Android is resolved;
 
 Section 2 - Segis as NPC
 

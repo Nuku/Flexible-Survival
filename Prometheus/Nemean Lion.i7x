@@ -26,8 +26,8 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Lion"; [name of the overall species of the infection, used for children, ...]
 	add "Nemean Lion" to infections of FelineList;
-	add "Nemean Lion" to infections of FurryList;
-	add "Nemean Lion" to infections of NatureList;
+	add "Nemean Lion" to infections of FeralList;
+	add "Nemean Lion" to infections of MythologicalList;
 	add "Nemean Lion" to infections of MaleList;
 	add "Nemean Lion" to infections of BarbedCockList;
 	add "Nemean Lion" to infections of SheathedCockList;

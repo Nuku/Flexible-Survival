@@ -1,6 +1,9 @@
-Version 1 of Wyvern Patriarch by Gherod begins here.
+Version 2 of Wyvern Patriarch by Gherod begins here.
 
 "Adds a Wyvern Patriarch to Flexible Survival's Wandering Monsters table"
+
+[Version 1 - File created]
+[Version 2 - Expanded introductory encounter (description) text with variations depending on the outcome of the previous battle. Added three sex scenes on victory menu.]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -16,13 +19,26 @@ to say MeetTheWyvernPatriarchCount:
 			choose a row with name of "Wyvern Patriarch" in the Table of Random Critters;
 			now area entry is "Outside";
 
+a postimport rule:
+	if Resolution of MeetTheWyvernPatriarch >= 3:
+		choose a row with name of "Wyvern Patriarch" in the Table of Random Critters;
+		now area entry is "Outside";
+
+WyvernPatriarchFightOutcome is a number that varies. WyvernPatriarchFightOutcome is usually 0. [@Tag:NotSaved]
+[1 - Player submitted]
+[2 - Player lost]
+[3 - Wyvern Lost through lust]
+[4 - Wyvern lost through combat]
+
 Section 1 - Creature Responses
 
 to say Wyvern Patriarch Wins:
 	if HP of Player > 0: [player submitted]
 		say "     As you recall the big wyvern saying that he would show you mercy if you submitted, you do so, falling to your knees and begging him to not murder you. He looks down at you in disbelief as you plead for your life or something similar. 'Murder?! What kind of basic creature do you think I am?! No, never! I wouldn't dirty my talons for such a savage and deplorable act. But you do need to be taught a lesson!' As you look up at the massive beast, he prepares a thick volley of goop, which lands directly on top of you, pinning you down under that thick substance and denying you any movement. 'Now, let's just properly keep you still while I consider what to do with you. A worthy punishment, perhaps, but since you were so eager to oblige, I might actually amuse myself instead.' The grand wyvern considers his next actions as you remain helplessly stuck in his goop, awaiting your fate...";
+		now WyvernPatriarchFightOutcome is 1;
 	else: [player fought]
 		say "     You attempted to fight back, but to no avail. The wyvern is obviously much stronger than you, so eventually, one last strike brings you down as you collapse on the ground, looking up at the massive beast as he prepares a thick volley of goop. Too weak to even attempt to dodge it, he lands his attack right on top of you, pinning you down under the thick substance and unable to move. 'Would you just stop moving, imbecile! I must administer your punishment as it is duly deserved! Now, how can such a large and almighty being like me use to truly remind you of your place?' The grand wyvern considers his next actions as you remain helplessly stuck in his goop, awaiting your fate...";
+		now WyvernPatriarchFightOutcome is 2;
 	WaitLineBreak;
 	say "     To your shock, the large beast places himself just above you, that large body of his soon almost completely obscuring your view as you find yourself almost between the wyvern's legs. Then, as you look up to his face, which is staring right back at you with a grin, the winged wyrm's cock begins to show itself, a massive red dong that continues to extend itself towards a nearly unimaginable size. He takes no hesitation to begin to shove it in the goop that surrounds you, replacing most of it with the presence and weight of his titanic dick. Luckily, you are still able to withstand the sheer force of the wyvern's giant shaft without being utterly crushed by it, so big that whenever the beast thrusts forward, your vision is completely obscured by it. 'Since you love to get your hands on my sons' parts, I shall give you something truly noteworthy to sate your cravings.'";
 	say "     Even as you push against it, his heavy cock battles your strength with ease and keeps you stuck between itself and the goop, only throbbing harder at every movement you make. Everytime you touch its warm body, it seems to pulsate as if yearning for more. Knowing that you will not make it out of here until the massive wyvern is fully satisfied, you think that, perhaps, the best move would be to submit to him and oblige his orders, which seem evident. 'Or is that too much for you to handle, I wonder? You've got a real wyvern here and you cannot even bring yourself to pleasure him properly?! Get to work, fool! I'm not letting you go until I find myself satisfied with your performance.'";
@@ -55,10 +71,12 @@ to say Wyvern Patriarch Loses:
 		say "     'Grr! I... Why are you...?! T-this is impossible!' It would seem the large wyvern is stuck in an incredulous state as he observes you walking towards him. Something in his mind must be making him stay instead of attempting to flee, confused about how he came to be in such a situation, where he does not know if he has truly lost the fight or is just too distracted with fantasies previously unknown to him. One thing is certain, that massive cock of his stands proudly erect, throbbing and leaking, right before you, showing the effectiveness of your tactics.";
 		say "     Perhaps you should use this opportunity to have some fun with the wyvern?";
 		WaitLineBreak;
+		now WyvernPatriarchFightOutcome is 3;
 		say "[WyvernPatriarchLosesSexMenu]";
 	else:
 		say "     You have seen to be able to deal some damage to the large wyvern, who roars in agony as you prove to be a quite more challenging foe than he thought you would be. 'How can such a puny vermin like you face the likes of me with such incomprehensible competency?!' Out of rage, he launches a volley of goop towards you, something he does not seem to do too frequently, and you barely manage to dodge it all with only a little drop of the stuff sticking to your leg. 'AAAARGH! You're insufferable! Know that this is not our last meeting. I shall take my revenge on you, sooner or later, and you'll have no way to avoid what's coming for you! I shall not give way to your petty strugglings the next time I lay my eyes on you, creature!'";
 		say "     Unable to completely subdue the large wyvern, you can only watch him take flight to flee. Would you have it another way, you would take advantage of him and his sizeable body, if you so wished, but alas, it seems this confrontation was not enough to weaken the winged wyrm for that purpose. Were you even expecting to be able to physically overpower him? Perhaps there are other ways to convince a hothead to stand down, unless you genuinely enjoyed kicking his ass instead. One could also say it was for mere survival necessity, but nonetheless, an incredible achievement.";
+		now WyvernPatriarchFightOutcome is 4;
 	now Resolution of MeetTheWyvernPatriarch is 5; [Player has beaten the Wyvern Patriarch]
 
 to say WyvernPatriarchLosesSexMenu:
@@ -69,6 +87,23 @@ to say WyvernPatriarchLosesSexMenu:
 	now title entry is "Sound his cock";
 	now sortorder entry is 1;
 	now description entry is "That massive piece of meat surely is big enough to fit an arm or two...";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Get the wyvern to blow you";
+		now sortorder entry is 2;
+		now description entry is "Time to teach him a lesson and make him blow you";
+		[]
+		if cock length of player >= 16:
+			choose a blank row in table of fucking options;
+			now title entry is "Fuck the wyvern's ass";
+			now sortorder entry is 3;
+			now description entry is "You seem to be big enough down there, why not take him from behind";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck the wyvern's cock";
+		now sortorder entry is 4;
+		now description entry is "You should be able to fit yours in his massive dong, go for it";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -87,6 +122,12 @@ to say WyvernPatriarchLosesSexMenu:
 				now sextablerun is 1;
 				if (nam is "Sound his cock"):
 					say "[WyvernPatriarchLosesCockSounding]";
+				else if (nam is "Get the wyvern to blow you"):
+					say "[WyvernPatriarchLosesBlowjobPlayer]";
+				else if (nam is "Fuck the wyvern's ass"):
+					say "[WyvernPatriarchLosesFuckedByPlayer]";
+				else if (nam is "Fuck the wyvern's cock"):
+					say "[WyvernPatriarchLosesCockFuck]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -121,8 +162,46 @@ to say WyvernPatriarchLosesCockSounding:
 		say "     Your body has also returned to normal, leaving no long-lasting consequences from messing with the wyvern like this. Perhaps you should not provoke him too much, lest you want him to fulfill his threats and end your existence.";
 	else:
 		say "     The horror in your eyes as he reveals what his intentions are only amuses the wyvern, as he throws a laughter. 'Hah! You should've seen your face! I mean, I could simply swallow you alive right now, but... You have indeed provided me with pleasure. This turned out to be more entertaining than I thought. So... perhaps I'll simply let you go. But don't expect mercy the next time we meet, just because we shared but one moment of pleasure.' He then stares at you dead in the eye before his large cock begins to release your arms. They slide out of his shaft, and by then, his meat begins to retract back into the large wyvern's body. With no further words shared between you, he takes off, flying above you and away, leaving you alone in the messy puddle.";
-		say "     Now, you only have to grab your things and take your leave as well.";
 	CreatureSexAftermath "Wyvern Patriarch" receives "Other" from "Player";
+
+to say WyvernPatriarchLosesBlowjobPlayer:
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'No, you cannot possibly ask that of me! I w-would never-...' his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride.";
+	say "     He hesitantly steps towards you, his great presence making the ground beneath you tremble, and leans his head over yours with his gaze fierce and judgemental. 'Fine, if this is your way to make amends, I shall appreciate the gift you are offering me. Not that this means I thoroughly enjoy the idea, but I am a polite and respectful wyvern. Therefore, it is not in my code of honor to refuse a gift so generously presented, and that is the only reason I will accept your request. None other!' After making such declarations, he half-angrily headbutts you so that you fall with your ass on the ground. While definitely a little painful to your butt, it is not the end of the world, though you barely have time to readjust yourself as the wyvern's head hovers above you.";
+	WaitLineBreak;
+	say "     Before you can react, his tongue comes descending upon your body and, with long and surprisingly tender licks, he caresses your entire body with that slick organ of his, decently wet and nimble. Its warm surface clashes with your outside body temperature, delivering a pleasant sensation as it rubs down on you through all the soft and sensitive spots. You feel the wyvern's damp breath brushing against you, causing your body's surface to glisten in moistness. With repeated circular motions around your torso, the wyvern continues to lick your body, sending many shivers of pleasure up and down your spine in ways you cannot even describe. It makes your penis throb with such solidity that your mindlessly lead your hands over to stroke it.";
+	say "     With his focus unabated, the wyvern then moves his very long tongue over your parts, swatting your hands away with a grunt, and what he does is twirl his tongue around your shaft and stroke it that way, wrapped around it. The sensations are incredible, as the wyvern's tongue constricts your penis and moves through it with surprising mastery, feeling way better than your hands could ever feel. The beast's saliva is gooey and serves as a good lubricant, helping you feel that friction all over your cock in a much more bearable and pleasant manner. All this encourages your hips to move on their own as you thrust into and through the tunnel of spiral flesh the wyvern's making.";
+	WaitLineBreak;
+	say "     The sensations of bliss prove to be a lot for you to endure, so much that you are quickly shown signs of being near your edging point. The wyvern's eyes shift towards yours as he bumps the tip of his muzzle against your pelvis, prompting you to stop moving as he takes the lead. His tongue then moves around your cock as the repeating stroking ends, but a constant caressing takes place. Close as you are, it does not take you much to begin to feel your load being pumped through your manhood and all the way out with extraordinary force. The orgasm hits you so hard that you moan loudly, not even processing that you are actually cumming inside the wyvern's mouth. Although, he does not move away, instead further stimulating you until the very last drop of jizz leaves your body.";
+	say "     He continues to caress your cock even after your climax begins to subside, giving you a bit of overstimulation as your organ begins to recover its high sensitivity. But while you would initially expect cruelty from the beast, he keeps it slow and tender, as to give you a few nice moments to end this interaction. The male wyvern then bumps his muzzle against your chest, softly, in what seems to be a show of intimate affection. For moments, you even forget you were fighting against each other not long ago, and you think he also placed that fact aside, for some reason. Although, this does not last for long, as the wyvern raises himself up as soon as several seconds pass.";
+	WaitLineBreak;
+	say "     'Hmph. I hope you had what you craved for. You'd make for a tasty snack, if I must admit, and your seed is of adequate flavor. Perhaps if you'd consider offering yourself to me as a... well, to put it bluntly, my property... I'd consider extracting more of it whenever I felt like it. Judging by how hard you came, I'm certain you'd enjoy such outcome. Alas, you will always be a mischievous runt, so I cannot trust your intentions. If I see you again, don't expect me to show mercy. Either earn it or accept your deserved punishment for all the transgressions you've committed and that I will NEVER forget. FAREWELL, puny thing.' With no further words shared between you, he takes off, flying above you and away, leaving only a brusque wind to swat at your face.";
+	CreatureSexAftermath "Wyvern Patriarch" receives "OralCock" from "Player";
+
+to say WyvernPatriarchLosesFuckedByPlayer:
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, which is quite sizable and eyecatching, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'W-what did you...? I... I'm a... I-I don't do that! Y-you'd dare to treat me like a female?!'";
+	say "     You remark that this has nothing to do with his sex, and that it is totally fine to enjoy a good dick in their asses. Being a large male wyvern should not take that joy away from him, if he so wished to feel your manhood inside him. Judging by how his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around, you think your short speech had some effect. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride. Now that he knows he cannot hide it from you, he rolls his eyes and grunts before finally opening his mouth to speak, 'I... suppose I could give it a try. Yes, it is definitely something of an experiment, nothing else. Y-you do have a... an interesting tool. I-I must learn from things like this if I must better my procedures with other female wyverns to expand my patriarchy!'";
+	WaitLineBreak;
+	say "     Hearing him speak, you only nod, then at some point, you start beckoning the wyvern to turn around and give you access to his rear. He is one big flying lizard, so you would have to climb over his legs and line up your cock with his hole while holding onto him. It will look as if you would effectively be mounting him, almost. Hesitantly, the wyvern shuts his mouth and proceeds to do as you say, lying down over the ground and do his best to let you get on top of him, even lifting his tail and swinging it out of your way. Now that your path is clear, you walk towards him and position yourself in a way you can finally bring your dick over the wyvern's hole. He lets out a grunt once he feels the tip of your meat brushing against his pucker, which looks surprisingly tight for a creature of his size.";
+	say "     The sight of a fully grown, mature and imposing male wyvern giving way for you to fuck him in the ass fills you with newfound excitement as you get a real grasp of the current situation, with you on top of such creature and ready to thrust into him. Without any further ado, you finally decide to give it to him, pushing your manhood against the wyvern's butthole and burying it all the way in. This causes the beast to growl deeply as his tail gets dropped across your shoulder, so you grab onto its base and resume thrusting, continuing to fuck the big wyvern with growing enthusiasm. His insides feel tight and pulsate around your shaft, providing you with great sensations that encourage you to keep the pace deep and steady, momentarily...";
+	WaitLineBreak;
+	say "     But eventually, you want to speed up and really give it all to the male wyvern, using his hole like you would use a fucktoy with all the horniness it demands. He definitely feels your determination, but does not stop you, instead seeming like he actually enjoys it, albeit too embarassed to verbalize it. It feels so good to you, however, that you could not care less about his insecurities and simply proceed to thrust faster and harder, getting what pleasure you can get from this whole experience. His hole begins to relax and welcome more of your fucking, which you take as a hint to go even harder, as hard as you can. Losing yourself in the momentum, you carry on assfucking this wyvern until your body gives signs of nearing your edging point.";
+	say "     Soon, it is as if a thunder struck you when you shoot your load into the wyvern, and at the same time, you hear him release a cry as he, too, creams over the entire ground underneath him. Spurt after spurt your loads leave through your bodies simultaneously, in a harmony that only makes you feel your climax stronger as it is reinforced by how hot the whole situation feels to you. Such intensity leads you to the necessity of catching your breath as soon as you are done, pulling your cock out of the wyvern and finally walking out to let him go. The beast refuses to look at you in the eye as he prepares to take flight with a grunt. 'Hmph. Not bad for a puny thing like you. But don't think you've just earned my respect! I was merely in... a mood of switching things around, that's all. I shall still have my way with you... One day!'";
+	WaitLineBreak;
+	say "     With no further words shared between you, he takes off, flying above you and away, leaving only a brusque wind to swat at your face.";
+	CreatureSexAftermath "Wyvern Patriarch" receives "AssFuck" from "Player";
+
+to say WyvernPatriarchLosesCockFuck:
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. His eyes widen as he seems almost... impressed with your audacity at making such request. 'What do you mean you wish to... T-that's quite a... An interesting proposal. Yes, you see... I am used to insertions in that particular place, and the tip is quite sensitive. You know what, I've deemed that this shall be a good way for you to redeem yourself and make it up to me.'";
+	say "     With such an easy persuasion attempt, you are left pretty reassured that the large wyvern is receptive to your intentions, and even more as he stands up higher to place his massive tool fully in display. 'Show me what you've got, then! You've made this happen, so I expect a proper solution.' You cannot lie about your own excitement to line up your cock into the wyvern's urethra and get started with this, so you walk towards him and do just that, slowly pressing against its head and into the small slit that easily stretches around your shaft. This makes the beast's smile wide as he feels your hands rub over his tool, which throbs excitedly and oozes so much precum that it comes running down your legs. It is not unwelcome, however, as it serves as natural lubricant for you to thrust deeper into his meat.";
+	WaitLineBreak;
+	say "     You not only fuck the wyvern's cock, but also make sure to give him proper worship with your touch, much to the male's pleasure. Holding his member in place, you begin to thrust in and out at a more steady pace, feeling your meat entering that warm, tight and wet place over and over as the pulsations further contribute to the bliss you feel around your manhood. 'You like it? Feels good, doesn't it? Should try other parts of your body sometime too...' he entices you, although you are so focused in the pleasure around your loins that you cannot even consider anything else right now. As you simply carry on fucking the wyvern's meat, pounding it harder and deeper, your surroundings quickly become a mess of precum all over.";
+	say "     But that is still not the end of it, as the messiest part is about to come. The feelings escalate into utter bliss and joy as soon as your body gives signs of nearing its limit, your climax building up faster than you would like. It feels so good, however, that you have little incentive to slow down, something that even the wyvern discourages, 'Keep at it, runt... You want to feel good, don't you? Go on, and I'll be sure to pay you back...' These words serve as further motivation to give in to your instincts as you pound that slit as fast as you can, and eventually, your climax surges. You find yourself cumming down the wyvern's shaft, spurt after spurt traveling down his meat as you feel it shake and throb...";
+	WaitLineBreak;
+	say "     'Hhng... Good job... Here's your reward...!' he warns, struggling with words at this point, until a massive force pushes you out of the beast's rod and onto the floor, followed by an avalanche of cum that washes over you like a tidal wave. The wyvern cries in pleasure as his orgasm continues, covering you from head to toe in that creamy white liquid and creating a puddle of mess underneath you, mixed in with the precum from before. 'Yees...! You'd be such an easy prey right now... but alas, I'm spent. I only hope you've enjoyed indulging yourself in such an act, as I shall come to collect my debt the next time I see you. Farewell for now, puny thing.'";
+	say "     With no further words shared between you, he takes off, flying above you and away, leaving only a brusque wind to swat at your face as your body remains atop all the mess. It will take you a while to clean yourself before you can grab your stuff and leave.";
+	CreatureSexAftermath "Wyvern Patriarch" receives "Other" from "Player";
+
+[---]
 
 to say Wyvern Patriarch Desc:
 	if Resolution of MeetTheWyvernPatriarch is 3: [first time met]
@@ -136,8 +215,18 @@ to say Wyvern Patriarch Desc:
 	else:
 		say "     Amidst your exploration within the outskirts of the city, you begin to hear a familiar roar from the distant horizon. You know exactly what this means and prepare for the unavoidable encounter...";
 		WaitLineBreak;
-		say "     'You again?! Hasn't our last meeting been clarifying enough?! Must I BREAK you until you learn your place?! So be it.'";
+		if WyvernPatriarchFightOutcome is 1: [player submitted]
+			say "     [one of]'Ah, look who's here...! The little runt from before... Did you come here to receive your deserved punishment once more? Perhaps you have come to terms with your savage ways and intend to atone for your mistakes? Let's make this less hard than it needs to be and simply SUBMIT to me this time too. I'll ensure your cravings for repentance are sated...'[or]'Have you come here to amuse me again? Think I'll forget what you did to my sons? Come here, then! I'll remind you of your place...'[or]'It seems you've returned. Perhaps I found a willing servant? Might as well submit already and avoid further unpleasantries! Come on closer, you know you want it...'[or]'Found you lurking around... Are you plotting something again? Drop to your knees and beg for my pardon. Once I'm done with you... I'll consider how I'll prolong your punishment. I'll even make you enjoy it.'[or]'I'm starting to wonder if you truly enjoy this... It's starting to be very easy to find you, you know? Not that I'm complaining, in fact, you're making it easier for me. How about I claim you once more? Punishing you is rather enjoyable, I'll admit.'[or]'You really do like to be dominated, don't you? Let us drop the fighting and proceed into what really matters here. You serving me as repentance for your sins... A proper punishment.'[at random]";
+		else if WyvernPatriarchFightOutcome is 2: [player lost fighting]
+			say "     [one of]'You again?! Hasn't our last meeting been clarifying enough?! Must I BREAK you until you learn your place?! So be it. I will ensure you won't forget another time what it means to defy my authority! SUBMIT! Or I'll make you.'[or]'I see you, runt! You're going to get another beating that'll teach you not to mess with me nor my kin!'[or]'You dare showing your face again? Very well. I'll teach you another lesson, and will keep doing so until you're utterly broken!'[or]'Would you look at that, were you going anywhere? Plotting something, I bet! Or have you finally come to your senses and wish to submit to me?'[or]'Where do you think you're going, runt?! Without paying me due respect?! Allow me to rectify that.'[or]'Caught you again, wimp! Now... Let's see how I'll destroy you, this time. Perhaps it'll be enough to finally teach you your place! If not... I'll simply break your resolve until I hear you beg.'[at random]";
+		else if WyvernPatriarchFightOutcome is 3: [wyvern lost through lust]
+			say "     [one of]'Y-you! I... I will not let you corrupt me with your s-... urgh...! S-savage ways again! I... I'll teach you a lesson this time. You won't break me as easily as before, no no! This time, I'll stand strong, like a true and proud wyvern would!'[or]'It's... you. How... Quaint finding you here. It's almost as if you expected my arrival. So, what is it this time? You're going to flash your [if player is male]dangling tool[else]bubbly buttocks[end if] again? Is that all you can do?! I warn you, I... I will not fall for that again. I've seen it all! It no longer impresses me!'[or]'No! Not you again! If you flash me again with your parts I'll... goop you to the ground and... Yes, you'll see what I'll do to you! I don't even need to tell you! Because, this time, you'll lose!'[or]'Oh for the love of... You?! Fine! Go on, strip and flash me and do all those lewd things you usually do. I just know you're going to do it again, so why expect anything else?! Deviants like you know only those dirty tactics. But I'm stronger today! You'll see...'[or]'So we meet again. Listen here... It's not too late, you know? You could just submit! It's much easier... And we can both enjoy each other quicker and sooner instead of forcing me to watch your exposed figure moving around and dancing and... N-not that I enjoy that! No, I didn't mean it that way-... Enough talking! PREPARE YOURSELF!'[at random]";
+		else if WyvernPatriarchFightOutcome is 4: [wyvern lost through fighting]
+			say "     [one of]'Hah! We meet once more. I doubt you can defeat me again, that last time was but a mere a strike of luck! You'll lose now, and your punishment will be more than deserved.'[or]'So, what is your tactic this time? Because if you intend to behave like an annoying fly, I'll swat you flat onto the ground. You'll stand no chance against me today!'[or]'I wish I could call you a valiant warrior and a worthy opponent, but one who wins by chance deserves no respect. I shall teach you what true might is!'[or]'What will it be today, runt?! Another duel? Very well... Prepare to be crushed. You won't win.'[at random]";
+		else: [a failsafe]
+			say "     'You again?! Hasn't our last meeting been clarifying enough?! Must I BREAK you until you learn your place?! So be it. I will ensure you won't forget another time what it means to defy my authority! SUBMIT! Or I'll make you.'";
 		WaitLineBreak;
+		Linebreak;
 		say "     This massive wyvern hovering above you, with loud and intimidating wings, has the same characteristics as a normal one, except much larger. As he swoops down to confront you, the sheer force of his landing nearly knocks you off balance as the earth around you shakes, his enormous visage enough to overtake you within his shadow. From his head, two large horns extend towards the back of his long and girthy neck. Then, right at the tip of his wings, protrudes a huge and sharp foretalon on each. You also have his impossible weight, supported by a pair of extremely thick, powerful legs and huge clawed feet, all serving as natural weapons to cut and impale you with. You have never seen a wyvern this muscular and powerful-looking, way larger than even a monster truck. The nature of his voice clearly suggests he is a male.";
 
 Section 2 - Creature Insertion

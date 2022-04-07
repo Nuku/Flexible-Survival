@@ -402,7 +402,7 @@ to say ElijahTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk about what comes to mind";
 	[]
-	if HP of Elijah < 99 and Libido of Skarnoth > 2 and Libido of Skarnoth < 11:
+	if HP of Elijah < 99 and Libido of Skarnoth > 2 and Libido of Skarnoth < 12:
 		choose a blank row in table of fucking options;
 		now title entry is "The imps hunting for you and him";
 		now sortorder entry is 2;

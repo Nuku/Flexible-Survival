@@ -1,9 +1,10 @@
-Version 2 of Damien by Gherod begins here.
+Version 3 of Damien by Gherod begins here.
 
 "Adds Damien to the game, a young demon hunter and scavenger who first begins as a human."
 
 [Version 1 - File Created, with Intro event and NPC consolidation]
 [Version 2 - Introducing demonic dragonmorph Damien]
+[Version 3 - Loopable escort sex scene]
 
 [ DamienIntro RESOLUTION STAGES ]
 [ 0 - Event Unresolved ]
@@ -683,13 +684,13 @@ to say ToronTalkDamien:
 			say "     After having offered Damien his special drink and noticing its diminishing effects, you decide to ask Toron more about it, explaining what you have observed since he started taking the Hellfire Draconic Special. The black demon clears his throat as he thinks of a few possibilities. 'Hm... seems like an acquired immunity to me. Perhaps the drink is not strong enough to push through the nanites in his system. Or maybe it has reached its transformative potential, which in that case it's quite disappointing... But I haven't made the drink with the purpose of transforming those who have it. I could, however, try to enhance its effects... See how far we can push his body...'";
 			say "     A smirk forms across the corner of his mouth as he ponders some ideas. 'Leave it to me. The next time you want to pay him another round, I'll have something new for you to try out. It's entirely your responsibility, though. Remember.'";
 			now Resolution of DamienTF is 2;
-		else:
+		else if Resolution of DamienTF is 2:
 			say "     After having offered Damien his special drink and noticing its diminishing effects, you decide to ask Toron more about it. 'The drink is ready, all you have to do is ask, give and see what happens.'";
-	else if Resolution of DamienTF is 3:
-		say "     You ask Toron about Damien, who seems to have gone away after your last, but memorable, encounter, hoping that he knows something about his whereabouts. The dark demon draws a grin on the corner of his mouth as he gives one glass a good polish. 'He's around. Said he needed some time to himself after the... new changes in his form, which are totally your fault. Nevertheless, he made himself clear of one thing... He'd come back for you.' These last words send a chill down your spine as Toron glares intensely at your eyes. 'I'm not certain his corrup-... uhm, generous improvement is complete, though. He seemed to still retain some guilt after your deed. Nothing a few additional tonics won't fix... That is, if you want an obsessed, overly-dominant brute of a hellfire draconic demon using you as a cock-sleeve for the rest of your life.'";
-		say "     A nervous laugh escapes your mouth, and you are not even sure why. 'Oh, I don't judge. The thought does seem appealing. What was his name... Iker, I believe, found it so, as well. Guess where that took him...' You remember Iker being Damien's friend, who sold his soul to Mogdraz, but for reasons that are yet unclear, since you have heard so many from Damien himself. 'Iker was not tricked into it. That goes against Lord Mogdraz's code of honor. It was a completely willing contract... It does make one wonder what would cause such a person to want to submit to a demon so badly, doesn't it?' Giving it some thought, you are able to draw conclusions from these facts, but Toron saves you the trouble.";
-		WaitLineBreak;
-		say "     'Who corrupted who... Guess you're about to find out... Once he comes back, that is. And he will, oh I'm sure.'";
+		else if Resolution of DamienTF >= 3:
+			say "     You ask Toron about Damien, who seems to have gone away after your last, but memorable, encounter, hoping that he knows something about his whereabouts. The dark demon draws a grin on the corner of his mouth as he gives one glass a good polish. 'He's around. Said he needed some time to himself after the... new changes in his form, which are totally your fault. Nevertheless, he made himself clear of one thing... He'd come back for you.' These last words send a chill down your spine as Toron glares intensely at your eyes. 'I'm not certain his corrup-... uhm, generous improvement is complete, though. He seemed to still retain some guilt after your deed. Nothing a few additional tonics won't fix... That is, if you want an obsessed, overly-dominant brute of a hellfire draconic demon using you as a cock-sleeve for the rest of your life.'";
+			say "     A nervous laugh escapes your mouth, and you are not even sure why. 'Oh, I don't judge. The thought does seem appealing. What was his name... Iker, I believe, found it so, as well. Guess where that took him...' You remember Iker being Damien's friend, who sold his soul to Mogdraz, but for reasons that are yet unclear, since you have heard so many from Damien himself. 'Iker was not tricked into it. That goes against Lord Mogdraz's code of honor. It was a completely willing contract... It does make one wonder what would cause such a person to want to submit to a demon so badly, doesn't it?' Giving it some thought, you are able to draw conclusions from these facts, but Toron saves you the trouble.";
+			WaitLineBreak;
+			say "     'Who corrupted who... Guess you're about to find out... Once he comes back, that is. And he will, oh I'm sure. For now, I suggest you go outside for a while and come back later, gather your thoughts... perhaps time is all you need.'";
 
 to say DamienTalkDrink:
 	if player is dominant:
@@ -947,11 +948,26 @@ to say ToronTalkExoticEscortsDamien:
 			say "     Toron nods, with a sigh. 'Very well, then. It is probably for the best...' he replies, awaiting further instructions from you.";
 			WaitLineBreak;
 			say "[ToronTalkExoticEscortsMenu]";
-	else:
-		say "     'But it looks like Damien is currently busy. You will have to wait for some time until you can ask to be with him again.' Toron informs you. Perhaps you should just pick another person, for the time being.";
-		say "     (This is the end of his scenes, for now. More will be added in the future.)";
-		WaitLineBreak;
-		say "[ToronTalkExoticEscortsMenu]";
+	else if Resolution of DamienTF > 5:
+		LineBreak;
+		say "     'With that said, do you wish to schedule a session with Mister Damien? The usual price is 10 Obsidian Coins for a full hour, but for you it is... [bold type]free[roman type], as you may already know.'";
+		say "     ([link]Y[as]y[end link]) - Yes, go see Damien.";
+		say "     ([link]N[as]n[end link]) - Perhaps... You should not.";
+		if player consents:
+			if lastfuck of Damien - turns < 7:
+				say "     With a nod, you state that you want to go see Damien, but Toron interrupts you as he realizes something. 'Oh, but it wasn't long ago you requested him, so he's attending other requests. You will have to wait for while until you can ask to be with him again. Let the paying clientele have their turns as well, you know...' Perhaps you should just pick another person, for the time being.";
+				WaitLineBreak;
+				say "[ToronTalkExoticEscortsMenu]";
+			else:
+				say "     With a nod, you state that you want to go see Damien. 'I will assume things went well last time,' he tells you, before gesturing towards the Staff door and beckoning you to follow him, 'Through here.' You find yourself going from corridors to more corridors, taking turns into places you could never hope to remember, but Toron seems to know exactly where he is going for. No matter how many times you repeat the path, it is just unexplainably difficult to recall... Although, curiously, you always know where the exit is. Thinking about it makes your head dizzy, too.";
+				say "     Damien's room seems to be just after this one door you stop at, according to Toron. The bartender leaves you be with only a cryptic stare instead of words...";
+				WaitLineBreak;
+				say "[ExoticEscortsDamienSession2]"; [a repeatable one]
+		else:
+			LineBreak;
+			say "     Toron nods, with a sigh. 'Very well, then. It is probably for the best...' he replies, awaiting further instructions from you.";
+			WaitLineBreak;
+			say "[ToronTalkExoticEscortsMenu]";
 
 to say ExoticEscortsDamienSession:
 	say "     Once you knock on the door, you hear a familiar voice on the other side, albeit a demonic one, deeper than how you remembered it, 'Come in, friend... I know it's you.' This surprised you, even knowing Damien was already changed almost beyond recognition due to the transformative drinks, but hearing such a different tone coming from him is definitely a shock, one that you were not quite prepared to face. You place your hand over the door's knob and rotate it to the side, then slowly push it open, looking over the floor as you take a step forward. Without opening the door completely, as if subconsciously shielding yourself, you only peek inside to have a look at the dragonmorph. You had already seen him, but now... He is truly a demon.";
@@ -985,6 +1001,35 @@ to say ExoticEscortsDamienSession:
 	say "     Toron them comes for you within only a few minutes, quite shocked to see you in such a state. 'My... What a mess. We'll have to get you clean before you return to the lounge. I... am assuming nothing out of the ordinary happened?' he asks you, but there is nothing special to tell him. He does not pry any further, either, and proceeds to get you cleaned up before escorting you back to the bar.";
 	NPCSexAftermath Player receives "Other" from Damien;
 	now Resolution of DamienTF is 6;
+
+to say ExoticEscortsDamienSession2: [Supposed to be a loopable scene with dialogue variations that can be expanded with future requests]
+	say "     Once you knock on the door, you hear Damien's voice on the other side, 'The space is all yours, friend... Come right in.' Since he just gave permission for you to enter, you place your hand over the door's knob and rotate it to the side, then slowly push it open, greeting the dragonmorph upon laying your eyes on him. He is lying down on the bed wearing only a black robe on his otherwise naked body, observing you stepping into his room. He has a grin on his face, ever so off putting, but you think you are growing accustomed to it. 'Knew you wouldn't be able to keep away for long. Thought of me often? Bet you did, otherwise you wouldn't be here...' Damien then makes a gesture with his hand to beckon you to approach him. 'Come on... there's no need to be shy anymore. We've been doing this for a while now!";
+	say "     Seeing no reason to just stand by the door, you approach him after closing it. He remains in the same position, pointing you towards the edge of the bed at a space right next to his feet. As you take a seat in that spot, he lifts and places them on your lap, huge and thick clawed toes wiggling right in front of your face. 'So, uh... We're cool, right? I mean, I'm still getting used to this new life and all, but it's pretty good. I get to fuck a lot and I was promised a comfortable life based on my performance... It's a shame I still have to gain Mogdraz's trust for the following years, but hey, fucking is good. Speaking of which... Hm, how about you give me a foot massage? Honestly I could use it... I remember you had good hands.'";
+	WaitLineBreak;
+	say "     It looks like Damien wants you to use your hands on his feet, but you get the feeling this might escalate into something more... Sexual. How do you feel about this? Do you want to let things go on or should you just take your leave?";
+	say "     ([link]Y[as]y[end link]) - Oblige his request.";
+	say "     ([link]N[as]n[end link]) - Get up and leave, you are definitely not into this.";
+	if player consents:
+		say "     Knowing that the draconic demon man means what he said, and judging by those bedroom dragon eyes, he really wants you to put your hands on his feet and rub them around a bit, so you begin to do it with the best of your abilities. 'Aah... That's nice. I could've asked anyone to do this for me, but I knew you'd come by eventually. And we both know how much you enjoy making me feel good... I'd be wasting a perfectly fun activity for us two!' He brings his arms up, hands between his head and the pillow, and gets comfortable as you feel up his feet and toes, trying to find the best pressure points. Whatever you do seems to please him, however, so you might be doing something right.";
+		say "     'Yeah, I was right, you still have nice hands... I remember how good they felt on my cock when you were giving me a helping hand. Which, by the way... got hard just now.' When you give your side a glance, you realize he has his huge dragon dong in his own hands, being stroked slowly. 'But I'll take care of it myself, today. I'd rather do something different with you...' While hearing him speak, you continue to rub his soles and toes generously, moving your fingers around firmly and pressing on them steadily. 'Why don't you get more comfortable? Still sitting like that, turned towards the door... I'd rather have you face me while you rub my feet. Then you can also feast your eyes on this... It's much better!'";
+		WaitLineBreak;
+		say "     Pulling your legs atop the bed, you sit down in a way that you are facing Damien while holding his feet up by the ankles, sliding part of your leg underneath to support them. With this, you are presented with a great view of the draconic devil jerking off as he, too, observes you. Now that you have readjusted yourself, you continue to massage him, often getting a few moans out of his mouth. Although, while you do this, you cannot help but stare at the dragon cock that is simply standing several inches away and in front of you, throbbing so hard you think it might feel as solid as steel. Damien looks amused at how distracted you are getting with his lewd display, and before you know it, he begins to raise one of his feet and plants it on your face.";
+		say "     'Hey, how about you give them a kiss too?' he asks, pressing his thick big toe against your lips, giving you no choice but to let it in. 'Ooh, yeah, suck on it too... and keep rubbing... Feels great...' With your lips wrapped around the tip of Damien's big toe, you then proceed to add your tongue to the equation and lick around it, all the way to the base and the space between the next. His claws are wide and not too sharp, so you manage to stay clear of them as you work your way towards the sole. 'Mmhh... keep licking...' he moans and grunts as he brings himself towards the edge, your efforts proving to be enough to please the dragonmorph. Right now, your lips are planted flat on the bumps below his toes as he presses his foot against your face. 'All over, come on...'";
+		WaitLineBreak;
+		say "     At this point, you must use one of your hands to grab that foot and hold it in place so you can turn your head around and get every angle of his sole with your tongue, running it across multiple sensitive areas, managing to drive Damien really close to the point of no return. He often presses his most favored zone against your mouth repeatedly until you practically start sucking on it, and right now, it is his heel, with the rest of his foot planted all across your face and forehead. 'Fuck, I'm close...!' The devilish man leaves it like that as he warns you, soon shooting his load all over himself with powerful blasts that even you can hear being fired from his cock, together with his moans and grunts.";
+		say "     'Fuuuck...! Yeah!! Made me blow big, bud...' he says, placing his foot atop your shoulder and allowing you to look at his cum-soaked body. 'Since you've done a good job today... come here. Lick my body clean,' he then orders you, together with a finger gesture as he spreads his legs open to allow you to crawl close to him. He places his arms up and hands behind his skull, just like he had them before, and lets you lick his muscular body off any trace of warm and sweet demonic cum. 'You're only allowed to leave once you've licked it all up, so better make sure the job's well done. Though I can say... I'm pleased with you. And this is a fitting reward for a good [boygirl] like you.' Hearing his praise only fills you with newfound determination to savor all the cum he blasted with his orgasm...";
+		WaitLineBreak;
+		say "     It is a lot, and it got absolutely everywhere. All over his muscular pecs, down to his abs, and around his cock, which still hangs half-hard atop his waist. Once you get there, he reassures you, 'Every inch, I said,' as you look at his wet cock. This earns you a moment to taste the dragon's dong to lick and swallow the cum that stuck to it, wiggling your tongue all over his sensitive tip... But you are soon stopped before you have time to get too enthusiasmed. 'That's it, nobody said you could blow me just now. You've done your job, cleaned me well enough, you can go,' he informs you, grabbing your head by the chin and leading you out of his bed, without even getting his ass up himself.";
+		say "     'Keep coming back to worship me, will you? I practically own you already, anyway...' Chuckling in the end of these words, he then dismisses you as you make your way towards the door in order to leave.";
+		WaitLineBreak;
+		say "     Toron is quick to show up in order to escort you back to the bar, but not without commentary. 'Seems like you've returned... clean. Yet, by the time you took and the smell of your breath, I'm assuming it went well enough.' This makes you feel very self-conscious about the way your breath smells, but other than that, you are happy to be back to the bar after an encounter with your friend Damien...";
+		if player is submissive:
+			say "     [italic type]Strangely happy. He said he practically owned you, and that really rubs your submissive instincts just right. But is it a good idea to give in? You think it is, and you were definitely left wanting more.[roman type][line break]";
+		NPCSexAftermath Player receives "Other" from Damien;
+	else:
+		say "     Your eyes visibly widen, as you have deemed that you are definitely not about to massage anyone's feet right now. Informing Damien of that, you push his feet away and get up to leave. You are not necessarily impolite, but the refusal alone seems to have annoyed the dragon devil. 'Oh well, your loss. Someone else will pay to have an opportunity you have wasted, for free... Guess if you don't wanna follow my rules, then you should probably just stop coming, really. Find someone else.' Feeling at a loss of words, you just remove yourself from Damien's room.";
+		say "     Toron appears shortly after to escort you back to the lounge, and not without commenting on how quickly the session went, 'Hm... I suppose it was not to your liking, this time? It's alright. I'm sure Damien will be more open to suggestions in the future. Give it time.' With that, you are returned to the bar shortly after.";
+		now lastfuck of Damien is turns; [no sex here, but lastfuck is being used as a cooldown for the escort, and this counts as a session]
 
 [***********************************************************]
 [***********************************************************]
