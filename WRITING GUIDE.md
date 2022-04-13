@@ -62,10 +62,24 @@ The data of the game is contained in a lot of variables and properties, many of 
 ### Genital Variables:
 This first set are the numerical values, to be followed by the descriptive ones which adjust themselves based on these numbers.
 
-* `cocks of player` | the number of cocks the player has
-* `cock length of player` | the length (in inches) of the player's cock
+```inform7
+A person has a number called Cock Count. Cock Count is usually 0. [the number of cocks the player has]
+A person has a number called Cock Girth. Cock Girth is usually 7. [thickness 1-5, thin/slender/average/thick/monstrous]
+A person has a number called Cock Length. Cock Length is usually 6. [length in inches]
+A person has a number called Ball Count. Ball Count is usually 2. [number of balls the player has]
+A person has a number called Ball Size. Ball Size is usually 3. [0-7: non-existent, acron, dove egg, chicken egg, goose egg, ostrich egg, basketball, beachball]
+A person has a number called Cunt Count. Cunt Count is usually 0. [the number of cunts the player has]
+A person has a number called Cunt Depth. Cunt Depth is usually 9. [depth in inches]
+A person has a number called Cunt Tightness. Cunt Tightness is usually 5. [1-5: tight, tight, receptive, open, gaping]
+A person has a number called Clit Size. Clit Size is usually 3.
+A person has a number called Asshole Depth. Asshole Depth is usually 9.
+A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
+```
+
+* `Cock Count of player` | the number of cocks the player has
+* `Cock Length of player` | the length (in inches) of the player's cock
 * `cock width of player` | the size (comparatively) of the player's balls
-* `cunts of player` | the number of cunts the player has
+* `Cunt Count of player` | the number of cunts the player has
 * `cunt length of player` | the depth (in inches) of the player's cunt
 * `cunt width of player` | the width (in inches) of the player's cunt
 * `breasts of player` | the number of breasts the player has (an even number)
@@ -94,16 +108,16 @@ For your own sanity, only include a few of these variations in any given scene a
 
 ### Genitals
 * `if player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
-* `if player is female` *or* `if cunts of player > 0` | does the player have any cunts? (female/herm)
-* `if player is herm` *or* `if cunts of player > 0 and cocks of player > 0` | does the player have both cock and cunt? (herm)
-* `if player is neuter` *or* `if cunts of player is 0 and cocks of player is 0` | does the player have no cunt and no cock? (neuter)
+* `if player is female` *or* `if Cunt Count of player > 0` | does the player have any cunts? (female/herm)
+* `if player is herm` *or* `if Cunt Count of player > 0 and Cock Count of player > 0` | does the player have both cock and cunt? (herm)
+* `if player is neuter` *or* `if Cunt Count of player is 0 and Cock Count of player is 0` | does the player have no cunt and no cock? (neuter)
 * `if Cock Count of player is 1` | does the player have a single cock?
 * `if Cock Count of player > 1` | does the player have multiple cocks?
 * `if Cock Count of player > 2` | does the player have 3 or more cocks?
-* `if cock length of player > 6` | does the player have a cock that is 7 inches or more?
-* `if cock length of player < 10` | does the player have a cock that is under 10 inches?
-* `if cock length of player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)
-* `if cock length of player > 20` | does the player have a belly-stuffing big cock? (again, my value choice for this)
+* `if Cock Length of player > 6` | does the player have a cock that is 7 inches or more?
+* `if Cock Length of player < 10` | does the player have a cock that is under 10 inches?
+* `if Cock Length of player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)
+* `if Cock Length of player > 20` | does the player have a belly-stuffing big cock? (again, my value choice for this)
 * `if cock width of player > 5` | are the player's balls ranked above 5 in size?
 * `if cock width of player < 12` | are the player's balls ranked under 12 in size?
 * `if cock width of player > 40` | is the player's load belly-bloatingly large? (again, my value choice for this)
@@ -136,7 +150,7 @@ The current list options are: felinelist, caninelist, equinelist, vulpinelist, r
 * `if fightoutcome >= 30` | did the player manage to flee from their last fight?
 Numerous more examples and more specific results for fightoutcome can be seen in this document: ----
 #### Setting up a first-time encounter
-```
+```inform7
 to say InfectionNameDesc:
     setmongender 0;
     if "InfectionName" is not listed in EncounteredEnemies of player: [first encounter]
@@ -246,7 +260,7 @@ Breasts(number)
 Breast Size(number)
 ```
 Just like so:
-```
+```inform7
 Amy is a woman.
 ScaleValue of Amy is 3. [human sized]
 SleepRhythm(number) [0 - awake at all times, 1 - day active, 2 - night active]
@@ -262,10 +276,10 @@ Breast Size of Amy is 2. [B cup at the start]
 ```
 This will allow you to make use of these values in scenes, and be quite useful if you have a NPC that might gender shift or the like.
 An example:
-```
+```inform7
 if Cock Length of Player > Cunt Depth of Amy + 2: [some stretching allowed]
 	say "     The female husky wines a little as you bottom out inside her before your cock is all the way in. 'Not so deep please, you're too big.' [...]'";
-else if cock length of player < cunt length of Amy - 3: [a bit small, eh?]
+else if Cock Length of player < cunt length of Amy - 3: [a bit small, eh?]
 	say "     The female husky gives a needy whine and asks, 'Are you, ehm... already in?'";
 else: [regular sex]
 	say "     ...";
@@ -283,7 +297,7 @@ Virgin(truth state)
 AnalVirgin(truth state)
 ```
 And can be used like so:
-```
+```inform7
 if Virgin of Amy is true:
 	say "     'Please be gentle, it's my first time,' the husky sighs out shyly as she spreads her legs. [...]'";
 	now Virgin of Amy is false;
@@ -320,6 +334,86 @@ Thirst(number)
 Morale(number)
 Lust(number)
 Libido(number)
+```
+
+### Wandering Creature Variables
+Wandering creatures should be added like so:
+
+
+```inform7
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Jackal"; [name of the overall species of the infection, used for children, ...]
+	[Add the infection to appropriate lists, see Core Mechanics\Lists and Banning.i7x]
+	add "Jackal Femboy" to infections of CanineList; 
+	add "Jackal Femboy" to infections of FurryList;
+	add "Jackal Femboy" to infections of NatureList;
+	add "Jackal Femboy" to infections of MaleList;
+	add "Jackal Femboy" to infections of TaperedCockList;
+	add "Jackal Femboy" to infections of KnottedCockList;
+	add "Jackal Femboy" to infections of SheathedCockList;
+	add "Jackal Femboy" to infections of BipedalList;
+	add "Jackal Femboy" to infections of TailList;
+	now Name entry is "Jackal Femboy"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "Jackal Femboy"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[one of]a[or]b[at random]";
+	now defeated entry is "[Femboy Jackal Loses]"; [Text when monster loses. Often links to a separate function ]
+	now victory entry is "[Femboy Jackal Wins]"; [Text when monster wins. Often links to a separate function ]
+	now desc entry is "     Standing before you is a Jackal Femboy...";  [ Description of the creature when you encounter it. ]
+	now face entry is "narrow and canine, with a long sleek muzzle"; [ Format as "Your face is [Face of Player]." ]
+	now body entry is "slim and sleek"; [ Format as "Your Body is [body entry]."]
+	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]"; [ Format as "Looking at yourself, your body is covered in [skin entry] skin"]
+	now tail entry is "You have a sleek, black-furred jackal's tail attached to your rear, swaying happily over your enormously colossal bubble ass with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]"; [ Format as "You have a [cock size desc of Player] [Cock of Player] cock."]
+	now face change entry is "your mouth pushes forward into a sleek black muzzle, and your eyes blur as they shift in both color and position. New sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears complete shifting into proper canine ears, swiveling around on top of your head like a proper jackal's, with effeminate features that betray your gender"; [ Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it seems to slim down, its form becoming both sleek and slim as it seems to shorten slightly"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "a soft tingling sensation spreads across your body and soft, sleek, black jackal fur begins to push its way out of it. The fur quickly covers your body in a sexy coat of short dark fur."; [ Format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a strange tingling sensation seems to grow in your rear. It softens and flattens somewhat, then with a soft pulling sensation you feel a thin black canine tail slowly extend from your tailbone, lengthening until it is down past your knees before the changing stops. You can't help but notice that your buttocks seem quite heavier than before, and they don't stop growing for a good while, until they are made of such massive bubbliness that makes it hard for you to walk, at first"; [ Format as "Your ass feels funny as [ass change entry]." ]
+	now cock change entry is "its shaft thins and changes, the tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur. Funnily enough, it seems keen on growing further"; [ Format as "Your groin tingles as [cock change entry]." ]
+	now str entry is 18;
+	now dex entry is 22;
+	now sta entry is 19;
+	now per entry is 17;
+	now int entry is 13;
+	now cha entry is 20;
+	now sex entry is "Male";  [ Defines which sex the infection will try and make you. Current options are 'Male' 'Female' 'Both']
+	now HP entry is 65;
+	now lev entry is 10;  [ Level of the Monster, you get this much XP if you win, or this much HP halved if you loose ]
+	now wdam entry is 12;  [ Amount of Damage monster does when attacking. ]
+	now area entry is "Nowhere";  [ A named area like 'Outside','Mall','Museum' or 'Nowhere'. Case sensitive!]
+	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 27;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 5;  [ Size of balls ]
+	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 0;  [ Cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;  [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [ Inches circumference. 3:extremely tight, 5:tight, 7:receptive, 10:open, 11+ gaping ]
+	now SeductionImmune entry is false; [ If true, prevents seduction attacks (increasing libido) from working ]
+	now libido entry is 80;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty. ]
+	now loot entry is "";  [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 50;  [ Chance of loot dropping 0-100 percentage. Use 0 for no loot ]
+	now MilkItem entry is ""; [ For if the player milks the monster. Must be defined as an item somewhere, see `margay milk` as an example ]
+	now CumItem entry is ""; [ For if the player milks the monster's cock. Must be defined as an item somewhere, see `sea dragon cum` as an example ]
+	now TrophyFunction entry is "-"; [ A function to call for more complex loot menu options. See GenerateTrophyList_Husky_Bitch as an example ]
+	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1:tiny, 3:avg, 5:huge ]
+	now body descriptor entry is "[one of]altered[or]animalistic[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "[one of]canine[or]jackal[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? (normally false, not sure this is actually used anywhere?) ]
+	now resbypass entry is false;  [ Bypasses Researcher bonus? almost always false ]
+	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? Usually false ]
+	now Cross-Infection entry is ""; [use if you want to give some other monster's infection; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "hump";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 ```
 
 ### Objects
@@ -372,11 +466,11 @@ To be added later.
 
 ### Random chance
 * `if a random chance of 1 in 3 succeeds` | a 33% chance of occurring.
-* `if cunts of player > 0 and a random chance of 1 in 2 succeeds` | if the player has a cunt, 50% chance of this scene playing out.
+* `if Cunt Count of player > 0 and a random chance of 1 in 2 succeeds` | if the player has a cunt, 50% chance of this scene playing out.
 * `if a random number between 1 and 100 < 15` | another way to do random chance, this one is 14%
 * `if "More Anal" is listed in feats of player and a random chance of 3 in 5 succeeds` | there is a 60% chance of this scene playing out, but only if the player has More Anal.
-* `if cunts of player is 0 or a random chance of 1 in 3 succeeds` | This will occur if the player has no cunt, otherwise it'll occur a third of the time.
-* `if a random chance of 1 in 2 succeeds or ( cocks of player > 0 and a random chance of 1 in 3 succeeds )` | this will occur one half of the time, with males/herms getting an additional 33% chance on top of that.
+* `if Cunt Count of player is 0 or a random chance of 1 in 3 succeeds` | This will occur if the player has no cunt, otherwise it'll occur a third of the time.
+* `if a random chance of 1 in 2 succeeds or ( Cock Count of player > 0 and a random chance of 1 in 3 succeeds )` | this will occur one half of the time, with males/herms getting an additional 33% chance on top of that.
 * `if libido of player > a random number between 1 and 100` | random libido check (yes = gave in, no = resisted)
 * `if libido of player > a random number between 25 and 125` | random libido check w/a libido of 25 or less guaranteed to win (not give in) and random roll of 101-125 also always winning (yes = gave in, no = resisted)
  * `if ( 100 + humanity of player - libido of player ) > a random number between 1 and 150` | a random check pitting the player's humanity and libido against one another (yes = resisted, no=gave in)
@@ -390,7 +484,7 @@ To be added later.
   ** Level: the event will only trigger if the player is at or above the given level (default: 0)
 
 For progressive events, you can use Resolution like any other tracking variable:
-```
+```inform7
 instead of resolving Daily Food Ration:
 	if Resolution of Daily Food Ration is 0: [default value, first time]
 		say "You come and grab your ration for the day";
@@ -414,7 +508,7 @@ Up to three events can be prerequisites for any given one.
 
 ### Player Imports and Exports: the ID tags
 For the new import/export system to work, all NPCs, Situations and Rooms need to be entered into a table that holds their IDs. This means that a NPC definition would look like this:
-```
+```inform7
 Table of GameCharacterIDs (continued)
 object	name
 Amy	"Amy"
@@ -424,7 +518,7 @@ Amy is a woman.
 You just need to drop the upper code block just right above where you make the character, fill in the proper name and that's it.
 
 Similar to ID tagging NPCs, the same thing needs to be done Situations/Events:
-```
+```inform7
 Table of GameEventIDs (continued)
 Object	Name
 Grumpy Old Men	"Grumpy Old Men"
@@ -433,7 +527,7 @@ Grumpy Old Men is a situation.
 ```
 
 And for the Rooms:
-```
+```inform7
 Table of GameRoomIDs (continued)
 Object	Name
 2F Trevor Labs	"2F Trevor Labs"
@@ -457,7 +551,7 @@ This function does several things:
 * Setmonster to the MainInfection of a given npc, then fimpregchance/mimpregchance for the player if they got fucked in the pussy/asses by a non-sterile partner
 
 Examples:
-```
+```inform7
 to say Carl_FucksPlayerPussy:
     say "Scene Text";
     NPCSexAftermath Player receives "PussyFuck" from Carl; [nothing else needed, no setmonster, no lastfuck setting, no impregchances]
@@ -475,7 +569,7 @@ Similar function for random enemies:
 This function is easier, since random enemies have no variables to save, they stop existing after the scene. Still, the player side of things will get the proper adjustments, as above.
 
 Example:
-```
+```inform7
     CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
     CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
 ```
