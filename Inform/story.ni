@@ -281,6 +281,7 @@ Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Diego Events by Vinickus.
 Include Dmitri the Peacock by Aureas Gigas.
+Include Dreamcatcher by Qazarar.
 Include Dry Plains Events by Stripes.
 Include Endings by Guest Writers.
 Include E-shocker by Stripes.
@@ -561,7 +562,7 @@ Include Lernean Hydra by Prometheus.
 Include Liquidshifter by Ssely.
 Include Lizard Girl by Damaged.
 Include Lusty Skunk by Nuku Valente.
-Include Magic Drake by Stripes.
+Include Magic Drake by Qazarar.
 Include Male Peacock by Guest Writers.
 Include Mall Rat by Stripes.
 Include Mammoth by Stripes.
@@ -684,6 +685,7 @@ Include Unicorn by Sarokcat.
 Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
+Include Vixen Kunoichi by Qazarar.
 Include Vixentaur by Stripes.
 Include Voodoo Gecko by Stripes.
 Include Vulpogryph by Stripes.
