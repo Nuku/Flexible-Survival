@@ -243,6 +243,8 @@ Figure of Alexandra_clothed0_smile_icon is the file "Alexandra_clothed0_smile.jp
 Figure of Alexandra_naked_smile_icon is the file "Alexandra_naked_smile.jpg".
 Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
+Figure of Alpha_hard_icon is the file "Alpha_hard.jpg".
+Figure of Alpha_soft_icon is the file "Alpha_soft.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
 Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
@@ -489,6 +491,10 @@ Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
 Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
+Figure of Richard_human_clothed_icon is the file "Richard_human_clothed.jpg".
+Figure of Richard_human_hard_icon is the file "Richard_human_hard.jpg".
+Figure of Richard_satyr_soft_icon is the file "Richard_satyr_soft.jpg".
+Figure of Richard_satyr_hard_icon is the file "Richard_satyr_hard.jpg".
 Figure of Ronda_icon is the file "Ronda.jpg".
 Figure of Rod_icon is the file "Rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
@@ -1044,6 +1050,29 @@ Figure of emap_Zoo_Parking_icon is the file "emap_Zoo_Parking.png".
 Figure of emap_Zoo_Rest_Area_icon is the file "emap_Zoo_Rest_Area.png".
 Figure of emap_Zoo_Restrooms_icon is the file "emap_Zoo_Restrooms.png".
 
+[emap - PAN Frat]
+Figure of emap_PAN_Frat_Living_Room is the file "emap_PAN_Frat_Living_Room.png".
+Figure of emap_PAN_Frat_Kitchen is the file "emap_PAN_Frat_Kitchen.png".
+Figure of emap_PAN_Frat_Game_Room is the file "emap_PAN_Frat_Game_Room.png".
+Figure of emap_PAN_Frat_Indoor_Pen is the file "emap_PAN_Frat_Indoor_Pen.png".
+Figure of emap_PAN_Frat_Garden is the file "emap_PAN_Frat_Garden.png".
+Figure of emap_PAN_Frat_Stairway is the file "emap_PAN_Frat_Stairway.png".
+Figure of emap_PAN_Frat_Basement is the file "emap_PAN_Frat_Basement.png".
+Figure of emap_PAN_Frat_Sauna is the file "emap_PAN_Frat_Sauna.png".
+Figure of emap_PAN_Frat_Showers is the file "emap_PAN_Frat_Showers.png".
+Figure of emap_PAN_Frat_Second_Floor is the file "emap_PAN_Frat_Second_Floor.png".
+Figure of emap_PAN_Frat_Bathroom is the file "emap_PAN_Frat_Bathroom.png".
+Figure of emap_PAN_Frat_Presidents_room is the file "emap_PAN_Frat_Presidents_room.png".
+Figure of emap_PAN_Frat_Soccer_Team_Captains_Room is the file "emap_PAN_Frat_Soccer_Team_Captains_Room.png".
+Figure of emap_PAN_Frat_Swim_Team_Captains_Room is the file "emap_PAN_Frat_Swim_Team_Captains_Room.png".
+Figure of emap_PAN_Frat_Richards_Room is the file "emap_PAN_Frat_Richards_room.png".
+Figure of emap_PAN_Frat_Third_Floor is the file "emap_PAN_Frat_Third_Floor.png".
+Figure of emap_PAN_Frat_North_Hallway is the file "emap_PAN_Frat_North_Hallway.png".
+Figure of emap_PAN_Frat_East_Hallway is the file "emap_PAN_Frat_East_Hallway.png".
+Figure of emap_PAN_Frat_West_Hallway is the file "emap_PAN_Frat_West_Hallway.png".
+Figure of emap_PAN_Frat_South_Hallway is the file "emap_PAN_Frat_South_Hallway.png".
+
+
 before examining a thing (called t):
 	if the icon of t is figure of pixel:
 		continue the action;
@@ -1173,6 +1202,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
 "Alpha Wolf hard"	Figure of AlphaWolf_hard_icon	"Vashaa"	g-White	"normal"
 "Alpha Wolf naked"	Figure of AlphaWolf_naked_icon	"Vashaa"	g-White	"normal"
+"AlphaOne soft"	Figure of Alpha_soft_icon	"SteppeCrow"	g-White	"normal"
+"AlphaOne hard"	Figure of Alpha_hard_icon	"SteppeCrow"	g-White	"normal"
 "Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
@@ -1563,6 +1594,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
+"Richard_human_hard"	Figure of Richard_human_hard_icon	"SteppeCrow"	g-White	"normal"
+"Richard_human_clothed"	Figure of Richard_human_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Richard_satyr_hard"	Figure of Richard_satyr_hard_icon	"SteppeCrow"	g-White	"normal"
+"Richard_satyr_soft"	Figure of Richard_satyr_soft_icon	"SteppeCrow"	g-White	"normal"
 "Rod"	Figure of Rod_icon	"Ticl"	g-white	"normal"
 "Ronda"	Figure of Ronda_icon	"Ticl"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
@@ -2145,7 +2180,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - Lecture Street"	Figure of emap_Lecture_Street_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Pericles' Room"	Figure of emap_Pericles_Room_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Randall's Room"	Figure of emap_Randalls_Room_icon	"Wolfram Rolf"	g-black	"normal"
-"emap - Richard's Room"	Figure of emap_Richards_Room_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Second Floor Male Dorms"	Figure of emap_Second_Floor_Male_Dorms_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Showers"	Figure of emap_Showers_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Sports Arena Lockerroom"	Figure of emap_Sports_Arena_Lockerroom_icon	"Wolfram Rolf"	g-black	"normal"
@@ -2193,6 +2227,27 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - Zoo Parking"	Figure of emap_Zoo_Parking_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Zoo Rest Area"	Figure of emap_Zoo_Rest_Area_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Zoo Restrooms"	Figure of emap_Zoo_Restrooms_icon	"Wolfram Rolf"	g-black	"normal"
+[emap - PAN Frat]
+"emap - PAN Frat East Hallway"	Figure of emap_PAN_Frat_East_Hallway	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat South Hallway"	Figure of emap_PAN_Frat_South_Hallway	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat West Hallway"	Figure of emap_PAN_Frat_West_Hallway	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat North Hallway"	Figure of emap_PAN_Frat_North_Hallway	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Living Room"	Figure of emap_PAN_Frat_Living_Room	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Kitchen"	Figure of emap_PAN_Frat_Kitchen	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Game Room"	Figure of emap_PAN_Frat_Game_Room	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Indoor Pen"	Figure of emap_PAN_Frat_Indoor_Pen	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Garden"	Figure of emap_PAN_Frat_Garden	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Basement"	Figure of emap_PAN_Frat_Basement	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Sauna"	Figure of emap_PAN_Frat_Sauna	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Showers"	Figure of emap_PAN_Frat_Showers	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Stairway"	Figure of emap_PAN_Frat_Stairway	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Bathroom"	Figure of emap_PAN_Frat_Bathroom	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Second Floor"	Figure of emap_PAN_Frat_Second_Floor	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Third Floor"	Figure of emap_PAN_Frat_Third_Floor	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Presidents Room"	Figure of emap_PAN_Frat_Presidents_room	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Soccer Team Captains Room"	Figure of emap_PAN_Frat_Soccer_Team_Captains_Room	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Swim Team Captains Room"	Figure of emap_PAN_Frat_Swim_Team_Captains_Room	"Wolfram Rolf"	g-black	"normal"
+"emap - PAN Frat Richards Room"	Figure of emap_PAN_Frat_Richards_Room	"Wolfram Rolf"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 

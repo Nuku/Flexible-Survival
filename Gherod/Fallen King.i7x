@@ -294,7 +294,7 @@ to DarkTyrantSexMenuContinue:
 		choose a blank row in table of fucking options;
 		now title entry is "Grab and worship that massive cock";
 		now sortorder entry is 2;
-		now description entry is "He's totally been asking for it, right";
+		now description entry is "He has totally been asking for it, right";
 		[]
 		if Intelligence of Fallen King >= 3 and "Given Dark Embrace" is listed in traits of Fallen King:
 			choose a blank row in table of fucking options;
@@ -312,6 +312,12 @@ to DarkTyrantSexMenuContinue:
 		now title entry is "Have him in his former black goo form and worship his cock";
 		now sortorder entry is 2;
 		now description entry is "You would love a hung goo lover right now, so why not ask him, in name of the good memories";
+		[]
+		if hunger of player >= 50 or "Automatic Survival" is listed in feats of Player:
+			choose a blank row in table of fucking options;
+			now title entry is "Have him... feed you?";
+			now sortorder entry is 3;
+			now description entry is "You feel an odd urge to let him in you. Go forward with it";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -338,6 +344,8 @@ to DarkTyrantSexMenuContinue:
 					say "[DarkTyrantSexEmbraceTamed]";
 				else if (nam is "Have him in his former black goo form and worship his cock"):
 					say "[DarkTyrantSexCockWorshipTamed]";
+				else if (nam is "Have him... feed you?"):
+					say "[DarkTyrantSexGooFeedTamed]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -481,12 +489,27 @@ to say DarkTyrantSexCockWorshipTamed:
 	say "     At some point, you feel it beginning to want to assimilate with you, pulling you into the impossibly massive shaft, but each movement the Tyrant makes breaks the bounds that would suck you in, sparing you from a time spent inside his dick. 'Now, that would be a fun thing to do. Have your puny body inside this dick, stuck in it, as I went by your day, doing things in your place.' He threats, but never does it, as he is enjoying using your body as a fuck pillow a little too much. He does realize that you are no longer in his view, all buried under layers of his own goo, so he pulls back and you are brought up again, free from your confinements, but in a quite different setting than when you first started. The Dark Tyrant looks at you, grinning, and you are faced with the tip of his cock presented to you as if you were in a buffet.";
 	say "     His slit continues to leak all that sticky goo at every second, but somehow, you can sense that he is close. His legs have moved under your body in a morphed gooey shape to support your current seating place, and you are free to hug his glans and feast on the sensitive gooey flesh. Without hesitating, you do so, and give him your best oral skills at licking his gigantic penis head, using your hands for additional stimulation as it continues to throb without cease. Eventually, it begins to shake and tremble with a lot of force, and literally seconds after, your entire world is an avalanche of cum-like goo drenching and burying you down under a tsunami of it, each shot causing a massive throb on his cock that you can definitely feel!";
 	WaitLineBreak;
-	say "     More morphing happens all over you as you feel your body being carried around, and the still perpetually hard dick ends up on top to you. The giant has placed you on top of his abs as the tip of his huge manhood rests against your chest, with just enough warm goo oozing on top of your body, this one feeling pleasantly warm and relaxing, as it must have been the last drops of his orgasm. You can still rub it, and it will still leak more and more, and everything else can still happen again and again... but you are exhausted, so the giant simply leaves you be, enjoying your company as you fall into a slumber.";
+	say "     More morphing happens all over you as you feel your body being carried around, and the still perpetually hard dick ends up on top of you. The giant has placed you on top of his abs as the tip of his huge manhood rests against your chest, with just enough warm goo oozing on top of your body, this one feeling pleasantly warm and relaxing, as it must have been the last drops of his orgasm. You can still rub it, and it will still leak more and more, and everything else can still happen again and again... but you are exhausted, so the giant simply leaves you be, enjoying your company as you fall into a slumber.";
 	WaitLineBreak;
 	follow the turnpass rule;
 	follow the turnpass rule;
 	say "     You seem to have slept on for hours and hours, your dark companion providing you all the comfort you needed for the duration of your nap. 'This was very fun, mortal... We could continue to do this, but I sensed you might have needed a break, since you have fallen asleep on top of me. Your puny flesh would not endure my endless pleasure before your mind broke.' You then get up from him and allow the Tyrant to return to his less active state, inhabiting your shadow once more as you get ready to carry on with your day.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
+
+to say DarkTyrantSexGooFeedTamed:
+	say "     As this sudden hunger overtakes you, your thoughts dwell into the Tyrant's mind despite you having not said a word about it. He speaks to you with a voice of concern, noticing your distress, 'Searching for mortal food seems to be as painful as seeking the essence that makes me...' Your stomach growls with the emptiness, reminding you that you have not eaten in a long while, and the presence of your dark companion leads your mind into an idea that sounds satisfying, yet strange. 'Do you forget what I represent? You and I are one. I can fulfill your emptiness, all you have to do is ask.' You had already thought about asking him to do just that, feeling the urge spiking in your brain as it did a while ago, so you forward him the request.";
+	say "     'But of course. It would be my pleasure to deliver part of me into you... Though, knowing your mortal mind, should we not make it... fun?' A vision of the dark goo giant's enormous body appears before you after brief seconds, the gigantic black shaft hanging half-hard between his legs, leaking out a slick, thick, black and shiny liquid that seems simply delightful to your eyes, delicious even, making your mouth salivate and delivering a sweet tingle to your loins. Then, you realize it is no longer just a vision, as your symbiotic partner fully manifests in this form right in front of you, having sensed your desire. 'Any pleasure of yours is also mine. Drink from me as you would, to your heart's content,' he says, beckoning you to approach him as that heavy, thick and gooey meat continues to drip with each throb.";
+	WaitLineBreak;
+	say "     Your feeling of hunger melds with an abrupt lust as you find yourself moving towards him, placing your hands over his enormous dark penis, feeling just like an actual fleshy one, as you move your lips towards the tip. Only the touch of the delightful liquid against your lips is enough to prompt your tongue to move in, only to get a taste of the sweet abyssal nectar. It tastes like you would want it to taste, delicious and heavenly. Even though it is a product from the void, it carries a fulfilling sensation as you feel compelled to tightly wrap your lips around that soft cockhead, to hungrily suckle on it. The way it pours into your mouth caresses each and every single one of your taste buds, leaving a lingering blissful sensation across your tongue, full of flavor. It only motivates you further to continue sucking every drop from the voidborn cock.";
+	say "     With each drop you take down through the force of swallowing, a sense of completion takes place. It just feels so right to you, and your desires go beyond just feeding from the Tyrant. With your touch, you rub that magnificent dark meat as it continues to pour into you, each throb it gives due to your attention shooting more of that delicious juice into your mouth. The giant's heavy sack hangs underneath, full like always, almost as if asking your hands to lay your palms on them. Despite your shows of affection, the goo giant keeps his endowment only half-hard, to let the liquid flow into you undeterred. You begin to feel your stomach fill as if you were midway through a banquet, your hunger soon sating itself upon having taken a lot of it in.";
+	WaitLineBreak;
+	say "     'You must have more,' he says, stepping forward as he grabs your head, keeping you from pulling away. 'We must ensure your survival. It strengthens our bond...' You would have been fine with what you have already swallowed, but the dark giant knows best, so you continue to gulp down his essence. It really starts filling you up, and at some point, you are simply stuffed, so full that your belly has swollen up, signaling that you really should stop here. As you are a little helpless right now, you decide to look up at your companion with pleading eyes, hoping that he gets the message. 'Just a little more, you are almost done,' he says, and the liquid keeps flowing down your throat. There is just so much of it inside you that you begin to feel lightheaded...";
+	say "     Though, before your despair can begin, the Tyrant pulls his shaft out of your mouth, content with his donation. 'There, no more hunger. It has been solved,' he declares, stepping back as his huge cock hangs back and forth between his monstrous thighs. Indeed, you do not see yourself eating anything for, like, another full day, not to mention your belly looks like you just got impregnated by a really massive orc (and likely with triplets). Catching your breath after this surprisingly exhausting feeding session, you thank your symbiotic companion, who retributes your words with a gentle smile. 'You need not to thank me, it is merely my duty to ensure your well-being.' He then morphs into your shadow, his dark presence still lingering near you.";
+	now Hunger of Player is 0;
+	WaitLineBreak;
+	say "     Your mind, however, feels rather... Odd. You struggle to recover your senses as you dissociate for brief moments, taking a while to recollect your thoughts and memories. Is it wise to do this often, one could wonder...?";
+	NPCSexAftermath Player receives "OralCock" from Fallen King;
+	SanLoss 20;
 
 [***********************************************************]
 Section 3 - As Companion

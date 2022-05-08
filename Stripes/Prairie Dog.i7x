@@ -7,14 +7,53 @@ Section 1 - Creature Responses
 
 to say prairiedogdesc:
 	setmongender 15; [creatures are herm]
-	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
 
 to say losetoprairiedog:
-	say "     Beaten, the prairie dogs swarm over you, pulling you to the dusty ground. They grope, fondle and tease you all over, rubbing their furry bodies over yours. One pushes her human-sized cock into your mouth while others start stroking and pumping at theirs[if Cock Count of Player > 1]. The horny burrowers push and scuffle with one another over your multiple cocks, unable to consider riding one without making it too hard for the others to enjoy the other(s). In the end, they end up licking, kissing and nipping at them, making you moan and quiver[else if Cock Count of Player is 1 and Cock Length of Player < 7]. Another of the burrowers finds her way over to your erection and sinks her wet cunt down onto it with a barking moan[else if Cock Count of Player is 1 and Cock Length of Player < 10]. Another of the burrowers finds her way to your erection and struggles to take your proportionally huge cock into her wet cunt, eventually releasing a loud, barking moan as she manages to sink down onto it[else if Cock Count of Player is 1]. Your cock, incredibly huge to them is lavished attention on by a pair of the burrowers, who rub their furred breasts against your hard length as they lick, kiss and nip at it, making you moan and quiver[end if][if Player is female]. There is a bit of an argument over who will get to enjoy your cunt, but in the end, one emerges victorious and stabs her throbbing member into you. She pounds away at you roughly, quite worked up by his scuffle over breeding rights with the others[else if anallevel > 1]. There is another argument over who will get to enjoy your ass, but in the end, one emerges victorious and stabs her throbbing member into you[end if][if Nipple Count of Player > 2]. Having multiple sets of breasts, you are able to accommodate many of them, who each take one to fondle and grope while suckling from your hard nipple[else if Nipple Count of Player is 2]. A pair of them get lucky and are able to claim your breasts, groping and fondling one each while their suckle from your hard nipple[end if]. They continue this wild orgy, cumming onto and into you until you are sticky with their seed and cumming hard yourself. Satisfied, the rodents scurry back down into their holes, which close up behind them as if they had never been.[impregchance]";
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     Beaten, the prairie dogs swarm over you, pulling you to the dusty ground. They grope, fondle and tease you all over, rubbing their furry bodies over yours. One pushes her human-sized cock into your mouth while others start stroking and pumping at theirs. ";
+		if Cock Count of Player > 1: [male, herm]
+			say "The horny burrowers push and scuffle with one another over your multiple cocks, unable to consider riding one without making it too hard for the others to enjoy the other(s). In the end, they end up licking, kissing and nipping at them, making you moan and quiver. ";
+		else if Cock Count of Player is 1: [male, herm]
+			if Cock Length of Player < 7:
+				say "Another of the burrowers finds her way over to your erection and sinks her wet cunt down onto it with a barking moan. ";
+			else if Cock Length of Player < 10:
+				say "Another of the burrowers finds her way to your erection and struggles to take your proportionally huge cock into her wet cunt, eventually releasing a loud, barking moan as she manages to sink down onto it. ";
+			else: [giant cocks]
+				say "Your cock, incredibly huge to them is lavished attention on by a pair of the burrowers, who rub their furred breasts against your hard length as they lick, kiss and nip at it, making you moan and quiver. ";
+		if Player is female:
+			say "There is a bit of an argument over who will get to enjoy your cunt, but in the end, one emerges victorious and stabs her throbbing member into you. She pounds away at you roughly, quite worked up by his scuffle over breeding rights with the others. ";
+		else if anallevel > 1:
+			say "There is another argument over who will get to enjoy your ass, but in the end, one emerges victorious and stabs her throbbing member into you. ";
+		if Nipple Count of Player > 2:
+			say "Having multiple sets of breasts, you are able to accommodate many of them, who each take one to fondle and grope while suckling from your hard nipple. ";
+		else if Nipple Count of Player is 2:
+			say "A pair of them get lucky and are able to claim your breasts, groping and fondling one each while their suckle from your hard nipple. ";
+		say "They continue this wild orgy, cumming onto and into you until you are sticky with their seed and cumming hard yourself. Satisfied, the rodents scurry back down into their holes, which close up behind them as if they had never been.";
+		if Cock Count of Player > 1: [male, herm]
+			CreatureSexAftermath "Prairie Dog" receives "OralCock" from "Player";
+		else if Cock Count of Player is 1: [male, herm]
+			if Cock Length of Player < 7:
+				CreatureSexAftermath "Prairie Dog" receives "PussyFuck" from "Player";
+			else if Cock Length of Player < 10:
+				CreatureSexAftermath "Prairie Dog" receives "PussyFuck" from "Player";
+			else: [giant cocks]
+				CreatureSexAftermath "Prairie Dog" receives "OralCock" from "Player";
+		if Player is female:
+			CreatureSexAftermath "Player" receives "PussyFuck" from "Prairie Dog";
+		else if anallevel > 1:
+			CreatureSexAftermath "Player" receives "AssFuck" from "Prairie Dog";
 
 to say beattheprairiedog:
-	say "     After smacking around the prairie dog horde, they eventually have enough and retreat back underground, taking their wounded with them. The holes they came out of close up behind them quickly, as if they had never been.";
-
+	if inasituation is true:
+		say ""; [dealt with at the source of the event]
+	else:
+		say "     After smacking around the prairie dog horde, they eventually have enough and retreat back underground, taking their wounded with them. The holes they came out of close up behind them quickly, as if they had never been.";
 
 Section 2 - Creature Insertion
 

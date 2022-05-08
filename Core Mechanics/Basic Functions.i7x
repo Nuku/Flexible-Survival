@@ -372,7 +372,7 @@ carry out PlayerRenaming:
 	playernaming; []
 
 to playernaming:
-	say "Note: You can always change your name at a later point with the 'rename NAME' command.";
+	say "Note: You can always change your name at a later point with the 'rename' command.";
 	say "     [bold type]Please enter your new name: [roman type][line break]";
 	get typed command as playerinput;
 	now name of Player is playerinput;

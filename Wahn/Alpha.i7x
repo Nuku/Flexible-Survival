@@ -64,6 +64,7 @@ Description of AlphaOne is "[AlphaOnedesc]".
 Conversation of AlphaOne is { "Meep!" }.
 
 to say AlphaOnedesc:
+	project Figure of Alpha_soft_icon;
 	say "     Alpha has a fairly unique body plan, consisting of a slender, humanoid upper body and starting at the hips beneath that eight long tentacles, lined with a double row of suckers all along their undersides. He doesn't seem to have any issue using them as legs, as the muscular appendages brace against the floor easily and keep his upper body straight. The human-octopus hybrid's skin is smooth and patterned in shades of orange and red, but appears able to shift to other shades too, as you can see traces of blue ripple over it here and there. Alpha doesn't seem to need moisture to sustain him, making a land-walking lifestyle possible without trapping himself due to dependence on bodies of water anywhere nearby.";
 	say "     Noticing your attention, the being turns his androgynously-featured head to look at you, his solidly green eyes with cross-shaped irises meeting your gaze. The throng of countless smaller tentacles that form his 'hair' twitch and move a little as [if mindshield helmet is not equipped]you feel him reaching out for your mind, reading through your surface thoughts as if they were an open book[else]he reflexively seems to want to read your mind, with the helmet on your head giving a little hum as it protects you from that mental invasion[end if]. After a moment or two, he shrugs and turns his attention elsewhere.";
 	if "Herm_Rescued" is listed in Traits of AlphaOne:
@@ -73,6 +74,7 @@ instead of sniffing AlphaOne:
 	say "     The human-octopus hybrid an odd, but pleasant, spicy scent.";
 
 instead of conversing AlphaOne:
+	project Figure of Alpha_soft_icon;
 	say "[AlphaOneTalkMenu]";
 
 [
@@ -278,6 +280,7 @@ instead of fucking the AlphaOne:
 		say "[AlphaOneSexMenu]";
 
 to say AlphaOneSexMenu:
+	project Figure of Alpha_hard_icon;
 	say "     [bold type]What exactly do you plan on doing with Alpha?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;

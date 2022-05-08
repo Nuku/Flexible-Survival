@@ -7,6 +7,8 @@ Version 10 of Soldier Events by Wahn begins here.
 [ - amber eyes                                                            ]
 [ - felt sexual attraction to his feral pet bitch as a teen (18)          ]
 [ - straight, but will do anyone to further his plans                     ]
+[ - titles are pretty important to him - first his rank, then alpha       ]
+[   loves having power over others                                        ]
 [                                                                         ]
 [ Alpha Team Leader: Carl (good guy)                                      ]
 [ - blond hair, light body hair                                           ]
