@@ -280,8 +280,10 @@ instead of conversing the Kerr & Talov:
 			say "[Kerr & Talov TalkMenu]";
 		else if "Fuckbuddy Rejection - Aggression" is listed in Traits of Kerr & Talov:
 			say "     Given that you've thoroughly burned your bridges with these two, you don't think talking would get you very far.";
+		[
 		else if "Fuckbuddy Rejection - Indifference" is listed in Traits of Kerr & Talov or "Fuckbuddy Rejection - Acceptance" is listed in Traits of Kerr & Talov:
 			say "     As you approach and say hello, the two satyrs acknowledge your presence and give you a somewhat sad wave, but that's about it. They do not seem to have anything to talk about with you, preferring to keep their distance.";
+		]
 		else:
 			say "     Waving to catch the attention of the two satyrs again, you gesture towards the double doors leading to the stairs and receive a nod. After some shuffling through the crowds, all three of you make your way to the private gym in the basement, where you can talk and understand each other at halfway normal volume.";
 			say "[Kerr & Talov TalkMenu]";
@@ -311,13 +313,13 @@ to say Kerr & Talov TalkMenu:
 		now sortorder entry is 3;
 		now description entry is "There must be some reason why they specifically trekked to the college campus from downtown";
 	[]
-	if "Backstory Told" is listed in Traits of Kerr & Talov and "Rules Mentioned" is listed in Traits of Kerr & Talov:
+	if "Backstory Told" is listed in Traits of Kerr & Talov and "Rules Mentioned" is listed in Traits of Kerr & Talov and "Fuckbuddy Rejection - Indifference" is not listed in Traits of Kerr & Talov or "Fuckbuddy Rejection - Acceptance" is not listed in Traits of Kerr & Talov and "Fuckbuddy Rejection - Aggression" is not listed in Traits of Kerr & Talov:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask them to remind you of their rules for fuckbuddies";
 		now sortorder entry is 4;
 		now description entry is "Get a reminder about their rules";
 	[]
-	if PlayerFriended of Kerr & Talov is true and "Backstory Told" is listed in Traits of Kerr & Talov and "Rules Mentioned" is listed in Traits of Kerr & Talov and "Fuckbuddy Option Off" is not listed in Traits of Kerr & Talov: [write a seperate option if the player has become a good/best friend]
+	if PlayerFriended of Kerr & Talov is true and "Backstory Told" is listed in Traits of Kerr & Talov and "Rules Mentioned" is listed in Traits of Kerr & Talov and "Fuckbuddy Option Off" is not listed in Traits of Kerr & Talov: [write a separate option if the player has become a good/best friend]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest that the three of you have sex";
 		now sortorder entry is 5;
@@ -354,7 +356,7 @@ to say Kerr & Talov TalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask about him and Kerr"):
+				if (nam is "Ask about the two of them"):
 					say "[Kerr & Talov Background]";
 				else if (nam is "Ask where they got the barrel"):
 					say "[Kerr & Talov Barrel]";
@@ -585,8 +587,6 @@ to say Kerr & Talov Gym Spitroast LivingRoom Start:
 		say "and before long, the three of you are on your way down to the basement. ";
 	say "Set up as a private gym, not much is going on down here during the party, with only [one of]a frat guy and a college girl[or]two college dudes[or]a small group of college students[at random] already present, who seem to have sought the place out for some semi-private, drunken groping. With a wicked smile on their faces, they nod to you and then quickly slip into the [one of]shower room[or]sauna[at random] to continue, yielding the room for you to have your own fun. 'Hope they enjoy each other, despite our little interruption,' Kerr comments in his deep voice, chuckling.";
 	say "[Kerr & Talov Gym Spitroast Main]";
-[-----WIP--------------------------------]
-
 
 Section 3 - Sex
 

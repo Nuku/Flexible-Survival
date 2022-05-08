@@ -85,6 +85,7 @@ PAN Frat Stairway is sleepsafe.
 PAN Frat Stairway is east of PAN Frat Living Room.
 PAN Frat Stairway is west of PAN Frat Garden.
 PAN Frat Stairway is north of PAN Frat Game Room.
+PAN Frat Stairway is below PAN Frat Second Floor.
 Description of PAN Frat Stairway is "[PFratStairwayDesc]".
 
 to say PFratStairwayDesc:
@@ -107,8 +108,6 @@ to say PFratGameDesc:
 	say "     Standing in the PAN fraternity living room, it becomes clear immediately that this is a long-established frat. From the smooth hardwood floor to the thick wooden beams holding up the ceiling, it wakes the impression of being very well-crafted and pretty solid in its construction. The back half of the room is filled with various types of gaming hardware, including a pool table, foosball, and two pinball machines. In the front half, there are a bunch of relatively modern, comfortable-looking leather couches and armchairs, set up in two groups before wall-mounted plasma TVs with an array of various gaming consoles lined up beneath them. Towards the [link]northwest[end link], a pair of open double doors leads into the living room of the frat house, while a single door leads [link]north[end link] into the stairway, another east into an indoor pen, and a back door in the [link]northeast[end link] allows access to the garden.";
 	if Daytimer is day:
 		say "     During the daytime, the place has less of the rowdy energy that takes hold when the partying starts later on, with mostly just the actual frat brothers being present. They do their own stuff, hanging out and talking, or keeping themselves busy with one of the games, with in-between bouts of cleaning and prep work for another night of partying to distract everyone from the chaos that has spread throughout the whole city. ";
-		if Kerr & Talov is present:
-			say "The two satyrs that you helped slip into the frat house have claimed one of the couches as their place of rest for now, with Kerr lying stretched out on his back, while Talov is sleeping half on top of him, lying in the crack between Kerr and the backrest, with one arm stretched across the more muscular satyr's broad chest. His head is dug into the bend of Kerr's shoulder and neck, and you can see they're literally breathing in the same slow rhythm, demonstrating the intimately close bond between the two males. The frat brothers do not seem bothered by having acquired the two houseguests, and in fact seem to be taking care not to wake them. ";
 		if Resolution of Free Drink is 1: [player got the satyrs in, nothing more yet]
 			LineBreak;
 		else if Resolution of Free Drink > 1 and Resolution of Free Drink < 5: [early stage, light transformations]
@@ -117,6 +116,8 @@ to say PFratGameDesc:
 			say "With satyr wine circulating quite a bit during the recent parties, partially due to your own efforts to advance Kerr and Talov's well-meant plan of getting everyone to live more in the moment and have fun, the effects on the frat brothers are more than obvious. They're still a mixed crowd, mostly human still, but almost all of them now bearded with stylish goatees. Two or three of the guys have fully transformed though, being through and through satyrs now, from their hooves up to the curved or curling horns on their heads. This doesn't appear to bother any of the brothers, as they seem to treat each other no different than before.";
 		else if Resolution of Free Drink > 7: [half satyrs, half human-ish - stopping here to keep the variety going, as satyr supremacy could get boring]
 			say "The rampant use of satyr wine has made quite an impact on the fraternity, greatly helped along by to your own efforts to advance Kerr and Talov's well-meant plan of getting everyone to live more in the moment and have fun. Looking at the frat brothers coming and going, you guess that half of them have fully transformed into satyrs by now, from their hooves up to the curved or curling horns on their heads. This doesn't appear to bother any of the brothers, as they seem to treat each other no different than before. There is a bunch more bare skin on show though, as they only clothing the satyrs bother to wear by now are some loose shorts to cover their privates.";
+		if Kerr & Talov is in PAN Frat Game Room:
+			say "     The two satyrs that you helped slip into the frat house have claimed one of the couches as their place of rest for now, with Kerr lying stretched out on his back, while Talov is sleeping half on top of him, lying in the crack between Kerr and the backrest, with one arm stretched across the more muscular satyr's broad chest. His head is dug into the bend of Kerr's shoulder and neck, and you can see they're literally breathing in the same slow rhythm, demonstrating the intimately close bond between the two males. The frat brothers do not seem bothered by having acquired the two houseguests, and in fact seem to be taking care not to wake them.";			
 	else:
 		say "     The place is packed with a large crowd that is standing, sitting, or circulating around, all of them enjoying themselves to the beat of popular music, dancing or talking with one another. Pretty much everyone has some sort of drink in their hands and the atmosphere is pretty rowdy, but good-natured. Groups are clustered around the physical games and game consoles, playing with and against each other, with onlookers cheering them on. ";
 		if Resolution of Free Drink is 1: [player got the satyrs in, nothing more yet]
@@ -219,7 +220,7 @@ PAN Frat Second Floor	"PAN Frat Second Floor"
 
 PAN Frat Second Floor is a room.
 PAN Frat Second Floor is sleepsafe.
-PAN Frat Second Floor is above of PAN Frat Stairway.
+PAN Frat Second Floor is below PAN Frat Third Floor.
 Description of PAN Frat Second Floor is "[PFratSecondFloorDesc]".
 
 to say PFratSecondFloorDesc:
@@ -251,16 +252,16 @@ PAN Frat Bathroom	"PAN Frat Bathroom"
 
 PAN Frat Bathroom is a room.
 PAN Frat Bathroom is sleepsafe.
-PAN Frat Bathroom is west of PAN Frat First Floor.
+PAN Frat Bathroom is west of PAN Frat Second Floor.
 Description of PAN Frat Bathroom is "[PFratBathroomDesc]".
 
 to say PFratBathroomDesc:
 	say "     The communal bathroom of PAN frat-house is nicely spacious and kept pretty clean, speaking of some good discipline in the group's ranks, despite everything that is going on. It is clearly designed to be used by a number of the frat members at once, with for example a counter bearing three sinks side by side in front of a long mirror on the left. A similar number of toilets are on the right, each in what's basically its own little room with a proper door. A pretty big, green and healthy potted plant is standing beside the last door on that side too. Finally, the back end of the room holds a shower area behind a frosted-glass floor to ceiling wall with glass doors on the left and right. A quick glance inside reveals a clean, tiled interior, with three spots to shower at, equipped with both a ceiling-rain nozzle and a handheld one on a flexible hose. A sort of stone bench built into the back wall across the whole width of the group shower even allows people to sit down and just let the warm water rain down on them.";
 	say "     Overall, quite a swanky setup with cut natural rock and whatnot. Though why not, you guess, as the frat clearly has some money to splash around, and in all likelihood someone put a lot of thought into fitting the place out like this. Overcrowded and cheap bathrooms can be a large source of conflict in communal living situations after all. A door to the [link]east[end link] leads back to the central room of the frat house's first floor. ";
 	if Daytimer is day:
-		say "     With a number of active young men living in the frat house, one or another is usually coming or going all the time. They throw you some curious glances, likely wondering why you're just hanging around in here, but then go on with their business, using the sinks, vanishing behind one of the doors to the toilets or stripping down and stepping in for a refreshing scrub-down, quickly covering up with a towel around their waists afterwards.";
+		say "With a number of active young men living in the frat house, one or another is usually coming or going all the time. They throw you some curious glances, likely wondering why you're just hanging around in here, but then go on with their business, using the sinks, vanishing behind one of the doors to the toilets or stripping down and stepping in for a refreshing scrub-down, quickly covering up with a towel around their waists afterwards.";
 	else:
-		say "     With the party in full swing and quite a bit of drinking going on, the amount of people coming in and out is noticeably high, mostly making beelines straight to the toilets sometimes waiting with strained expressions on their faces for one to free up. At times, someone who's pretty wasted is dragged to the showers and hosed down with cold water, either to clean or sober them up a bit. And of course, there are some instances in which people use the tentative 'privacy' one of the little restrooms or the shower cabin to do more lewd things to each other, if the sounds from within and the amused smirks people in the room share with each other are anything to go by.";
+		say "With the party in full swing and quite a bit of drinking going on, the amount of people coming in and out is noticeably high, mostly making beelines straight to the toilets sometimes waiting with strained expressions on their faces for one to free up. At times, someone who's pretty wasted is dragged to the showers and hosed down with cold water, either to clean or sober them up a bit. And of course, there are some instances in which people use the tentative 'privacy' one of the little restrooms or the shower cabin to do more lewd things to each other, if the sounds from within and the amused smirks people in the room share with each other are anything to go by.";
 
 Table of GameRoomIDs (continued)
 Object	Name
