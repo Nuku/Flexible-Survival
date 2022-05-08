@@ -327,7 +327,6 @@ Julian's Room	Figure of emap_Julians_Room_icon
 Lecture Street	Figure of emap_Lecture_Street_icon
 Pericles' Room	Figure of emap_Pericles_Room_icon
 Randall's Room	Figure of emap_Randalls_Room_icon
-Richard's Room	Figure of emap_Richards_Room_icon
 Second Floor Male Dorms	Figure of emap_Second_Floor_Male_Dorms_icon
 Showers	Figure of emap_Showers_icon
 Sports Arena Lockerroom	Figure of emap_Sports_Arena_Lockerroom_icon
@@ -384,6 +383,32 @@ Zoo Giftshop	Figure of emap_Zoo_Giftshop_icon
 Zoo Parking	Figure of emap_Zoo_Parking_icon
 Zoo Rest Area	Figure of emap_Zoo_Rest_Area_icon
 Zoo Restrooms	Figure of emap_Zoo_Restrooms_icon
+
+[PAN Frat]
+Table of Zpc Location Reference (continued)
+location(room)	icon(figure name)
+PAN Frat Game Room	Figure of emap_PAN_Frat_Game_Room
+PAN Frat Living Room	Figure of emap_PAN_Frat_Living_Room
+PAN Frat Kitchen	Figure of emap_PAN_Frat_Kitchen
+PAN Frat Indoor Pen	Figure of emap_PAN_Frat_Indoor_Pen
+PAN Frat Garden	Figure of emap_PAN_Frat_Garden
+PAN Frat Basement	Figure of emap_PAN_Frat_Basement
+PAN Frat Sauna	Figure of emap_PAN_Frat_Sauna
+PAN Frat Showers	Figure of emap_PAN_Frat_Showers
+PAN Frat Bathroom	Figure of emap_Pan_Frat_Bathroom
+PAN Frat Stairway	Figure of emap_PAN_Frat_Stairway
+PAN Frat Second Floor	Figure of emap_Pan_Frat_Second_Floor
+PAN Frat Third Floor	Figure of emap_Pan_Frat_Third_Floor
+PAN Frat North Hallway	Figure of emap_Pan_Frat_North_Hallway
+PAN Frat South Hallway	Figure of emap_Pan_Frat_South_Hallway
+PAN Frat East Hallway	Figure of emap_Pan_Frat_East_Hallway
+PAN Frat West Hallway	Figure of emap_Pan_Frat_West_Hallway
+Richard's Room	Figure of emap_Richards_Room_icon
+[
+PAN Frat Presidents Room	Figure of emap_Pan_Frat_Presidents_room
+PAN Frat Swim Team Captains Room	Figure of emap_Pan_Frat_Swim_Team_Captains_Room
+PAN Frat Soccer Team Captains Room	Figure of emap_Pan_Frat_Soccer_Team_Captains_Room
+]
 
 [Other]
 [Table of Zpc Location Reference (continued)

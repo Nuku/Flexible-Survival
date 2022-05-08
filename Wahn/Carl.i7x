@@ -3,6 +3,8 @@ Version 1 of Carl by Wahn begins here.
 [Version 1.2 - Added support for Evil Demon Brute path - Gherod]
 [Version 1.3 - Beta Fang Content added by Prometheus]
 
+[TODO: Ask Luneth to help create character detail for Carl, including specific preferencs for sexual acts, genders, etc. etc.]
+
 "Adds a husky NPC to Flexible Survival, entering the game as an aftermath of the soldier squad events"
 
 [ Carl, the husky                                                                      ]

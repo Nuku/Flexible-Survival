@@ -217,6 +217,7 @@ Include Down Under Pub by Stripes.
 Include Equinoid Camp by Song.
 Include Farm by Wahn.
 Include Gloryhole by SgtPepper234.
+Include Greek Street by Wahn.
 Include Hellfire Club by Gherod.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
@@ -841,6 +842,7 @@ Include Kai by Luneth.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Katherine by Kirov.
+Include Kerr & Talov by Wahn.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.

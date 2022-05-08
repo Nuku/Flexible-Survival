@@ -362,19 +362,27 @@ to say StoredSlut_Snow:
 Book 1 - Capture/Drug/Purchase
 More secure area people will not be available right off the bat (mall ect.) unless there are a certain amount of people already in the storage area. This is just to show you are becoming a better predator and are able to grab higher tier targets.
 
-Capture: The capture method may or not be available for all candidates. This method will involve using your stats/feats to immobilize people and take them to the storage area. "Warning": Capturing people will not put them into slut mode and will actually keep them in the non-con form until you either get your hands on the drug, or another prerequisite is met.
+	Chapter 1 - Capture
+	The capture method may or not be available for all candidates. This method will involve using your stats/feats to immobilize people and take them to the storage area. "Warning": Capturing people will not put them into slut mode and will actually keep them in the non-con form until you either get your hands on the drug, or another prerequisite is met.
 
-Drug: The drug method actually has you drugging the people and while they are out of it you take them to the storage unit. This way will be far easier for most people as their is no stat/feat check, they will however need to have the drug in their inventory. "Warning": With this method the person will still start in non-con, it's just a simpler/guaranteed way to acquire them.
+	Chapter 2 - Drug
+	The drug method actually has you drugging the people and while they are out of it you take them to the storage unit. This way will be far easier for most people as their is no stat/feat check, they will however need to have the drug in their inventory. "Warning": With this method the person will still start in non-con, it's just a simpler/guaranteed way to acquire them.
 
-Purchase: The purchase method is reserved for characters like those in the Shag Shack, these people will not be able to be captured or drugged, they are exclusive.
+	Chapter 3 - Purchase
+	The purchase method is reserved for characters like those in the Shag Shack, these people will not be able to be captured or drugged, they are exclusive to this method.
 
-Book 2 - Storage
+Book 2 - Storage Area
 
-Location: On the street connected to the Library.
+	Chapter 1 - Location
+	On the street connected to the Library.
 
-NPC - Storage Owner: Mortimer - Male - Slime
+	Chapter 2 - Content NPC's
 
-NPC - Scientist: Mr. Chimic - Male - Gecko
+		Section 1 - Mortimer
+		A male slime that owns the storage units that the player can make use of.
+
+		Section 2 - Mr. Chimic
+		A male gecko that is the scientist that's responsible for creating the available drugs.
 
 Book 3 - Sex and Advancement
 
@@ -404,9 +412,14 @@ Book 3 - Sex and Advancement
 
 			Part 1 - Planned
 			Skarnoth
+				#Milking Cowboy
 			Chase
 			Imps (all four count as one space)
+				#Tied-up fleshjacks
+				#Incest orgy (Fill every one of daddies holes)
+				#Incest orgy (Have daddy take each of his sons holes for a ride)
 			Brutus
+				#Condescending power bottom (Inspiration Modern Redpill - Raphael)
 			*Danny
 
 			Part 2 - Potential
@@ -448,56 +461,142 @@ Book 3 - Sex and Advancement
 			Zoe
 			Onyx
 
-Chapter 2 - Sex Progression
-Sex progression can have from 3-5 different levels depending on the character. These levels are actually just variations on the same "standard" scene. This means that the player will feel like "omg they are becoming more of a slut toy to use!", but for the writer it's actually just a simple "alright on this level this bitch says this and on the next I just tweak it".
+	Chapter 2 - Sex Progression
+	Sex progression can have from 3-5 different levels depending on the character. These levels are actually just variations on the same "standard" scene. This means that the player will feel like "omg they are becoming more of a slut toy to use!", but for the writer it's actually just a simple "alright on this level this bitch says this and on the next I just tweak it". Each advancement in the fighter group requires a dose of the drug to progress, this way you can keep the character at the variation that the player wants. One added point is that the first sex scene does need to have a special "first time" variation, this will only been seen once since you can only fuck a person for the first time once, all others will follow the standard variation.
 
-	Section 1 - Non-con
+		Section 1 - 3 Point Characters
+		Three point characters are for simpler content or when a writer wants to focus more on the characters "slut mode".
 
-	Section 1.5 - Non-con light
+			Part 1 - Non-con
+			This is basically for a character having realized that they have been captured and are being held against their will.
 
-	Section 2 - Dub-con
+			Examples:
+				The man giggles a bit, 'Oh master you came back to fuck me, thank you! I don't care what you do to me, just please fuck me like slut!'
 
-	Section 2.5 - Dub-con light
+			Part 2 - Dub-con
+			This is based around a character still wanting to free, however they have also begun to enjoy the feeling that the player is awakening within their body.
 
-	Section 3 - Slut Mode
+			Examples:
+				At the start - 'I fucking hate you ya piece of shit!'
+				Halfway through - 'Oh my god fuck me harder!'
 
+			Part 3 - Slut Mode
+			This is the final form of slutification, this character has completely given into their desires and wishes for nothing more than to be used by the player. All characters "slut mode" will differ from each other and are unique to that character. For example, one may become a himbo/bimbo while another may become a braindead fucktoy, a third may actually become feral ruled only by rut/heat, and a forth may actually become a dominant power bottom type.
 
-Book 4 - Drug Item
-A new drug that is based around the DNA of some of the cities more... interesting infections. Taking DNA strands from these infections leads to a drug that hybridizes their effects and can even overwrite their minds and views. This list should also be in-game possibly as a found note from the creator of the drug.
+			Examples:
+				The man giggles a bit, 'Oh master you came back to fuck me, thank you! I don't care what you do to me, just please fuck me like slut!'
 
-	Chapter 1 - Drug Makeup
-	Cum Girl Saliva: Makes a person incredibly horny, but also raises the power of orgasms and the amount of emissions.
-	Orc Semen: Adds an addictive property to the drug and well as "potentially" causing both Mpreg and overriding potential sterility.
-	Husky Pheromones: Induces an intense heat that makes an individual "need" to be bred.
-	Elk Pheromones: Induces an intense rut that makes an individual "need" to breed.
-	Incubus Prostate Gland: Raises the desire for sex as well as the virility of the subject.
-	Succubus Breast Milk: Raises the desire for sex as well as the fertility of the subject.
-	Peacock Neurotransmitter: Puts the subject in a slightly more "agreeable" mindset.
-	Bunny Jock Adrenal Gland: Makes the subject require less rest time before they are able to fuck again.
-	Rubber Tigress Digestive System: Makes it so that plastic items can be absorbed as food/water instead.
+		Section 2 - 5 Point Characters
+		Five point characters are meant to form a more "realistic" experience in terms of slutification.
 
+			Part 1 - Non-con
+			This is basically for a character having realized that they have been captured and are being held against their will.
 
-	Chapter 2 - Drug Acquisition
+			Examples:
+				A look of rage passes over his features as they realize the situation that he's in, 'Get the fuck away from me you freak!'
 
-	Chapter 3 - Drug Item
+			Part 2 - Non-con light
+			This is for the most part the same as above. but with the occasion moan forced out of them and their bodies showing sexual excitement.
 
+			Examples:
+				The man looks down in horror as his body betrays him and his cock begins to become erect, 'Nooo! I don't want this!'
 
-1:non-con
+			Part 3 - Dub-con
+			This is based around a character still wanting to free, however they have also begun to enjoy the feeling that the player is awakening within their body.
 
+			Examples:
+				At the start - 'I fucking hate you ya piece of shit!'
+				Halfway through - 'Oh my god fuck me harder!'
 
-1.5:non-con but with the occasional moan
+			Part 4 - Dub-con light
+			This is more of a game they may say that they don't really want it, but at this stage they definitely do.
 
+			Examples:
+				The man looks at you with slightly glazed over eyes, 'Don't you dare even think about trying to ram that hard cock into my tight little hole!' A small smirk forms on his lips as his legs spread open a bit wider.
 
-2:dub-con
+			Part 5 - Slut Mode
+			This is the final form of slutification, this character has completely given into their desires and wishes for nothing more than to be used by the player.
+			All characters "slut mode" will differ from each other and are unique to that character. For example, one may become a himbo/bimbo while another may become a braindead fucktoy, a third may actually become feral ruled only by rut/heat, and a forth may actually become a dominant power bottom type.
 
+			Examples:
+			The man giggles a bit, 'Oh master you came back to fuck me, thank you! I don't care what you do to me, just please fuck me like slut!'
 
-2.5:dub-con but explosions of slut mode
+Book 4 - Content Items
+These items are used to help with capturing and advancing a character down their slut path, however extra items may be added to help with fetishes/fantasies. As a side note, most of these items are exclusive to this content and the player will not being able to use them on themselves or in a more common setting.
 
+	Chapter 1 - Confirmed Items
 
-3:slut mode
+		Section 1 -  Slut Drug Item [TODO: name still to be decided]
+		A new drug that is based around the DNA of some of the cities more... interesting infections. Taking DNA strands from these infections leads to a drug that hybridizes their effects and can even overwrite their minds and views.
 
+			Part 1 - Drug Makeup
+			This list should also be in-game possibly as a found note from the creator of the drug.
 
-each advancement requires a dose of the drug to progress, this way you can keep the character at the variation t
+			Cum Girl Saliva: Makes a person incredibly horny, but also raises the power of orgasms and the amount of emissions.
+			Orc Semen: Adds an addictive property to the drug and well as "potentially" causing both Mpreg and overriding potential sterility.
+			Husky Pheromones: Induces an intense heat that makes an individual "need" to be bred.
+			Elk Pheromones: Induces an intense rut that makes an individual "need" to breed.
+			Incubus Prostate Gland: Raises the desire for sex as well as the virility of the subject.
+			Succubus Breast Milk: Raises the desire for sex as well as the fertility of the subject.
+			Peacock Neurotransmitter: Puts the subject in a slightly more "agreeable" mindset.
+			Bunny Jock Adrenal Gland: Makes the subject require less rest time before they are able to fuck again.
+			Rubber Tigress Digestive System: Makes it so that plastic items can be absorbed as food/water instead.
+
+			Part 2 - Drug Acquisition
+			You will need to pay for each dose that you want, the way to pay for these doses is with two bottles of any type of cum item.
+
+		Section 2 - Libido Suppressor Item [TODO: name still to be decided]
+		This item is basically the reverse form of slut drug
+
+			Part 1 - Drug Makeup
+			This list should also be in-game possibly as a found note from the creator of the drug.
+
+			Testosterone Blockers:
+			Estrogen Blockers:
+			Vitex Agnus-Castus: A plant more commonly known as the "chaste tree", the compounds needed are gained through the plants fruit and leaves.
+			Ruta Graveolens: The essential oils of this plant have been known to augment the sperm and dampens sexual desire.
+			Tropaeolum Tuberosum: This plant when digested can lower testosterone levels in an organism by at least 45%.
+			Boldo: This plant can lower the sexual desire in females as well as "remove" the option a normal pregnancy.
+
+			Part 2 - Drug Acquisition
+			You will need to pay for each dose that you want, the way to pay for these doses is with two bottles of any type of cum item.
+
+		Section 3 - Orc Pill Item
+		This item is already in game but allows a player to control whether they encounter Mpreg or not.
+
+			Part 1 - Drug Makeup
+
+			Part 2 - Drug Acquisition
+
+	Chapter 2 - Potential Items
+	These items are merely ideas to increase potential kinks that a writer may enjoy. None of these items will be able to be used until after the characters first time with the player, the reason for this is that it would be too much work to add the scenes, variations, AND the first time scene.
+
+		Section 1 - Male Drug [TODO: name still to be decided]
+		A drug to instantly turn a character from whatever gender they are to male.
+
+		Section 2 - Female Drug [TODO: name still to be decided]
+		A drug to instantly turn a character from whatever gender they are to female.
+
+		Section 3 - Male Herm Drug [TODO: name still to be decided]
+		A drug to instantly turn a character from whatever gender they are to a male herm.
+
+		Section 4 - Futa Drug [TODO: name still to be decided]
+		A drug to instantly turn a character from whatever gender they are to a female herm.
+
+		Section 5 - Male Genital Drug [TODO: name still to be decided]
+		A drug to instantly change a character's genitals to pure male, but leave the rest of them alone, this is mainly meant for people into shemales (but without being seen as offensive).
+
+		Section 6 - Female Genital Drug [TODO: name still to be decided]
+		A drug to instantly change a character's genitals to pure female, but leave the rest of them alone, this is mainly meant for people into cuntbois (but without being seen as offensive).
+
+		Section 7 - Lactation Drug [TODO: name still to be decided]
+		A drug to instantly make a character lactate, however while they are lactating their chest will not increase/decrease in size.
+
+		Section 8 - Sterilization Drug [TODO: name still to be decided]
+		A drug to instantly make a character sterile, it's purpose is for players that do not enjoy pregnancy content.
+
+		Section 9 - Sleep Drug [TODO: name still to be decided]
+		A drug to instantly make a character fall asleep, it's purpose is for players that enjoy somnophilia.
 
 ]
 

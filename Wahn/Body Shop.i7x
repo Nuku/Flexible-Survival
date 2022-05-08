@@ -2,6 +2,19 @@ Version 1 of Body Shop by Wahn begins here.
 [ Version 1 - new file]
 [ Version 1.1 - events by Hyliad ]
 
+[
+1 - Demon Brute
+2 - Fennec
+3 - German shepherd
+4 - Gryphon
+5 - Horseman
+6 - Naga
+7 - Orc Breeder
+8 - Satyr
+9 - Snow Leopard
+10 - Squid
+11 - Succubus
+]
 
 LastMoreauPartSale is a number that varies. LastMoreauPartSale is usually 10000.
 MoreauPaymentAccepted is a truth state that varies. MoreauPaymentAccepted is usually false.
@@ -351,49 +364,59 @@ to MoreauFaceSelection:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine muzzle";
+	now title entry is "A demon brute's face";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman face";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's beak";
-	now sortorder entry is 2;
-	now description entry is "Buy yourself a gryphon head";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A satyr's face";
-	now sortorder entry is 3;
-	now description entry is "Buy yourself a satyr head, complete with goatee";
+	now description entry is "Buy yourself a demon brute face";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A fennec's face";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Buy yourself a fennec head, complete with large ears";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A naga's face";
-	now sortorder entry is 5;
-	now description entry is "Buy yourself a naga head";
-	[]
-	choose a blank row in table of fucking options;
 	now title entry is "A German shepherd's muzzle";
-	now sortorder entry is 6;
+	now sortorder entry is 3;
 	now description entry is "Buy yourself a canine head";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus's face";
+	now title entry is "A gryphon's beak";
+	now sortorder entry is 4;
+	now description entry is "Buy yourself a gryphon head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An horseman muzzle";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's face";
+	now sortorder entry is 6;
+	now description entry is "Buy yourself a naga head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's face";
 	now sortorder entry is 7;
-	now description entry is "Buy yourself a beautiful visage";
+	now description entry is "Buy yourself an orc face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's face";
+	now sortorder entry is 8;
+	now description entry is "Buy yourself a satyr head, complete with goatee";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard muzzle";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Get a feline face";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A squid-person's face";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Get a squid face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus's face";
+	now sortorder entry is 11;
+	now description entry is "Buy yourself a beautiful visage";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -410,24 +433,28 @@ to MoreauFaceSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine muzzle":
-					setmonster "Horseman";
-				-- "A gryphon's beak":
-					setmonster "Blue Gryphon Herm";
-				-- "A satyr's face":
-					setmonster "Satyr";
+				-- "An demon brute face":
+					setmonster "Demon Brute";
 				-- "A fennec's face":
 					setmonster "Fennec";
-				-- "A naga's face":
-					setmonster "Naga";
 				-- "German Shepherd Male":
 					setmonster "German Shepherd Male";
-				-- "A succubus's face":
-					setmonster "Succubus";
+				-- "A gryphon's beak":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine muzzle":
+					setmonster "Horseman";
+				-- "A naga's face":
+					setmonster "Naga";
+				-- "An orc breeder's face":
+					setmonster "Orc Breeder";
+				-- "A satyr's face":
+					setmonster "Satyr";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
 				-- "A squid-person's face":
 					setmonster "Squid";
+				-- "A succubus's face":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				wait for any key;
@@ -487,49 +514,59 @@ to MoreauBodySelection:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro equine";
+	now title entry is "Demon Brute";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman body";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Anthro gryphon";
-	now sortorder entry is 2;
-	now description entry is "Get a gryphon body";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Satyr";
-	now sortorder entry is 3;
-	now description entry is "Get a satyr body";
+	now description entry is "Get a demon brute body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Fennec";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Get a fennec body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Naga";
-	now sortorder entry is 5;
-	now description entry is "Get a naga body";
-	[]
-	choose a blank row in table of fucking options;
 	now title entry is "Anthro German shepherd";
-	now sortorder entry is 6;
+	now sortorder entry is 3;
 	now description entry is "Get an anthro canine body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Succubus";
+	now title entry is "Anthro gryphon";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro equine";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga";
+	now sortorder entry is 6;
+	now description entry is "Get a naga body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Orc Breeder";
 	now sortorder entry is 7;
-	now description entry is "Get a winged succubus body";
+	now description entry is "Get an orc breeder body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anthro snow leopard";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Get an anthro feline body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anthro squid";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Get an anthro squid body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus";
+	now sortorder entry is 11;
+	now description entry is "Get a winged succubus body";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -546,24 +583,28 @@ to MoreauBodySelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "Anthro equine":
+				-- "Demon Brute":
+					setmonster "Demon Brute";
+				-- "Fennec":
+					setmonster "Fennec";
+				-- "Anthro German shepherd":
+					setmonster "German Shepherd Male";
+				-- "Anthro horseman":
 					setmonster "Horseman";
 				-- "Anthro gryphon":
 					setmonster "Blue Gryphon Herm";
 				-- "Satyr":
 					setmonster "Satyr";
-				-- "Fennec":
-					setmonster "Fennec";
 				-- "Naga":
 					setmonster "Naga";
-				-- "Anthro German shepherd":
-					setmonster "German Shepherd Male";
-				-- "Succubus":
-					setmonster "Succubus";
+				-- "Orc Breeder":
+					setmonster "Orc Breeder";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
 				-- "Anthro squid":
 					setmonster "Squid";
+				-- "Succubus":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				wait for any key;
@@ -624,49 +665,59 @@ to MoreauSkinSelection:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine coat";
+	now title entry is "Demon Brute skin";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman coat of fur";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's feathers";
-	now sortorder entry is 2;
-	now description entry is "Get blue gryphon feathers";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Satyr's skin and fur";
-	now sortorder entry is 3;
-	now description entry is "Get skin and furry legs";
+	now description entry is "Get purple skin";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Fennec fur";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Get fennec fur";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Naga scales";
-	now sortorder entry is 5;
-	now description entry is "Get naga scales";
-	[]
-	choose a blank row in table of fucking options;
 	now title entry is "German Shepherd fur";
-	now sortorder entry is 6;
+	now sortorder entry is 3;
 	now description entry is "Get German shepherd fur";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Succubus skin";
+	now title entry is "A gryphon's feathers";
+	now sortorder entry is 4;
+	now description entry is "Get blue gryphon feathers";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An equine coat";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman coat of fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga scales";
+	now sortorder entry is 6;
+	now description entry is "Get naga scales";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Orc Breeder skin";
 	now sortorder entry is 7;
-	now description entry is "Get flawless skin";
+	now description entry is "Get green skin";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr's skin and fur";
+	now sortorder entry is 8;
+	now description entry is "Get skin and furry legs";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Snow leopard fur";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Get spotted white fur";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Squid skin";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Get squid skin";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus skin";
+	now sortorder entry is 11;
+	now description entry is "Get flawless skin";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -683,24 +734,28 @@ to MoreauSkinSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine coat":
-					setmonster "Horseman";
-				-- "A gryphon's feathers":
-					setmonster "Blue Gryphon Herm";
-				-- "Satyr's skin and fur":
-					setmonster "Satyr";
+				-- "Demon Brute skin":
+					setmonster "Demon Brute";
 				-- "Fennec fur":
 					setmonster "Fennec";
-				-- "Naga scales":
-					setmonster "Naga";
 				-- "German Shepherd fur":
 					setmonster "German Shepherd Male";
-				-- "Succubus skin":
-					setmonster "Succubus";
+				-- "A gryphon's feathers":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine coat":
+					setmonster "Horseman";
+				-- "Naga scales":
+					setmonster "Naga";
+				-- "Orc Breeder skin":
+					setmonster "Orc Breeder";
+				-- "Satyr's skin and fur":
+					setmonster "Satyr";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
 				-- "Squid skin":
 					setmonster "Squid";
+				-- "Succubus skin":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				wait for any key;
@@ -760,49 +815,59 @@ to MoreauTailSelection:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine tail";
+	now title entry is "A demon brute tail";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman tail";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's tail";
-	now sortorder entry is 2;
-	now description entry is "Get a gryphon tail";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A satyr's tail";
-	now sortorder entry is 3;
-	now description entry is "Get a satyr tail";
+	now description entry is "Get a spaded tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A fennec tail";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Get a fennec tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A naga tail";
-	now sortorder entry is 5;
-	now description entry is "Get a naga tail";
-	[]
-	choose a blank row in table of fucking options;
 	now title entry is "A German shepherd tail";
-	now sortorder entry is 6;
+	now sortorder entry is 3;
 	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus ass";
+	now title entry is "A gryphon's tail";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An equine tail";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga tail";
+	now sortorder entry is 6;
+	now description entry is "Get a naga tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's booty";
 	now sortorder entry is 7;
-	now description entry is "Get a firm succubus ass";
+	now description entry is "Get an orc breeder ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's tail";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard tail";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Get a snow leopard tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A squid booty";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Get a squid ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus ass";
+	now sortorder entry is 11;
+	now description entry is "Get a firm succubus ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -819,24 +884,28 @@ to MoreauTailSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine tail":
-					setmonster "Horseman";
-				-- "A gryphon's tail":
-					setmonster "Blue Gryphon Herm";
-				-- "A satyr's tail":
-					setmonster "Satyr";
+				-- "A demon brute tail":
+					setmonster "Demon Brute";
 				-- "A fennec's tail":
 					setmonster "Fennec";
-				-- "A naga's tail":
-					setmonster "Naga";
 				-- "A German shepherd tail":
 					setmonster "German Shepherd Male";
-				-- "A succubus ass":
-					setmonster "Succubus";
+				-- "A gryphon's tail":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine tail":
+					setmonster "Horseman";
+				-- "A naga's tail":
+					setmonster "Naga";
+				-- "An orc breeder's booty":
+					setmonster "Orc Breeder";
+				-- "A satyr's tail":
+					setmonster "Satyr";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
 				-- "A squid booty":
 					setmonster "Squid";
+				-- "A succubus ass":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				wait for any key;
@@ -896,49 +965,59 @@ to MoreauCockSelection:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine groin";
+	now title entry is "A demon brute's groin";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman crotch";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A hermaphrodite gryphon's groin";
-	now sortorder entry is 2;
-	now description entry is "Get a gryphon crotch";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A satyr's groin";
-	now sortorder entry is 3;
-	now description entry is "Get a satyr crotch";
+	now description entry is "Get a demonic crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A fennec's groin";
-	now sortorder entry is 4;
+	now sortorder entry is 2;
 	now description entry is "Get a fennec crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A naga's groin";
-	now sortorder entry is 5;
-	now description entry is "Get a naga crotch";
-	[]
-	choose a blank row in table of fucking options;
 	now title entry is "A German shepherd's groin";
-	now sortorder entry is 6;
+	now sortorder entry is 3;
 	now description entry is "Get a German shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus's groin";
+	now title entry is "A hermaphrodite gryphon's groin";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An equine groin";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's groin";
 	now sortorder entry is 7;
-	now description entry is "Get a succubus crotch";
+	now description entry is "Get a naga crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's groin";
+	now sortorder entry is 6;
+	now description entry is "Get an orc breeder crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's groin";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard's groin";
-	now sortorder entry is 8;
+	now sortorder entry is 9;
 	now description entry is "Get a snow leopard crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A squid's groin";
-	now sortorder entry is 9;
+	now sortorder entry is 10;
 	now description entry is "Get a squid crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus's groin";
+	now sortorder entry is 11;
+	now description entry is "Get a succubus crotch";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -955,24 +1034,28 @@ to MoreauCockSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine groin":
-					setmonster "Horseman";
-				-- "A gryphon's groin":
-					setmonster "Blue Gryphon Herm";
-				-- "A satyr's groin":
-					setmonster "Satyr";
+				-- "A demon brute's groin":
+					setmonster "Demon Brute";
 				-- "A fennec's groin":
 					setmonster "Fennec";
-				-- "A naga's groin":
-					setmonster "Naga";
 				-- "A German shepherd's groin":
 					setmonster "German Shepherd Male";
-				-- "A succubus's groin":
-					setmonster "Succubus";
+				-- "A gryphon's groin":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine groin":
+					setmonster "Horseman";
+				-- "A satyr's groin":
+					setmonster "Satyr";
+				-- "A naga's groin":
+					setmonster "Naga";
+				-- "An orc breeder's groin":
+					setmonster "Orc Breeder";
 				-- "A snow leopard's groin":
 					setmonster "Snow Leopard";
 				-- "A squid's groin":
 					setmonster "Squid";
+				-- "A succubus's groin":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				wait for any key;

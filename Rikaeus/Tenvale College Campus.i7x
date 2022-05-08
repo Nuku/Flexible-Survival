@@ -208,19 +208,7 @@ to connect Wally's Room:
 
 [Room Declaration]
 
-Table of GameRoomIDs (continued)
-Object	Name
-Greek Street	"Greek Street"
-
-Greek Street is a room.
-Greek Street is southeast of College Walkway East.
-Description of Greek Street is "[greekdesc]".
-earea of Greek Street is "Campus".
-
-to say greekdesc:
-	say "     As suspected of a street with nothing but fraternities and sororities, your surroundings are moderately littered with plastic drinking cups, underwear, panties, and various sorts of trash. The buildings all around bear signs and banners with Greek letters, marking them as the homes of various groups. Letting your gaze sweep over the row of buildings, you recognize a pattern, with the fraternities lined up on the east side of the street, while the sororities are on the western side. Passing by the buildings you see a whole salad of Greek letters, with thankfully the English names spelled out beneath too. Inspecting the fraternities, you can see Phi Alpha Nu (PAN) being surprisingly well kept up, with its lawn and garden clean of litter and visibly greener than the surroundings. From the direction of Phi Iota Gamma (PIG), you hear some grunting, squealing and cheers coming from behind the building - might be some sort of fight or match going on there? Omicron Rho Chi (ORC) has a number of homemade banners fluttering in the wind, hung up on the front of the building - you recognize the stylized heads of a dragon, elves and orcs on a few of these.";
-	say "     The Tau Omicron Psi (TOP) frat is the only one that has a fence all around it like a military compound (recently upgraded to actually include barbed wire, from the looks of it), with a tall flagpole and the building looking kinda utilitarian and barracks-like. Rho Upsilon Nu (RUN) has the logos of various sports teams plastered on the front wall of the building, with its mailbox literally sitting on the tip of a stand styled like one of those 'We're #1' foam hands. Lastly, the Alpha Lambda Epsilon (ALE) frat is extensively littered with empty liquor and beer bottles and cans, with an overflowing ashtray on the front porch. Checking out the sororities, you can see the outline of a woman apparently running side by side with a panther as a mural on the wall of 'The Pride' of Chi Alpha Tau (CAT). 'The Nereids' of Tau Iota Tau (TIT) is housed in a downright beautiful building, complete with decorative columns, little flags and steamers that flutter in the wind. Situated besides the previous building, 'The Maiar' of Delta Upsilon Delta (DUD) seems a bit... plain, with no special decoration or anything. Well-kept up but that's about it, just a residential house.";
-	say "     While you'd love to explore all the various sororities and fraternities, you have no clue which ones are safe to enter. So you get the feeling that that it might be best for you to have a look around the campus to see if you can find information on the various groups at the college first instead of randomly walking up to any of the buildings...";
+[Greek Street moved to Wahn/Greek Street.i7x]
 
 [Room Declaration]
 
