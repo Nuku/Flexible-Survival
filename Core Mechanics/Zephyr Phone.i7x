@@ -327,7 +327,6 @@ Julian's Room	Figure of emap_Julians_Room_icon
 Lecture Street	Figure of emap_Lecture_Street_icon
 Pericles' Room	Figure of emap_Pericles_Room_icon
 Randall's Room	Figure of emap_Randalls_Room_icon
-Richard's Room	Figure of emap_Richards_Room_icon
 Second Floor Male Dorms	Figure of emap_Second_Floor_Male_Dorms_icon
 Showers	Figure of emap_Showers_icon
 Sports Arena Lockerroom	Figure of emap_Sports_Arena_Lockerroom_icon
@@ -404,7 +403,7 @@ PAN Frat North Hallway	Figure of emap_Pan_Frat_North_Hallway
 PAN Frat South Hallway	Figure of emap_Pan_Frat_South_Hallway
 PAN Frat East Hallway	Figure of emap_Pan_Frat_East_Hallway
 PAN Frat West Hallway	Figure of emap_Pan_Frat_West_Hallway
-Richard's Room	Figure of emap_Richards_Room_icon
+Richard's Room	Figure of emap_PAN_Frat_Richards_Room
 
 [Other]
 [Table of Zpc Location Reference (continued)

@@ -2180,7 +2180,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "emap - Lecture Street"	Figure of emap_Lecture_Street_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Pericles' Room"	Figure of emap_Pericles_Room_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Randall's Room"	Figure of emap_Randalls_Room_icon	"Wolfram Rolf"	g-black	"normal"
-"emap - Richard's Room"	Figure of emap_Richards_Room_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Second Floor Male Dorms"	Figure of emap_Second_Floor_Male_Dorms_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Showers"	Figure of emap_Showers_icon	"Wolfram Rolf"	g-black	"normal"
 "emap - Sports Arena Lockerroom"	Figure of emap_Sports_Arena_Lockerroom_icon	"Wolfram Rolf"	g-black	"normal"
