@@ -1367,14 +1367,14 @@ to say blancheupdate: [I have no idea what this is for. Possibly pregnancy count
 			increase HP of Blanche by 1;
 		if HP of Blanche is 6 and Libido of Blanche - turns >= 24:
 			increase HP of Blanche by 1;
-			now thirst of Blanche is 3; [+three pups in first litter]
+			now thirst of Blanche is 4; [+four pups in first litter]
 			now Libido of Blanche is 254;
 [			move Sturm to Office Den;]
 		if HP of Blanche is 9 and Libido of Blanche - turns >= 12:
 			increase HP of Blanche by 1;
 		if HP of Blanche is 10 and Libido of Blanche - turns >= 24:
 			increase HP of Blanche by 1;
-			now thirst of Blanche is 7; [+4 pups in second litter]
+			now thirst of Blanche is 6; [+2 pups in second litter]
 			now Libido of Blanche is 254;
 		while HP of Blanche >= 11 and lust of Blanche - turns >= 40 and tempnum is 0:		[extra cycles if the player's been away a long time]
 			now tempnum is 1;
@@ -1389,7 +1389,7 @@ to say blancheupdate: [I have no idea what this is for. Possibly pregnancy count
 			if HP of Blanche is 13 and Libido of Blanche - turns >= 24:
 				increase HP of Blanche by 1;
 				if thirst of Blanche < 10:
-					now thirst of Blanche is 10;
+					now thirst of Blanche is 10; [+4 pups in third litter]
 				else:
 					increase thirst of Blanche by a random number between 2 and 4;
 				now Libido of Blanche is 254;

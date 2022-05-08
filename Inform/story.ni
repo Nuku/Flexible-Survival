@@ -758,6 +758,7 @@ Include Carl by Wahn.
 Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
+Include Cleo by Prometheus.
 Include College Guards by Rikaeus.
 Include Colleen by Prometheus.
 Include Corbin by Wahn.
