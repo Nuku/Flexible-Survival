@@ -1031,7 +1031,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "gilded staff"	"A very large and very golden replica cock that bears a striking resemblance to one belonging to the magic drake."	3	gilded staff
 
-gilded staff is a grab object.
+gilded staff is a grab object. It is not temporary.
 
 instead of sniffing gilded staff:
 	say "Despite the metallic appearance, the item only has faint traces of a mysterious enchanting scent.";
