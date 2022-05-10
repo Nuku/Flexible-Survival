@@ -804,7 +804,7 @@ Include Genevieve by Prometheus.
 Include Garrett by SgtPepper234.
 Include Gerty by Qazarar.
 Include Glory by Wahn.
-Include Good Alexandra by Wahn.
+Include Good Alexandra by Prometheus.
 Include Gordon by Rikaeus.
 Include Gregory by Wahn.
 Include Gryphon Characters by SgtPepper234.
