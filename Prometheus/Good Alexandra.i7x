@@ -1,4 +1,4 @@
-Version 1 of Good Alexandra by Wahn begins here.
+Version 1 of Good Alexandra by Prometheus begins here.
 [ Originally authored by Stripes                       ]
 [ Version 1 - Separated from the Bad Alexandra content ]
 
