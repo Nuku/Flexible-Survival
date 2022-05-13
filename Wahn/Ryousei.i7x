@@ -610,7 +610,7 @@ to say RyouseiSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the anthro tiger";
 		now sortorder entry is 21;
-		now description entry is "Sink your pick into Ryousei's tight hole";
+		now description entry is "Sink your prick into Ryousei's tight hole";
 	[]
 	if RyouseiXerxes is 1 and player is in Grey Abbey Library:
 		choose a blank row in table of fucking options;

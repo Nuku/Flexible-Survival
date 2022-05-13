@@ -1303,7 +1303,7 @@ to say A_Task53:	[Patrols]
 	now AT_Patrol is true; [opens talk option for 'Patrol']
 
 to say alexandra_patrol:
-	say "     'Actually, I was thinking it was about time to go on patrol again. I don't want any sex-crazed mutants getting too comfortable coming near here, [if hunger of Alexandra is 1]unless they're ones that you're intentionally providing shelter for[end if][if PoliceStationTwelvePopulation > 0 or ( number of policed people + number of lockered people > 6 )]especially now that we've got several survivors living here[else]especially once more survivors start hearing about this place and showing up[end if]. While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem. One of us should stay here on guard. Did you want to patrol around the area?";
+	say "     'Actually, I was thinking it was about time to go on patrol again. I don't want any sex-crazed mutants getting too comfortable coming near here, [if hunger of Alexandra is 1]unless they're ones that you're intentionally providing shelter for[else if PoliceStationTwelvePopulation > 0 or ( number of policed people + number of lockered people > 6 )]especially now that we've got several survivors living here[else]especially once more survivors start hearing about this place and showing up[end if]. While it'd certainly be safer for both of us to go together,' she says, her stubby tail wagging a little at the prospect, 'there shouldn't be any real problem. One of us should stay here on guard. Did you want to patrol around the area?";
 	now fightoutcome is 100;
 	if Player consents:
 		now inasituation is true;

@@ -144,7 +144,7 @@ a postimport rule:
 
 Section 1 - Introduction
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and "Missing Puppy" is not listed in Traits of Alexandra and Libido of Alexandra > 2 and HP of Spike is 0):
+instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and "Missing Puppy" is not listed in Traits of Alexandra and Libido of Alexandra > 2 and HP of Spike is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
