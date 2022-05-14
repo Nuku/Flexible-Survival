@@ -2781,6 +2781,8 @@ to say FemaleFangLux&UmbraBirth:
 	now FangNewPuppies is 0;
 	now HP of Lux is 1;
 	now HP of Umbra is 1;
+	move Lux to Grey Abbey Library;
+	move Umbra to Grey Abbey Library;
 	now LuxUmbraMaturityCounter is 120;
 	increase score by a random number between 5 and 10;
 	now Perception of Fang is 0;

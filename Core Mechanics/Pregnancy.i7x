@@ -543,6 +543,8 @@ To Birth:
 			increase Charisma of Fang by 2;
 			now HP of Lux is 1;
 			now HP of Umbra is 1;
+			move Lux to Grey Abbey Library;
+			move Umbra to Grey Abbey Library;
 			now LuxUmbraMaturityCounter is 120;
 		else if hunger of Fang is 3:
 			increase Charisma of Fang by FangNewPuppies;
