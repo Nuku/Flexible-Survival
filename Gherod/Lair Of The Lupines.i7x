@@ -1,10 +1,11 @@
-Version 3 of Lair Of The Lupines by Gherod begins here.
+Version 4 of Lair Of The Lupines by Gherod begins here.
 
 "Adds the lair of the werewolf brutes as a set of locations, as well as related NPCs, to the game."
 
 [Version 1 - File released]
 [Version 2 - Vastly expanded Wyatt with new sex scenes. More progress on Jett's questline.]
 [Version 3 - 1 new Jett and Elstan sex scenes each]
+[Version 4 - 1 new Elstan blowjob scene and new "Pride Hurt" variant on his Oubliette scene]
 
 Section 1 - The Rooms
 
@@ -683,6 +684,8 @@ ElstanDoneTalking is a truth state that varies.[@Tag:NotSaved]
 Section 2-3-1 - Elstan Talk
 
 instead of conversing Elstan:
+	if "Pride Hurt" is listed in traits of Elstan:
+		say "     As soon as you approach him, he shifts his gaze towards you with contempt and anger, even showing his sharp teeth to you. That is a clear message stating [']do not come near me[']. You really have pissed him off, it seems. Now, you could always wait until [bold type]he approaches you in the Oubliette[roman type], instead, and let him take the initiative.";
 	say "     He barely seems to mind your presence when you try to address him, but he eventually turns to you with an unamused expression, 'What do you want?'";
 	WaitLineBreak;
 	say "[ElstanTalkMenu]";
@@ -776,10 +779,13 @@ instead of fucking Elstan:
 	else if Libido of Elstan is 1:
 		say "     You make an advance on Elstan, but he does not feel keen on letting you get any closer to him. 'What do you think this is? You ask and you get it? Fuck no. Go back to your hole and, if I feel like it, I might come pick you up.' It seems you will have to follow his rules if you want to get any of that meat.";
 	else if Libido of Elstan is 2:
-		if lastfuck of Elstan - turns < 4:
+		if "Pride Hurt" is listed in traits of Elstan:
+			say "     You attempt to make an advance on Elstan, but as soon as you approach him, he shifts his gaze towards you with contempt and anger, even showing his sharp teeth to you. That is a clear message stating [']do not come near me[']. 'Fuck off,' is the only thing he says to you. You really have pissed him off, it seems. Now, you could always wait until [bold type]he approaches you in the Oubliette[roman type], instead, and let him take the initiative.";
+		else if lastfuck of Elstan - turns < 4:
 			say "     You make an advance on Elstan, which you gain enough confidence for, given your past encounters. He does not shove you off, but since you were just together recently, the muscular werewolf does not seem to be in the mood. 'Didn't you have enough already? I gotta do some workout, beat it.'";
 		else:
 			say "     You make an advance on Elstan, which you gain enough confidence for, given your past encounters. Once, he would push you away and tell you off, but now, the muscular werewolf cannot help himself but get turned on at how much craving you show for him. 'Wow, you really do like being my bitch, huh? Want it so badly you keep asking me for it... Alright, let's have some fun then. I'll let you suggest some way I can use you, as I'm in such a good mood.'";
+			say "     It seems you can get some action with the big werewolf Elstan, however, [bold type]you are likely to have to do it right here, in front of all the other werewolves...[roman type][line break]";
 			WaitLineBreak;
 			say "[ElstanSexMenu]";
 
@@ -790,6 +796,11 @@ to say ElstanSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Worship his muscles";
 	now sortorder entry is 1;
+	now description entry is "Give his body some deserved appreciation";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Suck his cock";
+	now sortorder entry is 2;
 	now description entry is "Give his body some deserved appreciation";
 	[]
 	sort the table of fucking options in sortorder order;
@@ -809,6 +820,8 @@ to say ElstanSexMenu:
 				now sextablerun is 1;
 				if (nam is "Worship his muscles"):
 					say "[ElstanSexMuscleWorship]";
+				else if (nam is "Suck his cock"):
+					say "[ElstanSexBlowjob]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -837,7 +850,50 @@ to say ElstanSexMuscleWorship:
 	say "     He keeps on grunting as an almost seemingly endless stream of werewolf jizz coats both the wall behind you and the right side of your body, all this while you get choked under his pit due to the overpowering grip of his muscular arms. Elstan loosens it once he feels you are squirming around too much, but that causes you to inhale all that hot musky scent at once, leaving you very lightheaded. In a reflex, you hold yourself onto the wall behind you, accidentally splashing some of the cum in there with your whole arm and hand. Elstan starts chuckling as he steps back, admiring the mess he has just made. 'That's a fucking good bitch. Keep that up and you might even earn my tolerance. It's been a while since someone made me cum like that... hands-free.'";
 	WaitLineBreak;
 	say "     The light brown werewolf then pats you on the head as he is about to leave. 'Definitely put me in a good mood. Now get outta my sight before that changes.' You hastily retreat before his threats mean anything real. The mess he has made is still there, however. Maybe he'll just get someone to clean it up... In some manner.";
+	if Loyalty of Elstan < 10:
+		say "     [bold type]In his own way, Elstan seems to like you more.[roman type][line break]";
+		increase Loyalty of Elstan by 1;
 	NPCSexAftermath Elstan receives "Other" from Player;
+
+to say ElstanSexBlowjob:
+	say "     Shifting your gaze over to the handsome werewolf's crotch, a thought crosses your mind that he may very well enjoy hearing, or so you think. Nevertheless, you are keen on asking him about it, which leads you to propose a blowjob to him. At first, he looks at you from the corner of his eye, as if he was suspicious of that offer, before he grunts and turns to face you heads on. 'Is that a feeble attempt to gain access to the my goods without any effort? You just come here, say you wanna suck my dick and expect me to nod and agree to it?' You admit that you did not think he would take that as an offense and that you purely meant it as a way to treat him with something nice and pleasant. 'Is that so? Or are you just a little bitch hungry for my cock? If that's it, you should get in line.'";
+	say "     You get the feeling he is expecting something more out of you. Perhaps [bold type]this would require convincing at the cost of your own dignity[roman type], but for you, it may just be a small price to pay for some hot fun. Shall [bold type]you subject yourself to this?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Stroke his ego as much as you can.";
+	say "     ([link]N[as]n[end link]) - You have no time nor patience for this. Leave him at once. This may piss him off, however.";
+	if Player consents:
+		say "     Inspiring yourself as you look over the perfect specimen of a werewolf that Elstan is, you begin to talk about how he is the best of them all, that he is the most handsome and strongest, and you go as far as to say that even Jett should kneel to him, as he is so much better than him. While you could be lying (or not), this does not matter to the werewolf, only your words of praise filling his ego. And then, you explain that it is merely due to this fact that you wish to please him, because he deserves to be pleased and serviced as much as he ever wishes. The more you talk, the more his cock begins to show past his furred sheath, especially when you emphasize his qualities, good looks and strength.";
+		say "     'Yeah, I'm the fucking best and you know it. That makes you better than most bitches I get to fuck,' he says, turning to you, along with his growing boner, stopping whatever he is doing to talk to you. 'Or are you telling me all this because you really happen to be a little slut, who just can't control themselves near Elstan here? Is it the impressive sight? Hehe...' You simply tell him that you would be the biggest slut just for him, because you know he likes it and definitely deserves it. Your best signal that your efforts are working is the consistent throbbing his cock is giving as it gets even closer to a full erection. 'Oh yeah? The biggest slut? A little cumdump like you? Bet you can even tell us apart just from looking at our dicks... As you must be so acquainted with all of them.'";
+		WaitLineBreak;
+		say "     No, you have to say that his is special, that his is the best, and there is none like his. If Elstan was the only one you could worship, it would suffice, as it would be such a great privilege already. Nobody else would come as close to his greatness. And you know he loves hearing this, as his cock size is looking monstrous by now. 'Alright, fine. You know how to woo me, I'll give you that. Shit, I'm so hard just hearing you talk I could fuck you right here and now... But you wanted to suck me off, so you get only what you asked for. I'm sure you won't mind an audience, knowing how much of a dirty whore you are...' The werewolf grins as he beckons you to approach him, giving you permission to touch his body.";
+		say "     Though, as soon as you are within reach, he grabs you by the head and pushes you down, your face being brought right to his cock as you bump your nose on the rigid shaft. 'Careful there, might hurt yourself...' he says, chuckling mischievously as he slaps your cheek a couple more times with a few swings of his massive prick. 'C'mon, it ain't gonna suck itself, bitch.' Your dignity investment has finally paid off, as you can now simply move your lips towards that delightful looking meat and begin to slide them across his shaft, which makes the werewolf smile. 'Yeah, worship every inch like I deserve it. Show everyone how it's done,' he tells you, a little louder than his usual tone, which calls the attention of some nearby werewolves, including Kirnon, the silver one.";
+		WaitLineBreak;
+		say "     All that remains for you to do is to follow Elstan's demands and appreciate every inch of his cock with your mouth, lips and tongue, kissing and licking all over that pulsating rod while you cup the werewolves['] balls with one hand, playing with them gently as you carefully rub those orbs, feeling their mass and weight due to how full they are. 'Look at that, bitch [boygirl]... You've got everyone's eyes on you. Now everyone knows you're MY bitch, so you better not make me look bad.' You put all your effort into this, eventually bringing your lips to the tip of his cock, then part them to allow as much of that large meat as you can fit inside your mouth. You have to open really wide to get it in, but you do, and continue to push yourself.";
+		say "     With repeated movements, you slide your lips further deeper along his shaft, then back and forth, progressively managing to get more of his cock in your mouth, but what really matters is how much you are stroking and rubbing it, which greatly pleases Elstan. 'That's it... Keep that up and you'll get a nice reward,' he says, which is all the motivation you need to prolong your efforts. Hastening your pace, you suck him harder and faster, your hands following as such. A glance over your shoulder would reveal some of the werewolves in the audience absent-mindedly caressing themselves as they observe you blowing Elstan, perhaps fantasizing about being in either your place or the muscular wolfman's...";
+		WaitLineBreak;
+		say "     'Oh yeah, don't stop now, I'm getting there...' You continue as he demands, even as your neck aches and your arms threaten to falter, doing your absolute best to keep going. 'Almost there...' he warns, and you make a final push, sucking him as deep and fast as you can, hands stroking the entirety of his shaft where your lips cannot reach, and soon, his balls begin to raise. Elstan breathes deeply before he releases a loud grunt, grabs your head and keeps you in place, burying more of his cock inside your throat than you would feel comfortable with. Finally, he starts shooting his load directly into your stomach, powerful shots that you are forced to swallow almost as if you were chugging down a bottle full of it.";
+		say "     Everyone keeps their eyes on you as Elstan ensures you drink his cum to the very last drop, before finally letting go of your head and allowing you to breathe with a bellyful of wolf spunk. 'That was good, slut. You put up a good show too!' He then turns around, picks up some weights and resumes his exercising, ignoring you completely from that point on. The wolfmen who were watching you all stare at you hoping you would come assist them with their erections, except Kirnon, who seemed to have ignored your display since it started. You figure you have had enough and simply consider leaving.";
+		WaitLineBreak;
+		say "     [bold type]Do you wish to say goodbye to Elstan before you go?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Say something to him. It feels wrong just leaving like that.";
+		say "     ([link]N[as]n[end link]) - No, just leave. That is how he wants it.";
+		if Player consents:
+			say "     Even though he completely disregarded your existence right after he made you swallow his cum, you still insist in approaching him. The look on his face is best described as perplexed when you politely thanked him for the fun activity. 'Uh... Did I forget to tell you to fuck off? Oh, yeah, I actually did. So... fuck off.' He says it like that, but his eyes loom over you long enough to give you the impression he actually appreciated your gesture. 'Alright, or you could stare and admire the best werewolf in the den, yeah? Just do it quietly. I gotta focus.' Well, that was a little less hostile statement from him, so you are content with having done this before you commited to leaving.";
+			if Loyalty of Elstan < 10:
+				say "     [bold type]In his own way, Elstan seems to like you more.[roman type][line break]";
+				increase Loyalty of Elstan by 1;
+		else:
+			say "     You discard that thought and commit to being on your way.";
+		NPCSexAftermath Player receives "OralCock" from Elstan;
+	else:
+		say "     But you find yourself in a certain mood that does not tolerate a certain egotistical werewolf playing hard to get, so you kindly wish him good luck with finding someone as good as you in that [']line['] of his. You may have done so in a multitude of ways, but the main message gets across to him and... he does not look happy. 'Oh yeah? Then good luck finding dick as good as mine, slut! Hint, you won't, because there's none. And that's your fucking loss!' he shouts in response, angrily. It is clear that you hurt his pride, but there is no way back now. You commit to this and proceed to leave, clearly having left the werewolf upset as he resumes his exercises. You are certain it shall pass, but maybe you should not come back to him in a while.";
+		if Loyalty of Elstan > 0:
+			say "     [bold type]Elstan did not appreciate that at all, and that took a heavy toll on your relationship with him.[roman type][line break]";
+			decrease Loyalty of Elstan by 5;
+			if Loyalty of Elstan < 0:
+				now Loyalty of Elstan is 0;
+		TraitGain "Pride Hurt" for Elstan;
 
 Section 2-4 - Kirnon
 
@@ -1519,11 +1575,25 @@ to say WerewolfBruteLairCaptor:
 
 to say WerewolfBruteLairElstanWorship:
 	say "     You hear the noisy trapdoor above you open as the shadow of a very, very large and muscular werewolf brute looks down on you with a fierce look, his eyes piercing your soul like shiny and small dots of light. He only makes a grunt as he inspects you from a distance. 'You'll do,' he says, as he pulls you from the oubliette with the force of a beast, so effortlessly that you could as well be made of only feathers. You have seen large werewolves, but this one is especially big, he could very well have fooled you as the alpha brute. 'I don't like sharing. You're my bitch and only mine for now. Got it?' His voice is deep and commanding, almost to a threatening level, so you nod to him. 'Good. You're coming with me.' You immediately [bold type]recognize this werewolf as Elstan[roman type], who seems keen on using you for his personal pleasure this time.";
-	say "     With that having been said, the brute roughly puts you over his shoulder and starts walking, carrying you with one arm wrapped around you and his hand on your butt. He does not seem to want to linger in the pit, as he goes straight into the dorms area. You are brought to one of the bedrooms, which seems to be a private one, his, to be exact. Then, as you thought you were going to be put on the bed, the werewolf instead tosses you onto the floor. 'That's your place. At least until you prove yourself.' He then moves his large paw over your face and presses down on you, obscuring it entirely from outside view. 'Worship me, bitch. Work that tongue over my soles. And you better do it right!'";
-	WaitLineBreak;
-	say "     You get the feeling he is not fully aware of how strong he is. There is barely any room to move your mouth around his large paw, but you try your best, sticking it out and licking over his soles the best way you possibly can, as enthusiastically as you can get. As you half expected, the brute does not really bother praising you for your effort, only giving himself sexual satisfaction as he observes you, jerking his huge canine cock with your eyes locked on your movements. He grunts, only occasionally, but out of some pleasure he gets from demeaning you, as you can tell. The brute often keeps grinding his footpaw against your face, only to feel greater stimulation from your hard work. 'Hrr... Get it between the toes... Just like that...'";
-	say "     The increasing momentum you feel is a great indicative that the brute is truly enjoying himself, despite how grumpy he sounds. He seems to be jerking off faster as he forces you to worship his feetpaws, the rush of power getting him more and more horny. It helps the fact that you really cannot even match his physical strength, even if you wanted to try, as this brute is so ridiculously strong. However, the time he spends with his footpaw on your face comes to an end, as he seems to have had enough. 'I'm so fucking horny... Bend over the bed. Ass up,' he commands, impatiently waiting for you to get up as he puts his foot back and watches you. 'Quickly, bitch! Or you'll get me all soft again from waiting!'";
-	WaitLineBreak;
+	if "Pride Hurt" is listed in traits of Elstan:
+		WaitLineBreak;
+		say "     [italic type]Although, given your recent interactions, you remember that you have managed to piss the werewolf off with a certain attitude of yours. 'Heh... So you're a little bitch after all, still coming here out of your own volition...' You get the feeling that he does not seem to have forgotten that, either.[roman type][line break]";
+		WaitLineBreak;
+		say "     'Don't worry, I'll take special pleasure in putting you in your place... Because you're a fucking little slut. And you come here because you can't help it. It's in your nature, isn't it?' With that having been said, the brute roughly puts you over his shoulder and starts walking, carrying you with one arm wrapped around you and his hand on your butt. He does not seem to want to linger in the pit, as he goes straight into the dorms area. You are brought to one of the bedrooms, which seems to be a private one, his, to be exact. There, he keeps you hanging over his shoulder, with your face hovering just above his furry pecs. 'You just wanna be a cum rag for us big wolves, don't you? I know that's what you want... You can tell me all about it, now that it's just you and me here...'";
+		say "     You notice that as he keeps talking, that huge cock of his continues to pulsate harder and harder, as if talking to you like that actually turned him on. Obviously, you fail to turn your eyes away from such a thick, meaty wolf prick that keeps practically calling out to you with each throb. 'If you weren't such a pussy and were actually straightforward with your feelings towards me, you know... I'd make you the happiest bitch in this fucking shithole. Alas, you're keen on fucking with me, instead. Which I'd respect, if I didn't keep finding you in the fucking slaves' pit!' He has a point, which you nod to as he continues to speak, 'But that just shows you're not just a bitch, nor a slut. You're a fucking shameless whore. And you can't even look away from my dick while I'm talking to you!'";
+		WaitLineBreak;
+		say "     That really would be asking too much, especially when his monstrous shaft continues to throb right in front of you, even leaking precum as he carries on saying all that nasty stuff to you. There is no doubt about this, it turns him on talking rough to you. 'You know what? I was gonna do the usual with you, but seeing you looking over my dick as you are, like a starving bitch who just couldn't get any cock for themselves for a whole year, I'm actually feeling sorry for you. So... How about this, instead...' As he says this, you almost [italic type]feel[roman type] him grin as he grabs your head by the back of your skull and moves your forward, towards his cock. Once your upside down face is lined up with that huge thing, he pulls you to him, thrusting his tool against your lips and forcefully pushing it in.";
+		say "     His grip on your butt is tight, and he continues to caress your asshole with one of his thick fingers as he pulls your head all the way down his cock. You cannot possibly take all of that comfortably, but he simply does not care, and is rough in the way he forces you to deepthroat him. 'Hope you choke on it, slut. And you better, or it's no fun... Hehe...' With his intent keen on further humiliating you, he thoroughly fucks your throat as if it were a common fleshlight, forcing you to swallow it and depriving you of breathing. This is all about him and his pleasure, and for him, it just feels better if you struggle, which you inevitably do. This is a really strong werewolf handling you like a fucktoy, pounding your throat like he would fuck a hole, all while laughing at your misery.";
+		WaitLineBreak;
+		say "     'That's not what you wanted? The best fucking cock in the whole den? Well, then take it, you bitch! If you do well enough, I might switch entries... Now that you'd love, wouldn't you?' You can almost tell he gets off more from the way he treats you than by actually attempting to choke you out with his cock, but he keeps his moves relentless, threatening to dislocate your jaw as he buries all he can of his meat down your throat over and over for so long that you even begin to feel numb around your face's lower half. Having made a mess of spit and precum all over, trailing from various points of your face and his cock all the way to the floor, he finally decide to pull you away, finally granting you a respite of fresh breathable air, despite your need to cough. And, you guessed it, the view really turns him on.";
+		say "     'You look like shit. Good.' As his cock gives yet another throb, Elstan tosses you onto the bed, smirking happily at the sight of your defeated state. 'Bend over the bed. I've deemed you worthy of getting fucked properly. Your lucky day.'";
+		NPCSexAftermath Player receives "OralCock" from Elstan;
+	else:
+		say "     With that having been said, the brute roughly puts you over his shoulder and starts walking, carrying you with one arm wrapped around you and his hand on your butt. He does not seem to want to linger in the pit, as he goes straight into the dorms area. You are brought to one of the bedrooms, which seems to be a private one, his, to be exact. Then, as you thought you were going to be put on the bed, the werewolf instead tosses you onto the floor. 'That's your place. At least until you prove yourself.' He then moves his large paw over your face and presses down on you, obscuring it entirely from outside view. 'Worship me, bitch. Work that tongue over my soles. And you better do it right!'";
+		WaitLineBreak;
+		say "     You get the feeling he is not fully aware of how strong he is. There is barely any room to move your mouth around his large paw, but you try your best, sticking it out and licking over his soles the best way you possibly can, as enthusiastically as you can get. As you half expected, the brute does not really bother praising you for your effort, only giving himself sexual satisfaction as he observes you, jerking his huge canine cock with your eyes locked on your movements. He grunts, only occasionally, but out of some pleasure he gets from demeaning you, as you can tell. The brute often keeps grinding his footpaw against your face, only to feel greater stimulation from your hard work. 'Hrr... Get it between the toes... Just like that...'";
+		say "     The increasing momentum you feel is a great indicative that the brute is truly enjoying himself, despite how grumpy he sounds. He seems to be jerking off faster as he forces you to worship his feetpaws, the rush of power getting him more and more horny. It helps the fact that you really cannot even match his physical strength, even if you wanted to try, as this brute is so ridiculously strong. However, the time he spends with his footpaw on your face comes to an end, as he seems to have had enough. 'I'm so fucking horny... Bend over the bed. Ass up,' he commands, impatiently waiting for you to get up as he puts his foot back and watches you. 'Quickly, bitch! Or you'll get me all soft again from waiting!'";
+		WaitLineBreak;
 	say "     When you finally manage to put yourself in position, the werewolf is already moving in to grope at your butt, give it a few hard slaps and enjoy your reactive flinching, as each time it grows more painful. Although, as you glance over your shoulder, the brute's cock keeps on throbbing, looking even bigger and harder than before. 'Does it hurt? Aw... Poor little bitch can't take a beating from a real alpha werewolf like me? Just wait until I'm done with you...' he mocks you as he places his dong right between your asscheeks, determined to take your anal entrance. It truly makes you almost yelp as he presses his girthy dong against your hole, slowly pushing it in with only his leaking precum serving as lube.";
 	say "     'That's it... Ease in, bitch, you ain't gonna be rid of me so soon...' He leans over you, his muzzle close to your ear, as he whispers these words that are meant to taunt you, all while he shoves more and more of his girthy inches inside you. It feels like he is stretching your entire rear with every thrust he makes deeper, forcing you to arch your back and try your best at relaxing. His muscular arms are wrapped around your torso, his claws lightly scratching your chest, when one of his thick hands finds its way to your neck, grasping and squeezing it just enough to make you gasp. The control he has over you is absolutely intoxicating, rendering you powerless as you take his huge cock all the way to the knot.";
 	WaitLineBreak;
@@ -1531,13 +1601,22 @@ to say WerewolfBruteLairElstanWorship:
 	say "     Then, you are violently pushed forward, slamming your face and arms against the bed, as the brute takes hold of your hips, changing to doggy style. 'I'll fucking breed you until you leak my cum from every hole in your body, cocksleeve. That's all you're good for.' With this said, he [italic type]really[roman type] picks up the pace. As before he was fucking you fast and hard, he know moves like a battering ram, pounding your ass with such speed and force that you feel your insides bouncing within your body... and an incredible pleasure in your rectum. You moan, groan and beg for more, lost in your lust, not necessarily with your words but with your body language, which pleases the werewolf.";
 	WaitLineBreak;
 	say "     'My balls are so fucking heavy... Fuck, I gotta... Hnng...!' You hear him roar as he makes one final push, his swollen knot going past your anal ring as he fully buries that big girthy rod inside you, throbbing and throbbing... Until this huge, ridiculous, even, load of warm beastly cum invades your bowels and begins to fill you almost like a balloon, swelling your belly in almost an instant, and extending through what seems like a full minute. 'Oooh yeahh... Good cum dumpster, heheh...' While he is still shooting into you, the werewolf leans down again, wrapping his muscular and furred arms around your torso and resting his muzzle next to your skull, just above your shoulder.";
-	say "     'Mmh... Looks like we'll have to wait, now... I'm pleased with you. Hope you don't have any plans for today, because... I still got a few more loads to put in you...' he informs you, licking your face with his large tongue, coming from a maw that could terrify anyone with all those sharp teeth and a gaping end. 'There's a reason they call me the big bad wolf... heheh...' You can feel him already wanting to pound your ass again, even as his knot is still keeping him inside you, allowing little movement, but you know what expects you as soon as he finally gets his inevitable freedom back...";
-	WaitLineBreak;
+	if "Pride Hurt" is listed in traits of Elstan:
+		say "     [italic type]'I hope you've learned to be a good bitch now... But I'll be sure to remind you whenever you step out of your limits. And actually... I've got several more loads to fill you up with. But I'm still not gonna be nice about it, because... I get the feeling you like it. And since my mood has improved...'[roman type] he then licks your face with his large tongue, coming from a maw that could terrify anyone with all those sharp teeth and a gaping end. 'Keep being good and Elstan here will take good care of you. The other sluts will envy you, because you get to have my attention while they don't...' You can feel him already wanting to pound your ass again, even as his knot is still keeping him inside you, allowing little movement, but you know what expects you as soon as he finally gets his inevitable freedom back...";
+		TraitLoss "Pride Hurt" for Elstan;
+		WaitLineBreak;
+	else:
+		say "     'Mmh... Looks like we'll have to wait, now... I'm pleased with you. Hope you don't have any plans for today, because... I still got a few more loads to put in you...' he informs you, licking your face with his large tongue, coming from a maw that could terrify anyone with all those sharp teeth and a gaping end. 'There's a reason they call me the big bad wolf... heheh...' You can feel him already wanting to pound your ass again, even as his knot is still keeping him inside you, allowing little movement, but you know what expects you as soon as he finally gets his inevitable freedom back...";
+		WaitLineBreak;
 	clear the screen;
 	say "     You have completely lost track of time and fail to realize how long it has passed, but when you regain awareness of your whereabouts, you find yourself back in the oubliette with a very swollen belly and several small puddles of cum next to your butt. It is still leaking, even, and your hole has been in better conditions. It feels stretched and overly-sensitive, but worse, you really cannot feel your legs. They barely obey your brain, which is not good if you intended to be able to walk. Perhaps you should rest a little longer...";
 	NPCSexAftermath Player receives "AssFuck" from Elstan;
 	if Libido of Elstan is 1:
 		now Libido of Elstan is 2;
+	else if Libido of Elstan is 2:
+		if Loyalty of Elstan < 10:
+			say "     [bold type]In his own way, Elstan seems to like you more.[roman type][line break]";
+			increase Loyalty of Elstan by 1;
 
 to say WerewolfBruteLairKirnonAssWorship:
 	say "     You hear the noisy trapdoor above you open as the shadow of a muscular werewolf brute looks down on you, his flaring gaze looking like mere dots in the darkness. He says nothing as he makes eye contact with you, only coming down to grab you and jump back out with the agility of a feline, as strange as that may sound. With the dim light of the pit's torches, you are [bold type]able to recognize him as Kirnon[roman type], but he urges you to say nothing as he carries you to a more private area. This space is nothing more than a small storage room connecting to the pit, that barely anyone uses. He pushes the door open, puts you on the other side, enters and closes it back, locking it with a key he had tucked in the band of his loincloth.";
@@ -1719,6 +1798,8 @@ to say ElstanTalkGiftJett:
 		WaitLineBreak;
 		say "     'Hm... You do have a point. I can do gatekeeping. And I can do it better than him. Yeah, I'll just show him that. You know what... You're not that bad after all. Still a little bitch, and I'll still make fun of you and treat you like one, but at least I know deep down you've got a brain. That's better than most...' The way he glares at you once he says that makes you feel a little uneasy, but you thank him for his... compliments? Let us call them that, for now.";
 		say "     'Go [bold type]tell Jett[roman type] I'll be there. Just gimme a sec,' he says, before you have confirmation that your task is on its way to completion.";
+		if Loyalty of Elstan < 10:
+			increase Loyalty of Elstan by 1;
 		now Resolution of JettDominance is 3; [persuaded Elstan successfully]
 	else: [No luck there...]
 		say "     You try to reason with Elstan, but he is having none of that. He truly thinks Jett is being an asshole by doing this. 'Fuck you! And fuck him! I'm not doing any of that. Good fucking luck trying to be his little bitch, you're not getting his favor at the cost of my fucking hard work!' Well, that complicates things. You cannot really return to Jett without completing this, so... What shall you do?";
