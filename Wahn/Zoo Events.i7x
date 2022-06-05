@@ -198,8 +198,8 @@ to say ResolveEvent Tiger Trick:
 	say "     [link](3)[as]3[end link] - Sneak over to Malakhi and pull him off the branch.";
 	say "     [link](4)[as]4[end link] - Just turn around and leave.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-3)>[run paragraph on]";
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;

@@ -26,6 +26,9 @@ Figure of AlphaWolf_hard_icon is the file "AlphaWolf_hard.jpg".
 Figure of AlphaWolf_naked_icon is the file "AlphaWolf_naked.jpg".
 Figure of Amazon_icon is the file "Amazon.jpg".
 Figure of AnthroShaftBeast_icon is the file "AnthroSB_ig.jpg".
+Figure of Badger_clothed_icon is the file "Badger_clothed.jpg".
+Figure of Badger_soft_icon is the file "Badger_soft.jpg".
+Figure of Badger_hard_icon is the file "Badger_hard.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
 Figure of Beaver1_icon is the file "Beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
@@ -473,6 +476,8 @@ Figure of Mul_clothed_icon is the file "Mul_clothed.jpg".
 Figure of Mul_naked_icon is the file "Mul_naked.jpg".
 Figure of Mul_face_icon is the file "Mul_face.jpg".
 Figure of Nadia_icon is the file "FS_Nadia_ig.jpg".
+Figure of Nala_clothed_icon is the file "Nala_clothed.jpg".
+Figure of Nala_naked_icon is the file "Nala_naked.jpg".
 Figure of Nelson_clothed_icon is the file "Nelson_clothed.jpg".
 Figure of Nelson_naked_icon is the file "Nelson_naked.jpg".
 Figure of Nermine_clothed_icon is the file "Nermine_clothed.jpg".
@@ -499,6 +504,9 @@ Figure of Ronda_icon is the file "Ronda.jpg".
 Figure of Rod_icon is the file "Rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
+Figure of Ryan_pillow_icon is the file "Ryan_pillow.jpg".
+Figure of Ryan_panties_icon is the file "Ryan_panties.jpg".
+Figure of Ryan_naked_icon is the file "Ryan_naked.jpg".
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
@@ -1230,6 +1238,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Atticus_jeans_smile_arm_raised"	Figure of Atticus_jeans_smile_arm_raised_icon	"Lyttathebug"	g-black	"normal"
 "Atticus_jeans_frown_arms_crossed"	Figure of Atticus_jeans_frown_arms_crossed_icon	"Lyttathebug"	g-black	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
+"Badger clothed"	Figure of Badger_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Badger soft"	Figure of Badger_soft_icon	"SteppeCrow"	g-White	"normal"
+"Badger hard"	Figure of Badger_hard_icon	"SteppeCrow"	g-White	"normal"
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Brown Bear Female"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
@@ -1557,6 +1568,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Mul_face"	Figure of Mul_face_icon	"Kupo Klein"	g-black	"normal"
 "Nadia"	Figure of Nadia_icon	"Anymouse1968"	g-white	"normal"
 "Naga"	Figure of Naga_icon	"Rastear"	g-black	"normal"
+"Nala clothed"	Figure of Nala_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Nala naked"	Figure of Nala_naked_icon	"SteppeCrow"	g-White	"normal"
 "Nelson_clothed"	Figure of Nelson_clothed_icon	"Ticl"	g-white	"normal"
 "Nelson_naked"	Figure of Nelson_naked_icon	"Ticl"	g-white	"normal"
 "Nermine_clothed"	Figure of Nermine_clothed_icon	"Lytta"	g-black	"normal"
@@ -1602,6 +1615,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ronda"	Figure of Ronda_icon	"Ticl"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
 "Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
+"Ryan pillow"	Figure of Ryan_pillow_icon	"SteppeCrow"	g-White	"normal"
+"Ryan panties"	Figure of Ryan_panties_icon	"SteppeCrow"	g-White	"normal"
+"Ryan naked"	Figure of Ryan_naked_icon	"SteppeCrow"	g-White	"normal"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"

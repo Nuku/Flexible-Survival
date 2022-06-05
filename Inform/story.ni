@@ -895,6 +895,7 @@ Include Orc Lair by Wahn.
 Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
+Include PAN Frat Bros by Wahn.
 Include Paula by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.

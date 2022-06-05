@@ -51,6 +51,7 @@ Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
 ResolveFunction of Free Drink is "[ResolveEvent Free Drink]".
+PrereqTime of Free Drink is "Night".
 Sarea of Free Drink is "Campus".
 when play begins:
 	add Free Drink to BadSpots of MaleList;
@@ -68,7 +69,7 @@ to say ResolveEvent Free Drink:
 	say "     [link](2)[as]2[end link] - Sure! Share a drink with them before going on your way.";
 	say "     [link](3)[as]3[end link] - While you're not that thirsty right now, a party sounds like fun...";
 	say "     [link](4)[as]4[end link] - Nah, you're good. Reject the offer in a friendly way.";
-	say "     [link](5)[as]5[end link] - Actually, you'll be taking the whole barrel off their hands!";
+	say "     [link](5)[as]5[end link] - Actually, you'll be taking the whole barrel off their hands!"; [mug em - something for the assholes]
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 5:
 		say "Choice? (1-5)>[run paragraph on]";
@@ -135,7 +136,7 @@ to say Satyr Frat Party Intro:
 	say "     [bold type]What do you want to do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Violence might do the trick! Sucker-punch him to knock him out!";
 	say "     [link](2)[as]2[end link] - Make up some convincing lie to distract him.";
-	say "     [link](3)[as]3[end link] - Offering sex should be a quite distracting option for the guy.";
+	say "     [link](3)[as]3[end link] - Offering sex should be a quite distracting option for the guy. (Warning: He'll think you're a slut for future content.)";
 	say "     [link](4)[as]4[end link] - Decide not to help the satyrs get into the party.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
@@ -171,20 +172,25 @@ to say Satyr Frat Party Intro:
 		now inasituation is false;
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     The creature lets out a shriek of victory as you collapse, raising its clawed limbs and rearing up over you. This reveals a worryingly large, throbbing shaft dangling erect beneath its body. You can't really tell, with its chitin-covered and relatively immobile face, but you think that those movements of its mandibles are a cruel smile. Then it steps forward, and... you hear a crunch of breaking carapace as the frat guy suddenly steps into sight behind the thing and brings a solid tree branch down on its flank. Clearly hurt, the creature scuttles away from this new attack, almost stumbling over its compatriot that lies on the ground, two of its limbs twisted to unnatural angles. Threatening another wallop with his branch, the dude takes a step towards the two of them, which convinces the critters to flee in the opposite direction. After making sure they're properly gone, the young man helps you back to your feet.";
-			say "     When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and... er, help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how things develop in the frat house...";
+			say "     When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and... er, help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way after you introduce yourself in turn, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how things develop in the frat house...";
+			now PlayerMet of Richard is true; [introduced]
+			TraitGain "Player lost scuttler fight" for Richard;
 			now SatyrFratPartyStage is 4;
 		else if fightoutcome >= 30: [fled]
 			say "     Sometimes it's best to flee - this isn't really your fight after all. Hopefully the frat guy will take this as an attempt to draw the creature away, not you abandoning him. As you dash off, you see him giving his own weird beast a solid wallop with a thick tree branch he must have picked up somewhere. A good solid blow creating a resounding crunch as it splinters the chitin of one of the critter's legs. Your own opponent starts to chase you, letting out furious shrieks as it does so. Running as fast as you can, you hear it following you for quite a while before you finally manage to shake it from your trail. You idly wonder if your distraction tactic gave Kerr and Talov enough time to make their way into the frat house. Maybe you should return here sometime later and see how things develop in the frat house...";
+			TraitGain "Player fled scuttler fight" for Richard;
 			now SatyrFratPartyStage is 3;
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			say "     Landing another blow, you hear the crunch of breaking carapace, and your attacker scuttles backwards, holding its side from where some sticky goop oozes out of its body. Clearly hurt, the creature almost stumbles over its compatriot that lies on the ground, two of its limbs twisted to unnatural angles. The frat guy is next to that one, lifting a thick branch he must have picked up in a threatening gesture. This is enough to convince the critters to flee in the opposite direction. After making sure they're properly gone, the young man helps you back to your feet. When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how things develop in the frat house...";
+			say "     Landing another blow, you hear the crunch of breaking carapace, and your attacker scuttles backwards, holding its side from where some sticky goop oozes out of its body. Clearly hurt, the creature almost stumbles over its compatriot that lies on the ground, two of its limbs twisted to unnatural angles. The frat guy is next to that one, lifting a thick branch he must have picked up in a threatening gesture. This is enough to convince the critters to flee in the opposite direction. After making sure they're properly gone, the young man helps you back to your feet. When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way after you introduce yourself in turn, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how things develop in the frat house...";
+			now PlayerMet of Richard is true; [introduced]
+			TraitGain "Richard & Player won scuttler fight" for Richard;
 			now SatyrFratPartyStage is 2;
-		now SatyrFratRichardRelationship is 1;
+		now SatyrFratRichardRelationship is 1; [player and Richard fought the scuttlers]
 		now PlayerFriended of Kerr & Talov is true; [they like the Player because he got them in]
 	else if calcnumber is 3: [sex]
 		LineBreak;
 		say "[Richard Guard Sex]";
-		now SatyrFratRichardRelationship is 2;
+		now SatyrFratRichardRelationship is 2; [Player distracted Richard with sex]
 	else if calcnumber is 4: [change your mind]
 		LineBreak;
 		say "     Maybe it'll be for the best if the two of them won't manage to pass their infective wine to dozens of frat members here on the campus. With a well-meant suggestion of just taking their wine barrel and enjoying the contents themselves, you leave the satyrs and turn your attention back to more important matters.";
@@ -199,7 +205,33 @@ to say Satyr Frat Party Intro:
 		now Resolution of Free Drink is 1; [Player got the Satyrs in]
 		now PlayerFriended of Kerr & Talov is true; [they like the Player because he got them in]
 
+[
+instead of going east from Greek Street while "Player Introduced to PAN" is not listed in traits of Richard and SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99: [not introduced yet, Kerr & Talov got in]
+	if Daytimer is night:
+		say "     Maybe you should first find out how things went for Kerr and Talov after they slipped into the party with your help. Who knows what may have happened, after all. Best try this during the daytime, when there's less bustle going on and you can actually talk to the frat brothers...";
+	else if Daytimer is day:
+		project Figure of Richard_human_clothed_icon;
+		say "     Stepping up to the front door of the frat house, you raise a hand and knock on the hardwood door, hearing the sound of your knocks reverberate in the room beyond. As you stand there, waiting for someone to answer the door, you idly let your gaze wander over the frat house's front. It look to be quite solidly constructed, and more than a hundred years old, if you had to guess. On top of a foundation of rectangular-cut fieldstones, the three-story building itself is entirely made of some reddish-brown wood, likely varnished to protect it while retaining the natural look. While you're still taking in the architecture, a flash of movement visible through one of the fairly opaque glass elements left and right of the door draws your attention back to the entrance. Then the door is pulled open, from the inside, and you find yourself face to face with the one frat member that you encountered before, when he was guarding the front of the building.";
+		if "Richard & Player won scuttler fight" is listed in Traits of Richard or "Player lost scuttler fight" is listed in Traits of Richard:
+			say "     Richard looks at you with curiosity for who might be coming to visit the frat house, which is then quickly replaced by a smile appearing on his face as he recognizes you. 'Oh hey[if Player is not defaultnamed], [Name of Player][else]there[end if]!' he says, his expression becoming more open and welcoming instantly. 'Thanks again for your timely warning the other night. Good thing you spotted those things and we could drive them off.' Nodding to him and chatting for a little while about the creatures you fought together, you then casually swing the conversation over to the pair of friendly satyrs that you ran into earlier that day, who wanted to join the frat party, and ask if they actually did.";
+			WaitLineBreak;
+			say "[Richard_Friendly_Introduction]";
+		else if "Player fled scuttler fight" is listed in Traits of Richard:
+			say "     The guy looks at you with curiosity for who might be coming to visit the frat house, which is then quickly replaced by a smile appearing on his face as he recognizes you. 'Oh hey there!' he says, his expression becoming more open and welcoming instantly. 'Thanks again for your timely warning the other night. Good thing you spotted those things and told me about them. I'd been wondering what happened to you while I was fighting one of the creatures. Both the second thing and you just disappeared and didn't come back.' Clearing your throat, you quickly make up a halfway convincing explanation about deciding to draw away the creature to avoid them ganging up on either of you. The frat guy raises an eyebrow a little, but then gives a shrug to himself and just goes ahead to add, 'Anyways, I'm Richard, nice to talk to you!' After introducing yourself in turn, you casually bring up that you ran into a pair of friendly satyrs earlier that day who wanted to join the frat party, and ask if they actually did.";
+			WaitLineBreak;
+			say "[Richard_Friendly_Introduction]";
+		else if SatyrFratRichardRelationship is 98: [punched him - without him knowing its you]
+			say "...";
+		else if SatyrFratRichardRelationship is 99: [punched him]
+			say "...";
+		else if SatyrFratRichardRelationship is 2: [Player distracted Richard with sex]
+			say "...";
+			say "[Richard_Friendly_Introduction]";
 
+to say Richard_Friendly_Introduction:
+	say "     'Ah, you know K&T? Yeah, those two just strolled in the front door while we were... busy. '";
+	say "     ...";
+]
 
 Chapter 2 - NPCs
 

@@ -2,6 +2,18 @@ Version 1 of Richard by Wahn begins here.
 [ Originally authored by Rikaeus                     ]
 [ Version 1 - Creation of Richard the NPC            ]
 
+[ SatyrFratRichardRelationship                                ]
+[                                                             ]
+[   0: default number                                         ]
+[   1: Player and Richard fought the scuttlers                ]
+[   2: default number                                         ]
+[   3: default number                                         ]
+[   4: Richard is now a satyr                                 ]
+[  98: punched him (without him knowing it was you)           ]
+[  99: punched him                                            ]
+
+
+
 RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 
 a postimport rule:
@@ -201,8 +213,7 @@ to say Richard Guard Sex:
 		WaitLineBreak;
 		say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 		now SatyrFratPartyStage is 5;
-
-
+	now PlayerMet of Richard is true; [introduced]
 
 instead of fucking Richard:
 	if (lastfuck of Richard - turns < 3): [he got fucked in the last 9 hours = 3 turns]
