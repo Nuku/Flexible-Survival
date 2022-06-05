@@ -399,6 +399,24 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Cuddly Woman" for Amy;
 			TraitGain "Sturm - Flatterer" for Amy;
 			WaitBreakReactions;
+		[if Araqiel is booked or Araqiel is bunkered:
+			say "     ";
+			TraitGain "Araqiel - Adoptive Daughter" for Blanche;
+			TraitGain "Araqiel - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Araqiel;
+			TraitGain "Sturm - Flatterer" for Araqiel;]
+		[if Artemis is booked or Artemis is bunkered:
+			say "     ";
+			TraitGain "Artemis - Adoptive Daughter" for Blanche;
+			TraitGain "Artemis - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Artemis;
+			TraitGain "Sturm - Flatterer" for Artemis;]
+		[if Atticus is booked or Atticus is bunkered:
+			say "     ";
+			TraitGain "Atticus - Adoptive Daughter" for Blanche;
+			TraitGain "Atticus - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Atticus;
+			TraitGain "Sturm - Flatterer" for Atticus;]
 		[if Aurora is booked or Aurora is bunkered:
 			say "     ";
 			TraitGain "Aurora - Adoptive Daughter" for Blanche;
@@ -462,6 +480,12 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Combat Amateur" for Carl;
 				TraitGain "Sturm - Potential Watchmate" for Carl;
 			WaitBreakReactions;
+		[if Chirpy is booked or Chirpy is bunkered:
+			say "     ";
+			TraitGain "Chirpy - Adoptive Daughter" for Blanche;
+			TraitGain "Chirpy - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Chirpy;
+			TraitGain "Sturm - Flatterer" for Chirpy;]
 		if Chris is booked or Chris is bunkered:
 			if Libido of Chris is 0: [half-orc]
 				say "     Chris strolls over to the two wolves, admiring their pristine white fur. 'Hey there, I'm Chris. Welcome to the library,' he says, smiling. Though he shakes hands with both of them as they introduce themselves, his hand seems to linger a little as he lets go of Sturm, his eyes rapidly examining the large male wolf in a way that suggests interest rather than mere courtesy. 'I can't help but ask, but you seem like you were born the way that you are Sturm, is that right?' he asks, a flicker of hope behind his expression. 'You mean as a wolf? Yes. I can't imagine a world as bland as how Mom describes it,' Sturm laughs, Blanche playfully slapping his arm. 'It was also safer sweetie. We didn't have to scrounge for food. Well, the majority of us,' she says reproachfully. 'Yeah, the prison where I was born definitely wasn't safe. That's why daddy Val wanted me to come here,' Chris chips in. 'Well, I look forward to talking to you more Sturm. Um, you too Blanche,' he adds awkwardly before walking away, casting a look back when he thinks that no-one is looking. You hear Blanche mumble to herself, 'Are all orcs from the prison?'";
@@ -496,6 +520,13 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Blanche - Worthless" for Chris;
 					TraitGain "Sturm - Potential Slut" for Chris;
 			WaitBreakReactions;
+		if hp of Cleo > 3:
+			say "     Encouraged by her mother, Cleo reluctantly puts her book down and walks over to Blanche and Sturm to introduce herself. 'Hi. I'm Cleo. Did you lose your clothes?' your daughter asks, surreptitiously allowing her eyes to roam over their bodies nonetheless. Sturm chuckles a bit as his mother answers, 'No sweetie. I just haven't had much of an interest wearing clothes sonce this all began.' The doberman looks a little confused at the wolf MILF's answer. 'That seems a little strange, but I suppose to each their own. You seem nice enough. If you'll excuse me, I would like to go back to my book,' she eventually replies. 'Without us introducing ourselves? I'm hurt,' Sturm teases, earning a sharp look from his mother. 'Sorry, I'm Blanche and this is my son, Sturm, who seems to have forgotten that not everyone is as comfortable meeting new people, especially naked ones, as him,' she apologizes, Cleo waving a paw dismissively. 'Nah. It's fine. Good intentions and all that.' It would seem that they will get along just fine.";
+			TraitGain "Cleo - Innocent Bookworm" for Blanche;
+			TraitGain "Cleo - Hidden Pearl" for Sturm;
+			TraitGain "Blanche - Naked but Kind" for Cleo;
+			TraitGain "Sturm - Naked Extrovert" for Cleo;
+			WaitBreakReactions;
 		if Colleen is booked or Colleen is bunkered:
 			if hp of Colleen is 1: [Sane Sarah, Fluffy Colleen]
 				say "     Colleen approaches calmly, giving the wolves a once-over before introducing herself. 'Corporal Varna, pleased to meet you, but you can call me Colleen, especially as I'm not sure of Command's stance on transformed personnel,' she greets them, sticking a paw out invitingly. Sturm gives it a shake but Blanche goes in for a hug immediately, the husky chuckling and returning it cheerfully. 'More of a hugger eh? That's alright. A hug is as good as a handshake. I'm usually in the bunker down the stairs over there if you want us to get to know each other. Just stay away from the hole in the wall.' With the introduction over, Colleen heads back towards her vigil of the tunnel underground. Waving before she vanishes through the door down to the bunker. 'She seems like an interesting character. I'm not quite sure whether [']get to know each other['] was an innuendo or not,' Blanche comments, Sturm grunting his agreement. You doubt that that was what she meant, but that isn't to say that she wouldn't be willing.";
@@ -522,6 +553,12 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Modest Wolfess" for Colleen;
 				TraitGain "Sturm - Capable Stud" for Colleen;
 			WaitBreakReactions;
+		if Dash is booked or Dash is bunkered:
+			say "     The young fox rushes out of the Computer Room over to you, likely having already met the rest of Blanche's brood making themselves at home there. At first he is cautious of the two wolves beside you, but when Blanche sits on the ground and beckons him over, he tentatively approaches her. 'You like a growing boy, little fox,' she croons, gently coaxing him onto her lap and stroking him slowly along his back. 'And definitely in need of more love. You can never have too much.' Dash seems to be enjoying the attention, squeaking cheerfully as the wolfess pampers him. He seems even more enthused by the two white wolves when Sturm produces a piece of jerky from somewhere and offers it to the young vulpine. Between being smothered with affection from Blanche and her son plying him with food, you get the impression that he is going to appreciate you inviting them to the library.";
+			TraitGain "Dash - Growing Boy" for Blanche;
+			TraitGain "Dash - Cute Fox" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Dash;
+			TraitGain "Sturm - Food Provider" for Dash;
 		if David is booked or David is bunkered:
 			say "     David wanders over, curious to meet the new library residents. 'Hi there. I'm David. Due to their being a government agent, I've been assigned to aid [if Player is not defaultnamed][Name of Player][else][ObjectPro of Player][end if] for the foreseeable future so you'll probably be seeing me around,' he says, gesturing at you. 'Not that I mind really. The library is a lot more comfortable than Camp Bravo.' The soldier laughs and shakes hands with the two wolves. 'I know that not everyone is thrilled by everything that the military is doing in the city, and some of that won't be without reason, but we're the best chance anyone has of getting back to normality, so if you have any problems with me, please talk it through rather than jumping me in my sleep. I should also be able to put in a good word for you after this is all over. Anyway, I should get back to it. Come see me in the bunker if you want to talk. It gets lonely sometimes.' With that, he departs, leaving you to weather the accusatory stare from Blanche. 'You're not really a government agent are you? He seems to have a good heart, but I trust you enough to keep your secret.'";
 			TraitGain "David - Naive Soldier" for Blanche;
@@ -546,6 +583,12 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Pristine Fur" for Denise;
 			TraitGain "Sturm - Barely Met" for Denise;
 			WaitBreakReactions;
+		if Dinah is booked or Dinah is bunkered: [Cat]
+			say "     Feeling something brush up against you legs, you look down to see Dinah, the cat, rubbing up against you and peering suspiciously at Blanche and Sturm. The male wolf seems largely disinterested in the dometic feline, but Blanche, perhaps remembering her life before the nanite apocalypse, crouches down and attempts to entice the pet towards her. Torn between caution and curiosity, Dinah eventually decides that she can at least give the wolfess['] finger tips a sniff and a lick, relaxing against her touch as Blanche begins to pet the cat from head to tail, a sad smile on her face. 'It has been a while since I last saw a normal cat, as funny as that sounds. There's something relaxing about these moments of normality,' she sighs, scratching her new friend beneath the chin before standing up again. Sturm settles for waving at the cat, receiving an unimpressed stare in return.";
+			TraitGain "Dinah - Memory of Normality" for Blanche;
+			TraitGain "Dinah - Cat" for Sturm;
+			TraitGain "Blanche - Worth Knowing" for Dinah;
+			TraitGain "Sturm - Large White Thing" for Dinah;
 		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
 			if HP of Elijah is 99: [evil]
 				say "     Studying the two wolves for a moment, Elijah states, 'I see you got yourself a breeding bitch. I don't suppose you'd mind if I took her for a ride.' As he reaches towards her, Sturm bats his hand aside and glares at the angel. 'Leave my mother alone,' he growls. Elijah scowls at having his fun interfered with, clenching his fists as though about to fight back. However, after a few seconds he laughs darkly and opens his hands again. 'Your mother ought to have taught you not to strike your betters, but I'm sure that I can teach you this lesson personally at a later point. Perhaps I'll collar you and make you my bitch too. Make you watch as I break you both,' the fallen angel replies with a smirk. 'You and I will be getting well acquainted soon...' he taunts before turning on his heel and striding away to terrorise someone else. 'He scares me,' Blanche mumbles, her son hugging her reassuringly as he replies, 'Ignore him. I won't let anything happen to you, and father has promised to look after us here anyway.' Sturm fixes you with a stare to make sure he has got his point across."; [egotistical, lustful]
@@ -560,13 +603,6 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Good Heart" for Elijah;
 				TraitGain "Sturm - Devoted Son" for Elijah;
 			WaitBreakReactions;
-		[if Equinoid Warrior is booked or Equinoid Warrior is bunkered: [Liliana]
-			say "     ";
-			TraitGain "Liliana - Rape Threat" for Blanche;
-			TraitGain "Liliana - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Liliana;
-			TraitGain "Sturm - Ready Slut" for Liliana;
-			WaitBreakReactions;]
 		if Eric is booked or Eric is bunkered:
 			if HP of Eric > 0 and HP of Eric < 21: [Regular Cuntboy]
 				say "     Approaching Blanche and Sturm, Eric gives the two of them a cautious smile before stopping a few feet away and giving a shy wave. 'Hi, I'm Eric. I saw some other wolves going into the computer lab and I wondered whether they were yours,' he softly asks. Eager to talk about her children, Blanche's smile widens as she replies to the student. 'They are. My family is very important to me so I didn't want to leave any of them behind. What a polite young man you are.' At this moment, possibly catching Eric's scent, the wolf MILF looks confused. 'I apologize. I was sure you were male, but my nose is picking up something else. Was I wrong?' she asks. Eric sighs before responding. 'You're not wrong, but neither is your nose. I got transformed a bit before coming here from the college.' Perhaps sensing that this is a sensitive point of discussion, Sturm steps forward with his hand out, the student automatically putting his own hand out for the two of them to shake hands. 'I'm Sturm and this is my mother, Blanche,' he explains, redirecting the conversation. 'I'd love to hear about what you were studying if you ever have the time, or anything else you want to talk about,' Blanche chips in with a reassuring expression. 'Me too,' Sturm adds. 'Sure. I'll let you settle in first though,' Eric says before briefly saying hello to you and disappearing again.";
@@ -594,6 +630,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Praised Me" for Erica;
 			TraitGain "Sturm - Attracted" for Erica;
 			WaitBreakReactions;
+		[if Fallen King is booked or Fallen King is bunkered:
+			say "     ";
+			TraitGain "Fallen King - Rape Threat" for Blanche;
+			TraitGain "Fallen King - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Fallen King;
+			TraitGain "Sturm - Ready Slut" for Fallen King;
+			WaitBreakReactions;]
 		if HP of Fiona > 4:
 			say "     Fiona stalks over on all fours and begins to rub up against Blanche and Sturm's legs, purring loudly. You are mildly surprised at how friendly she seems to be when, as far as you know, the catgirl has never met them before, but eventually dismiss it as just being her natural good temperament. As Sturm bends down to pat her, she twists out of the way of his descending hand and retreats to a safe distance before rolling on her back and writhing around playfully. 'I was always more of a canine person, but a cat is fine too,' Blanche giggles as she looks over at Fiona. Behind his mother, you can see Sturm inconspicuously trying to hide a developing erection, the catgirl seemingly having quite the effect on him, likely due to pheromones or possibly due to the way in which the feline is nearly constantly displaying her pussy as she rolls around. Eventually, seeing that no-one is going to be enticed into approaching her, Fiona disappears into a shadowy corner again and vanishes from sight. 'I hope she'll let us stroke her next time,' Sturm mumbles, his mother giving him a reassuring smile. You are not so sure. Fiona is rather mercurial.";
 			TraitGain "Fiona - Cat is Fine Too" for Blanche;
@@ -614,6 +657,20 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Gobby - Ready Slut" for Sturm;
 			TraitGain "Blanche - Rape Threat" for Gobby;
 			TraitGain "Sturm - Ready Slut" for Gobby;
+			WaitBreakReactions;]
+		[if Gregory is booked or Gregory is bunkered:
+			say "     ";
+			TraitGain "Gregory - Rape Threat" for Blanche;
+			TraitGain "Gregory - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Gregory;
+			TraitGain "Sturm - Ready Slut" for Gregory;
+			WaitBreakReactions;]
+		[if Gwen is booked or Gwen is bunkered:
+			say "     ";
+			TraitGain "Gwen - Rape Threat" for Blanche;
+			TraitGain "Gwen - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Gwen;
+			TraitGain "Sturm - Ready Slut" for Gwen;
 			WaitBreakReactions;]
 		if Hadiya is booked or Hadiya is bunkered:
 			say "     'Oh look. Another bitch not strong enough to defend herself,' Hadiya drawls as she circles around the wolves. 'That's alright. I'm more than happy to protect what's mine. All you have to do is beg.' Seeing that the hyena is making Blanche uncomfortable, which is in turn putting Sturm on edge to defend his mother, you clear your throat loudly to get Hadiya's attention. In her typical fashion, she barely recognizes your presence but seems to have enough sense to know not to push this issue. 'I'm just kidding. I live here too now and I definitely ain't no helpless bitch,' she mutters as she stalks off, shouting a quick apology over her shoulder before disappearing through a door, likely back to her guitar.";
@@ -671,6 +728,20 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Affectionate MILF" for Joey;
 			TraitGain "Sturm - Friendly Wolf" for Joey;
 			WaitBreakReactions;]
+		if Karen is booked or Karen is bunkered:
+			say "     Karen trots over to sniff at the newcomers, her tail wagging as Blanche crouches to pat her. 'I'm Blanche and this is Sturm, my son. I have the urge to tell you what a good girl you are, but I'm sure you already knew that,' the wolfess says cheerfully. 'That, and she isn't feral,' Sturm mutters, kneeling down to join in running his hands through the retriever's thick coat. 'It doesn't hurt to be reminded from time to time,' Karen laughs, enjoying the attention. You look like you've kept yourself in good condition despite the state of the city. Did you find somewhere safe?' Blanche asks, standing up again, her son following suit a moment later. 'Yes and no,' the dog-woman replies. 'My dog sort of took me hostage and felt that I belonged only to him. I was protected for the most part, but Rex was horribly controlling and made me his bitch. I nearly accepted this before my saviour came along,' she continues, nodding towards you. 'I'm very sorry that you had to go through that,' Blanche responds sympathetically. 'People like that don't deserve mates,' Sturm growls in agreement, getting approving looks from the two women. 'Thank you. I'll be sure to catch up with you again after you have settled in,' Karen says before walking away again.";
+			TraitGain "Karen - Abuse Victim" for Blanche;
+			TraitGain "Karen - Mistreated Retriever" for Sturm;
+			TraitGain "Blanche - Sympathetic Wolfess" for Karen;
+			TraitGain "Sturm - White Knight" for Karen;
+			WaitBreakReactions;
+		[if Katherine is booked or Katherine is bunkered:
+			say "     ";
+			TraitGain "Katherine - Rape Threat" for Blanche;
+			TraitGain "Katherine - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Katherine;
+			TraitGain "Sturm - Ready Slut" for Katherine;
+			WaitBreakReactions;]
 		if Klauz is booked or Klauz is bunkered:
 			say "     Klauz saunters over to the wolves and begins to circle around them, purring as he begins to rub up against their sides, spreading his scent. 'Oh my. What a friendly lion you are, and so handsome,' Blanche croons, putting one hand down to run through his mane, the felinoid's pheromones influencing her nearly immediately. Sturm's face twists with confusion as his nose twitches. Suddenly, his eyes widen and he clenches his claws into the palm of his hand, while grabbing his mother by the arm with the other hand and sharply pulling her away from the feline. 'You're hurting me! What do you think you're...' she scolds him, before he digs his claws into her elbow, the pain seemingly overwhelming the dulling effect of the pheromones. As her head clears, Blanche looks embarrassed, while her son glares at Klauz. 'I've met your kind in the park before and Diego was kind enough to teach me some tricks. Stay away from my Mom. The rest of my family too,' Sturm growls, the felinoid growling back before slinking away. Blanche hugs her son while you wonder whether this might have escalated if you weren't there..."; [rubbing up against them, trying to entrance them (might be quite effective with Blanche, a bit much for Sturm?)]
 			TraitGain "Klauz - Enticing Pheromones" for Blanche;
@@ -692,6 +763,13 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Fertile MILF" for Korvin;
 				TraitGain "Sturm - Interfering Wolf" for Korvin;
 			WaitBreakReactions;
+		[if Liliana is booked or Liliana is bunkered: [Equinoid Warrior]
+			say "     ";
+			TraitGain "Liliana - Rape Threat" for Blanche;
+			TraitGain "Liliana - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Liliana;
+			TraitGain "Sturm - Ready Slut" for Liliana;
+			WaitBreakReactions;]
 		[if Macadamia is booked or Macadamia is bunkered:
 			say "     ";
 			TraitGain "Macadamia - Rape Threat" for Blanche;
@@ -712,13 +790,6 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Meredith - Ready Slut" for Sturm;
 			TraitGain "Blanche - Rape Threat" for Meredith;
 			TraitGain "Sturm - Ready Slut" for Meredith;
-			WaitBreakReactions;]
-		[if Mouse Girl is booked or Mouse Girl is bunkered: [Rachel]
-			say "     ";
-			TraitGain "Rachel - Rape Threat" for Blanche;
-			TraitGain "Rachel - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Rachel;
-			TraitGain "Sturm - Ready Slut" for Rachel;
 			WaitBreakReactions;]
 		if Nadia is booked or Nadia is bunkered:
 			say "     Fluttering over to you, Nadia gingerly greets the two wolves. 'Hello. I hope that we can get along. P-please leave my eggs alone and don't hurt my chicks,' she shyly asks, barely looking up from her feet. Crouching slightly so as not to look as threatening, Blanche replies, 'One mother to another, you have my word. You may have seen my other children when we first arrived and I don't know what I would do if they were harmed. I'm Blanche and this is my son, Sturm. I wouldn't mind discussing our children and motherhood with you at a later time either. Whenever it is convenient for you, of course.' Nadia looks up and meets her eyes, the excitement of a kindred spirit greater than her natural meekness. Sturm makes to agree with the request too, but the bird's attention is entirely on Blanche, a kinship forming between the two mothers. 'I was a little scared at first, but I look forward to talking with you more. I'll let you settle in first. I don't suppose you like gardening too?' Nadia asks, looking a little downcast when the wolves shake their heads. 'I can give it a try though,' Blanche cuts in, much to Nadia's delight. 'See you later then,' she says before walking away again.";
@@ -754,12 +825,26 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Witty Wolf" for Paula;
 			TraitGain "Sturm - Toned Wolf" for Paula;
 			WaitBreakReactions;
+		[if Peppy is booked or Peppy is bunkered: [Skunk Kit]
+			say "     ";
+			TraitGain "Peppy - Rape Threat" for Blanche;
+			TraitGain "Peppy - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Peppy;
+			TraitGain "Sturm - Ready Slut" for Peppy;
+			WaitBreakReactions;]
 		[if Philip is booked or Philip is bunkered:
 			say "     ";
 			TraitGain "Philip - Rape Threat" for Blanche;
 			TraitGain "Philip - Ready Slut" for Sturm;
 			TraitGain "Blanche - Rape Threat" for Philip;
 			TraitGain "Sturm - Ready Slut" for Philip;
+			WaitBreakReactions;]
+		[if Rachel is booked or Rachel is bunkered: [Mouse Girl]
+			say "     ";
+			TraitGain "Rachel - Rape Threat" for Blanche;
+			TraitGain "Rachel - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Rachel;
+			TraitGain "Sturm - Ready Slut" for Rachel;
 			WaitBreakReactions;]
 		[if Ranae is booked or Ranae is bunkered:
 			say "     ";
@@ -775,19 +860,12 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Exquisite Beauty" for Rane;
 			TraitGain "Sturm - Wolf Warrior" for Rane;
 			WaitBreakReactions;
-		if Retriever Girl is booked or Retriever Girl is bunkered: [Karen]
-			say "     Karen trots over to sniff at the newcomers, her tail wagging as Blanche crouches to pat her. 'I'm Blanche and this is Sturm, my son. I have the urge to tell you what a good girl you are, but I'm sure you already knew that,' the wolfess says cheerfully. 'That, and she isn't feral,' Sturm mutters, kneeling down to join in running his hands through the retriever's thick coat. 'It doesn't hurt to be reminded from time to time,' Karen laughs, enjoying the attention. You look like you've kept yourself in good condition despite the state of the city. Did you find somewhere safe?' Blanche asks, standing up again, her son following suit a moment later. 'Yes and no,' the dog-woman replies. 'My dog sort of took me hostage and felt that I belonged only to him. I was protected for the most part, but Rex was horribly controlling and made me his bitch. I nearly accepted this before my saviour came along,' she continues, nodding towards you. 'I'm very sorry that you had to go through that,' Blanche responds sympathetically. 'People like that don't deserve mates,' Sturm growls in agreement, getting approving looks from the two women. 'Thank you. I'll be sure to catch up with you again after you have settled in,' Karen says before walking away again.";
-			TraitGain "Karen - Abuse Victim" for Blanche;
-			TraitGain "Karen - Mistreated Retriever" for Sturm;
-			TraitGain "Blanche - Sympathetic Wolfess" for Karen;
-			TraitGain "Sturm - White Knight" for Karen;
-			WaitBreakReactions;
-		[if Rubber Tigress is booked or Rubber Tigress is bunkered: [Artemis]
+		[if Ranfer is booked or Ranfer is bunkered:
 			say "     ";
-			TraitGain "Artemis - Rape Threat" for Blanche;
-			TraitGain "Artemis - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Artemis;
-			TraitGain "Sturm - Ready Slut" for Artemis;
+			TraitGain "Ranfer - Rape Threat" for Blanche;
+			TraitGain "Ranfer - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Ranfer;
+			TraitGain "Sturm - Ready Slut" for Ranfer;
 			WaitBreakReactions;]
 		if Ryousei is booked or Ryousei is bunkered:
 			say "     Ryousei walks up to the pair with measured steps before giving them a cordial nod, respectful but fairly shallow. 'Welcome. I assume that you are the mother of the other wolves that I saw earlier?' he addresses Blanche. 'Yes. I love them to pieces. I'm Blanche,' the wolfess replies, curtseying slightly. 'And I take it that you are her eldest son?' the tiger continues, turning to Sturm. Nodding, he replies, 'Sturm. Pleased to meet you.' 'The honor is mine. My name is Ryousei. Do please tell me if you would be interested in sparring at some point. While I'm sure that your current combat technique has served you so far, there is always room for improvement, especially when I have seen how some within this world fight,' the tiger offers. 'I would really appreciate that, thank you. Whatever I need to do to keep my family safe,' Sturm replies, causing a frown to spread across Ryousei's face. 'Careful that you don't sacrifice too much, no matter how noble your goal,' he rumbles, making the wolf flinch back. 'I'm not going to sell my soul or anything like that. Nothing that would make Mom ashamed of me. I just meant that this might not be a chance that I get again,' Sturm mumbles. 'Ah. You have my apologies then. Too many warriors place martial prowess above moral integrity and I do not wish to start a student on the path to corruption,' Ryousei apologizes. 'I expect to see you soon. By your leave Matron Blanche,' the tiger excuses himself and bows before striding away "; [respectful of the 'matron' and whatnot]
@@ -796,6 +874,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Caring Matron" for Ryousei;
 			TraitGain "Sturm - Enthusiastic Student" for Ryousei;
 			WaitBreakReactions;
+		[if Sally is booked or Sally is bunkered:
+			say "     ";
+			TraitGain "Sally - Rape Threat" for Blanche;
+			TraitGain "Sally - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Sally;
+			TraitGain "Sturm - Ready Slut" for Sally;
+			WaitBreakReactions;]
 		[if Sam is booked or Sam is bunkered:
 			say "     ";
 			TraitGain "Sam - Rape Threat" for Blanche;
@@ -817,6 +902,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Possible Nymphomaniac" for Sarah;
 			TraitGain "Sturm - Son of a Sex Maniac" for Sarah;
 			WaitBreakReactions;
+		[if Segis is booked or Segis is bunkered:
+			say "     ";
+			TraitGain "Segis - Rape Threat" for Blanche;
+			TraitGain "Segis - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Segis;
+			TraitGain "Sturm - Ready Slut" for Segis;
+			WaitBreakReactions;]
 		if Serenity is booked or Serenity is bunkered:
 			say "     Serenity slithers down the stairs and over to your small group, a book clasped in one of her hands. 'I thought that I heard talking. Have you invited some more people to live with us?' she addresses you. You quickly explain the events leading up to Blanche and her family moving in before giving them a chance to properly introduce themselves. 'Hello. I'm Blanche and this is my son Sturm. It's a pleasure to meet you,' Blanche cheerfully says, leaning in and giving the naga hybrid a warm hug. 'Mmm. You're warm... You may call me Serenity, but don't you know that you should be careful giving snakes hugs? We can be pretty competitive about it,' she warns, teasingly encircling one of the wolfess['] legs with the end of her tail. 'You might not win. With how much Mom cuddles me and my brothers and sisters, she is highly proficient,' Sturm adds, his eyes being drawn to the spots on the naga's hood. Smiling at how sweet his comment was, the two women end their embrace and, after a quick discussion about family, Serenity slips off to return her book while Blanche cuddles her son against her side. You wonder to yourself when the naga plans on mentioning that she is skilled at hypnotism...";
 			TraitGain "Serenity - Cuddle Rival" for Blanche;
@@ -844,6 +936,20 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Fluffy Wolfess" for Sidney;
 				TraitGain "Sturm - Curious Wolf" for Sidney;
 			WaitBreakReactions;
+		[if Skarnoth is booked or Skarnoth is bunkered:
+			say "     ";
+			TraitGain "Skarnoth - Rape Threat" for Blanche;
+			TraitGain "Skarnoth - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Skarnoth;
+			TraitGain "Sturm - Ready Slut" for Skarnoth;
+			WaitBreakReactions;]
+		[if Snips is booked or Snips is bunkered:
+			say "     ";
+			TraitGain "Snips - Rape Threat" for Blanche;
+			TraitGain "Snips - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Snips;
+			TraitGain "Sturm - Ready Slut" for Snips;
+			WaitBreakReactions;]
 		if Snow is booked or Snow is bunkered:
 			say "     Rubbing her hands on her front to ensure that they're sufficiently clean, Snow walks over to you and sticks a hand out in greeting. 'Hey there. I'm Snow. Sort of the handy-herm of the place. And who might you be?' she introduces herself with a friendly smile. 'Blanche, and this is Sturm, my eldest son,' the wolfess replies, shaking the squirrel's hand before pulling her for a hug. 'Oh my. They certainly grow them big where you're from. And friendly. Do you make a habit of hugging people that you've only just met?' Snow laughs, awkwardly returning the embrace and shifting uncomfortably as he shaft begins to stir. 'Pretty much. I find a handshake rather impersonal. Acceptable for business, but not for gratitude or affection,' comes the reply as Blanche releases her and steps back. By comparison, Sturm settles for a firm handshake, the wolf and the squirrel inspecting each other. 'Strong silent type?' Snow asks. 'Not at all. Just imagining what you would look like being chased up a tree,' Sturm replies. 'First of all, rude. Second, I'd look as majestic as always. Thirdly, I think that I'd just pound some sense into you instead.' The wolf chuckles at the herm squirrel's response, looking at her with a new respect. 'I'll refrain from testing that. At least for now,' he says, making Snow smirk. 'Anyway. I'll see you two later. Let mister loud mouth here settle in. Nice meeting you.' With that, the [']handy-herm['], as she seems to have styled herself, wanders off back to her makeshift workshop. 'I wonder about you sometimes...' Blanche mumbles, her son merely snorting in reply.";
 			TraitGain "Snow - Handy-Herm Squirrel" for Blanche;
@@ -927,12 +1033,26 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Rape Threat" for Vanessa;
 			TraitGain "Sturm - Ready Slut" for Vanessa;
 			WaitBreakReactions;]
+		[if Velos is booked or Velos is bunkered:
+			say "     ";
+			TraitGain "Velos - Rape Threat" for Blanche;
+			TraitGain "Velos - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Velos;
+			TraitGain "Sturm - Ready Slut" for Velos;
+			WaitBreakReactions;]
 		[if Voria is booked or Voria is bunkered:
 			say "     ";
 			TraitGain "Voria - Rape Threat" for Blanche;
 			TraitGain "Voria - Ready Slut" for Sturm;
 			TraitGain "Blanche - Rape Threat" for Voria;
 			TraitGain "Sturm - Ready Slut" for Voria;
+			WaitBreakReactions;]
+		[if Xaedihr is booked or Xaedihr is bunkered:
+			say "     ";
+			TraitGain "Xaedihr - Rape Threat" for Blanche;
+			TraitGain "Xaedihr - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Xaedihr;
+			TraitGain "Sturm - Ready Slut" for Xaedihr;
 			WaitBreakReactions;]
 		if Xerxes is booked or Xerxes is bunkered:
 			say "     Xerxes runs over, excited about seeing new people and desperate to properly identify their scent. Almost pressing his nose into the wolves['] thick white fluff, the humanified dog inhales their scent while they hesitantly pat his head. 'Is he alright? This is canine behavior...' Blanche haltingly asks. You explain that the nanites seem to have done the opposite to him than they have to everyone else, turning a dog into a human. Though it boosted his intelligence beyond what it used to be, the canine instincts are still strong. Accepting your story, she becomes more comfortable at treating Xerxes like a dog, rubbing the back of his neck and under his chin while he sniffs at Sturm's crotch[if Lust of Xerxes > 3]. 'New friend?' he suddenly asks, followed by a happy bark as Blanche says, 'Definitely, you seem to be a good boy,' Sturm agreeing a moment later[end if]. As they stop patting him, gives them both a lick on the hand and shuffles away cheerfully.";
@@ -1013,7 +1133,7 @@ Asshole Depth of Blanche is 8. [inches deep for anal fucking]
 Asshole Tightness of Blanche is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Blanche is 0. [number of cocks]
 Cock Girth of Blanche is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Blanche is 0. [10 Inches]
+Cock Length of Blanche is 0. [0 Inches]
 Ball Count of Blanche is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Blanche is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Blanche is 1. [number of cunts]
@@ -1155,7 +1275,7 @@ Instead of conversing the Blanche:
 
 to say blanche_pups_intro:
 	say "     You are met by a large, intimidating white wolf standing inside the rear foyer to the office building, standing just inside the back door. He stands with his thick arms crossed and gives you a stern glare as he blocks the entrance. Given his similarity to Blanche, you assume that the two must know each other somehow and begin to wonder whether he will let you pass until you watch as his nose twitchs upon inhaling your scent followed by his eyes widening. He hastily steps aside to let you enter, though the look he gives you isn't entirely warm, almost reproachful. Eager to see Blanche again, you rush down the stairs.";
-	say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area. Blanche is there as well and seems safe and sound. If anything, she's happier and more relaxed than ever. She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you. 'My darling. You're back! Come meet my lovely pups. You met Sturm already. He's the one on guard duty. Such a big, brave boy. Mamma's favorite.' Blanche is quite cheerful and introduces the three other pups to you. They nod respectfully to you, but they clearly defer to their mother.";
+	say "     You find three more new white wolves in the basement office area, though not as big and burly as the one upstairs in the basement office area. Blanche is there as well and seems safe and sound. If anything, she's happier and more relaxed than ever. She busy directing the other wolves around, getting them to reorganize some of the furniture to make more space, when she notices you. 'My darling. You're back! Come meet my lovely pups. You met Sturm already. He's the one on guard duty. Such a big, brave boy. Mamma's favorite.' Blanche is quite cheerful and introduces the three other pups to you as Bianca, Ernest, and Claude. They nod respectfully to you, but they clearly defer to their mother.";
 	now HP of Blanche is 8;
 	if debugactive is 1:
 		say "DEBUG| Post-intro values:[line break]";
@@ -1416,7 +1536,64 @@ Definition: Blanche is gravid:
 	if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13, yes;
 	no;
 
-Section 3 - Endings
+Section 3 - Office Den Events
+
+instead of navigating Office Den while (Charisma of Blanche is 0 and HP of Blanche > 7 and "Blanche - OfficeEvent" is not listed in traits of Blanche):
+	say "[NavCheck Office Den]";
+	if NavCheckReturn is false, stop the action;
+	move player to Office Den;
+	say "[OfficeBlancheFamilyEvents]";
+
+to say OfficeBlancheFamilyEvents:
+	if "Sturm - OfficeEvent" is not listed in traits of Sturm:
+		say "     Encountering Sturm guarding the door again, you are surprised when instead of letting you pass, he grabs you and pushes you against the wall, the shock momentarily robbing you of the ability to resist. 'Each time you return here, you put us all in danger,' the wolf growls, releasing your shoulder and pacing back and forth angrily. 'Anyone could be watching you and some of them might follow you and discover us. Mom and the others might be more forgiving of the risk that you pose, but make up your mind whether you want to stay and help care for us, or stop coming back. After letting Mom know of course. She'd probably want to go out looking for you if you suddenly stopped coming to see her.' He pauses berating you to scan the surrounding area again, ears pricked and nose quivering as his eyes slowly travel across the the hellscape. Content that there is no immediate danger, he turns back to you, but is promptly interrupted by the door to the building opening and two other wolves exit. It takes you a moment to recognize them as Bianca and Ernest, during which time they walk over to you and Sturm.";
+		say "     'I'm told that you're harrassing Mom's mate,' Ernest says tiredly, pinching the bridge of his nose as he does so. '[SubjectProCap of Player] endangers us no more than any of us returning from scavenging.' 'Really Bianca? You told on me to Brainy?' the large white wolf grumbles. 'Sorry. But I think, we all think, that you're wrong about [ObjectPro of Player]. I didn't want to tell Mommy, so Ernest seemed the next best thing. And don't call him names. It's mean,' Bianca retorts. Sighing, Sturm turns to his brother. 'Sorry Ernest. Bianca's right. What can I do to make it up to you?' The smaller male wolf thinks for a moment before replying, 'I shall take being called Brainy as a compliment, but when you have the time, could you help me work out? It is an area that I am lacking in.' With a nod, Sturm agrees tot his before turning back to you. 'Go in before Mommy comes out here too. And don't mention any of this to her. Please?' the large wolf almost pleads, looking a lot less intimidating after his scolding from his brother and sister. Not wanting to cause problems, you consent before going through the door.";
+		TraitGain "Sturm - OfficeEvent" for Sturm;
+	else if "Bianca - OfficeEvent" is not listed in traits of Bianca:
+		say "     A shout of greeting catches your attention as you approach Blanche's office den and you turn around to find Bianca, her eldest daughter, running toward you, her chest jiggling with each step. As she comes to a stop in front of you, she clutches her breasts and puffs, 'Thank goodness the nanites provide support. From what Mommy says, having large breasts was frequently uncomfortable when she was a human.' 'And you're telling [ObjectPro of Player] this, why?' Sturm grumbles, walking up behind her carrying what you assume to be both of the bags that their bags filled with scavenged food, water, and what looks like an old portable military radio, albeit damaged. 'Just making conversation dear brother, and I doubt that Mommy will mind. She wasn't ashamed to tell me so I don't see why she would be concerned about me mentioning it to [if player is female]our other mommy [else]Daddy [end if]too,' Bianca replies. The male wolf merely rolls his eyes before patting her head and muttering that he will continue to carry her spoils so that she is free to talk to you.";
+		say "     The three of you are greeted back at the den by Blanche's third son, Claude. While not nearly as physically imposing as his eldest brother, he does appear to be taking sentry duty seriously, waving to you but continuing to scan the city around you as you approach, just in case. When you reach him, Sturm glances around quickly before giving a nod, allowing him to relax. 'Good job Claude,' Sturm says, those few words causing his brother's tail to wag excitedly. 'As good as you?' he replies. 'Well, assuming that no-one slipped past you and carried Mom off, yes I would say so, but don't tell anyone else that I said that or you might become Mommy's new favorite and then I'll have to feed you to the xeno drones,' the muscular wolf teasingly shoots back with a grin. It would seem that Sturm is quite a different person with you than he is with the rest of his family, making you a little disappointed. Maybe one day he will treat you the same way. Deciding to leave them to their conversation, you enter the office as Bianca complains about having to lug back the radio that they found for Ernest, her elder brother playing along good-naturedly despite the visible evidence otherwise.";
+		TraitGain "Bianca - OfficeEvent" for Bianca;
+	else if "Ernest - OfficeEvent" is not listed in traits of Ernest:
+		say "     You are surprised to find Ernest sitting on the ground outside the office den dismantling the radio that you saw Sturm and Bianca bring back last time[if daytimer is night] using a head-lamp for light[end if], Claude's attention split between curiously observing his brother's activity and watching for threats in the surrounding area. When you greet them, Claude runs over to give you a hug while his brother barely musters a wave of a hand, his attention solely on completing a diagram on a clipboard. 'Don't worry about him, he doesn't split his attention very well. He can't fix it, but he wants to understand how it works so he assembles and disassembles it over and over again. Let him finish his scribbling and talk to me instead,' the younger wolf says, enjoying his contact with you. Accepting his request, you ask him how he has been before telling him a little about your time in the city while his eyes widen with excitement and his tail wags behind him. Eventually, Ernest finishes his notes and joins the conversation too.";
+		say "     'Mommy is asleep and I didn't want to disturb her,' he replies when you ask why he is outside rather than using a table within the den. 'She's joined me in taking the radio to pieces a few times, but I don't know how much of that is because it is something that I am interested in and she is using it as a chance to spend time with me, but none of the others seem to hold a conversation with me about it as well as her. Probably due to the wisdom of age or something, but I don't know what I would do without her. She suggested that when our home is more secure that I might go to the college, but I doubt that that will ever happen. Here isn't exactly a safe place to raise a family,' Ernest informs you somberly. Claude pats his brother on the shoulder reassuringly, but the conversation seems to halt. Eventually, you decide to go inside, hoping that Blanche will have finished her nap.";
+		TraitGain "Ernest - OfficeEvent" for Ernest;
+	else if "Claude - OfficeEvent" is not listed in traits of Claude:
+		say "     A nearby commotion attracts your attention as you traverse the hellscape of the Capitol District, the sound of loud voices and jeering piquing your curiosity. Nonetheless, you remain cautious as you peer around the corner of a crumbling wall to see who or what is in such high spirits. The sight before you makes your heart drop. Your son with Blanche, Claude, has been backed into a corner by a group of three orc slavers who seem to have roughed him up a bit, judging from the flecks of blood on his face and dirt matting his fur, and are now planning on having their way with him. Despite being outnumbered and, frankly, outmatched, he stubbornly remains prepared to defend himself. Concerned as to what has become of Ernest, you realize that you can't be far from the Office Den and consider whether or not you should go and get help. Any thought of leaving are dispelled when the largest of the orcs ignores Claude's exhausted punches and backhands him, slamming his back into a wall and causing him to slump to the ground, stunned. You're going to make them regret this personally.";
+		say "     Stepping out of cover, you shout a challenge to them just as Sturm and Bianca charge around the corner a few meters away, growling with their fur on end. Though startled, the orcs recover quickly to this shift in circumstance, the leader of the group directing his subordinates to intercept your rescue party while he moves towards Claude, likely to carry him off. You hadn't realized just how large Sturm was, but when he and an orc square of against each other, you notice that they are much of a size, the two circling around and snarling before lunging for each other. Bianca by comparison looks a little more out of her depth, a look of relief crossing her face as you aid her in staring down her adversary, Sturm giving you a nod of gratitude when he manages to knock the orc back a few steps. You can hear Claude struggling against the final orc, hindering his attempts to abduct him and motivating you to end this fight as quickly as possible.";
+		WaitLineBreak;
+		say "     What follows is a brutal display of the bonds between family, you, Sturm, and Bianca managing to overwhelm your foes within seconds in order to save Claude from a terrible fate, a feat that you are not sure that you would manage to repeat in any other circumstance. As you prepare to advance on the leader of the slavers, you spot movement behind him. Perhaps fueled by adrenaline, Ernest swings his scavenging-bag with all his might into the jaw of the unprepared orc with a metallic crunch. Managing to stay upright for a moment, the brute eventually topples over in the dirt at the wolf's feet. With the battle over, Sturm and Blanche rush forwards and hug their siblings, the threat of what might have happened had they failed weighing on them as they embrace, beckoning you to join them too. When he is released, Claude tentatively takes the bag of Ernest and peers inside, gasping at what he sees. 'You hit him with your radio,' he mumbles, tipping the bent fragments onto the ground.";
+		say "     'You did this... for me? But you said-' Claude continues, before Ernest cuts him off. 'I know what I said, but it would seem that I really did care more about you than it.' Ernest sighs and hugs his brother again. 'I'm sorry that I said such a horrible thing especially when it made you run off and have this happen to you. I have no excuses, I'm sorry,' he says, fighting back tears. 'I shouldn't have argued with you either,' Claude replies before the two of them release each other and look venemously at the fallen orcs. As they take a step towards them, Sturm and Bianca exchange a look and put out an arm to stop their brothers. 'We don't have time to get revenge,' Sturm says gently, earning a scowl from Ernest. 'They could wake up again soon, and if they follow us, they may find Mommy,' Bianca joins in, understanding dawning on Claude's face. Wasting no further time, but grumbling nonetheless, the five of you disappear down the side of a building and take a convoluted route back to the Office Den, agreeing to let Sturm decide how best to tell Blanche about what had happened.";
+		TraitGain "Claude - OfficeEvent" for Claude;
+	[else if "Penelope - OfficeEvent" is not listed in traits of Penelope:
+		say "     ";
+		say "     ";
+		TraitGain "Penelope - OfficeEvent" for Penelope;
+	else if "Wendis - OfficeEvent" is not listed in traits of Wendis:
+		say "     ";
+		say "     ";
+		TraitGain "Wendis - OfficeEvent" for Wendis;
+	else if "Bernard - OfficeEvent" is not listed in traits of Bernard:
+		say "     ";
+		say "     ";
+		TraitGain "Bernard - OfficeEvent" for Bernard;
+	else if "Maeve - OfficeEvent" is not listed in traits of Maeve:
+		say "     ";
+		say "     ";
+		TraitGain "Maeve - OfficeEvent" for Maeve;
+	else if "Lumi - OfficeEvent" is not listed in traits of Lumi:
+		say "     ";
+		say "     ";
+		TraitGain "Lumi - OfficeEvent" for Lumi;
+	else if "Casper - OfficeEvent" is not listed in traits of Casper:
+		say "     ";
+		say "     ";
+		TraitGain "Casper - OfficeEvent" for Casper;
+	else if "Blanche - OfficeEvent" is not listed in traits of Blanche:
+		say "     ";
+		say "     ";
+		TraitGain "Blanche - OfficeEvent" for Blanche;]
+
+Section 4 - Endings
 [to come later]
 
 Blanche ends here.
