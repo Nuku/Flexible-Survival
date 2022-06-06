@@ -342,7 +342,7 @@ to say SatyrFratSex4: [Bj for Richard]
 			NPCSexAftermath Player receives "AssFuck" from Richard;
 
 to say SatyrFratSex5:
-	if SatyrFratRichardRelationship < 4:
+	if SatyrFratRichardRelationship < 4: [Richard is human]
 		project Figure of Richard_human_clothed_icon;
 		if carried of Pan's Special Reserve < 1:
 			say "     Letting your eyes wander over the crowd of partying students, you spot who you're looking for right away - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. With a smile on your face, you dodge between the crowd of dancing frat guys and girls in between and go for your mark, putting an arm around his shoulders before the cute guy even knows you're there. Eyes going wide and cheeks reddening as he looks over to you and remembers your last encounter, he gives a friendly smile and says, 'Hey! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
@@ -400,7 +400,7 @@ to say SatyrFratSex5:
 				change the east exit of PAN Frat South Hallway to Richard's Room; [connecting the location to the travel room]
 				change the west exit of Richard's Room to PAN Frat South Hallway; [connecting the location to the travel room]
 			now SatyrFratRichardRelationship is 4;
-	else if SatyrFratRichardRelationship > 3:
+	else if SatyrFratRichardRelationship > 3: [Richard turned satyr]
 		project Figure of Richard_satyr_hard_icon;
 		say "     Letting your eyes wander over the crowd of partying students, you spot who you're looking for right away - Richard, the hunk you encountered when you helped your satyr friends get in here. He's looking very fine in his new satyr self - standing tall on two brown-furred legs ending in hooves. His only article of clothing is the pair of navy blue trunks covering his hips, barely enough to cover his modesty as they're quite tight, especially over his crotch and the well-sized dick outlined there in the fabric. Richard's head with its magnificently curved horns nods to the beat of the music as he stands over near one of the sofas in the room. With a smile on your face, you dodge between the crowd of dancing frat guys and girls in between and go for your mark, putting an arm around his shoulders before the cute guy even knows you're there. A beaming smile spreads on his face as he looks at you, then says, 'Hey babe! Wanna party with me again?'";
 		say "     You couldn't agree more eagerly and invite him to share a drink with you, guiding the readily following student back to the bar a moment later. The two satyrs behind the counter greet you with wide grins, with both Kerr and Talov's eyes undressing your friend with their eyes. Richard sits down on a bar-stool just like you do, returning a wink at the unabashed lusty looks he is getting from the duo, then you lean in and loudly order wine for the two of you. 'Sure thing, coming right up,' one of the satyrs replies in a cheerful tone, filling first one, then another red plastic cup from the seemingly endless wine-barrel they brought along. A moment later, he hands the drinks off to you and Richard, playfully stroking the frat boy's arm as he does so.";

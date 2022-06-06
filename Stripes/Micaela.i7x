@@ -159,30 +159,36 @@ to say sexwithMicaela:
 to say michaela_sexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Micaela";
 		now sortorder entry is 1;
-		now description entry is "offer the bunny a ride in your lap";
+		now description entry is "Offer the bunny a ride in your lap";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked";
 		now sortorder entry is 2;
-		now description entry is "let the bunny bang you";
+		now description entry is "Let the bunny bang you";
+	[]
 	if HP of Micaela >= 6:
 		if ( FaceName of Player is not "Easter Bunny" and BodyName of Player is not "Easter Bunny" and SkinName of Player is not "Easter Bunny" and TailName of Player is not "Easter Bunny" and CockName of Player is not "Easter Bunny" ) or ( BodyName of Player is "Easter Bunny" and player is pure ) and player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "Bunny-fucking session";
 			now sortorder entry is 4;
-			now description entry is "ask Micaela to fuck you like a bunny until she's satisfied";
+			now description entry is "Ask Micaela to fuck you like a bunny until she's satisfied";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anal lap ride";
 	now sortorder entry is 3;
-	now description entry is "take it up the ass while taking a ride in her lap";
+	now description entry is "Take it up the ass while taking a ride in her lap";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck her cock";
 	now sortorder entry is 5;
-	now description entry is "get between her legs and suck her cock for a sweet treat";
+	now description entry is "Get between her legs and suck her cock for a sweet treat";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

@@ -737,6 +737,7 @@ Include Aster by Qazarar.
 Include Atticus by Wahn.
 Include Azari by Dys.
 Include Bastet by Wahn.
+Include Bianca by Prometheus.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.
 Include Blanche by Prometheus.
@@ -751,6 +752,7 @@ Include Bryony by Song.
 Include Bubble by Stripes.
 Include Callidora by Prometheus.
 Include Cassiel by Tin Can.
+Include Claude by Prometheus.
 Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Cadmea by Prometheus.
@@ -758,6 +760,7 @@ Include Carl by Wahn.
 Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
+Include Clayton by Gherod.
 Include Cleo by Prometheus.
 Include College Guards by Rikaeus.
 Include Colleen by Prometheus.
@@ -788,6 +791,7 @@ Include Elijah by Wahn.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
+Include Ernest by Prometheus.
 Include Fallen King by Gherod.
 Include Fancy by Sarokcat n Verath.
 Include Fang by Prometheus.
@@ -891,6 +895,7 @@ Include Orc Lair by Wahn.
 Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
+Include PAN Frat Bros by Wahn.
 Include Paula by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.

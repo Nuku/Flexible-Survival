@@ -197,6 +197,12 @@ to say CherryTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Talk about the conditions of you as her submissive";
 	[]
+	if Resolution of MeetingClayton is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "She seems pensive, ask her";
+		now sortorder entry is 99;
+		now description entry is "Your previous conversation with Cherry left her in a pensive state. Would you like to ask her about it";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -224,6 +230,8 @@ to say CherryTalkMenu:
 					say "[CherryTalkBreeding]";
 				else if (nam is "You as her sub"):
 					say "[CherryTalkDomination]";
+				else if (nam is "She seems pensive, ask her"):
+					say "[CherryTalkClayton]"; [on Clayton's file]
 				wait for any key;
 				if CherryDoneTalking is false:
 					say "[CherryTalkMenu]"; [looping back to keep talking with him]
@@ -250,7 +258,10 @@ to say CherryTalkPets:
 		now Energy of Cherry is 2;
 
 to say CherryTalkWealth:
-	say "     Someone like her must have had a lot of money and influence back in the days. You cannot help but wonder how someone with such wealth still failed to leave the area before things went down south. 'You don't get to keep your hard-earned money when an apocalypse rains down on you.' - she quickly answers - 'And it's not like money is worth much, anyway. In the end, I was looking like an animal and had to be quarantined. No amount of money, power or influence can get you out once you become just another one left to rot. All I can do is survive until rescue arrives... If it ever will. I'm getting used to the idea of having to live the rest of my life like this... But, as I said, some had it worse.'";
+	say "     Someone like her must have had a lot of money and influence back in the days. You cannot help but wonder how someone with such wealth still failed to leave the area before things went down south. 'You don't get to keep your hard-earned money when an apocalypse rains down on you.' - she quickly answers - 'And it's not like money is worth much, anyway. In the end, I was looking like an animal and had to be quarantined. No amount of money, power or influence can get you out once you become just another one left to rot. All I can do is survive until rescue arrives... If it ever will. I'm getting used to the idea of having to live the rest of my life like this... But, as I said, some had it worse. Even some close friends of mine... Fortunately, not [italic type]all[roman type] of them...'";
+	if Resolution of MeetingClayton is 0:
+		say "     Speaking of this must have triggered some memories, as Cherry seems quite pensive for a while... Perhaps you could ask her more about it?";
+		now Resolution of MeetingClayton is 1;
 
 to say CherryTalkSex:
 	say "     You are left wondering if you could ever get intimate with the nice and elegant fox lady, so you get bold enough to ask the question. She smiles and delivers a direct response. 'Well, since we've already spoken a lot and I got to know you a little better... I suppose we could do something more fun. But only if you bottom. Given that fact, it would certainly be my pleasure to share some intimate moments with you. As I said, my favorite thing to do is breeding, with everything that comes with it, if you understand what I mean... I'd be down for it under those conditions.' Now, that was a quite blunt answer.";

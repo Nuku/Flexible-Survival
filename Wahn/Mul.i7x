@@ -717,11 +717,11 @@ to say MulLibrarySexMenu:
 	now sortorder entry is 4;
 	now description entry is "Power-bottom your orcish slut";
 	[]
-	if (player is male and demon brute is tamed and DemonBruteStatus < 2):
+	if (demon brute is tamed and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Brutus fuck Mul";
 		now sortorder entry is 5;
-		now description entry is "Give the orc a treat and power-bottom him";
+		now description entry is "Allow Brutus to fuck the orc";
 	[]
 	if (felinoid companion is tamed):
 		choose a blank row in table of fucking options;
@@ -922,7 +922,10 @@ to say MulLibrarySex6: [Spit-Roasting Mul with the Felinoid]
 	WaitLineBreak;
 	say "     For several long moments, nothing but heavy breathing and panting fills the library as all of your orgasms slowly wind down and cocks spill forth the last ebbing spurts of cum in this hole or that, or on the ground. Satisfied with having gotten your rocks off, you pull away from Mul's mouth a short while later, allowing the orc's slurred exclamation of, 'Nnnnggh. Damn. Been fucked by an animal...' He doesn't get any further as Klauz grips his neck between his teeth again, almost as if to say, 'Yup, and you're my bitch now.' The soft bite pushes Mul to give an involuntary moan in new arousal, something that the large cat on top of him rewards with a deep purr, loud as an idling motor. Then the feral beast throws himself to the side, pulling Mul with him as he lands on the ground, paws wrapped around the orc's chest and hips grinding against him a little.";
 	say "     Grinning at the scene of the felinoid cuddling against Mul like he's his favorite toy, all the while still being balls-deep in the orc's ass with his barbed shaft, you move to collect your gear again and get dressed. With a look back at the two of them, you tell Klauz to catch up with you when he's done, then walk away from the stained sofa and the two males on the ground behind it. Moving to another part of the big library ground floor, you try to concentrate on other matters - like surviving in this crazy place - but your thoughts often return to the hunky orc, hoping he'll come over more often in the future.";
-	NPCSexAftermath Mul receives "OralCock" from Player;
+	if Player is male:
+		NPCSexAftermath Mul receives "OralCock" from Player;
+	else if Player is female:
+		NPCSexAftermath Mul receives "OralPussy" from Player;
 	NPCSexAftermath Mul receives "AssFuck" from Klauz;
 	if MulAnalAcceptance < 10:
 		increase MulAnalAcceptance by 1;

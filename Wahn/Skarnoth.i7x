@@ -159,6 +159,12 @@ to say SkarnothSexMenu:
 		now title entry is "Face-fuck him";
 		now sortorder entry is 2;
 		now description entry is "Use the demon's mouth";
+	[]
+	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Get a Massage";
+		now sortorder entry is 3;
+		now description entry is "Have the demon offer you some relief";
 	[
 	if Player is not neuter:
 		choose a blank row in table of fucking options;
@@ -208,7 +214,7 @@ to say SkarnothSexMenu:
 					say "[SkarnothSex1]";
 				else if (nam is "Face-fuck him"):
 					say "[SkarnothSex2]";
-				else if (nam is "69 with Skarnoth"):
+				else if (nam is "Get a Massage"):
 					say "[SkarnothSex3]";
 				else if (nam is "Ride Skarnoth's dick (vaginal)"):
 					say "[SkarnothSex4]";
@@ -274,10 +280,32 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		NPCSexAftermath Skarnoth receives "AssDildoFuck" from Player;
 	NPCSexAftermath Skarnoth receives "OralCock" from Player;
 
-to say SkarnothSex3: [69 with Skarnoth]
-	say "     A";
-	NPCSexAftermath Player receives "OralCock" from Skarnoth;
-	NPCSexAftermath Skarnoth receives "OralCock" from Player;
+to say SkarnothSex3: [massage/foot scene]
+	say "     Rolling your left shoulder a bit, you realize the aches and pains that come with exploring the city have begun to catch up with you. Glancing at Skarnoth out of the corner of your eye, the first thing that you notice is the bored expression on his face mixed with his annoyed attitude. However, below his handsome face, you are met with his impressive physique, the thought of those powerful muscles working out all of the kinks and tightness in your sore body are a welcome one indeed. 'Are you just going to stare at me all day or what?' The defensive comment from the demon startles you at first, but taking in his body language you are able to make out that he is simply uncomfortable with the silence.";
+	say "     Deciding to have mercy on your slave, you comment on the fact that you could use a massage. 'And that effects me how?' he retorts, and as you step forward, you simply grab one of his clawed hands and place it on your shoulder. With a roll of his eyes, the hellspawn finally gets the picture, 'Oh joy... just what I always wanted, to have to rub down a lower lifeform.' You explain that he can feel however he wants to about the experience as long as he gets the job done. With a huff of exasperation, the former prince slides his body behind you and begins to gently knead your back. While it does feel nice, you inform him that you want him to go harder, even going so far as to comment on your lack of fragility. Skarnoth's hands freeze in place, 'Well, if you're not some fragile little bitch, I could always try a more intense type of massage...'";
+	LineBreak;
+	say "     The grin on his face suggests that this might be a particularly rough method, one that [italic type]he[roman type] would enjoy, even. Considering his offer, [bold type]would that be something you would be interested in?[roman type][line break]";
+	say "     ([link]Y[as]y[end link]) - Let him do what he wants. (Warning - Foot Fetish Content)[line break]";
+	say "     ([link]N[as]n[end link]) - Decide that what he is currently doing will suffice.";
+	if Player consents:
+		LineBreak;
+		say "     Feeling confident in your place over the former prince of hell, you nod your head in agreement to his suggestion. Almost immediately, his grip on your back of your shoulders tightens, his strong hands giving you one final, and quite satisfying, rub before they lift off. 'Well, that's good. I can't stand pussies that are too scared of bursting their bubbles.' He then pulls away from you before continuing, 'Alright, for this you gotta get on the ground and lay on your chest. Trust me, it'll be good.' While not exactly what you had in mind, you acquiesce to his desire, as you have agreed to go forward with this. Once down there, however, you cannot help but begin to feel a bit silly at simply doing what the demon told you. Doubt surges as you wait for what is to come, clueless.";
+		say "     Moments pass by without nothing going on, so you start thinking this is just a waste of time. Maybe he is just messing with you! Following this line of thought, you soon start to get back up... That is, until you feel one of Skarnoth's taloned feet step onto your lower back, causing a loud popping sound to echo inside your head. A moan is quick to escape your lips as the hellspawn continues walking on your back. Surprisingly, while you can feel the razor sharp points of his toenails glide across your flesh, he is able to be careful enough to not accidently nick you. 'You said you weren't a frail little cunt, so I'm sure you'll enjoy this.' Indeed, the demon seems... quite skilled at this. While still rough, it feels oddly relaxing, with all the heightened pressure of his added weight onto your thankful sore spots.";
+		WaitLineBreak;
+		say "     Eventually, your whole body begins to feel like a cloudy mush, and your eyes begin to feel heavy. Soon, they slowly fall closed. While it feels like only a few seconds to you, apparently you fell asleep... Only to be quickly slapped on your ass, which ends up rousing you. 'Alright, your back is done. Now roll over so I can do the front and finally be done with this!' Two things enter your mind at once, the first is that you do not like the idea of anyone walking on your chest, second is the fact that, from a mixture of both the relief your muscles feel and all the relaxation you were provided with... you also now have an erection. However, before you can think of something to say, your body is forcefully flipped over by the muscular demon. While the shock of what just happened must be as evident on your face as the hardness of your prick, Skarnoth does not seem care either way.";
+		say "     Right as you open your mouth to reprimand the demon, you are quickly silenced by his feet appearing directly in your face, 'If I'm gonna do this, then you would prolly want these toes wet, otherwise the chaffing's gonna be a bitch, haha!' You are about to tell the hellspawn to go fuck himself, but you stop yourself as you see the demon do a strange hand gesture in the air, and immediately after, your dick begins to throb even harder with desire. Your mind feels like it is being pulled back and forth between your sexual needs and the foot in front of your face, but eventually your cock wins out and you slowly open your mouth. Sticking your tongue out, you slowly lick the side of the demon's foot, even if so hesitantly.";
+		WaitLineBreak;
+		say "     'Oh come on now, do you really think that's actually gonna accomplish anything?!' With those words, Skarnoth inserts the entire upper half of his foot in your mouth and commands you to make sure it is wet enough. With little choice left, and not feeling particularly inclined to offer resistance, you feel oddly compelled to try harder, struck by a sudden fiery lust overtaking your thoughts. Whatever the demon has done to you, you cannot help but admit to yourself that you like it. And so, you simply proceed to suck on his foot, wiggling your tongue around each meaty toe diligently with several twirls and curls, giving in to the situation that just so happens to make your cock throb.";
+		say "     After a while, you have forgotten all about the massage and start feeling yourself getting a bit carried away, until Skarnoth suddenly pulls his foot out of your mouth with an obvious grin on his face. 'That's honestly a fitting view for yourself, I gotta say. But I'm gonna go ahead and continue with what you asked for.' Your mind struggles to stay grounded after such an assault, and the sudden realization that you have just done what you did now throws you into a messy confusion. Still, you remain hard, with an unattended solid erection that continues to beg for attention. The devil definitely is not done, as he had just declared, and the foot that was previously in your mouth lands directly on top of your dick with enough force to make you flinch out of fear.";
+		WaitLineBreak;
+		say "     He chuckles at your reaction before starting to move his wet toes across your shaft, the slippery surface making it feel actually pleasant, rather than uncomfortable. You definitely begin to enjoy this as he so skillfully rubs your cock all over with his wiggling toes and sole, until you even kind of want to thrust against it. However, as soon as you try to make a move of your own, he presses his foot down harder, forcing you to remain still. 'I'm not done yet, fucker. You want me to be done with this or not?' he remarks, and the pleasure you feel is so great that you do not even find in yourself the energy to reply. 'Thought so. Actually, if you were this obedient more often, you wouldn't piss me off so much.'";
+		say "     The demon picks up the pace soon after, jerking you off with his foot at a faster rhythm until you eventually feel yourself nearing the edging point. Realizing that you are about to cum this way, you... Really cannot do anything to stop it. Skarnoth continues doing what he is doing without any care in the world, all the way until you start cumming with your cock pressed between his sole and your pelvis. You shoot all over yourself, and he continues to rub it all the way until the very last drop leaks out of your dick and onto your body. Using your shaft, he smears the cum all over its surrounding area while it is still half-hard, just carefully enough to not end up wetting his toes with the stuff.";
+		WaitLineBreak;
+		say "     'There, I'm done. I sincerely hope you enjoyed it, princess,' he says, with a clearly sarcastic tone as he steps back, leaving you to get up on your own. With all that, you still have to catch your breath and lift yourself off the ground, with the added humiliation that the demon just made you endure. You are about to reprimand him for tricking you like this, but he is having none of that. 'I did what you fucking asked for, then I asked a question and you agreed to it. Thanks would suffice, but alternatively, you can kindly go fuck yourself or die. That'd work wonders for me!' Deciding that this really is not worth your time, you simply roll your eyes at the hellspawn's comment and readjust yourself before making your way out of the room, but not before having to hear a few last words from him, 'Try not to think about my foot on your face all that much, bitch. I know you enjoyed that.'";
+		NPCSexAftermath Player receives "Other" from Skarnoth;
+	else:
+		LineBreak;
+		say "     Not liking the idea of giving Skarnoth too much control over the situation, you comment that what he is currently doing is fine and that the only problem at the moment is the fact that he is talking. A growl can be heard behind you reverberating through the demon's chest. Thankfully, this also comes with an increase in the pressure of the hellspawn's palms. Your eyes fall closed at the feeling of contentment that is passing across your body, and as much as he may have complained, the demon is actually pretty talented with his ministrations. As time begins to pass, you almost fall asleep while standing up, but are quickly brought back to yourself by a quick smack to your ass, 'There, I'm finished. Now you can kindly go fuck off, or become some abomination's cocksleeve. Hell, you could even go get yourself killed! Heh, actually that last one would work out best for me, haha!' You roll your eyes at the hellspawn's comment and readjust yourself before making your way out of the room.";
 
 to say SkarnothSex4: [player pussy fucked]
 	say "     A";
