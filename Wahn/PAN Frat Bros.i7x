@@ -1,4 +1,4 @@
-Version 1 of PAN Frat Brothers by Wahn begins here.
+Version 1 of PAN Frat Bros by Wahn begins here.
 
 [
 PAN Frat Brothers
@@ -72,22 +72,22 @@ Subelements of the Frat Brothers Group NPC
 			Cock Size: cut; 7 inch (human); uncut; 8 inch (satyr)
 			Background: Soccer Player
 
-10 - Big John
+10 - Big John (offensive guard football player)
 			Age: 20
 			Relations: English
 			Orientation:
 			Cock Size:
 
-11 - Little John
+11 - Little John (fireplug shaped wrestler)
 			Age: 20
 			Relations: English
 			Orientation:
 			Cock Size:
 
-12 - Nate
-13 - Paul
+12 - Nate (gymnast)
+13 - Paul (wrestler)
 14 - Eric
-15 -
+15 - Oliver (swims)
 16 -
 17 -
 18 -
@@ -110,6 +110,7 @@ PAN Frat Brothers	"PAN Frat Brothers"
 PAN Frat Brothers is a man.
 [PAN Frat Brothers is in PAN Frat Second Floor.]
 understand "Angelo" as PAN Frat Brothers.
+understand "River" as PAN Frat Brothers.
 [Physical details as of game start]
 ScaleValue of PAN Frat Brothers is 3. [human sized]
 SleepRhythm of PAN Frat Brothers is 0. [0 - awake at all times, 1 - day active, 2 - night active]
@@ -144,7 +145,7 @@ to say PAN Frat Brothers Desc:
 	say "     Various members of the PAN fraternity are gathered here, as the first floor seems to be a popular hang-out spot for them. Exactly who's present at any given time varies a bit, with guys coming and going to do things in their rooms, downstairs, or making beelines to the shared bathroom. ";
 	if Daytimer is day:
 		say "Still, you can find someone here at pretty much any time of the day, mostly in groups of twos or threes as they talk with one another, listen to music, watch TV, or the like. Plus some in-between bouts of cleaning by pledges and prep work for another night of partying to distract everyone from the chaos that has spread throughout the whole city, of course. Besides the frat guys, a few visitors are mixed in among the people you can see, mostly just friends they actually know, as compared to the random selection of partygoers swarming the frat house after darkness falls. You spot [bold type]River[roman type] among the group, ";
-		if MainInfection of River is "Human":
+		if MainInfection of River_1 is "Human":
 			say "his golden-blond head of short hair shining like a beacon on top of his fit swimmer's body.";
 		else:
 			say "his golden-blond head of shoulder-length hair shining like a beacon on top of his fit swimmer's body. Now that he's not quite human anymore, the guy somehow has gained an otherworldly beauty, with flawless, pale skin and a smooth, hairless body.";
@@ -199,39 +200,41 @@ to say Angelo Desc:
 
 Table of GameCharacterIDs (continued)
 object	name
-River	"River"
+River_1	"River_1"
+River_1	"River"
 
-River is a man.
-[River is in PAN Frat Second Floor.]
-understand "River" as River.
+River_1 is a man.
+[River_1 is in PAN Frat Second Floor.]
+understand "River" as River_1.
+printed name of River_1 is "River".
 [Physical details as of game start]
-ScaleValue of River is 3. [human sized]
-SleepRhythm of River is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of River is 1. [X cock]
-Cock Length of River is 9. [X Inches]
-Ball Size of River is 4.
-Ball Count of River is 2. [X balls]
-Cunt Count of River is 0. [X pussy]
-Cunt Depth of River is 0. [X Cunt]
-Cunt Tightness of River is 0. [X Cunt]
-Nipple Count of River is 2. [X nipples]
-Breast Size of River is 0. [X at the start]
+ScaleValue of River_1 is 3. [human sized]
+SleepRhythm of River_1 is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cock Count of River_1 is 1. [X cock]
+Cock Length of River_1 is 9. [X Inches]
+Ball Size of River_1 is 4.
+Ball Count of River_1 is 2. [X balls]
+Cunt Count of River_1 is 0. [X pussy]
+Cunt Depth of River_1 is 0. [X Cunt]
+Cunt Tightness of River_1 is 0. [X Cunt]
+Nipple Count of River_1 is 2. [X nipples]
+Breast Size of River_1 is 0. [X at the start]
 [Basic Interaction states as of game start]
-TwistedCapacity of River is false. [can not take oversized members without pain]
-Sterile of River is false.
-PlayerMet of River is false.
-PlayerRomanced of River is false.
-PlayerFriended of River is false.
-PlayerControlled of River is false.
-PlayerFucked of River is false.
-OralVirgin of River is false.
-Virgin of River is true.
-AnalVirgin of River is true.
-PenileVirgin of River is false.
-SexuallyExperienced of River is true.
-MainInfection of River is "Human".
-Description of River is "[River Desc]".
-Conversation of River is { "<This is nothing but a placeholder!>" }.
+TwistedCapacity of River_1 is false. [can not take oversized members without pain]
+Sterile of River_1 is false.
+PlayerMet of River_1 is false.
+PlayerRomanced of River_1 is false.
+PlayerFriended of River_1 is false.
+PlayerControlled of River_1 is false.
+PlayerFucked of River_1 is false.
+OralVirgin of River_1 is false.
+Virgin of River_1 is true.
+AnalVirgin of River_1 is true.
+PenileVirgin of River_1 is false.
+SexuallyExperienced of River_1 is true.
+MainInfection of River_1 is "Human".
+Description of River_1 is "[River Desc]".
+Conversation of River_1 is { "<This is nothing but a placeholder!>" }.
 The scent of River is "     River has a clean, fresh scent.".
 
 to say River Desc:
@@ -255,13 +258,13 @@ to say PANFratBro_Talkmenu_Day:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if PlayerMet of River is false:
+	if PlayerMet of River_1 is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Properly introduce yourself to River (the blond frat brother)";
 		now sortorder entry is 1;
 		now description entry is "Start a conversation with the dude";
 	[
-	if PlayerMet of River is true:
+	if PlayerMet of River_1 is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk to River about the frat";
 		now sortorder entry is 2;
@@ -302,7 +305,7 @@ to say PANFratBro_Talkmenu_Day:
 
 to say River Introduction:
 	say "     ...";
-	now PlayerMet of River is true;
+	now PlayerMet of River_1 is true;
 
 to say River Frat Talk:
 	say "     ...";
@@ -531,7 +534,7 @@ to say Angelo Video Time:
 			WaitLineBreak;
 			say "     Breathlessly [if player is male]holding your shaft in an iron grip as it begins to let loose long streaks of creamy cum to splat down on yourself, as well as a few onto Angelo's sheets, [else]frigging your clit and feeling your pussy go most and dripping, creating a small wet spot on Angelo's sheets, [end if]you ride out the pleasure-filled high of climax. Besides you, the Latino stud is tightly gripping his erection, holding the other hand over the throbbing dickhead. Then, once he stops twitching and grunting as the last of his seed has erupted from the piece of man-meat in his grasp, the young man does something surprising - he lifts the hand to his face, licking off the fresh cum from it. 'What? It's just protein!' he says as he sees you stare at him, then slurps up some more with a sweep of his tongue. 'The way I see it, it's a waste if it isn't going into a pussy. So this stuff goes right back into me if I'm not seeding a girl. Gotta keep up your energy to be ready when the time to strike comes, hah!'";
 			say "     Chuckling and keeping to yourself that it's a pretty gay thing to do, for a straight guy, you simply watch him finish off eating the cum. As he soon is finished, he glances over to you, then stretches himself across the bed to snatch up a box of tissues, handing it to you so you can clean up yourself. While you're doing that, Angelo nods to the TV screen, where his video-self is just enjoying himself being orally serviced, building up to a second wind of fucking the doctor again. With a snort, he comments, 'Too bad Lizzy's no longer around hereabouts, she was a wild fuck! Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you then slip out of the room and walk back down to the second floor.";
-		else if calcnumber is 3;
+		else if calcnumber is 3:
 			LineBreak;
 			say "     Pushing yourself up from the bed, you turn to look at Angelo, who holds his gaze on the TV for a moment longer before glancing up at you. 'Told ya!' he says with a grin, never stopping the jerking movements of his hand. Nodding to him, you acknowledge that he did tell the truth and get it on with that doctor - a fact that is underlined by a breathy moan coming from the TV, where you can see video-Angelo just slide into the woman's pussy for the first time. 'She was a wild minx to fuck, I can tell you that! Too bad Lizzy's no longer around hereabouts. Last I heard, she was carried off by a minotaur, happily rocking up and down on his shaft as they went.' Giving a shrug, the young man adds, 'Knew right away Lizzy was pretty thirsty for it when I heard from a buddy that she'd given his balls a bit of a fondle, when doing his checkup. So I took the bold approach, and it worked!' With a grin, he nods to the screen, where the examination room is still in quite active use for extracurricular activities.";
 			say "     As you chuckle and give Angelo a thumbs-up to acknowledge his conquest, the frat member says, 'It's fun to relive some memories, so... if you wanna watch another vid or so in the future, just let me know, eh? I got plenty.' Nodding to him, you tell him to enjoy his wank, then slip out of the room and walk back down to the second floor.";
@@ -595,13 +598,5 @@ to say PAN_FratBrothers_Sofa_Fuck:
 
 [------------------------------]
 
-an everyturn rule:
-	if FratEntryCooldown > 0:
-		reduce FratEntryCooldown by 1;
 
-instead of going east from Greek Street while PlayerMet of Richard is false:
-	say "     'X, Y Z aren't here right now, but we'll let them know that you're a welcome visitor.'";
-	now PlayerMet of Richard is true;
-
-
-PAN Frat Brothers ends here.
+PAN Frat Bros ends here.
