@@ -15,24 +15,26 @@ instead of sniffing dreamcatcher:
 
 Usedesc of dreamcatcher is "[perchance to dream]";
 
-Section 2 - DreamTable
+Section 2 - Dreamevent Defintions
 
-A dreamevent is a kind of thing.
-A dreamevent can be resolved or unresolved. A dreamevent is usually unresolved.
-A dreamevent can be active or inactive. A dreamevent is usually inactive.
-A dreamevent has a text called DreamFunction.
+A dreamevent is a kind of situation.
+A dreamevent has a truth state called RestfulDream. RestfulDream is usually true.
 
 Definition: A dreamevent (called x) is dreamable:
 	if x is inactive, no;
 	if x is resolved, no;
-	yes;
+	if x is not PrereqComplete, no;
+	if HardMode is true:
+		yes;
+	else if the level of x < (level of Player + 1):
+		yes;
+	no;
 
 Good Dreams is a dreamevent. [ensures one generic dream is always available]
-DreamFunction of Good Dreams is "[DreamEvent Good Dreams]"
+Sarea of Good Dreams is "Dreamland".
+ResolveFunction of Good Dreams is "[DreamEvent Good Dreams]".
 
-[Table of DreamEvents
-name(text)	dreamcontents(text)	dreamable(truth state) seen(truth state)
-"Good Dreams"	"[GoodDreamsEvent]"	True	False]
+
 
 Section 3 - Events
 
@@ -83,8 +85,14 @@ to say dream a little dream: [calls an available dream event]
 	if there is an active unresolved dreamevent:
 		let L be a random dreamable dreamevent;
 		if L is not nothing:
-			say "[DreamFunction of L]";
+			say "[ResolveFunction of L]";
 			wait for any key;
+			if RestfulDream of L is true:
+				Rest;
+			follow the turnpass rule;
+			follow the turnpass rule;
+			follow the player injury rule;
+			say "You are [descr]([HP of Player]/[maxHP of Player]).";
 	else:
 		say "     You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
 

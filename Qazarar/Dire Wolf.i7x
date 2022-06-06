@@ -7,10 +7,10 @@ DireWolfOral is a number that varies.
 to say DireWolfLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
-	else if Charisma of Direwolf Dom > 15: [temporary variable control]
-		say "[DireWolfNormalLoss]"; ['tame' the direwolf pet here, link to normal loss until implemented]
 	else if Direwolf Dom is tamed:
 		say "[DirewolfSuperLoss]";
+	else if Charisma of Direwolf Dom > 15: [temporary variable control]
+		say "[DireWolfNormalLoss]"; ['tame' the direwolf pet here, link to normal loss until implemented]
 	else: [regular scene]
 		say "[DireWolfNormalLoss]";
 

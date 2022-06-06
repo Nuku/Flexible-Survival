@@ -12,13 +12,24 @@ to say VixenKunoichiLoss: [player loses]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
-		say "     A";
+		if VixenKunoichiLust is 0: [groping]
+			say "     You find yourself unable to continue the fight, and helpless before the strength of the vixen. She stands over you, leaving you caught in the huge shadow of her equally obscene erection, but contrary to the sheer arousal on display from that member her face is dusted in a blush at odds with the rest of her. 'It seems that my skills are superior to yours, distracted as you were by that lustful gaze of yours.' Her cock seems to twitch involuntarily, and you can tell she's trying her best to ignore it. 'As an honorable warrior, I would never fall prey to such base perversions, no matter what manner of curse has been placed on me.' Her words are resolute, but no matter how much she means them her lewd body seems ready to disagree, and one of her hands seems to be wandering closer to you almost of its own accord.";
+			say "     The moment she's about to make contact, she turns her head away and huffs, apparently deciding to simply not confront her own approaching hypocrisy, while instead her extremities are lightly pawing at your truly magnificent backside, a physical expression of lewd curiosity. Even while deliberately ignoring you, it seems that she can't help but enjoy your plush posterior, but eventually she composes herself just enough, and pulls away. 'I suppose there are some merits to a body like that, it's at least pleasing to look at. But don't think for a second that I'm anything like you, with your lustful thoughts.' The vixen appears too flustered to continue berating you, as following that proclamation she turns on her heel and stalks away after the brief encounter.";
+		else: [if VixenKunoichiLust < 8:[curious]]
+			say "     A";
+			increase VixenKunoichiDomScore by 1;
+			if a random chance of 1 in 3 succeeds:
+				increase VixenKunoichiLust by 1;
+		[else if VixenKunoichiLust < 15:[lusty]
+			say "     A";
+		else: [corrupt]
+			say "     A";]
 
 to say VixenKunoichiVictory: [player wins]
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
-		say "     A";
+		say "     With a final strike, you cause the vixen to fall to her knees, unable to continue fighting. She hangs her head in shame, but regardless of her feelings her shaft is still throbbing eagerly.";
 		say "     [bold type]You could easily have your way with her if you want to.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Play with the Vixen Kunoichi.";
@@ -38,6 +49,11 @@ to say VixenKunoichiVictory: [player wins]
 			now sortorder entry is 2;
 			now description entry is "Have her user her mouth";
 			[]
+			if VixenKunoichiLust > 5:
+				choose a blank row in table of fucking options;
+				now title entry is "Ride her";
+				now sortorder entry is 3;
+				now description entry is "Use her oversized shaft";
 			sort the table of fucking options in sortorder order;
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
@@ -57,6 +73,8 @@ to say VixenKunoichiVictory: [player wins]
 							say "[VixenKunoichiSex1]";
 						if (nam is "Sit on her face"):
 							say "[VixenKunoichiSex2]";
+						if (nam is "Ride her"):
+							say "[VixenKunoichiSex3]";
 						wait for any key;
 				else if calcnumber is 0:
 					now sextablerun is 1;
@@ -73,16 +91,30 @@ to say VixenKunoichiDesc:
 	if VixenKunoichiLust > 15: [corrupt desc]
 		say "     ";
 	else if VixenKunoichiLust > 8: [lusty desc]
-		say "     ";
+		say "     'Don't move any further!' When you turn towards the sound of the voice, you see the vixen kunoichi perched on the hood of a stopped vehicle, hopping down and striding closer to you. You can see that her even more egregious endowments have limited her ability to do some of her prior acrobatics, and even further you can see that she appears significantly distracted. When you first saw her she was poised and composed, ready for battle, but now you can see that she is continuously fidgeting. Whether adjusting her reduced clothing nervously, or unconsciously tracing a finger up her shaft, she seems unable to focus completely on combat readiness. 'It's your fault that I'm feeling like this, with your lewd body and actions, so you're going to fix it!'";
 	else: [pure desc]
-		say "     'Stop right there, not another step!' You turn just in time to witness a figure standing dramatically atop a nearby build leap forward, gracefully flipping in the air before landing smoothly in front of you. Up close, you can clearly tell that you're looking at a particularly elegant vixen, nice-looking clothing in purples and grays in stark contrast to her vibrant golden yellow fur. Her pose is also strikes you as a practiced display of skill, clearly marking her as a trained combatant of some sort. However, the impressive sight is ";
+		say "     'Stop right there, not another step!' You turn just in time to witness a figure standing dramatically atop a nearby build leap forward, gracefully flipping in the air before landing smoothly in front of you. Up close, you can clearly tell that you're looking at a particularly elegant vixen, wearing nice-looking clothing in purples and grays in stark contrast to her vibrant golden yellow fur. Her pose is also strikes you as a practiced display of skill, clearly marking her as a trained combatant of some sort. However, the impressive elegance is somewhat diminished by the fact that her large breasts are uncovered by her outfit, and even more so that an absolutely massive cock is exposed, still bouncing from her drop. 'Stop looking at me with your lustful gaze and fight me!'";
 
 to say VixenKunoichiSex1: [sucking]
-	say "     A";
+	say "     Really, the only reasonable choice you have is to have a closer look at the huge shaft sitting there attached to the defeated vixen. The sheer size is enchanting, an endowment rarely seen even in this transformed city, and it's the least you can do to give it a little bit of affection. Besides, while you're sure that she'll enjoy the treatment, you know it will be just as much fun for you to tackle something like that with your mouth. You begin by reaching forward, and grasping the shaft, feeling the affirming weight under your fingers. As your fingers touch her, the vixen lets out a shocked gasp and freezes in place, clearly unused to the sensation. Her face is a mess of conflicted emotion, her sense of dignity at war with her sensitive member. However, that war is one you're about to weight in favor of her lovely cock.";
+	say "     Eventually you make the first real move, and lean forward. You switch from having a smile on your face to the head of her shaft in your mouth, and you think the trade is more than fair. Your gaze is focused on what's directly in front of you, allowing you to see how eagerly her member throbs in response to even this initial taste of pleasure, the sight closely confirmed by the stuttering moan you hear from above. Still, you must continue, as you are not content to simply leave her with a mere taste – for both your sakes. Instead you push onward, testing the limits of your ability by steadily swallowing more and more of her impressive shaft, pausing for a moment once more as you reach nearly halfway to listen to the conflicted whimpers as the vixen attempts to resist the sensations.";
+	WaitLineBreak; [later made a one-off scene]
+	say "     It takes very little time before your gradual progress starts approaching the base, each bobbing motion drawing out another reluctant gasp of sensational pleasure from the vixen. You start to increase your speed long before you hit that point, focusing more on the raw intensity of the feeling rather than going as deep as you can at this point. For a moment it seems as if her unfamiliar organ is about to reach its peak, as the telltale signs are firing on all cylinders, but the prophesized orgasm fails to manifest. A glance upwards shows that the pleasure struck expression on the vixen's face is clearly overwhelming her pride, leaving you briefly confused. However, once you look more closely at the overly full sack holding the grand prize hostage, an answer appears. Though her balls are clearly contracting in an effort to shoot a mighty load, they are overtaken each time with a faint glow. It seems that part of the drake's gift to this vixen is preventing her from properly climaxing, at least until something changes that.";
+	say "     Your experience with the magic drake is sufficient to give you an educated guess, particularly since the vixen is apparently considered a gift to you. You doubt that the sorceress would truly prevent the kunoichi from ograsming entirely, so it is merely waiting for the right moment, which is almost certainly to be part of that gift to you. Trusting your instincts, you prepare to truly change the vixen's fate. You pull back so that your mouth is free, for a moment at least. 'I order you to cum.' It's as if a bolt of lightning shoots through her spine, leaving her completely unable to resist the sudden onset of the bottled pleasure. You have a split second to react yourself, as you see her cum tanks rapidly twitching in preparation for their role, so you quickly entrap her shaft once more in your welcoming maw. Her gasping moans transition into uncontrolled yowls of pleasure, a primal lust overtaking her rational thought as the sorcerously delayed orgasm tears through her entire being.";
+	say "     In that moment, her pride, her resistance, everything holding her back is simply more fuel for the powerful rush. The tsunami flows through her, unable to be stopped, and manifests finally as an unmatched torrent of vixen jizz being launched from her enchanted cock in mighty spurts, each one surely enough to spray a jet several feet if it weren't positioned to instead directly go down your throat. Before this moment, perhaps it was possible for the vixen to resist the plans that the magic drake has made for her, and however unlikely she may even have been able to return to her own normalcy – but that chance is surely gone now. Her fate is sealed, and there is no way for her to fully resist the siren song of the lustful spell any more. Finally the sticky tide comes to a rest, and you're able to disentangle yourself from the vixen, who is seemingly exhausted from the full body orgasm she just had. She tries to speak, but is unable to muster her customary words of resistance and refutation, instead merely letting out a defeated sigh. You yourself are satisfied, and simply leave her to recover her energy, if not her dignity.";
+	[increase VixenKunoichiSubScore by 1;]
 	CreatureSexAftermath "Player" receives "OralCock" from "Vixen Kunoichi";
 
 to say VixenKunoichiSex2: [face sitting]
+	say "     It occurs to you that the best way to have fun with her might just be to find something she can't complain about the lewdness of, and a particularly appealing method of doing that is to keep her mouth busy otherwise. Besides, she seemed quite enamored with your back end before, so it would only be polite to give her a closer look at the same time. She is hardly able to resist as you get her onto her back, too exhausted to put up much of a fight. As you start to position yourself above her however, she seems about to renew her struggles, though not quite fast enough. You lower down into position, and then it's too late – your sorcerously granted caboose is more than enough to keep her in one place until you're done with her.";
+	say "     Despite her former protestations, it seems that being buried under your most impressive ass is enough to convincer her to play along, at least somewhat, as you can feel the vixen below you starting to cautiously lick at you. Her efforts start off slowly, but the otherwise refined combatant seems to quickly develop a knack for oral pleasure, as she is able to quickly move up to a far more enthusiastic series of motions. More and more she begins to lick and suck with greater fervor, her tongue darting out and leading to a slowly rising pleasure within you. It rapidly becomes downright impressive, the speed at which she begins to exhibit more advanced oral technique in the face of your rear passaeg, enough to make you wonder if this was another gift from the drake, or of she always had the potential to worship a fat ass like a fiend deep down.";
+	say "     Regardless of the source of her skill, the growing pleasure starting to echo outwards from your rear to the rest of your body is undeniable proof that it exists. You arch your back and rock faintly back and forth, grinding just that little bit harder against her to eke out additional traces of sensation for your overflowing lusts, and she meets each motion with further work from her vulpine tongue until it is finally too much for you. In a surge of uncontrollable energy, you can feel a powerful anal orgasm shooting through your body, collecting and magnifying until it finally escapes in the form of powerful lewd moans. Satisfied with the care given to you, you are prepared to offer mercy to the vixen, and release her from beneath you. For a time she merely gasps, her gaze unfocused, but as you prepare to leave you can hear a faint call from behind you. 'This... you were lucky this time, with your strange lustful spell you cast upon me. Next time I shall not be so easily fooled.' It seems that she isn't quite ready to accept that she willingly gave in, but perhaps in time she'll realize the truth.";
+	[increase VixenKunoichiSubScore by 1;]
+
+to say VixenKunoichiSex3: [riding her]
 	say "     A";
+	increase VixenKunoichiSubScore by 1;
+	CreatureSexAftermath "Player" receives "AssFuck" from "Vixen Kunoichi";
 
 Section 2 - Creature Insertion
 
