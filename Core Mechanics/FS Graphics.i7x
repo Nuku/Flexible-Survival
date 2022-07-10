@@ -82,6 +82,8 @@ Figure of GermanShepherd_hard_icon is the file "GermanShepherd_hard.jpg".
 Figure of GermanShepherd_naked_icon is the file "GermanShepherd_naked.jpg".
 Figure of GiraffeHerm_hard_icon is the file "Giraffe Herm_hard.jpg".
 Figure of GiraffeHerm_soft_icon is the file "Giraffe Herm_soft.jpg".
+Figure of Gorilla_clothed_icon is the file "Gorilla_clothed.jpg".
+Figure of Gorilla_hard_icon is the file "Gorilla_hard.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Harpy_icon is the file "Harpy.jpg".
@@ -114,7 +116,6 @@ Figure of Imp_naked_icon is the file "Imp_naked.jpg".
 Figure of Imp_face_icon is the file "Imp_face.jpg".
 Figure of Incubus_clothed_icon is the file "Incubus_clothed.jpg".
 Figure of Incubus_naked_icon is the file "Incubus_naked.jpg".
-Figure of Jennifer_icon is the file "Jennifer.jpg".
 Figure of Kangaroo_icon is the file "Red Kangaroo.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg". [creature loss variant]
@@ -157,7 +158,11 @@ Figure of PinkPoodle_icon is the file "fs_poodle.jpg".
 Figure of PlushLion_icon is the file "FS_PlushLion.jpg".
 Figure of QueenBee_icon is the file "QueenBee_ig.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
+Figure of Reptaur_hard_icon is the file "Reptaur_hard.jpg".
+Figure of Reptaur_soft_icon is the file "Reptaur_soft.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
+Figure of Satyr_hard_icon is the file "Satyr_hard.jpg".
+Figure of Satyr_soft_icon is the file "Satyr_soft.jpg".
 Figure of Satyress_naked_icon is the file "Satyress.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
@@ -173,6 +178,8 @@ Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
+Figure of Sierrasaur_hard_icon is the file "Sierrasaur_hard.jpg".
+Figure of Sierrasaur_soft_icon is the file "Sierrasaur_soft.jpg".
 Figure of Siren_clothed_icon is the file "Siren_clothed.jpg".
 Figure of Siren_hard_icon is the file "Siren_hard.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
@@ -441,6 +448,11 @@ Figure of Jay_naked_icon is the file "Jay_naked.jpg".
 Figure of Jay_suit_icon is the file "Jay_suit.jpg".
 Figure of Jay_suit_quest_icon is the file "Jay_suit_quest.jpg".
 Figure of Jay_undies_icon is the file "Jay_undies.jpg".
+Figure of Jennifer_clothed_icon is the file "Jennifer_clothed.jpg".
+Figure of Jennifer_naked_icon is the file "Jennifer_naked.jpg".
+Figure of Jennifer_preg_clothed_icon is the file "Jennifer_preg_clothed.jpg".
+Figure of Jennifer_preg_naked_icon is the file "Jennifer_preg_naked.jpg".
+Figure of Jennifer_icon is the file "Jennifer.jpg".
 Figure of LeonardViolin_icon is the file "Leonardv_ig.jpg".
 Figure of Lilith_clothed_icon is the file "Succubus_clothed.jpg".
 Figure of Lilith_naked_icon is the file "Succubus_naked.jpg".
@@ -520,6 +532,9 @@ Figure of Sarah_face_naked_icon is the file "Sarah_face_naked.jpg".
 Figure of Sarah_naked_icon is the file "Sarah_naked.jpg".
 Figure of Septus_icon is the file "Septus.jpg".
 Figure of Septus_face_icon is the file "Septus_face.jpg".
+Figure of SgtMarks_clothed_icon is the file "Sgt. Marks_clothed.jpg".
+Figure of SgtMarks_hard_icon is the file "Sgt. Marks_hard.jpg".
+Figure of SgtMarks_soft_icon is the file "Sgt. Marks_soft.jpg".
 Figure of SgtMarks_icon is the file "sgtmarks_ig.jpg".
 Figure of Sidney_wusky_Icon is the file "Sidney_wusky.jpg".
 Figure of Sidney_vixen_Icon is the file "Sidney_vixen.jpg".
@@ -1410,6 +1425,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Giraffe Herm hard"	Figure of GiraffeHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Giraffe Herm soft"	Figure of GiraffeHerm_soft_icon	"Vashaa"	g-white	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
+"Gorilla_clothed"	Figure of Gorilla_clothed_icon	"Vashaa"	g-white	"normal"
+"Gorilla_hard"	Figure of Gorilla_hard_icon	"Vashaa"	g-white	"normal"
 "Grant_face"	Figure of Grant_face_icon	"Vashaa"	g-black	"normal"
 "Grant"	Figure of Grant_icon	"uniformvixen"	g-white	"normal"
 "Grant2"	Figure of Grant2_icon	"Familliar"	g-white	"normal"
@@ -1475,6 +1492,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jay_suit"	Figure of Jay_suit_icon	"Lytta"	g-black	"normal"
 "Jay_suit_quest"	Figure of Jay_suit_quest_icon	"Lytta"	g-black	"normal"
 "Jay_undies"	Figure of Jay_undies_icon	"Lytta"	g-black	"normal"
+"Jennifer_clothed"	Figure of Jennifer_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Jennifer_naked"	Figure of Jennifer_naked_icon	"SteppeCrow"	g-white	"normal"
+"Jennifer_preg_clothed"	Figure of Jennifer_preg_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Jennifer_preg_naked"	Figure of Jennifer_preg_naked_icon	"SteppeCrow"	g-white	"normal"
 "Jennifer"	Figure of Jennifer_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
@@ -1607,6 +1628,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
+"Reptaur_hard"	Figure of Reptaur_hard_icon	"SteppeCrow"	g-white	"normal"
+"Reptaur_soft"	Figure of Reptaur_soft_icon	"SteppeCrow"	g-white	"normal"
 "Richard_human_hard"	Figure of Richard_human_hard_icon	"SteppeCrow"	g-White	"normal"
 "Richard_human_clothed"	Figure of Richard_human_clothed_icon	"SteppeCrow"	g-White	"normal"
 "Richard_satyr_hard"	Figure of Richard_satyr_hard_icon	"SteppeCrow"	g-White	"normal"
@@ -1637,6 +1660,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sarah_naked"	Figure of Sarah_naked_icon	"Lyttathebug"	g-white	"normal"
 "Stallionboi hard"	Figure of Stallionboi_hard_icon	"Vashaa"	g-White	"normal"
 "Stallionboi clothed"	Figure of Stallionboi_clothed_icon	"Vashaa"	g-White	"normal"
+"Satyr_hard"	Figure of Satyr_hard_icon	"Vashaa"	g-White	"normal"
+"Satyr_soft"	Figure of Satyr_soft_icon	"Vashaa"	g-White	"normal"
 "Satyress_naked"	Figure of Satyress_naked_icon	"Vashaa"	g-White	"normal"
 "Sea Dragoness NSFW"	Figure of SeaDragoness_NSFW_icon	"Vashaa"	g-white	"normal"
 "Sea Dragoness SFW"	Figure of SeaDragoness_SFW_icon	"Vashaa"	g-white	"normal"
@@ -1655,6 +1680,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
+"Sierrasaur_hard"	Figure of Sierrasaur_hard_icon	"SteppeCrow"	g-white	"normal"
+"Sierrasaur_soft"	Figure of Sierrasaur_soft_icon	"SteppeCrow"	g-white	"normal"
 "Siren_clothed"	Figure of Siren_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Siren_hard"	Figure of Siren_hard_icon	"SteppeCrow"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
@@ -2320,6 +2347,7 @@ carry out artistcredits:
 	say "     German Shepherd by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Giraffe Herm by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
+	say "     Gorilla by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
 	say "     Harpy by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
@@ -2337,6 +2365,7 @@ carry out artistcredits:
 	say "     Husky Female by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Imp by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Incubus by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Jennifer by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Jennifer by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Kangaroo by Anonymous[line break]";
 	say "     Lamia by Anymouse1968 @ furaffinity.net[line break]";
@@ -2368,16 +2397,20 @@ carry out artistcredits:
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
+	say "     Reptaur by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sabretooth (feral) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sabretooth (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
+	say "     Satyr by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Satyress by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sea Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+	say "     Sgt. Marks by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";
 	say "     Smooth Collie Shemale by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Siamese Cats by RedCoatCat @ furaffinity.net[line break]";
+	say "     Sierrasaur by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Snow Bat by Rosali @ Furaffinity.net[line break]";
 	say "     Snow Leopard by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Spartan by Obieblu @ tumblr.com[line break]";

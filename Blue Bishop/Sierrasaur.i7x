@@ -33,6 +33,7 @@ to say sierradesc:
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else:
+		project Figure of Sierrasaur_soft_icon;
 		if HermList is banned:
 			add { "Sierrasaur" } to infections of MaleList;
 			now sierramale is true;
@@ -48,6 +49,7 @@ to say sierradesc:
 
 
 to say losetosierra:
+	project Figure of Sierrasaur_hard_icon;
 	if HP of Player > 0:
 		say "     Instead of fleeing or fighting any further, you choose to offer yourself to the beast. The creature seems indifferent for a moment, approaching you and slowly forcing you to the ground. Once you offer no protest to this act, it takes a moment to regard you, perhaps considering its next course of action, and choosing to start off by pulling free any attire you might have with its maw.";
 	else:
@@ -259,6 +261,7 @@ to sierrabind:
 			say "Invalid action.";
 
 to sierrasex:
+	project Figure of Sierrasaur_hard_icon;
 	if boundstate is true:
 		say "     Your surroundings tremble as the beast starts to make a low hacking sound. Intent on relinquishing you from its confines, its firm stomach squeezes you back from whence you came, up through its gullet and out, foot by foot, into the dry, cool open air. Made to briefly wallow in a puddle of saliva, the creature is clearly not interested in letting you go, pinning you to the ground.";
 	if sierramem is 1:

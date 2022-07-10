@@ -1,6 +1,10 @@
 Greek Street by Wahn begins here.
 
+[
+Idea: Scuttler nest somewhere in the woods near the Campus
+not neccessarily hostile, but feral
 
+]
 
 
 [Room Declaration]
@@ -129,6 +133,17 @@ to say PFratGameDesc:
 		else if Resolution of Free Drink > 7: [overall 1/3 satyrs - stopping here to keep the variety going, as satyr supremacy could get boring]
 			say "The rampant use of satyr wine has made quite an impact on the fraternity and its parties, greatly helped along by to your own efforts to advance Kerr and Talov's well-meant plan of getting everyone to live more in the moment and have fun. Looking at the mix of people in here, you'd guess that maybe a third of the regulars have fully transformed into satyrs by now, from their hooves up to the curved or curling horns on their heads. This doesn't appear to bother anyone really, as the party has gained a wild, carefree energy and people just seem to want some fun.";
 
+instead of going east from PAN Frat Game Room while Daytimer is night and "Anthro" is not listed in Traits of Sylvanus:
+	say "     The door to the goat pen is locked right now. Seems like the frat brothers wanted to make sure that nothing happens to their mascot during the party.";
+
+instead of going south from PAN Frat Garden while Daytimer is night and "Anthro" is not listed in Traits of Sylvanus:
+	say "     The door to the goat pen is locked right now. Seems like the frat brothers wanted to make sure that nothing happens to their mascot during the party.";
+
+an everyturn rule:
+	if Player is in PAN Frat Indoor Pen and "Anthro" is not listed in Traits of Sylvanus and daytimer is night:
+		say "     In order to keep anything from happening to their mascot, the frat brothers keep folks away from him during party time. One of the guys escorts you out of the room (in a friendly way), then locks it.";
+		move Player to PAN Frat Game Room;
+
 Table of GameRoomIDs (continued)
 Object	Name
 PAN Frat Indoor Pen	"PAN Frat Indoor Pen"
@@ -152,9 +167,9 @@ PAN Frat Garden is northeast of PAN Frat Game Room.
 Description of PAN Frat Garden is "[PFratGardenDesc]".
 
 to say PFratGardenDesc:
-	say "     The well-sized garden of the PAN frat house is dominated by an immense oak tree in the back third, which has to be at least eighty years old by your guess, with its strong branches reaching wide into the air. To the left of the tree is a fire-pit with a ring of seats around it, while on the right, you can see a fenced-off area that seems to be used as a vegetable garden. The outer boundary of the garden is formed by an unbroken line of high hedges, carving a fairly private place out of the surrounding college campus. A flat expanse of grass fills the middle bit of the garden, all the way op to the steps of a raised patio closer to the building, with has enough room for a large outdoor dining table, grill and a hot tub. Three doors lead into the building, [link]northwest[end link] into the kitchen, [link]west[end link] into the stairway, and [link]southwest[end link] into the indoor pen of the frat's mascot.";
+	say "     The well-sized garden of the PAN frat house is dominated by an immense oak tree in the back third, which has to be at least eighty years old by your guess, with its strong branches reaching wide into the air. To the left of the tree is a fire-pit with a ring of seats around it, while on the right, you can see a fenced-off area that seems to be used as a vegetable garden. The outer boundary of the garden is formed by an unbroken line of high hedges, carving a fairly private place out of the surrounding college campus. A flat expanse of grass fills the middle bit of the garden, all the way op to the steps of a raised patio closer to the building, with has enough room for a large outdoor dining table, grill and a hot tub. Three doors lead into the building, [link]northwest[end link] into the kitchen, [link]west[end link] into the stairway, [link]southwest[end link] into the game room, and [link]south[end link] into the indoor pen of the frat's mascot. There's a little fenced-off section in front of that door too, allowing the goat to come out through a flap when he wants to.";
 	if Daytimer is day:
-		say "     During the daytime, the place has less of the rowdy energy that takes hold when the partying starts later on, with mostly just the actual frat brothers being present. They do their own stuff, hanging out and talking, or keeping themselves busy doing chores in the garden and watching after Sylvanus the goat.";
+		say "     During the daytime, the place has less of the rowdy energy that takes hold when the partying starts later on, with mostly just the actual frat brothers being present. They do their own stuff, hanging out and talking, or keeping themselves busy doing chores in the garden and watching after Sylvanus the goat who's peacefully grazing the grass in a little fenced-off section.";
 	else:
 		say "     The party crowd has spilled out onto the patio and into the garden itself, with people who prefer to talk in less noisy surroundings gravitating this way. You can see that someone has lit a moderately big fire in the fire pit back near the tree, with the flickering light of the fire revealing that a group of people is doing much more than 'just' talking back there, with most of them not even bothering to keep down their moans.";
 
@@ -269,7 +284,7 @@ PAN Frat Third Floor	"PAN Frat Third Floor"
 
 PAN Frat Third Floor is a room.
 PAN Frat Third Floor is sleepsafe.
-PAN Frat Third Floor is above of PAN Frat Second Floor.
+PAN Frat Third Floor is above PAN Frat Second Floor.
 Description of PAN Frat Third Floor is "[PFratThirdFloorDesc]".
 
 to say PFratThirdFloorDesc:

@@ -4,9 +4,11 @@ Section 1 - Creature Responses
 
 to say Reptaurdesc:
 	setmongender 5; [creature is herm]
+	project Figure of Reptaur_soft_icon;
 	say "     The slow and quiet thumps of feet hitting the ground draws your attention just in time to see the scaly figure of a four-legged reptile-morph coming at you, its dark eyes burning with quiet rage. You swallow thickly as you note the pervasive scent of male musk and sweat that emanates from the creature's muscular form. While normally you wouldn't be too mindful of facing down an overgrown reptile mutant, this one gives you some pause for thought. With an upper body that looks like a cross between a serpent and a man, the thing is covered in [one of]green[or]red[or]brown[or]dark orange[at random] scales and has a thick eight-pack making up its torso. From the waist down, there are four horse-like legs that come to an end at clawed feet instead of hooves and a six foot tail that looks thick and heavy. You ready yourself to face this strange and dauntingly mutated beast.";
 
 to say losetoReptaur:[Defeat Scenes]
+	project Figure of Reptaur_hard_icon;
 	say "     Getting pounced on and then knocked to the ground, the Reptaur hisses in front of your [FaceSpeciesName of Player in lower case] face before roughly tearing you out of your clothes. By the glower in the reptile's dark eyes it looks as though it's about to take whatever sexual frustration its feeling out on you.";
 	if Player is male:
 		if a random chance of 1 in 3 succeeds:[Reptaur gives you oral]
@@ -63,6 +65,7 @@ to say losetoReptaur:[Defeat Scenes]
 
 
 to say beattheReptaur:[Victory scenes]
+	project Figure of Reptaur_hard_icon;
 	say "     Sweeping the Reptaur's front legs out from under it, you end up making the reptilian creature stumble into a half bow before you. Humbled by its defeat, the Reptaur growls while looking at you with seething anger glowing hot in its dark eyes.";
 	if Libido of Player > 40:
 		say "     Despite the rage glowing in the Reptaur's eyes, you can smell the musky scent of its arousal rising high throughout the air.";

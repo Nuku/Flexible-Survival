@@ -940,6 +940,7 @@ Include Stuck Dragon by Stripes.
 Include Sturm by Prometheus.
 Include Sven by Stripes.
 Include Sylvia by Prometheus.
+Include Sylvanus by Wahn.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Silverbacks Football Team by Kernog.

@@ -2,7 +2,8 @@ Version 10 of Soldier Events by Wahn begins here.
 [Version 10 - David+Brutus]
 
 [ Soldier Overview                                                        ]
-[ Squad Leader: Allen (sociopath)                                         ]
+[ Squad Leader: Allen Rogers (sociopath)                                  ]
+[ - Rank: Sergeant                                                        ]
 [ - black hair, moderate body hair                                        ]
 [ - amber eyes                                                            ]
 [ - felt sexual attraction to his feral pet bitch as a teen (18)          ]
@@ -10,22 +11,26 @@ Version 10 of Soldier Events by Wahn begins here.
 [ - titles are pretty important to him - first his rank, then alpha       ]
 [   loves having power over others                                        ]
 [                                                                         ]
-[ Alpha Team Leader: Carl (good guy)                                      ]
+[ Alpha Team Leader: Carl Banning (good guy)                              ]
+[ - Rank: Corporal                                                        ]
 [ - blond hair, light body hair                                           ]
 [ - straight                                                              ]
 [ - respects others, moral, caring                                        ]
 [ - trained to take commands                                              ]
 [                                                                         ]
 [ Alpha Team Member: Davies                                               ]
+[ - Rank: Private                                                         ]
 [ - replacement for a soldier who died a week or two before deployment    ]
 [ - "new guy" just stuffed into the squad before they were sent off       ]
 [ - unjustly resented by the other guys due to being happy to join them   ]
 [                                                                         ]
-[ Alpha Team Member: Burt                                                 ]
+[ Alpha Team Member: Burt Jones                                           ]
+[ - Rank: Private First Class                                             ]
 [ - shaved head                                                           ]
 [ - sees infected as 'freaks', no attraction to them at all               ]
 [                                                                         ]
-[ Alpha Team Member: Ezra                                                 ]
+[ Alpha Team Member: Ezra Shepard                                         ]
+[ - Rank: Private                                                         ]
 [ - blue eyes, black hair (curly), moderate curly body hair               ]
 [ - darker skin, middle eastern descent                                   ]
 [ - cut cock                                                              ]
@@ -98,7 +103,7 @@ to say ResolveEvent Soldier Squad:
 			if calcnumber is 1:
 				LineBreak;
 				say "     You hurry to the entrance of the building you are in, stepping outside barely in time to catch a glimpse of where Allen is going. You track the soldier at a cautious distance for a few minutes, seeing the man threaten several passing people to keep their distance. Finally, he turns off the road to enter a run-down housing complex consisting of a number of buildings. Observing which one he picks, you slowly approach while making sure you're never in full sight of the front door or windows. Instead, you circle around the building and keep close to the wall, ducking under each window and barely peeking over its windowsill to catch a glimpse of the inside. One empty room, two, then you find them: It's a bedroom with a somewhat grimy king-size bed, on which Davies lies outstretched now, still happily rubbing her clit. Glancing a bit to the side, you catch sight of Allen, who's put a chair in one corner of the room and is watching both the husky as well as the door leading into the room. His rifle is leaned against the wall right next to him.";
-				say "     The window you're peeking through isn't actually fully shut, instead having about half an inch of an opening through which you can listen to what's going on in there fairly well, and smell the heady musk of canine arousal that must be insanely thick in the room itself. For a long while, most of what you hear are the schlicking sounds of Davies's fingers frigging her pussy and the husky's varied yips and pants as she pushes herself to sate the need the transformation instilled in her. Allen appears to be just silently watching her the whole time, gaze focused on the horny anthro that was one of his subordinate soldiers not so long ago. After the husky comes one more time, adding further to the wet spot on the mattress, she finally seems to calm down, sinking back onto the bed and just panting for breath with her eyes closed. As Allen brushes a hand through is black hair, then gets up to check on her, you notice that the man has a hardon in his pants, clearly outlined under the fabric it is straining against. Seems like having a ringside seat all this time had an impact on him.";
+				say "     The window you're peeking through isn't actually fully shut, instead having about half an inch of an opening through which you can listen to what's going on in there fairly well, and smell the heady musk of canine arousal that must be insanely thick in the room itself. For a long while, most of what you hear are the schlicking sounds of Davies's fingers frigging her pussy and the husky's varied yips and pants as she pushes herself to sate the need the transformation instilled in her. Allen appears to be just silently watching her the whole time, gaze focused on the horny anthro that was one of his subordinate soldiers not so long ago. After the husky comes one more time, adding further to the wet spot on the mattress, she finally seems to calm down, sinking back onto the bed and just panting for breath with her eyes closed. As Allen brushes a hand through his black hair, then gets up to check on her, you notice that the man has a hardon in his pants, clearly outlined under the fabric it is straining against. Seems like having a ringside seat all this time had an impact on him.";
 				LineBreak;
 				say "     [bold type]How do you react?[roman type][line break]";
 				say "     [link](1)[as]1[end link] - Do not interfere, just continue watching.";

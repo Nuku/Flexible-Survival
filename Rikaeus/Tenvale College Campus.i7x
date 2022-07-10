@@ -156,15 +156,6 @@ to say collegefdormdesc:
 
 [Room Declaration]
 
-Table of GameRoomIDs (continued)
-Object	Name
-Richard's Room	"Richard's Room"
-
-Richard's Room is a room.
-Description of Richard's Room is "[richardroomdesc]".
-
-to say richardroomdesc:
-	say "     The satyr boy's room is what you expect of a college student. Plastered all over the walls are lewd pictures of naked women and men, however upon closer examination you spot posters of male couples fucking that look to be recent acquisitions. You muse that Richard's recent goat changes appear to have enhanced his various desires. Turning your attention from the posters you notice there's various items on the floor from a football to stray jock straps to even a stray dildo. Out of the entire mess the only things that look to be neat are his bed which is covered in dark blue bedsheets and blankets and his computer area which is clean of junk.";
 
 [Room Declaration]
 
