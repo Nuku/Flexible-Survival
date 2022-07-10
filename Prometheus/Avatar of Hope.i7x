@@ -9,7 +9,7 @@ Object	Name
 A Strange Visitor	"A Strange Visitor"
 
 A Strange Visitor is a situation.
-ResolveFunction of A Strange Visitor is "[ResolveEvent A Hooded Visitor]".
+ResolveFunction of A Strange Visitor is "[ResolveEvent A Strange Visitor]".
 Sarea of A Strange Visitor is "Nowhere".
 
 instead of navigating Grey Abbey Library while (Level of Player > 30 and a random chance of 1 in 2 succeeds):
@@ -18,7 +18,7 @@ instead of navigating Grey Abbey Library while (Level of Player > 30 and a rando
 	move player to Grey Abbey Library;
 	say "[ResolveEvent A Strange Visitor]";
 
-	to say ResolveEvent A Strange Visitor:
+to say ResolveEvent A Strange Visitor:
 	say "     As you approach the library, you are concerned to find someone standing outside gazing at the entrance. While overall the rest of the city's inhabitants seem to avoid the area for some reason, what is especially worrying about this figure is that they are standing calmly outside, neither trying to gain entry nor worried about being seen. They seem to be wearing a robust ground-length coat, but for a fragment of a moment you swear that it shifts into a tattered pitch-black cloak and then pristine white armor before changing back to a coat again. If they are competent at magic, maybe that is why they are so at ease. Perhaps sensing your eyes on them, the figure turns to look at you, revealing that their face is just as obscured as the rest of them, an advanced looking combat helmet protecting the entirety of their head. 'You are [if player is not defaultnamed][name of player][else]a current occupant of this bunker[end if], yes?' they ask as you draw near, their voice surprisingly clear, if a bit clinical and emotionless, through what you assume must be hidden speakers on the mask.";
 	say "     'Be at ease, I wish you no harm. As to why I am waiting out here, I thought that it might be more polite to give you the chance to invite me into your home rather than having to potentially force my way past any guards that you might have and eliciting terror in any that you might be giving shelter.' They give of a sort of passive menace, their manner of speech stilted and strange despite being in fluent English. 'My name is... well, neither my name or the name of my vessel is important and would likely cause more issue for you to know it than to merely trust that I am not currently your enemy nor expect to ever be so.' Instinct screams at you to flee or to take cover in the bunker and wait for them to leave, but you simultaneously get the impression that if they did wish to harm you, they would have done so already without giving you the chance to get within combat distance. Trusting your deductive reasoning over your instinct, you coolly invite them to follow you inside so that you can speak in relative comfort away from the prying eyes and ears of the city.";
 	WaitLineBreak;
