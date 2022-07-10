@@ -151,6 +151,12 @@ Player has a number called AssFuckTaken.
 Player has a number called PussyFuckGiven.
 Player has a number called PussyFuckTaken.
 
+to say Player name:
+	if name of Player is "Player":
+		say("Alias D");
+	else:
+		say("[name of Player]");
+
 Section 2 - Body Parts
 
 [old style body parts - to be phased out once all infections follow the expanded set]
