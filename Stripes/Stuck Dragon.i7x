@@ -1391,13 +1391,29 @@ to say mchristy_cv2:
 	else if MChristyVore is 3: [bad end time]
 		say ". But right after that, you find yourself crawling right back towards [Christy]'s cock, all higher thought thoroughly squeezed from your mind. Your body is dissolving, becoming far more pliable, and as you push your head right against the urethra, you easily slip inside. [Christy] seems shocked, but he doesn't do anything to slow your new journey inside him. The cock sucks you in far faster than ever before. Your shoulders are sucked inside, then every other inch of you follows after in less than a minute. It takes little time to slip down his cock, even less to go along the tube leading to one of his testicles. You then splash right into the near empty ball, your body quickly conforming to the squeezing and pulsing interior.";
 		say "     Your legs shrink, lowering you more and more towards the bottom of the sphere, and soon your arms and torso do the same. Everything irreversibly changes, and you're soon just looking up at the top of the pulsing ball, only your senses remaining. You can see, hear, taste, smell and feel. Gurgling and bubbling fills and covers you, leaves you with a constant dopey feeling, a constant lust. You are now the very representation of sex, of need, of breeding. You then feel yourself bubbling up, rising as the testicle squeezes around you, pushing you up, and up, and up, through [Christy]'s pipes. You feel like you're cumming, like your entire body is orgasming at once, and it never stops. Even when you go flying from the cock, splattering a nearby wall, you feel like you're still cumming.";
-		WaitLineBreak;
-		say "     Even when soldiers come in and see your bubbling, liquid form, you keep cumming. Even when those soldiers are then sucked into [Christy]'s waiting cock, you keep cumming. You never stop, not even after he has devoured dozens more, using you as musky, alluring bait to draw in more meals. He never stops, and neither does your orgasm.";
-		WaitLineBreak;
-		now battleground is "Void";
-		the Player was ended by "Christy";
-		trigger ending "Cum Waste";
-		end the story saying "You were turned into cum while inside Christopher's balls.";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     There is, however, something that can still save you, despite how you have been melted to dragon jizz, as if your consciousness was not quite over yet. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself away. Maybe it will not be so bad...";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being whatever sensations you were feeling in [Christy]'s sack... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. To your surprise, [Christy] does not even seem to notice this strange event, simply thinking you have survived the experience as you did in the previous times. Your sudden urges also seem to have disappeared, though you cannot know for sure if it will not happen again.";
+			else:
+				LineBreak;
+				now battleground is "Void";
+				the Player was ended by "Christy";
+				trigger ending "Cum Waste";
+				end the story saying "You were turned into cum while inside Christopher's balls.";
+		else:
+			LineBreak;
+			say "     Even when soldiers come in and see your bubbling, liquid form, you keep cumming. Even when those soldiers are then sucked into [Christy]'s waiting cock, you keep cumming. You never stop, not even after he has devoured dozens more, using you as musky, alluring bait to draw in more meals. He never stops, and neither does your orgasm.";
+			WaitLineBreak;
+			now battleground is "Void";
+			the Player was ended by "Christy";
+			trigger ending "Cum Waste";
+			end the story saying "You were turned into cum while inside Christopher's balls.";
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

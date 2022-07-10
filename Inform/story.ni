@@ -404,6 +404,7 @@ Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
+Include Biolizardman Brute by Gherod.
 Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
 Include Behemoth by Kaleem mcintyre.
@@ -420,6 +421,7 @@ Include Breederslut by Stripes.
 Include Brown Rat by Wahn.
 Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
+Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
 Include Cannon by Guest Writers.
 Include Cat Ninjas by Stripes.
@@ -788,6 +790,7 @@ Include Duke by Wahn.
 Include Dullahan by Gherod.
 Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
+Include Elstan by Gherod.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
@@ -956,6 +959,7 @@ Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
+Include Wyatt by Gherod.
 Include Yolanda by Stripes.
 Include Zdravko by Gherod.
 Include Zeke by Qazarar.

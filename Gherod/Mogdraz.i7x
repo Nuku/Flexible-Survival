@@ -1627,6 +1627,11 @@ to say MogdrazSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around his huge cock";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Worship his body";
+	now sortorder entry is 3;
+	now description entry is "Such a great strong body must enjoy being worshipped. Forward that proposal";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1644,8 +1649,10 @@ to say MogdrazSexMenu:
 				now sextablerun is 1;
 				if (nam is "Give him a handjob"):
 					say "[MogdrazHandjob]";
-				if (nam is "Offer him a blowjob"):
+				else if (nam is "Offer him a blowjob"):
 					say "[MogdrazBlowjob]";
+				else if (nam is "Worship his body"):
+					say "[MogdrazBodyWorship]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -1688,5 +1695,23 @@ to say MogdrazBlowjob:
 	WaitLineBreak;
 	say "     'You like that? Guess dating me has some perks for you, right?' he says with a chuckle, then pushes you away gently while he gestures at Toron, the bartender, to come over and help clean you up. 'Don't worry, he'll get you all pristine looking in a pinch,' the Demon Lord lets you know, and it does not take long until Toron does some magic here and there and leaves you all cleaned up and ready to go.";
 	NPCSexAftermath Player receives "OralCock" from Mogdraz;
+
+to say MogdrazBodyWorship:
+	say "     Looking at the Demon Lord's impressive physique, you cannot help but have a desire to admire and worship every muscle of his, a thought further fueled by the visage you get as you stare at Mogdraz himself, who usually wears only a harness that practically shows off his entire torso. You only know for certain that his demonic strength must be appreciated, an urge that fires up your lust the more you picture yourself touching and feeling up those great demonic muscles. The crimson devil obviously notices your interest in his body and is the first to speak, in spite of your intention to do so before you got distracted. 'Is something troubling you? I couldn't help but notice you standing in obvious silence as your eyes took in my figure. Surely it must not be because you find such view alluring?'";
+	say "     You admit to him that you were thinking about offering yourself to give his muscles a bit of worship, seeing how great they look and how much he would probably enjoy having such a great deal of attention given to them. Chuckling, Mogdraz then retributes with a smile before your generous offer, one that he is pleased to receive. 'Well, it's certainly different. And pleasant, might I add, that someone would want to simply show my physique some love and care. I mostly find it peculiar myself since this is merely one of my many forms, but nonetheless... It feels great.' It is then that Mogdraz brings his hands over his harness and proceeds to slowly undo its belts, his fiery eyes now locked in a gaze with yours as you turn your full attention to what you are seeing.";
+	WaitLineBreak;
+	project figure of Mogdraz_noharness_icon;
+	say "     Once the whole thing is finally undone, Mogdraz throws the harness to the side in order to fully reveal his muscular torso, flexing every muscle in a way that seems to make each and every single one of them more pronounced and bigger in volume. In fact, you do not think that is how muscles work normally, but a powerful demon such as him would certainly have something in mind to put on a good gun show. 'Well, then... You might approach me, and I promise I won't smother you... much.' Despite the devilish smirk on Mogdraz's face, you trust him to make this a pleasant experience for the both of you, and so, you approach him. With one step after the other, you slowly make your way to just about a few inches of distance from the Demon Lord, who then extends his arms to reach you and pull you to him.";
+	say "     'Didn't you want to feel these muscles? Don't be shy now... I've got plenty of those to satisfy your cravings...' With this said, Mogdraz further pulls your head towards him until he manages to plant your face atop one of his pecs, your lips directly aligned to his pierced nipple that is already perked up and yearning for attention. Then, he grabs one of your hands and places it on his abs, after letting go of it to leave it free to explore, or so it highly suggests that. 'That's a good place to focus your attention... Wrap your lips around that meaty nub and roll your tongue all over it, you'll make this demon very happy.' As you feel up the sides of this muscular torso, you heed Mogdraz's request by immediately rolling your tongue around his dumbbell piercings and nipple, trying to find a good room to suck on it.";
+	WaitLineBreak;
+	project figure of Mogdraz_nakedhard_icon;
+	say "     'Mmh, that's it...' He then embraces you, taking both his big arms and wrapping them around your body in a tight hug, his biceps bulging all nicely as you feel at least one of them across the side of your head. Those pecs, which are covered in a pleasant amount of body hair, feel huge and soft against your face when he is not flexing them, and hard and even bigger when he does. You only care about suckling on that meaty nub as well as you can while your hands squeeze, rub and caress his muscular back and sides. All this caressing leads to Mogdraz popping a boner, as expected, and before you know it, he has his huge red cock out of his pants. 'You might have to take care of something down there, too... If you don't mind...'";
+	say "     Not wanting to leave any part of the Demon Lord unattended, you once more do as he requests and take one of your hands to grab his manhood by his shaft, then proceed to rub it as you continue tugging on his nipples with your mouth, changing from one to another after spending a considerable amount of time on each. By keeping this stimulation fresh and letting those sensations cool down, you manage to keep Mogdraz pleased, and most importantly, throbbing quite hard down there. You decide to bring your other hand over his shoulder and rub him there as well, causing the devil to lean his head backwards and let out a moan from all the pleasure combined. With the handjob you are also now giving him, you cause him to approach his edging point significantly faster...";
+	WaitLineBreak;
+	say "     'I guess you are determined to make it shoot... And I won't stop you. I only beg of you to continue what you're doing...' And you are happy to heed that request too. With your tongue wiggling all over those nipples, you feel his chest expanding with each deep breath, each pec almost overtaking your head in size, as a consequence of all the joy you are providing him with. The rubs and gentle squeezes around his body only further fuel those pleasant sensations, and everything just adds up in the end, together with your one free hand stroking his long and thick meatlog that yearns to shoot very soon. That time could not come in any better occasion, as his excitement grows so great his climax hits him like a thunder.";
+	say "     With his body language as your only warning, you pick up the pace and make him shoot all that load forward, making a mess of the floor as you keep all the stimulation going until the end, taking about half a minute for it to subside as the crimson devil moans and grunts in pure ecstasy. All that demon cum is as abundant as ever, and only at the end of that minute it begins to leak smaller drops, having formed a trail of the stuff from his feet to several more ahead. 'Ooh, that was... most pleasant... A great release...!' he says, thanking you for making him feel as good as he did. Mogdraz then gently grabs your head and gives you a passionate kiss, that demonic tongue of his swimming in your mouth, wrestling against yours before he pulls out, ending with a gente lip rubbing.";
+	WaitLineBreak;
+	say "     'Feel free to nurse on my chest anytime you wish, I most assuredly won't refuse your offer,' he says, giving the side of your waist a tap before he finally lets you go. Having left a smile on Mogdraz's face, you are now content to move on.";
+	NPCSexAftermath Mogdraz receives "Other" from Player;
 
 Mogdraz ends here.

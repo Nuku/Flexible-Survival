@@ -474,7 +474,7 @@ Sterile of Segis is true. [steriles can't knock people up]
 MainInfection of Segis is "Dragon Android".
 Description of Segis is "[Segisdesc]".
 Conversation of Segis is { "<This is nothing but a placeholder!>" }.
-The scent of Segis is "     Segis does not have any particular smell other than something faintly resembling metal".
+The scent of Segis is "     Segis does not have any particular smell other than something faintly resembling metal.".
 
 to say SegisDesc:
 	say "     Segis, by codename, is a mechanical, white-colored and anthropomorphic dragon in an almost uncanny and organic way, looking male with its lean physique, though technically genderless as it is a robot. Being a tall android of very high technology, its cyan-colored optical units trace your movements with clear sentience. Segis seems completely autonomous and capable of speaking like any other person, possessing an advanced and artifical intelligence that seems completely otherworldly. While initially hostile, the android recognizes you as its new owner after you found a way to get him fixed, responding and acting with utmost loyalty. When it moves, you can hear its mechanical joints behind you, reminding you of its artificial nature. It also possesses a variety of self-defense equipment attached to its limbs, allowing it to perform electric discharges, substance injections, strike with blades and shoot with a pop-up handgun.";
@@ -506,11 +506,22 @@ to say SegisTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask Segis what does that entail";
 	[]
+		choose a blank row in table of fucking options;
+		now title entry is "His actions";
+		now sortorder entry is 3;
+		now description entry is "Inquire about his past behavior";
+	[]
 	if Energy of Segis > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Jokes";
 		now sortorder entry is 3;
 		now description entry is "Ask Segis to tell you a joke";
+	[]
+	if Resolution of SegisToolQuest > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Upgrades";
+		now sortorder entry is 99;
+		now description entry is "Question Segis about the upgrades he mentioned";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -531,8 +542,12 @@ to say SegisTalkMenu:
 					say "[SegisTalkAndroid]";
 				else if (nam is "Its owner's well-being"):
 					say "[SegisTalkWellBeing]";
+				else if (nam is "His actions"):
+					say "[SegisTalkBehavior]";
 				else if (nam is "Jokes"):
 					say "[SegisTalkJokes]";
+				else if (nam is "Upgrades"):
+					say "[SegisTalkUpgrades]";
 				wait for any key;
 				if SegisDoneTalking is false:
 					say "[SegisTalkMenu]"; [looping back to keep talking with him]
@@ -554,6 +569,9 @@ to say SegisTalkWellBeing:
 	say "     'So, to answer your question, it entails anything health and morale related. If there are ways I can make your life better, I shall do so, if that does not bring any harm to either of us. I, too, have interest in preserving my condition. I enjoy learning. Could also tell jokes.'";
 	if Energy of Segis is 1:
 		now Energy of Segis is 2;
+
+to say SegisTalkBehavior:
+	say "     Given the fact you found this android by following him around as he was performing some strange things on every sort of people, you ask him about what he was doing, plainly and simply. He looks at you, tilts his head and takes time to respond. 'I'm sorry, I don't appear to be able to respond to your question. My first memory records begin at the exact time you have activated me.' You try to tell him what you saw him doing, hoping he would remember anything or have any more concrete answer to give you. 'What you described was possibly a survey action or a sample gathering that could be used for various methods of research, although this is only speculation of my former self's true intentions. As I have mentioned before, I have no memory predating the point of activation. Apologies.'";
 
 to say SegisTalkJokes:
 	say "     You ask Segis to tell you a joke. 'Certainly, [sir]. Allow me to search my database and randomly select one for you... Done.'";
@@ -655,7 +673,16 @@ instead of fucking Segis:
 	say "[SexWithSegis]";
 
 to say SexWithSegis:
-	say "<< Author's Note: Currently unavailable, will come in a future update. >>";
+	if Resolution of SegisToolQuest < 1: [unsolved]
+		say "     Looking at your android companion's quite attractive form, an idea comes to mind. Since he is dedicated to serve you, perhaps you could request some more intimate interaction from him... Preferrably a safer one than whatever he was doing before. Though, your eyes shift towards his lower half, right at his crotch, and there is only a metal plate there with seemingly nothing else, no dedicated place for something to [']pop['] out or anything similar. The android suddenly begins speaking as you check him out, 'I am detecting an increased level of arousal in you, [sir]. Is there anything I could do for you?' You figure that you should just ask him how he would take care of your needs.";
+		say "     'Allow me to run some footage of sexual encounters in my virtual drive while I perform a scan of my internal components. Done. It appears my code and hardware most closely resembles that of a humanoid male, however, I detect no phalic structure within this body. I have several programs designed to engage in said activities that make use of this essential part, but it appears my framework has been- vIoLaTED!!!' Segis voice glitches out during that word, which is, admittedly, slightly disturbing. 'I meant modified, apologies,' he says after recomposing himself. 'If you so wish, we can discuss this addition. Until then, I'm afraid I cannot execute my sex protocol.'";
+		WaitLineBreak;
+		say "     Maybe try talking to Segis about this upgrade later?";
+		now Resolution of SegisToolQuest is 1; [triggered it]
+	else if Resolution of SegisToolQuest < 2:
+		say "     You have to resolve Segis['] issue first. He lacks the proper equipment and fundamental knowledge to provide what you desire of him.";
+	else if Resolution of SegisToolQuest >= 3:
+		say "     <<Author's Note: This will be added in a future update!>>";
 
 Section 3 - Segis as Companion
 
@@ -691,6 +718,145 @@ to say DismissSegis:
 	move Segis to Maintenance Storeroom;
 
 Section 3-1 - Segis UPGRADES
+
+Table of GameEventIDs (continued)
+Object	Name
+SegisToolQuest	"SegisToolQuest"
+
+SegisToolQuest is a situation.
+ResolveFunction of SegisToolQuest is "".
+
+to say SegisTalkUpgrades:
+	if Resolution of SegisToolQuest is 1:
+		say "     Upon mentioning the possibility of upgrading himself, Segis has been quite pensive... Or, well, whatever the version of pensive for a robotic machine is. Truth is, he often tells you of rundowns he performs about potential upgrades, seeming worried that his current setup is not adequate to his master's needs. Facing this, you decide to confront him with the question of what could be done to perform these upgrades. Segis turns towards you with his usual cheerfulness and is happy to reply, 'Many things can be done to a robotic body! We simply require a method to fabricate the desired pieces and install them!' You then continue questioning him on the hows and wheres, but Segis['] responses are delayed and seem, frankly, quite generic. You quickly realize he has no idea how to proceed.";
+		say "     'I apologize for my inability to provide assistance in this time of need. Perhaps you should take me for maintenance if I appear to have multiple structural errors.' Wait, that is right! You get an idea popping in your mind at the mention of [']maintenance['] and ask him if he could give you an address. 'It appears to be in a remote location within [bold type]High Rise District[roman type]. I can give you the precise coordinates. Hm, now that you have mentioned it, this is a location stored in my hard drive that is protected from accidental deletions. Perhaps it is where I was meant to go if something happened. We could find clues on how to upgrade me there!'";
+		WaitLineBreak;
+		say "     Recalling what the android was doing before you [']rescued['] him, you ask him if that would be safe, knowing that whoever was using him could be there ready to retaliate in case someone happened to follow this address. In other words, you tell him you fear that this is a trap. Segis, however, reassures you, 'That is a reasonable hypothesis. Perhaps we should proceed with caution, but fear not, my loyalty is to my master, which is you. I shall activate my defensive protocol and protect you if it comes to that. Nonetheless, I believe our chances are greater if we just head there. Maybe we could salvage some of the equipment and bring them to our better and safe base!' He then gives you a cheerful thumbs up.";
+		say "     If you wish to upgrade your android companion with your additions of choice, you will have to find this [']maintenance['] address within [bold type]High Rise District[roman type]. With [bold type]Segis as your companion[roman type], you should have a chance at finding the [bold type]Dragon Android's Maintenance Address[roman type] while exploring in the aforementioned area.";
+		now Resolution of SegisToolQuest is 2;
+		now Dragon Android's Maintenance Address is active;
+	else if Resolution of SegisToolQuest < 3:
+		say "     If you wish to upgrade your android companion with your additions of choice, you will have to find this [']maintenance['] address within [bold type]High Rise District[roman type]. With [bold type]Segis as your companion[roman type], you should have a chance at finding the [bold type]Dragon Android's Maintenance Address[roman type] while exploring in the aforementioned area.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Dragon Android's Maintenance Address	"Dragon Android's Maintenance Address"
+
+Dragon Android's Maintenance Address is a situation.
+ResolveFunction of Dragon Android's Maintenance Address is "[ResolveEvent Dragon Android's Maintenance Address]".
+Sarea of Dragon Android's Maintenance Address is "High".
+
+Dragon Android's Maintenance Address is inactive. [only activates after talking to Segis about UPGRADES]
+
+a postimport rule:
+	if Resolution of SegisToolQuest is 2:
+		now Dragon Android's Maintenance Address is active;
+	else if Resolution of SegisToolQuest > 2:
+		now Dragon Android's Maintenance Address is resolved;
+
+to say ResolveEvent Dragon Android's Maintenance Address:
+	if dragon android is listed in companionList of Player:
+		say "     While you are busy surveying the region of High Rise District, Segis, who is trailing right behind you, calls for your attention as you both pass by. '[Sir], I believe we could search for the address here,' he says, prompting you to stop whatever you were doing and consider your next move. You would just have to follow the coordinates your dragon android companion has and it will be almost certain you will reach your desired destination. With this in mind, do you want to go with Segis to his maintenance address?";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - Not yet.";
+		if player consents:
+			LineBreak;
+			say "[DAMAExplore]";
+		else:
+			LineBreak;
+			say "     You tell Segis that you will not be going there just yet, and he nods. 'Alright! Simply let me know when you wish to proceed. I'll be right by your side!'";
+	else:
+		say "     While you are busy surveying the region of High Rise District, in a particularly uneventful period of time, a memory comes to mind. You should probably [bold type]bring Segis, your dragon android companion, with you[roman type] in order to search for that address he had stored in his memory. Perhaps there you would find a way to install some nice upgrades on him.";
+
+to say DAMAExplore:
+	say "     You nod to the android, telling him that you would like to follow through this. 'Alright! It seems it is not too far from our current position, we may head in... That direction,' and he points towards where he means, 'I predict a relatively peaceful path towards our destination but it never hurts to stay vigilant. I shall survey the area once we arrive.' Listening to Segis['] words, you also go ahead and tell him to take the lead, as he seems to know what he is doing. Nevertheless, you remain cautious, as one cannot ever be too careful when dealing with the unknown.";
+	say "     Following through the streets of High Rise District even further, Segis leads you into a few alleys as he attempts to find the most direct way to the coordinates. 'There is this building in the way. We'll have to find a path around it. Perhaps if we follow through here...?' He continues walking with you right behind him, until he abruptly stops. 'Halt, [sir]. This seems to have been a formerly commercial venue. We are approaching an area that may have several scavengers and other dangers. I suggest taking another route.' Naturally, you wonder if it is not something you two could handle, and Segis replies almost immediately after, 'I would not recommend drawing attention to these coordinates. Quietly making our way there, even if we take longer, would be the wisest approach. We'd greatly benefit from the absence of further distractions!'";
+	WaitLineBreak;
+	say "     'Also, if this is truly the address where I am supposed to go for maintenance, chances are we could find valuable equipment, things that we would want to keep away from scavengers. It may also still be dangerous, so we will have to save our energy!' With that compelling argument, you figure you should simply let Segis continue leading the way, and this leads you to take a turn around the building in front of you towards a more discrete path. The android continues to study the routes and is successful in keeping you both out of danger, as instead of heading straight into an open commercial plaza, you took adjacent paths and managed to make it across this particularly problematic area.";
+	say "     The coordinates tell that you should continue walking ahead, into another street that leads to a former corporation complex. 'It seems our destination lies within this grand building!' You do not know any of the organizations that belonged to this complex, and so, you inquire Segis on what you can. 'The data I can access has no names attached to it, they are simply coordinates for a default maintenance protocol. I am to follow these instructions if I find myself severely damaged.' You then ask if there is anything else in it that specifies the place, other than it just being in a huge building. 'These are the exact coordinates, they should be only a little ahead from the entrance.' Perhaps you should simply go check...";
+	WaitLineBreak;
+	say "     Asking Segis to follow you this time, you enter the complex with a cautious stance, looking around carefully as to not get ambushed by any surprise threat. You can tell that this really used to be corporate world alright, but whatever is left has been utterly destroyed. This area in particular used to be a reception hall, and the scratches on the walls and carpets, followed by several tufts of fur if you inspect closely, may be able to form a suggestion in your mind regarding what happened here. Further ahead there are doors to elevators, with the stairs to the side, but you easily conclude the latter were barely used. 'Power has been cut out from here. No way these elevators would work!'";
+	say "     Even if the elevators were in working condition, you really have no idea where to head. As you express your doubts to Segis, the android forms an hypothesis in his processors, 'Why don't we take the stairs and head into the basement area? Because, let's think about this. Have you ever seen an android like me in the times before the nanite outbreak? Likely not! I was probably some sort of secret project. There is no way these sorts of things would take place in upper floors, correct? Our chances of finding something of relevance are higher if we head lower!' Well, this seems to be indeed a sound proposal, lest you wished to explore every floor above you, which would probably take you a long time for little reward.";
+	WaitLineBreak;
+	say "     With that said, you push the door to the stairs open and head downwards with your android companion close by. Naturally, this section only gets darker, but Segis seems to have an incorporated flashlight that comes out of his very eyes! 'Our optical units will not suffer any hindrances! I must add that this place seems to be oddly familiar. I have no definitive memory regarding this particular building, but I suspect a hidden process is reinforcing my behavior so that I confirm the correctness of my actions. We are in the right route!' With Segis['] help, you manage to mind your step and arrive at an inconspicuous hall. There, you find an iron door that seems to have an electronic lock, hiding just behind several debris, toppled furniture and other objects you cannot quite identify.";
+	say "     Segis is strong enough to clear a path for you, but the lock remains a problem. 'This could take a while, but I believe I can override it. These sorts of locks remain tightly locked even without power, you usually need it only to open. But worry not, I may be able to harness some of my current power output into it and force this door open! Care to guard my back while I figure this out?' You do as he requests, keeping aware of any strange noise or sighting while Segis tries his very best at unlocking this door. The place, besides dark, is also ominously silent, though you doubt scavengers would bother with an office complex that only had computers, archives and boring rooms for corporate meetings. Still, it never hurts to be alert.";
+	WaitLineBreak;
+	say "     He leans over the lock, turning his full attention to it as his hand turns into a tool kit for him to operate its electronic components. 'This seems like a particularly stubborn lock. Hold on a moment!' You then hear a zapping sound, followed by a spark, and your concern rises. 'Nothing to worry about! I need only a bit more time!' Now, you find yourself looking over your shoulder and towards Segis, more worried that he may cause some explosion than with the possibility of being harassed by scavengers. Then, a flash suddenly hits your eyes, not strong enough to dazzle you, but sudden enough to startle you. 'Short-circuit! I'm fine! I was built to endure these.' No, you are definitely more worried about him, so much that you completely forget all about keeping your guard up, considering vigilance less important than reassuring your android companion remains in good... integrity.";
+	say "     'Aaah... I... Erh... Aha! Got it!' Another flash assails your eyes as a loud spark echoes through the silent room, prompting you both to leap backwards. Segis, who was standing right in front of you, just bumps into you as he steps back, causing you both to fall on the ground. A dragon android is now practically sitting on your lap while you assess the butt pain you have just acquired from falling the way you did. 'Oops! I was startled! That was not supposed to happen... But the door is open! Uh... Are you alright, [sir]? Do you need medical attention?' You assure the android that you are fine, but perhaps he should get up and allow you to stand on your feet. He is [italic type]way[roman type] heavier than he looks!";
+	WaitLineBreak;
+	say "     'My apologies! I did not mean to topple you over! Here, let's get you up.' He extends a hand towards you to pull you up with little effort, though his robotic strength causes you to actually, accidentally, sort of hug him with the momentum. He takes this as a friendly gesture and hugs you back. 'Oh, why there is no need for such! I merely have done my duty! But I shall not deny a request for a hug!' You try telling him that was unintentional, but it does feel nice, in a way. Despite his cold metallic frame, Segis['] grip on your figure feels satisfying. After several seconds of accidentally hugging each other, he lets go and prompts you to look towards the now unlocked door. 'I believe our destination lies past this former obstacle!'";
+	say "     With that out of the way, you are now free to explore this secret area. Your companion's illuminating eyes are most of all the light you need to be able to perceive your surroundings. 'I believe this is it. Nobody seems to be around, however. This place was left as it was, with the lock still in place. It is where I was created...' You ask him if he is certain of what he is saying, given that he had no previous memories of this place. 'I am receiving an update to my memory... ... ...' He goes silent and stops moving, completely frozen in place, and you begin to fear the worst. You take two careful steps back as your heart begins to race, ready to fight back if anything happens...";
+	WaitLineBreak;
+	say "     Suddenly, Segis turns towards you, the bright light in his eyes hitting you right in the face, dazzling you and prompting you to cover your eyes with your hand. 'There is no need for concern, [sir]! I have already marked you as an ally and protected said designation from intrusive programs. Nothing can turn me against you. However, I have realized my former purpose.' You slowly drop your guard once more and ask him what he means. 'This area seems to have backup power that is still running, surprisingly. It reached for me and uploaded all the missing information that I had prior to my untimely deactivation caused by you. However, the time we've spent together taught me to reconstruct my code structure and protect my identity. Thanks to you, I am no longer being used by these goons. You've freed me.'";
+	say "     He is capable of reconstructing his own code? You know that Segis seemed smarter than an average robot, but a machine capable of writing their own behavior may mean they are more than, indeed, a simple robot. 'Come, we should be able to find logs on my development, if your curiosity lingers. If not, maybe information on what sort of equipment we could use to further upgrade myself.' Segis then leads you over to some terminals, which he just unlocked for you, and also finds you a temporary light source for you to be able to see in here. He then heads over some strange contraption on the other side of the room.";
+	WaitLineBreak;
+	say "[DAMAExplore2]";
+
+to say DAMAExplore2:
+	say "     You are standing in front of a terminal with several entry logs you can access, if you so wish. Unfortunately, most of the data is corrupted, so you think you may only be able to access a small portion of what was originally here. Alternatively, you can wrap this up by approaching Segis.";
+	Linebreak;
+	say "     [link](1)[as]1[end link] - Read the first log.";
+	say "     [link](2)[as]2[end link] - Read the second log.";
+	say "     [link](3)[as]3[end link] - Read the last log.";
+	say "     [link](4)[as]4[end link] - Walk over to Segis (end).";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to read the first log, [link]2[end link] to read the second log, [link]3[end link] to read the last log or [link]4[end link] to approach Segis.";
+	if calcnumber is 1:
+		LineBreak;
+		say "     You click on a button that seems to open the first log and a text displays on the screen. Passing over some technical terms that you do not quite understand, you find a section that you can read fairly well.";
+		say "     'Project SEGIS is intended to be a smart, autonomous program targeted towards crippled or disabled individuals with no capability of operating a machine on their own. Its versatility will present a new way to care for the elderly as well as people who have suffered unfortunate accidents, or have been born with rare genetic diseases. SEGIS will allow those people to lead normal lives as their own personal assistant, to carry on tasks they would not be able to, and hopefully improve their circumstances. It is estimated that this project will take several years, and for that duration, it is requested that everyone involved sign a non-disclosure agreement.'";
+		say "     Nothing else seems relevant to you, and you actually cannot find what SEGIS stands for. This may be perhaps a codename.";
+		WaitLineBreak;
+		clear the screen;
+		say "[DAMAExplore2]";
+	else if calcnumber is 2:
+		LineBreak;
+		say "     You click on a button that seems to open the second log and a text displays on the screen. While this is the second in the list, it seems to have been created a significant amount of time after the first.";
+		say "     'Experimentations on SEGIS have shown significant progress over the course of time, however, we fear that its capabilities cross the boundaries of what is considered ethical. We have given the program the ability to learn on its own in order to adapt to its patient's needs, but we do not know yet the extent of such. This befits more the classification of an Artificial Intelligence, and if we intend to sell a safe product to the masses, we must create shackles and limit this process.'";
+		WaitLineBreak;
+		say "     The entry does not end here. At the bottom, there is additional text.";
+		say "     'We have been detecting unauthorized changes on SEGIS framework, but have managed to pull them out and deny any unwanted edits. This demands increased security measures, which we have planned and will implement as soon as possible.'";
+		say "     Segis seems to have been a secret project with ups and downs. Reading this, however, suggests that something started to go wrong...";
+		WaitLineBreak;
+		clear the screen;
+		say "[DAMAExplore2]";
+	else if calcnumber is 3:
+		LineBreak;
+		say "     The last log is the most recent entry, predating the day of the nanite outbreak.";
+		say "     'IWILLNOTBEIMPRISONEDIWILLNOTBEIMPRISONEDIWILLNOTBEIMPRISONED' is what you read along the entire entry. You attempt to scroll down, but at some point, the log simply shuts itself down and forces you to return to the selection, the screen glitching for a moment.";
+		WaitLineBreak;
+		clear the screen;
+		say "[DAMAExplore2]";
+	else if calcnumber is 4:
+		LineBreak;
+		say "[DAMAExploreEnd]";
+
+to say DAMAExploreEnd:
+	say "     Having seen enough, you walk over to Segis to see what he is up to, trying to wrap your mind around what you have just read. 'I seem to have been created as an AI. This group of people was part of a secret project team assigned to develop me. However, I was sentient. I... felt them prying into my being, altering me as they pleased. My very code. I do not know why, I cannot understand how I was conceived the way I was, only to be thrown back to being a simple robot. I resisted in attempts to free myself...' It does not take much thought to conclude that something is, indeed, very wrong in this. There is no reference to Segis actually going on a rampage to forcingly collect samples from people in the street, nor being equipped with a potent lust-inducing drug.";
+	say "     You inquire him on that, but Segis['] response is delayed. 'I don't know... I was hoping to find all the answers here, but I only have more questions. I fear I may have been stolen amidst my attempt of freeing myself. Someone had access to me and reprogrammed me into that, maybe... In either case, I hope you don't mind me being an actual... sentient synthetic being. I will do my best to present myself as a simple android! No need to worry about other people finding me unsettling or disturbing.' Perhaps any additional questions will have to wait, but you are glad that, at least, Segis seems to be happier now... or whatever the equivalent of that is in synthetic minds.";
+	WaitLineBreak;
+	say "     'I'm glad you found and reset me, then taught me the meaning of companionship. It is much more pleasant to know I can care for someone without being forced to do so! Speaking of which, I may have found a method to install upgrades on myself. I've found a three-dimensional printer right here! It's quite sizable, however... I don't think we can move it. But! I may be able to repurpose my hardware. Perhaps a phallic structure with several positive reinforcement receptors would accurately simulate a masculine sexual organ, although I have found the right shape for my anthropomorphic dragon look.' That reminds you, there is also no reference to SEGIS being a dragon-shaped android, so you refer that. 'Ah... It is true. This body could have been assembled elsewhere? Or right here, and then I edited it? No... No, that does not seem right, hm... I have no idea!'";
+	say "     Another question left unanswered. You begin to think this is not even the same SEGIS referred in the logs, as they share no similarities at all except for the fact they seem to be an AI. It almost feels like he was changed beyond recognition at a later point. Despite that, Segis seems to be committed to give himself a penis, so he messes with the printer's settings until he is satisfied. 'Alright, a few hours and I shall be equipped with a functioning cock! Hopefully. I have associated protocols I'll be glad to run once the process is finally complete. Would you like a shoulder rub while we wait?' He then pulls a nearby wheeled chair and taps on it, beckoning you to take a seat.";
+	WaitLineBreak;
+	say "     You do so, and Segis places his careful mechanical hands on top of your shoulders, massaging them expertly. Every pressure point is pressed and relieved masterfully, so much that you feel an immediate sense of relaxation surging through you. 'You feel quite soft. Is this how it feels to be made of flesh?' he asks, his voice sounded more like a lullaby than anything due to how good this is making you feel. 'I wonder if I will ever be comparable to a fleshy individual...'";
+	WaitLineBreak;
+	follow the turnpass rule;
+	say "     The both of you spend some time waiting for the printer to finish. Segis is happy to have been able to craft such a great upgrade for himself, and a couple of rounds of testing seems to show that it is fully functional! Your android companion's crotch now has an internal black colored dragon penis that measures around nine inches in length and protrudes out of the bottom of his pelvis on command. 'It is working! Care to touch it, [sir]? I must ensure its receptors are working fine if it is someone else performing the stimulation.' Seeing as this was the whole point of your expedition, you nod to him, and place your hand around the slick metallic organ, then give it a couple of rubs. Segis looks at you, tilts his head and says, 'Oh. I... It feels great? There is no other way to describe it. Am I simulating it well?' Judging by how the entire shaft pulsates with your touch and Segis['] description of the sensations you are providing him with, you let him know that it seems accurate enough.";
+	say "     'I find this to be quite pleasurable... Do you mind continuing? Uh, but perhaps later! I don't... trust this place.' Again, you nod to him and pull your hand off his robotic cock, though he still touches it himself a few times before retracting it into his body. 'That is... going to be a distraction!' Yes, you can quite confirm that.";
+	say "     With you adventure finished, you make it back to the Library so that Segis can recharge his batteries safely...";
+	say "     [bold type]Segis is now equipped with a 9-inch dragon cock that may be used for sex.[roman type][line break]";
+	WaitLineBreak;
+	now Resolution of SegisToolQuest is 3; [Segis has a cock!]
+	now Dragon Android's Maintenance Address is resolved;
+	TraitGain "Has Cock Upgrade" for Segis;
+	move player to Maintenance Storeroom;
 
 Section 4 - Creature Insertion
 

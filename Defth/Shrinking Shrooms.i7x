@@ -1,5 +1,6 @@
-Version 3 of Shrinking Shrooms by Defth begins here.
+Version 4 of Shrinking Shrooms by Defth begins here.
 [Version 3 - Added a shroom activated event occurring on the Stables (Ballsy Hung Horseman) - Gherod]
+[Version 4 - Added "Stubbornly Alive" outcomes to all vore events - Gherod]
 
 Section 1 - Event
 
@@ -105,21 +106,53 @@ to say ResolveEvent Hungry Dog:
 					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you open your mouth to scream or get air, you swallow more of his saliva, making it even harder to breathe. The deprivation of oxygen makes you lightheaded, and your arousal mixed with the dog's saliva has an almost euphoric taste. Bracing yourself, you cum hard, [if Player is male]spilling your seed, [end if]which the monster happily takes. Starting to feel some tremors, as though the beast is laughing at your own weakness, he finally moves to swallow you.";
 					say "     The horny dog's tongue pushes you to the back of his muzzle, brushing you against his teeth, before forcing you into a dark descent. You are crushed by the walls of flesh that surrounds you. It was difficult to breathe inside his mouth, but now, it's pretty much impossible. You lungs burn with the lack of oxygen. Your head spins, and your vision is turning darker and darker by the moment. Your muscles scream in pain with the pressure, and your bones almost snap. The travel is almost hellish in nature until you finally drop into the beast's stomach. Now, the hell is fully realized.";
 					say "     The foul odors of the monster's last meal assault your nose, and you almost puke. Holding yourself, you take a look at your surroundings. It is almost pitch-black, but somehow, you can see some of what is happening in here. You somehow landed on a safe place, everywhere else being filled with acid. There are some bones and even flesh still intact floating in the caustic sea. But your luck is only finite. With rising dread, you hear the gurgle noises of the digestion starting. Your safe place shifts, making you lose your footing and land in the acid. That is how you die. As someone's meal.";
-					WaitLineBreak;
-					now battleground is "void";
-					the Player was ended by "Shrinking Shrooms eaten alive";
-					trigger ending "Player has died";
-					end the story saying "You were eaten alive!";
-				else:
-					say "     You try your hardest to escape his grip, but the beast was already stronger than you with your normal size. Now that you are miniaturized, it doesn't look like there is much you can do. As he brings you near his teeth, you can only see the void of his throat, waiting to swallow you down. It convulses and closes from time to time, as if expecting a nice meal, which in this case, is you. The monster's throat looks almost sexual. With all of the saliva trickling and running inside, it seems like a huge sex organ that is soon to be your passage. The white teeth secure you in place, preventing any escape. Then you are tossed around inside of his mouth as he tries to chew your body. As he catches your leg and arm between his teeth, you feel your bones almost breaking. Despite your skin managing to miraculously keep together, you scream with agony. It wasn't supposed to end like this.";
-					if a random chance of 1 in 4 succeeds:
-						say "     You feel movement as his tongue starts to push you down his throat. Pressing you against his palate, there is little room to breathe with all of his saliva surrounding you, making you almost drown inside the beast. Your consciousness keeps fading in and out, but you keep yourself awake for the whole experience. The feeling of your erogenous zones slipping against the German shepherd's flesh is erotic, and this experience would almost be euphoric if there wasn't a dark abyss waiting for you. You keep sliding around in his throat, swimming between phases of pain and pleasure or even both. His muscles crush and press against your whole body, constantly pushing you down and down towards your destination. The journey feels like an eternity until you are finally tossed into his stomach.";
-						say "     The foul odor of his last meal still lingers in the air, if you can even call it air. You hold your nose in a vain chance to stop the smell, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast's stomach, although not much, and you are still held in place. Left without much to do but wait, your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly, and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have, or to someone like in your situation, a herald to their final moments. You take a look around and see the surrounding liquid coming to you like a death tide. You silently weep, once again mourning how it wasn't supposed to end like this...'";
+					if "Stubbornly Alive" is listed in Feats of Player:
+						WaitLineBreak;
+						say "     Or... do you? There is still a brink of consciousness in the back of your mind before it all fades away, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+						say "     ([link]N[as]n[end link]) - Commit to become this huge beast's meal.";
+						if Player consents: [reform and survive!]
+							LineBreak;
+							say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+						else:
+							LineBreak;
+							now battleground is "void";
+							the Player was ended by "Shrinking Shrooms eaten alive";
+							trigger ending "Player has died";
+							end the story saying "You were eaten alive!";
+					else:
 						WaitLineBreak;
 						now battleground is "void";
 						the Player was ended by "Shrinking Shrooms eaten alive";
 						trigger ending "Player has died";
 						end the story saying "You were eaten alive!";
+				else:
+					say "     You try your hardest to escape his grip, but the beast was already stronger than you with your normal size. Now that you are miniaturized, it doesn't look like there is much you can do. As he brings you near his teeth, you can only see the void of his throat, waiting to swallow you down. It convulses and closes from time to time, as if expecting a nice meal, which in this case, is you. The monster's throat looks almost sexual. With all of the saliva trickling and running inside, it seems like a huge sex organ that is soon to be your passage. The white teeth secure you in place, preventing any escape. Then you are tossed around inside of his mouth as he tries to chew your body. As he catches your leg and arm between his teeth, you feel your bones almost breaking. Despite your skin managing to miraculously keep together, you scream with agony. It wasn't supposed to end like this.";
+					if a random chance of 1 in 4 succeeds:
+						say "     You feel movement as his tongue starts to push you down his throat. Pressing you against his palate, there is little room to breathe with all of his saliva surrounding you, making you almost drown inside the beast. Your consciousness keeps fading in and out, but you keep yourself awake for the whole experience. The feeling of your erogenous zones slipping against the German shepherd's flesh is erotic, and this experience would almost be euphoric if there wasn't a dark abyss waiting for you. You keep sliding around in his throat, swimming between phases of pain and pleasure or even both. His muscles crush and press against your whole body, constantly pushing you down and down towards your destination. The journey feels like an eternity until you are finally tossed into his stomach.";
+						say "     The foul odor of his last meal still lingers in the air, if you can even call it air. You hold your nose in a vain chance to stop the smell, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast's stomach, although not much, and you are still held in place. Left without much to do but wait, your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly, and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have, or to someone like in your situation, a herald to their final moments. You take a look around and see the surrounding liquid coming to you like a death tide. You silently weep, once again mourning how it wasn't supposed to end like this...'";
+						if "Stubbornly Alive" is listed in Feats of Player:
+							WaitLineBreak;
+							say "     However, there is still a brink of consciousness in the back of your mind before it all fades away, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+							LineBreak;
+							say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+							say "     ([link]N[as]n[end link]) - Commit to become this huge beast's meal.";
+							if Player consents: [reform and survive!]
+								LineBreak;
+								say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+							else:
+								LineBreak;
+								now battleground is "void";
+								the Player was ended by "Shrinking Shrooms eaten alive";
+								trigger ending "Player has died";
+								end the story saying "You were eaten alive!";
+						else:
+							WaitLineBreak;
+							now battleground is "void";
+							the Player was ended by "Shrinking Shrooms eaten alive";
+							trigger ending "Player has died";
+							end the story saying "You were eaten alive!";
 					else:
 						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
 						now Resolution of Hungry Dog is 1; [was shrunk & eaten but escaped the hungry dog]
@@ -398,11 +431,28 @@ to say ChineseTrouble:
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
-				now battleground is "void";
-				the Player was ended by "Shrinking Shrooms eaten alive";
-				trigger ending "Player has died";
-				end the story saying "You were eaten alive!";
-				wait for any key;
+				if "Stubbornly Alive" is listed in Feats of Player:
+					WaitLineBreak;
+					say "     There is, however, still a way for you to survive this, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+					say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+					if Player consents: [reform and survive!]
+						LineBreak;
+						say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+					else:
+						LineBreak;
+						now battleground is "void";
+						the Player was ended by "Shrinking Shrooms eaten alive";
+						trigger ending "Player has died";
+						end the story saying "You were eaten alive!";
+						wait for any key;
+				else:
+					now battleground is "void";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
+					end the story saying "You were eaten alive!";
+					wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -447,11 +497,28 @@ to say ChineseTrouble:
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
-				now battleground is "void";
-				the Player was ended by "Shrinking Shrooms eaten alive";
-				trigger ending "Player has died";
-				end the story saying "You were eaten alive!";
-				wait for any key;
+				if "Stubbornly Alive" is listed in Feats of Player:
+					WaitLineBreak;
+					say "     There is, however, still a way for you to survive this, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+					say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+					if Player consents: [reform and survive!]
+						LineBreak;
+						say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+					else:
+						LineBreak;
+						now battleground is "void";
+						the Player was ended by "Shrinking Shrooms eaten alive";
+						trigger ending "Player has died";
+						end the story saying "You were eaten alive!";
+						wait for any key;
+				else:
+					now battleground is "void";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
+					end the story saying "You were eaten alive!";
+					wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -459,11 +526,27 @@ to say ChineseTrouble:
 to say AlphaKick:
 	if a random chance of 1 in 4 succeeds:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit. But before you can follow up, a more powerful quake goes through the husky's insides, with the wall of his stomach bulging out suddenly to throw you to the other side of the chamber and land in a puddle of stomach acid. Flinching in pain, you realize that he must have punched his own stomach. You smile at the thought and drag yourself to your feet again, then pummel his insides some more. This won't save you, but at least the bastard is gonna have indigestion.";
-		WaitLineBreak;
-		now battleground is "void";
-		the Player was ended by "Shrinking Shrooms eaten alive";
-		trigger ending "Player has died";
-		end the story saying "You were eaten alive!";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     Or, well, that might not save you, but there is something that can, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+			else:
+				LineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You were eaten alive!";
+		else:
+			WaitLineBreak;
+			now battleground is "void";
+			the Player was ended by "Shrinking Shrooms eaten alive";
+			trigger ending "Player has died";
+			end the story saying "You were eaten alive!";
 	else:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit, then a lot! Suddenly, everything shifts on its side, and you are thrown about, then violently ejected back the way you came in. After another voyage through the gullet of the husky, you fall onto the ground in a wash of vomit. Looks like your well-aimed hit made him throw up! With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
 		say "     It doesn't take long before he comes hunting for you in a wild rage, but the chaos in the ransacked kitchen and his impatience allows you to hide in between the rubble, trash, and cracks in the floor, eventually making it safely to the hole you entered the building through. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Best not to remain here for too much longer, as he might find the hole and come around the building, so you quickly snatch up your stuff and run away naked, only stopping to get dressed when you're several blocks away.";
@@ -488,11 +571,27 @@ to say AlphaClimb:
 to say AlphaDive:
 	if a random chance of 1 in 4 succeeds:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
-		WaitLineBreak;
-		now battleground is "void";
-		the Player was ended by "Shrinking Shrooms eaten alive";
-		trigger ending "Player has died";
-		end the story saying "You were eaten alive!";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     Or do you? There is something that can save you, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+			else:
+				LineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You were eaten alive!";
+		else:
+			WaitLineBreak;
+			now battleground is "void";
+			the Player was ended by "Shrinking Shrooms eaten alive";
+			trigger ending "Player has died";
+			end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through his digestive system until you are finally 'birthed' through his tight asshole. When you fall down, you have a small window to escape your 'parent' before he realizes what is going on. Luckily, he is busy fucking his bitch again, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
 		now Resolution of Little Trouble is 8; [shrunk, eaten by alpha, anal way out]
@@ -502,11 +601,27 @@ to say BitchClimb:
 	if a random chance of 1 in 4 succeeds:
 		say "     Looking at the hole you just went through, the realization strikes your mind. There are only two places connected to where you are now, up and down. And you don't think you will survive the rest of the way down anyway, so your only option is trying to go back from where you came. Getting back on your feet, you throw your hands up, trying you best to grab at anything at all. Your first attempt is met with failure, but on the second try, you manage to hold onto something. No time to figure out how you are climbing. If you want to survive this you have to continue.";
 		say "     Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside. Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. But still, you make your way to her muzzle, finally seeing the outside world again. Hope comes back to your heart... and are quickly shattered, as the alpha is waiting for you. 'Look at that little rascal,' he says looking directly at you inside her mouth. 'Thought you'd make it, but no. You're still going down!' As the husky laughs, the bitch clamps her teeth shut, closing the last sliver of light you are ever going to see, then throws her head back and swallows you again. This time, you don't have the energy to even struggle anymore...";
-		WaitLineBreak;
-		now battleground is "void";
-		the Player was ended by "Shrinking Shrooms eaten alive";
-		trigger ending "Player has died";
-		end the story saying "You were eaten alive!";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     There is, however, something that can still save you, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+			else:
+				LineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You were eaten alive!";
+		else:
+			WaitLineBreak;
+			now battleground is "void";
+			the Player was ended by "Shrinking Shrooms eaten alive";
+			trigger ending "Player has died";
+			end the story saying "You were eaten alive!";
 	else:
 		say "     Looking at the hole you just went through, the realization strikes your mind. There are only two places connected to where you are now, up and down. And you don't think you will survive the rest of the way down anyway, so your only option is trying to go back from where you came. Getting back on your feet, you throw your hands up, trying you best to grab at anything at all. Your first attempt is met with failure, but on the second try, you manage to hold onto something. No time to figure out how you are climbing. If you want to survive this you have to continue. Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside.";
 		say "     Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. Until you feel her muscles pushing you up with extreme strength. Soon, you are met with some of her digestive fluids and thrown out of her mouth while she gasps for air from the way you escaped. The male dog sees you in the pile of bile, but you quickly get back on your feet and run into a crack in the wall next to you. The male husky chases you for a while, almost hitting the wall as you enter the hole. Hearing growls and shouts, you keep running where you can. His arm is pushed inside the gap in the wall with you, but it's slow enough that you can outrun it with ease. Finally on the other side of the way you took, luck smiles upon you as you can see the sky again and near you is your stuff. Now, you just need to wait for the effects of the shrinking shrooms to end, and you can go back to your life on the city.";
@@ -516,11 +631,27 @@ to say BitchClimb:
 to say BitchDive:
 	if a random chance of 1 in 4 succeeds:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
-		WaitLineBreak;
-		now battleground is "void";
-		the Player was ended by "Shrinking Shrooms eaten alive";
-		trigger ending "Player has died";
-		end the story saying "You were eaten alive!";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     There is, however, something that can still save you, despite how badly all this acid burns around your body. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself become this beast's meal.";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being the painful ordeal of being in that beast's belly... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+			else:
+				LineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You were eaten alive!";
+		else:
+			WaitLineBreak;
+			now battleground is "void";
+			the Player was ended by "Shrinking Shrooms eaten alive";
+			trigger ending "Player has died";
+			end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all of the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through her digestive system until you are finally 'birthed' through her tight asshole. When you fall down, you have a small window to escape your 'parent' before she realizes what is going on. Luckily, she is busy being pounded by her master, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find the escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
 		now Resolution of Little Trouble is 10; [shrunk, eaten by bitch, anal way out]
@@ -668,11 +799,27 @@ to say BHHScene1:
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
 		if player consents:
 			say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Mmmh... Fuck yes... A pleasure to meet you, [mister]... My balls are temporarily sated, thanks to you.'";
-			WaitLineBreak;
-			now battleground is "void";
-			the Player was ended by "Shrinking Shrooms eaten alive";
-			trigger ending "Player has died";
-			end the story saying "You just got melted into cum, while stuck inside some very hung horseman's balls.";
+			if "Stubbornly Alive" is listed in Feats of Player:
+				WaitLineBreak;
+				say "     There is, however, something that can still save you, despite how you have been melted to horse jizz, as if your consciousness was not quite over yet. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+				say "     ([link]N[as]n[end link]) - Just give up and let yourself away.";
+				if Player consents: [reform and survive!]
+					LineBreak;
+					say "     You do not really know how it all happened, the last thing in your memory being whatever sensations you were feeling in that horseman's sack... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+				else:
+					LineBreak;
+					now battleground is "void";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
+					end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
+			else:
+				WaitLineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
 		else:
 			say "     You try your best to not fall asleep due to all this, and your awareness pays off. Soon, your body begins to give signs of wanting to regrow... But you are so exhausted that you black out moments after, as the creamy and thick pool of cum you are in takes you, submerging you completely.";
 			WaitLineBreak;
@@ -763,11 +910,27 @@ to say BHHFistCock:
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
 		if player consents:
 			say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Oh, I see you made your choice, [mister]... Don't worry, I'll enjoy every single spurt of this massive load you just gave me. I promise I'll think of you.' These are the last words you hear, followed by a laugh, before your existence fully dissipates into nothing but cum.";
-			WaitLineBreak;
-			now battleground is "void";
-			the Player was ended by "Shrinking Shrooms eaten alive";
-			trigger ending "Player has died";
-			end the story saying "You just got melted into cum, while stuck inside some very hung horseman's balls.";
+			if "Stubbornly Alive" is listed in Feats of Player:
+				WaitLineBreak;
+				say "     There is, however, something that can still save you, despite how you have been melted to horse jizz, as if your consciousness was not quite over yet. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+				say "     ([link]N[as]n[end link]) - Just give up and let yourself away.";
+				if Player consents: [reform and survive!]
+					LineBreak;
+					say "     You do not really know how it all happened, the last thing in your memory being whatever sensations you were feeling in that horseman's sack... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+				else:
+					LineBreak;
+					now battleground is "void";
+					the Player was ended by "Shrinking Shrooms eaten alive";
+					trigger ending "Player has died";
+					end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
+			else:
+				WaitLineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
 		else:
 			say "     You try your best to not fall asleep due to all this and resist with your very best efforts, still kicking at the horseman's balls and at every single one of his taunts. There is this particular kick that makes the horseman flinch unexpectedly... 'Whoa! Hey! S-stop doing that...!' he shouts, trying to block your blows, but the enormous size of his junk makes it difficult for him to find the right space to shield himself from you. Noticing this, you continue to hit that particular spot, the horseman's voice booming out from everywhere as grunts and heavy breathing. 'F-fuck, n-not there... C-come on! Let me enjoy you a little bit longer...! Fuuuck why does it feel so good...?!'";
 			WaitLineBreak;
@@ -834,11 +997,27 @@ to BBHFuckCockCV:
 	say "     ([link]N[as]n[end link]) - Try to keep awake.";
 	if player consents:
 		say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Oh, I see you made your choice, [mister]... Don't worry, I'll enjoy every single spurt of this massive load you just gave me. I promise I'll think of you.' These are the last words you hear, followed by a laugh, before your existence fully dissipates into nothing but cum.";
-		WaitLineBreak;
-		now battleground is "void";
-		the Player was ended by "Shrinking Shrooms eaten alive";
-		trigger ending "Player has died";
-		end the story saying "You just got melted into cum, while stuck inside some very hung horseman's balls.";
+		if "Stubbornly Alive" is listed in Feats of Player:
+			WaitLineBreak;
+			say "     There is, however, something that can still save you, despite how you have been melted to horse jizz, as if your consciousness was not quite over yet. Remembering the Wyvern Patriarch's boon, you know you could just endure this and survive... Or give up and perish.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+			say "     ([link]N[as]n[end link]) - Just give up and let yourself away.";
+			if Player consents: [reform and survive!]
+				LineBreak;
+				say "     You do not really know how it all happened, the last thing in your memory being whatever sensations you were feeling in that horseman's sack... But you have made it alive, after all. Your body retains a strange consistency after a while, which returns to normal briefly after. Once you are able to, you quickly look around for your stuff and get ready to continue your adventures. Maybe you should stay away from those mushrooms for a while...";
+			else:
+				LineBreak;
+				now battleground is "void";
+				the Player was ended by "Shrinking Shrooms eaten alive";
+				trigger ending "Player has died";
+				end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
+		else:
+			WaitLineBreak;
+			now battleground is "void";
+			the Player was ended by "Shrinking Shrooms eaten alive";
+			trigger ending "Player has died";
+			end the story saying "You just got melted into cum while stuck inside some very hung horseman's balls.";
 	else:
 		say "     You try your best to not fall back asleep due to all this and resist with your very best efforts, still kicking at the horseman's balls and at every single one of his taunts. There is this particular kick that makes the horseman flinch unexpectedly... 'Whoa! Hey! S-stop doing that...!' he shouts, trying to block your blows, but the enormous size of his junk makes it difficult for him to find the right space to shield himself from you. Noticing this, you continue to hit that particular spot, the horseman's voice booming out from everywhere as grunts and heavy breathing. 'F-fuck, n-not there... C-come on! Let me enjoy you a little bit longer...! Fuuuck why does it feel so good...?!'";
 		WaitLineBreak;
