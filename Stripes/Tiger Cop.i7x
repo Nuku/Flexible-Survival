@@ -194,7 +194,6 @@ to say SgtMarks_Desc:
 
 Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
 sgtmarkstalk is a number that varies.
-The icon of Sgt Marks is figure of SgtMarks_icon.
 
 the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
 

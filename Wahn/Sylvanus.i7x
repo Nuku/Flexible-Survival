@@ -226,7 +226,7 @@ an everyturn rule:
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
 			if Player is in PAN Frat Second Floor:
 				say "     Coming up the stairs, Sylvanus joins his frat brothers, eager to hang out with them. He really is one of the bros, and just as much as a party animal as them.";
-			now Sylvanus is in PAN Frat Indoor Pen;
+			now Sylvanus is in PAN Frat Second Floor;
 		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night]
 
 a postimport rule:
@@ -338,7 +338,7 @@ instead of fucking Sylvanus:
 			change the southeast exit of PAN Frat Second Floor to Sylvanus's Room; [connecting the location]
 			change the northwest exit of Sylvanus's Room to PAN Frat Second Floor; [connecting the location]
 		else:
-			say "<Writer's Note: As there currently are no additional sex scenes for Sylvanus, you'll get a repeat of the initial scene as a treat for now.>";
+			say "[bold type]<Writer's Note: As there currently are no additional sex scenes for Sylvanus, you'll get a repeat of the initial scene as a treat for now.>[roman type][line break]";
 			LineBreak;
 			say "[SylvanusDominance]";
 			[
@@ -369,7 +369,7 @@ to say SylvanusDominance:
 	[]
 	if ScaleValue of Player is 3 or ScaleValue of Player is 4:
 		choose a blank row in table of fucking options;
-		now title entry is "Fend off the challenge and dominate him instead";
+		now title entry is "Challenge and dominate him instead";
 		now sortorder entry is 2;
 		now description entry is "Grab one of his horns to redirect him into headbutting the next wall";
 	[]
@@ -399,7 +399,7 @@ to say SylvanusDominance:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Use your smaller size as an advantage to dominate him" or nam is "Fend off the challenge and dominate him instead" or nam is "Use your larger size to dominate him"):
+				if (nam is "Use your smaller size as an advantage to dominate him" or nam is "Challenge and dominate him instead" or nam is "Use your larger size to dominate him"):
 					say "[SylvanusDominate]";
 				if (nam is "Obediently kneel and orally service him"):
 					say "[SylvanusSubmission]";
