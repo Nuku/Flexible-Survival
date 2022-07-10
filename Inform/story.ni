@@ -260,6 +260,7 @@ Include Ancient Tome by Wahn.
 Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
+Include Avatar of Hope by Prometheus.
 Include Beach Events by Sarokcat.
 Include Black Pearl by Guest Writers.
 Include Bouncy Castle by Stripes.
@@ -824,6 +825,7 @@ Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
+Include Hope-Born Dragon by Prometheus.
 Include HornyHorsey by Guest Writers.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.

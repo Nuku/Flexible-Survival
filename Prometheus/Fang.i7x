@@ -248,7 +248,7 @@ to say FangTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the feral wolf, shaking your head slightly as he gives a questioning look.";
+			say "     You step back from the feral wolf, shaking your head slightly as [SubjectPro of Fang] gives a questioning look.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";

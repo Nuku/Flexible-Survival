@@ -142,10 +142,10 @@ to say Gwensexmenu:
 					say "[Gwen_3some1]";
 				else if nam is "Threesome w/Colleen":
 					say "[Gwen_3some2]";
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Gwen is turns;
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Gwensex1:
