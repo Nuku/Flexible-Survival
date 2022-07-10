@@ -106,7 +106,7 @@ SylviaRoomConnection is a number that varies.[@Tag:NotSaved]
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Despairing Biologist is resolved and (Resolution of Despairing Biologist is 1 or Resolution of Despairing Biologist is 2 or Resolution of Despairing Biologist is 3) and SylviaRoomConnection is 0:
 		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
-		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
+		change the southwest exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 		now SylviaRoomConnection is 1; [room connected]
 
 an everyturn rule:
@@ -303,11 +303,11 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk7]";
 				if (nam is "Knowledge of Greek Mythology"):
 					say "[SylviaTalk8]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -679,7 +679,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 			now hpM of Sylvia is 1; [got room number]
 		now Resolution of Despairing Biologist is 1; [banned / warded option]
 		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
-		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
+		change the southwest exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 	else:
 		say "     Her friend gives her a hug, the show of friendship slightly ruined by the erection tenting his trousers. 'Really, Julian? You're that pleased for me? Or are you perhaps wanting something else?' she questions him in a sultry manner, her hand sneaking down his trousers to cup his bulge. By this time, you are standing in full view about five meters away. A fact that has been noticed by the wolf, Julian. 'Umm, Sylvia. There's someone right there. Would we not be better going...' he remarks cautiously. The collie, whom you take to be Sylvia, turns around, but you notice that she doesn't remove her hand from his pants. She studies you shortly. 'From the look of them, they've seen sex before, and besides, universities were rife with fornication and debauchery even before the changes.' Unfazed by your presence, she continues to play with the lupine's junk.";
 		say "     [bold type]Do you wish to continue watching, or leave before this gets awkward?[roman type][line break]";
@@ -710,7 +710,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 				now HP of Sylvia is 1; [got room number]
 			add "Sylvia Quest" to OpenQuests of Player;
 			change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
-			change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
+			change the southwest exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 		else:
 			LineBreak;
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
@@ -1410,6 +1410,7 @@ to SylviasCityResearchOneEvent:
 				WaitLineBreak;
 				say "     None of the huskies move, the male unconscious, and the bitches shocked at the progression of events. They quietly begin to confer, looking around fearfully as though they expect to be attacked, until they come to an agreement. They hug each other tightly before fleeing into the city together, not even looking back at the cruel master that they are abandoning. Your not sure how to feel about what you saw, but nonetheless decide that you have been here for long enough and decide to continue with your day, leaving the alpha to face whatever creature comes across him next alone. You really hope that Julian and Sylvia discover your presence here today.";
 				now Resolution of Sylvia's City Research One is 5; [Watched. Raped by Husky Alpha]
+	now Sylvia's City Research One is resolved;
 
 [Table of GameEventIDs (continued)
 Object	Name

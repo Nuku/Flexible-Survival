@@ -459,10 +459,10 @@ to say Meredithsexmenu:
 					say "[Meredith_3some2]";
 				else if nam is "UB fun":
 					say "[Meredith_UBplayer]";
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Meredith is turns;
-	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Meredithsex1:

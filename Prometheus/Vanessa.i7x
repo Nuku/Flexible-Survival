@@ -310,10 +310,10 @@ to say Vanessasexmenu:
 					say "[Vanessasex4]";
 				else if nam is "Nursing":
 					say "[Vanessasex5]";
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Vanessa is turns;
-	wait for any key;
 	clear the screen and hyperlink list;
 
 

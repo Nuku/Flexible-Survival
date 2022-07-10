@@ -571,16 +571,16 @@ to SetHermPronouns for (x - a person):
 	now PronounSet of x is "Herm";
 
 To SetNeutralPronouns for (x - a person):
-	now SubjectPro of x is "it";
-	now ObjectPro of x is "it";
-	now PosAdj of x is "its";
-	now PosPro of x is "its";
-	now ReflexPro of x is "itself";
-	now SubjectProCap of x is "It";
-	now ObjectProCap of x is "It";
-	now PosAdjCap of x is "Its";
-	now PosProCap of x is "Its";
-	now ReflexProCap of x is "Itself";
+	now SubjectPro of x is "they";
+	now ObjectPro of x is "them";
+	now PosAdj of x is "their";
+	now PosPro of x is "theirs";
+	now ReflexPro of x is "themselves";
+	now SubjectProCap of x is "They";
+	now ObjectProCap of x is "Them";
+	now PosAdjCap of x is "Their";
+	now PosProCap of x is "Theirs";
+	now ReflexProCap of x is "Themselves";
 	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:

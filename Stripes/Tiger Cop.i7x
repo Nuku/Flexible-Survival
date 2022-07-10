@@ -54,7 +54,7 @@ ResolveFunction of Policeman is "[ResolveEvent Policeman]".
 Sarea of Policeman is "High".
 
 to say ResolveEvent Policeman:
-	project the icon of Sgt Marks;
+	project Figure of SgtMarks_clothed_icon;
 	if mqstatus is 0:
 		say "     While traveling through the streets of the ravaged city, you encounter a large tigerman wearing a partial police uniform. The jacket is left open, unable to close it over his broad, striped chest. The pants mostly fit, though the bottom of the legs are torn and leave the bottom third of his legs uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast.";
 		say "     The cop walks up to you purposefully, pulling out his nightstick and slapping his palm with it a couple of times while sizing you up. Watching your reactions, he notices that you're not a mindless monster (yet) and relaxes only slightly. 'Hold it right there. What are you doin['] roamin['] the streets during a crisis? All citizens were advised to stay at home and in shelters before all communications dropped,' he growls with authority.";
@@ -186,14 +186,19 @@ object	name
 Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man. Sgt Marks is in Police Car.
-Description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
+Description of Sgt Marks is "[SgtMarks_Desc]".
+
+to say SgtMarks_Desc:
+	project Figure of SgtMarks_clothed_icon;
+	say "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
+
 Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
 sgtmarkstalk is a number that varies.
-The icon of Sgt Marks is figure of SgtMarks_icon.
 
 the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
 
 Instead of conversing the Sgt Marks:
+	project Figure of SgtMarks_clothed_icon;
 	if sgtmarkstalk is 0:
 		say "     The feline cop looks up from the pack he's stocking. 'This is my cruiser here. Been comin['] back here from time to time to get stuff or store stuff. Just gear, mind you. Never leave anything incriminatin['] where it can be found and connected to you. Cop 101, that is. Most of the gear's already used up or lost dealin['] with the craziness out there.'";
 		say "     'We were heading to try and deal with another of the strange disturbances that were popping up that night. Sketchy reports were comin['] back from those who'd already responded to them, if they reported back at all. We were on our way to what was reported as a two-eight-eight: lewd conduct.' He chuckles at that.";
@@ -598,6 +603,7 @@ to say turning tricks:
 Section 8 - Monster Desc for Tiger Cop
 
 to say tigercopdesc:
+	project Figure of SgtMarks_clothed_icon;
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
@@ -613,6 +619,7 @@ to say tigercopdesc:
 
 
 to say losetotigercop:
+	project Figure of SgtMarks_hard_icon;
 	if mqstatus is 98:
 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn't just do what you were told. The world is filled with punks like you these days. No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
 		if Player is female:
@@ -686,6 +693,7 @@ to say losetotigercop:
 
 To say beattigercop:
 	if tcopfight is 4 and pquest is 0:
+		project Figure of SgtMarks_clothed_icon;
 		say "     With the tiger cop reeling from the fight, you're caught by surprise when he holds his hands out in a gesture of surrender. 'Hey, maybe we got off on the wrong foot here. Maby ewe could still work together, yeah? What do you say about helping out an officer of the law? I have somethin['] that would work a lot better with someone like you.' With you in control of the situation, you see no reason not to at least hear him out. 'You see, there's this gang of criminals we've been after for a long time, and it turns out they're still operatin['] out in the city, even after all of this. To make it worse, they're some of the ones who haven't completely lost their minds, so they're as dangerous as ever.'";
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";

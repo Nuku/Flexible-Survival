@@ -162,11 +162,11 @@ to say OttoTalkMenu:
 					say "[OttoTalk2]";
 				[if (nam is "Medical Attention"):
 					say "[OttoTalk3]";]
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You shake your head, stating that you simply wanted to make sure that he was alright. He gives you a brief smile of appreciation before returning to what he was doing.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

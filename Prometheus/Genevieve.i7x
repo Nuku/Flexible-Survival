@@ -97,11 +97,11 @@ to say GenevieveTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Small Talk"):
 					say "[GenevieveTalk1]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You shake your head, stating that you simply wanted to make sure that she was alright. She gives you a brief smile of appreciation before returning to what she was doing.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

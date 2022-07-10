@@ -376,7 +376,7 @@ to say Lux&UmbraResidentOpinion:
 			-- 10: [Korvin]
 				if GSD_pet > 19 and GSD_pet < 60: [Subby Korvin]
 					say "     ";
-				else if GSD_pet > 59 and GSD_pet < 100: [Cinfident Korvin]
+				else if GSD_pet > 59 and GSD_pet < 100: [Confident Korvin]
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;

@@ -260,6 +260,7 @@ Include Ancient Tome by Wahn.
 Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
+Include Avatar of Hope by Prometheus.
 Include Beach Events by Sarokcat.
 Include Black Pearl by Guest Writers.
 Include Bouncy Castle by Stripes.
@@ -404,6 +405,7 @@ Include Awesome Tree by Damaged.
 Include Badger by StripeGuy.
 Include Bald Eagle by Stripes.
 Include Batcubus by Blaydrex.
+Include Biolizardman Brute by Gherod.
 Include Brown Bear by Nuku Valente.
 Include Beaver by Stripes.
 Include Behemoth by Kaleem mcintyre.
@@ -420,6 +422,7 @@ Include Breederslut by Stripes.
 Include Brown Rat by Wahn.
 Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
+Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
 Include Cannon by Guest Writers.
 Include Cat Ninjas by Stripes.
@@ -788,6 +791,7 @@ Include Duke by Wahn.
 Include Dullahan by Gherod.
 Include Egyptian Wing by Xenophiliac.
 Include Elijah by Wahn.
+Include Elstan by Gherod.
 Include Eric by Wahn.
 Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
@@ -821,6 +825,7 @@ Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
+Include Hope-Born Dragon by Prometheus.
 Include HornyHorsey by Guest Writers.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Gherod.
@@ -937,6 +942,7 @@ Include Stuck Dragon by Stripes.
 Include Sturm by Prometheus.
 Include Sven by Stripes.
 Include Sylvia by Prometheus.
+Include Sylvanus by Wahn.
 Include Tanuki by Nuku Valente.
 Include Tehuantl by Wahn.
 Include Tenvale Silverbacks Football Team by Kernog.
@@ -956,6 +962,7 @@ Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
+Include Wyatt by Gherod.
 Include Yolanda by Stripes.
 Include Zdravko by Gherod.
 Include Zeke by Qazarar.

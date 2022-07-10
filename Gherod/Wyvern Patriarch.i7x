@@ -31,6 +31,25 @@ WyvernPatriarchFightOutcome is a number that varies. WyvernPatriarchFightOutcome
 [3 - Wyvern Lost through lust]
 [4 - Wyvern lost through combat]
 
+[ TEMPLATE FOR FEAT
+
+FeatGain "Stubbornly Alive";
+
+if "Stubbornly Alive" is listed in Feats of Player:
+	say "As your consciousness starts to fade, you cannot help but feel that maybe this should not be the end of you. There is so much more to do!";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Throw your last energy into maybe making it out after all!";
+	say "     ([link]N[as]n[end link]) - Sometimes, you just gotta give in. If you stop struggling, maybe it will not be so bad...";
+	if Player consents:
+		LineBreak;
+		say "     Later, you cannot really remember how you did it, or if some higher power helped you, but the next thing you remember is lying on the ground in XYZ, with no trace of what almost killed you. Not one to look a gift horse in the mouth, you quickly gather your stuff that lies scattered around you and get ready to continue your adventures.";
+	else:
+			say "[Location Specific Death]";
+else:
+		say "[Location Specific Death]";
+
+]
+
 Section 1 - Creature Responses
 
 to say Wyvern Patriarch Wins:
@@ -241,15 +260,47 @@ to say WyvernPatriarchLosesGetCockVored:
 	say "     'Now, I tire of your face. Get down.' With a single throb, he pulls most of your body inside him, as apparently he has complete control over how fast he can swallow you deeper into his member, and soon, you have only your head poking out of the tip. 'What a pathetic thing you are... So vulnerable, at the brink of disappearing into me with a single push... For who knows how long! And all out of his own volition... I must admit, it is the idea that has most turned me on until this very day.' The wyvern then leans his head over and puts his long tongue out to give your features a couple of lickings, filled with wet saliva that comes washing over you. Once he is satisfied with this, he places it above your head and begins to push you down with it.";
 	say "     Soon, your chin is pulled inside, your mouth follows right after, and your nose sinks in right before you dive into a complete darkness. It does not take long for the wyvern to fully consume you and have his slit close right above your skull, having completely encapsulated you inside his cock. Movement is extremely limited while inside this huge tunnel of pulsating walls, which yet continue to pull you deeper and deeper, all the way into the base of his shaft and beyond. You trip arrives at an end once you are deposited in his internal balls, safely tucked in within them and partially submerged in his warm fluids, curled up within what space you are given inside.";
 	WaitLineBreak;
-	say "     Thick jizz begins to slosh around and eventually overwhelms you, leaving you no other choice but to let some of it in your mouth. This space is tight, moist and very hot, rapidly making you sweat while you are in here, trapped inside the wyvern's orbs without any concern from the beast himself. His voice now booms from every direction, vibrating against your very being as he speaks, 'Now, I feel I shall take a nap without a care in the world, much less for how much time passes with your sorry presence in my gonads. With luck, your existence would be terminated in an ecstatic melting of your flesh... But alas, I find myself too kind to let you succumb to such a fate. Don't get me wrong, some of my enemies have due to how much I despised them, but... Why waste such a willing prey such as yourself? Perhaps I should simply continue chasing you... And one day, you could become my pet! I have a welcoming living space for you and everything...'";
-	say "     During his taunts, your senses begin to fade away as the nearly hypnotic sensation of his cum bathing your body, the heat and the scent draining what is left of your strength... Eventually, you simply fall asleep, blacking out for an undetermined amount of time as a prisoner in the wyvern's balls.";
-	WaitLineBreak;
-	follow the turnpass rule;
-	follow the turnpass rule;
-	follow the turnpass rule;
-	follow the turnpass rule;
-	say "     And sometime later, you wake up, finding yourself in the ground, covered in cum, bruised and weakened. Your skin has been left feeling squishy, seemingly having lost a bit of its color, and looks like a white-ish mess. It even feels dormant, albeit these effects last only for a temporary moment, fortunately. There was definitely something strange about the consistency of your body, leading you to think that the wyvern definitely was not joking when he said some of his prey have succumbed to a similar fate that ended their existence. You are left with no other alternative but to wait for your own strength to return. It takes a while until you manage to catch your breath and clean yourself of the substantial mess this large wyvern has made, then set off to search for your stuff. Luckily, he delivered you in about the same place as where you met him...";
-	say "     Your body eventually returns to normal, leaving no long-lasting consequences from messing with the wyvern like this. Perhaps you should not provoke him too much, lest you want him to fulfill his threats and end your existence... Even though this was entirely your decision.";
+	if "Stubbornly Alive" is not listed in Feats of Player and a random chance of 1 in 3 succeeds:
+		say "     Thick jizz begins to slosh around and eventually overwhelms you, leaving you no other choice but to let some of it in your mouth. This space is tight, moist and very hot, rapidly making you sweat while you are in here, trapped inside the wyvern's orbs without any concern from the beast himself. His voice now booms from every direction, vibrating against your very being as he speaks, 'Now, I feel I shall take a nap without a care in the world, much less for how much time passes with your sorry presence in my gonads. With luck, your existence [bold type]will[roman type] be terminated in an ecstatic melting of your flesh.' Those words land on you as if a massive boulder had rolled down a cliff to crush you. 'Oh yes, that's right. I've decided to consume you. It's time you make yourself useful for once... By being churned into more of my potent seed! But worry not, it'll all feel [italic type]very[roman type] good to you...'";
+		say "     The wyvern's creamy and thick cum flowing around, covering more and more of your body with passing second, begins to tingle sweetly in every inch of your figure. The sensation is almost hypnotic, and coupled with the heat and its powerful scent, your strength begins to diminish. However, it feels oddly pleasant, blissful to a point, the whole thing being comparable to a warm and relaxing bath in which you find all the comfort you yearn for after a tiring day. Your arousal spikes as this ecstatic pleasure comes rushing through you, then a sudden urge to be fully submerged in the cum that surrounds you, almost as if you could not help but want to become part of it. Both your mind and your senses are on the brink of giving in to this oddly tempting fate...";
+		WaitLineBreak;
+		say "     As your consciousness starts to fade, something awakens in the back of your mind, and an all too familiar voice once more booms from every direction. 'Very well, I'll give you one last chance after all. And while it may come to bite me in the future, the thought itself is quite entertaining...' You can barely stay awake, but you still listen to the wyvern's words, 'If you wish to live, drink as much of my seed as you can. If not, well... Not much is lost, to be frank. I don't care. I've gotten enough satisfaction from putting you in as much peril as you are currently, so whatever you fate is... I already reaped most, if not all, benefits.' Considering the wyvern's words, you have one last choice before you are irreversibly churned into wyvern juice.";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Trust the wyvern's words and swallow as much of his cum as you are able.";
+		say "     ([link]N[as]n[end link]) - Might as well just enjoy your last moments of pleasure and give yourself away to the bliss.";
+		if Player consents: [go after them]
+			LineBreak;
+			say "     All you have to do in order to survive this predicament is to swallow as much of the wyvern's cum as you can? Well, you better start working on that, lest you wished to give away your life like that. Opening your mouth, you begin to drink as much of it as you can, the creamy and rich texture of the large beast's seed quickly filling you up as you swallow it countless times, letting in more and more of that wonderful juice inside you. However, much to your dismay, your condition seems to worsen, or rather, make you even more aroused as you fall deeper into depravity. At some point, you are simply compelled by the urge to let it fill you up, your wish to become one with it even stronger... Has the wyvern tricked you?!";
+			say "     Eventually, your body gives up, and you can no longer act on your own. Your senses begin to fade away as the delight of it all becomes too much to handle. The last thing you feel is a spontaneous orgasm repeating itself over and over as your body melts away in delight, leaving no trace of yourself but your added mass to the wyvern's load.";
+			WaitLineBreak;
+			follow the turnpass rule;
+			follow the turnpass rule;
+			follow the turnpass rule;
+			follow the turnpass rule;
+			say "     And sometime later, you wake up, finding yourself in the ground, covered in cum, bruised and weakened. Your skin has been left feeling squishy, seemingly having lost a bit of its color, and looks like a white-ish mess. It even feels dormant... Oh, what is this? When you turn your head upwards, you find the wyvern himself standing before you! How could this happen, you wonder... Because you definitely felt yourself just melting away while inside his balls. 'Consider this a gift of mercy from me, runt. Given how you enjoy feeding yourself to beasts like that, I took the freedom to bestow a little boon. A regenerative gene within your system that will allow you to retake your form should the worst happen. This also means I'm free to play with your life for as much as I want!'";
+			say "     You blink in disbelief as to why a creature that despises you would want to give you something good like this. 'Oh, don't get too cocky, however. While it allows you to return to your petty life like nothing happened, you'll still feel every second of what would lead you to your demise. So, if you find yourself in a feral beast's belly, and unless they've suffered some odd mutation, those acidic secretions will still hurt.' Suddenly, the wyvern opens his wings, causing a wave of wind to crash down on you as he grins. 'Now, you best recover some more of your physical form before you get going. You wouldn't want to look like a cum slug like you do now, would you? Haha!'";
+			WaitLineBreak;
+			say "     He then takes off, flying away and into the distance, leaving you alone. Fortunately, these effects really are temporary, and while the consistence of your body has seen better days, it too recovers to how it was before while you wait for your own strength to return. It does take a while, but eventually, you are all set to get up and start cleaning yourself of the substantial mess this large wyvern has made, then set off to search for your stuff. Luckily, he delivered you in about the same place as where you met him...";
+			say "     What is this boon the wyvern mentioned? Oh, that is right, you [bold type]can now retake your former shape[roman type] after having met a rather [italic type]digestive[roman type] fate. Though, you doubt this would work everywhere, like places that envolve magic or other more aggressive, hungrier beasts. Even with a gift like this, you should stay aware of similar dangers.";
+			FeatGain "Stubbornly Alive";
+		else:
+			LineBreak;
+			say "     You refuse to listen to him and simply lay back, enjoying your few last moments before you fade away into bliss and ecstasy. The last thing you feel is a spontaneous orgasm repeating itself over and over as your body melts away in delight, leaving no trace of yourself but your added mass to the wyvern's load.";
+			wait for any key;
+			now battleground is "Void";
+			the Player was ended by "Wyvern Patriarch";
+			trigger ending "Player has died";
+			end the story saying "You have either not trusted the wyvern's words that could lead you to salvation, or you simply decided that it would be a better fate to get churned into cum, resulting in an irreversible loss of life. You were digested in the wyvern's balls, and that is entirely on you. Not that it matters now, anyway... In the end, the large wyvern had a really damn good blast, all thanks to you.";
+	else:
+		say "     Thick jizz begins to slosh around and eventually overwhelms you, leaving you no other choice but to let some of it in your mouth. This space is tight, moist and very hot, rapidly making you sweat while you are in here, trapped inside the wyvern's orbs without any concern from the beast himself. His voice now booms from every direction, vibrating against your very being as he speaks, 'Now, I feel I shall take a nap without a care in the world, much less for how much time passes with your sorry presence in my gonads. With luck, your existence would be terminated in an ecstatic melting of your flesh... But alas, I find myself too kind to let you succumb to such a fate. Don't get me wrong, some of my enemies have due to how much I despised them, but... Why waste such a willing prey such as yourself? Perhaps I should simply continue chasing you... And one day, you could become my pet! I have a welcoming living space for you and everything...'";
+		say "     During his taunts, your senses begin to fade away as the nearly hypnotic sensation of his cum bathing your body, the heat and the scent draining what is left of your strength... Eventually, you simply fall asleep, blacking out for an undetermined amount of time as a prisoner in the wyvern's balls.";
+		WaitLineBreak;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		follow the turnpass rule;
+		say "     And sometime later, you wake up, finding yourself in the ground, covered in cum, bruised and weakened. Your skin has been left feeling squishy, seemingly having lost a bit of its color, and looks like a white-ish mess. It even feels dormant, albeit these effects last only for a temporary moment, fortunately. There was definitely something strange about the consistency of your body, leading you to think that the wyvern definitely was not joking when he said some of his prey have succumbed to a similar fate that ended their existence. You are left with no other alternative but to wait for your own strength to return. It takes a while until you manage to catch your breath and clean yourself of the substantial mess this large wyvern has made, then set off to search for your stuff. Luckily, he delivered you in about the same place as where you met him...";
+		say "     Your body eventually returns to normal, leaving no long-lasting consequences from messing with the wyvern like this. Perhaps you should not provoke him too much, lest you want him to fulfill his threats and end your existence... Even though this was entirely your decision.";
 	CreatureSexAftermath "Wyvern Patriarch" receives "Other" from "Player";
 
 [---]

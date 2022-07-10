@@ -7,6 +7,7 @@ Section 1 - Creature Responses & Infection
 
 to say Gorilla Wins:
 	if inasituation is false: [regular scenes]
+		project Figure of Gorilla_hard_icon;
 		if HP of Player > 0: [player submits]
 			if GorillasMember is 3 and GorillasRep < 4:
 				say "     As you stop fighting and tell the mighty gorilla that he can do what he wants to you, he chuckles heartily. 'Hah! I knew a scrub like you could not hold the distance!' he chuckles, flexing his muscled arms. 'Now, get to work, [if Player is male]boy[else]girl[end if]! That's what you joined the team for, right?'";
@@ -61,6 +62,7 @@ to say Gorilla Wins:
 
 to say Gorilla Loses:
 	if inasituation is false: [regular scenes]
+		project Figure of Gorilla_hard_icon;
 		say "     The gorilla jock staggers from your last blow, stumbling back and falling on his ass. 'Whew - you wanted to show your own stuff off too, hm? Nice moves and you're plenty strong enough.' He shakes his head to clear the stars he's seeing, then looks back at you and adds in a jovial, if slightly defensive tone, 'Of course, I was only trying to give you a playful demonstration, not going full out, you know. So don't let this go to your head. But... you've certainly got the right stuff.";
 		if GorillasMember is 0:
 			say "I bet you'd be able to make the team when we next have an opening. For now - you've 'beaten' a member of the Tenvale Silverbacks - that's worth a reward.";
@@ -106,6 +108,7 @@ to say GorillaOral:
 to say Gorilla Desc:
 	setmongender 3;
 	if inasituation is false: [regular scenes]
+		project Figure of Gorilla_clothed_icon;
 		if GorillasMember > 0 and GorillasMember < 3:
 			say "     A burly and muscular gorilla steps into your line of sight. He is dressed in shorts, football shoulder pads and wears a helmet, all of them bearing the local team's colors. As the gorilla spots you, a smile spreads over his face and he drops on all fours, using his long arms as support as he quickly rushes towards you. 'Hey [if Player is male]dude[else]girl[end if], nice to see ya again. I saw you in the locker room. I can't wait to see how well you're gonna do during the tryouts. Every addition to the team would be very welcome.' He hits his chest and grunts loudly to honor the team, then gives you another long look - a pretty leering one. 'So, what do ya say we do some [']warm-up['] before the big day?'";
 			say "     It looks like this simian jock is fully committed to the idea that you're a soon-to-be subordinate teammate, whom he can order around - and that there is little doubt he intends to have sex with you. You don't think there's any chance to convince him of anything else, so you ready yourself for a fight.";

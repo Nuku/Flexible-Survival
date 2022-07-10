@@ -178,6 +178,13 @@ to say JimmyTalkMenu:
 				if nam is "About Him":
 					say "[JimmyTalk1]";
 				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Jimmy looks momentarily disappointed, but his naturally cheerful disposition ensures that this doesn't last long.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
 
 to say JimmyTalk1:
 	say "     'So you want to know about little old me, do you? What's the story behind the cute bundle of cuddles before you? I've lived in the city since the day I was born. Apart from a few vacations and school trips, I haven't ever left, and despite the current crisis, I still don't plan on it. This is my city and I'll not give it up just because a few people have gone overboard on the debauchery!' Though he had meant it humorously, he looks adorably determined, his stubby arms folded in front of him, though his manically wagging tail rather ruins any chances of looking tough. 'As far as I can remember, I've always been a cheerful sort of person and if my apartment had survived I could have shown you all my school pictures with me genuinely smiling while so many of the others had to force theirs. Despite my cheerfulness, I didn't have many friends at school. I wasn't smart enough for the nerds nor athletic enough for the jocks. I couldn't draw well enough to associated with the artistically inclined either.'";

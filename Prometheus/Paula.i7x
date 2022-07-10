@@ -207,6 +207,13 @@ to say PaulaTalkMenu:
 				if nam is "About Her":
 					say "[PaulaTalk1]";
 				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Paula rolls her eyes at you, but otherwise refrains from sassing you.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
 
 to say PaulaTalk1:
 	say "     'You want to know about me now? How long was I in the police station, and you waited until now to ask me about myself. A girl might get insulted if she weren't as forgiving as I am. I just hope you aren't trying to take advantage of me. Because I'm not sure I would be able to stop you,' she teases suggestively. 'I grew up in a small town in the north where everyone knew everybody else and newcomers were a once in a decade occurrence and visitors only appeared when they were lost. When I was young, there was only the post office which my parents managed, a small shop that sold groceries and a petrol station. We had a police building too I suppose, but barely. The nearest medical practice was several hours drive away, so if you got hurt you were reliant on someone's mother to having a look at you and decide whether or not they could patch you up or that someone was going to have to rush you to a hospital with your blood staining the seats of their truck. We were a close community, perhaps too close but I can't remember anyone looking too obviously inbred. So I think there was some disappointment when I decided I wanted to leave and see a bit more of the world.'";
