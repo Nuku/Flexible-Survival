@@ -30,9 +30,6 @@ Definition: A dreamevent (called x) is dreamable:
 		yes;
 	no;
 
-Good Dreams is a dreamevent. [ensures one generic dream is always available]
-Sarea of Good Dreams is "Dreamland".
-ResolveFunction of Good Dreams is "[DreamEvent Good Dreams]".
 
 
 
@@ -53,6 +50,14 @@ to say ResolveEvent Chasing Dreams:
 	ItemGain dreamcatcher by 1;
 	now Chasing Dreams is inactive;
 	now Good Dreams is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Good Dreams	"Good Dreams"
+
+Good Dreams is a dreamevent. [ensures one generic dream is always available]
+Sarea of Good Dreams is "Dreamland".
+ResolveFunction of Good Dreams is "[DreamEvent Good Dreams]".
 
 to say DreamEvent Good Dreams:
 	say "     As you sleep, you find your mind filled only with gentle dreams, mere fading pleasantries. These good dreams grace you until you wake up, when they disperse to the winds, so easily forgotten in the waking world.";

@@ -42,7 +42,7 @@ to say sierradesc:
 			add { "Sierrasaur" } to infections of HermList;
 			setmongender 7; [creature is mherm]
 		if sierramem is 0:
-			say "     You happen upon what - at first - appears to be a large boulder randomly jutting up from the ground, [if scalevalue of Player > 4]only slightly smaller[else if scalevalue of Player is 4]only slightly larger[else]much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
+			say "     You happen upon what - at first - appears to be a large boulder randomly jutting up from the ground, [if scalevalue of Player > 4]even a bit larger[else if scalevalue of Player is 4]markedly larger[else]much, much larger[end if] than you in size, until the mass begins to stir to life! Crawling to its feet, you see before yourself a bulky and wide-set beast, stout and covered in an earthen-colored, tough, almost chitinous hide as its back spires upwards to make a craggy peak. Directing its attention to the one who disrupted its rest, clearly not at all pleased, it attempts to slowly approach and subdue you, forcing you to keep your distance and deal with this matter.";
 			now sierramem is 1;
 		else:
 			say "     You happen upon another sierran reptile. [one of]Minding its own business, it doesn't take too kindly to your presence, the craggy beast ponderously attempting[or]Your presence disrupting its rest, it's none too pleased by this, the craggy beast ponderously attempting[or]This one seems to be hunting for prey. Perhaps gauging that you might suffice, the craggy beast ponderously attempts[at random] to approach and subdue you, forcing you to keep your distance and deal with them.";
@@ -447,7 +447,7 @@ When Play begins:
 	now MilkItem entry is "";
 	now CumItem entry is "";
 	now TrophyFunction entry is "-";
-	now scale entry is 3; [Infection strain is smaller than the actual monster]
+	now scale entry is 4; [Infection strain is smaller than the actual monster]
 	now body descriptor entry is "[one of]bulky[or]hulking[or]bestial[at random]";
 	now type entry is "[one of]feral[or]bestial[or]reptilian[or]saurian[at random]";
 	now magic entry is false;
