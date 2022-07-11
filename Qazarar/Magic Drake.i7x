@@ -1154,6 +1154,10 @@ to say MagicDrakeTalk2: [ask about her minions and associates]
 to say MagicDrakeTalk3: [ask about the drake's plans - leads to quest eventually]
 	say "     'So you're curious about what it is I'm doing here, then. Well, that's a fair enough concern coming from my familiar. I have no particular ill will towards the people here, of course, and in fact I think this place is also marvelously interesting. This city is full of so much potential, and somebody might as well make use of it, hmm? Better me than someone else, I say. That's why I've been planning ways to combine my favorite activities, getting more powerful and having fun with sexy things like you. You certainly seem inquisitive enough that I'm sure you'll stumble into one of my projects or another, if I don't make you a project yourself, wouldn't that be fun?' She looks at you appraisingly, but carries on with only a moment's delay. 'Perhaps I'll even come up with a special task just for you, if you're interested in helping me out.'";
 
+Table of GameEventIDs (continued)
+Object	Name
+Dreamy Twins	"Dreamy Twins"
+
 Dreamy Twins is a dreamevent.
 ResolveFunction of Dreamy Twins is "[DreamEvent Dreamy Twins]".
 Sarea of Dreamy Twins is "Dreamland".
@@ -1174,6 +1178,10 @@ to say DreamEvent Dreamy Twins:
 	now Resolution of Dreamy Twins is 1;
 	now Dreamy Twins is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Dreamy Twinning	"Dreamy Twinning"
+
 Dreamy Twinning is a dreamevent.
 ResolveFunction of Dreamy Twinning is "[DreamEvent Dreamy Twinning]".
 Sarea of Dreamy Twinning is "Dreamland".
@@ -1191,6 +1199,10 @@ to say DreamEvent Dreamy Twinning:
 	say "     As you're worshiping the pair, the strange feeling seems to migrate throughout your body, pulsing in time with your actions. It feels as if it's concentrating, at least for the moment, in your limbs, leaving them overcome with the mysterious tingling sensation. You return your focus to the all important task you're accomplishing, and lavish a kiss directly on one of the rear passages before you, relishing the pleasured exclamations from the sorceress above. At the same time the feeling in your body seems to reach a momentary fever pitch, and involuntarily you look down towards your own lower body.";
 	say "     Rather than the look they had one sported, your extremities have taken on a scaled appearance that you have seen in exactly two other places, each one of those places perched below the callipygian rears you're currently offering service to. You find yourself unconcerned with the sudden transformation, and instead return the entirety of your focus to the feast before you. Predictably, the strange process seems to continue onward, your continued worship constantly being reflected back in your own body, the pulsing energy building further alongside growing lust in your changing form.";
 	say "     Eventually, it all comes to a final point. The waves of change have progressed until it seems that the only thing left of your own body is your head. Even that, you feel is on the cusp of changing, but you do not allow this to distract you from your task, and you dive further into the plush rears that are your entire world at the moment. Suddenly an ultimate sensation shoots through your body, and even as your head twists into it's new form, you push forward for the final end goal of your actions. Your oral worship of the drake twins comes to an ultimate conclusion, and your transformed tongue is able to cross the final barrier, finally bringing each one to a climax with a resounding moan. Your last thought is of the fact that now this strange temple is the home to three magic drakes rather than two, before you slowly start to slip away from the land of dreams, and once more return to wakefulness.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Big Ass Library	"Big Ass Library"
 
 Big Ass Library is a dreamevent.
 ResolveFunction of Big Ass Library is "[DreamEvent Big Ass Library]".

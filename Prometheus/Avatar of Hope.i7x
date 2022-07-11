@@ -12,7 +12,7 @@ A Strange Visitor is a situation.
 ResolveFunction of A Strange Visitor is "[ResolveEvent A Strange Visitor]".
 Sarea of A Strange Visitor is "Nowhere".
 
-instead of navigating Grey Abbey Library while (Level of Player > 30 and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (Level of Player > 30 and A Strange Visitor is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
