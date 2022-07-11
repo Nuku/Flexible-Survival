@@ -1140,7 +1140,7 @@ to say Hope-BornDragonTalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Body Modification"):
+				if (nam is "Modification"):
 					if "Discussed Customisation" is not listed in traits of Hope-Born Dragon:
 						if "Dragon-Imperious" is listed in traits of Hope-Born Dragon:
 							say "     'I can change some aspects of myself, yes. I suppose that you have earned the privilege to ask me to alter myself a bit. Fine. What would you have me do?'";
