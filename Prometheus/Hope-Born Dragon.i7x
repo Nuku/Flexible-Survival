@@ -1364,24 +1364,33 @@ to say Hope-BornDragonSizeModMenu:
 
 to say Hope-BornDragonPenisModMenu:
 	say "     [bold type]How would you like to alter [Hope-BornDragonName]'s [if Cock Count of Hope-Born Dragon is 1]penis[else]penises[end if]?[roman type][line break]";
-	say "     [link](1)[as]1[end link] - Knotted.";
-	say "     [link](2)[as]2[end link] - Tapered. (Incompatible with Blunt)";
-	say "     [link](3)[as]3[end link] - Prehensile.";
-	say "     [link](4)[as]4[end link] - Barbed. (Incompatible with Tentacle-lined)";
-	say "     [link](5)[as]5[end link] - Blunt. (Incompatible with Tapered)";
-	say "     [link](6)[as]6[end link] - Tentacle-lined. (Incompatible with Barbed)";
+	say "     [link](1)[as]1[end link] - No Further Modification.";
+	say "     [link](2)[as]2[end link] - Knotted.";
+	say "     [link](3)[as]3[end link] - Tapered. (Incompatible with Blunt)";
+	say "     [link](4)[as]4[end link] - Prehensile.";
+	say "     [link](5)[as]5[end link] - Barbed. (Incompatible with Tentacle-lined)";
+	say "     [link](6)[as]6[end link] - Blunt. (Incompatible with Tapered)";
+	say "     [link](7)[as]7[end link] - Tentacle-lined. (Incompatible with Barbed)";
 	if hp of Hope-Born Dragon > 5:
-		say "     [link](7)[as]7[end link] - Penis Size Modification.";
-		say "     [link](8)[as]8[end link] - Penis Number Modification.";
-	say "     [link](9)[as]9[end link] - No Further Modification.";
+		say "     [link](8)[as]8[end link] - Penis Size Modification.";
+		say "     [link](9)[as]9[end link] - Penis Number Modification.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 7:
-		say "Choice? (1-7)>[run paragraph on]";
-		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5 or calcnumber is 6 or calcnumber is 7 or calcnumber is 8 or calcnumber is 9:
-			break;
-		else:
-			say "Invalid choice. Type [link]1[end link] for Knotted, [link]2[end link] for Tapered, [link]3[end link] for Prehensile, [link]4[end link] for Barbed, [link]5[end link] for Blunt, [link]6[end link] for Tentacle-lined, [link]7[end link] for Size Modification, [link]8[end link] for Number Modification, or [link]9[end link] for No Further Modifications.";
+	if hp of Hope-Born Dragon > 5:
+		while calcnumber < 1 or calcnumber > 9:
+			say "Choice? (1-9)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5 or calcnumber is 6 or calcnumber is 7 or calcnumber is 8 or calcnumber is 9:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] for No Further Modifications, [link]2[end link] for Knotted, [link]3[end link] for Tapered, [link]4[end link] for Prehensile, [link]5[end link] for Barbed, [link]6[end link] for Blunt, [link]7[end link] for Tentacle-lined, [link]8[end link] for Size Modification, or [link]9[end link] for Number Modification.";
+	else: [Initial customisation]
+		while calcnumber < 1 or calcnumber > 7:
+			say "Choice? (1-7)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5 or calcnumber is 6 or calcnumber is 7:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] for No Further Modifications, [link]2[end link] for Knotted, [link]3[end link] for Tapered, [link]4[end link] for Prehensile, [link]5[end link] for Barbed, [link]6[end link] for Blunt, or [link]7[end link] for Tentacle-lined.";
 	if calcnumber is 1: [Knotted]
 		LineBreak;
 		if "KnottedCock" is listed in traits of Hope-Born Dragon:
