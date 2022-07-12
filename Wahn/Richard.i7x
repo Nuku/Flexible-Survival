@@ -325,6 +325,7 @@ to say Richard Guard Sex:
 		WaitLineBreak;
 		say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 		now SatyrFratPartyStage is 5;
+		NPCSexAftermath Player receives "OralCock" from Richard;
 	now PlayerMet of Richard is true; [introduced]
 
 instead of fucking Richard:

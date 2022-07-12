@@ -6,12 +6,16 @@ Version 1 of Clayton by Gherod begins here.
 
 Section 1 - Pre-events
 
+a postimport rule:
+	now sarea of MeetingClayton is "Nowhere";
+
 Table of GameEventIDs (continued)
 Object	Name
 MeetingClayton	"MeetingClayton"
 
 MeetingClayton is a situation.
 ResolveFunction of MeetingClayton is "".
+Sarea of MeetingClayton is "Nowhere".
 
 to say CherryTalkClayton:
 	say "     Seeing how Cherry seems to be deep in thought, you resolve asking her if everything is fine. She takes a moment to process your words as she pulls herself from the tumultuous daydreaming sea in her head, turning to face you with a slightly surprised expression. 'Oh, it is nothing, my dear. I'm simply... Well, worrying about a few acquaintances of mine, nothing more.' You figure you should ask her a bit more about it, as you may be able to assist her with any trouble. The pink fox smiles at your gesture, happy to see that you cared about her personal issues. 'My apologies. I tend to act all high and mighty, it became a habit due to my job and other struggles in life, but it simply does not make me immune to worry. I am not the cold woman the world wanted me to be, for the better or worse...'";
