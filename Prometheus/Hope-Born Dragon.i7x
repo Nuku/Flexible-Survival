@@ -1219,7 +1219,7 @@ to say Hope-BornDragonCustomisationMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
+			say "     You indicate an end to the conversation. [Hope-BornDragonName] looks mildly disappointed before returning to what they were previously doing.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -1391,7 +1391,11 @@ to say Hope-BornDragonPenisModMenu:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] for No Further Modifications, [link]2[end link] for Knotted, [link]3[end link] for Tapered, [link]4[end link] for Prehensile, [link]5[end link] for Barbed, [link]6[end link] for Blunt, or [link]7[end link] for Tentacle-lined.";
-	if calcnumber is 1: [Knotted]
+	if calcnumber is 1:
+		LineBreak;
+		say "     Your decision made, you move on.";
+		wait for any key;
+	else if calcnumber is 2: [Knotted]
 		LineBreak;
 		if "KnottedCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1417,7 +1421,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 2: [Tapered]
+	else if calcnumber is 3: [Tapered]
 		LineBreak;
 		if "TaperedCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1447,7 +1451,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 3: [Prehensile]
+	else if calcnumber is 4: [Prehensile]
 		LineBreak;
 		if "PrehensileCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1473,7 +1477,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 4: [Barbed]
+	else if calcnumber is 5: [Barbed]
 		LineBreak;
 		if "BarbedCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1503,7 +1507,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 5: [Blunt]
+	else if calcnumber is 6: [Blunt]
 		LineBreak;
 		if "BluntCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1533,7 +1537,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 6: [Tentacle-lined]
+	else if calcnumber is 7: [Tentacle-lined]
 		LineBreak;
 		if "TentacledCock" is listed in traits of Hope-Born Dragon:
 			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
@@ -1563,7 +1567,7 @@ to say Hope-BornDragonPenisModMenu:
 			else: [No]
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 7: [Penis Size]
+	else if calcnumber is 8: [Penis Size]
 		LineBreak;
 		if ScaleValue of Hope-Born Dragon is 1:
 			say "     [bold type]How long would you like [Hope-BornDragonName]'s [if Cock Count of Hope-Born Dragon is 1]penis [else]penises [end if]to be?[roman type][line break]";
@@ -1692,7 +1696,7 @@ to say Hope-BornDragonPenisModMenu:
 				now Cock Length of Hope-Born Dragon is 36;
 		LineBreak;
 		say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 8: [Penis Number]
+	else if calcnumber is 9: [Penis Number]
 		LineBreak;
 		say "     [bold type]How many penises do you want [Hope-BornDragonName] to have?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - One.";
@@ -1714,10 +1718,6 @@ to say Hope-BornDragonPenisModMenu:
 			now Cock Count of Hope-Born Dragon is 3;
 		Linebreak;
 		say "[Hope-BornDragonPenisModMenu]";
-	else if calcnumber is 9:
-		LineBreak;
-		say "     Your decision made, you move on.";
-		wait for any key;
 
 Section 3 - Descriptor Shortcuts
 
