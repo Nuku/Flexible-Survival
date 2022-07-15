@@ -6,19 +6,19 @@ Version 1 of Avatar of Hope by Prometheus begins here.
 
 Table of GameEventIDs (continued)
 Object	Name
-A Strange Visitor	"A Strange Visitor"
+Strange Visitor	"Strange Visitor"
 
-A Strange Visitor is a situation.
-ResolveFunction of A Strange Visitor is "[ResolveEvent A Strange Visitor]".
-Sarea of A Strange Visitor is "Nowhere".
+Strange Visitor is a situation.
+ResolveFunction of Strange Visitor is "[ResolveEvent Strange Visitor]".
+Sarea of Strange Visitor is "Nowhere".
 
-instead of navigating Grey Abbey Library while (Level of Player > 30 and A Strange Visitor is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (Level of Player > 30 and Strange Visitor is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
-	say "[ResolveEvent A Strange Visitor]";
+	say "[ResolveEvent Strange Visitor]";
 
-to say ResolveEvent A Strange Visitor:
+to say ResolveEvent Strange Visitor:
 	say "     As you approach the library, you are concerned to find someone standing outside gazing at the entrance. While overall the rest of the city's inhabitants seem to avoid the area for some reason, what is especially worrying about this figure is that they are standing calmly outside, neither trying to gain entry nor worried about being seen. They seem to be wearing a robust ground-length coat, but for a fragment of a moment you swear that it shifts into a tattered pitch-black cloak and then pristine white armor before changing back to a coat again. If they are competent at magic, maybe that is why they are so at ease. Perhaps sensing your eyes on them, the figure turns to look at you, revealing that their face is just as obscured as the rest of them, an advanced looking combat helmet protecting the entirety of their head. 'You are [if player is not defaultnamed][name of player][else]a current occupant of this bunker[end if], yes?' they ask as you draw near, their voice surprisingly clear, if a bit clinical and emotionless, through what you assume must be hidden speakers on the mask.";
 	say "     'Be at ease, I wish you no harm. As to why I am waiting out here, I thought that it might be more polite to give you the chance to invite me into your home rather than having to potentially force my way past any guards that you might have and eliciting terror in any that you might be giving shelter.' They give of a sort of passive menace, their manner of speech stilted and strange despite being in fluent English. 'My name is... well, neither my name or the name of my vessel is important and would likely cause more issue for you to know it than to merely trust that I am not currently your enemy nor expect to ever be so.' Instinct screams at you to flee or to take cover in the bunker and wait for them to leave, but you simultaneously get the impression that if they did wish to harm you, they would have done so already without giving you the chance to get within combat distance. Trusting your deductive reasoning over your instinct, you coolly invite them to follow you inside so that you can speak in relative comfort away from the prying eyes and ears of the city.";
 	WaitLineBreak;
@@ -29,6 +29,6 @@ to say ResolveEvent A Strange Visitor:
 	say "     Your visitor stands again, considering the conversation over. 'It is a comfortable home that you have made for yourself here, but I fear that I must nonetheless depart lest I earn you the hostility of the Aesir or any of the other divine beings who might take an interest in you. I can already sense a presence stirring below so hopefully he will calm again should I leave. Good luck with the dragon. They shouldn't grow [italic type]too [roman type] large.' Laughing, he walks away with you following after him until he is out the door again. Wondering what you have got yourself into, you return to the egg and pick it up in both hands, finding it surprisingly light given its size. Unsure where to put it, but aware that you can't exactly take it with you as you traverse the city just in case it gets cracked, you eventually decide to leave it by the table at the top of the stairs so that you can check up on it easily. You hope that you aren't going to have to need to do anything weird like masturbate on it to make it grow...";
 	move Dragon Egg to Grey Abbey 2F;
 	now hp of Hope-Born Dragon is 1;
-	now A Strange Visitor is resolved;
+	now Strange Visitor is resolved;
 
 Avatar of Hope ends here.

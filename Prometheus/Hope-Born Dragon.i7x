@@ -197,6 +197,7 @@ to say DragonEggHatchingProcess:
 			now Cock Length of Hope-Born Dragon is 12;
 			now Ball Count of Hope-Born Dragon is 2;
 			now Ball Size of Hope-Born Dragon is 5;
+			now Hope-Born Dragon is Male;
 		else if calcnumber is 2: [Female]
 			LineBreak;
 			say "     For a brief moment, you picture the dragon sitting on a clutch of her own eggs, ready to defend them from any that might do them harm, or add to them with those who please her. Realizing that you have been stroking the egg for quite some time, you carefully place it back on its cushion beneath the table.";
@@ -205,6 +206,7 @@ to say DragonEggHatchingProcess:
 			now Cunt Depth of Hope-Born Dragon is 12;
 			now Cunt Tightness of Hope-Born Dragon is 2;
 			now Clit Size of Hope-Born Dragon is 3;
+			now Hope-Born Dragon is Female;
 		else if calcnumber is 3: [Herm]
 			LineBreak;
 			say "     For a brief moment, you allow your mind to wander onto thoughts of the dragon sitting on a clutch of its own eggs, its [']mighty spear['] only adding to the warmth provided and able to please or punish in a variety of ways. Realizing that you have been stroking the egg for quite some time, you carefully place it back on its cushion beneath the table.";
@@ -218,6 +220,31 @@ to say DragonEggHatchingProcess:
 			now Cunt Depth of Hope-Born Dragon is 12;
 			now Cunt Tightness of Hope-Born Dragon is 2;
 			now Clit Size of Hope-Born Dragon is 3;
+		Linebreak;
+		say "     [bold type]Preferred Gender Pronouns?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - He/Him/His";
+		say "     [link](2)[as]2[end link] - She/Her/Her";
+		say "     [link](3)[as]3[end link] - They/Them/Their";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] for He/Him/His, [link]2[end link] for She/Her/Her, or [link]3[end link] for They/Them/Their.";
+		if calcnumber is 1: [He/Him/His]
+			LineBreak;
+			say "     The dragon shall use typically masculine pronouns.";
+			SetMalePronouns for Hope-Born Dragon;
+		else if calcnumber is 2: [She/Her/Her]
+			LineBreak;
+			say "     The dragon shall use typically feminine pronouns.";
+			SetFemalePronouns for Hope-Born Dragon;
+		else if calcnumber is 3: [They/Them/Their]
+			LineBreak;
+			say "     The dragon shall use typically neutral pronouns.";
+			SetNeutralPronouns for Hope-Born Dragon;
 		now hp of Hope-Born Dragon is 2;
 	else if hp of Hope-Born Dragon is 2: [Deciding Form]
 		say "     Laying your hand softly against the side of the egg, you whisper encouraging words, telling it how it is going to grow big and strong. Though the egg technically isn't your offspring, you feel a powerful sense of parental affection towards it. You only have a moment to consider why this might be before your vision goes blank and you find yourself floating in some sort of fluid and everything is dark. Despite the abruptness with which you seemed to disappear and reappear here, you feel strangely relaxed and safe. In front of you is a miniscule dragon, though its shape seems to be in flux, one moment covered in scales with four legs, the next it looks more like a feathered serpent with wings. Curious, you reach out towards the life before you, your touch stabilizing its form and allowing you to better look at it. Currently it has smooth scales and looks more suited to water than land, but on a hunch, you close your eyes and imagine it instead as a Wyvern, its wings attached to its forearms. Opening your eyes, you see that it has changed to match your thoughts, confirming your suspicions. You seem to have influence over the form that it takes.";
@@ -844,41 +871,41 @@ to say DragonEggHatchingProcess:
 		if "Dragon-Legless" is listed in traits of Hope-Born Dragon:
 			if "Dragon-External" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse at their undercarriage as they turn around reveals her pussy, balls, and cock, as well as their anus.";
+					say "A brief glimpse at their undercarriage as they turn around reveals her pussy, balls, and [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if], as well as their anus.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse at his undercarriage as he turns around reveals his cock and balls, as well as his anus.";
+					say "A brief glimpse at his undercarriage as he turns around reveals his [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] and balls, as well as his anus.";
 			else if "Dragon-Internal" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse at their undercarriage as they turn around reveals two genital slits, one each for cock and pussy, and their anus.";
+					say "A brief glimpse at their undercarriage as they turn around reveals two genital slits, one each for [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] and pussy, and their anus.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse at his undercarriage as he turns around reveals his genital slit, hiding his cock from sight, and his anus.";
+					say "A brief glimpse at his undercarriage as he turns around reveals his genital slit, hiding his [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight, and his anus.";
 				else if Hope-Born Dragon is Female:
 					say "A brief glimpse at her undercarriage as she turns around reveals her genital slit and her anus.";
 			else if "Dragon-Cloaca" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse at their undercarriage as they turn around reveals a cloaca, hiding their cock from sight.";
+					say "A brief glimpse at their undercarriage as they turn around reveals a cloaca, hiding their [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse at his undercarriage as he turns around reveals a cloaca, hiding their cock from sight.";
+					say "A brief glimpse at his undercarriage as he turns around reveals a cloaca, hiding their [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight.";
 				else if Hope-Born Dragon is Female:
 					say "A brief glimpse at her undercarriage between her legs as she turns around reveals a cloaca.";
 		else: [Has legs]
 			if "Dragon-External" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse between their legs as they turn around reveals her pussy, balls, and cock, as well as their anus.";
+					say "A brief glimpse between their legs as they turn around reveals her pussy, balls, and [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if], as well as their anus.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse between his legs as he turns around reveals his cock and balls, as well as his anus.";
+					say "A brief glimpse between his legs as he turns around reveals his [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] and balls, as well as his anus.";
 			else if "Dragon-Internal" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse between their legs as they turn around reveals two genital slits, one each for cock and pussy, and their anus.";
+					say "A brief glimpse between their legs as they turn around reveals two genital slits, one each for [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] and pussy, and their anus.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse between his legs as he turns around reveals his genital slit, hiding his cock from sight, and his anus.";
+					say "A brief glimpse between his legs as he turns around reveals his genital slit, hiding his [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight, and his anus.";
 				else if Hope-Born Dragon is Female:
 					say "A brief glimpse between her legs as she turns around reveals her genital slit and her anus.";
 			else if "Dragon-Cloaca" is listed in traits of Hope-Born Dragon:
 				if Hope-Born Dragon is Herm:
-					say "A brief glimpse between their legs as they turn around reveals a cloaca, hiding their cock from sight.";
+					say "A brief glimpse between their legs as they turn around reveals a cloaca, hiding their [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight.";
 				else if Hope-Born Dragon is Male:
-					say "A brief glimpse between his legs as he turns around reveals a cloaca, hiding their cock from sight.";
+					say "A brief glimpse between his legs as he turns around reveals a cloaca, hiding their [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if] from sight.";
 				else if Hope-Born Dragon is Female:
 					say "A brief glimpse between her legs as she turns around reveals a cloaca.";
 		WaitLineBreak;
@@ -1020,7 +1047,7 @@ to say Hope-BornDragondesc:
 				say "blunt-tipped, ";
 			if "TentacledCock" is listed in traits of Hope-Born Dragon:
 				say "tentacle-covered, ";
-			say "draconic cock, as well as his anus.";
+			say "draconic [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if], as well as his anus.";
 	else if "Dragon-Internal" is listed in traits of Hope-Born Dragon:
 		if Hope-Born Dragon is Herm:
 			say "As [Hope-BornDragonName] shifts around, you catch sight of their genital slit, hiding their pussy and [if Cock Count of Hope-Born Dragon is 1]single [ else if Cock Count of Hope-Born Dragon is 2]two [else if Cock Count of Hope-Born Dragon is 3]three [end if][Cock Length of Hope-Born Dragon] inch ";
@@ -1036,7 +1063,7 @@ to say Hope-BornDragondesc:
 				say "blunt-tipped, ";
 			if "TentacledCock" is listed in traits of Hope-Born Dragon:
 				say "tentacle-covered, ";
-			say "draconic cock, as well as their anus behind it.";
+			say "draconic [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if], as well as their anus behind it.";
 		else if Hope-Born Dragon is Male:
 			say "As [Hope-BornDragonName] shifts around, you catch sight of his genital slit, hiding his [if Cock Count of Hope-Born Dragon is 1]single [ else if Cock Count of Hope-Born Dragon is 2]two [else if Cock Count of Hope-Born Dragon is 3]three [end if][Cock Length of Hope-Born Dragon] inch ";
 			if "KnottedCock" is listed in traits of Hope-Born Dragon:
@@ -1051,7 +1078,7 @@ to say Hope-BornDragondesc:
 				say "blunt-tipped, ";
 			if "TentacledCock" is listed in traits of Hope-Born Dragon:
 				say "tentacle-covered, ";
-			say "draconic cock, as well as his anus behind it.";
+			say "draconic [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if], as well as his anus behind it.";
 		else if Hope-Born Dragon is Female:
 			say "As [Hope-BornDragonName] shifts around, you catch sight of her pussy and anus.";
 	else if "Dragon-Cloaca" is listed in traits of Hope-Born Dragon:
@@ -1069,7 +1096,7 @@ to say Hope-BornDragondesc:
 				say "blunt-tipped, ";
 			if "TentacledCock" is listed in traits of Hope-Born Dragon:
 				say "tentacle-covered, ";
-			say "draconic cock.";
+			say "draconic [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if].";
 		else if Hope-Born Dragon is Male:
 			say "As [Hope-BornDragonName] shifts around, you catch sight of his cloaca, hiding his [if Cock Count of Hope-Born Dragon is 1]single [ else if Cock Count of Hope-Born Dragon is 2]two [else if Cock Count of Hope-Born Dragon is 3]three [end if][Cock Length of Hope-Born Dragon] inch ";
 			if "KnottedCock" is listed in traits of Hope-Born Dragon:
@@ -1084,7 +1111,7 @@ to say Hope-BornDragondesc:
 				say "blunt-tipped, ";
 			if "TentacledCock" is listed in traits of Hope-Born Dragon:
 				say "tentacle-covered, ";
-			say "draconic cock.";
+			say "draconic [if Cock Count of Hope-Born Dragon is 1]cock[else]cocks[end if].";
 		else if Hope-Born Dragon is Female:
 			say "As [Hope-BornDragonName] shifts around, you catch sight of her cloaca.";
 	WaitLineBreak;
@@ -1197,6 +1224,18 @@ to say Hope-BornDragonCustomisationMenu:
 		now title entry is "Modify Penis";
 		now sortorder entry is 2;
 		now description entry is "Modify the traits of [PosAdj of Hope-Born Dragon] penis, increase or decrease their size, or increase or decrease the number of penises.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Gender Identity";
+	now sortorder entry is 3;
+	now description entry is "Discuss how [Hope-BornDragonName] views their own gender.";
+	[]
+	if debugactive is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Debug";
+		now sortorder entry is 4;
+		now description entry is "Debug Options. (Currently just rename)";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -1216,6 +1255,10 @@ to say Hope-BornDragonCustomisationMenu:
 					say "[Hope-BornDragonSizeModMenu]";
 				else if (nam is "Modify Penis"):
 					say "[Hope-BornDragonPenisModMenu]";
+				else if (nam is "Gender Identity"):
+					say "[Hope-BornDragonPronounMenu]";
+				else if (nam is "Debug"):
+					say "[Hope-BornDragonDebugMenu]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -1718,6 +1761,39 @@ to say Hope-BornDragonPenisModMenu:
 			now Cock Count of Hope-Born Dragon is 3;
 		Linebreak;
 		say "[Hope-BornDragonPenisModMenu]";
+
+to say Hope-BornDragonPronounMenu:
+	LineBreak;
+	say "     Curious as to how [Hope-BornDragonName] views their gender identity at the moment, you ask, their reply being:";
+	say "     [bold type]Preferred Gender Pronouns?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Male. (He/Him/His)";
+	say "     [link](2)[as]2[end link] - Female. (She/Her/Her)";
+	say "     [link](3)[as]3[end link] - Non-Binary. (They/Them/Their)";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] for He/Him/His, [link]2[end link] for She/Her/Her, or [link]3[end link] for They/Them/Their.";
+	if calcnumber is 1: [He/Him/His]
+		LineBreak;
+		say "     [Hope-BornDragonName] views himself as male.";
+		SetMalePronouns for Hope-Born Dragon;
+	else if calcnumber is 2: [She/Her/Her]
+		LineBreak;
+		say "     [Hope-BornDragonName] views herself as female.";
+		SetFemalePronouns for Hope-Born Dragon;
+	else if calcnumber is 3: [They/Them/Their]
+		LineBreak;
+		say "     [Hope-BornDragonName] views themself as neither male nor female, rather just as themself.";
+		SetNeutralPronouns for Hope-Born Dragon;
+
+to say Hope-BornDragonDebugMenu:
+	say "     [bold type]What would you like to rename the dragon?[roman type][line break]";
+	get typed command as playerinput;
+	now Hope-BornDragonName is playerinput;
 
 Section 3 - Descriptor Shortcuts
 
