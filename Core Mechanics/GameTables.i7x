@@ -1556,6 +1556,7 @@ Name(text)	Type(text)
 "hdformname"	"text"
 "headadjdata"	"text"
 "HighestPlayerStat"	"text"
+"Hope-BornDragonName"	"text"
 "horndata"	"text"
 "JenniferFirstKidSpecialStat"	"text"
 "keychar"	"text"

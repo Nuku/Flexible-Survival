@@ -210,6 +210,8 @@ to TextVariableSave:
 			now TextVarValue entry is headadjdata;
 		-- "HighestPlayerStat":
 			now TextVarValue entry is HighestPlayerStat;
+		-- "Hope-BornDragonName":
+			now TextVarValue entry is Hope-BornDragonName;
 		-- "horndata":
 			now TextVarValue entry is horndata;
 		-- "JenniferFirstKidSpecialStat":
@@ -3849,6 +3851,8 @@ to VariableTextLoad:
 					now headadjdata is TextVarValue entry;
 				-- "HighestPlayerStat":
 					now HighestPlayerStat is TextVarValue entry;
+				-- "Hope-BornDragonName":
+					now Hope-BornDragonName is TextVarValue entry;
 				-- "horndata":
 					now horndata is TextVarValue entry;
 				-- "JenniferFirstKidSpecialStat":
