@@ -114,7 +114,7 @@ AnalVirgin of Carl is true.
 PenileVirgin of Carl is false.
 SexuallyExperienced of Carl is true.
 TwistedCapacity of Carl is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Carl is false. [steriles can't knock people up]
+Sterile of Carl is true. [for now, to have special pregnancy later]
 MainInfection of Carl is "Husky Alpha".
 The icon of Carl is Figure of Carl_clothed_icon.
 Description of Carl is "[CarlDesc]".

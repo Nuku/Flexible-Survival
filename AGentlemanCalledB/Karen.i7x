@@ -107,6 +107,42 @@ object	name
 Karen	"Karen"
 
 Karen is a woman.
+ScaleValue of Karen is 3. [human sized]
+Body Weight of Karen is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Karen is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Karen is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+SleepRhythm of Karen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Mouth Length of Karen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Karen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Karen is 6. [length in inches]
+Cock Count of Karen is 0. [No cock]
+Cock Girth of Karen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Karen is 0. [ ]
+Ball Size of Karen is 0. [  ]
+Ball Count of Karen is 0. [No balls]
+Cunt Count of Karen is 1. [1 pussy]
+Cunt Depth of Karen is 10. [can take 10 inch dicks]
+Cunt Tightness of Karen is 2. [No Cunt]
+Clit Size of Karen is 1. [size 1-5, very small/small/average/large/very large]
+Asshole Depth of Karen is 13. [inches deep for anal fucking]
+Asshole Tightness of Karen is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Nipple Count of Karen is 4. [4 nipples]
+Breast Size of Karen is 2. [B Cup at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Karen is false. [can not take oversized members without pain]
+Sterile of Karen is false.
+PlayerMet of Karen is false.
+PlayerRomanced of Karen is false.
+PlayerFriended of Karen is false.
+PlayerControlled of Karen is false.
+PlayerFucked of Karen is false.
+OralVirgin of Karen is false.
+Virgin of Karen is false.
+AnalVirgin of Karen is true.
+PenileVirgin of Karen is true.
+SexuallyExperienced of Karen is true.
+MainInfection of Karen is "Retriever Female".
 Description of Karen is "[KarenDesc]".
 MainInfection of Karen is "Retriever Female".
 

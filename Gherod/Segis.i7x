@@ -719,12 +719,17 @@ to say DismissSegis:
 
 Section 3-1 - Segis UPGRADES
 
+a postimport rule:
+	if Sarea of SegisToolQuest is "Outside";
+		now Sarea of SegisToolQuest is "Nowhere";
+
 Table of GameEventIDs (continued)
 Object	Name
 SegisToolQuest	"SegisToolQuest"
 
 SegisToolQuest is a situation.
 ResolveFunction of SegisToolQuest is "".
+Sarea of SegisToolQuest is "Nowhere".
 
 to say SegisTalkUpgrades:
 	if Resolution of SegisToolQuest is 1:
