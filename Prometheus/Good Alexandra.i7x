@@ -335,10 +335,15 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 7;
 		now description entry is "Talk to Alexandra about the Overmind.";
 	[]
+	if hunger of Alexandra is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Boop";
+		now sortorder entry is 8;
+		now description entry is "Boop Alexandra on the nose.";
 	[if hp of Alexandra is 71:
 		choose a blank row in table of fucking options;
 		now title entry is "Fight the Overmind";
-		now sortorder entry is 8;
+		now sortorder entry is 9;
 		now description entry is "Tell Alexandra that you are ready to take on the Overmind.";]
 	[]
 	sort the table of fucking options in sortorder order;
@@ -372,6 +377,8 @@ to say alexandratalk_gg_menu:
 					say "[alexandra_gshep]";
 				else if nam is "Next Step":
 					say "[alexandra_nextstep]";
+				else if nam is "Boop":
+					say "[alexandratalk_gg_boop]";
 				[
 				else if nam is "Fight the Overmind":
 					say "[alexandra_fight_overmind]";
@@ -629,6 +636,9 @@ to say alexandra_nextstep:
 	say "     You and Alexandra sit in silence for a few moments to digest what she has just read and the weight of what waits ahead of you. 'We have to go there, don't we? We can't automatically assume that this [']IA['] was successful, can we?' the doberman asks rhetorically, already knowing the answer. With a sigh, she spreads the blueprints out on the table and you lean over the top of them beside her to study them. Whoever IA was, they have provided comprehensive notes to help you understand what you are seeing. While the building does have elevators, using them will apparently alert the Overmind to your presence, giving it the chance to process your memories before it assimilates you as yet another drone. Luckily, there are stairwells at the north and southern sides of the building, though IA warns that they do not know how useable they will still be. The secondary data port is on the fourteenth floor and should provide sufficient access for the viruses on the [']Factory Settings['] and [']One Track Mind['] USBs to reprogram the Overmind. The primary data port is on the thirtieth floor and all three USBs will work there. Access above the thirteith floor would likely be a death sentence due to the saturation of the Overmind's nanites.";
 	say "     'This isn't going to be easy,' Alexandra sighs, though the look of determination on her face suggests that despite the difficulty of the task ahead that her resolve to end the Overmind's threat is undiminished. [bold type]'Take some time to prepare as I doubt that we'll be able to leave once we enter the building.[roman type] Talk to me when you're ready and we'll take this bastard down.' She gives your shoulder a squeeze as she stands up before walking away, likely to make her own preparations for what will be a [']death or glory['] mission. With a grim expression, you contemplate what you need to do before you will be ready to end this active menace to society.";
 	now hp of Alexandra is 71; [Ready to fight Overmind]]
+
+to say alexandratalk_gg_boop:
+	say "     As you are about to boop her, Alexandra's hand brabs you by the wrist. 'Think through your next action very carefully,' she warns you before letting go. Your mind made up, you tap her on the end of the snout. 'You are so immature,' she sighs before smiling and resting her head on your shoulder. 'It's nice though. Reminds me what we are struggling on for.'";
 
 [to say alexandra_fight_overmind:
 	if level of player < 30:

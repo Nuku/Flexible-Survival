@@ -56,6 +56,12 @@ Version 7 of Fang by Prometheus begins here.
 FangBetaCounter is a number that varies. FangBetaCounter is usually 0.
 FangNewPuppies is a number that varies. FangNewPuppies is usually 0.
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Fang is Male:
+		SetMalePronouns for Fang;
+	else if Fang is Female:
+		SetFemalePronouns for Fang;
+
 [Movement Schedule]
 an everyturn rule:
 	if (HP of Fang > 1 and HP of Fang < 6):
@@ -124,9 +130,9 @@ Body Weight of Fang is 6. [scale of 1-9 for body weight, grouped into low weight
 Body Definition of Fang is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Fang is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Fang is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Fang is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Fang is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Fang is 6. [length in inches]
+Tongue Length of Fang is 12. [length in inches]
 Breast Size of Fang is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Fang is 8. [count of nipples]
 Asshole Depth of Fang is 12. [inches deep for anal fucking]
@@ -227,6 +233,11 @@ to say FangTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Discuss taking Fang with you out into the city";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 3;
+	now description entry is "Boop Fang on the nose";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -245,6 +256,8 @@ to say FangTalkMenu:
 					say "[FangTalk1]";
 				else if (nam is "Take Fang With You"):
 					say "[FangTalk2]";
+				else if (nam is "Boop"):
+					say "[FangTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -283,6 +296,16 @@ to say FangTalk2: [Take as Companion]
 		now Best Wolf is tamed;
 		add "Tamed" to Traits of Best Wolf;
 	AddCompanionFunction "Best Wolf";
+
+to say FangTalk3: [Boop]
+	if hp of Fang is 1: [Vanilla Fang]
+		say "     Fang stoically sits there as you boop [ObjectPro of Fang], the only sign of [PosAdj of Fang] appreciation being [PosAdj of Fang] gently wagging tail. Such a good guard-wolf.";
+	else if hp of Fang is 2: [Omega Fang]
+		say "     You are unprepared for Fang's reaction when you boop [ObjectPro of Fang]. As soon as your fingers make contact with [PosAdj of Fang] nose, [SubjectPro of Fang] begins to bounce around, [PosAdj of Fang] tail frantically wagging and whining and woofling. It would seem that [SubjectPro of Fang] has taken it as a gesture of praise, which it may well have been.";
+	else if hp of Fang is 3 or hp of Fang is 4: [Alpha Fang]
+		say "     As you reach to boop Fang, [SubjectPro of Fang] fixes you with a stern look. 'No,' [SubjectPro of Fang] states. Disappointed, you let your arm fall limply to your side, before suddenly finding a paw gently bumping against your face. 'Boop,' [SubjectPro of Fang] growls before smugly turning away again.";
+	else if hp of Fang is 5: [Beta Fang]
+		say "     Fang eyes you curiously as you bring your hand towards [PosAdj of Fang] nose. When you boop [ObjectPro of Fang], [SubjectPro of Fang] snorts. 'Cute. Treat all [if hp of Lux > 0]family [else]pack [end if]like that?' [SubjectPro of Fang] asks, licking your hand as [SubjectPro of Fang] awaits your reply. When you remain silent, [SubjectPro of Fang] fixes you with a firm stare. 'More.'";
 
 
 Section 1.2 - Companion
@@ -1711,8 +1734,11 @@ to say MaleFangSandraSex:
 		if Player consents: [Fang becomes Alpha. See Section 4.1]
 			say "[MaleFangSubFuck]";
 			now HP of Fang is 3; [Fang becomes alpha]
+			increase ScaleValue of Fang by 1;
 			increase Cock Length of Fang by 2;
 			increase Ball Size of Fang by 1;
+			increase Mouth Length of Fang by 2;
+			increase Tongue Length of Fang by 2;
 			now XP of Alexandra is 0;
 			now vmusedone of Fang is false; [Open for fresh musings]
 			now Libido of Player is Libido of Player / 2;
@@ -1731,6 +1757,8 @@ to say MaleFangSandraSex:
 				say "[MaleFangDomRide]";
 			now HP of Fang is 2; [Fang locked into Omega-mode]
 			decrease Cock Length of Fang by 2;
+			decrease Mouth Length of Fang by 2;
+			decrease Tongue Length of Fang by 2;
 			now Libido of Player is Libido of Player / 4;
 			if thirst of Player > 50, decrease thirst of Player by 10;
 	else if ( lust of Fang is 4 or lust of Fang is 0 ) and HP of Fang is 2 and FangToy is false:
@@ -1932,8 +1960,11 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 	if Player consents:
 		say "[MaleFangSub2]";
 		now HP of Fang is 4; [Alpha Fang w/o Sandra]
+		increase ScaleValue of Fang by 1;
 		increase Cock Length of Fang by 2;
 		increase Ball Size of Fang by 1;
+		increase Mouth Length of Fang by 2;
+		increase Tongue Length of Fang by 2;
 		now XP of Alexandra is 0;
 		now vmusedone of Fang is false; [Open for fresh musings]
 		now Libido of Player is Libido of Player / 2;
@@ -1952,6 +1983,8 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 			say "[MaleFangDomRide2]";
 		now HP of Fang is 2; [Fang locked into omega-mode]
 		decrease Cock Length of Fang by 2;
+		decrease Mouth Length of Fang by 2;
+		decrease Tongue Length of Fang by 2;
 		now Libido of Player is Libido of Player / 4;
 
 to say MaleFangSub2:
@@ -2023,8 +2056,11 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 	if Player consents:
 		say "[FemaleFangSub3]";
 		now HP of Fang is 4; [Alpha Female Fang]
+		increase ScaleValue of Fang by 1;
 		increase Cunt Depth of Fang by 2;
 		increase Clit Size of Fang by 1;
+		increase Mouth Length of Fang by 2;
+		increase Tongue Length of Fang by 2;
 		now XP of Alexandra is 0;
 		[now vmusedone of Fang is false; [Open for fresh musings]]
 		now Libido of Player is Libido of Player / 2;
@@ -2042,6 +2078,8 @@ instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP o
 		else:
 			say "[FemaleFangDomRide3]";
 		now HP of Fang is 2; [Fang locked into omega-mode]
+		decrease Mouth Length of Fang by 2;
+		decrease Tongue Length of Fang by 2;
 		now Libido of Player is Libido of Player / 4;
 
 to say FemaleFangSub3:

@@ -70,7 +70,7 @@ an everyturn rule:
 			move Umbra to Computer Lab;
 			if Player is in Courtyard:
 				say "     [bold type]Lux and Umbra tiredly trot into the library, likely heading back to the computer lab to go to sleep, the dark-furred wolf leaving muddy pawprints.[roman type][line break]";
-			else if Player is in COmputer Lab:
+			else if Player is in Computer Lab:
 				say "     [bold type]Lux and Umbra tiredly trot into the computer lab before curling up beneath one of the desks[if Dash is visible] with Dash[end if].[roman type][line break]";
 		[else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning]
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
@@ -130,9 +130,9 @@ Body Weight of Lux is 4. [scale of 1-9 for body weight, grouped into low weight 
 Body Definition of Lux is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Lux is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Lux is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Lux is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Lux is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Lux is 5. [length in inches]
+Tongue Length of Lux is 10. [length in inches]
 Breast Size of Lux is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Lux is 8. [count of nipples]
 Asshole Depth of Lux is 8. [inches deep for anal fucking]
@@ -232,6 +232,11 @@ to say LuxTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask her and her brother about their opinions of others in the library";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 4;
+	now description entry is "Boop Lux on the nose";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -253,6 +258,8 @@ to say LuxTalkMenu:
 					say "[LuxTalk2]";
 				if (nam is "Other Library Residents"):
 					say "[LuxTalk3]";
+				if (nam is "Boop"):
+					say "[LuxTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -450,15 +457,18 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";]
 
+to say LuxTalk4: [Boop]
+	say "     Kneeling beside your daughter, you boop her on the nose. 'I knew you loved me best,' Lux says, her tail wagging wildly. 'There's something special about being tapped on the nose, but I can't find anything about it in any of my books.' You feel an insistent nudge against your side as Umbra protests your favoritism. Perhaps it would be wise to boop him next.";
+
 Umbra is a man.
-ScaleValue of Umbra is 3. [human sized]
+ScaleValue of Umbra is 4. [human sized]
 Body Weight of Umbra is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Umbra is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Umbra is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Umbra is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Umbra is 14. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Umbra is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Umbra is 6. [length in inches]
+Tongue Length of Umbra is 14. [length in inches]
 Breast Size of Umbra is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Umbra is 8. [count of nipples]
 Asshole Depth of Umbra is 8. [inches deep for anal fucking]
@@ -542,9 +552,14 @@ to say UmbraTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask whether he has found anything of interest while out in the city";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Umbra on the nose";
+	[]
 	[choose a blank row in table of fucking options;
 	now title entry is "Small Talk";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "Make idle conversation";]
 	[]
 	sort the table of fucking options in sortorder order;
@@ -564,8 +579,10 @@ to say UmbraTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Scavenging"):
 					say "[UmbraTalk1]";
+				if (nam is "Boop"):
+					say "[UmbraTalk2]";
 				[if (nam is "Small Talk"):
-					say "[UmbraTalk2]";]
+					say "[UmbraTalk3]";]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -599,7 +616,10 @@ to say UmbraTalk1: [An easy way of getting food and water (or soda and chips if 
 			say "a pair of frilly pink panties. You take a second longer look to make sure that you have seen correctly, that the wolf has indeed got a pair of ladies underwear in his mouth, but come to the same conclusion that you did before. He has. He seems rather proud of himself, enthusiastically wagging and bouncing from one paw to the other as he deposits the garment in your hand then sitting back and smiling widely as best as he can. His excitement causes, Lux to trot over, your daughter curiously sniffing the panties before giving them a single lick and pressing herself against your side to encourage you to stroke her. With a sigh, you thank Umbra for bringing them to you and stuff them into your backpack then devote you attention to cuddling the two of them at the same time, receiving lots of licks and smooches in return. Eventually, face sodden with wolf saliva, you are able to leave again, conscious of the fact that you have an unknown person's underwear in your backpack.";
 			ItemGain pink panties by 1;
 
-[to say UmbraTalk2: [Will be expanded upon further in future]
+to say UmbraTalk2: [Boop]
+	say "     Crouching beside him, you boop your son on the nose, chuckling as he begins to lick your hand, his tail wagging gleefully behind him. He looks at you with such adoration that you can't help yourself but boop him again. 'Stop being selfish, I need love too,' Lux complains, bumping up against her brother in a futile attempt to make Umbra share. Perhaps you will have to boop her next.";
+
+[to say UmbraTalk3: [Will be expanded upon further in future]
 	say "     You crouch down and scratch Umbra behind the ears as you begin to tell him about "; [Will likely be the player telling him about various specific adventures]
 	if a random number between 1 and 3 is:
 		-- 1: [Urban Forest]
@@ -1054,7 +1074,7 @@ Prereq1Resolution of Lux & Umbra First Mating is { 1 }.
 The level of Lux & Umbra First Mating is 0.
 The sarea of Lux & Umbra First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux > 3 and hp of Umbra > 3 and (TimekeepingVar is 4 or TimekeepingVar is -4) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and Resolution of Lux & Umbra Sexual Interest is 1 and ((hp of Lux < 5 and hp of Umbra < 5) or (hp of Lux is 5 and hp of Umbra < 5) or (hp of Lux < 5 and hp of Umbra is 5)) and Lux & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Lux & Umbra First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux > 3 and hp of Umbra > 3 and (TimekeepingVar is 4 or TimekeepingVar is -4) and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and (Resolution of Lux & Umbra Sexual Interest is 1 and Lux & Fang Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved) and Lux & Umbra First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&UmbraFirstMatingEvent;
 
 to Lux&UmbraFirstMatingEvent: [Lux is mounted and bred by Umbra] [Mid Afternoon] [Near Entrance to Library]
@@ -1071,8 +1091,11 @@ to Lux&UmbraFirstMatingEvent: [Lux is mounted and bred by Umbra] [Mid Afternoon]
 		say "     ";
 		say "     ";
 	else: [Neither has sexual experience]
-		say "     [See Lost Directions Suggestion]";
-		say "     ";
+		say "     Hearing the sound of conversation from behind some bookshelves, you stealthily make your way to the end and peer around the corner, finding Lux and Umbra talking. More accurately, Lux talks while her brother comments now and then, her heads resting on her brother's back as they lie together. 'Do you remember [if Fang is Male]Daddy [else]Mummy [end if]teaching us when we were little? So much of it was instinct, some was genetic memory, but the finer points [SubjectPro of Fang] helped us with,' Lux asks. 'Yes. It wasn't long ago,' Umbra replies, making his sister sigh in exasperation. 'Why are you so simple-minded when it comes to conversation but seem so insightful when we're playing?' she grumbles. Her brother lets out a bark of laughter. 'You mean sparring? Still sore about earlier?' he needles her, though upon noticing her serious expression, matches her mood. 'You know [if Fang is Male]Daddy's [else]Mummy's [end if]past. We take after [ObjectPro of Fang] differently. I am the warrior, but you are the philo... phallos... you are the thinker,' he explains, struggling with a word but nonetheless insightful.";
+		say "     Lux ponders this for a moment before a crafty smile spreads across her face. In a blur of movement, your daughter attempts to pin her brother, using her superior position as leverage to hold him down. Unfortunately for her, Umbra must have felt her tense as he begins to roll out of the way as she pounces on him, negating some of her advantage, but ending up upside-down beneath her. 'Clever, but dishonorable,' he playfully snarls before tucking his hind legs between them and pushing the smaller female off himself, properly escaping his sister's clutches. Rolling back onto all four paws, the two of them circle for a few moments, eyes probing their adversary for a weak point. Though you aren't sure whether he has detected your presence properly, Umbra begins to turn towards where you are observing them, but Lux takes advantage of this momentary distraction to lunge for her brother's neck, her jaws closing around the thick fluff that protects his throat, snapping his attention back to the scuffle. Reminiscent of another time you saw them play-fighting, he attempts to slump on top of his sister, but she seems to have anticipated this, letting go of his scruff as soon as he loses his balance.";
+		WaitLineBreak;
+		say "     The result of this is that Umbra is once again lying on the floor while his sister stands over him. 'Yield, and I may yet show mercy,' Lux teases, both wolves panting. 'Never!' her brother replies, scrabbling around to try and regain his feet while his sister heckles him, preventing him from recovering from his disadvantageous situation. It would seem that you have witnessed a rare instance of Lux achieving victory over her twin. Eventually, their roughhousing ends with Lux sitting on top of her brothers face, putting him in a distinctly undignified position. 'No mercy it is,' Lux taunts. 'A few minutes of this should give you a chance to learn your place.' Given her playful demeanor, you assume that this is more to amuse herself rather than a genuine display of dominance, but given her comments earlier, it is possible that there is more to it. However, even the best laid plans have flaws.";
+		say "     The first sign that something is amiss is when Lux gasps and clamps her hind-legs either side of her brother's face. 'That's cheating,' she whines, reflexively humping slightly as her body reacts to Umbra licking her vulva, conveniently grinding against his muzzle. 'Adapt to change in conditions,' your son manages to say between passes with his tongue, his advice doubling as an indirect request to his sister to reciprocate. Any thought of winning some petty play-fight are abandoned as Lux eagerly begins to snuffle and lick around her twin's sheath and balls, inhaling his scent and coaxing his cock out from within. Though they notice you as you step out from behind the bookshelf and make your way over to find a more comfortable place to observe from, they barely pay you any attention, completely surrendering to their lust towards each other, a lust born from an even deeper affection that they share.";
 		WaitLineBreak;
 		say "     ";
 		say "     ";

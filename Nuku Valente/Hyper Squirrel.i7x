@@ -88,16 +88,28 @@ object	name
 Snow	"Snow"
 
 Snow is a person.
+Snow is in Squirrel Den.
 ScaleValue of Snow is 3. [human sized]
-Cock Count of Snow is 1.
-Cock Length of Snow is 18.
-Ball Size of Snow is 4. [goose egg sized balls]
-Ball Count of Snow is 2.
-Cunt Count of Snow is 0.
-Cunt Depth of Snow is 0.
-Cunt Tightness of Snow is 0.
-Nipple Count of Snow is 2.
-Breast Size of Snow is 10.
+Body Weight of Snow is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Snow is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Snow is 6. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Snow is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Snow is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Snow is 6. [length in inches]
+Breast Size of Snow is 6. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Snow is 2. [count of nipples]
+Asshole Depth of Snow is 12. [inches deep for anal fucking]
+Asshole Tightness of Snow is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Snow is 1. [number of cocks]
+Cock Girth of Snow is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Snow is 18. [Length in Inches]
+Ball Count of Snow is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Snow is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Snow is 0. [number of cunts]
+Cunt Depth of Snow is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Snow is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Snow is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Snow is false.
 PlayerRomanced of Snow is false.
@@ -109,18 +121,18 @@ Virgin of Snow is true.
 AnalVirgin of Snow is true.
 PenileVirgin of Snow is true.
 SexuallyExperienced of Snow is false.
+TwistedCapacity of Snow is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Snow is false. [steriles can't knock people up]
 MainInfection of Snow is "Hyper Squirrel".
-
-Description of Snow is "[SnowDesc]";
+Description of Snow is "[SnowDesc]".
+Conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
+the scent of snow is "[snowscent]".
 
 to say SnowDesc:
 	project the figure of Snow_icon;
 	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.";
 
-Snow is in Squirrel Den.
-Conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
-the scent of snow is "[snowscent]".
 
 to say snowscent:
 	if SkinName of Player is "Hyper Squirrel":

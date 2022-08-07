@@ -131,21 +131,28 @@ object	name
 Thunderbolt	"Thunderbolt"
 
 Thunderbolt is a man. Thunderbolt is in Thunderbolt's Stable.
-[Physical details as of game start]
 ScaleValue of Thunderbolt is 4. [horse sized]
-SleepRhythm of Thunderbolt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Thunderbolt is 1. [X cock]
-Cock Length of Thunderbolt is 24. [X Inches]
-Ball Size of Thunderbolt is 4.
-Ball Count of Thunderbolt is 2. [X balls]
-Cunt Count of Thunderbolt is 0. [X pussy]
-Cunt Depth of Thunderbolt is 0. [X Cunt]
-Cunt Tightness of Thunderbolt is 0. [X Cunt]
-Nipple Count of Thunderbolt is 2. [X nipples]
-Breast Size of Thunderbolt is 0. [X at the start]
+Body Weight of Thunderbolt is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Thunderbolt is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Thunderbolt is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Thunderbolt is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Thunderbolt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Thunderbolt is 10. [length in inches]
+Breast Size of Thunderbolt is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Thunderbolt is 2. [count of nipples]
+Asshole Depth of Thunderbolt is 12. [inches deep for anal fucking]
+Asshole Tightness of Thunderbolt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Thunderbolt is 1. [number of cocks]
+Cock Girth of Thunderbolt is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Thunderbolt is 24. [Length in Inches]
+Ball Count of Thunderbolt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Thunderbolt is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Thunderbolt is 0. [number of cunts]
+Cunt Depth of Thunderbolt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Thunderbolt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Thunderbolt is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Thunderbolt is false. [can not take oversized members without pain]
-Sterile of Thunderbolt is true.
 PlayerMet of Thunderbolt is false.
 PlayerRomanced of Thunderbolt is false.
 PlayerFriended of Thunderbolt is false.
@@ -155,14 +162,16 @@ OralVirgin of Thunderbolt is true.
 Virgin of Thunderbolt is true.
 AnalVirgin of Thunderbolt is true.
 PenileVirgin of Thunderbolt is false.
-SexuallyExperienced of Thunderbolt is true.
+SexuallyExperienced of Thunderbolt is false.
+TwistedCapacity of Thunderbolt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Thunderbolt is true. [steriles can't knock people up]
 MainInfection of Thunderbolt is "".
 Description of Thunderbolt is "[ThunderboltDesc]".
 Conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".
 
 to say ThunderboltDesc:
-	say "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regale, almost always followed in tow by his two feline handlers.";
+	say "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regalia, almost always followed in tow by his two feline handlers, Ariana and Eres.";
 
 instead of conversing the Thunderbolt:
 	say "     Talking in soft tones, you reach out and stroke the horse Thunderbolt across his mane. Then you brush your palms down his flank, over his side and back up to his equine muzzle. He gives a low whinny as you pet him and caress his chin. Eventually you pull back letting the stallion settle. He stares back at you, shakes his mane then neighs in satisfaction.";
@@ -257,6 +266,41 @@ object	name
 Ariana	"Ariana"
 
 Ariana is a woman.
+ScaleValue of Ariana is 3. [human sized]
+Body Weight of Ariana is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ariana is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ariana is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ariana is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ariana is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ariana is 7. [length in inches]
+Breast Size of Ariana is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ariana is 2. [count of nipples]
+Asshole Depth of Ariana is 12. [inches deep for anal fucking]
+Asshole Tightness of Ariana is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ariana is 0. [number of cocks]
+Cock Girth of Ariana is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ariana is 0. [Length in Inches]
+Ball Count of Ariana is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ariana is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ariana is 1. [number of cunts]
+Cunt Depth of Ariana is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ariana is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ariana is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ariana is false.
+PlayerRomanced of Ariana is false.
+PlayerFriended of Ariana is false.
+PlayerControlled of Ariana is false.
+PlayerFucked of Ariana is false.
+OralVirgin of Ariana is false.
+Virgin of Ariana is false.
+AnalVirgin of Ariana is true.
+PenileVirgin of Ariana is true.
+SexuallyExperienced of Ariana is true.
+TwistedCapacity of Ariana is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ariana is true. [steriles can't knock people up]
+MainInfection of Ariana is "".
 Description of Ariana is "[ArianaDesc]".
 Conversation of Ariana is { "<This is nothing but a placeholder!>" }.
 The scent of Ariana is "     Ariana smells musky from a days jog, the scent underlain by a sweet smell of perfume and pheromones.".
@@ -312,12 +356,47 @@ object	name
 Eres	"Eres"
 
 Eres is a woman.
+ScaleValue of Eres is 3. [human sized]
+Body Weight of Eres is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Eres is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Eres is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Eres is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Eres is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Eres is 7. [length in inches]
+Breast Size of Eres is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Eres is 2. [count of nipples]
+Asshole Depth of Eres is 12. [inches deep for anal fucking]
+Asshole Tightness of Eres is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Eres is 0. [number of cocks]
+Cock Girth of Eres is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Eres is 0. [Length in Inches]
+Ball Count of Eres is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Eres is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Eres is 1. [number of cunts]
+Cunt Depth of Eres is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Eres is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Eres is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Eres is false.
+PlayerRomanced of Eres is false.
+PlayerFriended of Eres is false.
+PlayerControlled of Eres is false.
+PlayerFucked of Eres is false.
+OralVirgin of Eres is false.
+Virgin of Eres is false.
+AnalVirgin of Eres is true.
+PenileVirgin of Eres is true.
+SexuallyExperienced of Eres is true.
+TwistedCapacity of Eres is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Eres is true. [steriles can't knock people up]
+MainInfection of Eres is "".
 Description of Eres is "[EresDesc]".
 Conversation of Eres is { "<This is nothing but a placeholder!>" }.
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
 
 to say EresDesc:
-	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe from frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
+	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
 
 instead of conversing the Eres:
 	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";

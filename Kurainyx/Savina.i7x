@@ -22,38 +22,6 @@ Abandoned Camp is a situation.
 ResolveFunction of Abandoned Camp is "[ResolveEvent Abandoned Camp]".
 Sarea of Abandoned Camp is "Forest".
 
-Table of GameCharacterIDs (continued)
-object	name
-Savina	"Savina"
-
-Savina is a woman.
-[Physical details as of game start]
-ScaleValue of Savina is 5. [Giant Snake sized]
-SleepRhythm of Savina is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Savina is 0. [X cock]
-Cock Length of Savina is 0. [X Inches]
-Ball Size of Savina is 0.
-Ball Count of Savina is 0. [X balls]
-Cunt Count of Savina is 0. [X pussy]
-Cunt Depth of Savina is 0. [X Cunt]
-Cunt Tightness of Savina is 0. [X Cunt]
-Nipple Count of Savina is 0. [X nipples]
-Breast Size of Savina is 0. [X at the start]
-[Basic Interaction states as of game start]
-TwistedCapacity of Savina is false. [can not take oversized members without pain]
-Sterile of Savina is true.
-PlayerMet of Savina is false.
-PlayerRomanced of Savina is false.
-PlayerFriended of Savina is false.
-PlayerControlled of Savina is false.
-PlayerFucked of Savina is false.
-OralVirgin of Savina is true.
-Virgin of Savina is true.
-AnalVirgin of Savina is true.
-PenileVirgin of Savina is true.
-SexuallyExperienced of Savina is false.
-MainInfection of Savina is "".
-
 when play begins:
 	add Abandoned Camp to BadSpots of FemaleList;
 	add Abandoned Camp to badspots of FeralList;
@@ -153,7 +121,47 @@ Description of Deep Forest is "     You are in a small clearing deep inside of t
 
 Section 3 - Savina
 
+Table of GameCharacterIDs (continued)
+object	name
+Savina	"Savina"
+
+Savina is a woman.
 SavinaTempt is a number that varies. SavinaTempt is usually 0.
+ScaleValue of Savina is 5. [Giant Snake sized]
+Body Weight of Savina is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Savina is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Savina is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Savina is 24. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Savina is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Savina is 26. [length in inches]
+Breast Size of Savina is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Savina is 0. [count of nipples]
+Asshole Depth of Savina is 6. [inches deep for anal fucking]
+Asshole Tightness of Savina is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Savina is 0. [number of cocks]
+Cock Girth of Savina is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Savina is 0. [Length in Inches]
+Ball Count of Savina is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Savina is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Savina is 1. [number of cunts]
+Cunt Depth of Savina is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Savina is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Savina is 1. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Savina is false.
+PlayerRomanced of Savina is false.
+PlayerFriended of Savina is false.
+PlayerControlled of Savina is false.
+PlayerFucked of Savina is false.
+OralVirgin of Savina is true.
+Virgin of Savina is true.
+AnalVirgin of Savina is true.
+PenileVirgin of Savina is true.
+SexuallyExperienced of Savina is false.
+TwistedCapacity of Savina is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Savina is true. [steriles can't knock people up]
+MainInfection of Savina is "".
 Description of Savina is "[SavinaDesc]".
 Conversation of Savina is { "I'm a snek" }.
 The scent of the Savina is "Intertwined with the earthy smell of the forest, Savina has a unique, alluring musk. You're not sure if it's just another side effect of her hold on you, but there is something comforting about that scent that relaxes you a bit.";

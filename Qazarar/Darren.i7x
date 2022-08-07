@@ -4,7 +4,7 @@ Section 1 - NPC
 
 [ Loyalty of Darren                                            ]
 [   0: haven't spoken to                                       ]
-[		1: met Darren                                              ]
+[	1: met Darren                                              ]
 [   2: helping Darren                                          ]
 [   3: helped Darren                                           ]
 [   4: eventual breeding availability?                         ]
@@ -21,17 +21,30 @@ Darren	"Darren"
 
 Darren is a man.
 Darren is in Salamander Hideaway.
-ScaleValue of Darren is 3. [human sized]
+Loyalty of Darren is usually 0.
 SleepRhythm of Darren is 1. [day active]
-Cock Count of Darren is 1.
-Cock Length of Darren is 8. [check values]
-Ball Size of Darren is 5. [check values]
-Ball Count of Darren is 4.
-Cunt Count of Darren is 0.
-Cunt Depth of Darren is 0.
-Cunt Tightness of Darren is 0.
-Nipple Count of Darren is 2.
-Breast Size of Darren is 0.
+ScaleValue of Darren is 3. [human sized]
+Body Weight of Darren is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Darren is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Darren is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Darren is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Darren is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Darren is 6. [length in inches]
+Breast Size of Darren is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Darren is 2. [count of nipples]
+Asshole Depth of Darren is 8. [inches deep for anal fucking]
+Asshole Tightness of Darren is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Darren is 1. [number of cocks]
+Cock Girth of Darren is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Darren is 8. [Length in Inches]
+Ball Count of Darren is 4. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Darren is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Darren is 0. [number of cunts]
+Cunt Depth of Darren is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Darren is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Darren is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
 PlayerMet of Darren is false.
 PlayerRomanced of Darren is false.
 PlayerFriended of Darren is false.
@@ -42,7 +55,8 @@ Virgin of Darren is true.
 AnalVirgin of Darren is true.
 PenileVirgin of Darren is false.
 SexuallyExperienced of Darren is false.
-Loyalty of Darren is usually 0.
+TwistedCapacity of Darren is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Darren is true. [steriles can't knock people up]
 MainInfection of Darren is "Salamander".
 Description of Darren is "[DarrenDesc]".
 Conversation of Darren is { "<This is nothing but a placeholder!>" }.

@@ -148,14 +148,52 @@ Table of GameCharacterIDs (continued)
 object	name
 Lisa	"Lisa"
 
-Lisa is a person. Lisa is in Restrained Desire.
-Description of Lisa is "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.".
-Conversation of Lisa is { "Squeak!" }.
-
+Lisa is a woman.
+Lisa is in Restrained Desire.
 mousefucked is a number that varies. mousefucked is usually 0.
 mousespot is a number that varies. mousespot is usually 0.
 lisaartemiscount1 is a number that varies.
 lisaartemiscount2 is a number that varies.
+ScaleValue of Lisa is 3. [large dog sized + human body]
+Body Weight of Lisa is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Lisa is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Lisa is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Lisa is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Lisa is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Lisa is 6. [length in inches]
+Breast Size of Lisa is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Lisa is 2. [count of nipples]
+Asshole Depth of Lisa is 8. [inches deep for anal fucking]
+Asshole Tightness of Lisa is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Lisa is 0. [number of cocks]
+Cock Girth of Lisa is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Lisa is 0. [Length in Inches]
+Ball Count of Lisa is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Lisa is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Lisa is 1. [number of cunts]
+Cunt Depth of Lisa is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Lisa is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Lisa is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Lisa is false.
+PlayerRomanced of Lisa is false.
+PlayerFriended of Lisa is false.
+PlayerControlled of Lisa is false.
+PlayerFucked of Lisa is false.
+OralVirgin of Lisa is false.
+Virgin of Lisa is false.
+AnalVirgin of Lisa is true.
+PenileVirgin of Lisa is true.
+SexuallyExperienced of Lisa is true.
+TwistedCapacity of Lisa is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Lisa is false. [steriles can't knock people up]
+MainInfection of Lisa is "".
+Description of Lisa is "[LisaDesc]".
+Conversation of Lisa is { "Squeak!" }.
+
+to say LisaDesc:
+	say "     A mouse taur. Her mouse-like body is six feet long and about three feet tall where it flows into the curvy form of a well-built, mostly human female. Her hands are somewhat pawlike and she has whiskers and grand round ears. Besides that, she is human from the belly up, with enticing breasts that wobble with her motions for your eyes. Her entire form is covered in soft mouse gray fur, except for the end of the faint snout she has, twitching pinkly.";
 
 instead of sniffing Lisa:
 	say "     The mousetaur smells very feminine and murine. She wears a soft perfume and scented oils. There is a strong scent of females and sex about her person.";

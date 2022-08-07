@@ -114,19 +114,31 @@ object	name
 Sandra	"Sandra"
 
 Sandra is a woman.
-ScaleValue of Sandra is 3. [roughly human sized]
-Cock Count of Sandra is 0.
-Cock Length of Sandra is 0.
-Ball Size of Sandra is 0.
-Ball Count of Sandra is 0.
-Cunt Count of Sandra is 1.
-Cunt Depth of Sandra is 12.
-Cunt Tightness of Sandra is 6.
-Nipple Count of Sandra is 2.
-Breast Size of Sandra is 4.
+Sandra is in Rabbit Den.
+The icon of Sandra is Figure of sandy_icon.
+sangr is a text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
+ScaleValue of Sandra is 3. [human sized]
+Body Weight of Sandra is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sandra is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sandra is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sandra is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sandra is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sandra is 6. [length in inches]
+Breast Size of Sandra is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sandra is 6. [count of nipples]
+Asshole Depth of Sandra is 12. [inches deep for anal fucking]
+Asshole Tightness of Sandra is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sandra is 0. [number of cocks]
+Cock Girth of Sandra is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sandra is 0. [Length in Inches]
+Ball Count of Sandra is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sandra is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sandra is 1. [number of cunts]
+Cunt Depth of Sandra is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sandra is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sandra is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Sandra is false. [can not take oversized members without pain]
-Sterile of Sandra is false.
 PlayerMet of Sandra is false.
 PlayerRomanced of Sandra is false.
 PlayerFriended of Sandra is false.
@@ -137,19 +149,16 @@ Virgin of Sandra is false.
 AnalVirgin of Sandra is true.
 PenileVirgin of Sandra is true.
 SexuallyExperienced of Sandra is true.
+TwistedCapacity of Sandra is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sandra is false. [steriles can't knock people up]
 MainInfection of Sandra is "Anthro Rabbit".
-
-The icon of Sandra is Figure of sandy_icon.
 Description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
-Sandra is in Rabbit Den.
 Conversation of Sandra is { "Moved!" }
 
 Instead of conversing the Sandra:
-	say "[sandtalk][line break]";
+	say "[sandratalk][line break]";
 
-sangr is a text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
-
-to say sandtalk:
+to say sandratalk:
 	if rabbitsibling is 0 and a random chance of 1 in 2 succeeds:
 		say "     Approaching Sandra, she suddenly seems a little bashful.";
 		say "     'Oh! Hey, hon. This may seem a little odd to ask...' As she brings up the request, she begins to blush. 'But I get real lonely sometimes. Maybe you could... be my sibling?' Beyond the literal meaning of this request, you also figure she want to change you to look more like her as well.";

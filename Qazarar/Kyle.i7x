@@ -46,22 +46,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Kyle	"Kyle"
 
-Kyle is a man. The HP of Kyle is usually 0.
-[Physical details as of game start]
+Kyle is a man.
+Kyle is in Brookstone Books.
+The HP of Kyle is usually 0.
 ScaleValue of Kyle is 3. [human sized]
-SleepRhythm of Kyle is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Kyle is 1. [X cock]
-Cock Length of Kyle is 7. [X Inches]
-Ball Size of Kyle is 5.
-Ball Count of Kyle is 2. [X balls]
-Cunt Count of Kyle is 0. [X pussy]
-Cunt Depth of Kyle is 0. [X Cunt]
-Cunt Tightness of Kyle is 0. [X Cunt]
-Nipple Count of Kyle is 0. [X nipples]
-Breast Size of Kyle is 0. [X at the start]
+Body Weight of Kyle is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kyle is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kyle is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kyle is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kyle is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kyle is 6. [length in inches]
+Breast Size of Kyle is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kyle is 0. [count of nipples]
+Asshole Depth of Kyle is 6. [inches deep for anal fucking]
+Asshole Tightness of Kyle is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kyle is 1. [number of cocks]
+Cock Girth of Kyle is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kyle is 7. [Length in Inches]
+Ball Count of Kyle is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kyle is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kyle is 0. [number of cunts]
+Cunt Depth of Kyle is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kyle is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kyle is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Kyle is false. [can not take oversized members without pain]
-Sterile of Kyle is true.
 PlayerMet of Kyle is false.
 PlayerRomanced of Kyle is false.
 PlayerFriended of Kyle is false.
@@ -72,11 +81,12 @@ Virgin of Kyle is true.
 AnalVirgin of Kyle is true.
 PenileVirgin of Kyle is true.
 SexuallyExperienced of Kyle is false.
+TwistedCapacity of Kyle is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kyle is true. [steriles can't knock people up]
 MainInfection of Kyle is "".
 Description of Kyle is "[KyleDesc]".
 Conversation of Kyle is { "<This is nothing but a placeholder!>" }.
 The scent of Kyle is "     Kyle smells like scales and paper.".
-Kyle is in Brookstone Books.
 
 to say KyleDesc:
 	if debugactive is 1:

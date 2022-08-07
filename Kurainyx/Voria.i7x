@@ -30,39 +30,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Voria	"Voria"
 
-Voria is a woman. The HP of Voria is usually 0.
-[Physical details as of game start]
+Voria is a woman.
+The HP of Voria is usually 0.
 ScaleValue of Voria is 4. [large sized]
-SleepRhythm of Voria is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Voria is 2.
-Cock Length of Voria is 12.
-Ball Size of Voria is 0.
-Ball Count of Voria is 0.
-Cunt Count of Voria is 2.
-Cunt Depth of Voria is 8.
-Cunt Tightness of Voria is 3.
-Nipple Count of Voria is 0.
-Breast Size of Voria is 0.
+Body Weight of Voria is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Voria is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Voria is 5. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Voria is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Voria is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Voria is 10. [length in inches]
+Breast Size of Voria is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Voria is 0. [count of nipples]
+Asshole Depth of Voria is 0. [inches deep for anal fucking]
+Asshole Tightness of Voria is 0. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Voria is 2. [number of cocks]
+Cock Girth of Voria is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Voria is 12. [Length in Inches]
+Ball Count of Voria is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Voria is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Voria is 2. [number of cunts]
+Cunt Depth of Voria is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Voria is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Voria is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Voria is false.
 PlayerRomanced of Voria is false.
 PlayerFriended of Voria is false.
 PlayerControlled of Voria is false.
 PlayerFucked of Voria is false.
-OralVirgin of Voria is false.
-Virgin of Voria is false.
-AnalVirgin of Voria is false.
-PenileVirgin of Voria is false.
-SexuallyExperienced of Voria is true.
+OralVirgin of Voria is true.
+Virgin of Voria is true.
+AnalVirgin of Voria is true.
+PenileVirgin of Voria is true.
+SexuallyExperienced of Voria is false.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
+MainInfection of Voria is "".
 Description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
 Conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
 
 Section 2 - Events
-
 
 Table of GameEventIDs (continued)
 Object	Name

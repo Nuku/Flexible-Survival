@@ -34,10 +34,7 @@ Version 3 of Ranae by Kurainyx begins here.
 [  2: Gave Ranae Bracelet                                  ]
 
 
-
-Table of GameCharacterIDs (continued)
-object	name
-Ranae	"Ranae"
+Section 1 - Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -46,37 +43,6 @@ Rundown Boutique	"Rundown Boutique"
 Boarded-up Building	"Boarded-up Building"
 Ransacked Shop	"Ransacked Shop"
 Trench Coat Salesman	"Trench Coat Salesman"
-
-Ranae is a woman.
-[physical details as of game start]
-[size numbers not properly adjusted]
-ScaleValue of Ranae is 3. [human sized]
-Cock Count of Ranae is 0. [no cock]
-Cock Length of Ranae is 0. [no cock length]
-Ball Size of Ranae is 0. [no ball size]
-Ball Count of Ranae is 0. [no balls]
-Cunt Count of Ranae is 1. [1 pussy]
-Cunt Depth of Ranae is 7.
-Cunt Tightness of Ranae is 2.
-Nipple Count of Ranae is 2. [2 nipples]
-Breast Size of Ranae is 3. [C cup at the start]
-[Basic Interaction states as of game start]
-TwistedCapacity of Ranae is false. [can not take oversized members without pain]
-Sterile of Ranae is true.
-PlayerMet of Ranae is false.
-PlayerRomanced of Ranae is false.
-PlayerFriended of Ranae is false.
-PlayerControlled of Ranae is false.
-PlayerFucked of Ranae is false.
-OralVirgin of Ranae is true.
-Virgin of Ranae is true.
-AnalVirgin of Ranae is true.
-PenileVirgin of Ranae is true.
-SexuallyExperienced of Ranae is false.
-[MainInfection of Ranae is "".]
-
-
-Section 1 - Events
 
 Starving Frog is a situation.
 ResolveFunction of Starving Frog is "[ResolveEvent Starving Frog]".
@@ -207,6 +173,46 @@ instead of navigating Froggy Hideout:
 
 Section 3 - Ranae
 
+Table of GameCharacterIDs (continued)
+object	name
+Ranae	"Ranae"
+
+Ranae is a woman.
+ScaleValue of Ranae is 3. [human sized]
+Body Weight of Ranae is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ranae is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ranae is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ranae is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ranae is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ranae is 24. [length in inches]
+Breast Size of Ranae is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ranae is 2. [count of nipples]
+Asshole Depth of Ranae is 6. [inches deep for anal fucking]
+Asshole Tightness of Ranae is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ranae is 0. [number of cocks]
+Cock Girth of Ranae is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ranae is 0. [Length in Inches]
+Ball Count of Ranae is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ranae is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ranae is 1. [number of cunts]
+Cunt Depth of Ranae is 7. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ranae is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ranae is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ranae is false.
+PlayerRomanced of Ranae is false.
+PlayerFriended of Ranae is false.
+PlayerControlled of Ranae is false.
+PlayerFucked of Ranae is false.
+OralVirgin of Ranae is true.
+Virgin of Ranae is true.
+AnalVirgin of Ranae is true.
+PenileVirgin of Ranae is true.
+SexuallyExperienced of Ranae is false.
+TwistedCapacity of Ranae is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ranae is true. [steriles can't knock people up]
+MainInfection of Ranae is "".
 Description of Ranae is "[RanaeDesc]".
 Conversation of Ranae is { "Ribbit" }.
 The scent of the Ranae is "[RanaeScent]".

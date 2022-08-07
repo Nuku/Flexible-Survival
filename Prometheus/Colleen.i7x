@@ -97,7 +97,7 @@ Strike From the Deep is a situation.
 The level of Strike From the Deep is 10.
 The sarea of Strike From the Deep is "Nowhere".
 
-instead of going down from Grey Abbey Library while Colleen is in Bunker and ColleenAlpha is 0 and ColleenSlut is 0 and ColleenCollared is 0 and SarahCured > 3 and Strike From the Deep is not resolved and a random chance of 1 in 2 succeeds:
+instead of going down from Grey Abbey Library while Colleen is in Bunker and ColleenTalk is 1 and ColleenAlpha is 0 and ColleenSlut is 0 and ColleenCollared is 0 and SarahCured > 3 and Strike From the Deep is not resolved and a random chance of 1 in 2 succeeds:
 	StrikeFromtheDeepEvent;
 
 to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed through the wall]
@@ -220,13 +220,13 @@ Colleen	"Colleen"
 Colleen is a woman.
 [Physical details as of game start]
 ScaleValue of Colleen is 3. [human sized]
-Body Weight of Colleen is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-Body Definition of Colleen is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Body Weight of Colleen is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Colleen is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 Androginity of Colleen is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Colleen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Mouth Length of Colleen is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Colleen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Colleen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Colleen is 5. [length in inches]
+Tongue Length of Colleen is 6. [length in inches]
 Cock Count of Colleen is 0. [number of cocks]
 Cock Girth of Colleen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Colleen is 0. [length in inches]
@@ -386,11 +386,60 @@ instead of conversing the Colleen:
 			else if SarahSlut is 1 or SarahSlut is 2:
 				say "     [one of]'Thanks again for all your help!'[or]'I hope we can all make out in here safely,' she says, then blinks, 'out OF here I meant...' she says with a blush.[or]'I'm enjoying the company here, but she is starting to make me pretty nervous,' she says as she nods at the naked Sarah.[or]'Let me know if you find any other members of my team out there.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sarah seems to still be hanging in there barely, are you really sure you should be doing this to her?'[or]'I wonder what being a husky is like...'[or]'Found any other strays to take in?' she says with a grin.[or]'I'm not sure she can take much more of this,' she says with a nod at Sarah.[or]'Is that what you have planned for me too?' Colleen asks as she nods at the naked husky, seemingly worried, though her wagging tail makes you think she might be slightly excited by the idea.[or]'I think my body is starting to change too,' Colleen says in worry as she looks at you, 'And the worst part is, I think I kind of like it.'[or]'Well at least she seems happy,' Colleen says, nodding at Sarah.[at random]";
 			else if hp of Colleen is 1:
-				say "     [one of]'Thanks again for all your help!'[or]'I hope we can all make it out of here safely.'[or]'I'm enjoying the company here,' she says as she nods at Sarah.[or]'Let me know if you find any other members of my team out there.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sarah seems to still be holding in there, don't worry!'[or]'Being a husky hasn't been too bad so far...'[or]'Found any other strays to take in?' she says with a grin.[at random]";
+				say "[ColleenTalkMenu]";
 			else:
 				say "     [one of]'Thanks again for all your help!'[or]'I hope we can all make it out of here safely.'[or]'I'm enjoying the company here,' she says as she nods at Sarah.[or]'Let me know if you find any other members of my team out there.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sarah seems to still be holding in there, don't worry!'[or]'I wonder what being a husky is like...'[or]'Found any other strays to take in?' she says with a grin.[at random]";
 		else:
 			say "     [one of]'Thanks for all the help!'[or]'Glad to see you back again.'[or]'Be careful out there. It would be pretty lonely here without you.'[or]'Damn, I found some fun books here to read!'[or]'Let me know if you find any other members of my squad out there.'[or]'Try to be careful out there. This place is much more dangerous than they warned us.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sometimes I find myself wondering what it would be like to just wander outside and find one of infected to fuck...'[at random]";
+
+to say ColleenTalkMenu: [Currently only for Sane Husky Colleen]
+	say "     What do you wish to talk about with Colleen?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 1;
+	now description entry is "Have an idle conversation";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Colleen on the nose";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Small Talk"):
+					say "[ColleenTalk1]";
+				if (nam is "Boop"):
+					say "[ColleenTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back, indicating an end to the conversation. Blanche looks crestfallen for a moment before [one of]Sturm steps up behind her and traps her in a hug, the two of them enjoying a moment of innocent affection[or]Bianca pads over to her to ask her mother's opinion on some jewellery that she has found, holding various pieces up to her mother's neck and wrists[or]Ernest approaches, eager to get his mother's input on some plan that he has scribbled down on his clipboard[or]Claude creeps up behind her and grabs her and suddenly grabs her by the tail, deftly dodging her attempt to swat him in retribution[at random].";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say ColleenTalk1: [Small Talk]
+	say "     [one of]'Thanks again for all your help!'[or]'I hope we can all make it out of here safely.'[or]'I'm enjoying the company here,' she says as she nods at Sarah.[or]'Let me know if you find any other members of my team out there.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sarah seems to still be holding in there, don't worry!'[or]'Being a husky hasn't been too bad so far...'[or]'Found any other strays to take in?' she says with a grin.[at random]";
+
+to say ColleenTalk2: [Boop]
+	say "     As you boop the husky soldier on the nose, her eyes go cross-eyed on your finger. 'Was there something that you wanted, or were you just bored?' she asks, gently taking hold of your hand and lifting it away from her face. 'Being booped was not covered in any of the training scenarios, so I'll just have to use my own discretion I suppose. I shall permit it, but enough for now.' You note that she is reluctant to let go of your hand though.";
 
 
 to say Colleen_Vanessa_msg:

@@ -26,16 +26,49 @@ object	name
 Dan	"Dan"
 
 Dan is a man.
+ScaleValue of Dan is 3. [human sized]
+Body Weight of Dan is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Dan is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Dan is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Dan is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Dan is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Dan is 8. [length in inches]
+Breast Size of Dan is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Dan is 0. [count of nipples]
+Asshole Depth of Dan is 8. [inches deep for anal fucking]
+Asshole Tightness of Dan is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Dan is 1. [number of cocks]
+Cock Girth of Dan is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Dan is 8. [Length in Inches]
+Ball Count of Dan is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Dan is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Dan is 0. [number of cunts]
+Cunt Depth of Dan is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Dan is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Dan is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Dan is false.
+PlayerRomanced of Dan is false.
+PlayerFriended of Dan is false.
+PlayerControlled of Dan is false.
+PlayerFucked of Dan is false.
+OralVirgin of Dan is false.
+Virgin of Dan is true.
+AnalVirgin of Dan is false.
+PenileVirgin of Dan is false.
+SexuallyExperienced of Dan is true.
+TwistedCapacity of Dan is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Dan is true. [steriles can't knock people up]
+MainInfection of Dan is "".
+The scent of Dan is "     The four-armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere."
 Description of Dan is "The four-armed iguana moves himself around the loft with slow and measured steps while rolling his four arms around somewhat anxiously. Humming to himself all the while, you wonder how the other can stay perpetually happy as he moves around the loft. With the power [if findwires is 2 and fixedgens > 2]back on, the green and black scaled reptile works at both cleaning up the condo while at the same time making something to eat for himself and Greg, but it's easy to tell that Dan wants to be doing something more [italic type]vigorous[roman type] with his lover[else]not working properly, the iguana can only work at drawing in several coloring books to stave off his boredom. Though, from the way he is moving his tail about almost anxiously it's easy to see that Dan wants to be outside doing something[end if]. As strong and muscular as he is you have to wonder how much the virus has enhanced what the iguana had already had developed from his Academy training. Toned and limber with green and black scales shimmering in the light of the [if daytimer is day]sun shining in from the patio window[else]lights from the solar powered glow lamps surrounding the condo, along with the waning moonlight from outside[end if], Dan is quite a handsome specimen to behold. The sight of the naked reptile's genital slit leaking precum down his thighs makes for an interesting spectacle, and you idly wonder how Greg keeps his claws off of the other.".
 Conversation of Dan is { "Let's Do It!" }.
 Dan is in Lizard Parlor.
 
-instead of sniffing Dan:
-	say "The four-armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
-
 instead of conversing the Dan:
 	if HP of dan is 0:
-		say "     'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. 'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this, the four-armed male sighs wistfully.";
+		say "     'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. I'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this, the four-armed male sighs wistfully.";
 		say "     Asking the other what the matter is you get a story you weren't expecting. 'Well, when everything began to go all to hell many of the officers at the various stations dotting the city tried to do their best to handle what was happening, to both them and the people around them. But,' Dan reaches up with one of his four arms to scratch a thick claw underneath his chin. 'that really didn't go so well and many of them ended up succumbing to the virus and then doing some really... [italic type]wild[roman type]... things to each other once it looked as though the problem couldn't be solved by house arrest any longer.' Dan sighs forlornly at this. 'Logically one would think that people like police officers, who are trained to handle much more strenuous situations, would be able to hand little things like out of control boners and whatnot, but when the shit hit the fan... well.";
 		WaitLineBreak;
 		say "     'I keep trying to tell you that having a badge does not make you a hero, super or else,' Greg says as he comes up to hug his younger mate. The two reptiles nuzzle each other for several minutes, their thin tongues rapidly flick out across one another's scaled forms and then over the sides of their heads before moving down underneath toward their chins, before pulling away to give each other space. You find yourself smiling as you look between the two lovers. 'Y-yea, I know, but still...'";
@@ -92,12 +125,45 @@ object	name
 Greg	"Greg"
 
 Greg is a man.
+Greg is in Lizard Parlor.
+ScaleValue of Greg is 3. [human sized]
+Body Weight of Greg is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Greg is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Greg is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Greg is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Greg is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Greg is 8. [length in inches]
+Breast Size of Greg is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Greg is 0. [count of nipples]
+Asshole Depth of Greg is 8. [inches deep for anal fucking]
+Asshole Tightness of Greg is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Greg is 1. [number of cocks]
+Cock Girth of Greg is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Greg is 8. [Length in Inches]
+Ball Count of Greg is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Greg is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Greg is 0. [number of cunts]
+Cunt Depth of Greg is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Greg is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Greg is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Greg is false.
+PlayerRomanced of Greg is false.
+PlayerFriended of Greg is false.
+PlayerControlled of Greg is false.
+PlayerFucked of Greg is false.
+OralVirgin of Greg is false.
+Virgin of Greg is true.
+AnalVirgin of Greg is false.
+PenileVirgin of Greg is false.
+SexuallyExperienced of Greg is true.
+TwistedCapacity of Greg is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Greg is true. [steriles can't knock people up]
+MainInfection of Greg is "".
+The scent of Greg is "     The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz..."
 Description of Greg is "The taller and more powerfully built raptor/komodo dragon hybrid grunts while trying to find a warm patch of heat to rest in. Given that his much bigger build probably requires the necessary heat since he's gone from mammalian to reptilian, the orange and yellow mottled scalie does everything in his power to try and stay warm. [if the daytimer is day]With the sun out, it's much easier for Greg to lounge while reading a book as he keeps an eye out on Dan[else]Without the sun, the raptor hybrid has little choice save to wrap himself up with a large and fluffy comforter as he tries to conserve body heat[end if]. The older man's tail lashes beside him somewhat jubilantly as the raptor hisses while flicking his long tongue out to catch the scent of his boyfriend. Dan often comes over to help keep the older man warm by cuddling and nuzzling into Greg's scaly form. It's somewhat plain to see that the two would probably be mating if you weren't here right now as Greg's genital slit is almost drooling down in between his legs.".
 Conversation of Greg is { "Time for a nap????" }.
-Greg is in Lizard Parlor.
-
-instead of sniffing Greg:
-	say "The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz...";
 
 instead of conversing the Greg:
 	If HP of greg is 0:

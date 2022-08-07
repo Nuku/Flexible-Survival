@@ -39,9 +39,9 @@ Body Weight of Cleo is 4. [scale of 1-9 for body weight, grouped into low weight
 Body Definition of Cleo is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Cleo is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Cleo is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Cleo is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Cleo is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Cleo is 5. [length in inches]
+Tongue Length of Cleo is 8. [length in inches]
 Breast Size of Cleo is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Cleo is 2. [count of nipples]
 Asshole Depth of Cleo is 8. [inches deep for anal fucking]
@@ -111,9 +111,14 @@ to say CleoTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Try to learn more about your daughter";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Cleo on the nose";
+	[]
 	[choose a blank row in table of fucking options;
 	now title entry is "Family";
-	now sortorder entry is 2;
+	now sortorder entry is 3;
 	now description entry is "";
 	[]
 	choose a blank row in table of fucking options;
@@ -138,10 +143,12 @@ to say CleoTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Herself"):
 					say "[CleoTalk1]";
-				[if (nam is "Family"):
+				if (nam is "Boop"):
 					say "[CleoTalk2]";
+				[if (nam is "Family"):
+					say "[CleoTalk3]";
 				if (nam is "Other Library Residents"):
-					say "[CleoTalk3]";]
+					say "[CleoTalk4]";]
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -167,6 +174,9 @@ to say CleoTalk1:
 	say "Jimmy acts like my like he's my brother so much of the time. Sometimes he even acts like my sister. One of these days I'm going to dress him up as a princess. Princess Happiness. He's always so cheerful and I don't know where he gets all of his energy. He's been there for me nearly as much as you and Mom. He may even be able to turn me into an extrovert, given time. He's just so determined.'";
 	WaitLineBreak;
 	say "     Cleo seems a little worn out after that conversation so you give her a hug and thank her for sharing before you leave her to return to her book.";
+
+to say CleoTalk2: [Boop]
+	say "     Lifting a hand, you boop your daughter on the nose. '[if player is Male]Daaaaad[else if player is Female]Mooooom[else]Daaaaad[end if]! I'm not a little girl any more,' Cleo complains before cuddling up to you. 'Thanks though. It's nice to know that you love me. Don't forget about Mom though. SHe needs them as much as I do.'";
 
 
 Section 2 - Sex

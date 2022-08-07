@@ -8,24 +8,14 @@ Version 1 of HornyHorsey by Guest Writers begins here.
 
 "Adds a hermaphrodite equine named Ammy to the game."
 
-
-
-
-
-[
-
-AFFECTION TABLE
-0: Never met
-1: Talked once
-2: Talked twice
-3: Removed her bra
-4: Poledance
-5: Lapdance
-6: Friend with benefits
-
-]
-
-
+[AFFECTION TABLE]
+[0: Never met]
+[1: Talked once]
+[2: Talked twice]
+[3: Removed her bra]
+[4: Poledance]
+[5: Lapdance]
+[6: Friend with benefits]
 
 
 Section 0 - Variables and Items
@@ -60,7 +50,6 @@ Instead of wearing black bra:
 
 
 
-
 Section 1 - Lounge and Flatlet
 
 Table of GameRoomIDs (continued)
@@ -85,8 +74,6 @@ the scent of Ammy's Flatlet is "     The small room surprisingly smells not like
 Description of 'Employees Only' Door is "     Hidden beyond some curtains there is a heavy wooden door with a big sign on it, reading 'Employees Only' and a heart drawn next to it with red paint or lipstick.".
 
 
-
-
 Section 2 - Ammy
 
 Table of GameCharacterIDs (continued)
@@ -94,21 +81,28 @@ object	name
 Ammy	"Ammy"
 
 Ammy is a woman. Ammy is in Topless Lounge.
-[Physical details as of game start]
 ScaleValue of Ammy is 3. [human sized]
-SleepRhythm of Ammy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Ammy is 1. [X cock]
-Cock Length of Ammy is 10. [X Inches]
-Ball Size of Ammy is 4.
-Ball Count of Ammy is 2. [X balls]
-Cunt Count of Ammy is 1. [X pussy]
-Cunt Depth of Ammy is 10. [X Cunt]
-Cunt Tightness of Ammy is 4. [X Cunt]
-Nipple Count of Ammy is 2. [X nipples]
-Breast Size of Ammy is 4. [D Cup at the start]
+Body Weight of Ammy is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ammy is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ammy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ammy is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ammy is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ammy is 10. [length in inches]
+Breast Size of Ammy is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ammy is 2. [count of nipples]
+Asshole Depth of Ammy is 10. [inches deep for anal fucking]
+Asshole Tightness of Ammy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ammy is 1. [number of cocks]
+Cock Girth of Ammy is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ammy is 10. [Length in Inches]
+Ball Count of Ammy is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ammy is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ammy is 1. [number of cunts]
+Cunt Depth of Ammy is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ammy is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ammy is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Ammy is false. [can not take oversized members without pain]
-Sterile of Ammy is true.
 PlayerMet of Ammy is false.
 PlayerRomanced of Ammy is false.
 PlayerFriended of Ammy is false.
@@ -119,11 +113,11 @@ Virgin of Ammy is false.
 AnalVirgin of Ammy is false.
 PenileVirgin of Ammy is false.
 SexuallyExperienced of Ammy is true.
+TwistedCapacity of Ammy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ammy is true. [steriles can't knock people up]
 MainInfection of Ammy is "".
 Description of Ammy is "[ammy_desc]".
-
-Conversation of Ammy is { " " }
-
+Conversation of Ammy is { " " }.
 the scent of Ammy is "[ammyscent]".
 
 to say ammyscent:

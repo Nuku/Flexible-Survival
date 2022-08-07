@@ -39,21 +39,28 @@ object	name
 Erin	"Erin"
 
 Erin is a person.
-[Physical details as of game start]
 ScaleValue of Erin is 3. [human sized]
-SleepRhythm of Erin is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Erin is 1. [X cock]
-Cock Length of Erin is 6. [X Inches]
-Ball Size of Erin is 7.
-Ball Count of Erin is 2. [X balls]
-Cunt Count of Erin is 0. [X pussy]
-Cunt Depth of Erin is 0. [X Cunt]
-Cunt Tightness of Erin is 0. [X Cunt]
-Nipple Count of Erin is 2. [X nipples]
-Breast Size of Erin is 0. [X at the start]
+Body Weight of Erin is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Erin is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Erin is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Erin is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Erin is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Erin is 6. [length in inches]
+Breast Size of Erin is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Erin is 2. [count of nipples]
+Asshole Depth of Erin is 6. [inches deep for anal fucking]
+Asshole Tightness of Erin is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Erin is 1. [number of cocks]
+Cock Girth of Erin is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Erin is 6. [Length in Inches]
+Ball Count of Erin is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Erin is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Erin is 0. [number of cunts]
+Cunt Depth of Erin is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Erin is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Erin is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Erin is false. [can not take oversized members without pain]
-Sterile of Erin is false.
 PlayerMet of Erin is false.
 PlayerRomanced of Erin is false.
 PlayerFriended of Erin is false.
@@ -64,6 +71,8 @@ Virgin of Erin is true.
 AnalVirgin of Erin is true.
 PenileVirgin of Erin is false.
 SexuallyExperienced of Erin is true.
+TwistedCapacity of Erin is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Erin is false. [steriles can't knock people up]
 MainInfection of Erin is "Mall Rat".
 Description of Erin is "[ErinDesc]".
 Conversation of Erin is { "<Placeholder>" }.
@@ -249,21 +258,28 @@ object	name
 Violet	"Violet"
 
 Violet is a person.
-[Physical details as of game start]
 ScaleValue of Violet is 3. [human sized]
-SleepRhythm of Violet is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Violet is 0. [X cock]
-Cock Length of Violet is 0. [X Inches]
-Ball Size of Violet is 0.
-Ball Count of Violet is 0. [X balls]
-Cunt Count of Violet is 1. [X pussy]
-Cunt Depth of Violet is 8. [X Cunt]
-Cunt Tightness of Violet is 4. [X Cunt]
-Nipple Count of Violet is 2. [X nipples]
-Breast Size of Violet is 2. [X at the start]
+Body Weight of Violet is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Violet is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Violet is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Violet is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Violet is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Violet is 6. [length in inches]
+Breast Size of Violet is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Violet is 2. [count of nipples]
+Asshole Depth of Violet is 6. [inches deep for anal fucking]
+Asshole Tightness of Violet is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Violet is 0. [number of cocks]
+Cock Girth of Violet is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Violet is 0. [Length in Inches]
+Ball Count of Violet is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Violet is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Violet is 1. [number of cunts]
+Cunt Depth of Violet is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Violet is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Violet is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Violet is false. [can not take oversized members without pain]
-Sterile of Violet is false.
 PlayerMet of Violet is false.
 PlayerRomanced of Violet is false.
 PlayerFriended of Violet is false.
@@ -274,6 +290,8 @@ Virgin of Violet is false.
 AnalVirgin of Violet is true.
 PenileVirgin of Violet is true.
 SexuallyExperienced of Violet is true.
+TwistedCapacity of Violet is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Violet is false. [steriles can't knock people up]
 MainInfection of Violet is "Mall Rat".
 Description of Violet is "[VioletDesc]".
 Conversation of Violet is { "<Placeholder>" }.
