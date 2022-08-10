@@ -28,6 +28,41 @@ object	name
 Gwen	"Gwen"
 
 Gwen is a woman.
+ScaleValue of Gwen is 4. [horse sized]
+Body Weight of Gwen is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Gwen is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Gwen is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Gwen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Gwen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Gwen is 6. [length in inches]
+Breast Size of Gwen is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Gwen is 2. [count of nipples]
+Asshole Depth of Gwen is 12. [inches deep for anal fucking]
+Asshole Tightness of Gwen is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Gwen is 0. [number of cocks]
+Cock Girth of Gwen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Gwen is 0. [Length in Inches]
+Ball Count of Gwen is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Gwen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Gwen is 1. [number of cunts]
+Cunt Depth of Gwen is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Gwen is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Gwen is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Gwen is false.
+PlayerRomanced of Gwen is false.
+PlayerFriended of Gwen is false.
+PlayerControlled of Gwen is false.
+PlayerFucked of Gwen is false.
+OralVirgin of Gwen is true.
+Virgin of Gwen is true.
+AnalVirgin of Gwen is true.
+PenileVirgin of Gwen is true.
+SexuallyExperienced of Gwen is false.
+TwistedCapacity of Gwen is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Gwen is true. [steriles can't knock people up]
+MainInfection of Gwen is "".
 Description of Gwen is "[gwendesc]".
 Conversation of Gwen is { "Mama!" }.
 the fuckscene of Gwen is "[sexwithGwen]".

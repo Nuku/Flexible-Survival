@@ -62,9 +62,9 @@ Body Weight of Julian is 5. [scale of 1-9 for body weight, grouped into low weig
 Body Definition of Julian is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Julian is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Julian is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Julian is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Julian is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Julian is 6. [length in inches]
+Tongue Length of Julian is 10. [length in inches]
 Breast Size of Julian is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Julian is 2. [count of nipples]
 Asshole Depth of Julian is 8. [inches deep for anal fucking]
@@ -142,6 +142,11 @@ to say JulianTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Ask about his friends";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 4;
+	now description entry is "Boop Julian on the nose";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -163,6 +168,8 @@ to say JulianTalkMenu:
 					say "[JulianTalk2]";
 				if (nam is "Friends"):
 					say "[JulianTalk3]";
+				if (nam is "Boop"):
+					say "[JulianTalk4]";
 				say "     Julian watches you patiently, waiting to see whether you wish to continue the conversation";
 				wait for any key;
 		else if calcnumber is 0:
@@ -184,6 +191,9 @@ to say JulianTalk2: [Talk about his family]
 to say JulianTalk3: [Talk about his friends]
 	say "     'Before I went to high school, I was friends with many of the other children in the village. There was a small school, but I was homeschooled. I would be able to play with them in the afternoons, once we had all finished our classes for the day. Boys and girls all together. It was good, but once I went to boarding school, my social life changed. I didn't really make friends with the other pupils. Some bullied me, and many of the others feared associating with me in case they faced the same. I sort of became a teacher's pet, putting a lot of effort into progressing academically rather than focusing on a social life or sport. That probably didn't help improve my treatment from my peers. A few people would sit with me at times, eating lunch quietly with only a few soft conversations across the table. Luckily, since coming to Tenvale, the other students have treated me nicely, though I still wouldn't describe myself as a people person,' Julian jokes about his shyness.";
 	say "     'My main friends are Sylvia and the twins, Evelyn and Evenlyn, though there are a few other people that I talk to fairly often. One of the main reasons that I'm friends with Sylvia is that we've done many of the same science papers, even being assigned to the same tutorials and labs. Her being so socially competent probably helped considerably too. Now that we're in the same research group, though with the developments in the city, the focus has changed somewhat. The twins sort of invited themselves into the group, with none of us minding at all. They're cheerful and helpful, and some of the things that they bring back makes me wonder where and how they managed to get them, but I admit, the food and medicine are a distinct boon for us. They seem to be a bit more intimate than I would expect of siblings, but I don't have anything against it, and there are much worse things happening in the city,' he contemplates. 'I think that's all. Who knows, in the future, I might be mentioning you to other people when asked such a question.'";
+
+to say JulianTalk4: [Boop]
+	say "     Before he can stop you, you boop Julian, the wolf raising his hands ineffectively. Folding his ears back, he looks at you accusingly. 'Sylvia put you up to this didn't she. If you could, remind her that I'm bigger than her and that I know where she is ticklish,' he whines in embarrassment. 'I'm a wolf, not a puppy... Booping me without permission... Why is it so comforting though...' he mutters under his breath, occassionally glancing at you.";
 
 Section 4 - Sex
 

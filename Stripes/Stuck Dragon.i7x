@@ -309,6 +309,8 @@ a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Christy >= 50 and HP of Christy < 90:
 		now MainInfection of Christy is "Horny Dragon";
 		now printed name of Christy is "Christopher";
+	else:
+		now printed name of Christy is "Christy";
 
 Table of GameCharacterIDs (continued)
 object	name

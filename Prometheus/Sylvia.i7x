@@ -144,9 +144,9 @@ Body Weight of Sylvia is 4. [scale of 1-9 for body weight, grouped into low weig
 Body Definition of Sylvia is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Sylvia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Sylvia is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Sylvia is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Sylvia is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Sylvia is 6. [length in inches]
+Tongue Length of Sylvia is 8. [length in inches]
 Breast Size of Sylvia is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Sylvia is 2. [count of nipples]
 Asshole Depth of Sylvia is 8. [inches deep for anal fucking]
@@ -262,6 +262,12 @@ to say SylviaTalkMenu:
 		now sortorder entry is 8;
 		now description entry is "Ask her whether she can give you any help with the Twelve Labours";
 	[]
+	If (HP of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
+		choose a blank row in table of fucking options;
+		now title entry is "Boop";
+		now sortorder entry is 6;
+		now description entry is "Boop Sylvia on the nose";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -303,6 +309,8 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk7]";
 				if (nam is "Knowledge of Greek Mythology"):
 					say "[SylviaTalk8]";
+				if (nam is "Boop"):
+					say "[SylviaTalk9]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -528,6 +536,9 @@ to say SylviaTalk8: [Twelve Labours]
 			say "     ";
 		else:
 			say "     ";]
+
+to say SylviaTalk9: [Boop]
+	say "     Realising what you are doing a moment too late, Sylvia is unable to stop you booping her. 'Well, now I know what it feels like,' she laughs, leaving your finger where it is. 'I used to do this to my dogs all the time at home and I can't say that I'm disappointed by it happening to me. If you get the chance do it to Julian too. His reaction will be hilarious, I'm sure.' Still giggling, Sylvia sits and waits for you to take release her from the boop.";
 
 
 Section 4 - Sex

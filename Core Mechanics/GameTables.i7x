@@ -45,7 +45,7 @@ Part 5 - Slut Storage
 [PaymentType 1 = Player has to pay 1 bottle/week]
 
 Table of StoredSluts
-Name(text)	PaymentType(number)	Resistant(truth state)	Sluttyness(number)
+Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	Sexcount(number)
 with 1000 blank rows
 
 [
@@ -197,7 +197,7 @@ Name(text)	Type(text)
 "ndmlist"	"list of text"
 "StoredSluts_Female"	"list of text"
 "StoredSluts_Male"	"list of text"
-"StoredSluts_Herm"	"list of text"
+"StoredSluts_Other"	"list of text"
 "absorb"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"

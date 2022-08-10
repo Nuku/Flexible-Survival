@@ -115,14 +115,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Frank	"Frank"
 
-Frank is a man. Frank is in Comic Shop.
-Description of Frank is "[frankdesc]".
-Conversation of Frank is { "NERD!" }.
+Frank is a man.
+Frank is in Comic Shop.
 The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.
-
-the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
+ScaleValue of Frank is 3. [human sized]
+Body Weight of Frank is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Frank is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Frank is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Frank is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Frank is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Frank is 7. [length in inches]
+Breast Size of Frank is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Frank is 2. [count of nipples]
+Asshole Depth of Frank is 8. [inches deep for anal fucking]
+Asshole Tightness of Frank is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Frank is 1. [number of cocks]
+Cock Girth of Frank is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Frank is 8. [Length in Inches]
+Ball Count of Frank is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Frank is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Frank is 0. [number of cunts]
+Cunt Depth of Frank is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Frank is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Frank is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Frank is false.
+PlayerRomanced of Frank is false.
+PlayerFriended of Frank is false.
+PlayerControlled of Frank is false.
+PlayerFucked of Frank is false.
+OralVirgin of Frank is true.
+Virgin of Frank is true.
+AnalVirgin of Frank is true.
+PenileVirgin of Frank is true.
+SexuallyExperienced of Frank is false.
+TwistedCapacity of Frank is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Frank is false. [steriles can't knock people up]
+MainInfection of Frank is "Skunk".
+Description of Frank is "[frankdesc]".
+Conversation of Frank is { "NERD!" }.
+The scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
 
 to say frankdesc:
 	say "     Frank is a heavy-set skunk fellow. His encounter with the skunks seems to have slimmed him down a little, but he is still quite portly. His black and white fur is thick and soft. As he now has fur, he's forgone wearing clothes aside from a ballcap with the store logo on it.";

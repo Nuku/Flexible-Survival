@@ -46,18 +46,29 @@ object	name
 Sheng	"Sheng"
 
 Sheng is a man.
-[physical details as of game start]
+Sheng is in White Tiger Alchemy Shop.
 Humanity of Sheng is 80. [is thousands of years old]
-ScaleValue of Sheng is 3. [human size]
-Cock Count of Sheng is 1. [has a cock]
-Cock Length of Sheng is 10. [has an 10 inch cock]
-Ball Size of Sheng is 4. [size of balls]
-Ball Count of Sheng is 2. [has a pair of balls]
-Cunt Count of Sheng is 0. [no vagina]
-Cunt Depth of Sheng is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Sheng is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Sheng is 2. [Has two normal nipples]
-Breast Size of Sheng is 0. [Doesn't have breasts really]
+ScaleValue of Sheng is 3. [human sized]
+Body Weight of Sheng is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sheng is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sheng is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sheng is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sheng is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sheng is 6. [length in inches]
+Breast Size of Sheng is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sheng is 2. [count of nipples]
+Asshole Depth of Sheng is 10. [inches deep for anal fucking]
+Asshole Tightness of Sheng is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sheng is 1. [number of cocks]
+Cock Girth of Sheng is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sheng is 10. [Length in Inches]
+Ball Count of Sheng is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sheng is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sheng is 0. [number of cunts]
+Cunt Depth of Sheng is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sheng is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sheng is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Sheng is false.
 PlayerRomanced of Sheng is false.
@@ -69,10 +80,12 @@ Virgin of Sheng is false.
 AnalVirgin of Sheng is false.
 PenileVirgin of Sheng is false.
 SexuallyExperienced of Sheng is true.
+TwistedCapacity of Sheng is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sheng is true. [steriles can't knock people up]
+MainInfection of Sheng is "".
 Description of Sheng is "[ShengDesc]".
 Conversation of Sheng is { "<This is nothing but a placeholder!>" }.
 The scent of Sheng is "     The white tiger gives off a smell of herbs and spices with what appears to be an underlying scent of tea.".
-Sheng is in White Tiger Alchemy Shop.
 
 to say ShengDesc:
 	say "     Glancing over at the tiger you see the male is currently standing at the counter, hunched over a bunch of papers, possibly alchemical formulae. Ignoring that for now you look him over and take in his clothing. What the male is wearing is something you definitely wouldn't see outside of a fantasy book. First and foremost the tiger is wearing a dark green vest over a white button up shirt that's accompanied by a sea-green bowtie. Trailing your eyes downward you notice that instead of pants he's wearing a leather skirt that's held up by a belt made of similar material. Topping the outfit off, is a large lighter green than his vest coat that goes all the way down to his ankles, embossed with tigers dancing all over the edges. [if Loyalty of Sheng > 1]Having been staring at the male for a while it's not unbelievable that he's noticed you looking. He sends you a superior smirk that makes you twitch a bit[else]Having been staring at him for a while it's not unbelievable that he's noticed you looking. He sends you a look that says either buy something or get out[end if].";

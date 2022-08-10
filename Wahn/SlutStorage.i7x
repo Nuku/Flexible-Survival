@@ -3,16 +3,21 @@ SlutStorage by Wahn begins here.
 [ Hunger of Mortimer - number of bottles due]
 [ Energy of Mortimer - counting the days for payment]
 
+[ PaymentType                                      ]
+[  1 = weekly payment                               ]
+[  2 = milking                                      ]
+
 
 StoredSluts_Female is a list of text that varies.
 StoredSluts_Male is a list of text that varies.
-StoredSluts_Herm is a list of text that varies.
+StoredSluts_Other is a list of text that varies.
 
 an everyturn rule:
 	let Slut_PaymentsDue be 0;
 	repeat with X running from 1 to number of filled rows in Table of StoredSluts:
 		choose row X from the Table of StoredSluts;
-		increase Slut_PaymentsDue by PaymentType entry;
+		if PaymentType entry is 1:
+			increase Slut_PaymentsDue by PaymentType entry;
 	if Slut_PaymentsDue > 0 and (TimekeepingVar is 1 or TimekeepingVar is -7): [1+ sluts stored, midnight]
 		increase Energy of Mortimer by 1;
 		if Energy of Mortimer > 7:
@@ -86,8 +91,8 @@ instead of conversing Mortimer:
 			else:
 				say "Invalid choice. Type [link]1[end link] to keep him in mind to use later, [link]2[end link] to demand everyone be freed, or [link]3[end link] to just walk away.";
 		if calcnumber is 1:
-			say "     'I look forward to having you as a customer. There's plenty of room available, just bring your goods over whenever you want.' He grins and gives you a thumbs-up, happy to have found someone else interested in using his services. 'One small detail to add though - your payment options. You see, while I'm still building my customer base I'm offering this service at a uniquely low rate. Just one bottle of the cum, femcum or milk per occupied unit, once a week. That's not so bad, eh?' Thinking it over, you can't help but agree - this is a suspiciously affordable price for his effort and feeding the people in the units. Though you guess the prices will mount up if you get in the habit of bringing more people here...";
-			say "     Having watched your expression closely enough to guess where your thoughts might be going, Mortimer clears his throat in this moment to add, 'Or you can go with the alternate, comfort variant and just make an agreement to let me harvest fluids to pay for your units myself. I guarantee that milking is the only thing I'll do. This way you don't have to worry about payments, and your goods will be more comfortable too, if they're not pent up with aching udders, balls, etc. Just think about it, you'll be able to individually pick what you want to do for every new unit, in case you got someone 'extra special' you want treated differently.' Mortimer smiles at you, then gives a wink as he says, 'See ya soon, and happy hunting!'";
+			say "     'I look forward to having you as a customer. There's plenty of room available, just bring your goods over whenever you want.' He grins and gives you a thumbs-up, happy to have found someone else interested in using his services. 'One small detail to add though - your payment options. You see, while I'm still building up my customer base I'm offering this service at a uniquely low rate. Just one bottle of the cum, femcum or milk per occupied unit, once a week. That's not so bad, eh?' Thinking it over, you can't help but agree - this is a suspiciously affordable price for his effort and feeding the people in the units. Though you guess the prices will mount up if you get in the habit of bringing more people here...";
+			say "     Having watched your expression closely enough to guess where your thoughts might be going, Mortimer clears his throat in this moment to add, 'Or you can go with the alternate, comfort variant and just make an agreement to let me harvest fluids to pay for your units myself. I guarantee that milking is the only thing I'll do. This way you don't have to worry about payments, and your goods will be more comfortable too, if they're not pent up with aching udders, balls, etc. Just think about it, you'll be able to individually pick what you want to do for every new unit, in case you got someone 'extra special' you want treated differently.' Mortimer smiles at you, then gives a wink as he says, 'Might also have some additional extra services for customers who choose the comfort payments. Ya see, the units have security cameras, to monitor the goods wellbeing. That footage would be accessible too for premium customers.' With a chuckle, the goo guy then adds, 'See ya soon, and happy hunting!'";
 			TraitGain "PlayerInterested" for Mortimer;
 		else if calcnumber is 2:
 			say "     'Ah, you're one of those,' he groans with a roll of his eyes. 'Fuck off then, I got a business to run here. And you can forget about any plans of busting in here. Trust me, that wouldn't be pretty!' As he says this, all of the other goo copies further in the back suddenly stop what they're doing and turn to look at you in eerie uniformity. With the place's security measures as well as an unknown number of Mortimer doubles to contend with, you begin to doubt that you can achieve anything here. Letting out a sigh, you turn around and walk away, hearing the goo person call after you, 'I can't wait for the day when the last fucking do-gooder like you has been dragged into an alley to have their brains fucked out!'";
@@ -145,23 +150,28 @@ to say MortimerTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Let him give you a quote of how much you owe currently";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask about additional services";
+	now sortorder entry is 3;
+	now description entry is "Inquire about other things he might be offering";
+	[]
 	if the number of entries in StoredSluts_Female is not 0 and Hunger of Mortimer < 1:
 		choose a blank row in table of fucking options;
-		now title entry is "Female Sluts";
-		now sortorder entry is 3;
+		now title entry is "Visit Female Sluts";
+		now sortorder entry is 4;
 		now description entry is "Visit one of your units with a female slut";
 	[]
 	if the number of entries in StoredSluts_Male is not 0 and Hunger of Mortimer < 1:
 		choose a blank row in table of fucking options;
-		now title entry is "Male Sluts";
-		now sortorder entry is 4;
+		now title entry is "Visit Male Sluts";
+		now sortorder entry is 5;
 		now description entry is "Visit one of your units with a male slut";
 	[]
-	if the number of entries in StoredSluts_Herm is not 0 and Hunger of Mortimer < 1:
+	if the number of entries in StoredSluts_Other is not 0 and Hunger of Mortimer < 1:
 		choose a blank row in table of fucking options;
-		now title entry is "Herm Sluts";
-		now sortorder entry is 5;
-		now description entry is "Visit one of your units with a herm slut";
+		now title entry is "Visit Other Sluts";
+		now sortorder entry is 6;
+		now description entry is "Visit one of your units with an intersex or herm slut";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -180,14 +190,16 @@ to say MortimerTalkMenu:
 				now sextablerun is 1;
 				if nam is "Payment Options":
 					say "[Mortimer_PaymentOptionsTalk]";
-				if nam is "Ask how much you owe him":
+				else if nam is "Ask how much you owe him":
 					say "[Mortimer_PaymentsDue]";
-				if nam is "Female Sluts":
+				else if nam is "Ask about additional services":
+					say "[Mortimer_Services]";
+				else if nam is "Visit Female Sluts":
 					say "[Mortimer_FemaleSlutsMenu]";
-				if nam is "Male Sluts":
+				else if nam is "Visit Male Sluts":
 					say "[Mortimer_MaleSlutsMenu]";
-				if nam is "Herm Sluts":
-					say "[Mortimer_HermSlutsMenu]";
+				else if nam is "Visit Other Sluts":
+					say "[Mortimer_OtherSlutsMenu]";
 				if "SlutUsed" is listed in Traits of Mortimer: [player did choose and fuck someone - ends the talk menu]
 					remove "SlutUsed" from Traits of Mortimer;
 					wait for any key;
@@ -207,6 +219,50 @@ to say MortimerTalkMenu:
 
 to say Mortimer_PaymentOptionsTalk:
 	say "     'Sure thing, it's a really easy payment structure. Just one bottle of the cum, femcum or milk per occupied unit, every four days. Or you can go with the alternate, comfort variant and just make an agreement to let me harvest fluids to pay for your units myself. I guarantee that milking is the only thing I'll do. This way you don't have to worry about payments, and your goods will be more comfortable too, if they're not pent up with aching udders, balls, etc. Of course, you'll be able to individually pick what you want to do for every new unit, in case you got someone 'extra special' you want treated differently.'";
+	if the number of rows in Table of StoredSluts is not 0:
+		LineBreak;
+		say "     [bold type]'Wanna make any changes about your payments?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Set all to weekly payments.";
+		say "     [link](2)[as]2[end link] - Set all to be milked for fluids.";
+		say "     [link](3)[as]3[end link] - Individually go through the list and decide.";
+		say "     [link](4)[as]4[end link] - Not right now, no.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to set all to weekly payments, [link]2[end link] to set all to be milked, [link]3[end link] to individually adjust their settings, or [link]4[end link] to leave everything as it is.";
+		if calcnumber is 1:
+			LineBreak;
+			say "The following have been set to accrue weekly payments:[line break]";
+			repeat with X running from 1 to number of filled rows in Table of StoredSluts:
+				choose row X from the Table of StoredSluts;
+				now PaymentType entry is 1; [weekly payment]
+				say "[name entry][line break]";
+		else if calcnumber is 2:
+			LineBreak;
+			say "The following have been set to pay for themselves through milking:[line break]";
+			repeat with X running from 1 to number of filled rows in Table of StoredSluts:
+				choose row X from the Table of StoredSluts;
+				now PaymentType entry is 2; [milking]
+				say "[name entry][line break]";
+		else if calcnumber is 3:
+			LineBreak;
+			say "Pick individually for the following:[line break]";
+			repeat with X running from 1 to number of filled rows in Table of StoredSluts:
+				choose row X from the Table of StoredSluts;
+				say "[name entry]:[line break]";
+				say "     ([link]Y[as]y[end link]) - Payments.";
+				say "     ([link]N[as]n[end link]) - Milking.";
+				if Player consents:
+					now PaymentType entry is 1; [weekly payment]
+				else:
+					now PaymentType entry is 2; [milking]
+		else if calcnumber is 4:
+			LineBreak;
+			say "     'Sure thing, as you prefer,' Mortimer says, giving you a smarmy grin.";
 
 to say Mortimer_PaymentsDue:
 	if Hunger of Mortimer > 0:
@@ -224,6 +280,56 @@ instead of trading when the current action involves Mortimer:
 	else:
 		say "     Mortimer has no interest in what you're offering him.";
 
+to say Mortimer_Services:
+	say "     Mortimer puts a broad grin on his face. 'Yeah, I might have some... gear and items that might be of use for you.' With that said, he sticks his left hand into his own chest, rummaging around a little in the semitransparent goo. Then he pulls the limb out and holds it out to you, allowing you to see several triangular pieces of plastic within. 'For convenience, you can buy these chits from me, and trade them in to buy or use something to enhance your enjoyment with your stored goods.' That said, he also pulls out a little electronic reader unit, on the side of which you can see a stylized Z logo. 'A friend of mine hooked me up with this nifty little gimmick. Just wire me 10 credits per chit and I'll give you some.'";
+	say "     [bold type]What do you reply?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Buy one chit.";
+	say "     [link](2)[as]2[end link] - Buy five chits.";
+	say "     [link](3)[as]3[end link] - Buy ten chits.";
+	say "     [link](4)[as]4[end link] - Not right now.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to buy a chit, [link]2[end link] to buy five chits, [link]3[end link] to buy ten chits, or [link]4[end link] to buy none.";
+	if calcnumber is 1:
+		LineBreak;
+		if freecred < 10:
+			say "     As you swipe your hand over the reader, there is a sharp buzzing sound to indicate the transaction was rejected. 'Not enough credits in your account. Sorry, guess we'll have to do this another time, eh friend?' Mortimer says nonchalantly, then packs away his reader and chits again.";
+		else:
+			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and one of the pieces of plastic pushes itself up to come rest on the palm of his hand. You quickly take it and put it in your pocket.";
+			ItemGain storage chit by 1;
+			decrease Freecred by 10;
+	else if calcnumber is 2:
+		LineBreak;
+		if freecred < 50:
+			say "     As you swipe your hand over the reader, there is a sharp buzzing sound to indicate the transaction was rejected. 'Not enough credits in your account. Sorry, guess we'll have to do this another time, eh friend?' Mortimer says nonchalantly, then packs away his reader and chits again.";
+		else:
+			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and five of the pieces of plastic push themselves up to come rest on the palm of his hand. You quickly take them and put them in your pocket.";
+			ItemGain storage chit by 5;
+			decrease Freecred by 50;
+	else if calcnumber is 3:
+		LineBreak;
+		if freecred < 100:
+			say "     As you swipe your hand over the reader, there is a sharp buzzing sound to indicate the transaction was rejected. 'Not enough credits in your account. Sorry, guess we'll have to do this another time, eh friend?' Mortimer says nonchalantly, then packs away his reader and chits again.";
+		else:
+			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and ten of the pieces of plastic push themselves up to come rest on the palm of his hand. You quickly take them and put them in your pocket.";
+			ItemGain storage chit by 10;
+			decrease Freecred by 100;
+	else:
+		LineBreak;
+		say "     As you decline his offer, Mortimer shrugs. 'Maybe another time, eh?' With that said, he puts his reader and chits away again.";
+	TraitGain "Chits Explained" for Mortimer;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Storage Chit"	"A small, triangular piece of plastic, marked with an odd symbol. If you remember right, these were part of some over-hyped game a while back, which had a meteoric rise, then crashed hard. You haven't seen or heard of these things for years. Apparently Mortimer must have found a bunch of them in a storage unit, and he's now using them as his own kind of substitute-money."	0	storage chit
+
+storage chit is a grab object. It is not temporary.
+
 to say Mortimer_FemaleSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -233,12 +339,6 @@ to say Mortimer_FemaleSlutsMenu:
 		now title entry is "Sarah";
 		now sortorder entry is 1;
 		now description entry is "Visit the husky slut to have some fun";
-	[]
-	if there is a name of "Eric" in the Table of StoredSluts:
-		choose a blank row in table of fucking options;
-		now title entry is "Eric";
-		now sortorder entry is 1;
-		now description entry is "Visit the cuntboy to have some fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -255,26 +355,18 @@ to say Mortimer_FemaleSlutsMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				say "     After you make your choice, Mortimer splits off a part of himself to lead you while the rest of him stays behind to man the gate. The complex is fairly expansive and you go through twists and turns in eerily similar-looking passages between countless storage units before the goo person finally announces. 'Here we go, this is it! I'll wait here until you're 'done'.' With that said, Mortimer gives you an oily grin, then unlocks the door and lets you stroll inside, pulling down the shutter to give you privacy in the storage unit. Glancing around, you see very little inside it - mainly a big mattress, and some food and drink laid out near the entrance.";
 				if nam is "Sarah":
 					say "[StoredSlut_Sarah]";
-				else if nam is "Eric":
-					say "[StoredSlut_Eric]";
-				wait for any key;
+				TraitGain "SlutUsed" for Mortimer;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You change your mind, earning a questioning look from the goo person.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
 
 to say StoredSlut_Sarah:
 	say "...";
-
-to say StoredSlut_Eric:
-	say "...";
-
 
 to say Mortimer_MaleSlutsMenu:
 	now sextablerun is 0;
@@ -303,27 +395,32 @@ to say Mortimer_MaleSlutsMenu:
 				now sextablerun is 1;
 				if nam is "Joshiro":
 					say "[StoredSlut_Joshiro]";
-				wait for any key;
+				TraitGain "SlutUsed" for Mortimer;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You change your mind, earning a questioning look from the goo person.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
 
 to say StoredSlut_Joshiro:
 	say "...";
 
-to say Mortimer_HermSlutsMenu:
+to say Mortimer_OtherSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Snow" is listed in StoredSluts_Herm:
+	if "Snow" is listed in StoredSluts_Other:
 		choose a blank row in table of fucking options;
 		now title entry is "Snow";
 		now sortorder entry is 1;
 		now description entry is "Visit the squirrel slut to have some fun";
+	[]
+	if there is a name of "Eric" in the Table of StoredSluts:
+		choose a blank row in table of fucking options;
+		now title entry is "Eric";
+		now sortorder entry is 1;
+		now description entry is "Visit the cuntboy to have some fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -342,23 +439,20 @@ to say Mortimer_HermSlutsMenu:
 				now sextablerun is 1;
 				if nam is "Snow":
 					say "[StoredSlut_Snow]";
-				wait for any key;
+				else if nam is "Eric":
+					say "[Eric_StorageVisit]";
+				TraitGain "SlutUsed" for Mortimer;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You change your mind, earning a questioning look from the goo person.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
 
 to say StoredSlut_Snow:
 	say "...";
 
-
-
 [
-
-
 Book 1 - Capture/Drug/Purchase
 More secure area people will not be available right off the bat (mall ect.) unless there are a certain amount of people already in the storage area. This is just to show you are becoming a better predator and are able to grab higher tier targets.
 
@@ -424,10 +518,10 @@ Book 3 - Sex and Advancement
 
 			Part 2 - Potential
 			Korvin
-			Landon
+			Landon [Luneth]
 			Barret
-			Arthur
-			Reece
+			Arthur [Luneth]
+			Reece [Luneth]
 			Garth
 			Andy
 			Logan
@@ -443,14 +537,14 @@ Book 3 - Sex and Advancement
 			Rane
 			Hayato
 			Tehuantl
-			Gobby
+			Gobby [Luneth]
 			Kai
 			David
 			Adam
 			Monty
 			Brennan
-			Frank
-			Sgt Marks
+			Frank [Luneth]
+			Sgt Marks [Luneth]
 			Rex
 			Grant
 			Corbin
@@ -459,7 +553,7 @@ Book 3 - Sex and Advancement
 			Philip
 			Leonard
 			Zoe
-			Onyx
+			Onyx [Luneth]
 
 	Chapter 2 - Sex Progression
 	Sex progression can have from 3-5 different levels depending on the character. These levels are actually just variations on the same "standard" scene. This means that the player will feel like "omg they are becoming more of a slut toy to use!", but for the writer it's actually just a simple "alright on this level this bitch says this and on the next I just tweak it". Each advancement in the fighter group requires a dose of the drug to progress, this way you can keep the character at the variation that the player wants. One added point is that the first sex scene does need to have a special "first time" variation, this will only been seen once since you can only fuck a person for the first time once, all others will follow the standard variation.

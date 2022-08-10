@@ -530,7 +530,7 @@ to say SpikeAccepted:
 				TraitGain "Elijah - Friend" for Spike;
 				TraitGain "Spike - Young Guy" for Elijah;
 			WaitBreakReactions;
-		if Eric is booked or Eric is bunkered:
+		if Eric is booked or Eric is bunkered and Eric is not slutstored:
 			if HP of Eric > 0 and HP of Eric < 21:
 				say "     Walking up to Spike, Eric gives a friendly smile and shakes the dobie's paw-hand. 'Hi dude, wanna hang out sometime?' he asks, somewhat shy as he does so, with Spike patting him on the shoulder as he says, 'Totally, it'll be fun!' Looking at the two of them, they seem like a pair of normal young men of the same rough age on the surface - but of course, you know better, with Spike's life still being able to be counted in days, and Eric being not a male at all, down below. Still, the two of them seem to hit it off nicely, and you can see the start of a friendship develop by the time Eric eventually excuses himself and wanders off. As the dobie watches the student leave, you see him sniff the air thoughtfully, his eyebrows rising a little. 'Nice dude, and he smells kinda... good, you know,' Spike comments, apparently not quite able to place a finger on what it is about Eric that he can sense with his nose.";
 				TraitGain "Eric - Smells Good" for Spike;

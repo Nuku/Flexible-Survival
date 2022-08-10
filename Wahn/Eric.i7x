@@ -413,44 +413,7 @@ instead of conversing the Eric:
 					now HP of Eric is 100;
 					now Eric is nowhere;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, some deviant part of your brain suggests that you could have some fun right here and now...";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - He's warmed up and has his legs spread - just fuck him!";
-					say "     ([link]N[as]n[end link]) - Shake off the lewd thoughts and get him to safety now!";
-					if Player consents: [take advantage and take him to the bunker]
-						LineBreak;
-						say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
-						if Player is male:
-							say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. Running your hands over his muscular legs, you arrive at his dripping wet pussy and push two fingers inside, making him moan as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. You aim your manhood at his moist folds, rubbing its tip against his pussy lips, then push forward, sinking your shaft into his body until you reach his maidenhead and stop for a moment.";
-							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but soon the pleasure able feelings of your hard member rubbing his insides outweigh the pain and he starts moaning again with lust. Holding his legs up with your hands you thrust in and out, reveling in his tight embrace around your shaft as you make a real woman - or rather cuntboy - out of him.";
-							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around your thrusting cock. You stop for a moment and look down at the writhing cuntboy you're inside of, then start up again, harder and faster than before. Pacing yourself, you manage to last another half hour, giving Eric another orgasm, before you feel your balls tightening with your impending climax. With one last thrust as deep as you can go inside him, you reach your goal, shooting burst after burst of your seed deep inside his womb.";
-							NPCSexAftermath Eric receives "PussyFuck" from Player;
-							WaitLineBreak;
-							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping your cum and female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
-						else:
-							say "     A quick search through Stacy's dresser reveals a long pink dildo - and a vibrating one too. You take it and climb on the bed with Eric, rubbing his moist pussy lips slowly with your fingers, then spreading them to have a look. Ah, perfect - he really is a virgin. The thought of taking his cherry on the bed of his former girlfriend makes you grin in anticipation. You rub the dildo's tip against his pussy lips for a moment, then push forward, sinking it slowly into his body until you reach his maidenhead.";
-							say "     Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. He whimpers at your forceful intrusion in his innermost being, but as you flip the switch and move the vibrating dildo in and out of him, pleasure able feelings soon outweigh the pain and he starts moaning again with lust. Running a hand over his lithe body as you fuck him with the dildo, you revel in his pants and gasps as you make a real woman - or rather cuntboy - out of him.";
-							WaitLineBreak;
-							say "     Not much later, Eric gasps as he has his first female orgasm, his pussy getting really wet around the dildo and leaking female juices on the mattress. You stop for a moment and look down at the writhing cuntboy you're made cum, then start up again, harder and faster than before.";
-							say "     Taking your time, you keep going with the dildo for another forty minutes, giving Eric two more screaming orgasms. Then a groggy groan from the cheerleader hulk on the floor reminds you that you sadly don't have all the time in the world and should leave before she fully wakes up or something else comes along.";
-							NPCSexAftermath Eric receives "PussyDildoFuck" from Player;
-							WaitLineBreak;
-							say "     Such a nice little cuntboy, you decide to take Eric along to the bunker to have some fun with again later. After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
-						project the Figure of Eric_TShirt_shocked_icon;
-						say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. You soon reach the lockerroom and give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Departing towards the bunker, Eric walks with you but a step apart, silently thinking about what you did to him.";
-						now HP of Eric is 99;
-						now thirst of Eric is 1;
-						move Eric to bunker;
-						move player to bunker;
-					else: [really save him]
-						LineBreak;
-						project the Figure of Eric_TShirt_neutral_icon;
-						say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him... The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer.";
-						say "     You give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
-						now HP of Eric is 1;
-						now thirst of Eric is 1;
-						move Eric to bunker;
-						move player to bunker;
+					say "[StacyFight_Victory]";
 			else: [watch them fuck]
 				say "     Having been hit by her once already, you decide you want to avoid that from happening again - and have some fun in the meantime. You silently crawl a bit closer and sit on the floor from where you have a nice view.";
 				WaitLineBreak;
@@ -483,6 +446,82 @@ instead of conversing the Eric:
 	else:
 		say "[EricTalkMenu]";
 
+to say StacyFight_Victory:
+	say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, some deviant part of your brain suggests that you could have some fun right here and now...";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - He's warmed up and has his legs spread - just fuck him!";
+	say "     ([link]N[as]n[end link]) - Shake off the lewd thoughts and get him to safety now!";
+	if Player consents: [take advantage and take him to the bunker]
+		LineBreak;
+		say "     This is an opportunity you don't want to miss - the cuntboy is hot and ready, lying there on the bed with spread legs and just waiting for it...";
+		if Player is male:
+			say "     Your cock springs to attention as you step closer, then kneel on the bed between Eric's legs. As he sees you approach, naked and with lust in your eyes, the college student's eyes go wide in shock and he starts to whimper, 'No, please - I don't wan-' That's how far he gets before you press your hand over his mouth, muffling his words, then lean in and bark at him to shut up. You've just demonstrated that you could kick Stacy's ass, so there's no chance in hell that he'll be able to do anything to you. This is going to happen, right here and now. There's a brief moment of him trying to struggle, a scream or two choked off by your hand on his mouth, then Eric quiets down again. He sniffles a little, his head shaking left and right as far as he can with your grip on it, eyes seeking out your own as he pleads for you to not do this. Tough luck though - your lust comes first!";
+			say "     Running your hands over the subdued cuntboy's muscular legs, you arrive at his dripping wet pussy and push two fingers inside, drawing an involuntary moan from Eric as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin! The thought of taking his cherry on the bed of his former girlfriend makes your cock twitch in anticipation. Getting fully on top of him and forcing his legs a little bit further apart with your own, you grin at your captive and make a cruel quip that he'll learn what it means to be a woman in a moment. Then you aim your manhood at his moist folds, rubbing its tip against the pussy lips, and push forward. It is very satisfying to know you're the first to sink your shaft into his body, as proven when you reach his maidenhead, stopping there to bask in having this prize.";
+			WaitLineBreak;
+			say "     Running your free hand over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go. The young man bucks in pain, his whimpers muffled by your hand even as tears start to leak from his eyes at your forceful intrusion in his innermost being. He even tries to hit you, hands impotently smacking against your sides and trying to push you away. Yet even as he doesn't want to do this, his body soon betrays him, with the tight slit of his pussy getting wet and opening up to you from the stimulation alone. Grinning down at him, you buck against his crotch again and again, forcing Eric to feel pleasure despite himself, as your hard member rubs his insides and hits spots he never knew he had. He tries to suppress it for as long as he can, but soon enough, a first unwanted moan passes his lips. After reminding him that he doesn't want to annoy you with begging, you take away your hand, then delight in seeing what sounds you can draw from him as you fuck the cuntboy's slit.";
+			say "     As new as he is to being fucked, it doesn't take much longer before Eric gasps as he has his first female orgasm, his pussy getting really wet around your thrusting cock. 'You bastard,' he says in a voice full of loathing, but without having the strength to even attempt to fight against you physically. You stop for a moment and look down at the writhing cuntboy you're inside of, then start up again, harder and faster than before. Pacing yourself, you manage to last another half hour, forcing Eric into another orgasm, before you feel your balls tightening with your own impending climax. With one last thrust as deep as you can go inside him, you reach your goal, shooting burst after burst of your seed deep inside his womb and claiming that pussy. The thought that you might have just knocked him up gives you a satisfied tingle deep in your dark soul.";
+			NPCSexAftermath Eric receives "PussyFuck" from Player;
+		else: [non-males]
+			say "     A quick search through Stacy's dresser reveals a long pink dildo - and a vibrating one too. You take it and climb on the bed with Eric. As he sees you approach, with unmistakable lust in your eyes, the college student's eyes go wide in shock and he starts to whimper, 'No, please - I don't wan-' That's how far he gets before you press your hand over his mouth, muffling his words, then lean in and bark at him to shut up. You've just demonstrated that you could kick Stacy's ass, so there's no chance in hell that he'll be able to do anything to you. This is going to happen, right here and now. There's a brief moment of him trying to struggle, a scream or two choked off by your hand on his mouth, then Eric quiets down again. He sniffles a little, his head shaking left and right as far as he can with your grip on it, eyes seeking out your own as he pleads for you to not do this. Tough luck though - you wanna play!";
+			say "     Running your hands over the subdued cuntboy's muscular legs, you arrive at his dripping wet pussy and push two fingers inside, drawing an involuntary moan from Eric as you wiggle them. Inside, you feel the soft flesh of his hymen under your fingers - nice, he really is a virgin! The thought of busting his hymen on the bed of his former girlfriend makes you grin in anticipation. You rub the dildo's tip against his pussy lips for a moment, then push forward, sinking it slowly into his body until you reach his maidenhead. Running your hands over Eric's flat chest you play with his nipples, distracting him for the moment you pull back and then thrust in deep, piercing his hymen in one go and hearing the momentary crunching sound of his snapping flesh. The young man bucks in pain, his whimpers muffled by your hand even as tears start to leak from his eyes at your forceful intrusion in his innermost being. He even tries to hit you, hands impotently smacking against your sides and trying to push you away.";
+			WaitLineBreak;
+			say "     Yet even as he doesn't want to do this, his body soon betrays him, with the tight slit of his pussy getting wet and opening up to you from the stimulation alone. Grinning down at him, you shove the vibrator inside him again and turn it to high power, forcing Eric to feel pleasure despite himself, as the hard, vibrating rod rubs his insides and hits spots he never knew he had. He tries to suppress it for as long as he can, but soon enough, a first unwanted moan passes his lips. After reminding him that he doesn't want to annoy you with begging, you take away your hand, then delight in seeing what sounds you can draw from him as you manually fuck the cuntboy's slit. Running a hand over his lithe body as you fuck him with the dildo, you revel in his pants and gasps as you dominate him.";
+			say "     As new as he is to being fucked, it doesn't take much longer before Eric gasps as he has his first female orgasm, his pussy getting really wet around the vibrator and leaking female juices on the mattress. 'You bitch,' he says in a voice full of loathing, even as it sounds a bit funny from the vibrations going through him. Yet despite all of this, he doesn't have the strength to even attempt to fight against you physically. You stop for a moment and look down at the writhing cuntboy you're made cum, then start up again, harder and faster than before. Taking your time, you keep going with the sex toy for another forty minutes, forcing Eric through two more screaming orgasms. Then a groggy groan from the cheerleader hulk on the floor reminds you that you sadly don't have all the time in the world and should leave before she fully wakes up or something else comes along.";
+			NPCSexAftermath Eric receives "PussyDildoFuck" from Player;
+		WaitLineBreak;
+		if "PlayerInterested" is listed in Traits of Mortimer:
+			say "     Looking down at the naked cuntboy, you're still pumped up from the fun you had with him, and can't help but feel that it'd be fun to have continued access to a nice fucktoy like him. Your own little boy with a pussy to make use of when you feel like it, yeah, that'd be nice... and that's when you remember the storage facility that Mortimer has, just a little bit west of the library. This would be just the place you could drop off your newly broken in piece of tail, and not have to worry about him running off at the next opportunity.";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Take Eric to the storage place.";
+			say "     ([link]N[as]n[end link]) - Nah, too much hassle. You're out of here.";
+			if Player consents:
+				LineBreak;
+				say "     Deciding to not let the opportunity pass, you have a quick look around, picking up a bathrobe that's only a little too small for Eric. Throwing it at the still sniffling naked form on the bed, you order him to cover up, while at the same time tying a loop from the long belt of the bathrobe, slipping it over his head and pulling it tight, so it can serve as a kind of leash. Both holding that, and also with a firm grip on his arm, you lead Eric out of the building. He seems to tense a little as you step out on the walkway, clearly contemplating an attempt to run off, but a harsh tug at the belt and it squeezing around his neck puts an end to that idea quickly. In the end, he can't help but follow where you guide him, still rather out of it in shock and dripping sexual fluids on the floor as they run down his legs. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him...";
+				project the Figure of Eric_TShirt_shocked_icon;
+				say "     The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. You soon reach the lockerroom and wrench the bathrobe off his body, with him trying to hold on to it at first, then covering his crotch with his hands as that fails, getting bright red in shame. 'Why are you doing all of this?! I thought I could trust you!' he says in an accusing voice, with you not even deigning to answer as you shove Eric under a showerhead, keeping him under control with the leash so the sex-stink can be washed off the student. Drenched and afraid, you then guide him back to the lockers, where you command that he get dressed properly, while standing in front of the exit door and watching. A minute or two later, he's ready, dressed in shorts and a t-shirt, still looking at you in a fairly frightened manner, wondering what will happen next. Then you depart the campus, with Eric just a step ahead of you, where you can keep an eye on him and are ready to wrench on the leash if need be. He is silent as he follows your orders, only giving you some glances over his shoulder, trying to come to terms with what you did to him.";
+				WaitLineBreak;
+				say "     Some time later, you arrive at the 'Store Everything' location and with a grin tell Eric to push the buzzer. He does as he is told, which brings Mortimer to the entrance gate in short notice. There is a second in which it seems like Eric wants to say something to him, as if drawing some hope, but even as the student pushes past his fear of you to open his mouth, the goo person lets out a dirty laugh and calls out, 'New intake, eh? Come on in, customer!' One glance was enough for him to pick up on the dynamic between you and your captive. With a light shove, you propel Eric forward as the barred door swings open, then enter the facility itself. As you throw the door shut behind you, with it clicking into place securely, the young man appears to shrink down a little, taking in that he's now surrounded by high walls and metal gates.";
+				say "     Following Mortimer past several rows of storage bays, he eventually points at one, then withdraws a thick ring of keys from inside his gooey body and unlocks the sliding door leading into it. Flicking on a switch on the wall, the light comes on inside and you see the few things inside the bay: A large mattress on the floor, roughly in the center of the room, plus two bottles of what seems to be water, as well as a little food stacked up against the wall. Besides that, you can see a little portable TV, plugged into a socket on the wall. In the far corner, there's a bucket with a lid. 'In you go...' Mortimer says with a somewhat amused, but at the same time almost bored, tone. Eric hesitates, then says, 'I - uhm, I don't-' Making a clicking sound with his tongue (or however that may work for someone made from goo), the storage operator shakes his head, 'Save your breath, lad. It's just business, and you wanna stay on my good side. If you're nice and quiet, I might even give you something to read, eh?'";
+				WaitLineBreak;
+				say "     After a Eric finally steps into the unit, shoulders sagging defeatedly, Mortimer pulls down the door and locks it. 'As you can see, your boy's got all the essentials - bedding, enough food and water, even a TV that's set to a constant stream of porn, hah! And unless they get uppity, I take [']em out once a day for a scrub-down too. Wouldn't want the place to be all miffy when ya come for a visit, eh?' Smarmy grin on his face, he winks at you as he says this. 'So, as a reminder there are two payment options for this generous accommodation. You can come in once per week and give me a bottle of cum, femcum or milk per occupied unit. That's what most of the low key, amateur customers go for. On the other hand, there's a much more convenient way to do this - just let me harvest fluids to pay for your units myself. Easy, effortless for you, no worries about payments anymore! And I guarantee that milking is the only thing I'll do, you don't got to have no worries about your boy. And it'll get him used to the routine of regular orgasms, on command, hah! Might also have some additional extra services for customers who choose the comfort payments. Ya see, the units have security cameras, to monitor the goods wellbeing. That footage of your goods would be exclusive for you and only be accessible as a premium customer.'";
+				Choose a blank row from Table of StoredSluts;
+				now Name entry is "Eric";
+				now Resistant entry is false;
+				now Sluttyness entry is 1;
+				now WhoredOut entry is false;
+				now Sexcount entry is 1;
+				say "     [bold type]After thinking about it a second, you pick...[roman type][line break]";
+				say "     ([link]Y[as]y[end link]) - Making regular payments.";
+				say "     ([link]N[as]n[end link]) - The milking option.";
+				if Player consents:
+					now PaymentType entry is 1; [weekly payment]
+					say "     The goo guy draws a little bit of a face as you choose the first payment option. 'Fine then. And it's just a lowly price of one bottle per week for this unit. But if you ever get tired of lugging the payment here, you can always change your mind later. Just talk to me about payment options, and your boy'll pay for himself,' he says with a wink, guiding you back towards the entrance. 'Pleasure doing business with you!'";
+				else:
+					now PaymentType entry is 2; [milking]
+					say "     The goo guy grins broadly as you agree to his 'alternate' payment option. 'Great! It'll be definitively less hassle for you. This way you can just come in to enjoy yourself, with no worries about having to pay up fees for him. Your boy'll pay for himself,' he says with a wink, guiding you back towards the entrance. 'Pleasure doing business with you!'";
+				add "Eric" to StoredSluts_Other;
+				now Player is in Store Everything;
+			else:
+				LineBreak;
+				say "     With a sigh and a shrug, you shelve the dreams of keeping Eric and just get up, gathering your [if Player is not naked]clothes and [end if]gear before you set out, giving the still sniffling naked form on the bed a last look.";
+				now Player is in College Campus Entrance;
+		else:
+			say "     Looking down at the naked cuntboy, still pumped up from the fun you had with him, you can't help but feel that it'd be fun to have continued access to a nice piece of ass like him. Your own little boy with a pussy to make use of when you feel like it, yeah, that'd be nice... yet between thinking of what you'd do with him, to him, some issues with that plan inevitably crop up. It's not like he's turned into a brainless husky bitch that'll just wag his tail waiting for you to fuck him again. Nah, even though he's subdued now, you've got little doubt that Eric would try to run off at the next opportunity. It's not like you've got some pre-made cell, or plentiful bondage material to tie him up with in the library after all, and having to constantly watch him would get old fast...";
+			say "     With a sigh and a shrug, you shelve the dreams of keeping Eric and just get up, gathering your [if Player is not naked]clothes and [end if]gear before you set out, giving the still sniffling naked form on the bed a last look. [bold type]If only you knew of a place to drop off and store some less than willing sexual partners, this might have gone differently...[roman type][line break]";
+			now Player is in College Campus Entrance;
+		now HP of Eric is 99;
+		now thirst of Eric is 1;
+		now Eric is nowhere;
+	else: [really save him]
+		LineBreak;
+		project the Figure of Eric_TShirt_neutral_icon;
+		say "     After having a quick look around, you pick up a bathrobe that's only a little too small for Eric. You bundle him up in it, then lead him by the arm out of the building, still rather out of it and dripping female juices on the floor. This time you manage to avoid any creatures as you make your way back to the sports arena. Well, mostly - at one point a male German shepherd began sniffing the ground some way behind you and picked up the trail, but a passing incubus took an interest in him... The howls of your almost-encounter as he's being fucked by the demon remind you that many creatures out here will be able to follow Eric's trail easily. The lockerroom won't be safe much longer.";
+		say "     You give Eric some time to come down from his highly aroused state, then tell him to get dressed and that you're taking him to your bunker. Eric thanks you, at the same time getting very red in the face as he realizes you saw... all of him. Ten minutes later, he steps out from behind a row of lockers, dressed in shorts and a t-shirt and hefting a backpack with his most important gear and supplies. Soon you depart towards the bunker, Eric still rather silent beside you as he thinks about what happened to him.";
+		now HP of Eric is 1;
+		now thirst of Eric is 1;
+		move Eric to bunker;
+		move player to bunker;
+
 to say EricTalkMenu:
 	LineBreak;
 	if HP of Eric < 99:
@@ -490,6 +529,12 @@ to say EricTalkMenu:
 	say "What do you want to talk with Eric about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
+	if HP of Eric is 99 and "PlayerInterested" is listed in Traits of Mortimer:
+		choose a blank row in table of fucking options;
+		now title entry is "<Content Rewind (SlutStorage Update): Sex Slave Eric>";
+		now sortorder entry is 0;
+		now description entry is "Re-take the original scene with Eric after winning against Stacy. You'll be able to either truly save him (instead of raping him), or have the option to take him to slut storage (replacing bringing him to the library). The second option will remove sex slave Eric as an NPC in the library as if he never had been there. You will then be able to visit him in the storage facility instead";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
@@ -558,6 +603,8 @@ to say EricTalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
+				if (nam is "<Content Rewind (SlutStorage Update): Sex Slave Eric>"):
+					say "[StacyFight_Victory]";
 				if (nam is "Just chat a bit"):
 					say "[EricTalk1]";
 				if (nam is "Implement your plan to get him fucked by David"):
@@ -2208,7 +2255,7 @@ to say EricSex14: [threesome with Carl]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and Eric is not slutstored and (lastfuck of Eric - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2322,7 +2369,7 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			now level of Eric is 1;
 			now lastfuck of Eric is turns;
 
-instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and Eric is not slutstored and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2690,13 +2737,13 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 [   6: Carl fucked Eric                                              ]
 [  50: player told Carl to stop pursuing Eric                        ]
 
-after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored):
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	try looking;
 	say "[EricMeetsCarl]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2710,7 +2757,7 @@ to say EricMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5  and (lastCarlEricInteraction - turns > 6)):
+after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)):
 	try looking;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
@@ -2729,7 +2776,7 @@ after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and (lastCarlEricInteraction - turns > 6)):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2750,7 +2797,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -4078,7 +4125,7 @@ This is the Eric's Epilogue rule:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding for several weeks in an isolated environment, only allowing you to speak over the phone.";
 			say "     When he's finally released, he throws his arms around you and kisses you deeply as he comes out of the exit where you're waiting for him. After some hot and heavy sex in celebration of your reunion, he suggests you go out for a few drinks to unwind after everything you've been through. What you thought might be a quick drink turns into one after another as you start going from bar to bar.";
 			say "     Going from club to club, Eric drinks and parties very heartily. He sneaks off with you for sex at least once at every stop and usually manages to snag a quick fuck from some other lover while he's there as well. Enjoying yourself as well, you're often there beside him with some lover of the moment. Eric's good looks and growing confidence make him very popular, and your sure his strong, virile musk doesn't hurt his chances either. Eric becomes quite the party animal, very popular and always fun to go hang out with, though he's often a little sauced as well. But even then, he's still always able to attract a few lovers for you both the share in some secluded spot whenever you go out on the town together.";
-	else if ((Eric is in the bunker) and (HP of Eric is 99)): [sex slave cuntboy]
+	else if ((Eric is in the bunker) and (HP of Eric is 99) and Eric is not slutstored): [sex slave cuntboy]
 		now EricsEpilogueShown is true;
 		if (humanity of Player < 10):
 			if Player is male:
@@ -4087,6 +4134,7 @@ This is the Eric's Epilogue rule:
 				say "     When you succumb to your infection, you forget about Eric, turning to other things instead. Abandoned in the bunker, he stays there as long as he can, scavenging the area around it for food. On one of the trips, a hermaphrodite gryphon spots him from the air and swoops down on him. Quickly overpowering the cuntboy, she then takes him to her nest on top of a nearby building and fucks him hard and often, filling his womb with her eggs. When some soldiers finally come by several weeks later and save Eric from captivity, he's holding two speckled eggs warm with a few blankets, another one almost ready inside his bulging belly.";
 		else:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He seeks you out one night, knocking at your door. A bit hesitantly he says 'Please fuck me, I - I need it - and you.' and opens up his coat, showing he's naked beneath. You wave him inside, then close the door and guide your submissive cuntboy towards the bedroom...";
+	[TODO: Add ending for stored Eric]
 	else if (HP of Eric is 100): [Stacy's girlfriend now]
 		if humanity of Player > 9:
 			now EricsEpilogueShown is true;

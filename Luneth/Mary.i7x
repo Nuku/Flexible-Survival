@@ -11,21 +11,29 @@ object	name
 Mary	"Mary"
 
 Mary is a woman.
-[Physical details as of game start]
+Mary is in New Ewe Storeroom.
 ScaleValue of Mary is 3. [human sized]
-SleepRhythm of Mary is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Mary is 0. [X cock]
-Cock Length of Mary is 0. [X Inches]
-Ball Size of Mary is 0.
-Ball Count of Mary is 0. [X balls]
-Cunt Count of Mary is 1. [X pussy]
-Cunt Depth of Mary is 12. [X Cunt]
-Cunt Tightness of Mary is 8. [X Cunt]
-Nipple Count of Mary is 2. [X nipples]
-Breast Size of Mary is 4. [X at the start]
+Body Weight of Mary is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Mary is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Mary is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Mary is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Mary is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Mary is 7. [length in inches]
+Breast Size of Mary is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Mary is 2. [count of nipples]
+Asshole Depth of Mary is 10. [inches deep for anal fucking]
+Asshole Tightness of Mary is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Mary is 0. [number of cocks]
+Cock Girth of Mary is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Mary is 0. [Length in Inches]
+Ball Count of Mary is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Mary is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Mary is 1. [number of cunts]
+Cunt Depth of Mary is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Mary is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Mary is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Mary is false. [can not take oversized members without pain]
-Sterile of Mary is false.
 PlayerMet of Mary is false.
 PlayerRomanced of Mary is false.
 PlayerFriended of Mary is false.
@@ -34,13 +42,14 @@ PlayerFucked of Mary is false.
 OralVirgin of Mary is false.
 Virgin of Mary is false.
 AnalVirgin of Mary is true.
-PenileVirgin of Mary is false.
+PenileVirgin of Mary is true.
 SexuallyExperienced of Mary is true.
+TwistedCapacity of Mary is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Mary is true. [steriles can't knock people up]
 MainInfection of Mary is "Ewe".
 Description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
 Conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
-Mary is in New Ewe Storeroom.
 
 instead of sniffing Mary:
 	say "Mary smells like a female sheep and has traces of the city's scents in her wool.";

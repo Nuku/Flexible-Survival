@@ -31,6 +31,7 @@ to say ymgdesc:
 		if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
 	if ymgmode is 2:
 		setmongender 3; [creature is male]
+		project figure of YuppieMink_M_clothed_icon;
 		say "     Moored at the docks among the industrial and commercial crafts are also several pleasure boats caught up in the military blockade. From one of them, a slender white figure appears. Some kind of mink or ermine, with shimmering white fur and a regal bearing that oozes contempt. The smart blue captain's jacket he wears with the matching hat is lovely, but the lack of pants leaves his dripping cock and swinging sack on full display. He doesn't seem to mind at all, setting down his wine glass before calling to you. [one of]'Ahoy there! You must be my new sexy cabin boy!' [or]'Did you bring the fresh supplies of caviar and wine? No? Then what are you good for?' [or]'This city is so droll. Nothing like Madrid. You look a bit like a whore I knew there, though. Come aboard and remind me more!' [or]'Thank goodness, someone to scrub this decking. I am dripping all over the inlaid hardwoods.' [or]'Don't they know who I am? Why, I'll have them bent over the rail of my yacht and pound their asses until they're blue in the face. Mmm... that sounds lovely. Perhaps I'll practice a bit of that with you.' [or]'Thank goodness, someone other than these blue collar types. Come aboard for some wine and a hard fucking, will you?' [at random]He hops down from the deck, gearing up to fight!";
 		now sex entry is "Female";
 		if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
@@ -45,6 +46,7 @@ to say losetoymg:
 	if ymgmode is 1:
 		say "[losetoymgirl]";
 	else:
+		project figure of YuppieMink_M_hard_icon;
 		say "[losetoymguy]";
 
 to say losetoymgirl:
@@ -79,6 +81,7 @@ to say beattheymg:
 		if ymgmode is 1:
 			say "[beattheymgirl]";
 		else:
+			project figure of YuppieMink_M_hard_icon;
 			say "[beattheymguy]";
 
 to say beattheymgirl:

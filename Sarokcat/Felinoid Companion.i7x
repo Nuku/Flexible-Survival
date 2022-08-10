@@ -238,6 +238,11 @@ to say KlauzTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Spend time just relaxing with Klauz";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Klauz on the nose";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -254,6 +259,8 @@ to say KlauzTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Spend time with Klauz"):
 					say "[KlauzTalk1]";
+				if (nam is "Boop"):
+					say "[KlauzTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -265,6 +272,9 @@ to say KlauzTalkMenu:
 
 to say KlauzTalk1:
 	say "     Klauz listens attentively as you tell him what happening out in the city while you stroke and scritch your felinoid companion. He does make a point to rub up against you though, making sure his pheromones are all over you.";
+
+to say KlauzTalk2:
+	say "     Reluctant to lose your fingers, you are nonetheless compelled to boop the felinoid, risk of grievous bodily harm be damned. The resulting look of abject disappointment that Klauz directs towards you before huffing and turning away makes it all worth while though. You know that he enjoyed it even if he doesn't wish to show it. After all, he would have made it absolutely clear that you weren't ever to do it again if he genuinely disliked it.";
 
 
 Section 3 - Felinoid companion sex
@@ -472,7 +482,7 @@ This is the Klauz' Epilogue rule:
 		else:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
-			else if Player has a non-shifting body of "Feral Wolf Male" and HP of Fang is listed in { 3, 4 }:
+			else if Player has a non-shifting body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
 				[ see Feral Wolf Male file for this ending ]
 				make no decision;
 			else:

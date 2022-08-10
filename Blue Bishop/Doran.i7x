@@ -578,21 +578,28 @@ object	name
 Doran	"Doran"
 
 Doran is a man. Doran is in Rocky Outcropping.
-[Physical details as of game start]
 ScaleValue of Doran is 4. [horse sized]
-SleepRhythm of Doran is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Doran is 1. [1 cock]
-Cock Length of Doran is 18. [18 Inches]
-Ball Size of Doran is 5.
-Ball Count of Doran is 2. [2 balls]
-Cunt Count of Doran is 0. [0 pussy]
-Cunt Depth of Doran is 0. [X Cunt]
-Cunt Tightness of Doran is 0. [X Cunt]
-Nipple Count of Doran is 0. [X nipples]
-Breast Size of Doran is 0. [X at the start]
+Body Weight of Doran is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doran is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doran is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doran is 16. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doran is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doran is 16. [length in inches]
+Breast Size of Doran is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doran is 0. [count of nipples]
+Asshole Depth of Doran is 18. [inches deep for anal fucking]
+Asshole Tightness of Doran is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doran is 1. [number of cocks]
+Cock Girth of Doran is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doran is 18. [Length in Inches]
+Ball Count of Doran is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doran is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doran is 0. [number of cunts]
+Cunt Depth of Doran is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doran is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doran is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Doran is false. [can not take oversized members without pain]
-Sterile of Doran is true.
 PlayerMet of Doran is false.
 PlayerRomanced of Doran is false.
 PlayerFriended of Doran is false.
@@ -603,6 +610,8 @@ Virgin of Doran is true.
 AnalVirgin of Doran is true.
 PenileVirgin of Doran is true.
 SexuallyExperienced of Doran is false.
+TwistedCapacity of Doran is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doran is true. [steriles can't knock people up]
 MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
 Description of Doran is "[DoranLook]".

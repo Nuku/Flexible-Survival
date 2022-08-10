@@ -189,21 +189,28 @@ object	name
 Rex	"Rex"
 
 Rex is a man.
-[Physical details as of game start]
 ScaleValue of Rex is 3. [human sized]
-SleepRhythm of Rex is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Rex is 1. [One cock]
-Cock Length of Rex is 7. [Seven Inches]
-Ball Size of Rex is 3.
-Ball Count of Rex is 2. [Two balls]
-Cunt Count of Rex is 0. [No pussy]
-Cunt Depth of Rex is 0. [No Cunt]
-Cunt Tightness of Rex is 0. [No Cunt]
-Nipple Count of Rex is 2. [2 nipples]
-Breast Size of Rex is 0. [Flat at the start]
+Body Weight of Rex is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Rex is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Rex is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Rex is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Rex is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Rex is 8. [length in inches]
+Breast Size of Rex is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Rex is 2. [count of nipples]
+Asshole Depth of Rex is 6. [inches deep for anal fucking]
+Asshole Tightness of Rex is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Rex is 1. [number of cocks]
+Cock Girth of Rex is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Rex is 7. [Length in Inches]
+Ball Count of Rex is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Rex is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Rex is 0. [number of cunts]
+Cunt Depth of Rex is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Rex is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Rex is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Rex is false. [can not take oversized members without pain]
-Sterile of Rex is false.
 PlayerMet of Rex is false.
 PlayerRomanced of Rex is false.
 PlayerFriended of Rex is false.
@@ -214,14 +221,15 @@ Virgin of Rex is true.
 AnalVirgin of Rex is true.
 PenileVirgin of Rex is false.
 SexuallyExperienced of Rex is true.
+TwistedCapacity of Rex is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Rex is false. [steriles can't knock people up]
 MainInfection of Rex is "Retriever Female".
 Description of Rex is "[Rexdescribing]".
 Conversation of Rex is { "rextalk" }.
+The scent of Rex is "     The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.".
 
 to say Rexdescribing:
 	say "     Lounging on a couch near the back of the room is a large retriever male. On the table beside him, you spot the doggy bone sextoy he took from you when you first met, but as you begin to think of a way to get your prize back, you find your attention drawn to his large, sheathed doggy cock instead. Your goal of getting the toy back slips from your mind as you begin to wonder how much more fun the real thing must be.";
-
-the scent of Rex is "     The large retriever carries the strong musk of a virile male, and the scent of doggy sex clings to his fur constantly thanks to his frequent playtime with his happy retriever sexpet.".
 
 instead of conversing the Rex:
 	if HP of Karen is 3 and Dog Treats is owned:

@@ -403,7 +403,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "healing booster"	"A small syringe filled with a clear, blue fluid."	1	healing booster
 
-healing booster is a grab object. It is fast. It is not temporary.
+healing booster is a grab object. It is fast. It is temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
 
@@ -426,8 +426,6 @@ to say healing booster use:
 		decrease healed by HP of Player minus maxHP of Player;
 		now HP of Player is maxHP of Player;
 	say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
-	ItemLoss healing booster by 1;
-
 
 Section 3 - Endings
 

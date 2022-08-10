@@ -365,20 +365,28 @@ Ruby	"Ruby"
 
 Ruby is a woman.
 Ruby is in Ruby's Cave.
-[physical details as of game start]
-ScaleValue of Ruby is 4. [human sized]
-Cock Count of Ruby is 0. [no cock]
-Cock Length of Ruby is 0. [no cock length]
-Ball Size of Ruby is 0. [no ball size]
-Ball Count of Ruby is 0. [no balls]
-Cunt Count of Ruby is 1. [1 pussy]
-Cunt Depth of Ruby is 8. [gets stretched a bit by an alpha husky]
-Cunt Tightness of Ruby is 3. [gets stretched a bit by an alpha husky]
-Nipple Count of Ruby is 2. [4 nipples]
-Breast Size of Ruby is 4. [B cup at the start]
+ScaleValue of Ruby is 4. [horse sized]
+Body Weight of Ruby is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ruby is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ruby is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ruby is 14. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ruby is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ruby is 14. [length in inches]
+Breast Size of Ruby is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ruby is 2. [count of nipples]
+Asshole Depth of Ruby is 8. [inches deep for anal fucking]
+Asshole Tightness of Ruby is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ruby is 0. [number of cocks]
+Cock Girth of Ruby is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ruby is 0. [Length in Inches]
+Ball Count of Ruby is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ruby is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ruby is 1. [number of cunts]
+Cunt Depth of Ruby is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ruby is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ruby is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Ruby is false. [can not take oversized members without pain]
-Sterile of Ruby is true.
 PlayerMet of Ruby is false.
 PlayerRomanced of Ruby is false.
 PlayerFriended of Ruby is false.
@@ -387,17 +395,17 @@ PlayerFucked of Ruby is false.
 OralVirgin of Ruby is false.
 Virgin of Ruby is false.
 AnalVirgin of Ruby is false.
-PenileVirgin of Ruby is true. [got no cock]
+PenileVirgin of Ruby is true.
 SexuallyExperienced of Ruby is true.
+TwistedCapacity of Ruby is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ruby is true. [steriles can't knock people up]
 MainInfection of Ruby is "Crimson Dragon".
-
 Description of Ruby is "[RubyDesc]".
 Conversation of Ruby is { "Growl." }.
+The scent of Ruby is "     Ruby smells of brimstone, spicy-sweet alcohol and pleasant feminine musk. It's strangely intoxicating."
 
 to say RubyDesc:
 	say "     Ruby is a tall humanoid, a dragon woman with violet hair running down her head and spine while ending at the point of a long tail. The rest of her is covered in mostly reddish scales while her chest and tummy area sports an orange/red texture. Her eyes glow an amber-yellow and in the middle, surrounded by blood red irises. She's nearly seven feet tall with clear musculature and definition rippling on her naked body, yet still clearly feminine with steady curves, D-cup breasts and a draconic slit tucked between her legs.";
-
-The scent of Ruby is "     Ruby smells of brimstone, spicy-sweet alcohol and pleasant feminine musk. It's strangely intoxicating.".
 
 instead of conversing the Ruby:
 	say "     <WIP>";

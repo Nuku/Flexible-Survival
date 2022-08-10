@@ -104,9 +104,43 @@ object	name
 Vanessa	"Vanessa"
 
 Vanessa is a woman.
+ScaleValue of Vanessa is 4. [horse sized]
+Body Weight of Vanessa is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Vanessa is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Vanessa is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Vanessa is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Vanessa is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Vanessa is 6. [length in inches]
+Breast Size of Vanessa is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Vanessa is 2. [count of nipples]
+Asshole Depth of Vanessa is 12. [inches deep for anal fucking]
+Asshole Tightness of Vanessa is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Vanessa is 0. [number of cocks]
+Cock Girth of Vanessa is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Vanessa is 0. [Length in Inches]
+Ball Count of Vanessa is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Vanessa is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Vanessa is 1. [number of cunts]
+Cunt Depth of Vanessa is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Vanessa is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Vanessa is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Vanessa is false.
+PlayerRomanced of Vanessa is false.
+PlayerFriended of Vanessa is false.
+PlayerControlled of Vanessa is false.
+PlayerFucked of Vanessa is false.
+OralVirgin of Vanessa is false.
+Virgin of Vanessa is false.
+AnalVirgin of Vanessa is true.
+PenileVirgin of Vanessa is true.
+SexuallyExperienced of Vanessa is true.
+TwistedCapacity of Vanessa is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Vanessa is true. [steriles can't knock people up]
+MainInfection of Vanessa is "Centaur Mare".
 Description of Vanessa is "[Vanessadesc]".
 Conversation of Vanessa is { "Neigh!" }.
-
 the scent of the Vanessa is "Vanessa smells softly of horses[if HP of Vanessa > 3] and arousal[end if].".
 
 to say Vanessadesc:

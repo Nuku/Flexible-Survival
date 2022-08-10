@@ -29,6 +29,7 @@ The File of PlayerListsSave (owned by another project) is called "FSPlayerListsS
 The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
+The File of StorageSave (owned by another project) is called "FSStorageSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
 PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince"};
@@ -1409,6 +1410,22 @@ to NoteRestore:
 	else:
 		say "No Note Save File Found!";
 
+to StorageSave:
+	say "Saving Stored Person Data...";
+	write File of StorageSave from the Table of StoredSluts;
+	if debug is at level 10:
+		say "DEBUG -> File of StorageSave written.[line break]";
+
+to StorageRestore:
+	if the File of StorageSave exists:
+		say "Restoring Stored People...";
+		read File of StorageSave into the Table of StoredSluts;
+		if debug is at level 10:
+			say "DEBUG -> Stored People restored from StorageSave.[line break]";
+	else:
+		say "No Storage Save File Found!";
+
+
 to RunPostImportRules:
 	say "Running Post Import Rules...";
 	follow the postimport rules;
@@ -1445,6 +1462,7 @@ To SaveEverything:
 	PlayerSave;
 	BeastSave;
 	NoteSave;
+	StorageSave;
 	VariableSave;
 
 understand "Import Progress" as ProgressImport.
@@ -1471,6 +1489,7 @@ to say ProgressionImport:
 	PlayerRestore;
 	BeastRestore;
 	NoteRestore;
+	StorageRestore;
 	VariableLoad;
 	RunPostImportRules;
 	try looking; [start the player off in their new playthrough]

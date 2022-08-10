@@ -464,21 +464,54 @@ to say usetancoin:
 
 Section 4 - Tanuki Dad
 
-Tanuki Dad is a male person.
-TanukiTopics is a list of text that varies.
-
 Table of GameCharacterIDs (continued)
 object	name
 Tanuki Dad	"Tanuki Dad"
 Tanuki Mom	"Tanuki Mom"
 
+Tanuki Dad is a male person.
+TanukiTopics is a list of text that varies.
+ScaleValue of Tanuki Dad is 4. [large sized]
+Body Weight of Tanuki Dad is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Tanuki Dad is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Tanuki Dad is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Tanuki Dad is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Tanuki Dad is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Tanuki Dad is 6. [length in inches]
+Breast Size of Tanuki Dad is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Tanuki Dad is 2. [count of nipples]
+Asshole Depth of Tanuki Dad is 12. [inches deep for anal fucking]
+Asshole Tightness of Tanuki Dad is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Tanuki Dad is 1. [number of cocks]
+Cock Girth of Tanuki Dad is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Tanuki Dad is 12. [Length in Inches]
+Ball Count of Tanuki Dad is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Tanuki Dad is 7. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Tanuki Dad is 0. [number of cunts]
+Cunt Depth of Tanuki Dad is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Tanuki Dad is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Tanuki Dad is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Tanuki Dad is false.
+PlayerRomanced of Tanuki Dad is false.
+PlayerFriended of Tanuki Dad is false.
+PlayerControlled of Tanuki Dad is false.
+PlayerFucked of Tanuki Dad is false.
+OralVirgin of Tanuki Dad is true.
+Virgin of Tanuki Dad is true.
+AnalVirgin of Tanuki Dad is true.
+PenileVirgin of Tanuki Dad is true.
+SexuallyExperienced of Tanuki Dad is false.
+TwistedCapacity of Tanuki Dad is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Tanuki Dad is true. [steriles can't knock people up]
+MainInfection of Tanuki Dad is "".
 Description of Tanuki Dad is "[TanukiDadDesc]".
 [The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
 
 to say TanukiDadDesc:
 	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
 	add "Tanuki Balls" to TanukiTopics.
-
 
 instead of sniffing Tanuki Dad:
 	say "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.";
@@ -567,15 +600,46 @@ instead of fucking Tanuki Dad:
 Section 4 - Tanuki Mom
 
 Tanuki Mom is a female person.
-
-
+ScaleValue of Tanuki Mom is 4. [human sized]
+Body Weight of Tanuki Mom is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Tanuki Mom is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Tanuki Mom is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Tanuki Mom is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Tanuki Mom is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Tanuki Mom is 6. [length in inches]
+Breast Size of Tanuki Mom is 6. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Tanuki Mom is 2. [count of nipples]
+Asshole Depth of Tanuki Mom is 12. [inches deep for anal fucking]
+Asshole Tightness of Tanuki Mom is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Tanuki Mom is 0. [number of cocks]
+Cock Girth of Tanuki Mom is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Tanuki Mom is 0. [Length in Inches]
+Ball Count of Tanuki Mom is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Tanuki Mom is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Tanuki Mom is 1. [number of cunts]
+Cunt Depth of Tanuki Mom is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Tanuki Mom is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Tanuki Mom is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Tanuki Mom is false.
+PlayerRomanced of Tanuki Mom is false.
+PlayerFriended of Tanuki Mom is false.
+PlayerControlled of Tanuki Mom is false.
+PlayerFucked of Tanuki Mom is false.
+OralVirgin of Tanuki Mom is true.
+Virgin of Tanuki Mom is true.
+AnalVirgin of Tanuki Mom is true.
+PenileVirgin of Tanuki Mom is true.
+SexuallyExperienced of Tanuki Mom is false.
+TwistedCapacity of Tanuki Mom is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Tanuki Mom is true. [steriles can't knock people up]
+MainInfection of Tanuki Mom is "".
 Description of Tanuki Mom is "[TanukiMomDesc]".
-[The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
 
 to say TanukiMomDesc:
 	say "     The tanuki spirit here has taken on the form of a mother. Besides curves that defy any conventional method of biology, she's wearing a frilly apron and an equally obvious smile, her tail swaying as she watches you. The apron covers her entire front, but manages to be strangely tight, allowing her nipples to be seen through the fabric. Her belly and below are covered from the front, and she keeps turning if you try to circle her, preventing any easy view on her pert backside. Wielded in her right hand is a ladel that drips with something.";
 	add "Ladel" to TanukiTopics.
-
 
 instead of sniffing Tanuki Mom:
 	say "     She smells as if she applied some slightly over-strong perfume with a mixture of flowers and vanilla. Your sniffing of her prompts a casual flick of her tail. 'Don't make it odd,' she laughs out.";

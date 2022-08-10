@@ -240,6 +240,7 @@ Include Qytat a'th Lundrues by SgtPepper234.
 Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
 Include SlutStorage by Wahn.
+Include SlutStorage_Eric by Wahn.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
@@ -481,6 +482,7 @@ Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
 Include Feral Unicorn by Taelyn.
 Include Feral Wolf Bitch by Prometheus.
+Include Feral Wolf Herm by Prometheus.
 Include Feral Wolf Male by Prometheus.
 Include Ferret Infection by Luneth.
 Include Fire Elemental by Stripes.
@@ -740,6 +742,7 @@ Include Aster by Qazarar.
 Include Atticus by Wahn.
 Include Azari by Dys.
 Include Bastet by Wahn.
+Include Bernard by Prometheus.
 Include Bianca by Prometheus.
 Include Bjorn by Rikaeus.
 Include Blake by Wahn.
@@ -753,13 +756,13 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Cadmea by Prometheus.
+Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
+Include Carl by Wahn.
+Include Casper by Prometheus.
 Include Cassiel by Tin Can.
 Include Claude by Prometheus.
-Include Cynthia by Prometheus.
-Include Campus Gym by UrsaOmega.
-Include Cadmea by Prometheus.
-Include Carl by Wahn.
 Include Cherry by Gherod.
 Include Chris by Wahn.
 Include Cindy by Stripes.
@@ -769,6 +772,7 @@ Include College Guards by Rikaeus.
 Include Colleen by Prometheus.
 Include Corbin by Wahn.
 Include Coura by Wahn.
+Include Cynthia by Prometheus.
 Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
 Include Danny by Wahn.
@@ -868,8 +872,10 @@ Include Lindsey by Sarokcat.
 Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.
+Include Lumi by Prometheus.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
+Include Maeve by Prometheus.
 Include Malik by Wahn.
 Include Mark by Wahn.
 Include Mary by Luneth.
@@ -902,6 +908,7 @@ Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
 Include PAN Frat Bros by Wahn.
 Include Paula by Prometheus.
+Include Penelope by Prometheus.
 Include Percy by Taelyn.
 Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
@@ -960,6 +967,7 @@ Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
 Include Voria by Kurainyx.
 Include Wally by Rikaeus.
+Include Wendis by Prometheus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Wyatt by Gherod.

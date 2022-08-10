@@ -33,18 +33,29 @@ object	name
 Tyr	"Tyr"
 
 Tyr is a man.
-ScaleValue of Tyr is 3. [human sized]
-Cock Count of Tyr is 1.
-Cock Length of Tyr is 12.
-Ball Size of Tyr is 4.
-Ball Count of Tyr is 2.
-Cunt Count of Tyr is 0.
-Cunt Depth of Tyr is 0.
-Cunt Tightness of Tyr is 0.
-Nipple Count of Tyr is 2.
-Breast Size of Tyr is 0.
-TwistedCapacity of Tyr is false.
-Sterile of Tyr is false.
+Tyr is in Tyr's Club.
+ScaleValue of Tyr is 4. [7 feet tall]
+Body Weight of Tyr is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Tyr is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Tyr is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Tyr is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Tyr is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Tyr is 8. [length in inches]
+Breast Size of Tyr is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Tyr is 2. [count of nipples]
+Asshole Depth of Tyr is 8. [inches deep for anal fucking]
+Asshole Tightness of Tyr is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Tyr is 1. [number of cocks]
+Cock Girth of Tyr is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Tyr is 12. [Length in Inches]
+Ball Count of Tyr is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Tyr is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Tyr is 0. [number of cunts]
+Cunt Depth of Tyr is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Tyr is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Tyr is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
 PlayerMet of Tyr is false.
 PlayerRomanced of Tyr is false.
 PlayerFriended of Tyr is false.
@@ -55,13 +66,12 @@ Virgin of Tyr is true.
 AnalVirgin of Tyr is false.
 PenileVirgin of Tyr is false.
 SexuallyExperienced of Tyr is true.
+TwistedCapacity of Tyr is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Tyr is true. [steriles can't knock people up]
 MainInfection of Tyr is "Doberman Male".
 Description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 Conversation of Tyr is { "Battle is the Key to Success!" }.
-Tyr is in Tyr's Club.
-
-Instead of sniffing Tyr:
-	say "Tyr smells like a hardworking Dobie who has a couple of secrets he's not willing to share. Oh, and he also smells like a good fight!";
+The scent of Tyr is "     Tyr smells like a hardworking Dobie who has a couple of secrets he's not willing to share. Oh, and he also smells like a good fight!"
 
 Instead of conversing the Tyr:
 	if Tyrtalk is 0:
