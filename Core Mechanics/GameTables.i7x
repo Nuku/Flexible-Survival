@@ -197,7 +197,7 @@ Name(text)	Type(text)
 "ndmlist"	"list of text"
 "StoredSluts_Female"	"list of text"
 "StoredSluts_Male"	"list of text"
-"StoredSluts_Herm"	"list of text"
+"StoredSluts_Other"	"list of text"
 "absorb"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"
