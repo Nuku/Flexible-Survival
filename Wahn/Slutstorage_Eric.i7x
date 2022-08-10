@@ -115,6 +115,7 @@ to say Eric_StorageMenu:
 	clear the screen and hyperlink list;
 
 to say Eric_RestraintFit:
+	choose a row with name of "Eric" in the Table of StoredSluts;
 	if carried of Storage Chit < 5: [player doesn't have the money]
 		if "Chits Explained" is listed in Traits of Mortimer:
 			say "     Addressing Mortimer, you ask if he by any chance might have some nice bondage gear and restraints to outfit Eric with. The goo person gives you a knowing smile and nods. 'Sure thing! I'm happy to say that I can supply whatever you might need in that regard - any size, or shape! Had to build up quite a selection, given the large variety of 'goods' people have been bringing here. Mr. C put me in contact with some professional scavengers, who raided some high quality boutiques with the stuff.' Letting out an amused chuckle, he then adds, 'For the low, low price of five storage chits, I'll go grab the cart and we can get your boy fitted!' An expectant look flashes over his face, with Mortimer's hand half-rising to accept payment, until he reads in your expression that you don't actually have the chits you need to pay. Glibly skipping past any need of you to say this to him, the businessman smoothly changes the movement into just a wave of his hand and adds, 'Any time you want to get him some gear, just let me know. The deal includes putting up some attachment points on the ceiling and walls, by the way.' There is no need to say anything in reply, leaving you free to wonder what you want to do next...";
@@ -139,7 +140,9 @@ to say Eric_RestraintFit:
 			project figure of Eric_Panties_hostile_icon;
 			say "     Feasting your eyes on the captive cuntboy, you can't help but grin at the embarrassed blush covering his face, which isn't too surprising, given that Mortimer fitted him with a black, frilly pair of panties. That little detail is just a bonus though, on top of the more functional gear strapped to the former student. He's got a matching set of black ankle and wrist cuffs, made from smooth but firm leather and just right in size not to look clunky on him. They're currently connected to spreader bars holding Eric's legs apart, and his arms behind his back at the same width. His chest is covered in a bondage harness, with straps going over the shoulders and under the arms, all connected to a horizontal bar of leather crossing his pecs, holding a shiny silver ring that is connected to a black leather leash. A red ball gag with black straps holding Eric's mouth open completes the outfit. Letting your eyes wander up and down over him, you can't help but imagine the sexy scenarios this'll allow in the future.";
 			say "     As he sees that you're pleased with the restraints, Mortimer goes through a little spiel of explaining how to properly and securely strap in Eric, pointing out each piece and touching it while Eric looks wide eyed from Mortimer to you, making some whimpering noises through the gag. The explanation progresses to all of the gear being taken off at the end, fitting it all into the metal locker and handing the key to that to you. After that, Mortimer and yourself clear out of the storage unit, leaving behind Eric who throws worried looks after you until the door comes down again, thinking about what might lie in his near future. Most of the Mortimers leave, wheeling away the costume cart and carrying their tools, which leaves just the one standing next to you. 'That it for now, or did you want to have another go with him?' he asks, nodding to the door.";
+			WaitLineBreak;
 			TraitGain "Restraints Fitted" for Eric;
+			now Constraints entry is true;
 			say "[Eric_StorageMenu]";
 		else: [don't pay]
 			LineBreak;
@@ -209,6 +212,7 @@ to say EricStorageSex1: [cock sucked by Eric]
 		say "...";
 	else if Sluttyness entry is 3: [used to being used]
 		say "...";
+	increase SexCount entry by 1;
 	NPCSexAftermath Eric receives "OralCock" from Player;
 
 to say EricStorageSex2: [cunt licked by Eric]
@@ -229,6 +233,7 @@ to say EricStorageSex2: [cunt licked by Eric]
 		say "...";
 	else if Sluttyness entry is 3: [used to being used]
 		say "...";
+	increase SexCount entry by 1;
 	NPCSexAftermath Eric receives "OralPussy" from Player;
 
 to say EricStorageSex3: [Eric's cunt licked/fingered]
@@ -240,6 +245,7 @@ to say EricStorageSex3: [Eric's cunt licked/fingered]
 		say "...";
 	else if Sluttyness entry is 3: [used to being used]
 		say "...";
+	increase SexCount entry by 1;
 	NPCSexAftermath Player receives "OralPussy" from Eric;
 
 to say EricStorageSex4: [Eric's pussy fucked by player]
@@ -252,6 +258,7 @@ to say EricStorageSex4: [Eric's pussy fucked by player]
 		say "...";
 	else if Sluttyness entry is 3: [used to being used]
 		say "...";
+	increase SexCount entry by 1;
 	NPCSexAftermath Eric receives "PussyFuck" from Player;
 
 to say EricStorageSex5: [fucking Eric's ass]
@@ -263,6 +270,7 @@ to say EricStorageSex5: [fucking Eric's ass]
 		say "...";
 	else if Sluttyness entry is 3: [used to being used]
 		say "...";
+	increase SexCount entry by 1;
 	NPCSexAftermath Eric receives "AssFuck" from Player;
 
 to say EricStorageSex6: [threesome with Felinoid+Eric]
@@ -277,6 +285,7 @@ to say EricStorageSex6: [threesome with Felinoid+Eric]
 	say "     He starts rubbing the big cat's belly fur, which quickly is answered by a resounding purr from the big beast. Then he slowly moves one of his stroking hands lower and lower until he reaches Klauz's crotch and cups the feline's furry balls, gently massaging them. Coming fully awake now, the large cat raises his head and looks down on Eric, then sniffs the air (no doubt full of the scent of the little slut's dripping pussy) and gives a pleased growl. Lying down on the bed beside the one Klauz is on, Eric spreads his legs and fingers his own pussy, readying himself for what will come next. Starting to purr with a very satisfied note, the great cat rises from his perch and moves closer to the human cuntboy with feline grace. He lowers his large head to Eric's crotch and gives it a good sniff, then laps at it several times before moving further up on top of him. Lowering his hips and doing small probing thrusts, the felinoid soon finds the opening of Eric's moist and ready pussy and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking him with powerful and deep thrusts. Moans, pants and growls of lust fill the bunker and you move a bit closer to get a better view.";
 	LineBreak;
 	say "     Getting pretty aroused after a while of watching your two companions go at it, you decide it's time to join in.";
+	increase SexCount entry by 1;
 	if Player is male:
 		say "[EricSex13_99_Male]";
 	else:
