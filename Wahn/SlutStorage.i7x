@@ -302,7 +302,7 @@ to say Mortimer_Services:
 		else:
 			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and one of the pieces of plastic pushes itself up to come rest on the palm of his hand. You quickly take it and put it in your pocket.";
 			ItemGain storage chit by 1;
-			reduce Freecred by 10;
+			decrease Freecred by 10;
 	else if calcnumber is 2:
 		LineBreak;
 		if freecred < 50:
@@ -310,7 +310,7 @@ to say Mortimer_Services:
 		else:
 			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and five of the pieces of plastic push themselves up to come rest on the palm of his hand. You quickly take them and put them in your pocket.";
 			ItemGain storage chit by 5;
-			reduce Freecred by 50;
+			decrease Freecred by 50;
 	else if calcnumber is 3:
 		LineBreak;
 		if freecred < 100:
@@ -318,7 +318,7 @@ to say Mortimer_Services:
 		else:
 			say "     As you swipe your hand over the reader, there is a beep and a green checkmark appears on the screen. 'Pleasure doing business with you,' Mortimer says with a grin, then holds out his hand and ten of the pieces of plastic push themselves up to come rest on the palm of his hand. You quickly take them and put them in your pocket.";
 			ItemGain storage chit by 10;
-			reduce Freecred by 100;
+			decrease Freecred by 100;
 	else:
 		LineBreak;
 		say "     As you decline his offer, Mortimer shrugs. 'Maybe another time, eh?' With that said, he puts his reader and chits away again.";
