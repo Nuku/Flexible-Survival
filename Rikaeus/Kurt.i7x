@@ -133,21 +133,28 @@ object	name
 Kurt	"Kurt"
 
 Kurt is a man.
-[Physical details as of game start]
-ScaleValue of Kurt is 3. [human sized]
-SleepRhythm of Kurt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Kurt is 2. [X cock]
-Cock Length of Kurt is 8. [X Inches]
-Ball Size of Kurt is 4.
-Ball Count of Kurt is 2. [X balls]
-Cunt Count of Kurt is 0. [X pussy]
-Cunt Depth of Kurt is 0. [X Cunt]
-Cunt Tightness of Kurt is 0. [X Cunt]
-Nipple Count of Kurt is 2. [X nipples]
-Breast Size of Kurt is 0. [X at the start]
+ScaleValue of Kurt is 4. [taLL human sized]
+Body Weight of Kurt is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kurt is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kurt is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kurt is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kurt is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kurt is 8. [length in inches]
+Breast Size of Kurt is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kurt is 2. [count of nipples]
+Asshole Depth of Kurt is 10. [inches deep for anal fucking]
+Asshole Tightness of Kurt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kurt is 2. [number of cocks]
+Cock Girth of Kurt is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kurt is 8. [Length in Inches]
+Ball Count of Kurt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kurt is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kurt is 0. [number of cunts]
+Cunt Depth of Kurt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kurt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kurt is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Kurt is false. [can not take oversized members without pain]
-Sterile of Kurt is true.
 PlayerMet of Kurt is false.
 PlayerRomanced of Kurt is false.
 PlayerFriended of Kurt is false.
@@ -158,13 +165,15 @@ Virgin of Kurt is true.
 AnalVirgin of Kurt is true.
 PenileVirgin of Kurt is true.
 SexuallyExperienced of Kurt is false.
+TwistedCapacity of Kurt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kurt is true. [steriles can't knock people up]
 MainInfection of Kurt is "".
 Description of Kurt is "[KurtDesc]".
 Conversation of Kurt is { "<This is nothing but a placeholder!>" }.
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".
 
 to say KurtDesc:
-	say "     Your musician friend stands at a tall six foot four, which you guess makes sense for a shark-morph, though you expected him to be much taller for a great white shark. Beyond his height he has subtle bulging muscles that while they aren't the steroid crazy that you've seen many others out there with, it does say that he could probably do considerable damage to you. Outfit-wise the male is wearing just a simple pair of palm tree swim trunks and a black wife beater rather than anything fancy. Though you do know the reason for this, as you did ask him during your little lunch date earlier, so you draw your eyes upwards and notice Kurt's rather striking green eyes before taking another once-over glance. Overall your friend is a rather remarkable specimen that would catch anybody's eye.";
+	say "     Your musician friend stands at a tall six foot four, which you guess makes sense for a shark-morph, though you expected him to be much taller for a great white shark. Beyond his height he has subtle bulging muscles that while they aren't the steroid-crazy type that you've seen many others out there with, it does say that he could probably do considerable damage to you. Outfit-wise the male is wearing just a simple pair of palm tree swim trunks and a black muscle shirt rather than anything fancy. Though you do know the reason for this, as you did ask him during your little lunch date earlier, so you draw your eyes upwards and notice Kurt's rather striking green eyes before taking another once-over glance. Overall your friend is a rather remarkable specimen that would catch anybody's eye.";
 
 Section 2 - Talking with Kurt
 

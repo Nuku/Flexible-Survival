@@ -51,21 +51,28 @@ object	name
 Azrael	"Azrael"
 
 Azrael is a man.
-[Physical details as of game start]
 ScaleValue of Azrael is 3. [human sized]
-SleepRhythm of Azrael is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Azrael is 1. [X cock]
-Cock Length of Azrael is 8. [X Inches]
-Ball Size of Azrael is 4.
-Ball Count of Azrael is 2. [X balls]
-Cunt Count of Azrael is 0. [X pussy]
-Cunt Depth of Azrael is 0. [X Cunt]
-Cunt Tightness of Azrael is 0. [X Cunt]
-Nipple Count of Azrael is 2. [X nipples]
-Breast Size of Azrael is 0. [X at the start]
+Body Weight of Azrael is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Azrael is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Azrael is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Azrael is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Azrael is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Azrael is 6. [length in inches]
+Breast Size of Azrael is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Azrael is 2. [count of nipples]
+Asshole Depth of Azrael is 8. [inches deep for anal fucking]
+Asshole Tightness of Azrael is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Azrael is 1. [number of cocks]
+Cock Girth of Azrael is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Azrael is 8. [Length in Inches]
+Ball Count of Azrael is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Azrael is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Azrael is 0. [number of cunts]
+Cunt Depth of Azrael is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Azrael is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Azrael is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Azrael is true. [can not take oversized members without pain]
-Sterile of Azrael is true.
 PlayerMet of Azrael is false.
 PlayerRomanced of Azrael is false.
 PlayerFriended of Azrael is false.
@@ -76,6 +83,8 @@ Virgin of Azrael is true.
 AnalVirgin of Azrael is true.
 PenileVirgin of Azrael is true.
 SexuallyExperienced of Azrael is false.
+TwistedCapacity of Azrael is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Azrael is true. [steriles can't knock people up]
 MainInfection of Azrael is "".
 Description of Azrael is "[AzraelDesc]".
 Conversation of Azrael is { "<This is nothing but a placeholder>" }.

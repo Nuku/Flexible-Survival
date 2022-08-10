@@ -91,21 +91,28 @@ object	name
 Stewart	"Stewart"
 
 Stewart is a man.
-[Physical details as of game start]
 ScaleValue of Stewart is 3. [human sized]
-SleepRhythm of Stewart is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Stewart is 1. [X cock]
-Cock Length of Stewart is 7. [X Inches]
-Ball Size of Stewart is 4.
-Ball Count of Stewart is 2. [X balls]
-Cunt Count of Stewart is 0. [X pussy]
-Cunt Depth of Stewart is 0. [X Cunt]
-Cunt Tightness of Stewart is 0. [X Cunt]
-Nipple Count of Stewart is 2. [X nipples]
-Breast Size of Stewart is 0. [X at the start]
+Body Weight of Stewart is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Stewart is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Stewart is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Stewart is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Stewart is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Stewart is 6. [length in inches]
+Breast Size of Stewart is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Stewart is 2. [count of nipples]
+Asshole Depth of Stewart is 8. [inches deep for anal fucking]
+Asshole Tightness of Stewart is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Stewart is 1. [number of cocks]
+Cock Girth of Stewart is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Stewart is 7. [Length in Inches]
+Ball Count of Stewart is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Stewart is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Stewart is 0. [number of cunts]
+Cunt Depth of Stewart is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Stewart is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Stewart is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Stewart is false. [can not take oversized members without pain]
-Sterile of Stewart is true.
 PlayerMet of Stewart is false.
 PlayerRomanced of Stewart is false.
 PlayerFriended of Stewart is false.
@@ -116,7 +123,9 @@ Virgin of Stewart is true.
 AnalVirgin of Stewart is true.
 PenileVirgin of Stewart is true.
 SexuallyExperienced of Stewart is false.
-MainInfection of Stewart is "".
+TwistedCapacity of Stewart is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Stewart is false. [steriles can't knock people up]
+MainInfection of Stewart is "Harpy".
 Description of Stewart is "[StewartDesc]".
 Conversation of Stewart is { "<this is nothing but a placeholder!>" }.
 The scent of Stewart is "The harpy-boy smells of that new book scent as well as an undertone of green apples.".
