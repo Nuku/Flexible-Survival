@@ -391,6 +391,14 @@ Definition: A person (Called x) is bunkered:
 	if the location of x is Maintenance Storeroom, yes;
 	no;
 
+A person can be slutstored. A person is usually not slutstored.
+
+Definition: A person (Called x) is slutstored:
+	if printed name of x is listed in StoredSluts_Female, yes;
+	if printed name of x is listed in StoredSluts_Male, yes;
+	if printed name of x is listed in StoredSluts_Other, yes;
+	no;
+
 Chapter 3 - Gender & Sexuality Based
 
 Definition: A person (called x) is male:			[note: this is both male and herm]

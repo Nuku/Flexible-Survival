@@ -32,6 +32,8 @@ Figure of Badger_hard_icon is the file "Badger_hard.jpg".
 Figure of Bear_icon is the file "fs_bear.jpg".
 Figure of Beaver1_icon is the file "Beaver_ig1.jpg".
 Figure of Beaver2_icon is the file "Beaver_ig2.jpg".
+Figure of Behemoth_hard_icon is the file "Behemoth_hard.jpg".
+Figure of Behemoth_soft_icon is the file "Behemoth_soft.jpg".
 Figure of BlackEquinoid_icon is the file "FSTF_blackEquinoid_ig.jpg".
 Figure of BlueGel_icon is the file "BlueGel.jpg".
 Figure of Bobcat1_icon is the file "FS-Bobcat.jpg".
@@ -234,6 +236,8 @@ Figure of YamatoDragoness_green_NSFW_icon is the file "YamatoDragoness_green_NSF
 Figure of YamatoDragoness_blue_SFW_icon is the file "YamatoDragoness_blue_SFW.jpg".
 Figure of YamatoDragoness_blue_NSFW_icon is the file "YamatoDragoness_blue_NSFW.jpg".
 Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
+Figure of YuppieMink_M_hard_icon is the file "YuppieMink_M_hard.jpg".
+Figure of YuppieMink_M_clothed_icon is the file "YuppieMink_M_clothed.jpg".
 Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 
@@ -374,6 +378,7 @@ Figure of Eric_NakedOrcHard_happy_icon is the file "Eric_NakedOrcHard_happy.jpg"
 Figure of Eric_NakedOrcSoft_neutral_icon is the file "Eric_NakedOrcSoft_neutral.jpg".
 Figure of Eric_NakedSatyrHard_happy_icon is the file "Eric_NakedSatyrHard_happy.jpg".
 Figure of Eric_NakedSatyrSoft_neutral_icon is the file "Eric_NakedSatyrSoft_neutral.jpg".
+Figure of Eric_Panties_hostile_icon is the file "Eric_Panties_hostile.jpg".
 Figure of Eric_Panties_neutral_icon is the file "Eric_Panties_neutral.jpg".
 Figure of Eric_Soldier_happy_icon is the file "Eric_Soldier_happy.jpg".
 Figure of Eric_Soldier_neutral_icon is the file "Eric_Soldier_neutral.jpg".
@@ -1259,6 +1264,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Brown Bear Female"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
+"Behemoth_soft"	Figure of Behemoth_soft_icon	"SteppeCrow"	g-white	"normal"
+"Behemoth_hard"	Figure of Behemoth_hard_icon	"SteppeCrow"	g-white	"normal"
 "Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-white	"normal"
 "Blanche1"	Figure of Blanche1_icon	"The_Negative"	g-white	"normal"
 "Blanche2"	Figure of Blanche2_icon	"Xenotropos"	g-white	"normal"
@@ -1383,6 +1390,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Eric_NakedOrcSoft_neutral"	Figure of Eric_NakedOrcSoft_neutral_icon	"Lytta"	g-white	"normal"
 "Eric_NakedSatyrHard_happy"	Figure of Eric_NakedSatyrHard_happy_icon	"Lytta"	g-white	"normal"
 "Eric_NakedSatyrSoft_neutral"	Figure of Eric_NakedSatyrSoft_neutral_icon	"Lytta"	g-white	"normal"
+"Eric_Panties_hostile"	Figure of Eric_Panties_hostile_icon	"Lytta"	g-white	"normal"
 "Eric_Panties_neutral"	Figure of Eric_Panties_neutral_icon	"Lytta"	g-white	"normal"
 "Eric_Soldier_happy"	Figure of Eric_Soldier_happy_icon	"Lytta"	g-white	"normal"
 "Eric_Soldier_neutral"	Figure of Eric_Soldier_neutral_icon	"Lytta"	g-white	"normal"
@@ -1800,6 +1808,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yamato Dragoness Green SFW"	Figure of YamatoDragoness_green_SFW_icon	"Vashaa"	g-white	"normal"
 "Yamato Dragoness Green NSFW"	Figure of YamatoDragoness_green_NSFW_icon	"Vashaa"	g-white	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
+"Yuppie Mink_M_clothed"	Figure of YuppieMink_M_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Yuppie Mink_M_hard"	Figure of YuppieMink_M_hard_icon	"SteppeCrow"	g-white	"normal"
 "Zebra Stallion"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 "Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"

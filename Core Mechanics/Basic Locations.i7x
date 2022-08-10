@@ -297,10 +297,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Bend in 7th Street	"Bend in 7th Street"
 
-[TODO: connect when the SlutStorage Location is complete]
-[
 Bend in 7th Street is west of Looted Shops.
-]
 The earea of Bend in 7th Street is "Outside".
 Description of Bend in 7th Street is "[Bend7thDesc]".
 

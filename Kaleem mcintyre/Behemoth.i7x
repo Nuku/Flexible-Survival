@@ -4,6 +4,7 @@ Section 1 - Creature Responses
 
 to say BehemothDesc:
 	setmongender 5; [creature is herm]
+	project figure of Behemoth_soft_icon;
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
@@ -13,6 +14,7 @@ to say LoseToBehemoth:
 	if inasituation is true:
 		say ""; [dealt with at the event source]
 	else:
+		project figure of Behemoth_hard_icon;
 		say "     Having been knocked into the air by the Behemoth you find yourself spinning around like a top before plummeting back to the ground.";
 		if a random chance of 1 in 2 succeeds:
 			say "     Falling as you are you can only scream as you watch the Behemoth below you flip itself onto its backside and then spread its legs wide in preparation of something. You are not ready to see it lift its massive balls out of the way to present to you a gaping and oozing black cunt, looking like some kind of bizarre Venus flytrap. The fleshy lips part slightly right as you are about to enter into them, and then quickly move to swallow you whole once your [FaceSpeciesName of Player in lower case] head comes into contact with the feminine folds. Hot, wet, dark, and slightly uncomfortable you find yourself struggling on instinct as you realize that you are actually trapped into the cunt of the mutant you had fought and lost against. The situation only gets worse at that point as you are then treated to a very...unusual...happening when one of the Behemoth's paws force the lower part of your body further into itself.";
@@ -54,6 +56,7 @@ to say BeatTheBehemoth:
 	if inasituation is true:
 		say "     "; [dealt with at the event source]
 	else:
+		project figure of Behemoth_hard_icon;
 		say "     Knocking the Behemoth down with an impressive attack you watch as the mighty titan falls onto its side and then lets out a rumble of a roar as it sounds off its defeat.";
 		if Libido of Player > 40:
 			say "     Because you have subdued the Behemoth you could take this chance to reveal in your victory over it, but because of the difference in its size compared to yours there's not a lot you can do to sexually [']tame['] the beast. But then again, if you want, you could fondle it some and maybe tease it into orgasm. Do you want to?";

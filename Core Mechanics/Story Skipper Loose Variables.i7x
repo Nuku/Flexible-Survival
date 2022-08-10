@@ -3652,12 +3652,12 @@ to TextListVariableSave:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
 					now TextListVarValue entry is entry y of StoredSluts_Male;
-		-- "StoredSluts_Herm":
-			if the number of entries in StoredSluts_Herm is not 0:
-				repeat with y running from 1 to the number of entries in StoredSluts_Herm:
+		-- "StoredSluts_Other":
+			if the number of entries in StoredSluts_Other is not 0:
+				repeat with y running from 1 to the number of entries in StoredSluts_Other:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
-					now TextListVarValue entry is entry y of StoredSluts_Herm;
+					now TextListVarValue entry is entry y of StoredSluts_Other;
 
 to NumberListVariableSave:
 	if CurrentVariableName is:
@@ -7313,7 +7313,7 @@ to VariableTextListLoad:
 		truncate ndmlist to 0 entries; [cleaning out the old data]
 		truncate StoredSluts_Female to 0 entries; [cleaning out the old data]
 		truncate StoredSluts_Male to 0 entries; [cleaning out the old data]
-		truncate StoredSluts_Herm to 0 entries; [cleaning out the old data]
+		truncate StoredSluts_Other to 0 entries; [cleaning out the old data]
 		repeat with x running from 1 to the number of filled rows in the Table of GameTextLists:
 			choose row x in the Table of GameTextLists;
 			let TextListName be TextListVarName entry;
@@ -7334,8 +7334,8 @@ to VariableTextListLoad:
 					add TextListVarValue entry to StoredSluts_Female;
 				-- "StoredSluts_Male":
 					add TextListVarValue entry to StoredSluts_Male;
-				-- "StoredSluts_Herm":
-					add TextListVarValue entry to StoredSluts_Herm;
+				-- "StoredSluts_Other":
+					add TextListVarValue entry to StoredSluts_Other;
 			[
 			if debug is at level 10:
 				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";

@@ -693,7 +693,7 @@ if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
 		say "     <let's fuck it instead>";
 	else: [good]
 		say "     <will hang out and talk, god's work>";
-if Eric is booked or Eric is bunkered:
+if Eric is booked or Eric is bunkeredand Eric is not slutstored:
 	if HP of Eric > 0 and HP of Eric < 21:
 		say "     <talk to him, sharing>";
 	else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]

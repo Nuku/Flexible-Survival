@@ -57,10 +57,171 @@ carry out Inventorying:
 			now tradeguy is a random trader in the Location of Player;
 			let traderavailable be 1;
 		[go through all the stuff]
+		LineBreak;
+		say "Equipment:[line break]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
-			if ownedCount > 0:
+			if ownedCount > 0 and object entry is equipment:
+				increase owneditemindex by 1;
+				let itemname be Name entry;
+				[line feed or switch to next column]
+				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
+					say "[line break]";
+				else:
+					say "  --  ";
+				[new (old) linking without text capturing]
+				say "[variable letter spacing]";
+				if hypernull is not 1:
+					repeat with itemaction running through itemactions:
+						say "[invquicklink (itemname) for (itemaction)]";
+				if needstradecheck is 1 and trade of object entry is empty:
+					let notval be 0;
+					[! for every if block here there has to be a corresponding if before the loop !]
+					if Ronda is visible and HP of Ronda is 0 and itemname is "demon seed":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+					if Kristen is visible and HP of Kristen is 10 and itemname is "Janice's blouse":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+				else if traderavailable is 1:
+					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
+				[get available columns, plus 6 to show the increase to the original value]
+				let availcolumns be baseavailcolumns;
+				[add use and improve indicators which will reduce the available width for the item name]
+				let useindicator be "";
+				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+					now useindicator is " (*)";
+					now availcolumns is availcolumns minus 4;
+				let improveindicator be "";
+				if object entry is improved and ( object entry is armament or object entry is equipment ):
+					now improveindicator is " (+)";
+					now availcolumns is availcolumns minus 4;
+				[print item name and indicators]
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				let weighttxt be text;
+				let weightnum be weight entry times ownedCount;
+				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
+				increase weight by weightnum;
+		now owneditemindex is 0;
+		say "[line break]";
+		say "Armaments:[line break]";
+		repeat with x running from 1 to the number of rows in the table of game objects:
+			choose row x in the table of game objects;
+			let ownedCount be carried of object entry;
+			if ownedCount > 0 and object entry is armament:
+				increase owneditemindex by 1;
+				let itemname be Name entry;
+				[line feed or switch to next column]
+				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
+					say "[line break]";
+				else:
+					say "  --  ";
+				[new (old) linking without text capturing]
+				say "[variable letter spacing]";
+				if hypernull is not 1:
+					repeat with itemaction running through itemactions:
+						say "[invquicklink (itemname) for (itemaction)]";
+				if needstradecheck is 1 and trade of object entry is empty:
+					let notval be 0;
+					[! for every if block here there has to be a corresponding if before the loop !]
+					if Ronda is visible and HP of Ronda is 0 and itemname is "demon seed":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+					if Kristen is visible and HP of Kristen is 10 and itemname is "Janice's blouse":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+				else if traderavailable is 1:
+					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
+				[get available columns, plus 6 to show the increase to the original value]
+				let availcolumns be baseavailcolumns;
+				[add use and improve indicators which will reduce the available width for the item name]
+				let useindicator be "";
+				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+					now useindicator is " (*)";
+					now availcolumns is availcolumns minus 4;
+				let improveindicator be "";
+				if object entry is improved and ( object entry is armament or object entry is equipment ):
+					now improveindicator is " (+)";
+					now availcolumns is availcolumns minus 4;
+				[print item name and indicators]
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				let weighttxt be text;
+				let weightnum be weight entry times ownedCount;
+				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
+				increase weight by weightnum;
+		now owneditemindex is 0;
+		say "[line break]";
+		say "Consumables:[line break]";
+		repeat with x running from 1 to the number of rows in the table of game objects:
+			choose row x in the table of game objects;
+			let ownedCount be carried of object entry;
+			if ownedCount > 0 and object entry is temporary:
+				increase owneditemindex by 1;
+				let itemname be Name entry;
+				[line feed or switch to next column]
+				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
+					say "[line break]";
+				else:
+					say "  --  ";
+				[new (old) linking without text capturing]
+				say "[variable letter spacing]";
+				if hypernull is not 1:
+					repeat with itemaction running through itemactions:
+						say "[invquicklink (itemname) for (itemaction)]";
+				if needstradecheck is 1 and trade of object entry is empty:
+					let notval be 0;
+					[! for every if block here there has to be a corresponding if before the loop !]
+					if Ronda is visible and HP of Ronda is 0 and itemname is "demon seed":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Ronda[end link]";
+					if Xerxes is visible and lust of Xerxes is 2 and itemname is "awesome fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Xerxes[end link]";
+					if Helen is visible and lust of Helen is 2 and itemname is "awesomer fruit":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Helen[end link]";
+					if Kristen is visible and HP of Kristen is 10 and itemname is "Janice's blouse":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Kristen[end link]";
+					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and itemname is "super spicy sausage":
+						say "[link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to Christy[end link]";
+				else if traderavailable is 1:
+					say " [link][bracket][bold type]T[roman type][close bracket][as]give [itemname] to [tradeguy][end link]";
+				if (((object entry is armament or (object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0)) and object entry is not improved) or the itemname is "nanite collector") and the number of smither in the Location of Player > 0:
+					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [itemname][end link]";
+				[get available columns, plus 6 to show the increase to the original value]
+				let availcolumns be baseavailcolumns;
+				[add use and improve indicators which will reduce the available width for the item name]
+				let useindicator be "";
+				if (object entry is wielded and object entry is armament) or (object entry is equipment and object entry is equipped):
+					now useindicator is " (*)";
+					now availcolumns is availcolumns minus 4;
+				let improveindicator be "";
+				if object entry is improved and ( object entry is armament or object entry is equipment ):
+					now improveindicator is " (+)";
+					now availcolumns is availcolumns minus 4;
+				[print item name and indicators]
+				say "[fixed letter spacing][itemname formatted to (availcolumns) characters][useindicator][improveindicator]";
+				let weighttxt be text;
+				let weightnum be weight entry times ownedCount;
+				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
+				increase weight by weightnum;
+		now owneditemindex is 0;
+		say "[line break]";
+		say "Other:[line break]";
+		repeat with x running from 1 to the number of rows in the table of game objects:
+			choose row x in the table of game objects;
+			let ownedCount be carried of object entry;
+			if ownedCount > 0 and object entry is not armament and object entry is not equipment and object entry is not temporary:
 				increase owneditemindex by 1;
 				let itemname be Name entry;
 				[line feed or switch to next column]

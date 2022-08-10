@@ -373,7 +373,8 @@ after going to Burned-Out Chapel while (Atticus_Payback is not resolved and Atti
 				now Resolution of Atticus_Payback is 101; [Atticus left]
 				now Atticus is nowhere;
 				now Loyalty of Atticus is 101; [Atticus left - for good]
-			now Loyalty of Atticus is 4; [successfully gained new outfits for Atticus]
+			if Loyalty of Atticus < 4:
+				now Loyalty of Atticus is 4; [successfully gained new outfits for Atticus]
 			add "Well Dressed" to Traits of Atticus;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			project the Figure of Atticus_hard_neutral_arm_raised_icon;
