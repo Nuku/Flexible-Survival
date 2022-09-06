@@ -459,6 +459,7 @@ carry out huntinglisting:
 	sort huntinglist;
 	repeat with s running from 1 to the number of entries in huntinglist:
 		say "[link][entry s of huntinglist][as]hunt [entry s of huntinglist][end link][line break]";
+	truncate huntinglist to 0 entries; [cleaning out the old data]
 
 situationlisting is an action applying to nothing.
 
@@ -480,6 +481,7 @@ carry out situationlisting:
 	sort situationlist;
 	repeat with s running from 1 to the number of entries in situationlist:
 		say "[link][entry s of situationlist][as]hunt [entry s of situationlist][end link][line break]";
+	truncate situationlist to 0 entries; [cleaning out the old data]
 
 Part 3 - Exploring (randomly)
 
