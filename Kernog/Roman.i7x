@@ -85,8 +85,10 @@ to say RomanDesc:
 	if debugactive is 1:
 		say "     DEBUG: HP of Roman [HP of Roman][line break]";
 	if Roman is in Astroslide Field Locker-room:
+		project Figure of Roman_naked_icon;
 		say "You look at the former team captain. Roman is tied on his back to one of the benches. Old jerseys are pinning his arms under the bench, and pulling his legs up against his chest, exposing his pussy to everyone. Someone has covered his entire body in writings with a red marker. Dirty names, like [']bitch['], [']whore['], or [']team pet['], an arrow pointing down to his crotch, with the mention [']For public use['], and another on his head, pointing at his mouth, saying [']Feed the monkey[']. Roman's eyes meet yours, but he looks absent. He tries to mumble something, but his mouth has been filled with socks, and only a muffled whisper escapes his lips.";
 	else:
+		project Figure of Roman_clothed_icon;
 		if HP of Roman is 0:
 			say "[first time]This is the captain of the Tenvale Silverbacks. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
 		else if HP of Roman is not 5:
@@ -102,6 +104,7 @@ instead of sniffing Team Captain Roman:
 
 [Team scenes are in Tenvale Silverbacks Football Team Quest]
 instead of conversing the Team Captain Roman:
+	project Figure of Roman_clothed_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -351,6 +354,7 @@ instead of fucking Team Captain Roman:
 
 [1 - Roman bad ending]
 to say RomanFuck1:
+	project Figure of Roman_naked_icon;
 	say "     You approach the helpless Roman, a glint of lust in your eyes. [bold type]How are you going to ruin your favorite ape today?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -467,6 +471,7 @@ to say RomanFuck1Cuni:
 
 [2  - Roman good ending]
 to say RomanFuck2:
+	project Figure of Roman_naked_icon;
 	say "     Roman ponders your proposition for a moment. A very short moment. 'I guess I do need a distraction from the business, [if lastFuck of Roman is 0]and I trust you to show me a good time[else]especially if we have as much fun as last time[end if].' The both of you skedaddle to Roman's former changing room. It returned to its original function and is now cluttered with football equipment, but there is still enough space for Roman to unroll an exercise mattress on the floor. He looks back at you expectantly and asks, [bold type]'What do you have in mind?'[roman type] You hug the big gorilla tenderly as you whisper the answer in his ear.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -621,8 +626,9 @@ to say RomanTransformationFootage:
 	project the Figure of HuskyAlpha_soft_icon;
 	say "     When you press the play button, the screen displays the black-and-white, soundless feed of a security camera. It seems that the camera only filmed when there was motion in the field of vision of the recording device. The recording starts the day following the infection. You see the shopkeeper enter his shop from the back-room with wooden planks, about to barricade himself. Unfortunately, he is ambushed by a hyena. The pair leaves the field of the camera during the scuffle but, when it records again, it shows two hyena herms rushing out of the shop. The following recordings show several looters visit the store. [if BrennanRelationship >= 2]You even recognize Brennan at one point. [end if]With each passing day, the visitors are less and less human. The date of recording suddenly jumps forward several weeks when a large gorilla rushes into the store. He is quickly followed by a pack of husky girls, accompanied by an alpha husky. They surround the gorilla, then pile on him. The ape puts a tough resistance, but is eventually taken down.";
 	say "     The alpha has the gorilla brought up to his knees and held fast by his bitches, before pushing his cock inside the primate's mouth. Long minutes of mouth-rape pass. The alpha husky keeps talking. You cannot hear what he says, but the gorilla seems to not like what he hears. The dog cums eventually, and force the ape to drink his cum by pushing his knot past his victim's lips. The husky seems unsatisfied by something, and gives the gorilla a small kick to his package. He gives his girls an order, and the female huskies begin to force themselves on the gorilla's cock. Each time one of the huskies pull out, you notice that the gorilla's cock becomes smaller and smaller. Eventually, the penis completely recedes into the dark-furred body, and in its place is a vagina.";
-	WaitLineBreak;
 	project the Figure of HuskyAlpha_hard_icon;
+	WaitLineBreak;
+	project the Figure of Roman_naked_icon;
 	if HP of Roman > 2:
 		say "     You suddenly realize that the gorilla on the footage matches Roman's story about his transformation. You cannot help but feel a little sorry for him. In the meantime, the alpha husky used the show to make himself hard again. Pulling Roman by the fur of his head, he throws the football trainer on the cash counter and takes Roman's new and ephemeral virginity. He humps the ape hard and fast. Despite his teary eyes, Roman seems to take more and more pleasure in the pounding, until the dog pushes all the way in. Roman's eyes open wide, and you are actually thankful that the footage does not have sound, considering the scream that he just pushed. More pounding ensued until the alpha husky reached his climax. After a dozen more minutes where the husky slaps Roman's butt to spend time, he eventually pulls out from the gorilla and, with a final butt slap, takes his leave.";
 		say "     Roman slowly slides down from the counter and forces himself to stand up. He explores his body, a look of despair on his face. He frantically looks around, and eventually rushes to the backroom. He gets out a couple of minutes later, wearing the pants of the shopkeeper in order to cover his new sex. As he meekly walks out from the store, the footage stops for the final time.";
