@@ -5,6 +5,7 @@ Version 1 of Komodo Dragon by Stripes begins here.
 Section 1 - Creature Responses
 
 to say komododragondesc:
+	project Figure of Komodo_Dragon_soft_icon;
 	setmongender 3; [creature is male]
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
@@ -18,8 +19,8 @@ to say komododragondesc:
 	say "     [one of]Emerging from the murky shadows of the tunnels[or]Rising from the murky waters of the sewers[at random] comes a [one of]large[or]scaly[or]frightening[at random] lizard creature. This creature, a mix of man and komodo dragon that is far more lizard than man, stands almost ten feet tall and has a powerful, stocky frame despite its increased height. It is covered in a hide of tough, brown-green scales all over its body. This armored skin hangs loose over its body in many places, though this is not from body fat.";
 	say "     The Komodo Dragon looks at you with dark, beady eyes and flicks its long, forked tongue out at you. Its head is broad and somewhat flat with a blunted nose. Its eyes are spaced on the sides of its wedge-shaped head, giving it a wide field of vision most of the way around its head. More flaps of stretchable skin hang from its neck so it can accommodate large chunks of food after unhinging its jaw. Adding to the menace of its jaws are the hooked claws at the end of its muscled arms and legs. Those legs splay out to the side, making him look a little bowlegged, but you're sure that'd also allow him to switch between his current slouching stance and moving on all fours as needed. And between those legs, he has a pair of ridged and tapered manhoods, each roughly 20 inches long and fed by a pair of hand-filling balls.";
 
-
 to say losetokomododragon:
+	project Figure of Komodo_Dragon_hard_icon;
 	say "     Victorious, the savage beast knocks you to the ground and hisses loudly. It rips at your clothes and gear, adding new tears as it pulls them off roughly. As it does, its long, slender tongue flicks out, tasting your scent in the air and licking your cheek. ";
 	if Player is female and Cunt Depth of Player > 9:
 		say "With you naked beneath it, it grinds its throbbing cocks across your belly, dribbling sticky precum onto your flesh[if HP of Player < 1]. You try to squirm away, but are too weak to continue resisting this powerful brute[end if]. You know full well what he wants and what he's going to take.";
@@ -54,8 +55,8 @@ to say losetokomododragon:
 		say "With you naked beneath it, it [if scalevalue of Player < 3]growls in frustration at your small size compared to his mighty tools[else]growls in frustration and slaps its mighty tools atop you[end if]. He decides to grind those pulsing dicks down atop you, dribbling sticky precum onto your flesh[if HP of Player < 1]. You try to squirm away, but are too weak to continue resisting this powerful brute[end if]. His clawed paws pin you down while it seeks to relieve its twin lusts upon you.";
 		say "     As the sight and scent of his dual rods drooling their copious precum across your body arouse you, you find yourself taking hold of them, one to a hand. You start to assist him by stroking them, running your fingers over their ridges and teasing their leaking glandes. His hot, stinking breath washes over you as he pants with excitement while you pleasure him. When he finally growls and cums, his hot seed sprays across your face from two directions. You open your mouth wide, trying to catch as much of it as you can. It has a strong, salty taste which tastes a little unpleasant, but you are so turned on that you don't care and gulp it down regardless before spreading your lips for one mouthful after another. By the time he's done, your face and upper body are left [if scalevalue of Player > 3]streaked[else]soaked[end if] in reptilian cum from the sheer amount of cum splattered over you. Your belly is warm from all of it you managed to swallow down. Before leaving, he leans in and licks across your cheek with his flicking tongue again.";
 
-
 to say beatthekomododragon:
+	project Figure of Komodo_Dragon_hard_icon;
 	if Player is male:
 		say "     Having defeated the reptilian brute, you knock him to the ground and leap onto him, keeping him pinned down while you decide what to do with him. He tries to struggle weakly, but you have worn him down enough that he can't push you off. Feeling [if Libido of Player < 33]a bit[else if Libido of Player < 67]rather[else]considerably[end if] aroused after the fight, you find yourself tempted to turn the tables on him and use him for some relief. Not wanting that poisonous mouth filled with serrated teeth anywhere near your junk, that leaves you considering fucking him.";
 		say "     [bold type]Shall you mount him or just let him go?[roman type][line break]";

@@ -165,8 +165,10 @@ to say NightmareQuest:
 					now Nightmaremastery is 1;
 					now Daisy is in Master's Office;
 					move player to Master's Office;
+					move Slutslave to Master's Office;
 					change the north exit of Employee Access to Master's Office;
 					change the south exit of Master's Office to Employee Access;
+					now Nightmarish Horse Business is inactive; [forever gone, replaces this route]
 					now fancyquest is 16;
 				else:
 					say "'So this is what my new pet wanted to do to me, well remind me to reward Fancy properly for her gift of a lovely new slavegirl,' Your master says with amusement as he looks down on you with a smug smile, the sexy tones of his voice making you shudder and whimper with need, 'Though perhaps I should take some time out to enjoy my new pets first, what do you say pet?' he asks you with amusement, and you find yourself nodding eagerly as your master comes towards you, his cock bobbing teasingly as he approaches, and your mind fills with his amazingly arousing male musk. 'Well pet, spread those legs for your master,' the powerful stallion says with amusement, and you whimper at your stupidity as you hurry to comply, maybe if you had spread yourself as soon as you noticed how wonderful your master was, he would already be inside your eager body you think as you curse your slowness and resolve to do better. He chuckles softly as you eagerly spread your body out in front of him, and wastes no time burying his amazing blunt stallionhood in your deep mare's pussy, making you moan with delight as you feel your master's cock inside your body. He wastes little time in pulling back and thrusting into you again, his amazing velvety cock making you moan with delight as he begins to build up a rhythm of sharp fast thrusts into your eager form.";

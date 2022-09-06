@@ -3,6 +3,33 @@ Version 1 of Micaela by Stripes begins here.
 
 "Adds an Easter Bunny herm w/ovi content to Flexible Survival."
 
+[        HP of Micaela        ]
+[ 0 = not met                 ]
+[ 1 = no sex                  ]
+[ 2 = event sex               ]
+[ 3 = intro                   ]
+[ 4 = had sex at house        ]
+[ 5 = had sex again           ]
+[ 6 = and again - new scenes  ]
+
+[    level of Micaela     ]
+[      little eggies       ]
+[ 0 = not prompted         ]
+[ 1 = prompted - no        ]
+[ 2 = again - no           ]
+[ 3 = first time - yes     ]
+[ 4 = again - yes          ]
+[ 100 = never              ]
+
+[     lust of Micaela      ]
+[ 0 = not preggers         ]
+[ 1-8 = early pregnancy    ]
+[ 9-16 = late pregnancy    ]
+[ 17+ = oviposition time   ]
+
+[       XP of Micaela       ]
+[ # of offspring            ]
+
 Section 1 - Lead-in Event
 
 Table of GameEventIDs (continued)
@@ -96,7 +123,6 @@ Micaela is a person. Micaela is in Bunny House.
 Description of Micaela is "[micaeladesc]".
 Conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colorful bunny smells of arousal, rabbits and candy.".
-micaelastory1 is a truth state that varies. micaelastory1 is usually false.
 micaela_bf is a number that varies.
 the icon of Micaela is Figure of Micaela_icon.
 
@@ -117,10 +143,57 @@ Instead of conversing the Micaela:
 	if debugactive is 1:
 		say "DEBUG (Micaela) -> HP: [HP of Micaela], XP: [XP of Micaela] <- DEBUG[line break]";
 	if HP of Micaela is 0:
-		say "***Unknown error. Adjusting.";
+		say "***Unknown error. Adjusting. (Please report this error in the Flexible Survival Discord Server.)";
 		now HP of Micaela is 1;
 		now Easter Eggs is resolved;
 		AddNavPoint Bunny House;
+	else:
+		say "[MicaelaTalkMenu]";
+
+to say MicaelaTalkMenu:
+	say "     What did you wish to discuss with Micaela? You're sure that she'll be pleased for the conversation no matter what the topic.";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 1;
+	now description entry is "Engage in small talk";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "About Her";
+	now sortorder entry is 2;
+	now description entry is "Ask the Easter Bunny about herself";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Small Talk"):
+					say "[MicaelaTalk1]";
+				if (nam is "About Her"):
+					say "[MicaelaTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Micaela looks at you questioningly for a moment before allowing her attention to drift elsewhere.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say MicaelaTalk1: [Small Talk]
 	if HP of Micaela is 1 or HP of Micaela is 2:
 		say "     Micaela smiles as you come over. 'Hey there. I'm glad you decided to stop by. [if HP of Micaela is 1]Did you change your mind about having some fun[else]Are you in the mood for more fun[end if]?' she asks, spreading her legs and showing off her dual-gendered loins.";
 		say "     'I've run into some other nasty folks out there in the woods, especially those mean wolves. That's why I've been hiding stashes of my eggs in the forest. That way there's always some around to help me get back to my cute bunny self when one of those meanies catch me and fuck me,' she says, lightly running her fingers across her damp folds. 'I love the sex, but if I stop being my pretty bunny self, who'll spread Easter cheer around here?";
@@ -130,15 +203,19 @@ Instead of conversing the Micaela:
 		say "     [one of]'There'll be loads more Easter eggs stashed around the woods now that I've got my kids to help make them and hide them.'[or]Micaela shares a rather hot cuddle and kiss with one of her bunny brood.[or]A gaggle of giggling bunny kids run through the room, interrupting you.[or]Micaela smiles as she watches a pair of her kits play [']Hide the Egg['].[at random]";
 	else:
 		say "     '[one of]It feels so nice being filled with eggs. Almost as good as when they finally come out.'[or]Feel free to come visit as often as you like.'[or]Do you like my outfit?' the bunny herm asks. She does a little spin to show it off, ending with her bending over to flash you with a playful giggle.[or]I love the taste of sweets, sugar and chocolate. That's what helps make my eggs so yummy,' she says, giving one from her basket a long, slow lick before popping it right into her mouth. 'Mmmm...'[or]I've got a bunch of bunny egg stashes around the forest to help keep me my pretty bunny self.'[or]Those mean wolves must really like hunting rabbits, I guess. Not that I mind too much. They're a good fuck, at least,' she says with a giggle.[or]Oh... uh... what were we talking about?' the bunny girl asks, too distracted by [micaela_dist].[at random]";
-[	else if HP of Micaela > 3 and micaelastory1 is false and a random chance of 2 in 5 succeeds:
-		now micaelastory1 is true;
-		say "***";]
 
 to say micaela_dist:
 	if XP of Micaela >= 3 and a random chance of 1 in 3 succeeds:
 		say "her playing bunny kids";
 	else:
 		say "[one of]stroking her cock through her skirt[or]teasing her clit[or]fingering her juicy pussy under her skirt[or]playing with her nipples and breasts[or]gently pressing a colorful egg partway in and out of her cunt[at random]";
+
+to say MicaelaTalk2: [About Her]
+	say "     'You want to know more about me? I don't suppose that you would believe me if I told you that I was the Easter Bunny herself? No? Probably for the best as that would be a lie, though I like to think that I bring the most Easter cheer to those living in the woods. Even those mean wolves. They give some of the best cream fillings...' Micaela trails off. After a few seconds she realizes that you are still waiting for her to continue. 'Sorry, I got caught up thinking of... well you can guess. Anyway, you wanted to know my life story. I was born male, though given the changes most of us have gone through recently, I suppose that that is true for many of the people who are female now, but still, I thought that it might interest you. I was a bit of an outcast when I was young. I liked dresses and other pretty stuff and got pretty into wearing costumes for Halloween, Christmas, and, my favorite, Easter.'";
+	say "     'I'm not sure whether my parents would have preferred me to have been more masculine or even been a girl, but they were still supportive of me, for which I am deeply grateful. My father was a tailor and so it didn't take him much effort to make some of my clothes, though it was a bit different to his usual modification of customers['] jackets, coats, and dresses. I've forgotten what my mother's official title was, but she helped to coordinate special events for the city. Festivals and visiting dignitaries, things like that. She was really good at her job and occasionally she would get me to help her. My life has been good for the most part, if a little bit empty of proper friends. Not many people wanted to hang out with a boy who was more interested in the latest fashions than last night's football. Even the girls seemed to avoid being seen talking to me at school, though a few were more sociable if you met them at the mall or in the park. Social standing's a bitch.'";
+	WaitLineBreak;
+	say "     You tentatively ask whether she has seen her parents since the nanite plague began. 'No, but hopefully that's good news. They won a vacation for two to the Caribbean just before everything went bad here, so assuming that it hasn't spread, Mom and Dad should be safe. I don't have any brothers or sisters to worry about either. No, it's just me who is trapped here. I'm surprised that I've survived this long considering I had never had to scavenge before, but then how many people did? Especially with what the food can do to you. I mean look at me, all I could find was expired easter candy and now I'm a rabbit, not that I'm really complaining as it means that I can spread all the Easter cheer that I want. There's also the added bonus that I can have children now. I found out that I was infertile when I was a teenager. Something to do with a defective gene sequence. [if XP of Micaela is 0]I'm not sure how I know, but I know that [else]As you can see, [end if]for all the damage the nanites have done, they've fixed by ability to have children, whether I'm the one being impregnated or putting my cream filling in someone else.'";
+	say "     'I'm practically the epitome of fertility now, the representative of Easter birth and life, though my libido can sometimes get the better of me. It can leave me open to being used by the wolves that stalk the forest, not that I should really complain. There's something deeply satisfying about being railed by a fat wolf cock or being ridden by one of the bitches. They haven't tried to claim me any more than that though, so perhaps they appreciate the eggs that I hide around the place. It is a little strange that they don't get me pregnant though, but I won't even pretend to know the inner workings of the nanites. As long as you're willing to help me grow my family, I don't need their children. I think that about sums up who I was and who I am now. I think things have turned out quite well for me, especially when compared to so many. I can start my own family and bring joy to others and that's enough for me.'";
 
 
 Section 5 - Sex Mechanics
@@ -153,10 +230,10 @@ to say sexwithMicaela:
 	else if lastfuck of Micaela - turns < 4:
 		say "     'As fun as it's been, sweetie, even I need a break from bunny humping from time to time,' she says with a happy giggle.";
 	else:
-		say "[michaela_sexmenu]";
+		say "[micaela_sexmenu]";
 
 
-to say michaela_sexmenu:
+to say micaela_sexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -367,32 +444,5 @@ Section 9 - Endings
 [ To appear later ]
 
 Section X - Notes
-
-[        HP of Micaela        ]
-[ 0 = not met                 ]
-[ 1 = no sex                  ]
-[ 2 = event sex               ]
-[ 3 = intro                   ]
-[ 4 = had sex at house        ]
-[ 5 = had sex again           ]
-[ 6 = and again - new scenes  ]
-
-[    level of Micaela     ]
-[      little eggies       ]
-[ 0 = not prompted         ]
-[ 1 = prompted - no        ]
-[ 2 = again - no           ]
-[ 3 = first time - yes     ]
-[ 4 = again - yes          ]
-[ 100 = never              ]
-
-[     lust of Micaela      ]
-[ 0 = not preggers         ]
-[ 1-8 = early pregnancy    ]
-[ 9-16 = late pregnancy    ]
-[ 17+ = oviposition time   ]
-
-[       XP of Micaela       ]
-[ # of offspring            ]
 
 Micaela ends here.

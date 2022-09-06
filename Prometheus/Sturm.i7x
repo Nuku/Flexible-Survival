@@ -2,8 +2,7 @@ Version 1 of Sturm by Prometheus begins here.
 
 [   hp of Sturm - relationship variable with the player          ]
 [   0: not met                                                   ]
-[   1: On guard outside office (Not Implemented)                 ]
-[   2: At the library                                            ]
+[   1: At the library                                            ]
 
 
 
@@ -133,10 +132,10 @@ to say SturmTalkMenu:
 	clear the screen and hyperlink list;
 
 to say SturmTalk1: [Small Talk]
-		say "     [one of]Pretty quiet day today. I've only seen a couple of panther-taurs wandering by, but they didn't seem interested in the library fortunately[or]It is a relief not to have to worry about the drakes any more. Even the whelps are bad enough, but the larger ones weren't the sort of things I wanted to encounter on scavenging trips[or]Mom seems to have settled in here well. She seems a lot less worried recently though she managed to hide her fear from my brothers and sisters[or]Hopefully the Painted Wolves won't come searching for us here, though I would imagine that the trip would be dangerous enough for them to think twice about it and that doesn't even take into account the difficulty of overwhelming those of us who live here[at random].";
+		say "     '[one of]Pretty quiet day today. I've only seen a couple of panther-taurs wandering by, but they didn't seem interested in the library fortunately[or]It is a relief not to have to worry about the drakes any more. Even the whelps are bad enough, but the larger ones weren't the sort of things I wanted to encounter on scavenging trips[or]Mom seems to have settled in here well. She seems a lot less worried recently though she managed to hide her fear from my brothers and sisters[or]Hopefully the Painted Wolves won't come searching for us here, though I would imagine that the trip would be dangerous enough for them to think twice about it and that doesn't even take into account the difficulty of overwhelming those of us who live here[at random].'";
 
 to say SturmTalk2: [Boop]
-	say "     Aware that he may stop you should he realize what you are doing, you feign scratching the side of your head before lunging forward and quickly booping Sturm on the nose. 'ANd here I thought that I could trust you,' he grumbles, though the flick of his tail suggests that the gesture wasn't entirely unwanted. 'I'll have to keep a closer eye on you. Booping your own son...' he mutters as he turns away and skulks off, still unable to control his tail's more temperate reaction.";
+	say "     Aware that he may stop you should he realize what you are doing, you feign scratching the side of your head before lunging forward and quickly booping Sturm on the nose. 'And here I thought that I could trust you,' he grumbles, though the flick of his tail suggests that the gesture wasn't entirely unwanted. 'I'll have to keep a closer eye on you. Booping your own son...' he mutters as he turns away and skulks off, still unable to control his tail's more temperate reaction.";
 
 Section 3 - Sex
 
@@ -145,6 +144,27 @@ instead of fucking Sturm:
 
 Section 4 - Events
 
+instead of going down from Grey Abbey Library while Sandra is bunkered and HP of Sturm is 1 and "Sandra - Sexual Interest" is not listed in traits of Sturm and a random chance of 1 in 2 succeeds:
+	if "Sandra - Horny Bunny" is not listed in Traits of Sturm:
+		say "     You enter the bunker to find Sturm and Blanche introducing themselves to Sandra, making up for not greeting her when she arrived. 'Hello, I'm Blanche. What's your name?' the wolfess asks. 'Sandra. You're not going to eat me are you?' the rabbit replies, her eyes wide as she stares up at the wolves. 'I won't, but my son Sturm might,' Blanche teases, momentarily baring her teeth. Sturm rolls his eyes. 'Mom, you're embarrassing yourself. I'm not going to eat anyone,' he groans. 'I don't know. It might be worth it for a stud like you,' Sandra replies. There is a moment of silence while what she said sinks in. 'Wait. Did I say that out loud?' With a loud 'Eep', Sandra dashes away, her cheeks scarlet and the two wolves at a loss for words. Finally, Blanche breaks the silence. 'I'm not sure whether to say that she has a crush on you, or whether she just craves what's between your legs,' she ponders. 'Mom! Inappropriate!' Sturm hisses, his own face likely as red as Sandra's was. 'You're a very handsome young man, so I'm sure that it's the former,' the MILF says in a fruitless attempt at consolation. 'MOM!!!' Chuckling, you leave them to it.";
+		TraitGain "Sandra - Horny Bunny" for Blanche;
+		TraitGain "Sandra - Horny Bunny" for Sturm;
+		TraitGain "Blanche - Nice Wolfess" for Sandra;
+		TraitGain "Sturm - Wolf Stud" for Sandra;
+	else:
+		say "     You find Sturm and Sandra sitting together on one of the beds, the rabbit running her hands over his biceps as they talk. 'You can feel the muscle even through all your fur,' she exclaims, squeezing his arm to emphasize her point. 'That's how muscles work, silly rabbit,' Sturm replies with amusement. The bunny gives him a look. 'Oh. That was a pickup line, was it? Yes. My duties mean that I am physically active most of the time,' the wolf awkwardly says before allowing his eyes to roam over the young woman's body. 'I think that you're attractive too. What was it that you said when we met? You wouldn't mind if I ate you?' Sandra's breath quickens and she fidgets as her gaze remains fixed on the predator looming beside her. 'I... I would be open to that. Not literally being eaten, but you know... pinned down and... ravished,' she gasps, her arousal steadily growing.";
+		if HP of Fang is 3: [Alpha Fang via Sandra]
+			say "     'But what would your Alpha think? His little rabbit being claimed by another male, another wolf?' Sturm growls, running a finger down Sandra's cheek and making her quiver. 'I-I don't know. He'd probably have to claim me back again. Punish me for letting another male breed me. It would be so... intense,' the";
+		else:
+			say "     'You want to be completely at my mercy? A little rabbit trapped by a big, bad wolf?' Sturm growls, running a finger down Sandra's cheek and making her quiver. 'Y-yes. Your body pressing me into the ground and your thick shaft stretching me to my limit before you roughly breed me. THere's just so... primal about it,' the";
+		say "bunnygirl moans, rubbing her thighs together at the thought of it all. Unfortunately, the moment is interrupted by the sudden appearance of Ernest. 'Sturm, I've finally found you. Bianca's encouraging Claude to be overly sociable again and Mom won't do anything about it. Either get Mom to stop her or do it yourself. Please? Later is fine, just before we have to go out scavenging again,' he asks desperately before returning upstairs again, his focus on his own predicament meaning that he notices neither you nor Sandra. 'What it is to be the oldest,' Sturm tiredly mutters while the bunny looks up at him with frustration, though also a little sympathy. 'I'm sorry Sandra. We'll have to talk another time. I enjoyed it, though hopefully next time we'll have longer to properly get to know each other.' Gently patting the rabbit on the head, Sturm stands up and returns upstairs, nodding to you in passing. Though Sandra is left alone and sexually frustrated, you get the impression that this will only drive her to pursue the white wolf more intently.";
+		TraitLoss "Sandra - Horny Bunny" for Sturm;
+		TraitLoss "Sturm - Wolf Stud" for Sandra;
+		TraitGain "Sandra - Sexual Interest" for Sturm;
+		TraitGain "Sturm - Sexual Interest" for Sandra;
+	move Player to Bunker;
+
+[Shower Event with Jimmy - see file Prometheus/Jimmy.i7x]
 [Blanche (and children?) scavenging in the city. (Urban Forest? Park?)]
 [Sturm scavenging in the city (increase a counter?)]
 

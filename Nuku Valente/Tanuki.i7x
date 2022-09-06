@@ -510,6 +510,7 @@ Description of Tanuki Dad is "[TanukiDadDesc]".
 [The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
 
 to say TanukiDadDesc:
+	project Figure of Tanuki_Dad_soft_icon;
 	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
 	add "Tanuki Balls" to TanukiTopics.
 
@@ -517,6 +518,7 @@ instead of sniffing Tanuki Dad:
 	say "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.";
 
 instead of conversing the Tanuki Dad:
+	project Figure of Tanuki_Dad_soft_icon;
 	LineBreak;
 	say "What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
@@ -595,6 +597,7 @@ to say TanukiBallsTalk:
 	say "...";
 
 instead of fucking Tanuki Dad:
+	project Figure of Tanuki_Dad_soft_icon;
 	say "He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'";
 
 Section 4 - Tanuki Mom

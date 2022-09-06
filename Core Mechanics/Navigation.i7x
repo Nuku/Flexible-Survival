@@ -52,6 +52,7 @@ Clayton's Front Yard	"Clayton's Front Yard"	"Clayton's Front Yard"	"High Rise Di
 Flower Garden	"Flower Garden"	"Flower Garden"	"High Rise District"
 Lizard Parlor	"Lizard Parlor"	"Lizard Parlor"	"High Rise District"
 Rex's Place	"Rex's Place"	"Rex's Place"	"High Rise District"
+Snapjaw Beach Camp	"Snapjaw Beach Camp"	"Snapjaw Beach Camp"	"High Rise District"
 Zephyr Lobby	"Zephyr"	"Zephyr Lobby"	"High Rise District"
 City Hospital	"City Hospital"	"City Hospital"	"Hospital"
 Psych Department	"Psych Department"	"Psych Department"	"Hospital"

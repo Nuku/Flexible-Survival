@@ -105,7 +105,8 @@ to say promptsay:
 	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
 	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
 	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
-		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
+		say "[link][bracket]Enemies[close bracket][as]huntinglist[end link] ";
+		say "[link][bracket]Situations[close bracket][as]situationslist[end link] ";
 	if NewTypeInfectionActive is true:
 		say "[link][bracket]Enemy Stats[close bracket][as]ShowEncounteredEnemies[end link] ";
 	say "[line break]";
