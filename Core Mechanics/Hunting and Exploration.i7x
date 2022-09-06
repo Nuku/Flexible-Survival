@@ -432,6 +432,7 @@ to huntingfightchance:
 Part 2 - HuntingList Command (cheating)
 
 huntinglisting is an action applying to nothing.
+huntinglist is a list of text that varies. [@Tag:NotSaved]
 
 understand "huntinglist" as huntinglisting.
 
@@ -446,13 +447,18 @@ carry out huntinglisting:
 	now battleground is the earea of location of Player;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
+		let TexttoAdd be "";
 		if there is no area entry, next;
 		if there is no Name entry, next;
 		if area entry matches the text battleground, case insensitively:
 			if enemy title entry is empty or enemy title entry is "":
-				say "[link][Name entry][as]hunt [Name entry][end link][line break]";
+				now TexttoAdd is Name Entry;
 			else:
-				say "[link][enemy title entry][as]hunt [enemy title entry][end link][line break]";
+				now TexttoAdd is Enemy Title Entry;
+			add TexttoAdd to huntinglist;
+	sort huntinglist;
+	repeat with s running from 1 to the number of entries in huntinglist:
+		say "[link][entry s of huntinglist][as]hunt [entry s of huntinglist][end link][line break]";
 
 situationlisting is an action applying to nothing.
 

@@ -186,6 +186,10 @@ object	name
 Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man. Sgt Marks is in Police Car.
+understand "tiger" as Sgt Marks.
+understand "Sergeant Marks" as Sgt Marks.
+understand "cop" as Sgt Marks.
+understand "policeman" as Sgt Marks.
 Description of Sgt Marks is "[SgtMarks_Desc]".
 
 to say SgtMarks_Desc:

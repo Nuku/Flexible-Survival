@@ -1109,6 +1109,7 @@ to say SaveCarl: [save the husky]
 		move player to Grey Abbey 2F;
 		now Resolution of Soldier Squad is 9; [helped Carl, recruited]
 		now PlayerFriended of Carl is true;
+		say "<Writer's Note: The gritty reboot of the soldier squad event is complete now, but Carl himself has not been updated yet to take into account everything that has happened. Expanding on his NPC in the library to give him more character, a background and updated interactions with others is a potential expansion project for the future. If you want to speed that along, commissions to advance the content are always welcome.>";
 	else:
 		LineBreak;
 		say "     Pressing your lips together, you shake your head, then comment that everyone is in a bad situation these days, with few places of the city being truly safe. 'Yeah, no kidding about that. Some of the things I've seen so far on the streets... man, that was pretty monstrous. I guess I might try moving closer to the coast, heard some reports that things might be a little less violent there. Or if not there, maybe the warehouse district and harbor... less population, pre-nanites, you know. Anyways, guess I better get going. Gotta find some place of refuge before I fall asleep standing up. I'm bone-tired.' With a pinched smile, you wish Carl the best and watch him start to walk away, then turn around to move off in another direction.";
