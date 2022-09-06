@@ -85,8 +85,10 @@ to say RomanDesc:
 	if debugactive is 1:
 		say "     DEBUG: HP of Roman [HP of Roman][line break]";
 	if Roman is in Astroslide Field Locker-room:
+		project Figure of Roman_naked_icon;
 		say "You look at the former team captain. Roman is tied on his back to one of the benches. Old jerseys are pinning his arms under the bench, and pulling his legs up against his chest, exposing his pussy to everyone. Someone has covered his entire body in writings with a red marker. Dirty names, like [']bitch['], [']whore['], or [']team pet['], an arrow pointing down to his crotch, with the mention [']For public use['], and another on his head, pointing at his mouth, saying [']Feed the monkey[']. Roman's eyes meet yours, but he looks absent. He tries to mumble something, but his mouth has been filled with socks, and only a muffled whisper escapes his lips.";
 	else:
+		project Figure of Roman_clothed_icon;
 		if HP of Roman is 0:
 			say "[first time]This is the captain of the Tenvale Silverbacks. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
 		else if HP of Roman is not 5:
@@ -102,6 +104,7 @@ instead of sniffing Team Captain Roman:
 
 [Team scenes are in Tenvale Silverbacks Football Team Quest]
 instead of conversing the Team Captain Roman:
+	project Figure of Roman_clothed_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -351,6 +354,7 @@ instead of fucking Team Captain Roman:
 
 [1 - Roman bad ending]
 to say RomanFuck1:
+	project Figure of Roman_naked_icon;
 	say "     You approach the helpless Roman, a glint of lust in your eyes. [bold type]How are you going to ruin your favorite ape today?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -467,6 +471,7 @@ to say RomanFuck1Cuni:
 
 [2  - Roman good ending]
 to say RomanFuck2:
+	project Figure of Roman_naked_icon;
 	say "     Roman ponders your proposition for a moment. A very short moment. 'I guess I do need a distraction from the business, [if lastFuck of Roman is 0]and I trust you to show me a good time[else]especially if we have as much fun as last time[end if].' The both of you skedaddle to Roman's former changing room. It returned to its original function and is now cluttered with football equipment, but there is still enough space for Roman to unroll an exercise mattress on the floor. He looks back at you expectantly and asks, [bold type]'What do you have in mind?'[roman type] You hug the big gorilla tenderly as you whisper the answer in his ear.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

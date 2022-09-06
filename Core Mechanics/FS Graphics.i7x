@@ -315,8 +315,8 @@ Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
 Figure of Chase_face_icon is the file "Chase_face.jpg".
 Figure of Chris_breeder_clothed_icon is the file "Chris_breeder_clothed.jpg".
 Figure of Chris_breeder_naked_icon is the file "Chris_breeder_naked.jpg".
-Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
-Figure of Chris_naked_icon is the file "Chris_naked.jpg".
+Figure of Chris_clothed_icon is the file "Chris Normal_clothed.jpg".
+Figure of Chris_naked_icon is the file "Chris Normal_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
 Figure of Christopher_nsfw_icon is the file "Christopher_nsfw.jpg".
 Figure of Christopher_sfw_icon is the file "Christopher_sfw.jpg".
@@ -521,6 +521,8 @@ Figure of Richard_satyr_soft_icon is the file "Richard_satyr_soft.jpg".
 Figure of Richard_satyr_hard_icon is the file "Richard_satyr_hard.jpg".
 Figure of Ronda_icon is the file "Ronda.jpg".
 Figure of Rod_icon is the file "Rod.jpg".
+Figure of Roman_clothed_icon is the file "Roman_clothed.jpg".
+Figure of Roman_naked_icon is the file "Roman_naked.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
 Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
 Figure of Ryan_pillow_icon is the file "Ryan_pillow.jpg".
