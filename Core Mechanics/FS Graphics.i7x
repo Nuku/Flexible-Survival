@@ -441,6 +441,8 @@ Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
 Figure of Koghh_naked_icon is the file "Koghh_naked.jpg".
 Figure of Koghh_Yatur_naked_icon is the file "Koghh_Yatur_naked.jpg".
+Figure of Komodo_Dragon_hard_icon is the file "Komodo_Dragon_hard.jpg".
+Figure of Komodo_Dragon_soft_icon is the file "Komodo_Dragon_soft.jpg".
 Figure of Korvin_blackcollar_icon is the file "Korvin_blackcollar.jpg".
 Figure of Korvin_blackcollar_face_icon is the file "Korvin_blackcollar_face.jpg".
 Figure of Korvin_pinkcollar_icon is the file "Korvin_pinkcollar.jpg".
@@ -569,6 +571,8 @@ Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
 Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
 Figure of Sven_tail_icon is the file "Sven_tail.jpg".
+Figure of Tanuki_Dad_hard_icon is the file "Tanuki_Dad_hard.jpg".
+Figure of Tanuki_Dad_soft_icon is the file "Tanuki_Dad_soft.jpg".
 Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
 Figure of Tehuantl_Male_clothed_icon is the file "Tehuantl_Male_clothed.jpg".
 Figure of Tehuantl_Male_hard_icon is the file "Tehuantl_Male_hard.jpg".
@@ -1520,6 +1524,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Koghh_naked"	Figure of Koghh_naked_icon	"Kupo Klein"	g-white	"normal"
 "Koghh_Yatur_naked"	Figure of Koghh_Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
+"Komodo Dragon_soft"	Figure of Komodo_Dragon_soft_icon	"SteppeCrow"	g-White	"normal"
+"Komodo Dragon_hard"	Figure of Komodo_Dragon_hard_icon	"SteppeCrow"	g-White	"normal"
 "Korvin_blackcollar"	Figure of Korvin_blackcollar_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_blackcollar_face"	Figure of Korvin_blackcollar_face_icon	"Lyttathebug"	g-black	"normal"
 "Korvin_pinkcollar"	Figure of Korvin_pinkcollar_icon	"Lyttathebug"	g-black	"normal"
@@ -1677,7 +1683,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sea Dragon Soft"	Figure of SeaDragon_soft_icon	"Vashaa"	g-white	"normal"
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
-"SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
+"Sgt Marks_clothed"	Figure of SgtMarks_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Sgt Marks_soft"	Figure of SgtMarks_soft_icon	"SteppeCrow"	g-white	"normal"
+"Sgt Marks_hard"	Figure of SgtMarks_hard_icon	"SteppeCrow"	g-white	"normal"
+"SgtMarks_old"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
 "Shadow Beast Male"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
 "Smooth Collie Shemale_clothed"	Figure of Collie_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Smooth Collie Shemale_naked"	Figure of Collie_naked_icon	"SteppeCrow"	g-white	"normal"
@@ -1729,6 +1738,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
+"Tanuki Dad_soft"	Figure of Tanuki_Dad_soft_icon	"SteppeCrow"	g-White	"normal"
+"Tanuki Dad_hard"	Figure of Tanuki_Dad_hard_icon	"SteppeCrow"	g-White	"normal"
 "Tehuantl_Male_face"	Figure of Tehuantl_Male_face_icon	"Vashaa"	g-black	"normal"
 "Tehuantl_Male_clothed"	Figure of Tehuantl_Male_clothed_icon	"Yora"	g-black	"normal"
 "Tehuantl_Male_hard"	Figure of Tehuantl_Male_hard_icon	"Yora"	g-black	"normal"

@@ -43,6 +43,11 @@ If Player refuses the party and Kerr + Talov do not get in: [resolution -1, -2, 
 
 ]
 
+a postimport rule:
+	if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99:
+		change the East exit of Greek Street to PAN Frat Living Room;
+		change the West exit of PAN Frat Living Room to Greek Street;
+
 Chapter 1 - Meeting Event
 
 Table of GameEventIDs (continued)

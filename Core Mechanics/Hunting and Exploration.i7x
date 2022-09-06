@@ -454,6 +454,27 @@ carry out huntinglisting:
 			else:
 				say "[link][enemy title entry][as]hunt [enemy title entry][end link][line break]";
 
+situationlisting is an action applying to nothing.
+
+understand "situationlist" as situationlisting.
+situationlist is a list of text that varies. [@Tag:NotSaved]
+
+check situationlisting:
+	if "Unerring Hunter" is not listed in feats of Player:
+		say "You do not currently have this ability." instead;
+	if earea of location of Player is "void":
+		say "I don't see any good hunting grounds around here." instead;
+
+carry out situationlisting:
+	now battleground is the earea of location of Player;
+	repeat with n running through situations:
+		if Sarea of n matches the text battleground, case insensitively:
+			if n is active and n is unresolved:
+				add printed name of n to situationlist;
+	sort situationlist;
+	repeat with s running from 1 to the number of entries in situationlist:
+		say "[link][entry s of situationlist][as]hunt [entry s of situationlist][end link][line break]";
+
 Part 3 - Exploring (randomly)
 
 exploring is an action applying to nothing.
@@ -505,7 +526,7 @@ This is the explore rule:
 	[Chance for new events - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an active unresolved situation:
 		let L be a random available situation;
-		If L is not nothing:
+		If L is not nothing and Level of Player + 2 > Level of L:
 			if battleground is "Smith Haven":
 				say "Wandering around a bit, you find [bold type][L][roman type].";
 			else:
