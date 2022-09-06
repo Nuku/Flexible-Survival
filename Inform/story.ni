@@ -241,6 +241,7 @@ Include Red Light District by Wahn.
 Include Shag Shack by Wahn.
 Include SlutStorage by Wahn.
 Include SlutStorage_Eric by Wahn.
+Include Snapjaw Beach Camp by Gherod.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
@@ -648,6 +649,7 @@ Include Scarab Beetle by Xenophiliac.
 Include Scorched Mole by Prometheus.
 Include Seraphim by Wahn.
 Include Shadow Beast by UrsaOmega.
+Include Sharkman Brute by Gherod.
 Include Siamese Cats by Stripes.
 Include Sierrasaur by Blue Bishop.
 Include Siren by Stripes.
@@ -898,6 +900,7 @@ Include Nelson by Wahn.
 Include Nermine by Wahn.
 Include Nermine Quests by Wahn.
 Include Newt by Stripes.
+Include Nightmare Stablemaster by Gherod.
 Include NPC Interactions by Wahn.
 Include Oliver by Rikaeus.
 Include Onyx by Sarokcat n Verath.

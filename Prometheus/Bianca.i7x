@@ -75,18 +75,75 @@ Section 2 - Talking
 
 instead of conversing the Bianca:
 	if "First Talk" is not listed in Traits of Bianca:
-		say "     ";
+		say "     'I don't think we've talked like this before. Mommy seemed to take all of your attention. I'm glad that you have time now, but don't forget about Sturm or Mom either,' Bianca says, cuddling up to your side. 'Now that we're here, perhaps we can liven up this place and improve on the decorating. You've rather let the dust and dirt get away on you.' You ask how she plans on fixing that. 'I don't know, but Ernest will likely have some ideas and I should be able to get some of my other siblings to put in the work.' Unimpressed, you tell her that she should be helping too. 'I would make a joke about there being two kinds of people, but I get the impression that you want a serious answer. Labor assignment and scheduling is Mom's speciality and none of us have had any reason to complain so far. Given my talent for the aesthetic, I'm still planning out our bedroom design. If I get time, I suppose I can lend a paw dusting.' With a sigh, you accept that Blanche likely knows her children better than you. Sturm is unlikely to complain even if he has to do it all by himself.";
 		TraitGain "First Talk" for Bianca;
 	else:
-		say "     ";
-	[say "[BiancaTalkMenu]";]
+		say "[BiancaTalkMenu]";
+
+to say BiancaTalkMenu:
+	say "     What do you wish to talk about with the seductive white wolf?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 1;
+	now description entry is "Have an idle conversation";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Bianca on the nose";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Small Talk"):
+					say "[BiancaTalk1]";
+				if (nam is "Boop"):
+					say "[BiancaTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back, indicating an end to the conversation. Bianca looks about to say something before shaking her head and stepping back too.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say BiancaTalk1: [Small Talk]
+		say "     '[one of]I may look all style, no substance, but I do my part as much as everyone else. It's just that my part usually revolves around looking pretty to get presents from people instead of rummaging through the trash[or]I don't suppose you've seen any shampoo while out in the city? I'm making do, but you don't get fur like this without proper care[or]Sturm wants to know if you have any plans to expand into the nearby buildings. I think he's worried how cramped the library will become if you provide shelter to everyone you meet, but doesn't think that they should be abandoned either[or]Ernest and Claude might argue a lot, but they are just as attached to each other as I am to Sturm[at random].'";
+
+to say BiancaTalk2: [Boop]
+	say "     Looking around to make sure that Sturm isn't watching, you boop Bianca on the nose. 'How scandalous. You don't really believe that he'd attack you do you?' your daughter chuckles, gazing at you with adoration. Smiling at her in return, you wriggle your finger around a bit, her damp nose following suit. Suddenly, you find your wrist firmly grabbed. 'If you're going to be doing that to my sister, don't behave like you are doing something sordid,' Sturm growls, somehow having appeared at your side. He looks ready to scold you further, but upon noticing Bianca's wagging tail, he turns on his heel and stalks away. You have no idea how he managed to sneak up on you, but it would seem that he will permit you booping his sister. Perhaps you should share the love and boop him later.";
 
 Section 3 - Sex
 
 instead of fucking Bianca:
-	say "     ";
+	say "     'While I appreciate the offer, Sturm would give me the cold shoulder if I didn't get to know you first. He'd forgive me eventually, but I remember how he treated you at the office den and I don't want that directed at me. I'm sure it won't be more than a few months before I find out all your darkest secrets and we can explore your more carnal interests.' (WIP)";
 
 Section 4 - Events
 
+instead of going down from Grey Abbey Library while (SarahCured > 3 and Charisma of Blanche is 1 and "Sarah - Perceptive Prude" is not listed in traits of Bianca and a random chance of 1 in 2 succeeds):
+	say "     'Are you the one who called Mommy a sex maniac?' Bianca asks Sarah with a smirk. You entered the bunker to find Blanche's eldest daughter starting a conversation with the husky med-student, though you find her choice of opening question blunt. With a sigh, Sarah looks up from rolling some bandages, flinching when she notices the wolf's lack of clothes. 'Don't any of you wear clothes?' she mutters to no-one in particular before taking a breath and replying more calmly. 'I didn't call her a sex maniac, I just questioned her decision to have so many children, especially with the current state of the city. I'm assuming that you were all born recently, though if your mother is older than she looks, I suppose it is possible that one or two of you might have had time to grow up before the city went to Hell. If so, she can't have been that long out of school...' A shadow of sadness crosses your daughter's face. 'Yes, we were born into this. Sturm and I are the oldest, but Mom had been pregnant before. She miscarried.'";
+	say "     Sarah immediately stands up and hugs Bianca, the smaller canine being partially absorbed into the curvy wolf's lush fur. 'I'm sorry to hear that. I've seen how devastating that is,' she says sympathetically before stepping back again. [if Charisma of Blanche is 2]'She hasn't told me the whole story, but she got pregnant in her last year of high school. When she told her parents, there was a fight and her boyfriend got hurt[else]'Don't tell anyone. We aren't meant to know, but Sturm overheard her talking to herself. She got pregnant in her last year of high school and when she told her parents there was a fight and her boyfriend got hurt[end if]. The trauma of it all caused her to miscarry. Her dad went to prison for it and she cut herself off from her parents. Ernest thinks that this may be part of the reason that she devotes so much time to showing how much she loves us,' Bianca explains wiping her eyes. The two of them stand in silence for a few moments, lost in thought. Eventually your daughter speaks. 'Anyway. Mum isn't any more a sex maniac now than she was a few years ago. She's just found someone that she trusts again' 'I'm pleased for her. I just hope that none of you end up feeling neglected,' Sarah responds. Watching them get to know each other and start a proper conversation you move away to give them some privacy.";
+	TraitGain "Sarah - Perceptive Prude" for Bianca;
+	TraitGain "Bianca - Teasing Trollop" for Sarah;
+	move Player to Bunker;
+	if hp of Bianca is 0:
+		now hp of Bianca is 1;
+		move Bianca to Computer Lab;
 
 Bianca ends here.

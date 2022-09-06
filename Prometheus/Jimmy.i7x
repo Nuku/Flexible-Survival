@@ -245,4 +245,64 @@ to say Jimmysex02:
 	if HP of Jimmy is 4, now HP of Jimmy is 5;
 
 
+Section 4 - Interactions with other Library Residents
+
+instead of going to Communal Shower while hunger of Jimmy is 1 and HP of Sturm is 1 and "JimmyShowerBlowjobAccepted" is not listed in traits of Sturm and "JimmyShowerBlowjobRefused" is not listed in traits of Sturm and a random chance of 1 in 3 succeeds:
+	say "     Entering the communal showers, you immediately hear the sound of splashing water and grumbling. 'I don't know why Mom expects us to wash with hot water. Nothing wrong with cold.' Peering around the corner of the dividing wall, you spy Sturm grudgingly standing beneath the spray of warm water, rubbing it through his fur and looking grouchy and bedraggled. Not wanting to embarrass him, you turn to sneak away again but come face to face[if size of player is 1], or rather face to crotch[else if size of player is 3], or rather chest to face[else if size of player is 4], or rather tummy to face[else if size of player is 5], or rather crotch to face[end if] with Jimmy, the corgi putting a finger to his lips to urge you to remain quiet. Gesturing with his head towards the sounds of yours and Blanche's son washing himself, he mouthes the words, 'May I?' suggesting that he has something in mind for the wolf and it doesn't take much imagination to guess what, especially with how much sex has become accepted in the city.";
+	say "     [bold type]Do you give Jimmy permission to make Sturm's shower more enjoyable?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Yes. Jimmy does so enjoy brightening other people's days.";
+	say "     [link](2)[as]2[end link] - Not yet. Tell Jimmy to hold off for now. Perhaps another time.";
+	say "     [link](3)[as]3[end link] - No. You would prefer that Jimmy kept his cute paws off Sturm.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link], [link]2[end link], or [link]3[end link].";
+	if calcnumber is 1: [Continue]
+		LineBreak;
+		say "     After some deliberation, you nod but whisper that he should make sure not to embarrass Sturm. Giving you a thumbs up, Jimmy quietly slides his police vest over his head and leaves it on the bench before sneaking into the showers and creeping up behind Sturm. 'Has anyone told you that you work out,' the corgi says in a chipper tone, startling the much larger wolf with his sudden appearance. 'I mean, you look the sort to inspire sculptors and I'm sure that at least some effort must have gone into those muscles. Mind telling me your secret? As you can see, I'm a shrimp who is approaching the line between cuddly and podgy.' Your son stands there speechless while the corgi flatters him, unsure how best to respond. Eventually, Sturm finally manages to form a sentence. ";
+		if "Jimmy - Funny Corgi" is listed in traits of Sturm:
+			say "'You're the corgi that we met when we arrived. Jimmy, wasn't it?' The stumpy canine flashes him a grin. 'Nice to know that I made an impression. Now, I know that I offered a hug or a handjob, but you look a little glum so I'm willing to up the dosage of cheer to some tongue fun. Are you up for that?' the peppy dog asks, already eying the wolf's plump sheath.";
+		else: [Sturm didn't meet Jimmy on arrival]
+			say "'I'm sure that I've seen you around, but I don't know who you are to be honest.' The stumpy canine exaggerates a laugh before flashing a grin. 'I guess that gives me a chance to make a good first impression. I'm Jimmy and I make it my mission to keep everyone in top spirits. With that in mind, you look a little glum. Would a blowjob from a pint-sized pooch cheer you up?' the peppy dog asks, already eying the wolf's plump sheath.";
+		say "     Sturm looks momentarily indecisive before his lust gets the better of him. 'It really isn't that serious, but I'll take you up on that offer anyway. You're cute, and some attention sounds nice. Though I am a little suspicious that Bianca has something to do with this,' the wolf responds, his mood noticeably improved. Considering the size-difference between them, all it takes is a step forward for your son's balls to be resting on the corgi's upturned snout. 'Wait a minute. These aren't my glasses!' Jimmy cries, standing on tip toes and carefully balancing the wolf's scrotum over his eyes and making the larger male snort in amusement. 'I'm sure that you have some good reason to be showering, and it has given me this chance to get to know you, but it does diminish your natural scent that I find so appealing,' the corgi teases. 'You've got something to say about everything, don't you? Maeve would adore you. But for now let's put your mouth to better use.' Sturm growls, the tip of his cock beginning to slide from his sheath in anticipation.";
+		WaitLineBreak;
+		say "     Water splashing over him, Jimmy angles Sturm's penis towards his mouth with one paw while the other massages behind his balls, his wrist inadvertently stirring the orbs around as he moves. Looking up so that their eyes meet, the corgi envelops the weighty shaft in his mouth, or at least the first half, his height causing difficulties for the canine. Wordlessly, Sturm bends his knees a little and begins to thrust down into Jimmy's mouth, subtly making it easier for the smaller male while still preserving the feeling of intimacy that has developed. 'I'll warn you now, I doubt that I'll last long. I had a little time to myself before you arrived, if you know what I mean,' Sturm warns him, wiggling his eyebrows to emphasize his point. ";
+		if "BlowjobVirginFalse" is listed in traits of Sturm:
+			say "Also, this is my first time with someone else, so this is a little special to me. '";
+		say " Jimmy gives a thumbs up in comprehension and redoubles his effort in swallowing the wolf's cock, an effort that is both appreciated and effective if your son's facial expression and grunts are anything to go by.";
+		say "     By now, Sturm is gripping the sides of the corgi's head, trying to maximize his pleasure before his inevitable climax. Fortunately, Jimmy seems to be accustomed to being used in such a manner, moaning delightedly while his fingers continue to play over the wolf's groin. Sensing that Sturm will soon orgasm, you watch as Jimmy slides a finger further beneath the white wolf before curling it into his anus, causing him to make an especially deep thrust in surprise. Not getting a chance to acclimatize to the invading digit, your son is catapulted into an intense climax by the ministrations of the smaller male, though somehow maintaining a sliver of control to avoid knotting his mouth, breathy gasps accompanying each burst of semen down the corgi's throat, the wolf's buttocks clenching with each spasm. Somehow, he manages to avoid collapsing on top of Jimmy, though you can see the amount of effort that it takes to steady his shaky legs, especially in the lull between inseminations.";
+		WaitLineBreak;
+		say "     As the waves of ecstasy diminish, Sturm allows himself to slither down the wall, his cock slipping from Jimmy's mouth, until he is sitting on the floor, streams of water cascading over both wolf and corgi. Jimmy seats himself beside him, his own penis untended and rigid. Perhaps feeling guilty that he hasn't reciprocated the corgi's attention, your son tiredly reaches a hand for it but the canine gently nudges it away. 'Not this time, buddy. Take the time to recover and properly enjoy the moment. I'll take care of this myself later,' Jimmy explains, patting the wolf on the knee. 'Thank you. That was... wow. ";
+		if "BlowjobVirginFalse" is listed in traits of Sturm:
+			say "You definitely made my first blowjob something to remember,' ";
+		else:
+			say "That was very different to my past experiences,' ";
+		say " Sturm gasps. 'All part of the morale-boosting services I provide. I enjoyed it too. There's something about you that makes me think that we'll be seeing more of each other,' the corgi chuckles. 'Well, of course. At some point I'll have to return the favor, one way or another,' your son replies before leaning over and kissing the top of his new friend's head.";
+		say "     Deciding to let them recover in peace, you turn around to leave and are startled to find Bianca standing against the opposite wall with her fingers playing across her vulva and breasts. Having momentarily been lost in her own pleasure, she looks at you with wide-eyes as she realizes that she's been caught. Swiftly recovering, she holds a finger up to her lips before creeping away. As you leave a few seconds later, you take some comfort that you weren't the only one with voyeuristic tendencies who enjoyed the male-bonding in the showers.";
+		if "BlowjobVirginFalse" is not listed in Traits of Sturm:
+			TraitGain "BlowjobVirginFalse" for Sturm;
+			TraitGain "Jimmy - First Blowjob" for Sturm;
+		TraitGain "JimmyShowerBlowjobAccepted" for Sturm;
+	else if calcnumber is 2:
+		LineBreak;
+		say "     After some deliberation, you shake your head, whispering that you think that that would only embarrass Sturm even more. Conceding your point, Jimmy nods before leaving again, with you following soon after him, leaving the wolf to shower in peace.";
+	else if calcnumber is 3:
+		say "     Jimmy's face falls as you immediately shake your head. You quietly tell him that as long as he's staying here, that you would prefer if he refrained from anything sexual with Sturm, though you don't have a problem if the two of them become friends. Disappointedly nodding his acceptance, the corgi shuffles away, with you following soon after him, leaving the wolf to shower in peace.";
+		TraitGain "JimmyShowerBlowjobRefused" for Sturm;
+	move Player to Bunker;
+
+
+[Shower scene with Alexandra:
+	say "     ";
+	say "     ";
+
+Shower scene with Paula:
+	say "     ";
+	say "     ";]
+
+
 Jimmy ends here.

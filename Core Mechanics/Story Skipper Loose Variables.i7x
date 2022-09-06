@@ -3370,8 +3370,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is messypigaltorgasm;
 		-- "MFSDUBM":
 			now TruthVarValue entry is MFSDUBM;
-		-- "micaelastory1":
-			now TruthVarValue entry is micaelastory1;
 		-- "MKunleashed":
 			now TruthVarValue entry is MKunleashed;
 		-- "mlamiaboobmash":
@@ -7048,8 +7046,6 @@ to VariableTruthLoad:
 					now messypigaltorgasm is TruthVarValue entry;
 				-- "MFSDUBM":
 					now MFSDUBM is TruthVarValue entry;
-				-- "micaelastory1":
-					now micaelastory1 is TruthVarValue entry;
 				-- "MKunleashed":
 					now MKunleashed is TruthVarValue entry;
 				-- "mlamiaboobmash":
