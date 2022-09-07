@@ -522,7 +522,7 @@ to Mannequin_Warehouse_ChoicePoint:
 	say "     [bold type]Do you want to explore the warehouse?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Sure, you might find something interesting.";
 	say "     [link](2)[as]2[end link] - Not right now. Maybe later.";
-	say "     [link](3)[as]3[end link] - Nope. No. Definitively not! You're out of here";
+	say "     [link](3)[as]3[end link] - Nope. No. Definitely not! You're out of here";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
