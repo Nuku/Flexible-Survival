@@ -541,7 +541,7 @@ to say FionaCarlMeet:
 				now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 		else:
 			LineBreak;
-			say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, there is a masculine grunt and lust-filled mrowl from behind you, followed by thrusting sounds and exultant pants and moans. They're definitively having a good time together...";
+			say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, there is a masculine grunt and lust-filled mrowl from behind you, followed by thrusting sounds and exultant pants and moans. They're definitely having a good time together...";
 			if Strength of Fiona is 0:
 				now Strength of Fiona is 1; [they fucked, player didn't watch]
 		NPCSexAftermath Fiona receives "PussyFuck" from Carl;
@@ -577,7 +577,7 @@ to say FionaCarlRepeatFuck:
 			now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 	else:
 		LineBreak;
-		say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, you hear thrusting sounds in a rapid pace, mixed with exultant pants and moans. They're definitively having a good time together...";
+		say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, you hear thrusting sounds in a rapid pace, mixed with exultant pants and moans. They're definitely having a good time together...";
 	NPCSexAftermath Fiona receives "PussyFuck" from Carl;
 
 Section 4 - Endings

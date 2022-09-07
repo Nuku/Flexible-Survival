@@ -1337,7 +1337,7 @@ Instead of fucking the Elijah:
 			[if the player isn't a demon, he's not corrupt enough]
 			say "     Looking down over the angel on his bunk, you decide you'd rather let him rest for now. He's strikingly handsome and wakes lust in you from just looking at him, but only the most wicked creatures would take advantage of this helpless and injured person who isn't even conscious most of the time.";
 		else:
-			say "     [bold type]Handsome? Check. Virgin? Most definitively. Conscious? Who the hell cares... but then the remains of your human morality throw up a last despairing wail of protest.[roman type][line break]";
+			say "     [bold type]Handsome? Check. Virgin? Most definitely. Conscious? Who the hell cares... but then the remains of your human morality throw up a last despairing wail of protest.[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Silence your conscience and continue!";
 			say "     ([link]N[as]n[end link]) - This might be one bridge too far after all...";

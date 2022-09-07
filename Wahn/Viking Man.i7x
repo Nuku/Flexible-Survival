@@ -360,7 +360,7 @@ name	desc	weight	object
 "dried cod"	"A broad strip of dried and salted cod, just the right snack for an active viking on the prowl. Looks like someone has already taken a bite or two out of it."	1	dried cod
 
 instead of sniffing dried cod:
-	say "Raising the piece of meat to your nose, you can definitively confirm that it is indeed fish.";
+	say "Raising the piece of meat to your nose, you can definitely confirm that it is indeed fish.";
 
 dried cod is a grab object.
 Usedesc of dried cod is "[dried cod use]";
