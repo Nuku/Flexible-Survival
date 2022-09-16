@@ -7,7 +7,7 @@ This writing guide aims to give novice and experienced writers a basic understan
 
 ### b) Setup
 Before anything, new writers are strongly recommended to follow the steps in CONTRIBUTING.md before starting their work.
-https://github.com/Nuku/Flexible-Survival/CONTRIBUTING.md
+[https://github.com/Nuku/Flexible-Survival/CONTRIBUTING.md](https://github.com/Nuku/Flexible-Survival/blob/master/CONTRIBUTING.md)
 It will ensure that you have a working Flexible Survival directory, an efficient way to update your extension files, and send your own work on GitHub.
 
 ### c) Language
