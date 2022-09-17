@@ -51,7 +51,7 @@ Package Keyboard Shortcuts:
 Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors.
 
 ## 6. Install Inform 7
-Install Inform 7! Flexible Survival runs on this game engine. Grab the newest beta from the following link:
+Install Inform 7! Flexible Survival runs on this game engine. Grab beta "Inform7 6M62 Win64 beta 4" from the following link:
 
 https://github.com/DavidKinder/Windows-Inform7/releases/
 
