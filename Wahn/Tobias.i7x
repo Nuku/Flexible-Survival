@@ -221,7 +221,7 @@ instead of conversing the Tobias:
 	say "     ";
 
 instead of fucking the Tobias:
-	say "     A smile spreads over Tobias's face as he checks you out, followed by him giving a pleased nod. 'Definitively an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
+	say "     A smile spreads over Tobias's face as he checks you out, followed by him giving a pleased nod. 'Definitely an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
 
 to say TobiasSexMenu:
 	LineBreak;
