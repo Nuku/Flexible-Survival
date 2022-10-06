@@ -245,6 +245,7 @@ Include Snapjaw Beach Camp by Gherod.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
+Include Subterranean Caves by Prometheus.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.
