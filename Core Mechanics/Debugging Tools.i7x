@@ -1106,6 +1106,22 @@ carry out unresolvecheat:
 			now Object entry is unresolved;
 			break;
 
+activatecheat is an action applying to one topic.
+
+understand "zActivate [text]" as activatecheat.
+
+check activatecheat:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out activatecheat:
+	repeat with X running from 1 to number of filled rows in Table of GameEventIDs:
+		choose row X from the Table of GameEventIDs;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			now Object entry is active;
+			break;
+
 
 [Allows the spawning of any item in game.]
 itemcheat is an action applying to one topic.

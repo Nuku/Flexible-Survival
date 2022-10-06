@@ -28,12 +28,13 @@ bargainbinusagetotal is a number that varies.
 
 bargainhunting is an action applying to nothing.
 
+understand "hunt bargain bin" as bargainhunting.
 understand "hunt bargain" as bargainhunting.
 understand "hunt bin" as bargainhunting.
 understand "buy bargain" as bargainhunting.
-understand "sort bin" as bargainhunting.
 understand "sort bargain bin" as bargainhunting.
 understand "sort bargain" as bargainhunting.
+understand "sort bin" as bargainhunting.
 understand "hunting bargain" as bargainhunting.
 
 check bargainhunting:

@@ -113,6 +113,9 @@ Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
 Figure of HuskyAlpha_hard_icon is the file "HuskyAlpha_hard.jpg".
 Figure of HuskyAlpha_soft_icon is the file "HuskyAlpha_soft.jpg".
 Figure of Husky_Bitch_icon is the file "Husky_Bitch.jpg".
+Figure of Hyena_Matriarch_clothed_icon is the file "Hyena_Matriarch_clothed.jpg".
+Figure of Hyena_Matriarch_hard_icon is the file "Hyena_Matriarch_hard.jpg".
+Figure of Hyena_Matriarch_soft_icon is the file "Hyena_Matriarch_soft.jpg".
 Figure of Imp_clothed_icon is the file "Imp_clothed.jpg".
 Figure of Imp_naked_icon is the file "Imp_naked.jpg".
 Figure of Imp_face_icon is the file "Imp_face.jpg".
@@ -179,6 +182,8 @@ Figure of SeaDragoness_NSFW_icon is the file "Sea Dragoness_NSFW.jpg".
 Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
 Figure of SeaDragon_soft_icon is the file "Sea Dragon soft.jpg".
+Figure of Sewer_Gator_hard_icon is the file "Sewer Gator_hard.jpg".
+Figure of Sewer_Gator_soft_icon is the file "Sewer Gator_soft.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of Sierrasaur_hard_icon is the file "Sierrasaur_hard.jpg".
 Figure of Sierrasaur_soft_icon is the file "Sierrasaur_soft.jpg".
@@ -1474,6 +1479,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Henry_soft"	Figure of Henry_soft_icon	"CastBound"	g-white	"normal"
 "Henry_hard"	Figure of Henry_hard_icon	"CastBound"	g-white	"normal"
 "Herm Hyena_naked"	Figure of Herm_Hyena_naked_icon	"Vashaa"	g-White	"normal"
+"Hyena_Matriarch_clothed_icon"	Figure of Hyena_Matriarch_clothed_icon	"SteppeCrow"	g-white	"normal"
+"Hyena_Matriarch_hard_icon"	Figure of Hyena_Matriarch_hard_icon	"SteppeCrow"	g-white	"normal"
+"Hyena_Matriarch_soft_icon"	Figure of Hyena_Matriarch_soft_icon	"SteppeCrow"	g-white	"normal"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
@@ -1694,6 +1702,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Smooth Collie Shemale_naked"	Figure of Collie_naked_icon	"SteppeCrow"	g-white	"normal"
 "Cougar_clothed"	Figure of Cougar_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Cougar_naked"	Figure of Cougar_naked_icon	"SteppeCrow"	g-white	"normal"
+"Sewer Gator_hard"	Figure of Sewer_Gator_hard_icon	"SteppeCrow"	g-white	"normal"
+"Sewer Gator_soft"	Figure of Sewer_Gator_soft_icon	"SteppeCrow"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"

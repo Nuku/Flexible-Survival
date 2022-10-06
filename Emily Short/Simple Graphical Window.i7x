@@ -2,7 +2,7 @@ Version 8 of Simple Graphical Window (for Glulx only) by Emily Short begins here
 
 "Provides a graphics window in one part of the screen, in which the author can place images; with provision for scaling, tiling, or centering images automatically, as well as setting a background color. Glulx only."
 
-Include Version 7 of Glulx Entry Points by Emily Short.
+Include Glulx Entry Points by Emily Short.
 
 Section 1 - Creating Rocks and Building the Window Itself
 

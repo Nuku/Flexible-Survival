@@ -44,15 +44,15 @@ carry out Trixiecheating:
 		if Player can vore or Player can UB:
 			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if Player cannot UB]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
 		say "[link](15) Set egg-pregnancy (ovi) content level[as]15[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
-		say "[link](16) Adjust flags[as]16[end link] - View/change warding settings[line break]";
+		[say "[link](16) Adjust flags[as]16[end link] - View/change warding settings[line break]";]
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-16)> [run paragraph on]";
+			say "Choice? (0-15)> [run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 16:
+			if calcnumber >= 0 and calcnumber <= 15:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 16.";
+				say "Invalid choice. Pick from 0 to 15.";
 		if calcnumber is:
 			-- 1:
 				if "Unerring Hunter" is listed in feats of Player:
@@ -197,8 +197,10 @@ carry out Trixiecheating:
 				try voremenuing;
 			-- 15:
 				try Oviadjusting;
+			[
 			-- 16:
 				new ban menu;
+			]
 			-- 0:
 				say "Exiting menu.";
 				now Trixieexit is 1;
