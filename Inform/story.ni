@@ -211,6 +211,7 @@ Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Bunker Communal Shower Events by Luneth.
 Include Camp Bravo by Wahn.
+Include Camp Of The Snake by Gherod.
 Include Tenvale College Campus by Rikaeus.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
