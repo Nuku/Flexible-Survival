@@ -181,6 +181,7 @@ to say TehuantlTameNonSexM:
 to say TehuantlTameNonSexF:
 	say "     You swat the muscled feline's ass lightly, telling him that there's enough of that for now, you're not going to rape him. No, you just pull him up by the scruff of his neck, meeting his eyes and giving him a good long stare to show your dominance. Then you lay out how things are going to be - he's proven to be weaker than you more than once, and you're claiming him as yours now. In fact, he's so weak and pathetic that you're doubting that he even should be a male warrior. Acting like he did, getting his ass beat and then submitting to you seems more appropriate of a mewling pussy. To underline these words, you reach under him and squeeze his chest, to 'check if he's actually a girl', and somewhat surprisingly, your hand starts to fill with a furred curve as you do so, his chest bulging outwards and taking on more female curves in just a few seconds.";
 	say "     The formerly proud warrior lets out a moan and collapses to the ground, writhing before you. Stepping back a little, you watch the transformation you inadvertently kicked off, seeing the man change all over, with some subtle and other quite obvious adjustments to his forms. His cock shrinks back into his body, for one, leaving behind feminine folds, and the shape of his face and head softens a bit. When his new form stabilizes after a few moments, the now female jaguar pushes herself up to kneel before you, looking at you worshipfully. 'Yes, tlacahua. I'm your warslave and will serve,' she says, almost purring. Curiosity has you ask what that word she used was, and she explains that it means 'master' in her original Nahuatl language. You can't help but smile at this and tell her that she's starting to behave like a very good little kitty, then hold out a hand for her to take and pull her up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with her.";
+	SetFemalePronouns for Tehuantl;
 	say "[TameTehuantl]";
 
 to say TehuantlTameSex1: [player rubs balls, then fucks his ass -> male T]
@@ -204,8 +205,8 @@ to say TehuantlTameSex2: [player rubs balls, then rides his dick -> male T]
 	say "     After a very pleasurable time having your female bits licked and teased, you can't help but smile as you tell the jaguar that he's been a very good boy, then you hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
 	NPCSexAftermath Tehuantl receives "OralPussy" from Player;
+	say "[TehuantlMaleShift]";
 	say "[TameTehuantl]";
-	now HP of Tehuantl is 50; [male jaguar pet]
 
 to say TehuantlTameSex3: [player rubs nipples, then fucks his ass and pussy -> female T]
 	say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
@@ -217,6 +218,7 @@ to say TehuantlTameSex3: [player rubs nipples, then fucks his ass and pussy -> f
 	NPCSexAftermath Tehuantl receives "PussyFuck" from Player;
 	WaitLineBreak;
 	say "     As you roll off her exhausted form, the rumbling kitty snuggles up against you, staring up at you with a look of adoration as she slips out of consciousness. Clearly very little of the once dominant feline remains in this docile new creature and without a second thought you pull her into your arms as you rise to your feet. Your new pet nuzzles against your chest as you make your way back to the bunker.";
+	SetFemalePronouns for Tehuantl;
 	say "[TameTehuantl]";
 	now HP of Tehuantl is 10; [female jaguar pet]
 
@@ -229,6 +231,7 @@ to say TehuantlTameSex4: [player rubs nipples, then rides his dick -> female T]
 	WaitLineBreak;
 	say "     The exhausted kitty rumbles at she stares up at your with adoration, clearly very little of the once dominant feline remains in this docile new creature and without a second thought your reach down for her. Your new pet nuzzles against your chest as you lift her into your arms, cradling her gently against you as you make your way back to the bunker.";
 	NPCSexAftermath Player receives "PussyFuck" from Tehuantl;
+	SetFemalePronouns for Tehuantl;
 	say "[TameTehuantl]";
 	now HP of Tehuantl is 10; [female jaguar pet]
 
@@ -243,6 +246,7 @@ to say TehuantlMaleShift:
 	now Cunt Tightness of Tehuantl is 0;
 	now Nipple Count of Tehuantl is 2; [2 nipples]
 	now Breast Size of Tehuantl is 0;
+	SetMalePronouns for Tehuantl;
 
 to say TameTehuantl:
 	now battleground is "void";

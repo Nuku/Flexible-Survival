@@ -118,7 +118,7 @@ When Play begins:
 	now victory entry is "[GatorWins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]The gator emerges from the muck, surprisingly clean despite the surroundings. Her green scales glint in the light as she saunters towards you, snout curled in a smile as her wide hips sway. [one of]'I was looking for someone to play with,' [or]'Did you come looking for me?' [or]'I love a good wrestle!' [at random]she says, thick tail swaying as she crouches over. Her erect cock dangles between her scaly things, and her breasts heave with her breath as she readies for battle.";
 	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
-	now body entry is "full-bodied, with wide hips and a narrow waist. Your form feels full of strength and tough to boot. Peeking behind you reveals that you have two sets of bony ridges running down towards your ass";
+	now body entry is "full-bodied, with wide hips and a middling waist. Your form feels full of strength and tough to boot. Peeking behind you reveals that you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green-scaled[or]softly scaled[or]thick-scaled[at random]";
 	now tail entry is "You have a broad, reptilian tail. It has two ridges that run along the top, converging at the tip. It is covered in [Skin of Player] flesh and sways behind you with every step.";
 	now cock entry is "[one of]reptilian[or]gator[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
@@ -289,6 +289,7 @@ Conversation of Sewer Gator is { "Gator stuff" }.
 The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";
 
 to say GatorDesc:
+	project Figure of Sewer_Gator_soft_icon;
 	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductively shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
 
 instead of conversing the Gator:
@@ -306,6 +307,7 @@ to say gator den repeat:
 	say "[gator den scene]";
 
 to say gator den scene:
+	project Figure of Sewer_Gator_soft_icon;
 	say "     Do you want to stay with the gator?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -358,6 +360,7 @@ to say gator den scene:
 	clear the screen and hyperlink list;
 
 to say GatorDenSex:
+	project Figure of Sewer_Gator_hard_icon;
 	now gatorconsent is 1;
 	if BodyName of Player is "Gator Herm":
 		say "     'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip onto the bed to join her, she wraps her arms around you, pressing her soft, warm scales to your [Skin of Player] front, grinding gently as she presses her snout to you and gives a slow kiss. She's quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
@@ -427,6 +430,7 @@ to say GatorDenSex:
 		say "     You head home afterwards.";]
 
 to say GatorDenVore:
+	project Figure of Sewer_Gator_soft_icon;
 	say "     'What?' is all the gator asks when you tell her that you're willing to offer yourself to help with her hunger. The reptile's brow arches upward in equal parts amusement and curiosity. 'Seriously? You actually want me to eat you?' She shrugs and strides up to you, her thick hips swaying seductively. 'Whatever floats your boat, I guess, but fair warning; [one of]don't expect me to spit you out without a fight[or]don't expect me to spit you out. I'm famished[or]I won't mind if you make me spit you out, but if you're too weak to resist my stomach, don't be surprised if I let you become gator food[at random]. I'm only interested in hanging out with the strong,' she says in a low rumble, [one of]licking her lips[or]smacking her lips[at random] and eyeing you ravenously.";
 	say "     Before you could have any second thoughts, the ravenous reptile places her hands on your shoulders and shoves your head into her maw. Even though you put up a struggle because of her warnings, a part of you is excited, even wanting, to explore the gator's stomach. As the scaly herm roughly stuffs the rest of you into her mouth, her sharp teeth nicks and scratches you more than a few times, but thankfully, you don't receive any deep or serious wounds. As expected, the gator is as strong on the inside as she is on the outside, her throat walls squeezing you tightly, almost crushingly so, while you are pulled deeper into the reptile. She gives your legs a playful lick as they pass through her mouth before she snaps her jaws shut, enjoying the feel of your squirming form going through her. Her powerful muscles quickly move you through her body until you land with a splash in the belly of the beast.";
 	say "     The gator lets out a satisfied sigh as you settle down inside of her stomach. 'Nothing beats the feeling of having live prey wriggling inside of you,' she says, patting her stomach and the new occupant inside of it. 'See you soon, and if I don't, well, thanks for the free meal.'";
@@ -434,6 +438,7 @@ to say GatorDenVore:
 	GatorBind;
 
 to say GatorDenFaceSit:
+	project Figure of Sewer_Gator_hard_icon;
 	if anallevel is 3 and a random chance of 1 in 2 succeeds:
 		say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but every breath you take also gives you a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. [one of]'Seems like you're really enjoying my butt down there, so let's change things up. Instead of my cunt, you're going to give my ass a good licking,' the gator commands, grinding her butt into your face[or]'Ahh, I had you pegged for an ass muncher, good,' the croc coos and grinds her hole against your nose momentarily. 'Go on. Eat. It. Out,' she bellows lustfully[at random].";
 		say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if Player is male]wrap around your cock[smn][else if Player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";

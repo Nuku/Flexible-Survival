@@ -211,6 +211,7 @@ Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
 Include Bunker Communal Shower Events by Luneth.
 Include Camp Bravo by Wahn.
+Include Camp Of The Snake by Gherod.
 Include Tenvale College Campus by Rikaeus.
 Include Dog House by Kaleem mcintyre.
 Include Down Under Pub by Stripes.
@@ -245,6 +246,7 @@ Include Snapjaw Beach Camp by Gherod.
 Include Stablemasters by Sarokcat.
 Include Stables Hotel by Sarokcat.
 Include State Fair by Sarokcat.
+Include Subterranean Caves by Prometheus.
 Include Tattoo Parlor by Sarokcat.
 Include Tiger Den by Luneth.
 Include Tyr's Club by Kaleem mcintyre.

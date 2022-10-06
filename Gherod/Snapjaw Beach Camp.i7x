@@ -129,7 +129,7 @@ to say SkylerTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "The camp and the other sharkmen";
 		now sortorder entry is 2;
-		now description entry is "Ask the big sharkman about himself";
+		now description entry is "Ask the big sharkman about his people";
 	[]
 	if Energy of Skyler > 1:
 		choose a blank row in table of fucking options;

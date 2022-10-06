@@ -12,6 +12,7 @@ matriarchdefeated is a number that varies.
 matriarchowned is a number that varies.
 
 to say matriarch attack:
+	project Figure of Hyena_Matriarch_hard_icon;
 	[puts Herm Hyena as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -62,12 +63,17 @@ to say matriarch attack:
 				say "     You aren't sure how long you lie there like that, your body pressed into the floor underneath hers, while an ever growing orgy of hyenas surrounds you, celebrating your submission. She eventually draws herself up, causing you to whimper as she leaves you alone, only to perk up as she leans down to whisper in your ear. 'Next time you'll have the proper equipment to take me fully, won't you?' she says in her raspy voice, causing your mind to race at the thought of being taken properly, like a good little breeding slut, with her warm seed filling you up with her hyena cubs again and again. Your mind calms down though as she pets you almost fondly on the head, her approval of your submissiveness speaking to that permanent new part of you she has burned into your core as you feel the joy of pleasing your master welling up from within. Straightening up, the matriarch leaves you lying there helpless in the middle of the forming orgy, ready and waiting for anyone to use as they please, as she moves back to her own den. As you lie there you can't help but wonder if challenging her was really a smart idea... or maybe you think, as you feel the hands of he other hyenas begin to stroke and grope you, it was really the best idea ever...";
 
 To say matriarch loss:
+	project Figure of Hyena_Matriarch_hard_icon;
 	say "     Successfully defeating the reigning hyena matriarch, all the other hyena members of the hyena gang look on in awed silence as the former matriarch is forced to prostrate herself before you.";
 	say "     Taking advantage of the invitation her prostrated form with its upraised ass provides you, you slowly move around behind her, reveling in your victory. Your cock stiffens as you hear her defeated whimper and the cackling laughter of the hyena's surrounding you both, something about the situation speaking directly to your primal hyena instincts. Your mouth contorts into a feral grin as your hands dig into the coarse fur of her ass, before you sheathe your [Cock of Player] cock into her in one swift thrust, causing her to cry out in pain and pleasure underneath you. Her warm folds wrap your cock with delicious bliss flavored with the feel of victory and the joy of forcing her submission, causing you to moan in delight as you thrust into her.";
 	say "     Building up a rhythm of quick thrusts into her warm wetness, the former matriarch begins to whine and beg underneath you, her obvious submission increasing your pleasure as you turn the formerly dominant hyena into just another breeding slut underneath you. Around you, you are obviously not the only member of the hyena den aroused by the situation, as an orgy begins to break out among the laughing onlookers. The thrill of all the eyes watching you as you reduce the former matriarch to just another breeding hole makes the experience even more exciting as you pound into her body, every thrust driving her face down into the ground where it belongs.";
 	WaitLineBreak;
 	say "     You feel your pleasure growing as you reach the edge of your orgasm, your thrusts stronger and more dominant as she clenches her body underneath you, her soft lips massaging your cock needily, practically begging for you to fill her with your seed. Finally she shudders underneath you with a truly wanton moan, and you can almost sense something break inside her, almost tell the moment she gives herself up to your dominance completely and surrenders herself to your will. The pleasure as you realize the completeness of your victory makes your body shudder as it floods through you, sending you over the edge in the best orgasm of your life as you explode into her. The former matriarch cries out underneath you wantonly, as she embraces her new role in life, the role of a breeding slut, the lowest of the low in the pecking order, a slut for any and all to use as they please, and she embraces it willingly. You can't help but feel completely satisfied as you rest on her back, your cock still spurting into her slowing, ensuring she is filled with your strong, virile seed. Eventually you pull yourself out, and flop down on your side as you watch the rest of your new subjects celebrating your victory with an orgy around you.";
 	increase matriarchowned by 1;
+
+to say Hyena Matriarch Desc:
+	say "     The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you.";
+	project Figure of Hyena_Matriarch_clothed_icon;
 
 
 Section 2 - Creature Insertion
@@ -96,7 +102,7 @@ When Play begins:
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]";
 	now defeated entry is "[matriarch loss]";
 	now victory entry is "[matriarch attack]";
-	now desc entry is "[mongendernum 5]The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you."; [ Description of the creature when you encounter it.]
+	now desc entry is "[Hyena Matriarch Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "brown furred"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]

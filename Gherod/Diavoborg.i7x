@@ -1,11 +1,12 @@
-Version 5 of Diavoborg by Gherod begins here.
+Version 6 of Diavoborg by Gherod begins here.
 
 "Adds Diavoborg, a Behemoth NPC, to the game."
 
 [Version 2 - Expanded Diavoborg, added rooms and NPC interaction, including dialogue and sex scenes. Loyalty capped at 10 - Gherod]
 [Version 3 - Added 2 new Sex Scenes (pinned down and milking), as well as a special cum item from Diavoborg.]
 [Version 4 - Added a Same-Size path to unlock Diavoborg. 1 Same-Size Scene and 1 Smaller-Size scene were added.]
-[Versoin 5 - Cock Vore scene added. Loyalty cap raised. Minor variation in his sex talk.]
+[Version 5 - Cock Vore scene added. Loyalty cap raised. Minor variation in his sex talk.]
+[Version 6 - Integrated with Wyvern Patriarch quest, added Red Rock Wyvern Chamber]
 
 [Note: Diavoborg's infection is an exceptionally mutated one, originated from the Behemoths. Therefore, it renders him sterile and non-infectious, as this strain is so specific that it cannot possibly be transferred to another person.]
 
@@ -392,11 +393,13 @@ Red Rock Lair Hall	"Red Rock Lair Hall"
 
 Red Rock Lair Hall is a room.
 Red Rock Lair Hall is east of Entrance to Red Rock Lair. It is sleepsafe.
-The earea of Red Rock Lair Hall is "Plains".
 Description of Red Rock Lair Hall is "[DiavoborgLairHallDesc]".
 
 to say DiavoborgLairHallDesc:
-	say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other seems unfinished, with rubble scattered around. Perhaps the red behemoth is working on something.";
+	if Ambush The Wyvern Patriarch is resolved:
+		say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other further [bold type]east[roman type] leads to another chamber where Vuukzasqig, the former Wyvern Patriarch, is settled in.";
+	else:
+		say "     This particular division serves as the hall of Diavoborg's Lair, leading to other rooms that the behemoth himself excavated. There isn't a lot to tell about, only that it is ample and spacious, so that Diavoborg can freely move around. At the middle of this particular room there is a firecamp, bigger than you are used to, which is lit during the night to provide some light. He also took the time to hang some torches on the walls, since little light gets in the deepest parts of the cave. One of these paths leads to his resting place, while the other seems unfinished, with rubble scattered around. Perhaps the red behemoth is working on something.";
 
 instead of smelling Red Rock Lair Hall:
 	say "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.";
@@ -409,7 +412,6 @@ Red Rock Resting Chamber	"Red Rock Resting Chamber"
 
 Red Rock Resting Chamber is a room.
 Red Rock Resting Chamber is southeast of Red Rock Lair Hall. It is sleepsafe.
-The earea of Red Rock Resting Chamber is "Plains".
 Description of Red Rock Resting Chamber is "[DiavoborgRestingChamberDesc]".
 
 to say DiavoborgRestingChamberDesc:
@@ -417,6 +419,25 @@ to say DiavoborgRestingChamberDesc:
 
 instead of smelling Red Rock Resting Chamber:
 	say "     Inside Diavoborg's lair, his animalistic scent is more intense. You can definitely tell it apart from other beasts.";
+
+[-----------------------------------------------]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Red Rock Wyvern Chamber	"Red Rock Wyvern Chamber"
+
+Red Rock Wyvern Chamber is a room. It is sleepsafe.
+Description of Red Rock Wyvern Chamber is "[DiavoborgWyvernChamberDesc]".
+
+to say DiavoborgWyvernChamberDesc:
+	say "     This chamber is still recently dug up, and you can tell that by some rough edges that will take some time to perfect, but is otherwise a cozy place where your former nemesis now calls his own room. There is not much to say about it other than being a rocky room with a few piles of rubble and rocks next to the walls, and the only thing illuminating this place is more torches. There is definitely enough space for a colossal creature to hang around comfortably.";
+
+instead of smelling Red Rock Wyvern Chamber:
+	say "     In this particular room, the scents mix. Ultimately, it is Diavoborg's which prevails, but there is a certain something added to it, from another obvious male.";
+
+to connect Red Rock Wyvern Chamber:
+	change the east exit of Red Rock Lair Hall to Red Rock Wyvern Chamber;
+	change the west exit of Red Rock Wyvern Chamber to Red Rock Lair Hall;
 
 [-----------------------------------------------]
 
@@ -518,6 +539,12 @@ to say DiavoborgTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask him about his actual gender, given the fact he has a bit of both, down there...";
 	[]
+	if Loyalty of Diavoborg >= 15 and Resolution of Ambush The Wyvern Patriarch < 1 and Resolution of MeetTheWyvernPatriarch >= 3:
+		choose a blank row in table of fucking options;
+		now title entry is "Wyvern Patriarch";
+		now sortorder entry is 99;
+		now description entry is "Tell him about your recent nemesis, the Wyvern Patriarch";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -543,6 +570,8 @@ to say DiavoborgTalkMenu:
 					say "[DiavoborgTalkSex]";
 				else if (nam is "Gender"):
 					say "[DiavoborgTalkGender]";
+				else if (nam is "Wyvern Patriarch"):
+					say "[DiavoborgTalkWP]";
 				wait for any key;
 				say "[DiavoborgTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -616,6 +645,27 @@ to say DiavoborgTalkGender:
 	say "     You thank him for the answers before you change the subject.";
 	if Energy of Diavoborg is 2:
 		now Energy of Diavoborg is 3;
+
+to say DiavoborgTalkWP:
+	say "     Upon having encountered this particularly fearsome and large wyvern, after having messed with his alleged winged sons, you have been finding yourself to be quite bothered at the nuisance of him showing up at the most inopportune times, often while you are exploring the city. So, you thought, since you have a really big and powerful friend who is at least sane enough to be of some help, that you could ask for his assistance in dealing with this creature, explaining to him what kind of encounters you have had in the past with the Wyvern Patriarch. He listens to you attentively, showing concern for your well-being and keeps asking questions about how everything had built up to the point he relentlessly hunts you down, and you try to answer with the best of your abilities.";
+	say "     As you finishing telling your tale, Diavoborg's jaw is, figuratively, on the floor. 'So you pissed off this enormous wyvern and now you're seeking a way to get rid of him? That's nuts... I wonder what you actually did for that to happen?' You explain you merely got... closer to the wyverns, the male ones, specifically, which is something he took as [']defiling their bodies['] or something. He looks at you in silence for a second, thinking of what to say. 'Right... Yeah, whatever you did, he didn't like it. But judging by the way he actually treats you and lets you be on your way... I'd say he's not totally a bad guy. Maybe I could help out...' he says, looking back at his tail which unsubtly swings around.";
+	WaitLineBreak;
+	say "     'I think I've already told you about my tail, right? So, this big sting here is capable of injecting a powerful venom that gives uncontrollable, even debilitating, lust. Basically makes them so horny they are immediately subdued. I've used it plenty of times to get out of trouble, but I'm wondering if we could use this to tame ourselves a large wyvern?' You consider his words and whether it would be a good idea or not to practically drug the Wyvern Patriarch into submission with Diavoborg's venom. There are moral questions associated with this, but there is also the possibility of a peaceful resolution between you and him, provided that the red behemoth can reach him and accomplish what he is suggesting.";
+	say "     Should you accept Diavoborg's help in dealing with the Wyvern Patriarch? Beware though, as this will [bold type]disable the Wyvern Patriarch encounter[roman type] for the remainder of the playthrough.";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Accept Diavoborg's help in dealing with the Wyvern Patriarch permanently.";
+	say "     ([link]N[as]n[end link]) - It is not the time for this, give up on the idea for now.";
+	if player consents:
+		LineBreak;
+		say "     Well, it has been quite a pain having to deal with this furious wyvern, so you accept Diavoborg's help offer. 'Oh, that's great! I'm kind of excited to enact our plan, actually...!' With such an eager partner, you too are confident you can come up with something effective to accomplish what you both are looking for. 'So, all you have to do is to go after this guy one more time and [bold type]challenge him for a fight[roman type]. Once you do this, I'd suggest... maybe provoking him, or... Oh! Tell him you'd like to sort your affair once and for all! Even offer yourself as a slave if you lose your next duel, but whatever you do, make sure he heads this way, to the Dry Plains. I should see him coming, so I'll be able to find you.'";
+		say "     Until now, everything sounds pretty reasonable, but you ask him what would happen if you actually lost that fight, as the wyvern is still pretty tough... 'If you were to lose, it'd be no problem. I only need you to keep him distracted for a while as I find the best position to strike. Once my tail pierces his scales, it's game over for him. I'll make sure I have a very generous dose to give him...' And after that, one question remains... Where will he be brought to? The behemoth replies, 'Oh, I have room in my lair. We'll just keep him in a room here all dosed up and he'll be pacified for an indefinite amount of time. There'll be no problem, I'll drag him over. All you have to do is let me do my thing.'";
+		WaitLineBreak;
+		say "     So far, it seems like a pretty solid plan, so you thank him for his assistance and consider your next steps...";
+		say "     [bold type]You will be prompted to challenge the Wyvern Patriarch and lure him to the Dry Plains once you encounter him again until you decide to resolve this quest[roman type]. In order to progress, you have only to accept moving on with things once you encounter him another time.";
+		now Resolution of Ambush The Wyvern Patriarch is 1;
+	else:
+		LineBreak;
+		say "     You let Diavoborg know that you are not looking into doing anything of that sort at the moment, but thank him for listening to you. He nods and lets you drop the subject.";
 
 Section 4 - Diavoborg Sex
 
@@ -974,5 +1024,32 @@ to say diavoborg cum use:
 instead of sniffing diavoborg cum:
 	say "You open the lid for a moment and take a sniff. It smells so much like your behemoth friend, and it even made you think about his absurdly massive load that could never make it into this bottle...";
 	LibidoBoost 5;
+
+Section X - Dev Cheats
+
+SkipToDiavoborg is an action applying to nothing.
+Understand "GetDiavoborg" as SkipToDiavoborg.
+
+Check SkipToDiavoborg:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out SkipToDiavoborg:
+	move Diavoborg to Red Rock Lair Hall;
+	AddNavPoint Entrance to Red Rock Lair;
+	now That Red Cave is resolved;
+	now Resolution of Four Leg Wrath is 3; [Event resolved as smaller than Diavoborg]
+	now Four Leg Wrath is resolved;
+	say "     Set Diavoborg's loyalty?";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - To 10.";
+	say "     ([link]N[as]n[end link]) - To 20.";
+	if player consents:
+		now loyalty of Diavoborg is 10;
+	else:
+		now loyalty of Diavoborg is 20;
+	say "     Done.";
+	say "     Diavoborg is now accessible in his lair, all events are resolved as 'smaller size' and loyalty is set.";
 
 Diavoborg ends here.
