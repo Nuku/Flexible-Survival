@@ -864,9 +864,9 @@ to say playervirginsay:
 		say "Virgin";
 	else:
 		if StartingGender is 1:
-			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experience[else]Anal Virgin[end if], [if PenileVirgin of player is false]Penally Experienced[else]Penile Virgin[end if]";
+			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experienced[else]Anal Virgin[end if], [if PenileVirgin of player is false]Penally Experienced[else]Penile Virgin[end if]";
 		else:
-			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experience[else]Anal Virgin[end if], [if Virgin of player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
+			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experienced[else]Anal Virgin[end if], [if Virgin of player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
 
 to genderlockmenu:
 	now calcnumber is -1;

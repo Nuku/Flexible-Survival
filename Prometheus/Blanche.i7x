@@ -479,6 +479,7 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Chirpy - Gaudy Bird" for Sturm;
 			TraitGain "Blanche - Warm Fur" for Chirpy;
 			TraitGain "Sturm - Warm Fur" for Chirpy;
+			WaitBreakReactions;
 		if Chris is booked or Chris is bunkered:
 			if Libido of Chris is 0: [half-orc]
 				say "     Chris strolls over to the two wolves, admiring their pristine white fur. 'Hey there, I'm Chris. Welcome to the library,' he says, smiling. Though he shakes hands with both of them as they introduce themselves, his hand seems to linger a little as he lets go of Sturm, his eyes rapidly examining the large male wolf in a way that suggests interest rather than mere courtesy. 'I can't help but ask, but you seem like you were born the way that you are Sturm, is that right?' he asks, a flicker of hope behind his expression. 'You mean as a wolf? Yes. I can't imagine a world as bland as how Mom describes it,' Sturm laughs, Blanche playfully slapping his arm. 'It was also safer sweetie. We didn't have to scrounge for food. Well, the majority of us,' she says reproachfully. 'Yeah, the prison where I was born definitely wasn't safe. That's why daddy Val wanted me to come here,' Chris chips in. 'Well, I look forward to talking to you more Sturm. Um, you too Blanche,' he adds awkwardly before walking away, casting a look back when he thinks that no-one is looking. You hear Blanche mumble to herself, 'Are all orcs from the prison?'";

@@ -355,6 +355,7 @@ Include Origins by Luneth.
 Include Park Events by Sarokcat.
 Include Pet Shop by Wahn.
 Include Qytat Shifters by Hellerhound.
+Include Ranch House Event by Austin.
 Include Random Events by Guest Writers.
 Include Rane Events by Wahn.
 Include Recordings by Wahn.

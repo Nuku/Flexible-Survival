@@ -518,6 +518,9 @@ Figure of Orthas_face_icon is the file "Orthas_face.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
+Figure of Ranae_naked_icon is the file "Ranae_naked.jpg".
+Figure of Ranae_rags_icon is the file "Ranae_rags.jpg".
+Figure of Ranae_dress_icon is the file "Ranae_dress.jpg".
 Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
 Figure of Richard_human_clothed_icon is the file "Richard_human_clothed.jpg".
@@ -1649,6 +1652,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
 "Ram_hunk"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"
+"Ranae naked"	Figure of Ranae_naked_icon	"SteppeCrow"	g-White	"normal"
+"Ranae rags"	Figure of Ranae_rags_icon	"SteppeCrow"	g-White	"normal"
+"Ranae dress"	Figure of Ranae_dress_icon	"SteppeCrow"	g-White	"normal"
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
@@ -2595,6 +2601,7 @@ carry out artistcredits:
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
 	say "     Penny by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
+	say "     Ranae by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Rod by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";

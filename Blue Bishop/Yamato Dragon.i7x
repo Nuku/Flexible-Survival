@@ -79,7 +79,7 @@ to say Yamato Dragon attack:
 							else:
 								increase Ball Size of Player by 1;
 						follow the cock descr rule;
-						say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
+						say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 					else:
 						say "     It looks like you recover to their original size after treating it.";
 				else:
@@ -94,7 +94,7 @@ to say Yamato Dragon attack:
 						else:
 							increase Ball Size of Player by 1;
 					follow the cock descr rule;
-					say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
+					say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 			if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 1 in 4 succeeds)):
 				say "     Talons wrapping around your serpentine frame, the dragon pulls you up into the air, dragging you along as he ascends. [if HP of Player < 1 and player is not submissive]Instinctively struggling against the beast's hold, being let go quickly stops being an option, given how high up you are[else]At the mercy of this beast, you watch on as the earth becomes more and more distance, instinctively driving you to cling to him in return[end if]. Entirely exposed before him as you are, he presses you against his growing arousal, forced to abide his hardening cock as he grinds it between your legs.";
