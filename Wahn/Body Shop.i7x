@@ -188,7 +188,7 @@ to say MoreauSkinSale:
 			now MoreauPaymentAccepted is false;
 
 to say MoreauAssSale:
-	if SkinName of Player is "Mannequin":
+	if TailName of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like ass, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
 	else if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
 		say "     Taking a long glance at your ass, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
