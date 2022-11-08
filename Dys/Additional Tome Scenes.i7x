@@ -1,7 +1,8 @@
-Version 3 of Additional Tome Scenes by Dys begins here.
+Version 4 of Additional Tome Scenes by Dys begins here.
 [v1 - Adds tentacles and demon fox                                          ]
 [v2 - Breaks up the file into more abstract pieces                          ]
 [v3 - Added support for the Dullahan summon - Gherod                        ]
+[v4 - Added support for Drelgoth - Gherod]
 
 "Adds additional content to the Ancient Tome item."
 
@@ -46,11 +47,11 @@ to say TomeSexMenu:
 		now sortorder entry is 2;
 		now description entry is "The demon fox sounds like it could be fun";
 	[]
-	if Resolution of Hellish Trashpile > 2 and Resolution of Hellish Trashpile < 99 and Resolution of Hell Realm is 0:
+	if Resolution of MeetingDrelgoth < 99:
 		choose a blank row from table of fucking options;
-		now title entry is "Perform the Demonic Ritual";
+		now title entry is "Summon a demon lover";
 		now sortorder entry is 3;
-		now description entry is "Try to mimic the ritual you saw in the tape";
+		now description entry is "Maybe having a demonic companion would not be so bad";
 	[]
 	if Resolution of Corruption of Dreams > 0: [extra demonic summoning unlocked]
 		if Resolution of Dullahan Knight is 0:
@@ -63,6 +64,12 @@ to say TomeSexMenu:
 			now title entry is "Summon the Dullahan";
 			now sortorder entry is 4;
 			now description entry is "Face the mythical dark knight";
+	[]
+	if Resolution of Hellish Trashpile > 2 and Resolution of Hellish Trashpile < 99 and Resolution of Hell Realm is 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Perform the Demonic Ritual";
+		now sortorder entry is 99;
+		now description entry is "Try to mimic the ritual you saw in the tape";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows from table of fucking options:
@@ -84,6 +91,8 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxSummon]";
+					-- "Summon a demon lover":
+						say "[DrelgothSummon]"; [on his file]
 					-- "Perform the Demonic Ritual":
 						say "[HellRealmRitual]";
 					-- "Read on the mythical Dullahan":

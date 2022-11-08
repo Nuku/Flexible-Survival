@@ -499,10 +499,10 @@ instead of going North from Mall West Wing while (Libido of Danny is 12):
 	say "     [link](3)[as]3[end link] - Let Nermine destroy the doll, trapping Cole in male form.";
 	say "     [link](4)[as]4[end link] - Let Nermine destroy the doll, making Coura permanently his only form.";
 	now calcnumber is 0;
-	while calcnumber < 1 or calcnumber > 3:
+	while calcnumber < 1 or calcnumber > 4:
 		say "Choice? (1-4)>[run paragraph on]";
 		get a number;
-		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
 			break;
 		else:
 			say "Invalid choice. Type [link]1[end link] to refuse, [link]2[end link] to give the mall rat the ability to transform on his own, [link]3[end link] to make Cole permanently male again or [link]4[end link] to make Coura permanent.";

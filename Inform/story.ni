@@ -793,6 +793,7 @@ Include Diavoborg by Gherod.
 Include Diego by Wahn.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
+Include Drelgoth by Gherod.
 Include DrMoffatt by Stripes.
 Include DrUtah by Stripes.
 Include Duke by Wahn.
