@@ -24,19 +24,7 @@ to say ResolveEvent Creeping Grass:
 
 Section 2 - Ranch House
 
-Table of GameEventIDs (continued)
-Object	Name
-Ranch House	"Ranch House"
-
-Ranch House is a situation.
-ResolveFunction of Ranch House is "[ResolveEvent Ranch House]".
-Sarea of Ranch House is "Plains".
-
-to say ResolveEvent Ranch House:
-	say "     You come the ruins of what was probably a ranch house. You search through the broken home, but find nothing of use or value. Looking around, you see that some of the fence still stands and notice a second fallen structure. Going over, you can quickly tell that this was once a small stable from the smell of horses hanging over it. You take care where you step, avoiding the dark messes as well as the white ones from equine cum. Hoof-prints in the dirt around the stable head off into the plains where the transformed horses probably live now in some altered form.";
-	increase score by 1;
-	now Ranch House is resolved;
-
+[Replaced/Expanded - see Austin/Ranch House Event.i7x]
 
 Section 3 - Soaring Eagle
 

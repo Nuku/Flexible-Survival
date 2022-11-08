@@ -14,13 +14,13 @@ to say losetoRetriever:
 			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with your seed.";
 			WaitLineBreak;
 			say "Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
-			CreatureSexAftermath "Retriever Girl" receives "PussyFuck" from "Player";
+			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 		else:
 			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 			say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
 			WaitLineBreak;
 			say "Before getting up to leave you canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone, you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
-			CreatureSexAftermath "Retriever Girl" receives "OralPussy" from "Player";
+			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 
 to say beattheRetriever:
 	if HP of Karen is 4:
@@ -35,7 +35,7 @@ to say beattheRetriever:
 					say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
 					WaitLineBreak;
 					say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
-					CreatureSexAftermath "Retriever Girl" receives "PussyFuck" from "Player";
+					CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 				else:
 					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
 					say "Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
@@ -43,8 +43,8 @@ to say beattheRetriever:
 					WaitLineBreak;
 					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
 					say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
-					CreatureSexAftermath "Retriever Girl" receives "OralPussy" from "Player";
-					CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Girl";
+					CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
+					CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Female";
 			else:
 				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
 		else:

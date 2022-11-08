@@ -135,10 +135,10 @@ to say MoreauFaceSale:
 			choose row MonsterID from the Table of Random Critters;
 			if FaceName of Player is not Name entry:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+				now FaceSpeciesName of Player is Species Name entry;
 				now FaceName of Player is Name entry;
 				now Face of Player is face entry;
-			if "Body Shop Guarantee - Face" is listed in feats of Player:
-				remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -157,11 +157,11 @@ to say MoreauBodySale:
 			choose row MonsterID from the Table of Random Critters;
 			if BodyName of Player is not Name entry:
 				say "     Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+				now BodySpeciesName of Player is Species Name entry;
 				now BodyName of Player is Name entry;
 				now Body of Player is body entry;
 				attributeinfect; [sets the new attributes]
-			if "Body Shop Guarantee - Body" is listed in feats of Player:
-				remove "Body Shop Guarantee - Body" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Body";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -180,15 +180,15 @@ to say MoreauSkinSale:
 			choose row MonsterID from the Table of Random Critters;
 			if SkinName of Player is not Name entry:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+				now SkinSpeciesName of Player is Species Name entry;
 				now SkinName of Player is Name entry;
 				now Skin of Player is skin entry;
-			if "Body Shop Guarantee - Skin" is listed in feats of Player:
-				remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauAssSale:
-	if SkinName of Player is "Mannequin":
+	if TailName of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like ass, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
 	else if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
 		say "     Taking a long glance at your ass, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
@@ -202,10 +202,10 @@ to say MoreauAssSale:
 			choose row MonsterID from the Table of Random Critters;
 			if TailName of Player is not Name entry:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+				now TailSpeciesName of Player is Species Name entry;
 				now TailName of Player is Name entry;
 				now tail of Player is tail entry;
-			if "Body Shop Guarantee - Tail" is listed in feats of Player:
-				remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -228,10 +228,10 @@ to say MoreauDickSale:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
 			remove manhood from Player;
 			remove womanhood from Player;
+			now CockSpeciesName of Player is Species Name entry;
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
-			if "Body Shop Guarantee - Crotch" is listed in feats of Player:
-				remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -1178,10 +1178,10 @@ An everyturn rule:
 	if "Body Shop Guarantee - Face" is listed in feats of Player:
 		if (FaceName of Player is "Jackalman" or FaceName of Player is "Jackalboy" or FaceName of Player is "Nightmare" or FaceName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 		else if "Singular" is listed in feats of Player and FaceName of Player is not "Human" and FaceName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your face, only to be counteracted at every turn. You fall to your knees and cradle your head in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 		else if FaceName of Player is not BodyShopGuaranteedFace:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your head to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedFace;
@@ -1196,7 +1196,7 @@ An everyturn rule:
 	if "Body Shop Guarantee - Body" is listed in feats of Player:
 		if (BodyName of Player is "Jackalman" or BodyName of Player is "Jackalboy" or BodyName of Player is "Nightmare" or BodyName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Body" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Body";
 		else if BodyName of Player is not BodyShopGuaranteedBody:
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your body to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedBody;
@@ -1212,10 +1212,10 @@ An everyturn rule:
 	if "Body Shop Guarantee - Skin" is listed in feats of Player:
 		if (SkinName of Player is "Jackalman" or SkinName of Player is "Jackalboy" or SkinName of Player is "Nightmare" or SkinName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 		else if "Singular" is listed in feats of Player and FaceName of Player is not "Human" and SkinName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your skin in rippling waves, only to be counteracted at every turn. You fall to your knees and cradle your body in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 		else if SkinName of Player is not BodyShopGuaranteedSkin:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your skin to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedSkin;
@@ -1230,10 +1230,10 @@ An everyturn rule:
 	if "Body Shop Guarantee - Tail" is listed in feats of Player:
 		if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 		else if "Singular" is listed in feats of Player and TailName of Player is not "Human" and TailName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your tail, only to be counteracted at every turn. You fall to your knees and cradle the tail in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 		else if TailName of Player is not BodyShopGuaranteedtail:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your tail to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedtail;
@@ -1248,10 +1248,10 @@ An everyturn rule:
 	if "Body Shop Guarantee - Crotch" is listed in feats of Player:
 		if (CockName of Player is "Jackalman" or CockName of Player is "Jackalboy" or CockName of Player is "Nightmare" or CockName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 		else if "Singular" is listed in feats of Player and CockName of Player is not "Human" and CockName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your crotch, only to be counteracted at every turn. You fall to your knees and flinch in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 		else if CockName of Player is not BodyShopGuaranteedCrotch:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your cock to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedCrotch;

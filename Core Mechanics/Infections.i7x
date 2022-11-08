@@ -54,7 +54,7 @@ This is the sex change rule:
 			now Ball Size of Player is 4;
 		if prevcock < Ball Size of Player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
+			say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
 		[Shrinks existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
@@ -242,7 +242,7 @@ to grow balls by (x - a number):
 		now Ball Size of Player is 5;
 	if prevcock < Ball Size of Player:		[did balls actually grow?]
 		follow the cock descr rule;
-		say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
+		say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 
 Part 2 - Breast Change
 

@@ -974,7 +974,7 @@ to say bleuettonne Use:
 	else:
 		increase Ball Size of Player by a random number from 1 to 2;
 		Follow the cock descr rule;
-		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]";
+		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]";
 	decrease hunger of Player by 5;
 	if hunger of Player < 0, now hunger of Player is 0;
 

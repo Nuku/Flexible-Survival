@@ -190,16 +190,21 @@ to say ResolveEvent Scavenging the Park:
 			say "     'In the past. Not your fault,' your guard-wolf rumbles. 'Much happened since. Words difficult. Talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'Huh. You don't look that special,' Sturm comments, casting a critical eye over the quadrupedal wolf. 'I keep home safe. Protect my pack. Called Fang now,' Fang mutters, meeting Sturm's gaze. Blanche frowns for a moment, whether at her son's rudeness or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]words you are unsure, but she soon returns to smiling as ";
 		if hp of Lux > 0:
 			if hp of Lux is 1: [Pup]
-				say "two small fluffy blobs with legs crawl out from behind some shelves and struggle across the floor towards Fang.";
-				say "     With a girlish squeal, Blanche drops to the floor beside them, giggling as they clamber over top of her, occasionally pulling at her ears and licking her all over. 'They're gorgeous. Are they yours?' she asks Fang while scritching the puppies['] pudgy tummies. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm sits down beside his mother to pet the pups, detaching Lux from Blanche's ear and lifting her onto his lap to stroke her. 'I would say that I miss the days when you were this small, but you grew up after a few hours,' Blanche reminisces to her son, cupping the side of his face affectionately.";
+				say "two small fluffy blobs with legs crawl out from behind some shelves and struggle across the floor towards Fang[if FangDashRel > 0 and FangDashRel < 10], with Dash close behind[end if].";
+				say "     With a girlish squeal, Blanche drops to the floor beside them, giggling as they clamber over top of her, occasionally pulling at her ears and licking her all over. 'They're gorgeous. Are they yours?' she asks Fang while scritching the puppies['] pudgy tummies[if FangDashRel > 0 and FangDashRel < 10] and the fox's bushy tail[end if]. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm sits down beside his mother to pet the pups, detaching Lux from Blanche's ear and lifting her onto his lap to stroke her. 'I would say that I miss the days when you were this small, but you grew up after a few hours,' Blanche reminisces to her son, cupping the side of his face affectionately.";
 				WaitLineBreak;
-				say "     The six of you enjoy the moment while you can, some of you remembering life before the nanites. Others amuse themselves by biting the adults on the toes, the fits of giggles ruining any attempts at sounding authoritative when telling them to stop. However, even this moment must come to an end, Lux and Umbra eventually tiring and scrambling over to Fang to curl up beside [PosAdj of Fang] paws for a snooze. With a sigh, Blanche and Sturm clamber back to their feet, several appendages slobbered and chewed upon, and gaze down at the sleeping balls of fluff. 'We'll let them rest while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang curls up protectively around his children, head resting on the ground, but eyes still vigilant. 'Fang seemed nice and the puppies were so cute,' Sturm says as you walk away, earning a smile from his mother. 'Very,' she replies before they look to you to see what you have planned next.";
+				say "     The [if FangDashRel > 0 and FangDashRel < 10]seven [else]six [end if]of you enjoy the moment while you can, some of you remembering life before the nanites. Others amuse themselves by biting the adults on the toes, the fits of giggles ruining any attempts at sounding authoritative when telling them to stop. However, even this moment must come to an end, Lux [if FangDashRel > 0 and FangDashRel < 10], Umbra, and Dash [else]and Umbra [end if]eventually tiring and scrambling over to Fang to curl up beside [PosAdj of Fang] paws for a snooze. With a sigh, Blanche and Sturm clamber back to their feet, several appendages slobbered and chewed upon, and gaze down at the sleeping balls of fluff. 'We'll let them rest while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang curls up protectively around his children, head resting on the ground, but eyes still vigilant. 'Fang seemed nice and the puppies were so cute,' Sturm says as you walk away, earning a smile from his mother. 'Very,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Lux & Umbra - Fluffy Pups" for Blanche;
 				TraitGain "Lux & Umbra - Fluffy Pups" for Sturm;
 				TraitGain "Blanche - Chewable Ear" for Lux;
 				TraitGain "Sturm - Kind Hand" for Lux;
 				TraitGain "Blanche - Tasty Toes" for Umbra;
 				TraitGain "Sturm - Tasty Toes" for Umbra;
+				if FangDashRel > 0 and FangDashRel < 10:
+					TraitGain "Dash - Growing Boy" for Blanche;
+					TraitGain "Dash - Cute Fox" for Sturm;
+					TraitGain "Blanche - Cuddly Woman" for Dash;
+					TraitGain "Sturm - Food Provider" for Dash;
 				if hp of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
@@ -221,16 +226,21 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
 			else if hp of Lux is 2: [Child]
-				say "two wolves about the size of Shetland sheepdogs scamper out from behind some shelves and patter towards Fang.";
-				say "     With a coo of delight, Blanche crouches down and offers them a hand to sniff as they regard her curiously from around their [if Fang is Male]father's [else if Fang is female]mother's [end if]legs. After [SubjectPro of Fang] gives them a nod, they quickly rush over to you, affectionately licking you while their tails wag wildly, before moving on to investigate the newcomers, sniffing around their ankles and basking in the attention that they get given. 'They're adorable. Are they yours?' Blanche asks Fang, kissing the pups as they leap up. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves, rubbing them under their chins and ruffling Umbra's ears.";
+				say "two wolves about the size of Shetland sheepdogs scamper out from behind some shelves and patter towards Fang[if FangDashRel > 0 and FangDashRel < 10], closely followed by Dash[end if].";
+				say "     With a coo of delight, Blanche crouches down and offers them a hand to sniff as they regard her curiously from around their [if Fang is Male]father's [else if Fang is female]mother's [end if]legs. After [SubjectPro of Fang] gives them a nod, they quickly rush over to you, affectionately licking you while their tails wag wildly, before moving on to investigate the newcomers, sniffing around their ankles and basking in the attention that they get given. 'They're adorable. Are they yours?' Blanche asks Fang, kissing the pups as they leap up. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves[if FangDashRel > 0 and FangDashRel < 10] and fox[end if], rubbing them under their chins and ruffling Umbra's ears.";
 				WaitLineBreak;
-				say "     The six of you enjoy the moment while you can, Lux and Umbra dashing around as the adults dote on them, Blanche and Sturm's snowy fur seeming of great interest to them compared to Fang's much darker hues. However, even this moment must come to an end, Lux and Umbra eventually tiring and scrambling over to Fang to curl up beside [PosAdj of Fang] paws for a snooze. With a sigh, Blanche and Sturm clamber back to their feet, their fur matted with puppy lick, and gaze down at the panting wolves. 'We'll let them rest while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang curls around his children, head resting on the ground, but eyes still vigilant. 'Fang seemed nice and the puppies were so soft,' Sturm says as you walk away, earning a smile from his mother. 'Weren't they?' she replies before they look to you to see what you have planned next.";
+				say "     The [if FangDashRel > 0 and FangDashRel < 10]seven [else]six [end if]of you enjoy the moment while you can, Lux[if FangDashRel > 0 and FangDashRel < 10], Umbra, and Dash zooming [else] and Umbra dashing [end if]around as the adults dote on them, Blanche and Sturm's snowy fur seeming of great interest to them compared to Fang's much darker hues. However, even this moment must come to an end, [if FangDashRel > 0 and FangDashRel < 10]the three children [else]Lux and Umbra [end if]eventually tiring and scrambling over to Fang to curl up beside [PosAdj of Fang] paws for a snooze. With a sigh, Blanche and Sturm clamber back to their feet, their fur matted with puppy lick, and gaze down at the panting [if FangDashRel > 0 and FangDashRel < 10]cubs[else]wolves[end if]. 'We'll let them rest while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang curls around his children, head resting on the ground, but eyes still vigilant. 'Fang seemed nice and the puppies were so soft,' Sturm says as you walk away, earning a smile from his mother. 'Weren't they?' she replies before they look to you to see what you have planned next.";
 				TraitGain "Lux & Umbra - Adorable Puppies" for Blanche;
 				TraitGain "Lux & Umbra - Adorable Puppies" for Sturm;
 				TraitGain "Blanche - Pretty White Wolf" for Lux;
 				TraitGain "Sturm - Large White Wolf" for Lux;
 				TraitGain "Blanche - Pretty White Wolf" for Umbra;
 				TraitGain "Sturm - Source of Pats" for Umbra;
+				if FangDashRel > 0 and FangDashRel < 10:
+					TraitGain "Dash - Growing Boy" for Blanche;
+					TraitGain "Dash - Cute Fox" for Sturm;
+					TraitGain "Blanche - Cuddly Woman" for Dash;
+					TraitGain "Sturm - Food Provider" for Dash;
 				if hp of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
@@ -252,16 +262,21 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
 			else if hp of Lux is 3: [Teen]
-				say "two wolves bound out from behind some shelves and towards Fang, the young dark-furred wolf of similar size to him while his paler-furred twin is smaller, slightly larger than a border collie.";
-				say "     With a gasp of delight, Blanche kneels beside them and strokes their heads, giggling as they lick her face in return, taking the affection of a stranger within their stride. 'You're adorable. Are they yours?' Blanche first addresses the twins before directing the question towards Fang. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if],' [SubjectPro of Fang] replies, gesturing at you. 'Hi,' Lux brightly chips in, her brother a little more shyly chiming in a moment later. 'Such beautiful names, and fitting, but did you forget your Latin from school? Umbra is meant to be feminine...' the white-furred wolfess hesitantly comments, the dark-furred wolf too busy washing his sister's ear to take offense. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves, Lux licking his face and ensuring that he doesn't feel left out.";
+				say "two wolves bound out from behind some shelves and towards Fang, the young dark-furred wolf of similar size to him while his paler-furred twin is smaller, slightly larger than a border collie[if FangDashRel > 0 and FangDashRel < 10]. Behind them, Dash determinedly keeps up, his legs moving rapidly[end if].";
+				say "     With a gasp of delight, Blanche kneels beside them and strokes their heads, giggling as they lick her face in return, taking the affection of a stranger within their stride. 'You're adorable. Are they yours?' Blanche first addresses the twins before directing the question towards Fang. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Hi,' Lux brightly chips in, her brother a little more shyly chiming in a moment later. 'Such beautiful names, and fitting, but did you forget your Latin from school? Umbra is meant to be feminine...' the white-furred wolfess hesitantly comments, the dark-furred wolf too busy washing his sister's ear to take offense. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves[if FangDashRel > 0 and FangDashRel < 10] and fox[end if], Lux licking his face and ensuring that he doesn't feel left out[if FangDashRel > 0 and FangDashRel < 10], though Dash leaping at his heels hardly leaves any chance of that[end if].";
 				WaitLineBreak;
-				say "     The six of you enjoy the moment while you can, Lux and Umbra relishing the attention as the adults dote on them, tongues lolling out of the side of their mouths when they aren't busy giving wolfy kisses to anyone that they can reach. However, even this moment must come to an end, Lux and Umbra eventually scampering outside in pursuit of a regular sparrow. With a sigh, Blanche and Sturm clamber back to their feet, their fur matted with saliva, and gaze after the energetic wolves. 'We'll let them have their fun while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang pads after his children to keep a vigilant watch for any that might threaten their play. 'Fang seemed nice and Lux and Umbra were so friendly,' Sturm says as you walk away, earning a smile from his mother. 'I'm sure that you'll be able to spend more time with them again,' she replies before they look to you to see what you have planned next.";
+				say "     The [if FangDashRel > 0 and FangDashRel < 10]seven [else]six [end if]of you enjoy the moment while you can, Lux[if FangDashRel > 0 and FangDashRel < 10], Umbra, and Dash [else] and Umbra [end if]relishing the attention as the adults dote on them, tongues lolling out of the side of their mouths when they aren't busy giving wolfy kisses to anyone that they can reach. However, even this moment must come to an end, Lux and Umbra eventually scampering outside in pursuit of a regular sparrow[if FangDashRel > 0 and FangDashRel < 10] while Dash retires to Fang's side[end if]. With a sigh, Blanche and Sturm clamber back to their feet, their fur matted with saliva, and gaze after the energetic wolves. 'We'll let them have their fun while we finish the tour of our new home. We have a lot of catching up to do, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang pads after his children [if FangDashRel > 0 and FangDashRel < 10]with the little fox at his side [end if]to keep a vigilant watch for any that might threaten their play. 'Fang seemed nice and [if FangDashRel > 0 and FangDashRel < 10][PosAdj of Fang] children [else]Lux and Umbra [end if]were so friendly,' Sturm says as you walk away, earning a smile from his mother. 'I'm sure that you'll be able to spend more time with them again,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Lux & Umbra - Adorable Children" for Blanche;
 				TraitGain "Lux & Umbra - Adoptive Siblings" for Sturm;
 				TraitGain "Blanche - Affectionate Mother Wolf" for Lux;
 				TraitGain "Sturm - Adoptive Big Brother" for Lux;
 				TraitGain "Blanche - Affectionate Mother Wolf" for Umbra;
 				TraitGain "Sturm - Adoptive Big Brother" for Umbra;
+				if FangDashRel > 0 and FangDashRel < 10:
+					TraitGain "Dash - Growing Boy" for Blanche;
+					TraitGain "Dash - Cute Fox" for Sturm;
+					TraitGain "Blanche - Cuddly Woman" for Dash;
+					TraitGain "Sturm - Food Provider" for Dash;
 				if hp of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
@@ -283,16 +298,21 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
 			else: [Adult]
-				say "two wolves hurtle out from behind some shelves, stopping as they see your group before trotting towards Fang, the young dark-furred wolf slightly larger than him while his paler-furred twin is a little smaller.";
-				say "     With an excited gasp, Blanche sits beside them and strokes their heads, giggling as they lick her face in return, taking the affection of a stranger within their stride. 'You two are lovely. Are they yours?' Blanche first addresses the twins before directing the question towards Fang. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if],' [SubjectPro of Fang] replies, gesturing at you. 'Hello pretty lady,' Lux brightly greets her, her brother echoing her a moment later. 'Such beautiful names, and fitting, but did you forget your Latin from school? Umbra is meant to be feminine...' the white-furred wolfess hesitantly comments, scritching the twins between the ears. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm crouches beside his mother to pet the wolves, Umbra pressing himself up against his side as his neck is scritched.";
+				say "two wolves hurtle out from behind some shelves, stopping as they see your group before trotting towards Fang, the young dark-furred wolf slightly larger than him while his paler-furred twin is a little smaller[if FangDashRel > 0 and FangDashRel < 10]. Behind them, Dash's little legs piston to keep up with them[end if].";
+				say "     With an excited gasp, Blanche sits beside them and strokes their heads, giggling as they lick her face in return, taking the affection of a stranger within their stride. 'You [if FangDashRel > 0 and FangDashRel < 10]three [else]two [end if]are lovely. Are they yours?' Blanche first addresses the [if FangDashRel > 0 and FangDashRel < 10]twin wolves and their younger brother [else]twins [end if]before directing the question towards Fang. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Hello pretty lady,' Lux brightly greets her, her brother echoing her a moment later. 'Such beautiful names, and fitting, but did you forget your Latin from school? Umbra is meant to be feminine...' the white-furred wolfess hesitantly comments, scritching the twins between the ears. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm crouches beside his mother to pet the wolves, Umbra pressing himself up against his side as his neck is scritched[if FangDashRel > 0 and FangDashRel < 10], while Dash approaches Blanche and insistently nudges her her hand for attention[end if].";
 				WaitLineBreak;
-				say "     The six of you enjoy the moment while you can, Lux and Umbra relishing the attention as you all dote on them, rapidly wagging tails and wide toothy grins betraying the depth of their enjoyment at this bonding. However, even this moment must come to an end, Lux and Umbra eventually bidding their new friends farewell before loping outside on patrol. With a sigh, Blanche and Sturm clamber back to their feet, their cheeks slick from wolfy kisses, and gaze after the energetic wolves. 'It's nice to know who will be keeping us safe, but we should probably finish the tour before we get to know them a bit better. We have a lot of catching up to do too, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang pads after his children to join them in their protection of the library. 'Fang seemed nice and Lux and Umbra were so friendly,' Sturm says as you walk away, earning a smile from his mother. 'I'm sure that you'll be able to spend more time with them again,' she replies before they look to you to see what you have planned next.";
+				say "     The [if FangDashRel > 0 and FangDashRel < 10]seven [else]six [end if]of you enjoy the moment while you can, Lux[if FangDashRel > 0 and FangDashRel < 10], Umbra, and Dash [else] and Umbra [end if]relishing the attention as you all dote on them, rapidly wagging tails and wide toothy grins betraying the depth of their enjoyment at this bonding. However, even this moment must come to an end, Lux and Umbra eventually bidding their new friends farewell before loping outside on patrol[if FangDashRel > 0 and FangDashRel < 10], leaving Dash as sole protector of Fang[end if]. With a sigh, Blanche and Sturm clamber back to their feet, their cheeks slick from wolfy kisses, and gaze after the energetic wolves. 'It's nice to know who will be keeping us safe, but we should probably finish the tour before we get to know them a bit better. We have a lot of catching up to do too, so I'll talk with you later. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]?' Blanche asks, receiving a nod in response before Fang pads [if FangDashRel > 0 and FangDashRel < 10]over to the door to keep watch with Dash[else]after his children to join them in their protection of the library[end if]. 'Fang seemed nice and [if FangDashRel > 0 and FangDashRel < 10][PosAdj of Fang] children [else]Lux and Umbra [end if] were so friendly,' Sturm says as you walk away, earning a smile from his mother. 'I'm sure that you'll be able to spend more time with them again,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Lux & Umbra - Flourishing Children" for Blanche;
 				TraitGain "Lux & Umbra - Pack Siblings" for Sturm;
 				TraitGain "Blanche - Mommy Wolf" for Lux;
 				TraitGain "Sturm - New Pack Brother" for Lux;
 				TraitGain "Blanche - Mommy Wolf" for Umbra;
 				TraitGain "Sturm - New Pack Brother" for Umbra;
+				if FangDashRel > 0 and FangDashRel < 10:
+					TraitGain "Dash - Growing Boy" for Blanche;
+					TraitGain "Dash - Cute Fox" for Sturm;
+					TraitGain "Blanche - Cuddly Woman" for Dash;
+					TraitGain "Sturm - Food Provider" for Dash;
 				if hp of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
@@ -378,25 +398,25 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Araqiel - Beautiful Husky" for Sturm;
 			TraitGain "Blanche - Cuddly Woman" for Araqiel;
 			TraitGain "Sturm - Flatterer" for Araqiel;]
-		[if Artemis is booked or Artemis is bunkered:
-			say "     ";
-			TraitGain "Artemis - Adoptive Daughter" for Blanche;
-			TraitGain "Artemis - Beautiful Husky" for Sturm;
-			TraitGain "Blanche - Cuddly Woman" for Artemis;
-			TraitGain "Sturm - Flatterer" for Artemis;]
+		if Artemis is booked or Artemis is bunkered:
+			say "     Investigating what the source of excitement is, Artemis pads over. Letting out a squeaky meow of curiosity, she studies the wolves as they in turn appraise her. 'I've seen a few latex creatures while out scavenging, but not many. They probably avoid the Capitol District due to the heat,' Sturm informs you. 'She seems rather friendly,' Blanche adds as the rubber tigress rubs up against her. While part of it may be be a form of greeting, you are sure that she is also enjoying the sensation of fur against her latex flesh. The feline's flesh softens and begins to ooze around the wolf MILF's arm, but as soon as Blanche gasps, Artemis stops and slinks back with momentary look of shame. While Sturm takes a protective step towards his mother, Blanche is far less perturbed. 'That was an interesting feeling dear. And you can do that at will?' The question catches the tigress of guard, but after a few seconds, she shyly nods. 'Extraordinary. Assuming that you aren't assimilating me or anything, I might be open to trying that again once we've had a chance to settle in. What did you say your name was? My name is Blanche and this is my eldest son Sturm.' After you introduce Artemis, she pads away, casting one last intrigued glance over her shoulder before vanishing. 'Is there something that you want to tell me?' Sturm teases the wolfess.";
+			TraitGain "Artemis - Liquid Massage" for Blanche;
+			TraitGain "Artemis - Living Latex" for Sturm;
+			TraitGain "Blanche - Willing Friend" for Artemis;
+			TraitGain "Sturm - Cautious Wolf" for Artemis;
 		[if Atticus is booked or Atticus is bunkered:
 			say "     ";
 			TraitGain "Atticus - Adoptive Daughter" for Blanche;
 			TraitGain "Atticus - Beautiful Husky" for Sturm;
 			TraitGain "Blanche - Cuddly Woman" for Atticus;
 			TraitGain "Sturm - Flatterer" for Atticus;]
-		[if Aurora is booked or Aurora is bunkered:
-			say "     ";
-			TraitGain "Aurora - Adoptive Daughter" for Blanche;
-			TraitGain "Aurora - Beautiful Husky" for Sturm;
-			TraitGain "Blanche - Cuddly Woman" for Aurora;
-			TraitGain "Sturm - Flatterer" for Aurora;
-			WaitBreakReactions;]
+		if Aurora is booked or Aurora is bunkered:
+			say "     Given her size the arrival of Aurora is not easy to miss. 'Haven't I seen you somewhere before?' Blanche asks before remembering her manners, introducing herself and Sturm. 'Maybe? I've ended up looking like the mascot of the ice-cream shop I used to run in the Capitol District. I'm Aurora, by the way,' the giantess replies before carefully stooping down and hugging the two of them. 'That would be it. Giant's Frozen Yogurt, wasn't it? I used to go there from time to time during my lunch breaks in the summer,' the wolf MILF reminisces. 'Hey, then we probably met. You weren't by any chance a five-foot tall man with a huge beard before you transformed were you?' Aurora asks enthusiastically, causing Blanche to burst out laughing. 'No, no... I was a woman then too. Nothing special about me.' 'I'm sure that's not true, but I look forward to getting to know the two of you and finding out how you cope in this heat with such thick fur. I can give you some frozen yogurt if you need further enticement, though with the way your son has been looking at me, that may not be necessary,' Aurora teases before striding away again, leaving Sturm to blush as his mother sighs. 'Boys...' she mutters.";
+			TraitGain "Aurora - Statuesque Dessert Seller" for Blanche;
+			TraitGain "Aurora - Statuesque Beauty" for Sturm;
+			TraitGain "Blanche - White Wolfess" for Aurora;
+			TraitGain "Sturm - Admirer" for Aurora;
+			WaitBreakReactions;
 		if Brutus is booked or Brutus is bunkered:
 			if DBCaptureQuestVar is 5: [controlled]
 				if Resolution of Demonic Redemption is 7: [somewhat pacified]
@@ -453,12 +473,13 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Combat Amateur" for Carl;
 				TraitGain "Sturm - Potential Watchmate" for Carl;
 			WaitBreakReactions;
-		[if Chirpy is booked or Chirpy is bunkered:
-			say "     ";
-			TraitGain "Chirpy - Adoptive Daughter" for Blanche;
-			TraitGain "Chirpy - Beautiful Husky" for Sturm;
-			TraitGain "Blanche - Cuddly Woman" for Chirpy;
-			TraitGain "Sturm - Flatterer" for Chirpy;]
+		if Chirpy is booked or Chirpy is bunkered:
+			say "     With a flutter of feathers, Chirpy flaps over, circling around above your heads. 'Oh my, she's gorgeous,' Blanche exclaims, looking admiringly up at the bird of paradise. 'A little flashy,' Sturm replies, wincing when his mother smacks him reproachfully on the arm. 'Don't be rude.' Unconcerned with the white wolf's critique, Chirpy glides down to land on your shoulder where she proceeds to preen herself, straightening her feathers and showing off even further. After you give her a nod, Blanche approaches and strokes the bird's back, attention that the avian seems to enjoy. Eventually, Sturm too approaches to pet Chirpy. 'I guess she's no worse than Casper,' he muses, his mother giggling in response. After a short time of this, Chirpy launches herself away again, seemingly having had her fill of attention from large mammals. 'I wonder how clever she is,' Sturm says, mostly to himself. Nonetheless, Blanche replies, 'If she's like a parrot, then probably quite clever. In which case you had better hope she doesn't harbor a grudge for you calling her too flashy.'";
+			TraitGain "Chirpy - Pretty Bird" for Blanche;
+			TraitGain "Chirpy - Gaudy Bird" for Sturm;
+			TraitGain "Blanche - Warm Fur" for Chirpy;
+			TraitGain "Sturm - Warm Fur" for Chirpy;
+			WaitBreakReactions;
 		if Chris is booked or Chris is bunkered:
 			if Libido of Chris is 0: [half-orc]
 				say "     Chris strolls over to the two wolves, admiring their pristine white fur. 'Hey there, I'm Chris. Welcome to the library,' he says, smiling. Though he shakes hands with both of them as they introduce themselves, his hand seems to linger a little as he lets go of Sturm, his eyes rapidly examining the large male wolf in a way that suggests interest rather than mere courtesy. 'I can't help but ask, but you seem like you were born the way that you are Sturm, is that right?' he asks, a flicker of hope behind his expression. 'You mean as a wolf? Yes. I can't imagine a world as bland as how Mom describes it,' Sturm laughs, Blanche playfully slapping his arm. 'It was also safer sweetie. We didn't have to scrounge for food. Well, the majority of us,' she says reproachfully. 'Yeah, the prison where I was born definitely wasn't safe. That's why daddy Val wanted me to come here,' Chris chips in. 'Well, I look forward to talking to you more Sturm. Um, you too Blanche,' he adds awkwardly before walking away, casting a look back when he thinks that no-one is looking. You hear Blanche mumble to herself, 'Are all orcs from the prison?'";
@@ -520,11 +541,14 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Sturm - Capable Stud" for Colleen;
 			WaitBreakReactions;
 		if Dash is booked or Dash is bunkered:
-			say "     The young fox rushes out of the Computer Room over to you, likely having already met the rest of Blanche's brood making themselves at home there. At first he is cautious of the two wolves beside you, but when Blanche sits on the ground and beckons him over, he tentatively approaches her. 'You like a growing boy, little fox,' she croons, gently coaxing him onto her lap and stroking him slowly along his back. 'And definitely in need of more love. You can never have too much.' Dash seems to be enjoying the attention, squeaking cheerfully as the wolfess pampers him. He seems even more enthused by the two white wolves when Sturm produces a piece of jerky from somewhere and offers it to the young vulpine. Between being smothered with affection from Blanche and her son plying him with food, you get the impression that he is going to appreciate you inviting them to the library.";
-			TraitGain "Dash - Growing Boy" for Blanche;
-			TraitGain "Dash - Cute Fox" for Sturm;
-			TraitGain "Blanche - Cuddly Woman" for Dash;
-			TraitGain "Sturm - Food Provider" for Dash;
+			if FangDashRel > 0 and FangDashRel < 10:
+				say "     Seeing his chance to get more attention while his siblings are elsewhere, Dash rushes back over to you. 'Hello again honey,' Blanche croons, coaxing him onto her lap and gently stroking his back. 'What did you think of the rest of our family?' Sturm asks, curious as to what the little fox thought of all the wolves moving into the computer room. Dash withholds his answer, too busy being cuddled by the motherly wolfess. 'All the more people to love him. You can never have too much love, especially when you're a growing boy,' Blanche replies on his behalf. The fox definitely seems to be enjoying the attention, squeaking cheerfully as the wolfess pampers him. He seems even more enthused when Sturm produces a piece of jerky from somewhere and offers it to the young vulpine. Between being smothered with affection from Blanche and her son plying him with food, you get the impression that he is going to appreciate you inviting them to the library.";
+			else:
+				say "     The young fox rushes out of the Computer Room over to you, likely having already met the rest of Blanche's brood making themselves at home there. At first he is cautious of the two wolves beside you, but when Blanche sits on the ground and beckons him over, he tentatively approaches her. 'You look like a growing boy, little fox,' she croons, gently coaxing him onto her lap and stroking him slowly along his back. 'And definitely in need of more love. You can never have too much.' Dash seems to be enjoying the attention, squeaking cheerfully as the wolfess pampers him. He seems even more enthused by the two white wolves when Sturm produces a piece of jerky from somewhere and offers it to the young vulpine. Between being smothered with affection from Blanche and her son plying him with food, you get the impression that he is going to appreciate you inviting them to the library.";
+				TraitGain "Dash - Growing Boy" for Blanche;
+				TraitGain "Dash - Cute Fox" for Sturm;
+				TraitGain "Blanche - Cuddly Woman" for Dash;
+				TraitGain "Sturm - Food Provider" for Dash;
 			WaitBreakReactions;
 		if David is booked or David is bunkered:
 			say "     David wanders over, curious to meet the new library residents. 'Hi there. I'm David. Due to their being a government agent, I've been assigned to aid [if Player is not defaultnamed][Name of Player][else][ObjectPro of Player][end if] for the foreseeable future so you'll probably be seeing me around,' he says, gesturing at you. 'Not that I mind really. The library is a lot more comfortable than Camp Bravo.' The soldier laughs and shakes hands with the two wolves. 'I know that not everyone is thrilled by everything that the military is doing in the city, and some of that won't be without reason, but we're the best chance anyone has of getting back to normality, so if you have any problems with me, please talk it through rather than jumping me in my sleep. I should also be able to put in a good word for you after this is all over. Anyway, I should get back to it. Come see me in the bunker if you want to talk. It gets lonely sometimes.' With that, he departs, leaving you to weather the accusatory stare from Blanche. 'You're not really a government agent are you? He seems to have a good heart, but I trust you enough to keep your secret.'";
@@ -675,6 +699,26 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Nice Wolfess" for Honey;
 			TraitGain "Sturm - Nice Wolf" for Honey;
 			WaitBreakReactions;
+		[if HP of Hope-Born Dragon > 5:
+			if "Dragon-Imperious" is listed in Traits of Hope-Born Dragon:
+				say "     ";
+				TraitGain "Hope-Born Dragon - Rape Threat" for Blanche;
+				TraitGain "Hope-Born Dragon - Ready Slut" for Sturm;
+				TraitGain "Blanche - Rape Threat" for Hope-Born Dragon;
+				TraitGain "Sturm - Ready Slut" for Hope-Born Dragon;
+			else if "Dragon-Carefree" is listed in Traits of Hope-Born Dragon:
+				say "     ";
+				TraitGain "Hope-Born Dragon - Rape Threat" for Blanche;
+				TraitGain "Hope-Born Dragon - Ready Slut" for Sturm;
+				TraitGain "Blanche - Rape Threat" for Hope-Born Dragon;
+				TraitGain "Sturm - Ready Slut" for Hope-Born Dragon;
+			else if "Dragon-Lusty" is listed in Traits of Hope-Born Dragon:
+				say "     ";
+				TraitGain "Hope-Born Dragon - Rape Threat" for Blanche;
+				TraitGain "Hope-Born Dragon - Ready Slut" for Sturm;
+				TraitGain "Blanche - Rape Threat" for Hope-Born Dragon;
+				TraitGain "Sturm - Ready Slut" for Hope-Born Dragon;
+			WaitBreakReactions;]
 		if Icarus is booked or Icarus is bunkered:
 			say "     Icarus struts towards the wolves, his tail feathers spread out and a cocky glint in his eye. 'It's always a good day when such a beautiful lady such as yourself finds their way into my home,' the blue chaffinch greets them, though the sleazy comment is obviously directed at Blanche. To his embarrassment, she starts to laugh. 'You're not the first person to make a pass at me, and as pick-up lines go, that wasn't particularly creative, but at least it wasn't crude. Also, I don't think that the library is yours exactly,' the wolf MILF replies, her son smirking as Icarus['] expression slips. 'Well then. I'll be in my room if you want me,' the bird snaps stiffly before flapping away without looking back. 'I should probably apologize, but if I had to count the number of men who thought pick-up lines were a good way to start a conversation, I wouldn't have needed to work in an office,' Blanche sighs. 'I'll do it later. There's probably more to him than cheap talk.'";
 			TraitGain "Icarus - Pickup Artist" for Blanche;
@@ -793,20 +837,27 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Witty Wolf" for Paula;
 			TraitGain "Sturm - Toned Wolf" for Paula;
 			WaitBreakReactions;
-		[if Peppy is booked or Peppy is bunkered: [Skunk Kit]
+		if Peppy is booked or Peppy is bunkered: [Skunk Kit]
+			say "     Peppy's unique scent reaches you moments before the large skunk kit does, the wolves['] sensitive noses picking up on it in an instant judging from the way that they twitch. Despite his size, Blanche immediately recognizes that he is still a child. 'Aren't you adorable. Do you have a name sweetie?' the wolfess asks as she crouches down to appear less intimidating. The skunk seems wary of the two, but tentatively approaches Blanche as she continues to reassure him. You tell her that you named him Peppy and about how you found him. 'Sounds like you've had a rough beginning,' Sturm commiserates as he sits down to the left of his mother, his voice more gentle than usual. Though you are sure that his scent will cling to her fur for a while, Blanche continues to indulge Peppy with affection before he trots over to properly meet Sturm too, his confidence around them rapidly growing. Part of you wondered whether their lupine appearances would hinder any interaction, but it would seem that their personalities more than make up for this. After a while Peppy disappears into the computer room, possibly to meet Blanche's other children now that he is familiar with their mother.";
+			TraitGain "Peppy - Orphaned Skunk" for Blanche;
+			TraitGain "Peppy - Orphaned Skunk" for Sturm;
+			TraitGain "Blanche - Parental Soul" for Peppy;
+			TraitGain "Sturm - Friendly Wolf" for Peppy;
+			WaitBreakReactions;
+		[if Pet Mutt is booked or Pet Mutt is bunkered:
 			say "     ";
-			TraitGain "Peppy - Rape Threat" for Blanche;
-			TraitGain "Peppy - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Peppy;
-			TraitGain "Sturm - Ready Slut" for Peppy;
+			TraitGain "Pet Mutt - Rape Threat" for Blanche;
+			TraitGain "Pet Mutt - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Pet Mutt;
+			TraitGain "Sturm - Ready Slut" for Pet Mutt;
 			WaitBreakReactions;]
-		[if Philip is booked or Philip is bunkered:
-			say "     ";
-			TraitGain "Philip - Rape Threat" for Blanche;
-			TraitGain "Philip - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Philip;
-			TraitGain "Sturm - Ready Slut" for Philip;
-			WaitBreakReactions;]
+		if Philip is booked or Philip is bunkered:
+			say "     It is an extreme surprise when Philip appears, a thick film of mud clinging to his body from the waist down. He tenses slightly when he sees the wolves, but continues toward you otherwise undaunted. Unfortunately, his approach is accompanied by the stench of sweat and old food, among other even less savory odours. Blanche manages to disguise gagging behind a cough, but Sturm can do little to hide his momentary retching. 'Why are there suddenly all these fucking wolves everywhere?' Philip asks indignantly, ignoring the effect that he is having on your son. 'I can smell them from the shed and that's saying something,' he continues, blatantly scratching his backside as he eyes the two wolves up. 'A... pleasure to meet you. I'm Blanche and this is my son, Sturm. My family and I have been invited to live here,' the wolf MILF greets him, offering a paw. 'Huh, is that so? Well, I guess I don't get a say in it anyway and you are quite the looker, so welcome, I suppose,' he grunts, roughly shaking her hand. 'If you need me, I'm in the shed out the back. You should join me for a mud bath, it's good for the skin and I can get to know you better.' Without further ado, he plods away again, the buzzing of flies receding with him.";
+			TraitGain "Philip - Mild Mannered Slob" for Blanche;
+			TraitGain "Philip - Stinky Pig" for Sturm;
+			TraitGain "Blanche - Hot Babe" for Philip;
+			TraitGain "Sturm - Weak Stomach" for Philip;
+			WaitBreakReactions;
 		[if Rachel is booked or Rachel is bunkered: [Mouse Girl]
 			say "     ";
 			TraitGain "Rachel - Rape Threat" for Blanche;
@@ -911,13 +962,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Rape Threat" for Skarnoth;
 			TraitGain "Sturm - Ready Slut" for Skarnoth;
 			WaitBreakReactions;]
-		[if Snips is booked or Snips is bunkered:
-			say "     ";
-			TraitGain "Snips - Rape Threat" for Blanche;
-			TraitGain "Snips - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Snips;
-			TraitGain "Sturm - Ready Slut" for Snips;
-			WaitBreakReactions;]
+		if Snips is booked or Snips is bunkered:
+			say "     You aren't entirely sure how, but Snips suddenly appears beside your feet, looking up at the two wolves with his adorable eyes. Perhaps he was seeking you out to stop all the other wolves moving into what he viewed as his home. 'You'll give anyone that needs it shelter won't you,' Blanche says to you admiringly before seating herself on the floor and offering the crab a hand in greeting. Amusingly, he takes one of her fingers in his claws and shakes it politely. 'Such a gentleman,' she responds before introducing herself and her son. Part of you wonders whether Snips is even concerned with their names, but it seems to be a habit for the MILF to properly greet everyone she meets. When Snips eventually scuttles away again, he has a clump of white fur between his pincers, a prize to commemorate their meeting.";
+			TraitGain "Snips - Polite Crab" for Blanche;
+			TraitGain "Snips - Small Crab" for Sturm;
+			TraitGain "Blanche - Friendly Furry Giant" for Snips;
+			TraitGain "Sturm - Furry Giant" for Snips;
+			WaitBreakReactions;
 		if Snow is booked or Snow is bunkered:
 			say "     Rubbing her hands on her front to ensure that they're sufficiently clean, Snow walks over to you and sticks a hand out in greeting. 'Hey there. I'm Snow. Sort of the handy-herm of the place. And who might you be?' she introduces herself with a friendly smile. 'Blanche, and this is Sturm, my eldest son,' the wolfess replies, shaking the squirrel's hand before pulling her for a hug. 'Oh my. They certainly grow them big where you're from. And friendly. Do you make a habit of hugging people that you've only just met?' Snow laughs, awkwardly returning the embrace and shifting uncomfortably as he shaft begins to stir. 'Pretty much. I find a handshake rather impersonal. Acceptable for business, but not for gratitude or affection,' comes the reply as Blanche releases her and steps back. By comparison, Sturm settles for a firm handshake, the wolf and the squirrel inspecting each other. 'Strong silent type?' Snow asks. 'Not at all. Just imagining what you would look like being chased up a tree,' Sturm replies. 'First of all, rude. Second, I'd look as majestic as always. Thirdly, I think that I'd just pound some sense into you instead.' The wolf chuckles at the herm squirrel's response, looking at her with a new respect. 'I'll refrain from testing that. At least for now,' he says, making Snow smirk. 'Anyway. I'll see you two later. Let mister loud mouth here settle in. Nice meeting you.' With that, the [']handy-herm['], as she seems to have styled herself, wanders off back to her makeshift workshop. 'I wonder about you sometimes...' Blanche mumbles, her son merely snorting in reply.";
 			TraitGain "Snow - Handy-Herm Squirrel" for Blanche;
@@ -932,13 +983,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Body of a Goddess" for Solstice;
 			TraitGain "Sturm - Dashing Wolf" for Solstice;
 			WaitBreakReactions;
-		[if Sonny is booked or Sonny is bunkered:
-			say "     ";
-			TraitGain "Sonny - Rape Threat" for Blanche;
-			TraitGain "Sonny - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Sonny;
-			TraitGain "Sturm - Ready Slut" for Sonny;
-			WaitBreakReactions;]
+		if Sonny is booked or Sonny is bunkered:
+			say "     To your surprise, Sonny approaches to greet the two wolves. 'Umm, hi. I assume that you're with [ObjectPro of Player]?' he tentatively asks them, inclining his head towards you. 'Aren't you sweet? Yes. [SubjectProCap of Player] kindly offered to let us move here after our previous home became... less safe shall we say. My name is Blanche and this is my son, Sturm. You've probably already seen some of my other children,' the wolfess replies. Though the sheep looks more than a little fearful of the wolves, he manages to stutter, 'I like your fur. It looks very warm and well-cared for.' 'Checking my mother out are you?' Sturm teases, though you detect an edge to the question. Sonny begins to splutter an excuse (including that Sturm looked just as good), but Blanche soon comes to his rescue. 'Behave yourself Sturm. He was complimenting you as much as me on the effort that goes into fur-care. You need to work on being more approachable, dear.' Sturm grumbles an apology, which the sheep clumsily accepts before retreating again. Not exactly the best first impression, but it could have been worse. At least he didn't ask them whether they were going to eat him.";
+			TraitGain "Sonny - Shy and Sweet" for Blanche;
+			TraitGain "Sonny - Timid Sheep" for Sturm;
+			TraitGain "Blanche - Kind Wolf" for Sonny;
+			TraitGain "Sturm - Big Wolf" for Sonny;
+			WaitBreakReactions;
 		if Spike is booked or Spike is bunkered: [somewhat uncomfortable with hugging, possibly aroused nonetheless - Wahn]
 			say "     Walking up to the two wolves, Spike regards them with curiosity, his lean frame all the more apparent beside Sturm's toned form, especially with how fluffy he is. 'Hey there. Are you moving in here?' the young asks, his tail swaying behind him. 'Aren't you the polite young man,' Blanche coos and, before anyone can say anything, captures the dobie in a warm hug and inadvertently pressing his face between her breasts. You see his eyes widen as he begins to put up a struggle, the wolfess quickly releasing him with a look of concern. 'Are you alright? I didn't hurt you did I?' she worriedly asks. 'I'm a grown man. I don't need to be hugged,' Spike replies almost petulantly, though you notice how he shifts his posture to hide his stirring sheath from the wolves. Perhaps in an attempt to console him, Sturm steps forth with his hand outstretched, the doberman gladly clasping it in return. 'To answer your question, yes, we are moving in. Our previous home wasn't safe any more. I'm Sturm and this is my mother, Blanche. Don't worry about her hugging you, she does it to anyone that she likes. It happens to me multiple times a day,' he says with a grin. 'My mom hardly ever hugs me...' you hear Spike mutter before he begins to eagerly ask Sturm questions about his life in the city, the larger wolf answering cheerfully while Blanche looks on with an adoring smile. Eventually, Spike remembers something that he was meant to be doing and rushes off, no doubt thinking of more things to ask Sturm when they next meet.";
 			TraitGain "Spike - Youthful Doberman" for Blanche;
@@ -952,6 +1003,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Stella - Ready Slut" for Sturm;
 			TraitGain "Blanche - Rape Threat" for Stella;
 			TraitGain "Sturm - Ready Slut" for Stella;
+			WaitBreakReactions;]
+		[if Strange Doll is booked or Strange Doll is bunkered:
+			say "     ";
+			TraitGain "Strange Doll - Rape Threat" for Blanche;
+			TraitGain "Strange Doll - Ready Slut" for Sturm;
+			TraitGain "Blanche - Rape Threat" for Strange Doll;
+			TraitGain "Sturm - Ready Slut" for Strange Doll;
 			WaitBreakReactions;]
 		if Sven is booked or Sven is bunkered:
 			if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
@@ -988,7 +1046,7 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Sturm - Enamoured Stud" for Tehuantl;
 			WaitBreakReactions;
 		if Urik is booked or Urik is bunkered:
-			say "     Strolling up casually, Urik looms over the wolves despite being only a little taller than Sturm. He merely gives Blanche a cursory glance, but demonstrates more interest in her son, especially at the defiant glare that the wolf is giving him. 'Hello. I'm Blanche,' the wolfess cheerfully greets him, giving him a wave. 'Urik,' the orc simply replies, giving her a nod before returning his attention to the other wolf. 'And what's your name kid,' he continues, folding his arms across his chest. 'Sturm. A pleasure to meet you, I'm sure,' comes the response, though from the tone, you're sure that he is merely being polite. 'Well, Sturm, you look a little on the skinny side, so if you want to look like a proper man, you should come and train with me when you have the time. Though I may expect something in return. I bet you're good at getting in doggystyle position. How often have you had to raise your tail for men who were stronger than you?' Urik goads him. Blanche flinches at the orc's crude words towards her son, but Sturm merely smirks. 'Not once. So far I've known my limits. But sure, I'll see what you can teach me as long as what you expect in return isn't my ass.' The two men stare at each other before Urik slaps Sturm on the shoulder. 'We'll see, kid. At least you're not a complete coward,' the orc laughs. Giving you a nod, Urik swaggers back upstairs, Blanche looking worriedly between him and her son."; [greets Blanche neutrally/slightly cordial (no interest at all in women), might make a crude comment to Sturm, asking him how good he's at raising his tail and getting into doggy position ]
+			say "     Strolling up casually, Urik looms over the wolves despite being only a little taller than Sturm. He merely gives Blanche a cursory glance, but demonstrates more interest in her son, especially at the defiant glare that the wolf is giving him. 'Hello. I'm Blanche,' the wolfess cheerfully greets him, giving him a wave. 'Urik,' the orc simply replies, giving her a nod before returning his attention to the other wolf. 'And what's your name kid,' he continues, folding his arms across his chest. 'Sturm. A pleasure to meet you, I'm sure,' comes the response, though from the tone, you're sure that he is merely being polite. 'Well, Sturm, you look a little on the skinny side, so if you want to look like a proper man, you should come and train with me when you have the time. Though I may expect something in return. I bet you're good at getting in doggystyle position. How often have you had to raise your tail for men who were stronger than you?' Urik goads him. Blanche flinches at the orc's crude words towards her son, but Sturm merely smirks. 'Not once. So far I've known my limits. But sure, I'll see what you can teach me as long as what you expect in return isn't my ass.' The two men stare at each other before Urik slaps Sturm on the shoulder. 'We'll see, kid. You've got balls at least,' the orc laughs. Giving you a nod, Urik swaggers back upstairs, Blanche looking worriedly between him and her son."; [greets Blanche neutrally/slightly cordial (no interest at all in women), might make a crude comment to Sturm, asking him how good he's at raising his tail and getting into doggy position ]
 			TraitGain "Urik - Potential Corruptive Influence" for Blanche;
 			TraitGain "Urik - Muscular Orc" for Sturm;
 			TraitGain "Blanche - Disinterested" for Urik;
@@ -1001,13 +1059,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Rape Threat" for Vanessa;
 			TraitGain "Sturm - Ready Slut" for Vanessa;
 			WaitBreakReactions;]
-		[if Velos is booked or Velos is bunkered:
-			say "     ";
-			TraitGain "Velos - Rape Threat" for Blanche;
-			TraitGain "Velos - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Velos;
-			TraitGain "Sturm - Ready Slut" for Velos;
-			WaitBreakReactions;]
+		if Velos is booked or Velos is bunkered:
+			say "     Finally deciding to make an appearance, Velos slides out of your ass and into view of the two wolves. 'Goodness,' Blanche mumbles, while Sturm takes a protective step in front of his mother. 'Well, that's one of the mildest greetings I've had in a while. Usually people scream or attempt violence. I'm Velos,' the serpent comments, nonetheless eyeing Sturm cautiously. 'You have a snake in your butt,' the wolf states after a moment of awkward silence. 'Well done. Very perceptive. Your mother must be very proud of you,' Velos retorts mockingly. 'Oh, I am. Why wouldn't I be proud of my big, handsome boy?' Blanche interjects, lovingly cuddling her son from behind. The serpent remains silent for a moment, unsure how to proceed at such a deft deflection of his sarcasm. 'You have issues lady,' he eventually mutters. 'I'm proud of all my children. They make my life feel complete,' the MILFy wolf continues. 'Yeah. I get it. Your life's wonderful,' Velos replies with irritation. 'Sorry, we didn't introduce ourselves. I'm Blanche and this is Sturm,' the white wolfess apologizes, earning a wry smirk from the snake. 'Charmed, though I still think you have issues,' Velos replies before rapidly retreating into your bowels again. 'Don't we all?' the two wolves unintentionally mumble in unison before looking at each other and chuckling. You have to agree.";
+			TraitGain "Velos - Albino Anus Worm" for Blanche;
+			TraitGain "Velos - Butt Snake" for Sturm;
+			TraitGain "Blanche - Weird Mother" for Velos;
+			TraitGain "Sturm - Very Perceptive" for Velos;
+			WaitBreakReactions;
 		[if Voria is booked or Voria is bunkered:
 			say "     ";
 			TraitGain "Voria - Rape Threat" for Blanche;
@@ -1029,13 +1087,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - New Friend" for Xerxes;
 			TraitGain "Sturm - New Friend" for Xerxes;
 			WaitBreakReactions;
-		[if Yolanda is booked or Yolanda is bunkered:
-			say "     ";
-			TraitGain "Yolanda - Rape Threat" for Blanche;
-			TraitGain "Yolanda - Ready Slut" for Sturm;
-			TraitGain "Blanche - Rape Threat" for Yolanda;
-			TraitGain "Sturm - Ready Slut" for Yolanda;
-			WaitBreakReactions;]
+		if Yolanda is booked or Yolanda is bunkered:
+			say "     Hearing the commotion, Yolanda peers over the railing from above. 'What's going on down there? Are we being robbed?' she caws, no doubt considering how best to protect her collection of jewellery and junk. 'More like a reverse-burglary. We're moving things in, not stealing what is here,' Blanche calls up. 'My children and I have been invited to live here. I am Blanche and this is my eldest son, Sturm. Whom do I have the pleasure of talking to?' The large raven fixes the wolf matron with a stern glare. 'You may call me Yolanda. Make sure your children leave my treasures alone. I know what's there and if one single ear-ring goes missing...' she replies, leaving the implied threat hanging. 'We're not thieves,' Sturm barks, earning an eye-roll from the bird. 'Hardly anyone admits to being thief. In these times, most people claim that they were just scavenging. It makes little difference. Take something of mine and we'll have a problem,' she laughs darkly. With that, Yolanda vanishes from view again. 'It might be best if you encouraged your brothers and sisters to take extra care not to upset her, especially Maeve and Lumi. She might warm up to us in time,' Blanche advises her son, gently stroking the fur on the back of his neck to calm his indignity. 'I wouldn't count on it,' Sturm replies.";
+			TraitGain "Yolanda - Suspicious Treasure Hoarder" for Blanche;
+			TraitGain "Yolanda - Rude Raven" for Sturm;
+			TraitGain "Blanche - Well Mannered Mother" for Yolanda;
+			TraitGain "Sturm - Thief in Denial" for Yolanda;
+			WaitBreakReactions;
 		if loyalty of Zoe > 4:
 			say "     Zoe cautiously approaches the two wolves but relaxes when she sees Blanche smiling at her, wolfess['] inherent friendliness plain to see. 'Heya. I'm Zoe,' the bunny says, extending a hand. Taking hold of it, Blanche introduces herself too. 'A pleasure to meet you Zoe. I'm Blanche.' As she lets go, everyone notices a green stain on her wrist, and the bunny gasps, 'I'm so sorry. I didn't notice. Oh, your fur...' Her apology is halted by the wolfess laughing and evaluating the number of paint stains that seem to be on the rabbit. 'Don't worry about it sweetie. It'll wash out. I take it that you're an artist?' Hearing someone ask about her passion, Zoe launches into a very animated explanation of her passion for street art, the wolves doing their best to understand what is being said until, eventually, the rabbit has to take a breath. 'And I'm Sturm,' the wolf interjects, causing the bunny to realize that she got distracted from meeting him properly and making her blush. 'You two look very similar,' she states, making the wolves laugh. 'We should do. He's my son,' Blanche giggles, looking with pride at him. 'I'd be interested in hearing about your other interests soon, but for now we should probably finish being shown around. See you later?' Sturm says, Zoe nodding acceptance before departing with a wave. You see Blanche fruitlessly trying to wipe the green paint of her wrist, only managing to spread it to her other hand. With a shrug, she gives up.";
 			TraitGain "Zoe - Street Artist" for Blanche;
@@ -1635,7 +1693,7 @@ to say OfficeBlancheFamilyEvents:
 		say "     'I'm told that you're harrassing Mom's mate,' Ernest says tiredly, pinching the bridge of his nose as he does so. '[SubjectProCap of Player] endangers us no more than any of us returning from scavenging.' 'Really Bianca? You told on me to Brainy?' the large white wolf grumbles. 'Sorry. But I think, [italic type]we all think[roman type], that you're wrong about [ObjectPro of Player]. I didn't want to tell Mommy, so Ernest seemed the next best thing. And don't call him names. It's mean,' Bianca retorts. Sighing, Sturm turns to his brother. 'Sorry Ernest. Bianca's right. What can I do to make it up to you?' The smaller male wolf thinks for a moment before replying, 'I shall take being called Brainy as a compliment, but when you have the time, could you help me work out? It is an area that I am lacking in.' With a nod, Sturm agrees to this before turning back to you. 'Go in before Mommy comes out here too. And don't mention any of this to her. Please?' the large wolf almost pleads, looking a lot less intimidating after his scolding from his brother and sister. Not wanting to cause problems, you consent before going through the door.";
 		TraitGain "Sturm - OfficeEvent" for Sturm;
 	else if "Bianca - OfficeEvent" is not listed in traits of Bianca:
-		say "     A shout of greeting catches your attention as you approach Blanche's office den and you turn around to find Bianca, her eldest daughter, running toward you, her chest jiggling with each step. As she comes to a stop in front of you, she clutches her breasts and puffs, 'Thank goodness the nanites provide support. From what Mommy says, having large breasts was frequently uncomfortable when she was a human.' 'And you're telling [ObjectPro of Player] this, why?' Sturm grumbles, walking up behind her carrying what you assume to be both of the bags that their bags filled with scavenged food, water, and what looks like an old portable military radio, albeit damaged. 'Just making conversation dear brother, and I doubt that Mommy will mind. She wasn't ashamed to tell me so I don't see why she would be concerned about me mentioning it to [BlancheMommyDaddyTitle] too,' Bianca replies. The male wolf merely rolls his eyes before patting her head and muttering that he will continue to carry her spoils so that she is free to talk to you.";
+		say "     A shout of greeting catches your attention as you approach Blanche's office den and you turn around to find Bianca, her eldest daughter, running toward you, her chest jiggling with each step. As she comes to a stop in front of you, she clutches her breasts and puffs, 'Thank goodness the nanites provide support. From what Mommy says, having large breasts was frequently uncomfortable when she was a human.' 'And you're telling [ObjectPro of Player] this, why?' Sturm grumbles, walking up behind her carrying what you assume to be both of their bags, filled with scavenged food, water, and what looks like an old portable military radio, albeit damaged. 'Just making conversation dear brother, and I doubt that Mommy will mind. She wasn't ashamed to tell me so I don't see why she would be concerned about me mentioning it to [BlancheMommyDaddyTitle] too,' Bianca replies. The male wolf merely rolls his eyes before patting her head and muttering that he will continue to carry her spoils so that she is free to talk to you.";
 		say "     The three of you are greeted back at the den by Blanche's third son, Claude. While not nearly as physically imposing as his eldest brother, he does appear to be taking sentry duty seriously, waving to you but continuing to scan the city around you as you approach, just in case. When you reach him, Sturm glances around quickly before giving a nod, allowing him to relax. 'Good job Claude,' Sturm says, those few words causing his brother's tail to wag excitedly. 'As good as you?' he replies. 'Well, assuming that no-one slipped past you and carried Mom off, yes I would say so, but don't tell anyone else that I said that or you might become Mommy's new favorite and then I'll have to feed you to the xeno drones,' the muscular wolf teasingly shoots back with a grin. It would seem that Sturm is quite a different person with you than he is with the rest of his family, making you a little disappointed. Maybe one day he will treat you the same way. Deciding to leave them to their conversation, you enter the office as Bianca complains about having to lug back the radio that they found for Ernest, her elder brother playing along good-naturedly despite the visible evidence otherwise.";
 		TraitGain "Bianca - OfficeEvent" for Bianca;
 	else if "Ernest - OfficeEvent" is not listed in traits of Ernest:
@@ -1651,7 +1709,7 @@ to say OfficeBlancheFamilyEvents:
 		TraitGain "Claude - OfficeEvent" for Claude;
 	else if "Penelope - OfficeEvent" is not listed in traits of Penelope:
 		say "     As you approach the Office Den, you find an unfamiliar wolf standing on guard outside. She is undoubtedly Blanche's daughter, covered in the signature white floof, but you don't recall having acquanted yourself with her, especially when she looks as tall as Sturm and twice as wide. You see her say something over her shoulder before another head pops up beside her own, a wide grin on its face. '[BlancheMommyDaddyTitle]!' it shouts before the wolf that the head belongs to scrabbles over her sister's shoulder, leaps to the ground, and runs over to you to leap in for a hug, nearly knocking you over. 'Careful with [ObjectPro of Player], Wendis. You know that Sturm wants to be the one to crush [PosAdj of Player] ribs,' the goliath lupine laughs as she more calmly approaches. 'Uh uh, Penelope. Mommy said that he wasn't allowed to and he does whatever she tells him to do,' the smaller wolf shoots back glibly. While at first you thought that she was just small compared to her sister, now that she is still, you realize that she is only four foot at most.";
-		say "     Before you get the chance to put your foot in your mouth and accidentally say something tactless, your vision is obscured by the white fluff of the big sister as she warmly embraces you with her sibling sandwiched between you. 'Hello, [BlancheMomDadTitle]. I'm Penelope and this is my little sister, Wendis,' she says, her lips mere inches from your ear. Releasing you, the titanic wolf steps back again, carefully guiding her sibling away from you too to give you some space. You take a moment to properly look at them. Penelope looks to be between seven and eight foot tall and is extraordinarily fluffy, exagerating her width, but when she hugged you you could feel the muscle beneath the fur. She is built like a tank. Wendis by comparison looks more like a cuddly toy, small and exuberant. 'I can see that you want to ask why I'm so short. Don't worry, I don't mind,' Wendis says. 'When Mommy was pregnant, Penelope took most of the nutrients, enough for three and a half, meaning that I'm tiny and why there were only two of us in our litter.'";
+		say "     Before you get the chance to put your foot in your mouth and accidentally say something tactless, your vision is obscured by the white fluff of the big sister as she warmly embraces you with her sibling sandwiched between you. 'Hello, [BlancheMomDadTitle]. I'm Penelope and this is my little sister, Wendis,' she says, her lips mere inches from your ear. Releasing you, the titanic wolf steps back again, carefully guiding her sibling away from you too to give you some space. You take a moment to properly look at them. Penelope looks to be between seven and eight foot tall and is extraordinarily fluffy, exagerating her width, but when she hugged you, you could feel the muscle beneath the fur. She is built like a tank. Wendis by comparison looks more like a cuddly toy, small and exuberant. 'I can see that you want to ask why I'm so short. Don't worry, I don't mind,' Wendis says. 'When Mommy was pregnant, Penelope took most of the nutrients, enough for three and a half, meaning that I'm tiny and why there were only two of us in our litter.'";
 		WaitLineBreak;
 		say "     Penelope sighs and looks despairingly at her younger, smaller, and cuter sister. 'You've been talking to Claude too much. Perhaps ask Ernest about it instead and you might get a more logical answer,' she chides her. 'I don't want logic, I want you to give me my height back! You took it didn't you, and don't want to share,' Wendis says in mock indignation, jumping up and down. 'As you can see, my sister is prone to an overactive imagination. That said, she is my scavenging-mate and the most precious thing in the world to me,' Penelope informs you, affectionately stroking her siblings head. Wendis snuggles up against her before she is lifted onto her big sister's shoulders. 'We shan't hold you up any longer. Mommy's just inside. Meanwhile we'll return to guard duty. Perhaps next time we can talk more,' Penelope apologizes before returning to her post and resumes scanning the city, Wendis waving to you as you walk past them and enter the den.";
 		TraitGain "Penelope - OfficeEvent" for Penelope;
