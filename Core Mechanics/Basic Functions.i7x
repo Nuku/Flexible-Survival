@@ -1289,7 +1289,7 @@ to WaitBreakReactions:
 to decide if a dexterity check passes (difficulty - a number):
 	let bonus be (( dexterity of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (Dexterity Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (Dexterity Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
@@ -1298,7 +1298,7 @@ to decide if a dexterity check passes (difficulty - a number):
 to decide if a strength check passes (difficulty - a number):
 	let bonus be (( strength of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (strength Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (strength Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
@@ -1307,7 +1307,7 @@ to decide if a strength check passes (difficulty - a number):
 to decide if a stamina check passes (difficulty - a number):
 	let bonus be (( stamina of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (stamina Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (stamina Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
@@ -1316,16 +1316,16 @@ to decide if a stamina check passes (difficulty - a number):
 to decide if a charisma check passes (difficulty - a number):
 	let bonus be (( charisma of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (charisma Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (charisma Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
 		decide no;
 
-to decide if a intelligence check passes (difficulty - a number):
+to decide if an intelligence check passes (difficulty - a number):
 	let bonus be (( intelligence of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (intelligence Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (intelligence Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
@@ -1334,7 +1334,7 @@ to decide if a intelligence check passes (difficulty - a number):
 to decide if a perception check passes (difficulty - a number):
 	let bonus be (( perception of player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty][roman type] (perception Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2][difficulty in words][roman type] (perception Check):[line break]";
 	if diceroll + bonus >= difficulty:
 		decide yes;
 	else:
