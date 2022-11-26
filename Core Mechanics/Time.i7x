@@ -372,6 +372,46 @@ definition: Daytimer is night:
 	else:
 		yes;
 
+to decide if the time is post midnight:
+	if TimekeepingVar is 1 or TimekeepingVar is -7:
+		decide yes;
+	decide no;
+
+to decide if the time is pre dawn:
+	if TimekeepingVar is 0 or TimekeepingVar is -8:
+		decide yes;
+	decide no;
+
+to decide if the time is early morning:
+	if TimekeepingVar is 7 or TimekeepingVar is -1:
+		decide yes;
+	decide no;
+
+to decide if the time is morning:
+	if TimekeepingVar is 6 or TimekeepingVar is -2:
+		decide yes;
+	decide no;
+
+to decide if the time is evening:
+	if TimekeepingVar is 4 or TimekeepingVar is -4:
+		decide yes;
+	decide no;
+
+to decide if the time is afternoon:
+	if TimekeepingVar is -3 or TimekeepingVar is 5:
+		decide yes;
+	decide no;
+
+to decide if the time is night:
+	if TimekeepingVar is 2 or TimekeepingVar is -6:
+		decide yes;
+	decide no;
+
+to decide if the time is early night:
+	if TimekeepingVar is 3 or TimekeepingVar is -5:
+		decide yes;
+	decide no;
+
 Chapter 4 - Sunrise/Sunset
 
 LastTurnDay is a truth state that varies.
