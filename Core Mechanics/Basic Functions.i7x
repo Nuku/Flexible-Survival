@@ -1347,6 +1347,8 @@ to decide if a perception check passes (difficulty - a number):
 [This can be used to avoid writing the choice code over and over again when needing
 to prompt the player with an number of options to choose from. example of usage: let playerChoice be what the player chooses from myList]
 to decide which text is what the player chooses from (choices - a list of text):
+	if the number of entries in choices is 0:
+		decide on "";
 	let choice order be 1;
 	repeat with option running through choices:
 		say "     [link]([choice order in words])[as][choice order in words][end link] - [option].";
