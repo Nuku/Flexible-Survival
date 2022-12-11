@@ -56,6 +56,7 @@ Every turn when the player is in Grey Abbey Library and Fang is visible:
 
 
 to say MaleFangPlayerLust:
+	project Figure of Fang_hard_icon;
 	say "     Aching with need, you look around for Fang. He's laying by the door, watching the room with his usual alertness. As you walk towards him, he sits up on his haunches. When you reach for him, he lightly nips at your hand and chuffs disapproval. He remains seated, watching you penetratingly as you consider how to approach. A second reach to pat him earns another nip before he suddenly rears up and knocks you over backwards. The oversized wolf clambers up on top of you, his shaggy coat rubbing against your belly as he assumes the superior position. He licks your throat twice as he parts your legs and aligns himself with your entrance.";
 	if Cunt Depth of Player > 0 and player is female and (a random chance of 2 in 3 succeeds or anallevel is 1):
 		say "     He rolls his hips forward, pressing the pointed tip of his large wolf cock to your [cunt size desc of Player] nethers, then sinks in with a long, smooth thrust. His paws pull you down against his thrust as he bites into your throat, holding you still. He begins to rock, driving his slick red member through the wet hot tunnel, pushing in with easy and vigorous motions. Above, his tail lifts and wags lightly at the end of every movement, growling around your throat as he breeds you as his bitch.";
@@ -72,6 +73,7 @@ to say MaleFangPlayerLust:
 	FangInfect;
 
 to say FemaleFangPlayerLust:
+	project Figure of Fang_fem_icon;
 	say "     Aching with need, you look around for Fang. She's laying by the door, watching the room with her usual alertness. As you walk towards her, she sits up on her haunches. When you reach for her, she lightly nips at your hand and chuffs disapproval. She remains seated, watching you penetratingly as you consider how to approach. A second reach to pat her earns another nip before she suddenly rears up and knocks you over backwards. The oversized wolf presses her paw up on top of you, her springy pads pressing against your belly as she assumes the superior position. She licks your throat twice as she parts your legs and aligns her muzzle with your nethers.";
 	if player is purefemale: [female only]
 		say "     She moves her head forward, pressing the warm wet tip of her large nose to your [cunt size desc of Player] nethers as she takes in your scent, then opens her muzzle and licks the entrance with a long, smooth motion. Her paws push you down against the floor as she growls into your feminine vent, holding you still. She begins to rock her head, driving her slick long tongue through the wet hot tunnel, pushing her way in slowly with easy and methodical motions. Above, her tail lifts and wags lightly at the end of every movement, growling around your warm vent as she attempts to exorcise you of your abundance of libido.";
@@ -89,6 +91,7 @@ to say FemaleFangPlayerLust:
 	FangInfect;
 
 to say MaleFangRapePlayer:
+	project Figure of Fang_hard_icon;
 	say "     'Late,' says Fang as he approaches you. His scent is intoxicatingly strong and his [one of]puppy pecker[or]doggy dong[at random] is jutting from his sheath, heavy and ready. Any word of complaint you may have had is lost as the wolf gives you a penetrating look, brokering no argument. There is a punishment to be had and a service to be rendered, and that is all there is to it.";
 	say "     He grabs at you with his teeth, tugging you along and bringing you to a desk, pushing you against it so you're bent over it[if Nipple Count of Player > 0 and Breast Size of Player > 0]. Your [breast size desc of Player] breasts are squished against the smooth wood of the desk as he moves you into position, rubbing your nipples against the grain[else if Breast Size of Player > 0]. Your [breast size desc of Player] breasts are squished against the smooth wood of the desk as he moves you into position[end if]. He reaches around and removes any barrier to your bottom, tossing it aside for later with a soft, eager growl. Though you weren't very aroused when you walked in, his intense scent sends tingles through your form now, making you pant as you begin to warm up";
 	let anal be 1;
@@ -112,6 +115,7 @@ to say MaleFangRapePlayer:
 	say "[MaleFangWSContent]";
 
 to say FemaleFangRapePlayer:
+	project Figure of Fang_fem_icon;
 	say "     'Late,' says Fang as she approaches you. Her scent is intoxicatingly strong, perhaps getting stronger every moment and her [one of]moist pussy[or]heated vent[at random] is leaking pre from between her legs, striking the floor in a steadily fashion, wordlessly relaying to you how terrible her need is. Any word of complaint you may have had is lost in transit as the wolf gives you a penetrating look, brokering no argument and silently telling you that resisting would only make things worse. There is a punishment to be had and a service to be rendered, and that is all there is to it.";
 	say "     She grabs at you with her teeth, reaching around and removing any barrier to your bottom, tossing it aside for later with a soft, eager growl. She starts tugging you along and bringing you to a desk, pushing your back against it as she mounts you so you're pinned on top of it. [if Nipple Count of Player > 0 and Breast Size of Player > 0]Your [breast size desc of Player] breasts are jiggled slightly as your back is shoved against the smooth wood of the desk as she moves you into position, rubbing your nipples against her fur as she mounts you. [else if Breast Size of Player > 0]Your [breast size desc of Player] breasts are squished against the soft fur of Fangs body as she moves you into position, pinning you on the desk. [end if]Though you weren't very aroused when you walked in, the way Fang's soft and luxurious fur rubs against your body, the pure force of domination that rolls from her body and the growing intense scent sends tingles through your form, making you pant in erotically heated breaths as your body begins to warm up in preparation for the reckoning you know is coming. ";
 	let anal be 1; [local, temporary variable]
@@ -143,6 +147,7 @@ to say FemaleFangRapePlayer:
 	say "     Satisfied, Fang pants lightly as she relaxes on top of you for a few quiet minutes, gently nuzzling your neck and chest with her muzzle. She gives a soft chuff in your ear, then pulls free of you, allowing some of the juices to run free as she goes to clean up while you sag to the floor, enjoying the feeling of having served your alpha.";
 
 to say MaleFangMutualLust:
+	project Figure of Fang_hard_icon;
 	say "     You feel something nuzzling at your groin and look down to see Fang looking back up at you. His bright red canine shaft dangles between his hindlegs, and the sight and smell of him sets your already needy body aflame with desire. ";
 	if Player is male:
 		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment[if Ball Size of Player > 0], your [Ball Size Adjective of Player] [Balls] aching with the need to release[end if]. ";
@@ -169,6 +174,7 @@ to say MaleFangMutualLust:
 	say "[MaleFangWSContent]";
 
 to say FemaleFangMutualLust:
+	project Figure of Fang_fem_icon;
 	say "     You feel something nuzzling at your groin and look down to see Fang looking back up at you. Her juices drip down from her vagina rolling down her hindlegs signaling her desperate need as the sight and smell of her sets your already needy body aflame with desire in turn. ";
 	if Player is male:
 		say "You feel hot splashes of pre pouring from yourself as you grow more lustful by the moment[if Ball Size of Player > 0], your [Ball Size Adjective of Player] [Balls] aching with the need to release[end if]. ";

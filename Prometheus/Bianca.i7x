@@ -6,6 +6,63 @@ Version 1 of Bianca by Prometheus begins here.
 [   0 - At Office  ]
 [   1 - At Library ]
 
+
+[Movement Schedule]
+an everyturn rule:
+	if Charisma of Blanche > 3:
+		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
+			if Player is in Grey Abbey Garden and Bianca is in Grey Abbey Garden:
+				say "     [bold type]Bianca hugs you from behind before telling you that she is going to join her mother on the second floor of the library.[roman type][line break]";
+			else if Player is in Grey Abbey 2F:
+				say "     [bold type]Bianca winks at you as she reaches the top of the stairs, before snuggling up next to her mother on the sofa.[roman type][line break]";
+			move Bianca to Grey Abbey 2F;
+		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]
+			if Player is in Grey Abbey 2F:
+				say "     [bold type]Bianca tells you that she is going to the courtyard, blowing a kiss as she departs.[roman type][line break]";
+			else if Player is in Courtyard:
+				say "     [bold type]Bianca beams as she sees you, running over and snuggling up against you, before rushing over to greet Penelope similarly.[roman type][line break]";
+			move Bianca to Courtyard;
+		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
+			if Player is in Courtyard:
+				say "     [bold type]Feeling hungry, Bianca gives you a hug before jogging away to the breakroom to get something to eat.[roman type][line break]";
+			else if Player is in Breakroom:
+				say "     [bold type]Bianca spares you a quick wave before rushing over to see what Bernard has on offer for her to eat.[roman type][line break]";
+			move Bianca to Breakroom;
+		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
+			if Player is in Breakroom:
+				say "     [bold type]Her hunger for food satisfied, Bianca rubs her tummy as she walks by. Rubbing her cheek against you as she passes by, she informs you that she is returning to the den in the computer room.[roman type][line break]";
+			else if Player is in Computer Lab:
+				say "     [bold type]Bianca walks in and snuggles up against her mother, casting glances at you and Sturm in the hope that you'll join them.[roman type][line break]";
+			move Bianca to Computer Lab;
+		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
+			if Player is in Computer Lab:
+				say "     [bold type]Swaying her hips as she leaves, Bianca mischievously grabs her video camera and tells you that she is probably going to be in the library for the next few hours.[roman type][line break]";
+			else if Player is in Grey Abbey Library:
+				say "     [bold type]Bianca comes out of the computer room swaying her hips, giving you a wink when she sees you before wandering out of sight between the shelves, her video camera clutched in her paws.[roman type][line break]";
+			move Bianca to Grey Abbey Library;
+		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+			if Player is in Grey Abbey Library:
+				say "     [bold type]Bianca runs a paw down your arm as she walks by you on her way down to the bunker.[roman type][line break]";
+			else if Player is in Bunker:
+				say "     [bold type]Bianca goes over to one of the beds and sits on the edge, beckoning for you to join her, Claude, Wendis, and Lumi as they socialize.[roman type][line break]";
+			move Bianca to Bunker;
+		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+			if Player is in Bunker:
+				say "     [bold type]Bianca blows you a kiss before disappearing up the stairs on her way out into the city on a scavenging trip with Sturm.[roman type][line break]";
+			move Bianca to Nowhere;
+		[else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night] [Covered in Sturm's time table]
+			if a random chance of 4 in 5 succeeds:
+				if Player is in Bunker:
+					say "     [bold type]Sturm greets you having just returned from a scavenging.[roman type][line break]";
+				if Player is in Grey Abbey Garden:
+					say "     [bold type]Bianca runs over and gives you a hug, just having returned from scavenging.[roman type][line break]";
+				move Sturm to Bunker;
+				move Bianca to Grey Abbey Garden;]
+	else if Charisma of Blanche > 0:
+		if hp of Bianca is 0:
+			now hp of Bianca is 1;
+			move Bianca to Computer Lab;
+
 Section 1 - NPC Declaration
 
 Table of GameCharacterIDs (continued)
@@ -66,16 +123,17 @@ Relationships:
 Sexuality: Bisexual
 
 Associated Fetishes:
--
--
--
+- Voyeur
+- Group Sex
+- Filming
+- Exhibitionism
 ]
 
 Section 2 - Talking
 
 instead of conversing the Bianca:
 	if "First Talk" is not listed in Traits of Bianca:
-		say "     'I don't think we've talked like this before. Mommy seemed to take all of your attention. I'm glad that you have time now, but don't forget about Sturm or Mom either,' Bianca says, cuddling up to your side. 'Now that we're here, perhaps we can liven up this place and improve on the decorating. You've rather let the dust and dirt get away on you.' You ask how she plans on fixing that. 'I don't know, but Ernest will likely have some ideas and I should be able to get some of my other siblings to put in the work.' Unimpressed, you tell her that she should be helping too. 'I would make a joke about there being two kinds of people, but I get the impression that you want a serious answer. Labor assignment and scheduling is Mom's speciality and none of us have had any reason to complain so far. Given my talent for the aesthetic, I'm still planning out our bedroom design. If I get time, I suppose I can lend a paw dusting.' With a sigh, you accept that Blanche likely knows her children better than you. Sturm is unlikely to complain even if he has to do it all by himself.";
+		say "     'I don't think we've talked like this before. Mommy seemed to take all of your attention. I'm glad that you have time now, but don't forget about them or the others,' Bianca says, cuddling up to your side. 'Now that we're here, perhaps we can liven up this place and improve on the decorating. You've rather let the dust and dirt get away on you.' You ask how she plans on fixing that. 'I don't know, but Ernest will likely have some ideas and I should be able to get some of my other siblings to put in the work.' Unimpressed, you tell her that she should be helping too. 'I would make a joke about there being two kinds of people, but I get the impression that you want a serious answer. Labor assignment and scheduling is Mom's speciality and none of us have had any reason to complain so far. Given my talent for the aesthetic, I'm still planning out our bedroom design. If I get time, I suppose I can lend a paw dusting.' With a sigh, you accept that Blanche likely knows her children better than you. Sturm is unlikely to complain even if he has to do it all by himself.";
 		TraitGain "First Talk" for Bianca;
 	else:
 		say "[BiancaTalkMenu]";
@@ -136,14 +194,11 @@ instead of fucking Bianca:
 
 Section 4 - Events
 
-instead of going down from Grey Abbey Library while (SarahCured > 3 and Charisma of Blanche is 1 and "Sarah - Perceptive Prude" is not listed in traits of Bianca and a random chance of 1 in 2 succeeds):
+instead of going down from Grey Abbey Library while (SarahCured > 3 and Charisma of Blanche > 0 and "Sarah - Perceptive Prude" is not listed in traits of Bianca and a random chance of 1 in 2 succeeds):
 	say "     'Are you the one who called Mommy a sex maniac?' Bianca asks Sarah with a smirk. You entered the bunker to find Blanche's eldest daughter starting a conversation with the husky med-student, though you find her choice of opening question blunt. With a sigh, Sarah looks up from rolling some bandages, flinching when she notices the wolf's lack of clothes. 'Don't any of you wear clothes?' she mutters to no-one in particular before taking a breath and replying more calmly. 'I didn't call her a sex maniac, I just questioned her decision to have so many children, especially with the current state of the city. I'm assuming that you were all born recently, though if your mother is older than she looks, I suppose it is possible that one or two of you might have had time to grow up before the city went to Hell. If so, she can't have been that long out of school...' A shadow of sadness crosses your daughter's face. 'Yes, we were born into this. Sturm and I are the oldest, but Mom had been pregnant before. She miscarried.'";
-	say "     Sarah immediately stands up and hugs Bianca, the smaller canine being partially absorbed into the curvy wolf's lush fur. 'I'm sorry to hear that. I've seen how devastating that is,' she says sympathetically before stepping back again. [if Charisma of Blanche is 2]'She hasn't told me the whole story, but she got pregnant in her last year of high school. When she told her parents, there was a fight and her boyfriend got hurt[else]'Don't tell anyone. We aren't meant to know, but Sturm overheard her talking to herself. She got pregnant in her last year of high school and when she told her parents there was a fight and her boyfriend got hurt[end if]. The trauma of it all caused her to miscarry. Her dad went to prison for it and she cut herself off from her parents. Ernest thinks that this may be part of the reason that she devotes so much time to showing how much she loves us,' Bianca explains wiping her eyes. The two of them stand in silence for a few moments, lost in thought. Eventually your daughter speaks. 'Anyway. Mum isn't any more a sex maniac now than she was a few years ago. She's just found someone that she trusts again' 'I'm pleased for her. I just hope that none of you end up feeling neglected,' Sarah responds. Watching them get to know each other and start a proper conversation you move away to give them some privacy.";
+	say "     Sarah immediately stands up and hugs Bianca, the smaller canine being partially absorbed into the curvy wolf's lush fur. 'I'm sorry to hear that. I've seen how devastating that is,' she says sympathetically before stepping back again. [if Charisma of Blanche > 1]'She hasn't told me the whole story, but she got pregnant in her last year of high school. When she told her parents, there was a fight and her boyfriend got hurt[else]'Don't tell anyone. We aren't meant to know, but Sturm overheard her talking to herself. She got pregnant in her last year of high school and when she told her parents there was a fight and her boyfriend got hurt[end if]. The trauma of it all caused her to miscarry. Her dad went to prison for it and she cut herself off from her parents. Ernest thinks that this may be part of the reason that she devotes so much time to showing how much she loves us,' Bianca explains wiping her eyes. The two of them stand in silence for a few moments, lost in thought. Eventually your daughter speaks. 'Anyway. Mum isn't any more a sex maniac now than she was a few years ago. She's just found someone that she trusts again' 'I'm pleased for her. I just hope that none of you end up feeling neglected,' Sarah responds. Watching them get to know each other and start a proper conversation you move away to give them some privacy.";
 	TraitGain "Sarah - Perceptive Prude" for Bianca;
 	TraitGain "Bianca - Teasing Trollop" for Sarah;
 	move Player to Bunker;
-	if hp of Bianca is 0:
-		now hp of Bianca is 1;
-		move Bianca to Computer Lab;
 
 Bianca ends here.

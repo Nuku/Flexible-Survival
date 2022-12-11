@@ -5,10 +5,60 @@ Version 1 of Sturm by Prometheus begins here.
 [   1: At the library                                            ]
 
 
-
-
 [Notes]
 [ Interactions with Urik to boost his muscle mass?]
+
+[Movement Schedule]
+an everyturn rule:
+	if hp of Sturm > 1 and Charisma of Blanche > 3:
+		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
+			if Player is in Bunker and Sturm is in Bunker:
+				say "     [bold type]Sturm departs upstairs, telling Blanche that he's heading to the Courtyard.[roman type][line break]";
+			else if Player is in Courtyard:
+				say "     [bold type]You see Sturm approaching, the two of you exchanging a friendly nod with each other in greeting before he, Bernard, and Lumi begin training together.[roman type][line break]";
+			move Sturm to Courtyard;
+		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]
+			if Player is in Courtyard:
+				say "     [bold type]Sturm bids you goodbye before returning in the library to spend time with his mother again.[roman type][line break]";
+			else if Player is in Grey Abbey Library:
+				say "     [bold type]Appearing from the courtyard, Sturm raises a hand in greeting before walking over to Blanche and lifting his chess set from beneath the table, the two of them proceeding to set it up while light-heartedly arguing over which one of them gets to be white.[roman type][line break]";
+			move Sturm to Grey Abbey Library;
+		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
+			if Player is in Grey Abbey Library:
+				say "     [bold type]Sturm heads out the door, calling over his shoulder that he if you need him that he'll be in the garden.[roman type][line break]";
+			else if Player is in Grey Abbey Garden:
+				say "     [bold type]Sturm calls out a greeting as he approaches and you see some of the stress leave his shoulders as he inhales the fresh air.[roman type][line break]";
+			move Sturm to Grey Abbey Garden;
+		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
+			if Player is in Grey Abbey Garden:
+				say "     [bold type]Sturm waves goodbye, telling you that he is returning to the makeshift den in the computer room.[roman type][line break]";
+			else if Player is in Computer Lab:
+				say "     [bold type]As he comes in through the door, Sturm looks immensely pleased to see you and Blanche together in the den.[roman type][line break]";
+			move Sturm to Computer Lab;
+		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
+			if Player is in Computer Lab:
+				say "     [bold type]Under Blanche's approving gaze, Sturm gives you a hug before informing you that he is going to the break room to get something to eat.[roman type][line break]";
+			else if Player is in Breakroom:
+				say "     [bold type]Sturm gives you a nod as he comes in before wandering over to Bernard to see what food is available.[roman type][line break]";
+			move Sturm to Breakroom;
+		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+			if Player is in Breakroom:
+				say "     [bold type]Wiping his mouth, Sturm tells you that he is going out to the garden.[roman type][line break]";
+			else if Player is in Grey Abbey Garden:
+				say "     [bold type]Sturm gives a you a smile and a nod when he sees you before going over to sit near his mother.[roman type][line break]";
+			move Sturm to Grey Abbey Garden;
+		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+			if Player is in Grey Abbey Garden:
+				say "     [bold type]Sturm gives you and Blanche a hug before disappearing into the library on his way out into the city on a scavenging trip with Bianca.[roman type][line break]";
+			move Sturm to Nowhere;
+		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night]
+			if a random chance of 4 in 5 succeeds:
+				if Player is in Bunker: [Sturm]
+					say "     [bold type]Sturm greets you having just returned from a scavenging, before assisting his mother in doing some cleaning.[roman type][line break]";
+				if Player is in Grey Abbey Garden: [Bianca]
+					say "     [bold type]Bianca runs over and gives you a hug, just having returned from scavenging, before finding a spot to watch Penelope and Lumi spar.[roman type][line break]";
+				move Sturm to Bunker;
+				move Bianca to Grey Abbey Garden;
 
 Section 1 - NPC Declaration
 
@@ -71,11 +121,11 @@ to say SturmDesc:
 Species: Canine (Wolf)
 Gender: Male
 Relationships:
-Sexuality: Bisexual/Bicurious
+Sexuality: Bisexual
 
 Associated Fetishes:
--
--
+- Harem
+- Friendly Competition with Siblings
 -
 ]
 
@@ -144,7 +194,18 @@ instead of fucking Sturm:
 
 Section 4 - Events
 
-instead of going down from Grey Abbey Library while Sandra is bunkered and HP of Sturm is 1 and "Sandra - Sexual Interest" is not listed in traits of Sturm and a random chance of 1 in 2 succeeds:
+instead of navigating Grey Abbey Library while ((Sturm is booked or Sturm is bunkered) and HP of Sturm is 1 and Charisma of Blanche > 0):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	say "[SturmApology]";
+
+to say SturmApology:
+	say "     As you go in through the door, you find yourself suddenly submerged in an avalanche of snow-white fur, spurring the realisation that someone is now hugging you. While you try to move yourself enough to get a good look at who is, you hear his heartbeat rise a little as a familiar voice commands, 'Stop struggling and listen, because this is hard for me to say and important that you listen.' Sturm loosens his bear hug which gives enough leeway to look at his expression, usually cold and stern, instead reminding you of Blanche as he continues 'Considering how you were never around I had honestly thought that there wasn't much difference between you and the infected that wandered the city; only looking for a reliable source of pleasure.' While his grip never wavered, his voice did, whether from remembering the Office Den or thinking of his new life at the Library, you can't tell.";
+	say "     Though those words make you silently wonder for a moment if you should have carried Blanche back to the Library despite her protests, Sturm continues speaking 'I realize now after seeing the Library and your willingness to let others stay here that you are a lot more like Mom than I had thought, so I want to apologize for the way I have acted towards you and hope that with this we can start over by treating each other as family.' obviously done he looks at you nervously expectant of your answer.  Having heard Sturm's apology and his willingness to accept you, you cant help but smile and return the hug that he has been giving you for a while now. The wordless actions eliciting happy tail wagging from Sturm as he realizes that you aren't holding his hostility against him, though the hug ends up lasting for quite some time before you finally both return to your usual antics.";
+	now HP of Sturm is 2;
+
+instead of going down from Grey Abbey Library while Sandra is bunkered and HP of Sturm > 1 and "Sandra - Sexual Interest" is not listed in traits of Sturm and a random chance of 1 in 2 succeeds:
 	if "Sandra - Horny Bunny" is not listed in Traits of Sturm:
 		say "     You enter the bunker to find Sturm and Blanche introducing themselves to Sandra, making up for not greeting her when she arrived. 'Hello, I'm Blanche. What's your name?' the wolfess asks. 'Sandra. You're not going to eat me are you?' the rabbit replies, her eyes wide as she stares up at the wolves. 'I won't, but my son Sturm might,' Blanche teases, momentarily baring her teeth. Sturm rolls his eyes. 'Mom, you're embarrassing yourself. I'm not going to eat anyone,' he groans. 'I don't know. It might be worth it for a stud like you,' Sandra replies. There is a moment of silence while what she said sinks in. 'Wait. Did I say that out loud?' With a loud 'Eep', Sandra dashes away, her cheeks scarlet and the two wolves at a loss for words. Finally, Blanche breaks the silence. 'I'm not sure whether to say that she has a crush on you, or whether she just craves what's between your legs,' she ponders. 'Mom! Inappropriate!' Sturm hisses, his own face likely as red as Sandra's was. 'You're a very handsome young man, so I'm sure that it's the former,' the MILF says in a fruitless attempt at consolation. 'MOM!!!' Chuckling, you leave them to it.";
 		TraitGain "Sandra - Horny Bunny" for Blanche;
@@ -156,7 +217,7 @@ instead of going down from Grey Abbey Library while Sandra is bunkered and HP of
 		if HP of Fang is 3: [Alpha Fang via Sandra]
 			say "     'But what would your Alpha think? His little rabbit being claimed by another male, another wolf?' Sturm growls, running a finger down Sandra's cheek and making her quiver. 'I-I don't know. He'd probably have to claim me back again. Punish me for letting another male breed me. It would be so... intense,' the";
 		else:
-			say "     'You want to be completely at my mercy? A little rabbit trapped by a big, bad wolf?' Sturm growls, running a finger down Sandra's cheek and making her quiver. 'Y-yes. Your body pressing me into the ground and your thick shaft stretching me to my limit before you roughly breed me. THere's just so... primal about it,' the";
+			say "     'You want to be completely at my mercy? A little rabbit trapped by a big, bad wolf?' Sturm growls, running a finger down Sandra's cheek and making her quiver. 'Y-yes. Your body pressing me into the ground and your thick shaft stretching me to my limit before you roughly breed me. There's just something so... primal about it,' the";
 		say "bunnygirl moans, rubbing her thighs together at the thought of it all. Unfortunately, the moment is interrupted by the sudden appearance of Ernest. 'Sturm, I've finally found you. Bianca's encouraging Claude to be overly sociable again and Mom won't do anything about it. Either get Mom to stop her or do it yourself. Please? Later is fine, just before we have to go out scavenging again,' he asks desperately before returning upstairs again, his focus on his own predicament meaning that he notices neither you nor Sandra. 'What it is to be the oldest,' Sturm tiredly mutters while the bunny looks up at him with frustration, though also a little sympathy. 'I'm sorry Sandra. We'll have to talk another time. I enjoyed it, though hopefully next time we'll have longer to properly get to know each other.' Gently patting the rabbit on the head, Sturm stands up and returns upstairs, nodding to you in passing. Though Sandra is left alone and sexually frustrated, you get the impression that this will only drive her to pursue the white wolf more intently.";
 		TraitLoss "Sandra - Horny Bunny" for Sturm;
 		TraitLoss "Sturm - Wolf Stud" for Sandra;

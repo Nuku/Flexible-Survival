@@ -72,6 +72,7 @@ to say BeatFeralWolfBitch:
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
 				LineBreak;
+				project Figure of Fang_fem_icon;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take her as your own. You decide it best to show this wolf creature who's in charge right away and grab her nape roughly, holding her down while ";
 				if Player is herm:
 					say "you decide what to do with her. You are getting quite excited by the idea of making this wild beast yours. But being both male and female, there are options open to you if you wish to sexually dominate her.";

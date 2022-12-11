@@ -58,8 +58,134 @@ FangNewPuppies is a number that varies. FangNewPuppies is usually 0.
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Fang is Male:
+		if HP of Fang is 1 or HP of Fang is 5:
+			now ScaleValue of Fang is 3;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 2;
+			now Mouth Length of Fang is 12;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 12;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 1;
+			now Cock Girth of Fang is 4;
+			now Cock Length of Fang is 10;
+			now Ball Count of Fang is 2;
+			now Ball Size of Fang is 3;
+			now Cunt Count of Fang is 0;
+			now Cunt Depth of Fang is 0;
+			now Cunt Tightness of Fang is 0;
+			now Clit Size of Fang is 0;
+		else if HP of Fang is 2:
+			now ScaleValue of Fang is 3;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 2;
+			now Mouth Length of Fang is 10;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 10;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 1;
+			now Cock Girth of Fang is 4;
+			now Cock Length of Fang is 8;
+			now Ball Count of Fang is 2;
+			now Ball Size of Fang is 3;
+			now Cunt Count of Fang is 0;
+			now Cunt Depth of Fang is 0;
+			now Cunt Tightness of Fang is 0;
+			now Clit Size of Fang is 0;
+		else if HP of Fang is 3 or HP of Fang is 4:
+			now ScaleValue of Fang is 4;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 2;
+			now Mouth Length of Fang is 14;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 14;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 1;
+			now Cock Girth of Fang is 4;
+			now Cock Length of Fang is 12;
+			now Ball Count of Fang is 3;
+			now Ball Size of Fang is 3;
+			now Cunt Count of Fang is 0;
+			now Cunt Depth of Fang is 0;
+			now Cunt Tightness of Fang is 0;
+			now Clit Size of Fang is 0;
 		SetMalePronouns for Fang;
 	else if Fang is Female:
+		if HP of Fang is 1 or HP of Fang is 5:
+			now ScaleValue of Fang is 3;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 6;
+			now Mouth Length of Fang is 12;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 12;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 0;
+			now Cock Girth of Fang is 0;
+			now Cock Length of Fang is 0;
+			now Ball Count of Fang is 0;
+			now Ball Size of Fang is 0;
+			now Cunt Count of Fang is 1;
+			now Cunt Depth of Fang is 12;
+			now Cunt Tightness of Fang is 2;
+			now Clit Size of Fang is 3;
+		else if HP of Fang is 2:
+			now ScaleValue of Fang is 3;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 6;
+			now Mouth Length of Fang is 12;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 12;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 0;
+			now Cock Girth of Fang is 0;
+			now Cock Length of Fang is 0;
+			now Ball Count of Fang is 0;
+			now Ball Size of Fang is 0;
+			now Cunt Count of Fang is 1;
+			now Cunt Depth of Fang is 12;
+			now Cunt Tightness of Fang is 2;
+			now Clit Size of Fang is 2;
+		else if HP of Fang is 3 or HP of Fang is 4:
+			now ScaleValue of Fang is 3;
+			now Body Weight of Fang is 6;
+			now Body Definition of Fang is 7;
+			now Androginity of Fang is 6;
+			now Mouth Length of Fang is 12;
+			now Mouth Circumference of Fang is 4;
+			now Tongue Length of Fang is 12;
+			now Breast Size of Fang is 0;
+			now Nipple Count of Fang is 8;
+			now Asshole Depth of Fang is 12;
+			now Asshole Tightness of Fang is 3;
+			now Cock Count of Fang is 0;
+			now Cock Girth of Fang is 0;
+			now Cock Length of Fang is 0;
+			now Ball Count of Fang is 0;
+			now Ball Size of Fang is 0;
+			now Cunt Count of Fang is 1;
+			now Cunt Depth of Fang is 12;
+			now Cunt Tightness of Fang is 2;
+			now Clit Size of Fang is 4;
 		SetFemalePronouns for Fang;
 
 [Movement Schedule]
@@ -171,7 +297,10 @@ FangToy is a truth state that varies. FangToy is usually false.
 the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of your alpha wolf is strong and exciting[else]The scarred wolf has an arousing scent[end if]."
 
 to say fangdesc: [Note: SubjectPro and similar code is for gender pronoun checks. Not as complicated as it may look at first. :)]
-	project the Figure of Fang_face_icon;
+	if Fang is female:
+		project Figure of Fang_fem_icon;
+	else:
+		project Figure of Fang_soft_icon;
 	if debugactive is 1:
 		say "     DEBUG -> HP: [HP of Fang], Libido: [Libido of Fang], Lust: [Lust of Fang], FangWS: [FangWS], FangToy: [FangToy], FangBetaCounter: [FangBetaCounter], Hunger: [Hunger of Fang], Perception: [Perception of Fang], Charisma: [Charisma of Fang] <- DEBUG[line break]";
 	if HP of Fang is 2: [Omega Fang]
@@ -183,9 +312,9 @@ to say fangdesc: [Note: SubjectPro and similar code is for gender pronoun checks
 			say "     The feral wolf is curled up beside [PosAdj of Fang] children, occasionally giving them an affectionate lick as they stir in their sleep. While you would imagine that [SubjectPro of Fang] is still capable of protecting the library, [PosAdj of Fang] confidence has been diminished from what it used to be since becoming the Omega of the pack. [PosAdjCap of Fang] well-groomed fur is a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] watches you [PosAdj of Fang] bright, yellow eyes. You are pleased with how [SubjectPro of Fang] is turning out so far and how [SubjectPro of Fang] has accepted [PosAdj of Fang] role as the bottom-bitch. [SubjectProCap of Fang] has not made a mess around the Library and remains on [PosAdj of Fang] long, rope leash. The fact that [SubjectPro of Fang] cleverly unties and reties its anchoring point to get around doesn't bother you very much, as the fact [SubjectPro of Fang] still wears it shows [SubjectPro of Fang] recognizes your absolute authority as [PosAdj of Fang] [if Player is male]master[else]mistress[end if][if FangToy is true]. Unsurprisingly, Fang has left the toy that Sandra gave [ObjectPro of Fang] outside of the makeshift den[end if][if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
 		else: [Companion]
 			if Fang is Male:
-				say "     Taking a closer look at Fang, you notice that as he is on the small side compared to the feral wolves that you have encountered, [if scalevalue of Player is 5]his back is at the level of your shins[else if scalevalue of Player is 4]he is at just the right height to wedge himself between your legs[else if scalevalue of Player is 3] his back is about level with your stomach[else if scalevalue of Player is 2] your head comes up to his shoulder[else if scalevalue of Player is 1] you barely come up to his thigh[end if]. As Fang is surveying the surrounding area, he notices that you are examining him and rolls onto his back and spreads himself out, allowing you to see his entire body unimpeded and making you resist the urge to laugh as a canine grin appears on his face when he looks up at you. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with bright, yellow eyes that compliment his sharp, white, canine teeth, his whole form now seemingly built more for sexual activities than hunting prey since you took him down a peg. His four digitigrade legs complete with paws are thick and powerful looking with a sheath containing an eight-inch knotted canine cock complete with two chicken-egg-sized balls below it hanging between his hind-legs. His often expressive fluffy tail slips to the side and reveals his anus, the ring slightly parted from his past experiences. His thick fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look that clashes with his position as your Omega.";
+				say "     Taking a closer look at Fang, you notice that as he is on the small side compared to the feral wolves that you have encountered, [if scalevalue of Player is 5]his back is at the level of your shins[else if scalevalue of Player is 4]he is at just the right height to wedge himself between your legs[else if scalevalue of Player is 3] his back is about level with your stomach[else if scalevalue of Player is 2] your head comes up to his shoulder[else if scalevalue of Player is 1] you barely come up to his thigh[end if]. As Fang is surveying the surrounding area, he notices that you are examining him and rolls onto his back and spreads himself out, allowing you to see his entire body unimpeded and making you resist the urge to laugh as a canine grin appears on his face when he looks up at you. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with bright, yellow eyes that compliment his sharp, white, canine teeth, his whole form now seemingly built more for sexual activities than hunting prey since you took him down a peg. His digitigrade legs complete with paws are thick and powerful looking with a sheath containing an eight-inch knotted canine cock complete with two chicken-egg-sized balls below it hanging between his hind-legs. His often expressive fluffy tail slips to the side and reveals his anus, the ring slightly parted from his past experiences. His thick fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look that clashes with his position as your Omega.";
 			else: [Female]
-				say "     Taking a closer look at Fang, you notice that as she is on the small side compared to the feral wolves that you have encountered, [if scalevalue of Player is 5]her back is at the level of your shins[else if scalevalue of Player is 4]she is at just the right height to wedge herself between your legs[else if scalevalue of Player is 3] her back is about level with your hips[else if scalevalue of Player is 2] your head comes up to her shoulder[else if scalevalue of Player is 1] you barely come up to her thigh[end if]. As Fang is surveying the surrounding area, she notices that you are examining her and rolls onto her back and spreads herself out, allowing you to see her entire body unimpeded and making you resist the urge to laugh as a canine grin appears on her face when she looks up at you. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with bright, yellow eyes that compliment her sharp, white, canine teeth, her whole form now seemingly built more for sexual activities than hunting prey since you took her down a peg. Her four digitigrade legs complete with paws are thick and powerful looking with a puffy canine spade nestled between her hind-legs. Her often expressive fluffy tail slips to the side and reveals her anus, the ring slightly parted from her past experiences. Her thick fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty that clashes with her position as your Omega.";
+				say "     Taking a closer look at Fang, you notice that as she is on the small side compared to the feral wolves that you have encountered, [if scalevalue of Player is 5]her back is at the level of your shins[else if scalevalue of Player is 4]she is at just the right height to wedge herself between your legs[else if scalevalue of Player is 3] her back is about level with your hips[else if scalevalue of Player is 2] your head comes up to her shoulder[else if scalevalue of Player is 1] you barely come up to her thigh[end if]. As Fang is surveying the surrounding area, she notices that you are examining her and rolls onto her back and spreads herself out, allowing you to see her entire body unimpeded and making you resist the urge to laugh as a canine grin appears on her face when she looks up at you. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with bright, yellow eyes that compliment her sharp, white, canine teeth, her whole form now seemingly built more for sexual activities than hunting prey since you took her down a peg. Her digitigrade legs complete with paws are thick and powerful looking with a puffy canine spade nestled between her hind-legs. Her often expressive fluffy tail slips to the side and reveals her anus, the ring slightly parted from her past experiences. Her thick fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty that clashes with her position as your Omega.";
 	else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
 		if Fang is in Grey Abbey Library:
 			say "     The feral wolf is now prowling around freely in the Library, unchained and without a collar[if Lux is in Grey Abbey Library], [PosAdj of Fang] aura of authority only being momentarily lowered to show affection to [PosAdj of Fang] children before moving on with [PosAdj of Fang] patrol[end if]. Your beastly wolf has a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] stands on watch. Fang looks quite assertive as [SubjectPro of Fang] patrols, [PosAdj of Fang] bright, yellow eyes shining with confidence in [PosAdj of Fang] new position as the alpha wolf. [SubjectProCap of Fang] seems bigger now, having grown larger since asserting [ReflexPro of Fang] over you[if Fang is Male]. And this size growth doesn't seem to be limited to just [PosAdj of Fang] body. [PosAdjCap of Fang] sheath and balls are also plumper and fuller, proper for a virile alpha such as [SubjectPro of Fang]. [end if]You feel a rush of excitement as you look at [ObjectPro of Fang], your alpha wolf, feral instincts making you want to submit to [ObjectPro of Fang] again[if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
@@ -195,9 +324,9 @@ to say fangdesc: [Note: SubjectPro and similar code is for gender pronoun checks
 			say "     The feral wolf is curled up protectively in front of Lux and Umbra, looking up at you before settling down again. Your beastly wolf has a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] stands on watch. Fang looks quite assertive as [SubjectPro of Fang] watches you with [PosAdj of Fang] bright, yellow eyes that shine with confidence in [PosAdj of Fang] new position as the alpha wolf. [SubjectProCap of Fang] seems bigger now, having grown larger since asserting [ReflexPro of Fang] over you. And this size growth doesn't seem to be limited to just [PosAdj of Fang] body. [PosAdjCap of Fang] sheath and balls are also plumper and fuller, proper for a virile alpha such as [SubjectPro of Fang]. You feel a rush of excitement as you look at [ObjectPro of Fang], your alpha wolf, feral instincts making you want to submit to [ObjectPro of Fang] again[if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
 		else: [Companion]
 			if Fang is Male:
-				say "     Taking a closer look at Fang, you notice that he is on the large side when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] his back reaching your thigh[else if scalevalue of Player is 4] his face level with your groin[else if scalevalue of Player is 3] his face at eye-level[else if scalevalue of Player is 2] your face level with his sheath[else if scalevalue of Player is 1] your head doesn't even reach his elbow[end if]. As Fang is surveying the surrounding area, he notices that you are eye-humping him and unconsciously adjusts into a commanding pose, allowing you to admire his majesty while you resist the urge to submit as a he looks back at you with a calm expression. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with intense, yellow eyes that compliment his sharp, white, canine teeth, his whole form obviously built for leading the hunt and defending his pack against rivals. His four digitigrade legs complete with paws are thick and powerful looking with a sheath containing a twelve-inch knotted canine cock complete with two goose-egg sized balls below it hanging between his hind-legs. His often expressive fluffy tail briefly flags to the side to reveals his relatively tight anus. His lush fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look that enhances his position as your Alpha.";
+				say "     Taking a closer look at Fang, you notice that he is on the large side when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] his back reaching your thigh[else if scalevalue of Player is 4] his face level with your groin[else if scalevalue of Player is 3] his face at eye-level[else if scalevalue of Player is 2] your face level with his sheath[else if scalevalue of Player is 1] your head doesn't even reach his elbow[end if]. As Fang is surveying the surrounding area, he notices that you are eye-humping him and unconsciously adjusts into a commanding pose, allowing you to admire his majesty while you resist the urge to submit as a he looks back at you with a calm expression. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with intense, yellow eyes that compliment his sharp, white, canine teeth, his whole form obviously built for leading the hunt and defending his pack against rivals. His digitigrade legs complete with paws are thick and powerful looking with a sheath containing a twelve-inch knotted canine cock complete with two goose-egg sized balls below it hanging between his hind-legs. His often expressive fluffy tail briefly flags to the side to reveals his relatively tight anus. His lush fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look that enhances his position as your Alpha.";
 			else: [Female]
-				say "     Taking a closer look at Fang, you notice that she is on the large side when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] her back reaching your thigh[else if scalevalue of Player is 4] her face level with your groin[else if scalevalue of Player is 3] her face at eye-level[else if scalevalue of Player is 2] your face level with her vulva[else if scalevalue of Player is 1] your head doesn't even reach her elbow[end if]. As Fang is surveying the surrounding area, she notices that you are eye-humping her and unconsciously adjusts into a commanding pose, allowing you to admire her majesty while you resist the urge to submit as a she looks back at you with a calm expression. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with intense, yellow eyes that compliment her sharp, white, canine teeth, her whole form obviously built for leading the hunt and defending her pack against rivals. Her four digitigrade legs complete with paws are thick and powerful looking and her often expressive fluffy tail briefly flags to the side to reveals her puffy canine spade and relatively tight anus. Her lush fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty that enhances her position as your Alpha.";
+				say "     Taking a closer look at Fang, you notice that she is on the large side when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] her back reaching your thigh[else if scalevalue of Player is 4] her face level with your groin[else if scalevalue of Player is 3] her face at eye-level[else if scalevalue of Player is 2] your face level with her vulva[else if scalevalue of Player is 1] your head doesn't even reach her elbow[end if]. As Fang is surveying the surrounding area, she notices that you are eye-humping her and unconsciously adjusts into a commanding pose, allowing you to admire her majesty while you resist the urge to submit as a she looks back at you with a calm expression. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with intense, yellow eyes that compliment her sharp, white, canine teeth, her whole form obviously built for leading the hunt and defending her pack against rivals. Her digitigrade legs complete with paws are thick and powerful looking and her often expressive fluffy tail briefly flags to the side to reveals her puffy canine spade and relatively tight anus. Her lush fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty that enhances her position as your Alpha.";
 	else if HP of Fang is 5: [Beta Fang]
 		if Fang is in Grey Abbey Library:
 			say "     The feral wolf is now prowling around freely in the Library, unchained and without a collar[if Lux is in Grey Abbey Library], often accompanied by both Lux and Umbra as [SubjectPro of Fang] patrols, the three wolves walking side by side, talking softly and brushing against each other affectionately[end if]. Your beastly wolf has a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] stands on watch. Fang looks quite relaxed as [SubjectPro of Fang] patrols, [PosAdj of Fang] bright, yellow eyes shining with confidence in [PosAdj of Fang] position as your beta, answering to no one but you. While [SubjectPro of Fang] isn't any larger, [PosAdj of Fang] posture seems to have changed making [ObjectPro of Fang] look more impressive and filled with vigor. When [SubjectPro of Fang] sees you, [SubjectPro of Fang] begins to wag wildly and dips [PosAdj of Fang] ears in greeting before approaching you, pressing [ReflexPro of Fang] up against your side and giving you a friendly lick[if Lux is in Grey Abbey Library], a reaction that is mirrored by [PosAdj of Fang] children[end if][if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
@@ -207,9 +336,9 @@ to say fangdesc: [Note: SubjectPro and similar code is for gender pronoun checks
 			say "     The feral wolf is curled up against Lux and Umbra, all of their faces pressed together as they sleep peacefully. Your beastly wolf has a mix of black and dark gray fur that blends into the shadows of the room. While you can't currently see them, [PosAdj of Fang] bright, yellow eyes usually shine with confidence in [PosAdj of Fang] position as your beta, answering to no one but you. While [SubjectPro of Fang] isn't any larger, [PosAdj of Fang] posture seems to have changed making [ObjectPro of Fang] look more impressive and filled with vigor. You smile to yourself at the heart-warming sight in front of you, the three fully grown wolves feeling safe when together like this, breathing almost in unison. It's at times like this that you can really see the bond within this family and you are glad to be a part of it[if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
 		else: [Companion]
 			if Fang is Male:
-				say "     Taking a closer look at Fang, you notice that he is of similar size, perhaps slightly larger, when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] his back level with your knees[else if scalevalue of Player is 4] being at just the right height to rest your genitals on his head[else if scalevalue of Player is 3] his back level with your chest[else if scalevalue of Player is 2] a good height for you to blow him if you crouched a little[else if scalevalue of Player is 1] your head reaching a little past his elbow[end if]. As Fang is surveying the surrounding area, he notices your staring and stands still wagging slowly, a friendly canine grin spreading across his face as you take the time to get a better look at him. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with warm, amber eyes that compliment his sharp, white, canine teeth, his whole form obviously built for protecting his family and taking down fast prey. His four digitigrade legs complete with paws are thick and powerful looking with a sheath containing a ten-inch knotted canine cock complete with two chicken-egg sized balls below it hanging between his hind-legs. As his often expressive fluffy tail wags to the side, it reveals his accommodating anus. His luxuriant fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look befitting his position as your Beta.";
+				say "     Taking a closer look at Fang, you notice that he is of similar size, perhaps slightly larger, when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] his back level with your knees[else if scalevalue of Player is 4] being at just the right height to rest your genitals on his head[else if scalevalue of Player is 3] his back level with your chest[else if scalevalue of Player is 2] a good height for you to blow him if you crouched a little[else if scalevalue of Player is 1] your head reaching a little past his elbow[end if]. As Fang is surveying the surrounding area, he notices your staring and stands still wagging slowly, a friendly canine grin spreading across his face as you take the time to get a better look at him. His fur is a mix of black and dark gray fur that blends into the shadows as he watches you with warm, amber eyes that compliment his sharp, white, canine teeth, his whole form obviously built for protecting his family and taking down fast prey. His digitigrade legs complete with paws are thick and powerful looking with a sheath containing a ten-inch knotted canine cock complete with two chicken-egg sized balls below it hanging between his hind-legs. As his often expressive fluffy tail wags to the side, it reveals his accommodating anus. His luxuriant fur is a lot cleaner than when he lived in the urban forest as is his muzzle, revealing the number of scars on his face, giving him a ruggedly-handsome look befitting his position as your Beta.";
 			else: [Female]
-				say "     Taking a closer look at Fang, you notice that she is of similar size, perhaps slightly larger, when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] her back level with your knees[else if scalevalue of Player is 4] being at just the right height to rest your genitals on her head[else if scalevalue of Player is 3] her back level with your chest[else if scalevalue of Player is 2] a good height for you to eat her out if you crouched a little[else if scalevalue of Player is 1] your head reaching a little past her elbow[end if]. As Fang is surveying the surrounding area, she notices your staring and stands still wagging slowly, a friendly canine grin spreading across her face as you take the time to get a better look at her. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with warm, amber eyes that compliment her sharp, white, canine teeth, her whole form obviously built for protecting her family and taking down fast prey. Her four digitigrade legs complete with paws are thick and powerful looking and as her often expressive fluffy tail wags to the side it reveals her puffy canine spade and accommodating anus. Her luxuriant fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty befitting her position as your Beta.";
+				say "     Taking a closer look at Fang, you notice that she is of similar size, perhaps slightly larger, when compared to the feral wolves that you have encountered, [if scalevalue of Player is 5] her back level with your knees[else if scalevalue of Player is 4] being at just the right height to rest your genitals on her head[else if scalevalue of Player is 3] her back level with your chest[else if scalevalue of Player is 2] a good height for you to eat her out if you crouched a little[else if scalevalue of Player is 1] your head reaching a little past her elbow[end if]. As Fang is surveying the surrounding area, she notices your staring and stands still wagging slowly, a friendly canine grin spreading across her face as you take the time to get a better look at her. Her fur is a mix of black and dark gray fur that blends into the shadows as she watches you with warm, amber eyes that compliment her sharp, white, canine teeth, her whole form obviously built for protecting her family and taking down fast prey. Her digitigrade legs complete with paws are thick and powerful looking and as her often expressive fluffy tail wags to the side it reveals her puffy canine spade and accommodating anus. Her luxuriant fur is a lot cleaner than when she lived in the urban forest as is her muzzle, revealing the number of scars on her face, giving her a rugged beauty befitting her position as your Beta.";
 	else:
 		say "     The feral wolf seems to be doing better in [PosAdj of Fang] new home. [SubjectProCap of Fang] is looking more confident and strong as [SubjectPro of Fang] sits obediently on watch, clearly adjusting well to [PosAdj of Fang] improved position as your beta. [PosAdjCap of Fang] fur is a mix of black and dark gray fur that blends into the shadows as [SubjectPro of Fang] watches the door with [PosAdj of Fang] bright, yellow eyes. You are pleased with how [SubjectPro of Fang] is turning out so far. [SubjectProCap of Fang] has not made a mess around the Library and remains on [PosAdj of Fang] long, rope leash. The fact that [SubjectPro of Fang] cleverly unties and reties its anchoring point to get around when you're not looking doesn't bother you very much, as the fact [SubjectPro of Fang] still wears it shows [SubjectPro of Fang] recognizes your authority as [PosAdj of Fang] [if Player is male]master[else]mistress[end if][if FangToy is true and a random chance of 1 in 3 succeeds][one of]Fang has [PosAdj of Fang] doggy dick toy stuffed in [PosAdj of Fang] muzzle, happily working [PosAdj of Fang] tongue over it[or]Fang has the playtoy Sandra gave [ObjectPro of Fang] on the ground between [PosAdj of Fang] paws and is giving it a few casual licks[or]Fang's red dildo toy is on the floor beneath [ObjectPro of Fang]. [SubjectProCap of Fang] is idly rubbing [PosAdj of Fang] own hard cock against it, dribbling getting it slick with wolf pre[at random][end if][if Perception of Fang > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Perception of Fang > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy wolf[end if].";
 
@@ -330,6 +459,10 @@ the fuckscene of Best Wolf is "[sexwithFang]".
 
 to say SummonFang:
 	if Fang is visible: [summoning while standing next to him]
+		if Fang is female:
+			project Figure of Fang_fem_icon;
+		else:
+			project Figure of Fang_soft_icon;
 		if HP of Fang is 2: [Omega]
 			say "     Walking over to where Fang is currently lying, you tell [ObjectPro of Fang] that [SubjectPro of Fang] will be accompanying you around the city until you dismiss [ObjectPro of Fang]. [SubjectProCap of Fang] looks up at you, [PosAdj of Fang] tail thumping against the floor in excitement that [SubjectPro of Fang] will be going with you, before lurching to [PosAdj of Fang] feet and pressing [ReflexPro of Fang] against your side. For a moment you wonder whether to attach a proper collar and leash, but decide that the wolf may need freedom of movement if [SubjectPro of Fang] is to defend you.";
 		else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
@@ -341,6 +474,10 @@ to say SummonFang:
 
 to say DismissFang:
 	move Fang to Grey Abbey Library;
+	if Fang is female:
+		project Figure of Fang_fem_icon;
+	else:
+		project Figure of Fang_soft_icon;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		if HP of Fang is 5: [Omega]
 			say "     Putting a hand on Fang's shoulder, you tell [ObjectPro of Fang] that you can manage without [ObjectPro of Fang] for now and that [SubjectPro of Fang] should return to the library. With little more than a nod, the wolf slinks away, keeping to the shadows to avoid conflict while [SubjectPro of Fang] travels back home alone. Soon [SubjectPro of Fang] has disappeared from sight and you continue on.";
@@ -362,7 +499,6 @@ Section 2 - Sexxxings
 the fuckscene of Fang is "[sexwithFang]";
 
 to say sexwithFang:
-	project the Figure of Fang_face_icon;
 	[puts Feral Wolf as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -432,6 +568,7 @@ Section 2.1.1 - Male Omega Fang Sexxxings [Sort of Placeholders]
 to say MaleFangOmegaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Omega Fang Sex Menu";
+	project Figure of Fang_hard_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -581,6 +718,7 @@ Section 2.1.2 - Female Omega Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangOmegaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Omega Female Fang Sex Menu";
+	project Figure of Fang_fem_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -707,6 +845,7 @@ to say FemaleFangOmegaSex6: [assfuck Fang as Skunkbeast]
 Section 2.2.1 - Male Alpha Fang Sexxxings [Sort of Placeholders]
 
 to say MaleFangAlphaSexMenu:
+	project Figure of Fang_hard_icon;
 	if a random chance of 1 in 2 succeeds:
 		if hp of Fang is 3:
 			say "[MaleFangAlphaSex1]";
@@ -981,6 +1120,7 @@ to say MaleFangWSContent:
 Section 2.2.2 - Female Alpha Fang Sexxxings [Sort of Placeholders]
 
 to say FemaleFangAlphaSexMenu:
+	project Figure of Fang_fem_icon;
 	if a random chance of 1 in 2 succeeds:
 		say "[FemaleFangAlphaSex1]";
 	else:
@@ -1095,6 +1235,7 @@ Section 2.3.1 - Male Beta Fang Sexxxings [Sort of Placeholders]
 to say MaleFangBetaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Beta Fang Sex Menu";
+	project Figure of Fang_hard_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1281,6 +1422,7 @@ Section 2.3.2 - Female Beta Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangBetaSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Beta Female Fang Sex Menu";
+	project Figure of Fang_fem_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1437,6 +1579,7 @@ to say FemaleFangBetaSex6: [Oral Vore]
 Section 2.4.1 - Male Vanilla Fang Sexxxings [Sort of Placeholders]
 
 to say MaleFangSexMenu:
+	project Figure of Fang_hard_icon;
 	if debugactive is 1:
 		say "     DEBUG -> Vanilla Fang Sex Menu";
 	now sextablerun is 0;
@@ -1613,6 +1756,7 @@ Section 2.4.2 - Female Vanilla Fang Sexxxings [Sort of Placeholders]
 to say FemaleFangSexMenu:
 	if debugactive is 1:
 		say "     DEBUG -> Vanilla Fang Sex Menu";
+	project Figure of Fang_fem_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -1756,7 +1900,7 @@ Section 3 - Male Fang and Sandra
 
 instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sandra is in the Bunker and Fang is in the Grey Abbey Library and lastfuck of Fang - turns > 7 and Libido of Fang < 2 and ( HP of Fang is 1 and Fang is Male) ):
 	move player to Grey Abbey Library;
-	project the Figure of Fang_face_icon;
+	project Figure of Fang_hard_icon;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if Libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if Libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast! I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her. It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more. Clearly the rabbit girl is much kinkier than she lets on. You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf. Getting quite aroused by the erotic display before you, you rub your hands over your body.";
 	say "     [bold type]Shall you head over to join them [if Libido of Fang is 1]this time [end if]or remain watching quietly?[roman type][line break]";
@@ -2043,7 +2187,7 @@ to say MaleFangDomRide:
 Section 4.2.1 - Male Alpha/Omega without Sandra
 
 instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and Fang is Male) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
-	project the Figure of Fang_face_icon;
+	project Figure of Fang_hard_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
 	LineBreak;
@@ -2139,7 +2283,7 @@ to say MaleFangDomRide2:
 Section 4.2.2 - Female Alpha/Omega without Sandra
 
 instead of going up from Bunker while (( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and Fang is Female) and (FangBetaCounter < 6) and (player is not neuter)):	[ignored for 3+ days]
-	project the Figure of Fang_face_icon;
+	project Figure of Fang_fem_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From her growls and the slick pussy rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like she's intent on satisfying her lusts with you whether you like it or not. As her twitching cunt grinds against you while she tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have her way with you.";
 	say "     [bold type]Shall you let her or reassert your dominance?[roman type][line break]";
 	LineBreak;
@@ -2237,6 +2381,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 		say "     ([link]Y[as]y[end link]) - Yes. The chance to further bond with Fang is too good to miss."; [Size considerations may come later]
 		say "     ([link]N[as]n[end link]) - No. You have more important things that you feel like doing.";
 		if Player consents:
+			project Figure of Fang_hard_icon;
 			LineBreak;
 			if player is herm:
 				say "     With a murmur of assent, you [if player is naked]begin to put on [else]suggestively strip your clothes before beginning [end if]a show for Fang, caressing your thighs, up your sides until you reach your chest where your palms dance inwards over your nipples before stroking your tummy and halting just above your stirring loins. A faint sheen can be seen on the lips of your pussy, the nanites readying you for whatever might come next, even as your shaft twitches above it, a single bead of pre building at the tip. Your display has had similar effect on Fang, the wolf's knotted cock bobbing beneath him, releasing a steady drizzle of hazy fluid onto the soft carpet beneath him. Seeing that he too is ready for whatever comes next, you approach him, standing in front of his panting maw, and present your crotch to his quivering tongue.";
@@ -2500,6 +2645,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 		say "     ([link]Y[as]y[end link]) - Yes. The chance to further bond with Fang is too good to miss."; [Size considerations may come later]
 		say "     ([link]N[as]n[end link]) - No. You have more important things that you feel like doing.";
 		if Player consents:
+			project Figure of Fang_fem_icon;
 			LineBreak;
 			if player is herm:
 				say "     With a murmur of assent, you [if player is naked]begin to put on [else]suggestively strip your clothes before beginning [end if]a show for Fang, caressing your thighs, up your sides until you reach your chest where your palms dance inwards over your nipples before stroking your tummy and halting just above your stirring loins. A faint sheen can be seen on the lips of your pussy, the nanites readying you for whatever might come next, even as your shaft twitches above it, a single bead of pre building at the tip. Your display has had similar effect on Fang, the wolf's ready pussy misting beneath her, releasing a steady drizzle of hazy fluid onto the soft carpet beneath her. Seeing that she too is ready for whatever comes next, you approach her, standing in front of her panting maw, and present your crotch to her quivering tongue.";
@@ -2832,6 +2978,7 @@ The level of Alpha's Shepherd Watcher is 0.
 Sarea of Alpha's Shepherd Watcher is "Nowhere".
 
 instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and MaleList is not warded and MaleList is not banned and Alpha's Shepherd Watcher is not resolved and a random chance of 1 in 2 succeeds:
+	project Figure of Fang_soft_icon;
 	say "     Entering the library, you are met by your Alpha who brushes against your side possessively. You are pleased that he has seen fit to greet you this way and give him a friendly pat in return, the large wolf letting out a contented groan as you scratch him under the chin. It would seem that he is in a more affectionate mood than usual and decide to make the most of it as he rolls on his side with you atop him, rubbing the thick fur of his tummy with your hand occasionally straying to brush against his full sheath, feeling the heat radiating from it. Unfortunately, the moment is soon ruined by a snicker behind a bookshelf and you manage to look up in time to see a flicker of tan and black disappear from view. You aren't the only one to have noticed them as Fang leaps to his feet, sending you sprawling, and darts after the voyeur, his mood distinctly soured and irritation likely to be taken out on whoever dared sound mocking.";
 	say "     'Oh fuck.' As you clamber to your feet, you hear a voice that sounds suspiciously like Korvin's before the noise of a chase begins, the clatter of claws on the floor, books being knocked from shelves, angry growls from Fang, and the [if gsd_pet < 60]scared yelping [else]desperate panting [end if]from the German shepherd as he attempts to flee the much larger male. You would have thought that Korvin would have had a little more respect for Fang given that you are subservient to the wolf and that you in turn have authority over the canine, but it would seem that [if gsd_pet < 60]some of his old rebellious spirit returned for long enough [else]he was overconfident enough in his position [end if]for him to laugh at Fang relaxing and behaving more like a dog. Your musings are cut short by a very loud crash and you run towards the noise to confirm that no one is (too badly) harmed and that they haven't broken any of the furniture. While nothing is destroyed, a table seems to have been knocked over and Fang is atop Korvin, teeth millimeters from his throat and a low growl rumbling from his chest.";
 	WaitLineBreak;
@@ -2855,6 +3002,7 @@ The level of Alpha's Shepherd Domination is 0.
 Sarea of Alpha's Shepherd Domination is "Nowhere".
 
 instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and (gsd_pet >= 20 and Korvin is in Makeshift Rec Room) and lastfuck of Fang - turns > 7 and Alpha's Shepherd Domination is not resolved and Alpha's Shepherd Domination is PrereqComplete and MaleList is not warded and MaleList is not banned and a random chance of 1 in 2 succeeds:
+	project Figure of Fang_hard_icon;
 	say "     A crash as you enter the library along with the absence of Fang from his usual position by the door tips you off that something is happening and you quickly run towards the noise to investigate and lend any assistance necessary. However, when you reach the source, a more open area with couches and armchairs pushed to the edge, you discover your Alpha looming over Korvin, the German shepherd crouched close to the floor and his ears lowered submissively as he ensures that he doesn't meet his superior's eye. It would seem that his previous irreverence towards the wolf has caught up with him and now Fang is going to pound some respect into him if his emerging cock is anything to go by, so you decide to get comfortable in one of the chairs and watch the wolf have some pleasure as he more thoroughly establishes his dominance over the canine. Fang doesn't seem to mind your presence, circling around the dog and sniffing at his scent, whereas Korvin almost seems embarrassed to be in such a position in front of you.";
 	say "     When the wolf's cool nose brushes against the soft fur of his scrotum, the German shepherd lets out a gasp which soon transforms into a sigh when Fang's tongue licks beneath his rising tail, the saliva that spreads across his tight anus sure to allow smother access for when the larger male mounts him. By now, Korvin seems to have overcome his shyness due to a combination of physical pleasure, arousing pheromones, and acceptance of his situation, so when Fang circles around to face him from the front, you can guess that there will be no resistance to what comes next. 'Suck,' your Alpha commands the German shepherd, an order that is instantly obeyed as his subordinate steps forward to crouch beneath him and take his twitching shaft into his muzzle, excess saliva dribbling from the corners of his mouth as the wolf slowly thrusts into the inviting maw. You can see Korvin's throat swelling beneath his [if gsd_pet < 60]pink [else]black [end if]collar signifying Fang's length being pushed down his throat, though the canine doesn't seem perturbed at all, instead focusing on maximising his partner's pleasure, swirling his tongue and constricting the muscles in his throat.";
 	WaitLineBreak;
@@ -2900,6 +3048,7 @@ instead of going down from Grey Abbey 2F while ("Fang's Mate" is listed in feats
 to say FemaleFangLux&UmbraBirth:
 	if hp of Lux > 0:
 		now FangNewPuppies is a random number between 1 and 3;
+	project Figure of Fang_fem_icon;
 	say "     As you find yourself in the entrance of the library, you feel an odd feeling that tells you that you should check on a certain pregnant wolf and see how she is doing. Almost with a mind of their own, your feet continuing to move you to Fang's position amidst the bookshelves until you finally arrive to crouch down at her side. It seems that you made it in time as a rush of liquid begins to escape her nether region as she grunts in obvious distress, you get into a better position and gently help Fang move until she is laying on her back in order to make the exit easier as well as to lessen the burden. You hold your hands at ready as Fang's face constricts with pain and her breath heavy, as her children exit her womb and make their way down her passage until finally a tiny head pokes out, then the rest of the body, with her being tailed by her sibling as he exits as well until they are both safely out into the world.";
 	say "     Fang gets up and presses herself against your side, laying down next to you as you both sit while leaning onto a nearby bookcase, unable to do anything but gaze adoringly at the two bundles of fur that are held in your hands after sharing a brief but intense kiss. The second one born seems to be grasping the other's tail in his mouth, bringing a small smile to your face. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash her children, her tongue clearing the excess slime from them and smearing her scent over their fur, re-marking them as her children. You haven't seen her look at anyone as tenderly and with as much care as she is doing so now to her puppies.";
 	WaitLineBreak;

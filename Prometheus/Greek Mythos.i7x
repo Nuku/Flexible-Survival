@@ -447,14 +447,13 @@ Prereq1 of Benefit of Hindsight Introduction is Too Many Heads.
 The level of Benefit of Hindsight Introduction is 30.
 Sarea of Benefit of Hindsight Introduction is "Urban Forest".
 
-instead of going to Urban Forest while (Benefit of Hindsight Introduction is active and Benefit of Hindsight Introduction is not resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
+instead of navigating Urban Forest while (Benefit of Hindsight Introduction is active and Benefit of Hindsight Introduction is not resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Urban Forest]";
+	if NavCheckReturn is false, stop the action;
 	move player to Urban Forest;
-	BenefitofHindsightIntroductionEvent;
+	say "[ResolveEvent Benefit of Hindsight Introduction]";
 
 to say ResolveEvent Benefit of Hindsight Introduction:
-	BenefitofHindsightIntroductionEvent;
-
-to BenefitofHindsightIntroductionEvent: [Search for the Hind of Ceryneia]
 	say "     Unsure of exactly who you are meant to be meeting about the Third Labor, you wander around vaguely, though making sure not to stray too far from the road so as to avoid getting lost. You are just beginning to think that you'll return to the temple in the museum to get more guidance when you see a goat-legged satyr hiding behind some bushes, seeming to be spying on something beyond them. Sneaking up beside them, you peer out past the leaves and spot a naked young woman swimming back and forth in a swimming pool, prompting you to avert your gaze again and instead stare at the satyr, waiting for him to notice you. He is so engrossed in the view that you have been crouched beside him for nearly thirty seconds before he senses your presence and without even looking at you, falls over with a startled yelp. 'I swear I didn't mean to spy on her, it just sort of happened. Please don't set the wolves on me,' he pleads, pressing his face into the dirt.";
 	say "     You find this to be a bit of a strange reaction and question him as to why you would do such a thing. Voyeurism isn't exactly an uncommon occurrence in the city after all. His head snaps up and he looks at you, his relief evident. 'Thank the gods that you aren't who I thought you were. She'd have made me prey,' the satyr mumbles, brushing some of the dirt from his face. You ask him who. 'Artemis, the Mistress of the Hunt and the Maiden Archer,' a feminine voice answers as the woman from before steps through the bushes, now dressed more decently in a short, brown tunic, and glares at the perpetrator. 'Do you really want to take after Aktaion? If you want to join me swimming, ask, but hiding in a bush so you can watch is a good way to have the hounds set upon you,' she chides him. Waiting for a break in the conversation, you ask whether they might perhaps be who you are meant to be meeting about the Third Labor of Herakles, noticing their shoulders sag in relief.";
 	WaitLineBreak;
@@ -472,14 +471,13 @@ Prereq1 of Benefit of Hindsight Forest is Benefit of Hindsight Introduction.
 The level of Benefit of Hindsight Forest is 30.
 Sarea of Benefit of Hindsight Forest is "Urban Forest".
 
-instead of going to Urban Forest while (Benefit of Hindsight Forest is active and Benefit of Hindsight Forest is not resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
+instead of navigating Urban Forest while (Benefit of Hindsight Forest is active and Benefit of Hindsight Forest is not resolved and Benefit of Hindsight Introduction is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Urban Forest]";
+	if NavCheckReturn is false, stop the action;
 	move player to Urban Forest;
-	BenefitofHindsightForestEvent;
+	say "[ResolveEvent Benefit of Hindsight Forest]";
 
 to say ResolveEvent Benefit of Hindsight Forest:
-	BenefitofHindsightForestEvent;
-
-to BenefitofHindsightForestEvent: [Search for the Hind of Ceryneia]
 	say "     Creeping between the trees, you are soon joined by Nephele and Abderos, the satyr moving surprisingly stealthily given that he has a horn of wine in one hand and seems to be slightly inebriated. 'Sorry, sorry,' the nymph apologizes on his behalf, seeing your glance in their direction. 'He didn't think that you would be this quick to begin the pursuit and decided that he had time to attend a party at the college. Fortunately, no one thought twice about a satyr wandering around and we can travel quickly when we need to. We frequently end up assigned together like this, and despite our differences Abderos is nearly as capable in the wilds as I am,' Nephele grudgingly compliments him, as he staggers around twigs and branches that might otherwise spook your quarry. 'We should probably keep silent from now on. We're nearing the hind, I can feel it in the wind.' You agree, but not having spoken a word since meeting them, you smirk that it is her who has been the most chatty. As you near a glade, the satyr gestures for you to take cover behind a fallen log and you see the Hind of Ceryneia for the first time.";
 	say "     Your eyes widen as you take in the size of it, wondering how it manages to traverse the forest without its golden antlers catching in the branches. The hind is as large as a moose, though it exudes an aura of serenity as it grazes in the clearing, a creature of elegance despite its size. It takes you a moment to notice that its hooves appear to be bronze and you snap your head around to look at your guides in case they have anything to say. 'Don't get kicked,' Abderos advises you, sagely nodding his head as though he has imparted some great wisdom. As you turn back to look at the doe, a loud noise startles you all and an elf woman sprints from the trees opposite you pursued by a knight who is naked from the waist down, his penis flopping around as he runs. 'Cease your flight fair maiden and tend to my sword,' the knight bellows before tripping over a root, giving the elf a chance to dart off to the side and escape. This unfortunately also causes the hind to bolt in the opposite direction, the branches magically parting in its path to allow it passage before closing behind its retreating from, preventing any chance of you catching up to it.";
 	WaitLineBreak;
@@ -497,7 +495,7 @@ Prereq1 of Benefit of Hindsight Beach is Benefit of Hindsight Forest.
 The level of Benefit of Hindsight Beach is 30.
 Sarea of Benefit of Hindsight Beach is "Beach".
 
-instead of going to Beach while (Benefit of Hindsight Beach is active and Benefit of Hindsight Beach is not resolved and Benefit of Hindsight Forest is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
+instead of going to Beach while (Benefit of Hindsight Beach is active and Benefit of Hindsight Beach is not resolved and Benefit of Hindsight Forest is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
 	move player to Beach;
 	BenefitofHindsightBeachEvent;
 
@@ -525,14 +523,13 @@ Prereq1 of Benefit of Hindsight Zoo is Benefit of Hindsight Beach.
 The level of Benefit of Hindsight Zoo is 30.
 Sarea of Benefit of Hindsight Zoo is "Zoo".
 
-instead of going to Zoo while (Benefit of Hindsight Zoo is active and Benefit of Hindsight Zoo is not resolved and Benefit of Hindsight Beach is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
-	move player to Zoo;
-	BenefitofHindsightZooEvent;
+instead of navigating Zoo Entrance while (Benefit of Hindsight Zoo is active and Benefit of Hindsight Zoo is not resolved and Benefit of Hindsight Beach is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Zoo Entrance]";
+	if NavCheckReturn is false, stop the action;
+	move player to Zoo Entrance;
+	say "[ResolveEvent Benefit of Hindsight Zoo]";
 
 to say ResolveEvent Benefit of Hindsight Zoo:
-	BenefitofHindsightZooEvent;
-
-to BenefitofHindsightZooEvent: [Search for the Hind of Ceryneia]
 	say "     Your arrival at the zoo is one without a welcoming party, though it could hardly be said to be quiet. All around you are the usual cries and calls of animals, varying from sounds of hostility to those of ecstasy. Realizing that you don't know where exactly in the zoo that you were meant to be meeting and that you aren't likely to find the deer without help, you stand around awkwardly and try to concoct a plan. Fortunately, before much time has passed, you hear familiar voices in the midst of an argument. 'I knew that you would get distracted, but by the gods, I didn't expect to have to trail you all over the city as you pursued men, women, and parties,' an exasperated female voice scolds. Turning around, you see Nephele and Abderos approaching, the satyr for the most part ignoring his companions' complaints. 'I'm sure that [SubjectPro of Player] won't be here either. Why don't you save your prickly tongue for [ObjectPro of Player]?' he replies.";
 	say "     You call out to them, interrupting their exchange and making them look towards you with surprise. Even more shocking is that Abderos barges in front of the nymph and makes a dash towards you. Unfortunately for him, he manages to tangle his legs together as he does so and ends up sprawled on the ground as Nephele scampers past him and gently pokes your nose before turning back towards him as he hauls himself back to his feet. 'Now, what did we learn?' she mocks him, sticking her tongue out momentarily. 'Also, by your own wager, you are now sour vinegar. I do hope that none of the gods take this too literally,' she continues. 'I said spoiled wine, and of course no-one is going to transform me into it. Anyway, I thought that nymphs were meant to be nice. Your close ties with nature and all that,' the satyr grumbles, brushing himself off as he comes to a stop in front of you.";
 	WaitLineBreak;
@@ -555,14 +552,13 @@ Prereq1 of Benefit of Hindsight Park is Benefit of Hindsight Zoo.
 The level of Benefit of Hindsight Park is 30.
 Sarea of Benefit of Hindsight Park is "Park".
 
-instead of going to Park while (Benefit of Hindsight Park is active and Benefit of Hindsight Park is not resolved and Benefit of Hindsight Zoo is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
-	move player to Park;
-	BenefitofHindsightParkEvent;
+instead of navigating Park Entrance while (Benefit of Hindsight Park is active and Benefit of Hindsight Park is not resolved and Benefit of Hindsight Zoo is resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Park Entrance]";
+	if NavCheckReturn is false, stop the action;
+	move player to Park Entrance;
+	say "[ResolveEvent Benefit of Hindsight Park]";
 
 to say ResolveEvent Benefit of Hindsight Park:
-	BenefitofHindsightParkEvent;
-
-to BenefitofHindsightParkEvent: [Search for the Hind of Ceryneia]
 	say "     Facing a similar problem to in the zoo, you register that once again, you didn't agree on anywhere in particular to meet Nephele and Abderos, though with how suddenly you seemed to part ways previously, you begin to wonder whether they are doing this on purpose, especially as they always seem to arrive soon after you as if by magic. With how they explained the hind's ability to travel so quickly, you assume that it is something similar. Finding a bench in the shadow of a statue to some historical philanthropist, you sit and wait for their inevitable arrival. As expected, you aren't waiting long before the two of them round the corner in the middle of laughing about something. They wave as they approach, still stifling giggles as they walk over to you. 'Hiya. Sorry to keep you waiting, but we were held up by some coyote by the entrance,' Nephele chuckles.";
 	say "     'I'm sure that you will have met [ObjectPro of Diego] before. Anyway, [SubjectPro of Diego] was in the middle of some nonsense about how we had been invited to a party being held in the Red Light District when Abderos challenged [ObjectPro of Diego] to a drinking competition, even going as far as to call [ObjectPro of Diego] a coward when they initially refused. Now, I know what you're thinking. Only an idiot would agree to a drinking contest with a satyr, but here's the thing, they were only going to be drinking water.' The nymph pauses to to take a breath and Abderos continues the story, 'Or to be more accurate, [SubjectPro of Diego] [italic type]thought[roman type] that we were going to drink water and no doubt was thinking of some way to hoodwink me, but a quick prayer to Dionysus and I knew that I wouldn't have any trouble winning. As soon as any liquid entered either of our throats, it changed into strong wine. Needless to say, I have a much better capacity for alcohol than most in your world. Long story short, now [SubjectPro of Diego] is sleeping it off and we were able to meet up with you without any more problems.'";
 	WaitLineBreak;
@@ -582,11 +578,13 @@ Benefit of Hindsight Plains is a situation.
 ResolveFunction of Benefit of Hindsight Plains is "[ResolveEvent Benefit of Hindsight Plains]".
 Prereq1 of Benefit of Hindsight Plains is Benefit of Hindsight Park.
 The level of Benefit of Hindsight Plains is 30.
-Sarea of Benefit of Hindsight Plains is "Dry Plains".
+Sarea of Benefit of Hindsight Plains is "Plains".
 
-instead of going to Dry Plains while (Benefit of Hindsight Plains is active and Benefit of Hindsight Plains is not resolved and TwelveLaborsStage is 3 and a random chance of 1 in 5 succeeds):
+instead of navigating Dry Plains while (Benefit of Hindsight Plains is active and Benefit of Hindsight Plains is not resolved and TwelveLaborsStage is 3 and a random chance of 1 in 3 succeeds):
+	say "[NavCheck Dry Plains]";
+	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
-	BenefitofHindsightPlainsEvent;
+	say "[ResolveEvent Benefit of Hindsight Plains]";
 
 to say ResolveEvent Benefit of Hindsight Plains:
 	BenefitofHindsightPlainsEvent;
@@ -683,7 +681,7 @@ To say CeryneianTransformation:
 		if wrcursestatus >= 7 and wrcursestatus < 100: [Were-raptor]
 			say "     You rub the shrunken golden antler and immediately snatch your fingers away again as a stabbing sensation like being struck by thousands of arrows spreads through your hand. You swear that you hear the wind breath, 'Cursed...' as you return the artifact to your backpack. Perhaps the Olympians take issue with you being a wereraptor.";
 			stop the action;
-		if (JackalManTF > 0 and JackalManTF < 5): [Jackalman Transformation]
+		if (JackalManTF > 0 and JackalManTF < 5) or (JackalBoyTF > 0): [Jackalman Transformation]
 			say "     You rub the shrunken golden antler and immediately snatch your fingers away again as a stabbing sensation like being struck by thousands of arrows spreads through your hand. You swear that you hear the wind breath, 'Soul-sworn...' as you return the artifact to your backpack. Perhaps the Olympians take issue with your Jackalman infection.";
 			stop the action;
 		else if isHellhound is true: [Hellhound]
