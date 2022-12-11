@@ -6,6 +6,63 @@ Version 1 of Claude by Prometheus begins here.
 [   0 - At Office  ]
 [   1 - At Library ]
 
+
+[Movement Schedule]
+an everyturn rule:
+	if Charisma of Blanche > 3:
+		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
+			if Player is in Computer Lab:
+				say "     [bold type]Claude waves goodbye to you as he rushes out mumbling something about getting the best spot. You see him heading for the staits to the second floor.[roman type][line break]";
+			else if Player is in Grey Abbey 2F:
+				say "     [bold type]Claude brightly waves to you before going over to snuggle with Blanche and Bianca on the sofa.[roman type][line break]";
+			move Claude to Grey Abbey 2F;
+		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]
+			if Player is in Grey Abbey 2F:
+				say "     [bold type]Claude gives you a hug before heading downstairs behind his mother.[roman type][line break]";
+			else if Player is in Grey Abbey Library:
+				say "     [bold type]Upon seeing you, Claude rushes over and gives you a cuddle before wandering off to see what else is going on in the library.[roman type][line break]";
+			move Claude to Grey Abbey Library;
+		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
+			if Player is in Grey Abbey Library:
+				say "     [bold type]Overhearing his mother, Claude follows behind her. The idea of a blanket nest sounding quite appealing to him.[roman type][line break]";
+			else if Player is in Computer Lab:
+				say "     [bold type]Claude smiles at you as he nestles himself in some blankets before shuffling over to be next to Blanche.[roman type][line break]";
+			move Claude to Computer Lab;
+		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
+			if Player is in Computer Lab:
+				say "     [bold type]Reluctantly leaving the warmth of his blanket coccoon, Claude hugs you and tells you that he and Ernest are going out scavenging. He brightens up a little as he remembers that he might get to makes ome new friends.[roman type][line break]";
+			move Claude to Nowhere;
+		[else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon] [Covered in Ernest's time table]
+			if a random chance of 4 in 5 succeeds:
+				if Player is in Grey Abbey Library: [Ernest]
+					say "     [bold type]Back from scavenging, Ernest gives you a hug before going off to look for a book.[roman type][line break]";
+				if Player is in Breakroom: [Claude]
+					say "     [bold type]Hungry from the scavenging trip, Claude is permitted to get his food before everyone else, though he does hug you in passing.[roman type][line break]";
+				move Ernest to Grey Abbey Library;
+				move Claude to Breakroom;]
+		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
+			if Player is in Breakroom and Claude is in Breakroom:
+				say "     [bold type]Brushing crumbs from his chin, Claude gives you a hug before mentioning that he is heading to the bunker.[roman type][line break]";
+			else if Player is in Bunker:
+				say "     [bold type]Claude wanders past you, absent-mindedly greeting you before going over to chat with Bianca, Wendis, and Lumi.[roman type][line break]";
+			move Claude to Bunker;
+		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
+			if Player is in Bunker:
+				say "     [bold type]Their conversation over, Claude gives you a hug before going back upstairs to the library,[roman type][line break]";
+			else if Player is in Grey Abbey Library:
+				say "     [bold type]You see Claude walk past you with a book on massages tucked under one arm. Upon seeing you, he gives you a hug before continuing on his way.[roman type][line break]";
+			move Claude to Grey Abbey Library;
+		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night]
+			if Player is in Grey Abbey Library:
+				say "     [bold type]Claude puts his book back on the shelf before walking past you back tot he computer lab, kissing you on the cheek as he passes by.[roman type][line break]";
+			else if Player is in Computer Lab:
+				say "     [bold type]Claude enters the computer room and snuggles in a blanket, keeping an eye on Erenest's activity as he dozes.[roman type][line break]";
+			move Claude to Computer Lab;
+	else if Charisma of Blanche > 0:
+		if hp of Claude is 0:
+			now hp of Claude is 1;
+			move Claude to Computer Lab;
+
 Section 1 - NPC Declaration
 
 Table of GameCharacterIDs (continued)
@@ -112,29 +169,76 @@ Relationships:
 Sexuality: Bisexual
 
 Associated Fetishes:
--
--
--
+- Gendershifting
+- Sexual Party Games
+- Sex while Dancing
 ]
 
 Section 2 - Talking
 
 instead of conversing the Claude:
 	if "First Talk" is not listed in Traits of Claude:
-		say "     ";
+		say "     'I was wondering if you were ever going to talk to me,' Claude complains light-heartedly. 'I was asking myself if I should be the one to start a conversation, but a part of me thought that that might be rude. You'd talk to me when you had the time. I'm just glad that it didn't take any longer or I might have just burst.' He places an arm around your shoulder [if ScaleValue of Player is not 3]as best he can [end if]as he continues to talk. 'Making friends is rather important to me, so the thought that one of my parents might avoid me was agony, but I'm glad that I was just overreacting. Now that that's over I can relax knowing that you'll make time for me when you can. I can give you a back rub if you get too stressed, be an ear to talk to if you need to vent, or introduce you to some of the friends that I have made out in the city, assuming that their open to getting to know you. They're all good people, even if they can be a little handsy at times. Anyway, if you want to talk, I'll be around. It's great talking with you.' He seems sincere in his friendliness, if a little over enthusiastic.";
 		TraitGain "First Talk" for Claude;
 	else:
-		say "     ";
-	[say "[ClaudeTalkMenu]";]
+		say "[ClaudeTalkMenu]";
+
+to say ClaudeTalkMenu:
+	say "     What do you wish to talk about with the friendly white wolf?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Small Talk";
+	now sortorder entry is 1;
+	now description entry is "Have an idle conversation";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Claude on the nose";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Small Talk"):
+					say "[ClaudeTalk1]";
+				if (nam is "Boop"):
+					say "[ClaudeTalk2]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back, indicating an end to the conversation. Claude looks about to say something before shaking his head and stepping back too.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say ClaudeTalk1: [Small Talk]
+		say "     '[one of]I think that you understand me better than the rest of my family when it comes to the importnace of making friends out in the city. If you hadn't helped Mom when you did, none of us would have ever been born[or]Sometimes when I meet up with friends we end up playing games together. Board games, Tabletop games, and sometimes if they find batteries, we take turns playing handheld video games. I gotta say, it's a great way to have fun. One day I want to have things like that.[or]I have the worst time trying to pull Ernest away from whatever he is doing to go scavenging out in the city. If he were invested any further into his work or reading, he may end up never coming out of the library[or]If you ever want a massage, I'd be more than happy to help you to relax and forget the hardships of the city for a while. While you could have the massage with your clothes on, for a more deep seated relaxation it's better if you are naked. Though I say that, none of my siblings actually wear anything so I'm not sure what the difference wearing clothes would make[at random].'";
+
+to say ClaudeTalk2: [Boop]
+	say "     From the moment you look Claude in the eyes, you find yourself filled with the urge to give him a boop to see how he would react, only to find yourself getting your snoot booped instead. Momentarily going cross-eyed looking at the furry digit now having pre-emptively booped your snoot, Claude giggles and says 'Nothing says family closeness like a boop to the snoot!' his demonstration of familial affection brings a smile to your face as you reward him with head floofing pats and finish with a boop to his snoot in return.";
 
 Section 3 - Sex
 
 instead of fucking Claude:
-	say "     ";
+	say "     That would be great, but even Bianca says that I should give it some more time. I know, it's annoying and you aren't the first to think so, but Mom was pretty serious when I brought up the idea of doing it with some of my friends, so I should at least discuss it with her before borrowing her mate.' That felt like a convoluted way of saying no, but there is still hope for the future. (WIP)";
 
 Section 4 - Events
 
-[Blanche (and children?) scavenging in the city. (Urban Forest? Park?)]
-[Claude scavenging in the city (increase a counter?)]
+[Candy]
 
 Claude ends here.
