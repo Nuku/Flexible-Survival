@@ -404,6 +404,9 @@ Figure of Erin_face_icon is the file "Erin_face.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Fang_face_icon is the file "Fang_face.jpg".
+Figure of Fang_fem_icon is the file "Fang_fem.jpg".
+Figure of Fang_hard_icon is the file "Fang_hard.jpg".
+Figure of Fang_soft_icon is the file "Fang_soft.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank.jpg".
@@ -1425,6 +1428,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ewe"	Figure of Ewe_icon	"Vashaa"	g-white	"normal"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-white	"normal"
 "Fang_face"	Figure of Fang_face_icon	"SineAlas"	g-black	"normal"
+"Fang_fem"	Figure of Fang_fem_icon	"SteppeCrow"	g-white	"normal"
+"Fang_hard"	Figure of Fang_hard_icon	"SteppeCrow"	g-white	"normal"
+"Fang_soft"	Figure of Fang_soft_icon	"SteppeCrow"	g-white	"normal"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Felix"	Figure of Felix_icon	"ConnyChiwa"	g-white	"normal"
@@ -2537,7 +2543,8 @@ carry out artistcredits:
 	say "     Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Erin Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Fang by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Fang (headshot) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Fang (body) by Steppecrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by ConnyChiwa @ https://www.furaffinity.net/user/connychiwa/[line break]";
