@@ -186,20 +186,6 @@ This is the starting gender rule:
 to say gsopt_start:
 	now started is 1;
 	[old gender setting start, use until the new system becomes active]
-	if StartingGender is 1:	[male]
-		now Cock Count of Player is 1;
-		now Cock Length of Player is 6;
-		now the Ball Size of Player is 3;
-		now Nipple Count of Player is 2;
-		remove womanhood from Player;
-		now Breast Size of Player is 0;
-	else:		[defaults to female]
-		now Cunt Count of Player is 1;
-		now Cunt Depth of Player is 6;
-		now Cunt Tightness of Player is 4;
-		now Nipple Count of Player is 2;
-		remove manhood from Player;
-		now Breast Size of Player is 2;
 	gs_stats;
 	now Morale of Player is Charisma of Player plus Perception of Player;
 	now HP of Player is Stamina of Player times two;
@@ -208,6 +194,7 @@ to say gsopt_start:
 	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if GenderLock > 1, startgenderlockget;
+	startgenderget;
 	follow the SetPlayerPronouns rule;
 	startfreefeats;
 	startcreatureban;
@@ -563,6 +550,7 @@ to say silent_start:
 	now the Capacity of Player is five times Strength of Player;
 	now humanity of Player is 100;
 	if GenderLock > 1, startgenderlockget;
+	startgenderget;
 	follow the SetPlayerPronouns rule;
 	startfreefeats;
 	startcreatureban;
@@ -728,9 +716,9 @@ to newplayercustomizationmenu:
 		while charactermenuexit is 0:
 			clear the screen;
 			say "[line break][bold type]Character Customization:[roman type][line break]";
-			say "(1) [link]Player Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else]Female[end if][roman type][line break]";
+			say "(1) [link]Player Starting Gender[as]1[end link] - [bold type][if StartingGender is 1]Male[else if StartingGender is 2]Female[else if StartingGender is 3]Trans-Woman[else if StartingGender is 4]Trans-Man[else if StartingGender is 5]Male Herm[else if StartingGender is 6]Female Herm[end if][roman type][line break]";
 			say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-			say "(3) [link]Gender Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Male[else if GenderLock is 4]Female[else if GenderLock is 5]Shemale[else if GenderLock is 6]Cuntboy[else if GenderLock is 7]Male Herm[else if GenderLock is 8]Herm[else if GenderLock is 9]Always Cocky[else if GenderLock is 10]Always a Pussy[else if GenderLock is 11]Single Sexed[else if GenderLock is 12]Flat Chested[else if GenderLock is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(3) [link]Body Configuration Lock[as]3[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always a Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
 			say "[line break]";
 			say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -743,7 +731,7 @@ to newplayercustomizationmenu:
 					say "Invalid Entry";
 			LineBreak;
 			if calcnumber is 1:
-				say "[gsopt_2]";
+				PlayerStartingGenderSetting;
 			else if calcnumber is 2:
 				playersexsetting;
 			else if calcnumber is 3:
@@ -759,7 +747,7 @@ to newplayercustomizationmenu:
 			clear the screen;
 			say "[line break][bold type]Character Customization:[roman type][line break]";
 			say "(1) [link]Gender Settings & Orientation[as]1[end link][line break]";
-			say "(2) [link]Gender Lock[as]2[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Male[else if GenderLock is 4]Female[else if GenderLock is 5]Shemale[else if GenderLock is 6]Cuntboy[else if GenderLock is 7]Male Herm[else if GenderLock is 8]Herm[else if GenderLock is 9]Always Cocky[else if GenderLock is 10]Always a Pussy[else if GenderLock is 11]Single Sexed[else if GenderLock is 12]Flat Chested[else if GenderLock is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(2) [link]Body Configuration Lock[as]2[end link] - [bold type][if GenderLock is 1]None[else if GenderLock is 2]Random[else if GenderLock is 3]Unchanging[else if GenderLock is 4]Always Cocky[else if GenderLock is 5]Always a Pussy[else if GenderLock is 6]Single Sexed[else if GenderLock is 7]Flat Chested[else if GenderLock is 8]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 			say "(3) [link]Player Sexual Experience[as]3[end link]: [playervirginsay][line break]";
 			say "(4) [link]Player Hair[as]4[end link]: Head Hair: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player]; [if Player is Hasbeard]Beard: [Beard Style of Player];[end if] Body Hair: [Body Hair Adjective of Player][line break]";
 			say "(5) [link]Eye Color[as]5[end link]: [Eye Color of Player][line break]";
@@ -931,32 +919,22 @@ to genderlockmenu:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Select a gender lock:[roman type][line break]";
+		say "[bold type]Select a body configuration lock:[roman type][line break]";
 		say "(1) [link]None[as]1[end link] - There is no restriction to your gender-transformation. You receive a 5% point bonus from this selection at game end.";
-		say "(2) [link]Random[as]2[end link] - Fond of Excitement? A random lock is chosen for you at game start!";
+		say "(2) [link]Random[as]2[end link] - Enjoy a loss of control? A random lock (4-8) is chosen for you at game start!";
 		say "[line break]";
-		say "[bold type]Standard:[roman type][line break]";
-		say "(3) [link]Male[as]3[end link] - You reject all female mutations.";
-		say "(4) [link]Female[as]4[end link] - You reject all male mutations.";
-		say "[line break]";
-		say "[bold type]Hybrid:[roman type][line break]";
-		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm - however lacking female genitalia.";
-		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female - however lacking any breasts.";
-		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm - however lacking any breasts.";
-		say "(8) [link]Herm[as]8[end link] - You take on the configuration of a full herm.";
-		say "[line break]";
-		say "[bold type]Loose:[roman type][line break]";
-		say "(9) [link]Always Cocky[as]9[end link] - Regardless of mutation, you always retain some male anatomy.";
-		say "(10) [link]Always a Pussy[as]10[end link] - Regardless of mutation, you always retain some female anatomy.";
-		say "(11) [link]Single Sexed[as]11[end link] - Regardless of mutation, you will never be a herm.";
-		say "(12) [link]Flat Chested[as]12[end link] - Regardless of mutation, you never gain breasts.";
-		say "(13) [link]Simplified Masculine[as]13[end link] - Flat Chested + Single-Sexed.";
+		say "(3) [link]Unchanging[as]3[end link] - Preserve selected starting gender.";
+		say "(4) [link]Always Cocky[as]4[end link] - Your body will never give up its cock (if it has one, or gains one).";
+		say "(5) [link]Always a Pussy[as]5[end link] - Your body will never give up its pussy (if it has one, or gains one).";
+		say "(6) [link]Single Sexed[as]6[end link] - Regardless of mutation, you will never be a herm but remain male or female, with the right chest to match.";
+		say "(7) [link]Flat Chested[as]7[end link] - Regardless of mutation, you never gain breasts.";
+		say "(8) [link]Simplified Masculine[as]8[end link] - Flat Chested + Single-Sexed.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-13)>[run paragraph on]";
+			say "Choice? (0-8)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 13:
+			if calcnumber >= 0 and calcnumber <= 8:
 				break;
 			else:
 				say "Invalid Entry";
@@ -969,54 +947,54 @@ to genderlockmenu:
 to startgenderlockget:
 	say "Locking Gender...";
 	if GenderLock is 2:
-		now GenderLock is a random number between 3 and 11;
-	if GenderLock > 1:
-		if GenderLock is 3:
-			say "Locked to male gender.";
-			add "Male Preferred" to feats of Player;
-		else if GenderLock is 4:
-			say "Locked to female body configuration (breasts, single sexed with a pussy, no cock).";
-			add "Always A Pussy" to feats of Player;
-			add "Single Sexed" to feats of Player;
-			add "Breasts" to feats of Player;
-			now StartingGender is 2;
-		else if GenderLock is 5:
-			say "Locked to shemale configuration.";
-			add "Male Preferred" to feats of Player;
-			add "Breasts" to feats of Player;
-		else if GenderLock is 6:
-			say "Locked to cuntboy configuration.";
-			add "Female Preferred" to feats of Player;
-			add "Flat Chested" to feats of Player;
-		else if GenderLock is 7:
-			say "Locked to male herm configuration.";
-			add "Herm Preferred" to feats of Player;
-			add "Flat Chested" to feats of Player;
-		else if GenderLock is 8:
-			say "Locked to herm configuration.";
-			add "Herm Preferred" to feats of Player;
-		else if GenderLock is 9:
-			say "Male anatomy locked in.";
+		now GenderLock is a random number between 4 and 8;
+	if GenderLock is 3:
+		if StartingGender is 1:
+			say "Locked to body configuration: flat chest, single sexed with a cock, no pussy.";
 			add "Always Cocky" to feats of Player;
-		else if GenderLock is 10:
-			say "Female anatomy locked in.";
+			add "Single Sexed" to feats of Player;
+			add "Flat Chested" to feats of Player;
+		else if StartingGender is 2:
+			say "Locked to body configuration: breasts, single sexed with a pussy, no cock.";
 			add "Always A Pussy" to feats of Player;
-		else if GenderLock is 11:
-			say "Locked to a singular gender at a time.";
 			add "Single Sexed" to feats of Player;
-		else if GenderLock is 12:
-			say "Locked to be flat chested.";
-			add "Flat Chested" to feats of Player;
-		else if GenderLock is 13:
-			say "Locked to male or cuntboy.";
+			add "Breasts" to feats of Player;
+		else if StartingGender is 3:
+			say "Locked to body configuration: breasts, single sexed with a cock, no pussy.";
+			add "Always Cocky" to feats of Player;
+			add "Single Sexed" to feats of Player;
+			add "Breasts" to feats of Player;
+		else if StartingGender is 4:
+			say "Locked to body configuration: flat chested, single sexed with a pussy, no cock.";
+			add "Always A Pussy" to feats of Player;
 			add "Single Sexed" to feats of Player;
 			add "Flat Chested" to feats of Player;
-
-to say gsopt_2:
-	if StartingGender is 1:
-		now StartingGender is 2;
-	else:
-		now StartingGender is 1;
+		else if StartingGender is 5:
+			say "Locked to body configuration: flat chested, both genitals.";
+			add "Herm Preferred" to feats of Player;
+			add "Flat Chested" to feats of Player;
+		else if StartingGender is 6:
+			say "Locked to body configuration: breasts, both genitals.";
+			add "Herm Preferred" to feats of Player;
+			add "Breasts" to feats of Player;
+	else if GenderLock is 4:
+		say "Male genitals locked in.";
+		add "Always Cocky" to feats of Player;
+	else if GenderLock is 5:
+		say "Female genitals locked in.";
+		add "Always A Pussy" to feats of Player;
+	else if GenderLock is 6:
+		say "Locked to a singular gender at a time.";
+		add "Single Sexed" to feats of Player;
+	else if GenderLock is 7:
+		say "Locked to be flat chested.";
+		add "Flat Chested" to feats of Player;
+		now Breast Size of Player is 0;
+	else if GenderLock is 8:
+		say "Locked to flat-chested male or trans-male.";
+		add "Single Sexed" to feats of Player;
+		add "Flat Chested" to feats of Player;
+		now Breast Size of Player is 0;
 
 Chapter 4 - Stats
 
