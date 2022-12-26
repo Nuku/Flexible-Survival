@@ -161,7 +161,7 @@ carry out bargainhunting:
 						ItemGain dog milk by 1;
 					ItemGain honeycomb by 1;
 					ItemGain Tasty Fish by 1;
-		else if Z is 15: [Dr Matt samples]
+		else if Z is 15: [Dr. Matt samples]
 			if FemaleList is banned and ( HermList is banned or FurryList is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
 				LineBreak;

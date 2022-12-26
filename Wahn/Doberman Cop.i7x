@@ -664,7 +664,7 @@ When Play begins:
 	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 	now Androginity entry is 7; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is "your ears are drawn upwards to the top of your head, forming sharp wedges standing upright. A long and narrow muzzle pushes forward to give you the head of a sleek doberman"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Change entry is "your ears are drawn upwards to the top of your head, forming sharp wedges standing upright. A long and narrow muzzle pushes forward to give you the head of a sleek Doberman"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is "a sleek Doberman with [Head Color of Player] fur and ears sticking up in sharp wedges"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
@@ -708,8 +708,8 @@ When Play begins:
 	now Arms Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is "dark brown and black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is "they shift into the digitigrade stance of an anthro doberman with short fur in dark brown and black, ending in a pair of paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro doberman, with short fur in [Legs Color of Player] covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Change entry is "they shift into the digitigrade stance of an anthro Doberman with short fur in dark brown and black, ending in a pair of paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is "that of an anthro Doberman, with short fur in [Legs Color of Player] covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "dark brown and black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes fairly narrow and small, with dark brown and black fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -754,7 +754,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"doberman bitch fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a doberman. It's nicely soft."	0	doberman bitch fur
+"doberman bitch fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a Doberman. It's nicely soft."	0	doberman bitch fur
 
 doberman bitch fur is a grab object.
 Usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
@@ -849,7 +849,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 this is the dobermancop rule:		[combat rule]
-	if inafight is 0 and dobielibido < 100:			[doberman cop does not attack on first strike]
+	if inafight is 0 and dobielibido < 100:			[Doberman cop does not attack on first strike]
 		say "The Doberwoman police officer holds herself at the ready, nightstick raised but does not swing despite having the advantage. 'Last warning! Stand down!' she growls.";
 	else:
 		increase dobieresist by 1; [turns the player did not surrender]

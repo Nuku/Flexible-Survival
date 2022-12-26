@@ -355,7 +355,7 @@ to say candymusing:
 	say "     'I'd say the same to you, hon, but I doubt you could, with that mouth of yours.' This is enough to elicit a slight chuckle from Velos, and he decides to conclude the conversation at that, letting you return to your own matters.";
 
 
-Part 3 - Dr Moffatt
+Part 3 - Dr. Moffatt
 
 the vmusings of Doctor Moffatt is "[drmoffattmusing]";
 
@@ -375,14 +375,14 @@ to say drmoffattmusing:
 	add 3 to velospostmusings;
 
 
-Part 4 - Dr Mouse
+Part 4 - Dr. Mouse
 
 the vmusings of Doctor Mouse is "[drmousemusing]";
 
 to say drmousemusing:
 	say "     You call out Velos [if level of Velos < 3]- at least part of you hoping the doctor might be able to help you deal with him - [end if]and with a moment of slight fidgeting, you present him to Doctor Mouse. Keeping his distance, he seems to ponder the creature for a moment.";
 	say "     'Hmm, what a peculiar specimen. A symbiote, then?'";
-	say "     'I guess you could say that...' The serpent doesn't rightly know how to regard the doctor's demeanor at this moment, perhaps made worse by the fact that he's completely unphased by this revelation.";
+	say "     'I guess you could say that...' The serpent doesn't rightly know how to regard the doctor's demeanor at this moment, perhaps made worse by the fact that he's completely unfazed by this revelation.";
 	say "     'So then I'd conjecture that you're mentally linked, perhaps improving your host's intellectual fidelity?'";
 	say "     'Er, no... To be quite frank I'd rather not guess what's going on in my friend's mind right about now...'";
 	say "     'Organ redundancy, then? For better stamina?'";
@@ -894,7 +894,7 @@ to say Anastasiamusing:
 	say "     'Very well. I think we'll cut this short - this place puts an even larger strain on me than usual. Take care.' Ending his discussion on a more polite note, Anastasia seems to calm a bit down as he retreats back into your hole, leaving you to your own matters.";
 
 
-Part 23 - Dr Matt
+Part 23 - Dr. Matt
 
 the vmusings of Doctor Matt is "[drmattmusing]";
 

@@ -105,20 +105,20 @@ To MainStorylineLog:
 			say "[bold type]Doctor Matt: [roman type]Talk to Susan.";
 		-- 8:
 			if hospquest < 8:
-				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr Mouse and let Dr Matt know what you find out.";
+				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr. Mouse and let Dr. Matt know what you find out.";
 			else if hospquest is 13:
-				say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr Matt about everything that happened at the hospital...";
+				say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr. Matt about everything that happened at the hospital...";
 		-- 9:
 			if hospquest < 8:
-				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr Mouse and let Dr Matt know what you find out.";
+				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr. Mouse and let Dr. Matt know what you find out.";
 			else if hospquest > 7 and mattcollection is 0:
-				say "[bold type]Doctor Matt: [roman type]You feel like the doctor might like to see the samples Dr Mouse has asked you to collect before you deliver them to Dr Mouse...";
+				say "[bold type]Doctor Matt: [roman type]You feel like the doctor might like to see the samples Dr. Mouse has asked you to collect before you deliver them to Dr. Mouse...";
 			else if mattcollection > 0:
-				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr Mouse and let Dr Matt know what you find out.";
+				say "[bold type]Doctor Matt: [roman type]Continue to assist Dr. Mouse and let Dr. Matt know what you find out.";
 			else if hospquest is 13:
-				say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr Matt about the rest of the events at the hospital.";
+				say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr. Matt about the rest of the events at the hospital.";
 		-- 11:
-			say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr Matt about the rest of the events at the hospital.";
+			say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr. Matt about the rest of the events at the hospital.";
 		-- 12:
 			if level of Doctor Matt - turns < 16:
 				say "[bold type]Doctor Matt: [roman type]Check back with the doctor a bit later.";

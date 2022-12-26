@@ -60,7 +60,7 @@ to say ResolveEvent Guard Gryphon:
 						GryphonGuardMilkSolution;
 					else if calcnumber is 2:
 						LineBreak;
-						say "     You're not ready to take such a drastic measure, neither you're willing to fight to find out whatever she's hiding. Respectfuly, you decline her offer, but urge her not to worry about you anymore, as you'll be leaving without any further issue. She keeps watching you from a distance as you retreat. There's always the possibility of acquiring this full tranformation yourself out in the wilds and return, or search for the Gryphon Guard and force your way by attacking her.";
+						say "     You're not ready to take such a drastic measure, neither you're willing to fight to find out whatever she's hiding. Respectfully, you decline her offer, but urge her not to worry about you anymore, as you'll be leaving without any further issue. She keeps watching you from a distance as you retreat. There's always the possibility of acquiring this full transformation yourself out in the wilds and return, or search for the Gryphon Guard and force your way by attacking her.";
 						now Resolution of Guard Gryphon is 1; [left to come back later]
 					else if calcnumber is 3:
 						LineBreak;

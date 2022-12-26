@@ -43,7 +43,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Team Captain Roman	"Team Captain Roman"
 
-Team Captain Roman is a man.  Understand "Roman" as Team Captain Roman.
+Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 ScaleValue of Team Captain Roman is 3. [human sized]
 Body Weight of Team Captain Roman is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Team Captain Roman is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]

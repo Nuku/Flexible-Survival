@@ -1,19 +1,19 @@
 Version 1 of Albino Mouse by Stripes begins here.
 [Version 1.1 - Hard Mode Variant added]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds Dr Mouse the Albino Mouse opponent to Flexible Survival's Monsters table"
+"Adds Dr. Mouse the Albino Mouse opponent to Flexible Survival's Monsters table"
 
 
 Section 1 - Creature Responses
 
 to say drmouseattack:
 	if hospfight is 1:
-		say "[one of]Dr Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr Mouse shoves one of the stools into your path, causing you to stumble. He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches. He's not very strong, but it still hurts![at random]";
+		say "[one of]Dr. Mouse swings his fists in wild punches, managing a few glancing blows![or]The maddened mouse manages to bite your wrist with his sharp teeth.[or]The doctor starts tossing random glassware from his worktable at you![or]Dr. Mouse shoves one of the stools into your path, causing you to stumble. He punches you in the jaw while you're off balance![or]The mad doctor manages to punch you in the groin with one of his wild punches. He's not very strong, but it still hurts![at random]";
 	if hospfight is 2:
-		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm![or]Dr Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
+		say "[one of]The mouse monster punches your head with one of his bony fists, making the room spin for a moment![or]Dr. Mouse's vicious claws slash across your body, opening bloody gashes![or]That twisted head manages to snap its fangorious jaws onto your shoulder![or]The transformed mouse jabs your arm with one of its horns as you try to swing at him. It stabs into your bicep and your blood flows down your arm![or]Dr. Mouse grabs one of the wooden stools and proceeds to beat you with it, only stopping when it shatters against one of the worktables![or]The monstrous mouse hisses at you and releases a spray of stinging mist into your face, momentarily blinding you. As you try to stumble back while wiping your eyes, you get slammed by a powerful backhand and sent flying back several feet![or]Dr. Mouse chuckles madly as he grabs your shoulder with one clawed hand and gets your arm in the other. He pulls and twists your arm, smiling as you scream in pain. Luckily, you manage to break free before he pulls it completely free of its socket, but your shoulder burns with pain![or]The monstrous creature charges, slamming his shoulder into you before sending you flying over one of the worktables![or]The transformed doctor clubs you several times with his powerful fists, laughing in mad delight as he does![at random]";
 
 to say losetodrmouse:
-	say "     Unable to continue fighting, you collapse to your knees. Dr Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.";
+	say "     Unable to continue fighting, you collapse to your knees. Dr. Mouse chuckles and grabs a bottle from one of the tables. He splashes some of the liquid onto a cloth, then covers your mouth and nose with it. 'Does this smell like chloroform?' he asks with a mad titter. The room goes hazy and you pass out.";
 
 to say beatdrmouse:
 	if hospfight is 1:
@@ -26,7 +26,7 @@ to say drmousedesc:
 	let debit be 0;
 	setmongender 3;
 	if hospfight is 1:
-		say "     Dr Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
+		say "     Dr. Mouse, barely four feet tall, intends to fight you. With his white fur disheveled, his blood red eyes and sharp, rodent teeth, the albino lab mouse would be quite threatening were he not so small and weak. But the murine doctor snarls angrily and charges at you, tiny paws clenched into fists. You ready to strike, prepared to deal with the mad doctor once and for all.";
 		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now HP entry is 30 + ( debit * 2 );
 		now monsterHP is 30 + ( debit * 2 );

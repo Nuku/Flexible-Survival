@@ -1012,7 +1012,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Sven's Epilogue"	"NPC"	""	Sven's Epilogue rule	900	false
 
 This is the Sven's Epilogue rule:
-	let SvenEpilogueShown be false; [This may need some reorganisation to make this workaround-ish solution obsolete. (@Stadler#3007)]
+	let SvenEpilogueShown be false; [This may need some reorganization to make this workaround-ish solution obsolete. (@Stadler#3007)]
 	[Sven special cases]
 	if Sven is in the bunker and HP of Sven < 30 and BodyName of Player is not "Snow Leopard" and BodyName of Player is not "Siamese Cat" and BodyName is not "Snow Bat":
 		if humanity of Player < 10:
