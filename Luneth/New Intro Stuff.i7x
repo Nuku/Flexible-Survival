@@ -8,7 +8,7 @@ The new Master of Hell intro will be a more modern version of the story, taking 
 
 Section 2 - New City Location
 
-The location of the city will also have an adjustment to make it have more options. This version the city will be closer to northern california, the reason for this is that it will put it at the crossroads between california/oregon/nevada. With this location we will have access to more natural biomes that we wouldn't otherwise.
+The location of the city will also have an adjustment to make it have more options. This version the city will be closer to northern California, the reason for this is that it will put it at the crossroads between California/Oregon/Nevada. With this location we will have access to more natural biomes that we wouldn't otherwise.
 
 Section 3 - New Electrical Issues
 
@@ -391,7 +391,7 @@ The player will wake up to the sound of their alarm and after some initial scene
 
 TODO: Look into initial options for pec/breast size and cock/clit size.
 
-After inspecting themselves in the shower the player will get out and make their way to the bathroom mirror, this will be used to decide the players race(white/black/asian/hispanic/middle eastern), complexion(light or dark), androgeny(hyper masculine to hyper feminine), pronouns(male/female/non-binary), lip size(thin/average/full), eye color(blue/green/brown/hazel/grey/lavender), hair color(black/brown/blonde/red), hair length(shaved/short/medium/long), hair style(pony tail/down/fohawk/gelled), facial hair(none/full beard/goatee/mustache).
+After inspecting themselves in the shower the player will get out and make their way to the bathroom mirror, this will be used to decide the players race(white/black/asian/hispanic/middle eastern), complexion(light or dark), androgyny(hyper masculine to hyper feminine), pronouns(male/female/non-binary), lip size(thin/average/full), eye color(blue/green/brown/hazel/grey/lavender), hair color(black/brown/blonde/red), hair length(shaved/short/medium/long), hair style(pony tail/down/fohawk/gelled), facial hair(none/full beard/goatee/mustache).
 
 TODO: Look into potential for other complexions such as albinism and melanism
 
@@ -664,7 +664,7 @@ Hard mode: gives 1 free item that save you from a game over
 HardMode is a truth state that varies. [hard mode on/off]
 HardMode is usually false. [See Core Mechanics/Presets.i7x]
 
-TODO: nohealmode seems silly since if you lose and dont have any items to save you from a game over you die/are broken
+TODO: nohealmode seems silly since if you lose and don't have any items to save you from a game over you die/are broken
 NoHealMode is a truth state that varies. [no-heal mode on/off]
 NoHealMode is usually false. [See Core Mechanics/Presets.i7x]
 

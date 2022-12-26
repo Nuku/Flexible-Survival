@@ -32,7 +32,7 @@ Usedesc of TodtGrains Beer is "[TodtGrainsBeer use]".
 instead of sniffing TodtGrains Beer:
 	say "A light scent of alcohol flows into your nose.";
 to say TodtGrainsBeer use:
-	say "You drink the nice refreshing beer, its dark grain taste lingering on your toungue.";
+	say "You drink the nice refreshing beer, its dark grain taste lingering on your tongue.";
 	PlayerDrink 6;
 	addAlcPoints 1;
 
@@ -66,7 +66,7 @@ to say Dwarven Spirit use:
 [Beginning of Absinthe]
 
 to say AbsintheWasted:
-	say "You hear the fluttering of wings behind your ear, you turn around to see the black wings of a pixie along with a dark green dress. 'You sure do know how to hold your drink.' she says, fluttering on top of your hand. 'someone as capable of you should be able to take a few more, why dont you join me in your next one.' blowing a kiss towards you as she takes off and dissapears into the air. 'Did she have horns on top of her head' you think to yourself, before being distracted from the thought.";[absinthe pixie dialogue]
+	say "You hear the fluttering of wings behind your ear, you turn around to see the black wings of a pixie along with a dark green dress. 'You sure do know how to hold your drink.' she says, fluttering on top of your hand. 'Someone as capable of you should be able to take a few more, why don't you join me in your next one.' blowing a kiss towards you as she takes off and disappears into the air. 'Did she have horns on top of her head' you think to yourself, before being distracted from the thought.";[absinthe pixie dialogue]
 	[say "     You hear the familiar sounds of the pixie wings again. "Hello, my names Absinthe "";]
 
 Absinthe ends here.

@@ -580,18 +580,18 @@ instead of using First Aid Manual:
 the scent of First Aid Manual is "     It smells like an old book.".
 
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of Doctor Matt > 0 and HP of Doctor Matt < 100 ):
-	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
+	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr. Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		say "     Showing Dr Matt the book, you suggest to him that you can act as reconnaissance for the military. You tell him that since you've been facing the creatures out there, you can provide information on their strengths, weaknesses, number and tactics. You add that having this information will help the soldiers be better prepared for the strains they'll encounter as well as probably get him more time to work while the military holds back to better prepare. With the promise of greater opportunity to investigate this outbreak, he accepts, telling you to prepare reports that can then be transmitted to the military forces.";
+		say "     Showing Dr. Matt the book, you suggest to him that you can act as reconnaissance for the military. You tell him that since you've been facing the creatures out there, you can provide information on their strengths, weaknesses, number and tactics. You add that having this information will help the soldiers be better prepared for the strains they'll encounter as well as probably get him more time to work while the military holds back to better prepare. With the promise of greater opportunity to investigate this outbreak, he accepts, telling you to prepare reports that can then be transmitted to the military forces.";
 		extend game by 24;
 		increase score by 30;
 		now mattintel is 1;
 	else:
-		say "     Deciding not to help the military in this way, you take a moment to reorganize your thoughts before speaking to Dr Matt on other matters.";
+		say "     Deciding not to help the military in this way, you take a moment to reorganize your thoughts before speaking to Dr. Matt on other matters.";
 		now mattintel is 100;
 
 Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
@@ -606,7 +606,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 		increase score by 30;
 		now mouseintel is 1;
 	else:
-		say "     Deciding against helping the white mouse and the creatures of the hospital, you take a moment to reorganize your thoughts before speaking to Dr Mouse on other matters.";
+		say "     Deciding against helping the white mouse and the creatures of the hospital, you take a moment to reorganize your thoughts before speaking to Dr. Mouse on other matters.";
 		now mouseintel is 100;
 
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:

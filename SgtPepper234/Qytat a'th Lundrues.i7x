@@ -79,7 +79,7 @@ to say ResolveEvent Guard Gryphon:
 						GryphonGuardMilkSolution;
 					else if calcnumber is 2:
 						LineBreak;
-						say "     You're not ready to take such a drastic measure, neither you're willing to fight to find out whatever she's hiding. Respectfuly, you decline her offer, but urge her not to worry about you anymore, as you'll be leaving without any further issue. She keeps watching you from a distance as you retreat. There's always the possibility of acquiring this full tranformation yourself out in the wilds and return, or search for the Gryphon Guard and force your way by attacking her.";
+						say "     You're not ready to take such a drastic measure, neither you're willing to fight to find out whatever she's hiding. Respectfully, you decline her offer, but urge her not to worry about you anymore, as you'll be leaving without any further issue. She keeps watching you from a distance as you retreat. There's always the possibility of acquiring this full transformation yourself out in the wilds and return, or search for the Gryphon Guard and force your way by attacking her.";
 						now Resolution of Guard Gryphon is 1; [left to come back later]
 					else if calcnumber is 3:
 						LineBreak;
@@ -253,7 +253,7 @@ Qytat Stairs is a room. Description of Qytat Stairs is "[Qytat Stairs desc]".
 Qytat Plaza is above Qytat Stairs.
 
 To say Qytat Stairs desc:
-	say "     The glowing steps extend above and behind you, spiraling upwards.  The faint blue material forming the concealing walls provides something to rest your hand against as you traverse the long staircase to the heavens. Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.";
+	say "     The glowing steps extend above and behind you, spiraling upwards. The faint blue material forming the concealing walls provides something to rest your hand against as you traverse the long staircase to the heavens. Looking through it, everything has a faint, bluish glow that makes everything below seem misty and unfocused, as if it is not quite real.";
 
 Table of GameRoomIDs (continued)
 Object	Name
