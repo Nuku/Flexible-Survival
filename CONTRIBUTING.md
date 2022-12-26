@@ -1,7 +1,7 @@
 # How To Contribute!
 
-## 1. Register on Github
-Flexible Survival is hosted on Github, so you'll have to make an account to push changes.
+## 1. Register on GitHub
+Flexible Survival is hosted on GitHub, so you'll have to make an account to push changes.
 
 https://github.com/
 
@@ -10,8 +10,8 @@ You have to fork the repository (which will duplicate the entire codebase to mak
 
 https://github.com/Nuku/Flexible-Survival/
 
-## 3. Download Github Desktop
-This will let you record your changes and send it up to the Github repository for review.
+## 3. Download GitHub Desktop
+This will let you record your changes and send it up to the GitHub repository for review.
 
 https://desktop.github.com/
 
@@ -84,9 +84,9 @@ https://blog.flexiblesurvival.com/p/links.html
 Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
 
 ## 11. Record your changes and submit a Pull Request!
-Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
+Open GitHub Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
 
-Click on Branch -> Create pull request. It will open the Github site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the Github site.
+Click on Branch -> Create pull request. It will open the GitHub site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the GitHub site.
 
 Then just wait for one of the maintainers to accept your pull request! If it gets accepted, you likely won't have to do anything and you'll see your changes in the next push.
 

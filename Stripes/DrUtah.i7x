@@ -44,7 +44,7 @@ to say paleodesc:
 		say "     Dr. Utah's office has been cleaned since you first saw it, but is still quite the mess. While most of the debris has been removed, the slashes at the wall and damage to the door and its frame remain. Several new books has been brought in, including a copy of the book Nermine had. Dr. Utah is [if daytimer is day][one of]pacing as he thinks[or]poring over some books[or]looking at some small fossils[or]surveying a map of the campus[or]lounging in his chair[at random][else][one of]prowling around the room[or]munching on some chunk of meat[or]clawing impatiently at his desk[or]gazing out the window and touching himself[or]pads around the room[at random][end if].";
 
 
-Section 2 - Dr Utah the Wereraptor
+Section 2 - Dr. Utah the Wereraptor
 
 Table of GameCharacterIDs (continued)
 object	name

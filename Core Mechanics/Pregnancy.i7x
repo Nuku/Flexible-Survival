@@ -152,7 +152,7 @@ to decide which text is random child gender:
 	decide on "[entry ChildGenderRoll of GenderList]";
 
 to decide which text is random child personality:
-	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievious" };
+	let PersonalityList be { "friendly", "playful", "mean", "curious", "stubborn", "independent", "sassy", "assertive", "meek", "extroverted", "introverted", "mischievous" };
 	let ChildPersonalityRoll be a random number from 1 to the number of entries in PersonalityList;
 	decide on "[entry ChildPersonalityRoll of PersonalityList]";
 

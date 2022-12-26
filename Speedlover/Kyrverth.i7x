@@ -23,7 +23,7 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 []
 [KyrverthNutGrowth - 0/2-unchanged. 1-BIG.]
 [KyrverthSpikeGrowth - 0/3-unchanged. 1-Horns. 2-Horns & Back spikes]
-[0 - Normal, 1 - Feathers, 2 - Double, 3 - Double Feathers 4 - Standard, Dont ask again.]
+[0 - Normal, 1 - Feathers, 2 - Double, 3 - Double Feathers 4 - Standard, Don't ask again.]
 [KyrverthCockType - 1-Standard, 2-Double, 3-Horsecock, 4-Barbed, 5-Prehensile]
 [Reference/Inspiration]
 [Ref pic - MAIN. Closest match I have found to the dragon. Kyrverth's cock is as shown but with three ridges along the length. https://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
@@ -566,8 +566,8 @@ to KyrverthCockDoubling:
 
 to KyrverthCockPrehensiling:
 	say "     Pulling the vials of milk from your pack and handing them to the dragon, you watch as [one of]the Dolphin Milk is instantly sent on its way down his throat[or]the thirsty dragon drinks the Dolphin Milk first from one vial then from another[at random]. He swallows with a loud 'gulp' and starts walking away but only gets a few steps before he slows to a stop and lets out a loud moan. Quickly his cock extends from his sheath and quickly reaches its full size – and beyond!  The girth of the mighty cock doesn't seem to change, but it lengthens and begins to twitch. 'Wait a minute!' - the cock twitches. 'huh' - the cock twitches again. 'I can control this!' he exclaims.";
-	say "     His dick now acting more like a tentacle than a cock, he makes it twist and turn in the open air with a giddy kind of joy. Watching intently, you sidle up to him and mention that he could move his cock while... [bold type]inside[roman type] someone. Eyes widen. He freezes. Realisation hits.";
-	say "     'I have to try this out!' he shouts, running outside. You give chase but by the time you get outside he is alrady up in the air and disappearing into the distance.";
+	say "     His dick now acting more like a tentacle than a cock, he makes it twist and turn in the open air with a giddy kind of joy. Watching intently, you sidle up to him and mention that he could move his cock while... [bold type]inside[roman type] someone. Eyes widen. He freezes. Realization hits.";
+	say "     'I have to try this out!' he shouts, running outside. You give chase but by the time you get outside he is already up in the air and disappearing into the distance.";
 	ItemLoss Dolphin Milk by 2;
 	now KyrverthCockType is 5;
 	WaitLineBreak;
@@ -1132,7 +1132,7 @@ to say ResolveEvent Valuable Stables Artifact:
 understand "KyrverthSecretDebugCheat" as KyrverthSecretDebugCheat.
 
 check KyrverthSecretDebugCheat:
-	if location of Player is not Dragons Den, say "Thats not a verb I recognize" instead;
+	if location of Player is not Dragons Den, say "That's not a verb I recognize" instead;
 
 carry out KyrverthSecretDebugCheat:
 	say "     Kyrverthstage: [Kyrverthstage]";
