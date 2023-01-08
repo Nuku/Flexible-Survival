@@ -568,6 +568,12 @@ to say beatthedobie3:			[high-lust cop player victory]
 		now battleground is "void";
 		move Alexandra to Grey Abbey Library;
 		move player to Grey Abbey Library;
+		move Jimmy to Sanctuary Hotel Lobby;
+		now HP of Jimmy is 3;
+		now hunger of Jimmy is 2;
+		move Paula to Sanctuary Hotel Lobby;
+		now HP of Paula is 3;
+		now hunger of Paula is 2;
 	else:
 		say "     Not wanting to waste any more of your time on the policewoman, you kick her to the ground. Then you call her a slut and tell the bitch that you don't want a lousy street dog like her, fucked by who knows whom. She's just a fucktoy now, not even a real policewoman anymore. To drive this home, you lean down and un-pin the police badge she is wearing, putting the metal shield into your pocket. The anthro dog doesn't resist as you do so, showing how completely you've destroyed the woman she once was. With a cruel snort you wave her away, telling the canine to fuck off. She slinks away in shame and you can't help but chuckle, darkly pleased at having broken the cop and then just discarding her like trash. You doubt she'll be troubling you any more.";
 		ItemGain alexandra's badge by 1;

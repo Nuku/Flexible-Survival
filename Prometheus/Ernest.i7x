@@ -153,6 +153,12 @@ to say ErnestTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Ernest on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Three is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Ernest to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -172,6 +178,8 @@ to say ErnestTalkMenu:
 					say "[ErnestTalk1]";
 				if (nam is "Boop"):
 					say "[ErnestTalk2]";
+				if (nam is "Take as Companion"):
+					say "[ErnestTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -187,6 +195,10 @@ to say ErnestTalk1: [Small Talk]
 to say ErnestTalk2: [Boop]
 	say "     The fact that Ernest is showing literally no emotion whatsoever in an attempt to show off his inherent discipline in giving you his undivided attention, unfortunately shows your lack thereof as you are unable to stop yourself from booping him on the nose. Ernest stands completely still for a moment as if processing what just happened, the seconds tick by as you could almost swear theres a number of advanced formula spinning amongst the cogs of his mind as his stoic expression turns into a frown. Ernest than asks 'Was that unavoidable?' with his tail wagging slightly, the speed of it wagging all the harder when you pat him on the head.";
 
+to say ErnestTalk3: [Companion]
+	say "     You ask Ernest whether he would be interested in coming with you out into the city. He nods before silently mouthing words while counting on his fingers, likely making sure that he hasn't forgotten anything, moving in for a hug when he has finished. 'Thanks, [BlancheMomDadTitle]. This should really help my research.' You know that he enjoys the time with you just as much, if not more, than his pursuit of science.";
+	AddCompanionFunction "White Wolf Three";
+
 Section 3 - Sex
 
 instead of fucking Ernest:
@@ -195,5 +207,49 @@ instead of fucking Ernest:
 Section 4 - Events
 
 [Meredith or Sam]
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Three	"White Wolf Three"
+
+White Wolf Three is a pet.
+NPCObject of White Wolf Three is Ernest.
+understand "Ernest" as White Wolf Three.
+IDList of White Wolf Three is { "Ernest", "Ernest", "White Wolf Three", "white wolf three" }.
+printed name of White Wolf Three is "Ernest".
+Description of White Wolf Three is "[ErnestDesc]".
+Weapon Damage of White Wolf Three is 10.
+The level of White Wolf Three is 1.
+Dexterity of White Wolf Three is 15.
+The summondesc of White Wolf Three is "[SummonErnest]".
+The dismissdesc of White Wolf Three is "[DismissErnest]".
+The assault of White Wolf Three is "[one of]After briefly analyzing where it will hurt most, Ernest jabs at your opponent.[or]In an attempt to trip your opponent, Ernest scythes his leg at their ankles.[or]Seeing a brief opening, Ernest rakes his claws across your opponent's back.[or]Ernest makes a feint at your foe's face, making them flinch back and leaving them open to your own strike.[at random]".
+the fuckscene of White Wolf Three is "WIP".
+
+to say SummonErnest:
+	if Ernest is visible: [summoning while standing next to him]
+		say "     Walking over to Ernest, you ask whether he would be interested in coming with you out into the city. He nods before silently mouthing words while counting on his fingers, likely making sure that he hasn't forgotten anything, moving in for a hug when he has finished. 'Thanks, [BlancheMomDadTitle]. This should really help my research.' You know that he enjoys the time with you just as much, if not more, than his pursuit of science.";
+	else: [regular summoning]
+		say "     Ernest for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+
+to say DismissErnest:
+	move Ernest to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Ernest's attention and tell him that he should head back to the library for now. He looks pensive, deep in thought, before eventually letting his shoulders slump. 'I guess so. I'm sure that you have good reason to ask that of me,' he sighs. 'Just make sure that you tell me about anything interesting that you find when you get back, [BlancheMomDadTitle].' After giving you a quick hug, he turns to leave. You know that he can handle herself, but you still feel guilty as he trudges away. ";
+		if White Wolf Four is listed in companionlist of Player: [Claude]
+			say "'Are you sure that you wouldn't have prefered to send me back instead? I enjoy the company, but following you helps Ernest with his research,' Claude confides. ";
+		else:
+			say "You would imagine that he and Claude will soon be squabbling when he gets back. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Ernest in the abbey]
+		say "     With a word, you get Ernest's attention and tell him that he should stay here at the library for now. He looks disappointed, deep in thought, before letting his shoulders slump. 'I guess so. I'm sure that you have good reason to leave me behind,' he sighs. 'Just make sure that you tell me about anything interesting that you find when you get back, [BlancheMomDadTitle].' After giving you a quick hug, he turns to leave. You know that he can handle himself, but even he needs a rest from time to time. ";
+		if White Wolf Four is listed in companionlist of Player: [Claude]
+			say "'Are you sure that you wouldn't rather take him than me? I enjoy the company, but going with you would really help Ernest with his research,' Claude confides. ";
+		else:
+			say "You hope that he and Claude won't squabble to much while you are away. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Ernest ends here.

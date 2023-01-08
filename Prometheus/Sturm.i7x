@@ -109,10 +109,10 @@ The scent of Sturm is "     Sturm, smells of the city. Sweat, sexual fluid, and 
 to say SturmDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sturm] <- DEBUG[line break]";
-	if hp of Sturm is 1:
+	if hp of Sturm is 0:
 		say "     Sturm is an anthropomorphic male wolf with thick white fur covering his large, toned body. As the eldest male child of Blanche he is frequently on guard outside of her office den, scrutinizing all that approach and ready to see off any threats, something that he seems quite capable of given that his family is still here. He doesn't bother to wear clothes leaving his body bare for all to see, including his plump sheath and heavy balls between his legs. You briefly wonder to yourself how many creatures have felt his weight atop them before shaking your head to dismiss the thought. There's very little way of knowing anyway.";
 		say "     Perhaps feeling your eyes running over him, Sturm looks at you and gives a disdainful snort before turning back to watch for threats. Like all of his siblings, he is devoted to his mother and her safety above all else, but unlike the others, he looks at you disapprovingly at times and you wonder what you have done to cause such an emotion to be directed at you. Most of the times that he catches himself doing it, he makes the effort to appear a little more friendly, but you are sure that the issue continues to fester below the surface, whatever it may be.";
-	else if hp of Sturm is 2:
+	else if hp of Sturm is 1:
 		say "     Sturm is an anthropomorphic male wolf with thick white fur covering his large, toned body. As the eldest male child of Blanche he is frequently on guard around the library, scrutinizing all that approach and ready to see off any threats, something that he seems quite capable of given that he protected his family when they were at the office den. He doesn't bother to wear clothes leaving his body bare for all to see, including his plump sheath and heavy balls between his legs. You briefly wonder to yourself how many creatures have felt his weight atop them before shaking your head to dismiss the thought. There's very little way of knowing anyway.";
 		say "     Perhaps feeling your eyes running over him, Sturm looks at you and gives an amused snort before turning back to what he was doing. Like all of his siblings, he is devoted to his mother and her safety above all else, though he does seem to look at Bianca nearly as protectively. While he seemed to be semi-hostile towards you, he has improved since he and his family moved here, though you are unsure whether this is only at his mother's instruction or if he has decided to let go of whatever grudge he had with you. Either way, it is a relief to not have him glowering at you.";
 
@@ -153,6 +153,12 @@ to say SturmTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Sturm on the nose";
 	[]
+	if Charisma of Blanche > 3 and HP of Sturm > 1 and White Wolf One is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Sturm to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -172,6 +178,8 @@ to say SturmTalkMenu:
 					say "[SturmTalk1]";
 				if (nam is "Boop"):
 					say "[SturmTalk2]";
+				if (nam is "Take as Companion"):
+					say "[SturmTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -187,6 +195,10 @@ to say SturmTalk1: [Small Talk]
 to say SturmTalk2: [Boop]
 	say "     Aware that he may stop you should he realize what you are doing, you feign scratching the side of your head before lunging forward and quickly booping Sturm on the nose. 'And here I thought that I could trust you,' he grumbles, though the flick of his tail suggests that the gesture wasn't entirely unwanted. 'I'll have to keep a closer eye on you. Booping your own son...' he mutters as he turns away and skulks off, still unable to control his tail's more temperate reaction.";
 
+to say SturmTalk3: [Companion]
+	say "     You ask Sturm whether he would be interested in coming with you out into the city. He smiles widely and nods, darting in for a quick hug, his tail wagging wildly. 'Thank you, [BlancheMomDadTitle]. Really. I'd love to.' You privately chuckle at how such an innocent question can transform the usually stern wolf into a puppy.";
+	AddCompanionFunction "White Wolf One";
+
 Section 3 - Sex
 
 instead of fucking Sturm:
@@ -201,8 +213,8 @@ instead of navigating Grey Abbey Library while ((Sturm is booked or Sturm is bun
 	say "[SturmApology]";
 
 to say SturmApology:
-	say "     As you go in through the door, you find yourself suddenly submerged in an avalanche of snow-white fur, spurring the realization that someone is now hugging you. While you try to move yourself enough to get a good look at who is, you hear his heartbeat rise a little as a familiar voice commands, 'Stop struggling and listen, because this is hard for me to say and important that you listen.' Sturm loosens his bear hug which gives enough leeway to look at his expression, usually cold and stern, instead reminding you of Blanche as he continues 'Considering how you were never around I had honestly thought that there wasn't much difference between you and the infected that wandered the city; only looking for a reliable source of pleasure.' While his grip never wavered, his voice did, whether from remembering the Office Den or thinking of his new life at the Library, you can't tell.";
-	say "     Though those words make you silently wonder for a moment if you should have carried Blanche back to the Library despite her protests, Sturm continues speaking 'I realize now after seeing the Library and your willingness to let others stay here that you are a lot more like Mom than I had thought, so I want to apologize for the way I have acted towards you and hope that with this we can start over by treating each other as family.' obviously done he looks at you nervously expectant of your answer. Having heard Sturm's apology and his willingness to accept you, you cant help but smile and return the hug that he has been giving you for a while now. The wordless actions eliciting happy tail wagging from Sturm as he realizes that you aren't holding his hostility against him, though the hug ends up lasting for quite some time before you finally both return to your usual antics.";
+	say "     As you go in through the door, you find yourself suddenly submerged in an avalanche of snow-white fur, spurring the realization that someone is now hugging you. While you try to move yourself enough to get a good look at who is, you hear his heartbeat rise a little as a familiar voice commands, 'Stop struggling and listen, because this is hard for me to say and important that you listen.' Sturm loosens his bear hug which gives enough leeway to look at his expression, usually cold and stern, instead reminding you of Blanche as he continues, 'Considering how you were never around I had honestly thought that there wasn't much difference between you and the infected that wandered the city; only looking for a reliable source of pleasure.' While his grip never wavered, his voice did, whether from remembering the Office Den or thinking of his new life at the Library, you can't tell.";
+	say "     Though those words make you silently wonder for a moment if you should have carried Blanche back to the Library despite her protests, Sturm continues speaking. 'I realize now after seeing the Library and your willingness to let others stay here that you are a lot more like Mom than I had thought, so I want to apologize for the way I have acted towards you and hope that with this we can start over by treating each other as family.' Obviously done he looks at you, nervously expectant of your answer.  Having heard Sturm's apology and his willingness to accept you, you can't help but smile and return the hug that he has been giving you for a while now. The wordless actions eliciting happy tail wagging from Sturm as he realizes that you aren't holding his hostility against him, though the hug ends up lasting for quite some time before you finally both return to your usual antics.";
 	now HP of Sturm is 2;
 
 instead of going down from Grey Abbey Library while Sandra is bunkered and HP of Sturm > 1 and "Sandra - Sexual Interest" is not listed in traits of Sturm and a random chance of 1 in 2 succeeds:
@@ -228,5 +240,49 @@ instead of going down from Grey Abbey Library while Sandra is bunkered and HP of
 [Shower Event with Jimmy - see file Prometheus/Jimmy.i7x]
 [Blanche (and children?) scavenging in the city. (Urban Forest? Park?)]
 [Sturm scavenging in the city (increase a counter?)]
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf One	"White Wolf One"
+
+White Wolf One is a pet.
+NPCObject of White Wolf One is Sturm.
+understand "Sturm" as White Wolf One.
+IDList of White Wolf One is { "Sturm", "sturm", "White Wolf One", "white wolf one" }.
+printed name of White Wolf One is "Sturm".
+Description of White Wolf One is "[SturmDesc]".
+Weapon Damage of White Wolf One is 15.
+The level of White Wolf One is 1.
+Dexterity of White Wolf One is 15.
+The summondesc of White Wolf One is "[SummonSturm]".
+The dismissdesc of White Wolf One is "[DismissSturm]".
+The assault of White Wolf One is "[one of]With a growl, Sturm lunges at your opponent, using his momentum to put more force behind his punch.[or]Grabbing your foe by the arm, Sturm attempts to twist it behind their back and make them surrender.[or]Seeing a brief opening, Sturm attempts rams his shoulde rinto their ribs, driving the air from their lungs.[or]Sturm feints a kick before striking them across the jaw with his fist instead![at random]".
+the fuckscene of White Wolf One is "WIP".
+
+to say SummonSturm:
+	if Sturm is visible: [summoning while standing next to him]
+		say "     Walking over to Sturm, you ask whether he would be interested in coming with you out into the city. He smiles widely and nods, darting in for a quick hug, his tail wagging wildly. 'Thank you, [BlancheMomDadTitle]. Really. I'd love to.' You privately chuckle at how such an innocent question can transform the usually stern wolf into a puppy.";
+	else: [regular summoning]
+		say "     Sturm for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+
+to say DismissSturm:
+	move Sturm to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Sturm's attention and tell him that he should head back to the library for now. He looks indignant for a moment but bites his tongue and merely nods. 'Fine. I guess I'll see you at home then,' he grumbles as he walks away, before hurrying back. '[BlancheMomDadTitle]. I enjoy this time together. Just so you know,' he says quickly as he gives you a firm hug before turning away and rushing off before you have a chance to reply. You know that he can handle himself, but you still feel guilty for dismissing him here. ";
+		if White Wolf Two is listed in companionlist of Player: [Bianca]
+			say "'Going somewhere that you don't want him to see? Perhaps to see one of your secret families?' Bianca teases you as she watches her brother leave. ";
+		else:
+			say "You would imagine that Bianca will be pleased to have her brother back. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Sturm in the abbey]
+		say "     With a word, you get Sturm's attention and tell him that he should stay here at the library for now. He looks conflicted but eventually nods. 'I suppose this gives me the chance to spend more time with the rest of my family,' he concedes as he walks away, before hurrying back. '[BlancheMomDadTitle]. I enjoy this time together. Just so you know,' he says quickly as he gives you a firm hug before turning away and rushing off before you have a chance to reply. You know that he can handle himself, but even he needs a rest from time to time. ";
+		if White Wolf Two is listed in companionlist of Player: [Bianca]
+			say "'Going somewhere that you don't want him to see? Perhaps to see one of your secret families?' Bianca teases you as she watches her brother leave. ";
+		else:
+			say "You would imagine that Bianca will be pleased to have her brother to play with again. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Sturm ends here.

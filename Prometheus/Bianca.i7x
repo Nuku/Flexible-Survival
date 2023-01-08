@@ -153,6 +153,12 @@ to say BiancaTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Bianca on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Two is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Bianca to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -172,6 +178,8 @@ to say BiancaTalkMenu:
 					say "[BiancaTalk1]";
 				if (nam is "Boop"):
 					say "[BiancaTalk2]";
+				if (nam is "Take as Companion"):
+					say "[BiancaTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -187,6 +195,11 @@ to say BiancaTalk1: [Small Talk]
 to say BiancaTalk2: [Boop]
 	say "     Looking around to make sure that Sturm isn't watching, you boop Bianca on the nose. 'How scandalous. You don't really believe that he'd attack you do you?' your daughter chuckles, gazing at you with adoration. Smiling at her in return, you wriggle your finger around a bit, her damp nose following suit. Suddenly, you find your wrist firmly grabbed. 'If you're going to be doing that to my sister, don't behave like you are doing something sordid,' Sturm growls, somehow having appeared at your side. He looks ready to scold you further, but upon noticing Bianca's wagging tail, he turns on his heel and stalks away. You have no idea how he managed to sneak up on you, but it would seem that he will permit you booping his sister. Perhaps you should share the love and boop him later.";
 
+to say BiancaTalk3: [Companion]
+	say "     You ask Bianca whether she would be interested in coming with you out into the city. Your daughter snuggles against, frantically wagging her tail. 'I'd love to, [BlancheMommyDaddyTitle]. I always enjoy watching you doing what you're good at.' You laugh at the implication behind this, sure that your daughter knew exactly what she was saying.";
+	AddCompanionFunction "White Wolf Two";
+
+
 Section 3 - Sex
 
 instead of fucking Bianca:
@@ -200,5 +213,49 @@ instead of going down from Grey Abbey Library while (SarahCured > 3 and Charisma
 	TraitGain "Sarah - Perceptive Prude" for Bianca;
 	TraitGain "Bianca - Teasing Trollop" for Sarah;
 	move Player to Bunker;
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Two	"White Wolf Two"
+
+White Wolf Two is a pet.
+NPCObject of White Wolf Two is Bianca.
+understand "Bianca" as White Wolf Two.
+IDList of White Wolf Two is { "Bianca", "bianca", "White Wolf Two", "white wolf two" }.
+printed name of White Wolf Two is "Bianca".
+Description of White Wolf Two is "[BiancaDesc]".
+Weapon Damage of White Wolf Two is 10.
+The level of White Wolf Two is 1.
+Dexterity of White Wolf Two is 15.
+The summondesc of White Wolf Two is "[SummonBianca]".
+The dismissdesc of White Wolf Two is "[DismissBianca]".
+The assault of White Wolf Two is "[one of]Feigning having dropped something, Bianca bends over, exposing herself to your opponent and mesmerizing them for long enough for you to attack.[or]Bianca winks and blows a kiss towards your opponent, momentarily distracting them and leaving them open for you to strike.[or]With a growl, Bianca punches your opponent four times in quick succession before backing away.[or]Firmly grabbing your foe, Bianca attempts to drive a knee into their soft parts.[at random]".
+the fuckscene of White Wolf Two is "WIP".
+
+to say SummonBianca:
+	if Bianca is visible: [summoning while standing next to her]
+		say "     Walking over to Bianca, you ask whether she would be interested in coming with you out into the city. Your daughter snuggles against, frantically wagging her tail. 'I'd love to, [BlancheMommyDaddyTitle]. I always enjoy watching you doing what you're good at.' You laugh at the implication behind this, sure that your daughter knew exactly what she was saying.";
+	else: [regular summoning]
+		say "     Bianca for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+
+to say DismissBianca:
+	move Bianca to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Bianca's attention and tell her that she should head back to the library for now. She looks ready to argue, but ultimately just pouts. 'I just know that you'll be doing interesting things without me, [BlancheMommyDaddyTitle],' she grumbles. 'Oh well. I suppose there isn't anything stopping me finding my own fun,' she mumbles as she hugs you goodbye. You know that she can handle herself, but you still feel guilty as she walks away. ";
+		if White Wolf Zero is listed in companionlist of Player: [Blanche]
+			say "'I wonder how many people she'll tease on her way back... Mommy's little succubus,' Blanche sighs. ";
+		else:
+			say "You would imagine that Blanche will be relieved when Bianca returns (hopefully without having been impregnated). ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Bianca in the abbey]
+		say "     With a word, you get Bianca's attention and tell her that she should stay here at the library for now. She looks ready to argue, but ultimately just pouts. 'I just know that you'll be doing interesting things without me, [BlancheMommyDaddyTitle],' she grumbles. 'Oh well. I suppose there isn't anything stopping me finding my own fun,' she mumbles as she hugs you goodbye. You know that she can handle himself, but even she needs a rest from time to time. ";
+		if White Wolf Zero is listed in companionlist of Player: [Blanche]
+			say "'I wonder what trouble she'll get up to while we're away... Mommy's little succubus,' Blanche sighs. ";
+		else:
+			say "You would imagine that Blanche will be relieved that Bianca isn't out in the city getting impregnated by strangers. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Bianca ends here.

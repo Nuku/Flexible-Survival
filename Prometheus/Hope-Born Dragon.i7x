@@ -104,6 +104,9 @@ Version 1 of Hope-Born Dragon by Prometheus begins here.
 
 Hope-BornDragonName is a text that varies.
 
+a postimport rule: [bugfixing rules for players that import savegames]
+	if hp of Hope-Born Dragon > 5:
+		move Dragon Egg to Nowhere;
 
 Section 1 - Dragon Egg
 
@@ -928,7 +931,7 @@ to say DragonEggHatchingProcess:
 		say "away to properly explore the library. You guess that you'll get to know [ObjectPro of Hope-Born Dragon] another time.";
 		now hp of Hope-Born Dragon is 6;
 		move Hope-Born Dragon to Grey Abbey 2F;
-		move Dragon Egg to Void;
+		move Dragon Egg to Nowhere;
 	else: [ERROR]
 		say "     ERROR! Something has gone wrong here. Please report this bug in sp-bug-reports on the Flexible Survival Discord Server.";
 
@@ -1441,7 +1444,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 2: [Knotted]
 		LineBreak;
 		if "KnottedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1453,7 +1456,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1467,7 +1470,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 3: [Tapered]
 		LineBreak;
 		if "TaperedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1483,7 +1486,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Blunt'. Please disable 'Blunt' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1497,7 +1500,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 4: [Prehensile]
 		LineBreak;
 		if "PrehensileCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1509,7 +1512,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1523,7 +1526,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 5: [Barbed]
 		LineBreak;
 		if "BarbedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1539,7 +1542,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tentacle-lined'. Please disable 'Tentacle-lined' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1553,7 +1556,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 6: [Blunt]
 		LineBreak;
 		if "BluntCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1569,7 +1572,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tapered'. Please disable 'Tapered' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1583,7 +1586,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 7: [Tentacle-lined]
 		LineBreak;
 		if "TentacledCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1599,7 +1602,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Barbed'. Please disable 'Barbed' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1787,7 +1790,7 @@ to say Hope-BornDragonPronounMenu:
 		SetFemalePronouns for Hope-Born Dragon;
 	else if calcnumber is 3: [They/Them/Their]
 		LineBreak;
-		say "     [Hope-BornDragonName] views themselves as neither male nor female, rather just as themselves.";
+		say "     [Hope-BornDragonName] views themself as neither male nor female, rather just as themself.";
 		SetNeutralPronouns for Hope-Born Dragon;
 
 to say Hope-BornDragonDebugMenu:

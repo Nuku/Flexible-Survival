@@ -152,6 +152,12 @@ to say CasperTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Casper on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Ten is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Casper to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -171,6 +177,8 @@ to say CasperTalkMenu:
 					say "[CasperTalk1]";
 				if (nam is "Boop"):
 					say "[CasperTalk2]";
+				if (nam is "Take as Companion"):
+					say "[CasperTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -186,6 +194,10 @@ to say CasperTalk1: [Small Talk]
 to say CasperTalk2: [Boop]
 	say "     The way in which Casper is giving you his undivided attention is just too adorable and you can't help yourself from booping him on the nose, momentarily causing him to go cross-eyed looking at your finger. 'You do realize that that's my nose, not a big red button, right? There isn't going to be a firework display or a fanfare. I will not transform or power up.' You inform him that you're purely doing it because you are fond of him, causing his tail to manically wag behind him. 'Really? I didn't think that other people thought of it like that. Thank you. Really. It means a lot coming from you.'";
 
+to say CasperTalk3: [Companion]
+	say "     You ask Casper whether he would be interested in coming with you out into the city. 'And so, the hero and his trusty sidekick, that's you, begin yet another adventure into the wastes of the city,' Casper declares, before moving in for a hug. 'Yes, [BlancheMommyDaddyTitle]. Obviously I would be interested.' You can't help but smile at his antics and return the hug.";
+	AddCompanionFunction "White Wolf Ten";
+
 Section 3 - Sex
 
 instead of fucking Casper:
@@ -194,5 +206,49 @@ instead of fucking Casper:
 Section 4 - Events
 
 []
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Ten	"White Wolf Ten"
+
+White Wolf Ten is a pet.
+NPCObject of White Wolf Ten is Casper.
+understand "Casper" as White Wolf Ten.
+IDList of White Wolf Ten is { "Casper", "casper", "White Wolf Ten", "white wolf ten" }.
+printed name of White Wolf Ten is "Casper".
+Description of White Wolf Ten is "[CasperDesc]".
+Weapon Damage of White Wolf Ten is 10.
+The level of White Wolf Ten is 1.
+Dexterity of White Wolf Ten is 15.
+The summondesc of White Wolf Ten is "[SummonCasper]".
+The dismissdesc of White Wolf Ten is "[DismissCasper]".
+The assault of White Wolf Ten is "[one of]Brandishing a convenient stick, Casper attacks your foe in his best impression of a fantasy hero.[or]Casper attempts to bare-knuckle box your opponent.[or]Casper launches into a re-enactment of a comic scene, distracting your foe long enough for you to get a couple of blows in.[or]Seemingly short on ideas, Casper settles for a solid kick at the soft parts of your foe.[at random]".
+the fuckscene of White Wolf Ten is "WIP".
+
+to say SummonCasper:
+	if Casper is visible: [summoning while standing next to him]
+		say "     Walking over to Casper, you ask whether he would be interested in coming with you out into the city. 'And so, the hero and his trusty sidekick, that's you, begin yet another adventure into the wastes of the city,' Casper declares, before moving in for a hug. 'Yes, [BlancheMommyDaddyTitle]. Obviously I would be interested.' You can't help but smile at his antics and return the hug.";
+	else: [regular summoning]
+		say "     Casper for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+
+to say DismissCasper:
+	move Casper to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Casper's attention and tell him that he should head back to the library for now. He adopts a pose of mock despair. 'Alas. The hero's quest ends at the bequest of his dear [BlancheMommyDaddyTitle]. He must now journey to safety alone,' he declares. 'I look forward to when I can accompany you again,' he mumbles in your ear as he hugs you goodbye. You know that he can handle herself, but you still feel guilty as he walks away. ";
+		if White Wolf Nine is listed in companionlist of Player: [Lumi]
+			say "'We should try to bring him back something nice. I know that I like gifts. Perhaps a comic...' Lumi suggests. ";
+		else:
+			say "Lumi will probably have him play ball with her once he gets home. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Casper in the abbey]
+		say "     With a word, you get Casper's attention and tell him that he should stay here at the library for now. He adopts a pose of mock despair. 'The hero is commanded to protect the innocent by his dear [BlancheMommyDaddyTitle]. His quest for glory must wait,' he declares. 'I look forward to when I can accompany you again,' he mumbles in your ear as he hugs you goodbye. You know that he can handle himself, but even he needs a rest from time to time. ";
+		if White Wolf Nine is listed in companionlist of Player: [Lumi]
+			say "'We should try to find him something nice while we're out. I know that I like gifts. Perhaps a comic...' Lumi suggests. ";
+		else:
+			say "She and Casper will likely play wolves and wizards while you're away. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Casper ends here.

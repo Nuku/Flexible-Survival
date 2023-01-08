@@ -2,9 +2,13 @@ Version 1 of Bernard by Prometheus begins here.
 
 [Blanche's fourth son. Steady]
 
-[   hp of Bernard - relationship variable with the player          ]
+[   hp of Bernard - relationship variable with the player   ]
 [   0 - At Office  ]
 [   1 - At Library ]
+
+[ hunger of Bernard - Gender Reveal           ]
+[ 0 - Assumed to be physically male           ]
+[ 1 - Revealed to be aphysically  herm        ]
 
 FamilyMealCooldown is a number that varies. FamilyMealCooldown is usually 0.
 
@@ -124,7 +128,7 @@ to say BernardDesc:
 [Character Notes - Bernard:
 
 Species: Canine (Wolf)
-Gender: Male
+Gender: Herm
 Relationships:
 Sexuality: Bisexual
 
@@ -164,6 +168,18 @@ to say BernardTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Join the family in a meal (Once per day)";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Seven is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 4;
+		now description entry is "Ask Bernard to join you";
+	[]
+	if Charisma of Blanche > 3:
+		choose a blank row in table of fucking options;
+		now title entry is "His Love of Cooking";
+		now sortorder entry is 5;
+		now description entry is "Ask Bernard about his culinary quest";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -185,6 +201,10 @@ to say BernardTalkMenu:
 					say "[BernardTalk2]";
 				if (nam is "Family Meal"):
 					say "[BernardTalk3]";
+				if (nam is "Take as Companion"):
+					say "[BernardTalk4]";
+				if (nam is "His Love of Cooking"):
+					say "[BernardTalk5]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -212,6 +232,29 @@ to say BernardTalk3: [Family Meal]
 	PlayerDrink 25;
 	now FamilyMealCooldown is 5;
 
+to say BernardTalk4: [Companion]
+	say "     You ask Bernard whether he would be interested in coming with you out into the city. He stares at you for a moment before smothering you in his arms. 'I'd love that, [BlancheMommyDaddyTitle]. Exercise is so much better when you do it with someone you love. And we might find food!' You chuckle and reassure him that you feel the same.";
+	AddCompanionFunction "White Wolf Seven";
+
+to say BernardTalk5: [The Reveal]
+	if hunger of Bernard is 0: [First Talk]
+		say "     You know how passionate Bernard is about food, but you remain curious as to whether there is a deeper reason behind his dream of becoming a chef. When you ask, he looks a little sheepish and one of his hands nervously squeezes his thigh as he replies. 'Well there's a good reason that out of all my brothers and sisters, I'm the only one that happens to have a passion for cooking. Not long after you first met us, while Maeve and myself were out scavenging, we came across an abandoned cooler. I doubt that this will come as any surprise to you, but being as hungry as I tend to be, I obviously opened it in the hopes of finding something edible or drinkable to either take back to the den or to give me a more immediate boost of energy. Unfortunately, the only thing inside was an open tub of icecream that had already been half eaten,' Bernard explains, his stomach growling at the memory.";
+		say "     'I asked Maeve if she wanted to split it with me but as usual she was reluctant to eat any food that was already open, describing it as suspicious. She said that we should leave the icecream even if we took the cooler, but I thought that it would be wasteful to just throw it away, especially I was hungry anyway... It didn't take me more than a few seconds to finish it.' A look of utter bliss overtakes Bernard's face as his tail begun to wag like mad as he continues, 'It was one of the best things I had ever tasted, narrowly behind Mommy's breast milk. So very creamy and refreshing, far beyond anything that we had scavenged before. Compared to the usual scavenged cans of food and water bottles it was sublime. But it also had a side effect. You see, after eating it, I had a bit more in common with my sisters than I did before, if you catch my meaning.' Your son carefully lifts his sheath and scrotum out of the way and gestures for you to take a closer look, brushing the thick fur out of the way to reveal a canine vulva that you had previously failed to see.";
+		WaitLineBreak;
+		say "     'I had my very first orgasm from tasting that delicacy, though in hindsight, maybe it had more to it than the exquisite flavor. When I regained my senses a bit later, I found that I had apparently covered myself and the ground surrounding me with my own [']cream['], as well as having grown a pussy and a pair of B-cup breasts. They aren't too different to pecs, but they produce milk when I want it,' Bernard informs you, excitedly squeezing one to demonstrate before licking the fluid off his finger. Recounting the story seems to have aroused your son considerably, his cock having grown to full size, being dangerously close to climaxing from the memory alone if the beads of pre are anything to go by. Nonetheless, he ignores it as he finishes up the story. 'Maeve had worriedly watched the whole ordeal, unable to do anything to stop it, but after it was all over, she managed to ask if it was really that good. Obviously it was and I don't regret it at all. It was a learning experience. It also gives me more ways to have fun and I'm able to use my own milk as an ingredient in my own cooking.'";
+		say "     Seeing your eyebrows rise, Bernard hurriedly continues., 'I don't make people eat any without first telling them. That would betray any trust that they have in me, and who can you trust if you can't trust the person making your food?' You would assume then that the rest of his family knows. 'Of course. We don't have any secrets from each other. Not that I know of anyway. Anyway, to answer your question, I hope that by improving my culinary ability that I can one day make something as delicious as that icecream was. You might say that it was a transformative experience.' You have your suspicions about who might have made the icecream, but keep your thoughts to yourself on the matter. It doesn't really matter when he seems to have taken to the change so well. Regardless, you ask Bernard whether he wants you to address him differently now that you know that he is not entirely male. 'You can call me whatever you want, as long as it's not late for dinner,' he jokes, smirking when you roll your eyes. 'Nah, I don't really mind. I still think of myself as your son, so I don't think that how you view me has to change. You give him a hug and thank him for sharing, the mixed scent of food and his unique scent filling your nose as you bury your face in his fluff.";
+		now Breast Size of Bernard is 2;
+		now Cunt Count of Bernard is 1;
+		now Cunt Depth of Bernard is 10;
+		now Cunt Tightness of Bernard is 1;
+		now Clit Size of Bernard is 2;
+		now hunger of Bernard is 1;
+	else:
+		say "     You ask Bernard to remind you why he is so passionate about becoming a chef. 'Again? Sure, I don't mind. Not long after you first met us, while Maeve and myself were out scavenging, we came across an abandoned cooler. You know how hungry I tend to be, so I obviously opened it in the hopes of finding something edible or drinkable to either take back to the den or to give me a more immediate boost of energy. Unfortunately, the only thing inside was an open tub of icecream that had already been half eaten,' Bernard explains, his stomach growling at the memory. 'I asked Maeve if she wanted to split it with me but as usual she was reluctant to eat any food that was already open, describing it as suspicious. She said that we should leave the icecream even if we took the cooler, but I thought that it would be wasteful to just throw it away, especially I was hungry anyway... It didn't take me more than a few seconds to finish it.'";
+		say "     A look of utter bliss overtakes Bernard's face as his tail begun to wag like mad as he continues, 'As I said last time, it was one of the best things I had ever tasted, narrowly behind Mommy's breast milk. So very creamy and refreshing, far beyond anything that we had scavenged before. Compared to the usual scavenged cans of food and water bottles it was sublime. But it also had the side effect of giving me a pussy,' your son explains, carefully lifting his sheath and scrotum out of the way to quickly show you the canine vulva nestled there. 'I had my very first orgasm from tasting that delicacy, though in hindsight, maybe it had more to it than the exquisite flavor. When I regained my senses a bit later, I found that I had apparently covered myself and the ground surrounding me with my own [']cream['], as well as having grown a pussy and a pair of B-cup breasts. They aren't too different to pecs, but they produce milk when I want it,' Bernard informs you, excitedly squeezing one to demonstrate before licking the fluid off his finger.";
+		WaitLineBreak;
+		say "     Recounting the story seems to have aroused your son considerably, his cock having grown to full size, being dangerously close to climaxing from the memory alone if the beads of pre are anything to go by. Nonetheless, he ignores it as he finishes up the story. 'Maeve had worriedly watched the whole ordeal, unable to do anything to stop it, but after it was all over, she managed to ask if it was really that good. Obviously it was and I don't regret it at all. It was a learning experience. It also gives me more ways to have fun and I'm able to use my own milk as an ingredient in my own cooking. My family doesn't mind, but I'm not going to sneak it into anyone else's food if that is waht you are wondering. Anyway, because of this, I hope that by improving my culinary ability that I can one day make something as delicious as that icecream was. You might say that it was a transformative experience.' You give him a hug and thank him for sharing, the mixed scent of food and his unique scent filling your nose as you bury your face in his fluff.'";
+
 
 Section 3 - Sex
 
@@ -221,5 +264,49 @@ instead of fucking Bernard:
 Section 4 - Events
 
 []
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Seven	"White Wolf Seven"
+
+White Wolf Seven is a pet.
+NPCObject of White Wolf Seven is Bernard.
+understand "Bernard" as White Wolf Seven.
+IDList of White Wolf Seven is { "Bernard", "bernard", "White Wolf Seven", "white wolf seven" }.
+printed name of White Wolf Seven is "Bernard".
+Description of White Wolf Seven is "[BernardDesc]".
+Weapon Damage of White Wolf Seven is 20.
+The level of White Wolf Seven is 1.
+Dexterity of White Wolf Seven is 10.
+The summondesc of White Wolf Seven is "[SummonBernard]".
+The dismissdesc of White Wolf Seven is "[DismissBernard]".
+The assault of White Wolf Seven is "[one of]Grappling your opponent, Bernard presses their face into the fur of his chest, smothering them in fur and musk.[or]Bernard barrels headfirst at you foe, willing to trample them under paw.[or]Bernard picks your opponent up before slamming them onto the ground again.[or]Bernard punches your opponent in the side, sending them staggering![at random]".
+the fuckscene of White Wolf Seven is "WIP".
+
+to say SummonBernard:
+	if Bernard is visible: [summoning while standing next to him]
+		say "     Walking over to Bernard, you ask whether he would be interested in coming with you out into the city. He stares at you for a moment before smothering you in his arms. 'I'd love that, [BlancheMommyDaddyTitle]. Exercise is so much better when you do it with someone you love. And we might find food!' You chuckle and reassure him that you feel the same.";
+	else: [regular summoning]
+		say "     Bernard for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+
+to say DismissBernard:
+	move Bernard to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Bernard's attention and tell him that he should head back to the library for now. He nods resignedly. 'I suppose that my cooking skills aren't of much use to anyone out here, but I did enjoy getting to explore with you, [BlancheMommyDaddyTitle],' he concedes. 'I guess I'll try to have some food ready for you when you return,' he mumbles in your ear as he traps you in a bone-crushing hug. You know that he can handle himself, but you still feel guilty as he walks away. ";
+		if White Wolf Eight is listed in companionlist of Player: [Maeve]
+			say "'It will also give him a chance to have a shower. I'm sure that his scent attracts people to us. Not that I won't miss him...' Maeve reveals. ";
+		else:
+			say "You would imagine that Maeve will soon rope him into some scheme when he gets back. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Bernard in the abbey]
+		say "     With a word, you get Bernard's attention and tell him that he should stay here at the library for now. He nods resignedly. 'I suppose that my cooking skills wouldn't be of much use to anyone out there, but I do enjoy getting to explore with you, [BlancheMommyDaddyTitle],' he concedes. 'I guess I'll try to have some food ready for you when you return,' he mumbles in your ear as he traps you in a bone-crushing hug. You know that he can handle himself, but even he needs a rest from time to time. ";
+		if White Wolf Eight is listed in companionlist of Player: [Maeve]
+			say "'I agree. Best not to risk the head chef on one of your adventures. Especially when he has such an enticing aroma that follows him wherever he goes,' Maeve muses. ";
+		else:
+			say "You would imagine that Maeve will soon rope him into some scheme while you are away. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Bernard ends here.

@@ -356,7 +356,7 @@ to say FangTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Tell Fang about some of your exploits in the city (PLACEHOLDER)";
 	[]
-	if hp of Fang > 1 and Fang is not listed in companionList of Player:
+	if hp of Fang > 1 and Best Wolf is not listed in companionList of Player:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Fang With You";
 		now sortorder entry is 2;

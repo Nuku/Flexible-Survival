@@ -234,7 +234,7 @@ Prereq1 of Sunbathing Goddess is Birth of a Goddess.
 Prereq1Resolution of Birth of a Goddess is { 1, 2 }.
 Sarea of Sunbathing Goddess is "Beach".
 
-instead of going to Public Beach while Sunbathing Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
+instead of going to Public Beach while Birth of a Goddess is resolved and Sunbathing Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
 	move player to Public Beach;
 	SunbathingGoddessEvent;
 

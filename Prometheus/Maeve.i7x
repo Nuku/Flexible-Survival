@@ -150,6 +150,12 @@ to say MaeveTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Maeve on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Eight is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Maeve to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -169,6 +175,8 @@ to say MaeveTalkMenu:
 					say "[MaeveTalk1]";
 				if (nam is "Boop"):
 					say "[MaeveTalk2]";
+				if (nam is "Take as Companion"):
+					say "[MaeveTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -184,6 +192,10 @@ to say MaeveTalk1: [Small Talk]
 to say MaeveTalk2: [Boop]
 	say "     Standing before Maeve you get the ever growing urge to strengthen the ties that bind by booping her snoot, though you make sure to get close and raise the comfort level by giving her head pats before suddenly going in for the boop. When your finger touches her nose you hear a loud 'BZZZT' as Maeve begins to laugh until tears appear. After getting herself under control she says 'I saw that look from a mile away as its the one Sturm has whenever he wants to give affection to others, naturally I felt the need to try out this handy custom made nose buzzer that I had Ernest make for me.' hearing this you can't help but laugh as well, the both of you laughing up a storm.";
 
+to say MaeveTalk3: [Companion]
+	say "     You ask Maeve whether she would be interested in coming with you out into the city. With a mischievous smile, she rushes over and gives you a cuddle. 'If you're taking me, [BlancheMomDadTitle], you're obviously planning on getting up to something fun. Obviously I'm in.' You can't be sure about that, but who knows what the future brings?";
+	AddCompanionFunction "White Wolf Eight";
+
 Section 3 - Sex
 
 instead of fucking Maeve:
@@ -192,5 +204,49 @@ instead of fucking Maeve:
 Section 4 - Events
 
 []
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Eight	"White Wolf Eight"
+
+White Wolf Eight is a pet.
+NPCObject of White Wolf Eight is Maeve.
+understand "Maeve" as White Wolf Eight.
+IDList of White Wolf Eight is { "Maeve", "maeve", "White Wolf Eight", "white wolf eight" }.
+printed name of White Wolf Eight is "Maeve".
+Description of White Wolf Eight is "[MaeveDesc]".
+Weapon Damage of White Wolf Eight is 10.
+The level of White Wolf Eight is 1.
+Dexterity of White Wolf Eight is 15.
+The summondesc of White Wolf Eight is "[SummonMaeve]".
+The dismissdesc of White Wolf Eight is "[DismissMaeve]".
+The assault of White Wolf Eight is "[one of]Maeve throws sand in your opponent's eyes, giving her a moment to get in a few good punches before they recover.[or]Firmly grabbing your foe, Maeve attempts to drive a knee into their soft parts.[or]Maeve sticks a leg out to trip your opponent up, taking advantage of their carelessness as they attack.[or]Seeing a brief opening, Maeve rakes her claws across your opponent's back.[at random]".
+the fuckscene of White Wolf Eight is "WIP".
+
+to say SummonMaeve:
+	if Maeve is visible: [summoning while standing next to her]
+		say "     Walking over to Maeve, you ask whether she would be interested in coming with you out into the city. With a mischievous smile, she rushes over and gives you a cuddle. 'If you're taking me, [BlancheMomDadTitle], you're obviously planning on getting up to something fun. Obviously I'm in.' You can't be sure about that, but who knows what the future brings?";
+	else: [regular summoning]
+		say "     Maeve for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+
+to say DismissMaeve:
+	move Maeve to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Maeve's attention and tell her that she should head back to the library for now. She looks ready to try to persuade you otherwise, but ultimately decides against it. 'If you're sure, [BlancheMomDadTitle]. I shall assume that you trust in my ability to get home safely rather than this being an attempt to get me kidnapped,' she jokes. After giving you a hug, she walks away. You know that she can handle herself, but you still feel guilty as she walks away. ";
+		if White Wolf Seven is listed in companionlist of Player: [Bernard]
+			say "'Can we go for icecream? I know I should have asked before Maeve left, but now I really want icecream,' Bernard asks, his mind on food. ";
+		else:
+			say "You would imagine that Bernard will end up roped into some scheme when Maeve returns. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Maeve in the abbey]
+		say "     With a word, you get Maeve's attention and tell her that she should stay here at the library for now. She looks ready to try to persuade you otherwise, but ultimately decides against it. 'If you're sure, [BlancheMomDadTitle]. It will give me the chance to play around with my magician's kit. Perhaps by the time you get back, I'll be able to saw you in half,' she jokes. After giving you a hug, she walks away. You know that she can handle herself, but even she needs a rest from time to time. ";
+		if White Wolf Seven is listed in companionlist of Player: [Bernard]
+			say "'I think producing a feast out of nowhere would be more helpful, but I suppose being sawed in half is pretty cool too,' Bernard concedes. ";
+		else:
+			say "You would imagine that Bernard will end up being part of this learning experience. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Maeve ends here.

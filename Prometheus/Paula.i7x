@@ -6,18 +6,24 @@ Version 1 of Paula by Prometheus begins here.
 
 "Adds a vixen nurse NPC to Flexible Survival."
 
-[  HP of Paula          ]
-[ overall status        ]
-[ 0 = Task not prompted ]
-[ 1 = Alexandra got supplies, no Paula ]
-[ 2 = got supplies w/o Paula           ]
-[ 3 = got supplies and Paula           ]
-[ 4 = talked to Paula                  ]
-[ 5 = had sex                          ]
+[ HP of Paula - overall status        ]
+[ 0 - Task not prompted                ]
+[ 1 - Alexandra got supplies, no Paula ]
+[ 2 - got supplies w/o Paula           ]
+[ 3 - got supplies and Paula           ]
+[ 4 - talked to Paula                  ]
+[ 5 - had sex                          ]
 
-[   hunger of Paula   - Whether at library or not     ]
-[   0:     Paula at Police Station     ]
-[   1:     Paula at Library            ]
+[ hunger of Paula   - Whether at library or not  ]
+[ 0 - Paula at Police Station                    ]
+[ 1 - Paula at Library                           ]
+[ 2 - Paula at Sanctuary                         ]
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if (HP of Alexandra > 0 and HP of Alexandra < 50) and Paula is not in Sanctuary Hotel Lobby: [Bad Alexandra]
+		move Paula to Sanctuary Hotel Lobby;
+		now HP of Paula is 3;
+		now hunger of Paula is 2;
 
 Section 0 - Rescuing Paula
 
@@ -25,7 +31,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     Agreeing to go along, you make sure you've got your pack and gear ready before heading out together. You and Alexandra chat a little on the trip, but are mostly quiet to help avoid drawing attention to yourselves. Thankfully, aside from a few easily dispatched troublemakers, the journey there is uneventful.";
 	move player to City Hospital;
 	AddNavPoint City Hospital;
-	say "     You and the Doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
+	say "     You and the doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
 	say "     As you pass along the darkened halls, you hear some activity up ahead. You both freeze and listen, wary of danger.";
 	WaitLineBreak;
 	say "     '...coming to, dammit. Anesthesia!' a male voice barks authoritatively.";
@@ -144,8 +150,12 @@ The icon of Paula is Figure of Paula_icon.
 the scent of the Paula is "The vixen smells of antiseptic, medicine and faintly of vulpine arousal.".
 
 to say pauladesc:
-	say "     Paula, thanks to her [']treatment['] back at the hospital, has become a vixen. Like the nurses there, she has a coat of silvery fur covering her sexy figure. But unlike them, she wears a more reserved nurse's outfit, mainly at Alexandra's insistence. Of course, even that can't compete with such features as her twin rows of breasts and her tight bottom. Nor does it prevent her from putting a bit of naughty teasing into her bedside manner.";
-	say "     If you're injured, you can talk to Paula about some [bold type]healing[roman type] once a day. Also, she'll give you a hand with any first aid you do with your medkits while here.";
+	if hunger of Paula is 3: [Sanctuary]
+		say "     Paula is a sexy silver-furred vixen wearing a nurse's outfit that's slightly too small, causing her twin rows of breasts and her tight bottom to peek from the straining fabric. She is not above putting a bit of naughty teasing into her bedside manner.";
+		say "     If you're injured, you can talk to Paula about some [bold type]healing[roman type] once a day. Also, she'll give you a hand with any first aid you do with your medkits while here.";
+	else:
+		say "     Paula, thanks to her [']treatment['] back at the hospital, has become a vixen. Like the nurses there, she has a coat of silvery fur covering her sexy figure. But unlike them, she wears a more reserved nurse's outfit, mainly at Alexandra's insistence. Of course, even that can't compete with such features as her twin rows of breasts and her tight bottom. Nor does it prevent her from putting a bit of naughty teasing into her bedside manner.";
+		say "     If you're injured, you can talk to Paula about some [bold type]healing[roman type] once a day. Also, she'll give you a hand with any first aid you do with your medkits while here.";
 
 
 Section 2 - Conversation
@@ -156,9 +166,12 @@ Instead of conversing the Paula:
 	if HP of Paula is 0 or HP of Paula is 1 or HP of Paula is 2:
 		say "ERROR-Paula-[HP of Paula]L: You should not be able to find her yet.";
 	else if HP of Paula is 3:
-		say "     Approaching the vixen, you ask her how she's making out. 'Well, things aren't too bad here right now. Oh, I'm sure it'll all go downhill eventually, but it should be safe enough for a while. You and Alexandra seem to be setting up a pretty good shelter, so when this place does eventually descend into a sex pit, at least it'll be a [if policerepair > 3]well-protected and [end if]well-equipped one. A person can't reasonably expect much more than that these days.'";
-		say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer.";
-		say "     'Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
+		if hunger of Paula is 3:
+			say "     'You're new here aren't you?' the vixen comments as you strike up a conversation with her. 'Were you rescued too? The sniper woman, Cynthia I think she said her name was, rescued me from the hospital before I completely lost my mind, but it wouldn't have hurt if she'd been a bit quicker.' You shake your head and tell her that you're just visiting before sympathetically asking how she is holding up. 'Well, things aren't too bad here right now. Oh, I'm sure it'll all go downhill eventually, but it should be safe enough for a while. The [']Den Mother['] and [']Pack Alpha['] seem to be setting up a pretty good shelter, so when this place does eventually descend into a sex pit, at least it'll be a well-protected and well-equipped one. A person can't reasonably expect much more than that these days.'";
+			say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer. Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
+		else:
+			say "     Approaching the vixen, you ask her how she's making out. 'Well, things aren't too bad here right now. Oh, I'm sure it'll all go downhill eventually, but it should be safe enough for a while. You and Alexandra seem to be setting up a pretty good shelter, so when this place does eventually descend into a sex pit, at least it'll be a [if policerepair > 3]well-protected and [end if]well-equipped one. A person can't reasonably expect much more than that these days.'";
+			say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer. Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
 		now HP of Paula is 4;
 	if hunger of Paula is 0: [At police station]
 		if PoliceStationTwelvePopulation > 0 and a random chance of 1 in 4 succeeds:
@@ -223,10 +236,10 @@ to say PaulaTalkMenu:
 	clear the screen and hyperlink list;
 
 to say PaulaTalk1:
-	say "     'You want to know about me now? How long was I in the police station, and you waited until now to ask me about myself. A girl might get insulted if she weren't as forgiving as I am. I just hope you aren't trying to take advantage of me. Because I'm not sure I would be able to stop you,' she teases suggestively. 'I grew up in a small town in the north where everyone knew everybody else and newcomers were a once in a decade occurrence and visitors only appeared when they were lost. When I was young, there was only the post office which my parents managed, a small shop that sold groceries and a petrol station. We had a police building too I suppose, but barely. The nearest medical practice was several hours drive away, so if you got hurt you were reliant on someone's mother to having a look at you and decide whether or not they could patch you up or that someone was going to have to rush you to a hospital with your blood staining the seats of their truck. We were a close community, perhaps too close but I can't remember anyone looking too obviously inbred. So I think there was some disappointment when I decided I wanted to leave and see a bit more of the world.'";
+	say "     'You want to know about me[if hunger of Paula is 3]? What perverted thoughts are running through your head? I suppose that I'll find out[else] now? How long was I in the police station, and you waited until now to ask me about myself. A girl might get insulted if she weren't as forgiving as I am[end if]. I just hope you aren't trying to take advantage of me. Because I'm not sure I would be able to stop you,' she teases suggestively. 'I grew up in a small town in the north where everyone knew everybody else and newcomers were a once in a decade occurrence and visitors only appeared when they were lost. When I was young, there was only the post office which my parents managed, a small shop that sold groceries and a petrol station. We had a police building too I suppose, but barely. The nearest medical practice was several hours drive away, so if you got hurt you were reliant on someone's mother to having a look at you and decide whether or not they could patch you up or that someone was going to have to rush you to a hospital with your blood staining the seats of their truck. We were a close community, perhaps too close but I can't remember anyone looking too obviously inbred. So I think there was some disappointment when I decided I wanted to leave and see a bit more of the world.'";
 	say "     'I didn't get to see much more of the world in the end. My parents gave me a small amount of money so I could make a life somewhere else, and I heard at how nice California was, so I came here and started a course on nursing, doing waitressing to help pay the fees. After I completed the course, top of my class I might add, I started looking for employment at the hospital here, but they weren't hiring so I had to decide whether to find another job here while I waited, or look further afield. After a few days of lying around at home thinking about how I missed my mother, I decided I would try some of the doctors around the city. Everyone of them I went to didn't have any jobs going. Dr. Fuchs I think he was called, could only afford the salary of the one nurse who assisted him, and Dr. Medea at the pediatrics clinic already had sufficient staff for her needs.'";
 	WaitLineBreak;
-	say "     'They were very apologetic, but regret doesn't pay the bills and I was beginning to think I would have to return north. Perhaps I should have, I might have avoided the sea of pheromones that the city seems to have become, but I decided to stay and wait, hoping that a vacancy would appear at the hospital. Then the transformed started rampaging around and my chances of paid work flew south for the winter. After I found out that the hospital had become a sex trap, I thought that I could perhaps use my medical knowledge to help people in exchange for food and water, all I had to do was [']borrow['] some of their supplies that they weren't using. It didn't go very well. I got rather badly bitten by one of the patients on my way out and then the staff were adamant that they had to treat me. The rest you know. I thought it was about to be a change from naughty nurses to perverted police officers, but you and Alexandra have done alright I suppose. You haven't disappointed me too much so I think I made the right choice. But haven't you got heroic acts to be doing? Go on, we can talk another time.'";
+	say "     'They were very apologetic, but regret doesn't pay the bills and I was beginning to think I would have to return north. Perhaps I should have, I might have avoided the sea of pheromones that the city seems to have become, but I decided to stay and wait, hoping that a vacancy would appear at the hospital. Then the transformed started rampaging around and my chances of paid work flew south for the winter. After I found out that the hospital had become a sex trap, I thought that I could perhaps use my medical knowledge to help people in exchange for food and water, all I had to do was [']borrow['] some of their supplies that they weren't using. It didn't go very well. I got rather badly bitten by one of the patients on my way out and then the staff were adamant that they had to treat me. [if hunger of Paula is 3]If Cynthia hadn't saved me... Now I help with treating the injured, both the patrols and the civilians, so life isn't too bad. Especially when I have Jimmy around. Don't tell him, but his cheeriness doesn't annoy me nearly as much as I tell him that it does[else]The rest you know. I thought it was about to be a change from naughty nurses to perverted police officers, but you and Alexandra have done alright I suppose. You haven't disappointed me too much so I think I made the right choice[end if]. But haven't you got heroic acts to be doing? Go on, we can talk another time.'";
 
 to say PaulaTalk2:
 	say "     While she is momentarily distracted, you boop Paula, snatching your hand away before she can nip you. 'Oh. Booping now is it? Do you think I'm some sort of deviant that enjoys having her snout lovingly tapped, her nose sensually bonked, her muzzle filthily fingered?' she asks in mock anger. 'Well, perhaps. Perhaps not. All that we know is that your are every bit the degenerate that I initially thought you to be.'";
@@ -247,10 +260,16 @@ to say sexwithPaula:
 	else if lastfuck of Paula - turns < 6:
 		say "     'You're back pretty quickly for more, don't you think? Probably means you're losing it, if you're back asking for sex again so soon. Try holding out a little longer before we knock boots again,' she adds, running her paws along her sides in a sultry manner in a clear invitation that you are indeed welcome back for more soon.";
 	else:
-		if HP of Paula is 4:
-			say "     'And so it begins,' she says with a bit of sigh. 'Knew there'd be a catch to staying here.' Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
+		if hunger of Paula is 3:
+			if HP of Paula is 4:
+				say "     'And so it begins,' she says with a bit of sigh. 'Knew you wouldn't be able to keep your hands of me, you pervert.' Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
+			else:
+				say "     'Back for more, I see. Taking advantage of the poor nurse again. Well, if that's how it has to be,' she says, grinding her sexy body against yours. She rubs her ample bosom against your chest before moving her paws up to slowly unbutton her nurse's outfit. Even as she's stripping down, she moves over to the cot with a sultry sway to her hips. Dropping her clothes to the floor, she stretches out on her makeshift examination table in a steamy pin-up pose.";
 		else:
-			say "     'Back for more, I see. Taking advantage of the poor nurse you've taken in. Well, if that's how it has to be,' she says, grinding her sexy body against yours. She rubs her ample bosom against your chest before moving her paws up to slowly unbutton her nurse's outfit. Even as she's stripping down, she moves over to the cot with a sultry sway to her hips. Dropping her clothes to the floor, she stretches out on her makeshift examination table in a steamy pin-up pose.";
+			if HP of Paula is 4:
+				say "     'And so it begins,' she says with a bit of sigh. 'Knew there'd be a catch to staying here.' Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
+			else:
+				say "     'Back for more, I see. Taking advantage of the poor nurse you've taken in. Well, if that's how it has to be,' she says, grinding her sexy body against yours. She rubs her ample bosom against your chest before moving her paws up to slowly unbutton her nurse's outfit. Even as she's stripping down, she moves over to the cot with a sultry sway to her hips. Dropping her clothes to the floor, she stretches out on her makeshift examination table in a steamy pin-up pose.";
 		say "     'So, what did you have in mind[if HP of Paula > 4] this time[end if]?'";
 		say "[Paulasexmenu]";
 		if HP of Paula is 4, now HP of Paula is 5;
@@ -405,7 +424,7 @@ carry out paulahealing:
 	if ( 100 * HP of Player ) / maxHP of Player >= 90:
 		say "     You're not really hurt enough to require using the shelter's limited medical supplies. You should probably just cope.";
 	else if lastPaulahealing - turns < 8:
-		say "     'We've got to ration our medical supplies. I know you're kind of a big help to Alexandra, but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
+		say "     'We've got to ration our medical supplies. I know you're kind of a big [if hunger of Paula is 3]shot[else]help to Alexandra[end if], but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
 		let healed be ( maxHP of Player - HP of Player ) / 2;
 		if "Rapid Healing" is listed in the feats of Player:

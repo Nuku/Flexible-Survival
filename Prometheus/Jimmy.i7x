@@ -6,17 +6,24 @@ Version 1 of Jimmy by Prometheus begins here.
 
 "Adds corgi NPC named Jimmy to the Flexible Survival game."
 
-[          HP of Jimmy         ]
-[ 0 - task not started         ]
-[ 1 - task started             ]
-[ 2 - Jimmy ran off            ]
-[ 3 - Jimmy rescued            ]
-[ 4 - spoke to Jimmy           ]
-[ 5 - had anal sex             ]
+[ HP of Jimmy             ]
+[ 0 - task not started    ]
+[ 1 - task started        ]
+[ 2 - Jimmy ran off       ]
+[ 3 - Jimmy rescued       ]
+[ 4 - spoke to Jimmy      ]
+[ 5 - had anal sex        ]
 
-[   hunger of Jimmy     - Whether at library or not  ]
-[   0:     Jimmy at Police Station     ]
-[   1:     Jimmy at Library            ]
+[ hunger of Jimmy - Whether at library or not  ]
+[ 0 - Jimmy at Police Station                  ]
+[ 1 - Jimmy at Library                         ]
+[ 2 - Jimmy at Sanctuary                       ]
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if (HP of Alexandra > 0 and HP of Alexandra < 50) and Jimmy is not in Sanctuary Hotel Lobby: [Bad Alexandra]
+		move Jimmy to Sanctuary Hotel Lobby;
+		now HP of Jimmy is 3;
+		now hunger of Jimmy is 2;
 
 Section 1 - Event
 
@@ -129,14 +136,19 @@ the scent of the Jimmy is "Jimmy smells pleasantly of dog.".
 to say jimmydesc:
 	if HP of Jimmy < 3:
 		say "ERROR-Jimmy-[HP of Jimmy]L: You should not be able to see me.";
+	else if hunger of Jimmy is 2:
+		say "     Jimmy, having been transformed into a corgi, is quite short. He stands roughly three-and-a-half feet tall, mostly due to his very short legs. He is furry coat is a golden brown across most of his body, though white at his muzzle and chest. His arms, also short, end in paw-like hands covered in clean, white fur. He wears a plain black waistcoat, looking adorably cute in it. Despite, or perhaps because of his transformation, he seems perpetually happy. He works cheerfully around the station to clean up the mess here.";
 	else:
-		say "     Jimmy, having been transformed into a corgi, is quite short. He stands roughly three-and-a-half feet tall, mostly due to his very short legs. He is furry coat is a golden brown across most of his body, though white at his muzzle and chest. His arms, also short, end in paw-like hands covered in clean, white fur. He wears one of the police dog vests he's found and cleaned up, looking adorably cute in it. Despite, or perhaps because of, his transformation, he seems perpetually happy. He works cheerfully around the station to clean up the mess here.";
+		say "     Jimmy, having been transformed into a corgi, is quite short. He stands roughly three-and-a-half feet tall, mostly due to his very short legs. He is furry coat is a golden brown across most of his body, though white at his muzzle and chest. His arms, also short, end in paw-like hands covered in clean, white fur. He wears one of the police dog vests he's found and cleaned up, looking adorably cute in it. Despite, or perhaps because of his transformation, he seems perpetually happy. He works cheerfully around the station to clean up the mess here.";
 
 Instead of conversing the Jimmy:
 	if HP of Jimmy < 3:
 		say "ERROR-Jimmy-[HP of Jimmy]T: You should not be able to talk to me.";
 	else if HP of Jimmy is 3:
-		say "     'Thanks again for helping me get here. This place is so much better than where I was stuck before, even though there's a lot of sticky messes to clean up. Still, once I get it all cleaned up, it'll be fun to make a few sticky messes of my own,' he laughs with a wink at you. 'Oh, do you like my new outfit,' he asks, doing a wobbly spin to show off the police dog vest he found. It is the kind worn by the dogs of the K-9 unit and looks absolutely adorable on him. It makes you want to scoop him up and hug him tight.";
+		if hunger of Jimmy is 2: [At Sanctuary]
+			say "     'Hello. I don't think we've met before. I'm Jimmy. I'm sort of a refugee here now after my previous home stopped being safe. There was some food for a while, but eventually that ran out and I had to start eating from a bag of dog food. Tasty stuff, let me tell you,' he adds cheerfully. 'But, as you can probably guess, eating it caused me to change into a corgi. Well, at least I'm super-cute now,' he says with a canine grin, running his paws over his short, canine body. 'Some robots tried to turn me into one of them, but a huge black wolf saved me and brought me here. This place is so much better than where I was stuck before, even though there's a lot of sticky messes to clean up. Still, once I get it all cleaned up, it'll be fun to make a few sticky messes of my own,' he laughs with a wink at you. 'Oh, do you like my new outfit,' he asks, doing a wobbly spin to show off the waistcoat he found. It is the kind worn by hotel staff and looks absolutely adorable on him. It makes you want to scoop him up and hug him tight.'";
+		else:
+			say "     'Thanks again for helping me get here. This place is so much better than where I was stuck before, even though there's a lot of sticky messes to clean up. Still, once I get it all cleaned up, it'll be fun to make a few sticky messes of my own,' he laughs with a wink at you. 'Oh, do you like my new outfit,' he asks, doing a wobbly spin to show off the police dog vest he found. It is the kind worn by the dogs of the K-9 unit and looks absolutely adorable on him. It makes you want to scoop him up and hug him tight.";
 		now HP of Jimmy is 4;
 	else if HP of Alexandra >= 63 and sgtimer - turns >= 8 and sgtimer is not 255:
 		say "     Speaking with Jimmy, he informs you that one of the survivors from the bingo hall had left a note for any of the missing scouts who might return, telling them where the rest of you had gone. 'Since they'd be left there alone without directions or help to get here, I'd like you to go back there and check it out one last time. Besides, some of those scattered by the wolves may have escaped there.' Agreeing that it's worth a shot, you promise him you'll return to check on the [bold type]survivor group[roman type]'s bingo hall one last time.";
@@ -195,10 +207,15 @@ to say JimmyTalkMenu:
 
 to say JimmyTalk1:
 	say "     'So you want to know about little old me, do you? What's the story behind the cute bundle of cuddles before you? I've lived in the city since the day I was born. Apart from a few vacations and school trips, I haven't ever left, and despite the current crisis, I still don't plan on it. This is my city and I'll not give it up just because a few people have gone overboard on the debauchery!' Though he had meant it humorously, he looks adorably determined, his stubby arms folded in front of him, though his manically wagging tail rather ruins any chances of looking tough. 'As far as I can remember, I've always been a cheerful sort of person and if my apartment had survived I could have shown you all my school pictures with me genuinely smiling while so many of the others had to force theirs. Despite my cheerfulness, I didn't have many friends at school. I wasn't smart enough for the nerds nor athletic enough for the jocks. I couldn't draw well enough to associated with the artistically inclined either.'";
-	say "     'So I just sort of drifted through, no one really wanting to be my friend, but not really being bullied either. A few people would take pity on me and let me sit with them from time to time at lunch, but I didn't fit in so I was usually left to be taken in by another group every few weeks. I'm making it sound much worse than it was and you don't need to feel sorry for me. That was then, and now I have you[if hunger of Paula > 0], Paula,[end if] and Alexandra. I was good at English classes, especially the oratory presentations, so when I had graduated high school, I did a dual degree in English and Political Science. It was only when I had received the bit of paper at the end that I realized that I didn't know what I wanted to do next. My parents had moved house to the other side of the country, meaning I couldn't live at home while I decided, so I asked my sister for a loan and bought an apartment. I do hope she's alright. She was meant to be leaving for a business trip just after people started changing, so I don't even know whether she is in the city or not.' Jimmy has a moment of silent to take a breath and contemplate this thought. 'She's probably fine, but could I have a moment? I'm not feeling my usual pep. We can talk again later if that's alright.'";
+	say "     'So I just sort of drifted through, no one really wanting to be my friend, but not really being bullied either. A few people would take pity on me and let me sit with them from time to time at lunch, but I didn't fit in so I was usually left to be taken in by another group every few weeks. I'm making it sound much worse than it was and you don't need to feel sorry for me. That was then, and now I have ";
+	if hunger of Jimmy is 1:
+		say "you[if hunger of Paula > 0], Paula,[end if] and Alexandra. ";
+	else:
+		say "Paula and the other people here. ";
+	say "I was good at English classes, especially the oratory presentations, so when I had graduated high school, I did a dual degree in English and Political Science. It was only when I had received the bit of paper at the end that I realized that I didn't know what I wanted to do next. My parents had moved house to the other side of the country, meaning I couldn't live at home while I decided, so I asked my sister for a loan and bought an apartment. I do hope she's alright. She was meant to be leaving for a business trip just after people started changing, so I don't even know whether she is in the city or not.' Jimmy has a moment of silent to take a breath and contemplate this thought. 'She's probably fine, but could I have a moment? I'm not feeling my usual pep. We can talk again later if that's alright.'";
 
 to say JimmyTalk2: [Boop]
-	say "     Jimmy watches with eager anticipation as your finger gets closer and closer to his nose until, unable to help himself, he jumps into it, booping himself on your finger. 'That was so intense, let me tell you,' he declares, his tail wagging maniacally behind him. 'The build up... I assume that this is what drugs are like.' You warn him that perhaps he should be careful not to say such things around Alexandra. 'I said that I assumed. I'm not going to admit that I've been running a drug lab in the bunker,' he replies with a wink.";
+	say "     Jimmy watches with eager anticipation as your finger gets closer and closer to his nose until, unable to help himself, he jumps into it, booping himself on your finger. 'That was so intense, let me tell you,' he declares, his tail wagging maniacally behind him. 'The build up... I assume that this is what drugs are like.' You warn him that perhaps he should be careful not to say such things around [if hunger of Jimmy is 1]Alexandra. 'I said that I assumed. I'm not going to admit that I've been running a drug lab in the bunker,' he [else]strangers. 'I said that I assumed. I'm not going to admit that I've been running a drug lab when the Den Mother has been so kind as to take me in,' he [end if]replies with a wink";
 
 [to say JimmyTalk3:
 	say "     Everyone else in my family is a bit more impressive than me. Apart from my parents and me, I have two brothers and a sister. My dad was editor for some scientific journal that I can't remember the name of and didn't often have time to spend with the rest of us so I can't say I was particularly close. Mum did consultancy for security companies ";]
@@ -240,7 +257,7 @@ to say Jimmysex02:
 		say "***will not be accessible until later - first time via regular sex.";
 	else:
 		say "     Jimmy's tail wags excitedly at the prospect of having some more fun with you. Bending over, the little guy wiggles his ass in the air. 'How about you fill me up again?' he asks as he shows that tempting, crinkled hole of his. It's already pre-lubed, the corgi clearly having hoped for another chance to ride your cock. With such a tantalizing offer, you find it hard to refuse the cute little guy. Wrapping your arms around him, you sit him in your lap and onto your throbbing erection. After sharing a kiss with him, tongues darting across one another, you ease him down slowly, letting your [Cock of Player] cock pop into his tight tailhole[if Cock Length of Player > 15]. Given the size of your [cock size desc of Player] manhood, you have to take it very slow and aren't able to fully bury yourself into him, but that doesn't stop the two of you from enjoying it immensely[else if Cock Length of Player > 7]. Given the size of your [cock size desc of Player] manhood, you have to start carefully, but soon you're able to fully bury yourself into his fuzzy rear, much to your immense mutual enjoyment[else]. Your [cock size desc of Player] manhood slides fairly easily into his prepped hole and soon you're buried fully in his fuzzy bottom, much to your immense mutual enjoyment[end if].";
-	say "     Partly opening up his K9 unit vest, you slip a hand into it, rubbing his fuzzy chest. You bounce the cute fellow easily up and down on your cock. He pants and moans in delight as you fuck his cute ass. His own canine cock throbs, releasing spurts of precum onto the ground between your feet with every push against his prostate. The little guy's anus is wonderfully tight[if HP of Jimmy >= 5] even with his earlier preparation[end if], squeezing it hard each time you push into him[one of], and soon you can't help but bounce him even faster in your lap[or]. Taking a hold of his canine cock with your free hand, you stroke his pulsing rod[or], and soon you're pulling him down even harder with every thrust you make[in random order]. This proves too much for the little guy, his knot swelling up and soon she's spurting dog cum across the floor in long streaks as he cries out in ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and unleash your [Cum Load Size of Player] load into the happy doggy.";
+	say "     Partly opening up his [if hunger of Jimmy is 1]K9 unit vest[else]waist coat[end if], you slip a hand into it, rubbing his fuzzy chest. You bounce the cute fellow easily up and down on your cock. He pants and moans in delight as you fuck his cute ass. His own canine cock throbs, releasing spurts of precum onto the ground between your feet with every push against his prostate. The little guy's anus is wonderfully tight[if HP of Jimmy >= 5] even with his earlier preparation[end if], squeezing it hard each time you push into him[one of], and soon you can't help but bounce him even faster in your lap[or]. Taking a hold of his canine cock with your free hand, you stroke his pulsing rod[or], and soon you're pulling him down even harder with every thrust you make[in random order]. This proves too much for the little guy, his knot swelling up and soon she's spurting dog cum across the floor in long streaks as he cries out in ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and unleash your [Cum Load Size of Player] load into the happy doggy.";
 	say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support as he's still weak at the knees. '[if HP of Jimmy is 4]Oh wow! I mean... I'd never... that was awesome. I wish I knew how great that felt; I'd have been doing that for years had I known[else][one of]That just keeps getting better and better[or]Oh, how I ache, but it's such a good ache[or]Mmmm... I feel so warm and full[at random][end if].' Cuddling the cute guy, you help him wipe up the mess you two've made with some rags. After sharing another kiss, he flops out on his cot, rubbing his [if Ball Size of Player > 5]bulging [else if Ball Size of Player >= 4]rounded [else]tummy with a happy smile on his doggy muzzle.";
 	if HP of Jimmy is 4, now HP of Jimmy is 5;
 

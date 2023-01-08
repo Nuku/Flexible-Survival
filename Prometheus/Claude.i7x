@@ -198,6 +198,12 @@ to say ClaudeTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Claude on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Four is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Claude to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -217,6 +223,8 @@ to say ClaudeTalkMenu:
 					say "[ClaudeTalk1]";
 				if (nam is "Boop"):
 					say "[ClaudeTalk2]";
+				if (nam is "Take as Companion"):
+					say "[ClaudeTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -232,6 +240,10 @@ to say ClaudeTalk1: [Small Talk]
 to say ClaudeTalk2: [Boop]
 	say "     From the moment you look Claude in the eyes, you find yourself filled with the urge to give him a boop to see how he would react, only to find yourself getting your snoot booped instead. Momentarily going cross-eyed looking at the furry digit now having pre-emptively booped your snoot, Claude giggles and says 'Nothing says family closeness like a boop to the snoot!' his demonstration of familial affection brings a smile to your face as you reward him with head floofing pats and finish with a boop to his snoot in return.";
 
+to say ClaudeTalk3: [Companion]
+	say "     You ask Claude whether he would be interested in coming with you out into the city. He pumps a fist in the air before rushing over to give you a hug. 'Thanks, [BlancheMomDadTitle]. No one will be able to complain about me making new friends if I'm with you.' You don't know about that, but you'll at least be there to protect him.";
+	AddCompanionFunction "White Wolf Four";
+
 Section 3 - Sex
 
 instead of fucking Claude:
@@ -240,5 +252,49 @@ instead of fucking Claude:
 Section 4 - Events
 
 [Candy]
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Four	"White Wolf Four"
+
+White Wolf Four is a pet.
+NPCObject of White Wolf Four is Claude.
+understand "Claude" as White Wolf Four.
+IDList of White Wolf Four is { "Claude", "claude", "White Wolf Four", "white wolf four" }.
+printed name of White Wolf Four is "Claude".
+Description of White Wolf Four is "[ClaudeDesc]".
+Weapon Damage of White Wolf Four is 10.
+The level of White Wolf Four is 1.
+Dexterity of White Wolf Four is 15.
+The summondesc of White Wolf Four is "[SummonClaude]".
+The dismissdesc of White Wolf Four is "[DismissClaude]".
+The assault of White Wolf Four is "[one of]Barely dodging an attack directed at him, Claude manages to back-hand your foe as he evades.[or]Claude begins to suggestively dance, momentarily distracting your opponent and leaving them open for you to strike.[or]In an attempt to trip your opponent, Claude scythes his leg at their ankles.[or]Seeing an opening, Claude attempts to ram his fist into your opponent's sternum.[at random]".
+the fuckscene of White Wolf Four is "WIP".
+
+to say SummonClaude:
+	if Claude is visible: [summoning while standing next to him]
+		say "     Walking over to Claude, you ask whether he would be interested in coming with you out into the city. He pumps a fist in the air before rushing over to give you a hug. 'Thanks, [BlancheMomDadTitle]. No one will be able to complain about me making new friends if I'm with you.' You don't know about that, but you'll at least be there to protect him.";
+	else: [regular summoning]
+		say "     Claude for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+
+to say DismissClaude:
+	move Claude to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Claude's attention and tell him that he should head back to the library for now. He opens his mouth to argue before letting his gaze slip from yours. 'Ok. I guess I can be a bit overpowering to be around for long periods of time, personality-wise,' he concedes. 'Make me proud and try to make a few new friends while you're out, won't you, [BlancheMomDadTitle]?' he continues teasingly as he hugs you before turning to leave. You know that he can handle herself, but you still feel guilty as he walks away. ";
+		if White Wolf Three is listed in companionlist of Player: [Ernest]
+			say "'Are you sure that you wouldn't have prefered to send me back instead? You definitely help me with my research, but Claude needs the positive socialization,' Ernest confides. ";
+		else:
+			say "You would imagine that he and Ernest will soon be squabbling when he gets back. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Claude in the abbey]
+		say "     With a word, you get Claude's attention and tell him that he should stay here at the library for now. He opens his mouth to argue before letting his gaze slip from yours. 'Ok. I guess I can be a bit overpowering to be around for long periods of time, personality-wise,' he concedes. 'Make me proud and try to make a few new friends while you're out, won't you, [BlancheMomDadTitle]?' he continues teasinglyas he hugs you before turning to leave. You know that he can handle himself, but even he needs a rest from time to time. ";
+		if White Wolf Three is listed in companionlist of Player: [Ernest]
+			say "'Are you sure that you wouldn't rather take him than me? You definitely help me with my research, but Claude needs the positive socialization,' Ernest confides. ";
+		else:
+			say "You hope that he and Ernest won't squabble to much while you are away. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Claude ends here.
