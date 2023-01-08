@@ -505,7 +505,7 @@ ResolveFunction of Lost Souls is "[ResolveEvent Lost Souls]".
 Sarea of Lost Souls is "Warehouse".
 Prereq1 of Lost Souls is Stolen Lives.
 PrereqTime of Lost Souls is "Night".
-The Prereq1Resolution of Lost Souls is { 50 }. [TODO: Change this to 1 to enable later]
+The Prereq1Resolution of Lost Souls is { 1 }.
 
 to say ResolveEvent Lost Souls:
 	if Resolution of Lost Souls is not 98: [first encounter]
