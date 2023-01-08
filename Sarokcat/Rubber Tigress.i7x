@@ -25,6 +25,9 @@ to say Rubber Tigress attack:
 To say Rubber Tigress loss:
 	say "     With a strange squeaking noise, the large rubber tigress seems to deflate slightly, her body seeming to shrink in on itself as she staggers away, looking desperately for a rubber patch kit. She gives you one last longing look over her shoulder as she flicks her tail to the side, giving you a glimpse of what you might have had before she disappears into the midway.";
 
+to say RubberTigress_Desc:
+	project the Figure of RubberTigress_icon;
+	say "     A large and shiny tigress appears in front of you, stalking forward on two legs with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out visibly in the colored fair lighting.";
 
 Section 2 - Creature Insertion
 
@@ -51,7 +54,7 @@ When Play begins:
 	now attack entry is "[one of]She swipes at you with her surprisingly sharp claws.[or]The rubber beast rubs itself on you, leaving a patch of orange and black rubber attached to your skin.[or]The beast draws back for a second, and then springs forward in a rush, knocking you to the ground.[or]Crouching low for a second, the tigress explodes into motion as she lashes you again and again with her rubber paws.[or]She opens her muzzle wide, revealing the inside of her pink rubber mouth, and her soft rubber teeth, before clamping her jaws down on your arm, strangely for being bitten by the squeaky rubber beast, it actually feels kind of good.[or]The tigress grabs some nearby fair prizes, and starts throwing them at you![or]Panting as she shows off her body, she turns to wiggle her ass at you, it isn't until you feel something on your leg that you realize she has rubbed her tail up the inside of your thighs, leaving a trail of rubber behind.[or]She slams herself into you recklessly, her hands moving to do all she can to spread her orange rubber-like coating to your body as well.[at random]";
 	now defeated entry is "[Rubber Tigress loss]";
 	now victory entry is "[Rubber Tigress attack]";
-	now desc entry is "[mongendernum 4]     A large shiny tigress appears in front of you, stalking forward with an evil grin on her sleek rubber muzzle, her stripes sleek and her rubbery nipples standing out brightly in the colored fair lighting.";
+	now desc entry is "[RubberTigress_Desc]";
 	now face entry is "bright and shiny orange and black striped face, its tiger-like appearance somehow conveying both sexiness and cuteness at the same time. With an overlarge muzzle and soft rubber whiskers, your rubber tiger ears cocked forward while your overlarge cat-like eyes stare out of your tiger"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "sleek and smooth, your body is built for stalking and hunting, with large exaggerated muscles and your hands and feet converted into overlarge tiger paws"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]orange and black striped[or]squeaky rubber[or]tiger-striped[or]tight rubberized[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]

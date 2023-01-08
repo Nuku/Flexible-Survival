@@ -7,16 +7,11 @@ Version 3 of Main Storyline by Wahn begins here.
 [
 Ideas:
 Add in more nanite lore - player being especially infectable; not infective to others
-
-
-
 ]
-
-
 
 "Contains the content for Dr. Matt and the Main Quest Storyline."
 
-Section 0 - Dr. Matt
+Section 0 - Dr Matt
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -86,7 +81,7 @@ instead of fucking Doctor Matt:
 	else:
 		say "Doctor Matt recognizes the glint of arousal in your eyes as you imagine peeling him out of the suit. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
 
-Section 1 - Talking w/Dr. Matt (this drives the Main Storyline quests)
+Section 1 - Talking w/Doctor Matt (this drives the Main Storyline quests)
 
 Instead of conversing the Doctor Matt:
 	if HP of Doctor Matt is 100:

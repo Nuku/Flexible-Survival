@@ -1353,17 +1353,16 @@ to decide which text is what the player chooses from (choices - a list of text):
 	repeat with option running through choices:
 		say "     [link]([choice order in words])[as][choice order in words][end link] - [option].";
 		increase choice order by 1;
-
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > number of entries in choices:
 		say "Choice? (1-[number of entries in choices in words])>[run paragraph on]";
 		get a number;
 		if calcnumber < 1 or calcnumber > number of entries in choices:
-			say "Invalid choice. Type "
+			say "Invalid choice. Type ";
 			now choice order is 1;
 			repeat with option running through choices:
 				if choice order is number of entries in choices:
-					say " or [link][choice order in words][end link] to select [option]."
+					say " or [link][choice order in words][end link] to select [option].";
 				else:
 					say "[link][choice order in words][end link] to select [option], ";
 				increase choice order by 1;

@@ -153,6 +153,12 @@ to say LumiTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Lumi on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Nine is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Lumi to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -172,6 +178,8 @@ to say LumiTalkMenu:
 					say "[LumiTalk1]";
 				if (nam is "Boop"):
 					say "[LumiTalk2]";
+				if (nam is "Take as Companion"):
+					say "[LumiTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -187,6 +195,10 @@ to say LumiTalk1: [Small Talk]
 to say LumiTalk2: [Boop]
 	say "     As she is already more animalistic than her siblings, it doesn't take much for you to convince yourself to boop Lumi on the nose. 'Wow. Really playing into the stereotype there,' she comments, wagging her tail. 'I hope that you weren't planning on stopping there. Rub between my ears. Tell me I'm a good girl,' she complains when you take your finger away. Chuckling, you comply, smiling as a dopey smile spreads across her muzzle and her tail wags even faster. 'Ahhh... That's a really good feeling. Who needs drugs when they can have pats?' She is shameless in her enjoyment of being treated like this. 'Remind me to pay you back for this someday. Mommy always tells us that no good deed should go unrewarded.'";
 
+to say LumiTalk3: [Companion]
+	say "     You ask Lumi whether she would be interested in coming with you out into the city. Her tail wagging wildly, she bounds around you, eventually leaping up to give you a lick. 'Of course, [BlancheMomDadTitle]. I'm sure that you find the best treasures and I get to find them with you.' With her at your side, perhaps you'll find even better loot than before.";
+	AddCompanionFunction "White Wolf Nine";
+
 Section 3 - Sex
 
 instead of fucking Lumi:
@@ -195,5 +207,49 @@ instead of fucking Lumi:
 Section 4 - Events
 
 []
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Nine	"White Wolf Nine"
+
+White Wolf Nine is a pet.
+NPCObject of White Wolf Nine is Lumi.
+understand "Lumi" as White Wolf Nine.
+IDList of White Wolf Nine is { "Lumi", "lumi", "White Wolf Nine", "white wolf nine" }.
+printed name of White Wolf Nine is "Lumi".
+Description of White Wolf Nine is "[LumiDesc]".
+Weapon Damage of White Wolf Nine is 15.
+The level of White Wolf Nine is 1.
+Dexterity of White Wolf Nine is 15.
+The summondesc of White Wolf Nine is "[SummonLumi]".
+The dismissdesc of White Wolf Nine is "[DismissLumi]".
+The assault of White Wolf Nine is "[one of]Lumi leaps at your opponent, siezing them by the shoulder and using her momentum to pull them over as she flies past.[or]Lumi nips at your opponent's heels before attempting to sink her teeth into the back of their leg.[or]Lumi lets out a sudden howl, startling your foe and leaving them open for an opportunistic attack.[or]Lumi slashes her claws at your opponent, snarling as she does so.[at random]".
+the fuckscene of White Wolf Nine is "WIP".
+
+to say SummonLumi:
+	if Lumi is visible: [summoning while standing next to him]
+		say "     Walking over to Lumi, you ask whether she would be interested in coming with you out into the city. Her tail wagging wildly, she bounds around you, eventually leaping up to give you a lick. 'Of course, [BlancheMomDadTitle]. I'm sure that you find the best treasures and I get to find them with you.' With her at your side, perhaps you'll find even better loot than before.";
+	else: [regular summoning]
+		say "     Lumi for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+
+to say DismissLumi:
+	move Lumi to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Lumi's attention and tell her that she should head back to the library for now. She tucks her tail between her legs but nods her acceptance nonetheless. 'Mommy says that we're stronger as a family, but I suppose that I can be a lone wolf for a bit. Just don't be too long, [BlancheMomDadTitle]. I'll have new things in my stash to show you when you get back,' she requests. After giving you a lick on the cheek, she walks away. You know that she can handle herself, but you still feel guilty as she walks away. ";
+		if White Wolf Ten is listed in companionlist of Player: [Casper]
+			say "'We should try to bring her back something nice. I know that I like gifts. Perhaps a squeaky toy...' Casper suggests. ";
+		else:
+			say "She'll probably scrounge something up for Casper on her way back home. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Lumi in the abbey]
+		say "     With a word, you get Lumi's attention and tell her that she should stay here at the library for now. She tucks her tail between her legs but nods her acceptance nonetheless. 'Mommy says that we're stronger as a family, but I suppose that we can't all go with you. Just don't be too long, [BlancheMomDadTitle]. I'll have new things in my stash to show you when you get back,' she requests. After giving you a lick on the cheek, she walks away. You know that she can handle herself, but even she needs a rest from time to time. ";
+		if White Wolf Ten is listed in companionlist of Player: [Casper]
+			say "'We should try to find her something nice while we're out. I know that I like gifts. Perhaps a squeaky toy...' Casper suggests. ";
+		else:
+			say "You would imagine that Casper will play ball with her while you're away. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Lumi ends here.

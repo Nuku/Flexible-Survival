@@ -443,7 +443,7 @@ Section 3 - Helper Dog Event & Pet
 
 [Helper Dog moved to Hobo file]
 
-Section 4 - The Hidden Lab & Dr. Mouse
+Section 4 - The Hidden Lab & Doctor Mouse
 
 An everyturn rule:
 	if hospquest is 0 and HP of Doctor Matt > 7:	[Not started hospital quest & found susan (regardless of outcome) _or_ Dr Matt is only a recording]
@@ -613,7 +613,7 @@ Instead of conversing the Doctor Mouse:
 		say "((Hospital Quest 2 ends here for now.))";
 
 
-Section 5 - Dr. Mouse's Quests
+Section 5 - Doctor Mouse's Quests
 
 [	hospquest values        ]
 [	0 new				]

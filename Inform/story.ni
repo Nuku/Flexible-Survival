@@ -760,6 +760,7 @@ Include Brennan's Wolves by Wahn.
 Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
+Include Bucky by Wahn.
 Include Bubble by Stripes.
 Include Cadmea by Prometheus.
 Include Campus Gym by UrsaOmega.
@@ -835,6 +836,7 @@ Include Hayato by Gherod.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
+Include Hercules by Wahn.
 Include Hope-Born Dragon by Prometheus.
 Include HornyHorsey by Guest Writers.
 [Include Horus by Rikaeus.]

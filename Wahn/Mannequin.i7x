@@ -496,8 +496,6 @@ to say ResolveEvent Stolen Lives:
 		now Resolution of Stolen Lives is 99; [fled, not watched]
 	now Stolen Lives is resolved;
 
-[
-
 Table of GameEventIDs (continued)
 Object	Name
 Lost Souls	"Lost Souls"
@@ -507,7 +505,7 @@ ResolveFunction of Lost Souls is "[ResolveEvent Lost Souls]".
 Sarea of Lost Souls is "Warehouse".
 Prereq1 of Lost Souls is Stolen Lives.
 PrereqTime of Lost Souls is "Night".
-The Prereq1Resolution of Lost Souls is { 50 }. [TODO: Change this to 1 to enable later]
+The Prereq1Resolution of Lost Souls is { 1 }.
 
 to say ResolveEvent Lost Souls:
 	if Resolution of Lost Souls is not 98: [first encounter]
@@ -523,7 +521,7 @@ to Mannequin_Warehouse_ChoicePoint:
 	say "     [bold type]Do you want to explore the warehouse?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Sure, you might find something interesting.";
 	say "     [link](2)[as]2[end link] - Not right now. Maybe later.";
-	say "     [link](3)[as]3[end link] - Nope. No. Definitely not! You're out of here";
+	say "     [link](3)[as]3[end link] - Nope. No. Definitely not! You're out of here.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
@@ -543,9 +541,10 @@ to Mannequin_Warehouse_ChoicePoint:
 		say "     Looking over your shoulder, you see the deer standing just a step or two behind you, arm outstretched as it was when you were pulling him. Given their similarities, and just where you found these two, you are fairly certain that the deer is another mannequin that must have absorbed this shape. If you had to guess, they both likely tried to fit in and become their new selves, yet despaired after however many tries. Maybe they then gave up and returned to 'their people' in this warehouse? Or did someone bring them here? Arrange these two like this? Who would do this, and why? Whatever may be the truth, here they are now, as incredibly lifelike dolls with apparently no will of their own. Wondering if there might be more of these transformed mannequins, you glance around and let your gaze sweep over the mass of shapes. There are so many of them in the darkness, yet you don't spot anything but the plastic-y, wooden or metallic shapes of normal mannequins. Who knows, more might arrive or be brought here in the future and be found through a more thorough search. Best not to step away from your two current finds right now, as you might lose your way in the crowd and not find them again.";
 		say "     Turning back to the deer and horseman, you contemplate what to do now. While doing so, are struck by the thought that the buck's skinny jeans seem a little [italic type]too[roman type] skinny in the crotch area. Stepping closer, you say more to yourself than him that you got to check for his wallet, maybe find out his name, and slip your hand into the tight pockets of the jeans. There is still no reaction from the buck, so you feel comfortable enough to go ahead and opening the jeans up at the front, allowing you to find out that this deer has one single part that is more doe than buck, as he has a pussy between his legs. Raising your eyebrows at that revelation, you zip him back up and push the lower edge of the tank top back down. While you're exploring, you find yourself pulling open his mouth, and look inside, seeing it perfectly realistic shape, down to a throat going down at the back, and having a moist, soft tongue. The thought of if they need to eat arises in you, and if these beings might just starve if they continue standing here all on their own. Finally, you gently pull down an eyelid, which stays as you place it, then push it up again.";
 		say "     [bold type]On a whim, you give the two of them the names Bucky and Hercules, then prepare yourself to make a decision of your next step.[roman type][line break]";
+		say "     <Writer's Note: As of right now, Bucky is still WIP and the options to pick him are disabled.>[line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		[]
+		[
 		choose a blank row in table of fucking options;
 		now title entry is "Grab Bucky's hand and bring him to the library";
 		now sortorder entry is 1;
@@ -555,7 +554,7 @@ to Mannequin_Warehouse_ChoicePoint:
 		now title entry is "Pick Bucky to be a sex doll and take him to the library";
 		now sortorder entry is 2;
 		now description entry is "Grab the deer as a readily available fucktoy";
-		[]
+		]
 		choose a blank row in table of fucking options;
 		now title entry is "Grab Hercules's hand and bring him to the library";
 		now sortorder entry is 3;
@@ -602,11 +601,11 @@ to Mannequin_Warehouse_ChoicePoint:
 		now Lost Souls is resolved;
 	else if calcnumber is 2:
 		LineBreak;
-		say "     ";
+		say "     This is a little bit creepy for you, right now. Maybe you can explore it some other time, but for now you're out of here!";
 		now Resolution of Lost Souls is 98;
 	else: [leave]
 		LineBreak;
-		say "     This doesn't look like a place you want to be in, much less at night! You're out of here, now!";
+		say "     This doesn't look like a place you want to be in, much less at night! You're out of here, now! And you'll make a special mental note to avoid this building in the future too!";
 		now Resolution of Lost Souls is 99;
 		now Lost Souls is resolved;
 
@@ -614,6 +613,7 @@ to say Bucky_Person:
 	say "     Reaching out to caress the slender buck's cheek, you talk to him like you would a [']normal['] person, gently explaining that he can be more than just a doll. He's got a whole life to be lived and you want to try to bring him back from this... catatonia he's sunk into. There is no reaction at all, not that you expected any really, but you still keep at it, laying out that you'll bring him somewhere new, and do your best for him. Then you take hold of the slender buck's hand and guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your charge all the way home.";
 	move Bucky to Back of the Library;
 	move Player to Back of the Library;
+	TraitGain "Therapy Project" for Bucky;
 	say "     When you eventually arrive, you guide him into the backwards half of the library, from where he can see out the windows into the garden. On top of that, there's sofa space available to allow him to be made to sit or lay down (thinking that it must be uncomfortable for him to stand all the time), and also lots of books, to maybe read to him. ";
 	if (number of bunkered people + number of booked people > 2):
 		say "After that, you announce publicly that Bucky is not a doll or anything, but a person, and he needs all the support he can get to become normal again.";
@@ -699,7 +699,7 @@ to say Bucky_Person:
 			say "     Walking up to Bucky, Elijah studies the doll-like buck for a moment, then reaches out to him. With his hand almost, but not quite, touching the anthro's forehead, he closes his eyes and seems to concentrate for a short moment, then suddenly steps forward to wrap his arms and wings around the slender deer, pulling him into a warm embrace. 'I can feel your fear, your desperation. Know that you are not alone my friend, and I will be here for you. God loves all of his children, no matter what form.' After just holding him and stroking Bucky's hair a little, Elijah then steps back, giving you a respectful nod for wanting to help the former mannequin.";
 		TraitGain "Bucky - Seen him" for Elijah;
 		WaitBreakReactions;
-	if Eric is booked or Eric is bunkeredand Eric is not slutstored:
+	if Eric is booked or Eric is bunkered and Eric is not slutstored:
 		if HP of Eric > 0 and HP of Eric < 21:
 			say "     Coming closer slowly, Eric bites his lip as he looks at the buck, then finally says, 'Hello, I - I'm Eric. You, uhm... I wanted to tell you that I wish you the best. Maybe I can help you with that too. I mean, even with all of us being changed to a greater or lesser extent by all of the things happening, there's always hope, right?' He gives Bucky a shy smile, then retreats, for now. ";
 		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
@@ -769,7 +769,7 @@ to say Bucky_Person:
 			say "     Tehuantl comes up to you, rubbing her side against your own and giving you a nod. 'You are a merciful master, even taking in those that are lost in their own minds. I will guard him while you are away, and tell this one of your greatness so he knows the debt he owns, and will serve faithfully once he wakes.' With a confident smile to you, she then walks off again.";
 		WaitBreakReactions;
 	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
-		say "     Sarah walks up to Bucky with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes. 'This makes absolutely no sense! He isn't breathing, but has a pulse, and is standing despite having no response at all to my light! I -' Sarah says, only to stop herself and then looking down at her own canine body. 'I guess I shouldn't be surprised anymore about weird things, with everything that can happen, does happen, these days. So yeah, let's fall back to the basics. Ignoring his body for now, it looks like Bucky is in a sort of fugue state. I'm no psychologist, but I think talking to him might be the way to go. He should be able to hear us, and there's a slight chance it might help him find his way back.' Patting the buck on the shoulder, she leans closer and says in a soft voice, 'We'll get you better. I promise I'll visit you regularly.' Giving you a nod, the husky doctor then walks away, a thoughful expression on her face.";
+		say "     Sarah walks up to Bucky with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes. 'This makes absolutely no sense! He isn't breathing, and neither has a pulse, yet has body heat and is standing despite having no response at all to my light! I -' Sarah says, only to stop herself and then looking down at her own canine body. 'I guess I shouldn't be surprised anymore about weird things, with everything that can happen, does happen, these days. So yeah, let's fall back to the basics. Ignoring his body for now, it looks like Bucky is in a sort of fugue state. I'm no psychologist, but I think talking to him might be the way to go. He should be able to hear us, and there's a slight chance it might help him find his way back.' Patting the buck on the shoulder, she leans closer and says in a soft voice, 'We'll get you better. I promise I'll visit you regularly.' Giving you a nod, the husky doctor then walks away, a thoughful expression on her face.";
 		TraitGain "Bucky - Seen him" for Sarah;
 		WaitBreakReactions;
 	if Sven is booked or Sven is bunkered:
@@ -789,6 +789,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Xerxes;
 		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 20; [Took Bucky as Person]
 
 to say Bucky_Toy:
 	say "     Taking hold of the slender buck's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
@@ -799,10 +800,12 @@ to say Bucky_Toy:
 		say "     Deciding that this is [bold type]your[roman type] cuntboy buck sex toy, you guide him down the stairs and into the bunker, placing Bucky in a corner next to your bed.";
 		move Bucky to Maintenance Storeroom;
 		move Player to Maintenance Storeroom;
+		TraitGain "Private Sex Toy" for Hercules;
 	else:
 		LineBreak;
 		move Bucky to Back of the Library;
 		move Player to Back of the Library;
+		TraitGain "Public Sex Toy" for Hercules;
 		say "     Deciding that a publicly available cuntboy sex doll might be a good idea, you guide Bucky towards the back of the library, placing him next to the sofa there. ";
 		if (number of bunkered people + number of booked people > 2):
 			say "After that, you announce publicly that Bucky is not actually a person, but just a really realistic cuntboy doll.";
@@ -877,7 +880,7 @@ to say Bucky_Toy:
 			]
 			WaitBreakReactions;
 		if David is booked or David is bunkered:
-			say "     Coming up, David looks Bucky up and down, then blushes when you smile at his interest. 'I - uhm, he looks to lifelike!' the young man says, reaching out to feel the fur on Bucky's arm. 'And you say he's got a pussy? Seems like an odd combination. Why wouldn't they have put boobs on there too? But anyways, I don't even know if I should, uhm... you know.' Smiling a little, you give an understanding nod, then add that there's no rush, Bucky will stay right here and be available. David takes a deep breath, letting his eyes wander a bit more again, then shakes himself out of it. 'Uh, I should go,' he says somewhat embarrassedly[if Libido of David > 56 and Libido of David < 99]. As he walks away afterwards, you hear him mumble to himself, 'Maybe together with Brutus...' [else]and walks away. [end if][line break]";
+			say "     Coming up, David looks Bucky up and down, then blushes when you smile at his interest. 'I - uhm, he looks so lifelike!' the young man says, reaching out to feel the fur on Bucky's arm. 'And you say he's got a pussy? Seems like an odd combination. Why wouldn't they have put boobs on there too? But anyways, I don't even know if I should, uhm... you know.' Smiling a little, you give an understanding nod, then add that there's no rush, Bucky will stay right here and be available. David takes a deep breath, letting his eyes wander a bit more again, then shakes himself out of it. 'Uh, I should go,' he says somewhat embarrassedly[if Libido of David > 56 and Libido of David < 99]. As he walks away afterwards, you hear him mumble to himself, 'Maybe together with Brutus...' [else]and walks away. [end if][line break]";
 			TraitGain "Bucky - Seen him" for David;
 			WaitBreakReactions;
 		if Denise is booked or Denise is bunkered:
@@ -940,7 +943,7 @@ to say Bucky_Toy:
 				say "     Walking up, Korvin looks Bucky up and down with interest, grabbing his hip and giving it a little squeeze. 'It'll be awesome to pound something again!' the German shepherd says, seeming eager to feel a bit of his old, wild self again with the sex doll. He glances over at you, pausing to see what you make of his desire, and seems relieved when you give a generous nod. With his tail wagging behind his back, the anthro then walks off.";
 				TraitGain "Bucky - Seen him" for Korvin;
 			else:
-				say "     Walking up with a swagger in his step, Korvin looks Bucky up and down. 'Nice toy you got us there,' he says with an eager grin, then grabs the anthro deer's chest and gives his flat pecs a squeeze. Too bad you didn't get one that's a bit more top-heavy, but as long as he's got a juicy pussy, I'm not gonna kick him out of bed, hah!' Grabbing his crotch and adjusting himself, the horny dog then walks off. Before he's fully out of earshot, you can hear him muse to himself, 'I wonder if these things can be knocked up...'";
+				say "     Walking up with a swagger in his step, Korvin looks Bucky up and down. 'Nice toy you got us there,' he says with an eager grin, then grabs the anthro deer's chest and gives his flat pecs a squeeze. 'Too bad you didn't get one that's a bit more top-heavy, but as long as he's got a juicy pussy, I'm not gonna kick him out of bed, hah!' Grabbing his crotch and adjusting himself, the horny dog then walks off. Before he's fully out of earshot, you can hear him muse to himself, 'I wonder if these things can be knocked up...'";
 				TraitGain "Bucky - Seen him" for Korvin;
 			WaitBreakReactions;
 		if Klauz is booked or Klauz is bunkered:
@@ -993,12 +996,13 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Xerxes;
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
-
+	now Resolution of Lost Souls is 21; [Took Bucky as Toy]
 
 to say Hercules_Person:
 	say "     Reaching out to touch the tall and muscular horseman's side, you talk to him like you would a [']normal['] person, gently explaining that he can be more than just a doll. He's got a whole life to be lived and you want to try to bring him back from this... catatonia he's sunk into. There is no reaction at all, not that you expected any really, but you still keep at it, laying out that you'll bring him somewhere new, and do your best for him. Then you take hold of the towering equine's hand and guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your charge all the way home.";
 	move Hercules to Back of the Library;
 	move Player to Back of the Library;
+	TraitGain "Therapy Project" for Hercules;
 	say "     When you eventually arrive, you guide him into the backwards half of the library, from where he can see out the windows into the garden. On top of that, there's sofa space available to allow him to be made to sit or lay down (thinking that it must be uncomfortable for him to stand all the time), and also lots of books, to maybe read to him. ";
 	if (number of bunkered people + number of booked people > 2):
 		say "After that, you announce publicly that Hercules is not a doll or anything, but a person, and he needs all the support he can get to become normal again.";
@@ -1084,7 +1088,7 @@ to say Hercules_Person:
 			say "     Walking up to Hercules, Elijah studies the doll-like buck for a moment, then reaches out to him. With his hand almost, but not quite, touching the anthro's forehead, he closes his eyes and seems to concentrate for a short moment, then suddenly steps forward to wrap his arms and wings around the muscular Clydesdale, pulling him into a warm embrace. 'I can feel your fear, your desperation. Know that you are not alone my friend, and I will be here for you. God loves all of his children, no matter what form.' After just holding him and stroking Hercules's hair a little, Elijah then steps back, giving you a respectful nod for wanting to help the former mannequin.";
 		TraitGain "Hercules - Seen him" for Elijah;
 		WaitBreakReactions;
-	if Eric is booked or Eric is bunkeredand Eric is not slutstored:
+	if Eric is booked or Eric is bunkered and Eric is not slutstored:
 		if HP of Eric > 0 and HP of Eric < 21:
 			say "     Coming closer slowly, Eric bites his lip as he looks at the buck, then finally says, 'Hello, I - I'm Eric. You, uhm... I wanted to tell you that I wish you the best. Maybe I can help you with that too. I mean, even with all of us being changed to a greater or lesser extent by all of the things happening, there's always hope, right?' He gives Hercules a shy smile, then retreats, for now.";
 		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
@@ -1154,7 +1158,7 @@ to say Hercules_Person:
 			say "     Tehuantl comes up to you, rubbing her side against your own and giving you a nod. 'You are a merciful master, even taking in those that are lost in their own minds. I will guard him while you are away, and tell this one of your greatness so he knows the debt he owns, and will serve faithfully once he wakes.' With a confident smile to you, she then walks off again.";
 		WaitBreakReactions;
 	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
-		say "     Sarah walks up to Hercules with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes, having to stretch quite a bit due to his height. 'This makes absolutely no sense! He isn't breathing, but has a pulse, and is standing despite having no response at all to my light! I -' Sarah says, only to stop herself and then looking down at her own canine body. 'I guess I shouldn't be surprised anymore about weird things, with everything that can happen, does happen, these days. So yeah, let's fall back to the basics. Ignoring his body for now, it looks like Hercules is in a sort of fugue state. I'm no psychologist, but I think talking to him might be the way to go. He should be able to hear us, and there's a slight chance it might help him find his way back.' Patting the buck on the shoulder, she leans closer and says in a soft voice, 'We'll get you better. I promise I'll visit you regularly.' Giving you a nod, the husky doctor then walks away, a thoughful expression on her face.";
+		say "     Sarah walks up to Hercules with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes, having to stretch quite a bit due to his height. 'This makes absolutely no sense! He isn't breathing, and neither has a pulse, yet has body heat and is standing despite having no response at all to my light! I -' Sarah says, only to stop herself and then looking down at her own canine body. 'I guess I shouldn't be surprised anymore about weird things, with everything that can happen, does happen, these days. So yeah, let's fall back to the basics. Ignoring his body for now, it looks like Hercules is in a sort of fugue state. I'm no psychologist, but I think talking to him might be the way to go. He should be able to hear us, and there's a slight chance it might help him find his way back.' Patting the buck on the shoulder, she leans closer and says in a soft voice, 'We'll get you better. I promise I'll visit you regularly.' Giving you a nod, the husky doctor then walks away, a thoughful expression on her face.";
 		TraitGain "Hercules - Seen him" for Sarah;
 		WaitBreakReactions;
 	if Sven is booked or Sven is bunkered:
@@ -1174,198 +1178,220 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Xerxes;
 		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 10; [Took Hercules as Person]
+	TraitGain "Naked" for Hercules;
 
 to say Hercules_Toy:
-	say "...";
-	if Alexandra is booked or Alexandra is bunkered:
-		say "     <interest>";
-		TraitGain "Hercules - Seen him" for Alexandra;
-		WaitBreakReactions;
-	if Amy is booked or Amy is bunkered:
-		say "     <scared, massive and muscular, not a person>";
-		TraitGain "Hercules - Seen him" for Amy;
-		WaitBreakReactions;
-	[--------------]
-	if Brutus is booked or Brutus is bunkered:
-		if DBCaptureQuestVar is 5: [controlled]
+	say "     Taking hold of the tall and muscular Clydesdale's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
+	say "     ([link]Y[as]y[end link]) - Your bedroom, down in the bunker, for private use."; [TODO: add a potential 'reserved' sticker if he's moved out later]
+	say "     ([link]N[as]n[end link]) - Why not put him in the back of the library, available for everyone.";
+	if Player consents: [private use]
+		LineBreak;
+		say "     Deciding that this is [bold type]your[roman type] equine hunk sex toy, you guide him down the stairs and into the bunker, placing Hercules in a corner next to your bed.";
+		move Hercules to Maintenance Storeroom;
+		move Player to Maintenance Storeroom;
+		TraitGain "Private Sex Toy" for Hercules;
+	else:
+		LineBreak;
+		move Hercules to Back of the Library;
+		move Player to Back of the Library;
+		TraitGain "Public Sex Toy" for Hercules;
+		say "     Deciding that a publicly available equine hunk sex doll might be a good idea, you guide Hercules towards the back of the library, placing him next to the sofa there. ";
+		if (number of bunkered people + number of booked people > 2):
+			say "After that, you announce publicly that Hercules is not actually a person, but just a really realistic horseman stud doll.";
+		LineBreak;
+		if Alexandra is booked or Alexandra is bunkered: [70/30]
+			say "     Alexandra saunters closer, letting her gaze drift up and down over Hercules. 'Well, well - what do we have here? That's one big stud you've brought over! Is he... fully functional, and all that?' Alexandra says, adding a wave to indicate the soft cock down at the Clydesdale's crotch as she says the last sentence. As you nod, she snorts and comments, 'You really are one kinky fucker, boss! Bet you'll want to watch as I use this thing, eh?' After that, the doberwoman walks away.";
+			TraitGain "Hercules - Seen him" for Alexandra;
+			WaitBreakReactions;
+		if Amy is booked or Amy is bunkered:
+			say "     Amy shily approaches the Clydesdale, then hesitantly says, 'Hello there.' As he doesn't reply, the young woman looks at you in slight confusion. 'Why isn't he saying anything?' You explain again that Hercules really isn't a person, and she can make use of him sexually if she wants, but the husky looks a little skittish in reaction. 'I, uhm... I'm not sure I could. He does look mighty good, but... it's a bit eerie, that he just stares blankly like that.' With that said, she retreats from the sex doll, glancing back at it a few times before moving out of sight.";
+			TraitGain "Hercules - Seen him" for Amy;
+			WaitBreakReactions;
+		if Brutus is booked or Brutus is bunkered:
+			if DBCaptureQuestVar is 5: [controlled]
+				[
+				if "Master's Bite" is listed in Traits of demon brute:
+					say "     <ask Luneth>";
+				else
+				]
+				if Resolution of Demonic Redemption is 7: [somewhat pacified]
+					say "     Brutus steps up to Hercules, a broad grin filled with dangerous teeth on his face. 'Just a toy, eh master?' he grunts. Then the demon's hand suddenly shoots forward, grabbing the horseman by the neck and lifting him off the ground. He seems a little disappointed that there is no sign of struggle from Hercules, even as Brutus shakes him a bit. Grabbing Hercules's crotch, he seems ready to squeeze his balls, his own cock throbbing in vicious anticipation. 'I'm going to fuck the shit out of this thing!' he says in an amused tone. You hastily add that the equine is supposed to stay in one piece, so while he can be used sexually, Brutus should take at least some care with him. You're not going to get a new one if he breaks Hercules. 'Mh - fine,' Brutus grunts and sets him back down, then walks off.";
+				else: [standard hateful captive]
+					say "     Brutus steps up to Hercules, a broad grin filled with dangerous teeth on his face. 'Just a toy, eh... master?' he grunts. Then the demon's hand suddenly shoots forward, grabbing the horseman by the neck and lifting him off the ground. He seems disappointed that there is no sign of struggle from Hercules, even as claws start drawing some blood. Grabbing Hercules's crotch, he seems ready to let out some of his more violent impulses, with the demon's own cock throbbing in vivious anticipation. 'I'm going to rape the shit out of this thing!' he says in an amused tone. You hastily add that the equine is supposed to stay in one piece, so while he can be used sexually, Brutus can't unleash his bloodlust on top of that. 'Ride a lamppost and die, you-' Brutus growls before you cut him off with a sharp gesture, then sets Hercules back down after you order it and walks off.";
+				TraitGain "Hercules - Seen him" for Brutus;
+			else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+				say "     Brutus steps up to Hercules, eyeing him up and down, then reaching out to grab his hair and bending the former mannequin's head back, using a clawed finger to open the anthro's mouth. Grinning, you remind him that Hercules also has a receptive asshole for him to fuck as hard as he wants to. 'I want to ram my shaft hard into a sweet hole again!' the purple demon says with a smile full of needle-sharp teeth spreading over his face. Then he pauses and his expression falls a little, followed by the words, 'Might break him by accident though.' Brutus lets out a weary sigh, then shrugs, at which point you pat his arm in a comforting way. As one of the affected by the nanites, the stud of a horseman will surely be more resilient than Brutus thinks. And even if he gets a little stretched, that'll surely be back to being virgin tight in no time. Relieved from getting your okay to try Hercules, there is a visible throb of Brutus's dick. The enormous demon has a libido to match his size, after all. [if Libido of David > 56 and Libido of David < 99]'Could share him with David...' you hear Brutus say almost dreamily as he walks off afterwards. [end if][line break]";
+				TraitGain "Hercules - Seen him" for Brutus;
+			WaitBreakReactions;
+		if Candy is booked or Candy is bunkered:
+			say "     Candy saunters up to Hercules and looks the anthro horseman up and down, then proclaims, 'Man, that's some beefcake! Hmm... you said every one can use him, and he's effectively a big doll. Can I dress him up a bit? Just imagine, black harness straps crossing the chest in a big X, and maybe chaps, then... ooh, this'll be so much fun!' Chuckling, you nod to the raccoon, who walks off with an eager smirk on his muzzle.";
+			TraitGain "Hercules - Seen him" for Candy;
+			WaitBreakReactions;
+		if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
+			say "     The pink raccoon comes up to Hercules and straight away starts to paw and touch his body. Seems like he took your invitation of free use literally and is ready to have a go, right now. Chuckling, you shoo him away, saying that he'll have plenty of time later. Might just be fun to get something going with both of your toys stacked on top of each other sometime.";
+			TraitGain "Hercules - Seen him" for Candy;
+			WaitBreakReactions;
+		if Carl is booked or Carl is bunkered:
+			if HP of Carl is 30: [beta carl]
+				say "     Carl comes up to you, glancing aside at Hercules with interest but keeping most of his attention on yourself. 'Thank you for this fun toy, Alpha!' the husky soldier says happily, tail wagging behind his back. He brushes a hand over the horseman's chest, feeling his muscles and being surprised in the lifelike warmth that the doll has. You can almost see the thoughts of what he wants to do with the sex doll in the broadness of his smile as he wanders off afterwards.";
+			else:
+				say "     Carl comes up to you, mostly staring straight ahead, but not quite managing his eyes from flicking aside at Hercules several times. 'A sex doll? I, uhm... I always thought just sexual deviants get something like th- err, oh, sorry - no offense meant!' You wave his worried expression away casually, then shrug and say he shouldn't discount something he hasn't tried so quickly. Carl raises his eyebrows, hesitates, then finally says, 'Uhm... I should get back to the observation post.' With that said, he walks off. You notice that he pauses for a second before moving completely out of sight, throwing a furtive glance at Hercules and slowly wagging the tail behind his back. Maybe the husky isn't quite as down on the sex doll as he says openly.";
+			TraitGain "Hercules - Seen him" for Carl;
+			WaitBreakReactions;
+		if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
+			if Libido of Chris is 0: [half-orc]
+				say "     Chris strolls right up to Hercules, checking him out openly. '[if Thirst of Val is 2]Wow, dad! [end if]Looks like a fun toy. That's so neat!' the young orc says, then reaches down to give his firm as a testing squeeze, then moves on to also feel the heft of the anthro horseman's cock and balls. Grinning eagerly, he gives you a [if Thirst of Val is 2]hug[else]fist-bump[end if], then wanders off. Seems like Chris is less set in his ways than the other orcs, even though he sees the ass as the first place to go sexually.";
+				TraitGain "Hercules - Seen him" for Chris;
+			else if Libido of Chris is 1: [orc breeder]
+				if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
+					say "     Chris saunters up to Hercules, checking him out with interest. Then he asks shily, 'So, [if Thirst of Val is 2]daddy, [end if]uhm... with this being a toy, could I - could I be on top? Be the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day, but remind him that he needs to keep himself ready for [if Thirst of Val is 2]daddy [else]you [end if] still. 'Of course!' Chris says with an obedient and eager nod, then walks off with a big smile on his face.";
+					TraitGain "Hercules - Seen him" for Chris;
+				else: [happy breeder]
+					say "     Chris saunters up to Hercules, checking him out with interest and even touching the large horseman a little. '[if Thirst of Val is 2]Wow, daddy! [end if]He looks like he should be fun. And with him being a toy, I could be on top too, right?! Be the one fucking his ass! BBe the one fucking his ass, you know. Not that I won't also try out this big rod at the front, but...' Chuckling and nodding, you make the young orc's day. Ruffling [if Thirst of Val is 2]your son's [else]his [end if] hair, you tell him to have fun and enjoy himself. Breeders can play around with being the dominant partner too, why not! Chris looks happy at your encouragement, walking off with a big smile on his face.";
+					TraitGain "Hercules - Seen him" for Chris;
+			else if Libido of Chris is 2: [orc warrior]
+				if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
+					say "     Chris struts up to the anthro horseman, immediately sliding an arm around Hercules to feel his rear end and giving it a squeeze. '[if Thirst of Val is 2]Wow, pops! [end if]Oh yeah, this'll be fun! Nice toy you brought us here! Hope he's got a nice tight rear end! Gonna breed that thing so hard, hah!' Grinning eagerly, he gives you a [if Thirst of Val is 2]hug[else]fist-bump[end if], then wanders off.";
+					TraitGain "Hercules - Seen him" for Chris;
+				else: [dominant warrior Chris]
+					say "     Chris struts up to the anthro horseman, looking Hercules up and down, then gives him a shove in the chest, causing the anthro to stumble back before catching himself and keeping an awkward pose. Shaking your head, you pull Hercules straight again. '[if Thirst of Val is 2]Hmm pops, [else]Hmm, [end if]I don't know. It's big and beefy, but there's no fight in this thing, that's pretty boring. I'd rather grab a nice dude from the streets. Who needs a thing like this? Only a breeder playing pretend, I guess. [if Thirst of Val is 2 and Stamina of Chris > 0]I got my dad-slut for that[else]I want the real deal[end if]!' With a disinterested shrug, the orc warrior then wanders off.";
+					TraitGain "Hercules - Seen him" for Chris;
+			WaitBreakReactions;
+		if Colleen is booked or Colleen is bunkered:
+			if SarahSlut < 2: [not transformed, or only a little]
+				say "     Keeping her distance as she stares at Hercules and shakes her head, Colleen then looks over to you. 'What the fuck? What's wrong with your priorities?! Everyone is fighting for their lives and you take the time to drag [italic type]that[bold type] through the city? You should've kept things in your pants, pretty much anything else could have been more useful!' Shaking her head in frustration, the soldier then turns around and walks away.";
+				TraitGain "Hercules - Seen him" for Colleen;
+			else if ColleenAlpha is 0:
+				say "     Walking right up, Colleen looks at Hercules with her tail wagging behind her back. 'You brought us something new, boss? Awesome, looks like a neat toy!' True to the sexy dog she's become, the transformed soldier seems pretty eager to make use of the anthro horseman. With a chuckle, you wave her off for now, saying that she'll have plenty of time later.";
 			[
-			if "Master's Bite" is listed in Traits of demon brute:
-				say "     <ask Luneth>";
-			else
+			else if ColleenAlpha > 0:
+				say "..."; [TODO: write this]
 			]
-			if Resolution of Demonic Redemption is 7: [somewhat pacified]
-				say "     <not a person? rules don't apply? player says not to break him completely>";
-			else: [standard hateful captive]
-				say "     <not a person? rules don't apply? player says not to break him completely>";
-			TraitGain "Hercules - Seen him" for Brutus;
-		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
-			say "     <relief without having to worry? if in relationship with David: alright to share?>";
-			TraitGain "Hercules - Seen him" for Brutus;
-		WaitBreakReactions;
-	if Candy is booked or Candy is bunkered:
-		say "     <ride him! can I play dressup too?>";
-		TraitGain "Hercules - Seen him" for Candy;
-		WaitBreakReactions;
-	if Pink Raccoon is booked or Pink Raccoon is bunkered: [mindless Candy]
-		say "     <paws at Hercules, seems ready to use him>";
-		TraitGain "Hercules - Seen him" for Candy;
-		WaitBreakReactions;
-	if Carl is booked or Carl is bunkered:
-		if HP of Carl is 30: [beta carl]
-			say "     <fun toy, gift from the Alpha!>";
-		else:
-			say "     <I would never! secretly uses (fucks)>";
-		TraitGain "Hercules - Seen him" for Carl;
-		WaitBreakReactions;
-	if Chris is booked or Chris is bunkered: [TODO: add special stuff if they're brothers]
-		if Libido of Chris is 0: [half-orc]
-			say "     <fun toy>";
-			TraitGain "Hercules - Seen him" for Chris;
-		else if Libido of Chris is 1: [orc breeder]
-			if "Breeder_Slut" is listed in Traits of Chris: [slut breeder]
-				say "     <fun toy - I can be on top with such a big guy?!>";
-				TraitGain "Hercules - Seen him" for Chris;
-			else: [happy breeder]
-				say "     <fun toy - I can be on top with such a big guy?!>";
-				TraitGain "Hercules - Seen him" for Chris;
-		else if Libido of Chris is 2: [orc warrior]
-			if "Bro" is listed in Traits of Chris or "Bro with Benefits" is listed in Traits of Chris or "Dad with Benefits" is listed in Traits of Chris:
-				say "     <fun toy>";
-				TraitGain "Hercules - Seen him" for Chris;
-			else: [dominant warrior Chris]
-				say "     <boring, doesn't struggle (at least he's big)>";
-				TraitGain "Hercules - Seen him" for Chris;
-		WaitBreakReactions;
-	if Colleen is booked or Colleen is bunkered:
-		if SarahSlut < 2: [not transformed, or only a little]
-			say "     <wtf is wrong with you?! creepy!>";
-			TraitGain "Hercules - Seen him" for Colleen;
-		else if ColleenAlpha is 0:
-			say "     <fun male toy!>";
-		[
-		else if ColleenAlpha > 0:
-			say "..."; [TODO: write this]
-		]
-		WaitBreakReactions;
-	if David is booked or David is bunkered:
-		say "     <embarrassed, secretly uses - might think of using with Brutus>";
-		TraitGain "Hercules - Seen him" for David;
-		WaitBreakReactions;
-	if Denise is booked or Denise is bunkered:
-		say "     <too big and dangerous for her to want to use>";
-		TraitGain "Hercules - Seen him" for Denise;
-		WaitBreakReactions;
-	if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
-		if HP of Elijah is 99: [evil] [TODO: add manipulation?]
-			say "     <pound it all day, casually, when he doesn't want to hunt, fun to bend a big guy without a fight>";
-			TraitGain "Hercules - Seen him" for Elijah;
-		else: [good]
-			say "     <not interested, having sex must be special>";
-			TraitGain "Hercules - Seen him" for Elijah;
-		WaitBreakReactions;
-	if Eric is booked or Eric is bunkered:
-		if HP of Eric > 0 and HP of Eric < 21:
-			say "     <loves big guys, shy about using him>";
+			WaitBreakReactions;
+		if David is booked or David is bunkered:
+			say "     Coming up, David looks Hercules up and down, then blushes when you smile at his interest. 'I - uhm, he looks so lifelike!' the young man says, reaching out to feel the fur on Hercules's arm. 'Having some warm holes to get off in would be neat, but I don't even know if I should, uhm... you know.' Smiling a little, you give an understanding nod, then add that there's no rush, Hercules will stay right here and be available. David takes a deep breath, letting his eyes wander a bit more again, then shakes himself out of it. 'Uh, I should go,' he says somewhat embarrassedly[if Libido of David > 56 and Libido of David < 99]. As he walks away afterwards, you hear him mumble to himself, 'Maybe together with Brutus...' [else]and walks away. [end if][line break]";
+			TraitGain "Hercules - Seen him" for David;
+			WaitBreakReactions;
+		if Denise is booked or Denise is bunkered:
+			say "     In a flutter of wings, Denise lands a little distance away, then approaches shily. 'He's a giant!' she says with wide eyes, then looks at you somewhat hesitantly. 'I think that would be a bit too big and intimidating for my tastes. But thank you for offering!' With that said, she jumps back in the air, gliding away on outstretched wings.";
+			TraitGain "Hercules - Seen him" for Denise;
+			WaitBreakReactions;
+		if (Elijah is booked or Elijah is bunkered) and HP of Elijah > 3:
+			if HP of Elijah is 99: [evil] [TODO: add manipulation?]
+				say "     Elijah saunters up to Hercules, feeling his fur, then reaches up to open the anthro's mouth to slide two fingers inside. 'Not bad, I guess, for when I don't feel like hunting down someone out in the streets. Getting large hunks to spread their cheeks can be a bit of a workout too.' He then half-steps around the horseman, giving his butt a resounding slap and grinning broadly. Wiggling one eyebrows at you, the dark angel smirks and says, 'Had better, but it'll do.' Then he wanders off with a smirk on his face.";
+				TraitGain "Hercules - Seen him" for Elijah;
+			else: [good]
+				say "     Elijah comes up to you, looking at Hercules only for a short moment then shaking his head. 'I don't think I could ever, uhm - you know what I want to say. Being intimate with someone is a special gift from our creator. Doing that with nothing but a puppet almost seems like throwing that back in his face.' Shaking his head, the angel wanders off.";
+				TraitGain "Hercules - Seen him" for Elijah;
+			WaitBreakReactions;
+		if Eric is booked or Eric is bunkered:
+			if HP of Eric > 0 and HP of Eric < 20:
+				say "     Eric comes up to you and looks with interest at Hercules. 'Wow, this dude is huge... in more than one aspect.' Chuckling at how the young man first stared at the horseman's muscular chest, then glanced to his crotch, you give him time to check the sex toy out. 'I - I think, uhm... would it be alright if I experimented a little with him?' As you tell him he's fine to do whatever, Eric beams at you in relief and anticipation, then makes his goodbyes and walks away.";
+			else if HP of Eric is 20: [hoping for a cure]
+				say "     Eric comes up to you and looks with interest at Hercules. 'Wow, this dude is huge... in more than one aspect.' Chuckling at how the young man first stared at the horseman's muscular chest, then glanced to his crotch, you give him time to check the sex toy out. 'I - I kinda want to experiment a little, but... what if that's how I get stuck like this? I don't want to jeopardize a possible cure!' With a sigh, Eric then makes his goodbyes and walks away.";
+			else if HP of Eric > 20 and HP of Eric < 30: [horsecock]
+				say "     Eric comes up to you and looks with interest at Hercules. 'Wow, you really went all out in getting him, eh? Too bad this isn't a mare. But I guess I could, you know, use the other end?' Chuckling, you nod, and clap a hand on the young man's shoulder, giving it a squeeze. 'Guess I know what I'm looking forward to then!' the young athlete tells you, then wanders off after a friendly wave.";
+			else if HP of Eric > 30 and HP of Eric < 40: [satyrcock]
+				say "     Eric comes up to you and looks with interest at Hercules. 'Oh yeah! Got us an awesome party treat here! Too bad this isn't a mare. But I guess I could, you know, use the other end?' Chuckling, you nod, and clap a hand on the young man's shoulder, giving it a squeeze. 'Guess I know what I'm looking forward to then!' the young athlete tells you, then wanders off after a friendly wave.";
+			else if HP of Eric > 40 and HP of Eric < 50: [orccock]
+				say "     Eric comes up to you and looks with interest at Hercules. 'Oh yeah! You know, the balls that I got together with this cock are kinda churning out cum all the time. It'll be nice to have your toy here available to drain some loads in every day!' He's clearly enthusiastic about getting it on with the equine hunk. Slapping the side of your arm in a friendly way, the student then wanders off.";
+			else if HP of Eric is 99:
+				say "     Eric keeps his distance, throwing looks with scrunched-together eyebrows at you and Hercules. There is disapproval in his gaze, but at the same time, you think you can make out almost grudging interest as he studies the anthro horseman. Noticing your attention to him watching, the abused young man then steps out of sight to hide from you. His expression seemed somewhat conflicted, as if at the same time eager to try out the equine cock dangling freely between Hercules legs, as well as resistant to accepting anything that you are offering.";
 			TraitGain "Hercules - Seen him" for Eric;
-		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
-			say "     <horse: yeah, horse toy fun! satyr: party on! orc: get some relief, love the bigness>";
-			TraitGain "Hercules - Seen him" for Eric;
-		else if HP of Eric is 99:
-			say "     <scared, might use it secretly, stretch himself to be prepared for others>";
-			TraitGain "Hercules - Seen him" for Eric;
-		WaitBreakReactions;
-	if Fang is booked or Fang is bunkered:
-		say "     <stick nose between the legs, licks balls, dickhead sticking out of sheath, tail wags>";
-		TraitGain "Hercules - Seen him" for Fang;
-		WaitBreakReactions;
-	if HP of Fiona > 4:
-		say "     <tries to get reaction, claws, still no reaction, pissed>";
-		TraitGain "Hercules - Seen him" for Fiona;
-		WaitBreakReactions;
-	if Gabriel is booked or Gabriel is bunkered:
-		say "     <train with it>";
-		TraitGain "Hercules - Seen him" for Gabriel;
-		WaitBreakReactions;
-	if Hayato is booked or Hayato is bunkered:
-		say "     <confident he doesn't break it - happy to let loose>";
-		TraitGain "Hercules - Seen him" for Hayato;
-		WaitBreakReactions;
-	if Helen is booked or Helen is bunkered:
-		say "     <comes up, sniffs crotch, licks, wags butt, barks, disappointed in no reaction>";
-		TraitGain "Hercules - Seen him" for Helen;
-		WaitBreakReactions;
-	if Hobo is booked or Hobo is bunkered:
-		say "     <comes up, sniffs, sits down as if to keep company>";
-		TraitGain "Hercules - Seen him" for Hobo;
-		WaitBreakReactions;
-	if Honey is booked or Honey is bunkered:
-		say "     <likes the fur - can I pet it? and oooh, that dick is so big! feels balls and comments about shooting a lot>";
-		TraitGain "Hercules - Seen him" for Honey;
-		WaitBreakReactions;
-	if Korvin is booked or Korvin is bunkered:
-		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
-			say "     <yay, I can pound something! can be on top of a big guy, like in the old times, or powerbottom>";
-			TraitGain "Hercules - Seen him" for Korvin;
-		else:
-			say "     <nice toy>";
-			TraitGain "Hercules - Seen him" for Korvin;
-		WaitBreakReactions;
-	if Klauz is booked or Klauz is bunkered:
-		say "     <rubs up, no reaction? confused>";
-		TraitGain "Hercules - Seen him" for Klauz;
-		WaitBreakReactions;
-	if Malik is booked or Malik is bunkered:
-		say "     <wants to hunt instead, at least the player got a proper orc sized one, gets the sluts used to that>";
-		TraitGain "Hercules - Seen him" for Malik;
-		WaitBreakReactions;
-	if Nadia is booked or Nadia is bunkered:
-		say "     <likes a sex toy for everyone, wouldn't personally want to use>";
-		TraitGain "Hercules - Seen him" for Nadia;
-		WaitBreakReactions;
-	if Rane is booked or Rane is bunkered:
-		say "     <you kinky guy - I for one like the chase, you know?>";
-		TraitGain "Hercules - Seen him" for Rane;
-		WaitBreakReactions;
-	if Ryousei is booked or Ryousei is bunkered:
-		say "     <weird customs you have. but when in Rome, I guess...>";
-		TraitGain "Hercules - Seen him" for Ryousei;
-		WaitBreakReactions;
-	if Tehuantl is booked or Tehuantl is bunkered:
-		if Tehuantl is male:
-			say "     <thank you master for this gift, this will allow me to focus more>";
-			TraitGain "Hercules - Seen him" for Tehuantl;
-		else:
-			say "     <wants cock! yeah!>";
-			TraitGain "Hercules - Seen him" for Tehuantl;
-		WaitBreakReactions;
-	if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
-		say "     <horrified - this must have been a person!>";
-		TraitGain "Hercules - Seen him" for Sarah;
-		WaitBreakReactions;
-	if Sven is booked or Sven is bunkered:
-		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
-			say "     <neat toy, cool!>";
+			WaitBreakReactions;
+		if Fang is booked or Fang is bunkered:
+			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. Still, it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+			TraitGain "Hercules - Seen him" for Fang;
+			WaitBreakReactions;
+		if HP of Fiona > 4:
+			say "     Sitting on the ground nearby, Fiona glances over at Hercules, then licks her paw and rubs it behind her ear. She seems fairly oblivious to the sex doll, as if he isn't worth looking at even.";
+			TraitGain "Hercules - Seen him" for Fiona;
+			WaitBreakReactions;
+		if Gabriel is booked or Gabriel is bunkered:
+			say "     Gabriel comes up to you and Hercules, looking the anthro horseman up and down. 'I can train with this to serve you better, [master]!' the sexy angel you've tamed for yourself says in an eager tone. He's fully focused on being the best sex slave he can be, prompting you to give his ass a playful slap as you send him back to where he came from.";
+			TraitGain "Hercules - Seen him" for Gabriel;
+			WaitBreakReactions;
+		if Hayato is booked or Hayato is bunkered:
+			say "     Hayato walks up and comes to tower over Hercules, looking down at him with interest. He half raises a large red hand to touch the Clydesdale, then hesitates, 'Looks so very real. I - er, can he feel pain? I'm pretty big, and don't want to injure him, you know.' Chuckling, you pat the oni's arm and tell him that the nanites should make the hunk of a Clydesdale quite stretchy, and able to bounce back from being hard-used. Hayato looks at you with raised eyebrows, then says thoughtfully, 'I'd be nice to... let loose fully once in a while.' Then he makes his goodbyes and wanders off, stopping to glance back at Hercules before moving out of sight.";
+			TraitGain "Hercules - Seen him" for Hayato;
+			WaitBreakReactions;
+		if Helen is booked or Helen is bunkered:
+			say "     Helen rushes up to Hercules on all fours, barking and smiling at him. [if Lust of Helen > 3]'New friend?' she suddenly asks, and [else]She [end if]seems confused when there is no reaction, even as she barks again and uses a hand to pat the anthro's leg. Finally, she wanders off and lies down on the ground a little distance away.";
+			TraitGain "Hercules - Seen him" for Helen;
+			WaitBreakReactions;
+		if Hobo is booked or Hobo is bunkered:
+			say "     Hobo pads up to Hercules, sniffing him and looking up at the anthro horseman. He gives a quiet whine that almost sounds like a question, then sits down on the ground right next to the Clydesdale, having decided that he needs someone to keep him company. You let the devoted dog stay there for a little while before shooing him away gently.";
+			TraitGain "Hercules - Seen him" for Hobo;
+			WaitBreakReactions;
+		if Honey is booked or Honey is bunkered:
+			say "     With the hum of her wings, Honey flies up and circles Hercules once before coming to a hover besides the anthro horseman. 'Ooh, his fur looks so soft! Can I pet it?' Chuckling, you nod to her, and the small bee girl gleefully rubs her hands through Hercules's fur. 'I'll be back for more of that! Such lovely fur!' she says somewhat giggly and flies away.";
+			TraitGain "Hercules - Seen him" for Honey;
+			WaitBreakReactions;
+		if Korvin is booked or Korvin is bunkered:
+			if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+				say "     Walking up, Korvin looks Hercules up and down with interest, grabbing his hip and giving it a little squeeze. 'It'll be awesome to pound something again!' the German shepherd says, seeming eager to feel a bit of his old, wild self again with the sex doll. He glances over at you, pausing to see what you make of his desire, and seems relieved when you give a generous nod. With his tail wagging behind his back, the anthro then walks off.";
+				TraitGain "Hercules - Seen him" for Korvin;
+			else:
+				say "     Walking up with a swagger in his step, Korvin looks Hercules up and down. 'Nice toy you got us there,' he says with an eager grin, then grabs the anthro horseman's chest and gives his meaty, firm pecs a squeeze. 'Man, this thing is built like a brickhouse. Good that it's just a doll and not an actual hoseman, otherwise we'd have our hands full!' Grabbing his crotch and adjusting himself, the horny dog then walks off. Before he's fully out of earshot, you can hear him muse to himself, 'Gonna knot that thing so hard...'";
+				TraitGain "Hercules - Seen him" for Korvin;
+			WaitBreakReactions;
+		if Klauz is booked or Klauz is bunkered:
+			say "     Klauz prowls closer and closer, circling Hercules two full times at a distance before finally making his move. He rubs his side against the anthro horseman's legs and then waits, purring like an idling motor. When Hercules isn't drawn in to pet him, the felinoid tries again on the sex doll's other side, looking up expectantly. Something like confusion crosses his face, followed by the feline stalking away, tail making jerking movements as he is in a bit of a sulk.";
+			TraitGain "Hercules - Seen him" for Klauz;
+			WaitBreakReactions;
+		if Malik is booked or Malik is bunkered:
+			say "     Malik comes up to the anthro horseman with swaggering steps, then looks Hercules up and down. 'Not much action to be had with this thing, eh? Any dude I drag in from the street is more fun, so I'll pass. [if Loyalty of Malik > 0]How about we go out and hunt some guy that's more fun, eh dad?' [else]Braindead toys are more your speed, I guess.' [end if] With that said, the orc warrior then wanders off.";
+			TraitGain "Hercules - Seen him" for Malik;
+			WaitBreakReactions;
+		if Nadia is booked or Nadia is bunkered:
+			say "     Nadia comes up and looks at Hercules, more out of curiosity than any actual interest. 'It's good of you to provide this relief, for those who need it. That'll allow people to take the edge off[if NadiaChickCounter > 0]. Just please keep it somewhat out of the way, not used just anywhere. I don't want my chicks to see it like that[end if].' With a smile, she then walks away.";
+			TraitGain "Hercules - Seen him" for Nadia;
+			WaitBreakReactions;
+		if Rane is booked or Rane is bunkered:
+			say "     Rane smirks as he strolls up and looks Hercules up and down. Then he reaches out and gives your shoulder a light punch. 'Kinky, kinky, bringing something like that here. Hope you have fun with him.' Nodding to the Horseman, he shrugs. 'Can't say I'd go for it myself - I for one like the chase that real people provide, you know?'";
+			TraitGain "Hercules - Seen him" for Rane;
+			WaitBreakReactions;
+		if Ryousei is booked or Ryousei is bunkered:
+			say "     Ryousei walks up to Hercules, looking at the Horseman with a curious expression. Then he reaches out to grasp the Clydesdale's hand and pulls it up before letting go, watching it be held just where he moved it. With a slightly amused snort, the tiger pushes Hercules's arm back down. 'Your world does have odd customs. I would have preferred a geisha to this simple thing, but as the saying goes: [']When visiting an uwabami, drink the sake, or add to its flavor.['] You certainly provided a handsome poll for companionship.' With a little bow, the anthro feline then walks away.";
+			TraitGain "Hercules - Seen him" for Ryousei;
+			WaitBreakReactions;
+		if Tehuantl is booked or Tehuantl is bunkered:
+			if Tehuantl is male:
+				say "     Tehuantl comes up to you, laying a hand on his chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' He gives Hercules a very interested look, letting out a purr before he walks off again.";
+				TraitGain "Hercules - Seen him" for Tehuantl;
+			else:
+				say "     Tehuantl comes up to you, laying a hand on her chest and giving a deep nod to you. 'Thank you [master] for this gift. With an outlet for my libido, I will be able to focus more on tasks for you.' She gives Hercules a very interested look, letting out a purr before she walks off again.";
+				TraitGain "Hercules - Seen him" for Tehuantl;
+			WaitBreakReactions;
+		if (Sarah is booked or Sarah is bunkered) and SarahCured > 3:
+			say "     Sarah walks up to Hercules with a grim expression on her face, then takes the anthro's arm to feel for a pulse. After a moment, she nods to herself and takes out a little pen-light to shine in his eyes. 'This makes absolutely no sense! He isn't breathing, but has a pulse, and is standing despite having no response at all to my light! You can tell yourself what you want, but this must have been a person at some point! He needs help, not to be abused as a sex toy!' Throwing her hands in the air as you give a noncommittal shrug, the husky doctor then storms off.";
+			TraitGain "Hercules - Seen him" for Sarah;
+			WaitBreakReactions;
+		if Sven is booked or Sven is bunkered:
+			if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+				say "     Sven walks up to Hercules, looking him up and down, then reaches out and touches the anthro horseman's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! But this is neat! Thank you for putting him here.' The exchange student feels Hercules up for another moment or two, then pulls himself back and makes his goodbyes.";
+			else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+				say "     Sven shyly approaches Hercules, looking him up and down, then over to you as if to ask permission. As you smile and nod, he reaches out and touches the anthro horseman's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! And I'd never have dared to get one. Thank you for putting him here.' The exchange student feels Hercules up for another moment or two, then pulls himself back and makes his goodbyes.";
+			else:
+				say "     Sven shyly approaches Hercules, looking him up and down, then reaches out and touches the anthro horseman's arm. 'Wow, he even feels real! Always thought a sex doll would be... hm, how do you say it. Forfalskning, you know. Uhm... ah! Fake, I mean! But this is kinda neat. Thank you for putting him here, but still... I don't know if I - if I'd dare use him.' The exchange student pulls his hand back, then makes his goodbyes and wanders off. As he goes, you see him stop once or twice to throw the Clydesdale another glance or two.";
 			TraitGain "Hercules - Seen him" for Sven;
-		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
-			say "     <soo big! shyly open to use it>";
-			TraitGain "Hercules - Seen him" for Sven;
-		else:
-			say "     <I wouldn't do that, later secretly plays around>";
-			TraitGain "Hercules - Seen him" for Sven;
-		WaitBreakReactions;
-	if Urik is booked or Urik is bunkered:
-		say "     <how boring, no hunt - excited if he can breed it>";
-		TraitGain "Hercules - Seen him" for Urik;
-		WaitBreakReactions;
-	if Xerxes is booked or Xerxes is bunkered:
-		say "     <sniffs crotch, interested in humping>";
-		WaitBreakReactions;
-		TraitGain "Hercules - Seen him" for Xerxes;
-	now IntroReactionCounter is 0; [reset]
+			WaitBreakReactions;
+		if Urik is booked or Urik is bunkered:
+			say "     Urik walks up to Hercules, crossing his arms as he looks eye to eye with the anthro horseman. 'He's looking nice and hunky, I can give you that. Not really my thing, though. I prefer guys to have a bit more fire in them. Ones that fight back, until they're nice and broken in.' With a shrug, he wanders off afterwards.";
+			TraitGain "Hercules - Seen him" for Urik;
+			WaitBreakReactions;
+		if Xerxes is booked or Xerxes is bunkered:
+			say "     Xerxes rushes up to Hercules on all fours, barking and smiling at him. [if Lust of Helen > 3]'New friend?' he suddenly asks, and [else]He [end if]seems confused when there is no reaction, even as he barks again and uses a hand to pat the anthro's leg. Finally, he wanders off and lies down on the ground a little distance away.";
+			TraitGain "Hercules - Seen him" for Xerxes;
+			WaitBreakReactions;
+		now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 11; [Took Hercules as Toy]
+	TraitGain "Naked" for Hercules;
 
 to say Leaving Limbo:
-	say "...";
-
-]
+	say "     You can think of better ideas besides bringing creatures like this home with you. No matter what they look like right now, these things hunted down someone to steal that appearance, and just because they're not moving right now doesn't mean they're not dangerous. You're out of here, and you make a mental note to avoid the place in the future too!";
+	now Resolution of Lost Souls is 99;
+	now Lost Souls is resolved;
 
 Mannequin ends here.

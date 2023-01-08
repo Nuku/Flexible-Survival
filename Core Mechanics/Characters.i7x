@@ -362,6 +362,7 @@ A person can be booked. A person is usually not booked.
 Definition: A person (Called x) is booked:
 	If x is Trixie, no;
 	if x is Velos, no;
+	if x is Help Book, no;
 	if the location of x is Grey Abbey Library, yes;
 	if the location of x is Grey Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
@@ -384,7 +385,9 @@ Definition: A person (Called x) is booked:
 A person can be bunkered. A person is usually not bunkered.
 
 Definition: A person (Called x) is bunkered:
+	If x is Trixie, no;
 	if x is Velos, no;
+	if x is Help Book, no;
 	if the location of x is Bunker, yes;
 	if the location of x is Communal Shower, yes;
 	if the location of x is Underground Restroom, yes;
@@ -418,6 +421,7 @@ Definition: A person (called x) is herm:
 
 Definition: A person (called x) is neuter:
 	if Cock Count of x is 0 and Cunt Count of x is 0, yes;
+
 
 Definition: A person (called x) is CockFitsInPlayerPussy:
 	if "Twisted Capacity" is listed in the feats of Player, yes;

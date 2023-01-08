@@ -152,6 +152,12 @@ to say PenelopeTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Boop Penelope on the nose";
 	[]
+	if Charisma of Blanche > 3 and White Wolf Five is not listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Take as Companion";
+		now sortorder entry is 3;
+		now description entry is "Ask Penelope to join you";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -171,6 +177,8 @@ to say PenelopeTalkMenu:
 					say "[PenelopeTalk1]";
 				if (nam is "Boop"):
 					say "[PenelopeTalk2]";
+				if (nam is "Take as Companion"):
+					say "[PenelopeTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -185,6 +193,10 @@ to say PenelopeTalk1: [Small Talk]
 
 to say PenelopeTalk2: [Boop]
 	say "     Abandoning all caution, you boop the titanic wolf on the nose. Penelope stares at you for a bit before returning the favor. 'You didn't think that you were the only one who could do that, did you? I hate to tell you this, but Wendis, Bianca, and Claude started doing that when we were just pups so I am quite experienced with it. Blanche did it to Sturm once and I swear he was in shock for the entire afternoon. Anyway, we think of it as a sign of bonding, so I hope that you do it to all the people that you like,' she tells you before you boop her once more. Boop.";
+
+to say PenelopeTalk3: [Companion]
+	say "     You ask Penelope whether she would be interested in coming with you out into the city. The ground shudders as she charges over to scoop you up in a hug. 'Thank you, [BlancheMommyDaddyTitle]. I'll protect you to the best of my ability, but I apologize if anyone gets past me. I seem to be better at defending Wendis than anyone else.' You reassure her that you can take a few hits and that you won't blame her when you do.";
+	AddCompanionFunction "White Wolf Five";
 
 Section 3 - Sex
 
@@ -204,5 +216,49 @@ to say PenelopeRyouseiFirstMeeting:
 	say "     ";
 	TraitGain "Ryousei - Potential Tutor" for Penelope;
 	TraitGain "Penelope - Hopeful Pupil" for Ryousei;]
+
+
+Section 5 - Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+White Wolf Five	"White Wolf Five"
+
+White Wolf Five is a pet.
+NPCObject of White Wolf Five is Penelope.
+understand "Penelope" as White Wolf Five.
+IDList of White Wolf Five is { "Penelope", "penelope", "White Wolf Five", "white wolf five" }.
+printed name of White Wolf Five is "Penelope".
+Description of White Wolf Five is "[PenelopeDesc]".
+Weapon Damage of White Wolf Five is 15.
+The level of White Wolf Five is 1.
+Dexterity of White Wolf Five is 15.
+The summondesc of White Wolf Five is "[SummonPenelope]".
+The dismissdesc of White Wolf Five is "[DismissPenelope]".
+The assault of White Wolf Five is "[one of]Complete with warcry, Penelope shoulder charges your opponent, a living battering ram of fluff.[or]Penelope glowers fiercely at your foe, momentarily paralyzing them with fear and leaving them open to an opportunistic attack.[or]Countering one of your opponent's attacks, Penelope gets a few blows in before sending them staggering back.[or]Penelope manages to grab onto your opponent, relentlessly maintaining her grip as they struggle, providing you with an opening![at random]".
+the fuckscene of White Wolf Five is "WIP".
+
+to say SummonPenelope:
+	if Penelope is visible: [summoning while standing next to her]
+		say "     Walking over to Penelope, you ask whether she would be interested in coming with you out into the city. The ground shudders as she charges over to scoop you up in a hug. 'Thank you, [BlancheMommyDaddyTitle]. I'll protect you to the best of my ability, but I apologize if anyone gets past me. I seem to be better at defending Wendis than anyone else.' You reassure her that you can take a few hits and that you won't blame her when you do.";
+	else: [regular summoning]
+		say "     Penelope for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+
+to say DismissPenelope:
+	move Penelope to Grey Abbey Library;
+	if Player is not in Grey Abbey Library: [regular dismiss]
+		say "     With a word, you get Penelope's attention and tell her that she should head back to the library for now. She purses her lips and stares at you for a moment. 'Make sure that you keep yourself safe, [BlancheMommyDaddyTitle]. If anything happens to you...' she warns you, leaving the threat hanging in the air, though you aren't sure who it is directed at. She gives you a tight hug before lumbering away. You know that she can handle herself, but you still feel guilty as she walks away. ";
+		if White Wolf Six is listed in companionlist of Player: [Wendis]
+			say "'Are you sure that she'll be alright without me to protect her? She's hardly inconspicuous,' Wendis worries. ";
+		else:
+			say "You would imagine that Wendis will be pleased to have her steed back when she returns. ";
+		say "With that in mind, you continue your exploration.";
+	else: [dismissing Penelope in the abbey]
+		say "     With a word, you get Penelope's attention and tell her that she should stay here at the library for now. She purses her lips and stares at you for a moment. 'Make sure that you keep yourself safe, [BlancheMommyDaddyTitle]. If anything happens to you...' she warns you, leaving the threat hanging in the air, though you aren't sure who it is directed at. She gives you a tight hug before lumbering away. You know that she can handle herself, but even she needs a rest from time to time. ";
+		if White Wolf Six is listed in companionlist of Player: [Wendis]
+			say "'If she's not watching, you can toss me at our enemies and really teach them the meaning of fear,' Wendis suggests. ";
+		else:
+			say "You would imagine that Wendis will be overjoyed that Penelope will be around to give her piggybacks. ";
+		say "With that in mind, you ready yourself to continue exploring.";
 
 Penelope ends here.

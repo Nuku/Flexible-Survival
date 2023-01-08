@@ -355,7 +355,7 @@ to say candymusing:
 	say "     'I'd say the same to you, hon, but I doubt you could, with that mouth of yours.' This is enough to elicit a slight chuckle from Velos, and he decides to conclude the conversation at that, letting you return to your own matters.";
 
 
-Part 3 - Dr. Moffatt
+Part 3 - Doctor Moffatt
 
 the vmusings of Doctor Moffatt is "[drmoffattmusing]";
 
@@ -375,7 +375,7 @@ to say drmoffattmusing:
 	add 3 to velospostmusings;
 
 
-Part 4 - Dr. Mouse
+Part 4 - Doctor Mouse
 
 the vmusings of Doctor Mouse is "[drmousemusing]";
 
@@ -894,7 +894,7 @@ to say Anastasiamusing:
 	say "     'Very well. I think we'll cut this short - this place puts an even larger strain on me than usual. Take care.' Ending his discussion on a more polite note, Anastasia seems to calm a bit down as he retreats back into your hole, leaving you to your own matters.";
 
 
-Part 23 - Dr. Matt
+Part 23 - Doctor Matt
 
 the vmusings of Doctor Matt is "[drmattmusing]";
 
