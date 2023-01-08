@@ -23,7 +23,7 @@ Asshole Depth of Hercules is 8. [inches deep for anal fucking]
 Asshole Tightness of Hercules is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Hercules is 1. [number of cocks]
 Cock Girth of Hercules is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Hercules is 15. [length in inches]
+Cock Length of Hercules is 22. [length in inches]
 Ball Count of Hercules is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Hercules is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Hercules is 0. [number of cunts]
@@ -40,10 +40,10 @@ OralVirgin of Hercules is false.
 Virgin of Hercules is true.
 AnalVirgin of Hercules is true.
 PenileVirgin of Hercules is false.
-SexuallyExperienced of Hercules is true.
-TwistedCapacity of Hercules is false. [Twisted Characters can take any penetration, no matter the size]
+SexuallyExperienced of Hercules is false.
+TwistedCapacity of Hercules is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Hercules is false. [steriles can't knock people up]
-MainInfection of Hercules is "Husky Alpha".
+MainInfection of Hercules is "Horseman".
 Description of Hercules is "[HerculesDesc]".
 Conversation of Hercules is { "Woof." }.
 
@@ -54,7 +54,7 @@ to say HerculesDesc:
 	else if "Public Sex Toy" is listed in Traits of Hercules:
 		say "     Having found this impressive example of masculinity in a warehouse among hundreds of motionless mannequins, and determined that he's apparently without any impulse to do anything on his own, making him uniquely pliable for others to control. You obviously grabbed the horseman to position him in the library, as a nice and obedient sex toy like this is just what the place needed.";
 	else if "Therapy Project" is listed in Traits of Hercules:
-		say "     Having found this sad example of a being's reasoning being stretched past its breaking point due to the sinister impact of the transformation nanites ravaging the city, you took Hercules from the warehouse you found him in, bringing him here to the library. The chance of reclaiming him from the catatonia-like state he currently is in might be slim, but you thought it'd be a worthwhile endeavour. Hopefully he can be convinced that he shouldn't just despair and stay in this doll-like state, but can be... real, can be alive.";
+		say "     Having found this tragic example of a being's reasoning being stretched past its breaking point due to the sinister impact of the transformation nanites ravaging the city, you took Hercules from the warehouse you found him in, bringing him here to the library. The chance of reclaiming him from the catatonia-like state he currently is in might be slim, but you thought it'd be a worthwhile endeavour. Hopefully he can be convinced that he shouldn't just despair and stay in this doll-like state, but can be... real, can be alive.";
 		if "Naked" is listed in Traits of Hercules:
 			say "     Looking at the horseman, you're struck by the realization that having him standing here in the nude might actually be a first thing you can do something about as a first step. Maybe you could try to address that side of things in an attempt to give your equine friend some dignity? [bold type]Try talking to him to explain what you're gonna do.[roman type][line break]";
 		else if "Towel" is listed in Traits of Hercules:

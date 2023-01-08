@@ -521,7 +521,7 @@ to Mannequin_Warehouse_ChoicePoint:
 	say "     [bold type]Do you want to explore the warehouse?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Sure, you might find something interesting.";
 	say "     [link](2)[as]2[end link] - Not right now. Maybe later.";
-	say "     [link](3)[as]3[end link] - Nope. No. Definitely not! You're out of here";
+	say "     [link](3)[as]3[end link] - Nope. No. Definitely not! You're out of here.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
 		say "Choice? (1-3)>[run paragraph on]";
@@ -541,7 +541,7 @@ to Mannequin_Warehouse_ChoicePoint:
 		say "     Looking over your shoulder, you see the deer standing just a step or two behind you, arm outstretched as it was when you were pulling him. Given their similarities, and just where you found these two, you are fairly certain that the deer is another mannequin that must have absorbed this shape. If you had to guess, they both likely tried to fit in and become their new selves, yet despaired after however many tries. Maybe they then gave up and returned to 'their people' in this warehouse? Or did someone bring them here? Arrange these two like this? Who would do this, and why? Whatever may be the truth, here they are now, as incredibly lifelike dolls with apparently no will of their own. Wondering if there might be more of these transformed mannequins, you glance around and let your gaze sweep over the mass of shapes. There are so many of them in the darkness, yet you don't spot anything but the plastic-y, wooden or metallic shapes of normal mannequins. Who knows, more might arrive or be brought here in the future and be found through a more thorough search. Best not to step away from your two current finds right now, as you might lose your way in the crowd and not find them again.";
 		say "     Turning back to the deer and horseman, you contemplate what to do now. While doing so, are struck by the thought that the buck's skinny jeans seem a little [italic type]too[roman type] skinny in the crotch area. Stepping closer, you say more to yourself than him that you got to check for his wallet, maybe find out his name, and slip your hand into the tight pockets of the jeans. There is still no reaction from the buck, so you feel comfortable enough to go ahead and opening the jeans up at the front, allowing you to find out that this deer has one single part that is more doe than buck, as he has a pussy between his legs. Raising your eyebrows at that revelation, you zip him back up and push the lower edge of the tank top back down. While you're exploring, you find yourself pulling open his mouth, and look inside, seeing it perfectly realistic shape, down to a throat going down at the back, and having a moist, soft tongue. The thought of if they need to eat arises in you, and if these beings might just starve if they continue standing here all on their own. Finally, you gently pull down an eyelid, which stays as you place it, then push it up again.";
 		say "     [bold type]On a whim, you give the two of them the names Bucky and Hercules, then prepare yourself to make a decision of your next step.[roman type][line break]";
-		say "     <Writer's Note: As of right now, Bucky is still WIP and the options to pick him are disabled.>";
+		say "     <Writer's Note: As of right now, Bucky is still WIP and the options to pick him are disabled.>[line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[
@@ -1179,6 +1179,7 @@ to say Hercules_Person:
 		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
 	now Resolution of Lost Souls is 10; [Took Hercules as Person]
+	TraitGain "Naked" for Hercules;
 
 to say Hercules_Toy:
 	say "     Taking hold of the tall and muscular Clydesdale's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
@@ -1386,6 +1387,7 @@ to say Hercules_Toy:
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
 	now Resolution of Lost Souls is 11; [Took Hercules as Toy]
+	TraitGain "Naked" for Hercules;
 
 to say Leaving Limbo:
 	say "     You can think of better ideas besides bringing creatures like this home with you. No matter what they look like right now, these things hunted down someone to steal that appearance, and just because they're not moving right now doesn't mean they're not dangerous. You're out of here, and you make a mental note to avoid the place in the future too!";

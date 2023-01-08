@@ -165,6 +165,7 @@ Figure of QueenBee_icon is the file "QueenBee_ig.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of Reptaur_hard_icon is the file "Reptaur_hard.jpg".
 Figure of Reptaur_soft_icon is the file "Reptaur_soft.jpg".
+Figure of RubberTigress_icon is the file "Rubber Tigress.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of Satyr_hard_icon is the file "Satyr_hard.jpg".
 Figure of Satyr_soft_icon is the file "Satyr_soft.jpg".
@@ -1788,6 +1789,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "TyrannosaurusMale_soft"	Figure of TyrannosaurusMale_soft_icon	"SteppeCrow"	g-white	"normal"
 "TyrannosaurusMale_hard"	Figure of TyrannosaurusMale_hard_icon	"SteppeCrow"	g-white	"normal"
 "Malayan Tiger Herm"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
+"Rubber Tigress"	Figure of RubberTigress_icon	"SteppeCrow"	g-white	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "TinyTim_face"	Figure of TinyTim_face_icon	"SineAlas"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
@@ -2451,6 +2453,7 @@ carry out artistcredits:
 	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Reptaur by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
+	say "     Rubber Tigress by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Saber Kitty by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sabretooth (feral) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Sabretooth (anthro) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
