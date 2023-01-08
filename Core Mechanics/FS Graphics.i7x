@@ -228,6 +228,10 @@ Figure of Wyvern_female_night_icon is the file "Wyvern_female_night.jpg".
 Figure of Wyvern_female_icon is the file "Wyvern_female.jpg".
 Figure of Wyvern_male_day_icon is the file "Wyvern_male_day.jpg".
 Figure of Wyvern_male_night_icon is the file "Wyvern_male_night.jpg".
+Figure of Wyvern_Patriarch_hard_icon is the file "Wyvern_Patriarch_hard.jpg".
+Figure of Wyvern_Patriarch_soft_icon is the file "Wyvern_Patriarch_soft.jpg".
+Figure of Wyvern_Patriarch_hard_balls_icon is the file "Wyvern_Patriarch_hard_balls.jpg".
+Figure of Wyvern_Patriarch_soft_balls_icon is the file "Wyvern_Patriarch_soft_balls.jpg".
 Figure of YamatoDragon_red_hard_icon is the file "YamatoDragon_red_hard.jpg".
 Figure of YamatoDragon_red_soft_icon is the file "YamatoDragon_red_soft.jpg".
 Figure of YamatoDragon_green_hard_icon is the file "YamatoDragon_green_hard.jpg".
@@ -1820,6 +1824,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Wyvern_male_night"	Figure of Wyvern_male_night_icon	"Corbee"	g-white	"normal"
 "Wyvern_female_day"	Figure of Wyvern_female_day_icon	"Corbee"	g-white	"normal"
 "Wyvern_female_night"	Figure of Wyvern_female_night_icon	"Corbee"	g-white	"normal"
+"Wyvern_Patriarch_hard"	Figure of Wyvern_Patriarch_hard_icon	"SteppeCrow"	g-white	"normal"
+"Wyvern_Patriarch_soft"	Figure of Wyvern_Patriarch_soft_icon	"SteppeCrow"	g-white	"normal"
+"Wyvern_Patriarch_hard_balls"	Figure of Wyvern_Patriarch_hard_balls_icon	"SteppeCrow"	g-white	"normal"
+"Wyvern_Patriarch_soft_balls"	Figure of Wyvern_Patriarch_soft_balls_icon	"SteppeCrow"	g-white	"normal"
 "Xaedihr_Full"	Figure of Xaedihr_Full_icon	"Gherod"	g-black	"normal"
 "Xaedihr_FullMagic"	Figure of Xaedihr_FullMagic_icon	"Gherod"	g-black	"normal"
 "Xaedihr_FullNoRuby"	Figure of Xaedihr_FullNoRuby_icon	"Gherod"	g-black	"normal"
@@ -2478,6 +2486,7 @@ carry out artistcredits:
 	say "     Wyvern Male by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
 	say "     Wyvern Female by Corbee @ https://www.furaffinity.net/user/corneliablanka/[line break]";
 	say "     Wyvern Female by Anonymous[line break]";
+	say "     Wyvern Patriarch by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Yamato Dragon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yamato Dragoness by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Yuppie Mink by Anymouse1968 @ furaffinity.net[line break]";
@@ -2515,7 +2524,7 @@ carry out artistcredits:
 	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Chase by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
-	say "     Chris (breeder) by SteppeCrow @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Chris (breeder) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Christy (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";

@@ -419,6 +419,7 @@ Definition: A person (called x) is herm:
 Definition: A person (called x) is neuter:
 	if Cock Count of x is 0 and Cunt Count of x is 0, yes;
 
+
 Definition: A person (called x) is CockFitsInPlayerPussy:
 	if "Twisted Capacity" is listed in the feats of Player, yes;
 	if Cock Length of x > Cunt Depth of Player + 1, no; [some stretching allowed]
