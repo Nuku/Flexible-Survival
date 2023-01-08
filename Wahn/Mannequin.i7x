@@ -699,7 +699,7 @@ to say Bucky_Person:
 			say "     Walking up to Bucky, Elijah studies the doll-like buck for a moment, then reaches out to him. With his hand almost, but not quite, touching the anthro's forehead, he closes his eyes and seems to concentrate for a short moment, then suddenly steps forward to wrap his arms and wings around the slender deer, pulling him into a warm embrace. 'I can feel your fear, your desperation. Know that you are not alone my friend, and I will be here for you. God loves all of his children, no matter what form.' After just holding him and stroking Bucky's hair a little, Elijah then steps back, giving you a respectful nod for wanting to help the former mannequin.";
 		TraitGain "Bucky - Seen him" for Elijah;
 		WaitBreakReactions;
-	if Eric is booked or Eric is bunkeredand Eric is not slutstored:
+	if Eric is booked or Eric is bunkered and Eric is not slutstored:
 		if HP of Eric > 0 and HP of Eric < 21:
 			say "     Coming closer slowly, Eric bites his lip as he looks at the buck, then finally says, 'Hello, I - I'm Eric. You, uhm... I wanted to tell you that I wish you the best. Maybe I can help you with that too. I mean, even with all of us being changed to a greater or lesser extent by all of the things happening, there's always hope, right?' He gives Bucky a shy smile, then retreats, for now. ";
 		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
@@ -789,6 +789,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Xerxes;
 		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 20; [Took Bucky as Person]
 
 to say Bucky_Toy:
 	say "     Taking hold of the slender buck's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
@@ -995,6 +996,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Xerxes;
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 21; [Took Bucky as Toy]
 
 to say Hercules_Person:
 	say "     Reaching out to touch the tall and muscular horseman's side, you talk to him like you would a [']normal['] person, gently explaining that he can be more than just a doll. He's got a whole life to be lived and you want to try to bring him back from this... catatonia he's sunk into. There is no reaction at all, not that you expected any really, but you still keep at it, laying out that you'll bring him somewhere new, and do your best for him. Then you take hold of the towering equine's hand and guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your charge all the way home.";
@@ -1086,7 +1088,7 @@ to say Hercules_Person:
 			say "     Walking up to Hercules, Elijah studies the doll-like buck for a moment, then reaches out to him. With his hand almost, but not quite, touching the anthro's forehead, he closes his eyes and seems to concentrate for a short moment, then suddenly steps forward to wrap his arms and wings around the muscular Clydesdale, pulling him into a warm embrace. 'I can feel your fear, your desperation. Know that you are not alone my friend, and I will be here for you. God loves all of his children, no matter what form.' After just holding him and stroking Hercules's hair a little, Elijah then steps back, giving you a respectful nod for wanting to help the former mannequin.";
 		TraitGain "Hercules - Seen him" for Elijah;
 		WaitBreakReactions;
-	if Eric is booked or Eric is bunkeredand Eric is not slutstored:
+	if Eric is booked or Eric is bunkered and Eric is not slutstored:
 		if HP of Eric > 0 and HP of Eric < 21:
 			say "     Coming closer slowly, Eric bites his lip as he looks at the buck, then finally says, 'Hello, I - I'm Eric. You, uhm... I wanted to tell you that I wish you the best. Maybe I can help you with that too. I mean, even with all of us being changed to a greater or lesser extent by all of the things happening, there's always hope, right?' He gives Hercules a shy smile, then retreats, for now.";
 		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
@@ -1176,6 +1178,7 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Xerxes;
 		WaitBreakReactions;
 	now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 10; [Took Hercules as Person]
 
 to say Hercules_Toy:
 	say "     Taking hold of the tall and muscular Clydesdale's hand, you guide him through the crowd of mannequins, making sure he doesn't bump against any of them on the way out. Stepping through the side door you came in through, back into the silent and empty streets of this part of the warehouse district, you then start along the route back to the Grey Abbey Library. This time of night, there's thankfully somewhat less creatures around, even in the more fully inhabited parts of the city, so you have little issue to bring your new fucktoy all the way home. When you eventually arrive, the question poses itself of where you want to place the anthro deer.";
@@ -1382,10 +1385,11 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Xerxes;
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
+	now Resolution of Lost Souls is 11; [Took Hercules as Toy]
 
-[
 to say Leaving Limbo:
-	say "...";
-]
+	say "     You can think of better ideas besides bringing creatures like this home with you. No matter what they look like right now, these things hunted down someone to steal that appearance, and just because they're not moving right now doesn't mean they're not dangerous. You're out of here, and you make a mental note to avoid the place in the future too!";
+	now Resolution of Lost Souls is 99;
+	now Lost Souls is resolved;
 
 Mannequin ends here.
