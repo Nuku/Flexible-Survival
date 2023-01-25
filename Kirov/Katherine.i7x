@@ -492,6 +492,7 @@ Object	Name
 Hunting Reece	"Hunting Reece"
 
 Hunting Reece is a situation.
+ResolveFunction of Hunting Reece is "[ResolveEvent Hunting Reece]".
 The sarea of Hunting Reece is "Outside".
 
 to say ResolveEvent Hunting Reece:
