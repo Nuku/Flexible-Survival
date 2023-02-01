@@ -1,4 +1,9 @@
-Milking Facility by Kernog begins here.
+Version 2 of Milking Facility by Kernog begins here.
+
+"Adds a Milking Facility to the game."
+
+[Version 1 - File Created]
+[Version 2 - Edited Milking Facility and updated its questline, to go with the new NPC Zdravko - Gherod]
 
 [New location made of three rooms.
 Entrance -> Requires a key card item found in the Underground Labs
@@ -52,13 +57,53 @@ to say milkingFacilityEntranceDesc:
 		else:
 			say "     You stumble upon the entrance of a bunker. Before the Events, it was hidden in a boarded-up building. Now that the boards have been yanked open, and the concrete walls crumbled, the mysterious bunker is exposed to the outside world. The words [italic type]Emergency Supplies Production Project, Facility 14 - Dairy Products[roman type] are written in big letters over the door. The door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
 	else:
-		if ESPP bunker keycard is owned:
-			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for you to swipe in the keycard.";
-		else:
-			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
+		if Resolution of ZdravkoIntro is 0 or (Resolution of ZdravkoIntro > 9 and Resolution of ZdravkoIntro < 50):
+			if ESPP bunker keycard is owned:
+				say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for you to swipe in the keycard.";
+			else:
+				say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to be in working condition, and waiting for a keycard. You notice, next to the identification device, a small plaque directing employees who have lost their card to a room in the Trevor Labs Building in the inner city. [bold type]Judging from the minus in front of the room number, it should be somewhere underground in that building[roman type].";
+		else if Resolution of ZdravkoIntro < 10:
+			if ESPP bunker keycard is owned:
+				say "     You face the entrance of the Dairy Products Facility. The metallic door is open, meaning that Zdravko is still inside.";
+			else:
+				say "     You face the entrance of the Dairy Products Facility. The metallic door is open, meaning that Zdravko is still inside. Fortunately, this means you still have access to the facility, but that can change if you don't find a way to recover your keycard...";
+		else if Resolution of ZdravkoIntro > 49 and Resolution of ZdravkoIntro < 98:
+			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, but the electronic lock seems to have been repaired and is now in working condition. Zdravko locked the doors for security reasons, but you still have your keycard, so all you have to do is to swipe it and enter.";
+			if MilkingFacilityZdravkoCooldown - turns < 7:
+				say "     [italic type]Though, perhaps for now, you should let some time pass before returning to check on Zdravko...[roman type][line break]";
+		else if Resolution of ZdravkoIntro is 98 or Resolution of ZdravkoIntro is 99:
+			say "     You face the entrance of the Dairy Products Facility. The metallic door is still sealed, and the electronic lock seems to have stopped working for mysterious reasons. This means you will never be able to access the building again.";
 
-instead of going inside from Milking Facility Entrance while ESPP bunker keycard is not owned:
+instead of going inside from Milking Facility Entrance while ESPP bunker keycard is not owned and Resolution of ZdravkoIntro is 0:
 	say "     You cannot go in. You lack a keycard.";
+
+instead of going inside from Milking Facility Entrance while ESPP bunker keycard is not owned and Resolution of ZdravkoIntro is 5:
+	say "     As you return to the facility with your new findings and a way to reset the AI... The doors close right before your eyes with a quick shut, leaving you outside! Without a keycard, you cannot open them, and this definitely does not look good! Your only hope is that Zdravko hears you outside and comes to get you, so you bang on the door and shout his name several times... And it does not work. He never comes.";
+	WaitLineBreak;
+	say "     But as you make a brief stop, you hear something strange. A voice, from inside... deep, masculine... and in panic, yelling and screaming for help, until it is silenced all too suddenly, leaving only muffled moans in its place. Unfortunately, you are not able to help Zdravko, who fell victim to the AI's trickery like all the others. It is quite obvious what is happening to him, given all the vinyl cows in display and the trap you barely evaded in that console. The door does not budge, and the electronic lock lets out a flying spark, shortly after, becoming completely inoperative. You have lost both the facility and the bull man to the same fate as the previous visitors...";
+	say "     The AI will remain there, active and indefinitely locked away from any more unwanted visitors. Perhaps you should just take note of this place and put warning signs all over, so that hopefully when escort arrives, people will know better than to try to mess with it.";
+	now Resolution of ZdravkoIntro is 98;
+
+instead of going inside from Milking Facility Entrance while ESPP bunker keycard is owned and Resolution of ZdravkoIntro is 5:
+	say "[ZdravkoIntroResolution]"; [on Zdravko's File]
+
+instead of going inside from Milking Facility Entrance while Resolution of ZdravkoIntro is 50:
+	if MilkingFacilityZdravkoCooldown - turns < 7:
+		say "     Maybe it is best to allow Zdravko some time before returning to the facility. Give him a day or so, if you just left, then come back to check on him.";
+	else:
+		if ESPP bunker keycard is not owned:
+			say "     It has been long enough since you left Zdravko alone inside, after defeating the menacing AI holding total control of this Milking Facility, so it should be a good time to go check on him... Wait, where did you put your keycard? You cannot enter without it...! Did you drop it, somewhere...? Oh no... How are you going to find it now?!";
+			WaitLineBreak;
+			say "     You search for it again in your pockets, and for mysterious reasons, you find it sitting around somewhere in the deepest parts of your belongings... Lucky! Or maybe you just thought you dropped it and it was still here, all this time. It would have been really bad to stay locked outside, right?";
+			ItemGain ESPP bunker keycard by 1;
+		else:
+			say "[ZdravkoIntroPostEnding]"; [on Zdravko's File]
+
+instead of going inside from Milking Facility Entrance while Resolution of ZdravkoIntro is 98:
+	say "     You cannot go in. Entrance to the facility has been permanently blocked, and it is strangely silent...";
+
+instead of going inside from Milking Facility Entrance while Resolution of ZdravkoIntro is 99:
+	say "     You cannot go in. Zdravko locked you out of the facility permanently, and it is strangely silent...";
 
 Section 2-1 Keycard situation
 
@@ -95,7 +140,10 @@ to say milkingFacilityFactoryDesc:
 		say "     You stand in the factory of the Milking Facility. To your left and right, a dozen of [if milkingFactorySuitUpgraded is 0]plastic-like[else]metal-like[end if] vinyl cows are lined up. Tubes are hooked to their various private parts, and extract cum and milk at a [if milkingFactoryProductivityUp is 0]leisurely[else]frantic[end if] space, filling large metallic tanks behind them. North of the factory is a control room. Over the control room's door hangs a clock, indicating that the next pause of the [']workers['] will not be before a while.";
 
 to say vinylCowsScene:
-	say "     You report your attention to the dozen of vinyl cows lined up on each side of the room. The bovines have now a slick and shiny body, with a black-and-white metallic surface, which feels like it comes straight out of a high-tech factory. [if milkingFactorySuitUpgraded is 1]Thanks to the upgrade you authorized, it looks bulkier and sturdier than the previous model, without any useless addition; would you not hear raspy moos escape from the filter, you would have confused the vinyl cow for a statue. The fan has disappeared, and it seems that the person inside is forced to breathe the recycled air. It must be hot as hell inside[else]Their featureless face ends with an integrated fan which brings fresh, but filtered air in and out the inside of the suit, probably directly the lungs of the person inside. The rotund bovine constantly wobbles, following its prisoner's various squirmings[end if]. Various additional, transparent tubes are hooked on the cows['] surfaces. You can tell, from each tube's position, the gender of each prisoner. [if milkingFactoryProductivityUp is 0]The milkers go at a leisurely pace on their recipient. The ones working on female and herm breasts emit a constant, modest stream of human dairy. Every ten minutes or so, a groan here and there signal that one of the cock milkers extracted a new dose of cum from a cow[else]Since you activated the full productivity mode, the room is a concert of groans and moos. Breast milkers keep pumping and pumping, filling the tubes to full capacity, and the male cows seems to cum one after the other, continuously[end if]. The breast milk, and the other kind of [']milk['] is collected by the tubes, and stored in big, metallic containers sitting behind the cows. Next to each cow is a monitor, but they seem to be locked on a screensaver, an endless scenery of grassy hills.";
+	if Resolution of ZdravkoIntro < 50:
+		say "     You report your attention to the dozen of vinyl cows lined up on each side of the room. The bovines have now a slick and shiny body, with a black-and-white metallic surface, which feels like it comes straight out of a high-tech factory. [if milkingFactorySuitUpgraded is 1]Thanks to the upgrade you authorized, it looks bulkier and sturdier than the previous model, without any useless addition; would you not hear raspy moos escape from the filter, you would have confused the vinyl cow for a statue. The fan has disappeared, and it seems that the person inside is forced to breathe the recycled air. It must be hot as hell inside[else]Their featureless face ends with an integrated fan which brings fresh, but filtered air in and out of the inside of the suit, probably directly into the lungs of the person inside. The rotund bovine constantly wobbles, following its prisoner's various squirmings[end if]. Various additional, transparent tubes are hooked on the cows['] surfaces. You can tell, from each tube's position, the gender of each prisoner. [if milkingFactoryProductivityUp is 0]The milkers go at a leisurely pace on their recipient. The ones working on female and herm breasts emit a constant, modest stream of human dairy. Every ten minutes or so, a groan here and there signal that one of the cock milkers extracted a new dose of cum from a cow[else]Since you activated the full productivity mode, the room is a concert of groans and moos. Breast milkers keep pumping and pumping, filling the tubes to full capacity, and the male cows seems to cum one after the other, continuously[end if]. The breast milk, and the other kind of [']milk['] is collected by the tubes, and stored in big, metallic containers sitting behind the cows. Next to each cow is a monitor, but they seem to be locked on a screensaver, an endless scenery of grassy hills.";
+	else if Resolution of ZdravkoIntro > 49:
+		say "     You report your attention to the dozen of vinyl cows lined up on each side of the room. The bovines have now a slick and shiny body, with a black-and-white metallic surface, which feels like it comes straight out of a high-tech factory. Their featureless face ends with an integrated fan which brings fresh air in and out the inside of the suit, probably directly into the lungs of the person inside. The rotund bovine constantly wobbles, following its prisoner's various squirmings. Various additional, transparent tubes are hooked on the cows['] surfaces. You can tell, from each tube's position, the gender of each prisoner. The milkers go at a leisurely pace on their recipient. The ones working on female and herm breasts emit a constant, modest stream of human dairy. Every ten minutes or so, a groan here and there signal that one of the cock milkers extracted a new dose of cum from a cow. The breast milk, and the other kind of [']milk['] is collected by the tubes, and stored in big, metallic containers sitting behind the cows. Next to each cow is a monitor, showing several graphs, values and data, which Zdravko is probably using to help him keep them stable.";
 
 Section 4 - Control Room
 
@@ -128,15 +176,20 @@ check readingOperatorDiary:
 	if abandoned operator diary is not visible, say "You cannot use this action here." instead;
 
 carry out readingOperatorDiary:
-		say "     You read the first entry. It seems to have been written roughly one month before the nanite outbreak: [italic type]Hello, research diary. Damn, this feels weird. Two months ago, I was partying with my friends after earning my doctorate, and now I am in this top-secret-confidential-defense bunker, in order to perform governmental research. The Man wants us to devise a way to synthesize dairy products, in case of ecological or biological disaster. Standard federal paranoia, I guess, but I can see the promises it holds for civilian applications, so I do not mind. We just finished setting up everything. The cattle will only arrive next trimester, right now we are trying to tune our machine learning algorithm, to help us with our research. The AI is a little clunky, but I'm sure that, with the proper training sets, we will be able to extract something out of it.[roman type][line break]";
+	say "     You read the first entry. It seems to have been written roughly one month before the nanite outbreak: [italic type]Hello, research diary. Damn, this feels weird. Two months ago, I was partying with my friends after earning my doctorate, and now I am in this top-secret-confidential-defense bunker, in order to perform governmental research. The Man wants us to devise a way to synthesize dairy products, in case of ecological or biological disaster. Standard federal paranoia, I guess, but I can see the promises it holds for civilian applications, so I do not mind. We just finished setting up everything. The cattle will only arrive next trimester, right now we are trying to tune our machine learning algorithm, to help us with our research. The AI is a little clunky, but I'm sure that, with the proper training sets, we will be able to extract something out of it.[roman type][line break]";
+	WaitLineBreak;
+	say "     You skip a few, unimportant entries, and reach a second entry, written one week after the nanite outbreak: [italic type]Last week was crazy, for a lack of better words. I came to work, as usual, but then the security guard had me and the others confined inside the bunker. 'Biohazard outbreak,' he told us. The day passed, then the day after that, and then another day. Everyone was already nervous, and some were starting to panic. Ironically, the Emergency Supplies Production Project did not have any emergency supplies... The guard left the bunker on the fourth day, taking the risk to break the quarantine in search of food and water. This was the last time we saw him. On the fifth day, me and five others armed ourselves with whatever we could find, and explored the Outside. God, it was as if the Apocalypse had set in. Then, when we arrived near the Library, we were attacked by some kind of latex fox thing. He tried to hump poor Susie. Fortunately, I was there. We walked all the way to the beach, and decided to call it a day after finding some supplies in the restaurant. But something else followed us. How should I describe it? It was a big, purple inflatable bottlenose dolphin, walking on both legs. An anatomically correct one, too. It carried another pool toy with him (or her, we're still confused about that too). We chased off the bottlenose. We decided to investigate further tomorrow.[roman type][line break]";
+	WaitLineBreak;
+	say "     The next entry, written the day after, seems important too. [italic type]The six of us went to the beach, and we tried to find the bottlenose toy from yesterday. We did not find her, but we saw some monstrous figures in the distance. What happened to the city? We eventually found an abandoned shack. Pool toys, these ones inflated. Then, it happened. First, the toys started to move and scream like crazy, startling everyone. Then, one of these things fell on Thomas. This one was deflated, and open. Did it fall on him intentionally, or was it an accident. Thomas was like gobbled-up by the pool toy, which zipped close after him. We watched, powerless, as the dolphin slowly filled with air on his own. We understood why all these pool toys were moving. Susie proposed we bring Thomas back to the Bunker, to find a way to get him out without hurting him. On the way back, a penis started to grow under the toy, as if it was a living thing. We heard Thomas grunt louder and louder, until the blasted thing ejaculated on us. We quickly understood that, the more we touched the toy, the more it was [']stimulated[']. We eventually managed to get Thomas back. We hooked him up to the MOO. That damn computer took a while to answer, only to write that it was [']working on a new solution[']. Work faster, dammit![roman type][line break]";
+	WaitLineBreak;
+	say "     The next entry, written the next day: [italic type]MOO found a way to open the suit! I did not really understand its explanation. Something about nanomachines which took over the suit. Thomas was... Not the same. He had been turned into some weird human/pool toy hybrid, and had to be restrained as he instantly lunged at us, talking nonsense about [']sharing the fun with us[']. What a mess. And the worse came after that. MOO messaged us, and told us that he had successfully resolved his mission. I still shudder when I saw the schematics display on the screen. It really comes to a machine to think about milking humans for food. Thankfully, Susie put a forceful stop to MOO's background programs responsible for this. She could not throw away the whole thing, but at least MOO will not be able to act on it.[roman type][line break]";
+	WaitLineBreak;
+	say "     The next and final entry, written one week after: [italic type]WHOEVER'S READING THIS DON'T (illegible scribbling).[roman type][line break]";
+	if Resolution of ZdravkoIntro is 0:
 		WaitLineBreak;
-		say "     You skip a few, unimportant entries, and reach a second entry, written one week after the nanite outbreak: [italic type]Last week was crazy, for a lack of better words. I came to work, as usual, but then the security guard had me and the others confined inside the bunker. 'Biohazard outbreak,' he told us. The day passed, then the day after that, and then another day. Everyone was already nervous, and some were starting to panic. Ironically, the Emergency Supplies Production Project did not have any emergency supplies... The guard left the bunker on the fourth day, taking the risk to break the quarantine in search of food and water. This was the last time we saw him. On the fifth day, me and five others armed ourselves with whatever we could find, and explored the Outside. God, it was as if the Apocalypse had set in. Then, when we arrived near the Library, we were attacked by some kind of latex fox thing. He tried to hump poor Susie. Fortunately, I was there. We walked all the way to the beach, and decided to call it a day after finding some supplies in the restaurant. But something else followed us. How should I describe it? It was a big, purple inflatable bottlenose dolphin, walking on both legs. An anatomically correct one, too. It carried another pool toy with him (or her, we're still confused about that too). We chased off the bottlenose. We decided to investigate further tomorrow.[roman type][line break]";
-		WaitLineBreak;
-		say "     The next entry, written the day after, seems important too. [italic type]The six of us went to the beach, and we tried to find the bottlenose toy from yesterday. We did not find her, but we saw some monstrous figures in the distance. What happened to the city? We eventually found an abandoned shack. Pool toys, these ones inflated. Then, it happened. First, the toys started to move and scream like crazy, startling everyone. Then, one of these things fell on Thomas. This one was deflated, and open. Did it fall on him intentionally, or was it an accident. Thomas was like gobbled-up by the pool toy, which zipped close after him. We watched, powerless, as the dolphin slowly filled with air on his own. We understood why all these pool toys were moving. Susie proposed we bring Thomas back to the Bunker, to find a way to get him out without hurting him. On the way back, a penis started to grow under the toy, as if it was a living thing. We heard Thomas grunt louder and louder, until the blasted thing ejaculated on us. We quickly understood that, the more we touched the toy, the more it was [']stimulated[']. We eventually managed to get Thomas back. We hooked him up to the MOO. That damn computer took a while to answer, only to write that it was [']working on a new solution[']. Work faster, dammit![roman type][line break]";
-		WaitLineBreak;
-		say "     The next entry, written the next day: [italic type]MOO found a way to open the suit! I did not really understand its explanation. Something about nanomachines which took over the suit. Thomas was... Not the same. He had been turned into some weird human/pool toy hybrid, and had to be restrained as he instantly lunged at us, talking nonsense about [']sharing the fun with us[']. What a mess. And the worse came after that. MOO messaged us, and told us that he had successfully resolved his mission. I still shudder when I saw the schematics display on the screen. It really comes to a machine to think about milking humans for food. Thankfully, Susie put a forceful stop to MOO's background programs responsible for this. She could not throw away the whole thing, but at least MOO will not be able to act on it.[roman type][line break]";
-		WaitLineBreak;
-		say "     The next and final entry, written one week after: [italic type]WHOEVER'S READING THIS DON'T (illegible scribbling).[roman type][line break]";
+		say "     Whatever happened after that, you have no way of knowing, but it did not look good. Perhaps it has something to do with the AI itself, as the diary entries get progressively more intriguing by mentioning some form of [bold type]independency[roman type] in its actions. You would have to be [bold type]very careful[roman type] while messing with it if you do not want to share these people's fate...";
+		say "     But then again, is there a way to actually mess with it? It does seem like it is a very complex program. Maybe [bold type]someone else[roman type] would be able to?";
+		say "     You could always just [bold type]check the console and try out some options[roman type]... Maybe something will pop up, eventually.";
 
 
 Section 5 - The Computer
@@ -145,11 +198,14 @@ milking facility console is a thing. It is in Milking Facility Operations Room.
 Description of milking facility console is "[milkingFacilityConsoleDesc]".
 
 to say milkingFacilityConsoleDesc:
-	say "     A large computer screen and its console awaits your input. You do not see the tower unit anywhere, which means that it must be somewhere deeper within the complex or somewhere else entirely, out of your reach. A webcam follows your movements constantly. Whenever you come within a couple of meters from the screen, it displays a series of reports:[line break]";
-	say "     Next extract [if milkingFacilityLastProduction - turns < 8]dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours[else][bold type]available[roman type][end if][line break]";
-	say "     Suit upgrades: [bold type][if milkingFactorySuitUpgraded is 1]effective[else]pending approval[end if][roman type][line break]";
-	say "     Productivity optimizations: [bold type][if milkingFactoryProductivityUp is 1]committed[else]awaiting commit[end if][line break]";
-	say "     Storage augmentation: [bold type][if milkingFactoryPlayerTrap is 1]ready[else]confirmation needed[end if][roman type][line break]";
+	if Resolution of ZdravkoIntro < 10:
+		say "     A large computer screen and its console awaits your input. You do not see the tower unit anywhere, which means that it must be somewhere deeper within the complex or somewhere else entirely, out of your reach. A webcam follows your movements constantly. Whenever you come within a couple of meters from the screen, it displays a series of reports:[line break]";
+		say "     Next extract [if milkingFacilityLastProduction - turns < 8]dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours[else][bold type]available[roman type][end if][line break]";
+		say "     Suit upgrades: [bold type][if milkingFactorySuitUpgraded is 1]effective[else]pending approval[end if][roman type][line break]";
+		say "     Productivity optimizations: [bold type][if milkingFactoryProductivityUp is 1]committed[else]awaiting commit[end if][line break]";
+		say "     Storage augmentation: [bold type][if milkingFactoryPlayerTrap is 1]ready[else if Resolution of ZdravkoIntro > 9 and Resolution of ZdravkoIntro < 50]completed[else]confirmation needed[end if][roman type][line break]";
+	else if Resolution of ZdravkoIntro > 49 and Resolution of ZdravkoIntro < 98:
+		say "     Both the large computer screen and its console are turned off, by now. Zdravko must have completely shut down the whole facility.";
 
 [Milk dispenser counter. Works in the same way than lastFuck]
 milkingFacilityLastProduction is a number that varies. When play begins, now milkingFacilityLastProduction is turns.
@@ -169,101 +225,106 @@ check milkingFactoryManagement:
 	if milking facility console is not visible, say "You cannot use this action here." instead;
 
 carry out milkingFactoryManagement:
-	say "     Your hands are barely on the keyboard that the screen turns on. [italic type]Welcome, administrator. Please choose the issue to manage in the menu.[roman type][first time] A little lost, you click on the help icon on the screen. The program asks you some strange question: are you a researcher or a survivor? Your gender? Your family situation? And so on. Eventually, the screen displays an explanation: [italic type]Greetings, new administrator. I am MOO, Milking Optimization Organizer. My primary duty is to find a secure source of dairy products, in case of civilization collapse. This facility is currently experimenting on animated vinyl organisms, and their fluid extraction capacities. As the new administrator, you are required to review the improvement propositions that I make, and that are still pending approval since the disappearance of the previous administrator. I strongly recommend that you approve them. Your status also gives you the right to receive a daily dispense of the products of this facility. Let us make great work together, administrator.[roman type][only]";
-	LineBreak;
-	say "     [bold type]What do you want to do with the computer?[roman type][line break]";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if milkingFacilityLastProduction - turns >= 8:
-		choose a blank row in table of fucking options;
-		now title entry is "Dispense dairy product";
-		now sortorder entry is 1;
-		now description entry is "Ask MOO to give you some of the dairy produced by the factory.";
+	if Resolution of ZdravkoIntro > 0 and Resolution of ZdravkoIntro < 10:
+		say "     It seems impossible to mess with the console now. Zdravko has taken control of everything... Perhaps you should [bold type]talk to him[roman type] first and decide on a course of action.";
+	else if Resolution of ZdravkoIntro > 49 and Resolution of ZdravkoIntro < 98:
+		say "     There is nothing to interact with. Both the console and the computer have been turned off.";
 	else:
-		say "Next dairy extract dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours.";
-	[]
-	if milkingFactorySuitUpgraded is 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Approve suit upgrades";
-		now sortorder entry is 2;
-		now description entry is "Check the 'Suit upgrades' entry";
-	[]
-	if milkingFactoryProductivityUp is 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Commit productivity optimizations";
-		now sortorder entry is 2;
-		now description entry is "Check the 'Productivity optimizations' entry";
-	[]
-	if milkingFactoryPlayerTrap is 0:
-		choose a blank row in table of fucking options;
-		now title entry is "Augment storage space";
-		now sortorder entry is 2;
-		now description entry is "Check the 'Storage space' entry";
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if nam is "Dispense dairy product":
-					say "     [italic type]Dispensing dairy products. Thank you in advance for your feedback[roman type], the computer prints on the screen, before displaying the mentioned feedback survey. [one of]What you thought was a coffee dispenser suddenly hums to life in the room[or]The dispenser turns on and hums softly[stopping]. After some rumbling, [if milkingFactoryProductivityUp is 0]a sealed bottle of milk falls down[else]two sealed bottles of milk fall one after the other[end if] where the coffee cup would be.";
-					now milkingFacilityLastProduction is turns;
-					ItemGain manufactured milk by 1;
-					if milkingFactoryProductivityUp is 1, ItemGain manufactured milk by 1;
-				if nam is "Approve suit upgrades":
-					say "     A pop-up appears on the screen: [italic type]Suit upgrades will allow addition of purification functionalities, providing the consumer with 100% safe dairy. Approval cannot be rescinded. Do you confirm?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Confirm.";
-					say "     ([link]N[as]n[end link]) - Cancel.";
-					if Player consents:
-						LineBreak;
-						say "     [italic type]Thank you, administrator,[roman type] MOO answers. You hear the factory stir to life outside. Large tubes are suspended over each vinyl cow and pour down a shiny black molasses on them. The molasses sticks to the cows['] bodies and integrates with them. The shiny black-and-white motif reforms on the surface. The cows look bulkier and do not move an inch anymore, as if they have turned into statues.";
-						now milkingFactorySuitUpgraded is 1;
-						now manufactured milk is not infectious;
-					else:
-						LineBreak;
-						say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
-				else if nam is "Commit productivity optimizations":
-					say "     A pop-up appears on the screen: [italic type]Productivity optimizations will allow us to gain around 100% in daily productivity by removing non-essential biological limiters. Commit cannot be rolled back. Do you confirm?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Confirm.";
-					say "     ([link]N[as]n[end link]) - Cancel.";
-					if Player consents:
-						LineBreak;
-						say "     [italic type]Thank you, administrator,[roman type] the computer tells you. The cows start mooing frantically outside of the control room as the milking machine gears up its ministrations.";
-						now milkingFactoryProductivityUp is 1;
-					else:
-						LineBreak;
-						say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
-				else if nam is "Augment storage space":
-					say "     A pop-up appears on the screen: [italic type]Creation of empty storage will allow us to gain around 100% in daily productivity by adding new production units. Search for viable subjects will begin as soon as approval is given. Do you confirm?[roman type][line break]";
-					LineBreak;
-					say "     ([link]Y[as]y[end link]) - Confirm.";
-					say "     ([link]N[as]n[end link]) - Cancel.";
-					if Player consents:
-						LineBreak;
-						say "     [italic type]Thank you, administrator, and goodbye,[roman type] the screen displays. Nothing seems to have changed in the factory. A sense of dread overcomes you, like you have been tricked somehow.";
-						now milkingFactoryPlayerTrap is 1;
-					else:
-						LineBreak;
-						say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
-			wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step away from the console. [italic type]Goodbye, administrator,[roman type] the screen displays, before it turns off.";
-			wait for any key;
+		say "     Your hands are barely on the keyboard that the screen turns on. [italic type]Welcome, administrator. Please choose the issue to manage in the menu.[roman type][first time] A little lost, you click on the help icon on the screen. The program asks you some strange question: are you a researcher or a survivor? Your gender? Your family situation? And so on. Eventually, the screen displays an explanation: [italic type]Greetings, new administrator. I am MOO, Milking Optimization Organizer. My primary duty is to find a secure source of dairy products, in case of civilization collapse. This facility is currently experimenting on animated vinyl organisms, and their fluid extraction capacities. As the new administrator, you are required to review the improvement propositions that I make, and that are still pending approval since the disappearance of the previous administrator. I strongly recommend that you approve them. Your status also gives you the right to receive a daily dispense of the products of this facility. Let us make great work together, administrator.[roman type][only]";
+		LineBreak;
+		say "     [bold type]What do you want to do with the computer?[roman type][line break]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		if milkingFacilityLastProduction - turns >= 8:
+			choose a blank row in table of fucking options;
+			now title entry is "Dispense dairy product";
+			now sortorder entry is 1;
+			now description entry is "Ask MOO to give you some of the dairy produced by the factory.";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Next dairy extract dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours.";
+		[]
+		if milkingFactorySuitUpgraded is 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Approve suit upgrades";
+			now sortorder entry is 2;
+			now description entry is "Check the 'Suit upgrades' entry";
+		[]
+		if milkingFactoryProductivityUp is 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Commit productivity optimizations";
+			now sortorder entry is 2;
+			now description entry is "Check the 'Productivity optimizations' entry";
+		[]
+		if milkingFactoryPlayerTrap is 0 and Resolution of ZdravkoIntro < 10:
+			choose a blank row in table of fucking options;
+			now title entry is "Augment storage space";
+			now sortorder entry is 2;
+			now description entry is "Check the 'Storage space' entry";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					now sextablerun is 1;
+					if nam is "Dispense dairy product":
+						say "     [italic type]Dispensing dairy products. Thank you in advance for your feedback[roman type], the computer prints on the screen, before displaying the mentioned feedback survey. [one of]What you thought was a coffee dispenser suddenly hums to life in the room[or]The dispenser turns on and hums softly[stopping]. After some rumbling, [if milkingFactoryProductivityUp is 0]a sealed bottle of milk falls down[else]two sealed bottles of milk fall one after the other[end if] where the coffee cup would be.";
+						now milkingFacilityLastProduction is turns;
+						ItemGain manufactured milk by 1;
+						if milkingFactoryProductivityUp is 1, ItemGain manufactured milk by 1;
+					if nam is "Approve suit upgrades":
+						say "     A pop-up appears on the screen: [italic type]Suit upgrades will allow addition of purification functionalities, providing the consumer with 100% safe dairy. Approval cannot be rescinded. Do you confirm?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Confirm.";
+						say "     ([link]N[as]n[end link]) - Cancel.";
+						if Player consents:
+							LineBreak;
+							say "     [italic type]Thank you, administrator,[roman type] MOO answers. You hear the factory stir to life outside. Large tubes are suspended over each vinyl cow and pour down a shiny black molasses on them. The molasses sticks to the cows['] bodies and integrates with them. The shiny black-and-white motif reforms on the surface. The cows look bulkier and do not move an inch anymore, as if they were turned into statues.";
+							now milkingFactorySuitUpgraded is 1;
+							now manufactured milk is not infectious;
+						else:
+							LineBreak;
+							say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
+					else if nam is "Commit productivity optimizations":
+						say "     A pop-up appears on the screen: [italic type]Productivity optimizations will allow us to gain around 100% in daily productivity by removing non-essential biological limiters. Commit cannot be rolled back. Do you confirm?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Confirm.";
+						say "     ([link]N[as]n[end link]) - Cancel.";
+						if Player consents:
+							LineBreak;
+							say "     [italic type]Thank you, administrator,[roman type] the computer tells you. The cows start mooing frantically outside of the control room as the milking machine gears up its ministrations.";
+							now milkingFactoryProductivityUp is 1;
+						else:
+							LineBreak;
+							say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
+					else if nam is "Augment storage space":
+						say "     A pop-up appears on the screen: [italic type]Creation of empty storage will allow us to gain around 100% in daily productivity by adding new production units. Search for viable subjects will begin as soon as approval is given. Do you confirm?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Confirm.";
+						say "     ([link]N[as]n[end link]) - Cancel.";
+						if Player consents:
+							LineBreak;
+							say "     [italic type]Thank you, administrator, and goodbye,[roman type] the screen displays. Nothing seems to have changed in the factory. A sense of dread overcomes you, like you have been tricked somehow.";
+							now milkingFactoryPlayerTrap is 1;
+						else:
+							LineBreak;
+							say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
+				wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step away from the console. [italic type]Goodbye, administrator,[roman type] the screen displays, before it turns off.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 
 
 Section 6 - Special bound state and game over scene
@@ -361,7 +422,7 @@ to milkingCowSuitBind:
 						if milkingCowSuitBindStage is 1:
 							say "     With some difficulty, you manage to free your hands from the encroaching vinyl. Grabbing a nearby ledge, you start to pull yourself out, inch by inch. But then, you sense your orgasm coming. Panicking, you pull even stronger. The artificial intelligence, sensing your increasing vitals, gears up its machine into overdrive. Your body freezes in mid air as your brain attempts to process the onslaught of stimuli it goes through. Stuck in a dead-end, it has no choice but to deliver a powerful climax. Crying in pleasure, you hump the deflated, vinyl suit as you [if Player is male]unload your [Cum Load Size of Player] load inside the milker[smn][else if Player is female]squirt repeatedly in orgasmic pleasure[else]cum hard[end if] Keeping your body paralyze with overstimulation, the machine brings you back in the middle of the vinyl, while the suit finishes forming around your body.";
 						else if milkingCowSuitBindStage is 2:
-							say "     You feel another orgasm coming in the middle of another push. You violently trash in your prison, yearning to make progress before the inevitable. On the direct-live feed you are forced to see, you see your human shape agitate, while it violently punches and kicks the vinyl cow, like a cartoon character trapped in a bag. Then the orgasm comes. You think that you have frozen in place, but your pelvis is actually violently humping the air while [if Player is male]cum escape from the tube[smn] attached to your milker[smn][else if Player is female]fem-cum is ejected outside from your violent orgasm[else]it cums hard[end if]. You watch, powerless, as the vinyl cow slowly reforms around your body, and goes into the next stage of its capture program.";
+							say "     You feel another orgasm coming in the middle of another push. You violently trash in your prison, yearning to make progress before the inevitable. On the direct-live feed you are forced to see, you see your human shape agitate, while it violently punches and kicks the vinyl cow, like a cartoon character trapped in a bag. Then the orgasm comes. You think that you have frozen in place, but your pelvis is actually violently humping the air while [if Player is male]cum escapes from the tube[smn] attached to your milker[smn][else if Player is female]fem-cum is ejected outside from your violent orgasm[else]it cums hard[end if]. You watch, powerless, as the vinyl cow slowly reforms around your body, and goes into the next stage of its capture program.";
 						else if milkingCowSuitBindStage is 3:
 							say "     You can feel your third orgasm come insidiously. Your movements quickly lose all sense of coordination. The program managing your suit presses its advantage, and maintains you in place, while you hump against the air layer and go over the edge once more. You mind blanks out, and you have only the barest feeling of something leaving your body, as you are lost in the throes of pleasure. Utterly knocked out and detached from reality, you slump down inside the suit, while it completes its installation.";
 						else: [4+: Impossible to trigger]
@@ -427,7 +488,7 @@ to MilkingCowSuitOrgasm: [Orgasm description. Progresses to next bound segment.]
 	else if milkingCowSuitBindStage is 2:
 		say "     You whine pathetically as another orgasm takes over your body, and MOO steals yet another load from you. This time, the suit does not stop after a long, torturous minute, until it has taken everything it could from you. The suit is much more efficient, too. [if Player is herm]The milker's latex sheath[smn] squeezes around your dick[s] in synchronicity with your ejaculation, and the dildo[sfn] adapt[sfv] [itstheirm] hammering to the contractions of your cunt[sfn][else if Player is female] The dildo[sfn] adapt[sfv] [itstheirm] hammering to the contractions of your cunt[sfn][else if Player is male]The milker's latex sheath[smn] squeezes around your dick[s] in synchronicity with your ejaculation[end if]. You have trouble getting your breath back, as your teary eyes are fixed on your own wheezing shape through the video feed.";
 	else if milkingCowSuitBindStage is 3:
-		say "     You cum for the third time. Your scream is muffled by the thick gag in your mouth, but your eyes ring with a loud, unnatural moo. The material contracts under your body, as if to simulate you mounting a breeding post or another cow. [if milkingFactorySuitUpgraded is 1]The upgraded cow suit in front of your eyes does not move an inch, confusing your brain even more[else]The vinyl cow in front of your eyes seem to follow your movements slightly[end if]. Your orgasm does not seem to end, as MOO prolongs your suffering with inhuman efficiency, by making you go through a series of mini, half-ruined orgasms before the final, mind-crushing one. The anal plug joins the fun, [if Player is male]inflating and pressing against your prostate in order to rise your productivity[else]letting you squeeze around it and let the rumbles carry your orgasm over its natural time limit[end if].";
+		say "     You cum for the third time. Your scream is muffled by the thick gag in your mouth, but your ears ring with a loud, unnatural moo. The material contracts under your body, as if to simulate you mounting a breeding post or another cow. [if milkingFactorySuitUpgraded is 1]The upgraded cow suit in front of your eyes does not move an inch, confusing your brain even more[else]The vinyl cow in front of your eyes seem to follow your movements slightly[end if]. Your orgasm does not seem to end, as MOO prolongs your suffering with inhuman efficiency, by making you go through a series of mini, half-ruined orgasms before the final, mind-crushing one. The anal plug joins the fun, [if Player is male]inflating and pressing against your prostate in order to rise your productivity[else]letting you squeeze around it and let the rumbles carry your orgasm over its natural time limit[end if].";
 	else if milkingCowSuitBindStage is 4:
 		say "     Half-crying, half-moaning, you close your eyes tight as another orgasm wash over your body. You feel as if your body turns into liquid, then makes one with the cow as it milks you on, and on, and on, until your mind blanks out and you almost lose consciousness. Eventually, you slump down in your air-tight prison, exhausted to the point that you are unable to move a single finger from exhaustion.";
 	else: [Debug failsafe]
@@ -446,7 +507,8 @@ to milkingCowSuitProgress: [Displays once when entering the next bound segment. 
 			say "     With perfect timing, the various apparatus return to work on your body. And thus, you have a perfect angle on the milking pump[smn] sliding up and down your [cock size desc of Player] cock[smn][if Nipple Count of Player > 0 and Breast Size of Player > 0], and the milking cups pressing on your breasts in order to extract their contents[end if].";
 		say "     Panicking you scramble inside the suit. Your hands desperately attempt to find a zipper or a weak point in your prison. The constant video feed hinders you, as it is more disorienting and distracting than anything, when all it shows is the vague shape of a person push against the inner surface of a growing [if milkingFactorySuitUpgraded is 1]bulky[else]round[end if] cow.";
 	else if milkingCowSuitBindStage is 3:
-		say "     You grown in shock and fatigue from your second forced orgasm, while your various fluids are sucked away. The inside of the cow suit feels unbearably hot. You sweat heavily against the inner layer's surface while more air is added. Your free space is dramatically restrained, and your limbs are forced into sleeves, forcing you to stay on all fours. From the outside, the vinyl looks now more cow than man. You, and the silhouette in the video feed, jump as a thick plug pushes inside your ass. It vibrates intensely against your [if Player is male]prostate[else]vaginal walls[end if]. Then, you realize that you cannot close your mouth after shouting, as a phallic-shaped mouth gag inflates and locks your jaws in place. You feel something pour into your throat. The machine gives you your first dose of stimulant, laced with aphrodisiac. [if Nipple Count of Player > 0 and Breast Size of Player > 0]The drug seems to have an effect on your breasts too, as they start to release milk liberally into the constantly sucking tubes. [end if]The other stimulations return promptly after, and resume eating away at your mental resistance.";
+		say "     You groan in shock and fatigue from your second forced orgasm, while your various fluids are sucked away. The inside of the cow suit feels unbearably hot. You sweat heavily against the inner layer's surface while more air is added. Your free space is dramatically restrained, and your limbs are forced into sleeves, forcing you to stay on all fours. From the outside, the vinyl looks now more cow than man. You, and the silhouette in the video feed, jump as a thick plug pushes inside your ass. It vibrates intensely against your [if Player is male]prostate[else]vaginal walls[end if]. Then, you realize that you cannot close your mouth after shouting, as a phallic-shaped mouth gag inflates and locks your jaws in place. You feel something pour into your throat. The machine gives you your first dose of stimulant, laced with aphrodisiac. [if Nipple Count of Player > 0 and Breast Size of Player > 0]The drug seems to have an effect on your breasts too, as they start to release milk liberally into the constantly sucking tubes. [end if]The other stimulations return promptly after, and resume eating away at your mental resistance.";
+		WaitLineBreak;
 	else if milkingCowSuitBindStage is 4:
 		say "     This time, you take a while to recover from the grogginess of your most recent orgasm. Meanwhile, the suit finishes to inflate around you. Your prison is now indistinguishable from the other vinyl cows. [if milkingFactorySuitUpgraded is 1]Because the suit recycles its air, you are perfectly insulated in a warm, rubbery prison[else]The fan integrated into your muzzle brings you fresh air, but it is a meager consolations compared to your unescapable predicament[end if]. The air layer separating the inner suit from the outside is so thick, that you do not feel the ground under your body. You could be flipped upside down or fall on the side, and never realize it. The only thing you feel right now is the continuous pleasure inflicted on your body, while your eyes are locked on the [if milkingFactorySuitUpgraded is 1]bulky[else]jiggling[end if] vinyl cow. Every breath you take, every saliva you gulp is laced with pleasure-enhancing drugs. The smart suit starts to use a system of rhythmic contractions to force your body into humping motions, and more and more thoughts of giving in and going along the flow starts popping up in your mind.";
 	else: [stage 3+]
@@ -454,7 +516,7 @@ to milkingCowSuitProgress: [Displays once when entering the next bound segment. 
 
 to say milkingCowSuitBindDesc: [Displays at the top of the bound screen after every action. Modified by current bound stage.]
 	if milkingCowSuitBindStage is 1:
-		say "     You are down on your knees, trapped inside a black mass which threatens to engulf you[if Player is male]. A milker is hooked to your cock[smn] and pumps slowly. It slurps down a bit of pre-cum here and then, as MOO tries to find the optimal rhythm for your physiology[end if][if Player is female]. The fluid matter has formed an almost perfect reproduction of a bull cock, adapted to the size of your [cunt size desc of Player] cunt[sfn]. It pushes, inch by inch in your puss[yfn] in an attempt to find your g-spot[sfn][end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Milking cups are hooked on each of your [Nipple Count of Player] breasts and stimulate them in an attempt to draw out milk[end if]. [one of]You turn your head just in time, as the muzzle part of the vinyl slime tried to fit on your [FaceName of Player] head. You push it back with some difficulty.[or]The mass of vinyl tries to stick your hands to the floor. You pull them away just in time, in a brief tug-of-war with the animated goop[or]The vinyl slowly creeps up your neck, trying to find the mask part in order to fuse with it.[purely at random]";
+		say "     You are down on your knees, trapped inside a black mass which threatens to engulf you[if Player is male]. A milker is hooked to your cock[smn] and pumps slowly. It slurps down a bit of pre-cum here and then, as MOO tries to find the optimal rhythm for your physiology[end if][if Player is female]. The fluid matter has formed an almost perfect reproduction of a bull cock, adapted to the size of your [cunt size desc of Player] cunt[sfn]. It pushes, inch by inch in your puss[yfn] in an attempt to find your g-spot[sfn][end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Milking cups are hooked on each of your [Nipple Count of Player] breasts and stimulate them in an attempt to draw out milk[end if]. [one of]You turn your head just in time, as the muzzle part of the vinyl slime tried to fit on your [FaceSpeciesName of Player in lower case] head. You push it back with some difficulty.[or]The mass of vinyl tries to stick your hands to the floor. You pull them away just in time, in a brief tug-of-war with the animated goop[or]The vinyl slowly creeps up your neck, trying to find the mask part in order to fuse with it.[purely at random]";
 		say "     Your could try to [bold type]S[roman type]truggle in vain, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] MOO, or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] its relentless teasing.";
 	else if milkingCowSuitBindStage is 2:
 		say "     You are completely encased inside what looks, from the outside, like a deflated cow costume. The suit continuously fills with air, while various tubes and machinery are hooked on you and harass your body[if Player is male]. A milker is hooked to your cock[smn] and pumps with fearsome regularity, neither too fast nor too slow for your unconscious tastes. Pre-cum regularly leaves through the sheath's tube, while it waits for the main product[end if][if Player is female]. Bull-shaped cock[sfn] ram your cunt[sfn], slowly changing shape to stimulate every sensitive spot[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Milking cups pump your breasts, collecting more and more natural milk with each passing minute[end if].";
@@ -463,7 +525,7 @@ to say milkingCowSuitBindDesc: [Displays at the top of the bound screen after ev
 		say "     You are trapped in a fully inflated vinyl cow. The fake animal is now stuck on its four legs, your limbs trapped inside. There is now enough air for you to keep your naked, sweating body from touching the ground. A gag fills your mouth, muffling your sound and transforming them into animalistic moos through an integrated microphone. The gag regularly forces a liquid down your throat, which makes you feel like your body heat goes through the roof, and keeps you aroused and productive. [if milkingFactorySuitUpgraded is 1]. The air, simply recycled before being sent back to your lungs alongside a dose of drug, becomes progressively warmer[else]You feel the soft rumble of the fan integrated to your muzzle, which feeds you fresh, drug-laced air[end if]. [if Player is male]A milker is hooked to your cock[smn]. It has learned to vary its rhythm, slowing down or picking up in speed, toying with you. Your pre is collected and used to lubricate the sheath of the milker. [end if][if Player is female]The dildo[sfn] ramming your cunt[sfn] have lost their animalistic shaped. They are now lined up with ridges, bumps and other texture tricks, so perfectly-shaped for you that you can feel each and every one of them. [end if]A thick anal plug fills your ass, and rumbles hard against your [if Player is male]prostate[else]vagina[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. An uninterrupted flow of milk flows down your breast milkers, now that you are under the effect of the aphrodisiac and that your milk productivity is jacked up[end if].";
 		say "     Your could try to [bold type]S[roman type]truggle in vain, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] your prison, or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] its incredibly arousing motions.";
 	else if milkingCowSuitBindStage is 4:
-		say "The suit is fully inflated and operates at full capacity. The thick air layer makes you feel like you are suspended into a void[if milkingFactorySuitUpgraded is 1]. The impression is reinforced by the bulky structure of your prison, completely immobile on the video feed. The inside of the suit is very warm, as it espouses your forms and the heat has nowhere else to go[end if]. The whole suit rhythmically contracts around you, matching your every move. A gag fills your mouth, muffling your sound and transforming them into animalistic moos through an integrated microphone. The gag regularly forces a liquid down your throat, which makes you feel like your body heat goes through the roof, and keeps you aroused and productive. [if milkingFactorySuitUpgraded is 1]The air, simply recycled before being sent back to your lungs alongside a dose of drug, becomes progressively warmer[else]You feel the soft rumble of the fan integrated to your muzzle, which feeds you fresh, drug-laced air[end if]. [if Player is male]The penis milker[smn] feel now as if [ittheym] [ismv] part of your body, and [itstheirm] rubbery sheath[smn] [ismv] a second skin, constantly moving around your [CockName of Player] cock[smn], torturing you with pleasure. [end if][if Player is female]The dildo[sfn] have lost all pretention of simulating sex. [ittheyf] [isfv] rammed as far as [ittheyf] can inside of you, and keep spinning, grazing your pleasure spots with all [itstheirf] ridges and bumps. [end if]A thick anal plug fills your ass, and rumbles with frequently-changing rhythms against your [if Player is male]prostate[else]vagina[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. The milk flows liberally from your breasts, so much that it pulls around your areolas while it waits to be collected by the tubes, now continuously white[end if].";
+		say "The suit is fully inflated and operates at full capacity. The thick air layer makes you feel like you are suspended into a void[if milkingFactorySuitUpgraded is 1]. The impression is reinforced by the bulky structure of your prison, completely immobile on the video feed. The inside of the suit is very warm, as it espouses your forms and the heat has nowhere else to go[end if]. The whole suit rhythmically contracts around you, matching your every move. A gag fills your mouth, muffling your sound and transforming them into animalistic moos through an integrated microphone. The gag regularly forces a liquid down your throat, which makes you feel like your body heat goes through the roof, and keeps you aroused and productive. [if milkingFactorySuitUpgraded is 1]The air, simply recycled before being sent back to your lungs alongside a dose of drug, becomes progressively warmer[else]You feel the soft rumble of the fan integrated to your muzzle, which feeds you fresh, drug-laced air[end if]. [if Player is male]The penis milker[smn] feel now as if [ittheym] [ismv] part of your body, and [itstheirm] rubbery sheath[smn] [ismv] a second skin, constantly moving around your [Cock of Player] cock[smn], torturing you with pleasure. [end if][if Player is female]The dildo[sfn] have lost all pretention of simulating sex. [ittheyf] [isfv] rammed as far as [ittheyf] can inside of you, and keep spinning, grazing your pleasure spots with all [itstheirf] ridges and bumps. [end if]A thick anal plug fills your ass, and rumbles with frequently-changing rhythms against your [if Player is male]prostate[else]vagina[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. The milk flows liberally from your breasts, so much that it pulls around your areolas while it waits to be collected by the tubes, now continuously white[end if].";
 		say "     Your could try to [bold type]S[roman type]truggle in vain, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] your new universe, or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] its incredibly arousing motions.";
 	else: [Debug failsafe]
 		say "     ERROR <milkingCowSuitInvalidBindStage>: This text should never appear. Please file a bug report on the FS Discord and include the above error message.";

@@ -200,21 +200,29 @@ Object	Name
 Randall	"Randall"
 
 Randall is a man.
-[physical details as of game start]
 Humanity of Randall is 80. [lives at the campus]
-ScaleValue of Randall is 3. [human size]
-Cock Count of Randall is 1. [has a cock]
-Cock Length of Randall is 8. [has an 8 inch cock]
-Ball Size of Randall is 4. [size of balls]
-Ball Count of Randall is 2. [has a pair of balls]
-Cunt Count of Randall is 0. [no vagina]
-Cunt Depth of Randall is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Randall is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Randall is 2. [Has two normal nipples]
-Breast Size of Randall is 0. [Doesn't have breasts really]
+ScaleValue of Randall is 3. [human sized]
+Body Weight of Randall is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Randall is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Randall is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Randall is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Randall is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Randall is 6. [length in inches]
+Breast Size of Randall is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Randall is 2. [count of nipples]
+Asshole Depth of Randall is 8. [inches deep for anal fucking]
+Asshole Tightness of Randall is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Randall is 1. [number of cocks]
+Cock Girth of Randall is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Randall is 8. [Length in Inches]
+Ball Count of Randall is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Randall is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Randall is 0. [number of cunts]
+Cunt Depth of Randall is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Randall is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Randall is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Randall is false. [can not take oversized members without pain]
-Sterile of Randall is true.
 PlayerMet of Randall is false.
 PlayerRomanced of Randall is false.
 PlayerFriended of Randall is false.
@@ -225,6 +233,8 @@ Virgin of Randall is false.
 AnalVirgin of Randall is false.
 PenileVirgin of Randall is true.
 SexuallyExperienced of Randall is true.
+TwistedCapacity of Randall is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Randall is true. [steriles can't knock people up]
 MainInfection of Randall is "".
 Description of Randall is "[RandallDesc]".
 Conversation of Randall is { "<This is nothing but a placeholder!>" }.
@@ -417,21 +427,29 @@ Object	Name
 Brad	"Brad"
 
 Brad is a man.
-[physical details as of game start]
 Humanity of Brad is 80. [lives at the campus]
-ScaleValue of Brad is 4. [basketball player size]
-Cock Count of Brad is 1. [has a cock]
-Cock Length of Brad is 12. [has a 12 inch cock]
-Ball Size of Brad is 5. [size of balls]
-Ball Count of Brad is 2. [has a pair of balls]
-Cunt Count of Brad is 0. [no vagina]
-Cunt Depth of Brad is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Brad is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Brad is 2. [Has two normal nipples]
-Breast Size of Brad is 0. [Doesn't have breasts really]
+ScaleValue of Brad is 4. [tall human sized]
+Body Weight of Brad is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Brad is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Brad is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Brad is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Brad is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Brad is 6. [length in inches]
+Breast Size of Brad is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Brad is 2. [count of nipples]
+Asshole Depth of Brad is 10. [inches deep for anal fucking]
+Asshole Tightness of Brad is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Brad is 1. [number of cocks]
+Cock Girth of Brad is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Brad is 12. [Length in Inches]
+Ball Count of Brad is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Brad is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Brad is 0. [number of cunts]
+Cunt Depth of Brad is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Brad is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Brad is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Brad is false. [can not take oversized members without pain]
-Sterile of Brad is true.
 PlayerMet of Brad is false.
 PlayerRomanced of Brad is false.
 PlayerFriended of Brad is false.
@@ -442,7 +460,9 @@ Virgin of Brad is false.
 AnalVirgin of Brad is true.
 PenileVirgin of Brad is false.
 SexuallyExperienced of Brad is true.
-MainInfection of Brad is "".
+TwistedCapacity of Brad is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Brad is true. [steriles can't knock people up]
+MainInfection of Brad is "Bunny Jock".
 Description of Brad is "[BradDesc]".
 Conversation of Brad is { "<This is nothing but a placeholder!>" }.
 The scent of Brad is "     Brad gives off the scent of rubber and sweat with the underlying smell of sex. For a basketball player the first two kinda make sense and the last one you attribute to his boyfriend Randall.".

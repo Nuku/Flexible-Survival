@@ -434,7 +434,7 @@ Section - Collie
 
 Table Collie - Collie Shifts
 Segment	Shift Text	Desc Text
-"head"		"Your nose becomes wet and black as it draws away from your face, forming with your mouth to become a slender snout full of long teeth. Your ears migrate up to the top of your head, becoming long enough to flop over themself. Your hair extends to your shoulders, running free."	"You have the head of a female collie dog. Your ears flop over half way and twitch softly at loud sounds. Your nose is wet and black and you have many sharp canines(pun intended). Your brown hair looks more like a mane, running down to your neck."
+"head"		"Your nose becomes wet and black as it draws away from your face, forming with your mouth to become a slender snout full of long teeth. Your ears migrate up to the top of your head, becoming long enough to flop over themselves. Your hair extends to your shoulders, running free."	"You have the head of a female collie dog. Your ears flop over half way and twitch softly at loud sounds. Your nose is wet and black and you have many sharp canines(pun intended). Your brown hair looks more like a mane, running down to your neck."
 "chest"	"Warmth flows through your chest as two modest B cupped breasts form, high riding and without droop. Brown fur spreads over your back while white fur takes up your front."	"You have B cupped breasts hidden under a chest of white fur. Your back is covered in soft brown fur."
 "gut"		"Your midsection seems to elongate as you become slender and fit. White fur covers your new belly as brown tinges at the sides."	"You have a long, lean, lower torso, covered with white fur at the front and brown at sides and back."
 "pelvis"	"White fur encroaches on your groin as things adjust down there. You soon have the almost hidden labia of a collie."	"Your groin is covered in white fur, partially concealing a dog's netherlips."
@@ -3810,7 +3810,7 @@ Section - Boar Man
 
 A boar man is a infection model. Description of a boar man is "This man appear to be a rather fat boar creature, but closer examination reveals his stocky frame carries a good deal of muscle as well. But the stench is absolutely horrid." The TF table of a boar man is Table 12.
 
-Plural of boar man is boar men.
+The plural of boar man is boar men.
 
 The move rate of a boar man is 2.
 The attack rate of a boar man is 2.

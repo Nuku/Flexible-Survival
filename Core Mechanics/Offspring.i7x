@@ -105,11 +105,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "offspring present"	"A little box, complete with a scavenged bow! A little sign on it says it's just for you and from one of your offspring that are living in the bunker."	1	offspring present
 
-instead of sniffing offspring present:
-	say "The box smells very mysterious.";
-
 offspring present is a grab object.
 Usedesc of offspring present is "[offspring present use]";
+
+instead of sniffing offspring present:
+	say "The box smells very mysterious.";
 
 to say offspring present use:
 	say "Curious about what your child got you, you carefully open the present and find ";

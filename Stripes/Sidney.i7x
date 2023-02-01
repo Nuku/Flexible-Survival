@@ -465,7 +465,7 @@ to say sexwithSidney_01:
 		say "     'This is... oooo... so... ahhh... even better... than I'd dreamed,' she pants between your thrusts. Pleased with how much your lover is enjoying her first time, you can't help but feel a swell of pride. And that further fuels your lust. You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is. Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out. You join her in climax a few moments later, pumping your hot load into her womb. Her orgasm peaks again as she feels the hot rush of your semen inside her for the first time. By the time you've finished and have pulled out, the no-longer-virginal [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] sags down onto the ground with a happy sigh, gently [if level of Sidney is 71]licking[else]caressing[end if] her leaking pussy with blissful awe.";
 	else:
 		say "     'It still... oooo... can't... ahhh... can't believe how... ohh baby! ...how great this feels,' she pants between your thrusts. Pleased with how much your lover is enjoying your lovemaking, you can't help but feel a swell of pride. And that further fuels your lust. You nuzzle at the back of her head, nibble her ears and coo softly about what a sexy woman she is. Hearing this sends the gender-shifted soldier into orgasmic delight, her needy cunt milking at your shaft as she cries out. You join her in climax a few moments later, pumping your hot load into her womb. By the time you've finished and have pulled out, the sated [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] sags down onto the floor with a happy sigh, basking in the blissful afterglow of sex.";
-	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
+	if Player is not sterile and lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
 
 
 to say sexwithSidney_02:
@@ -473,7 +473,7 @@ to say sexwithSidney_02:
 	say "     Her wet tunnel grips and squeezes around you as you start thrusting. Her paws [if level of Sidney is 71]kick sporadically in the air as you fuck her so satisfyingly[else]rub over your [bodydesc of Player] body as you fuck her so satisfyingly[end if]. Leaning [if lust of Sidney > 8]over her pregnant belly[else]in[end if], you share a passionate kiss with the [if level of Sidney is 21]sultry vixen[else if level of Sidney is 22 or level of Sidney is 23]flexible otter[else]cute canine[end if]. Your pace quickens as your lovemaking continues until she [one of]moans[or]whimpers[or]pants[at random] heavily and her hips and loins tremble beneath you in orgasmic release. Having her climaxing beneath you pushes you over the top in short order and you pump your hot, sticky load into the sexy female.";
 	say "     When finished, you pull out slowly. She watches you exiting her and [if level of Sidney is 71]rolls onto her side, burying her muzzle between her legs to lap up your warm semen from her sloppy cunt[else]slips a few fingers into her sloppy cunt, enjoying having your semen warming her insides[end if]. 'Having a horny stud cum inside my very own pussy is the best thing I've ever felt. I hope it never gets old.'";
 	if HP of Sidney is 6, now HP of Sidney is 7;
-	if lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
+	if Player is not sterile and lust of Sidney is 0 and a random chance of 3 in 5 succeeds, now lust of Sidney is 1; [preggers]
 
 
 to say sexwithSidney_03:
@@ -510,6 +510,7 @@ to say sexwithSidney_04:
 Section 6 - Interactions
 
 after navigating Grey Abbey Library while ( HP of Sidney >= 6 and Sidney is booked and lastfuck of Sidney > turns ) and ( Fang is booked and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and Fang is Male and lastfuck of Fang > turns ) and fangsidney is false:
+	project Figure of Fang_hard_icon;
 	say "     You arrive back to find Sidney's come out of the breakroom. At first you think she might be mentioning something she spotted to Fang, your lupine guard, but it's rapidly clear that it's more than that. The wolf goes from nuzzling the [if level of Sidney is 21]vixen[else if level of Sidney is 22 or level of Sidney is 23]otter[else]wusky[end if] to sniff along her side and then under her tail. Sidney [if level of Sidney <= 23]raises that tail and pushes aside her obstructing garments[else]raises that fluffy tail of hers[end if], allowing Fang to smell and then lick across her pussy. She shivers with pleasure and releases a happy moan.";
 	say "     Shall you continue watching?";
 	if Player consents:

@@ -11,7 +11,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Cow";
+	now Species Name entry is "Cow";
 	add "Cow-boi Male" to infections of BovineList;
 	add "Cow-boi Male" to infections of FurryList;
 	add "Cow-boi Male" to infections of MaleList;
@@ -185,7 +185,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Cow";
+	now Species Name entry is "Cow";
 	add "Cow-babe Female" to infections of BovineList;
 	add "Cow-babe Female" to infections of FurryList;
 	add "Cow-babe Female" to infections of MaleList;

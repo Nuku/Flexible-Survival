@@ -249,7 +249,43 @@ Table of GameCharacterIDs (continued)
 object	name
 Tawnya	"Tawnya"
 
+
 Tawnya is a woman.
+ScaleValue of Tawnya is 3. [human sized]
+Body Weight of Tawnya is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Tawnya is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Tawnya is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Tawnya is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Tawnya is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Tawnya is 6. [length in inches]
+Breast Size of Tawnya is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Tawnya is 0. [count of nipples]
+Asshole Depth of Tawnya is 6. [inches deep for anal fucking]
+Asshole Tightness of Tawnya is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Tawnya is 0. [number of cocks]
+Cock Girth of Tawnya is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Tawnya is 0. [Length in Inches]
+Ball Count of Tawnya is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Tawnya is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Tawnya is 1. [number of cunts]
+Cunt Depth of Tawnya is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Tawnya is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Tawnya is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Tawnya is false.
+PlayerRomanced of Tawnya is false.
+PlayerFriended of Tawnya is false.
+PlayerControlled of Tawnya is false.
+PlayerFucked of Tawnya is false.
+OralVirgin of Tawnya is true.
+Virgin of Tawnya is true.
+AnalVirgin of Tawnya is true.
+PenileVirgin of Tawnya is true.
+SexuallyExperienced of Tawnya is false.
+TwistedCapacity of Tawnya is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Tawnya is true. [steriles can't knock people up]
+MainInfection of Tawnya is "Lizard Girl".
 Description of Tawnya is "[TawnyaDesc]".
 Conversation of Tawnya is { "<This is nothing but a placeholder!>" }.
 The scent of Tawnya is "     Tawnya smells rather fresh, at least compared to the other suspects. The perfume coming off of her probably helps".
@@ -405,6 +441,41 @@ object	name
 Cane	"Cane"
 
 Cane is a man.
+ScaleValue of Cane is 3. [human sized]
+Body Weight of Cane is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Cane is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Cane is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Cane is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Cane is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Cane is 8. [length in inches]
+Breast Size of Cane is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Cane is 2. [count of nipples]
+Asshole Depth of Cane is 8. [inches deep for anal fucking]
+Asshole Tightness of Cane is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Cane is 1. [number of cocks]
+Cock Girth of Cane is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Cane is 6. [Length in Inches]
+Ball Count of Cane is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Cane is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Cane is 0. [number of cunts]
+Cunt Depth of Cane is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Cane is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Cane is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Cane is false.
+PlayerRomanced of Cane is false.
+PlayerFriended of Cane is false.
+PlayerControlled of Cane is false.
+PlayerFucked of Cane is false.
+OralVirgin of Cane is true.
+Virgin of Cane is true.
+AnalVirgin of Cane is true.
+PenileVirgin of Cane is false.
+SexuallyExperienced of Cane is true.
+TwistedCapacity of Cane is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Cane is true. [steriles can't knock people up]
+MainInfection of Cane is "".
 Description of Cane is "[CaneDesc]".
 Conversation of Cane is { "<This is nothing but a placeholder!>" }.
 The scent of Cane is "     The brown-furred doggy smells of musk and food, which is to be expected as the owner of a restaurant.".
@@ -480,13 +551,48 @@ to say CaneMotive:
 		now CaneMotive is 3;
 
 instead of fucking Cane:
-	say "     '...Sorry but I have a husband and wife,' he says, shocking you with that statement. You shake your head and step back away from him.";
+	say "     '...Sorry but I have a husband and a wife,' he says, shocking you with that statement. You shake your head and step back away from him.";
 
 Table of GameCharacterIDs (continued)
 object	name
 Barry	"Barry"
 
 Barry is a man.
+ScaleValue of Barry is 4. [bear sized]
+Body Weight of Barry is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Barry is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Barry is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Barry is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Barry is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Barry is 6. [length in inches]
+Breast Size of Barry is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Barry is 2. [count of nipples]
+Asshole Depth of Barry is 10. [inches deep for anal fucking]
+Asshole Tightness of Barry is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Barry is 1. [number of cocks]
+Cock Girth of Barry is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Barry is 8. [Length in Inches]
+Ball Count of Barry is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Barry is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Barry is 0. [number of cunts]
+Cunt Depth of Barry is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Barry is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Barry is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Barry is false.
+PlayerRomanced of Barry is false.
+PlayerFriended of Barry is false.
+PlayerControlled of Barry is false.
+PlayerFucked of Barry is false.
+OralVirgin of Barry is true.
+Virgin of Barry is true.
+AnalVirgin of Barry is true.
+PenileVirgin of Barry is true.
+SexuallyExperienced of Barry is false.
+TwistedCapacity of Barry is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Barry is true. [steriles can't knock people up]
+MainInfection of Barry is "".
 Description of Barry is "[BarryDesc]".
 Conversation of Barry is { "<this is a placeholder!>" }.
 The scent of Barry is "     The big bear smells heavily like musk, cologne.... and is that cotton candy?".

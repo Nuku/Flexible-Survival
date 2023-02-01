@@ -34,6 +34,9 @@ A person has a number called Lust. [ currently unused for the player; stash vari
 A person has a number called Libido.
 A person has a number called Loyalty.
 A person has a number called Humanity.
+A person has a number called Affection. [TODO: remember to include these in export/import when turning them on]
+A person has a number called Depravity.
+A person has a number called SubVsDom. [range from -100 (sub) to 0 (vers) to +100 (dom)]
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
@@ -45,11 +48,14 @@ A person has a number called Androginity. Androginity is usually 5.
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 
 A person has a number called Mouth Length. Mouth Length is usually 5.
-A person has a number called Mouth Circumference. Mouth Circumference is usually 7.
+A person has a number called Mouth Circumference. Mouth Circumference is usually 3.
 A person has a number called Tongue Length. Tongue Length is usually 3.
 A person has a number called Breast Size. Breast Size is usually 0.
 A person has a number called Nipple Count. Nipple Count is usually 2.
 A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
+[
+A person has a number called lastDrug. lastDrug is usually 2500.[@Tag:NotSaved][last drug use of the character - combined variable for all drugs (alcohol, nicotine, bliss, ...)]
+]
 A person has a number called SleepRhythm. [day/night bias]
 
 [ genital variables for all persons ]
@@ -80,8 +86,8 @@ A person has a text called Originalgender. Originalgender is usually "Undefined"
 [player interaction variables]
 A person has a truth state called PlayerMet. PlayerMet is usually false.
 A person has a truth state called PlayerRomanced. PlayerRomanced is usually false.
-A person has a truth state called PlayerFriended. PlayerFriended is usually false. [not saved till new infection system update]
-A person has a truth state called PlayerControlled. PlayerControlled is usually false. [not saved till new infection system update]
+A person has a truth state called PlayerFriended. PlayerFriended is usually false.
+A person has a truth state called PlayerControlled. PlayerControlled is usually false.
 A person has a truth state called PlayerFucked. PlayerFucked is usually false.
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -144,6 +150,12 @@ Player has a number called AssFuckGiven.
 Player has a number called AssFuckTaken.
 Player has a number called PussyFuckGiven.
 Player has a number called PussyFuckTaken.
+
+to say Player name:
+	if name of Player is "Player":
+		say("Alias D");
+	else:
+		say("[name of Player]");
 
 Section 2 - Body Parts
 
@@ -350,6 +362,7 @@ A person can be booked. A person is usually not booked.
 Definition: A person (Called x) is booked:
 	If x is Trixie, no;
 	if x is Velos, no;
+	if x is Help Book, no;
 	if the location of x is Grey Abbey Library, yes;
 	if the location of x is Grey Abbey 2F, yes;
 	if the location of x is Half-Renovated Room, yes;
@@ -372,11 +385,21 @@ Definition: A person (Called x) is booked:
 A person can be bunkered. A person is usually not bunkered.
 
 Definition: A person (Called x) is bunkered:
+	If x is Trixie, no;
 	if x is Velos, no;
+	if x is Help Book, no;
 	if the location of x is Bunker, yes;
 	if the location of x is Communal Shower, yes;
 	if the location of x is Underground Restroom, yes;
 	if the location of x is Maintenance Storeroom, yes;
+	no;
+
+A person can be slutstored. A person is usually not slutstored.
+
+Definition: A person (Called x) is slutstored:
+	if printed name of x is listed in StoredSluts_Female, yes;
+	if printed name of x is listed in StoredSluts_Male, yes;
+	if printed name of x is listed in StoredSluts_Other, yes;
 	no;
 
 Chapter 3 - Gender & Sexuality Based
@@ -398,6 +421,7 @@ Definition: A person (called x) is herm:
 
 Definition: A person (called x) is neuter:
 	if Cock Count of x is 0 and Cunt Count of x is 0, yes;
+
 
 Definition: A person (called x) is CockFitsInPlayerPussy:
 	if "Twisted Capacity" is listed in the feats of Player, yes;
@@ -495,6 +519,82 @@ Definition: A person (called x) is pure:
 										yes;
 		no;
 
+Definition: a person is facially human: [TODO: Update if needed]
+	if FaceName of Player is "Human", yes;
+	if FaceName of Player is "Herm Human", yes;
+	if FaceName of Player is "Pod Person", yes;
+	if FaceName of Player is "Siren", yes;
+	if FaceName of Player is "Greek Nymph", yes;
+	if FaceName of Player is "Spartan Warrior", yes;
+	if FaceName of Player is "Helot Manservant", yes;
+	if FaceName of Player is "Amazonian", yes;
+	if FaceName of Player is "Naiad", yes;
+	if FaceName of Player is "Math Teacher", yes;
+	if FaceName of Player is "Viking Woman", yes;
+	if FaceName of Player is "Knight", yes;
+	if FaceName of Player is "Squire", yes;
+	if HeadName of Player is "Human", yes;
+	if HeadName of Player is "Herm Human", yes;
+	if HeadName of Player is "Pod Person", yes;
+	if HeadName of Player is "Siren", yes;
+	if HeadName of Player is "Greek Nymph", yes;
+	if HeadName of Player is "Spartan Warrior", yes;
+	if HeadName of Player is "Helot Manservant", yes;
+	if HeadName of Player is "Amazonian", yes;
+	if HeadName of Player is "Naiad", yes;
+	if HeadName of Player is "Math Teacher", yes;
+	if HeadName of Player is "Viking Woman", yes;
+	if HeadName of Player is "Knight", yes;
+	if HeadName of Player is "Squire", yes;
+	no;
+
+Definition: a person is skintone human: [TODO: Update if needed]
+	if SkinName of Player is "Human", yes;
+	if SkinName of Player is "Herm Human", yes;
+	if SkinName of Player is "Pod Person", yes;
+	if SkinName of Player is "City Sprite", yes;
+	if SkinName of Player is "Wood Elf", yes;
+	if SkinName of Player is "Elven Hunter", yes;
+	if SkinName of Player is "Harpy", yes;
+	if SkinName of Player is "Siren", yes;
+	if SkinName of Player is "Succubus", yes;
+	if SkinName of Player is "Incubus", yes;
+	if SkinName of Player is "Greek Nymph", yes;
+	if SkinName of Player is "Spartan Warrior", yes;
+	if SkinName of Player is "Helot Manservant", yes;
+	if SkinName of Player is "Amazonian", yes;
+	if SkinName of Player is "Naiad", yes;
+	if SkinName of Player is "Caveman", yes;
+	if SkinName of Player is "Math Teacher", yes;
+	if SkinName of Player is "Viking Woman", yes;
+	if SkinName of Player is "Knight", yes;
+	if SkinName of Player is "Squire", yes;
+	if SkinName of Player is "Gunbunny", yes;
+	no;
+
+Definition: a person is bodily human: [TODO: Update if needed]
+	if BodyName of Player is "Human", yes;
+	if BodyName of Player is "Herm Human", yes;
+	if BodyName of Player is "Wood Elf", yes;
+	if BodyName of Player is "Elven Hunter", yes;
+	if BodyName of Player is "Pod Person", yes;
+	if BodyName of Player is "Greek Nymph", yes;
+	if BodyName of Player is "Spartan Warrior", yes;
+	if BodyName of Player is "Helot Manservant", yes;
+	if BodyName of Player is "Amazonian", yes;
+	if BodyName of Player is "Naiad", yes;
+	if BodyName of Player is "Math Teacher", yes;
+	if BodyName of Player is "Viking Woman", yes;
+	if BodyName of Player is "Knight", yes;
+	if BodyName of Player is "Squire", yes;
+	no;
+
+Definition: a person is fully human:
+	if person is not facially human, no;
+	if person is not skintone human, no;
+	if person is not bodily human, no;
+	yes;
+
 Definition: A person (called x) is purehuman:
 	if Player is not FullyNewTypeInfected: [player doesn't have all new type parts]
 		if BodyName of Player is "Human" or BodyName of Player is "Herm Human":
@@ -516,7 +616,6 @@ Definition: A person (called x) is purehuman:
 										if HeadName of Player is "Human" or CuntName of Player is "Herm Human":
 											yes;
 		no;
-
 
 Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
@@ -552,6 +651,41 @@ A person can be blunt. A person is usually not blunt.
 
 Definition: A person (called x) is blunt:
 	if CockName of Player is listed in infections of BluntCockList, yes;
+	no;
+
+A person can be nocturnal. A person is usually not nocturnal.
+
+Definition: A person (called x) is nocturnal: [as in "can see in low light"]
+	if HeadName of x is listed in infections of AquaticList, yes;
+	if HeadName of x is listed in infections of CetaceanList, yes;
+	if HeadName of x is listed in infections of CervineList, yes;
+	if HeadName of x is listed in infections of FelineList, yes;
+	if HeadName of x is listed in infections of InsectList, yes;
+	if HeadName of x is listed in infections of MachineList, yes;
+	if HeadName of x is listed in infections of MustelidList, yes;
+	if HeadName of x is listed in infections of PiscineList, yes;
+	if HeadName of x is listed in infections of RodentList, yes;
+	if HeadName of x is listed in infections of VulpineList, yes;
+	no;
+
+A person can be keeneyed. A person is usually not keeneyed.
+
+Definition: A person (called x) is keeneyed: [sharpness of view - distance, etc.]
+	if HeadName of x is listed in infections of AvianList, yes;
+	if HeadName of x is listed in infections of AvianpredList, yes;
+	if HeadName of x is listed in infections of MachineList, yes;
+	no;
+
+A person can be keenscented. A person is usually not keenscented.
+
+Definition: A person (called x) is keenscented: [can smell special information]
+	if HeadName of x is listed in infections of CanineList, yes;
+	if HeadName of x is listed in infections of FelineList, yes;
+	if HeadName of x is listed in infections of MustelidList, yes;
+	if HeadName of x is listed in infections of PorcineList, yes;
+	if HeadName of x is listed in infections of RodentList, yes;
+	if HeadName of x is listed in infections of UrsineList, yes;
+	if HeadName of x is listed in infections of VulpineList, yes;
 	no;
 
 A person can be HeadFurred. A person is usually not HeadFurred.
@@ -1252,29 +1386,29 @@ to say Breast Size Description of ( x - a person ):
 		-- 7:
 			say "DDDD cup";
 		-- 8:
-			say "G cup";
-		-- 9:
 			say "H cup";
-		-- 10:
+		-- 9:
 			say "I cup";
-		-- 11:
+		-- 10:
 			say "J cup";
-		-- 12:
+		-- 11:
 			say "K cup";
-		-- 13:
+		-- 12:
 			say "L cup";
-		-- 14:
+		-- 13:
 			say "M cup";
-		-- 15:
+		-- 14:
 			say "N cup";
-		-- 16:
+		-- 15:
 			say "O cup";
-		-- 17:
+		-- 16:
 			say "P cup";
-		-- 18:
+		-- 17:
 			say "Q cup";
-		-- 19:
+		-- 18:
 			say "R cup";
+		-- 19:
+			say "S cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]

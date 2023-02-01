@@ -98,21 +98,29 @@ object	name
 Horus	"Horus"
 
 Horus is a man.
-[physical details as of game start]
 Humanity of Horus is 80. [is thousands of years old]
-ScaleValue of Horus is 3. [human size]
-Cock Count of Horus is 1. [has a cock]
-Cock Length of Horus is 10. [has an 10 inch cock]
-Ball Size of Horus is 4. [size of balls]
-Ball Count of Horus is 2. [has a pair of balls]
-Cunt Count of Horus is 0. [no vagina]
-Cunt Depth of Horus is 0. [Doesnt have a vagina to get stretched]
-Cunt Tightness of Horus is 0. [Doesnt have a vagina to get stretched]
-Nipple Count of Horus is 2. [Has two normal nipples]
-Breast Size of Horus is 0. [Doesn't have breasts really]
+ScaleValue of Horus is 3. [human sized]
+Body Weight of Horus is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Horus is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Horus is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Horus is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Horus is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Horus is 6. [length in inches]
+Breast Size of Horus is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Horus is 2. [count of nipples]
+Asshole Depth of Horus is 10. [inches deep for anal fucking]
+Asshole Tightness of Horus is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Horus is 1. [number of cocks]
+Cock Girth of Horus is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Horus is 10. [Length in Inches]
+Ball Count of Horus is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Horus is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Horus is 0. [number of cunts]
+Cunt Depth of Horus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Horus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Horus is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Horus is false. [can not take oversized members without pain]
-Sterile of Horus is true.
 PlayerMet of Horus is false.
 PlayerRomanced of Horus is false.
 PlayerFriended of Horus is false.
@@ -123,6 +131,8 @@ Virgin of Horus is true.
 AnalVirgin of Horus is true.
 PenileVirgin of Horus is true.
 SexuallyExperienced of Horus is false.
+TwistedCapacity of Horus is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Horus is true. [steriles can't knock people up]
 MainInfection of Horus is "".
 Description of Horus is "[HorusDesc]".
 Conversation of Horus is { "<This is nothing but a placeholder!>" }.
@@ -658,7 +668,7 @@ to say ResolveEvent Nightmare Showdown:
 				challenge "Destabilizing Mass";
 				if fightoutcome < 20: [won]
 					say "     Managing to nimbly dodge a tendril that shoots straight in your direction you spot a chance to go for the injection pen. Rolling towards it, you grab the item off the ground before jumping back at the creature. Slamming it downward onto it, you hear the hiss of the mechanism of the device as it pushes the cure into the massive being. Seconds pass without anything happening, causing you to fear it was a failure, however that is promptly thrown out the door when it starts to spazz out. The rapidly shapeshifting mass slowly starts to shrink and coalesce into a single shape. You're actually rather shocked when it shrinks to the point of being about four feet two.";
-					say "     When it finishes, laying on the ground is a short-ish person with pointy ears and dark blue hair wearing a lab coat. They groan before pushing themself off the ground before standing up, looking at you curiously. 'Were you the one who saved me?' He asks, the person clearly male from the body tone and facial features. You nod though, you tell him that you had help from other people but yeah you're the one who delivered the cure. He thanks you profusely before introducing himself as Zerbo the gnome, a researcher. That last bit you tell him you know as much, as you've had to look into him to find a cure.";
+					say "     When it finishes, laying on the ground is a short-ish person with pointy ears and dark blue hair wearing a lab coat. They groan before pushing themselves off the ground before standing up, looking at you curiously. 'Were you the one who saved me?' He asks, the person clearly male from the body tone and facial features. You nod though, you tell him that you had help from other people but yeah you're the one who delivered the cure. He thanks you profusely before introducing himself as Zerbo the gnome, a researcher. That last bit you tell him you know as much, as you've had to look into him to find a cure.";
 					WaitLineBreak;
 					say "     Mentioning the action that resulted in him becoming becoming a monster he blushes. Moving onward so he doesn't get too embarrassed, you ask him if he needs a place to stay. 'Yeah, that'd be great! I'm pretty sure my place is trashed.' He says with a cheerful grin. Inwardly you chuckle, as his place was destroyed from the rampage he went on as he transformed. However, you tell him that you'd be glad to host him where you're staying. He thanks you for that, after which the two of you promptly head for the Abbey. Thankfully the path on the way there is pretty safe so you two don't run into anything dangerous, managing to make it there without any trouble.";
 					say "     Once there the two of you have a look around, Zerbo probably trying to figure out which room is best for him to stay in. It doesn't take long for him to pick the Computer Lab, and grab a table that doesn't have anything on it. 'This is perfect for me to set my writing on and I can probably set up my chemicals in this corner,' the gnome says cheerfully. You smile at his enthusiasm and tell him you're glad that he's happy. Right after that you let him know that you'll allow him to settle in before you step away, a mental thought that you should probably return to Horus and let him know what happened.";
@@ -719,7 +729,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mutant"; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Destabilizing Mutant";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -877,7 +887,7 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-   [ Row used to designate any special combat features, "default" for standard combat. ]
+[ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say Destabilizing Mass Wins:
 	if inasituation is true:
@@ -901,7 +911,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mutant"; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Destabilizing Mass";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -1059,7 +1069,7 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-   [ Row used to designate any special combat features, "default" for standard combat. ]
+[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section D - Gnome infection
 
@@ -1079,7 +1089,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Gnome"; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Gnome";
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
@@ -1237,6 +1247,6 @@ When Play begins:
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
-   [ Row used to designate any special combat features, "default" for standard combat. ]
+[ Row used to designate any special combat features, "default" for standard combat. ]
 
 Horus ends here.

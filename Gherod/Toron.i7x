@@ -6,6 +6,12 @@ Version 3 of Toron by Gherod begins here.
 [Version 2 - Added Tentacular Slushie as a drink. Buffed some drink effects, adjusting negatives accordingly.]
 [Version 3 . Added the Tonics.]
 
+postimport rule:
+	if "Connected Hellfire Corridor" is listed in traits of Toron:
+		connect Hellfire Corridor;
+	if player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
+		connect Hellfire Corridor;
+
 [***********************************************************]
 Section 1 - Toron NPC
 [***********************************************************]
@@ -74,6 +80,11 @@ to say ToronTalkMenu:
 	now description entry is "Have Toron craft a special tonic for you";
 	[]
 	choose a blank row in table of fucking options;
+	now title entry is "Request an exotic escort";
+	now sortorder entry is 1;
+	now description entry is "Browse the exotic escorts catalog";
+	[]
+	choose a blank row in table of fucking options;
 	now title entry is "Recent events";
 	now sortorder entry is 2;
 	now description entry is "Request an update on what's going on";
@@ -111,6 +122,12 @@ to say ToronTalkMenu:
 		now sortorder entry is 8;
 		now description entry is "Ask if he knows Xaedihr";
 	[]
+	if Resolution of DamienIntro >= 5:
+		choose a blank row in table of fucking options;
+		now title entry is "About Damien";
+		now sortorder entry is 8;
+		now description entry is "Ask Toron about some details regarding the scavenger you met";
+	[]
 	if resolution of Ambush The Purifier < 99 and HP of Araqiel is 1 or HP of Araqiel is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "About that odd Angel...";
@@ -121,13 +138,19 @@ to say ToronTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Mogdraz and Araqiel";
 		now sortorder entry is 10;
-		now description entry is "Ask Toron what he knows about the relationship between these two.";
+		now description entry is "Ask Toron what he knows about the relationship between these two";
+	[]
+	if VRDarkTyrantTracker > -1:
+		choose a blank row in table of fucking options;
+		now title entry is "About what you unleashed in the Void";
+		now sortorder entry is 11;
+		now description entry is "He's not going to be happy about it... but maybe he can help you";
 	[]
 	if abyssal remnant is owned:
 		choose a blank row in table of fucking options;
 		now title entry is "Restore Abyssal Remnant";
-		now sortorder entry is 11;
-		now description entry is "Show Toron what is left of the sword you found in the Void Realm and hope for a restore.";
+		now sortorder entry is 12;
+		now description entry is "Show Toron what is left of the sword you found in the Void Realm and hope for a restore";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -146,29 +169,36 @@ to say ToronTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Order a drink"):
 					say "[ToronTalkDrinks]";
-				if (nam is "Order a tonic"):
+				else if (nam is "Order a tonic"):
 					say "[ToronTalkTonic]";
 					now ToronDoneTalking is true;
-				if (nam is "Recent events"):
+				else if (nam is "Request an exotic escort"):
+					say "[ToronTalkExoticEscortsMenu]"; [on Hellfire Workers file]
+					now ToronDoneTalking is true;
+				else if (nam is "Recent events"):
 					say "[ToronTalkNews]";
 					now ToronDoneTalking is true;
-				if (nam is "Himself"):
+				else if (nam is "Himself"):
 					say "[ToronTalkHimself]";
-				if (nam is "His work"):
+				else if (nam is "His work"):
 					say "[ToronTalkWork]";
-				if (nam is "Void Realm"):
+				else if (nam is "Void Realm"):
 					say "[ToronTalkVR]";
-				if (nam is "Sex"):
+				else if (nam is "Sex"):
 					say "[ToronTalkSex]";
-				if (nam is "History with Mogdraz"):
+				else if (nam is "History with Mogdraz"):
 					say "[ToronTalkMogdraz]";
-				if (nam is "About Xaedihr"):
+				else if (nam is "About Xaedihr"):
 					say "[ToronTalkXaedihr]";
-				if (nam is "About that odd Angel..."):
+				else if (nam is "About Damien"):
+					say "[ToronTalkDamien]"; [on Damien file]
+				else if (nam is "About that odd Angel..."):
 					say "[ToronTalkPurifier]"; [on Araqiel file]
-				if (nam is "Mogdraz and Araqiel"):
+				else if (nam is "Mogdraz and Araqiel"):
 					say "[ToronTalkMogdrazAraqiel]"; [on Araqiel file]
-				if (nam is "Restore Abyssal Remnant"):
+				else if (nam is "About what you unleashed in the Void"):
+					say "[ToronTalkDarkTyrant]"; [on Fallen King file]
+				else if (nam is "Restore Abyssal Remnant"):
 					say "[ToronTalkAE]";
 				wait for any key;
 				if ToronDoneTalking is false:
@@ -216,7 +246,7 @@ to say ToronTalkTonic:
 
 to say ToronTalkNews:
 	say "     You ask Toron to share some gossip, and also update you on recent events happening around the area. He leans over the counter and speaks low.";
-	say "     [one of]'All kinds of people come and go from here, but they can't help themselves when they see the boss. Some build straight-up boners or find themselves wetting their pants... I wonder what is so attractive about Master Mogdraz...? Don't get me wrong, he's quite the sight... I just wonder if they can sense what's beyond his visage...'[or]'You wouldn't believe if I told you I've been asked to tentacle rape an anthro wolf, would you? Heh, what am I saying... Of course you would.'[or]'Mogdraz just had a special client, and he made a generous pay. What he wanted in exchange? To feel his navel. That was it.'[or]'Incubi and succubi are such a drag, sometimes. Flirting, flirting, and... oh, more flirting. And their thoughts? Literally useless. I suppose that's why we fight them. Well, [italic type]they[roman type] fight them, I just collect information.'[or]'Demon Brutes seem to be a problem around the mall's sewers. Have you been there? I wonder if they would make good cannon fodder...'[or]'There's this mega beast called Behemoth wandering around the Dry Plains who seems to be able to... slurp people in with their dicks and pussies? Very... odd. But... intriguing. Well, then again, there's this black goo tyrant in the Void...'[or]'I've heard of an imp dumping hell trash somewhere in the Warehouse District. What an odd place to do it, honestly.'[or]'Why are the Incubi swarming the College Campus? I'm wondering, since their original base is the Red Light District. Curious, is it not? What is that sorceress up to, now...?'[or]'Alpha huskies, alpha german shepherds, alpha this and that, all over the place preying on new additions to their packs... then they often come here to get dominated by an experienced demon. Oops. I wonder if we could turn them into hellhounds for profit...?'[or]'Those orcs at the Warehouse District, looking for new breeders... They have this really nice brew. But Mogdraz took an interest in their methods to increase population. I suppose we could run some experimentations ourselves with some of our... prisoners.'[or]'Have you met an Oni? Those are interesting demons... and pretty big ones, too. They quite often get me weak on the knees... it's what you call this leg bone thingie, right? Ugh, I never know. A blackfire demon like myself has no need for such... things.'[at random]";
+	say "     [one of]'All kinds of people come and go from here, but they can't help themselves when they see the boss. Some build straight-up boners or find themselves wetting their pants... I wonder what is so attractive about Master Mogdraz...? Don't get me wrong, he's quite the sight... I just wonder if they can sense what's beyond his visage...'[or]'You wouldn't believe if I told you I've been asked to tentacle rape an anthro wolf, would you? Heh, what am I saying... Of course you would.'[or]'Mogdraz just had a special client, and he made a generous pay. What he wanted in exchange? To feel his navel. That was it.'[or]'Incubi and succubi are such a drag, sometimes. Flirting, flirting, and... oh, more flirting. And their thoughts? Literally useless. I suppose that's why we fight them. Well, [italic type]they[roman type] fight them, I just collect information.'[or]'Demon Brutes seem to be a problem around the mall's sewers. Have you been there? I wonder if they would make good cannon fodder...'[or]'There's this mega beast called Behemoth wandering around the Dry Plains who seems to be able to... slurp people in with their dicks and pussies? Very... odd. But... intriguing. Well, then again, there's this black goo tyrant in the Void...'[or]'I've heard of an imp dumping hell trash somewhere in the Warehouse District. What an odd place to do it, honestly.'[or]'Why are the Incubi swarming the College Campus? I'm wondering, since their original base is the Red Light District. Curious, is it not? What is that sorceress up to, now...?'[or]'Alpha huskies, alpha German shepherds, alpha this and that, all over the place preying on new additions to their packs... then they often come here to get dominated by an experienced demon. Oops. I wonder if we could turn them into hellhounds for profit...?'[or]'Those orcs at the Warehouse District, looking for new breeders... They have this really nice brew. But Mogdraz took an interest in their methods to increase population. I suppose we could run some experimentations ourselves with some of our... prisoners.'[or]'Have you met an Oni? Those are interesting demons... and pretty big ones, too. They quite often get me weak on the knees... it's what you call this leg bone thingie, right? Ugh, I never know. A blackfire demon like myself has no need for such... things.'[at random]";
 	if HellfireOrcBrewTimer - turns > 4 and HellfireOrcBrewTimer is not 20000:
 		say "     'Also, I've got a new drink, thanks to your offering of orc brew and orc cum. The [bold type]Orcish Bomber[roman type] has been added to the menu. Give it a try!'";
 		now HellfireOrcBrewTimer is 20000;
@@ -240,7 +270,8 @@ to say ToronTalkWork:
 
 to say ToronTalkVR:
 	say "     Given the fact this Club ends up being the destination of many void travelers in the dimensional vicinity (or whatever they come from), you ask Toron a bit more about that. He does not seem too eager to inform you of anything specific, but he does start to speak. 'They come from the void, indeed. It was our point of arrival when we traveled from our former dimension. If you are curious about it, however...' - he makes a pause and eyes you with a very serious look - 'While I don't recommend it... You may find the entrance to the Void Realm past the door behind me. If anyone asks, say Toron let you in. But do be careful out there, that place is not for the faint of mind. Bring me any secrets you find.'";
-	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]east of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
+	say "     It is a good thing you asked about the Void, or you would not have gained access to the Staff area of the Hellfire Club... Just head [bold type]west of the Hellfire Lounge[roman type] then proceed [bold type]north[roman type] to find the entrance to this mysterious realm.";
+	TraitGain "Connected Hellfire Corridor" for Toron;
 	connect Hellfire Corridor;
 
 to say ToronTalkSex:
@@ -260,7 +291,7 @@ to say ToronTalkXaedihr:
 	say "     Seems like Toron knows a lot more about Xaedihr than even the half-demon himself. 'You saw how he brought down two of Mogdraz's best hellfire demons so easily? You've got a powerful companion on your side... and with a very delicate heart. His tough shell is merely for self-protection. Gain his trust, and you'll have a friend for life, but hurt him, and you'll... be having a bad time.' You thank Toron for sharing this information with you, to which he nods. 'Just keep it discrete. Secrets are not cheap.'";
 
 to say ToronTalkAE:
-	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. When you show the broken hilt to him, his eyes widen. 'You... You didn't do that, did you?!' he asks, and all you can say in response is... not denying the obvious. 'I really hope the seal is not that broken, then. If what you released from pulling that sword got out, it would be the end of the world... probably of all existence... I don't want to think about that. I believe it is imperative that we restore this sword and slay that creature at once! Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
+	say "     Given the extremely poor condition of the sword you pulled back in the Void Realm, you ask Toron if he knows what it is and if he can do something about it. 'Yes, I could restore the [']what you shouldn't have pulled from a completely and utterly isolated part of the Void Realm['] to its former glory. Not that I should, but whatever, what's done is done. Do you have null essences?' You suppose you've seen some already, but you have to ask how many he would need.";
 	say "     'I would need around... [bold type]25 Null Essences[roman type] to restore this. Yes, that should be enough.'";
 	if carried of null essence > 24:
 		LineBreak;
@@ -792,10 +823,10 @@ Instead of fucking Toron:
 			clear the screen and hyperlink list;
 
 to say ToronNightAssPlay:
-	say "     You lean towards Toron in order to whisper into his ear, letting him know what you want to do to him once you discretely go around the counter and get on his side. He agrees to this with a mischievious grin, and continue his duties as if nothing was happening. You duck behind the counter so nobody can see you quietly approaching the bartender, who is actually not wearing anything from his waist down, something that is impossible to observe from the other side of the counter. Occasionally, a shadowy tentacle can be seen taking form from his back, stretching towards a distant bottle or some other ingredient, though he maintains a pair of completely normal humanoid legs to sustain his weight, and with that, a magnificent bubblebutt waiting to get grabbed by you. As you take some time to admire his dark glutes, a soft, warm tendril brushes against the back of your head, encouraging you to lean closer...";
+	say "     You lean towards Toron in order to whisper into his ear, letting him know what you want to do to him once you discretely go around the counter and get on his side. He agrees to this with a mischievous grin, and continue his duties as if nothing was happening. You duck behind the counter so nobody can see you quietly approaching the bartender, who is actually not wearing anything from his waist down, something that is impossible to observe from the other side of the counter. Occasionally, a shadowy tentacle can be seen taking form from his back, stretching towards a distant bottle or some other ingredient, though he maintains a pair of completely normal humanoid legs to sustain his weight, and with that, a magnificent bubblebutt waiting to get grabbed by you. As you take some time to admire his dark glutes, a soft, warm tendril brushes against the back of your head, encouraging you to lean closer...";
 	say "     Offering no resistance to this invitation, you position yourself around his legs, sliding your hands over his thighs from the backside, then around his glutes. His black skin is really soft, and his buttcheeks are so plump and bubbly that you could just stay here feeling them up for hours... and for just a second, Toron seems briefly distracted by your touch, showing signs of arousal, before he returns to his usual expression while serving drinks. You don't want to rush anything here, so first, you feel up his ass cheeks some more, because they feel really good on your palms, bouncing nicely and firmly with each movement he makes. The bartender archs his back a little, letting you take a better look at his pucker. It's shaped like a plump and soft donut hole, twitching along with your touch, looking so inviting that it sends your heart into a fast, eager beat.";
 	WaitLineBreak;
-	say "     As you are getting acquainted with his marvelous butt, each plump glute clenching and bouncing with your caressing, you slide in a single finger right between his cheeks to feel that warm and accomodating hole, feeling almost too silky. You see the demon taking a deep breath, as he turns his head downwards to have a brief look at you, then back smiling to possibly an approaching client - you can't really see what is going on from your angle - while you have your own fun. It feels amazing just rubbing his anus, it's incredibly warm and welcoming, and a plethora of ideas just pop up in your mind... Only if you could do anything you wanted to his ass right here, right now... Though perhaps you can give it a good lick. His tentacle keeps pushing your head from behind, which is a clear invitation to this.";
+	say "     As you are getting acquainted with his marvelous butt, each plump glute clenching and bouncing with your caressing, you slide in a single finger right between his cheeks to feel that warm and accommodating hole, feeling almost too silky. You see the demon taking a deep breath, as he turns his head downwards to have a brief look at you, then back smiling to possibly an approaching client - you can't really see what is going on from your angle - while you have your own fun. It feels amazing just rubbing his anus, it's incredibly warm and welcoming, and a plethora of ideas just pop up in your mind... Only if you could do anything you wanted to his ass right here, right now... Though perhaps you can give it a good lick. His tentacle keeps pushing your head from behind, which is a clear invitation to this.";
 	say "     Spreading his asscheeks at last, you lean in to bury your face between his bubbly glutes, your lips touching his pucker as you give it a kiss, before sliding your tongue around the entrance and try to press it in a little bit, humming as you feel its incredible taste. 'A[one of] Hellfire Swea... Uh, excuse me... Swizzle[or] Black Ch...' - he breathes... - Cherry Drink[or] Tequila S-shot[or] S-simple... Beer [or] most refined Red Wine C-[or] Black Lemon Lime Voooh-' - he clears his throat to mask that accident - 'Vodka[at random] coming out...!' he says to the client amidst a moan you have caused, and lucky him that his tentacles are able to do the work. With your wiggling tongue, you lick his hole thorough before you make a bigger effort into pressing further inside, only to find out it just happens to welcome you so easily, yet so tightly, that you can caress all of his fleshy insides with ease. It almost feels like his ass is pulling your tongue, and it's not so long until Toron is grinding himself against your face so he can feel you tonguefucking him deeper.";
 	WaitLineBreak;
 	say "     His tentacles push you deep between his buns, not letting you go out for even a second of breathing, and putting your hands on each of his glutes, you twist and roll your tongue to the sides, while pushing it in and out as you go. Toron does a phenomenal work at keeping cool, and you're sometimes able to hear a really low, yet encouraging moan, when nobody's nearby. Eventually, his tentacles pull out, and you are allowed to take a whiff of fresh air and catch your breath. Another of his tentacles raises your hand in the form of a suggestion, and looking at his hole, it seems to wink at you while... You are not sure, but his butt seems even larger than before. He invites you to touch it once more, your fingers moving closer to his pucker... and then, you find your index finger sinking inside his ass very easily, welcomed by his warm fleshy tunnel.";
@@ -826,7 +857,7 @@ to say ToronDayAssFuck:
 	if a random chance of 1 in 3 succeeds:
 		if Libido of Mogdraz > 0 and Libido of Mogdraz < 99:
 			increase Lust of Mogdraz by 1; [Mogdraz approves when the player cares for his crew, especially Toron, whom he holds in high regard]
-	NPCSexAftermath Toron receives "Assfuck" from Player;
+	NPCSexAftermath Toron receives "AssFuck" from Player;
 
 Section 4 - Items
 

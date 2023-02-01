@@ -91,7 +91,9 @@ instead of conversing the Blue Speaker:
 	BlueSpeakerTalkMenu;
 
 to BlueSpeakerTalkMenu:
-	say "     Do you want to talk to Blue about something?";
+	if PlayerMet of Blue Speaker is false:
+		now PlayerMet of Blue Speaker is true;
+	say "     [bold type]Do you want to talk to Blue about something?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -111,19 +113,19 @@ to BlueSpeakerTalkMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more masculine";
 		now sortorder entry is 3;
-		now description entry is "Let the goo person reshape themself";
+		now description entry is "Let the goo person reshape themselves";
 	[]
 	if HP of Blue Speaker > 1 and Libido of Blue Speaker is not 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more feminine";
 		now sortorder entry is 5;
-		now description entry is "Let the goo person reshape themself";
+		now description entry is "Let the goo person reshape themselves";
 	[]
 	if HP of Blue Speaker > 1 and Libido of Blue Speaker is not 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more gender-neutral";
 		now sortorder entry is 6;
-		now description entry is "Let the goo person reshape themself";
+		now description entry is "Let the goo person reshape themselves";
 	[]
 	if HP of Blue Speaker > 0:
 		choose a blank row in table of fucking options;

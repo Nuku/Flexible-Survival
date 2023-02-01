@@ -110,20 +110,6 @@ to say campuseastdesc:
 
 Table of GameRoomIDs (continued)
 Object	Name
-Greek Street	"Greek Street"
-
-Greek Street is a room.
-Greek Street is southeast of College Walkway East.
-Description of Greek Street is "[greekdesc]".
-earea of Greek Street is "Campus".
-
-to say greekdesc:
-	say "     As suspected of a street with nothing but fraternities and sororities it is littered with cups, underwear, panties, and all sorts of trash. Beyond that you can also spot a few people passed out drunk on the grass in front of a lot of the buildings. While you'd love to explore all the various sororities and fraternities, you have no clue which ones are safe to enter. So, personally you feel that it is better for you to have a look around the campus to see if you can find information on the various groups at the college.";
-
-[Room Declaration]
-
-Table of GameRoomIDs (continued)
-Object	Name
 Dorm Street	"Dorm Street"
 
 Dorm Street is a room.
@@ -170,15 +156,6 @@ to say collegefdormdesc:
 
 [Room Declaration]
 
-Table of GameRoomIDs (continued)
-Object	Name
-Richard's Room	"Richard's Room"
-
-Richard's Room is a room.
-Description of Richard's Room is "[richardroomdesc]".
-
-to say richardroomdesc:
-	say "     The satyr boy's room is what you expect of a college student. Plastered all over the walls are lewd pictures of naked women and men, however upon closer examination you spot posters of male couples fucking that look to be recent acquisitions. You muse that Richard's recent goat changes appear to have enhanced his various desires. Turning your attention from the posters you notice there's various items on the floor from a football to stray jock straps to even a stray dildo. Out of the entire mess the only things that look to be neat are his bed which is covered in dark blue bedsheets and blankets and his computer area which is clean of junk.";
 
 [Room Declaration]
 
@@ -219,6 +196,10 @@ to say wallysroomdesc:
 to connect Wally's Room:
 	change southwest exit of Second Floor Male Dorms to Wally's Room;
 	change east exit of Wally's Room to Second Floor Male Dorms;
+
+[Room Declaration]
+
+[Greek Street moved to Wahn/Greek Street.i7x]
 
 [Room Declaration]
 

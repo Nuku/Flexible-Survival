@@ -544,7 +544,7 @@ an everyturn rule:
 this is the wereraptor curse rule:
 	if skipturnblocker is 0:
 		if wrcursestatus > 0 and wrcursestatus < 100:
-			if ( ( jackalmantf > 0 or jackalboytf > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0:	[eliminates curse]
+			if ( ( jackalmantf > 0 or jackalboytf > 0 ) and wrcursestatus < 7 ) or nightmaretf > 0 or HellHoundlevel > 0 or ("Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player):	[eliminates curse]
 				if wrcursestatus >= 3:
 					say "     You can feel your mystical transformation fighting off the wereraptor curse you are under. Your body writhes in pain and you hiss angrily as your eyes flash yellow and turn slitted before returning to normal. The scars at your shoulders heal, the curse purged by the greater power that now has a hold of you - for better or for ill.";
 					now HP of Player is HP of Player / 2;

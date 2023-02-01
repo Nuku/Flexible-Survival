@@ -69,7 +69,7 @@ carry out heresniffing:
 Section 2 - The player
 
 instead of sniffing yourself:
-	say "You smell like a [if Player is herm]hermaphrodite[else if Player is female]female[else if Player is male]male[else]neuter[end if] [BodyName of Player].";
+	say "You smell like a [if Player is herm]hermaphrodite[else if Player is female]female[else if Player is male]male[else]neuter[end if] [BodySpeciesName of Player in lower case].";
 	if animal heat is True:
 		say "There is an animalistic musk around you.";
 	if child is not born and gestation of child > 0:
@@ -104,7 +104,7 @@ the scent of Trevor Labs Lobby is "The air is better in here, [if HP of Orthas >
 
 the scent of 2F Trevor Labs is "The air smells pretty clear up here. It doesn't seem that roaming creatures have been getting in here.".
 
-the scent of Primary Lab is "The lab smells of Dr Matt's experiments[if Susan is in Primary Lab] and of Susan's musky doe arousal[end if].".
+the scent of Primary Lab is "The lab smells of Dr. Matt's experiments[if Susan is in Primary Lab] and of Susan's musky doe arousal[end if].".
 
 the scent of Park Entrance is "The park entrance smells of trees and flowers and a myriad of lustful creatures.".
 
@@ -116,7 +116,7 @@ the scent of Cola Vending Machine is "The vending machine smells of burnt electr
 
 the scent of Library Microwave is "Despite lack of upkeep, the microwave smells rather clean.".
 
-the scent of Lab Microwave is "The microwave smells a little from the dried stains inside. It seems Dr Matt is too lazy or busy to clean it.".
+the scent of Lab Microwave is "The microwave smells a little from the dried stains inside. It seems Dr. Matt is too lazy or busy to clean it.".
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
 

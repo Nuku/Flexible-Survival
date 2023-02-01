@@ -1,7 +1,7 @@
 # How To Contribute!
 
-## 1. Register on Github
-Flexible Survival is hosted on Github, so you'll have to make an account to push changes.
+## 1. Register on GitHub
+Flexible Survival is hosted on GitHub, so you'll have to make an account to push changes.
 
 https://github.com/
 
@@ -10,8 +10,8 @@ You have to fork the repository (which will duplicate the entire codebase to mak
 
 https://github.com/Nuku/Flexible-Survival/
 
-## 3. Download Github Desktop
-This will let you record your changes and send it up to the Github repository for review.
+## 3. Download GitHub Desktop
+This will let you record your changes and send it up to the GitHub repository for review.
 
 https://desktop.github.com/
 
@@ -51,9 +51,9 @@ Package Keyboard Shortcuts:
 Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors.
 
 ## 6. Install Inform 7
-Install Inform 7! Flexible Survival runs on this game engine.
+Install Inform 7! Flexible Survival runs on this game engine. Grab beta "Inform7 6M62 Win64 beta 4" from the following link:
 
-http://inform7.com/downloads/
+https://github.com/DavidKinder/Windows-Inform7/releases/
 
 <!--
 However, Flexible Survival is too big for Inform! We have a custom 64-bit compiler that you will also have to install or else you will not be able to compile the game:
@@ -71,28 +71,22 @@ Install the Flexible Survival game so you have an interpreter that can read the 
 
 https://blog.flexiblesurvival.com/p/links.html
 
-## 9. Run the `sync.bat` script
-You will have to do this step every time a new folder is introduced (either pulled from Github or if you add a new folder yourself).
-
-It will make a symlink from your Inform project to the Github repo, so that the Inform engine knows where the files are stored for compilation.
-
-Here are the manual mapping of files if you do not want to use the script:
+## 9. Move files for use in Inform7's folders
 
 | Action                      | File/Folder                        | At  |
 | --------------------------- | ---------------------------------- | --- |
-| Copy the file from the folder `Documents\Github\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
+| Copy the file from the folder `Documents\Github\Flexible-Surival\Inform` | `story.ni` | `Documents\Inform\Projects\Flexible Survival.inform\Source` |
 | Create a new folder called  | `Flexible Survival.materials` | `Documents\Inform\Projects\` |
-| Copy the folder from the folder `Documents\Github` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
-| Copy the folders from the folder `Documents\Github` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
-| Copy the file from the folder `Documents\Inform\Projects\Flexible Survival.materials\Release` | `Flexible Survival.gblorb` | `C:\Program Files (x86)\Silver Games LLC\flexible\Flexible Survival\Release` |
+| Copy the folder from the folder `Documents\Github\Flexible-Surival\` | `Figures` | `Documents\Inform\Projects\Flexible Survival.materials` |
+| Copy the folders from the folder `Documents\Github\Flexible-Surival\` | Every folder that is not `Figures` or `Inform` | `Documents\Inform\Extensions` |
 
 ## 10. Make your changes!
-Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes! If you used the `sync.bat` script above, you will be able to use your `Play Flexible Survival` shortcut in the start menu to access your latest Release build (NOT Go!).
+Now whenever you make changes in Atom, you should be able to then open Inform and re-compile the game to test it. You can do it in the Inform editor by clicking `Go` or to export it to another interpreter with `Release`. Compiling takes a very long time! Expect to wait 5-20 minutes!
 
 ## 11. Record your changes and submit a Pull Request!
-Open Github Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
+Open GitHub Desktop and review your changes. Write a summary (i.e. title, like `Adding new scenes to Sarah`) and a longer description listing the types of changes you made. Then click `Commit to master` to save it to your local repository. Click `Push origin` to move your changes from your local repository to your online fork.
 
-Click on Branch -> Create pull request. It will open the Github site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the Github site.
+Click on Branch -> Create pull request. It will open the GitHub site to compare your fork changes to the official Flexible Survival repository. Click on the `Create pull request` button on the GitHub site.
 
 Then just wait for one of the maintainers to accept your pull request! If it gets accepted, you likely won't have to do anything and you'll see your changes in the next push.
 

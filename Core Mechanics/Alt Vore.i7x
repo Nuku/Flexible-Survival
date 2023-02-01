@@ -69,12 +69,12 @@ a postimport rule: [bugfixing rules for players that import savegames]
 
 to say ResolveEvent Inner Predator:
 	if MaleList is banned and FemaleList is banned:
-		say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
+		say "     Picking your way between several immobile and abandoned cars, you spot an all too familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
 		say "(This event is closed if both guy and girl are banned.)";
 		now Resolution of Inner Predator is 99; [event closed because both males and females are banned]
 		now Inner Predator is resolved;
 		continue the action;
-	say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly.";
+	say "     Picking your way between several immobile and abandoned cars, you spot an all too familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly.";
 	say "     Inside, there is a single vial of a murky looking fluid, along with some documents and notes. As well, a candy bar - score! The papers have been badly smudged and ruined by the seeping fluids around, including several tear marks that could very well have been made by large claws. Although most of the writing has been rendered unable to decipher, some words manage to stand out enough to read. [']Predator experiment['] and [']test substance['] are the most prominent that catch your eye, along with what appear to be government or corporate insignias along the tops of the pages. Clearly, this vial of fluid was part of some experiment, possibly related to the nanite plague now sweeping the city.";
 	say "     You manage to piece together a few more words, but the majority of the documents are no longer legible, leaving you with a vial of unknown substance in your hand. If the government was working on something to do with this nanite plague, this may very well be useful to you in your survival in the infested city. Then again, who knows what it could do?";
 	say "     Do you use the vial?";
@@ -155,34 +155,57 @@ to vorebyplayer:
 		decrease humanity of Player by 2; [Additional humanity loss]
 	else:
 		say "[vorebyplayer00]"; [Master vore scene]
-	let vv be a random number between 1 and 6;
 	let powerchance be 4;
 	if "Bestial Power" is listed in feats of Player, increase powerchance by 2;
 	if a random chance of powerchance in 20 succeeds:
-		if vv is 1:
+		let vc be 0; [ setting up which stats are valid choices for the stat increase ]
+		let vstr be -1;
+		if strength of Player < str entry and str entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vstr is vc;
+		let vint be -1;
+		if Intelligence of Player < int entry and int entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vint is vc;
+		let vdex be -1;
+		if dexterity of Player < dex entry and dex entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vdex is vc;
+		let vsta be -1;
+		if stamina of Player < sta entry and sta entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vsta is vc;
+		let vper be -1;
+		if perception of Player < per entry and per entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vper is vc;
+		let vcha be -1;
+		if charisma of Player < cha entry and cha entry >= ( 12 + level of Player ):
+			increase vc by 1;
+			now vcha is vc;
+		[ now all numbers from 1 to vc are indicative of a stat which can be increased ]
+		let vz be 1;
+		if vc is 0, now vz is 0; [ since I don't know what happens when you ask for a random number between 1 and 0, this is here as a safety precaution ]
+		let vv be a random number between vz and vc;
+		if vv is vstr:
 			if strength of Player < str entry and str entry >= ( 12 + level of Player ):
 				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
 				StatChange "Strength" by 1;
-		if vv is 2:
-			if Intelligence of Player < int entry and int entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [Name entry] [one of]intelligence[or]wit[or]complexity[at random].";
-				StatChange "Intelligence" by 1;
-		if vv is 3:
-			if dexterity of Player < dex entry and dex entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [Name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
-				StatChange "Dexterity" by 1;
-		if vv is 4:
-			if stamina of Player < sta entry and sta entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [Name entry] [one of]stamina[or]physique[or]power[at random].";
-				StatChange "Stamina" by 1;
-		if vv is 5:
-			if perception of Player < per entry and per entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [Name entry] [one of]perception[or]aptitude[or]feral attention[at random].";
-				StatChange "Perception" by 1;
-		if vv is 6:
-			if charisma of Player < cha entry and cha entry >= ( 12 + level of Player ):
-				say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [Name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
-				StatChange "Charisma" by 1;
+		if vv is vint:
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your mind swelling with [Name entry] [one of]intelligence[or]wit[or]complexity[at random].";
+			StatChange "Intelligence" by 1;
+		if vv is vdex:
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your hand-eye coordination improving with [Name entry] [one of]dexterity[or]physique[or]accuracy[at random].";
+			StatChange "Dexterity" by 1;
+		if vv is vsta:
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your body toughening with [Name entry] [one of]stamina[or]physique[or]power[at random].";
+			StatChange "Stamina" by 1;
+		if vv is vper:
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your senses being heightened with [Name entry] [one of]perception[or]aptitude[or]feral attention[at random].";
+			StatChange "Perception" by 1;
+		if vv is vcha:
+			say "     By consuming your foe, you have managed to absorb some of them to empower yourself. You feel your social sense improving with [Name entry] [one of]charisma[or]natural charm[or]pheromones[at random].";
+			StatChange "Charisma" by 1;
 	if "Safe Appetite" is not listed in feats of Player:
 		say "     Indulging in this monstrous act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system as your belly quickly seeks to consume them. Your hunger, satisfied for now, is decreased dramatically.";
 		now researchbypass is 1;

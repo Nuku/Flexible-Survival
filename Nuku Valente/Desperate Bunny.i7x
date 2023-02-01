@@ -114,19 +114,31 @@ object	name
 Sandra	"Sandra"
 
 Sandra is a woman.
-ScaleValue of Sandra is 3. [roughly human sized]
-Cock Count of Sandra is 0.
-Cock Length of Sandra is 0.
-Ball Size of Sandra is 0.
-Ball Count of Sandra is 0.
-Cunt Count of Sandra is 1.
-Cunt Depth of Sandra is 12.
-Cunt Tightness of Sandra is 6.
-Nipple Count of Sandra is 2.
-Breast Size of Sandra is 4.
+Sandra is in Rabbit Den.
+The icon of Sandra is Figure of sandy_icon.
+sangr is a text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
+ScaleValue of Sandra is 3. [human sized]
+Body Weight of Sandra is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sandra is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sandra is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sandra is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sandra is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sandra is 6. [length in inches]
+Breast Size of Sandra is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sandra is 6. [count of nipples]
+Asshole Depth of Sandra is 12. [inches deep for anal fucking]
+Asshole Tightness of Sandra is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sandra is 0. [number of cocks]
+Cock Girth of Sandra is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sandra is 0. [Length in Inches]
+Ball Count of Sandra is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sandra is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sandra is 1. [number of cunts]
+Cunt Depth of Sandra is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sandra is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sandra is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Sandra is false. [can not take oversized members without pain]
-Sterile of Sandra is false.
 PlayerMet of Sandra is false.
 PlayerRomanced of Sandra is false.
 PlayerFriended of Sandra is false.
@@ -137,19 +149,16 @@ Virgin of Sandra is false.
 AnalVirgin of Sandra is true.
 PenileVirgin of Sandra is true.
 SexuallyExperienced of Sandra is true.
+TwistedCapacity of Sandra is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sandra is false. [steriles can't knock people up]
 MainInfection of Sandra is "Anthro Rabbit".
-
-The icon of Sandra is Figure of sandy_icon.
 Description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
-Sandra is in Rabbit Den.
 Conversation of Sandra is { "Moved!" }
 
 Instead of conversing the Sandra:
-	say "[sandtalk][line break]";
+	say "[sandratalk][line break]";
 
-sangr is a text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
-
-to say sandtalk:
+to say sandratalk:
 	if rabbitsibling is 0 and a random chance of 1 in 2 succeeds:
 		say "     Approaching Sandra, she suddenly seems a little bashful.";
 		say "     'Oh! Hey, hon. This may seem a little odd to ask...' As she brings up the request, she begins to blush. 'But I get real lonely sometimes. Maybe you could... be my sibling?' Beyond the literal meaning of this request, you also figure she want to change you to look more like her as well.";
@@ -373,7 +382,7 @@ to say sandrasex1: [fuck the bunny]
 			else if multicocks is 1:
 				say "     Sandra stares lustfully at your multiple members for a moment before she turns around and presents her rump to you, then sits back. Those shapely cheeks descend on you before settling in your lap just in front of your [Cock of Player] cocks. She slowly rubs back, teasing them with her soft, twitching tail as she looks at you over her shoulder. You grab for her, squeezing her heavy upper breasts and drawing a happy little squeak of delight as you begin to roll and knead the sensitive flesh. She rises up against you, cock brushing against her ass, then catching against her large, thick lips.";
 				say "     Her honey is flowing thickly, trailing down your [Cock of Player] shaft on contact in a warm trickle. You press up excitedly, but she raises against it, softly scolding as she lines up [if Cock Count of Player > 2]two[else]both[end if] of your dicks, getting the second to press securely against her tight pucker. With a nod from her, you draw her to yourself, impaling her on your [cock size desc of Player] poles until she is seated firmly against you, shuddering powerfully.";
-				say "     Her hands grasp at your own as they explore her curvy front, roaming from breast to breast as she rises and falls against those [Cock of Player] cocks, wet slapping sounds filling the room as she grows tense. Her soft moans become louder before hitting a fever pitch, small form trembling against yours as her body tightens powerfully around you. Your [Ball Size Adjective of Player] [Balls] clench before you start to release into her with thick blasts of fertile seed, filling bowels and womb at once. Your erect members bump one another in their powerful twitches inside the rabbit girl as she presses tightly to you, not allowing any to escape her hungry form. Her ears go back and down suddenly, brushing at your [FaceName of Player] face lightly. 'I think I'm spoiled on regular fucking,' she whispers lightly, panting and glistening with sweat.";
+				say "     Her hands grasp at your own as they explore her curvy front, roaming from breast to breast as she rises and falls against those [Cock of Player] cocks, wet slapping sounds filling the room as she grows tense. Her soft moans become louder before hitting a fever pitch, small form trembling against yours as her body tightens powerfully around you. Your [Ball Size Adjective of Player] [Balls] clench before you start to release into her with thick blasts of fertile seed, filling bowels and womb at once. Your erect members bump one another in their powerful twitches inside the rabbit girl as she presses tightly to you, not allowing any to escape her hungry form. Her ears go back and down suddenly, brushing at your [FaceSpeciesName of Player in lower case] face lightly. 'I think I'm spoiled on regular fucking,' she whispers lightly, panting and glistening with sweat.";
 			else:
 				say "     Sandra rolls over onto all fours, looking somehow natural in the position. Her short tail wags over her ass invitingly as she wriggles the rump towards you. 'Come on, don't keep a gal waiting[if charisma of Player > 10].' Despite her invitation, you move in with your face first, licking over her furry folds. The fur is downy soft, and her flesh is wet with arousal. She gasps, then begins to give little whimpering moans as you explore her body with your hungry tongue. Your hands grab at her ass, pulling it against yourself as you nibble at her thick labia and nuzzle into the sensitive flesh. She feels large enough to take a cow, but the dense muscle of the passage keeps it clenched tight around your invading tongue as she gives a sharp wail, surrendering sweet honey for you.[else].'[end if]";
 				say "     You rise up, licking your lips, and slip in over her from behind. With your [Cock of Player] cock at the ready, you ease it into her cunt, amazed at how well the thick muscles of her sex grip and flex around you. You sink into her in a smooth thrust, and it feels like you're already pistoning with how powerfully her cunt pulls at you. She bumps her ass against your crotch as she sighs. 'Come on...' she urges, and you comply, starting to rock, slowly at first, but faster with every satisfying push. Your dick vanishes into her squelching, hungry depths, spurting thick juices across your crotch as her strangely intoxicating scent washes over you. You lose track of time as you settle on her back and grab at her many-titted from, caressing those soft, pear-shaped organs as you buck your hips against her, rocking her with your passion.";
@@ -685,7 +694,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 
 This is the Sandra's Epilogue rule:
 	if Sandra is in the Bunker:
-		if Fang is in the Grey Abbey Library and HP of Fang is 3 and ColleenAlpha is 0 and humanity of Player < 10:
+		if Fang is in the Grey Abbey Library and HP of Fang is 3 and Fang is Male and ColleenAlpha is 0 and humanity of Player < 10:
 			[succumb: alpha Fang takes uncontested Sandra ]
 			make no decision; [skip this rule]
 		if HP of Player > 0:

@@ -1,7 +1,7 @@
 Roman by Kernog begins here.
 [Some minor edits and the inclusion of the new TF helmet - Luneth]
 
-"Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Gorillas Football Team Quest."
+"Adds the Team Captain Roman NPC, who hangs around Astroslide Football Field and is tied to the Tenvale Silverbacks Football Team Quest."
 
 [Character Variables]
 [HP :
@@ -29,11 +29,11 @@ to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 6:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He heard a rumor about an [bold type]orca volleyball player[roman type], and would like me to investigate[roman type].";
 	if HP of Roman is 7:
-		say "[bold type]Football team additions[roman type]: Willy the Orca accepted to join the Tenvale Gorillas. I should report back to Roman.";
+		say "[bold type]Football team additions[roman type]: Willy the Orca accepted to join the Tenvale Silverbacks. I should report back to Roman.";
 	if HP of Roman is 8:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He heard a rumor about a [bold type]ruthless horse hermaphrodite roaming the park[roman type], and would like me to investigate[roman type].";
 	if HP of Roman is 9:
-		say "[bold type]Football team additions[roman type]: The Black Equinoid accepted to join the Tenvale Gorillas. I should report back to Roman.";
+		say "[bold type]Football team additions[roman type]: The Black Equinoid accepted to join the Tenvale Silverbacks. I should report back to Roman.";
 	if HP of Roman is 10:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He would like to recruit some female cheerleaders, this time. He told about a [bold type]Husky Gang[roman type], with whom he has some history.";
 	if HP of Roman is 11:
@@ -44,21 +44,28 @@ object	name
 Team Captain Roman	"Team Captain Roman"
 
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
-[Physical details as of game start]
 ScaleValue of Team Captain Roman is 3. [human sized]
-SleepRhythm of Team Captain Roman is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Team Captain Roman is 0. [X cock]
-Cock Length of Team Captain Roman is 0. [X Inches]
-Ball Size of Team Captain Roman is 0.
-Ball Count of Team Captain Roman is 0. [X balls]
-Cunt Count of Team Captain Roman is 1. [X pussy]
-Cunt Depth of Team Captain Roman is 8. [X Cunt]
-Cunt Tightness of Team Captain Roman is 4. [X Cunt]
-Nipple Count of Team Captain Roman is 2. [X nipples]
-Breast Size of Team Captain Roman is 0. [X at the start]
+Body Weight of Team Captain Roman is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Team Captain Roman is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Team Captain Roman is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Team Captain Roman is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Team Captain Roman is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Team Captain Roman is 6. [length in inches]
+Breast Size of Team Captain Roman is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Team Captain Roman is 2. [count of nipples]
+Asshole Depth of Team Captain Roman is 8. [inches deep for anal fucking]
+Asshole Tightness of Team Captain Roman is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Team Captain Roman is 0. [number of cocks]
+Cock Girth of Team Captain Roman is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Team Captain Roman is 0. [Length in Inches]
+Ball Count of Team Captain Roman is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Team Captain Roman is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Team Captain Roman is 1. [number of cunts]
+Cunt Depth of Team Captain Roman is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Team Captain Roman is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Team Captain Roman is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Team Captain Roman is false. [can not take oversized members without pain]
-Sterile of Team Captain Roman is false.
 PlayerMet of Team Captain Roman is false.
 PlayerRomanced of Team Captain Roman is false.
 PlayerFriended of Team Captain Roman is false.
@@ -68,7 +75,9 @@ OralVirgin of Team Captain Roman is false.
 Virgin of Team Captain Roman is false.
 AnalVirgin of Team Captain Roman is false.
 PenileVirgin of Team Captain Roman is false.
-SexuallyExperienced of Team Captain Roman is false.
+SexuallyExperienced of Team Captain Roman is true.
+TwistedCapacity of Team Captain Roman is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Team Captain Roman is false. [steriles can't knock people up]
 MainInfection of Team Captain Roman is "Football Gorilla Male".
 Description of Team Captain Roman is "[RomanDesc]".
 
@@ -76,10 +85,12 @@ to say RomanDesc:
 	if debugactive is 1:
 		say "     DEBUG: HP of Roman [HP of Roman][line break]";
 	if Roman is in Astroslide Field Locker-room:
+		project Figure of Roman_naked_icon;
 		say "You look at the former team captain. Roman is tied on his back to one of the benches. Old jerseys are pinning his arms under the bench, and pulling his legs up against his chest, exposing his pussy to everyone. Someone has covered his entire body in writings with a red marker. Dirty names, like [']bitch['], [']whore['], or [']team pet['], an arrow pointing down to his crotch, with the mention [']For public use['], and another on his head, pointing at his mouth, saying [']Feed the monkey[']. Roman's eyes meet yours, but he looks absent. He tries to mumble something, but his mouth has been filled with socks, and only a muffled whisper escapes his lips.";
 	else:
+		project Figure of Roman_clothed_icon;
 		if HP of Roman is 0:
-			say "[first time]This is the captain of the Tenvale Gorillas. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
+			say "[first time]This is the captain of the Tenvale Silverbacks. You hear some of the apes address him as 'captain Roman'. [only]Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, who outline his strong body and the large bulge of his crotch. Damn, he must be hung!";
 		else if HP of Roman is not 5:
 			say "Roman stands out from the rest of the players. He looks more mature, and in opposition to his teammates, who strut on the field with only a helmet and a shoulder-pad, he wears a tank-top and a pair of shorts, which are simply padded with cotton in order to hide his gynomorphism, as you now know.";
 		else:
@@ -91,8 +102,9 @@ Team Captain Roman is in Astroslide Football Field.
 instead of sniffing Team Captain Roman:
 	say "     The scent of Roman's slightly sweaty fur reaches your nose. It's definitely a male smell, albeit not as strong as the other, more active gorillas. Roman raises an eyebrow as he notices you smelling him. 'I'm working here. If you want more of that smell, you should just go to the locker-room, or take care of our laundry.";
 
-[Team scenes are in Tenvale Gorillas Football Team Quest]
+[Team scenes are in Tenvale Silverbacks Football Team Quest]
 instead of conversing the Team Captain Roman:
+	project Figure of Roman_clothed_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -248,7 +260,7 @@ to say JoiningTheTeam:
 	else:
 		say "[FootballTryouts]";
 
-[TryoutScore is in Tenvale Gorillas Football Team extension]
+[TryoutScore is in Tenvale Silverbacks Football Team extension]
 to say FootballTryoutsResults:
 	say "     'Just in time. I was just done with the results.' The team captain shouts some instructions to the unruly throng of football players all around, sending some of them to train on the field while cheering on those who're currently involved in a gangbang on near the door to the locker-room. After calling out, 'I'll be over in a moment, hold me a place in the line to fuck her!' he [if HP of Roman is 0]asserts[else]lies[end if], as he walks over and turns his attention to you. 'Okay. Let's see...'";
 	WaitLineBreak;
@@ -267,7 +279,7 @@ to say FootballTryoutsResults:
 to say RomanConfront:
 	say "     You ask Roman to talk with him in private. 'Okay. One moment, boys!' he tells the other players, while you guide him to an isolated area of the football field. 'What's the problem? Some of the boys making trouble?' he asks.";
 	say "     Sheepishly, you admit that you saw Roman naked, and his private bits. The team captain looks at you for a moment, looking like he was hit by a freight train. 'Y-You what?' he asks. 'You... Why are you telling me this? Are you trying to mock me? To blackmail me?' You try to reassure him, that you would tell no one, but that his attitude about it was strange, considering all the manner of beings roaming the city nowadays. 'You know nothing,' he replies, giving you a stern look. 'It's a personal issue, and I don't want to talk about it. Not now, at least.'";
-	say "     It seems that you will need to convince Roman to trust you. Maybe being a member of the team and/or a trans-man yourself may help with this";
+	say "     It seems that you will need to convince Roman to trust you. Maybe being a member of the team and/or a trans-man yourself may help with this.";
 	now HP of Roman is 2;
 
 to say RomanConvince:
@@ -288,7 +300,7 @@ to say RomanConvince:
 		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now we're on the same page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there is enough women and herms on the team, their looks may change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
 		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
-		add "tenvale gorillas football helmet" to invent of Astroslide Field Locker-Room;
+		add "tenvale silverbacks football helmet" to invent of Astroslide Field Locker-Room;
 	else:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";
 
@@ -342,6 +354,7 @@ instead of fucking Team Captain Roman:
 
 [1 - Roman bad ending]
 to say RomanFuck1:
+	project Figure of Roman_naked_icon;
 	say "     You approach the helpless Roman, a glint of lust in your eyes. [bold type]How are you going to ruin your favorite ape today?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -458,6 +471,7 @@ to say RomanFuck1Cuni:
 
 [2  - Roman good ending]
 to say RomanFuck2:
+	project Figure of Roman_naked_icon;
 	say "     Roman ponders your proposition for a moment. A very short moment. 'I guess I do need a distraction from the business, [if lastFuck of Roman is 0]and I trust you to show me a good time[else]especially if we have as much fun as last time[end if].' The both of you skedaddle to Roman's former changing room. It returned to its original function and is now cluttered with football equipment, but there is still enough space for Roman to unroll an exercise mattress on the floor. He looks back at you expectantly and asks, [bold type]'What do you have in mind?'[roman type] You hug the big gorilla tenderly as you whisper the answer in his ear.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -603,7 +617,7 @@ ResolveFunction of Grocery Store Security Camera is "[ResolveEvent Grocery Store
 Sarea of Grocery Store Security Camera is "Outside".
 
 to say ResolveEvent Grocery Store Security Camera:
-	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
+	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eyes meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
 	say "[bold type]Grocery Store Tape has been added to your tape inventory![roman type][line break]";
 	add "Grocery Store Tape" to tapes of Player;
 	now Grocery Store Security Camera is resolved;
@@ -612,8 +626,9 @@ to say RomanTransformationFootage:
 	project the Figure of HuskyAlpha_soft_icon;
 	say "     When you press the play button, the screen displays the black-and-white, soundless feed of a security camera. It seems that the camera only filmed when there was motion in the field of vision of the recording device. The recording starts the day following the infection. You see the shopkeeper enter his shop from the back-room with wooden planks, about to barricade himself. Unfortunately, he is ambushed by a hyena. The pair leaves the field of the camera during the scuffle but, when it records again, it shows two hyena herms rushing out of the shop. The following recordings show several looters visit the store. [if BrennanRelationship >= 2]You even recognize Brennan at one point. [end if]With each passing day, the visitors are less and less human. The date of recording suddenly jumps forward several weeks when a large gorilla rushes into the store. He is quickly followed by a pack of husky girls, accompanied by an alpha husky. They surround the gorilla, then pile on him. The ape puts a tough resistance, but is eventually taken down.";
 	say "     The alpha has the gorilla brought up to his knees and held fast by his bitches, before pushing his cock inside the primate's mouth. Long minutes of mouth-rape pass. The alpha husky keeps talking. You cannot hear what he says, but the gorilla seems to not like what he hears. The dog cums eventually, and force the ape to drink his cum by pushing his knot past his victim's lips. The husky seems unsatisfied by something, and gives the gorilla a small kick to his package. He gives his girls an order, and the female huskies begin to force themselves on the gorilla's cock. Each time one of the huskies pull out, you notice that the gorilla's cock becomes smaller and smaller. Eventually, the penis completely recedes into the dark-furred body, and in its place is a vagina.";
-	WaitLineBreak;
 	project the Figure of HuskyAlpha_hard_icon;
+	WaitLineBreak;
+	project the Figure of Roman_naked_icon;
 	if HP of Roman > 2:
 		say "     You suddenly realize that the gorilla on the footage matches Roman's story about his transformation. You cannot help but feel a little sorry for him. In the meantime, the alpha husky used the show to make himself hard again. Pulling Roman by the fur of his head, he throws the football trainer on the cash counter and takes Roman's new and ephemeral virginity. He humps the ape hard and fast. Despite his teary eyes, Roman seems to take more and more pleasure in the pounding, until the dog pushes all the way in. Roman's eyes open wide, and you are actually thankful that the footage does not have sound, considering the scream that he just pushed. More pounding ensued until the alpha husky reached his climax. After a dozen more minutes where the husky slaps Roman's butt to spend time, he eventually pulls out from the gorilla and, with a final butt slap, takes his leave.";
 		say "     Roman slowly slides down from the counter and forces himself to stand up. He explores his body, a look of despair on his face. He frantically looks around, and eventually rushes to the backroom. He gets out a couple of minutes later, wearing the pants of the shopkeeper in order to cover his new sex. As he meekly walks out from the store, the footage stops for the final time.";
@@ -637,14 +652,14 @@ to say ResolveEvent Orca Volleyball Player:
 	if HP of Roman is not 6:
 		say "     You mix yourself with the crowd and watch the match. While all the players play well, the killer whale is undoubtedly the best one. Despite his large body, he manages to cover a lot of ground, and his smashes leave no chance to its opponents. You do not mind the match to be unbalanced, if it means being able to ogle the orca's generous package flopping in his skin-tight swimming trunks. You take your leave at the same time the gorgeous cetacean leaves the field.";
 	else:
-		say "     You remember Ronan's request. [one of]This must be the cetacean that the rumors talk about. You wait patiently for the end of the match, then walk to the orca and present yourself and why you want to talk to him. Willy, that's his name, seems to ponder the idea for a moment. 'Football team? You mean the one of the University? I can see why you'd want me in, but why would I go at the other end of the city to play sports?'[or]You sigh and muster the courage to talk to Willy the orca again after his match. 'Oh, it's you,' the cetacean says as you approach him once again. 'You're a stubborn [BodyName of Player], you know that?'[stopping]";
+		say "     You remember Roman's request. [one of]This must be the cetacean that the rumors talk about. You wait patiently for the end of the match, then walk to the orca and present yourself and why you want to talk to him. Willy, that's his name, seems to ponder the idea for a moment. 'Football team? You mean the one of the University? I can see why you'd want me in, but why would I go at the other end of the city to play sports?'[or]You sigh and muster the courage to talk to Willy the orca again after his match. 'Oh, it's you,' the cetacean says as you approach him once again. 'You're a stubborn [BodySpeciesName of Player in lower case], you know that?'[stopping]";
 		say "     You try to use your best arguments in order to convince Willy to join the team. All you manage to do is annoy him [one of]with your babble[or]again[stopping]. 'Stop right there. I said it was not about [']being part of something big[']. I'm not interested in joining your bunch of pansies.' Insulted, you [one of]reply coarsely that he should stop talking shit and just follow you already. 'Make me, or I'll clean your runny mouth in my own fashion,' [or]insult Willy's relatives. The orca frowns. 'I guess you need another mouth cleaning, asshole,' [stopping]he says while he walks towards you.";
 		WaitLineBreak;
 		now inasituation is true;
 		challenge "Killer Whale";
 		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     Willy falls like a log on the sand. The orca catches his breath, then sits on the warm sand. Your scuffle attracted an audience, who look at you as if you were David felling down Goliath. The orca erupts suddenly in a boisterous laughter. 'That's what I call a punch! Seems that you can back what you bark, [BodyName of Player]!' You can't help but chuckle too. You offer your hand to Willy, but the cetacean gets back on his feet, with surprising ease. 'Wouldn't want me, if I couldn't take a few tackles, would you?' he asks, as he dusts the sand off his black and white skin. 'Gimme a minute to tell my friends where I'm going. I'll see you on the football field.'";
+			say "     Willy falls like a log on the sand. The orca catches his breath, then sits on the warm sand. Your scuffle attracted an audience, who look at you as if you were David felling down Goliath. The orca erupts suddenly in a boisterous laughter. 'That's what I call a punch! Seems that you can back what you bark, [BodySpeciesName of Player in lower case]!' You can't help but chuckle too. You offer your hand to Willy, but the cetacean gets back on his feet, with surprising ease. 'Wouldn't want me, if I couldn't take a few tackles, would you?' he asks, as he dusts the sand off his black and white skin. 'Gimme a minute to tell my friends where I'm going. I'll see you on the football field.'";
 			say "     While Willy jogs away, you make a mental note to report back to Roman about your successful recruitment.";
 			now HP of Roman is 7;
 			now Resolution of Orca Volleyball Player is 1; [won against the orca]
@@ -672,7 +687,7 @@ to say ResolveEvent Husky Gang:
 		say "     You have no business with them. So you let the horde pass. The mutants do not notice you, chattering to each other as they travel to their next destination. Once they are gone, you walk away from your hiding place, and after some more exploration decide to return to your starting point.";
 		now Husky Gang is resolved;
 	else:
-		say "     The Alpha's appearance perfectly fits the description that Roman gave you, at the Football Field. It seems that you found your cheerleaders. You walk away from your hiding place. [one of]The Alpha Husky instantly growls as he sees you. 'Who the fuck are you?' You quickly explain why you are here. 'Roman? Oh yeah, that gorilla. Does he make good use of the pussy I gave him?' he asks sarcastically. 'I'll let the girls take care of you once I knock you on your ass[or]'You again?' the Alpha growls. He cracks his fingers and walks towards you with a determined look on his face. 'Was the last lesson not enough? Fine by me. I won't say no to one more bitch in my pack[stopping].' Behind him, the females shout encouragements for their champion. '[one of]Yeah, bite his ass[or]Take that loser off[or]That wimpy [BodyName of Player] is no match for our boy[at random]!'";
+		say "     The Alpha's appearance perfectly fits the description that Roman gave you, at the Football Field. It seems that you found your cheerleaders. You walk away from your hiding place. [one of]The Alpha Husky instantly growls as he sees you. 'Who the fuck are you?' You quickly explain why you are here. 'Roman? Oh yeah, that gorilla. Does he make good use of the pussy I gave him?' he asks sarcastically. 'I'll let the girls take care of you once I knock you on your ass[or]'You again?' the Alpha growls. He cracks his fingers and walks towards you with a determined look on his face. 'Was the last lesson not enough? Fine by me. I won't say no to one more bitch in my pack[stopping].' Behind him, the females shout encouragements for their champion. '[one of]Yeah, bite his ass[or]Take that loser off[or]That wimpy [BodySpeciesName of Player in lower case] is no match for our boy[at random]!'";
 		WaitLineBreak;
 		now inasituation is true;
 		challenge "Husky Alpha";
@@ -684,7 +699,7 @@ to say ResolveEvent Husky Gang:
 			now Resolution of Husky Gang is 1; [won against the huskies]
 			now Husky Gang is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
-			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [BodyName of Player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
+			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [BodyType of Player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
 			say "     Two of them play with your [Nipple Count of Player] breasts, pulling your nipples and kneading your [breast size desc of Player] chest. There is no intent to please you. Instead, they try to entice the most reactions out of you, to the collective amusement[if Player is male]. The Huskies play with your cock[smn]. They pinch, squeeze and nibble your shaft[smn], making sure to keep you on your toes. They quickly start the game of polishing your [cock size desc of Player] dickhead[smn], puffing in amusement as you moan and writhe under them from the overstimulation[end if][if Player is female]. The oldest in the band pushes a finger. 'Watch me spread that bitch. She's gonna wish she had jumped our man's cock instead of putting up a fight!' After that, she rams in a second finger, and quickly after, two more. Once she deems you stretched enough, she balls her hand in a fist, and slowly forces it inside your vagina. She pushes in as much of her arm as she can, while the other Huskies holler and whistle at the scene, and rub the bump traveling up and down your lower belly. 'How's my fist in your puss, bitch?' the dog asks in a vicious tone. You cannot answer her, as your mouth is busy being grinded by another female. Your only response is to squeeze around the fist filling your pussy and cover it in your juices. 'That's what I thought, bitch.'[else].[end if]";
 			say "     Once every Female Husky has had her way with you, the gang discards your tired body on the side of the street. Your last sight of them before the nanite infection starts ramping up in your body is the Alpha leaning over you. 'Hope you learned your lesson this time. You're welcome.'";
 			infect "Husky Bitch";

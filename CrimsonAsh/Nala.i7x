@@ -43,8 +43,9 @@ when play begins:
 	add Fool Me Once to badspots of DemonList;
 
 after resting while (Fool Me Once is active and Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
+	project Figure of Nala_clothed_icon;
 	say "     Deciding to rest for the next few hours you lay down, closing your eyes slowly drifting to sleep. You dream of your life before the nanobots and the apocalypse, what little you can remember at least. Of previous friends, your old job and your old worries. Suddenly jolted out of your dream by a barrage of ringing and beeping. You nearly launch yourself from your bedding as you swivel around the blaringly loud room for the source of the noises. Set around the room are nearly a dozen alarm clocks, all at full volume and shrieking bells at you. You stand up and stumble around the room confused but intent on ending to the obnoxious noise. Shutting off a few and simply slamming others onto the floor. Soon enough the room is quiet, but the ringing is quickly replaced by a familiar feminine laughter, looking to the doorway you finally get a good look at your prankster.";
-	say "     The girl before you is clearly demonic in nature, she has light red, almost pink skin and only stands a little over two and a half feet tall. The diminutive imp girl flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with violet pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filling perfectly out her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
+	say "     The girl before you is clearly demonic in nature, she has light red, almost pink skin and only stands a little over two and a half feet tall. The diminutive imp girl flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with green pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filling perfectly out her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
 	WaitLineBreak;
 	say "     She lets out another laugh before speaking, 'Hehe you looked like a chicken with its head cut off, running around like mad!' She speaks in a slightly high-pitched yet oddly melodic voice before cracking down and laughing madly at her own prank before she turns and flees at a remarkable speed. Her small wings dart her down the hall and out of the bunker before you can fully register what just happened. You still try to rush after the little runt but she's long gone, her laughter still ringing in the air. Grunting in frustration you head back down to the bunker planning on using what time you have left of your rest productively to end this nuisance. You form a plan to feign sleep next time and catch the imp surprised.";
 	now HP of Nala is 2; [flag set to remember the progress]
@@ -63,6 +64,7 @@ when play begins:
 	add Fool Me Twice to badspots of DemonList;
 
 after resting while (Fool Me Twice is active and Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
+	project Figure of Nala_clothed_icon;
 	say "     Deciding to set your trap as ready to feign rest, you position a blanket across your body to use as a net and close your eyes. You lay waiting for what feels like an hour, just as you're about to give up you hear what sounds like the flapping lightly echoing down the hall. Readying yourself and cracking an eye open you spot the same imp prankster carrying a bucket of suspicious intent. As she makes her way over to your bedside you leap into action, gripping the edge of the blanket and throwing it over her before leaping atop it. You hear a squeal of surprise as the bucket she was holding drops to the floor and the grub-worms inside spill out onto the ground. You pin the struggling bundle of imp and blanket to the floor as she squeals and whines in protest. 'Let me go you big bully!' she yells as you have her fully trapped, her stinger-tipped tail pinned under one of your limbs as it struggles and twists to free itself.";
 	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
@@ -99,6 +101,7 @@ to say TalkNala:
 	move Nala to Makeshift Rec Room;
 
 to say RapeNala:
+	project Figure of Nala_naked_icon;
 	if Player is male:
 		say "     You wrap her lower body and tail tightly in the blanket leaving only her struggling head and chest exposed before you. Removing what underclothes you have, you expose your [cock size desc of Player] shaft for her viewing. Your captive lets out a 'Meep' in realization as you rest your member across her cheek. She wiggles against you but seeing as her arms and tail are firmly trapped she relents and stares up at you with reluctant acceptance. Stroking your member to hardness you hold it before her lips and warn her of and biting before bringing the tip to her lips. You see her face an image of reluctance but her lips quiver and wet themselves with need as she opens her mouth up to take in your tip. Suckling gently at your member you groan in pleasure as you feed more of your length into her cute mouth.";
 		say "     Her long pointed tongue flaps and folds around your [cock size desc of Player] shaft squeezing around it with enthusiastic pleasure. Reaching the back of her throat as her tongue works its magic you withdraw suddenly with whimpered protests from the girl below before pulling back, shoving as much as you can cram down her small tight throat. She lets out a surprised gag as she tries to adjust to your sudden throat invasion, her tongue rolling around your cock as her eyes close and her newly freed hands come up to grasp your thighs. Barely registering her freed limbs you groan as she eagerly sucks you off. She takes as much as you can give her, sucking and bobbing her head with glee until you explode in her throat.";
@@ -117,22 +120,30 @@ Table of GameCharacterIDs (continued)
 object	name
 Nala	"Nala"
 
-Nala is a woman. The HP of Nala is usually 0.
-[Physical details as of game start]
+Nala is a woman.
+The HP of Nala is usually 0.
 ScaleValue of Nala is 2. [dog sized]
-SleepRhythm of Nala is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Nala is 0. [X cock]
-Cock Length of Nala is 0. [X Inches]
-Ball Size of Nala is 0. [Each testicle 1/2 X inch across]
-Ball Count of Nala is 0. [X balls]
-Cunt Count of Nala is 1. [X pussy]
-Cunt Depth of Nala is 6. [X Cunt]
-Cunt Tightness of Nala is 2. [X Cunt]
-Nipple Count of Nala is 2. [X nipples]
-Breast Size of Nala is 2. [X at the start]
+Body Weight of Nala is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Nala is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Nala is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Nala is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Nala is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Nala is 6. [length in inches]
+Breast Size of Nala is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Nala is 2. [count of nipples]
+Asshole Depth of Nala is 6. [inches deep for anal fucking]
+Asshole Tightness of Nala is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Nala is 0. [number of cocks]
+Cock Girth of Nala is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Nala is 0. [Length in Inches]
+Ball Count of Nala is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Nala is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Nala is 1. [number of cunts]
+Cunt Depth of Nala is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Nala is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Nala is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Nala is true. [can take oversized members without pain]
-Sterile of Nala is true.
 PlayerMet of Nala is false.
 PlayerRomanced of Nala is false.
 PlayerFriended of Nala is false.
@@ -143,6 +154,8 @@ Virgin of Nala is true.
 AnalVirgin of Nala is true.
 PenileVirgin of Nala is true.
 SexuallyExperienced of Nala is false.
+TwistedCapacity of Nala is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Nala is true. [steriles can't knock people up]
 MainInfection of Nala is "".
 Description of Nala is "[NalaDesc]".
 Conversation of Nala is { "<This is nothing but a placeholder!>" }.
@@ -151,9 +164,11 @@ The scent of Nala is "     Nala smells like roses with a small hint of brimstone
 to say NalaDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Nala] <- DEBUG[line break]";
-	say "     The diminutive imp girl before you is clearly demonic in nature, with has light red, almost pink skin and only stands a little over two and a half feet tall. She flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple-painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with violet pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filling perfectly out her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
+	project Figure of Nala_clothed_icon;
+	say "     The diminutive imp girl before you is clearly demonic in nature, with light red, almost pink skin and only stands a little over two and a half feet tall. She flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple-painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with green pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filling perfectly out her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
 
 instead of conversing the Nala:
+	project Figure of Nala_clothed_icon;
 	if Libido of Nala is 0: [never talked before]
 		say "     You approach the library's new resident Nala, she has set up what seems to be an old fluffy cat bed in the corner to rest in. When you approach her she beams and flaps her wings, hovering to address you at eye level. 'Wow, big place you got here!' she chirps, flying down to sit her curvaceous hips on your shoulder. 'Four times bigger than my last place. Then again, my last place was under a giant's bosom,' she finishes, bursting into a snicker that you can't help but smile at.";
 		now Libido of Nala is 1;
@@ -202,6 +217,7 @@ to say NalaKiss:
 		say "     You thank her for the service but ask about her tail and what it did to you. 'Oh! Don't worry, it's nothing permanent. Just a little defense mechanism we imp girls have.' She gives you a telling smile before speaking again. 'It's also great for mind exploding orgasms, huh?' She finishes by making a pretend explosion with her hands accompanied by sounds. She flies over to where her bed is and takes out a small pipe and begins smoking from it before addressing you again. 'This was fun. Well, of course it was - I knew it would be,' she corrects herself. 'Let's do it again sometime, and next time you're on bottom.' She points downward before leaning back and taking a few drags from her pipe. You shudder and turn to walk away.";
 
 to say NalaFuck:
+	project Figure of Nala_naked_icon;
 	if Player is male:
 		say "     You stride up to the bubbly imp girl and ask if she's in the mood for some fun. She gives you a giggle and places a hand over her mouth. 'Feeling a little randy so you come to little ol['] me huh? Well lucky for you I'm always down for a little randiness.' She flaps her wings and darts in your direction, slamming like a heavy pillow into your head locking lips with you and throwing her arms around your head. She thrusts her tongue into your mouth, her long demonic tongue wrapping with your own. Her stinger-tipped tail wraps around your midriff as her small yet surprisingly strong body pushes your willing form against a nearby wall. After a few moments of making out with the little she-devil she pulls back and smiles brightly. 'Mmm, you're going to take care of me aren't you big boy?' She slowly pushes you down unto the floor below and straddles your waist.";
 		say "     Releasing your shaft and gripping it in her paws you can't help but bring up the concern of Nala's small size. She giggles sweetly, 'Don't you worry about that hun, I'm kind of a... one size fits all kind of imp.' She flashes you a smile before removing her lacy panties while stroking your [Cock of Player] shaft. 'Oooh such a nice big boy you have here, and it's all for me?' She laughs to herself, wrapping her tail around one of your legs. She begins to grind her small body against your fully erect phallus, licking her lavish lips as she does so. Eventually she leans forward to place your length in between her firm ass cheeks, hot dogging you between her soft buns. She gives you a wink as she lifts herself up and impales herself on your stiff cock. You let out a groan and she lets out a squeal of delight as she plants herself down.";
@@ -224,6 +240,7 @@ instead of fucking the Nala:
 		say "[NalaSexMenu]";
 
 to say NalaSexMenu:
+	project Figure of Nala_naked_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

@@ -88,16 +88,28 @@ object	name
 Snow	"Snow"
 
 Snow is a person.
+Snow is in Squirrel Den.
 ScaleValue of Snow is 3. [human sized]
-Cock Count of Snow is 1.
-Cock Length of Snow is 18.
-Ball Size of Snow is 4. [goose egg sized balls]
-Ball Count of Snow is 2.
-Cunt Count of Snow is 0.
-Cunt Depth of Snow is 0.
-Cunt Tightness of Snow is 0.
-Nipple Count of Snow is 2.
-Breast Size of Snow is 10.
+Body Weight of Snow is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Snow is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Snow is 6. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Snow is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Snow is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Snow is 6. [length in inches]
+Breast Size of Snow is 6. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Snow is 2. [count of nipples]
+Asshole Depth of Snow is 12. [inches deep for anal fucking]
+Asshole Tightness of Snow is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Snow is 1. [number of cocks]
+Cock Girth of Snow is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Snow is 18. [Length in Inches]
+Ball Count of Snow is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Snow is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Snow is 0. [number of cunts]
+Cunt Depth of Snow is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Snow is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Snow is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Snow is false.
 PlayerRomanced of Snow is false.
@@ -109,18 +121,18 @@ Virgin of Snow is true.
 AnalVirgin of Snow is true.
 PenileVirgin of Snow is true.
 SexuallyExperienced of Snow is false.
+TwistedCapacity of Snow is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Snow is false. [steriles can't knock people up]
 MainInfection of Snow is "Hyper Squirrel".
-
-Description of Snow is "[SnowDesc]";
+Description of Snow is "[SnowDesc]".
+Conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
+the scent of snow is "[snowscent]".
 
 to say SnowDesc:
 	project the figure of Snow_icon;
 	say "     This sexual beauty is about six feet tall, with the features of a squirrel. She sports a massive pair of heaving breasts, larger than any you've seen, and a large bulge in her pants, barely covering the massive cock and huge balls. She normally has her tattered shirt and 'too-tight' pants, but they always seem to vanish before they can be damaged any further.[line break][line break]Snow loves messing with weapons and armor. Type [bold type]upgrade (weapon/armor)[roman type] and she'll give it a working over.";
 
-Snow is in Squirrel Den.
-Conversation of Snow is { "I love tinkering around with things, making them better.", "I was earning a degree in engineering!", "If we get rescued, what am I gonna do?", "Wonder what happened to the two that grabbed me...", "You have anyone you care about out there?", "Howdy!" }.
 the fuckscene of Snow is "[sexwithsnow00]".
-the scent of snow is "[snowscent]".
 
 to say snowscent:
 	if SkinName of Player is "Hyper Squirrel":
@@ -328,7 +340,7 @@ to say sexwithsnow02:	[Anal on Snow]
 	say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants. She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle. 'Mmm.. I'm in the mood for something different, hon? How about you take the back door and stuff my tight nut hole?' she asks with a grin. 'What's the problem? Can't a girl-boy want something a little kinkier?' She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening. Will you take her up on her offer?";
 	if Player consents:
 		say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench. Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready. As you sink your throbbing shaft into her, you grip her hips and press yourself to her back. 'Ohhh... that's so [if Cock Length of Player < 10]nice[else]big[end if]. Do me, baby! Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of Player] [Cock of Player] cock before pushing herself further onto it. Needing no more encouragement, you start pounding away at the eager herm.";
-		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [CockName of Player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
+		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [Cock of Player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
 		now Wild Squirrels is active;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
@@ -338,9 +350,9 @@ to say sexwithsnow02:	[Anal on Snow]
 
 to say sexwithsnow03:	[Vaginal on player]
 	setmonster "Hyper Squirrel";
-	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [BodyName of Player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
-	say "     She brushes the tip of the member against your [cunt size desc of Player] [CockName of Player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
-	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [Skin of Player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [BodyName of Player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
+	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [TailSpeciesName of Player in lower case] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
+	say "     She brushes the tip of the member against your [cunt size desc of Player] [Cock of Player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
+	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [Skin of Player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [BodyType of Player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
 	now Wild Squirrels is active;
 
 to say sexwithsnow04:	[Anal on player]
@@ -365,7 +377,7 @@ to say sexwithsnow06:	[Fellatio]
 	say "     'I feel like these need a work out,' she says, reaching below her legs to slowly rub over her distended balls through her pants. She gives off a soft chittering sigh as soft churning is heard, her cum factories ramping up production even as she leers at you lustfully. 'You are going to pucker up and give me a big ole kiss where it counts,' she insists, undoing her pants and letting her huge pink member bob into the air, demanding attention.";
 	say "     Give her what she wants?";
 	if Player consents:
-		say "     You help Snow up onto a counter where she leans back against a pile of books and runs her hands down her form, cupping her large member and caressing along it before she directs it up at you. You run your fingers along the excited member, drawing a soft, appreciative chitter from Snow as she half lids her eyes. Your tongue flicks over the sensitive tool, lapping up the precum as it flows. It is strangely sweet across your tongue with a tangy hit almost hidden in it. You wrap your [FaceName of Player] lips around it and begin to suckle softly at the head, letting your tongue taste of the prefluids as they flow more powerfully with every touch.";
+		say "     You help Snow up onto a counter where she leans back against a pile of books and runs her hands down her form, cupping her large member and caressing along it before she directs it up at you. You run your fingers along the excited member, drawing a soft, appreciative chitter from Snow as she half lids her eyes. Your tongue flicks over the sensitive tool, lapping up the precum as it flows. It is strangely sweet across your tongue with a tangy hit almost hidden in it. You wrap your [FaceSpeciesName of Player in lower case] lips around it and begin to suckle softly at the head, letting your tongue taste of the prefluids as they flow more powerfully with every touch.";
 		say "     Your fingertips find her bulging veins, tracing them as you lightly stroke the member, feeling its heat and angry throbbing. Snow is moaning and cooing with delight at the attention, her breath short and rapid as she watches you fellate her with gusto. As you sink down along the tool, she suddenly grabs at you, yelping, then shrieking. You can see her balls lurch visibly, then your mouth is flooded with huge blasts of cum, pouring in salty sprays into your waiting gullet as she rocks her hips into you, trying to bury as much of her tool into you as she can, left panting and exhausted, but with a happy smile on her face.";
 	else:
 		say "     She looks at you a bit hurt, and lowers a hand to rub at her balls lightly, 'Well damn, don't go getting a girl all riled up just to shoot her down. Excuse me, I need some alone time,' and she retreats to the far corner of the area. Not long after, soft indecent sounds begin to be heard.";

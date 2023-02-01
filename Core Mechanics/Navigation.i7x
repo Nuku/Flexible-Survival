@@ -48,9 +48,11 @@ Argos Antiques	"Argos Antiques"	"Argos Antiques"	"High Rise District"
 Bone-Appetit	"Bone-Appetit"	"Bone-Appetit"	"High Rise District"
 Butterfly Grove	"Butterfly Grove"	"Butterfly Grove"	"High Rise District"
 Cherry's Apartment	"Cherry's Apartment"	"Cherry's Apartment"	"High Rise District"
+Clayton's Front Yard	"Clayton's Front Yard"	"Clayton's Front Yard"	"High Rise District"
 Flower Garden	"Flower Garden"	"Flower Garden"	"High Rise District"
 Lizard Parlor	"Lizard Parlor"	"Lizard Parlor"	"High Rise District"
 Rex's Place	"Rex's Place"	"Rex's Place"	"High Rise District"
+Snapjaw Beach Camp	"Snapjaw Beach Camp"	"Snapjaw Beach Camp"	"High Rise District"
 Zephyr Lobby	"Zephyr"	"Zephyr Lobby"	"High Rise District"
 City Hospital	"City Hospital"	"City Hospital"	"Hospital"
 Psych Department	"Psych Department"	"Psych Department"	"Hospital"
@@ -99,6 +101,8 @@ Staghorn	"Staghorn"	"Staghorn"	"Urban Forest"
 Happy Puppy Kennel	"Happy Puppy Kennel"	"Happy Puppy Kennel"	"Urban Forest"
 Ironscale Hollow	"Ironscale Hollow"	"Ironscale Hollow"	"Urban Forest"
 Avalon-Crossroads	"Avalon-Crossroads"	"Avalon-Crossroads"	"Urban Forest"
+Camp Of The Snake	"Camp Of The Snake"	"Camp Of The Snake"	"Urban Forest"
+Hidden Rock Cavern Entrance	"Hidden Rock Cavern Entrance"	"Hidden Rock Cavern Entrance"	"Urban Forest"
 Warehouse District	"Warehouse District"	"Warehouse District"	"Warehouse District"
 Hyena Hideout	"Hyena Hideout"	"Hyena Hideout"	"Warehouse District"
 Mike's Home	"Mike's Home"	"Mike's Home"	"Warehouse District"
@@ -106,8 +110,26 @@ Spider's Web	"Spider's Web"	"Spider's Web"	"Warehouse District"
 Wolfman Lair	"Wolfman Lair"	"Wolfman Lair"	"Warehouse District"
 Zoo Entrance	"Zoo Entrance"	"Zoo Entrance"	"Zoo"
 Gator Den	"Gator Den"	"Gator Den"	"Zoo"
-Tiger Den	"Tiger Den"	"Tiger Den"	"Zoo"
+TDen_Entrance	"Tiger Den"	"TDen_Entrance"	"Zoo"
 [ Note: The city areas and locations above are sorted alphabetically. Please put new rooms in the right spots as you add them ]
+
+to AddNavPoint (RoomObj - room):
+	AddNavPoint RoomObj silence state is 0;
+
+to AddNavPoint (RoomObj - room) silently:
+	AddNavPoint RoomObj silence state is 1;
+
+to AddNavPoint (RoomObj - room) silence state is (Silence - a number):
+	if RoomObj is not fasttravel: [programming error, to be reported]
+		say "DEBUG: Trying to add [RoomObj] as a nav point, but it is not a fasttravel point. Please report this message on the FS Discord!";
+	else: [the room is at least a valid nav point]
+		if RoomObj is known:
+			if debug is at level 10:
+				say "DEBUG: Trying to add [RoomObj] as a nav point, but the player knows it already.";
+		else: [player doesn't know the room]
+			now RoomObj is known;
+			if Silence is 0:
+				say "[bold type]['][printed name of RoomObj]['][roman type] has been added to your list of available navpoints. You will now be able to [bold type]nav[roman type]igate there from any of the fasttravel locations in the city by using the command [bold type]nav [printed name of RoomObj][roman type].";
 
 destinationcheck is an action applying to nothing.
 

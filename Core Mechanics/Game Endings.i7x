@@ -1,5 +1,8 @@
 Version 1 of Game Endings by Core Mechanics begins here.
 
+[TODO: Rebuild the game endings as a menu, where you can choose one option of endings you qualify]
+[ Allowing for multiple endings to be watched: "This is one way your life could have continued. Do you want to see another?"]
+
 EndingID is a number that varies.[@Tag:NotSaved] EndingID is usually 1.
 
 a Game Ending is a kind of object.
@@ -114,6 +117,7 @@ to decide if all of the/-- endings in ( Endings - a list of texts ) are triggere
 
 vetcheat is an action applying to nothing.
 understand "i am a pro" as vetcheat.
+understand "I Am A Pro" as vetcheat.
 
 vetcheater is a number that varies.
 carry out vetcheat:
@@ -137,12 +141,13 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "fireworks" as supersponsor.
+understand "hooray" as supersponsor.
 
 when play ends:
 	clear the screen;
 	say "[bold type]Game Over![roman type][line break]";
 	ratetheplayer;
+	say "[link][bracket]Restart[close bracket][end link] [link][bracket]Restore[close bracket][as]restore[end link] [link][bracket]Undo[close bracket][end link]";
 	say "----------";
 	follow the self examine rule;
 	LineBreak;
@@ -174,6 +179,7 @@ when play ends:
 	say "https://flexiblesurvival.com/[line break]";
 	say "Once you have a character, click [']direct control['], and we'll be there, waiting to give a hand!";
 	say "Already have a MUD/MUCK/MUSH client? We're at flexiblesurvival.com port 2222";
+
 
 to ratetheplayer:
 	if GenderLock is 1 and score > 0:
@@ -248,7 +254,7 @@ This is the Epilogue Intro rule: [The player didn't die or bad ended]
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		trigger ending "Epilogue Intro";
-		say "You emerge from your harrowing experience with your mind intact, with your [BodyName of Player] form and [FaceName of Player] face.";
+		say "You emerge from your harrowing experience with your mind intact, with your [BodySpeciesName of Player in lower case] form and [FaceSpeciesName of Player in lower case] face.";
 		if BodyName is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
 		if Cock Length of Player > 10 or Ball Size of Player > 3 and player is male:

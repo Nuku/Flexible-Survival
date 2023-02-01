@@ -131,21 +131,28 @@ object	name
 Thunderbolt	"Thunderbolt"
 
 Thunderbolt is a man. Thunderbolt is in Thunderbolt's Stable.
-[Physical details as of game start]
 ScaleValue of Thunderbolt is 4. [horse sized]
-SleepRhythm of Thunderbolt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Thunderbolt is 1. [X cock]
-Cock Length of Thunderbolt is 24. [X Inches]
-Ball Size of Thunderbolt is 4.
-Ball Count of Thunderbolt is 2. [X balls]
-Cunt Count of Thunderbolt is 0. [X pussy]
-Cunt Depth of Thunderbolt is 0. [X Cunt]
-Cunt Tightness of Thunderbolt is 0. [X Cunt]
-Nipple Count of Thunderbolt is 2. [X nipples]
-Breast Size of Thunderbolt is 0. [X at the start]
+Body Weight of Thunderbolt is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Thunderbolt is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Thunderbolt is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Thunderbolt is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Thunderbolt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Thunderbolt is 10. [length in inches]
+Breast Size of Thunderbolt is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Thunderbolt is 2. [count of nipples]
+Asshole Depth of Thunderbolt is 12. [inches deep for anal fucking]
+Asshole Tightness of Thunderbolt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Thunderbolt is 1. [number of cocks]
+Cock Girth of Thunderbolt is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Thunderbolt is 24. [Length in Inches]
+Ball Count of Thunderbolt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Thunderbolt is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Thunderbolt is 0. [number of cunts]
+Cunt Depth of Thunderbolt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Thunderbolt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Thunderbolt is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Thunderbolt is false. [can not take oversized members without pain]
-Sterile of Thunderbolt is true.
 PlayerMet of Thunderbolt is false.
 PlayerRomanced of Thunderbolt is false.
 PlayerFriended of Thunderbolt is false.
@@ -155,14 +162,16 @@ OralVirgin of Thunderbolt is true.
 Virgin of Thunderbolt is true.
 AnalVirgin of Thunderbolt is true.
 PenileVirgin of Thunderbolt is false.
-SexuallyExperienced of Thunderbolt is true.
+SexuallyExperienced of Thunderbolt is false.
+TwistedCapacity of Thunderbolt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Thunderbolt is true. [steriles can't knock people up]
 MainInfection of Thunderbolt is "".
 Description of Thunderbolt is "[ThunderboltDesc]".
 Conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".
 
 to say ThunderboltDesc:
-	say "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regale, almost always followed in tow by his two feline handlers.";
+	say "     Thunderbolt is the college campus's football mascot, he is a young and well-muscled stallion with a brown coat and darker brown mane. He usually strides around donning his Westside Stallions regalia, almost always followed in tow by his two feline handlers, Ariana and Eres.";
 
 instead of conversing the Thunderbolt:
 	say "     Talking in soft tones, you reach out and stroke the horse Thunderbolt across his mane. Then you brush your palms down his flank, over his side and back up to his equine muzzle. He gives a low whinny as you pet him and caress his chin. Eventually you pull back letting the stallion settle. He stares back at you, shakes his mane then neighs in satisfaction.";
@@ -221,37 +230,34 @@ instead of fucking Thunderbolt:
 	clear the screen and hyperlink list;
 
 to say ThunderboltSex1:
-	setmonster "Feral Mustang Stallion";
 	say "     You stride up to Ariana and ask if her offer is still open. She pauses a moment looking confused before her eyes light up with comprehension. 'Ooh [italic type]that[roman type] offer!' she purrs seductively before adding, 'Hmm, I'd be happy to.' Eying you up and down predatory, the young woman turns to wink at her sister who has buried her face in a book pretending not to know what's happening. Taking your hand in hers you walk over to where Thunderbolt has stopped to drink from the nearby trough. Pulling his head up to look at you and the lioness approaching, his ear flicks and he stares curiously at you. Before you can act Ariana takes your head in her paws and kisses you, moving her body against yours. Running her lips along yours she plunges inside filling your mouth with her rough lion-tongue. She stays like that for a moment wrestling with your own eager mouth while you caress each other.";
 	say "     Pulling back she licks her lips, 'A good start lover, but we should include the big fellow here.' She motions to Bolt who has been watching you with interest seeming to understand where this is leading. Letting go of your hand the lioness Ariana kneels down below Bolt's undercarriage. 'Hmm, I'll get us started,' she says, taking a hold of Bolt's growing member and beginning to stroke him. 'There's a good boy, come on out to play.' You can hear Ariana audibly purring as she beckons you to join her. Kneeling down with her you peer back to the younger Eres who quickly ducks back behind her book, obviously just having been watching you. Kneeling down the older feline sees your glance back and says, 'Don't worry, this is how she always is, she'll jump in when she's ready.' She gives you a soft smile before turning back to Bolt. Now nearly at its full two feet of hard horse cock, Ariana envelops the head in her mouth, giving you a show of fellating that glorious hunk of horse meat.";
-	LineBreak;
+	WaitLineBreak;
 	say "     As she takes Thunderbolt's rod you decide to keep busy. Reaching to caress the Lioness's covered breasts results in her letting out a moan in pleasure, which reverberates around the horse cock in her maw. Still caressing and squeezing her breasts, you lean in close to lick at the large equine phallus before you. Licking around its base, you breathe in deep and take in his mating musk - wild, horny and a pure aphrodisiac for your senses. Withdrawing a foot of cock from her throat with a gasp, Ariana leans back, slightly out of breath. She gazes over to a fence she uses to hitch Thunderbolt to and you can see an idea form in her eyes. 'Follow me sweeties, I have an idea.' She leads both you and the still fully aroused horse to the fence and places you doggy style before it, pulling down what clothes you have on in the meanwhile. She exposes your ass and dripping lady-lips before turning to Bolt.";
 	say "     'Alright Bolt, leap up boy!' she says, motioning her arms forward. Getting the message, he rears up and lands with his hooves resting on the fence while his thick organ rests on your back, pulsing and throbbing with excitement. You bite your lip in anticipation but wiggle your hips back at his groin. Moving over to the back side of Bolt, the lovely feline runs a hand down the horse's flanks, caressing him as she tries to guide him into you. Bolt starts humping forward, trying to hit home and thrust into his willing mate. With Ariana's help the tip of his flared cock penetrates your womanhood causing you to throw your head back in surprised pleasure. 'I knew you'd come to join,' you Hear behind you. Looking back you spot Eres with a flushed face and damp skirt having come over to kneel by her sister. 'L-let's just do this already, I'm about to lose control,' replies the shy younger of the two. Smiling Ariana returns her gaze to you and widens her grin. Still staring at you she captures her sister's lips in a sweet passionate kiss.";
-	LineBreak;
+	WaitLineBreak;
 	say "     Pulling your head back from there erotic display of incest you moan loudly as you once again feel the equine shaft pushing into you. Pulling his large body back Thunderbolt slams into you again and again causing your stomach to distend each time he does. You moan and squeal in delight as your railed by your horse mate, your mind turning to shatters as pleasure overwhelms you. Glancing back again barely coherent, Eres is licking up and down Bolt's large dangling sack. She takes one large ball in her mouth and sucks it before letting it go and resuming licking, all signs of shyness and restraint gone from the younger feline. Seeing you looking back taking the monstrous cock as it hammers you Eres pads over to your front. She strokes your face and chest gently before locking eyes with you.";
 	say "     Eres lifts your chin up and kisses you once again in a tender kiss. That does it. The amazing stretching of the horse cock and the lips of the sultry college girl is too much. You climax around the shaft of hard horseflesh as it bottoms out inside you. Clamping down on it you trap the horse cock in you, locked down tighter than a vice. Letting out a neigh of pleasure Bolt climaxes soon after. Feeding every inch he can fit inside you he shoots forth a load of creamy horse cum to bathe your womb in white hot liquid. You moan and nearly pass out, taking every drop of cum this virile beast has to give. Your entire body feels like it's flooded with cum, it fills up your womb and your tunnels before shooting out around the big piece of meat inside you. Your belly distends with the amount of cum pumped in you causing a second orgasm to rip through you as Thunderbolt's cock is squeezed for every drop it has.";
-	fimpregchance;
-	LineBreak;
+	WaitLineBreak;
 	say "     Eventually you come down from your orgasmic high realizing that Thunderbolt has withdrew his member from you and a rough feline tongue has replaced it. Ariana still holds your head in her paws and smiles before pulling down her clearly soaked panties and tossing them aside revealing her pleasantly musky pussy to you. She lowers your head down and you begin licking dutifully at her delicious sex. Meanwhile Eres behind you starts to eat out your gushing pussy, she swallows the load that flows from your pussy and drinks it down happily before lapping at your lips. The three of you continue on a cycle of oral pleasure and fingering before your orgasm is tripped once again soaking Eres's muzzle. Eres follows shortly after cumming around her own digits stuffed in her cunt.";
 	say "     Then Ariana climaxes, covering your face in sweet feline honey which you lap up quickly. Coming down from each of your highs you lay down in the soft grass below, noticing Thunderbolt having moved away to rest and chew some hay nearby. A rest sounds like a good idea to you, you lay back with Ariana pulling your head into her lap. Her sister crawls up next to you placing an arm around you as well. The group of you close eyes and bed down for a relaxing and needed rest.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mustang Stallion";
 
 to say ThunderboltSex2: [pussy fuck]
-	setmonster "Feral Mustang Stallion";
 	say "     Feeling especially horny and randy you tie a leash around your stallion mate and lead him off somewhere further secluded. Ducking around the edge of another building behind Bolt's stable you find a nice quiet spot. Turning to face the magnificent horse you can see him already hardening at the sight of you, apparently aware of your plans for him. You smile and lean over to smooch him on his muzzle. Surprisingly he responds to the kiss, and lashes his thick tongue against your lips before slipping it into your mouth. Without planning to originally, you're now making out with your equine mate, swapping saliva as Bolt messily tongue-fucks your mouth. Pulling back slightly out of breath a little while later, your loins feel on fire and beg to be plowed by this virile beast.";
 	say "     Stripping off any obstructions you lay your back down on a nearby bench. Then you spread your legs and start to finger your already quite wet womanhood, beckoning him to come breed his mare. As he steps up to the bench, Thunderbolt's large body towers over you, the musk of his arousal very apparent and quickly filling your mind with all kinds of naughty thoughts. His glorious two foot cock is already rock hard and dripping tasty pre. You take a hold of his thick male-meat and guide it to your soaking entrance, rubbing the tip of his flared cock against your lower lips. Lubing him up nicely you start to glide his equine phallus into you slowly taking inch after inch of his manhood. Yet something about the process seems to have been too slow for the horse's taste - as mid-way, Bolt suddenly rears up impatiently and thrusts forward, spearing you on his horse cock.";
-	LineBreak;
+	WaitLineBreak;
 	say "     You let out a shriek of pleasure and shout obscenities at no one in particular as Thunderbolt starts to thrust back and forth. Taking control of his willing mate he stands above you and hammers away at your gripping sex. You barely have time to think or act as Bolt stretches out your cunt with each thrust. You're glad you choose to lie down, because you doubt you could hold yourself up at this moment. Soon after, Bolt starts to speed up, grunting and snorting in pleasure as he fucks your pussy. He jackhammers at incredible speed into you and you can but lay there and take it like a good mate for your stallion. Bottoming out inside you one last time he thrust nearly every inch of his two foot cock into you, distending your belly magnificently.";
-	fimpregchance;
 	say "     At that sensation, you clamp around his raging hardness yelling to the skies above as you climax from your stallion's long pole. Bolt quickly follows you into sweet oblivion, shooting nearly a gallon of thick horse jizz into your spasming body. It floods your inner walls and womb before spraying out onto the ground below. Pushed out of your well-fucked pussy by the torrent of cum still pulsing out of its end, his spurting cock lands on your tummy. It covers your abdomen and torso with more spunk than you know what to do with. As you are coming down from your mutual orgasms a little while later, his now shrinking cock slides from your belly as he withdraws himself from above you. You give him a fond smile and scoop up a few handfuls of thick cum to snack on before cleaning and redressing. Stroking Bolt's mane, you are nuzzled by the horse in his pleasant afterglow, then lead your stallion back to his stable.";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Mustang Stallion";
 
 to say ThunderboltSex3: [ass fuck]
-	setmonster "Feral Mustang Stallion";
 	say "     Feeling especially horny and randy you tie a leash around your stallion mate and lead him off somewhere further secluded. Ducking around the edge of another building behind Bolt's stable you find a nice quiet spot. Turning to face the magnificent horse you can see him already hardening at the sight of you, apparently aware of your plans for him. You smile and lean over to smooch him on his muzzle. Surprisingly he responds to the kiss, and lashes his thick tongue against your lips before slipping it into your mouth. Without planning to originally, you're now making out with your equine mate, swapping saliva as Bolt messily tongue-fucks your mouth. Pulling back slightly out of breath a little while later, [if Player is male]your own cock is rock-hard and your asshole itching [else if Player is female]your loins feel on fire and beg [else]you are itching [end if]to be plowed by this virile beast.";
 	say "     Stripping off any obstructions you get on all fours a nearby bench. Then you spit into your hand and use it to rub your back door, moistening and massaging it with the improvised lube. Your ass raised high as you finger yourself, this beckons the stallion to come breed his mare. As he steps up to the bench, Thunderbolt's large body towers over you, the musk of his arousal very apparent and quickly filling your mind with all kinds of naughty thoughts. His glorious two foot cock is already rock hard and dripping tasty pre. You take a hold of his thick male-meat and guide it to your trembling entrance, rubbing the tip of his flared cock against your pucker. The pre-cum he is leaking in a constant drip helps lube you up nicely, until you push his dickhead against the opening a bit harder and feel it gliding into you slowly. Inch after inch of his manhood enter your asshole, stretching it oh so very nicely around the warm shaft. Yet something about the process seems to have been too slow for the horse's taste - as mid-way, Bolt suddenly rears up impatiently and thrusts forward, spearing you on his horse cock.";
-	LineBreak;
+	WaitLineBreak;
 	say "     You let out a shriek of pleasure and shout obscenities at no one in particular as Thunderbolt starts to thrust back and forth. Taking control of his willing mate he stands above you and hammers away at your gripping hole. You barely have time to think or act Bolt stretches out your tight chute with each thrust. You're glad you have the backrest of the bench to hold on to, because you doubt you could hold keep his hard thrusts from pushing you all over the place otherwise. Soon after, Bolt starts to speed up, grunting and snorting in pleasure as he fucks your ass. He jackhammers at incredible speed into you and you can but kneel there and take it like a good mate for your stallion. Bottoming out inside you one last time he thrust nearly every inch of his two foot cock into you, distending your belly magnificently.";
-	mimpregchance;
 	say "     At that sensation, you clamp around his raging hardness yelling to the skies above as you climax from your stallion's long pole. [if Player is male]Spurt after spurt of cum is sent flying, making a mess of the bench you are kneeling upon. [else if Player is female]You squirt out femcum, making a mess of the bench you are kneeling upon. [end if]Bolt quickly follows you into sweet oblivion, shooting nearly a gallon of thick horse jizz into your spasming body. It floods your inner walls [if Player is mpreg_ok]and interior womb [end if]before spraying out onto the ground below. Pushed out of your well-fucked ass by the torrent of cum still pulsing out of its end, his spurting cock lands on your lower back. It covers your backside with more spunk than you know what to do with. As you are coming down from your mutual orgasms a little while later, his now shrinking cock slides from your back as he withdraws himself from above you. You give him a fond smile and scoop up a few handfuls of thick cum to snack on before cleaning and redressing. Stroking Bolt's mane, you are nuzzled by the horse in his pleasant afterglow, then lead your stallion back to his stable.";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Mustang Stallion";
 
 Section 4 - Ariana NPC
 
@@ -260,6 +266,41 @@ object	name
 Ariana	"Ariana"
 
 Ariana is a woman.
+ScaleValue of Ariana is 3. [human sized]
+Body Weight of Ariana is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ariana is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ariana is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ariana is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ariana is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ariana is 7. [length in inches]
+Breast Size of Ariana is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ariana is 2. [count of nipples]
+Asshole Depth of Ariana is 12. [inches deep for anal fucking]
+Asshole Tightness of Ariana is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ariana is 0. [number of cocks]
+Cock Girth of Ariana is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ariana is 0. [Length in Inches]
+Ball Count of Ariana is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ariana is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ariana is 1. [number of cunts]
+Cunt Depth of Ariana is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ariana is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ariana is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ariana is false.
+PlayerRomanced of Ariana is false.
+PlayerFriended of Ariana is false.
+PlayerControlled of Ariana is false.
+PlayerFucked of Ariana is false.
+OralVirgin of Ariana is false.
+Virgin of Ariana is false.
+AnalVirgin of Ariana is true.
+PenileVirgin of Ariana is true.
+SexuallyExperienced of Ariana is true.
+TwistedCapacity of Ariana is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ariana is true. [steriles can't knock people up]
+MainInfection of Ariana is "".
 Description of Ariana is "[ArianaDesc]".
 Conversation of Ariana is { "<This is nothing but a placeholder!>" }.
 The scent of Ariana is "     Ariana smells musky from a days jog, the scent underlain by a sweet smell of perfume and pheromones.".
@@ -315,15 +356,50 @@ object	name
 Eres	"Eres"
 
 Eres is a woman.
+ScaleValue of Eres is 3. [human sized]
+Body Weight of Eres is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Eres is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Eres is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Eres is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Eres is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Eres is 7. [length in inches]
+Breast Size of Eres is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Eres is 2. [count of nipples]
+Asshole Depth of Eres is 12. [inches deep for anal fucking]
+Asshole Tightness of Eres is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Eres is 0. [number of cocks]
+Cock Girth of Eres is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Eres is 0. [Length in Inches]
+Ball Count of Eres is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Eres is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Eres is 1. [number of cunts]
+Cunt Depth of Eres is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Eres is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Eres is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Eres is false.
+PlayerRomanced of Eres is false.
+PlayerFriended of Eres is false.
+PlayerControlled of Eres is false.
+PlayerFucked of Eres is false.
+OralVirgin of Eres is false.
+Virgin of Eres is false.
+AnalVirgin of Eres is true.
+PenileVirgin of Eres is true.
+SexuallyExperienced of Eres is true.
+TwistedCapacity of Eres is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Eres is true. [steriles can't knock people up]
+MainInfection of Eres is "".
 Description of Eres is "[EresDesc]".
 Conversation of Eres is { "<This is nothing but a placeholder!>" }.
 The scent of Eres is "     Eres smells of evergreen grass with a hint of the innards of a book.".
 
 to say EresDesc:
-	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe from frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
+	say "     Eres is a bipedal lioness girl standing around six feet tall with orange and yellow fur and a gorgeous face that closely resembles her sisters. Unlike her older sister however Eres has a much thinner and lithe frame. Eres sports a fairly chaste knee long white skirt and matching blouse, a hole poking out of her skirt lets her tail swish freely around.";
 
 instead of conversing the Eres:
-	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about out past.' She gazes back down to her journal smiling fondly.";
+	say "     You walk up and say hello to the lovely lioness. Eres pokes her head up from a small journal she was writing in and gives you a shy smile. [first time]'Oh, hello there I don't think we've actually formally met. I'm Eres.' [only]She lays a paw out to shake which you do. After some casual talk you ask her about herself. She flashes you a coy smile. 'I uses to study economics here, you know before everything happened. I suppose now I just take it day by day, usually in the library reading about the past.' She gazes back down to her journal smiling fondly.";
 
 instead of fucking Eres:
 	say "     What exactly do you plan on doing with the young lioness?";

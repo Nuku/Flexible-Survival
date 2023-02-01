@@ -7,6 +7,7 @@ Version 1 of Panther Taur by Nuku Valente begins here.
 Section 1 - Creature Responses
 
 to say defeated_panthertaur:
+	project Figure of PantherTaur_hard_icon;
 	if zephyrtask is 1, increase zephyrpests by 1;
 	say "     The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[panthertaur tempt]";
 
@@ -98,6 +99,7 @@ To say panthertaur tempt: [player wins]
 		clear the screen and hyperlink list;
 
 to say panthertaur rape: [panthertaur wins or player gets mounted]
+	project Figure of PantherTaur_hard_icon;
 	if Player is puremale and anallevel > 1: [checks that 1.male and 2.not less anal]
 		if Player is submissive:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target and instead thrusting against your [Cock of Player] cock. You start wanting it as she tries to sheathe herself inside you. You reach back, spreading your cheeks to help her push that barbed cock inside you. Both of you moan out loud once she hits her target, filling your asshole with her thick cock and rubbing against your prostate. It takes a while, but eventually she manages to hilt inside you, her furred balls slapping against your behind.";
@@ -190,7 +192,9 @@ to say panthertaur ride cowgirl:
 		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance]";
 		now Libido of Player is (Libido of Player + Libido of Player + 40) / 3;
 
-
+to say PantherTaurDesc:
+	project Figure of PantherTaur_clothed_icon;
+	say "An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two nicely full breasts on her upper chest, held lightly by a top wrapped around her body. On her undercarriage rest six smaller bumps with nipples, visible for short glimpses as she takes powerful steps with those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, with respectably sized balls to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
 
 Section 2 - Creature Insertion
 
@@ -217,7 +221,7 @@ When Play begins:
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";
 	now defeated entry is "[defeated_panthertaur]";
 	now victory entry is "[panthertaur rape]";
-	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more bumps with nipples, swaying slightly with every powerful step of those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
+	now desc entry is "[PantherTaurDesc]";
 	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face. Format as Your face is [Face of Player]. ]
 	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if Nipple Count of Player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body. Format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
@@ -243,7 +247,7 @@ When Play begins:
 	now Cock Length entry is 16; [ Length in inches infection will make cock grow to if cocks. ]
 	now Ball Size entry is 4; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 6; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 6; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 14; [ Depth in inches of female sex the infection will attempt to give a player. ]

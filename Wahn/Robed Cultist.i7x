@@ -242,16 +242,16 @@ When Play begins:
 	now skin change entry is "it becomes grayish-blue and scaly, covering your body in a slightly shimmering new look";
 	now ass change entry is "it becomes firm and tight, as if to avoid sticking out too much";
 	now cock change entry is "it becomes a nonhuman in shape, with an upwards-curving shaft that ends in a flat, angled head at the end, surrounded by 'interesting' ridges";
-	now str entry is 18;
-	now dex entry is 12;
-	now sta entry is 20;
+	now str entry is 22;
+	now dex entry is 16;
+	now sta entry is 24;
 	now per entry is 14;
 	now int entry is 12;
 	now cha entry is 8;
 	now sex entry is "Male";       [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 75;                [ How many HP has the monster got? ]
+	now HP entry is 275;                [ How many HP has the monster got? ]
 	now lev entry is 10;                [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 10;               [ Amount of Damage monster Does when attacking.]
+	now wdam entry is 15;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";       [ Case sensitive]
 	now Cock Count entry is 1;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 12;

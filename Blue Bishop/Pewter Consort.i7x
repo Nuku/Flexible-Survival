@@ -144,9 +144,9 @@ to pewterbind:
 			now tempnum is 1;
 			pewterlustsate;
 			if pewtercuntvar2 > 0:
-				say "[impregchance]";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
 			if pewterassvar2 > 0 and player is mpreg_ok:
-				say "[mimpregchance]";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
 			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;
 			if enduring is true:
@@ -399,7 +399,7 @@ to pewtergenitalapply:
 					say "[if pewtercockvar1 is 1]one other[else][pewtercockvar1] others[end if] and the [if pewtercockvar2 is 1]one[else][pewtercockvar2][end if] riding you";
 				else if pewtercockvar1 > 0:
 					say "[if pewtercockvar1 is 1]one other[else][pewtercockvar1] others[end if] attending you";
-				else:
+				else if pewtercockvar2 > 0:
 					say "[if pewtercockvar2 is 1]one[else][pewtercockvar2][end if] riding you";
 				say ", all eager to milk you dry.";
 			increase pewtercockvar1 by 1;
@@ -417,7 +417,7 @@ to pewtergenitalapply:
 					say "[if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] and the [if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] sucking you off";
 				else if pewtercockvar2 > 0:
 					say "[if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] taking you";
-				else:
+				else if pewtercockvar1 > 0:
 					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] sucking you off";
 				say ", all eager to milk you dry.";
 			increase pewtercockvar2 by 1;
@@ -438,7 +438,7 @@ to pewtergenitalapply:
 						say "[if pewtercuntvar1 is 1]one other[else][pewtercuntvar1] others[end if] and the [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] fucking you";
 					else if pewtercuntvar1 > 0:
 						say "[if pewtercuntvar1 is 1]one other[else][pewtercuntvar1] others[end if] tonguing you";
-					else:
+					else if pewtercuntvar2 > 0:
 						say "[if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] fucking you";
 					say ", stuffing another of your holes.";
 				else:
@@ -447,7 +447,7 @@ to pewtergenitalapply:
 						say "[if pewtercuntvar1 is 1]one other[else][pewtercuntvar1] others[end if] and the [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] fucking you";
 					else if pewtercuntvar1 > 0:
 						say "[if pewtercuntvar1 is 1]one other[else][pewtercuntvar1] others[end if] tonguing you";
-					else:
+					else if pewtercuntvar2 > 0:
 						say "[if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] fucking you";
 					say ", further putting a strain on your beleaguered hole[sfn].";
 			increase pewtercuntvar1 by 1;
@@ -466,7 +466,7 @@ to pewtergenitalapply:
 						say "[if pewtercuntvar2 is 1]one other[else][pewtercuntvar2] others[end if] and the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing you";
 					else if pewtercuntvar2 > 0:
 						say "[if pewtercuntvar2 is 1]one other[else][pewtercuntvar2] others[end if] riding you";
-					else:
+					else if pewtercuntvar1 > 0:
 						say "[if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing you";
 					say ", stuffing another of your holes.";
 				else:
@@ -475,7 +475,7 @@ to pewtergenitalapply:
 						say "[if pewtercuntvar2 is 1]one other[else][pewtercuntvar2] others[end if] and the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing you";
 					else if pewtercuntvar2 > 0:
 						say "[if pewtercuntvar2 is 1]one other[else][pewtercuntvar2] others[end if] riding you";
-					else:
+					else if pewtercuntvar1 > 0:
 						say "[if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing you";
 					say ", further putting a strain on your stuffed hole[sfn].";
 			increase pewtercuntvar2 by 1;
@@ -490,7 +490,7 @@ to pewtergenitalapply:
 					say "[if pewterassvar1 is 1]one other[else][pewterassvar1] others[end if] and the [if pewterassvar2 is 1]one[else][pewterassvar2][end if] fucking you";
 				else if pewterassvar1 > 0:
 					say "[if pewterassvar1 is 1]one other[else][pewterassvar1] others[end if] attending you";
-				else:
+				else if pewterassvar2 > 0:
 					say "[if pewterassvar2 is 1]one[else][pewterassvar2][end if] fucking you";
 				say ", further putting a strain on your stuffed hole.";
 			increase pewterassvar1 by 1;
@@ -503,7 +503,7 @@ to pewtergenitalapply:
 					say "[if pewterassvar2 is 1]one other[else][pewterassvar2] others[end if] and the [if pewterassvar1 is 1]one[else][pewterassvar1][end if] tonguing you";
 				else if pewterassvar2 > 0:
 					say "[if pewterassvar2 is 1]one other[else][pewterassvar2] others[end if] riding you";
-				else:
+				else if pewterassvar1 > 0:
 					say "[if pewterassvar1 is 1]one[else][pewterassvar1][end if] tonguing you";
 				say ", further putting a strain on your stuffed hole.";
 			increase pewterassvar2 by 1;
@@ -615,7 +615,7 @@ to say pewtercharacterassess:
 					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks are sucked off, [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] being ridden";
 				else if pewtercockvar1 > 0:
 					say "[if pewtercockvar1 is 1]one[else][pewtercockvar1][end if] of your dicks are sucked off";
-				else:
+				else if pewtercockvar2 > 0:
 					say "[if pewtercockvar2 is 1]one[else][pewtercockvar2][end if] of your dicks are being ridden";
 			else:
 				if pewtercockvar1 > 0:
@@ -635,19 +635,19 @@ to say pewtercharacterassess:
 						say "[if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] of your cunts are being tongued, [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] being fucked";
 					else if pewtercuntvar1 > 0:
 						say "[if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] of your cunts are being tongued";
-					else:
+					else if pewtercuntvar2 > 0:
 						say "[if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] of your cunts are being fucked";
 				else:
 					if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
 						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] tongued by [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if], fucked by [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if][if Cunt Count of Player > 1] as they share your [Cunt Count of Player] holes[end if]";
 					else if pewtercuntvar1 > 0:
 						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] tongued by [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if]";
-					else:
+					else if pewtercuntvar2 > 0:
 						say "your cunt[if Cunt Count of Player > 1]s are[else] is[end if] fucked by [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if]";
 			else:
 				if pewtercuntvar1 > 0:
 					say "[if Cunt Count of Player > 1]one of [end if]your cunt[sfn] being tongued by [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if]";
-				else:
+				else if pewtercuntvar2 > 0:
 					say "[if Cunt Count of Player > 1]one of [end if]your cunt[sfn] being fucked by [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if]";
 			if pewterassocc > 0: [here?]
 				say ", and ";
@@ -659,12 +659,12 @@ to say pewtercharacterassess:
 					say "your ass is rimmed by [if pewterassvar1 is 1]one[else][pewterassvar1][end if] of them, [if pewterassvar2 is 1]one other[else][pewterassvar2] others[end if] fucking it";
 				else if pewterassvar1 > 0:
 					say "your ass is rimmed by [pewterassvar1] of them";
-				else:
+				else if pewterassvar2 > 0:
 					say "your ass is pounded by [pewterassvar2] of them";
 			else:
 				if pewterassvar1 > 0:
 					say "your ass is being rimmed by one of them";
-				else:
+				else if pewterassvar2 > 0:
 					say "your ass is being pounded by one of them";
 
 

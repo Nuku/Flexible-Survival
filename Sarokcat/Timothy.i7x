@@ -18,7 +18,7 @@ Gryphon nest is a room.
 
 Description of Gryphon nest is "     This small room is tucked between several of the other tents filling the area, its soft canvas surrounding a small private enclosure filled with a large variety of different cushions and cloths, the soft light from the glowing floor and tent cloth illuminating the area. You can see several small items and trinkets, scattered amongst the cushions, but your eyes are drawn most to the heavily pregnant herm gryphon lying sprawled out on the cushions, a small collar with a tag hanging from around her neck.".
 Timothy is in Gryphon nest.
-Gryphon nest is west of Qytat Plaza.
+Gryphon nest is up of Plaza Fountain.
 
 instead of sniffing the Gryphon nest:
 	say "The nest area smells strongly of gryphon arousal, sex and egg-laying.";
@@ -34,21 +34,28 @@ object	name
 Timothy	"Timothy"
 
 Timothy is a man.
-[Physical details as of game start]
 ScaleValue of Timothy is 3. [human sized]
-SleepRhythm of Timothy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Timothy is 1. [X cock]
-Cock Length of Timothy is 8. [X Inches]
-Ball Size of Timothy is 4.
-Ball Count of Timothy is 2. [X balls]
-Cunt Count of Timothy is 1. [X pussy]
-Cunt Depth of Timothy is 16. [X Cunt]
-Cunt Tightness of Timothy is 6. [X Cunt]
-Nipple Count of Timothy is 2. [X nipples]
-Breast Size of Timothy is 4. [X at the start]
+Body Weight of Timothy is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Timothy is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Timothy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Timothy is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Timothy is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Timothy is 8. [length in inches]
+Breast Size of Timothy is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Timothy is 2. [count of nipples]
+Asshole Depth of Timothy is 12. [inches deep for anal fucking]
+Asshole Tightness of Timothy is 3. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Timothy is 1. [number of cocks]
+Cock Girth of Timothy is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Timothy is 8. [Length in Inches]
+Ball Count of Timothy is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Timothy is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Timothy is 1. [number of cunts]
+Cunt Depth of Timothy is 16. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Timothy is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Timothy is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Timothy is false. [can not take oversized members without pain]
-Sterile of Timothy is false.
 PlayerMet of Timothy is false.
 PlayerRomanced of Timothy is false.
 PlayerFriended of Timothy is false.
@@ -59,6 +66,8 @@ Virgin of Timothy is false.
 AnalVirgin of Timothy is false.
 PenileVirgin of Timothy is false.
 SexuallyExperienced of Timothy is true.
+TwistedCapacity of Timothy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Timothy is false. [steriles can't knock people up]
 MainInfection of Timothy is "Blue Gryphon Herm".
 Description of Timothy is "[TimothyDesc]".
 
@@ -76,7 +85,7 @@ instead of sniffing timothy:
 
 instead of conversing the timothy:
 	if HP of timothy is 0:
-		say "     'Oh wow!' the gryphon says as you approach to talk to her. 'I didn't expect to see someone like you here,' she says as she looks you over, moaning slightly in pleasure as she shifts her large egg-filled weight to look at you better. 'Welcome to the flying city, I think they are calling it Qytat or something, to be honest I wasn't paying too much attention to things like that when my mistress led me here.' Seeing your confusion, she begins to explain. 'My mistress is the one who changed me into this lovely new body,' she says as she gestures at her long leonine form, and her avian wings, and finally rubs her pregnant belly. 'And my mistress is the one who keeps me nice and full of her gryphonic offspring as well. I was once a human called Timothy, living down there in the city, before I met her while I was out camping one night. That was the best night of my life,' she says, as her flexible beak pulls back in a happy smile.";
+		say "     'Oh wow!' the gryphon says as you approach to talk to her. 'I didn't expect to see someone like you here,' she says as she looks you over, moaning slightly in pleasure as she shifts her large egg-filled weight to look at you better. 'Welcome to the flying city, I think they call it Qytat or something, to be honest I wasn't paying too much attention to things like that when my mistress led me here.' Seeing your confusion, she begins to explain. 'My mistress is the one who changed me into this lovely new body,' she says as she gestures at her long leonine form, and her avian wings, and finally rubs her pregnant belly. 'And my mistress is the one who keeps me nice and full of her gryphonic offspring as well. I was once a human called Timothy, living down there in the city, before I met her while I was out camping one night. That was the best night of my life,' she says, as her flexible beak pulls back in a happy smile.";
 		say "     'She changed me and filled me right up with her wonderful cock, and then led me here where I could be a good little breeding pet for her, bearing her eggs again and again, and letting her drink my tasty milk and fuck me whenever she wants,' the gryphon says, obviously growing somewhat excited at the memory, and small trickles of milk begin to dampen the soft fur on her large breasts. 'She still calls me by my old name sometimes, but I love it best when she calls me her pet, or even mate or breeder, it just seems so right,' the gryphon says with a shudder as she licks her lips. 'And sometimes she even lets other gryphons come in and breed me too, to make sure that I am always nice and full of little baby gryphons. It's the best life ever, you should really try it! I bet my mistress would love to make you into a happy, slutty breeding gryphon too!' Timothy says as she rubs herself erotically, 'And you could stay here and talk with me and we could bear eggs for the handsome gryphon studs all day long... mmm,' she moans as she orgasms just from the thought, lying back on the cushions and panting slightly as you try to decide just what to say to that.";
 		increase HP of timothy by 1;
 	else if HP of timothy is 1:

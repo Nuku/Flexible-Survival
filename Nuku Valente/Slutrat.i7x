@@ -10,7 +10,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Rat"; [name of the overall species of the infection, used for children, ...]
 	add "Slut Rat" to infections of RodentList;
 	add "Slut Rat" to infections of FurryList;
 	add "Slut Rat" to infections of NatureList;
@@ -358,7 +358,7 @@ To Say slutratdenscene:
 	else:
 		increase SlutRatDenVisitTimes by 1;
 	if HP of Ronda is 9 and BodyName of Player is "Slut Rat":
-		say "[rondarescue]";
+		say "[RondaRescue]";
 
 
 Section 2 - Slut Rat Welcome
@@ -378,7 +378,7 @@ To Say ratslutwelcome:
 			say ". 'This won't do,' she says with a frown on her pointed snout. Warm fingers squeeze at your shaft, 'This won't do at all.' On saying this, another rat hurries forward with a plastic bottle filled with some strange purple syrup that sloshes slowly with the vigorous movement. The first rat raises up and reaches for your mouth, 'Say [']ahhh[']' she beckons with a smile.";
 			say "Allow her?";
 			if Player consents:
-				say "     The new rat pops off the top and lifts it to your [FaceName of Player] lips. 'Drink drink drink,' she says with a clear excitement. She isn't alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
+				say "     The new rat pops off the top and lifts it to your [FaceSpeciesName of Player in lower case] lips. 'Drink drink drink,' she says with a clear excitement. She isn't alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
 				now lost is 0;
 				ratslutchug;
 				if lost is 1: [ bad end]

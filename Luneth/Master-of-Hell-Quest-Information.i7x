@@ -319,7 +319,7 @@ Book 12 - Notes
 [Demonic citadel dungeon finished]
 [Demonic citadel secondary hub in place]
 [Solo scenes for Skarnoth and Brutus to get their marking bites]
-[Liliths ritual for a non sexual way to get son Atticus]
+[Lilith's ritual for a non sexual way to get son Atticus]
 [Sidequests for the merchant, the shaman and teleporting]
 [Dark sanctum put in place]
 

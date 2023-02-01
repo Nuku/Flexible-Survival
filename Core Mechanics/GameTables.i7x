@@ -2,6 +2,8 @@ Version 1 of GameTables by Core Mechanics begins here.
 
 Part 0 - Variables
 
+tempnum is a number that varies.[@Tag:NotSaved]
+tempnum2 is a number that varies.[@Tag:NotSaved]
 MonsterID is a number that varies.[@Tag:NotSaved] [line number chosen in the table of random critters]
 JournalNotes is a list of text that varies. [player-made journal notes]
 Allobjs is a list of text that varies.[@NotSaved] [list of all objects in the game]
@@ -37,7 +39,25 @@ Table of JournalNotes
 Date(number)	Note (text)
 with 1000 blank rows
 
-Part 5 - ID Tables (for the Export/Import System)
+Part 5 - Slut Storage
+
+[PaymentType 0 = Mortimer harvests fluids]
+[PaymentType 1 = Player has to pay 1 bottle/week]
+
+Table of StoredSluts
+Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	Sexcount(number)
+with 1000 blank rows
+
+[
+	Choose a blank row from Table of StoredSluts;
+	now name entry is "Name";
+	now PaymentType entry is 1;
+	now Resistant entry is false;
+	now Sluttyness entry is 1;
+]
+
+
+Part 6 - ID Tables (for the Export/Import System)
 
 [All character IDs - used for export/import system]
 Table of GameCharacterIDs
@@ -64,7 +84,7 @@ Table of GamePossessions
 Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
-Table of GameEndings
+Table of GameEndings[ (continued)]
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 --	--	--	--	0	false
 
@@ -78,6 +98,10 @@ with 1000 blank rows
 
 Table of GameCharacterVariable2
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
+with 1000 blank rows
+
+Table of GameCharacterVariable3
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Affection(number)	Depravity(number)	SubVsDom(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
 with 1000 blank rows
 
 Table of PlayerData
@@ -171,6 +195,9 @@ Name(text)	Type(text)
 "Dolphinlist"	"list of text"
 "lbcomplist"	"list of text"
 "ndmlist"	"list of text"
+"StoredSluts_Female"	"list of text"
+"StoredSluts_Male"	"list of text"
+"StoredSluts_Other"	"list of text"
 "absorb"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"
@@ -1030,8 +1057,6 @@ Name(text)	Type(text)
 "NermineTalk"	"number"
 "NESProgress"	"number"
 "nesteddino"	"number"
-"NewGraphicsInteger"	"number"
-"NewGraphicsRatio"	"number"
 "NGRP"	"number"
 "nightcheck"	"number"
 "Nightmaremastery"	"number"
@@ -1531,6 +1556,7 @@ Name(text)	Type(text)
 "hdformname"	"text"
 "headadjdata"	"text"
 "HighestPlayerStat"	"text"
+"Hope-BornDragonName"	"text"
 "horndata"	"text"
 "JenniferFirstKidSpecialStat"	"text"
 "keychar"	"text"
@@ -1731,7 +1757,6 @@ Name(text)	Type(text)
 "fsnakevalid"	"truth state"
 "garrettinfo1"	"truth state"
 "gobdem"	"truth state"
-"graphics"	"truth state"
 "grhouse"	"truth state"
 "gsd_attack"	"truth state"
 "gsd_fled"	"truth state"
@@ -1802,7 +1827,6 @@ Name(text)	Type(text)
 "Meredith_Vanessa_fun2"	"truth state"
 "messypigaltorgasm"	"truth state"
 "MFSDUBM"	"truth state"
-"micaelastory1"	"truth state"
 "MKunleashed"	"truth state"
 "mlamiaboobmash"	"truth state"
 "mlamiamet"	"truth state"
@@ -1816,9 +1840,6 @@ Name(text)	Type(text)
 "nagawarning"	"truth state"
 "NavCheckReturn"	"truth state"
 "ndmLisa"	"truth state"
-"NewGraphics"	"truth state"
-"NewGraphicsDebugMode"	"truth state"
-"NewGraphicsOpened"	"truth state"
 "nmformswitch"	"truth state"
 "NoHealMode"	"truth state"
 "nosquirrelanal"	"truth state"

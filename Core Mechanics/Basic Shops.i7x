@@ -6,7 +6,7 @@ BuyingAction is an action applying to one topic.
 Understand "buy [text]" as BuyingAction.
 
 Check BuyingAction:
-	if price sign is not visible and outfitters rack is visible and medicine case is not visible and (Darius's Inventory is not visible and Darius is not visible), say "Buy what from whom?" instead;
+	if price sign is not visible and outfitters rack is not visible and medicine case is not visible and (Darius's Inventory is not visible and Darius is not visible) and Drenraya is not visible, say "Buy what from whom?" instead;
 
 Carry out BuyingAction:
 	let SoughtItem be "";

@@ -529,7 +529,7 @@ A person has a text called PosAdjCap. PosAdjCap is usually "Their".
 A person has a text called PosProCap. PosProCap is usually "Theirs".
 A person has a text called ReflexProCap. ReflexProCap is usually "Themselves".
 The player has a text called PronounChoice. PronounChoice is usually "Auto". [Player chosen option on how the game handles pronouns]
-A person has a text called PronounSet. PronounSet is usually "Neutral". [Current pronoun set in use for the player]
+A person has a text called PronounSet. PronounSet is usually "Neutral". [Current pronoun set in use]
 
 to SetMalePronouns for (x - a person):
 	now SubjectPro of x is "he";
@@ -571,16 +571,16 @@ to SetHermPronouns for (x - a person):
 	now PronounSet of x is "Herm";
 
 To SetNeutralPronouns for (x - a person):
-	now SubjectPro of x is "it";
-	now ObjectPro of x is "it";
-	now PosAdj of x is "its";
-	now PosPro of x is "its";
-	now ReflexPro of x is "itself";
-	now SubjectProCap of x is "It";
-	now ObjectProCap of x is "It";
-	now PosAdjCap of x is "Its";
-	now PosProCap of x is "Its";
-	now ReflexProCap of x is "Itself";
+	now SubjectPro of x is "they";
+	now ObjectPro of x is "them";
+	now PosAdj of x is "their";
+	now PosPro of x is "theirs";
+	now ReflexPro of x is "themselves";
+	now SubjectProCap of x is "They";
+	now ObjectProCap of x is "Them";
+	now PosAdjCap of x is "Their";
+	now PosProCap of x is "Theirs";
+	now ReflexProCap of x is "Themselves";
 	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:
@@ -595,15 +595,16 @@ This is the SetPlayerPronouns rule:
 			SetNeutralPronouns for player;
 		-- "Auto":
 			if Player is herm:
-				if Breast Size of Player > 0: [herm]
-					SetHermPronouns for player;
+				if Breast Size of Player > 0: [fem-herm]
+					SetFemalePronouns for player;
 				else: [male herm]
 					SetMalePronouns for player;
-			else:
-				if Breast Size of Player > 0: [shemale, female, neuter fem]
-					SetFemalePronouns for player;
-				else: [male, cuntboy, neuter masc]
-					SetMalePronouns for player;
+			else if Player is male:
+				SetMalePronouns for player;
+			else if Player is female:
+				SetFemalePronouns for player;
+			else if Player is neuter:
+				SetNeutralPronouns for player;
 
 A person can be MProN. A person is usually not MProN.
 
@@ -629,6 +630,30 @@ Definition: A person (called x) is NProN:
 	if PronounSet of x is "Neuter", yes;
 	no;
 
+A person can be pronounMale. A person is usually not pronounMale.
+
+Definition: A person (called x) is pronounMale:
+	if SubjectPro of Player is "he", yes;
+	no;
+
+A person can be pronounFemale. A person is usually not pronounFemale.
+
+Definition: A person (called x) is pronounFemale:
+	if SubjectPro of Player is "she", yes;
+	no;
+
+A person can be pronounHerm. A person is usually not pronounHerm.
+
+Definition: A person (called x) is pronounHerm:
+	if SubjectPro of Player is "shi", yes;
+	no;
+
+A person can be pronounNeuter. A person is usually not pronounNeuter.
+
+Definition: A person (called x) is pronounNeuter:
+	if SubjectPro of Player is "it", yes;
+	no;
+
 [Menu]
 
 pronounsetting is an action applying to nothing.
@@ -637,8 +662,8 @@ understand "set pronouns" as pronounsetting.
 understand "pronoun menu" as pronounsetting.
 
 carry out pronounsetting:
-	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type][line break]";
-	say "Current Pronoun Choice: [bold type][PronounChoice of Player][roman type][line break]";
+	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type][line break].";
+	say "Current Pronoun Choice: [bold type][PronounChoice of Player][roman type] - [SubjectPro of Player]/[PosAdj of Player][line break]";
 	say "- [link](1) Auto[as]1[end link] - Game will decide pronouns based on current body configuration.";
 	say "- [link](2) Male[as]2[end link] - Game will always use He/His/Him/Himself pronouns for the player.";
 	say "- [link](3) Female[as]3[end link] - Game will always use She/Her/Her/Herself pronouns for the player.";

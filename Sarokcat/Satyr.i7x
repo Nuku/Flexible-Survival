@@ -9,6 +9,7 @@ Section 1 - Creature Responses
 beatsatyr is a number that varies.
 
 to say Satyr attack:
+	project Figure of Satyr_hard_icon;
 	if Player is female:
 		say "     'Hah!' the satyr says as he pins you to the wall. 'What do we have here?' the goat-like man says with a leer as his hands roam your body. 'Not quite a proper nymph, I'll admit, but you'll do!' the satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself. The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening. Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goat-like meat into you.";
 		say "     Your mind fogs even more as the scent of wine, the satyrs musk and your own body's lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goat-like legs easily supporting both your weight, as he holds your moaning body up, you can't help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good. You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn't even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you. Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor. 'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'but I have to admit that was pretty damn good anyways. Maybe you'll let me catch ya again sometime and we can make a real nymph out of you,' the satyr finishes with a smile, then snags his wine cup from where it fell and goes looking for a refill. Slowly you manage to pull your well used body together, and you head back off into the museum halls yourself, almost looking forward to that next promised chase.";
@@ -46,6 +47,7 @@ To say Satyr loss:
 
 
 to say satyrsexselection:
+	project Figure of Satyr_hard_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
@@ -108,6 +110,10 @@ to say satyrsexselection:
 			say "Invalid Option. Pick 1 - [the number of filled rows in table of fucking options].";
 
 
+to say Satyr_Desc:
+	project Figure of Satyr_hard_icon;
+	say "     You hear a strange off key singing echoing through the halls, turning to look you see a strange man weaving down the hall on goat-like legs. Indeed the strange creatures lower body appears to be that of a goat, small curved horns protrude from his forehead, with a goat-like beard hanging off his chin, and a large animal like sheath between his legs, you recognize him immediately from some of the pictures on the wall as a satyr, but you thought those were just a myth! Spotting you, he waves the large wine cup in one hand at you, while he pats the pipes hanging off his rough belt. [one of]'Hey there! Care for a bit of wine?' [or]'Did you see any nymphs around here?' [or]'Hey, come join the party!' [or]'You look like you need to lighten up!' [or]'You gots anymore booze? Is good!' [at random]he says, as he dances forward nimbly on his goat-like hooves. His inebriated state is as obvious to you as is the fact that he isn't interested in listening to anything you have to say.";
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -130,7 +136,7 @@ When Play begins:
 	now attack entry is "[one of]He splashes wine around everywhere, as he tries to get you to try some.[or]He grins as he shows off his large goat cock, the sight stirring something strange deep within you.[or]His strong goat-like musk distracts you for a minute as he attacks.[or]Dancing around nimbly on his goat hooves, the satyr then plants one of the hooves right where it hurts the most.[or]Swinging the wine cup around haphazardly, somehow he manages to bounce it off your head.[or]The satyr brings up his pipes and whistles a little tune, and to your surprise you can't help but dance a little.[at random]";
 	now defeated entry is "[Satyr loss]";
 	now victory entry is "[Satyr attack]";
-	now desc entry is "[mongendernum 3]     You hear a strange off key singing echoing through the halls, turning to look you see a strange man weaving down the hall on goat-like legs. Indeed the strange creatures lower body appears to be that of a goat, small curved horns protrude from his forehead, with a goat-like beard hanging off his chin, and a large animal like sheath between his legs, you recognize him immediately from some of the pictures on the wall as a satyr, but you thought those were just a myth! Spotting you, he waves the large wine cup in one hand at you, while he pats the pipes hanging off his rough belt. [one of]'Hey there! Care for a bit of wine?' [or]'Did you see any nymphs around here?' [or]'Hey, come join the party!' [or]'You look like you need to lighten up!' [or]'You gots anymore booze? Is good!' [at random]he says, as he dances forward nimbly on his goat-like hooves. His inebriated state is as obvious to you as is the fact that he isn't interested in listening to anything you have to say.";
+	now desc entry is "[Satyr_Desc]";
 	now face entry is "rough mostly human-like face, though the goat-like beard, goat horns, and the lusty look filling your eyes show it to truly be a satyr's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "short and rather stocky. Your upper body is that of a well-built man, while your lower body rests on two exceptionally well-built goat-like legs, your nimble goat hooves ringing off the floor with every step"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]goat furred[or]tough[or]rugged[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]

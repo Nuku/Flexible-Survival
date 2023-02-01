@@ -16,6 +16,7 @@ Version 6 of Bouncy Castle by Stripes begins here.
 [ Version 5.4 - Minor maintenance and character relocation - Luneth     ]
 [ Version 6.0 - Player can now choose whether or not to cut the tether after rescuing or losing the vixen. Added additional documentation and fixed several bugs - Song ]
 [ Version 6.1 - Added an Inflatable Otter Suit that binds male/herm players and offers sex options for female/neuter players - Song ]
+[ Version 7.0 - Added an Inflatable Snake to the ball pit - Kernog ]
 
 "Save the vixen 'princess' from the 'castle'."
 
@@ -159,11 +160,13 @@ bcplayroomlast is a truth state that varies. bcplayroomlast is usually true.
 bcseenkingchair is a truth state that varies. bcseenkingchair is usually false.
 bcseenkingknight is a truth state that varies. bcseenkingknight is usually false.
 bcseenhugeorca is a truth state that varies. bcseenhugeorca is usually false.
+bcseensnake is a truth state that varies. bcseensnake is usually false.
 bcfinalchairform is a text that varies. bcfinalchairform is usually "".
 lastsealfight is a number that varies. lastsealfight is usually 255.
 lastoctofight is a number that varies. lastoctofight is usually 255.
 lastbcchair is a number that varies. lastbcchair is usually 255.
 lastbcduobeaten is a number that varies. lastbcduobeaten is usually 255.
+lastsnakefight is a number that varies. lastsnakefight is usually 255.
 bcduofightlost is a truth state that varies. bcduofightlost is usually false.
 bcduofightfled is a truth state that varies. bcduofightfled is usually false.
 bcseenthroneroom is a truth state that varies. bcseenthroneroom is usually false.
@@ -335,13 +338,13 @@ Chapter 1 - Entrance
 
 to say bcentrance:
 	if HP of Bubble is 1:
-		say "     As you approach your destination, you can see it's much larger than you'd originally guessed. Being the size of a good-sized home, it could probably accommodate several dozen rambunctious, jumping kids at once. It even seems to be two tiered, with a waterslide coming down from the upper level on both the east and west sides. There is also a taller tower somewhere off at the back. You don't recall these things being made this large. The exterior of the castle is sky blue, making it difficult to see at a distance. The large inflatable has been secured by two long ropes which lead to rocky outcroppings, mooring it safely between them. But despite this, it does shift and sway around considerably. Coupling that with its bouncy floor makes movement inside rather difficult.";
+		say "     As you approach your destination, you can see it's much larger than you'd originally guessed. Being the size of a good-sized home, it could probably accommodate several dozen rambunctious, jumping kids at once. It even seems to be two tiered, with a waterslide coming down from the upper level on both the [Bold Type]east[roman type] and [Bold Type]west[roman type] sides. There is also a taller tower somewhere off at the back. You don't recall these things being made this large. The exterior of the castle is sky blue, making it difficult to see at a distance. The large inflatable has been secured by two long ropes which lead to rocky outcroppings, mooring it safely between them. But despite this, it does shift and sway around considerably. Coupling that with its bouncy floor makes movement inside rather difficult.";
 		say "     You pull yourself into the first room and look around the entrance room. It has a soft, bouncy floor and is a couple of feet above the water level, necessitating an easy climb up a mesh ladder that hangs from the entrance mouth. The interior of this room has a dark green floor, blue walls with yellow arches and columns and a ceiling of red. There's a couple of beach balls and pool noodles left scattered on the floor here, probably by the airheaded dolphin girls[if daytimer is night]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].";
 		now HP of Bubble is 2;
 		increase score by 5;
 	else:
 		say "     This inflatable castle floats on the water, tethered between two rocks by thick ropes. It sways and bobs on the water, adding to the instability of its floor, making it difficult for you to move around. The bouncy castle itself is brightly colored with the exterior a sky blue, making it hard to spot on the water in the distance. The interior has a dark green floor, blue walls with yellow arches and columns, and a ceiling of red vinyl[if daytimer is night]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if].";
-	say "     Aside from the yawning mouth to the castle which you entered to the south of you, there are two separate child-sized doorways out of this room, one to the east and one to the west. While each doorway is obscured by strips on hanging clear plastic, pushing them aside, you glance quickly in them both before pressing onward. The one to the [link]east[end link] has a few columns in it and some foam swords and other toys scattered on the floor. To the [link]west[end link], you see large assortment of beach toys and equipment, including some several beach balls, plastic pails and buckets and a couple of those floating mats people can lie across while in the pool. Alternatively, you could exit to the [link]north[end link] and make your way back to the beach.";
+	say "     Aside from the yawning mouth to the castle which you entered to the [Bold Type]south[roman type] of you, there are two separate child-sized doorways out of this room, one to the [Bold Type]east[roman type] and one to the [Bold Type]west[roman type]. While each doorway is obscured by strips on hanging clear plastic, pushing them aside, you glance quickly in them both before pressing onward. The one to the [link]east[end link] has a few columns in it and some foam swords and other toys scattered on the floor. To the [link]west[end link], you see large assortment of beach toys and equipment, including some several beach balls, plastic pails and buckets and a couple of those floating mats people can lie across while in the pool. Alternatively, you could exit to the [link]north[end link] and make your way back to the beach.";
 	[DESCRIBE FLOT]
 
 instead of going north from Bouncy Castle:
@@ -404,14 +407,14 @@ Chapter 3 - Bouncing Play Room
 to say bcplayroom:
 	now bcplayroomlast is true;
 	now bcseenplayroom is true;
-	say "     This room is large and open with a plenty of space for kids to bounce and play inside it. It is very similar to the entrance room with its green floor, blue walls, red ceiling and yellow for the rounded columns that form the corners. The southwest corner is rounded with a much larger tower there, though there's no entrance to it here. There's a pair of arched window on the south wall[if daytimer is day], letting in some light[else]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if]. There's a few toys and things scattered around this room, clearly from when the dolphin girls would frolic in here. From the scent in the air, you can tell that the room's been used for more adult frolicking as well.";
+	say "     This room is large and open with a plenty of space for kids to bounce and play inside it. It is very similar to the entrance room with its green floor, blue walls, red ceiling and yellow for the rounded columns that form the corners. The [Bold Type]southwest[roman type] corner is rounded with a much larger tower there, though there's no entrance to it here. There's a pair of arched window on the [Bold Type]south[roman type] wall[if daytimer is day], letting in some light[else]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if]. There's a few toys and things scattered around this room, clearly from when the dolphin girls would frolic in here. From the scent in the air, you can tell that the room's been used for more adult frolicking as well.";
 	if lastsealfight - turns >= 4: [FLOT - DONE]
 		if flotmarked is true and a random chance of 1 in 2 succeeds:
-			say "     Now that you're in the room, you do notice a bright yellow seal-shaped floating seat in the northwest corner. It's fairly small and would only really be suitable for toddlers. It has a drawn-on face with a friendly smile, blue eyes, black nose and cute whiskers and a pair of small handles at its shoulders. As you look at it, it briefly stirs, flapping about in mild confusion. '...Play?' squeaking softly, it eventually exhausts itself trying to find you and seems to deflate either from exhausting itself or from disappointment. It appears it wasn't able to notice you...";
+			say "     Now that you're in the room, you do notice a bright yellow seal-shaped floating seat in the [Bold Type]northwest[roman type] corner. It's fairly small and would only really be suitable for toddlers. It has a drawn-on face with a friendly smile, blue eyes, black nose and cute whiskers and a pair of small handles at its shoulders. As you look at it, it briefly stirs, flapping about in mild confusion. '...Play?' squeaking softly, it eventually exhausts itself trying to find you and seems to deflate either from exhausting itself or from disappointment. It appears it wasn't able to notice you...";
 			now lastsealfight is turns;
 		else:
 			if lastsealfight is 255:
-				say "     Now that you're in the room, you do notice a bright yellow seal-shaped floating seat in the northwest corner. It's fairly small and would only really be suitable for toddlers. It has a drawn-on face with a friendly smile, blue eyes, black nose and cute whiskers and a pair of small handles at its shoulders. As you look at it, it starts to stir, flapping its flippers and giving a squeaking bark. 'Play!' it squeaks, crawling forward to have fun with the newcomer. As it moves, you spot a pointed penis inflating at its underside - clearly a new feature to this once innocent toy.";
+				say "     Now that you're in the room, you do notice a bright yellow seal-shaped floating seat in the [Bold Type]northwest[roman type] corner. It's fairly small and would only really be suitable for toddlers. It has a drawn-on face with a friendly smile, blue eyes, black nose and cute whiskers and a pair of small handles at its shoulders. As you look at it, it starts to stir, flapping its flippers and giving a squeaking bark. 'Play!' it squeaks, crawling forward to have fun with the newcomer. As it moves, you spot a pointed penis inflating at its underside - clearly a new feature to this once innocent toy.";
 			else:
 				say "     Looking over, you notice that the bright yellow seal has managed to reinflate itself and is looking towards you. 'Play?' it squeaks enquiringly before waddling forward on its flippers, clearly intent on trying to play with you again.";
 			WaitLineBreak;
@@ -456,14 +459,38 @@ to say bcplayroom:
 					SanLoss 8;
 					follow the turnpass rule;
 	else:
-		say "     Taking a quick glance to the northwest corner, you can see that the yellow seal is still partially deflated and isn't ready to try to play again, giving you a chance to continue undistracted. A quick glance shows two kid-sized doorways leading out of here, one to the west and other to the north. A quick glance through the hanging flaps between rooms shows the [link]north[end link] leads to the smaller room you saw earlier with the foam swords. The door to the [link]west[end link] leads to a ball pit room as big as this play room. You also notice a mesh climbing ladder at the back corner of the ball pit which heads up to the upper level.";
+		say "     Taking a quick glance to the [Bold Type]northwest[roman type] corner, you can see that the yellow seal is still partially deflated and isn't ready to try to play again, giving you a chance to continue undistracted. A quick glance shows two kid-sized doorways leading out of here, one to the [Bold Type]west[roman type] and other to the [Bold Type]north[roman type]. A quick glance through the hanging flaps between rooms shows the [link]north[end link] leads to the smaller room you saw earlier with the foam swords. The door to the [link]west[end link] leads to a ball pit room as big as this play room. You also notice a mesh climbing ladder at the back corner of the ball pit which heads up to the upper level.";
 
 
 Chapter 4 - Ball Pit Room
 
 to say bcballpitroom:
-	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls. You are able to wade your way through them slowly to move around. The room itself is fairly large, bigger than the entrance room, but having the same overall design. There's two arch-shaped windows in the south wall[if daytimer is day], letting in some light[else]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if]. In the [link]southeast[end link] corner of the room, the wall is rounded with a much larger tower there with an arched entrance into it. There are also three other doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the [link]west[end link] heading to a hall filled with padded pillars made for punching.";
-
+	say "     The ball pit room has a rounded, raised edge and seems sunk further into the floor, making it somewhat less springy under all those balls. You are able to wade your way through them slowly to move around. The room itself is fairly large, bigger than the entrance room, but having the same overall design. There's two arch-shaped windows in the [Bold Type]south[roman type] wall[if daytimer is day], letting in some light[else]. Despite the late hour, the castle strangely seems lit, though you can find no light sources[end if]. In the [link]southeast[end link] corner of the room, the wall is rounded with a much larger tower there with an arched entrance into it. There are also three other doorways out of here, one to the [link]north[end link] leading to the smaller room with all the beach toys the dolphin girls have collected, another to the [link]east[end link] and a play room as large as this one and the final to the [link]west[end link] heading to a hall filled with padded pillars made for punching.";
+	if lastsnakebeat - turns >= 4: [FLOT - DONE]
+		if bcseensnake is true:
+			say "Now wary of the inflatable snake's presence, you stay on your guard. Just as you suspected, you spot the sea of plastic ball bulge slightly, as the creature patrols its territory.";
+		else:
+			say "As you make your way through the ball pit, an unnatural brush against your leg startles you. You look down, and notices a large green tube slide among the plastic balls. The cartoonish head of an inflatable snake pops out of the pit. It looks at you with its soulless eyes, and you could swear the smile painted on its face elongated.";
+			now bcseensnake is true;
+		if flotmarked is true and a random chance of 1 in 2 succeeds:
+			say "The 'wave' made by the inflatable snake travels in your general direction, but misses you completely. The snake's snout bumps on the edge of the ball pit in a somewhat comical manner. You take the opportunity of the creature's confusion to be on your way.";
+		else:
+			say "The 'wave' made by the inflatable snake makes a beeline towards you. You prepare yourself for the fight.";
+			challenge "Inflatable Snake";
+			if fightoutcome >= 30: [Only for fleeing. For other outcomes, see Inflatable Snake.]
+				say "     Deciding that you would have none of that sneaky squeaky snake, you make your way towards the nearest exit as fast as you can. As you step out of the ball pit, you hear the plastic head of the inflatable reptile bump against the edge.";
+				WaitLineBreak;
+				let randomExit be a random number between 1 and 4;
+				if randomExit is 1:
+					move player to Bouncing Play Room;
+				else if randomExit is 2:
+					move player to Lower Tower;
+				else if randomExit is 3:
+					move player to Toy Room;
+				else:
+					move player to Punching Pillars;
+	else:
+		say "Now wary of the inflatable snake's presence, you stay on your guard. However, you do not spot any movement. It seems that the plastic reptile is still recovering.";
 
 Chapter 5 - Toy Room
 
@@ -491,7 +518,7 @@ to say bctoyroom:
 			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs 17: ";
 			if bonus + dice > 16:
 				say "     The octopus inflatable wraps a few tentacles around you, but you manage to push them off and kick them away for the moment.";
-				say "     [bold type]You have an opportunity to get away either by their heading further into the castle by heading south or going to the east to return to the castle entrance.[roman type][line break]";
+				say "     [bold type]You have an opportunity to get away either by their heading further into the castle by heading [Bold Type]south[roman type] or going to the [Bold Type]east[roman type] to return to the castle entrance.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - South - Further into the castle.";
 				say "     ([link]N[as]n[end link]) - East - Return to the castle entrance.";
@@ -517,7 +544,7 @@ Chapter 6 - Great Hall
 
 to say bcgreathall:
 	if lastorcabeat - turns >= 4: [FLOT - DONE]
-		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east. There's a door at the north and another at the southern corner of the west wall, the one which first brought you in here. But you have little opportunity to take in much more detail than this, for the room also holds ";
+		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the [Bold Type]west[roman type] wall and tapestries between the windows on the [Bold Type]east[roman type]. There's a door at the [Bold Type]north[roman type] and another at the [Bold Type]southern[roman type] corner of the [Bold Type]west[roman type] wall, the one which first brought you in here. But you have little opportunity to take in much more detail than this, for the room also holds ";
 		if bcseenhugeorca is false:
 			say "a large, inflatable orca toy. It is very round and bigger than the dolphin toys you've seen, being over two yards long from end to end and big enough for an adult to use. The black and white inflatable bobs up into the air and rolls over a few times with a trilling noise before charging towards you to bump you with its nose. The blow doesn't really hurt much, but makes you stumble back on the rocking, swaying floor. It seems intent on playing with you, although what that entails is yet to be seen.";
 			now bcseenhugeorca is true;
@@ -525,15 +552,15 @@ to say bcgreathall:
 			say "the large orca inflatable from earlier. It trills happily and moves in to charge at you, clearly wanting to [if orcaintense is 0]turn you into its well-fucked plaything again[else]bump you around some more[end if] as part of its game.";
 		if flotmarked is true and a random chance of 1 in 2 succeeds:
 			say "     The orca tries to charge you again, but seems to have trouble aiming at you and misses completely, bouncing harmlessly against a wall! You have a quick moment to decide which direction you'd like to go before it can recover.";
-			say "     [bold type]Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
+			say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - North.";
 			say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 			if Player consents:
-				say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring it in here.";
+				say "     You move quickly to the [Bold Type]northern[roman type] doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring it in here.";
 				move player to King's Chambers;
 			else:
-				say "     You move quickly to door in the southwest end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
+				say "     You move quickly to door in the [Bold Type]southwest[roman type] end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
 				move player to Bouncing Play Room;
 		else:
 			let bonus be ( dexterity of Player - 10 ) / 2;
@@ -541,15 +568,15 @@ to say bcgreathall:
 			say "     You roll 1d20([dice])+[bonus] + [3 - scalevalue of Player]: [dice + bonus + 3 - scalevalue of Player] vs 15: ";
 			if ( bonus + dice + 3 - scalevalue of Player ) > 14:
 				say "     You manage to weave in one direction and then push off in the other, dodging another charge from the orca which would have knocked you off your feet. You have a quick moment to decide which direction you'd like to go.";
-				say "     [bold type]Shall you head through the door to the north or head back the way you came by going west back to the play room?[roman type][line break]";
+				say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]west[roman type] back to the play room?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - North.";
 				say "     ([link]N[as]n[end link]) - Go back west to the play room.";
 				if Player consents:
-					say "     You move quickly to the northern doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
+					say "     You move quickly to the [Bold Type]northern[roman type] doorway, push aside the plastic curtain and dive into the next room just before the orca comes rushing to slam into you. The doorway seems too small for the big orca toy, making you briefly wonder if it was deflated to bring in here.";
 					move player to King's Chambers;
 				else:
-					say "     You move quickly to door in the west end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
+					say "     You move quickly to door in the [Bold Type]west[roman type] end of the room. Pushing aside the plastic curtain, you head back towards the center of the bouncy castle.";
 					move player to Bouncing Play Room;
 			else:
 				say "     You fail to dodge in time and are struck by the full brunt of the orca's charge, knocking you off your feet. It takes a moment to recover, and by that time you do, the orca is nudging and bumping you insistently, clearly intent on playing with you[if orcaintense is 0] some more[end if]. Pressed into a corner, it looks like your only option is to fight this creature if you want to make it out of this [if orcaintense is 0]place with your mind intact[else]room[end if].";
@@ -562,7 +589,7 @@ to say bcgreathall:
 					else:
 						move player to King's Chambers;
 	else:
-		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the west wall and tapestries between the windows on the east. There's a door at the north and another at the southern corner of the west wall, the one which first brought you in here. The orca you fought against earlier is still lying in the center of the room, trying to mend itself.";
+		say "     You find yourself in a room designed as if it were a great hall, with images of banquet table on the [Bold Type]west[roman type] wall and tapestries between the windows on the [Bold Type]east[roman type]. There's a door at the [Bold Type]north[roman type] and another at the [Bold Type]southern[roman type] corner of the [Bold Type]west[roman type] wall, the one which first brought you in here. The orca you fought against earlier is still lying in the center of the room, trying to mend itself.";
 
 
 Chapter 7 - King's Chambers
@@ -571,7 +598,7 @@ to say bckingschamber:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companionList of Player is not empty, increase compnumber by 1;
 	now bcplayroomlast is false;
-	say "     This room is designed to be the king's chambers. The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this. There's no exit from this room save the one you entered by. There's a window on the north wall and another two on the east. There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
+	say "     This room is designed to be the king's chambers. The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this. There's no exit from this room save the one you entered by. There's a window on the [Bold Type]north[roman type] wall and another two on the [Bold Type]east[roman type]. There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		if bcseenkingchair is false:
 			say "a very mundane looking inflatable chair resting on its side. The discarded or forgotten chair is transparent and yellow[if scalevalue of Player < 3]. It seems a little on the small side, but this makes it just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else if scalevalue of Player > 3]. It seems larger than normal, seeming just about the right size for your [Body Size Adjective of Player] [bodydesc of Player] body[else]. It seems just about the right size for your [bodydesc of Player] body[end if].";
@@ -670,7 +697,7 @@ to say bckingchair:
 				let chairescape be true;
 			else:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
-				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
+				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodySpeciesName of Player in lower case] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 				WaitLineBreak;
 				now bcfinalchairform is BodyName of Player;
 				now humanity of Player is 0;
@@ -708,7 +735,7 @@ to say bckingchair_accept:
 	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting. You let your mind wander, simply basking in the simple pleasure of sitting in the chair. It is so soft, so comfy. There's no reason to resist, you feel. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure and relax into your seat to enjoy the moment.";
 	WaitLineBreak;
 	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
-	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
+	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodySpeciesName of Player in lower case] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 	WaitLineBreak;
 	now bcfinalchairform is BodyName of Player;
 	now humanity of Player is 0;
@@ -724,18 +751,18 @@ ppcolor is a text that varies. ppcolor is usually "green".
 bcfinalpillarform is a text that varies. bcfinalpillarform is usually "black knight".
 
 to say bcpunchingpillars:
-	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the east wall and weapon racks between the windows on the west. The room itself has several shoulder-height pillars which seem padded for punching. These pillars come in several bright colors and have designs of wolf men, orcs, cat people and other aggressive foes. As you walk further into the room, the pillars ";
+	say "     This side room is designed as if it were a training hall, with images of training knights and straw dummies on the [Bold Type]east[roman type] wall and weapon racks between the windows on the [Bold Type]west[roman type]. The room itself has several shoulder-height pillars which seem padded for punching. These pillars come in several bright colors and have designs of wolf men, orcs, cat people and other aggressive foes. As you walk further into the room, the pillars ";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say "start to rock [if bcseenpunchingpillars is true]again[else]a little[end if] before thick tendrils of gooey latex flow out of them. They seem to fumble around a bit, but even as they occasionally graze past you, they seem wholly unaware of your presence... You should probably make a break for it before they finally lock onto your [']scent[']. You have two options for exit from this room.";
-		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
+		say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if Player consents:
-			say "     You move quickly to the northern doorway, doing your best to avoid the grabby tentacles, push aside the plastic curtain and dive into the next room. You pant for breath and pull yourself to your feet so you can look around the room.";
+			say "     You move quickly to the [Bold Type]northern[roman type] doorway, doing your best to avoid the grabby tentacles, push aside the plastic curtain and dive into the next room. You pant for breath and pull yourself to your feet so you can look around the room.";
 			move player to Knight's Chambers;
 		else:
-			say "     You move quickly to the eastern doorway, doing your best to avoid the grabby tentacles. Pushing aside the plastic curtain, you dive into the next room, safely landing in the ball pit.";
+			say "     You move quickly to the [Bold Type]eastern[roman type] doorway, doing your best to avoid the grabby tentacles. Pushing aside the plastic curtain, you dive into the next room, safely landing in the ball pit.";
 			move player to Ball Pit Room;
 		now bcseenpunchingpillars is true;
 	else:
@@ -831,15 +858,15 @@ to say bcpptendril:
 				end the story saying "You are transformed into another [ppcolor] pillar.";
 	if tendrilescape is true:
 		say "     Focusing on your escape, you pull free of the liquid latex attempting to engulf you with a wet, slurping sound. The pillar makes a few more weak attempts to grab you, but it seems your escape has worn it out too much for the moment[if compnumber is 1]. You rush over to your companion and assist them in getting free, having gotten themselves mostly engulfed by the pillar which caught them[else if compnumber > 1]. You rush over to your companions, well on their way to being engulfed by pillars themselves, and help them break free[end if]. You don't have time to take a break though, as the other pillars around you are also making grabs for you now that you're unclaimed. You have two options for exit from this room.";
-		say "     [bold type]Shall you head through the door to the north or head back the way you came by going east back to the ball pit?[roman type][line break]";
+		say "     [bold type]Shall you head through the door to the [Bold Type]north[roman type] or head back the way you came by going [Bold Type]east[roman type] back to the ball pit?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - North.";
 		say "     ([link]N[as]n[end link]) - East - Back to the ball pit.";
 		if Player consents:
-			say "     You move quickly to the northern doorway, doing your best to avoid the grabby tentacles, push aside the plastic curtain and dive into the next room. You pant for breath and pull yourself to your feet so you can look around the room.";
+			say "     You move quickly to the [Bold Type]northern[roman type] doorway, doing your best to avoid the grabby tentacles, push aside the plastic curtain and dive into the next room. You pant for breath and pull yourself to your feet so you can look around the room.";
 			move player to Knight's Chambers;
 		else:
-			say "     You move quickly to the eastern doorway, doing your best to avoid the grabby tentacles. Pushing aside the plastic curtain, you dive into the next room, safely landing in the ball pit.";
+			say "     You move quickly to the [Bold Type]eastern[roman type] doorway, doing your best to avoid the grabby tentacles. Pushing aside the plastic curtain, you dive into the next room, safely landing in the ball pit.";
 			move player to Ball Pit Room;
 	now bcseenpunchingpillars is true;
 
@@ -877,7 +904,7 @@ Chapter 9 - Knight's Chambers
 floatertaken is a truth state that varies. floatertaken is usually false.
 
 to say bcknightschambers:
-	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armor, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the north wall and another two on the west. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
+	say "     This room is designed to be a knight's chambers. The wall designs have a knight donning his armor, tapestries by the windows, a bed and a rack of weapons as large decals to show a childish representation of this. There's no exit from this room save the one you entered by, meaning you'll need to once again face those pillars to get out of here. There's a window on the [Bold Type]north[roman type] wall and another two on the [Bold Type]west[roman type]. There's not much in this room, scattered beach toys that were probably forgotten by the dolphins in this far corner of the castle.";
 	if floatertaken is false:
 		say "     Also in this room is an inflatable floater shaped like a cute, white ducky. The swim ring looks like one meant to be worn around a kid's waist to help them float, but large enough to [if scalevalue of Player > 2]even [end if]fit you. It has a cute duck head on a short neck at the front, a tuft of a tail at its back and a tiny pair of wings at its sides. These latter are the main reason you noticed it, as it's waving them around frantically, making the floater shift around a bit on the floor. As you cautiously move closer, it looks up at your with a strangely plaintive look in its eyes as it wobbles around. Odd behavior when compared to that of the other creatures you've seen here.";
 		say "     [bold type]Shall you pick it up?[roman type][line break]";
@@ -929,7 +956,7 @@ to say bcuppertower:
 Chapter 12 - Tower Turret
 
 to say bctowerturret:
-	say "     Having ascended to the top of the castle's tallest tower, you are able to look out through several mesh-screened windows. You're able to see out across the water for some distance, including the far-off beach and the city from one of them. Heading to the others, you're able to look down over the top of the castle and view its parapets. One the eastern size, you spot a couple of balloon creatures moving around, though the western side seems peaceful and clear. Separating the two is a roofed off section, probably leading to that upper hall you saw and the other rooms on that floor. Your only option from here is to climb back [link]down[end link] the mesh ladder.";
+	say "     Having ascended to the top of the castle's tallest tower, you are able to look out through several mesh-screened windows. You're able to see out across the water for some distance, including the far-off beach and the city from one of them. Heading to the others, you're able to look down over the top of the castle and view its parapets. One the [Bold Type]eastern[roman type] size, you spot a couple of balloon creatures moving around, though the [Bold Type]western[roman type] side seems peaceful and clear. Separating the two is a roofed off section, probably leading to that upper hall you saw and the other rooms on that floor. Your only option from here is to climb back [link]down[end link] the mesh ladder.";
 
 
 Book 3 - Upper Floor
@@ -945,9 +972,9 @@ Chapter 14 - Western Parapets
 to say bcwestparapets:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companionList of Player is not empty, increase compnumber by 1;
-	say "     Up at the top level of the castle, this room is designed to look like its western parapets. This section covers roughly the western third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor is covered in a regular pattern of large, red dots, and while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below.";
+	say "     Up at the top level of the castle, this room is designed to look like its [Bold Type]western[roman type] parapets. This section covers roughly the [Bold Type]western[roman type] third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor is covered in a regular pattern of large, red dots, and while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below.";
 	say "     There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
-	say "     Looking along the one inflated wall on the eastern side of this room, you see two arched doors. One leads east to the upper hall which connects to the tower and the other is to the northeast, heading to [if bcseenthroneroom is true]the throne room and the inflatable dolphin suits[else]another room[end if]. The other option would be to take the slide to leave the castle entirely.";
+	say "     Looking along the one inflated wall on the [Bold Type]eastern[roman type] side of this room, you see two arched doors. One leads [Bold Type]east[roman type] to the upper hall which connects to the tower and the other is to the [Bold Type]northeast[roman type], heading to [if bcseenthroneroom is true]the throne room and the inflatable dolphin suits[else]another room[end if]. The other option would be to take the slide to leave the castle entirely.";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say "     Seeing no obstructions to a potential exit from this place, you move quickly towards the slide to examine it more closely. You take a few steps, but as you're approaching the center of the room, you feel the floor give way suddenly. For a moment, you imagine the inflatable castle to be unable to support your weight, but a quick glance down shows your feet have sunk into two of the red spots... However, though it quivers slightly, it doesn't fight back when you instinctively wrench your feet free. Perhaps they don't recognize you a potential victim?";
 		say "     In any case you better bolt out of here, lest they change their mind. Shall you head [link]northeast (1)[as]1[end link] to the [if bcseenthroneroom is true]throne room[else]next room[end if], [link]east (2)[as]2[end link] back to the upper hall or [link]take the slide (3)[end link] to leave this place?";
@@ -1365,8 +1392,8 @@ to say bcchairsubmit:
 Chapter 15 - Eastern Parapets
 
 to say bceastparapets:
-	say "     Up at the top level of the castle, this room is designed to look like its eastern parapets. This section covers roughly the eastern third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor, while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below. There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
-	say "     Looking along the one inflated wall on the western side of this room, you see two arched doors. One leads [link]west[end link] to the upper hall which connects to the tower and the other is to the [link]northwest[end link], heading to [if bcseenthroneroom is true]the throne room and the inflatable dolphin suits[else]another room[end if]. There is also the open gap to [link]take the slide[end link]. You are not alone here though";
+	say "     Up at the top level of the castle, this room is designed to look like its [Bold Type]eastern[roman type] parapets. This section covers roughly the [Bold Type]eastern[roman type] third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor, while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below. There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
+	say "     Looking along the one inflated wall on the [Bold Type]western[roman type] side of this room, you see two arched doors. One leads [link]west[end link] to the upper hall which connects to the tower and the other is to the [link]northwest[end link], heading to [if bcseenthroneroom is true]the throne room and the inflatable dolphin suits[else]another room[end if]. There is also the open gap to [link]take the slide[end link]. You are not alone here though";
 	if flotmarked is true and a random chance of 1 in 2 succeeds:
 		say ", as there are two animated inflatable animals in here that have come to life with your arrival.";
 		if lastbcduobeaten is 255:
@@ -1439,7 +1466,7 @@ Chapter 16 - Castle Throne Room
 
 to say bcthroneroom:
 	now bcseenthroneroom is true;
-	say "     The central portion of the bouncy castle's upper level has the same bright, colorful walls with a pair of arched windows along the northern wall. There's a doorway out of her on either side of the room, one to the [link]east[end link] and one to the [link]west[end link], each heading out onto the parapets. Despite the bright colors and soft, rounded shapes of this place, you cannot help but be disturbed. For while the bouncy castle looks fun and safe enough as a kiddy play area, it is the [if HP of Bubble is 2]contents of this room which draw your eyes. You came hoping to find the captured vixen in her inflatable dolphin prison, but you instead find a dozen of the inflatable dolphin suits hanging along the walls[else]dozen of so inflatable dolphin suits hanging along the walls which draw your eyes[end if].";
+	say "     The central portion of the bouncy castle's upper level has the same bright, colorful walls with a pair of arched windows along the [Bold Type]northern[roman type] wall. There's a doorway out of her on either side of the room, one to the [link]east[end link] and one to the [link]west[end link], each heading out onto the parapets. Despite the bright colors and soft, rounded shapes of this place, you cannot help but be disturbed. For while the bouncy castle looks fun and safe enough as a kiddy play area, it is the [if HP of Bubble is 2]contents of this room which draw your eyes. You came hoping to find the captured vixen in her inflatable dolphin prison, but you instead find a dozen of the inflatable dolphin suits hanging along the walls[else]dozen of so inflatable dolphin suits hanging along the walls which draw your eyes[end if].";
 	say "     As you try to remain standing, the dolphins on the wall seem to shift about, perhaps from the feeble struggles of their occupants or from the simple swaying brought on by the waves. You look over the inflated dolphin suits[if HP of Bubble is 2], trying to decide which to search first, as these are more opaque than the ones you've seen on the beach. Since they're all inflated and full, you can't tell for certain which may hold the vixen you seek, or[else] and wonder if you should search through them for any survivors. Since they're all inflated and full, you can't even tell[end if] if they hold anyone at all.";
 	say "     There are a dozen inflated dolphins [if HP of Bubble is 2]like the one you saw the vixen being stuffed into. You will have to start checking them if you want to find her[else]to search through[end if]. (Type [link]check dolphin[as]dolchecklist[end link] followed by the number you'd like to check out.)[line break]";
 
@@ -1756,7 +1783,7 @@ to say dolcheckA:		[empty]
 		now tempnum2 is 0;
 	else:
 		now tempnum2 is 5;
-	say "     [if tempnum2 is 5]The[else]Ignoring your attempts to resist it, the[end if] strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinName of Player] skin as it works to enclose your [bodydesc of Player] body as best it can [if tempnum2 is 5]without assistance[else]in spite of your protests[end if]. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you.";
+	say "     [if tempnum2 is 5]The[else]Ignoring your attempts to resist it, the[end if] strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinSpeciesName of Player in lower case] skin as it works to enclose your [bodydesc of Player] body as best it can [if tempnum2 is 5]without assistance[else]in spite of your protests[end if]. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you.";
 	say "     You can feel a slick lubricant coating its inside, letting it slide easily over[if tempnum2 is not 5] part of[end if] your [bodydesc of Player] form. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet[if tempnum2 is not 5] even as you try to rip it free of you[end if]. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 	if tempnum2 is 5:
 		say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside";
@@ -1799,7 +1826,7 @@ to say dolcheckA:		[empty]
 				say ". You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 				say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside. You feel an increasing sense of euphoria as the inner lining [if Player is herm]rubs against your throbbing cock and presses into your wet pussy[else if Player is male]rubs against your maleness[else if Player is female]presses into your wet pussy[else]slides against your bare groin[end if] arousing you greatly[if Player is not neuter]. You cum several times from the toy's motion against you as the rubbery walls slide over you";
 	else: [Submit variant]
-		say "     The strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinName of Player] skin as it works to enclose your [bodydesc of Player] body as best it can without assistance. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you. You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
+		say "     The strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinSpeciesName of Player in lower case] skin as it works to enclose your [bodydesc of Player] body as best it can without assistance. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you. You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 		say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside. You feel an increasing sense of euphoria as the inner lining [if Player is herm]rubs against your throbbing cock and presses into your wet pussy[else if Player is male]rubs against your maleness[else if Player is female]presses into your wet pussy[else]slides against your bare groin[end if] arousing you greatly[if Player is not neuter]. You cum several times from the toy's motion against you as the rubbery walls slide over you";
 	if dolphinbundle is not 2 and dolescape is 0: [Standard Eject]
 		say ". After several orgasms, the suit begins to open up again, releasing you back onto the floor of the bouncy castle. You lay there panting for a while, aroused by the strange experience.";
@@ -1887,7 +1914,7 @@ to say dolcheckE:		[vixen]
 	say "     ([link]Y[as]y[end link]) - East.";
 	say "     ([link]N[as]n[end link]) - West.";
 	if Player consents:
-		say "     Deciding to try your luck to the east, you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide. Your path to the slide gets cut off by ";
+		say "     Deciding to try your luck to the [Bold Type]east[roman type], you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide. Your path to the slide gets cut off by ";
 		if lastbcduobeaten < 255:
 			say "a pair of inflatable creatures. It seems your activity's drawn their attention and they charge at you, trying to foil the rescue attempt. The vixen is too weak and confused to be much help in the fight, so it looks like you'll have to face them on your own.";
 			say "     The first is a male sea lion made of opaque purple vinyl and a whiskered face drawn on his head. He has a plump body and flippers, and you're able to tell he's male when he rears up on his rear flippers and claps his front ones together excitedly, also showing off his darker purple cock. His companion is a female orca[if bcseenhugeorca is false], considerably smaller than the one you encountered downstairs and[end if] and made of a translucent magenta with a white underside. As she starts to float up in the air, she does a quick roll over, which gives you a chance to spot the damp slit at the bottom of her underbelly. Both of them are a little over a meter long. They move in on you, one from each side and trying to bear you down with their cuteness.";
@@ -1901,7 +1928,7 @@ to say dolcheckE:		[vixen]
 		else if fightoutcome >= 30:
 			say "[bcfinal3]";
 	else:
-		say "     Deciding to try your luck to the west, you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide. Seeing it, she giggles happily and bounds ahead to enjoy the waterslide. ";
+		say "     Deciding to try your luck to the [Bold Type]west[roman type], you grab the inflatable vixen by the wrist and pull her quickly through that door and rush towards the slide. Seeing it, she giggles happily and bounds ahead to enjoy the waterslide. ";
 		if lastbcchair is 255:
 			say "Eager to depart, you follow her quickly, glancing around the open parapets area for any enemies.";
 			say "     Focused as you are on looking for more balloon creatures, you're surprised as you both stumble as the red-spotted floor suddenly becomes unstable under you. For a moment, you imagine the inflatable castle to be unable to support your weight, but you soon realize as your hands similarly fall into more of those large red spots that it is another trap. Looking at them, you can see that the red spots have formed flesh-like orifices made of the same latex-vinyl material as the rest of this place which have now squeezed tightly down onto your wrists and ankles[if compnumber > 1]. A noise behind you alerts you to the fact that your companions are being ensnared by bands of material growing from the mesh walls[else if compnumber is 1]. A noise behind you alerts you to the fact that your companion is being ensnared by the bands of material growing from the mesh walls[end if].";
@@ -2150,7 +2177,7 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	WaitLineBreak;
 	say "     When they're done with her, they press their muzzles to your lips. As you and the vixen are kissed, there's another release of heady gas to keep you both dazed and weak. This time they bump and push you from the parapets into the upper hall and then continue on, gradually leading you both back downstairs, giving you numbing kisses along the way. Eventually you are lead into [if bcseenhugeorca is true]a distant room with a much larger orca inside it[else]the room with the large, pushy orca[end if].";
 	say "     The larger orca does not seem perturbed by their arrival and shares a quick nuzzle with each of them. There is a short exchange of squeaky trills and barks before you're pressed forward to kiss and lick at the big inflatable's wet pussy while the others stroke and caress you, urging you on. Not that you need much encouragement by this point, your mind quite addled on the gas and your arousal very high.";
-	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper. As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more. The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her. As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles while follow you in, the vixen being sent in behind you. Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
+	say "     You nuzzle and lick at those widening folds even as they start to spread open to let you work your tongue deeper. As you lap up her flowing juices, the stroking flippers and paws start to push at you, pressing you forward all the more. The orca's slick cunt opens wider, taking your head in, and soon after, your shoulder and upper body follow as rippling walls and pushing playmates send you into her. As your upper body's moving into a larger chamber prepared for you, you feel a pair of hands around your ankles follow you in, the vixen being sent in behind you. Soon enough, you're bundled up together in the large orca's rubbery womb, covered in a slick coating of latex and playing lustfully with one another in the orca's snug womb.";
 	say "     As you [if Player is male]fuck her[else]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
 	WaitLineBreak;
 	now humanity of Player is 0;

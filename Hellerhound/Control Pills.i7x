@@ -40,6 +40,7 @@ to say fertilepilluse:
 	if "Sterile" is listed in the feats of Player:
 		now wassterile is 1;
 		remove "Sterile" from the feats of Player;
+		now Sterile of Player is false;
 	else:
 		now wassterile is 0;
 	add "Fertile" to the feats of Player;
@@ -52,7 +53,7 @@ wassterile is a number that varies.
 to say controlpilluse:
 	increase steriletime by 24;
 	if child is not born and gestation of child > 0:
-		now child is born;
+		now child is not born; [ Fixed 2022-03-08, leave set as *not born* so player can get pregnant again ]
 		now gestation of Child is 0;
 		say "Your pregnant belly feels odd, and something slushes out of your hole, melting into mush. Looks like the pill aborted you. You feel lighter as your belly shrinks back to its original size.";
 	if inheat is True:
@@ -66,6 +67,7 @@ to say controlpilluse:
 	if "Sterile" is listed in the feats of Player:
 		now wassterile is 1;
 		remove "Sterile" from the feats of Player;
+		now Sterile of Player is false;
 	else:
 		now wassterile is 0;
 	add "Sterile" to the feats of Player;
@@ -79,6 +81,7 @@ an everyturn rule:
 			say "Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
 			if wassterile is 0:
 				remove "Sterile" from the feats of Player;
+				now Sterile of Player is false;
 			if wasfertile is 1:
 				add "Fertile" to the feats of Player;
 	if fertiletime > 0:
@@ -91,6 +94,7 @@ an everyturn rule:
 			say "Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wassterile is 1:
 				add "Sterile" to the feats of Player;
+				now Sterile of Player is true;
 			if wasfertile is 0:
 				remove "Fertile" from the feats of Player;
 

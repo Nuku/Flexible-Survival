@@ -362,18 +362,17 @@ to orcasanityorgasm: [Causes sanity to sharply plummet upon orgasm.]
 	let endureadj be 1;
 	if enduring is true:
 		now endureadj is 2; [Value to divide sanity loss by if enduring.]
+	if struggleatt > 0, decrease struggleatt by 1;
+	if orcaintense is 1:
+		decrease humanity of Player by (2 + psycheadjust) / endureadj;
+	else if orcaintense is 2:
+		decrease humanity of Player by (3 + psycheadjust) / endureadj;
+	else if orcaintense is 3:
+		decrease humanity of Player by (2 + psycheadjust * 2) / endureadj;
+	else if orcaintense is 4:
+		decrease humanity of Player by (3 + psycheadjust * 2) / endureadj;
 	else:
-		if struggleatt > 0, decrease struggleatt by 1;
-		if orcaintense is 1:
-			decrease humanity of Player by (2 + psycheadjust) / endureadj;
-		else if orcaintense is 2:
-			decrease humanity of Player by (3 + psycheadjust) / endureadj;
-		else if orcaintense is 3:
-			decrease humanity of Player by (2 + psycheadjust * 2) / endureadj;
-		else if orcaintense is 4:
-			decrease humanity of Player by (3 + psycheadjust * 2) / endureadj;
-		else:
-			decrease humanity of Player by (4 + psycheadjust * 2) / endureadj;
+		decrease humanity of Player by (4 + psycheadjust * 2) / endureadj;
 
 to say orcastrugglebar: [Displays struggle bar. The amount of struggle turns necessary to escape is always equal to the bound segment.]
 	say "[close bracket]";
@@ -394,7 +393,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Inflatable Orca"; [name of the overall species of the infection, used for children, ...]
 	add "Inflatable Orca" to infections of CetaceanList;
 	add "Inflatable Orca" to infections of FurryList;
 	add "Inflatable Orca" to infections of ToyList;

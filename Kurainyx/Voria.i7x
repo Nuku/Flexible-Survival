@@ -30,39 +30,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Voria	"Voria"
 
-Voria is a woman. The HP of Voria is usually 0.
-[Physical details as of game start]
+Voria is a woman.
+The HP of Voria is usually 0.
 ScaleValue of Voria is 4. [large sized]
-SleepRhythm of Voria is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Voria is 2.
-Cock Length of Voria is 12.
-Ball Size of Voria is 0.
-Ball Count of Voria is 0.
-Cunt Count of Voria is 2.
-Cunt Depth of Voria is 8.
-Cunt Tightness of Voria is 3.
-Nipple Count of Voria is 0.
-Breast Size of Voria is 0.
+Body Weight of Voria is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Voria is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Voria is 5. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Voria is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Voria is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Voria is 10. [length in inches]
+Breast Size of Voria is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Voria is 0. [count of nipples]
+Asshole Depth of Voria is 0. [inches deep for anal fucking]
+Asshole Tightness of Voria is 0. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Voria is 2. [number of cocks]
+Cock Girth of Voria is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Voria is 12. [Length in Inches]
+Ball Count of Voria is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Voria is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Voria is 2. [number of cunts]
+Cunt Depth of Voria is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Voria is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Voria is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Voria is false.
 PlayerRomanced of Voria is false.
 PlayerFriended of Voria is false.
 PlayerControlled of Voria is false.
 PlayerFucked of Voria is false.
-OralVirgin of Voria is false.
-Virgin of Voria is false.
-AnalVirgin of Voria is false.
-PenileVirgin of Voria is false.
-SexuallyExperienced of Voria is true.
+OralVirgin of Voria is true.
+Virgin of Voria is true.
+AnalVirgin of Voria is true.
+PenileVirgin of Voria is true.
+SexuallyExperienced of Voria is false.
 TwistedCapacity of Voria is true. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Voria is true. [steriles can't knock people up]
+MainInfection of Voria is "".
 Description of Voria is "[VoriaDesc]". [In Section 3 - Scenes]
 Conversation of Voria is { "Plant noises" }.
 The scent of Voria is "     Voria has a distinct floral scent mixed with the smell of sex.".
 
 
 Section 2 - Events
-
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -372,7 +382,7 @@ to VoriaPostCombat:	[Voria vore scenes after you win a fight against a voreable 
 	now hunger of Voria is 0;	[Voria doesn't need to eat for 8 turns as the player's pet]
 
 to say VoriaPCAssPound:	[Player sticks dick in enemy butt]
-	say "     Not wanting to pass up this opportunity to have some fun with your plant companion, you walk over to the bound victim as you set down your gear, and your hands begin stroking your [cockname of player] dick. As if sensing your anal intent, Voria pulls the helpless victim onto one of its bed-sized leaves and flips them over onto their stomach while still continuing to suck on the captive shaft. Several smaller vines slither forward to grope at its prey's rear cheeks before spreading them wide, giving you clear access to your target's asshole. Between watching Voria's debaucherous capture and the few moments of warm-up you gave yourself, your cock is nice and hard, ready to plunder your enemy's booty.";
+	say "     Not wanting to pass up this opportunity to have some fun with your plant companion, you walk over to the bound victim as you set down your gear, and your hands begin stroking your [Cock of Player] dick. As if sensing your anal intent, Voria pulls the helpless victim onto one of its bed-sized leaves and flips them over onto their stomach while still continuing to suck on the captive shaft. Several smaller vines slither forward to grope at its prey's rear cheeks before spreading them wide, giving you clear access to your target's asshole. Between watching Voria's debaucherous capture and the few moments of warm-up you gave yourself, your cock is nice and hard, ready to plunder your enemy's booty.";
 	say "     Your victim squirms a bit from your touch, but Voria keeps them restrained, allowing you to line your dick up with their ass and push right into the welcoming hole. Both you and the captive let out audible moans of arousal as your shaft sinks into their posterior. You take a moment for you to enjoy the tightness around your malehood, as well as letting your opponent adjust to your anal intrusion. Of course, just leaving your dick inside your foe is not enough, and you soon start rocking your hips back and forth. Slowly and steadily, you push deeper into your opponent's warm, tight rear tunnel, and you relish in the exquisite sensation of the clenching rectal walls.";
 	WaitLineBreak;
 	say "     [if player is dominant]Your pleasure is heightened with the satisfaction that you turned the tables on your would-be attacker and are now thoroughly dominating them.[end if] While your growing lust prompts you to gradually increase the speed of your thrusts, Voria's mouth-tentacle has not stopped suckling on the victim's dick. With you and your plant claiming your victory spoils from both the front and rear, it does not take long before your opponent's will crumbles as they let out a loud, aroused moan from their climax. You have a clear view as Voria's mouth-tentacle clamps down on your foe's spurting cock, not a single drop of cum leaking out as bulges of seed travel down the tentacle and back to Voria's main body.";
@@ -393,7 +403,7 @@ to say VoriaPCAssRide:	[Player uses their ass to ride enemy dick]
 	say "     Voria waits patiently for you to take a few moments to bask in your afterglow, but as soon as you catch your breath and raise yourself up, the plant promptly reintroduces the mouth-tentacle clamps right back on the still-spurting cock, enjoying the last few bits of spunk. At the same time, another of Voria's mouth-tentacle goes over to your butt, a tongue-like appendage slipping out of the tiny maw and lapping up the juicy bounty dripping out of your ass. After milking the last drops of cum from its prey and cleaning you off, Voria moves onto the main course, raising its prey and feeding the rest of them into its maw. Voria rumbles happily after tightly shutting its mouth, relishing in its catch. With both you and your plant friend sated, you continue on your explorations.";
 
 to say VoriaPCPussyPound:	[Player sticks dick in enemy pussy]
-	say "     Not wanting to pass up this opportunity to have some fun with your plant companion, you walk over to the bound victim as you set down your gear, and your hands begin stroking your [cockname of player] dick. As if sensing your intent, Voria pulls the helpless victim onto one of its bed-sized leaves, and the tentacle gives one final push into its captive's pussy before withdrawing out, giving you clear access to your target's glistening cunt. Between watching Voria's debaucherous capture and the few moments of warm-up you gave yourself, your cock is nice and hard, ready to plunder your enemy's nethers. You firmly plant your hands on the captive's thighs with a loud [italic type]SLAP[roman type], and eagerly begin rubbing your shaft on the lips of the exposed muff.";
+	say "     Not wanting to pass up this opportunity to have some fun with your plant companion, you walk over to the bound victim as you set down your gear, and your hands begin stroking your [Cock of Player] dick. As if sensing your intent, Voria pulls the helpless victim onto one of its bed-sized leaves, and the tentacle gives one final push into its captive's pussy before withdrawing out, giving you clear access to your target's glistening cunt. Between watching Voria's debaucherous capture and the few moments of warm-up you gave yourself, your cock is nice and hard, ready to plunder your enemy's nethers. You firmly plant your hands on the captive's thighs with a loud [italic type]SLAP[roman type], and eagerly begin rubbing your shaft on the lips of the exposed muff.";
 	say "     Your victim squirms a bit from your touch, but Voria keeps them restrained, allowing you to line your dick up with their slit and push right into the welcoming hole. Both you and the captive let out audible moans of arousal as your shaft sinks into their core. You take a moment for you to enjoy the tightness around your malehood, as well as letting your opponent adjust to your penetration. Of course, just leaving your dick inside your foe is not enough, and you soon start rocking your hips back and forth. Slowly and steadily, you push deeper into your opponent's warm, slick canal, and you relish in the sensation of the clenching walls on your shaft.";
 	WaitLineBreak;
 	say "     [if player is dominant]Your pleasure is heightened with the satisfaction that you turned the tables on your would-be attacker and are now thoroughly dominating them.[end if] Your growing lust prompts you to gradually increase the speed of your thrusts, aided by the increasingly-slick tunnel that your malehood is pounding into. To add to the fun, Voria sneaks a tentacle to start playing with the captive's clit. With you and your plant claiming your victory spoils, it does not take long before your opponent's will crumbles as they let out a loud, aroused moan from their climax. The sudden tightening around your cock is enough to push you over the edge, and soon after, you groan in pleasure as you cum into their pussy.";

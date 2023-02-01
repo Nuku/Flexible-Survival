@@ -238,6 +238,11 @@ to say KlauzTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Spend time just relaxing with Klauz";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Boop";
+	now sortorder entry is 2;
+	now description entry is "Boop Klauz on the nose";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -254,6 +259,8 @@ to say KlauzTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Spend time with Klauz"):
 					say "[KlauzTalk1]";
+				if (nam is "Boop"):
+					say "[KlauzTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -266,12 +273,16 @@ to say KlauzTalkMenu:
 to say KlauzTalk1:
 	say "     Klauz listens attentively as you tell him what happening out in the city while you stroke and scritch your felinoid companion. He does make a point to rub up against you though, making sure his pheromones are all over you.";
 
+to say KlauzTalk2:
+	say "     Reluctant to lose your fingers, you are nonetheless compelled to boop the felinoid, risk of grievous bodily harm be damned. The resulting look of abject disappointment that Klauz directs towards you before huffing and turning away makes it all worth while though. You know that he enjoyed it even if he doesn't wish to show it. After all, he would have made it absolutely clear that you weren't ever to do it again if he genuinely disliked it.";
+
 
 Section 3 - Felinoid companion sex
 
+[TODO: Add choice point for if the player wants to submit to Klauz or not]
 An everyturn rule:
 	if felinoid companion is listed in companionList of Player and skipturnblocker is 0:
-		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 4:
+		if a random number between one and 20 < 6 and lastfuck of felinoid companion - turns >= 8:
 			say "[sexwithfelinoidpet]";
 
 
@@ -354,17 +365,12 @@ to say sexwithfelinoidpet:
 			increase HP of Felinoid companion by 1;
 		else:
 			say "[one of]The strong masculine scent from Klauz wafts over you strongly, and you can feel your body starting to change![or]The large felinoid companion comes up to you and nuzzles you with its soft feline nose, and you find yourself changing.[or]Your Feline companion bumps you with his head, and his silly action brings a smile to your face as you reach down and pet him.[or]Your felinoid companion rubs up against you, his strong musky smell filling your mind with images of lusty felinoid sex.[or]Your felinoid friend rubs himself up against you companionably, letting out a soft rumbling purr that you find oddly comforting.[or]As you pause to take a breath for a minute, you can feel a rasping tongue lick your hands from behind, jumping you turn around to stare at Klauz, just in time for him to hop upwards and lick you on the face, sputtering slightly, you can't help but grin at the beast's silly antics.[or]The strong scent of musk from your felinoid companion washes over you, and you can't help but moan as the thought of being fucked by the large cat runs through your head.[or]Your body feels rather warm, and looking around you can see your large felinoid companion nearby, his golden fur and strong sleek lines catching your eye, as your mind fills with images of the big strong beast mounting you and making you his mate.[or]You smile as your feline companion stalks around you looking for dangers to chase away, feeling somewhat happy to have such a powerful mate.[or]Your companion decides to play, batting at you teasingly with his large paws as he bounces around you, making you smile and wish you could be just as carefree as the catlike beast obviously is.[or]You find yourself feeling strangely horny for some reason, and looking around see that your feline companion is watching you intently.[at random]";
-			increase Libido of Player by 12;
-			if Libido of Player > 100, now Libido of Player is 100;
+			LibidoBoost 12;
 		infect "Felinoid";
-		now lastfuck of felinoid companion is turns;
 	else:
 		say "[one of]The strong masculine scent from Klauz wafts over you strongly, and you can feel your body starting to change![or]The large felinoid companion comes up to you and nuzzles you with its soft feline nose, and you find yourself changing.[or]Klauz bumps you with his head, and his silly action brings a smile to your face as you reach down and pet him.[or]Your felinoid companion rubs up against you, his strong musky smell filling your mind with images of lusty felinoid sex.[or]Your felinoid friend rubs himself up against you companionably, letting out a soft rumbling purr that you find oddly comforting.[or]As you pause to take a breath for a minute, you can feel a rasping tongue lick your hands from behind, jumping you turn around to stare at your felinoid companion, just in time for it to hop upwards and lick you on the face, sputtering slightly, you can't help but grin at the beast's silly antics.[or]You smile as your feline companion stalks around you looking for dangers to chase away, feeling somewhat happy to have such a powerful protector.[or]Your companion decides to play, batting at you teasingly with his large paws as he bounces around you, making you smile and wish you could be just as carefree as the catlike beast obviously is.[or]You find yourself feeling strangely horny for some reason, and looking around see that your feline companion is watching you intently.[at random]";
 		infect "Felinoid";
-		increase Libido of Player by 8;
-		if Libido of Player > 100, now Libido of Player is 100;
-		now lastfuck of felinoid companion is turns;
-
+		LibidoBoost 8;
 
 to say felinoidpet_puref:
 	say "     Klauz gives a delighted mrowl and rears up to knock you forward onto all fours, then circles hungrily. ";
@@ -380,7 +386,6 @@ to say felinoidpet_puref:
 	say "     His orgasm fading, he gives a firm nip and drives your front against the ground before his feet change stance, then he pulls out in a swift, brutal, motion. The barbs catch firmly in your sensitive flesh and all you can feel is dizzying intensity, as if your entire form were made of fire for what feels like forever. As your trembling limbs return to your control, you can see him quietly licking himself clean, satisfied and content again.";
 	NPCSexAftermath Player receives "PussyFuck" from Klauz;
 	now Libido of Player is Libido of Player / 3;
-	say "[impregchance]";
 	increase HP of Felinoid companion by 1;
 
 
@@ -477,7 +482,7 @@ This is the Klauz' Epilogue rule:
 		else:
 			if humanity of Player < 10:
 				say "     When you finally surrender completely to the infection, the felinoid you saved tries to guide you back to the park and his den, but you are having none of it. Growling, you manage to drive the pushy felinoid off, his injuries still hampering him enough that you can drive him away easily, and while you think you spot him hanging around several times over the next few days, he doesn't try approaching you again, letting you settle into your new more feral life without his interference.";
-			else if Player has a non-shifting body of "Feral Wolf Male" and HP of Fang is listed in { 3, 4 }:
+			else if Player has a non-shifting body of "Feral Wolf" and HP of Fang is listed in { 3, 4 }:
 				[ see Feral Wolf Male file for this ending ]
 				make no decision;
 			else:

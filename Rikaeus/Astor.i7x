@@ -42,18 +42,29 @@ object	name
 Astor	"Astor"
 
 Astor is a man.
-[physical details as of game start]
+Astor is in Azure Dragon Culinary Tastes.
 Humanity of Astor is 80. [is thousands of years old]
-ScaleValue of Astor is 3. [human size]
-Cock Count of Astor is 1. [has a cock]
-Cock Length of Astor is 10. [has an 10 inch cock]
-Ball Size of Astor is 4. [size of balls]
-Ball Count of Astor is 2. [has a pair of balls]
-Cunt Count of Astor is 0. [no vagina]
-Cunt Depth of Astor is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Astor is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Astor is 2. [Has two normal nipples]
-Breast Size of Astor is 0. [Doesn't have breasts really]
+ScaleValue of Astor is 3. [human sized]
+Body Weight of Astor is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Astor is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Astor is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Astor is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Astor is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Astor is 12. [length in inches]
+Breast Size of Astor is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Astor is 2. [count of nipples]
+Asshole Depth of Astor is 10. [inches deep for anal fucking]
+Asshole Tightness of Astor is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Astor is 1. [number of cocks]
+Cock Girth of Astor is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Astor is 10. [Length in Inches]
+Ball Count of Astor is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Astor is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Astor is 0. [number of cunts]
+Cunt Depth of Astor is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Astor is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Astor is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Astor is false.
 PlayerRomanced of Astor is false.
@@ -65,10 +76,12 @@ Virgin of Astor is false.
 AnalVirgin of Astor is false.
 PenileVirgin of Astor is false.
 SexuallyExperienced of Astor is true.
+TwistedCapacity of Astor is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Astor is true. [steriles can't knock people up]
+MainInfection of Astor is "".
 Description of Astor is "[AstorDesc]".
 Conversation of Astor is { "<This is nothing but a placeholder!>" }.
 The scent of Astor is "     The azure dragon gives off a scent of spices, meats, and vegetables, which is pretty drool-worthy on its own.".
-Astor is in Azure Dragon Culinary Tastes.
 
 to say AstorDesc:
 	say "     Taking a look at the cook you see him hard at work cooking up the meals of the various customers of his restaurant. Moving your eyes to glance at his clothes you notice that his apron isn't a plain white one, no it says 'Kiss the Dragon Cook' which makes you chuckle. Besides that he seems to be wearing a regular t-shirt under that as well as a pair of black slacks. Body wise he has two large azue scaled wings that are held close to him, probably so that he doesn't knock anything over when he cooks. He also seems pretty well built under the apron and shirt, which makes you give an appreciative whistle. While you're admiring him Astor seems to notice this and raises a brow at you and chuckles.";

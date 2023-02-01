@@ -67,9 +67,9 @@ PlayerFriended of Lilith is false.
 PlayerControlled of Lilith is false.
 PlayerFucked of Lilith is false.
 OralVirgin of Lilith is false.
-Virgin of Lilith is true.
+Virgin of Lilith is false.
 AnalVirgin of Lilith is false.
-PenileVirgin of Lilith is true.
+PenileVirgin of Lilith is false.
 SexuallyExperienced of Lilith is true.
 TwistedCapacity of Lilith is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Lilith is false. [steriles can't knock people up]
@@ -86,15 +86,24 @@ An everyturn rule:
 		increase LilithKidCounter by 1;
 		increase score by a random number between 5 and 10;
 		if Player is in Sacristy:
-			say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demon rapidly crowning, then slipping out of his mother as she orgasms. He looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on his back and the tail with its spaded tip.";
-			WaitLineBreak;
-			say "     A satisfied grin on her face, Lilith takes the child and sets him against her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
-			say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
-			now LilithPregnancy is 0;
-			if LilithKidCounter is 1:
-				project the Figure of Atticus_soft_neutral_arms_lowered_icon;
+			if "Succubus Daughter Wanted" is listed in Traits of Lilith: [Alternate scene for Aerana's birth]
+				say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demoness rapidly crowning, then slipping out of her mother as the latter orgasms. She looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on her back and the tail with its spaded tip.";
+				WaitLineBreak;
+				say "     With a satisfied grin on her face, Lilith takes the child and sets her against her breast, feeding her. Before your eyes, the little succubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to her early teens moments later, your daughter starts putting both hands on her demon mother's breasts, caressing them as she switches off between them, licking over her nipples and drinking more milk.";
+				WaitLineBreak;
+				say "     The girl goes through puberty rapidly, her body continuing to grow until she becomes a stunningly gorgeous eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, she just nuzzles and strokes Lilith's breasts. Then the powerful succubus reaches down and puts a hand on her child's womanhood, slipping some fingers in and begin to fondle her. Your daughter gives you an enticing smile as Lilith continues to stimulate her, and soon her sex quivers in a climax that lasts for several moments. Scooping up a bit of her feminine juices with her fingers, the demonic sorceress licks it off them and tells her 'Leave us, for now.' Your beautiful and completely naked offspring saunters out of the room, not without giving you a suggestive glance.";
+				remove "Succubus Daughter Wanted" from Traits of Lilith;
+				TraitGain "Succubus Daughter Born" for Lilith;
 			else:
-				project the Figure of Incubus_naked_icon;
+				say "     Lilith suddenly says, 'It's time', her water breaking a second later. She gets into a comfortable position on the bed, legs spread and then... puts her hand between her legs and starts masturbating. Seems like everything is about sex with these demons. The birth of your child is a surprisingly easy and arousing affair, accompanied by Lilith's lustful moans and pants, with the baby demon rapidly crowning, then slipping out of his mother as she orgasms. He looks like a perfect and beautiful human baby, squeaky clean like a newborn on television. Looking closer, you can see the tiny wings on his back and the tail with its spaded tip.";
+				WaitLineBreak;
+				say "     A satisfied grin on her face, Lilith takes the child and sets him against her breast, feeding him. Before your eyes, the little incubus grows in leaps and bounds, rapidly passing the stages of toddler and little child, soon sitting on Lilith's lap instead of being held by her. Getting to his early teens moments later, your son starts putting both hands on his demon mother's breasts, caressing them as he switches off between them, licking over her nipples and drinking more milk.";
+				say "     The boy goes through puberty rapidly, his body continuing to grow until he becomes a stunningly handsome eighteen year old, which is where the progress stabilizes and ebbs out. Now no longer drinking from her, he just nuzzles and strokes Lilith's breasts, his cock rock-hard. Then the succubus reaches down and puts a hand on his manhood, taking hold of it and starts jerking him off. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+				if LilithKidCounter is 1:
+					project the Figure of Atticus_soft_neutral_arms_lowered_icon;
+				else:
+					project the Figure of Incubus_naked_icon;
+			now LilithPregnancy is 0;
 		else:
 			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
 			now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
@@ -107,7 +116,7 @@ An everyturn rule:
 		decrease LilithPregCounter by 1;
 
 instead of sniffing Lilith:
-	say "Lilith smells... definitively female, seductive, enticing - but with a slight undertone of brimstone.";
+	say "Lilith smells... definitely female, seductive, enticing - but with a slight undertone of brimstone.";
 
 to say LilithDesc:
 	if debugactive is 1:
@@ -169,6 +178,12 @@ to say LilithTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask Lilith about what's been going on with Brutus";
 	[]
+	if "Succubus Daughter Born" is not listed in Traits of Lilith and "Succubus Daughter Wanted" is not listed in Traits of Lilith and LilithKidCounter > 0 and LilithPregnancy is 0: [She cannot be pregnant already]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Lilith for a daughter";
+		now sortorder entry is 98;
+		now description entry is "Would it be possible to have a succubus child";
+	[]
 	if Resolution of YokLairLilith is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask her for help in finding the onis";
@@ -201,6 +216,8 @@ to say LilithTalkMenu:
 					say "[LilithTalk4]";
 				if (nam is "Brutus and David"):
 					say "[LilithTalk5]";
+				if (nam is "Ask Lilith for a daughter"):
+					say "[LilithTalkAerana]"; [on Aerana file]
 				if (nam is "Ask her for help in finding the onis"):
 					say "[LilithTalkYokLair]"; [on Hayato file]
 				wait for any key;
@@ -225,7 +242,7 @@ to say LilithTalk2:
 	else if HP of Elijah is 99:
 		say "     'Good work in making something out of the kid... he's come visiting a few times now. Not bad at all between the sheets, and black really is his color.'";
 	else if HP of Elijah is 100:
-		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is out infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";
+		say "     'That little winged cutie? He's down below now... and I hear he's made quite a splash with Lucifer. His angel ass is our infernal master's new favorite toy. He won't even stop fucking him when meeting the demon princes - just has their meetings in his quarters as he rams his ass, or carries his angel pet around impaled on his shaft.'";
 	wait for any key;
 
 to say LilithTalk3:
@@ -266,7 +283,7 @@ to say LilithTalk5:
 		say " and as he gets closer to Lilith, the demoness leans against his broad chest, looking up at the large being's face while she playfully flicks over his nipples with a finger. 'So - your [if Player is purefemale]mistress[else]master[end if] thinks you're more than just another hunk of muscle and urges now... do you think this is true?' As she asks the question, her other hand slides up between the demon's leg, cupping his balls and rubbing them.";
 		say "     While his body reacts as expected, the massive piece of man-meat between Brutus's legs filling out and becoming more erect by the second, the purple giant actually stays relatively calm, only giving a few aroused grunts in between saying, 'Yes. The pain and hate that filled all of me was extinguished, and now there are... other things that appear in their place. I - I feel things. It is strange, to care about others, but I like it.' Reaching up to pinch the demon's cheek, Lilith says in a mocking tone, 'Aww, how cute... so tell me more about this man of yours, this David.'";
 		WaitLineBreak;
-		say "     Brutus's shaft twitches a bit as his human lover is brought up, and the demon explains, 'He is small, but not... soft, as some of the mortals are. A warrior in trade, with a handsome body. He just feels so good to be inside, or even just holding him is... nice. And above all, he does not fear me anymore. He cares for me, and I for him... but I fear I will do things to him, change him.' There is a tremor of fear and anguish audible in the last part, which puts a malicious smile on Lilith's lips. 'Oh, definitively - if you continue on as you are,' the succubus beautiful and smooth voice promises him, and you can't shake the image of a life belt being dangled in view of a drowning person. She's priming him for something, that much is clear...";
+		say "     Brutus's shaft twitches a bit as his human lover is brought up, and the demon explains, 'He is small, but not... soft, as some of the mortals are. A warrior in trade, with a handsome body. He just feels so good to be inside, or even just holding him is... nice. And above all, he does not fear me anymore. He cares for me, and I for him... but I fear I will do things to him, change him.' There is a tremor of fear and anguish audible in the last part, which puts a malicious smile on Lilith's lips. 'Oh, definitely - if you continue on as you are,' the succubus beautiful and smooth voice promises him, and you can't shake the image of a life belt being dangled in view of a drowning person. She's priming him for something, that much is clear...";
 		say "     Lilith continues, 'There is a way out, one that I can help you with - if you perform a little service for me. I'm sure that it's not too much to ask. Just think about it - wouldn't you just do anything to be with the man you looove?' Far from being innocent about the twisted ways of demonic minds, Brutus gives her a guarded, 'Maybe. What is your price?' She giggles innocently, a decidedly unnatural sound coming from this kind of creature, then oh so sweetly says, 'Nothing you haven't done before, and so, so often...'";
 		WaitLineBreak;
 		say "     Lilith turns her head a bit and calls over to one of the side doors of other rooms in what was once this churches sacristy. 'Liam! Would you come out here and say hello to our guests please?' After a short moment, a human male opens the door and comes into the room. He's in his mid-twenties, tall and more than a little handsome, dressed in a somewhat crumpled business suit. You'd guess that she must have picked him up from somewhere in the inner city, straight from work. In a somewhat sleepy tone, he replies 'Of course, sister Lilith. Are they more people seeking refuge in your convent?' It is clear that the man is entranced, not seeing his surroundings as they actually are - he even almost stumbles over a dildo lying in a pool of wetness on the ground, as he doesn't realize it is there. 'Quite right, deary. Now be a good boy and don't listen to anything till I tell you otherwise,' Lilith cheerfully tells him, making the man stand still and calmly look around at things only he sees.";
@@ -419,8 +436,13 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith is 0: [firs
 instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not the first meeting]
 	if LilithPregnancy is 4:
 		move player to Sacristy;
-		project the Figure of Incubus_naked_icon;
-		say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
+		if "Succubus Daughter Wanted" is listed in Traits of Lilith: [Alternate scene for Aerana's birth]
+			say "     As you enter the sacristy, you find Lilith there, with a young succubus nuzzling her breasts while she fondles her offspring's womanhood. The female demoness, looking about eighteen years old in human terms, looks up to you, her features quite similar to her own mother's while sharing another few with you, clearly resembling both. Your daughter gives you an enticing smile as Lilith continues to stimulate her, and soon her sex quivers in a climax that lasts for several moments. Scooping up a bit of her feminine juices with her fingers, the demonic sorceress licks it off them and tells her 'Leave us, for now.' Your beautiful and completely naked offspring saunters out of the room, not without giving you a suggestive glance.";
+			remove "Succubus Daughter Wanted" from Traits of Lilith;
+			TraitGain "Succubus Daughter Born" for Lilith;
+		else:
+			project the Figure of Incubus_naked_icon;
+			say "     As you enter the sacristy, you find Lilith there, with a young incubus nuzzling her breasts and her hand on his hard cock. The male demon, looking about eighteen years old in human terms, looks up to you and with a small shock you recognize his features as very similar to your own. Your son gives you a broad grin as his mother continues to stroke him, and soon blows an impressive load all over himself, her and the bed. Scooping up a bit of cum with her fingers, Lilith licks it off them and tells him 'Leave us, for now.' Your handsome and bare-ass naked offspring saunters out of the room, not without giving you a suggestive wink.";
 		now LilithPregnancy is 0;
 	else if HP of Lilith is 1 and demon brute is listed in companionList of Player: [first time the player takes the demon brute pet where she can see him]
 		move player to Sacristy;
@@ -500,10 +522,10 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 		move player to Sacristy;
 		project the Figure of Lilith_naked_icon;
 		if Level of Lilith is 0:
-			say "     As you walk over to the door of the sacristy, you hear pants and yips from inside, in a clearly female voice that doesn't belong to Lilith. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, bent over on all fours, with her head right over the crotch of a beautiful golden retriever girl and lapping away at her pussy. Neither of them has noticed you yet, as the young canine woman's head is lying back with closed eyes while she shudders in pleasure and Lilith is completely focused on giving her oral attention. The clear view of the demoness's own moist pussy between her slightly spread legs awakens your libido and makes you think about just joining them on the bed for some fun. Lilith would almost definitively be down for it - she is a succubus after all.";
+			say "     As you walk over to the door of the sacristy, you hear pants and yips from inside, in a clearly female voice that doesn't belong to Lilith. Your curiosity leads you forward and into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, bent over on all fours, with her head right over the crotch of a beautiful golden retriever girl and lapping away at her pussy. Neither of them has noticed you yet, as the young canine woman's head is lying back with closed eyes while she shudders in pleasure and Lilith is completely focused on giving her oral attention. The clear view of the demoness's own moist pussy between her slightly spread legs awakens your libido and makes you think about just joining them on the bed for some fun. Lilith would almost definitely be down for it - she is a succubus after all.";
 			now Level of Lilith is 1;
 		else if Level of Lilith is 1:
-			say "     As you walk over to the door of the sacristy, you hear pants and yips from inside, in a clearly female voice that doesn't belong to Lilith. Seems like Renee is back for some more fun. Quickening your steps a bit, you walk into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, bent over on all fours, with her head right over the crotch of the beautiful golden retriever girl and lapping away at her pussy. Neither of them has noticed you yet, as the young canine woman's head is lying back with closed eyes while she shudders in pleasure and Lilith is completely focused on giving her oral attention. The clear view of the demoness's own moist pussy between her slightly spread legs awakens your libido and makes you think about just joining them on the bed for some fun. Lilith would almost definitively be down for it - she is a succubus after all.";
+			say "     As you walk over to the door of the sacristy, you hear pants and yips from inside, in a clearly female voice that doesn't belong to Lilith. Seems like Renee is back for some more fun. Quickening your steps a bit, you walk into the room without delay, putting a hot little scene into view. On top of the large bed in the middle of the room is Lilith, bent over on all fours, with her head right over the crotch of the beautiful golden retriever girl and lapping away at her pussy. Neither of them has noticed you yet, as the young canine woman's head is lying back with closed eyes while she shudders in pleasure and Lilith is completely focused on giving her oral attention. The clear view of the demoness's own moist pussy between her slightly spread legs awakens your libido and makes you think about just joining them on the bed for some fun. Lilith would almost definitely be down for it - she is a succubus after all.";
 		LineBreak;
 		say "     Do you climb on the bed and make this a threesome?";
 		if Player consents:
@@ -771,7 +793,10 @@ to say LilithSex4: [Fuck her pussy]
 	if LilithPregnancy is 0 or LilithPregnancy is 4:
 		say "     'Yes, yes!' she moans, pulling your lips to hers for a deep kiss. 'I can feel your load inside me, filling me. Invading my womb.' She lets you rest for a moment, then starts stroking your body, the muscles in her pussy gripping your cock and almost masturbating it, giving it no chance to go soft. Animated by the insatiable demoness, you start fucking her again, thrusting in and out rapidly, feeling your own cum lubricate your movements and squirt out around your shaft as you pound into her. On your second go, you last longer than the first, mostly due to just having come already, but even then her expert skills quickly move you to another mind-blasting climax. With two loads inside her, the succubus relents, satisfied for now. Holding and stroking you, she moans 'You were amazing, lover. Let's hope it takes. Together we can populate this earth with demons.'";
 	else:
-		say "     'Yes, yes!' she moans, pulling your lips to hers for a deep kiss. 'I can feel your load inside me, filling me. Invading my womb, bathing our son in his father's seed.' She lets you rest for a moment, then starts stroking your body, the muscles in her pussy gripping your cock and almost masturbating it, giving it no chance to go soft. Animated by the insatiable demoness, you start fucking her again, thrusting in and out rapidly, feeling your own cum lubricate your movements and squirt out around your shaft as you pound into her. On your second go, you last longer than the first, mostly due to just having come already, but even then her expert skills quickly move you to another mind-blasting climax. With two loads inside her, the succubus relents, satisfied for now. Holding and stroking you, she moans 'You were amazing, lover. Teaching your demon son the taste of cum before he's even born. He'll be an amazing incubus.'";
+		if "Succubus Daughter Wanted" is listed in Traits of Lilith: [pregnant with succubus]
+			say "     'Yes, yes!' she moans, pulling your lips to hers for a deep kiss. 'I can feel your load inside me, filling me. Invading my womb, bathing our daughter in her father's seed.' She lets you rest for a moment, then starts stroking your body, the muscles in her pussy gripping your cock and almost masturbating it, giving it no chance to go soft. Animated by the insatiable demoness, you start fucking her again, thrusting in and out rapidly, feeling your own cum lubricate your movements and squirt out around your shaft as you pound into her. On your second go, you last longer than the first, mostly due to just having come already, but even then her expert skills quickly move you to another mind-blasting climax. With two loads inside her, the succubus relents, satisfied for now. Holding and stroking you, she moans 'You were amazing, lover. Teaching your demon daughter the taste of cum before she's even born. She'll be an amazing succubus.'";
+		else: [regular incubus]
+			say "     'Yes, yes!' she moans, pulling your lips to hers for a deep kiss. 'I can feel your load inside me, filling me. Invading my womb, bathing our son in his father's seed.' She lets you rest for a moment, then starts stroking your body, the muscles in her pussy gripping your cock and almost masturbating it, giving it no chance to go soft. Animated by the insatiable demoness, you start fucking her again, thrusting in and out rapidly, feeling your own cum lubricate your movements and squirt out around your shaft as you pound into her. On your second go, you last longer than the first, mostly due to just having come already, but even then her expert skills quickly move you to another mind-blasting climax. With two loads inside her, the succubus relents, satisfied for now. Holding and stroking you, she moans 'You were amazing, lover. Teaching your demon son the taste of cum before he's even born. He'll be an amazing incubus.'";
 	NPCSexAftermath Lilith receives "PussyFuck" from Player;
 	if LilithPregnancy is 0: [not already preggers]
 		let LilithPregChance be a random number from 1 to 20;

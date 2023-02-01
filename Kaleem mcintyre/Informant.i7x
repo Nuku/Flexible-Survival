@@ -61,12 +61,45 @@ object	name
 Homaru	"Homaru"
 
 Homaru is a man.
-Description of Homaru is "A young man with spiky brown hair and black hooded coat sits at his desk while [one of]going over some interesting-looking notes[or]leafing through information on his computer[or]surveying files that look to be giving him a hard time[or]eating a sandwich[or]chuckling while reading a comic book[at random]. Homaru looks to be somewhere in his twenties, but the feel of the other man makes him seem as though he's about fifty or something. Sharp, brown eyes filled with wisdom look up at you as you walk by Homaru and you find it hard not to freeze in place from the look given to you by those dark and seemingly ageless orbs.".
 Homaru is in Agency.
+ScaleValue of Homaru is 3. [human sized]
+Body Weight of Homaru is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Homaru is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Homaru is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Homaru is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Homaru is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Homaru is 6. [length in inches]
+Breast Size of Homaru is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Homaru is 2. [count of nipples]
+Asshole Depth of Homaru is 6. [inches deep for anal fucking]
+Asshole Tightness of Homaru is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Homaru is 1. [number of cocks]
+Cock Girth of Homaru is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Homaru is 6. [Length in Inches]
+Ball Count of Homaru is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Homaru is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Homaru is 0. [number of cunts]
+Cunt Depth of Homaru is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Homaru is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Homaru is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Homaru is false.
+PlayerRomanced of Homaru is false.
+PlayerFriended of Homaru is false.
+PlayerControlled of Homaru is false.
+PlayerFucked of Homaru is false.
+OralVirgin of Homaru is true.
+Virgin of Homaru is true.
+AnalVirgin of Homaru is true.
+PenileVirgin of Homaru is true.
+SexuallyExperienced of Homaru is false.
+TwistedCapacity of Homaru is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Homaru is true. [steriles can't knock people up]
+MainInfection of Homaru is "".
+The scent of Homaru is "     The information dealer smells like unsolved puzzles and mysteries best left in the dark... as well a turkey and ham on whole wheat."
+Description of Homaru is "A young man with spiky brown hair and black hooded coat sits at his desk while [one of]going over some interesting-looking notes[or]leafing through information on his computer[or]surveying files that look to be giving him a hard time[or]eating a sandwich[or]chuckling while reading a comic book[at random]. Homaru looks to be somewhere in his twenties, but the feel of the other man makes him seem as though he's about fifty or something. Sharp, brown eyes filled with wisdom look up at you as you walk by Homaru and you find it hard not to freeze in place from the look given to you by those dark and seemingly ageless orbs.".
 Conversation of Homaru is { "I'll find it out for you!" };
-
-Instead of sniffing Homaru:
-say "The information dealer smells like unsolved puzzles and mysteries best left in the dark... as well a turkey and ham on whole wheat.";
 
 Instead of fucking Homaru:
 	say "     'Whoa! Whoa there, friend!' The brown-haired man quickly throws out his hands as you advance on him. 'You're [if Player is female]cute and all[else]a nice guy[end if], but I don't want or need to have this infection getting any worse on me. So please, for my sake and all of the people out there who still need information only a reputable informant like myself can gather, keep your [if Player is male]cock[else]sexy self[end if] at least five feet away from me!";
@@ -83,7 +116,7 @@ instead of conversing the Homaru:
 			now Homarusearch is 70;
 			now Homarutalk is 1;
 		else:
-			say "     Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [FaceName of Player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it ten minutes ago. Unless the other was some kind of fortune teller or prophet, that should have been impossible... right? Or maybe he was spying on you?";
+			say "     Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [FaceSpeciesName of Player in lower case] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it ten minutes ago. Unless the other was some kind of fortune teller or prophet, that should have been impossible... right? Or maybe he was spying on you?";
 			say "     Pulling out a manila folder, Homaru leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that, these said groups worked to grab up as many uninfected people as they can to use them for... well, let's just say it wasn't for good things.'";
 			say "     You ask Homaru to elaborate. The other man lowers the folder in front of him and then sweeps a hand through his spiky hair as he tries to find the right words to say. 'You know how kinky everything is outside right now?' You nod at this. 'Well, it seems as though there are some people more immune to what's going on than others, or at least partially appear to be so.' You get a feeling for what Homaru is saying as the man starts to flush deep red and bite at his lower lip.";
 			WaitLineBreak;
@@ -173,7 +206,6 @@ carry out delaymilitary:
 
 Section 4 - Homaru Search
 
-Dam is a number that varies.
 Homarusearching is a number that varies.
 Findfirefighter is a number that varies.
 Homarusearch is a number that varies.

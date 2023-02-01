@@ -9,6 +9,9 @@ Section 1 - Bargain Bin
 when play begins:
 	now bargainbinusagetotal is 0;
 
+a postimport rule:
+	now Bargain Bin is in The Mysterious Shop;
+
 Table of GameCharacterIDs (continued)
 object	name
 Bargain Bin	"Bargain Bin"
@@ -25,12 +28,13 @@ bargainbinusagetotal is a number that varies.
 
 bargainhunting is an action applying to nothing.
 
+understand "hunt bargain bin" as bargainhunting.
 understand "hunt bargain" as bargainhunting.
 understand "hunt bin" as bargainhunting.
 understand "buy bargain" as bargainhunting.
-understand "sort bin" as bargainhunting.
 understand "sort bargain bin" as bargainhunting.
 understand "sort bargain" as bargainhunting.
+understand "sort bin" as bargainhunting.
 understand "hunting bargain" as bargainhunting.
 
 check bargainhunting:
@@ -157,7 +161,7 @@ carry out bargainhunting:
 						ItemGain dog milk by 1;
 					ItemGain honeycomb by 1;
 					ItemGain Tasty Fish by 1;
-		else if Z is 15: [Dr Matt samples]
+		else if Z is 15: [Dr. Matt samples]
 			if FemaleList is banned and ( HermList is banned or FurryList is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
 				LineBreak;
@@ -450,9 +454,7 @@ carry out bargainhunting:
 				ItemGain dirty water by 1;
 	else:
 		say "     Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
-	if bargainbinusagetotal > 41: [i.e. 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
-		say "With the removal of your latest findings, the Bargain Bin appears oddly empty. The few things left in it are ones you have rejected already. Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
-		now Bargain Bin is nowhere;
+
 
 [ Plush Lion / rubber tigress / chocolate lab in bin ]
 to say plrtcl:

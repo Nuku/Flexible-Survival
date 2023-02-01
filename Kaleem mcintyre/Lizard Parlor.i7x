@@ -26,16 +26,49 @@ object	name
 Dan	"Dan"
 
 Dan is a man.
+ScaleValue of Dan is 3. [human sized]
+Body Weight of Dan is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Dan is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Dan is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Dan is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Dan is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Dan is 8. [length in inches]
+Breast Size of Dan is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Dan is 0. [count of nipples]
+Asshole Depth of Dan is 8. [inches deep for anal fucking]
+Asshole Tightness of Dan is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Dan is 1. [number of cocks]
+Cock Girth of Dan is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Dan is 8. [Length in Inches]
+Ball Count of Dan is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Dan is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Dan is 0. [number of cunts]
+Cunt Depth of Dan is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Dan is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Dan is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Dan is false.
+PlayerRomanced of Dan is false.
+PlayerFriended of Dan is false.
+PlayerControlled of Dan is false.
+PlayerFucked of Dan is false.
+OralVirgin of Dan is false.
+Virgin of Dan is true.
+AnalVirgin of Dan is false.
+PenileVirgin of Dan is false.
+SexuallyExperienced of Dan is true.
+TwistedCapacity of Dan is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Dan is true. [steriles can't knock people up]
+MainInfection of Dan is "".
+The scent of Dan is "     The four-armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere."
 Description of Dan is "The four-armed iguana moves himself around the loft with slow and measured steps while rolling his four arms around somewhat anxiously. Humming to himself all the while, you wonder how the other can stay perpetually happy as he moves around the loft. With the power [if findwires is 2 and fixedgens > 2]back on, the green and black scaled reptile works at both cleaning up the condo while at the same time making something to eat for himself and Greg, but it's easy to tell that Dan wants to be doing something more [italic type]vigorous[roman type] with his lover[else]not working properly, the iguana can only work at drawing in several coloring books to stave off his boredom. Though, from the way he is moving his tail about almost anxiously it's easy to see that Dan wants to be outside doing something[end if]. As strong and muscular as he is you have to wonder how much the virus has enhanced what the iguana had already had developed from his Academy training. Toned and limber with green and black scales shimmering in the light of the [if daytimer is day]sun shining in from the patio window[else]lights from the solar powered glow lamps surrounding the condo, along with the waning moonlight from outside[end if], Dan is quite a handsome specimen to behold. The sight of the naked reptile's genital slit leaking precum down his thighs makes for an interesting spectacle, and you idly wonder how Greg keeps his claws off of the other.".
 Conversation of Dan is { "Let's Do It!" }.
 Dan is in Lizard Parlor.
 
-instead of sniffing Dan:
-	say "The four-armed iguana smells of both happiness and determination with a hint of tangy reptile musk mixed in there somewhere.";
-
 instead of conversing the Dan:
 	if HP of dan is 0:
-		say "     'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. 'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this, the four-armed male sighs wistfully.";
+		say "     'Hey you!' Dan cheers while smiling at you like an overexcited hatchling. I'm glad you decided to stop by today. Greg was starting to think that something had happened to you.' You tell Dan that you wouldn't be done in by anything in this city you watch as the other man's green-brown eyes shine with a bright and intensive light as he flicks his reptilian tongue out at you. 'I'm glad to hear that. It would be a serious shame if you turned into one of the mutants out there.' At this, the four-armed male sighs wistfully.";
 		say "     Asking the other what the matter is you get a story you weren't expecting. 'Well, when everything began to go all to hell many of the officers at the various stations dotting the city tried to do their best to handle what was happening, to both them and the people around them. But,' Dan reaches up with one of his four arms to scratch a thick claw underneath his chin. 'that really didn't go so well and many of them ended up succumbing to the virus and then doing some really... [italic type]wild[roman type]... things to each other once it looked as though the problem couldn't be solved by house arrest any longer.' Dan sighs forlornly at this. 'Logically one would think that people like police officers, who are trained to handle much more strenuous situations, would be able to hand little things like out of control boners and whatnot, but when the shit hit the fan... well.";
 		WaitLineBreak;
 		say "     'I keep trying to tell you that having a badge does not make you a hero, super or else,' Greg says as he comes up to hug his younger mate. The two reptiles nuzzle each other for several minutes, their thin tongues rapidly flick out across one another's scaled forms and then over the sides of their heads before moving down underneath toward their chins, before pulling away to give each other space. You find yourself smiling as you look between the two lovers. 'Y-yea, I know, but still...'";
@@ -66,13 +99,13 @@ Instead of fucking the Dan:
 		if Player consents:
 			LineBreak;
 			say "     Telling Dan that you don't mind getting it on with both him and Greg, you find the iguana chuckling at you naughtily. 'I see. Well, I hope you don't come to regret that decision.' The other playfully winks at you before getting himself up from off of Greg's lap to take one of your hands and one of his lover's. 'Let's take this show upstairs, shall we?' You don't have much of choice in trying to argue, the (surprisingly strong) reptile quickly dragging all three of you upstairs to the bedroom area.";
-			say "     Once upstairs, Greg and Dan make a show of stripping each other down while kissing and flicking their whip-thin tongues all over each other while looking at you with eyes burning with unending lust. Not wanting to be left out, you strip out of your clothing and then saucily walk over to the large, four-poster bed the two reptiles share. Crawling onto your hands and knees until you are in between the raptor and iguana, you find yourself getting kissed and licked by the two reptiles, and they work their individual hands all along your [BodyName of Player] form, warming your [SkinName of Player] skin up until you feel as though you could explode.";
+			say "     Once upstairs, Greg and Dan make a show of stripping each other down while kissing and flicking their whip-thin tongues all over each other while looking at you with eyes burning with unending lust. Not wanting to be left out, you strip out of your clothing and then saucily walk over to the large, four-poster bed the two reptiles share. Crawling onto your hands and knees until you are in between the raptor and iguana, you find yourself getting kissed and licked by the two reptiles, and they work their individual hands all along your [BodyType of Player] form, warming your [SkinSpeciesName of Player in lower case] skin up until you feel as though you could explode.";
 			WaitLineBreak;
-			say "     Telling Dan that you want to feel him buried within your body, the four-armed police officer quietly hisses into your ear and then uses his two lower arms to lower you down onto bed onto your back. [if Player is female]'You have a nice-looking cunt between your legs, but I'm afraid that I'm not interested in that.' [end if]Murring at the reptile, you don't fight the blush staining your [FaceName of Player] cheeks as you look up into the smoldering eyes of the iguana as Dan lifts your legs up onto his scaled shoulders. When you feel a warm wetness slather itself between your legs, you arch and then groan before looking down through clenched eyes to see Greg licking his tongue in between your rump.";
+			say "     Telling Dan that you want to feel him buried within your body, the four-armed police officer quietly hisses into your ear and then uses his two lower arms to lower you down onto bed onto your back. [if Player is female]'You have a nice-looking cunt between your legs, but I'm afraid that I'm not interested in that.' [end if]Murring at the reptile, you don't fight the blush staining your [FaceSpeciesName of Player in lower case] cheeks as you look up into the smoldering eyes of the iguana as Dan lifts your legs up onto his scaled shoulders. When you feel a warm wetness slather itself between your legs, you arch and then groan before looking down through clenched eyes to see Greg licking his tongue in between your rump.";
 			say "     The hot feel of the raptor's breath mixed with his warm saliva washing over and across the split of your ass has you hissing and groaning in pleasure. Rolling an eye down to have a look over the orange scaled raptor with his face buried in between your legs, you find yourself almost unprepared to have Dan nudging the tip of his cock into the split of your rear. Quickly Greg pulls himself back so as to give his younger partner enough room to maneuver, and by the time you try and figure out what's behind the knowing smirk on the raptor's face, your mouth is opening wide to gasp up to the ceiling as you feel Dan's thick cock spreading you open.";
 			WaitLineBreak;
 			say "     Surprisingly, the other man is quite big, and you feel every pleasurable inch of the reptile's length as the iguana moves himself into the depths of your backside, filling you up almost to the brink. When Dan hilts inside of you, your fingers are gripping the covers of the bed so tightly that your knuckles threaten to turn white; however, the pain you are feeling quickly fades to be replaced by sensual pleasure as the iguana slowly pulls himself out of you to begin a leisurely series of thrusts into your rump.";
-			say "     Dan's thighs pump themselves into you, back and forth with firm and unyielding slams of scales against your [SkinName of Player] skin. Groaning and arching into the other man, you spare a tentative glance up at Dan, only to take notice of the iguana and raptor sharing a heated kiss between the two of them. Cock filling your insides up to where you are sure that you're going to be walking funny for the next couple of hours while pre-cum oozes out of your backside onto the mattress, you find it mildly ironic that the two lovers are barely sparing you a glance, so lost in each other as they are.";
+			say "     Dan's thighs pump themselves into you, back and forth with firm and unyielding slams of scales against your [SkinSpeciesName of Player in lower case] skin. Groaning and arching into the other man, you spare a tentative glance up at Dan, only to take notice of the iguana and raptor sharing a heated kiss between the two of them. Cock filling your insides up to where you are sure that you're going to be walking funny for the next couple of hours while pre-cum oozes out of your backside onto the mattress, you find it mildly ironic that the two lovers are barely sparing you a glance, so lost in each other as they are.";
 			WaitLineBreak;
 			say "     The bed you're on is rocking hard enough that the frame is actually tapping against the back wall, but that matters little to you as your [if Player is male]cock is gushing with slick and clear fluids down onto your belly[else]fluttering nethers are dripping down in between your legs[end if]. Hissing and yowling like a cat in heat, you buck yourself back against Dan as hard as you can while trying to drive the other man into you with as deep as he can go. The sounds of warning growls echo up from between both reptiles, and just before you feel the rush of heat splatter over into the depths of your battered insides, you find another kind of molten heat spraying itself across your chest and thighs.";
 			say "     Gasping as loud as you can, your orgasm almost takes you by surprise as Dan's fiery cum surges up inside of your body while at the same time your [if Player is male]cock sends a torrent of cum up into the sky[else]leaking nethers gush with juice onto the bed[end if]. The iguana doesn't stop his thrusts as he sprays his load inside of you, though; instead, the other man continues to thrust and pant and warble out a pleasurable growl of ecstasy as he and Greg continue to become lost in one another. By the time Dan has finished, your legs are trembling up and across Dan's shoulders as heavy pants of breath whoosh out from between your lips.";
@@ -92,19 +125,52 @@ object	name
 Greg	"Greg"
 
 Greg is a man.
+Greg is in Lizard Parlor.
+ScaleValue of Greg is 3. [human sized]
+Body Weight of Greg is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Greg is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Greg is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Greg is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Greg is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Greg is 8. [length in inches]
+Breast Size of Greg is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Greg is 0. [count of nipples]
+Asshole Depth of Greg is 8. [inches deep for anal fucking]
+Asshole Tightness of Greg is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Greg is 1. [number of cocks]
+Cock Girth of Greg is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Greg is 8. [Length in Inches]
+Ball Count of Greg is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Greg is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Greg is 0. [number of cunts]
+Cunt Depth of Greg is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Greg is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Greg is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Greg is false.
+PlayerRomanced of Greg is false.
+PlayerFriended of Greg is false.
+PlayerControlled of Greg is false.
+PlayerFucked of Greg is false.
+OralVirgin of Greg is false.
+Virgin of Greg is true.
+AnalVirgin of Greg is false.
+PenileVirgin of Greg is false.
+SexuallyExperienced of Greg is true.
+TwistedCapacity of Greg is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Greg is true. [steriles can't knock people up]
+MainInfection of Greg is "".
+The scent of Greg is "     The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz..."
 Description of Greg is "The taller and more powerfully built raptor/komodo dragon hybrid grunts while trying to find a warm patch of heat to rest in. Given that his much bigger build probably requires the necessary heat since he's gone from mammalian to reptilian, the orange and yellow mottled scalie does everything in his power to try and stay warm. [if the daytimer is day]With the sun out, it's much easier for Greg to lounge while reading a book as he keeps an eye out on Dan[else]Without the sun, the raptor hybrid has little choice save to wrap himself up with a large and fluffy comforter as he tries to conserve body heat[end if]. The older man's tail lashes beside him somewhat jubilantly as the raptor hisses while flicking his long tongue out to catch the scent of his boyfriend. Dan often comes over to help keep the older man warm by cuddling and nuzzling into Greg's scaly form. It's somewhat plain to see that the two would probably be mating if you weren't here right now as Greg's genital slit is almost drooling down in between his legs.".
 Conversation of Greg is { "Time for a nap????" }.
-Greg is in Lizard Parlor.
-
-instead of sniffing Greg:
-	say "The raptor hybrid smells like a toughened detective that needs much more sleep... and sex. You almost feel sleepy just being around... him... ZZZzzz...";
 
 instead of conversing the Greg:
 	If HP of greg is 0:
 		say "     'So I see you survived this place another day. Not bad, even for a rookie like you.' Greg's words are mild, but carry enough of a sting to them to make you pause for a second in afterthought. 'Don't take it the wrong way.' The raptor flicks his tongue out from between his lips and then chuckles at you. 'I'm just surprised by your tenacity. Not many have [']survived['] this place. Well, if you take the general census from before the epidemic and compare it to what we have now as being considered [']citizens['].' Any annoyed growl slips free from Greg's muzzle and mildly you have to wonder what's gotten him into such a snit.";
 		say "     Asking the other on his thoughts about what may happen after the military rolls into the clean up the city, you find yourself getting a somewhat unanticipated reply. 'When/if the military comes then not much will change - other than the population of mutants here increasing with the influx of new blood.' Blinking you ask the other about his bleak outlook. 'Bleak? I'm being realistic.' The other man shrugs before rolling his head from side to side in an effort to pop the bones in his neck. 'Come on, wake up some of those latent brain cells for a moment and think outside the box. If you were a top commander leading a group of people into an assured danger zone, how would you handle this situation, seeing as all other alternatives and possibilities have, as of currently, been ineffective in solving the crisis?' At that you pause to think.";
 		WaitLineBreak;
-		say "     The obvious answer would be to try and get as many people out and quarantine off the city, however, that's what's being done already. The results of such actions speak for themselves in this case. 'If I were in charge I'd have the whole place sanitized and then pick off whatever was left with a couple of airstrikes, but that's just because I'm more practical when dealing with problems.' Hearing this your [FaceName of Player] eyes widen in disbelief. Asking the other if [']sanitize['] means what you think you find Greg suddenly looking at you with an unwavering gaze.";
+		say "     The obvious answer would be to try and get as many people out and quarantine off the city, however, that's what's being done already. The results of such actions speak for themselves in this case. 'If I were in charge I'd have the whole place sanitized and then pick off whatever was left with a couple of airstrikes, but that's just because I'm more practical when dealing with problems.' Hearing this your [FaceSpeciesName of Player in lower case] eyes widen in disbelief. Asking the other if [']sanitize['] means what you think you find Greg suddenly looking at you with an unwavering gaze.";
 		WaitLineBreak;
 		say "     'In truth,' the raptor hybrid says once he's won the little staring content between you both. 'I personally don't see the point in trying to soothe the egos of the bureaucrats in charge by making them believe that everything is still under control. There's no point at this stage in the game. We've seen the results of contamination and then subsequent transformations that follow afterwards. Unless there's some group out there who plans to shoulder the burden and responsibility of dealing with these new mutations out here, myself included, then we're just staring down the barrel of a proverbial rifle about to go off.";
 		WaitLineBreak;

@@ -209,7 +209,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Fox"; [name of the overall species of the infection, used for children, ...]
 	add "Vixen Nurse" to infections of VulpineList;
 	add "Vixen Nurse" to infections of FurryList;
 	add "Vixen Nurse" to infections of NatureList;
@@ -403,7 +403,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "healing booster"	"A small syringe filled with a clear, blue fluid."	1	healing booster
 
-healing booster is a grab object. It is fast. It is not temporary.
+healing booster is a grab object. It is fast. It is temporary.
 
 the scent of the healing booster is "The healing booster smells of chemicals and medicine.".
 
@@ -426,8 +426,6 @@ to say healing booster use:
 		decrease healed by HP of Player minus maxHP of Player;
 		now HP of Player is maxHP of Player;
 	say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
-	ItemLoss healing booster by 1;
-
 
 Section 3 - Endings
 
@@ -448,13 +446,13 @@ This is the Vixen Nurse Infection rule:
 				else:
 					say "     Between the strange, medical duties you and the others perform, you enjoy many an evening with the muscled jaguars that populate the hospital, never tiring of the feel of their cocks pounding into your hyper-sexualized body.";
 			else if hospquest < 13:
-				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of one of his exploratory teams, letting you order around the jaguar orderlies as they capture new [']volunteers['] for his experiments.";
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of one of his exploratory teams, letting you order around the jaguar orderlies as they capture new [']volunteers['] for his experiments.";
 				if Player is female:
 					say "     On a trip to the beach, you are ambushed by a crew of pirate sharks after the helicopter. Successfully boarding the craft, they disable the pilot and manage to deal with the orderlies only by sheer numbers. They are all dumped overboard into the sea while you are kept as booty. The sharks celebrate that evening with drink, song and sex, all eager to take a turn with you. Being treated by the good doctor for your duties, you resist physically transforming to become another shark, but your mind unravels again. You are remade into a vixen pirate, lover to this band of air pirates.";
 				else:
 					say "     During a mission to an old hotel on the outskirts of the red light district, your team is assaulted by a herd of powerful equines. The ferocious orderlies manage to hold their own, but you are dragged off. The horses spend many weeks trying to turn you into another equine slave for their brothel, but the treatment given to you by the mouse doctor holds enough to keep your body intact. But your mind does not fare as well and succumbs to the constant training they give you, turning you into a slutty, silver fox. You act as their medical staff, helping them with their conversions when needed and the rare injuries that are too much for the nanites. When not performing these infrequent duties, you are there to provide a change of pace to anyone looking for something a little different from the otherwise equine whorehouse.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
-				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
+				say "     Driven by your new instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember the experiences that lead you to know him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
 				if "Sterile" is not listed in feats of Player and player is female:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower";
@@ -471,8 +469,8 @@ This is the Vixen Nurse Infection rule:
 					say "     It is only with the coming of the military that control is restored. The united threat of military action unites the factions, at least temporarily. And you would see that unity remain and enact a plan that percolates in the back of your mind. Feeling the need to have someone in charge, you break from the defense and slip past the military lines. You find a small veterinarian hospital and spot some activity inside. Armed with a syringe filled with tranquilizers and a need to do what must be done for the good of the hospital, you slip in and attack the panther taur vet. Unprepared for the injection, she moved in close, letting you knock her out with it.";
 					say "     You relay your success over the radio to the hospital, but it takes them some time to get a team past the military and out to you. Thankfully the veterinary clinic still has supplies and you're able to keep her under until you can get her back to the hospital. One of the female jaguars is allowed to welcome the panther herm to the hospital, bonding her into the staff as your new leader. The taur doctor fills her position well, maintaining the unity of the hospital staff after the military is repulsed. The hospital's medical work slacks off, but several of the staff are sent out to capture many animal creatures from the city. These are converted into more staff for an expanding new wing for sexual veterinary medicine.";
 			else:
-				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of monitoring his test subjects with a pair of jaguars to act as your muscle. Obediently, you follow the mad doctor's orders, watching his [']volunteers['] and often using them as play-toys when he's done with them before sending them downstairs to the hospital proper to be assimilated into the staff[if Susan is in hidden lab]. Susan, as his assistant, is there with him to help you and reward you with lustful sex[end if].";
-				say "     When the time comes to leave the city, Dr Mouse takes you[if Susan is in hidden lab], Susan[end if] and several other of the staff to escape through the service tunnels under the hospital. Meanwhile the main body of the staff hold the hospital against the army with the helicopter running as an added diversion. You all escape out of the city and Dr Mouse sets up a new lab in secret. He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form. He has you continue to monitor his test subjects for his ongoing experiments";
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he greets you with a smile and happily adds you to his hospital's staff. He puts you in charge of monitoring his test subjects with a pair of jaguars to act as your muscle. Obediently, you follow the mad doctor's orders, watching his [']volunteers['] and often using them as play-toys when he's done with them before sending them downstairs to the hospital proper to be assimilated into the staff[if Susan is in hidden lab]. Susan, as his assistant, is there with him to help you and reward you with lustful sex[end if].";
+				say "     When the time comes to leave the city, Dr. Mouse takes you[if Susan is in hidden lab], Susan[end if] and several other of the staff to escape through the service tunnels under the hospital. Meanwhile the main body of the staff hold the hospital against the army with the helicopter running as an added diversion. You all escape out of the city and Dr. Mouse sets up a new lab in secret. He begins selling off the fruits of his research to foreign powers and the growing factions of transformed creatures that form. He has you continue to monitor his test subjects for his ongoing experiments";
 				if Player is female:
 					say ". You also are honored with being the little mouse's personal sex-toy when he needs to unwind after a particularly exciting procedure";
 					if "Sterile" is not listed in feats of Player:

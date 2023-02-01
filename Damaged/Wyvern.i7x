@@ -75,9 +75,16 @@ to say WYVDESC:
 			now sex entry is "Female";
 		if WYVGEN is 1:
 			setmongender 4; [creature is female]
-			project the figure of Wyvern_female_icon;
+			if Daytimer is day:
+				project the figure of Wyvern_female_day_icon;
+			else:
+				project the figure of Wyvern_female_night_icon;
 		else:
 			setmongender 3; [creature is male]
+			if Daytimer is day:
+				project the figure of Wyvern_male_day_icon;
+			else:
+				project the figure of Wyvern_male_night_icon;
 		say "     [if showlocale is true]As you explore the city, you suddenly[else]Suddenly, you[end if] [if ishunting is true]run into a wyvern[else]find yourself ambushed by a wyvern[end if], swooping down to confront you, the earth trembling as it lands. Looking at the beast proper, it appears to be slightly larger than a pickup truck, wings doubling as its foretalons, thick legs supporting its massive weight. From what you can tell it appears to be [bold type][if WYVGEN is 0]male[else]female[end if][roman type].";
 		if level of Player < 20:
 			say "     With a low growl it opens its great maw, hailing you with a barrage of strange, yellowish-white ooze, the strong adhesive fusing you to the ground. You manage to pry some of the viscous fluid free of you, but if feels as though contact with it has drained you slightly. This monster is simply too much for you to handle right now, and your best bet is simply to pull yourself free and make a run for it.";
@@ -118,6 +125,7 @@ to say WYVDEF:
 				if WYVGEN is 0:
 					wyvmalevic;
 				else:
+					project the figure of Wyvern_female_icon;
 					wyvfemvic;
 			else:
 				say "     You choose to leave the creature as-is, turning to depart.";
@@ -233,6 +241,7 @@ to say WYVVIC:
 			else:
 				say "     With little ceremony or care, you watch as the beast's dick retreats back from whence it hid before he pulls away, taking to the sky once more. It takes you several moments to figure out up from down after the whole ordeal before you start pulling yourself free of your primitive bondage. Once free, it takes quite a while to clean yourself off and just as long to not feel completely sore all over.";
 	else: [female]
+		project the figure of Wyvern_female_icon;
 		if "Touched by Madness" is listed in feats of Player and ((scalevalue of Player is 3 and player is twistcapped) or scalevalue of Player > 3) and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)) and boundstate is false:
 			say ". The monster circles around your for a moment, intent on asserting her dominance by screeching at you as she eyes you over, sizing you up with a rather peculiar expression...";
 			say "     Her eventual approach reveals she is already heavy with eggs, making you wonder [if scalevalue of Player is 3]how she'd exactly intends to fit you in there[else]why she'd bother dealing with you in the first place[end if]. [if scalevalue of Player is 3]Moving over[else]Climbing on top of[end if] you, Bestial vent poised against [if Cunt Count of Player > 1 and Cunt Depth of Player > 14 and anallevel < 3]one of your exposed cunts[else if Player is female and Cunt Depth of Player > 14 and anallevel < 3]your exposed cunt[else]anal ring[end if], her pained low grunts elucidate on her twisted intent.";
@@ -330,22 +339,6 @@ to say WYVVIC:
 			else if WYVSF is 0:
 				now WYVSF is 1;
 
-to libidoeval:
-	if "Horny Bastard" is listed in feats of Player: [lust adjust check]
-		now lustadjust is 1;
-	else if "Cold Fish" is listed in feats of Player:
-		now lustadjust is -1;
-	else:
-		now lustadjust is 0;
-
-to psycheeval:
-	if "Weak Psyche" is listed in feats of Player: [psyche adjust check]
-		now psycheadjust is 1;
-	else if "Strong Psyche" is listed in feats of Player:
-		now psycheadjust is -1;
-	else:
-		now psycheadjust is 0;
-
 
 Section 1-2 - Victory Sex Trees
 
@@ -408,6 +401,7 @@ to wyvmalevic:
 			now Trixieexit is 1;
 
 to wyvfemvic:
+	project the figure of Wyvern_female_icon;
 	now calcnumber is -1;
 	say "     What will you do?";
 	let Trixieexit be 0;
@@ -467,6 +461,7 @@ carry out callwyvernbias:
 Section 1-3 - Wyvern Sex Pools
 
 to say wyvgen_1: [Anal Pitching]
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
 	say "     [if scalevalue of Player < 5]Given how massive the wyvern is, it takes you a bit of effort to properly position the beast[else]With a little work, you manage to position the wyvern[end if] for your entry, whose exhausted form can only abide your preparations. Rough, chitinous scales obfuscating the hole, you're forced to use a digit to find where it's hiding, your exploration soon rewarded as they eventually part around your appendage to expose soft, supple flesh to your touch.";
 	say "     Your bit of exploration causes the monster to writhe and growl in impotent protest, soon betrayed by [if WYVGEN is 0]his own arousal, his impressive dick beginning to emerge from its housing[else]her own arousal, her unattended hole beginning to ooze sexual fluids[end if]. Ready for you, shall you engage in a bit of foreplay? Otherwise, you'll get straight to the point.";
 	if Player consents:
@@ -512,6 +507,7 @@ to say wyvgen_1: [Anal Pitching]
 		CreatureSexAftermath "Wyvern" receives "PussyFuck" from "Player";
 
 to say wyvgen_2: [Oral Receiving Cock]
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
 	say "     Circling around to meet the wyvern at his front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cock size desc of Player] dick[smn] before [ghim]. At first inclined to nip impotently at [if Cock Count of Player > 1]one of them[else]it[end if], you're forced to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
 	say "     Prehensile appendage slathering its affection on your tool, you can't help but thrust against the wyvern's snout, eventually forcing [ghim] to engulf it within the confines of [ghis] scaled maw[if Cock Count of Player > 2], its brothers grinding against [ghim] and[else if Cock Count of Player is 2], its brother grinding against [ghim] and[else],[end if] no doubt filling [ghis] senses with the taste and scent of your precum. Unable to resist [ghis] growing, wanton need, the beast grinds [ghim]self against the ground, [ghis] own arousal brought about by your lewd task.";
 	say "     Eventually, [ghis] fervor drives [ghim] to hilt your organ entirely within [ghis] greedy hole - a feat [if Cock Length of Player < 18]not particularly difficult given how large [ghe] is[else]no doubt putting some strain on [ghim], given how well-endowed you are[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to suck you dry. Perhaps you should pry yourself free at the last second and shame the beast? Otherwise, you'll properly reward [ghis] compliance.";
@@ -524,6 +520,7 @@ to say wyvgen_2: [Oral Receiving Cock]
 	CreatureSexAftermath "Wyvern" receives "OralCock" from "Player"; [SexAftermath NYI: Male player gets a blowjob from the wyvern]
 
 to say wyvgen_3: [Oral Receiving Cunt]
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
 	say "     Circling around to meet the wyvern at his front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cunt size desc of Player] cunt[sfn] before [ghim], at first inclined to nip impotently at [if Cunt Count of Player > 1]one of them[else]it[end if], forcing you to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
 	say "     Prehensile appendage slathering its affection on your feminine portal, you can't help but press against the wyvern's snout, eventually forcing [ghim] to worm the slick organ within the confines of your hole[if Player is male], hardening dick[smn] grinding against his snout and[else if Cunt Count of Player > 2], its unattended sisters oozing against the [ghis] lips and[else if Cunt Count of Player is 2], its unattended sister oozing against the [ghis] lips and[else],[end if] no doubt filling [ghis] senses with the taste and scent of your honey. Unable to resist [ghis] growing, wanton need, the beast grinds [ghim]self against the ground, [ghis] own arousal brought about by your lewd task.";
 	say "     Eventually, [ghis] fervor drives [ghim] to dig [ghis] tongue entirely within your greedy hole - an act [if Cunt Depth of Player < 15]quickly stretching you to your limits, given how large [ghe] is[else]your sizable hole can easily abide, in spite [ghis] large size[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to taste your ecstasy.";
@@ -532,6 +529,7 @@ to say wyvgen_3: [Oral Receiving Cunt]
 	CreatureSexAftermath "Wyvern" receives "OralPussy" from "Player"; [SexAftermath NYI: Female player gets a cuntjob from the wyvern]
 
 to say wyvmale_1: [Cunt Catching]
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
 	say "     [if scalevalue of Player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavor[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
 	if Player consents:
 		say "     [if scalevalue of Player < 4]Difficult for you to grip[else]Firmly gripping[end if] around the girth of the wyvern's hardening dick, your kneading attendance invites the monster to growl lowly, overtaken by his wanton need, precum oozing from the tip of its blunt head. Compelled to taste his emergent sexual fluids, your head lowers, tongue teasing along his leaking cockhead, taste awash in his heady, masculine aura.";
@@ -557,6 +555,7 @@ to say wyvmale_1: [Cunt Catching]
 	say "     Taking a moment to catch your breath, you eventually pull yourself free of the wyvern and his tool, its audible departure from your ass loudly echoing through the air. You set him off with a smack, though his lingering exhaustion makes him slow to comply. Satisfied, you go on your merry way... Though now perhaps a little sore from the whole affair[if tempnum is 1], to say nothing of being a cum-drenched mess[end if].";
 
 to say wyvmale_2: [Anal Catching]
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
 	say "     [if scalevalue of Player < 5]Perhaps the hardest part of this task is to roll the wyvern onto his back, the exhausted beast eventually complying with your endeavor[else]It takes a little work, but you manage to roll the wyvern onto his back, the exhausted beast offering little in the way of any protest[end if]. Chitinous undercarriage exposed before you, your curious hands fondle his otherwise unmarked crotch until the affection is enough to bring him to attention, scales parting to gradually expose his massive, draconic dick before you. Shall you engage in a bit of foreplay? Otherwise, you'll skip straight to the fun part.";
 	if Player consents:
 		say "     [if scalevalue of Player < 4]Difficult for you to grip[else]Firmly gripping[end if] around the girth of the wyvern's hardening dick, your kneading attendance invites the monster to growl lowly, overtaken by his wanton need, precum oozing from the tip of its blunt head. Compelled to taste his emergent sexual fluids, your head lowers, tongue teasing along his leaking cockhead, taste awash in his heady, masculine aura.";
@@ -581,24 +580,73 @@ to say wyvmale_2: [Anal Catching]
 	say "     Taking a moment to catch your breath, you eventually pull yourself free of the wyvern and his tool, its audible departure from your ass loudly echoing through the air. You set him off with a smack, though his lingering exhaustion makes him slow to comply. Satisfied, you go on your merry way... Though now perhaps a little sore from the whole affair[if tempnum is 1], to say nothing of being a cum-drenched mess[end if].";
 
 to say wyvmale_3: [Oral Giving Cock]
-	Let PlayerFaceFucks be 0; [Count the number of times the 'Player consents' facefucking the Wyvern]
-	say "     After managing to get the wyvern on his back, you curiously fondle his thickly scaled undercarriage, the beast growling in impotent protest of your inspection. The coarse, seemingly chitinous array obstructs any identifying mark of where the creature houses his dick, but it only takes a bit of work for the scales to part, gradually exposing his impressive tool.";
-	say "     Organ's supple flesh in stark contrast to the wyvern's rough exterior, it doesn't take long before you fondling brings him to full attention, throbbing and dribbling pre from its blunt head onto himself. Shall you lavish your full affection of his offering? Otherwise, you'll keep your distance.";
-	if Player consents:
-		increase PlayerFaceFucks by 1;
-		say "     Unable to resist the opportunity, you move your head in closer, tongue caressing along its length, tasting the beast's flesh. Its shaft slightly mimics the plated scales of his undercarriage along its sides, giving it a distinctive ribbing. Ending at its mostly flat head, [if scalevalue of Player is 1]it's almost as big as you are! [else if scalevalue of Player is 2]it's at least half your size! [else if scalevalue of Player is 3]its size is extremely intimidating. [else if scalevalue of Player is 4]its size is somewhat intimidating. [else]its size is impressive, though it's nothing you can't handle. [end if]Your attendee growling lowly in approval, he can't help but writhe against the attention you offer him, his persistent oozing compelling your taste, tongue awash in the beast's masculine flavor.";
+	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
+	say "     As the now debilitated wyvern remains helpless to your will, it is not as big of a challenge to get the large winged reptile on his back. Although, there is still quite some weight to take into consideration due to the creature's impressive size and mass. Now that your area of curiosity is in plain view and within your reach, you move in between the wyvern's legs and begin to fondle his thickly scaled undercarriage. This makes the beast growl in impotent protest as you carry on inspecting his private region. The coarse, seemingly chitinous array obstructs any identifying mark of where the creature houses his sex, but it only takes a bit of work for the scales to part, gradually exposing his very impressive tool.";
+	say "     The organ's supple flesh sharply contrasts with the wyvern's rough exterior, and your persistent rubbing keeps it growing longer and thicker. It does not take long to have the wyvern's cock reach its full erection size, throbbing and dribbling precum from its blunt head onto himself. Having observed the entire process and even supported it with your touch, you realize [if scalevalue of Player is 1]the wyvern's cock is almost as big as you are[else if scalevalue of Player is 2]the wyvern's cock is at least half your size[else if scalevalue of Player is 3]that you are actually feeling intimidated by this cock's enormous size[else if scalevalue of Player is 4]that you are actually feeling somewhat intimidated by this cock's enormous size[else]that, while it is an impressive cock, you could handle it alright[end if]. You have to admit that such a sight does, indeed, a great job at turning you on, and you cannot help but begin to think what things you could do with it. Now, it is entirely up to you to decide how you want to enjoy your reward.";
+	WaitLineBreak;
+	say "     [bold type]Shall you be using your mouth on it, after all? You could always just keep your distance and continue to rub it with your hands...[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Try to give him a proper blowjob.";
+	say "     ([link]N[as]n[end link]) - Stick to your hands, for now.";
+	if player consents:
+		LineBreak;
+		say "     Unable to resist the opportunity, you move your head in closer, tongue caressing along its length, tasting the beast's flesh from its tip to the base, giving yourself some physical ordeal to get through in order to cover the whole thing. After giving it some further attention, you notice the wyvern's shaft slightly mimics the plated scales of his undercarriage along its sides, giving it a distinctive ribbing. As you end at its mostly flat head, your attendee growls lowly in approval. He cannot help but writhe against the attention you offer him, his persistent oozing compelling you to continue tasting it, practically bathing your tongue in the beast's masculine flavor.";
 	else:
-		say "     Remaining aloof, you continued to knead and pump the beast's [if scalevalue of Player < 4]extremely intimidating[else if scalevalue of Player is 4]somewhat intimidating[else]impressive[end if] flesh. Your attendee growling lowly in approval, he can't help but writhe against the attention you offer him, its persistent oozing noticeably staining his torso with precum.";
-	say "     As you gradually pick up the pace, so too does the wyvern's breath become more shallow, clawing weakly at the ground as your grow more and more determined to set him off. As he rapidly approaches his bliss, shall you finish this by sucking him off? Otherwise, you'll leave him to fire into the open air.";
+		say "     Remaining a bit aloof, you continue to knead and pump the beast's [if scalevalue of Player < 4]extremely intimidating[else if scalevalue of Player is 4]somewhat intimidating[else]impressive[end if] flesh with your hands alone, feeling up the quickly moistened flesh from every angle as it keeps throbbing within your grasp. With a cock so big, you really need to put a good effort at moving your hands from its girthy base to the mostly flat head, noticing now that the wyvern's shaft slightly mimics the plated scales of his undercarriage along its sides, giving it a distinctive ribbing. All this causes your attendee to growl lowly in approval. He cannot help but writhe against the attention you offer him, its persistent oozing noticeably staining his torso with precum.";
+	say "     Your continued attention keeps tempting the wyvern to fully give in, and you feel that he eventually does, thrusting upwards slightly amidst your efforts at giving him pleasure. As you gradually pick up the pace, so too does the wyvern's breath become more shallow, clawing weakly at the ground as your grow more and more determined to set him off. As he steadily approaches his point of no return, his movements become more desperate, wanting that release so badly that he looks at you with pleading eyes, pressing you to not stop what you are doing. Since you are both on the same page, you could consider how you shall finish this. Would you prefer to try to swallow his load? Otherwise, you will leave him to fire into open air. Either way, it will likely make a huge mess.";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Attempt to swallow his load.";
+	say "     ([link]N[as]n[end link]) - Rub him until he makes it rain.";
 	if Player consents:
-		increase PlayerFaceFucks by 1;
-		say "     Closing in, your lips firmly embracing its sputtering head, [if scalevalue of Player < 4]it's much too large for you to fit[else if scalevalue of Player is 4]you try your best to engulf it[else]you're quick to exploit your large size, engulfing it entirely[end if] within the confines of your maw, tongue lapping eagerly against his flesh. This is more than enough to set the wyvern off, roaring out in bestial ecstasy as your eager hole is quickly flooded with wave after wave of his virile cum, [if scalevalue of Player < 4]very quickly becoming too much for you and sputtering from your lips[else if scalevalue of Player is 4]which proves quite a challenge to keep up with, soon oozing from your lips[else]proving not to be that much of a challenge for you to keep up with, milking him for every last drop[end if].";
+		say "     Deciding to give it a try, you close in, your lips firmly embracing its sputtering head[if scalevalue of Player < 4]. It is much too large for you to fit[else if scalevalue of Player is 4]. You try your best to engulf it[else]. You manage, and only due to your size, to get just a portion of it[end if] within the confines of your mouth, but you eagerly move your tongue in laps and wiggles against his flesh with such effectiveness that the wyvern fails to hold himself any longer. Roaring out in bestial ecstasy, you feel this powerful surge of creamy warm liquid being shot, wave after wave, towards your throat, the beast's huge load [if scalevalue of Player < 4]very quickly becoming too much for you. It pops out from your lips, blasts onto your face and soon gives you a messy cum bath as it fires out of control and all over your body, the sheer force and quantity nearly knocking you over as it threatens to overwhelm you. Fortunately, the wyvern stops cumming before you practically drown on the stuff[else if scalevalue of Player is 4]proving quite a challenge to keep up with, soon oozing from your lips as you try your best to keep swallowing it. You last a good time, but inevitably, the cum pops out from your lips and ends up splattering on your face and chest, covering your front side in a fair bit of spunk all over[else]proving not to be an impossible challenge for you to keep up with. With enough determination, you manage to hold your ground and steadily swallow each generous spurt with loud gulps, only a single droplet oozing from your lips by the time the wyvern is done cumming[end if].";
 	else:
-		say "     In a few, brief seconds you manage to set off the wyvern, roaring out in bestial ecstasy as his scaled body is splattered with wave after wave of his virile cum. No doubt this is quite an embarrassing sight for the once intimidating beast, now nothing but a shameful, lust-hazed mess of a creature.";
-	say "     Taking a moment to catch your breath and clean yourself of the substantial mess he's made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
-	increase Libido of Player by 3;
-	if PlayerFaceFucks > 0:
-		CreatureSexAftermath "Player" receives "OralCock" from "Wyvern";
+		say "     Deciding that you would like to keep your distance from that huge cock, you stick to your hands and continue to stroke him. It is just a matter of several seconds until the wyvern's climax begins to show sign, and once that happens, you do not stop. Pushing his meat forward a bit, you manage to get it to lean towards the beast just as you set him off. He roars out in bestial ecstasy as his scaled body is splattered with wave after wave of his abundant load, giving you quite a spectacle as all that spunk comes raining down all over him. His massive cock continues to give out powerful throbs between your hands with every shot right until the end. No doubt this is quite an embarrassing sight for the once intimidating beast, now nothing but a shameful, lust-hazed mess of a creature... But he does not seem to mind that any longer.";
+	WaitLineBreak;
+	if bitch breaker gel is owned and player is kinky:
+		say "[wyvmale_3_cockgrowth]";
+	else:
+		say "     Taking a moment to catch your breath and clean yourself of the substantial mess this large wyvern has made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
+		increase libido of player by 3;
+	CreatureSexAftermath "Player" receives "OralCock" from "Wyvern";
+
+to say wyvmale_3_cockgrowth:
+	say "     That was quite a blast, literally, and the whole display has left you still unsatisfied. The wyvern is still weak and unable to offer any resistance, so perhaps, you could still play with him some more... You look back at his girthy, massive piece of meat still out, leaning against his scaled bottom, and an idea comes to mind once you remember yourself what you have among your personal items. Either by curiosity or sheer deviancy, you wonder what effect one of those zephyr products would have on him, namely this one called [']Bitch Breaker gel['] that is supposed to grow someone's penis substantially. The thing is already so big, but there is fun to be had with things that achieve ridiculous proportions, sometimes.";
+	say "     You could fetch one from your inventory and apply it on the wyvern's endowment... You will either have some deviant fun, learn something new or just continue humiliating the flying lizard as he, hopefully, gains an obscenely gigantic dick that would no longer be concealable. All sorts of fantasies are crossing your mind, in this moment, but what shall you do?";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Apply the Bitch Breaker gel on the wyvern's cock.";
+	say "     ([link]N[as]n[end link]) - Decide that this is a waste of your time and be on your way.";
+	if Player consents:
+		ItemLoss bitch breaker gel by 1;
+		say "[MeetTheWyvernPatriarchCount]"; [EXTRA ACTION - Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
+		say "     You totally have to do it. There is no way you are going to waste the chance, now that you have this wyvern still at your mercy and you just so happened to have this idea! Immediately plucking your item of choice from your personal belongings, you then open the small container and have a look at this thick bright red gel substance, with some of it having managed to stick to the top of the jar. When looking back at the wyvern's cock, you realize there is a lot to cover, so you will have to, most likely, use the whole thing. Then, an idea comes to mind as you look at the whole mess, and decide that you will be mixing the gel with the beast's cum in order to smear it all across his manhood. So, without any further ado, you put your plan into practice.";
+		say "     By sliding your hand into the jar, you bring a good chunk of its contents and begin your work, the creature's cum managing to dilute it and allow you to spread it more easily over that massive endowment. The wyvern grunts at this, possibly because he must be oversensitive after having hit his climax, and seems to wiggle around in discomfort, but soon, you feel his organ beginning to slowly engorge once more. It is nothing out of the ordinary, for now, so you continue, bringing some more gel and rub it all across the wyvern's dick. Eventually, the jar is emptied, and what is left to do is to just carry on spreading it until the entire chemical is fully absorbed into the cock. Strangely, the wyvern already seems greatly aroused by this... You doubt this is already a growth effect, as it takes time to react, but...";
+		WaitLineBreak;
+		say "     ... His cock is steadily growing, soon past its previous full erect size, and your eyes widen in a mixture of shock and lust. Your kinky nature gets the better of you and compels you to continue caressing the evergrowing meat before you, and it does not seem to stop gaining more and more mass... It feels a lot heavier, thicker and begins to drool like crazy, these thick drops of precum rapidly oozing out of its tip and sliding down across the shaft. You think it would stop here, but no, it goes on and on, surpassing [if scalevalue of Player < 5]you[else]even you[end if] in size by a lot, both girth and length, all while the wyvern just moans and roars in pure bliss. Soon, you are showered by several gushes of his precum as it gets shot out by sheer excitement.";
+		say "     Though, his cock growing was not the only effect the gel gave the wyvern. Your heart nearly jumps off your chest as you realize the beast managed to flip you over and pin you down under him quicker than you could react. He grins with satisfaction as the tables have turned, and proceeds to smother you underneath his gigantic size, washing you in even more precum as you struggle against his newfound vigor. Unable to get away from under the really ridiculously gigantic manhood, he grinds it against you while fully enjoying the sensation your much punier body, by comparison, provides. With bestial lust, he only seems to care about pleasuring himself while you try not to drown in the copious amounts of thick precum that come down washing all over you.";
+		WaitLineBreak;
+		say "     Luckily, you are still able to withstand the sheer force of the wyvern's giant shaft without being utterly crushed by it, but you think it still found room to grow a few additional inches. It is so big that whenever the beast thrusts forward, your vision is completely obscured by it. Even as you push against it, his heavy cock battles your strength with ease and keeps you stuck between itself and the ground, only throbbing harder at every movement you make. Everytime you touch its warm body, it seems to pulsate as if yearning for more. Knowing that you will not make it out of here until the wyvern is fully satisfied, once more, you think that, perhaps, the best move would be to enjoy your predicament and make friends with this grown-up dick.";
+		say "     You give it a kiss and try to wrap your legs and arms around the very girthy shaft, giving it your best attempt at further pleasing the wyvern, and he keeps grinding it against you, steadily. Its size only leaves you able to stretch your limbs, barely even hugging the massive meat as you feel it rubbing against your entire body. But this does not last for much longer, as the spike of lust is enough to cause the wyvern to approach his second climax soon, after just some more time of grinding. With a fairly increased pace, the beast makes his last thrusts as his cock begins to throb dramatically, making your whole body shake along with it. Then, the wyvern pulls back enough to aim his dick's head at you...";
+		WaitLineBreak;
+		say "     This massive surge of cum hits you right on the face, the first gush being enough to blind you and make you choke for several moments before he thrusts forward, firing the rest of his massive load right past your head for like another minute. His spurts are so huge and heavy you can even hear the liquid falling onto the ground in loud splashes, all this happening while the wyvern just roars in ecstasy, overwhelmed by the sheer amount of pleasure he is getting from his significantly augmented cock.";
+		WaitLineBreak;
+		if vorelevel is 3: [CV scene]
+			say "[wyvmale_3_cockvore]";
+		else:
+			say "     Satisfied with his revenge, the wyvern looks down at you in contempt and proceeds to take off, his giant dong flapping around before it recedes back to its scaled confinements... almost entirely. At least a quarter of it struggles to be concealed, but you are still given a sort of funny view as a now big dicked wyvern flies off into the distance, leaving you in a puddle of his jizz. Your lusts are not sated, however. They are even more lit after experiencing this craziness.";
+			increase libido of player by 10;
+	else:
+		say "     You are kinky, but not enough to go forward with such a deviant idea, at least in this situation. So, you stick to just taking a moment to catch your breath and clean yourself of the substantial mess this large wyvern has made, then set off and leave the exhausted and spent monster, satisfied with the work you had already done... Albeit still a bit aroused yourself from all of it.";
+
+to say wyvmale_3_cockvore:
+	say "[MeetTheWyvernPatriarchCount]"; [EXTRA ACTION - Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
+	say "     But even after a second orgasm, the wyvern does not seem satisfied, grunting about as he persistently continues to rub his cock on your body, his meat refusing to soften. He does not seem annoyed, however, only more increasingly horny, which begins to worry you. He then looks down at you, bliss evident in his reptilian muzzle, and slides his manhood all the way down until its tip is facing your feet. You shrug as you attempt to understand what he wants, and then, he thrusts forward to bring that mostly flat head over your soles. At first, you think he merely wants a third round, so before he decides to crush you or anything, you begin to move your feet across his cock, which pleases the beast... But you have yet to figure out why is that slit of his getting wider.";
+	say "     One of your feet happen to slide into the gaping orifice and, suddenly, his cock begins to throb, gushing out this slippery precum all over you, once more. Your foot also sinks into his cock by the time you look back at it, and it is then that you realize the wyvern's true motives. You try to get it off, but it is too late. Another throb and your ankle is caught in it, and during your desperate struggle, you somehow manage to cause your other foot to slip in, too, a surprisingly pleasant sensation for the wyvern as he lets out a growl. There is no escape, as the pull his cock has on you is so great that, with each additional throb, you feel yourself traveling deeper into it!";
+	WaitLineBreak;
+	say "     Now, it has managed to pull you up to your knees, and the creature's hungry giant cock continues to swallow you, inch by inch. Your body slowly slides in deeper, threatening to fully disappear into the girthy and vast shaft that yearns for you. No amount of thrashing can stop you from being down to your chest and beyond, its slit having slurped you in a way that only leaves your head out, its fleshy walls constricting you from all around you and moving in an almost peristaltic fashion... You cannot stop the inevitable. The last thing you feel before you are fully enveloped in warm and moist flesh is the slit itself closing in around your face and head, leaving you in complete darkness as you are forced to travel through the giant shaft.";
+	say "     Your ordeal is yet far from ending, it is more like a beginning. With his prey - so, you - captured and slowly being pulled towards the beast's internal gonads, the wyvern feels content enough to set off and fly around with you still inside him. Eventually, you are dropped inside his cum factories that have also grown up in size, almost as if to accommodate your arrival. Thick jizz sloshes around you and quickly overwhelms you as you have no other choice but to let some of it in your mouth. This space is tight, moist and very hot, rapidly making you sweat while you are in here, trapped inside the wyvern's orbs as he flies around, as if to continue to torment you for humiliating him before.";
+	WaitLineBreak;
+	say "     However, the creature's plans to do this backfire, as his cock flops around in the air, and the breeze, perhaps, makes it all feel even better... His erection persists, and soon, he begins to crave for release. Before you are fully submerged in cum, the flying lizard's climax is hit for a third time, and he is forced to land somewhere as this really powerful orgasm even causes his wings to spasm, the sheer force of his shots draining the wyvern of his last strength. You are thrown out of his massive cock amidst this, in the middle of an almost endless torrent of cum, right onto the ground, hard enough for it to be painful. The beast seems to feel even angrier, but decides to just carry on flying away from you.";
+	say "     And you are left here, covered in cum, bruised and lying on the ground, waiting for your own strength to return. It takes a while until you manage to catch your breath and clean yourself of the substantial mess this large wyvern has made, then set off. This entire thing was very exhausting.";
 
 to say wyvfem_1: [Cunt Pitching]
 	say "     [if scalevalue of Player < 5]Given how massive the wyvern is, it takes you a bit of effort to properly position the beast[else]With a little work, you manage to position the wyvern[end if] for your entry, whose exhausted form can only abide your preparations. Rough, chitinous scales obfuscating the hole, you're forced to use a digit to find where it's hiding, your exploration soon rewarded as they eventually part around your appendage to expose soft, supple flesh to your touch.";
@@ -1013,10 +1061,6 @@ to wyvore:
 				wait for any key;
 				next;
 			say "Invalid action.";
-
-boundsegment is a number that varies.
-boundmod is a number that varies.
-boundcounter is a number that varies.
 
 to say wyvstrugglebar:
 	if boundsegment is 1:
@@ -1878,8 +1922,6 @@ to wyverndisengage:
 				decrease wyvkinatt by 1;
 				decrease pewtergenitalcap by 1;
 				now tempnum is 0;
-
-tempnum2 is a number that varies.
 
 to wyvernmatron:
 	if a random chance of tempnum2 in 14 succeeds:

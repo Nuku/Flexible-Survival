@@ -451,7 +451,7 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
-	now loot entry is "Catboy Fluff"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Nekomimi Boy Fluff"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 15; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is "";
 	now CumItem entry is "";

@@ -82,6 +82,7 @@ to say ResolveEvent Orcish Slave Raid:
 						WaitLineBreak;
 						say "     Your inner orc tells you that you should just keep the well-bred fox for yourself, as a start of a whole harem of men to fuck, though you realize that that's not an option as you contemplate it for a second. By now, the three other orcs are rested again, and you're also a bit tired from just having come, so a fight is far less certain. So with a sigh, you surrender the handsome fox back to the three slavers, then watch his limp, exhausted form being carried off over the leader's shoulder. His shapely ass and cum-dripping hole is the last you see of the fox before the orcs turn a corner and move out of sight.";
 						move Val to Slave Cell 1;
+						now ValPregnancy is 1;
 						now ValPregCounter is 48;
 						now thirst of Val is 2;
 						now SlaveRaidEncounters is 2;
@@ -107,7 +108,10 @@ to say ResolveEvent Orcish Slave Raid:
 								say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 								if Player consents:
 									LineBreak;
+									choose a row with name of "Orc Warrior" in the Table of Random Critters;
+									now enemy type entry is 1; [unique orc, not for impregnation]
 									say "     [BeatenOrcSexMenu]";
+									now enemy type entry is 0; [reset to non-unique]
 								else:
 									LineBreak;
 									say "     You walk away after checking them over for loot.";
@@ -138,7 +142,9 @@ to say ResolveEvent Orcish Slave Raid:
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 						if Player consents:
 							LineBreak;
+							now enemy type entry is 1; [unique orc, not for impregnation]
 							say "     [BeatenOrcSexMenu]";
+							now enemy type entry is 0; [reset to non-unique]
 						else:
 							LineBreak;
 							say "     You walk away after checking them over for loot.";
@@ -147,7 +153,7 @@ to say ResolveEvent Orcish Slave Raid:
 		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those little weaklings? I wanna fuck!', followed by another voice answering 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone soon.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such big and muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
 		LineBreak;
 		now inasituation is true;
-		now OrcSpecialFightNumber is 6; [fighting Yatur]
+		now OrcSpecialFightNumber is 4; [fighting Yatur]
 		challenge "Orc Warrior";
 		if fightoutcome is 22:
 			say "[SubmitToOrcSlavers]";
@@ -184,7 +190,9 @@ to say ResolveEvent Orcish Slave Raid:
 					say "     [bold type]Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 					if Player consents:
 						LineBreak;
+						now enemy type entry is 1; [unique orc, not for impregnation]
 						say "     [BeatenOrcSexMenu]";
+						now enemy type entry is 0; [reset to non-unique]
 					else:
 						LineBreak;
 						say "     You walk away after checking them over for loot.";
@@ -195,6 +203,7 @@ to say RunFromOrcSlavers:
 		now Resolution of Orcish Slave Raid is 3; [ran]
 		say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of Player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
 		move Val to Slave Cell 1;
+		now ValPregnancy is 1;
 		now ValPregCounter is 48;
 		now thirst of Val is 1;
 		now SlaveRaidEncounters is 2; [fox enslaved]
@@ -214,6 +223,7 @@ to say SubmitToOrcSlavers:
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if Player is purefemale]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if Player is purefemale]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and just enjoy the other one' and they unceremoniously turn around and leave, carrying their captive with them.";
 					move Val to Slave Cell 1;
+					now ValPregnancy is 1;
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
@@ -224,6 +234,7 @@ to say SubmitToOrcSlavers:
 			LineBreak;
 			say "     [bold type]WRITER'S NOTE: Since you've selected [']less anal['], you won't be dragged off to the orc lair, as the main way of orc reproduction is anal sex. It's all man on man action in there! Should you want to play through this content nevertheless, adjust your anal settings and hunt for the event again.[roman type][line break]";
 			move Val to Slave Cell 1;
+			now ValPregnancy is 1;
 			now ValPregCounter is 48;
 			now thirst of Val is 1;
 			now SlaveRaidEncounters is 2;
@@ -255,6 +266,7 @@ to say SubmitToOrcRaid:
 	move player to Slave Cell 2;
 	now OrcSlaverCaptureTime is turns;
 	move Val to Slave Cell 1;
+	now ValPregnancy is 1;
 	now ValPregCounter is 48;
 	now thirst of Val is 1;
 	now SlaveRaidEncounters is 2;
@@ -283,6 +295,7 @@ to say LoseToOrcSlavers:
 				else:
 					say "     As you collapse in exhaustion, one of the orcs looks down on you and grins, lust in his eyes. 'You got spunk, [if Player is purefemale]girl[else]boy[end if] - I like it. Try to keep some of it when you become a breeder.' His buddy steps up and gives your ass a rough squeeze, then says 'Hold your horses, Yatur - this one has that crazy gleam in [if Player is purefemale]her[else]his[end if] eyes... might be a biter. Remember the maniac squirrel bitch?' At that comment, the first orc crosses his legs with a pained expression, then gives an annoyed grunt and pushes you away from him. He says 'Let's leave this wretched thing and just enjoy the other one' and they unceremoniously turn around and leave, carrying their captive with them.";
 					move Val to Slave Cell 1;
+					now ValPregnancy is 1;
 					now ValPregCounter is 48;
 					now thirst of Val is 1;
 					now SlaveRaidEncounters is 2;
@@ -293,6 +306,7 @@ to say LoseToOrcSlavers:
 			LineBreak;
 			say "     [bold type]WRITER'S NOTE: Since you've selected [']less anal['], you won't be dragged off to the orc lair, as the main way of orc reproduction is anal sex. It's all man on man action in there! Should you want to play through this content nevertheless, adjust your anal settings and hunt for the event again.[roman type][line break]";
 			move Val to Slave Cell 1;
+			now ValPregnancy is 1;
 			now ValPregCounter is 48;
 			now thirst of Val is 1;
 			now SlaveRaidEncounters is 2;
@@ -327,6 +341,7 @@ to say LoseToOrcRaid:
 	move player to Slave Cell 2;
 	now OrcSlaverCaptureTime is turns;
 	move Val to Slave Cell 1;
+	now ValPregnancy is 1;
 	now ValPregCounter is 48;
 	now thirst of Val is 1;
 	now SlaveRaidEncounters is 2;
@@ -1524,10 +1539,10 @@ instead of conversing the Orc Mob:
 								say "     Holding on to your newly-created orc breeder tightly, you really take out all the stops and hammer his asshole harder than ever. With the high of having won a fight, as well as the satisfaction of taking not one but two virgin soldiers as your slaves today, it doesn't take much longer before your roaring arousal reaches breathtaking heights - and your cock erupts like a volcano, filling the eagerly moaning Brian with throb after heavy throb of orcish seed. The man screams in pleasure as real orc cum finally fills him, not just pre, and you can feel him shiver and tremble under you and around your manhood as he joins you in orgasm.";
 								say "     Between his moans and your own, you manage to make out another voice when your conscious thoughts return after the climax starts to ebb off a little - you almost forgot Ike! Leaning your chest a bit to the side, you look past Brian's well-bred ass and your hips tightly pressed against it and spot the other soldier, kneeling on the ground. The by now also green-skinned shaft of his buddy is held tightly between Ike's lips as the man suckles on him with eager attention, swallowing every last drop of cum that Brian does provide. Pleased by the soldier's slutty behavior, you decide to give him a treat and pull out of the gripping asshole around your shaft. The wet slurp draws Ike's attention and his eyes go round as he focuses on your cum-dripping pole dangling just in front of his face - it barely takes a second for him to wrap his lips around you and start suckling.";
 								WaitLineBreak;
-								say "     You let Ike continue to devour your cock for a few moments, enjoying the tongue-action as he experiments with ways to please you - and milk out some more tasty cum, then eventually pull him away from it when its all clean and getting a bit sensitive too. Being well on the way to becoming an orcish breeder himself by now, the cum-drunk guy immediately pounces on another source of his favorite treat. New moans rise and echo between the buildings as he shoves his face between Brian's cheeks and starts to eat the man out. Stepping back, you observe their antics with a smile. Two newly-made breeder bitches, just like you need for the contest. Though maybe... you could keep them to yourself? There definitively is something to be said about a private pair of sluts to serve and... any and all thoughts you were having in that regard are dashed as the main bunch of roaming orcs wanders around the corner and several of them spot you.";
+								say "     You let Ike continue to devour your cock for a few moments, enjoying the tongue-action as he experiments with ways to please you - and milk out some more tasty cum, then eventually pull him away from it when its all clean and getting a bit sensitive too. Being well on the way to becoming an orcish breeder himself by now, the cum-drunk guy immediately pounces on another source of his favorite treat. New moans rise and echo between the buildings as he shoves his face between Brian's cheeks and starts to eat the man out. Stepping back, you observe their antics with a smile. Two newly-made breeder bitches, just like you need for the contest. Though maybe... you could keep them to yourself? There definitely is something to be said about a private pair of sluts to serve and... any and all thoughts you were having in that regard are dashed as the main bunch of roaming orcs wanders around the corner and several of them spot you.";
 								say "     'Oh yeah, told ya I heard a slut moan for more!' one of the orcs at the very front tell his neighbor, then casually walks up to you and gives you a friendly slap on the shoulder. 'Prime meat you found us there, good job!' And with that said, he steps past you, pulling out his rapidly hardening prick as he does so. You're severely tempted to protest as he peels the uniform trousers off Ike and starts to line up his shaft with the man's virgin hole - but before you can do, a throng of half-drunk orcs are all around you, congratulating and sloshing you with a stein of orc brew thrust at your chest. While you're still accepting fist-bumps and are pushed into taking a long pull of the brew to celebrate, the breathless grunt of Ike losing his cherry reaches to your ear.";
 								WaitLineBreak;
-								say "     Oh well, you knew they were for the orc lair as public breeders, but you somehow still would have liked to be the one to do the honors with both. A double-capture definitively puts you in good standing for the competition, and the presence of the drunken crowd also helps as your competitor comes to a short while later. He snarls a little at first, seeing that you took the credit for the soldier's capture, but after chugging down an offered drink - or three - he's happy enough to join the throng of orcs waiting their turn to fuck. The drinking, boasting and general carousing goes on quite a while as Ike and Brian are bred to over-flowing, with orc after orc dumping their loads into the completely cum-drunk guys. Slowly, the other hunters come back to the group in that time as well, sometimes carrying new slaves over their shoulders - which helps take the pressure off your two breeders a little. Still, they're far from able to satisfy everyone without waiting turns - so there'll have to be more hunts, that's for sure.";
+								say "     Oh well, you knew they were for the orc lair as public breeders, but you somehow still would have liked to be the one to do the honors with both. A double-capture definitely puts you in good standing for the competition, and the presence of the drunken crowd also helps as your competitor comes to a short while later. He snarls a little at first, seeing that you took the credit for the soldier's capture, but after chugging down an offered drink - or three - he's happy enough to join the throng of orcs waiting their turn to fuck. The drinking, boasting and general carousing goes on quite a while as Ike and Brian are bred to over-flowing, with orc after orc dumping their loads into the completely cum-drunk guys. Slowly, the other hunters come back to the group in that time as well, sometimes carrying new slaves over their shoulders - which helps take the pressure off your two breeders a little. Still, they're far from able to satisfy everyone without waiting turns - so there'll have to be more hunts, that's for sure.";
 								say "     By the time your orc compatriots are sated, all of you eventually make your way back to the lair. As the orcs that remained there greet you, Boghrim steps forward to inspect the new captures. He grins broadly at their well-used state and the fact that they're all so high on orc cum that they had to be carried in. 'A very nice haul guys. Now shut up for a moment,' the orc boss shouts over the noise of the crowd, and after a few moments the orcish horde turns to him, more or less attentive. 'We still gotta choose the winner of this round. So, what's your verdict of these bitches?' The room gets loud again instantly as people chuckle and call in their favorites, among which Ike and Brian are prominently named. Seems like you decided this round for yourself and Boghrim grabs your wrist to pull your muscled arm up in a victory pose.";
 								say "     [bold type]That was fun - you feel like you should come back here sometime soon and join in for another 'hunt'. Best talk to the orc crowd when you're ready.[roman type][line break]";
 								CreatureSexAftermath "Human" receives "AssFuck" from "Player";
@@ -1578,7 +1593,7 @@ instead of conversing the Orc Mob:
 						else: [take him]
 							LineBreak;
 							say "     'Huh?!' the gorilla grunts in confusion, barely able to imagine that anyone could want something else other than compete for possession of an egg-shaped ball. He starts out to say, 'Now come on dude, you really got a great chance on the team and - aaaahhh!' Words fail him as pull his legs up and hook them over your shoulders, raising his ass to be on just the right height for your crotch. Easily pulling aside the loincloth of your orcish outfit, you rub the green-skinned hard shaft thus revealed up and down between his furry cheeks, then set the pre-cum oozing tip against your captive gorilla's pucker. The easy way in which his opening stretches to envelop your cockhead tells you that this primate isn't a novice at getting fucked - in fact, his insides are slicker than you anticipated, a clear sign that he's had sex with another dude today. But his partner surely wasn't an orc - so you're about to introduce the college athlete to a whole new level of fun.";
-							say "     Seeing no reason to hold back, you plunge right in, thrusting deep into the lying gorilla. Man, he really feels great to be in, gripping your shaft tightly even as he takes its whole length without any trouble. There is definitively something positive to be said about this gorilla's training regimen, as he obviously works out all his muscles - even those inside his ass. Pounding his furry butt, you make the burly simian moan and grunt - and looking down, you see that his own dick is fully erect and leaking pre on those defined abs it rests against. This might not have been what he wanted at first, but the gorilla is more than ready to go with the program, moaning loudly as you bump his prostate again and again.";
+							say "     Seeing no reason to hold back, you plunge right in, thrusting deep into the lying gorilla. Man, he really feels great to be in, gripping your shaft tightly even as he takes its whole length without any trouble. There is definitely something positive to be said about this gorilla's training regimen, as he obviously works out all his muscles - even those inside his ass. Pounding his furry butt, you make the burly simian moan and grunt - and looking down, you see that his own dick is fully erect and leaking pre on those defined abs it rests against. This might not have been what he wanted at first, but the gorilla is more than ready to go with the program, moaning loudly as you bump his prostate again and again.";
 							WaitLineBreak;
 							say "     In a slightly slurred voice, the gorilla soon says, 'Wow! Your dick feels soo good! Oh. Myyy. Gooooddd!' Obviously, the pre you've been oozing into his depths is showing its effects. With a grin on your face, you let the gorilla know that that's nothing compared to what will be next, then speed up your thrusts even more, really giving the burly guy everything you got. Fucking a muscled male gorilla right in the open, on a lawn on the college campus is quite a bit of fun - especially as there are passersby who can't help but ogle you rutting your partner. One of them even stops completely and walks a bit closer to watch, a young woman in tight clothes who soon pushes a hand down the front of her shorts to rub herself.";
 							say "     Leaning over your captive, you give him a demanding kiss, making your tusks scrape against his equally impressive canines in a pleasing way. As you come up again and let him catch a breath, the next thing you do is draw his attention to the audience - by now having grown to include an incubus who has one hand under the woman's shirt and his dick out being stroked by the other one. You tease your moaning gorilla by saying he should speak up, tell everyone how he fells and what he wants - and he does so without question, grunting out his lusty noises with increased intensity. 'Yeaaahhh! Fuck me! FUCK that feels great. Pound my furry ass!' can be heard echo between the campus buildings and you hammer into him with great pleasure at having such an eager partner.";

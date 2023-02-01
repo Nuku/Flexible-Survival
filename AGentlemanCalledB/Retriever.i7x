@@ -14,13 +14,13 @@ to say losetoRetriever:
 			say "Once she's satisfied that you're as ready as she is, the retriever moves to bring her needy slit into position over your erect meat and slowly lowers herself onto you with a whimpering yip. As she raises and lowers herself against you, you find yourself slipping into a lust-filled haze, lost in the pleasure this sexy canine is forcing on you. Before long you feel yourself approaching your peak as the retriever quickens her pace, but just before you climax she reaches it first, howling in pleasure as she convulses above you, pushing you over the edge you fill her needy body with your seed.";
 			WaitLineBreak;
 			say "Afterwards, she collapses atop you, almost as exhausted as you are. The two of you lay there for some time, lost in the afterglow of your lovemaking, before she raises herself off you. She rubs her belly contently as she pads away, leaving you to recover on your own.";
-			NPCSexAftermath Karen receives "Pussyfuck" from Player;
+			CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 		else:
 			say ". As she strips you of your clothing and gear, you see her face overcome with disappointment as she discovers you lack the prize she's looking for. Her expression brightens again a moment later and she dives face-first into your crotch, clearly intent on making sure you're satisfied even if she quite doesn't get what she wanted.";
 			say "As she drags her wet canine tongue across your feminine slit you can't help but shiver in delight. As her licking and nibbling continues you quickly find yourself approaching climax and as a final push to bring you over the edge the lustful canine drives her muzzle into you, licking at your depths as you scream in pleasure, soaking her muzzle and face in your juices.";
 			WaitLineBreak;
 			say "Before getting up to leave you canine playmate gives you one last long doggy kiss, giving you a taste of your own juices then leaves you to recover alone, you watch her tail wag happily behind her as she walks away still licking your juices from her muzzle.";
-			NPCSexAftermath Karen receives "OralPussy" from Player;
+			CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
 
 to say beattheRetriever:
 	if HP of Karen is 4:
@@ -35,7 +35,7 @@ to say beattheRetriever:
 					say "As the pace quickens you rapidly approach climax, and based on her rising pitch and increasingly forceful bucking you can tell she is as well. With one final thrust you drive your entire length into her, pushing you both over the edge. You fill her womb with your seed even as her own female juices are awash around you.";
 					WaitLineBreak;
 					say "You both lay there for some time, basking in the afterglow before you finally pull out of her. You quickly gather your things and head on your way, leaving the retriever girl to recover alone, rubbing her belly happily with a vapid smile across her muzzle.";
-					NPCSexAftermath Karen receives "PussyFuck" from Player;
+					CreatureSexAftermath "Retriever Female" receives "PussyFuck" from "Player";
 				else:
 					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
 					say "Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
@@ -43,8 +43,8 @@ to say beattheRetriever:
 					WaitLineBreak;
 					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
 					say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";
-					NPCSexAftermath Karen receives "OralPussy" from Player;
-					NPCSexAftermath Player receives "OralPussy" from Karen;
+					CreatureSexAftermath "Retriever Female" receives "OralPussy" from "Player";
+					CreatureSexAftermath "Player" receives "OralPussy" from "Retriever Female";
 			else:
 				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
 		else:
@@ -84,8 +84,8 @@ When Play begins:
 	add "Retriever Female" to infections of TailList;
 	now Name entry is "Retriever Female";
 	now enemy title entry is "Female Retriever";
-	now enemy Name entry is "Karen";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is "";
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[RetrieverAttack]";
 	now defeated entry is "[beattheRetriever]";
 	now victory entry is "[losetoRetriever]";
@@ -439,7 +439,7 @@ This is the Retriever Female Infection rule:
 			else if Retriever Girl is Tamed:
 				say "     As the last of your resistance fades and the bestial needs of the retriever bitch take full control you bound off happily into the city and Karen quickly follows suite. The two of you eventually catch a familiar male scent, and your bodies, eager for an alpha's touch, soon lead you to him. With your minds gone none of you are ever entirely aware of your previous relationships, but somehow you know you belong together. And so your small retriever pack sets off into the city, eager to bolster your numbers and enjoy your carefree lives as lusty canines.";
 			else if HP of Rex > 5:
-				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again";
+				say "     As your mental resistance begins to slip away you find yourself becoming more and more the retriever bitch your body is urging you to be. Soon you end up back at Rex's home and noting your failing struggle to maintain control he takes advantage of your weakened state of mind, offering you the collar and a place in his home once again.";
 				say "     This turns out to be the final push your mind needed, and as you reach to accept the collar the last of your resistance fades away, finally surrendering yourself t a simple life as one of Rex's happy pets.";
 				if Player is female:
 					if "Sterile" is not listed in feats of Player:
@@ -491,6 +491,9 @@ This is the Rex' and Karen's Epilogue rule:
 			else:
 				say "     When the military finally arrives and begins evacuating people from the city Karen happily comes with you, following you wherever your life takes you. She spends most of her time at your home, cooking, cleaning and generally being a good companion. You frequently take the time to show her how thankful you are for all her help, both with innocent play, trips to the [one of]park[or]beach[or]city[at random], as well as more lustful playtime.";
 				if Player is male:
-					say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever/[BodyName of Player] hybrid pups prove to be wonderful companions, just like their mother.";
+					if CockSpeciesName of Player is "Retriever":
+						say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever pups prove to be wonderful companions, just like their mother.";
+					else:
+						say "     Eventually one of these romps results in Karen's belly swelling round with life, and her litter of retriever/[BodySpeciesName of Player] hybrid pups prove to be wonderful companions, just like their mother.";
 
 Retriever ends here.

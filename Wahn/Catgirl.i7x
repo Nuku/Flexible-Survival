@@ -458,13 +458,13 @@ to say FionaRepeatMeeting:
 	if HP of Fiona is 4:
 		now HP of Fiona is 5;
 
-instead of going up from Bunker while (HP of Fiona > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
+instead of going up from Bunker while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
 
-instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in Grey Abbey Library and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -474,6 +474,7 @@ instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in G
 
 to say FionaFangSex:
 	if Dexterity of Fiona is 0:
+		project Figure of Fang_hard_icon;
 		say "     The library is filled with yowls, growls and the scratching or claws on the ground as you enter - and just a moment later, your catgirl Fiona streaks into view from behind a row of bookshelves, a hunted look on her face and her tail all thick and bushy. Her eyes go wide as she turns her head to look at you, and that small moment of distraction is enough to make her step on a book someone left lying on the floor, lose her balance and take a tumble. Only a second behind her is Fang, panting excitedly from the hunt after this intruder into his domain. The wolf is on top of the catgirl in a flash, standing over her and setting his jaws to lightly nip at the fur of her neck while he gives a warning growl.";
 		say "     Fiona stiffens under the feral wolf and you can see the claws on her hand-paws slowly sliding out of their sheaths as she prepares to claw her way out of this situation - only to pull back again as she feels something poke the side of her hips. Looks like Fang got excited in more way than one from the little chase, as his canine cock is dangling fully erect between his legs. Well, if the catgirl came to seek you out again, she's likely at the height of her heat, something the wolf will undoubtedly have smelled immediately. So even though she came for you, the look on Fiona's face as she glances back and sees Fang's shaft speaks volumes.";
 		WaitLineBreak;
@@ -487,6 +488,7 @@ to say FionaFangSex:
 		say "     ([link]Y[as]y[end link]) - Watch.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if Player consents:
+			project Figure of Fang_hard_icon;
 			LineBreak;
 			say "     Just a moment later, your catgirl Fiona streaks into view from behind a row of bookshelves, a hunted look on her face and her tail all thick and bushy. Her eyes go wide as she turns her head to look at you, and that small moment of distraction is enough to make her step on a book someone left lying on the floor, lose her balance and take a tumble. Only a second behind her is Fang, panting excitedly from the hunt after this intruder into his domain. The wolf is on top of the catgirl in a flash, standing over her and setting his jaws to lightly nip at the fur of her neck while he gives a warning growl.";
 			say "     Fiona stiffens under the feral wolf and you can see the claws on her hand-paws slowly sliding out of their sheaths as she prepares to claw her way out of this situation - only to pull back again as she feels something poke the side of her hips. Looks like Fang got excited in more way than one from the little chase, as his canine cock is dangling fully erect between his legs. Well, if the catgirl came to seek you out again, she's likely at the height of her heat, something the wolf will undoubtedly have smelled immediately. So even though she came for you, the look on Fiona's face as she glances back and sees Fang's shaft speaks volumes.";
@@ -541,7 +543,7 @@ to say FionaCarlMeet:
 				now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 		else:
 			LineBreak;
-			say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, there is a masculine grunt and lust-filled mrowl from behind you, followed by thrusting sounds and exultant pants and moans. They're definitively having a good time together...";
+			say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, there is a masculine grunt and lust-filled mrowl from behind you, followed by thrusting sounds and exultant pants and moans. They're definitely having a good time together...";
 			if Strength of Fiona is 0:
 				now Strength of Fiona is 1; [they fucked, player didn't watch]
 		NPCSexAftermath Fiona receives "PussyFuck" from Carl;
@@ -577,7 +579,7 @@ to say FionaCarlRepeatFuck:
 			now Strength of Fiona is 10; [they fucked, player did watch and Carl knows it]
 	else:
 		LineBreak;
-		say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, you hear thrusting sounds in a rapid pace, mixed with exultant pants and moans. They're definitively having a good time together...";
+		say "     You leave the two of them to have some fun in private and turn away, starting to walk to the other end of the large building to busy yourself with something. Before you've made more than a few steps, you hear thrusting sounds in a rapid pace, mixed with exultant pants and moans. They're definitely having a good time together...";
 	NPCSexAftermath Fiona receives "PussyFuck" from Carl;
 
 Section 4 - Endings

@@ -10,6 +10,7 @@ object	name
 Impregnator	"Impregnator"
 Impregnatee	"Impregnatee"
 child	"child"
+Impregnated Feral	"Impregnated Feral"
 
 Impregnator is a creature.
 The printed name of Impregnator is "Impregnator".
@@ -22,6 +23,17 @@ The printed name of Child is "Child".
 Child has a number called Gestation.
 Child can be born. Child is not born.
 
+Impregnated Feral is a creature. [standin character for pregnant enemies after combat sex]
+
+an everyturn rule:
+	if Libido of Impregnated Feral > 0: [knocked up by the player]
+		decrease Libido of Impregnated Feral by 1; [counting down]
+		if Libido of Impregnated Feral is 0: [birthing time]
+			say "     [bold type]Out of the blue, a sudden thought strikes you, making you remember the [MainInfection of Impregnated Feral] you recently had carnal relations with. You don't know how or why exactly, but you feel certain that your encounter resulted in them becoming pregnant and giving birth to your offspring. Somewhere out there in the city, a new life as entered the world.[roman type][line break]";
+			say "     While it is very unlikely that you will ever encounter your child - or the two of you will even recognize each other - you can't help but feel that they'll [one of]do great things[or]be an unholy terror[or]spread your genes far and wide[or]give you grandkids before long[or]dominate their surroundings[at random]. And whatever else, this is one more wild and feral inhabitant for the city, making it all the harder for the military to move in and regain control.";
+			extend game by a random number between 3 and 12;
+			increase FeralBirths by 1;
+			increase Score by 5;
 
 Chapter 1 - Definitions and Variables
 
@@ -317,7 +329,7 @@ to detailbirth:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the large egg that had been inside of you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
 			else if mpregcount < 3:			[First few times, painful]
-				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat, and your [FaceName of Player] face grimaces in pain with each painful shift. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of an egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat, and your [FaceSpeciesName of Player in lower case] face grimaces in pain with each painful shift. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of an egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 				increase mpregcount by 1;
@@ -359,7 +371,7 @@ to detailbirth:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
 			else if mpregcount < 3:			[First few times, painful]
-				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [FaceName of Player] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [FaceSpeciesName of Player in lower case] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 				increase mpregcount by 1;
@@ -518,7 +530,7 @@ To Birth:
 			else if pregtype is 1: [Normal Birth]
 				say "Fang presses himself against your side as you both gaze adoringly at the two bundles of fur that are held in your hands after sharing a brief but intense kiss. The second one born seems to be grasping the other's tail in his mouth, bringing a small smile to your face. [if scalevalue of Player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
 			else if pregtype is 2: [Anal Birth]
-				say "     As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of Player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+				say "     As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of Player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly smaller than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
 			say "     You carefully slump to the ground, exhausted from childbirth, but elated at bringing such adorable puppies into the world. Fang lies down next to you, equally as proud of his children as you are, and you are sure that his bond with you will be even greater than it was before, especially if the heartfelt look that he is giving you is anything to go by. You begin to stroke your children's backs as you look at them for who they are. A quick inspection reveals that one of your puppies is male while the other is female, your son having dark-gray fur and being slightly larger than his pale-gray-furred sister. Their eyes have yet to open, and they don't even seem capable of making any noise, mouthing silently at the air as they try to express something that is not understandable to you. Seeming to know what they want, Fang nudges them against your chest and guides each to an exposed nipple. With gusto, they begin to suckle, gulping down mouthful after mouthful of rich milk. They let out soft sighs as they continue to feed, a steady dribble of milky bubbles spilling from the corners of their mouths.";
 			now hunger of Fang is 2;
 			WaitLineBreak;
@@ -531,6 +543,8 @@ To Birth:
 			increase Charisma of Fang by 2;
 			now HP of Lux is 1;
 			now HP of Umbra is 1;
+			move Lux to Grey Abbey Library;
+			move Umbra to Grey Abbey Library;
 			now LuxUmbraMaturityCounter is 120;
 		else if hunger of Fang is 3:
 			increase Charisma of Fang by FangNewPuppies;

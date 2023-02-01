@@ -309,8 +309,9 @@ to say libguard4:
 	else:
 		now jamessex is 3;
 		say "     James is clearly tempted by the offer. Quite torn between his animal urges and his strong duty to guard this place. You slide up beside him and run a big paw down his body to give his groin a squeeze. You nibble his ear and suggest he take you right here, on the steps, part of you succumbing to the urge to mate this big, strong, devoted male. You whisper that he can guard the access while screwing you. Growling in his throat, he throws you down roughly and jumps atop you. Within moments, you have your clothes and pack off while the wolverine growls and nips at your neck and shoulder. You growl loudly in response and push him back, rolling onto all fours. He pounces back atop your wolverine body and grinds his throbbing cock against you.";
-		say "     'Oh, I haven't felt this horny in years,' he growls as he drives his throbbing cock into you, making you growl and claw at the stone beneath you. His large cock throbs inside you, pulsing with virility as he thrusts it into you again and again. He fucks you like a wild animal and you revel in it, just what your wolverine body needs. He nips and bites at you, only exciting you further. Bracing yourself, you support his weight atop you while his big paws fondle your breasts[if Player is male] and even make a few strokes at your cock[end if] while his large balls slap against you. He pumps hard and fast into you, driving himself in deep before unleashing his hot load into you with a triumphant roar. You roar as well as you feel his semen pumping into you, flowing into your womb and overflowing around his thick shaft.[impregchance]";
-		say "     But it doesn't stop there, the big wolverine rolls you onto your back and climbs atop you again. After licking and kissing at your breasts for a while and playing with your pussy, he climbs atop you and starts mating again. It is another wild, animalistic romp after another until you both collapse panting on the steps, reeking of sex and thoroughly satisfied. You are so wonderfully full to the point of overflowing with this strong, diligent wolverine's cum and your new instincts love it.[impregchance]";
+		say "     'Oh, I haven't felt this horny in years,' he growls as he drives his throbbing cock into you, making you growl and claw at the stone beneath you. His large cock throbs inside you, pulsing with virility as he thrusts it into you again and again. He fucks you like a wild animal and you revel in it, just what your wolverine body needs. He nips and bites at you, only exciting you further. Bracing yourself, you support his weight atop you while his big paws fondle your breasts[if Player is male] and even make a few strokes at your cock[end if] while his large balls slap against you. He pumps hard and fast into you, driving himself in deep before unleashing his hot load into you with a triumphant roar. You roar as well as you feel his semen pumping into you, flowing into your womb and overflowing around his thick shaft.";
+		say "     But it doesn't stop there, the big wolverine rolls you onto your back and climbs atop you again. After licking and kissing at your breasts for a while and playing with your pussy, he climbs atop you and starts mating again. It is another wild, animalistic romp after another until you both collapse panting on the steps, reeking of sex and thoroughly satisfied. You are so wonderfully full to the point of overflowing with this strong, diligent wolverine's cum and your new instincts love it.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Wolverine Guard";
 		infect "Wolverine Guard";
 		SanLoss 20;
 		if "Strong Psyche" is listed in feats of Player, SanBoost 5;
@@ -579,18 +580,18 @@ instead of using First Aid Manual:
 the scent of First Aid Manual is "     It smells like an old book.".
 
 Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of Doctor Matt > 0 and HP of Doctor Matt < 100 ):
-	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
+	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr. Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if Player consents:
-		say "     Showing Dr Matt the book, you suggest to him that you can act as reconnaissance for the military. You tell him that since you've been facing the creatures out there, you can provide information on their strengths, weaknesses, number and tactics. You add that having this information will help the soldiers be better prepared for the strains they'll encounter as well as probably get him more time to work while the military holds back to better prepare. With the promise of greater opportunity to investigate this outbreak, he accepts, telling you to prepare reports that can then be transmitted to the military forces.";
+		say "     Showing Dr. Matt the book, you suggest to him that you can act as reconnaissance for the military. You tell him that since you've been facing the creatures out there, you can provide information on their strengths, weaknesses, number and tactics. You add that having this information will help the soldiers be better prepared for the strains they'll encounter as well as probably get him more time to work while the military holds back to better prepare. With the promise of greater opportunity to investigate this outbreak, he accepts, telling you to prepare reports that can then be transmitted to the military forces.";
 		extend game by 24;
 		increase score by 30;
 		now mattintel is 1;
 	else:
-		say "     Deciding not to help the military in this way, you take a moment to reorganize your thoughts before speaking to Dr Matt on other matters.";
+		say "     Deciding not to help the military in this way, you take a moment to reorganize your thoughts before speaking to Dr. Matt on other matters.";
 		now mattintel is 100;
 
 Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and mouseintel is 0:
@@ -605,7 +606,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 		increase score by 30;
 		now mouseintel is 1;
 	else:
-		say "     Deciding against helping the white mouse and the creatures of the hospital, you take a moment to reorganize your thoughts before speaking to Dr Mouse on other matters.";
+		say "     Deciding against helping the white mouse and the creatures of the hospital, you take a moment to reorganize your thoughts before speaking to Dr. Mouse on other matters.";
 		now mouseintel is 100;
 
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:

@@ -9,20 +9,20 @@ name	desc	weight	object
 Hiking Backpack is a grab object.
 Hiking Backpack is equipment.
 It is not temporary.
-The AC of Hiking Backpack is 0.
-The effectiveness of Hiking Backpack is 0.
-The placement of Hiking Backpack is "back".
-The slot of Hiking Backpack is "back".
-The descmod of Hiking Backpack is "A sturdy backpack made for hauling tents and other various outdoor gear. Fitted with many pockets and deep storage space, it is perfect for people on the move.".
-the scent of Hiking Backpack is "You smell fabric and cedar. Apparently the store tucked an air freshener into one of its pouches.".
+AC of Hiking Backpack is 0.
+Effectiveness of Hiking Backpack is 0.
+Placement of Hiking Backpack is "back".
+Slot of Hiking Backpack is "back".
+Descmod of Hiking Backpack is "A sturdy backpack made for hauling tents and other various outdoor gear. Fitted with many pockets and deep storage space, it is perfect for people on the move.".
+Scent of Hiking Backpack is "You smell fabric and cedar. Apparently the store tucked an air freshener into one of its pouches.".
+EquipFunction of Hiking Backpack is "[EquipHBP]".
+UnequipFunction of Hiking Backpack is "[UnequipHBP]".
 
-Usedesc of Hiking Backpack is "[HBPuse]".
+to say UnequipHBP:
+	decrease capacity of Player by 10;
 
-to say HBPuse:
-	if Hiking Backpack is equipped:
-		decrease capacity of Player by 10;
-	else:
-		increase capacity of Player by 10;
+to say EquipHBP:
+	increase capacity of Player by 10;
 
 
 Table of GameEventIDs (continued)

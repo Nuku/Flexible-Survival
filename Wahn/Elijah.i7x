@@ -2,6 +2,8 @@ Version 3 of Elijah by Wahn begins here.
 [Version 3.2 - Offer for Evil Elijah made at any point cure does not go ahead]
 "Adds an NPC named Elijah to the Flexible Survival game"
 
+[ TODO: Needs updating for evil Elijah, more manipulative ]
+
 [ HP states of Elijah                                                  ]
 [   0: Chained up in the Chapel                                        ]
 [   1: At Bunker, unconscious                                          ]
@@ -400,7 +402,7 @@ to say ElijahTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Talk about what comes to mind";
 	[]
-	if HP of Elijah < 99 and Libido of Skarnoth > 2 and Libido of Skarnoth < 11:
+	if HP of Elijah < 99 and Libido of Skarnoth > 2 and Libido of Skarnoth < 12:
 		choose a blank row in table of fucking options;
 		now title entry is "The imps hunting for you and him";
 		now sortorder entry is 2;
@@ -508,7 +510,7 @@ to say ElijahTalk3:
 		move player to The Clouds;
 
 to say DemonLairAttack:
-	say "     Armed and prepared as good as you're gonna get, you set out into the wild streets of the city together with Elijah. Some creatures along the way raise their heads and look over at the two of you with lusty gazes, but something about the determined stride and grim expressions you show puts them off from attacking. Seems like they're not ready to take on a [BodyName of Player] and an angel on a mission - not as long as there's countless easier marks to pick from for some sexy fun. A short while later, you arrive at the burned-out chapel from where you rescued Elijah from his captors and step in through the open entrance portal. 'It pains me to see a house of our father in such a state,' Elijah says as he looks around, taking in the ruined remains of the pews and the blackened walls.";
+	say "     Armed and prepared as good as you're gonna get, you set out into the wild streets of the city together with Elijah. Some creatures along the way raise their heads and look over at the two of you with lusty gazes, but something about the determined stride and grim expressions you show puts them off from attacking. Seems like they're not ready to take on a [BodySpeciesName of Player in lower case] and an angel on a mission - not as long as there's countless easier marks to pick from for some sexy fun. A short while later, you arrive at the burned-out chapel from where you rescued Elijah from his captors and step in through the open entrance portal. 'It pains me to see a house of our father in such a state,' Elijah says as he looks around, taking in the ruined remains of the pews and the blackened walls.";
 	say "     His brows draw together in scorn a moment later, and following his gaze you see the cracked altar at the end of the large room. It is literally dripping cum - some creature must have used it as a fuck-pad and came all over the stone block! The shocked silence at the sacrilege is broken a second later by a whimper and groan coming from behind the altar, and looking further down, the two of you spot a slender human foot poke out from behind the defiled altar. In answer, a deep and gravelly voice can be heard from an open archway in the left-hand wall, saying in a cruel tone, 'Trying to crawl away bitch? Its my turn now and I'm gonna punish you for that! Fuck you till you're raw!' With that said, a hulking demon brute steps out of the shadows, his massive erect shaft leading the way.";
 	WaitLineBreak;
 	say "     'Not while I'm here, creature!' Elijah shouts in rage and sprints forward, engaging the purple demon in a fight. You try to close up and help him, but a second demon follows after the first - coming out of the darkened side room. This one isn't fully hard and his weighty shaft dangles down between thick and muscled legs, its length glisteningly wet and with cum smeared over the head and shaft. Looks like he's the one who took their victim before and 'decorated' the altar in his seed. With an eager grin showing a worrying amount of sharp teeth, the demonic creature turns his red-glowing eyes on you and roars with battle-lust!";
@@ -1335,7 +1337,7 @@ Instead of fucking the Elijah:
 			[if the player isn't a demon, he's not corrupt enough]
 			say "     Looking down over the angel on his bunk, you decide you'd rather let him rest for now. He's strikingly handsome and wakes lust in you from just looking at him, but only the most wicked creatures would take advantage of this helpless and injured person who isn't even conscious most of the time.";
 		else:
-			say "     [bold type]Handsome? Check. Virgin? Most definitively. Conscious? Who the hell cares... but then the remains of your human morality throw up a last despairing wail of protest.[roman type][line break]";
+			say "     [bold type]Handsome? Check. Virgin? Most definitely. Conscious? Who the hell cares... but then the remains of your human morality throw up a last despairing wail of protest.[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Silence your conscience and continue!";
 			say "     ([link]N[as]n[end link]) - This might be one bridge too far after all...";
@@ -1870,6 +1872,7 @@ to say ElijahFangDoubleImpreg:
 			NPCSexAftermath Player receives "AssFuck" from Elijah;
 
 to say ElijahSex11: [Get fucked by both Elijah and Fang at once]
+	project Figure of Fang_hard_icon;
 	if (HP of Elijah < 99): [Good Elijah]
 		say "     Feeling your submissive urges overtaking you, you decide to get a thorough fucking. Heading over to Elijah, you whisper your plan to him and he agrees, clearly seeing how much your body is craving it. You and he head into the library, approaching your alpha wolf. Fang, as if smelling your need, accompanies you both into one of the side rooms. Once you're undressed, Elijah gets into position on the floor, laying back and welcoming you into his arms. Taking his cock in hand, you guide yourself down onto it with a lustful moan, which is echoed as Fang climbs atop you, sinking his hard rod into [if Cunt Count of Player > 2]another[else]your other[end if] wet pussy. You pant and groan in pleasure as the two start fucking you, Fang going a little slower so Elijah can keep pace with him, both thrusting hard into you again and again in synchronous fucking.";
 		say "     As the two horny males pound into you, your hot juices flow, your submissive urges loving the fact that you're letting yourself be used by the two sexy lovers at once. The fact that one is a hot guy and the other is a wild beast makes it all the better. Elijah's hands run over your body, working to pleasure you even further. You delight in the sounds of Elijah's grunts as he tries to keep pace with the feral wolf while Fang pants in your ear and nips at your shoulder. You tilt your head back, sharing a slobbery kiss with your lupine alpha before turning and kissing Elijah. Feeling so deliciously full as Fang's knot swells and ties with you, you groan loudly in orgasm, your hot pussies clamping down around the pair of cocks stuffed inside you. The horny males cum shortly afterwards[if a random chance of 1 in 2 succeeds], first Elijah and then Fang[else], first Fang and then Elijah[end if]. The rush of having both their loads pumping into you makes you cum again, pushing you into multi-orgasmic bliss. Once you finally come down, you are left panting and soaked in feminine juices and leaking semen from your well-stuffed holes.[ElijahFangDoubleImpreg]";

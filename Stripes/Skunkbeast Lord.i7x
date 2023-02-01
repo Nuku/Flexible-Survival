@@ -182,7 +182,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Skunk"; [name of the overall species of the infection, used for children, ...]
 	add "Skunkbeast Lord" to infections of MustelidList;
 	add "Skunkbeast Lord" to infections of FurryList;
 	add "Skunkbeast Lord" to infections of NatureList;
@@ -485,7 +485,7 @@ This is the Peppy's Epilogue rule:
 	if ending "Skunk with Frank" is triggered:
 		make no decision;
 	if skunk kit is tamed:
-		trigger ending "Peppy's Epilogue rule";
+		trigger ending "Peppy's Epilogue";
 		if Player has a non-shifting body of "Skunk":
 			if humanity of Player < 10:
 				if Player is female:

@@ -8,7 +8,9 @@ Section 1 - Zephyr Office
 This is the zephyrad rule:
 	if Zephyr Lobby is not known:
 		say "     Playing around with your radio in an attempt to gain some information about what is going on, you find a channel that seems to have a cycling message. 'Good day to anyone listening. This is Zephyr Incorporated. We wanted to you know that even during this current crisis, our branch office in this fine city remains open. Coordinates follow.' After making a mental note of the description, you listen on to the rest of their recording. 'We here are Zephyr Inc are dedicated to the betterment of mankind through science. And of course we also want to help people outlast what is currently going on. Therefore we are going to award company credit - also known as freecred - to those who contribute to keeping the more aggressive infected in check. A number of ways of observation are in effect in the city, and you will be credited for every hostile you pacify. Swing on by and spend your freecred on useful survival gear. We look forward to meeting you shortly.'";
-		say "     The radio continues, 'Please be advised that your Zephyr local branch now stocks our newest technological advancement - the Zephyr Personal Communicator, featuring satellite navigation in a device that fits in your pockets! Never get lost again, with the ZPC. Available now at a limited time offer of only 350 freecred. Visit your Zephyr branch now for more information!'";
+		say "     The radio continues, 'Please be advised that your Zephyr local branch is now offering compensation for helping keep the local area safe! sign up now and recieve our newest technological advancement - the Zephyr Personal Communicator, [bold type]featuring satellite navigation[roman type] in a device that fits in your pockets! Never get lost again, with the ZPC. Available now as a means to keep you connected with all our Zephyr rewards and product offers. Visit your Zephyr branch now for more information!'";
+		WaitLineBreak;
+		say "     It doesn't sound particularly nice to have such fully branded hardware, but it might be worth checking out as a replacement for your currently bricked Cell Phone.";
 		AddNavPoint Zephyr Lobby;
 
 Table of GameRoomIDs (continued)
@@ -141,7 +143,7 @@ name	desc	weight	object
 "nanite collector"	"[nanitecolldesc]"	25	nanite collector
 "pistol"	"A small, but serviceable, hand gun. It has a stylized Z on the grip. It never seems to run out of bullets, and gets oddly warm when you fire it."	2	pistol
 
-pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 2.
+pistol is armament. It has a weapon "[one of]a quick shot[or]speedy pistol play[or]your pistol[at random]". It is ranged. It is not temporary. Weapon Damage of pistol is 7. Objsize of pistol is 3.
 
 
 nanite collector is equipment. It is not temporary.
@@ -156,7 +158,7 @@ to say nanitecolldesc:
 Table of Zephyr Goods
 name	price	object	allowed
 "nanite collector"	360	nanite collector	noresearch rule
-"zpc"	350	zpc	true rule
+["zpc"	350	zpc	true rule]
 "medkit"	275	medkit	true rule
 "pistol"	550	pistol	true rule
 "pepperspray"	320	pepperspray	pepper rule

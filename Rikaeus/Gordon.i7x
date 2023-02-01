@@ -23,21 +23,28 @@ object	name
 Gordon	"Gordon"
 
 Gordon is a man.
-[Physical details as of game start]
 ScaleValue of Gordon is 3. [human sized]
-SleepRhythm of Gordon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Gordon is 1. [X cock]
-Cock Length of Gordon is 6. [X Inches]
-Ball Size of Gordon is 4.
-Ball Count of Gordon is 2. [X balls]
-Cunt Count of Gordon is 0. [X pussy]
-Cunt Depth of Gordon is 0. [X Cunt]
-Cunt Tightness of Gordon is 0. [X Cunt]
-Nipple Count of Gordon is 2. [X nipples]
-Breast Size of Gordon is 0. [X at the start]
+Body Weight of Gordon is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Gordon is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Gordon is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Gordon is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Gordon is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Gordon is 6. [length in inches]
+Breast Size of Gordon is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Gordon is 2. [count of nipples]
+Asshole Depth of Gordon is 6. [inches deep for anal fucking]
+Asshole Tightness of Gordon is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Gordon is 1. [number of cocks]
+Cock Girth of Gordon is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Gordon is 6. [Length in Inches]
+Ball Count of Gordon is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Gordon is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Gordon is 0. [number of cunts]
+Cunt Depth of Gordon is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Gordon is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Gordon is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Gordon is false. [can not take oversized members without pain]
-Sterile of Gordon is true.
 PlayerMet of Gordon is false.
 PlayerRomanced of Gordon is false.
 PlayerFriended of Gordon is false.
@@ -48,6 +55,8 @@ Virgin of Gordon is true.
 AnalVirgin of Gordon is true.
 PenileVirgin of Gordon is true.
 SexuallyExperienced of Gordon is false.
+TwistedCapacity of Gordon is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Gordon is true. [steriles can't knock people up]
 MainInfection of Gordon is "".
 Description of Gordon is "[GordonDesc]".
 Conversation of Gordon is { "<this is a placeholder!>" }.
@@ -122,7 +131,7 @@ to say GordonFurEvidence:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
-			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
+			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple? Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 2;
 		else:
 			say "     You shake your head at the monkey and decline his offer, telling him that for now you'll take him at his word. 'Aw, really? Well, if you want to then you know where to find me,' Gordon says with a disappointed look on his face. You turn to the guard and tell him that you're done with this suspect for now. The wolverine nods at you and grabs the guy by his arm and takes you and him back to lockup. There you wonder what you'll do next. Should you go back to the monkey and show him the fur again, accepting his offer or find out some other way?";
@@ -137,7 +146,7 @@ to say GordonFurEvidence:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
-			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
+			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple? Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 3;
 		else:
 			say "     Shaking your head, you again decline the monkey's advances. Gordon sighs at you before he too, shakes his head. 'Darn! I'll wear you down soon enough,' he says. You roll your eyes at that, before turning to the wolverine guard. The guy asks you if you want to return to the lockup, to which you nod. Taking that as agreement, he takes the suspect by the arm and guides the two of you back to where you were prior to interrogation. There you muse about what you should do. If you really don't want to get the information about Gordon by blowing him, then maybe his coworkers know something, just show them the fur.";

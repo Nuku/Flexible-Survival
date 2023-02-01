@@ -35,18 +35,29 @@ object	name
 Serafino	"Serafino"
 
 Serafino is a man.
-[physical details as of game start]
+Serafino is in Phoenix Rebirth Spa Lobby.
 Humanity of Serafino is 80. [is thousands of years old]
-ScaleValue of Serafino is 3. [human size]
-Cock Count of Serafino is 1. [has a cock]
-Cock Length of Serafino is 8. [has an 8 inch cock]
-Ball Size of Serafino is 3. [size of balls]
-Ball Count of Serafino is 2. [has a pair of balls]
-Cunt Count of Serafino is 0. [no vagina]
-Cunt Depth of Serafino is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Serafino is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Serafino is 2. [Has two normal nipples]
-Breast Size of Serafino is 0. [Doesn't have breasts really]
+ScaleValue of Serafino is 3. [human sized]
+Body Weight of Serafino is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Serafino is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Serafino is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Serafino is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Serafino is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Serafino is 6. [length in inches]
+Breast Size of Serafino is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Serafino is 2. [count of nipples]
+Asshole Depth of Serafino is 8. [inches deep for anal fucking]
+Asshole Tightness of Serafino is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Serafino is 1. [number of cocks]
+Cock Girth of Serafino is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Serafino is 8. [Length in Inches]
+Ball Count of Serafino is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Serafino is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Serafino is 0. [number of cunts]
+Cunt Depth of Serafino is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Serafino is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Serafino is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Serafino is false.
 PlayerRomanced of Serafino is false.
@@ -58,10 +69,12 @@ Virgin of Serafino is false.
 AnalVirgin of Serafino is false.
 PenileVirgin of Serafino is false.
 SexuallyExperienced of Serafino is true.
+TwistedCapacity of Serafino is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Serafino is true. [steriles can't knock people up]
+MainInfection of Serafino is "".
 Description of Serafino is "[SerafinoDesc]".
 Conversation of Serafino is { "<This is nothing but a placeholder!>" }.
 The scent of Serafino is "     The phoenix gives off a smell that reminds you of a rough mixture of flames, oils and ashes.".
-Serafino is in Phoenix Rebirth Spa Lobby.
 
 to say SerafinoDesc:
 	say "     Looking over at the phoenix the first thing you notice are his vermilion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction";

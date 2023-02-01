@@ -446,7 +446,7 @@ to say AresXerxesWalk:
 		ForceCompanionJoin "Ares";
 		now battleground is "Outside";
 		fight;
-		ForceCompanionDismiss "Korvin";
+		ForceCompanionDismiss "Ares";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 			say "     Looks as if Xerxes and Ares managed to flee when you lost the fight, but remained in the area. Now that the attacker is gone, they trot up to you, Ares showing his own bruises from the fight. With supportive whines to get up, the human dogs rub their heads against your side and Ares even takes a guarding position to protect you from any new threats. Not really in the mood to continue this excursion after getting a beating, you drop off Ares at Mike's hope and take Xerxes back to the library.";
 		else if fightoutcome >= 30:[fled]

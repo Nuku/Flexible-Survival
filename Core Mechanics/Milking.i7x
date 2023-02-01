@@ -5,14 +5,11 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "mothers milk"	"Delicious milk made from your own tender breasts."	1	mothers milk
 "distilled milk"	"Some creature's milk boiled down to a concentrated, powdery, form? That can't be dangerous!"	1	distilled milk
-"dog milk"	"A bottle of dog milk? Man you will take anything."	1	dog milk
 "panther milk"	"The thick, luscious milk of one of the panther taurs."	1	panther milk
 "chocolate milk"	"The creamy milk with a white chocolate taste."	1	chocolate milk
 "vixen milk"	"A thin milk with a faintly medicinal taste, like the silvery vixens it is from."	1	vixen milk
 "sweet milk"	"A creamy, sweet milk with a faintly honey-like taste."	1	sweet milk
 "macho milk"	"A creamy, energizing milk with a faintly spicy-like taste."	1	macho milk
-
-mothers milk is a grab object. Understand "milk" as mothers milk. Purified of mothers milk is "distilled milk". mothers milk is milky.
 
 distilled milk is a grab object. It is not milky.
 
@@ -24,7 +21,7 @@ to say distilled milk use:
 	grow breasts by 3;
 	say "[line break]";
 
-
+mothers milk is a grab object. Understand "milk" as mothers milk. Purified of mothers milk is "distilled milk". mothers milk is milky.
 
 Usedesc of mothers milk is "[mothers milk use]";
 

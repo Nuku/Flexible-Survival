@@ -11,21 +11,29 @@ object	name
 Mary	"Mary"
 
 Mary is a woman.
-[Physical details as of game start]
+Mary is in New Ewe Storeroom.
 ScaleValue of Mary is 3. [human sized]
-SleepRhythm of Mary is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Mary is 0. [X cock]
-Cock Length of Mary is 0. [X Inches]
-Ball Size of Mary is 0.
-Ball Count of Mary is 0. [X balls]
-Cunt Count of Mary is 1. [X pussy]
-Cunt Depth of Mary is 12. [X Cunt]
-Cunt Tightness of Mary is 8. [X Cunt]
-Nipple Count of Mary is 2. [X nipples]
-Breast Size of Mary is 4. [X at the start]
+Body Weight of Mary is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Mary is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Mary is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Mary is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Mary is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Mary is 7. [length in inches]
+Breast Size of Mary is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Mary is 2. [count of nipples]
+Asshole Depth of Mary is 10. [inches deep for anal fucking]
+Asshole Tightness of Mary is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Mary is 0. [number of cocks]
+Cock Girth of Mary is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Mary is 0. [Length in Inches]
+Ball Count of Mary is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Mary is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Mary is 1. [number of cunts]
+Cunt Depth of Mary is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Mary is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Mary is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Mary is false. [can not take oversized members without pain]
-Sterile of Mary is false.
 PlayerMet of Mary is false.
 PlayerRomanced of Mary is false.
 PlayerFriended of Mary is false.
@@ -34,13 +42,14 @@ PlayerFucked of Mary is false.
 OralVirgin of Mary is false.
 Virgin of Mary is false.
 AnalVirgin of Mary is true.
-PenileVirgin of Mary is false.
+PenileVirgin of Mary is true.
 SexuallyExperienced of Mary is true.
+TwistedCapacity of Mary is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Mary is true. [steriles can't knock people up]
 MainInfection of Mary is "Ewe".
 Description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
 Conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
-Mary is in New Ewe Storeroom.
 
 instead of sniffing Mary:
 	say "Mary smells like a female sheep and has traces of the city's scents in her wool.";
@@ -65,7 +74,7 @@ instead of conversing the Mary:
 			if Player consents:
 				say "     'Really? You mean it? That's wonderful!' she says with a smile, before grabbing the sides of your face and giving you another big kiss. As she breaks the kiss you stare at her slightly bemused as she blushes, realizing every eye in the store is on the two of you. Glancing around at all the staring eyes she quickly grabs your arm and nearly drags your unprotesting body outside, slamming the door behind you. Pausing for a moment in the street, she quickly makes her way to one of the abandoned buildings next to the store, motioning you to follow as she quickly unlocks the door and slips inside.";
 				WaitLineBreak;
-				say "     Following Mary into the dimly lit building, you realize someone has gone to some effort to keep it looking abandoned, but out of sight of the front windows it has actually been furnished as a nice little hideaway. Mary is standing there blushing again as she admits 'I found this place a while back, and I cleaned it up for when I needed to get away from the rest of the flock. You're the only other person who knows about it now.' Before you can respond to her surprising statement, she reaches up and kisses you again, taking her time to rub her sheep-like muzzle along your [FaceName of Player] face, and exploring your mouth with her tongue.";
+				say "     Following Mary into the dimly lit building, you realize someone has gone to some effort to keep it looking abandoned, but out of sight of the front windows it has actually been furnished as a nice little hideaway. Mary is standing there blushing again as she admits 'I found this place a while back, and I cleaned it up for when I needed to get away from the rest of the flock. You're the only other person who knows about it now.' Before you can respond to her surprising statement, she reaches up and kisses you again, taking her time to rub her sheep-like muzzle along your [FaceSpeciesName of Player in lower case] face, and exploring your mouth with her tongue.";
 				say "     Breaking the kiss, her face flushed in embarrassment and a bit of desire she moves over to the makeshift couch and gestures for you to come sit next to her. Smiling as you do so, she cuddles up next to you and rests her head on your shoulder. Seeming somewhat embarrassed she begins telling you about her life from before, as a teenager working her way through college at her parents store, and asking questions about your life and what it was like.";
 				WaitLineBreak;
 				say "     She eventually talks about the infection sweeping the city, and how everyone at the store both employees and customers alike began to change, and all the males fought until Leon was the only male left, and the rest had become ewes like everyone else. Not really wanting to end up like some of the rest of the flock who seemed to lose most of their intelligence the more they stayed there, she volunteered to do much of the scouting and scavenging for the rest. She was able to put Leon off of claiming her personally so far, but she figured it was only a matter of time before he got to her, until she met you. She says with a yawn, staring up at you adoringly, she thinks she could really like being part of your flock instead.";

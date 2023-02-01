@@ -34,7 +34,7 @@ First for constructing the status line (this is the bypass status line map rule)
 
 Table of Fancy Status
 left	central	right
-"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link]"	"HP: [HP of Player]/[maxHP of Player]"
+"Location: [Location of Player][if Location of Player is fasttravel] ([link]Navpoint[as]nav[end link])[end if]"	"Name: [if Player is not defaultnamed][Name of Player][else][link]Pick one?[as]rename[end link][end if] | Pronouns: [link][PronounChoice of Player][as]set pronouns[end link] - [SubjectPro of Player]/[PosAdj of Player] | Condition: [SleepMessage], [AlcState] | [link]Inventory[as]i[end link] | [link]Feats[as]FeatList[end link] | [link]Allies[as]Allies[end link]"	"HP: [HP of Player]/[maxHP of Player]"
 "Date: [DateYear]-[DateMonth]-[DateDay], Time: [time of day]"	"STR: [strength of Player] | DEX: [dexterity of Player] | STA: [stamina of Player] | CHA: [Charisma of Player] | INT: [intelligence of Player] | PER: [perception of Player]"	"XP: [XP of Player]/[level up needed]"
 "Evac: [if playon is 0][( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[else]UNKNOWN[end if]"	"Hunger: [hunger of Player]/100 | Thirst: [thirst of Player]/100 | Libido: [Libido of Player]/100 | Humanity: [humanity of Player]/100"	"LVL: [level of Player]"
 "Freecred: [freecred]"	"[link]Help[as]HelpBookLookup[end link] | Game Version (Serial): [serial number][if NewGraphicsInteger is 0] [else] | Art by: [ngraphics_currentartist] ([link]art credits[end link])[end if]"	"Score: [score]/[maximum score]"
@@ -55,6 +55,7 @@ Part 2 - Command Prompt
 Chapter 1 - Definitions
 
 Definition: a direction (called D) is valid if the room D from the Location of Player is a room.
+
 
 Chapter 2 - Prompt
 
@@ -97,18 +98,51 @@ to say promptsay:
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "[link][bracket]Vial[close bracket][as]Vial Inventory[end link] ";
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
+	if ObserveAvailable of x is true:
+		say "[link][bracket]Observe[close bracket][as]observe[end link] ";
 	say "[link][bracket]Save[close bracket][as]save[end link] ";
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
 	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
 	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
 	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
-		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
+		say "[link][bracket]Enemies[close bracket][as]huntinglist[end link] ";
+		say "[link][bracket]Situations[close bracket][as]situationslist[end link] ";
 	if NewTypeInfectionActive is true:
 		say "[link][bracket]Enemy Stats[close bracket][as]ShowEncounteredEnemies[end link] ";
 	say "[line break]";
 	say "Exits:";
+	let vdirections be a list of text; [helps sort valid directions, which can't be sorted itself because it is an inbuilt inform constant.]
 	repeat with nam running through valid directions:
-		say " [link][printed name of nam][end link]";
+		if nam is:
+			-- North:
+				add "North" to vdirections;
+			-- Northeast:
+				add "Northeast" to vdirections;
+			-- Northwest:
+				add "Northwest" to vdirections;
+			-- South:
+				add "South" to vdirections;
+			-- Southeast:
+				add "Southeast" to vdirections;
+			-- Southwest:
+				add "Southwest" to vdirections;
+			-- West:
+				add "West" to vdirections;
+			-- East:
+				add "East" to vdirections;
+			-- Up:
+				add "Up" to vdirections;
+			-- Down:
+				add "Down" to vdirections;
+			-- Inside:
+				add "Inside" to vdirections;
+			-- Outside:
+				add "Outside" to vdirections;
+			-- otherwise:
+				add "Error: unknown direction detected, report this bug on discord: [printed name of nam]" to vdirections;
+	sort vdirections in reverse order;
+	repeat with vdir running through vdirections:
+		say " [link][vdir][end link]";
 	if location of Player is fasttravel and earea of location of Player is "void":
 		say " [bracket][link]nav[end link][close bracket]";
 	else if location of Player is fasttravel:
@@ -248,6 +282,7 @@ To showstats (x - Person):
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
 		say ", [link]Feats[as]FeatsList[end link]";
+	say ", [link]Orientation[as]adjust player orientation[end link]";
 	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0: [more than zero children of both types combined]
 		say ", [link]Offspring[as]ListOffspring[end link][line break]";
 	else:

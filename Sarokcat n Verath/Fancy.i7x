@@ -33,6 +33,12 @@ an everyturn rule:
 		change the south exit of Master's Office to Employee Access;
 		now NightmareOfficeRoomConnection is 1; [room connected]
 
+a postimport rule:
+	if fancyquest > 15 and fancyquest < 100:
+		now Nightmarish Horse Business is inactive; [forever gone, replaces this route]
+		now Stablemaster is nowhere; [take him out of the office if he's in there]
+		now Resolution of NightmareStablemasterEvents is -99; [remove the Stablemaster's Master's Office events if they were ongoing]
+
 Section 0 - NPC Setup
 
 Fancytalk is a number that varies.
@@ -165,8 +171,12 @@ to say NightmareQuest:
 					now Nightmaremastery is 1;
 					now Daisy is in Master's Office;
 					move player to Master's Office;
+					move Slutslave to Master's Office;
 					change the north exit of Employee Access to Master's Office;
 					change the south exit of Master's Office to Employee Access;
+					now Nightmarish Horse Business is inactive; [forever gone, replaces this route]
+					now Stablemaster is nowhere; [take him out of the office if he's in there]
+					now Resolution of NightmareStablemasterEvents is -99; [remove the Stablemaster's Master's Office events if they were ongoing]
 					now fancyquest is 16;
 				else:
 					say "'So this is what my new pet wanted to do to me, well remind me to reward Fancy properly for her gift of a lovely new slavegirl,' Your master says with amusement as he looks down on you with a smug smile, the sexy tones of his voice making you shudder and whimper with need, 'Though perhaps I should take some time out to enjoy my new pets first, what do you say pet?' he asks you with amusement, and you find yourself nodding eagerly as your master comes towards you, his cock bobbing teasingly as he approaches, and your mind fills with his amazingly arousing male musk. 'Well pet, spread those legs for your master,' the powerful stallion says with amusement, and you whimper at your stupidity as you hurry to comply, maybe if you had spread yourself as soon as you noticed how wonderful your master was, he would already be inside your eager body you think as you curse your slowness and resolve to do better. He chuckles softly as you eagerly spread your body out in front of him, and wastes no time burying his amazing blunt stallionhood in your deep mare's pussy, making you moan with delight as you feel your master's cock inside your body. He wastes little time in pulling back and thrusting into you again, his amazing velvety cock making you moan with delight as he begins to build up a rhythm of sharp fast thrusts into your eager form.";
@@ -421,6 +431,10 @@ Usedesc of Nightmare Vial is "[nightmaremagic].";
 To say nightmaremagic:
 	if jackalmantf > 0:
 		say "For some reason your body seems to fight with itself for a minute as you ingest the vial of strange liquid, and you get flashes of dark images and strange places in your eyes as your body convulses helplessly. Eventually though the tremors fade, and you lie there panting on the ground for several minutes before you are able to move again, though looking yourself over you can't see that the strange vial of liquid changed any of your nice and sexy jackal-like features...";
+		stop the action;
+	if "Ceryneian Blessed - Anthro" is listed in traits of Player or "Ceryneian Blessed - Feral" is listed in traits of Player or "Ceryneian Blessed - Taur" is listed in traits of Player:
+		say "     As you swallow the liquid, you begin to retch, your body seemingly rejecting the foul fluid. Convulsing, you see images flash before your eyes, dark rituals and visions of terror that you don't remember a moment later. 'Resist the taint,' a voice spits, though you are unable to see who said it. Eventually, your body calms and you look down, panting from exertion, to see what effect the vial's contents has had on your body, finding that you look exactly the same, the blessing of the Olympians seemingly protecting you against the Nightmare's influence while you are in Ceryneian deer. Surprisingly, as you look down at your hand, you see that the vial is still full, making you wonder whether you even drank it in the first place. You decide to stow it away again, wondering whether you would be better off trying again when you are in another form...";
+		ItemGain Nightmare Vial by 1;
 		stop the action;
 	if jackalboytf > 0:
 		now nerminetalk is 1;

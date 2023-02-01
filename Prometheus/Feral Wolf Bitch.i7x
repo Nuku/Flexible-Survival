@@ -1,9 +1,21 @@
-Version 1 of Feral Wolf Bitch by Prometheus begins here.
+Feral Wolf Bitch by Prometheus begins here.
 [Based off of Feral Wolf Male by Stripes]
 [Primarily written by Lost Directions]
 
 "Adds a Feral Wolf Bitch to Flexible Survival's Wandering Monsters table"
 
+to say GenerateTrophyList_Feral_Wolf_Bitch:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "wolf bitch fur" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "tennis ball" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Section 1 - Creature Responses
 
@@ -60,6 +72,7 @@ to say BeatFeralWolfBitch:
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
 				LineBreak;
+				project Figure of Fang_fem_icon;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take her as your own. You decide it best to show this wolf creature who's in charge right away and grab her nape roughly, holding her down while ";
 				if Player is herm:
 					say "you decide what to do with her. You are getting quite excited by the idea of making this wild beast yours. But being both male and female, there are options open to you if you wish to sexually dominate her.";
@@ -105,8 +118,8 @@ to say BeatFeralWolfBitch:
 						say "[FeralWolfBitchFemaleSex]";
 					else:
 						say "[FeralWolfBitchNonsexTame]";
-				now HP of Fang is 1;
 				now Fang is Female;
+				now HP of Fang is 1;
 				now Androginity of Fang is 6;
 				now Cock Count of Fang is 0;
 				now Cock Girth of Fang is 0;
@@ -114,7 +127,7 @@ to say BeatFeralWolfBitch:
 				now Ball Count of Fang is 0;
 				now Ball Size of Fang is 0;
 				now Cunt Count of Fang is 1;
-				now Cunt Depth of Fang is 10;
+				now Cunt Depth of Fang is 12;
 				now Cunt Tightness of Fang is 2;
 				now Clit Size of Fang is 3;
 				now Virgin of Fang is false;
@@ -167,7 +180,7 @@ to say FeralWolfBitchVictorySex:
 				say "     . (Y=Ride, N=Fuck)";
 				if Player consents:
 					say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-					say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+					say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 					say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 					CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 				else:
@@ -183,7 +196,7 @@ to say FeralWolfBitchVictorySex:
 			if Player is female:
 				LineBreak;
 				say "     Moving your hand to her back, you roll her over, the wolf accepting her fate readily enough. Having allowed herself to be moved into the position best suited for the ride you have in mind, you scritch her ears to reassure her that she will walk away from this, as you move overtop her and line up her muzzle with your wet slit. This both in order to calm her and convince her to join in on the effort of getting you to your climax. You sink your cunt slowly onto her, moaning slightly as she holds herself still, letting you go down on her muzzle without any fuss. As you begin to piston your hips in order to get this done as fast as possible, she angles her muzzle as she licks the walls of your passage, her lupine muzzle getting slathered in pre-cum as you whisper huskily what a good girl she is. She growls softly in response, muffled by your muff as you continue mating her, as her tail starts to wag in response.";
-				say "     She moans inconherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the suprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
+				say "     She moans incoherently, a muffled sound coming from the animalistic wolf as you see her orgasm, the sound and shudders from her body rippling through you. Pleased by this, you press yourself down onto her firmly as you orgasm, being sure to move your body and pussy off of her muzzle, letting her breathe as you position yourself to sit down next to her. You lean in to kiss her fem-cum drenched lupine muzzle directly on the tip of her nose, as you cum a second time from the memory of the sensation. Lifting your head after the surprisingly chaste kiss on top of the not-so-chaste ride, she pants as she inhales fresh air, softly growling out something she probably wants you to hear, being as tired as you both are, you look back at her to see if she would repeat that, however is seems that she passed out from the exertion.";
 				say "     Having gotten off and shown the wolfess who is boss, you get up once your legs recover from the ride you just went on, picking up your things and getting on your way.";
 				CreatureSexAftermath "Feral Wolf Bitch" receives "OralPussy" from "Player";
 			else:
@@ -254,27 +267,27 @@ When Play begins:
 	now per entry is 17;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 45;
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 5; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	now Nipple Count entry is 6; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 8; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 1; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 15;
+	now Cunt Depth entry is 12;
+	now Cunt Tightness entry is 2;
 	now SeductionImmune entry is false;
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "wolf fem-cum";
+	now loot entry is "wolf bitch fur";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now MilkItem entry is "wolf bitch milk";
 	now CumItem entry is "wolf fem-cum";
-	now TrophyFunction entry is "-";
+	now TrophyFunction entry is "[GenerateTrophyList_Feral_Wolf_Bitch]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -283,7 +296,7 @@ When Play begins:
 	now non-infectious entry is false;
 	now Cross-Infection entry is "Feral Wolf Male"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is ""; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 [
@@ -425,14 +438,29 @@ This is the FemaleFang's Beta rule:
 
 
 
-Section 4 - Wolf Fem-cum
+Section 4 - Items
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch fur"	"A tuft of black, gray, and brown fur that looks like it has been pulled out of the coat of a wolf. It's nicely soft."	0	wolf bitch fur
+
+wolf bitch fur is a grab object.
+It is temporary.
+Usedesc of wolf bitch fur is "[WolfBitchFurUse]";
+
+to say WolfBitchFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Feral Wolf Bitch";
+
+instead of sniffing wolf bitch fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "wolf fem-cum"	"A vial of thick, musky, clear liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf fem-cum
 
 wolf fem-cum is a grab object. wolf fem-cum is cum.
-Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Bitch".
+Wolf Fem-cum is infectious. Strain of Wolf Fem-cum is "Feral Wolf Male".
 
 instead of sniffing wolf fem-cum:
 	say "The wolf fem-cum smells of wolves and pussy, naturally.";
@@ -444,6 +472,22 @@ to say Wolf Fem-cum use:
 	if Libido of Player < 75:
 		now Libido of Player is 75;
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"wolf bitch milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Wolf Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	wolf bitch milk
 
+wolf bitch milk is a grab object.
+wolf bitch milk is milky.
+Purified of wolf bitch milk is "distilled milk".
+wolf bitch milk is infectious.
+Strain of wolf bitch milk is "Feral Wolf Bitch".
+Usedesc of wolf bitch milk is "[wolf bitch milk use]";
+
+to say wolf bitch milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the wolf milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing wolf bitch milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Feral Wolf Bitch ends here.

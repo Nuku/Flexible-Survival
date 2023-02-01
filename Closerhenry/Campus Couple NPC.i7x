@@ -43,21 +43,28 @@ object	name
 Jadako	"Jadako"
 
 Jadako is a man.
-[Physical details as of game start]
 ScaleValue of Jadako is 3. [human sized]
-SleepRhythm of Jadako is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Jadako is 1. [X cock]
-Cock Length of Jadako is 7. [X Inches]
-Ball Size of Jadako is 5.
-Ball Count of Jadako is 2. [X balls]
-Cunt Count of Jadako is 0. [X pussy]
-Cunt Depth of Jadako is 0. [X Cunt]
-Cunt Tightness of Jadako is 0. [X Cunt]
-Nipple Count of Jadako is 2. [X nipples]
-Breast Size of Jadako is 0. [X at the start]
+Body Weight of Jadako is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Jadako is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Jadako is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Jadako is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Jadako is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Jadako is 6. [length in inches]
+Breast Size of Jadako is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Jadako is 2. [count of nipples]
+Asshole Depth of Jadako is 8. [inches deep for anal fucking]
+Asshole Tightness of Jadako is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Jadako is 1. [number of cocks]
+Cock Girth of Jadako is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Jadako is 7. [Length in Inches]
+Ball Count of Jadako is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Jadako is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Jadako is 0. [number of cunts]
+Cunt Depth of Jadako is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Jadako is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Jadako is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Jadako is false. [can not take oversized members without pain]
-Sterile of Jadako is true.
 PlayerMet of Jadako is false.
 PlayerRomanced of Jadako is false.
 PlayerFriended of Jadako is false.
@@ -68,6 +75,8 @@ Virgin of Jadako is true.
 AnalVirgin of Jadako is false.
 PenileVirgin of Jadako is false.
 SexuallyExperienced of Jadako is true.
+TwistedCapacity of Jadako is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Jadako is true. [steriles can't knock people up]
 MainInfection of Jadako is "".
 Description of Jadako is "[jadakodesc]".
 Conversation of Jadako is { "<This is nothing but a placeholder!>" }.
@@ -81,21 +90,28 @@ object	name
 Joseph	"Joseph"
 
 Joseph is a man.
-[Physical details as of game start]
 ScaleValue of Joseph is 3. [human sized]
-SleepRhythm of Joseph is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Joseph is 1. [X cock]
-Cock Length of Joseph is 9. [X Inches]
-Ball Size of Joseph is 7.
-Ball Count of Joseph is 2. [X balls]
-Cunt Count of Joseph is 0. [X pussy]
-Cunt Depth of Joseph is 0. [X Cunt]
-Cunt Tightness of Joseph is 0. [X Cunt]
-Nipple Count of Joseph is 2. [X nipples]
-Breast Size of Joseph is 0. [X at the start]
+Body Weight of Joseph is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Joseph is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Joseph is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Joseph is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Joseph is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Joseph is 8. [length in inches]
+Breast Size of Joseph is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Joseph is 2. [count of nipples]
+Asshole Depth of Joseph is 10. [inches deep for anal fucking]
+Asshole Tightness of Joseph is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Joseph is 1. [number of cocks]
+Cock Girth of Joseph is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Joseph is 9. [Length in Inches]
+Ball Count of Joseph is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Joseph is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Joseph is 0. [number of cunts]
+Cunt Depth of Joseph is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Joseph is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Joseph is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Joseph is false. [can not take oversized members without pain]
-Sterile of Joseph is true.
 PlayerMet of Joseph is false.
 PlayerRomanced of Joseph is false.
 PlayerFriended of Joseph is false.
@@ -106,6 +122,8 @@ Virgin of Joseph is true.
 AnalVirgin of Joseph is false.
 PenileVirgin of Joseph is false.
 SexuallyExperienced of Joseph is true.
+TwistedCapacity of Joseph is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Joseph is true. [steriles can't knock people up]
 MainInfection of Joseph is "".
 Description of Joseph is "[josephdesc]".
 Conversation of Joseph is { "<This is nothing but a placeholder!>" }.

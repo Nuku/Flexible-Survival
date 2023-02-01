@@ -84,7 +84,7 @@ It is not temporary.
 The AC of Apocalypse Scarf is 0.
 The effectiveness of Apocalypse Scarf is 0.
 The placement of Apocalypse Scarf is "face".
-The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceName of Player] face.".
+The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceSpeciesName of Player in lower case] face.".
 The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".
 

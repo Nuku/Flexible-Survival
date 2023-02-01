@@ -187,7 +187,7 @@ Object	Name
 Virgin's Pass	"Virgin's Pass"
 
 Virgin's Pass is a room.
-The earea of Virgin's Pass is "Avalon".
+Earea of Virgin's Pass is "Avalon".
 Description of Virgin's Pass is "[VirginsPass desc]".
 
 to say VirginsPass desc:
@@ -207,7 +207,7 @@ Avalon-Crossroads is a room.
 Avalon-Crossroads is fasttravel.
 Avalon-Crossroads is private.
 Avalon-Crossroads is south of Virgin's Pass.
-The earea of Avalon-Crossroads is "Avalon".
+Earea of Avalon-Crossroads is "Avalon".
 Description of Avalon-Crossroads is "[AvCrossroads desc]".
 
 to say AvCrossroads desc:

@@ -1,10 +1,11 @@
-Version 3 of Hellfire Demon by Gherod begins here.
+Version 4 of Hellfire Demon by Gherod begins here.
 
 "Adds the kinky Hellfire Demons to be roaming around Red Light District in service of an unknown entity."
 
 [Version 1 - File created - Gherod]
 [Version 2 - New Victory Scene w/ Xaedihr and Male player]
 [Version 3 - Updated Infection with lootlists and infection items. Leather Jockstrap moved to Hellfire Workers file.]
+[Version 4 - Added new Victory scene - Worship the demon's feet.]
 
 Section 1 - Lootlist
 
@@ -103,6 +104,11 @@ to say HellDemon loses:
 		now sortorder entry is 1;
 		now description entry is "Get a taste of his demon cock";
 		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Worship the demon's feet";
+		now sortorder entry is 7;
+		now description entry is "Work your tongue around those crimson toes";
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Facefuck the demon";
@@ -122,7 +128,7 @@ to say HellDemon loses:
 			if demonologist is listed in companionList of Player and libido of Xaedihr > 0:
 				choose a blank row in table of fucking options;
 				now title entry is "Double tag him with Xaedihr";
-				now sortorder entry is 7;
+				now sortorder entry is 99;
 				now description entry is "Fuck him from both sides";
 		[]
 		if Player is female:
@@ -153,17 +159,19 @@ to say HellDemon loses:
 					now sextablerun is 1;
 					if (nam is "Offer to suck his dick"):
 						say "[HellDemonBJ]";
-					if (nam is "Facefuck the demon"):
+					else if (nam is "Facefuck the demon"):
 						say "[HellDemonFacefuck]";
-					if (nam is "Fuck his muscley ass"):
+					else if (nam is "Fuck his muscley ass"):
 						say "[HellDemonFuck]";
-					if (nam is "Offer your ass for his pleasure"):
+					else if (nam is "Offer your ass for his pleasure"):
 						say "[HellDemonAnal]";
-					if (nam is "Sit on his face"):
+					else if (nam is "Sit on his face"):
 						say "[HellDemonCun]";
-					if (nam is "Offer your pussy for his pleasure"):
+					else if (nam is "Offer your pussy for his pleasure"):
 						say "[HellDemonPussy]";
-					if (nam is "Double tag him with Xaedihr"):
+					else if (nam is "Worship the demon's feet"):
+						say "[HellDemonFeet]";
+					else if (nam is "Double tag him with Xaedihr"):
 						say "[HellDemonXMale]";
 					wait for any key;
 			else if calcnumber is 0:
@@ -252,7 +260,7 @@ to say HellDemonAnal:
 to say HellDemonCun:
 	project Figure of HellfireDemon_hard_icon;
 	say "     Thinking what you should do with the sexy devil, your eyes end up locked on his. As you observe his face, his handsome and masculine features, you feel a soft warmth on your groin as an idea slips into your mind, taking over your thoughts. The demon shows a grin at you, as if knowing what you're thinking, and walks up to you, ready to give your cheek a gentle stroke. 'Oh, I know that look... But I figure you need encouragement.' he says, sliding one of his meaty hands between your legs, pressing against your crotch so nicely as he begins to take a seat on the ground. He's now looking up at you, licking his lips to show his long demonic tongue, and by a will that is almost not yours, [if player is not naked]you slide down your lower gear and take off your clothes, [else]you give your exposed womanhood a soft rub, [end if]and walk over the demon. He leans back as your pussy hovers above his face, his expression rather eager as your arousal keeps building up.";
-	say "     Slowly, you duck above his head, your thighs on each side as you grind your labia across his lips. The demon lets out a pleased hum as he gives you a kiss, your moistered vulva tingling in response as lust starts to take over. He doesn't disappoint with his oral skills either, the pointy and long tongue of a demon being one of the most pleasurable things that could have ever entered you at this stage, wiggling and squirming around so nicely that you feel every inch and bit of your sex thoroughly stimulated, and you can hear him sucking in your juices rather hungrily. Pressing against his face harder only seems to encourage him to tonguefuck you, and soon you find yourself actually riding his tongue, so buried deep in you that you can't help but moan at the joyful sensations happening in your womanhood.";
+	say "     Slowly, you duck above his head, your thighs on each side as you grind your labia across his lips. The demon lets out a pleased hum as he gives you a kiss, your moistened vulva tingling in response as lust starts to take over. He doesn't disappoint with his oral skills either, the pointy and long tongue of a demon being one of the most pleasurable things that could have ever entered you at this stage, wiggling and squirming around so nicely that you feel every inch and bit of your sex thoroughly stimulated, and you can hear him sucking in your juices rather hungrily. Pressing against his face harder only seems to encourage him to tonguefuck you, and soon you find yourself actually riding his tongue, so buried deep in you that you can't help but moan at the joyful sensations happening in your womanhood.";
 	WaitLineBreak;
 	if player is dominant:
 		say "     Now wouldn't it be nice to have such a powerful demonic creature at your service to provide you such a godlike cunnilingus anytime you craved a lengthy and wiggling hot tongue in you? Only if you had him as your personal slave, satisfying all your whims and needs, such a strong devil at your permanent service, performing this well at all tasks you order him to carry on for you... Only if you could have that, you could keep riding this demon's face all you wanted, for as long as you desired...";
@@ -286,10 +294,24 @@ to say HellDemonPussy:
 	say "     With only a couple more thrusts, he lets out a beastly grunt, unloading each and every drop of his seed into his womb, spurt after spurt filling you with thick and sweet demonic cum for a long minute, and this triggers a massive surge of pleasure through your whole being, breaking through your senses like a rampant shiver. Your in-sync orgasms seem to have pleased the demon, as he keeps depositing his last drops of hellish fluids inside you. When he's finally done, he slowly puts you on the ground, helps you lie down and chuckles with amusement as he sees his own cum leaking from your swollen womb though your flustered pussy. 'That was fun. Hope we meet again... Maybe I can fill you another time.' With this, the demon retreats back to the shadows, leaving you taking a much needed rest before you can do the same.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Hellfire Demon";
 
+to say HellDemonFeet:
+	say "     You have won the fight, and that means you can take anything you want out of the demon, even things you would normally want if you were in a submissive position. Regardless, once your eyes lay on the demon's feet, all perfectly shaped and soft looking, adorned with a full set of obsidian claws each, giving them a somewhat wild look... A thought crosses your mind. Lost in your contemplations, you are startled by him suddenly wiggling his toes as he realizes you are staring at them. 'I see something caught your gaze, [mister]... Would that be these?' he asks, lifting one of his feet and moving it around, showing off every angle of those large and soft-looking soles. 'What's holding you, then? Come have a closer look! It's not like I'm gonna walk away...'";
+	say "     He then picks a toppled container that happens to be nearby and sits on it with a manspread, letting his cock poke out of his leather jockstrap as he stretches his legs forward, raising his soles off the ground. Following his previous words without thinking much on the matter, you step closer to the demon and kneel in front of him. Placing one hand behind his ankle, you lift one of his feet and inspect it from a closer distance, already thinking of the things you could do to it. You start by rubbing it a bit all over with your fingers and thumb, providing him with a sort of foot massage. It surprises you how soft his skin is down there, perhaps due to the quick regenerative characteristics of these demons, since they walk barefoot.";
+	WaitLineBreak;
+	project Figure of HellfireDemon_hard_icon;
+	say "     'Well, that feels great, but... I'm sure you had something more in mind, right?' He gives you his other foot to hold, moving both closer to your face as you absentmindedly touch them. Your eyes continue to follow those wiggling toes and the temptation to bring them closer to your mouth increases... to the point you simply just do it, placing your lips atop one of his big toes and slowly wrapping them around it, though carefully to avoid that sharp claw. 'Mmh, well... That's more like it. I probably should let you know that I'm into this.' The demon rips his jockstrap off and frees the monster within, jerking his cock while he observes you worshipping his feet. You do not pay much attention to that, though, as for now your focus is that big toe you have your tongue wiggling around.";
+	say "     It slowly escalates into a full-on toe sucking as you get your mouth between them. One at a time, you allow them to enter your mouth while rubbing the rest of the foot, and the demon finds himself in the freedom to rub the other's sole against your cheek. As things get more intense, so does your desire for the devil's pleasure, and you are quick to add the other foot to the action, jumping from one's toes to the other's with your tongue and lips always ready to suck on them. 'Oh, you're doing so good... I'm in luck to have found a foot lover like you...' he teases, now watching you put your tongue under the toes and kissing the sides of the soles. Soon, you go all out, stretching your tongue and moving it in circles around the entire underside of both feet, alternating between them, causing the demon to feel more than happy to start press them against your face.";
+	WaitLineBreak;
+	say "     'Mmmh... Keep going... Feels great...' he moans as he jerks his cock with long and steady strokes, pushing against your face with his feet until you simply find it easier to lie down and let him take the lead. He leans forward to look at you as now both of his feet are on top of your face, giving you generous access to the toes once more. He slides one entire set of them into your mouth and only stops until your lips are resting by their base. 'Suck on them good for me... That really makes me throb...' The rest of the sole remains atop your chin while he rubs the rest of your face with the other foot, and he is not exactly gentle with it. You feel the motions of him jerking off, the momentum being carried all the way through his legs, as he grows more and more excited...";
+	say "     With your face overtaken by both his feet, your only option left is to suck on his toes as he pleases. The demon gives you plenty of time with each foot to worship as he brings himself closer to the edging point. Soon, he gets there, and you can hear him moan as he struggles to hold back, all the way up to a point that he just... cannot hold it anymore. 'Fuck, I'm cumming! Yess!' he shouts, and soon, cum comes raining down over his abs - and everywhere, really - as you carry on wiggling your tongue around and below his toes, only further intensifying his pleasure. He cums so much that you can even hear the drops falling on the container he is sitting on, as it is getting sprayed all around him, like a firehose.";
+	WaitLineBreak;
+	say "     It is then that the demon pulls his feet off your mouth, placing them on each side of your head as you remain completely turned on by the experience. He stands up and looks down at you with the biggest smile as the cum slides down his body, some of it even dripping on your face as he catches his breath. 'That was fucking hot! Look at the mess you've made me do... It got all over!' He then laughs as he rubs his body, smearing that creamy load all over his torso. 'Though I guess funtime's over and I have to go. Was cool to let you lick my feet, made me cum good... See ya!' He then just starts walking away, leaving you lying on the ground look at him go. Eventually, you get a grip of your senses and decide to stand up, keeping this encounter engraved in your memory for future reference...";
+	CreatureSexAftermath "Player" receives "Other" from "Hellfire Demon";
+
 to say HellDemonXMale:
 	project Figure of HellfireDemon_soft_icon;
 	say "     With a quick glance over your companion, you give Xaedihr a sign to step ahead as he eyes you with mischief. 'Oh, kind of you to think of me. It was getting boring to see you take all the fun for yourself...' he comments, while simultaneously performing an arcane gesture, causing his signature dark tendrils to raise from the ground and slowly wrapping themselves around the red devil's legs. 'What's this?! A sorcerer?! No, come on, we can talk about this, I'm sure?' he protests, but soon his words turn into moans as his throbbing meat, still restrained underneath his barely fitting jockstrap, is held and stroked by a single tendril slipping itself around his shaft. This makes him weak on the knees, and with a slight push, he's brought down on all fours. Though as this clearly isn't enough to satisfy the half-demon, he also makes sure he removes the jockstrap, while guiding you to walk over the sexy devil's rear, a delightful muscle ass now fully exposed to you.";
-	say "     'Now that looks like a tasty sight. And since I'm a generous person, I'll let you have it as I facefuck him. You know I love a mouth wrapped around my dick.' says Xaedihr, winking at you suggestively. With a pat on the devil's powerful glutes, you feel up his butt in all of its glory as the sorcerer takes his own manhood out, slapping it on the demon's face before sliding it in between his lips. You hear grunts from the other side as the helpless hellspawn is forced to take a footlong of a cock in his throat, being held by his large horns, while you're ready to bring your [cock of player] penis between the muscle cheeks. His hole, twitching and surprisingly eager, feels warm and slick, inviting you to put your cock in and enjoy the tight feeling around your shaft in any way you see fit. Without any further ado, you do so, thrusting into his ass until you're all the way in, your pelvis hiting his butt with your cock resting inside.";
+	say "     'Now that looks like a tasty sight. And since I'm a generous person, I'll let you have it as I facefuck him. You know I love a mouth wrapped around my dick.' says Xaedihr, winking at you suggestively. With a pat on the devil's powerful glutes, you feel up his butt in all of its glory as the sorcerer takes his own manhood out, slapping it on the demon's face before sliding it in between his lips. You hear grunts from the other side as the helpless hellspawn is forced to take a footlong of a cock in his throat, being held by his large horns, while you're ready to bring your [cock of player] penis between the muscle cheeks. His hole, twitching and surprisingly eager, feels warm and slick, inviting you to put your cock in and enjoy the tight feeling around your shaft in any way you see fit. Without any further ado, you do so, thrusting into his ass until you're all the way in, your pelvis hitting his butt with your cock resting inside.";
 	WaitLineBreak;
 	project Figure of HellfireDemon_hard_icon;
 	say "     'How are you feeling down there, demon slut? Getting double tagged and tentacle raped, what's not to enjoy...?' Xaedihr keeps teasing the sexy devil as his tendrils fully embrace the demon's thick body, further stimulating his throbbing meat as you keep on fucking his ass hard and deep. He's basically being supported by the sorcerer's magic, making it feel so easy for you to pound and thrust to your heart's content. Grabbing him by the hips to aid the momentum, you pick up the pace in order to feel a much greater sensation, going so deep in the devil that he can't help but twitch his asshole around your shaft, grunting with a mouth full of Xaedihr's cock. 'What's the matter? My bud is fucking you too hard? Shame you can't talk and complain about it...' he teases once more, tightening his grip around the demon's horns and pulling his face towards himself, leaving only the balls out as his entire shaft gets buried inside the devil's mouth.";
@@ -300,7 +322,7 @@ to say HellDemonXMale:
 	if player consents:
 		LineBreak;
 		say "     With a nod, you agree on trading places with your friend. Pulling out your cock out of the crimson devil's ass, you walk over to Xaedihr's spot as he moves to yours with a few steps, the demon being too overwhelmed with ecstasy to make any sounds other than moaning and grunting. Now on his frontal side, you bring your meatstick over those soft and warm lips, push it in between them as his long tongue twirls around your cock, and take hold of his big horns to give him the facefuck he deserves. In the meantime, the half-demon doesn't waste any time in covering the hole you've left unfilled, shoving all of his twelve inches inside the hellspawn's ass without an issue at all, grinning in satisfaction. 'Fuck, he's tight... Even when warmed up...' Pleased with the sensation of the demon's pucker clenching around his length, Xaedihr gives the muscle ass a loud slap, making him let out a groan with your dick in his mouth.";
-		say "     How that almost sets you off, feeling his deep voice vibrating through your shaft, making you throb with pleasure and all the much eager to thrust into his throat. And his horns are so convenient to aid you in this, making such great handles to help you pound his sorry mouth until you have nearly driven yourself close to climax. Definitely doesn't help seeing your sorcerer friend pounding the demon's ass on the other side as he makes eyecontact with you, sending a wink and a charming smirk that makes you throb even harder. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's mouth and make him swallow up your cum until the very last drop.";
+		say "     How that almost sets you off, feeling his deep voice vibrating through your shaft, making you throb with pleasure and all the much eager to thrust into his throat. And his horns are so convenient to aid you in this, making such great handles to help you pound his sorry mouth until you have nearly driven yourself close to climax. Definitely doesn't help seeing your sorcerer friend pounding the demon's ass on the other side as he makes eye contact with you, sending a wink and a charming smirk that makes you throb even harder. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's mouth and make him swallow up your cum until the very last drop.";
 		WaitLineBreak;
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's mouth as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums in his ass, and all you can imagine is his insides getting covered completely by the virile mage as he pounds that rear hard and deep. Inevitably, you feel the demon's grunts as all this happens, he too hitting the edge and making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' says Xaedihr, as he is slowly pulling out his cock from the demon's abused hole, a stream of his load following right after and leaking down to the muscle glutes. You do the same, pulling out of his mouth and finally letting the hunky devil take a breath.";
 		CreatureSexAftermath "Hellfire Demon" receives "OralCock" from "Player";
@@ -308,7 +330,7 @@ to say HellDemonXMale:
 	else:
 		LineBreak;
 		say "     Shaking your head, you let him know you want to keep the ass to yourself. 'Huh, alright. All the better for me.' he replies, with a wink and a grin as he proceeds to continue to facefuck the hunky devil as eagerly as before. After all, his hole clenching around your length is feeling so good, you don't really want to pull out now. Instead, you want to continue fucking this delicious ass while Xaedihr keeps making the demon choke and grunt with his twelve inches fully buried inside his throat. He's leaning his head back with just the happiest pleasure face as he's feeling the crimson devil's throat muscles around his thick shaft, then returning to pound his face as if it was the ass you're fucking by the other side.";
-		say "     As the spitroast fucking continues, you eventually hit signs that you're getting closer the more you thrust, as once can only last so long. Slowing down the pace, you try to let Xaedihr know that you really want to cum, and he gets you with a suggestive, teasing nod with a smirk drawn on his face. He makes a couple more poundings at half the speed and he too looks to be close. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload insde this sexy devil's ass and coat his insides until left leaking your cum from his anus. Just the image of his pucker twitching open as your seed slowly makes its way out from where it was deposited sends your cock into a hard frenzy, so ready to explode.";
+		say "     As the spitroast fucking continues, you eventually hit signs that you're getting closer the more you thrust, as once can only last so long. Slowing down the pace, you try to let Xaedihr know that you really want to cum, and he gets you with a suggestive, teasing nod with a smirk drawn on his face. He makes a couple more poundings at half the speed and he too looks to be close. 'You want to fill him up? I'm all set...' he says, and truth be told, you cannot wait to unload inside this sexy devil's ass and coat his insides until left leaking your cum from his anus. Just the image of his pucker twitching open as your seed slowly makes its way out from where it was deposited sends your cock into a hard frenzy, so ready to explode.";
 		WaitLineBreak;
 		say "     With a couple more thrusts, you feel your orgasm settling in, and you can't help but let out a moan as your seed leaves your body, spurt after spurt coming inside the red devil's ass as you keep thrusting until the end. The tendrils tighten their grip around the demon, holding him in place as Xaedihr too cums down his throat, and you can hear the sexy devil gulping down every single drop of it. 'Fuck yes... Swallow all of it, demon slut... That's right...' says Xaedihr, amidst some grunting, as the demon too hits the edge, making a puddle of his own load around his knees, plentiful of hellish cum just laying there on the ground. 'Fuuuck... this felt so good...' he continues, slowly pulling out his cock from between the hellspawn's lips, finally letting the hunky devil take a breath. You do the same, pulling out of his ass as a stream of your load follows right out of his abused hole, leaking down to the muscle glutes.";
 	say "     'Now this was hot. Hope you took some lessons, hellfire boy.' teases your sorcerer friend, leaving a rather humiliated demon silent as he lies down on the ground, right on his own messy puddle of cum as Xaedihr's tendrils return to their own void. He only lets out a defeated grunt, but you can tell he secretly enjoyed being used like that, both his mouth and ass used and abused for a good while. 'I think we should do this again, totally. Hope you're down for that anytime, bud.' he tells you, and you think he's actually eager to do it again. Perhaps he is, given how much he gets off from dominating demons... A charming fellow, this man.";
@@ -320,7 +342,7 @@ to say HellDemonXMale:
 
 to LJockstrapPickup:
 	if carried of leather jockstrap < 1:
-		say "     Though while that happens, you happen to come accross the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you hadn't paid attention. It smells greatly of his sweet musk... There's no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it's in good conditions.";
+		say "     Though while that happens, you happen to come across the jockstrap left behind by the demon when he removed it before you. Luckily enough, as it is quite dark around here and it's barely visible if you had not paid attention. It smells greatly of his sweet musk... There is no way to guarantee safety in using it, but it [italic type]should[roman type] be fine, since it is in good conditions.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Pick it up.";
 		say "     ([link]N[as]n[end link]) - Just leave it.";
@@ -328,7 +350,7 @@ to LJockstrapPickup:
 			say "     You crouch down to pick the leather jockstrap and stow it away in your inventory.";
 			ItemGain leather jockstrap by 1 silently;
 		else:
-			say "     With a shrug, you leave it where it is. Probably won't be there in a few minutes.";
+			say "     With a shrug, you leave it where it is. It probably will not be there in a few minutes.";
 
 to say HellDemon Desc:
 	setmongender 3;
@@ -338,7 +360,7 @@ to say HellDemon Desc:
 		project Figure of HellfireDemon_clothed_icon;
 		say "     Standing in front of you is yet another intimidating creature of Hell. A deep crimson, tall and powerful demon, with large tauric horns on the top of his head, approaches you from the darkness. Your eyes inevitably land on the massive bulge barely contained by a leather jockstrap, jiggling slightly at each step that he takes. On top of that, his athletic body is covered in muscle, with a simple harness around his hairy pectorals, and while he generally looks more human in appearance than the brutish of demons, his dark sharp claws still prove a threat to you. With a grin on his face, he speaks to you:[line break]";
 		if Hellfire Club is known:
-			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the antecipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
+			say "     'Look who it is! Master's special guest taking a walk during the night! How about we spar... And fuck right after?' You swear you can already see his bulge growing with the anticipation of having it with you, be it just fighting or more than that. He also doesn't waste any time, lunging himself at you with a grin on his face.";
 		else if BodyName of Player is "Hellfire Demon" and FaceName of Player is "Hellfire Demon": [player looks like a Hellfire Demon]
 			say "     'Fancy meetin' you here! Did you get fucked so much that you became one of us? Should've just asked Master Mogdraz for a joining pass, I'm sure he'd provide you with enough juice... in exchange for your soul. A small price for an eternity of fun, if you ask me... Speaking of fun, wanna have a go?' With this, the demon lunges himself at you.";
 		else:

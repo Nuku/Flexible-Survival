@@ -258,14 +258,6 @@ to say losetogob_m:
 		say ".' Satisfied, he runs off back from whence he hid. It takes you a moment to recover, and you find yourself a little disoriented and lust-addled by his sexual fluid's infectious influence.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Goblin";
 
-[  - old scene -
-	if Player is female and BodyName of Player is "Goblin":
-		say "     The goblin cackles merrily at his victory and pushes you down onto the ground. Having found a female goblin, or at least someone close to one, he pushes you onto all fours with his foot and scrambles atop you. Raising his loincloth, he brings his green cock to your pussy and thrusts into you with no preamble. He grips your shoulders and pounds away at you, driving his small cock in again and again. Your body can't help but respond to this, panting and moaning at having a goblin cock inside it. Your pussy quivers over his penis, milking at it until he cums. As his hot seed rushes into you, you cum as well with a loud, squealing moan. Once he's drained his balls into you, he gives you another kick to send you on your way.[impregchance]";
-	else:
-		say "     The goblin cackles at his victory and pushes you to the ground. Taking your head in his hands, you can feel they have a surprisingly strong grip for their spindly size. Pressing your face to his loincloth, the masculine scent it's masking becomes more apparent. As his cock grows hard, his loincloth is pushed aside to reveal a five inch cock. Given his body's size, it must seem impressive to him, though you've seen much bigger out in this city.";
-		say "     But regardless of its size, it's clear what the goblin wants of you. As he presses his cock to your lips, you give it a few licks before taking it into your mouth. Its taste is bitter, but also masculine and strong. You find yourself continuing to lick at it and start sucking it of your own accord, aroused by the sight of the little guy's prominent ballsack. They are a little bigger than an average man's, making them quite impressive on his small frame. You grip his green, leathery sac as you bob over his cock, getting him to blast his spunk into your mouth. Though bitter, you swallow it all down with a soft moan around his meat. Once his cock gives its last spurt, he pushes you away with his boot and sends you on your way.";
-]
-
 to say beatthegoblin:
 	now goblinfight is 1;
 	now calcnumber is -1;
@@ -364,7 +356,7 @@ to say beatthegoblin:
 
 to say fgob_vicsex1:	[f-gob vaginal sex]
 	say "     While she attempts to recover you move behind her, exposing your cock[smn] and driving [if Cock Count of Player > 1]one of them[else]it[end if] to arousal. Suddenly, you pounce on her, [if scalevalue of Player > 3]lifting her clean off the ground and impaling the poor lass[else]pinning her to the ground as you drill into her hole[end if] with your [cock size desc of Player] dick. She cries out, [if Cock Length of Player > 8]forced to contend with your sizable flesh[else]struggling in vain against your hold[end if].";
-	say "     [if scalevalue of Player > 3]Grip firm on her, you begin to force her up and down against your [CockName of Player] cock, relegating the beleaguered goblin to a mere sex toy[else]Firm hold on her, you begin to thrust against her cunt, beleaguered goblin moaning out as you continue to abuse her[end if]. Your motions gradually start to pick up in pace until you cry out in rapturous release, [if Cock Count of Player > 2]your exposed cocks firing impotently into the air[else if Cock Count of Player > 1]your exposed cock firing impotently into the air[else]the creature moaning loudly[end if] as you pump her full of your seed[if Ball Size of Player >= 6]. Elongated and strained her moans become as her belly visibly bloats with your impressive load, each successive gout spurted from her stuffed hole when she can abide it no further[end if].";
+	say "     [if scalevalue of Player > 3]Grip firm on her, you begin to force her up and down against your [CockSpeciesName of Player in lower case] cock, relegating the beleaguered goblin to a mere sex toy[else]Firm hold on her, you begin to thrust against her cunt, beleaguered goblin moaning out as you continue to abuse her[end if]. Your motions gradually start to pick up in pace until you cry out in rapturous release, [if Cock Count of Player > 2]your exposed cocks firing impotently into the air[else if Cock Count of Player > 1]your exposed cock firing impotently into the air[else]the creature moaning loudly[end if] as you pump her full of your seed[if Ball Size of Player >= 6]. Elongated and strained her moans become as her belly visibly bloats with your impressive load, each successive gout spurted from her stuffed hole when she can abide it no further[end if].";
 	say "     Your flow soon diminishes and - now sated - you pull [if scalevalue of Player > 3]her free of you and put her down[else]yourself free of her and let her go[end if]. The goblin weakly retreats, leaving a trail of sexual fluids in her wake and letting you continue on your merry way.";
 	CreatureSexAftermath "Goblin" receives "PussyFuck" from "Player";
 
@@ -559,7 +551,7 @@ to say goblindesc:
 			now gobgender is 1;
 		else if FemaleList is warded:
 			now gobgender is 2;
-	if a random chance of 1 in 4 succeeds:
+	if a random chance of 1 in 4 succeeds and inasituation is false:
 		now gobdem is true;
 	else:
 		now gobdem is false;

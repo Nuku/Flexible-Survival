@@ -4,6 +4,13 @@ Version 2 of Power Plant by Hellerhound begins here.
 
 [Include Computers by Hellerhound.]
 
+CityPowerOn is a truth state that varies. CityPowerOn is usually false.
+
+a postimport rule:
+	if findwires is 2 and fixedgens > 2:
+		now CityPowerOn is true;
+
+
 Table of GameEventIDs (continued)
 Object	Name
 Ravaged Power Plant	"Ravaged Power Plant"
@@ -178,6 +185,7 @@ carry out activating:
 		say "Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
 		activatecomputers;
 		now fixedgens is 3;
+		now CityPowerOn is true;
 	else if fixedgens is 0:
 		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
 	else if fixedgens is 1:

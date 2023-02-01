@@ -20,7 +20,7 @@ after going to White Tiger Alchemy Shop while Loyalty of Sheng is 0:
 	say "     Turning to the source of the sound you spot a rather fancy dressed white tiger. With the dark green vest, button-up shirt, leather skirt, and ankle-length coat you're pretty damn sure that he wouldn't be out of place of a fantasy novel. 'Are you going to buy something?' The tiger asks in a deep, almost purring voice that has a slight bit of annoyance to it. Figuring you'd best answer his question you ask him what he sells, which prompts him to raises his eyebrow, giving you the idea he thinks you're stupid for asking the returning question. 'This is an alchemy shop...' he drawls out, cementing that previous thought of yours. You tentatively put out the suggested answer that he sells potions.";
 	WaitLineBreak;
 	say "     '[if bodyname of player is listed in infections of CanineList]Good doggy[else if Player is neuter or player is herm]Good job peon[else if Player is male]Good boy[else if Player is female]Good girl[end if], looks like you know the basics,' he says in a condescending tone though you can tell there [italic type]is[roman type] a little bit of praise in his words, causing you to feel embarrassed. 'But I feel like I should throw you a bone and offer you more information.' The tiger says this part with a chuckle as if it's an inside joke to him, causing you to stare at him oddly. He moves out from behind the counter and leans against the front of it. 'Currently I sell transformative alchemy potions. Before you hurt your small brain trying to contemplate what exactly that means, they are basically concoctions that change you into one of the many... creatures that you see wandering the city outside Atlantis,' he says, sneering when speaking about the various beings created by the nanites.";
-	say "     You comment on that, asking if he's not one of those creatures, causing him to look at you in complete horror. 'No! Absolutely not, I am what you might call a mythical being, I am [italic type]natural[roman type] unlike them,' he says with a look of contempt. With a wince you ask him if he thinks that then why make potions that turn people into them then. That causes his face to soften before he speaks. 'I find the creatures themselves and how they came to be, the nanites that is, unnatural. The person themself I care nothing for and I can talk perfectly fine to, if not be a bit wary of their motives, as your kind is a randy bunch.' The tiger says with a raised brow. You let out a chuckle and admit that's true considering the people you've ran into. 'Anyways, finishing this conversation off, as I do have work to do, if you would like to purchase something, my name is Sheng and I'm one of the Four Lords of Atlantis,' the white furred male says before returning behind the counter, leaving you in the store.";
+	say "     You comment on that, asking if he's not one of those creatures, causing him to look at you in complete horror. 'No! Absolutely not, I am what you might call a mythical being, I am [italic type]natural[roman type] unlike them,' he says with a look of contempt. With a wince you ask him if he thinks that then why make potions that turn people into them then. That causes his face to soften before he speaks. 'I find the creatures themselves and how they came to be, the nanites that is, unnatural. The person themselves I care nothing for and I can talk perfectly fine to, if not be a bit wary of their motives, as your kind is a randy bunch.' The tiger says with a raised brow. You let out a chuckle and admit that's true considering the people you've ran into. 'Anyways, finishing this conversation off, as I do have work to do, if you would like to purchase something, my name is Sheng and I'm one of the Four Lords of Atlantis,' the white furred male says before returning behind the counter, leaving you in the store.";
 	now Loyalty of Sheng is 1;
 	now PlayerMet of Sheng is true;
 
@@ -46,18 +46,29 @@ object	name
 Sheng	"Sheng"
 
 Sheng is a man.
-[physical details as of game start]
+Sheng is in White Tiger Alchemy Shop.
 Humanity of Sheng is 80. [is thousands of years old]
-ScaleValue of Sheng is 3. [human size]
-Cock Count of Sheng is 1. [has a cock]
-Cock Length of Sheng is 10. [has an 10 inch cock]
-Ball Size of Sheng is 4. [size of balls]
-Ball Count of Sheng is 2. [has a pair of balls]
-Cunt Count of Sheng is 0. [no vagina]
-Cunt Depth of Sheng is 0. [Doesn't have a vagina to get stretched]
-Cunt Tightness of Sheng is 0. [Doesn't have a vagina to get stretched]
-Nipple Count of Sheng is 2. [Has two normal nipples]
-Breast Size of Sheng is 0. [Doesn't have breasts really]
+ScaleValue of Sheng is 3. [human sized]
+Body Weight of Sheng is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sheng is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sheng is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sheng is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sheng is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sheng is 6. [length in inches]
+Breast Size of Sheng is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sheng is 2. [count of nipples]
+Asshole Depth of Sheng is 10. [inches deep for anal fucking]
+Asshole Tightness of Sheng is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sheng is 1. [number of cocks]
+Cock Girth of Sheng is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sheng is 10. [Length in Inches]
+Ball Count of Sheng is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sheng is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sheng is 0. [number of cunts]
+Cunt Depth of Sheng is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sheng is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sheng is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Sheng is false.
 PlayerRomanced of Sheng is false.
@@ -69,10 +80,12 @@ Virgin of Sheng is false.
 AnalVirgin of Sheng is false.
 PenileVirgin of Sheng is false.
 SexuallyExperienced of Sheng is true.
+TwistedCapacity of Sheng is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sheng is true. [steriles can't knock people up]
+MainInfection of Sheng is "".
 Description of Sheng is "[ShengDesc]".
 Conversation of Sheng is { "<This is nothing but a placeholder!>" }.
 The scent of Sheng is "     The white tiger gives off a smell of herbs and spices with what appears to be an underlying scent of tea.".
-Sheng is in White Tiger Alchemy Shop.
 
 to say ShengDesc:
 	say "     Glancing over at the tiger you see the male is currently standing at the counter, hunched over a bunch of papers, possibly alchemical formulae. Ignoring that for now you look him over and take in his clothing. What the male is wearing is something you definitely wouldn't see outside of a fantasy book. First and foremost the tiger is wearing a dark green vest over a white button up shirt that's accompanied by a sea-green bowtie. Trailing your eyes downward you notice that instead of pants he's wearing a leather skirt that's held up by a belt made of similar material. Topping the outfit off, is a large lighter green than his vest coat that goes all the way down to his ankles, embossed with tigers dancing all over the edges. [if Loyalty of Sheng > 1]Having been staring at the male for a while it's not unbelievable that he's noticed you looking. He sends you a superior smirk that makes you twitch a bit[else]Having been staring at him for a while it's not unbelievable that he's noticed you looking. He sends you a look that says either buy something or get out[end if].";

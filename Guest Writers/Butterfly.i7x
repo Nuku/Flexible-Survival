@@ -739,7 +739,7 @@ name	desc	weight	object
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
 The placement of racy lingerie is "crotch".
-The descmod of racy lingerie is "Over your [BodyName of Player] body, you're wearing a very racy set of red lingerie.".
+The descmod of racy lingerie is "Over your [BodyType of Player] body, you're wearing a very racy set of red lingerie.".
 The slot of racy lingerie is "crotch".
 the scent of racy lingerie is "While always smelling clean and fresh at first, smelling a little longer picks up a faint perfume and the scent of [if Player is herm]male and female [else if Player is female]female [else if Player is male]male [end if]arousal.".
 
@@ -796,6 +796,8 @@ to say testosterone pill use:
 		say "With a burst of intense pain the lips of your cunt[sfn] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
 		increase Cock Length of Player by 2;
 		increase Ball Size of Player by 2;
+		if Ball Size of Player > 7:
+			now Ball Size of Player is 7;
 		follow the cock descr rule;
 		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]! ";
 		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [Skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";
@@ -813,6 +815,8 @@ to say testosterone pill use:
 		now Cunt Tightness of Player is 0;
 		now Cunt Depth of Player is 0;
 		increase Cock Length of Player by 2;
+		if Ball Size of Player > 7:
+			now Ball Size of Player is 7;
 		increase Ball Size of Player by 2;
 		follow the cock descr rule;
 		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]! ";
@@ -823,7 +827,7 @@ to say testosterone pill use:
 		now Cunt Depth of Player is 0;
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
-		now Ball Size of Player is 4;
+		now Ball Size of Player is 2;
 		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]form inside you[else]then pop out underneath your new manhood[end if]. ";
 	if "Breasts" is not listed in feats of Player:
 		if Breast Size of Player > 0:

@@ -12,10 +12,14 @@ to say losetodragontaur:
 	else:
 		if Player is female or ( anallevel > 1 and a random chance of 2 in 3 succeeds ):
 			say "     Having defeated you, the dragontaur roars triumphantly and presses you to the ground. It rumbles in your ear as it moves to mount you about [if Player is female]it's going to breed you full of whelps[else]pound you until you're overflowing with cum[end if] and thrusts into you with little preamble. Its tapered tip is designed for prying open reluctant holes and pushes its way into your [if Player is female][cunt size desc of Player] pussy with ease[else]tight anus[end if]. The draconic cock thickens as it pushes further into you, each of those ridges on it acting as delightfully pleasurable markers of just how much meat the powerful taur is stuffing inside you. The dragon fucks you with wild, animalistic abandon, pounding you until you're nearly insensate with lust and finally climax as he blasts shot after shot of his creamy load into your wanton hole, bloating your [if Player is female]womb[else]belly[end if] with his prodigious output. Finished, he pushes you aside, leaving you on the ground and leaking his cum from your overstuffed and gaping [if Player is female]pussy[else]asshole[end if].[ovichance]";
+			if Player is female:
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Dragontaur";
+			else:
+				CreatureSexAftermath "Player" receives "AssFuck" from "Dragontaur";
 		else:
 			say "     Having defeated you, the dragontaur rumbles excitedly and presses you to the ground. It murrs in your ear about how [one of]much fun it's going to have with you[or]it's been looking for some fun[at random]. You are beyond resisting its advances at this point, wrapping your arms around him and burying your face to his firm scales, taking in his spicy scent while he chuckles and rubs your head.";
 			say "     Stepping over you, he presses his throbbing cock to your face, precum spurting from it across your lips. The musky fluid has a spicy taste that is quite exciting. You find yourself wanting more and lick at his dribbling glans before welcoming his cock into your mouth. You moan in pleasure as that ridged length slides past your lips and over your tongue before pressing its tapered glans down your throat. He presses one of his forepaws at the back of your head, encouraging you to bob your head over his meat as he fucks your face with increasing fervor. You reach up and knead his hefty balls until he finally cums, feeding you a heavy load of his exotically tasting semen. As he's finishing up, he pushes your head back roughly, letting the last few spurts of his seed spray across your face, marking you as having been used by him. Once he's done, you're left feeling full from his large load but still eagerly licking at the cum running down your face for more.";
-
+			CreatureSexAftermath "Player" receives "OralCock" from "Dragontaur";
 
 to say beatthedragontaur:
 	if HP of Sam is 15:
@@ -31,9 +35,11 @@ to say beatthedragontaur:
 				say "     Deciding that you might indeed want to have some fun with the dragon, but on your own terms, you push the fallen taur over onto his side and grab his cock. While it had been softening and receding after his defeat, it quickly rises back to its full glory as you stroke it. He tries to rise so he can mount you, but you push him back down firmly and instead straddle him. With his rear turned over and the rest of him on his side you're able to position yourself overtop of his cock and guide it into your wet cunt. His tapered glans slips easily into you, spreading you open for his thickening length below it.";
 				say "     You run your hands over his scaly hide as you sink more and more of his ridged shaft into you. Each of those ridges provide delightful pleasure to you as they slide across your pussy lips and inner walls. His hips try to buck and thrust into you, but to little avail. You're the one setting the pace this time and, having gotten very aroused by this point, intent to make the most of it. You vary your pace and position several times, riding through several small orgasms while always building yourself higher and not letting the dragon get off. And when your massive orgasm finally comes crashing over your in waves of ecstasy, you ride him hard and fast, pushing the dragon over the edge as well. He roars loudly and cums hard, blasting thick dragoncum deep inside you, filling your womb with his virile seed.[ovichance]";
 				say "     Only once you've drained his balls do you ease yourself off of him and stand on weak knees after your mind-blowing climax. The dragontaur staggers to his feet as well. You give his rear a hard swat and send him off now that you're done with him. Cowed, at least for the moment, the powerful beast takes flight and soars away.";
+				CreatureSexAftermath "Player" receives "PussyFuck" from "Dragontaur";
 			else:
 				say "     Deciding that you might indeed want to have some fun with the dragon, but on your own terms, you keep a grip on the dragon and move around in front of him. Grabbing his horns, you pull his face between your legs so his muzzle's squarely at your cock. Finding himself face to penis with you, he tries to pull back, but you keep a firm grip on his horn with one hand. You slap your cock across his face with the other and order him to get sucking. Beaten, the powerful male has no choice but to comply. He licks slowly across your shaft with his forked tongue.";
 				say "     While he only gives a few tentative slides of his tongue at first, soon enough he's lapping over your erection and balls, growing more willing to service the stronger male. Pulling his head closer, he opens his muzzle and slides your cock into his mouth. He fellates you with increasing eagerness as his arousal grows and he becomes an eager participant. You thrust into his muzzle, driving your [cock size desc of Player] [Cock of Player] cock into his mouth harder and faster until you finally cum, feeding the horny dragontaur your cum[if Ball Size of Player > 6] until he's stuffed full and bloated with it[else] and leaving his tummy a little rounded from it all[end if]. You get the dragontaur to lick you clean before you'll release him and send him on his way with a swat on his rear. Cowed, at least for the moment, the powerful beast takes flight and soars away.";
+				CreatureSexAftermath "Dragontaur" receives "OralCock" from "Player";
 		else:
 			say "     Not in the mood to play with the blue dragontaur, you give his ass a hard swat and warn him not to get in your way again. He growls at the swat, but slinks a few feet away before taking to the air and flying off.";
 		decrease dragontaurcatch by 15;
@@ -61,7 +67,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dragontaur"; [name of the overall species of the infection, used for children, ...]
 	add "Dragontaur" to infections of ReptileList;
 	add "Dragontaur" to infections of FurryList;
 	add "Dragontaur" to infections of MagicalList;

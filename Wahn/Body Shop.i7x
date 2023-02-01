@@ -2,6 +2,20 @@ Version 1 of Body Shop by Wahn begins here.
 [ Version 1 - new file]
 [ Version 1.1 - events by Hyliad ]
 
+[
+1 - Demon Brute
+2 - Fennec
+3 - German shepherd
+4 - Gryphon
+5 - Horseman
+6 - Naga
+7 - Orc Breeder
+8 - Satyr
+9 - Snow Leopard
+10 - Squid
+11 - Succubus
+]
+
 LastMoreauPartSale is a number that varies. LastMoreauPartSale is usually 10000.
 MoreauPaymentAccepted is a truth state that varies. MoreauPaymentAccepted is usually false.
 MoreauDiscount is a truth state that varies. MoreauDiscount is usually false.
@@ -27,130 +41,12 @@ Description of Body Shop is "[BodyShopDesc]".
 
 to say BodyShopDesc:
 	say "     This room seems to have been a clothing boutique before the chaos started - at least judging by the wide-open floorspace, the row of changing booths in the back and numerous mannequins standing around motionlessly. Interestingly, none of the dolls actually wears a shred of clothing, with all of the former merchandise and the stands they were offered on pushed into an untidy heap in one corner of the store. No, what is being presented now instead are the mannequins themselves... on a second look, you see that they often vary from the 'typical' stature of sexless store mannequins. A row of them at the shop windows sports impressive erections - equine, canine, feline and human, to name just a few, while other little groups have a variety of facial features and body plans. Further in the back are several that one might believe customers at first - fully formed anthros with life-like skin, feathers or otherwise - if they didn't stand quite so motionless and still...";
-
+	if Daytimer is Day:
+		say "     The storekeeper is a large naga, who slithers through the room on his brightly colored scales, always ready to welcome new customers strolling in through the door. There is a slow but relatively steady trickle of interested people straying into the Body Shop, looking with interest at all the displays and appearing to think about what they see. 'Come in and look around at your leisure,' Moreau says in a welcoming manner, inviting them to have a closer inspection, and even offering to have the mannequins pose side to side with customers, even holding out their own body parts to compare.";
 
 Section 2 - NPC
 
-Table of GameCharacterIDs (continued)
-object	name
-Moreau	"Moreau"
-
-Moreau is a man.
-Description of Moreau is "[MoreauDesc]".
-The icon of Moreau is Figure of Moreau_soft_icon.
-Conversation of Moreau is { "Pay up!" }.
-Moreau is in Body Shop.
-
-the scent of Moreau is "Moreau has a hot, spicy scent that reminds you of exotic places.".
-
-To say MoreauDesc:
-	if debugactive is 1:
-		say "DEBUG -> HP of Moreau: [HP of Moreau], Libido of Moreau: [Libido of Moreau] <- DEBUG[line break]";
-	say "     Moreau is a snake... quite literally so, as most of his body is purely ophidian, going on and on as it slowly tapers. But in addition to that, he does have a waist too - you can see the typical little bulges where the hip-bone are right under the skin, and above that a human-like torso, giving him arms and opposable thumbs. A quick glance down to his crotch reveals that it is smooth and relatively bare, with just a narrow slit between the rows of scales - no telling what might or might not be hidden inside that. The naga bears a truly awe-inspiring set of scales, with vibrant shades of red, orange and yellow making him almost appear like a dragon, complete with a little crest of scale-tips standing up on his broad snake-head.";
-	say "     In a sharp contrast to his fiery-colored body, the storekeeper's large eyes are startlingly green, making you freeze where you stand as he notices your attention and focuses his gaze on you in turn. The emerald, slit-pupiled orbs seem like bottomless pools you could stare at forever and lose yourself in... and you almost do, before he turns his head and breaks the stare. Opening his mouth a fraction, the naga tastes the air with his split tongue and then smiles at you, waving you closer with an inviting gesture.";
-
-Instead of conversing the Moreau:
-	project the figure of Moreau_face_icon;
-	if HP of Moreau is 0:
-		say "     'Welcome to my store,' the naga tells you with a gracious bow, snaking his way closer to you before coiling up right in front of where you stand. 'Did something in the shop windows catch your eye? The offered wares are subject to change, and I do circle through the newer parts for people to have a look at.' You look around at the collection of mannequins, then ask what he actually sells. 'Why, bodies of course. Everything about them. The signage is quite clear, is it not? Come, let me show you.' Miming you to walk over to the next bunch of mannequins, the ophidian storekeeper keeps up with your steps in a smooth glide of his scales on the tiled floor, stopping before the display models.";
-		say "     'We live in times of change - that is obvious - but many, oh so very many of people are dissatisfied with their adopted shapes. Maybe they were forced to shift, or couldn't help but succumb into it, and now they feel like they deserve... better. I offer this service, for a price.' Smiling at you, he then turns to stare directly at a mannequin shaped like an anthro gryphon, its body detailing everything exactly, from the tips of the clawed digitigrade feet, up over a hermaphrodite's set of cock, balls and pussy to the pair of wings behind its back. Only the showpiece's head is still that of an almost featureless doll, as well as the skin which has a white plastic-y sheen.";
-		WaitLineBreak;
-		say "     Giving you a sidelong glance that tells you he loves showing off, Moreau crooks his finger a little at the mannequin - and the human-sized doll instantly reacts, walking over to come stand before you with startling suddenness. As it comes to stand in front of you in an 'at rest' position, you can't help but gulp and glance around. Ten, fifteen, twenty, twenty-six, -seven, -eight... there are about thirty of those things in here, which makes you feel less like on a shopping trip and more like standing in the midst of a pride of lions. 'Do not be concerned, my assistants are perfectly well behaved. Watch this one for example,' Moreau says, amusement underlying his voice as he puts the gryphon doll through its paces, spinning around slowly, stretching and showing off the details of its shape.";
-		say "     Once he is satisfied with the mannequin, Moreau sends it back to the original position and turns back to you. 'I can offer the service of giving people what they want. And even more than that - I give a warranty. No more losing what you so dearly desired, you understand,' the snake tells you in a quite smooth-talking voice, guiding you in a tour through the store, past numerous of the motionless living dolls. While you walk, your gaze falls upon a treasure-trove of supplies stacked up in the back. He must have weeks forth of food and water there! Curiosity drives you to check it out from up close, but after a few steps, the naga's hand slides under your arm and gently but firmly tugs you back to his tour. Then you notice that every last one of the mannequins in the whole store turned their head towards you when you came close to the supplies. They quickly take their positions again, but you can't help but shiver a little from so many featureless faces staring at you.";
-		WaitLineBreak;
-		say "     Finally arriving back where you started after having shown off all sorts of creature parts you never even knew existed, Moreau smiles and shows his forked tongue for a second. 'As you can see, I do have much to offer. It depends a bit on what people sell to me, so be sure to get anything you desire immediately, so it is not sold out by the time you return. You will find the prices very reasonable for this unique service...'";
-		increase HP of Moreau by 1; [got his initial spiel]
-	else:
-		say "[MoreauTalkMenu]";
-
-to say MoreauTalkMenu:
-	LineBreak;
-	say "What do you want to talk with Moreau about?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and "Mannequin" is not listed in EncounteredEnemies of Player)):
-		choose a blank row in table of fucking options;
-		now title entry is "Ask about the mannequins";
-		now sortorder entry is 1;
-		now description entry is "Try to learn about his store";
-	[]
-	if (FirstMannequinTalk is 1 and "Mannequin" is listed in EncounteredEnemies of Player):
-		choose a blank row in table of fucking options;
-		now title entry is "Ask for the truth about the mannequins";
-		now sortorder entry is 2;
-		now description entry is "Press the shopkeeper for the truth";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask if buying body parts is really worth it";
-	now sortorder entry is 3;
-	now description entry is "You'll still be able to lose them, right";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Sell something";
-	now sortorder entry is 4;
-	now description entry is "Let him take part of you";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Buy something";
-	now sortorder entry is 5;
-	now description entry is "Ask to buy some feature to change on your body";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if nam is:
-				-- "Ask about the mannequins":
-					say "[MoreauTalk1]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
-				-- "Ask for the truth about the mannequins":
-					say "[MoreauTalk2]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
-				-- "Ask if buying body parts is really worth it":
-					say "[MoreauTalk3]";
-					WaitLineBreak;
-					say "[MoreauTalkMenu]";
-				-- "Sell something":
-					say "[MoreauPartSale]";
-				-- "Buy something":
-					say "[MoreauPartBuy]";
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-	clear the screen and hyperlink list;
-
-to say MoreauTalk1: [mannequins not seen]
-	say "     Deciding you'd like to know a bit more about Moreau's store and how it came to be, you gesture to some of the mannequins nearby, asking the shopkeeper about their origins.";
-	say "     His grin seems to indicate to you that he's been asked this question many times before, and the smooth and practiced way he starts to talk tells you you're probably right. 'Ah, yes. They are quite interesting, are they not? When this all started, seeing all the changes happening around this city had started to give me some vague ideas along the lines of this shop, but it wasn't until I stumbled on a discarded mannequin on the side of the road that those ideas really clicked together. And so I came here, as I knew there'd be plenty of mannequins to work with, and with a bit of my own magical talent was able to convert the mannequins you see here from their inert state to something more suitable for my purposes. The process took some refining, but I think the result has been well worth it all.'";
-	say "     Satisfied, you nod and smile to him in thanks for the explanation, returning to looking around the store. Some part of you can't help but feel there might be more to the story, though...";
-	now FirstMannequinTalk is 1;
-
-to say MoreauTalk2: [mannequins seen, asked about them once]
-	say "     Recognizing the mannequins around the store from your travels around the city and feeling you know what the snake might be leaving out of his story, you choose to press Moreau to tell you where exactly they came from.";
-	say "     With your confrontational posture and the skeptical look on your face, the shopkeeper seems to recognize that you've seen the roaming mannequins and he lets out a sigh, gesturing you to follow him toward the back of the store before answering in a hushed voice. 'I can tell what you're really asking, and thinking. And no, I did not lie to you before, I simply left some of the finer details out as I always do when people ask me about them. I do not wish to frighten away my customers after all.' He gives you a smile at that, which was probably meant to be reassuring, but ends up a little more sinister. You nod to him, gesturing for him to continue talking.";
-	say "     After a quick glance around the store to make sure no one is approaching, he continues. 'As you probably guessed, the mannequin I found was one of the animate ones this event has created. I fought and defeated it, and nearly left it there, until the idea of this shop occurred to me. This form has given me certain... powers of persuasion, which I used to bring the mannequin under my control. Having seen what they do to those they defeat, and not wishing to have to fight and collect them one by one, I had the idea to transform an ordinary mannequin. I tested the idea on an inert mannequin from a nearby store, and finding that it had worked, led my two new mannequins here to collect more from the abandoned stores. So yes, one of my mannequins is from out in the city. Perhaps it was once a person, but there was no way for me or anyone else to tell. The rest were all created from inert mannequins. I've harmed no one, and they're all completely under my control. Does that satisfy you?'";
-	WaitLineBreak;
-	say "     Considering what else has been happening in this warped city and how this seems to be one of the more benign and overall harmless, if still unsettling, things you've seen, you nod to him with a sigh. He nods with a smile, visibly relaxing as his tongue flicks out at the air. 'Good. Now that your curiosity is satisfied, perhaps you'd like to look around the shop and see if anything catches your eye?' Telling him that you will, you step away, returning to looking around the store.";
-
-to say MoreauTalk3: [ask if buying is worth it if you just keep changing]
-	say "     Moreau gives you a winning smile as you ask your question, snaking his way to a nearby mannequin and pointing out its physical features. 'Ah, I can assure you that anything you might want to pick will be quite worth the investment. Not only are the physical characteristics that I offer very specific in their nature, rather than the random chance you might have out on the streets, but I can also offer a bit of permanence for them. There are some little tricks in my repertoire that will help ensure it.' The naga's forked tongue flicks out of his mouth as he focuses on you intensely, eager to make a deal. 'Of course, if you should wish to change again afterwards, I can also take off the 'body part guarantee' again. Just return and sell the part back to me and you will be as changeable as before.'";
+[ see Wahn/Moreau.i7x]
 
 Section 3 - Selling Parts
 
@@ -239,10 +135,10 @@ to say MoreauFaceSale:
 			choose row MonsterID from the Table of Random Critters;
 			if FaceName of Player is not Name entry:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
+				now FaceSpeciesName of Player is Species Name entry;
 				now FaceName of Player is Name entry;
 				now Face of Player is face entry;
-			if "Body Shop Guarantee - Face" is listed in feats of Player:
-				remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -261,11 +157,11 @@ to say MoreauBodySale:
 			choose row MonsterID from the Table of Random Critters;
 			if BodyName of Player is not Name entry:
 				say "     Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+				now BodySpeciesName of Player is Species Name entry;
 				now BodyName of Player is Name entry;
 				now Body of Player is body entry;
 				attributeinfect; [sets the new attributes]
-			if "Body Shop Guarantee - Body" is listed in feats of Player:
-				remove "Body Shop Guarantee - Body" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Body";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -284,15 +180,15 @@ to say MoreauSkinSale:
 			choose row MonsterID from the Table of Random Critters;
 			if SkinName of Player is not Name entry:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
+				now SkinSpeciesName of Player is Species Name entry;
 				now SkinName of Player is Name entry;
 				now Skin of Player is skin entry;
-			if "Body Shop Guarantee - Skin" is listed in feats of Player:
-				remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauAssSale:
-	if SkinName of Player is "Mannequin":
+	if TailName of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like ass, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
 	else if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
 		say "     Taking a long glance at your ass, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
@@ -306,10 +202,10 @@ to say MoreauAssSale:
 			choose row MonsterID from the Table of Random Critters;
 			if TailName of Player is not Name entry:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
+				now TailSpeciesName of Player is Species Name entry;
 				now TailName of Player is Name entry;
 				now tail of Player is tail entry;
-			if "Body Shop Guarantee - Tail" is listed in feats of Player:
-				remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -332,10 +228,10 @@ to say MoreauDickSale:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
 			remove manhood from Player;
 			remove womanhood from Player;
+			now CockSpeciesName of Player is Species Name entry;
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
-			if "Body Shop Guarantee - Crotch" is listed in feats of Player:
-				remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -463,39 +359,64 @@ to say MoreauFaceBuy:
 
 to MoreauFaceSelection:
 	LineBreak;
-	say "What face do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What face do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine muzzle";
+	now title entry is "A demon brute's face";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman face";
+	now description entry is "Buy yourself a demon brute face";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's beak";
+	now title entry is "A fennec's face";
 	now sortorder entry is 2;
-	now description entry is "Buy yourself a gryphon head";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A satyr's face";
-	now sortorder entry is 3;
-	now description entry is "Buy yourself a satyr head, complete with goatee";
+	now description entry is "Buy yourself a fennec head, complete with large ears";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A German shepherd's muzzle";
-	now sortorder entry is 4;
+	now sortorder entry is 3;
 	now description entry is "Buy yourself a canine head";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus's face";
+	now title entry is "A gryphon's beak";
+	now sortorder entry is 4;
+	now description entry is "Buy yourself a gryphon head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An horseman muzzle";
 	now sortorder entry is 5;
-	now description entry is "Buy yourself a beautiful visage";
+	now description entry is "Get a horseman face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's face";
+	now sortorder entry is 6;
+	now description entry is "Buy yourself a naga head";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's face";
+	now sortorder entry is 7;
+	now description entry is "Buy yourself an orc face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's face";
+	now sortorder entry is 8;
+	now description entry is "Buy yourself a satyr head, complete with goatee";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard muzzle";
-	now sortorder entry is 6;
+	now sortorder entry is 9;
 	now description entry is "Get a feline face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid-person's face";
+	now sortorder entry is 10;
+	now description entry is "Get a squid face";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus's face";
+	now sortorder entry is 11;
+	now description entry is "Buy yourself a beautiful visage";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -512,18 +433,28 @@ to MoreauFaceSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine muzzle":
-					setmonster "Horseman";
-				-- "A gryphon's beak":
-					setmonster "Blue Gryphon Herm";
-				-- "A satyr's face":
-					setmonster "Satyr";
+				-- "An demon brute face":
+					setmonster "Demon Brute";
+				-- "A fennec's face":
+					setmonster "Fennec";
 				-- "German Shepherd Male":
 					setmonster "German Shepherd Male";
-				-- "A succubus's face":
-					setmonster "Succubus";
+				-- "A gryphon's beak":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine muzzle":
+					setmonster "Horseman";
+				-- "A naga's face":
+					setmonster "Naga";
+				-- "An orc breeder's face":
+					setmonster "Orc Breeder";
+				-- "A satyr's face":
+					setmonster "Satyr";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
+				-- "A squid-person's face":
+					setmonster "Squid";
+				-- "A succubus's face":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				wait for any key;
@@ -550,6 +481,10 @@ to say MoreauFaceBuyPayment:
 		if FaceName of Player is not Name entry:
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
 			now Face of Player is face entry;
 			now BodyShopGuaranteedFace is Name entry;
 			FeatGain "Body Shop Guarantee - Face";
@@ -574,39 +509,64 @@ to say MoreauBodyBuy:
 
 to MoreauBodySelection:
 	LineBreak;
-	say "What body do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What body do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro equine";
+	now title entry is "Demon Brute";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman body";
+	now description entry is "Get a demon brute body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro gryphon";
+	now title entry is "Fennec";
 	now sortorder entry is 2;
-	now description entry is "Get a gryphon body";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Satyr";
-	now sortorder entry is 3;
-	now description entry is "Get a satyr body";
+	now description entry is "Get a fennec body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anthro German shepherd";
-	now sortorder entry is 4;
+	now sortorder entry is 3;
 	now description entry is "Get an anthro canine body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Succubus";
+	now title entry is "Anthro gryphon";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro equine";
 	now sortorder entry is 5;
-	now description entry is "Get a winged succubus body";
+	now description entry is "Get a horseman body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga";
+	now sortorder entry is 6;
+	now description entry is "Get a naga body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Orc Breeder";
+	now sortorder entry is 7;
+	now description entry is "Get an orc breeder body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr body";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Anthro snow leopard";
-	now sortorder entry is 6;
+	now sortorder entry is 9;
 	now description entry is "Get an anthro feline body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Anthro squid";
+	now sortorder entry is 10;
+	now description entry is "Get an anthro squid body";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus";
+	now sortorder entry is 11;
+	now description entry is "Get a winged succubus body";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -623,18 +583,28 @@ to MoreauBodySelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "Anthro equine":
+				-- "Demon Brute":
+					setmonster "Demon Brute";
+				-- "Fennec":
+					setmonster "Fennec";
+				-- "Anthro German shepherd":
+					setmonster "German Shepherd Male";
+				-- "Anthro horseman":
 					setmonster "Horseman";
 				-- "Anthro gryphon":
 					setmonster "Blue Gryphon Herm";
 				-- "Satyr":
 					setmonster "Satyr";
-				-- "Anthro German shepherd":
-					setmonster "German Shepherd Male";
-				-- "Succubus":
-					setmonster "Succubus";
+				-- "Naga":
+					setmonster "Naga";
+				-- "Orc Breeder":
+					setmonster "Orc Breeder";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
+				-- "Anthro squid":
+					setmonster "Squid";
+				-- "Succubus":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				wait for any key;
@@ -661,6 +631,10 @@ to say MoreauBodyBuyPayment:
 		if BodyName of Player is not Name entry:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
 			now Body of Player is body entry;
 			now BodyShopGuaranteedBody is Name entry;
 			attributeinfect; [sets the new attributes]
@@ -686,39 +660,64 @@ to say MoreauSkinBuy:
 
 to MoreauSkinSelection:
 	LineBreak;
-	say "What skin do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What skin do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine coat";
+	now title entry is "Demon Brute skin";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman coat of fur";
+	now description entry is "Get purple skin";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's feathers";
+	now title entry is "Fennec fur";
 	now sortorder entry is 2;
-	now description entry is "Get blue gryphon feathers";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Satyr's skin and fur";
-	now sortorder entry is 3;
-	now description entry is "Get skin and furry legs";
+	now description entry is "Get fennec fur";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "German Shepherd fur";
-	now sortorder entry is 4;
+	now sortorder entry is 3;
 	now description entry is "Get German shepherd fur";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Succubus skin";
+	now title entry is "A gryphon's feathers";
+	now sortorder entry is 4;
+	now description entry is "Get blue gryphon feathers";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An equine coat";
 	now sortorder entry is 5;
-	now description entry is "Get flawless skin";
+	now description entry is "Get a horseman coat of fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Naga scales";
+	now sortorder entry is 6;
+	now description entry is "Get naga scales";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Orc Breeder skin";
+	now sortorder entry is 7;
+	now description entry is "Get green skin";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Satyr's skin and fur";
+	now sortorder entry is 8;
+	now description entry is "Get skin and furry legs";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Snow leopard fur";
-	now sortorder entry is 6;
+	now sortorder entry is 9;
 	now description entry is "Get spotted white fur";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Squid skin";
+	now sortorder entry is 10;
+	now description entry is "Get squid skin";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Succubus skin";
+	now sortorder entry is 11;
+	now description entry is "Get flawless skin";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -735,18 +734,28 @@ to MoreauSkinSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine coat":
-					setmonster "Horseman";
-				-- "A gryphon's feathers":
-					setmonster "Blue Gryphon Herm";
-				-- "Satyr's skin and fur":
-					setmonster "Satyr";
+				-- "Demon Brute skin":
+					setmonster "Demon Brute";
+				-- "Fennec fur":
+					setmonster "Fennec";
 				-- "German Shepherd fur":
 					setmonster "German Shepherd Male";
-				-- "Succubus skin":
-					setmonster "Succubus";
+				-- "A gryphon's feathers":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine coat":
+					setmonster "Horseman";
+				-- "Naga scales":
+					setmonster "Naga";
+				-- "Orc Breeder skin":
+					setmonster "Orc Breeder";
+				-- "Satyr's skin and fur":
+					setmonster "Satyr";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
+				-- "Squid skin":
+					setmonster "Squid";
+				-- "Succubus skin":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				wait for any key;
@@ -773,6 +782,10 @@ to say MoreauSkinBuyPayment:
 		if SkinName of Player is not Name entry:
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
 			now Skin of Player is skin entry;
 			now BodyShopGuaranteedSkin is Name entry;
 			FeatGain "Body Shop Guarantee - Skin";
@@ -797,39 +810,64 @@ to say MoreauTailBuy:
 
 to MoreauTailSelection:
 	LineBreak;
-	say "What tail do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What tail do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine tail";
+	now title entry is "A demon brute tail";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman tail";
+	now description entry is "Get a spaded tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's tail";
+	now title entry is "A fennec tail";
 	now sortorder entry is 2;
-	now description entry is "Get a gryphon tail";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A satyr's tail";
-	now sortorder entry is 3;
-	now description entry is "Get a satyr tail";
+	now description entry is "Get a fennec tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A German shepherd tail";
-	now sortorder entry is 4;
+	now sortorder entry is 3;
 	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus ass";
+	now title entry is "A gryphon's tail";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An equine tail";
 	now sortorder entry is 5;
-	now description entry is "Get a firm succubus ass";
+	now description entry is "Get a horseman tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga tail";
+	now sortorder entry is 6;
+	now description entry is "Get a naga tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's booty";
+	now sortorder entry is 7;
+	now description entry is "Get an orc breeder ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's tail";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A snow leopard tail";
-	now sortorder entry is 6;
+	now sortorder entry is 9;
 	now description entry is "Get a snow leopard tail";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid booty";
+	now sortorder entry is 10;
+	now description entry is "Get a squid ass";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus ass";
+	now sortorder entry is 11;
+	now description entry is "Get a firm succubus ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -846,18 +884,28 @@ to MoreauTailSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine tail":
-					setmonster "Horseman";
-				-- "A gryphon's tail":
-					setmonster "Blue Gryphon Herm";
-				-- "A satyr's tail":
-					setmonster "Satyr";
+				-- "A demon brute tail":
+					setmonster "Demon Brute";
+				-- "A fennec's tail":
+					setmonster "Fennec";
 				-- "A German shepherd tail":
 					setmonster "German Shepherd Male";
-				-- "A succubus ass":
-					setmonster "Succubus";
+				-- "A gryphon's tail":
+					setmonster "Blue Gryphon Herm";
+				-- "An equine tail":
+					setmonster "Horseman";
+				-- "A naga's tail":
+					setmonster "Naga";
+				-- "An orc breeder's booty":
+					setmonster "Orc Breeder";
+				-- "A satyr's tail":
+					setmonster "Satyr";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
+				-- "A squid booty":
+					setmonster "Squid";
+				-- "A succubus ass":
+					setmonster "Succubus";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				wait for any key;
@@ -884,6 +932,10 @@ to say MoreauTailBuyPayment:
 		if TailName of Player is not Name entry:
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now tail of Player is tail entry;
 			now BodyShopGuaranteedTail is Name entry;
 			FeatGain "Body Shop Guarantee - Tail";
@@ -908,39 +960,64 @@ to say MoreauCrotchBuy:
 
 to MoreauCockSelection:
 	LineBreak;
-	say "What cock do you want to buy from Moreau? (Options vary over time)[line break]";
+	say "What cock do you want to buy from Moreau?[line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An equine groin";
+	now title entry is "A demon brute's groin";
 	now sortorder entry is 1;
-	now description entry is "Get a horseman crotch";
+	now description entry is "Get a demonic crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A hermaphrodite gryphon's groin";
+	now title entry is "A fennec's groin";
 	now sortorder entry is 2;
-	now description entry is "Get a gryphon crotch";
+	now description entry is "Get a fennec crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A satyr's groin";
+	now title entry is "A German shepherd's groin";
 	now sortorder entry is 3;
-	now description entry is "Get a satyr crotch";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "A German shepherd groin";
-	now sortorder entry is 4;
 	now description entry is "Get a German shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A succubus's groin";
-	now sortorder entry is 5;
-	now description entry is "Get a firm succubus crotch";
+	now title entry is "A hermaphrodite gryphon's groin";
+	now sortorder entry is 4;
+	now description entry is "Get a gryphon crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A snow leopard groin";
+	now title entry is "An equine groin";
+	now sortorder entry is 5;
+	now description entry is "Get a horseman crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A naga's groin";
+	now sortorder entry is 7;
+	now description entry is "Get a naga crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "An orc breeder's groin";
 	now sortorder entry is 6;
+	now description entry is "Get an orc breeder crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A satyr's groin";
+	now sortorder entry is 8;
+	now description entry is "Get a satyr crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A snow leopard's groin";
+	now sortorder entry is 9;
 	now description entry is "Get a snow leopard crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A squid's groin";
+	now sortorder entry is 10;
+	now description entry is "Get a squid crotch";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "A succubus's groin";
+	now sortorder entry is 11;
+	now description entry is "Get a succubus crotch";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -957,18 +1034,28 @@ to MoreauCockSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An equine groin":
-					setmonster "Horseman";
+				-- "A demon brute's groin":
+					setmonster "Demon Brute";
+				-- "A fennec's groin":
+					setmonster "Fennec";
+				-- "A German shepherd's groin":
+					setmonster "German Shepherd Male";
 				-- "A gryphon's groin":
 					setmonster "Blue Gryphon Herm";
+				-- "An equine groin":
+					setmonster "Horseman";
 				-- "A satyr's groin":
 					setmonster "Satyr";
-				-- "A German shepherd groin":
-					setmonster "German Shepherd Male";
+				-- "A naga's groin":
+					setmonster "Naga";
+				-- "An orc breeder's groin":
+					setmonster "Orc Breeder";
+				-- "A snow leopard's groin":
+					setmonster "Snow Leopard";
+				-- "A squid's groin":
+					setmonster "Squid";
 				-- "A succubus's groin":
 					setmonster "Succubus";
-				-- "A snow leopard groin":
-					setmonster "Snow Leopard";
 				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				wait for any key;
@@ -997,6 +1084,10 @@ to say MoreauCrotchBuyPayment:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;
+		if Species Name entry is not "":
+			now CockSpeciesName of Player is Species Name entry;
+		else:
+			now CockSpeciesName of Player is Name entry;
 		now BodyShopGuaranteedCrotch is Name entry;
 		FeatGain "Body Shop Guarantee - Crotch";
 		say "[line break][MoreauBuySuccessful]";
@@ -1087,70 +1178,90 @@ An everyturn rule:
 	if "Body Shop Guarantee - Face" is listed in feats of Player:
 		if (FaceName of Player is "Jackalman" or FaceName of Player is "Jackalboy" or FaceName of Player is "Nightmare" or FaceName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 		else if "Singular" is listed in feats of Player and FaceName of Player is not "Human" and FaceName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your face, only to be counteracted at every turn. You fall to your knees and cradle your head in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Face" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Face";
 		else if FaceName of Player is not BodyShopGuaranteedFace:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your head to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedFace;
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
 			now Face of Player is face entry;
 	if "Body Shop Guarantee - Body" is listed in feats of Player:
 		if (BodyName of Player is "Jackalman" or BodyName of Player is "Jackalboy" or BodyName of Player is "Nightmare" or BodyName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Body" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Body";
 		else if BodyName of Player is not BodyShopGuaranteedBody:
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your body to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedBody;
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
 			now Body of Player is body entry;
 			attributeinfect; [sets the new attributes]
 	if "Body Shop Guarantee - Skin" is listed in feats of Player:
 		if (SkinName of Player is "Jackalman" or SkinName of Player is "Jackalboy" or SkinName of Player is "Nightmare" or SkinName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 		else if "Singular" is listed in feats of Player and FaceName of Player is not "Human" and SkinName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your skin in rippling waves, only to be counteracted at every turn. You fall to your knees and cradle your body in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Skin" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Skin";
 		else if SkinName of Player is not BodyShopGuaranteedSkin:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your skin to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedSkin;
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
 			now Skin of Player is skin entry;
 	if "Body Shop Guarantee - Tail" is listed in feats of Player:
 		if (TailName of Player is "Jackalman" or TailName of Player is "Jackalboy" or TailName of Player is "Nightmare" or TailName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 		else if "Singular" is listed in feats of Player and TailName of Player is not "Human" and TailName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your tail, only to be counteracted at every turn. You fall to your knees and cradle the tail in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Tail" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Tail";
 		else if TailName of Player is not BodyShopGuaranteedtail:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your tail to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedtail;
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now tail of Player is tail entry;
 	if "Body Shop Guarantee - Crotch" is listed in feats of Player:
 		if (CockName of Player is "Jackalman" or CockName of Player is "Jackalboy" or CockName of Player is "Nightmare" or CockName of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 		else if "Singular" is listed in feats of Player and CockName of Player is not "Human" and CockName of Player is not BodyName of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your crotch, only to be counteracted at every turn. You fall to your knees and flinch in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Crotch" from feats of Player;
+			FeatLoss "Body Shop Guarantee - Crotch";
 		else if CockName of Player is not BodyShopGuaranteedCrotch:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your cock to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedCrotch;
 			choose row MonsterID from the Table of Random Critters;
 			say "     Your crotch [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
+			if Species Name entry is not "":
+				now CockSpeciesName of Player is Species Name entry;
+			else:
+				now CockSpeciesName of Player is Name entry;
 			now Cock of Player is cock entry;
 
 Section 5 - Events

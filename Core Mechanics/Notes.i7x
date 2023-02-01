@@ -60,9 +60,11 @@ check WriteANote:
 carry out WriteANote:
 	say "[bold type]You open your journal and write...[roman type][line break][line break]";
 	get a long line of input;
-	let DayCount be (240 - turns ) divided by 8;
+	let DayCount be (240 - turns ) divided by 8; [starting turn (240) minus current turn divided by 8 (the amount of turns in a day)]
 	choose a blank row in the table of JournalNotes;
 	now Date entry is Daycount;
+	if debugactive is 1:
+		say "date: [Date entry] daycount: [Daycount]";
 	now Note entry is the current long line of input;
 
 BroweseNotes is an action applying to nothing.
@@ -76,6 +78,9 @@ check BroweseNotes:
 		say "     Sadly, you do not have a journal.";
 
 carry out BroweseNotes:
+	let tdays be "days";
+	let tmonths be "months";
+	let tyears be "years";
 	if the number of filled rows in the Table of JournalNotes is 0:
 		say "     You open your journal and page through it, but it seems like you currently do not have any special notes.";
 	else:
@@ -83,7 +88,7 @@ carry out BroweseNotes:
 		sort the Table of JournalNotes in Date order;
 		repeat with X running from 1 to number of filled rows in the Table of JournalNotes:
 			choose row X from the Table of JournalNotes;
-			say "[bracket][link]X[as]crossoutnote [X][end link][close bracket] Day [Date entry]: [Note entry][line break]";
+			say "[bracket][link]X[as]crossoutnote [X][end link][close bracket] [Date entry converted to tmonths]/[Date entry converted to tdays]/[Date entry converted to tyears]: [Note entry][line break]";
 
 CrossOutNote is an action applying to one number.
 

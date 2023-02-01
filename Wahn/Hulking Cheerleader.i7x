@@ -51,7 +51,7 @@ To say Cheerleader loses:
 			CreatureSexAftermath "Player" receives "OralCock" from "Hulking Cheerleader";
 			infect "Hulking Cheerleader";
 		else:
-			say "     You politely decline her offer. As you walk away, you hear her say 'Your loss, it's great fun to play. If you ever change your mind, you know where to find me.'";
+			say "     You politely decline her offer. As you walk away, you hear her say 'Your loss; it's great fun to play. If you ever change your mind, you know where to find me.'";
 
 to say cheerleaderDesc:
 	setmongender 6; [dickgirl]

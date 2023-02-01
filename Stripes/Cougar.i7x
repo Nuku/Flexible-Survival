@@ -7,6 +7,7 @@ Section 1 - Creature Responses
 cougarfight is a number that varies.
 
 to say losetocougar:
+	project Figure of Cougar_naked_icon;
 	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you. Her strong body holds you down as she rubs herself against you. Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock on your skin.";
 	if wslevel is 3 and a random chance of 2 in 5 succeeds:
@@ -25,11 +26,14 @@ to say losetocougar:
 
 to say cougarride:
 	say "     Placing her paws on your shoulders to pin you down, she grinds her wet pussy against your cock, getting you hard before mounting it. She mrowls as she rides your shaft, gripping her inner walls around it. This feline wildwoman rides your cock hard and fast until finally you cum, shooting your hot seed into her womb. She leaves you spent and panting as she pads off on all fours, cum dripping out behind her.";
+	CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 
 to say cougartop:
-		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your pussy before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your vaginal walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your womb. She leaves you spent and pads off on all fours.[impregchance]";
+		say "     Placing her paws on your shoulders to pin you down, she grinds her hard shaft between your thighs, lining it up with your pussy before sinking it into you. She mrowls as she thrusts into you again and again, sliding those feline barbs along your vaginal walls, stimulating you deep inside. This feline wildwoman pounds away at you hard and fast until she finally cums, shooting her hot seed into your womb. She leaves you spent and pads off on all fours.";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
 
 to say beatthecougar:
+	project Figure of Cougar_naked_icon;
 	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < Libido of Player:
@@ -42,8 +46,13 @@ to say beatthecougar:
 			say "     Feeling in the mood for some feline fun, you grab the exhausted kitty and push her into position. She mewls softly, wary of you hurting her further, yet hopeful for some sexual relief for her lustful urges.";
 			if Player is male:
 				say "     You push her onto her back and line up your cock with her pussy, making her mrowl in delight. You fondle her breasts and pound away at her. You tweak and tease her nipples while watching her hard cock bounce against her tummy with each thrust you make. Her precum soaks the soft, cream fur there as you drive into her. Her horny mewls get louder as she digs her paws into the ground and climaxes. Her hot pussy clamps down firmly, milking your cock for all you'll give as you cum moments later. Her own thick seed sprays across her chest and muzzle, leaving white streaks all across her body and face. When done, you get her to lick your cock clean before leaving her panting on the ground and leaking your cum.";
+				CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 			else:
-				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.[impregchance]";
+				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.";
+				if player is female:
+					CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
+				else:
+					CreatureSexAftermath "Player" receives "AssFuck" from "Cougar";
 		else:
 			say "     Deciding to head off while you can, you leave her to her own devices. Which is just what she does, stroking her cock needfully while fingering herself. You can hear her lustful yowls as you walk off.";
 	else:
@@ -51,6 +60,7 @@ to say beatthecougar:
 
 
 to say cougardesc:
+	project Figure of Cougar_clothed_icon;
 	setmongender 5;
 	say "     Before you is a powerful looking feline, with golden brown fur and piercing eyes. She looks at you with cold intent, claws unsheathed and teeth bared. This puma herm has two, C-cup breasts on her athletic body and a hefty cock and set of balls waiting to be used. Her cock is a deep brown and human in shape, but with stimulating barbs as well. She drops to all fours and pads slowly around you, emitting an animalistic growl before charging.";
 
@@ -64,7 +74,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Cougar"; [name of the overall species of the infection, used for children, ...]
 	add "Cougar" to infections of FelineList;
 	add "Cougar" to infections of FurryList;
 	add "Cougar" to infections of NatureList;

@@ -379,7 +379,7 @@ instead of sniffing Wolfman Lair:
 instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Wolfman Lair]";
 	if NavCheckReturn is false, stop the action;
-	project Figure of Jennifer_icon;
+	project Figure of Jennifer_clothed_icon;
 	say "     You turn the last corner and spot the warehouse occupied by the wolfmen a little distance away, with its large wolf's head painted on the facade. The two muscular males guarding the entrance are at their usual spots and give you a little wave, but your eyes are immediately drawn to the movement of a petite human form further to the left - it is Jennifer, the head cheerleader of the football team, strolling along the building exterior with a tall male with leopard spots and a black wolf's tail by her side. The beautiful young woman is completely naked, as usual for members of this little tribe of post-humanity, quite comfortable without a stitch of clothing on her. Watching her move along, with sunlight shining on her pale-skinned beauty, until she and the guy she's talking vanish behind the building, you can't help but wonder what exactly is going on over there.";
 	LineBreak;
 	say "     [bold type]Do you want to go after Jennifer and that other guy?[roman type][line break]";
@@ -403,7 +403,7 @@ instead of navigating Wolfman Lair while (Jenniferfucked > 0 and HP of Jennifer 
 			say "     'Okay, that's it. I'll gut you for this, girlie!' the leopardman threatens Jennifer and takes a step towards her. Shortly before you reach the two of them, the young woman goads Keefer with the words, 'You're just a pathetic little kitty with a tiny dick, aren't you? I bet you couldn't even get it up to fuck me with!' Slightly baffled by Jennifer enraging the leopardman even further, you can't help but glance over to her attacker's junk - finding it half-hard and actually of only slightly below-average size. Nevertheless, it seems that the cheerleader hit her mark head-on with him, as the muscular feline lets out an almost feral growl and just throws himself at her with everything he has, an all-out dash led by his unsheathed claws stretched forward.";
 			WaitLineBreak;
 			say "     Jennifer laughs at the leopardman as she side-steps the furious and uncontrolled lunge, allowing Keefer to run full steam into the side of the next door warehouse, bouncing off its metal walls with a loud crash and collapsing in a heap. Her attention stays on him for a while longer, first to see if he's gonna get up, then to check if he is still breathing after that face-plant into a wall. 'He'll be okay eventually,' comes the young woman's verdict a moment later, turning away from him and walking over to you. She smiles happily at you as she approaches, doing her best to calm down and put the fight behind her. Now that you see her naked form fully from the front and not moving as quickly as before, you see that the scratches and marks she took in the short fight are healing with startling speed, literally closing and completely vanishing in less than a minute. She might look completely human, but this young woman is far from ordinary anymore.";
-			say "     'Thank you for wanting to help,' Jennifer says with a smile, coming up to you to plant a peck on your cheek. 'Me and the girls can take care of ourselves, but it still feels really nice to know that others want to stand up for us. And you've definitively earned yourself some fun later, you know.' Sliding an arm around your chest and giving you a friendly squeeze, she glances over her shoulder at Keefer, then shrugs and says, 'Come on, let's get back inside. That trash can lie there and crawl away on his own when he comes to.' And with that, she walks with you up the alley again, arm in arm. Getting back to the guards at the entrance, she tells them, 'Keefer isn't welcome here anymore. Not that I expect him to come back...' After entering the building, Jennifer kisses you again and then peels off to go tell Septus about what happened.";
+			say "     'Thank you for wanting to help,' Jennifer says with a smile, coming up to you to plant a peck on your cheek. 'Me and the girls can take care of ourselves, but it still feels really nice to know that others want to stand up for us. And you've definitely earned yourself some fun later, you know.' Sliding an arm around your chest and giving you a friendly squeeze, she glances over her shoulder at Keefer, then shrugs and says, 'Come on, let's get back inside. That trash can lie there and crawl away on his own when he comes to.' And with that, she walks with you up the alley again, arm in arm. Getting back to the guards at the entrance, she tells them, 'Keefer isn't welcome here anymore. Not that I expect him to come back...' After entering the building, Jennifer kisses you again and then peels off to go tell Septus about what happened.";
 		else:
 			LineBreak;
 			say "     Calling to the petite cheerleader to run and get to safety, but she doesn't hear you since her opponent keeps cursing and growling loudly. Not wasting any more time, you then whirl around and run back the way you came, calling loudly for help. By the time you reach the corner of the warehouse, the two wolfman guards are already coming the other way, and all three of you rush to rescue Jennifer from the aggressive leopardman-wolfman hybrid. The scene that awaits you isn't what you expected though, as Jennifer is standing over the feline as he lies in an unconscious heap, her arms crossed as she looks down at him. Looks like he ran face-first into the wall of the next door building and she is checking if he is still breathing. 'He'll be okay eventually,' comes the young woman's verdict a moment later, turning away from Keefer and walking over to you and the wolfmen. She smiles happily at you as she approaches, doing her best to calm down and put the fight behind her.";
@@ -471,19 +471,20 @@ instead of sniffing Jennifer:
 	say "Jennifer has a pretty nice female smell.";
 
 to say Jenniferdesc:
-	project Figure of Jennifer_icon;
 	if debugactive is 1:
 		say "DEBUG -> THIRST: [thirst of Jennifer], LUST: [lust of Jennifer], JENNIFERFUCKED: [Jenniferfucked], PREG TIMER: [Jenniferpregnant], OFFSPRING: [Jenniferwolves]<- DEBUG[line break]";
 	if (thirst of Jennifer is 0 or thirst of Jennifer is 1): [starting state]
-		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being naked, you got a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her pussy is a bit red and swollen and the nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
+		project Figure of Jennifer_clothed_icon;
+		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being ready to drop her clothes at the slightest prompt, and frequently doing so, you easily get a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her pussy is a bit red and swollen and the nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
 	if (thirst of Jennifer is 2): [visibly pregnant by the player]
-		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being naked, you got a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her belly is currently bulging outwards quite a bit, showing the result of your recent coupling growing inside her. The nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
+		project Figure of Jennifer_preg_clothed_icon;
+		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being ready to drop her clothes at the slightest prompt, and frequently doing so, you easily get a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her belly is currently bulging outwards quite a bit, showing the result of your recent coupling growing inside her. The nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
 
 instead of conversing the Jennifer:
 	say "[JenniferTalkMenu]";
 
 to say JenniferTalkMenu:
-	project Figure of Jennifer_icon;
+	project Figure of Jennifer_clothed_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -692,7 +693,10 @@ Instead of fucking the Jennifer:
 			say "[JenniferSexMenu]";
 
 to say JenniferSexMenu:
-	project Figure of Jennifer_icon;
+	if (thirst of Jennifer is 0 or thirst of Jennifer is 1): [starting state]
+		project Figure of Jennifer_naked_icon;
+	else:
+		project Figure of Jennifer_preg_naked_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -770,7 +774,7 @@ to say JenniferSexMenu:
 	clear the screen and hyperlink list;
 
 to say JenniferSex1: [cock sucked by Jennifer]
-	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then push softly on her shoulders. She kneels down in front of you, smiling up at you and licking her lips as she takes hold of your [CockName of Player] shaft. [if HP of Septus >= 7 and HP of Septus < 50]'Mmm... you've been working so hard for the team, my sexy manager. I think you've earned a special treat.' [end if]Holding it up, she starts licking your balls, then runs her tongue up the underside of the shaft, creating a tingly pleasant feeling inside you. As she arrives at the tip, she licks over it, playing with the slit with the tip of her tongue. Then she takes the cockhead into her mouth, softly sucking at it before she returns to lick your balls and shaft.";
+	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then push softly on her shoulders. She kneels down in front of you, smiling up at you and licking her lips as she takes hold of your [Cock of Player] shaft. [if HP of Septus >= 7 and HP of Septus < 50]'Mmm... you've been working so hard for the team, my sexy manager. I think you've earned a special treat.' [end if]Holding it up, she starts licking your balls, then runs her tongue up the underside of the shaft, creating a tingly pleasant feeling inside you. As she arrives at the tip, she licks over it, playing with the slit with the tip of her tongue. Then she takes the cockhead into her mouth, softly sucking at it before she returns to lick your balls and shaft.";
 	if HP of Septus >= 7 and HP of Septus < 50: [team manager]
 		say "     As an added flair between her oral action, she squeezes those buxom breasts for hers around your cock and balls. The feel of her soft, warm flesh against yours makes your penis twitch and dribble with precum. She grins at the sight of it and playfully licks it all up, pleased with herself at having gotten you so worked up. You smile down at her, stroke her head tenderly and moan in pleasure as she works your cock back into her mouth.";
 	say "     As you're expertly pleasured by Jennifer, cat-calls and whistles start up from the wolfmen around you[if HP of Septus >= 7 and HP of Septus < 50] and you can't help but smile all the more, knowing this sexy cheerleader's all yours[end if]. You moan loudly as she starts to stroke her hands up and down your cock in between licks and fondles your balls as they build up a heavy load. Pretty soon, you're panting at each of her licks. Anticipating your impending orgasm, she puts her lips around the head of your [Cock of Player] cock and starts stroking you faster and faster until you quickly reach the point of no return.";
@@ -1465,6 +1469,7 @@ to say CheerleaderPractice:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "FootBall Wolfman";
 			if "Sterile" is listed in feats of Player:
 				remove "Sterile" from feats of Player;
+				now Sterile of Player is false;
 				say "     After having bathed your reproductive organs in such an incredible amount of virile wolfman cum, your sterility is a thing of the past. Seems like even though the wolfmen normally aren't infective, the nanites in them and their fluids refuse to have their further breeding denied and simply fix you up.";
 			LineBreak;
 			say "     You feel something changing deep inside you as your body prepares itself to birth wolfmen - and only wolfmen - in the future.";

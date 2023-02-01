@@ -13,22 +13,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Zeke	"Zeke"
 
-Zeke is a man. The HP of Zeke is usually 0.
-[Physical details as of game start]
+Zeke is a man.
+Zeke is in Gaming Den.
+The HP of Zeke is usually 0.
 ScaleValue of Zeke is 3. [human sized]
-SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Zeke is 1. [X cock]
-Cock Length of Zeke is 7. [X Inches]
-Ball Size of Zeke is 5.
-Ball Count of Zeke is 2. [X balls]
-Cunt Count of Zeke is 0. [X pussy]
-Cunt Depth of Zeke is 0. [X Cunt]
-Cunt Tightness of Zeke is 0. [X Cunt]
-Nipple Count of Zeke is 2. [X nipples]
-Breast Size of Zeke is 0. [X at the start]
+Body Weight of Zeke is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Zeke is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Zeke is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Zeke is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Zeke is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Zeke is 8. [length in inches]
+Breast Size of Zeke is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Zeke is 2. [count of nipples]
+Asshole Depth of Zeke is 8. [inches deep for anal fucking]
+Asshole Tightness of Zeke is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Zeke is 1. [number of cocks]
+Cock Girth of Zeke is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Zeke is 7. [Length in Inches]
+Ball Count of Zeke is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Zeke is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Zeke is 0. [number of cunts]
+Cunt Depth of Zeke is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Zeke is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Zeke is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Zeke is false. [can not take oversized members without pain]
-Sterile of Zeke is false.
 PlayerMet of Zeke is false.
 PlayerRomanced of Zeke is false.
 PlayerFriended of Zeke is false.
@@ -39,11 +48,12 @@ Virgin of Zeke is true.
 AnalVirgin of Zeke is true.
 PenileVirgin of Zeke is true.
 SexuallyExperienced of Zeke is false.
+TwistedCapacity of Zeke is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Zeke is false. [steriles can't knock people up]
 MainInfection of Zeke is "Red Fox".
 Description of Zeke is "[ZekeDesc]".
 Conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
-Zeke is in Gaming Den.
 
 to say ZekeDesc:
 	if debugactive is 1:
@@ -326,38 +336,40 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 to say ZekeSex1: [frotting]
 	say "     The two of you each prepare, sliding out of any distracting equipment, until you stand naked before each other. You can see Zeke's vulpine shaft standing proudly aroused, coming to a clear point, and with a sizable knot at the base. You break the stillness first, moving right up against the fox, until you stand a scant few inches away. Slowly, you press up against him, until your cock is pressed up against his shaft. Then Zeke begins to reciprocate your motions, and presses back against you as well, the combined motion causing a slight friction as your dicks start to rub against each other, a sense of warm pleasure beginning to build up.";
 	say "     With the sensations growing, both of you start to shift your motions, changing from pressing to grinding, almost humping. At the same time, your hands drift downward, joining the mess of pleasure below, adding stroking and tugging to the rubbing sensations. You can feel the veins of his knot against your own member, and the feeling of them in contact with you finally pushes you over the edge. Your cock begins to jerk as you feel the pleasure peaking and flowing, shots of seed splashing over the both of you. Immediately following your own climax, Zeke's dick erupts as well, adding more semen to the mess. The two of you remain like that for a while, basking in the afterglow, before you muster the will to move again and clean yourselves up.";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Player receives "Stroking" from Zeke;
+	NPCSexAftermath Zeke receives "Stroking" from Player;
 
 to say ZekeSex2: [blowing - casual]
 	say "     When you make your request, the fox quickly strips off his clothing, and then responds. 'If you want to treat me, I don't mind. But anything more serious than this, you'll have to try your luck with some competition. The reward is more fun with a risk.' He follows up his comment by winking at you, before he settles down into one of the beanbags, legs spread, and the slowly hardening cock beginning to stand free. You step over to Zeke, and then fall to your knees in front of him, bringing your eyes level with his vulpine dick. For a moment, you sit there, your eyes following the slight twitches of the shaft before you. Eventually the temptation becomes too much for you to wait any longer, and you lean forward, capturing it in your mouth.";
 	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up.";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Player receives "OralCock" from Zeke;
 
 to say ZekeSex3: [sixty-nine]
 	say "     After deciding how you two will take care of each other, it takes almost no time until you're each completely nude, and ready to have a good time. Once that is done, you see Zeke standing near the largest couch in the room. 'I think this will do nicely, don't you?' You nod in response, and approach him. Deciding to move first, you lay yourself down on the couch. You start stroking your member lightly, building it up towards full hardness, and give the fox your best inviting look. He quickly gets the message, and after some slightly awkward maneuvering, ends up properly in place above you. You can feel his breath against the tip of your cock, just as you can see his appealing shaft right in front of your own face.";
 	say "     In the end, was the one who acted first, evidenced by the feeling of a warm suction starting to cover your shaft. Not to be outdone, you follow suit, and move your head up enough to get his fox cock in your mouth. In no time at all, the two of you achieve a rhythm, his head bobbing down on your dick just as your head bobs upwards to meet his. Soon enough, you can feel that your task is nearing completion, clearly evidenced by the way his shaft is starting to twitch and pulse in your mouth. At the same time, your own orgasm draws nearer from the constant pleasure provided by Zeke. You begin to speed up your own efforts to bring him to climax, and in no time at all the fox begins to follow suit.";
 	WaitLineBreak;
 	say "     Eventually the stalemate is broken, and Zeke is the first to peak. His cock is throbbing in your mouth, shooting spurts of seed down your throat, with the hard knot battering against your lips as he thrust his hips downward in his orgasm. After several moments of his cum shooting into you, the same release happens to you, with your own cock firing off jets of semen into the fox's mouth. Your lower body involuntarily jerks upwards slightly as this matching pair of orgasms flows between the two of you, the electric senses of pleasure seeming to connect you in a continuous circuit. After a time, however, the sensation fades, and you are left with the fox laying comfortably atop your body, and the two of you remain lying in comfort for several more minutes. Eventually, however, you each clean up from your lustful adventure.";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Player receives "OralCock" from Zeke;
+	NPCSexAftermath Zeke receives "OralCock" from Player;
 
 to say ZekeSex4: [facefuck Zeke]
 	say "     As the victor, it is your right to take the spoils. And this time, it will be the fox's pretty little mouth you'll be taking. You spend a few moments getting Zeke properly set up, laying across his couch on his back, his mouth right at crotch level. You spend several more moments stroking your member to full hardness, making sure you're ready to act. You barely give him any time to adjust before you start using him, practically slamming your cock into his mouth. You follow up by moving your hips, building up into a proper rhythm, only going in partway at first. Once he seems to be ready to take your full length, however, you thrust in fully, sinking your shaft into his throat.";
 	say "     From there, you continue pistoning your cock in and out of the fox, keeping up the unrelenting oral pressure. You can feel the tight seal his mouth makes around you, accompanied by the very audible noises made by your thrusts. The pleasure begins to build, and you can feel the wave rising, and your speed increasing until it eventually peaks. You thrust in as far as you are able, hilting yourself, with your balls resting on his face, and you release. Your cock throbs, and unleashes a stream of spunk into the fox's mouth, quickly filling him. After several moments of this, the pressure in your shaft abates, and you pull back, watching Zeke's stunned face, with several streaks of cum dripping from his mouth.";
 	WaitLineBreak;
 	say "     After you have completely pulled back from Zeke, he finally becomes fully aware again, shaking himself out of his daze. He sits up, and looks over at you. 'Wow, you really took charge there, didn't you? Guess the competition was good for you. But next time, I'll win, and then it'll be my turn.' He laughs, before going over to the corner of the room, and cleaning himself off. You follow suit, and clean yourself up as well, enjoying the last fleeting remnants of the pleasure as they last.";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Zeke receives "OralCock" from Player;
 
 to say ZekeSex5: [power bottom Zeke]
 	say "     A";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Player receives "AssFuck" from Zeke;
 
 to say ZekeSex6: [fuck Zeke]
 	say "     A";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Zeke receives "AssFuck" from Player;
 
 to say ZekeSex7: [being facefucked]
 	say "     A";
-	now lastfuck of Zeke is turns;
+	NPCSexAftermath Player receives "OralCock" from Zeke;
 
 to say ZekeSex8: [being fucked]
 	setmonster "Red Fox";
@@ -365,8 +377,8 @@ to say ZekeSex8: [being fucked]
 	say "     You receive a sudden shock when Zeke slams forward, the tapered head of his dick making the entry smooth and easy, until he rests about halfway into you. For several moments, he holds that position, his cock stretching you open, but as intense as the sensations flooding through you are, this is only the beginning. The fox starts pumping in and out, his cock ending up deeper inside you on each thrust, stretching you yet further. Once he gets even deeper in you, his thrusts are enough that his knot begins to collide with your ass on each thrust. As the action continues, your attentions focus further and further on the pleasure you're getting from being fucked, and nothing else.";
 	WaitLineBreak;
 	say "     It doesn't take very long after that for you to be jarred from your cock-induced reverie, as Zeke pulls back until he is barely staying in you, and holds there. Before you have a chance to wonder why he stopped, you hear him whisper in your ear. 'If you want me to finish fucking you, tell me you want it.' There is no hesitation in your mind, and you immediately begin begging for him to fuck you. The fox doesn't answer you, but his response is still clear, as he resumes his earlier work even more energetically than before. You gasp in shock and pleasure as he immediately begins hammering you, and sinks his entire shaft into you in one swift thrust, only straining for a moment before the knot pops into you as well.";
-	say "     An overwhelming wave of bliss is the only thing on your mind, the wracking pleasure of the dick sheathed inside you right now. Soon a fresh warmth lets you know that Zeke has hit a pleasured peak as well, with his cock pulsing inside you and releasing its payload. That is the final thing to push you over the edge, and the strength of that pleasure is enough that you almost feel about to pass out. In the end, however, you hang on, simply in a pleasurable daze, until finally the two of you have finished. The fox cleans everything up as you lay over the edge of the couch, recovering from the act. When he's finished with that, he comes back over to you. 'You were quite the ride there, weren't you? Maybe next time you'll get the chance to do that to me instead. Looking forward to either possibility.'[mimpregchance]";
-	now lastfuck of Zeke is turns;
+	say "     An overwhelming wave of bliss is the only thing on your mind, the wracking pleasure of the dick sheathed inside you right now. Soon a fresh warmth lets you know that Zeke has hit a pleasured peak as well, with his cock pulsing inside you and releasing its payload. That is the final thing to push you over the edge, and the strength of that pleasure is enough that you almost feel about to pass out. In the end, however, you hang on, simply in a pleasurable daze, until finally the two of you have finished. The fox cleans everything up as you lay over the edge of the couch, recovering from the act. When he's finished with that, he comes back over to you. 'You were quite the ride there, weren't you? Maybe next time you'll get the chance to do that to me instead. Looking forward to either possibility.'";
+	NPCSexAftermath Player receives "AssFuck" from Zeke;
 
 Section 4 - Events
 
