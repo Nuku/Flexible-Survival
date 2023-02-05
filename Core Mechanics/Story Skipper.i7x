@@ -202,6 +202,9 @@ to EventRestore:
 				[bugfix code after re-naming Midway to Fair]
 				if sarea of EventObject is "Midway":
 					now sarea of EventObject is "Fair";
+				[bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
+				if sarea of EventObject is "Dry Plains":
+					now sarea of EventObject is "Plains";
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";

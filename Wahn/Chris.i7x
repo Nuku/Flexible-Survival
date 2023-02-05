@@ -434,7 +434,7 @@ Instead of fucking the Chris:
 		if Libido of Chris is 0:
 			project the figure of Chris_naked_icon;
 		else if Libido of Chris is 1:
-			project the figure of Chris_breeder_clothed_icon;
+			project the figure of Chris_breeder_naked_icon;
 		else if Libido of Chris is 2:
 			project the Figure of Chris_warrior_naked_icon;
 		blank out the whole of table of fucking options;

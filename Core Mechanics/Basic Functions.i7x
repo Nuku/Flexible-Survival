@@ -363,6 +363,21 @@ to MoraleBoost (N - number):
 	if morale of Player > 100:
 		now morale of Player is 100;
 
+to BehaviorCount (TraitCountName - text):
+	if TraitCountName is:
+		-- "Breeder":
+			increase BehaviorCount_Breeder of Player by 1;
+		-- "Lover":
+			increase BehaviorCount_Lover of Player by 1;
+		-- "Rapist":
+			increase BehaviorCount_Rapist of Player by 1;
+		-- "Nice":
+			increase BehaviorCount_Nice of Player by 1;
+		-- "Cruel":
+			increase BehaviorCount_Cruel of Player by 1;
+		-- "Vore":
+			increase BehaviorCount_Vore of Player by 1;
+
 
 understand "rename" as PlayerRenaming.
 
