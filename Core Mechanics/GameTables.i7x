@@ -1510,6 +1510,8 @@ Name(text)	Type(text)
 "battleground"	"text"
 "bcfinalchairform"	"text"
 "bcfinalpillarform"	"text"
+"BlancheNonBinaryMomDad"	"text"
+"BlancheNonBinaryMommyDaddy"	"text"
 "BlueDesignator"	"text"
 "bodyselector"	"text"
 "BodyShopGuaranteedBody"	"text"

@@ -1,4 +1,6 @@
-Version 1 of Penelope by Prometheus begins here.
+Version 2 of Penelope by Prometheus begins here.
+[ By Prometheus and Lost Directions]
+[ Version 2 - Movement Schedule and Companion Function - By Prometheus and Lost Directions]
 
 [Blanche's second daughter. Resolute]
 

@@ -709,7 +709,7 @@ to say Bucky_Person:
 		TraitGain "Bucky - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
-		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. The canine lets out a half-barked woof as you explain that Bucky's a new friend, and not meant for... that. Giving the deer another sniff, Fang trots off soon after, tail wagging behind his back.";
+		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Bucky's a new friend, and not meant for... that. Giving the deer another sniff, Fang trots off soon after, tail wagging behind his back.";
 		TraitGain "Bucky - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
@@ -911,7 +911,7 @@ to say Bucky_Toy:
 			TraitGain "Bucky - Seen him" for Eric;
 			WaitBreakReactions;
 		if Fang is booked or Fang is bunkered:
-			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Bucky's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still,  it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
 			TraitGain "Bucky - Seen him" for Fang;
 			WaitBreakReactions;
 		if HP of Fiona > 4:
@@ -1098,7 +1098,7 @@ to say Hercules_Person:
 		TraitGain "Hercules - Seen him" for Eric;
 		WaitBreakReactions;
 	if Fang is booked or Fang is bunkered:
-		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. The canine lets out a half-barked woof as you explain that Hercules's a new friend, and not meant for... that. Giving the Clydesdale another sniff, Fang trots off soon after, tail wagging behind his back.";
+		say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. The canine lets out a half-barked woof as you explain that Hercules's a new friend, and not meant for... that. Giving the Clydesdale another sniff, Fang trots off soon after, tail wagging behind his back.";
 		TraitGain "Hercules - Seen him" for Fang;
 		WaitBreakReactions;
 	if HP of Fiona > 4:
@@ -1301,7 +1301,7 @@ to say Hercules_Toy:
 			TraitGain "Hercules - Seen him" for Eric;
 			WaitBreakReactions;
 		if Fang is booked or Fang is bunkered:
-			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the dickhead already emerging from his sheath. Still, it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
+			say "     Fang pads closer, then [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]lowers his chest and [end if]sticks his muzzle between Hercules's legs in a fairly straightforward way, sniffing him. A casual glance between the wolf's legs tells you he's getting hard, with the pointed tip already emerging from his sheath. Still, it seems like the wolf doesn't feel like mounting him right now, so he trots off soon after, tail wagging behind his back.";
 			TraitGain "Hercules - Seen him" for Fang;
 			WaitBreakReactions;
 		if HP of Fiona > 4:

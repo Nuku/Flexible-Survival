@@ -169,7 +169,7 @@ To say jazzfriends:
 			if SarahPups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
-		if HP of Fang is 3 or HP of Fang is 4:
+		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6:
 			say "     Fang seems quite interested in the music as [SubjectPro of Fang] comes over to lay by your leg while listening to it. Grumbling softly into the back of [PosPro of Fang] throat, the wolf nuzzles close to you while curling up into a large ball of fur and muscle. You do happen to notice, however, that the wolf's ears are ever tuned towards the door of the bunker. The lupine, no matter how relaxed, is ever vigilant towards [PosPro of Fang] duty to protect [PosPro of Fang] new home.";
 		else:
 			say "     Fang, not use to hearing music too often, seems a little intrigued by the noise coming from the boombox. Slowly, the feral wolf comes over and then lays down beside your cot to listen to the soft sounds coming from the unfamiliar machine.";
@@ -284,10 +284,10 @@ to say Oceanfriends:
 			if SarahPups > 0:
 				say "     Sarah's pups encircle both you and their mother as they sleepily start to drift off together, one after another.";
 	If Fang is in the Grey Abbey Library:
-		if HP of Fang is 3 or HP of Fang is 4:
+		if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6:
 			say "     Fang slowly comes over to where you are and then curls [ReflexPro of Fang] up at your head. Panting softly, the big [if thirst of player is 0]male [else]female [end if]has no problem whimpering at the sounds of the music and then drifting off to sleep as [SubjectPro of Fang] listens to the music with you.";
 		else:
-			say "     Fang sleepy pads [ReflexPro of Fang] over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ReflexPro of Fang] up next to your head.";
+			say "     Fang sleepily pads [ReflexPro of Fang] over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling [ReflexPro of Fang] up next to your head.";
 	If Colleen is in the bunker:
 		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:

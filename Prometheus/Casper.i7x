@@ -1,6 +1,8 @@
-Version 1 of Casper by Prometheus begins here.
+Version 2 of Casper by Prometheus begins here.
+[ By Prometheus and Lost Directions]
+[ Version 2 - Movement Schedule and Companion Function - By Prometheus and Lost Directions]
 
-[Blanche's fifth son. Steady]
+[Blanche's fifth son. Creative]
 
 [   hp of Casper - relationship variable with the player          ]
 [   0 - At Office  ]

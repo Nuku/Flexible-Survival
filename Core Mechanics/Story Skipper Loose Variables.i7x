@@ -118,6 +118,10 @@ to TextVariableSave:
 			now TextVarValue entry is bcfinalchairform;
 		-- "bcfinalpillarform":
 			now TextVarValue entry is bcfinalpillarform;
+		-- "BlancheNonBinaryMomDad":
+			now TextVarValue entry is BlancheNonBinaryMomDad;
+		-- "BlancheNonBinaryMommyDaddy":
+			now TextVarValue entry is BlancheNonBinaryMommyDaddy;
 		-- "BlueDesignator":
 			now TextVarValue entry is BlueDesignator;
 		-- "bodyselector":
@@ -3757,6 +3761,10 @@ to VariableTextLoad:
 					now bcfinalchairform is TextVarValue entry;
 				-- "bcfinalpillarform":
 					now bcfinalpillarform is TextVarValue entry;
+				-- "BlancheNonBinaryMomDad":
+					now BlancheNonBinaryMomDad is TextVarValue entry;
+				-- "BlancheNonBinaryMommyDaddy":
+					now BlancheNonBinaryMommyDaddy is TextVarValue entry;
 				-- "BlueDesignator":
 					now BlueDesignator is TextVarValue entry;
 				-- "bodyselector":
