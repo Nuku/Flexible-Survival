@@ -241,7 +241,40 @@ Section 4 - Tome Specific Scenes
 
 to say DemonFoxSummon:
 	say "     You recite the incantation shown in the book, albeit with a little difficulty. With a flash of light, you see the demon fox from before standing in front of you.";
-	if DemonFox_PlayerDefeated is true:
+	if DemonFox_PlayerSubmitted is true and DemonFox_Apologized is true:
+		say "     As you open the tome, you hear a familiar chuckle. A flashing light sears your eyes, barely shielded by the edge of the book. Standing before you is the demonic fox in all his glory, his sharp teeth dripping drool, and his stance widened to show off his low-hanging balls. The familiar scent of musk fills your bedroom as he looks you over, his expression showing a hunger that brings a blush to your cheeks. 'It seems you aren't willing to take 'no' for an answer kit. Do I need to remind you of who's in charge? Or is it possible that you're craving what only [italic type]I [roman type]can give you?' Despite his annoyed tone, the fox's peeking cock shows a certain level of interest. Closing the distance between you, the demonic fox tilts your head to stare into his beastly face, pressing you against the wall and hunching over you. He moves as if your body belongs to him, and asking is a formality. 'Since you're desperate for my company, I'll let you decide how I take you. Choose wisely. I won't be stopping until I'm satisfied.' Crossing his arms and tapping his foot, the demon stands in front of you, awaiting your answer in polite silence.";
+		say "     [bold type]How do you want Kal['] Ren to fuck you?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Facefuck.";
+		say "     ([link]N[as]n[end link]) - Anal.";
+		if Player consents: [Facefuck]
+			LineBreak;
+			say "     The demon nods. 'You wish for a taste, then? I hope you've been practicing. I won't be taking it easy on you.' Pleased by your choice, the demonic fox's cock spills from its sheath, steaming in the open air and intensifying the animalistic musk you've come to associate with his presence. Guided by a heavy paw, your face draws closer to that dripping tip until you can feel the heat pouring off it, searing your cheeks. Sinking every exposed inch into your open mouth, the fox hisses through clenched teeth, paying no mind to your desperate gag. The rustle of multiple tails is the only warning you receive before those hips draw back, allowing you a shallow breath before he plunges to the start of his growing knot, slamming the back of your head against the wall hard enough to blur your vision.";
+			say "     Thrust after thrust violates your throat, stretching it to fit every inch of masculinity. Large enough to bring an ache to your jaw, it leaks molten precum into your throat with every thrust, messing your chest with the sheer volume of his overflow, but he shows no signs of stopping, forcing you to swallow what you can to prevent yourself from drowning. Before long, you feel a heavy knot slapping against your lips, threatening to break through with each insistent shove. Brutal humps slam swinging balls against your chin, and the demon fox's growls grow more savage, his paw leaving the back of your head to brace himself as he tries his level best to pry your mouth open with that veiny monster.";
+			say "     [bold type]Kal['] Ren is growing frustrated with your jaw's inability to accept his knot. Do you want to encourage the savage beast's efforts?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Yes, reach up and give those heavy balls some affection to goad him into knotting your mouth.";
+			say "     ([link]N[as]n[end link]) - No. You're afraid of taking the knot. It could break your jaw!";
+			if Player consents: [Take the knot]
+				LineBreak;
+				say "     With a triumphant howl, the fox surges forward with a wet pop, locking your jaw around his swollen knot and draining himself down your throat. Hot, molten cum fills your stomach, slowly at first, then gaining volume with each heavy spurt, and you can feel your stomach swelling with his prodigious output. Like an overfull condom, you feel yourself reach your limit. Still, the fox isn't finished, humping relentlessly until your nose overflows with orange cum, messing the sweaty pubic fur in front of you with evidence of his desire. Trapped between the wall and increasingly messy fur, you drift in and out of consciousness, drawing what few breaths you can through an endless deluge of cum. Just as you begin to worry that you'll die there, impaled on his dick, you feel pressure on your jaw, growing rougher until the fox's knot pops free, his flexing tip filling your mouth with a final squirt of gooey heat before withdrawing completely. 'Good kit. You're better at taking cock than I thought you'd be. We'll have to do this again.' Filled with mocking affection that sends a shiver through your spine, Kal' Ren's voice purrs above you. Marking your face with his retreating cock and sweating balls, the fox pulled away, letting you draw your first untainted breath in what felt like hours. Another flash follows as the fox disappears into the book, leaving you to gather your wits and clean the evidence of your encounter. Hopefully, you can still walk with your belly as swollen as it is.";
+			else: [Don't take the knot]
+				LineBreak;
+				say "     Frustrated, the fox pulls back, unsheathing his cock and slapping it against your face. 'No way around it. I'll have to mark you instead.' He growls his words, grinding against your face and smearing that plump shaft over your cheeks, nose, and open mouth. Suffocating you in pulsing cock and churning balls, he grows more restless by the second, the pulsing heartbeat feeding that monster growing more frantic. With a triumphant howl, he fountains molten orange cum, his hips withdrawing so you can watch the arcing strings before they land heavily on your face, searing your skin with almost unbearable heat. Each rope is fatter than the last, and before long, you can barely see, your squinting vision tainted by an orange glow and your world colored by the scent of musk and cum. 'What a waste. You'd better lick all of that up.' Mocking your sorry state, Kal' Ren brought his cock to bear, letting you feel its heat against your drenched face. Smearing his drooling tip against your cheek and pushing some of his cum into your open, panting mouth in the process, the fox disappears in a flash, leaving you to clean his mess. It takes you a few minutes to clear your eyes. By the time you can see well enough to stand on shaky legs, the fox's cum has begun to cool, leaving you with a musky, uncomfortable reminder of your submission as you busy yourself with mopping up the puddle below you. Maybe it would have been better to brave his knot.";
+		else: [Anal]
+			LineBreak;
+			say "     'Begging to be bred? I can't say I'm surprised. I bet you've been thinking about it since that first time.' Grabbing your arm as he speaks, the fox looks around, settling on your cot and unceremoniously throwing you over it.[if player is not naked] Tearing away your clothes with impatient claws, he licks his lips, one paw on the small of your back to keep your ass oriented for his pleasure. 'Next time, take it all off before you summon me. I want to see my property. You don't need modesty when you've already given yourself to me[else] Licking his lips, the fox slaps your upturned ass, digging his claws into your cheeks and spreading them to inspect your ass. 'This is how it should be. Naked and ready for my cock. You're such a well-behaved kit.' Judging by his tone, you've pleased the fox. You'll have to remember to strip next time if you want to be a good pet.[end if] Without a moment spent preparing your vulnerable ass, the fox lines up his peeking cocktip, smearing its drooling tip over your hole and letting you feel the heat pouring off his churning balls. Sharp claws dig into your skin, drawing blood as he surges forward, his cock spilling into your ass in one prolonged stretch that brings tears to your eyes. Was he always this big, or was the fox increasing his size to humiliate you?";
+			say "     'Still just as tight as the first time. It's a perfect fit, isn't it, kit?' Taunting you as he mercilessly thrusts, the fox drools onto your back, rutting you like a bitch in heat. There's no tenderness in his thrusts, and what few jabs find your prostate seem accidental, though they harden your cock and set your nerves alight. A claiming snarl fills the air as thrusts get wetter, sending trails of molten pre down your balls to drip wetly on the floor below. Kal['] Ren shows no signs of slowing, and when you feel his knot swell, he bites down on your shoulder, the burning stretch of that throbbing ball of flesh threatening to burst through your entrance.";
+			WaitLineBreak;
+			if Lust of Kal Ren > 0: [Only been fucked by him once]
+				say "     Searing pain and blinding pleasure combine as sharp teeth break the skin of your shoulder, pinning you under the rutting beast. His knot pops in with colossal effort, ruining your hole and filling you with the sensation of being so full you might pop. This feeling grows more pronounced as jets of liquid demon-fox seek your deepest reaches, pooling in your bowels and swelling your stomach into a perverse facsimile of pregnancy. Helpless underneath the beast's savage affections, you clench and squirm, your cock unleashing its approval against the bed below and cementing your submission. You don't want to admit it, but you live for the thrill of being taken by the monstrous fox. 'Good kit.' Kal['] Ren's voice drips with approval even as his teeth drip with your blood, his grip on your waist tightening as he tests the death grip your spasming hole has on his cock. With a wet pop, he slops free alongside a deluge of spilling cum, leaving your ass gaped and overused. You doubt you could clench closed if you tried.";
+			else: [Been fucked more than once]
+				say "     Snarling, Kal['] Ren throws his entire weight into fucking you, easily slopping his swollen knot past your battered, broken hole and emptying the contents of his churning balls into your accepting hole. This time, however, he hasn't finished with you. Intense pressure tests your connection before the first jet consecrates your insides, and with a wet pop, he slides free, his teeth clamping on your shoulder as his cock continues its rampage, unwilling to let you off with a single knotting. Ramming home in a feral rhythm, the fox destroys your hole with his knot, pulling at your helpless entrance with every savage thrust and depositing more of his desire into your growing bulge. You aren't tight enough to hold him in place, so all you can do is twitch and moan, lost to the intense sensation of your prostate's brutal beating and hole's ruination. You'll be lucky if you can sit down for a week! Helpless before the onslaught, you signal your submission, your cock unleashing its wasted load on the cot below you and squirting in time with every sloppy pop. You lose track of how long you cum and how long the fox uses you, only returning to your senses when you feel the wet sensation of Kal['] Ren's cock wiping itself clean on your ass-cheeks.";
+			say "     The demon leaves you to rest in your mess, your hopelessly destroyed ass leaking a river of cum to the floor below. A flash confirms that he returned to his book, and you settle in for a nap, hoping to sleep off the gut full of cum and the ache of claw marks and bites that are already healing over.";
+			if Lust of Kal Ren < 5:
+				increase Lust of Kal Ren by 1;
+			now TomeTimer is turns;
+	else if DemonFox_PlayerDefeated is true:
 		say "     'Well, if it isn't my pet from before...' the beast purrs out. 'You gonna try fighting me again? If so, I'm really not in the mood. I hate to break it to you, but I'm actually not always interested in sex and fighting.' You blink at him incredulously. 'I'm really not. It might have appeared that way from our first encounter, but I'll be the first to admit that I... didn't make a great first impression.'";
 		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' he nods in introduction. Tentatively you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future we can have another go.' With that, the fox disappears in another flash of light, leaving you slightly confused at everything that just transpired.";
 		now DemonFox_Apologized is true; [met after losing to him, he apologized]
@@ -360,5 +393,52 @@ to say DemonFoxFirstRead:
 	now DemonFoxRead is true;
 	now TomeInteractions is 2;
 	now TomeEventPending is true;
+
+
+Section 5 - NPC Declaration
+
+Table of GameCharacterIDs (continued)
+object	name
+Kal Ren	"Kal Ren"
+
+Kal Ren is a man.
+ScaleValue of Kal Ren is 4. [human sized]
+Body Weight of Kal Ren is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kal Ren is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kal Ren is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kal Ren is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kal Ren is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kal Ren is 12. [length in inches]
+Breast Size of Kal Ren is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kal Ren is 2. [count of nipples]
+Asshole Depth of Kal Ren is 12. [inches deep for anal fucking]
+Asshole Tightness of Kal Ren is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kal Ren is 1. [number of cocks]
+Cock Girth of Kal Ren is 5. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kal Ren is 13. [Length in Inches]
+Ball Count of Kal Ren is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kal Ren is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kal Ren is 0. [number of cunts]
+Cunt Depth of Kal Ren is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kal Ren is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kal Ren is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Kal Ren is false.
+PlayerRomanced of Kal Ren is false.
+PlayerFriended of Kal Ren is false.
+PlayerControlled of Kal Ren is false.
+PlayerFucked of Kal Ren is false.
+OralVirgin of Kal Ren is false.
+Virgin of Kal Ren is false.
+AnalVirgin of Kal Ren is true.
+PenileVirgin of Kal Ren is false.
+SexuallyExperienced of Kal Ren is false.
+TwistedCapacity of Kal Ren is True. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kal Ren is true. [steriles can't knock people up]
+MainInfection of Kal Ren is "".
+Description of Kal Ren is "Demonic Fox".
+Conversation of Kal Ren is { "Infernal growling" }.
+The scent of Kal Ren is "     Kal Ren smells of demon fox."
 
 Demon Fox ends here.
