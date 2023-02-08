@@ -392,6 +392,8 @@ This is the self examine rule:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
 	if "Top Dog" is listed in feats of Player:
 		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
+	if "Marked - Fang" is listed in Traits of Player:
+		say "Your neck bears the tooth-marks from when Fang became your alpha, marking you as a member of his pack and family. ";
 	[ ^^ Infection Descriptions Done ]
 	let cocktext be "";
 	if Cock Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated] [new parts]

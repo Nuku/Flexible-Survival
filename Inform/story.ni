@@ -876,7 +876,7 @@ Include Larissa by Stripes.
 Include Leon by Luneth.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
-Include Lindsey by Sarokcat.
+Include Lindsey by Prometheus.
 Include Lingau by Wahn.
 Include Logan by Wahn.
 Include Lucy by Stripes.

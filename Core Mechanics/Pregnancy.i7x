@@ -31,6 +31,7 @@ an everyturn rule:
 		if Libido of Impregnated Feral is 0: [birthing time]
 			say "     [bold type]Out of the blue, a sudden thought strikes you, making you remember the [MainInfection of Impregnated Feral] you recently had carnal relations with. You don't know how or why exactly, but you feel certain that your encounter resulted in them becoming pregnant and giving birth to your offspring. Somewhere out there in the city, a new life as entered the world.[roman type][line break]";
 			say "     While it is very unlikely that you will ever encounter your child - or the two of you will even recognize each other - you can't help but feel that they'll [one of]do great things[or]be an unholy terror[or]spread your genes far and wide[or]give you grandkids before long[or]dominate their surroundings[at random]. And whatever else, this is one more wild and feral inhabitant for the city, making it all the harder for the military to move in and regain control.";
+			BehaviorCount "Breeder";
 			extend game by a random number between 3 and 12;
 			increase FeralBirths by 1;
 			increase Score by 5;
@@ -300,6 +301,7 @@ to detailpregnancy:
 
 to say detailbirth:
 	detailbirth;
+	BehaviorCount "Breeder";
 
 to detailbirth:
 	LineBreak;
