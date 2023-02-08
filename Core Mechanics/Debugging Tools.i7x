@@ -337,6 +337,8 @@ to DescriptionDisplay:
 		say " Thin lines of healed claw-marks run down your back, marking you as Angie's mate.[run paragraph on]";
 	if "Boghrim's Mark" is listed in feats of Player:
 		say " Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you.[run paragraph on]";
+	if "Marked - Fang" is listed in Traits of Player:
+		say "Your neck bears the tooth-marks from when Fang became your alpha, marking you as a member of his pack and family.[run paragraph on]";
 	if weapon object of Player is not journal:
 		say " You are carrying a/an [weapon object of Player] just in case of trouble";
 		if weapon object of Player is unwieldy:

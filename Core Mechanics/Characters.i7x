@@ -150,6 +150,12 @@ Player has a number called AssFuckGiven.
 Player has a number called AssFuckTaken.
 Player has a number called PussyFuckGiven.
 Player has a number called PussyFuckTaken.
+Player has a number called BehaviorCount_Breeder.
+Player has a number called BehaviorCount_Lover.
+Player has a number called BehaviorCount_Rapist.
+Player has a number called BehaviorCount_Nice.
+Player has a number called BehaviorCount_Cruel.
+Player has a number called BehaviorCount_Vore.
 
 to say Player name:
 	if name of Player is "Player":

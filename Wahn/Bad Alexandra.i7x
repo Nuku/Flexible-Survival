@@ -1420,7 +1420,7 @@ an everyturn rule:
 				now AlexandraGrowingPups is 0; [no pups in her now]
 				now lust of Alexandra is 0;
 				now HP of Alexandra is 4;
-		else if Fang is booked and Fang is Male and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned:
+		else if Fang is booked and Fang is Male and HP of Fang < 6 and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			project Figure of Fang_hard_icon;
 			if level of Alexandra is 0: [first time]

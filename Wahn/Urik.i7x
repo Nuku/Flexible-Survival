@@ -1569,7 +1569,7 @@ to say UrikSexMenu:
 			now PlayerFucked of Urik is true;
 	else:
 		LineBreak;
-		project the figure of Urik_face_icon;
+		project the Figure of Urik_naked_icon;
 		say "     [bold type]What do you want to do with Urik?[roman type][line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;

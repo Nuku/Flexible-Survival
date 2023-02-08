@@ -58,7 +58,7 @@ carry out Inventorying:
 			let traderavailable be 1;
 		[go through all the stuff]
 		LineBreak;
-		say "Equipment:[line break]";
+		say "[bold type]Equipment:[roman type][line break]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -111,7 +111,7 @@ carry out Inventorying:
 				increase weight by weightnum;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "Armaments:[line break]";
+		say "[bold type]Armaments:[roman type][line break]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -164,7 +164,7 @@ carry out Inventorying:
 				increase weight by weightnum;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "Consumables:[line break]";
+		say "[bold type]Consumables:[roman type][line break]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;
@@ -217,7 +217,7 @@ carry out Inventorying:
 				increase weight by weightnum;
 		now owneditemindex is 0;
 		say "[line break]";
-		say "Other:[line break]";
+		say "[bold type]Other:[roman type][line break]";
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			let ownedCount be carried of object entry;

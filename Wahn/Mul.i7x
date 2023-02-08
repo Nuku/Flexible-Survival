@@ -729,7 +729,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 6;
 		now description entry is "Allow Klauz to mount Mul";
 	[]
-	if (Fang is in Grey Abbey Library and Fang is Male and HP of Fang > 1 and HP of Fang < 100):
+	if (Fang is in Grey Abbey Library and Fang is Male and HP of Fang > 1 and HP of Fang < 6):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Fang fuck Mul";
 		now sortorder entry is 7;
