@@ -464,6 +464,7 @@ to WPAmbushFightAftermath:
 		WaitLineBreak;
 		say "     'I'm... sure I gave him enough to have him be a little less aggressive...' he adds, but the wyvern immediately retorts, 'What, with your little sting?! That was only a momentarily spike of pleasure! Admittedly. Therefore, I've decided that I shall stay.' You two look at each other, even more confused. Diavoborg says, 'Uh... Well, I could always give you more?' as he tilts his head, to which the wyvern replies 'Of course you should! It's been long since I've met someone worthy of my respect. Unlike your little... friend. But seeing as you are both in good terms with each other, I shall make an exception.' You have a hard time telling if the wyvern is genuinely wanting to be at peace with you, or if he is just... No, you really have no idea of what is going on.";
 		say "     'Right... Well, if that's the case...' Diavoborg says, striding closer to the wyvern, who almost flinches as he so boldly approaches him. He hugs the huge reptilian's back with his tail and gently grabs his thin lizard-like head with one hand, which seems to have a significant effect on his demeanor. '... How about we get started on something fun? And you better treat my friend with respect, or you're not gonna feel that sweet ecstatic surge ever again, yeah?' This shuts him up, as the wyvern seems to be looking for words he cannot find. Though, eventually, he mutters something, 'Fine, I... promise I'll... I'll be nice,' as he nearly shakes with the red behemoth's tender touch. 'Good wyvern.'";
+		WaitLineBreak;
 		say "[VuukzasqigSexDiavoborgThreesome]";
 		WaitLineBreak;
 		say "     'Anyway, I'll take it from here, bud. Thanks for the help again, I'm just... gonna make sure our newcomer feels at home.' With a nod, you begin to walk away and move on to do your own things, now that everything is in order. And, after what seems to be mere seconds, you can hear thrusting again coming from the wyvern's chamber. Fortunately, it seems your former nemesis has been tamed, even though some of his arrogant personality persisted... But it would not be the same thing if it did not. Still, you know you can count on Diavoborg to keep him under control, happy and satisfied.";
@@ -525,7 +526,64 @@ to say VuukzasqigDesc:
 Section 3-1 - Vuukzasqig Talk
 
 instead of conversing Vuukzasqig:
-	say "     << Author's Note: Not possible at the moment, will be added in a future update! >>";
+	say "[VuukzasqigTalkMenu]";
+
+to say VuukzasqigTalkMenu:
+	say "     [bold type]You approach the wyvern with the intent of initiating a conversation. What would you like to talk to him about?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Origins";
+	now sortorder entry is 1;
+	now description entry is "Ask about where he came from and how he came to be this massive wyvern";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Diavoborg";
+	now sortorder entry is 2;
+	now description entry is "Inquire about his relationship with Diavol";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Origins"):
+					say "[VuukzasqigTalkOrigins]";
+				else if (nam is "Diavoborg"):
+					say "[VuukzasqigTalkDiavol]";
+				wait for any key;
+				say "[VuukzasqigTalkMenu]"; [looping back to keep talking with him]
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You see yourself out as you nod to the wyvern. He does not mind you too much.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say VuukzasqigTalkOrigins:
+	say "     Before, you could never viably ask how he came to be this big, or even call himself the patriarch of the wyverns, but as you entertain such a thought, you realize it would be a fair question. As you verbalize it to the large winged beast, he sighs exasperatedly. 'Isn't that obvious? I am like this because I was chosen to bear the patriarchy of all wyverns! They're all my sons and daughters! Nevermind that one other impostor. Nor the other. I am the only rightful one! And I've been brought to this cave [italic type]totally[roman type] against my will... Because of you!' That is true, you cannot deny that you have brought him pretty much against his will, but you defend yourself by saying he was being problematic, at best. 'Problematic?! You mess with my sons and have the audacity to call me problematic?! Some of them even had issues flying because they somehow grew gigantic cocks so heavy they couldn't lift them! You're no sorcerer, but it's a very odd coincidence! Therefore, you're the one to blame for that! YOU are problematic!'";
+	say "     You tell him you could not possibly think of anything that would have such lasting consequences on their poor cocks... Or maybe you do, but it is best to not tell him. 'This certainly doesn't prove your innocence! You... You tricked me into being... Defiled by a... Beast! A... Really sexy b-... A PERVERT! That's what I wanted to say! All those muscles and attitude... And size... A-ALL an offense! Yes, an offense to my being! I feel offended! Worse... VIOLATED.' Judging by an emerging tip between his legs, you totally believe his claims. Truly, you do! In fact, all you do is look down at his member beginning to protrude, then back to his face. This prompts him to hide his crotch. 'T-this isn't me! This is your influence! My body's been corrupted and betrays my virtues!'";
+	WaitLineBreak;
+	say "     Anyway, before this conversation derails any further, as entertaining as it could be, you remind him you genuinely wanted to know about how he came to call himself the Wyvern Patriarch and how he happened to have become such a huge beast. He grunts at first, but then gives it some thought and sees your curiosity is true. 'If you must know so desperately... I... Well, I don't remember.' You tilt your head and, quite frankly, not believe him at first, so you attempt to pry and ask him again. 'I'm not trying to deceive you! I... Really don't remember.' You present him some theories, such as... Perhaps while he was a human, he was captured by wyverns and turned into one, or he was in contact with some mutating substance, or the nanites had an unforeseen effect on his organism like they did with Diavol...";
+	say "     He only shakes his head as nothing seems to trigger anything for him. 'I have no idea, I only remember being like this and caring for my children... The other wyverns. And, for some reason, I keep having this intrusive urge to... Engage in unsavory activites!' He means having sexual thoughts, you can assume. It is possible that the wyvern's mind was simply too long gone, but not quite entirely. He is quite intelligent and has not gone entirely feral, but very little of his humanity is left in him."; 
+	say "     For now, you thank him for answering your questions, and he simply turns away from you.";
+
+to say VuukzasqigTalkDiavol:
+	say "     As he has been essentially sharing Diavoborg's home, you ask him how things are going with his new housemate. He rolls his eyes at your question and takes a long time to come up with an answer. 'How am I supposed to answer to that? That I'm thrilled you've got yourself a sizable partner to capture and enslave me? Then to be forced to live with him?!' Before you can look, he has one of his winged arms covering his crotch from your view. 'No one would be thrilled about living with such a sexy-... RUDE muscular and massive beast. He has no qualities! None! Nothing in him is good! None of this is pleasant!' By, perhaps, his manner of speech, you have trouble believing in his claims. In fact, you ask him if it is all as bad as he is describing. He hesitates to reply, shifting his eyes around, but eventually does say something, 'Well... I've had worse. There's potential... But I'll only believe when I see it.'";
+	say "     That is his final take on the matter. Not a very enlightening conversation, but you can definitely see there is room for improvement. Maybe in the future this will be different.";
 
 Section 3-2 - Vuukzasqig Sex
 
@@ -754,5 +812,40 @@ Carry out ForceWPEncounter:
 	if Resolution of MeetTheWyvernPatriarch < 3:
 		now Resolution of MeetTheWyvernPatriarch is 3;
 	say "     Wyvern Patriarch encounter is now on. Note that this should not be possible after Vuukzasqig is in the game as a NPC. Use for testing only!";
+
+
+WPSkip is an action applying to nothing.
+Understand "WPSkip" as WPSkip.
+
+Check WPSkip:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out WPSkip:
+	choose a row with name of "Wyvern Patriarch" in the Table of Random Critters;
+	now area entry is "Nowhere";
+	if Loyalty of Diavoborg < 15:
+		now Loyalty of Diavoborg is 15;
+	if Resolution of MeetTheWyvernPatriarch < 4:
+		now Resolution of MeetTheWyvernPatriarch is 4;
+	now Resolution of Ambush The Wyvern Patriarch is 5;
+	now Ambush The Wyvern Patriarch is resolved;
+	move Vuukzasqig to Red Rock Wyvern Chamber;
+	connect Red Rock Wyvern Chamber;
+	say "     Vuukzasqig moved to Red Rock Wyvern Chamber, all quest checks have been modified accordingly.";
+	say "     Diavoborg's Loyalty is set to 15 if it was below that.";
+	say "     If Diavoborg's quest has not been properly completed, the cheat will also ensure it is. Checking now...";
+	wait for any key;
+	if Diavoborg is not in Red Rock Lair Hall: [run SkipToDiavoborg partially]
+		move Diavoborg to Red Rock Lair Hall;
+		AddNavPoint Entrance to Red Rock Lair;
+		now That Red Cave is resolved;
+		now Resolution of Four Leg Wrath is 3; [Event resolved as smaller than Diavoborg]
+		now Four Leg Wrath is resolved;
+		say "     Diavoborg is now accessible in his lair, all events are resolved as 'smaller size'.";
+	else:
+		say "     It looks like Diavoborg's quest is already resolved.";
+	say "     Cheat applied successfully. Chop chop to testing or whatever you do!";
 
 Wyvern Patriarch ends here.

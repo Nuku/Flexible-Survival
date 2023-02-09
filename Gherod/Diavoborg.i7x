@@ -539,6 +539,12 @@ to say DiavoborgTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Ask him about his actual gender, given the fact he has a bit of both, down there...";
 	[]
+	if Ambush The Wyvern Patriarch is resolved:
+		choose a blank row in table of fucking options;
+		now title entry is "Vuukzasqig";
+		now sortorder entry is 98;
+		now description entry is "Ask how things are going with the Wyvern Patriarch";
+	[]
 	if Loyalty of Diavoborg >= 15 and Resolution of Ambush The Wyvern Patriarch < 1 and Resolution of MeetTheWyvernPatriarch >= 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Wyvern Patriarch";
@@ -570,6 +576,8 @@ to say DiavoborgTalkMenu:
 					say "[DiavoborgTalkSex]";
 				else if (nam is "Gender"):
 					say "[DiavoborgTalkGender]";
+				else if (nam is "Vuukzasqig"):
+					say "[DiavoborgTalkVuukzy]";
 				else if (nam is "Wyvern Patriarch"):
 					say "[DiavoborgTalkWP]";
 				wait for any key;
@@ -645,6 +653,11 @@ to say DiavoborgTalkGender:
 	say "     You thank him for the answers before you change the subject.";
 	if Energy of Diavoborg is 2:
 		now Energy of Diavoborg is 3;
+
+to say DiavoborgTalkVuukzy:
+	say "     Given that the big wyvern is now living with Diavol, you ask the behemoth how things are going between the two of them, since this is a situation where two enormous beasts are sharing a home. He chuckles and pulls you to his side with his massive paw, like someone would place their arm across your shoulders. 'Oh, it's going fiiiine. Really, Vuukzy's harmless when you keep him horny and happy, and I've got a feeling he fancies me!' His voice roars through the caves, and you do not think it is accidental. Though, he lowers his tone before continuing to speak, 'Seriously though, it's a little too soon to draw conclusions. It's been going well so far, but I've no idea what would happen if I stopped dosing him with my venom. I keep it light and even reduce the dosage bit by bit, but I can definitely tell when the effect's leaving his body... He's usually a bitch, but without the venom, he actually gets aggressive.'";
+	say "     That is sort of worrying, so you happen to ask him if you can help in any way. 'Well, yeah, maybe if you continue to visit and talk to him, or... Maybe if we keep fucking and all that, he'll change in a more... Permanent way? Like, actually not be an horrible person-... Lizard-... Wyvern-thing? Also, you think it's wrong what we're doing? We're practically keeping someone hostage in our basement. Feels... illegal.' Well, seeing the havoc he was creating outside, you are probably doing more good than harm in this case, so you argue that this may be for the better good... Maybe. 'Yeah, I agree, but it's sort of weird. Fun, but weird. And weird that it's fun... Well, fuck it. We've already done it so might as well carry on, yeah?' He lets off another chuckle as you end the conversation there.";
+	say "     In short, you both agree that you may need to interact more with the wyvern before you can draw conclusions of how viable it is to keep him here in the long term.";
 
 to say DiavoborgTalkWP:
 	say "     Upon having encountered this particularly fearsome and large wyvern, after having messed with his alleged winged sons, you have been finding yourself to be quite bothered at the nuisance of him showing up at the most inopportune times, often while you are exploring the city. So, you thought, since you have a really big and powerful friend who is at least sane enough to be of some help, that you could ask for his assistance in dealing with this creature, explaining to him what kind of encounters you have had in the past with the Wyvern Patriarch. He listens to you attentively, showing concern for your well-being and keeps asking questions about how everything had built up to the point he relentlessly hunts you down, and you try to answer with the best of your abilities.";

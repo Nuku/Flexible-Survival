@@ -986,7 +986,7 @@ to say CarlShower_CarlAss:
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and Fang is Male and HP of Fang > 1 and (lastfuck of Fang - turns) > 12):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang > 1 and HP of Fang < 6) and (lastfuck of Fang - turns) > 12):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

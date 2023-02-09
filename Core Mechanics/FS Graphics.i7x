@@ -48,6 +48,7 @@ Figure of CheetahWoman_icon is the file "CheetahWoman.png".
 Figure of CentaurStallion_hard_icon is the file "CentaurStallion_hard.jpg".
 Figure of CentaurStallion_soft_icon is the file "CentaurStallion_soft.jpg".
 Figure of CentaurMare_icon is the file "CentaurMare.jpg".
+Figure of Cock_Cannon_icon is the file "Cock_Cannon.jpg".
 Figure of Collie_clothed_icon is the file "Collie_clothed.jpg".
 Figure of Collie_naked_icon is the file "Collie_naked.jpg".
 Figure of Cougar_clothed_icon is the file "Cougar_clothed.jpg".
@@ -1346,6 +1347,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Christy_nsfw"	Figure of Christy_nsfw_icon	"SteppeCrow"	g-white	"normal"
 "Christy_sfw"	Figure of Christy_sfw_icon	"SteppeCrow"	g-white	"normal"
 "Christy_face"	Figure of Christy_face_icon	"SineAlas"	g-white	"normal"
+"Cock Cannon"	Figure of Cock_Cannon_icon	"SteppeCrow"	g-white	"normal"
 "Colleen_face"	Figure of Colleen_face_icon	"SineAlas"	g-white	"normal"
 "Colleen_clothed"	Figure of Colleen_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Colleen_naked"	Figure of Colleen_naked_icon	"SteppeCrow"	g-white	"normal"
