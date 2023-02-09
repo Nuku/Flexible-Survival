@@ -1,11 +1,11 @@
 Version 1 of Demon Fox by Dys begins here.
 
+[Version 2 of Demon Fox by Voidsnaps with coding assistance by Prometheus- Adding new scenes for player submission path, a reworked appearance, fixing typos and fixing the infection to match the npc.]
+
 "Adds a Demon Fox enemy and infection."
 
-[ DemonFoxInteractions tracks the number of times the player interacted     ]
-[ with the demon fox                                                        ]
-[ DemonFoxRead indicates whether or not the player has read about the       ]
-[ demon fox                                                                 ]
+[DemonFoxInteractions tracks the number of times the player interacted with the demon fox.]
+[DemonFoxRead indicates whether or not the player has read about the demon fox]
 
 DemonFox_PlayerDefeated is a truth state that varies. DemonFox_PlayerDefeated is usually false.
 DemonFox_PlayerSubmitted is a truth state that varies. DemonFox_PlayerSubmitted is usually false.
@@ -413,7 +413,7 @@ to say DemonFoxFirstLoss:
 		say "     Somehow, you can feel the knot slip further and further in, your twisted body able to accept the impossibly meaty mass. Soon enough, the knot has passed its widest point, and the rest slurps into you with a loud squelch. The demon on top of you lets out a loud howl of pleasure before that massive knot swells even wider, locking your already tied hole. Your cock[smn] throb[smv] as you release a [Cum Load Size of Player] load onto the ground, the pressure on your prostate driving you over the edge. He leans down and bites into your shoulder roughly as he climaxes, rope after rope of molten cum rushes into you, quickly rounding you out. His orgasm doesn't seem like it will abate any time soon, however, as more and more cum spills into you. Looking down at your bloated belly, you swear you can see a faint glow through your skin, even! Once his climax ends, he releases your shoulder, a trickle of blood dripping from his maw before he harshly yanks his tool out of you, the knot popping out loudly.";
 	else:
 		say "     Despite his best efforts, the knot is just too big to fit. It doesn't bother the fox much as he thrusts against you once more before howling as he reaches his climax, rope after rope of molten, glowing cum spilling into your bowels. There's so much that your belly starts to bulge from the sheer amount of fluid filling it. Eventually, the cum has nowhere left to go, managing to find its way out of your ass around his massive shaft. By the time his climax has ended, you're thoroughly drenched in fox cum, the hot ejaculate forming a pool around the two of you.";
-	NPCSexAftermath "Player" receives "AssFuck" from Kal Ren;
+	NPCSexAftermath Player receives "AssFuck" from Kal Ren;
 	WaitLineBreak;
 	say "     The fox gives you a look, observing your battered form as if admiring his handiwork. 'I told you that you should've submitted, pet,' he says. 'Maybe next time this won't have to be so hard...' By the time you've recovered enough energy to glance over your shoulder, the fox is gone, apparently having decided to leave after finishing with you. After that encounter, you're not sure why you'd want to, but perhaps you could [italic type]summon the fox again[roman type]?";
 	infect "Demon Fox";
@@ -432,8 +432,8 @@ to say DemonFoxFirstSubmit:
 	WaitLineBreak;
 	say "     You turn to look at the fox once more, only to find thin air. It seems the fox has gone for now. [italic type]Perhaps you could summon him once more with the book if you so desire.[roman type][line break]";
 	infect "Demon Fox";
-	NPCSexAftermath "Player" receives "OralCock" from Kal Ren;
-	NPCSexAftermath "Player" receives "AssFuck" from Kal Ren;
+	NPCSexAftermath Player receives "OralCock" from Kal Ren;
+	NPCSexAftermath Player receives "AssFuck" from Kal Ren;
 	now DemonFox_Encountered is true;
 	now DemonFox_PlayerSubmitted is true; [submitted]
 	WaitLineBreak;
@@ -456,7 +456,7 @@ to say DemonFoxFirstVictory:
 		WaitLineBreak;
 		say "     You can't help but whine in disappointment as his muzzle departs from your rear. His disappointment only lasts for a moment as you soon feel him wrapping his forepaws around your waist, mounting you. He gives you a few gentle prods with his massive cock before he pushes his head into you slowly. You can't help but moan as he gently prods more of his shaft into your spasming entrance until the first inches begin to push in. 'This might hurt a bit,' he warns you as he shoves forward. The first few inches eventually manage to go in, albeit with a bit of pain. As his knot rests against your entrance, the fox grunts before pulling back out, retreating from your well-fucked hole.";
 		say "     Now that only his tip remains inside you, he pushes back in. This thrust goes by faster, your hole getting used to his size. Pretty soon, he's built up a decent rhythm, and you can't help but push your body back, meeting his thrusts. 'I'm going to speed up now,' he warns you. His next thrust is much more aggressive and primal, his knot bashing against your entrance. Your thrusts grow in intensity, determined to get the demon's massive knot in you. With each thrust, more and more of the knot slips inside until it finally passes its widest point, and your body pulls it in the rest of the way. His knot, firmly buried inside you, swells to its full size, ensuring the two of you won't be moving anytime soon. He lets out a howl of pleasure as his cock pulses and erupts inside you, rope after rope of molten, glowing cum spilling into you. Your orgasm follows seconds after, your cock[smn] shooting your [Cum Load Size of Player] load onto the ground below you. More and more of his molten seed fills you, and your belly swells with its weight. By the time his orgasm slows to a trickle and his knot has shrunken down, your stomach is swollen and decently rounded out from the load. 'That was fun, kit,' he pants in your ear. 'I think you'd enjoy being my pet if you liked that...'";
-		NPCSexAftermath "Player" receives "AssFuck" from "Kal Ren";
+		NPCSexAftermath Player receives "AssFuck" from Kal Ren;
 		WaitLineBreak;
 		say "     Eventually, he pulls out of your hole, a dribble of his glowing cum flowing out. He gives a few laps at your stretched hole before walking around to face you. 'We should do this again sometime,' he growls suggestively. 'However, I think it's time for me to depart.' A blinding flash suddenly fills your vision, and once it clears, he's gone. If you'd like to see him again, you could [italic type]use the tome[roman type].";
 		infect "Demon Fox";
