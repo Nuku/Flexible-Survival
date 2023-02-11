@@ -1,8 +1,10 @@
-Version 1 of Demon Fox by Dys begins here.
+Version 2 of Demon Fox by Voidsnaps begins here.
 
-[Version 2 of Demon Fox by Voidsnaps with coding assistance by Prometheus- Adding new scenes for player submission path, a reworked appearance, fixing typos and fixing the infection to match the npc.]
+[Expansion and Rewriting by Voidsnaps. Coding assistance by Prometheus.]
+[Version 2 Introduction of submissive character scenes.]
+[- Originally Authored by: Dys-]
 
-"Adds a Demon Fox enemy and infection."
+"Adds a Demon Fox enemy and infection, along with the Kal Ren NPC."
 
 [DemonFoxInteractions tracks the number of times the player interacted with the demon fox.]
 [DemonFoxRead indicates whether or not the player has read about the demon fox]
@@ -26,19 +28,19 @@ to say DemonFoxDefeat:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxVictory:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxDesc:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 
 Section 2 - Creature Insertion
@@ -346,7 +348,7 @@ to say DemonFoxSummon:
 				say "     He smells earthy, with a hint of something wild and untamed, and the deeper you press your nose, the stronger it becomes, filling your senses with masculinity too powerful to be denied. Eager to show appreciation for this awful, deliciously unwashed scent, you caress the fragrant fuzz covering your prize, then roll your tongue along it, tasting the salty, heady flavor of the fox's manhood. Minutes pass as you dutifully lick every last inch of Kal['] Ren's balls, sandwiching your face between those heavy kit makers and leaking a small puddle of desire between your thighs as your dick throbs along with each shuddering churn of Kal['] Ren's cum factories. As you feel your orgasm rising, you snort his musk like a drug, hefting them and smearing their saliva-streaked fur over your face. ";
 				WaitLineBreak;
 				say "     'As much as I enjoy watching you debase yourself- I believe you promised something more substantial.' Seizing his cock, Kal['] Ren let its drooling tip ooze down onto your panting face, narrowly missing your eyes as it drips down your cheek. 'Are you going to keep me waiting? I could take what I need if you prefer.' Licking his lips at his threatening promise, he squeezes his knot and wags his vulpine shaft imperiously.";
-				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. (If kinky feat) Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. (if no kinky feat) Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
+				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. [if player is kinky]Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. [end if]Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
 				WaitLineBreak;
 				say "     'Good kit. You're so eager for it.' Goading your efforts with his panting words, the fox strokes himself with both paws, shaking his cock with every movement. Clinging to his tip like a man possessed, you close your eyes, letting his shaky breathing guide your slow bobbing as you desperately attempt to keep him inside. Howling his approval, Kal['] Ren thrusts upward, stretching your mouth and stroking himself feverishly as one paw moves to the back of your head, trapping you in place. With a heaving throb, his knot bloats, and as you brace for his orgasm, you feel a gooey eruption threaten to throw you across the room, forcing its way down your throat and backing up through your nose as shot after shot crams its way past your stretched lips.";
 				say "     Swallowing franticly, you worry that you've breathed your last, struggling against his iron grip and feeling your stomach swell out into a perverse bulge. Feeling your grip on reality fade as you drift in and out of consciousness, you swallow dutifully until finally, as your lungs scream for air and your stomach threatens to burst, the fox loosens his grip, letting you fall back and draw a shaky breath. Letting loose his last few dribbles of steaming satisfaction onto your swollen stomach, the fox lazily strokes himself, a satisfied smirk across his muzzle. 'I must admit, the depth of your devotion pleases me to no end.' Yawning as he finishes speaking, he touches the tip of his cock to your nose, then disappears in a flash of light, leaving you to digest your gut-full.";
@@ -463,7 +465,6 @@ to say DemonFoxFirstVictory:
 		now DemonFox_PlayerWon_Fucked is true; [won, let him fuck you]
 	else:
 		say "     You tell the demon that you're not interested, and he nods. 'A pity. You looked like you'd be a fun partner,' he laments. 'I shall respect your wishes, however. If you ever change your mind, you know where to find me.' In a blinding flash of light, the fox is suddenly gone, the tome lying where he once stood.";
-	WaitLineBreak;
 
 
 Section 5 - NPC Declaration
@@ -507,9 +508,9 @@ PenileVirgin of Kal Ren is false.
 SexuallyExperienced of Kal Ren is false.
 TwistedCapacity of Kal Ren is True. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kal Ren is true. [steriles can't knock people up]
-MainInfection of Kal Ren is "".
+MainInfection of Kal Ren is "Demon Fox".
 Description of Kal Ren is "Demonic Fox".
 Conversation of Kal Ren is { "Infernal growling" }.
-The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed."
+The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed.".
 
 Demon Fox ends here.

@@ -451,7 +451,7 @@ Include Cute Chinchilla Girl by Guest Writers.
 Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
-Include Demon Fox by Dys.
+Include Demon Fox by Voidsnaps.
 Include Dino Pack by Qazarar.
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Wahn.
