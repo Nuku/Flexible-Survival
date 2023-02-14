@@ -1,11 +1,13 @@
-Version 1 of Demon Fox by Dys begins here.
+Version 2 of Demon Fox by Voidsnaps begins here.
 
-"Adds a Demon Fox enemy and infection."
+[Expansion and Rewriting by Voidsnaps. Coding assistance by Prometheus.]
+[Version 2 Introduction of submissive character scenes.]
+[- Originally Authored by: Dys-]
 
-[ DemonFoxInteractions tracks the number of times the player interacted     ]
-[ with the demon fox                                                        ]
-[ DemonFoxRead indicates whether or not the player has read about the       ]
-[ demon fox                                                                 ]
+"Adds a Demon Fox enemy and infection, along with the Kal Ren NPC."
+
+[DemonFoxInteractions tracks the number of times the player interacted with the demon fox.]
+[DemonFoxRead indicates whether or not the player has read about the demon fox]
 
 DemonFox_PlayerDefeated is a truth state that varies. DemonFox_PlayerDefeated is usually false.
 DemonFox_PlayerSubmitted is a truth state that varies. DemonFox_PlayerSubmitted is usually false.
@@ -26,19 +28,19 @@ to say DemonFoxDefeat:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxVictory:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxDesc:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 
 Section 2 - Creature Insertion
@@ -223,7 +225,7 @@ Section 3 - Item
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"demon fox fur"	"A small tuft of black and yellow fur you managed to find after fighting the Demon Fox"	1	demon fox fur
+"demon fox fur"	"A small tuft of black and red fur you managed to find after fighting the Demon Fox"	1	demon fox fur
 
 demon fox fur is a grab object.
 
@@ -233,29 +235,32 @@ instead of sniffing demon fox fur:
 Usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
-	say "You shrug before opening your mouth and eating the fur. Oddly enough, it almost seems to heat up, before it dissolves in your mouth, a strong wave of heat rushing through your body.";
-	infect "Demon Fox";
+    say "Holding the tuft of fur between your fingers, you stroke over it, delighting in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+    choose a row with name of "Demon Fox" in the Table of Random Critters;
+    now non-infectious entry is false;
+    infect "Demon Fox";
+    now non-infectious entry is true;
 
 Section 4 - Tome Specific Scenes
 
 to say DemonFoxFirstRead:
-	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is said to be able to change its size to whatever it desires. Supposedly, he's possessive, with a pathological need to force submission in others. Anyone who has encountered the beast has reaffirmed that fact.";
+	say "     Looking over the passage dedicated to the demonic fox, you manage to learn a few things. The demon fox is said to be able to change its size to whatever it desires. Supposedly, he's possessive, with a pathological need to force submission in others. Anyone who has encountered the beast has reaffirmed that fact.";
 	say "     According to the page's short physical description, the fox is taller than the average human, with hulking muscles and two demonic horns between vulpine ears. His fur is mostly black but bright, blazing red around his stomach, chest, and part of his lower jaw, while his eyes are an arcane yellow with slitted pupils. Three tails jut from his rear end, moving independently at his beck and call to trap unwary prey.";
-	say "     A quickly jotted addendum adds that his cum is bright orange and glows like hot lava, with a steaming heat that nearly hurts.";
-	say "     [if Player is puremale]Interestingly[else]Thankfully[end if], it only seems to be attracted to males.";
+	say "     A quickly jotted addendum adds that his cum is bright orange and glows like hot lava, with a steaming heat that nearly hurts. There are some stains at the bottom of the page too, a streak of... something, and several splotches. Eww, given the haphazard way that the words above are written, you can just imagine what [italic type]that[roman type] is.";
+	say "     [if Player is puremale]Interestingly[else]Thankfully[end if], he only seems to be attracted to males.";
 	now DemonFoxRead is true;
 	now TomeInteractions is 2;
 	now TomeEventPending is true;
 
 to say DemonFoxFirstEncounter:
-	say "     Out of nowhere, something tackles you to the ground! A heavy weight is pressing down upon your back, and you can feel the hot breath of something along the back of your neck. Pinned as you are, you can't get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you vulnerable to whatever is attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. Your eyes widen, and you gasp as you see the hulking demonic fox you read about earlier standing over you.";
-	say "     Before you can react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if Player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if Player is submissive]are[else]should be[end if].'";
+	say "     Out of nowhere, something tackles you to the ground! A heavy weight is pressing down upon your back, and you can feel the hot breath of something along the back of your neck. Pinned beneath musky fur and heavy paws, you can't get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you vulnerable to whatever is attacking you. Suddenly, a long, fluffy appendage wraps around your waist, hoisting you into the air, then tossing you unceremoniously to the ground. Your eyes widen, and you gasp as you see a vulpine monster standing over you.";
+	say "     Before you can react, the fox pins you once more, its massive forepaws slamming you to the ground as it snarls inches from your face. 'Seems like I finally have something to play with,' he says with a grin that makes your blood run cold. 'I'm going to enjoy [if Player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if Player is submissive]are[else]should be[end if].'";
 	WaitLineBreak;
-	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a feisty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
+	say "     Mustering your strength, you throw the beast off you, drawing a surprised grunt from its open maw. Quickly, you scramble to your feet and ready yourself for a fight. 'My, aren't you a fiesty one.' he chuckles, licking his chops and narrowing his eyes. 'I like that...'";
 	now inasituation is true;
 	challenge "Demon Fox";
 	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
-		if HP of Player > 0: [submitted]
+		if fightoutcome is 22: [submitted]
 			say "[DemonFoxFirstSubmit]";
 		else: [lost]
 			say "[DemonFoxFirstLoss]";
@@ -270,7 +275,7 @@ to say DemonFoxFirstEncounter:
 to say DemonFoxSummon:
 	say "     You recite the incantation shown in the book, albeit with a little difficulty. With a flash of light, you see the demon fox from before standing in front of you.";
 	if DemonFox_PlayerSubmitted is true and DemonFox_Apologized is true:
-		say "     As you open the tome, you hear a familiar chuckle. A flashing light sears your eyes, barely shielded by the edge of the book. Standing before you is the demonic fox in all his glory, his sharp teeth dripping drool, and his stance widened to show off his low-hanging balls. The familiar scent of musk fills your bedroom as he looks you over, his expression showing a hunger that brings a blush to your cheeks. 'It seems you aren't willing to take 'no' for an answer kit. Do I need to remind you of who's in charge? Or is it possible that you're craving what only [italic type]I [roman type]can give you?' Despite his annoyed tone, the fox's peeking cock shows a certain level of interest. Closing the distance between you, the demonic fox tilts your head to stare into his beastly face, pressing you against the wall and hunching over you. He moves as if your body belongs to him, and asking is a formality. 'Since you're desperate for my company, I'll let you decide how I take you. Choose wisely. I won't be stopping until I'm satisfied.' Crossing his arms and tapping his foot, the demon stands in front of you, awaiting your answer in polite silence.";
+		say "     As you open the tome, you hear a familiar chuckle. A flashing light sears your eyes, barely shielded by the edge of the book. Standing before you is the demonic fox in all his glory, his sharp teeth dripping drool, and his stance widened to show off his low-hanging balls. The familiar scent of musk fills your bedroom as he looks you over, his expression showing a hunger that brings a blush to your cheeks. 'It seems you aren't willing to take 'no' for an answer, kit. Do I need to remind you of who's in charge? Or is it possible that you're craving what only [italic type]I [roman type]can give you?' Despite his annoyed tone, the fox's peeking cock shows a certain level of interest. Closing the distance between you, the demonic fox tilts your head to stare into his beastly face, pressing you against the wall and hunching over you. He moves as if your body belongs to him, and asking is a formality. 'Since you're desperate for my company, I'll let you decide how I take you. Choose wisely. I won't stop until I'm satisfied.' Crossing his arms and tapping his foot, the demon stands in front of you, awaiting your answer in polite silence.";
 		say "     [bold type]How do you want Kal['] Ren to fuck you?[roman type][line break]";
 		LineBreak;
 		say "     ([link](1)[as]1[end link]) - Facefuck.";
@@ -346,7 +351,7 @@ to say DemonFoxSummon:
 				say "     He smells earthy, with a hint of something wild and untamed, and the deeper you press your nose, the stronger it becomes, filling your senses with masculinity too powerful to be denied. Eager to show appreciation for this awful, deliciously unwashed scent, you caress the fragrant fuzz covering your prize, then roll your tongue along it, tasting the salty, heady flavor of the fox's manhood. Minutes pass as you dutifully lick every last inch of Kal['] Ren's balls, sandwiching your face between those heavy kit makers and leaking a small puddle of desire between your thighs as your dick throbs along with each shuddering churn of Kal['] Ren's cum factories. As you feel your orgasm rising, you snort his musk like a drug, hefting them and smearing their saliva-streaked fur over your face. ";
 				WaitLineBreak;
 				say "     'As much as I enjoy watching you debase yourself- I believe you promised something more substantial.' Seizing his cock, Kal['] Ren let its drooling tip ooze down onto your panting face, narrowly missing your eyes as it drips down your cheek. 'Are you going to keep me waiting? I could take what I need if you prefer.' Licking his lips at his threatening promise, he squeezes his knot and wags his vulpine shaft imperiously.";
-				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. (If kinky feat) Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. (if no kinky feat) Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
+				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. [if player is kinky]Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. [end if]Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
 				WaitLineBreak;
 				say "     'Good kit. You're so eager for it.' Goading your efforts with his panting words, the fox strokes himself with both paws, shaking his cock with every movement. Clinging to his tip like a man possessed, you close your eyes, letting his shaky breathing guide your slow bobbing as you desperately attempt to keep him inside. Howling his approval, Kal['] Ren thrusts upward, stretching your mouth and stroking himself feverishly as one paw moves to the back of your head, trapping you in place. With a heaving throb, his knot bloats, and as you brace for his orgasm, you feel a gooey eruption threaten to throw you across the room, forcing its way down your throat and backing up through your nose as shot after shot crams its way past your stretched lips.";
 				say "     Swallowing franticly, you worry that you've breathed your last, struggling against his iron grip and feeling your stomach swell out into a perverse bulge. Feeling your grip on reality fade as you drift in and out of consciousness, you swallow dutifully until finally, as your lungs scream for air and your stomach threatens to burst, the fox loosens his grip, letting you fall back and draw a shaky breath. Letting loose his last few dribbles of steaming satisfaction onto your swollen stomach, the fox lazily strokes himself, a satisfied smirk across his muzzle. 'I must admit, the depth of your devotion pleases me to no end.' Yawning as he finishes speaking, he touches the tip of his cock to your nose, then disappears in a flash of light, leaving you to digest your gut-full.";
@@ -373,22 +378,22 @@ to say DemonFoxSummon:
 				NPCSexAftermath Player receives "AssFuck" from Kal Ren;
 	else if DemonFox_PlayerDefeated is true:
 		say "     'Well, if it isn't my pet from before...' the beast purrs. 'Are you going to try fighting me again? If so, I'm not in the mood. I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
-		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
+		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused and alone.";
 		now DemonFox_Apologized is true; [met after losing to him, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerSubmitted is true:
-		say "     Well, if it isn't my pet from before...' the beast purrs. 'You wanna try fighting me this time? If so, I'm not in the mood. I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
+		say "     Well, if it isn't my pet...' the beast purrs. 'You want to challenge me this time? Sadly, I'm not in the mood. I'm not always interested in the thrills of fighting and fucking.' You blink at him incredulously. 'I'm not. Our first encounter may have implied otherwise, but I'll be the first to admit that I didn't make a great first impression.'";
 		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
 		now DemonFox_Apologized is true; [met after submitting, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerFled is true:
-		say "     'Well, if it isn't the kit from before...' the beast purrs. 'Are you going to run away again? If so, I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
-		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
+		say "     'Well, if it isn't the flighty kit from before...' the beast purrs. 'Will you run away again? I won't stop you.' You blink at him incredulously. Waving dismissively, he continues. 'I won't. I can see that I won't get far by chasing you. Frankly, it bores me.'";
+		say "     'Perhaps we can attempt to be civil. I'm Kal['] Ren, but you can call me Ren, if you'd prefer.' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
 		now DemonFox_Apologized is true; [met after fleeing, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerWon is true:
-		say "     'Well, if it isn't you,' the demon greets you with a surprisingly chipper tone. 'You know, it's rare for a mortal to beat me in combat, but you managed it. I respect you for that,' he says. 'The name's Kal['] Ren, by the way. You can call me Ren.' You tentatively introduce yourself as well.";
-		say "     'I know I said you could summon me if you were ever in the mood for breeding, but funnily enough, I'm not feeling up to it right now.' He hesitates for a moment before continuing, 'Maybe sometime in the future, though. You've piqued my interest.' Without giving you a chance to reply, he disappears in a flash of light, leaving you somewhat dumbfounded at the whole interaction.";
+		say "     'Well, if it isn't the conquering hero,' the demon greets you with a surprisingly chipper tone. 'You know, it's rare for a mortal to beat me in combat, but you managed it. I respect you for that,' he says. 'The name's Kal['] Ren, by the way. You can call me Ren.' You tentatively introduce yourself as well.";
+		say "     'I know I said you could summon me if you were ever in the mood for breeding, but I'm not feeling up to it at this moment.' He hesitates for a moment before continuing, 'Perhaps another time. You've piqued my interest.' Without giving you a chance to reply, he disappears in a flash of light, leaving you somewhat dumbfounded by the whole interaction.";
 		now TomeTimer is turns;
 	else if DemonFoxStatus is 11 or DemonFoxStatus is 21 or DemonFoxStatus is 31 or DemonFoxStatus is 42:
 		say "[DemonFoxMenu]";
@@ -396,11 +401,11 @@ to say DemonFoxSummon:
 to say DemonFoxMenu:
 	say "     You use the spell to summon Kal['] Ren, bracing for the blinding flash of light by holding the book in front of your eyes. 'Well, hello, kit,' you hear him greet in his rumbling voice, opening your eyes and lowering the book to look at him. 'Do you desire some companionship?'";
 	if DemonFox_PlayerWon is false or (DemonFox_PlayerWon_Fucked is true and DemonFox_PlayerWon is true):
-		say "     You scowl at his mention of you as his pet, quickly stating that you don't belong to him, no matter what he thinks. He laughs, shaking his head before his body suddenly seems to grow before your eyes, a paw on your chest knocking you to the ground. You look into his leering visage, searing drool landing on your face from his dripping maw. 'Oh, so you don't think you're my pet, then? [if DemonFox_PlayerDefeated is true]Maybe I'll have to show you your place again. Perhaps you don't realize what that bite I gave you meant, hm? [else if DemonFox_PlayerSubmitted is true]Don't even try to pretend. You want to be my pet, serving my every whim. That little bite I gave you is binding. [else if DemonFox_PlayerFled is true]Just because you ran before doesn't mean I can't take you now. You'd make an excellent toy. [else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you. [end if]As far as I'm concerned, you're mine.'";
+		say "     You scowl as he taunts you with his infantilizing nickname, quickly stating that you don't belong to him, no matter what he thinks. He laughs, shaking his head before his body suddenly seems to grow before your eyes, one massive paw swiping at your chest and knocking you to the ground. You look into his leering visage, searing drool landing on your face from his dripping maw. 'Oh, so you don't think you're mine? [if DemonFox_PlayerDefeated is true]Perhaps I'll show you your place. You don't realize what that bite I gave you meant. [else if DemonFox_PlayerFled is true] If you're going to run again, kindly refrain from summoning me. Unless you wish for me to [italic type]catch you.[roman type] [else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you. [end if]As far as I'm concerned, you're mine.'";
 	else:
-		say "     You scowl at his comment, denying your status as his pet, despite the butterflies in your stomach. He laughs before you're suddenly pinned under a much larger version of him, his paw completely covering your torso. He leers over you, a drop of his nearly scalding saliva dripping onto your face. 'Just because you won last time doesn't mean you'd win again. It wouldn't take much for me to mark you as my pet...'";
+		say "     You scowl at his comment, denying his hold over you, even as your stomach flutters with indecision. He laughs before you're suddenly pinned under a much larger version of him, his paw completely covering your torso. He leers above you, a drop of his nearly scalding saliva dripping onto your face. 'Just because you won last time doesn't mean you'd win again. It wouldn't take much for me to mark you as mine...'";
 	WaitLineBreak;
-	say "     He lets those words sink in for a few seconds before he laughs again, removing his paw as he cackles. Soon enough, he's back to his previous size, lifting you back to your feet with one of his long tails. You blink, slightly bewildered and somewhat scared, as he continues to cackle at you, his muzzle scrunched up in a very vulpine grin. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You blush as he continues laughing for nearly a minute longer, finally beginning to settle down as he sits on his haunches, sharp teeth bared in a teasing grin.";
+	say "     Removing his paw, he lets those words sink in, his deep chuckle bringing a flush to your cheeks. Soon enough, he returns to his previous size, tugging you to your feet with one fluffy tail. You blink, slightly bewildered and somewhat frightened, as his vulpine grin adds to your embarrassment. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You look away as he continues laughing for far too long, finally settling down as he sits on his haunches, sharp teeth bared in a teasing grin.";
 	say "     'Now... You've called me here. Is there anything you want to do?'";
 
 to say DemonFoxFirstLoss:
@@ -463,7 +468,6 @@ to say DemonFoxFirstVictory:
 		now DemonFox_PlayerWon_Fucked is true; [won, let him fuck you]
 	else:
 		say "     You tell the demon that you're not interested, and he nods. 'A pity. You looked like you'd be a fun partner,' he laments. 'I shall respect your wishes, however. If you ever change your mind, you know where to find me.' In a blinding flash of light, the fox is suddenly gone, the tome lying where he once stood.";
-	WaitLineBreak;
 
 
 Section 5 - NPC Declaration
@@ -507,9 +511,9 @@ PenileVirgin of Kal Ren is false.
 SexuallyExperienced of Kal Ren is false.
 TwistedCapacity of Kal Ren is True. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kal Ren is true. [steriles can't knock people up]
-MainInfection of Kal Ren is "".
+MainInfection of Kal Ren is "Demon Fox".
 Description of Kal Ren is "Demonic Fox".
 Conversation of Kal Ren is { "Infernal growling" }.
-The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed."
+The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed.".
 
 Demon Fox ends here.

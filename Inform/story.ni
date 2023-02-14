@@ -323,6 +323,7 @@ Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Shadowwolf94.
 Include Kitsune Expansion by Shadowwolf94.
+Include Komainu by Voidsnaps.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
@@ -451,7 +452,7 @@ Include Cute Chinchilla Girl by Guest Writers.
 Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
-Include Demon Fox by Dys.
+Include Demon Fox by Voidsnaps.
 Include Dino Pack by Qazarar.
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Wahn.
