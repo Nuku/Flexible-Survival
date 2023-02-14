@@ -323,6 +323,7 @@ Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Shadowwolf94.
 Include Kitsune Expansion by Shadowwolf94.
+Include Komainu by Voidsnaps.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
