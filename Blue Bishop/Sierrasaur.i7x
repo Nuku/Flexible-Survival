@@ -69,17 +69,7 @@ to say losetosierra:
 	else:
 		sierrasex;
 
-boundrecover is a truth state that varies. boundrecover is usually false.
-recoverchance is a number that varies. recoverchance is usually -1.
-enduring is a truth state that varies. enduring is usually false.
-obliging is a truth state that varies. obliging is usually false.
-
-to checkboundrecover:
-	if boundrecover is false, increase recoverchance by 1;
-	if a random chance of recoverchance in 9 succeeds:
-		now boundrecover is true;
-		now recoverchance is -1;
-	if "Sanity Saver" is listed in the feats of Player, now humanity of Player is 100;
+[checkboundrecover moved to bound state universals]
 
 to sierrabind:
 	now lustatt is Libido of Player;
