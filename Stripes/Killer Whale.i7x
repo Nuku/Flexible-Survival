@@ -25,7 +25,7 @@ to say losetoorca:
 		if HP of Player > 0:
 			say "     Not wanting to fight, you immediately drop to your knees and let the Killer Whale advance upon you. Grabbing hold of you, you're given a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from its beleaguered confines. 'Suck it!' he orders to you in a deep, rumbling command. ";
 		else:
-			say "     Seeing an opening, he relinquishes you of your leg's support by sweeping them away with his thick and powerful tail. On the ground and too weak to continue, the Killer Whale pulls you onto your knees, displaying for you a clear view of the beast's long, curving cock as it commences the ritual of relinquishing itself from it's beleaguered confines. 'Suck it!' He orders to you in a deep, rumbling command. ";
+			say "     Seeing an opening, the orca relieves you of your leg's support by sweeping them away with his thick and powerful tail. With you now on the ground and too weak to continue, the killer whale pulls you onto your knees, displaying a clear view of the beast's long, curving cock as it commences the ritual of emerging from its watertight home. 'Suck it!' He orders you in a deep, rumbling command. ";
 		if Libido of Player > 40 or HP of Player > 0:
 			say "Overwhelmed by lust, you shame your better senses as you engulf the emergent tip of the whale's cock within the confines of your [bodytype of Player] lips, your olfactories flooded with the salty musk of the aquatic beast's arousal.";
 		else:
@@ -48,14 +48,18 @@ to say losetoorca:
 
 to say orcadefeatsex1: [anal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your ass, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
-	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] anus, the orcaman's impressive shaft probes your depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is make apparent as his thick, virile cum floods the confines of your stomach.[mimpregchance]";
+	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] anus, the orca-man's impressive shaft probes your depths of your fleshy labyrinth, and it's not long before your hole is sufficiently stretched to accommodate the whole of his cock within your confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is make apparent as his thick, virile cum floods the confines of your stomach.";
 	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Killer Whale";
 
 
 to say orcadefeatsex2: [new vaginal sex]
 	say "     Thrusting into your mouth at a slow and deliberate pace, you're made to slick his cetacean rod with your saliva while it becomes fully engorged. Eventually, you feel its immense length depart from your abused orifice before he indicates to you that he will be claiming another. He slides overtop of you, his massive form pinning you against the beach's sand as his muscular tail spreads and otherwise prepares your legs for his eager intrusion. With a sharp jab, you feel the flexible member invade your pussy, worming itself deeper into you like some meaty tentacle as he proceeds to pound your vulnerable hole.";
-	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your uterus.[impregchance]";
+	say "     Influenced by whale's perverse hold on you, you're soon unable to refuse the pleasure of such a wriggling intrusion. Slickly sliding across the supple walls of your [bodytype of Player] cunt, the orcaman's impressive shaft probes your depths before it intrudes past your cervix, and the prospect of occupying your womb is enough motivation for him to engulf the remainder of his cock within these confines. Writhing in pleasure against the wet sand, this strange sensation is enough to drive you to climax, and - like clockwork - the beast's own release is made apparent as his thick, virile cum floods the confines of your uterus.";
 	say "     Visibly bloated by such an impressive release, your feel the writhing organ soften before the whale firmly pulls himself free of your tight hole. Satisfied with what he has wrought upon you, he departs, leaving you to lay across the sand in a dizzy stupor.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 
 
 to say orcadefeatsex3: [old vaginal sex]
@@ -63,8 +67,10 @@ to say orcadefeatsex3: [old vaginal sex]
 	if hasgills is 1:
 		say "     Holding you under the water, you are thankful for your gills and breathe through them. Without the distraction of drowning, you quickly start to enjoy the strange sensation of that wriggling inside you. The orcaman's slick shaft slides along your walls and probes at the depths of your pussy before pushing past your cervix and worming its way into your womb. You writhe in pleasure beneath him as this strange sensation drives you to climax, the orca filling your uterus with his thick, virile cum.";
 	else:
-		say "     Holding you under the water, you struggle to hold your breath as each hard thrust he makes into you seeks to push the air from your lungs. You can feel his throbbing, wriggling cock inside you. It is very enjoyable and arousing despite your desperate situation. Your desire for air, your struggle to live, somehow makes it all the more exciting. It is as if some primal part of you wants you to live so that you may breed and have children. When the orca cums inside you, forcing his way into your womb and filling it with his seed, you orgasm powerfully as that primal need is fulfilled. You can feel him pumping blast after blast of his thick, virile cum into you even as you're starting to black out.[impregchance]";
+		say "     Holding you under the water, you struggle to hold your breath as each hard thrust he makes into you seeks to push the air from your lungs. You can feel his throbbing, wriggling cock inside you. It is very enjoyable and arousing despite your desperate situation. Your desire for air, your struggle to live, somehow makes it all the more exciting. It is as if some primal part of you wants you to live so that you may breed and have children. When the orca cums inside you, forcing his way into your womb and filling it with his seed, you orgasm powerfully as that primal need is fulfilled. You can feel him pumping blast after blast of his thick, virile cum into you even as you're starting to black out.";
 	say "     When he's finished draining his large balls into you, his flexible cock pulls itself from your stuffed, bloated womb and he releases you. The killer whale departs, leaving you floating on your back in a stupor.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Killer Whale";
 
 
 to say orcadefeatsex4: [oral sex]
@@ -75,6 +81,7 @@ to say orcadefeatsex4: [oral sex]
 	else: [oral out]
 		say "     You feel that worming rod throb against your tongue, informing you of his approaching release; however, your captor doubtlessly has a more articulate grasp on the state of his imminent orgasm and instead opts to abruptly pull his rod from your abused orifice. His intent made immediately clear, he finishes himself off with a few final strokes before you're showered with spray after spray of the orcaman's cum.";
 		say "     Eventually, after having sufficiently unloaded himself all over you, he leaves to let you lay your jizz-soaked form across the sand in a dizzy stupor.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Killer Whale";
 
 
 to say beattheorca:
