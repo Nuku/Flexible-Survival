@@ -233,8 +233,11 @@ instead of sniffing demon fox fur:
 Usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
-	say "You shrug before opening your mouth and eating the fur. Oddly enough, it almost seems to heat up, before it dissolves in your mouth, a strong wave of heat rushing through your body.";
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	choose a row with name of "Demon Fox" in the Table of Random Critters;
+	now non-infectious entry is false;
 	infect "Demon Fox";
+	now non-infectious entry is true;
 
 Section 4 - Tome Specific Scenes
 
