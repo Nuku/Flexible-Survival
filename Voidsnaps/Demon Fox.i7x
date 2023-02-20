@@ -1,11 +1,13 @@
-Version 1 of Demon Fox by Dys begins here.
+Version 2 of Demon Fox by Voidsnaps begins here.
 
-"Adds a Demon Fox enemy and infection."
+[Expansion and Rewriting by Voidsnaps. Coding assistance by Prometheus.]
+[Version 2 Introduction of submissive character scenes.]
+[- Originally Authored by: Dys-]
 
-[ DemonFoxInteractions tracks the number of times the player interacted     ]
-[ with the demon fox                                                        ]
-[ DemonFoxRead indicates whether or not the player has read about the       ]
-[ demon fox                                                                 ]
+"Adds a Demon Fox enemy and infection, along with the Kal Ren NPC."
+
+[DemonFoxInteractions tracks the number of times the player interacted with the demon fox.]
+[DemonFoxRead indicates whether or not the player has read about the demon fox]
 
 DemonFox_PlayerDefeated is a truth state that varies. DemonFox_PlayerDefeated is usually false.
 DemonFox_PlayerSubmitted is a truth state that varies. DemonFox_PlayerSubmitted is usually false.
@@ -26,19 +28,19 @@ to say DemonFoxDefeat:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxVictory:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxDesc:
 	if inasituation is true:
 		say "";
 	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
+		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 
 Section 2 - Creature Insertion
@@ -223,7 +225,7 @@ Section 3 - Item
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"demon fox fur"	"A small tuft of black and yellow fur you managed to find after fighting the Demon Fox"	1	demon fox fur
+"demon fox fur"	"A small tuft of black and red fur you managed to find after fighting the Demon Fox"	1	demon fox fur
 
 demon fox fur is a grab object.
 
@@ -233,7 +235,7 @@ instead of sniffing demon fox fur:
 Usedesc of demon fox fur is "[DemonFoxFurUse]";
 
 to say DemonFoxFurUse:
-	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighting in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	choose a row with name of "Demon Fox" in the Table of Random Critters;
 	now non-infectious entry is false;
 	infect "Demon Fox";
@@ -242,23 +244,23 @@ to say DemonFoxFurUse:
 Section 4 - Tome Specific Scenes
 
 to say DemonFoxFirstRead:
-	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is said to be able to change its size to whatever it desires. Supposedly, he's possessive, with a pathological need to force submission in others. Anyone who has encountered the beast has reaffirmed that fact.";
+	say "     Looking over the passage dedicated to the demonic fox, you manage to learn a few things. The demon fox is said to be able to change its size to whatever it desires. Supposedly, he's possessive, with a pathological need to force submission in others. Anyone who has encountered the beast has reaffirmed that fact.";
 	say "     According to the page's short physical description, the fox is taller than the average human, with hulking muscles and two demonic horns between vulpine ears. His fur is mostly black but bright, blazing red around his stomach, chest, and part of his lower jaw, while his eyes are an arcane yellow with slitted pupils. Three tails jut from his rear end, moving independently at his beck and call to trap unwary prey.";
-	say "     A quickly jotted addendum adds that his cum is bright orange and glows like hot lava, with a steaming heat that nearly hurts.";
-	say "     [if Player is puremale]Interestingly[else]Thankfully[end if], it only seems to be attracted to males.";
+	say "     A quickly jotted addendum adds that his cum is bright orange and glows like hot lava, with a steaming heat that nearly hurts. There are some stains at the bottom of the page too, a streak of... something, and several splotches. Eww, given the haphazard way that the words above are written, you can just imagine what [italic type]that[roman type] is.";
+	say "     [if Player is puremale]Interestingly[else]Thankfully[end if], he only seems to be attracted to males.";
 	now DemonFoxRead is true;
 	now TomeInteractions is 2;
 	now TomeEventPending is true;
 
 to say DemonFoxFirstEncounter:
-	say "     Out of nowhere, something tackles you to the ground! A heavy weight is pressing down upon your back, and you can feel the hot breath of something along the back of your neck. Pinned as you are, you can't get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you vulnerable to whatever is attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. Your eyes widen, and you gasp as you see the hulking demonic fox you read about earlier standing over you.";
-	say "     Before you can react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if Player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if Player is submissive]are[else]should be[end if].'";
+	say "     Out of nowhere, something tackles you to the ground! A heavy weight is pressing down upon your back, and you can feel the hot breath of something along the back of your neck. Pinned beneath musky fur and heavy paws, you can't get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you vulnerable to whatever is attacking you. Suddenly, a long, fluffy appendage wraps around your waist, hoisting you into the air, then tossing you unceremoniously to the ground. Your eyes widen, and you gasp as you see a vulpine monster standing over you.";
+	say "     Before you can react, the fox pins you once more, its massive forepaws slamming you to the ground as it snarls inches from your face. 'Seems like I finally have something to play with,' he says with a grin that makes your blood run cold. 'I'm going to enjoy [if Player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if Player is submissive]are[else]should be[end if].'";
 	WaitLineBreak;
-	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a feisty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
+	say "     Mustering your strength, you throw the beast off you, drawing a surprised grunt from its open maw. Quickly, you scramble to your feet and ready yourself for a fight. 'My, aren't you a fiesty one.' he chuckles, licking his chops and narrowing his eyes. 'I like that...'";
 	now inasituation is true;
 	challenge "Demon Fox";
 	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
-		if HP of Player > 0: [submitted]
+		if fightoutcome is 22: [submitted]
 			say "[DemonFoxFirstSubmit]";
 		else: [lost]
 			say "[DemonFoxFirstLoss]";
@@ -273,7 +275,7 @@ to say DemonFoxFirstEncounter:
 to say DemonFoxSummon:
 	say "     You recite the incantation shown in the book, albeit with a little difficulty. With a flash of light, you see the demon fox from before standing in front of you.";
 	if DemonFox_PlayerSubmitted is true and DemonFox_Apologized is true:
-		say "     As you open the tome, you hear a familiar chuckle. A flashing light sears your eyes, barely shielded by the edge of the book. Standing before you is the demonic fox in all his glory, his sharp teeth dripping drool, and his stance widened to show off his low-hanging balls. The familiar scent of musk fills your bedroom as he looks you over, his expression showing a hunger that brings a blush to your cheeks. 'It seems you aren't willing to take 'no' for an answer kit. Do I need to remind you of who's in charge? Or is it possible that you're craving what only [italic type]I [roman type]can give you?' Despite his annoyed tone, the fox's peeking cock shows a certain level of interest. Closing the distance between you, the demonic fox tilts your head to stare into his beastly face, pressing you against the wall and hunching over you. He moves as if your body belongs to him, and asking is a formality. 'Since you're desperate for my company, I'll let you decide how I take you. Choose wisely. I won't be stopping until I'm satisfied.' Crossing his arms and tapping his foot, the demon stands in front of you, awaiting your answer in polite silence.";
+		say "     As you open the tome, you hear a familiar chuckle. A flashing light sears your eyes, barely shielded by the edge of the book. Standing before you is the demonic fox in all his glory, his sharp teeth dripping drool, and his stance widened to show off his low-hanging balls. The familiar scent of musk fills your bedroom as he looks you over, his expression showing a hunger that brings a blush to your cheeks. 'It seems you aren't willing to take 'no' for an answer, kit. Do I need to remind you of who's in charge? Or is it possible that you're craving what only [italic type]I [roman type]can give you?' Despite his annoyed tone, the fox's peeking cock shows a certain level of interest. Closing the distance between you, the demonic fox tilts your head to stare into his beastly face, pressing you against the wall and hunching over you. He moves as if your body belongs to him, and asking is a formality. 'Since you're desperate for my company, I'll let you decide how I take you. Choose wisely. I won't stop until I'm satisfied.' Crossing his arms and tapping his foot, the demon stands in front of you, awaiting your answer in polite silence.";
 		say "     [bold type]How do you want Kal['] Ren to fuck you?[roman type][line break]";
 		LineBreak;
 		say "     ([link](1)[as]1[end link]) - Facefuck.";
@@ -349,7 +351,7 @@ to say DemonFoxSummon:
 				say "     He smells earthy, with a hint of something wild and untamed, and the deeper you press your nose, the stronger it becomes, filling your senses with masculinity too powerful to be denied. Eager to show appreciation for this awful, deliciously unwashed scent, you caress the fragrant fuzz covering your prize, then roll your tongue along it, tasting the salty, heady flavor of the fox's manhood. Minutes pass as you dutifully lick every last inch of Kal['] Ren's balls, sandwiching your face between those heavy kit makers and leaking a small puddle of desire between your thighs as your dick throbs along with each shuddering churn of Kal['] Ren's cum factories. As you feel your orgasm rising, you snort his musk like a drug, hefting them and smearing their saliva-streaked fur over your face. ";
 				WaitLineBreak;
 				say "     'As much as I enjoy watching you debase yourself- I believe you promised something more substantial.' Seizing his cock, Kal['] Ren let its drooling tip ooze down onto your panting face, narrowly missing your eyes as it drips down your cheek. 'Are you going to keep me waiting? I could take what I need if you prefer.' Licking his lips at his threatening promise, he squeezes his knot and wags his vulpine shaft imperiously.";
-				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. (If kinky feat) Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. (if no kinky feat) Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
+				say "     Your tongue continues its lazy path along the demon fox's foxhood, following the curve of one delicious orb up to the base of his knot. [if player is kinky]Pausing there, you flick your tongue over the puffy skin of the fox's sheath, dipping beneath it to taste the powerful musk hidden there. You can't resist a soft suck at tender flesh, bringing a hiss of pleasure through the fox's clenched teeth. [end if]Swirling your tongue over the space behind his knot, you worship the fat ball of flesh, covering every inch with a spit shine before setting your sights on his leaking tip. Placing both hands on that pulsating knot, you lick your way from the base of the demon fox's prodigious manhood up along the swollen cum-vein, lapping up his lava-like gift until you're face to face with his weeping tip. Taking what you can, you swallow his drooling gift, your tongue working over every inch of veiny flesh it can reach.";
 				WaitLineBreak;
 				say "     'Good kit. You're so eager for it.' Goading your efforts with his panting words, the fox strokes himself with both paws, shaking his cock with every movement. Clinging to his tip like a man possessed, you close your eyes, letting his shaky breathing guide your slow bobbing as you desperately attempt to keep him inside. Howling his approval, Kal['] Ren thrusts upward, stretching your mouth and stroking himself feverishly as one paw moves to the back of your head, trapping you in place. With a heaving throb, his knot bloats, and as you brace for his orgasm, you feel a gooey eruption threaten to throw you across the room, forcing its way down your throat and backing up through your nose as shot after shot crams its way past your stretched lips.";
 				say "     Swallowing franticly, you worry that you've breathed your last, struggling against his iron grip and feeling your stomach swell out into a perverse bulge. Feeling your grip on reality fade as you drift in and out of consciousness, you swallow dutifully until finally, as your lungs scream for air and your stomach threatens to burst, the fox loosens his grip, letting you fall back and draw a shaky breath. Letting loose his last few dribbles of steaming satisfaction onto your swollen stomach, the fox lazily strokes himself, a satisfied smirk across his muzzle. 'I must admit, the depth of your devotion pleases me to no end.' Yawning as he finishes speaking, he touches the tip of his cock to your nose, then disappears in a flash of light, leaving you to digest your gut-full.";
@@ -376,22 +378,23 @@ to say DemonFoxSummon:
 				NPCSexAftermath Player receives "AssFuck" from Kal Ren;
 	else if DemonFox_PlayerDefeated is true:
 		say "     'Well, if it isn't my pet from before...' the beast purrs. 'Are you going to try fighting me again? If so, I'm not in the mood. I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
-		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
+		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused and alone.";
 		now DemonFox_Apologized is true; [met after losing to him, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerSubmitted is true:
-		say "     Well, if it isn't my pet from before...' the beast purrs. 'You wanna try fighting me this time? If so, I'm not in the mood. I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
+		say "     Well, if it isn't my pet...' the beast purrs. 'You want to challenge me this time? Sadly, I'm not in the mood. I'm not always interested in the thrills of fighting and fucking.' You blink at him incredulously. 'I'm not. Our first encounter may have implied otherwise, but I'll be the first to admit that I didn't make a great first impression.'";
 		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
 		now DemonFox_Apologized is true; [met after submitting, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerFled is true:
-		say "     'Well, if it isn't the kit from before...' the beast purrs. 'Are you going to run away again? If so, I hate to break it to you, but I'm not always interested in sex and fighting.' You blink at him incredulously. 'I'm not. It might have appeared that way from our first encounter, but I'll be the first to admit that I didn't make a great first impression.'";
-		say "     'Perhaps we can try this again. I'm Kal['] Ren, but you can just call me Ren,' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I do believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
+		say "     'Well, if it isn't the flighty kit from before...' the beast purrs. 'Will you run away again? I won't stop you.' You blink at him incredulously. Waving dismissively, he continues. 'I won't. I can see that I won't get far by chasing you. Frankly, it bores me.'";
+		say "     'Perhaps we can attempt to be civil. I'm Kal['] Ren, but you can call me Ren, if you'd prefer.' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
 		now DemonFox_Apologized is true; [met after fleeing, he apologized]
 		now TomeTimer is turns;
 	else if DemonFox_PlayerWon is true:
-		say "     'Well, if it isn't you,' the demon greets you with a surprisingly chipper tone. 'You know, it's rare for a mortal to beat me in combat, but you managed it. I respect you for that,' he says. 'The name's Kal['] Ren, by the way. You can call me Ren.' You tentatively introduce yourself as well.";
-		say "     'I know I said you could summon me if you were ever in the mood for breeding, but funnily enough, I'm not feeling up to it right now.' He hesitates for a moment before continuing, 'Maybe sometime in the future, though. You've piqued my interest.' Without giving you a chance to reply, he disappears in a flash of light, leaving you somewhat dumbfounded at the whole interaction.";
+		say "     'Well, if it isn't the conquering hero,' the demon greets you with a surprisingly chipper tone. 'You know, it's rare for a mortal to beat me in combat, but you managed it. I respect you for that,' he says. 'The name's Kal['] Ren, by the way. You can call me Ren.' You tentatively introduce yourself as well.";
+		say "     'I know I said you could summon me if you were ever in the mood for breeding, but I'm not feeling up to it at this moment.' He hesitates for a moment before continuing, 'Perhaps another time. You've piqued my interest.' Without giving you a chance to reply, he disappears in a flash of light, leaving you somewhat dumbfounded by the whole interaction.";
+		now DemonFoxStatus is 42;
 		now TomeTimer is turns;
 	else if DemonFoxStatus is 11 or DemonFoxStatus is 21 or DemonFoxStatus is 31 or DemonFoxStatus is 42:
 		say "[DemonFoxMenu]";
@@ -399,12 +402,34 @@ to say DemonFoxSummon:
 to say DemonFoxMenu:
 	say "     You use the spell to summon Kal['] Ren, bracing for the blinding flash of light by holding the book in front of your eyes. 'Well, hello, kit,' you hear him greet in his rumbling voice, opening your eyes and lowering the book to look at him. 'Do you desire some companionship?'";
 	if DemonFox_PlayerWon is false or (DemonFox_PlayerWon_Fucked is true and DemonFox_PlayerWon is true):
-		say "     You scowl at his mention of you as his pet, quickly stating that you don't belong to him, no matter what he thinks. He laughs, shaking his head before his body suddenly seems to grow before your eyes, a paw on your chest knocking you to the ground. You look into his leering visage, searing drool landing on your face from his dripping maw. 'Oh, so you don't think you're my pet, then? [if DemonFox_PlayerDefeated is true]Maybe I'll have to show you your place again. Perhaps you don't realize what that bite I gave you meant, hm? [else if DemonFox_PlayerSubmitted is true]Don't even try to pretend. You want to be my pet, serving my every whim. That little bite I gave you is binding. [else if DemonFox_PlayerFled is true]Just because you ran before doesn't mean I can't take you now. You'd make an excellent toy. [else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you. [end if]As far as I'm concerned, you're mine.'";
+		say "     You scowl as he taunts you with his infantilizing nickname, quickly stating that you don't belong to him, no matter what he thinks. He laughs, shaking his head before his body suddenly seems to grow before your eyes, one massive paw swiping at your chest and knocking you to the ground. You look into his leering visage, searing drool landing on your face from his dripping maw. 'Oh, so you don't think you're mine? [if DemonFox_PlayerDefeated is true]Perhaps I'll show you your place. You don't realize what that bite I gave you meant. [else if DemonFox_PlayerFled is true] If you're going to run again, kindly refrain from summoning me. Unless you wish for me to [italic type]catch you.[roman type] [else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you. [end if]As far as I'm concerned, you're mine.'";
 	else:
-		say "     You scowl at his comment, denying your status as his pet, despite the butterflies in your stomach. He laughs before you're suddenly pinned under a much larger version of him, his paw completely covering your torso. He leers over you, a drop of his nearly scalding saliva dripping onto your face. 'Just because you won last time doesn't mean you'd win again. It wouldn't take much for me to mark you as my pet...'";
+		say "     You scowl at his comment, denying his hold over you, even as your stomach flutters with indecision. He laughs before you're suddenly pinned under a much larger version of him, his paw completely covering your torso. He leers above you, a drop of his nearly scalding saliva dripping onto your face. 'Just because you won last time doesn't mean you'd win again. It wouldn't take much for me to mark you as mine...'";
 	WaitLineBreak;
-	say "     He lets those words sink in for a few seconds before he laughs again, removing his paw as he cackles. Soon enough, he's back to his previous size, lifting you back to your feet with one of his long tails. You blink, slightly bewildered and somewhat scared, as he continues to cackle at you, his muzzle scrunched up in a very vulpine grin. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You blush as he continues laughing for nearly a minute longer, finally beginning to settle down as he sits on his haunches, sharp teeth bared in a teasing grin.";
+	say "     Removing his paw, he lets those words sink in, his deep chuckle bringing a flush to your cheeks. Soon enough, he returns to his previous size, tugging you to your feet with one fluffy tail. You blink, slightly bewildered and somewhat frightened, as his vulpine grin adds to your embarrassment. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You look away as he continues laughing for far too long, finally settling down as he sits on his haunches, sharp teeth bared in a teasing grin.";
 	say "     'Now... You've called me here. Is there anything you want to do?'";
+	if DemonFoxStatus is 42:
+		LineBreak;
+		say "     [bold type]It seems he's willing to let you control the flow of your interactions, to some degree. What would you like to suggest?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - You beat Kal' Ren, fair and square. You'd like to explore your options on a more even footing.";
+		say "     [link](2)[as]2[end link] - Perhaps there's another way you could serve him...";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 2:
+			say "Choice? (1-2)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to explore your options, or [link]2[end link] to serve.";
+		if calcnumber is 1: [Explore options]
+			LineBreak;
+			say "     You ponder the fox's fearsome visage, mulling over your options. You beat him, and despite his dominant appearance sending a shudder through you, you are no one's bitch. If you give yourself to him, it will be on your terms. Hoping he'll understand your intent, you tell him so, attempting to keep your voice from wavering. Crossing his arms, the fox taps his foot, mulling over your proposal. 'It's an intriguing thought. I suppose there's no harm in allowing you some freedom.' Showing those terrifyingly sharp teeth with a cocky grin, he tilts your face upward, a perverse sort of affection infusing his words. 'You'll learn to submit, either way. Why not allow you to serve?'";
+			now hunger of Kal Ren is 1;
+		else if calcnumber is 2: [Serve]
+			LineBreak;
+			say "     While Kal' Ren's ferocious charms excite and scare you in equal measure, there's something you've been gathering the courage to ask. In your many interactions, you couldn't help but notice that the demon fox's ass is perfectly muscled, with its trio of prehensile tails. If his ever-present musk is any indication, more of his dizzying scent hides beneath those tails, and you would love to taste what he has to offer. Choosing your words carefully, you ask if he'd be interested in letting you worship his ass. 'Daring little kit, aren't you?' Crossing the distance between you and tilting your chin with one paw, Kal' Ren searches your eyes for something, his heated breath inches from your face. His eyes seem deep enough to devour you, and you can't look away. 'Alright. I'll allow this one indulgence. If you abuse the privilege, I will make sure you pay. Do not test me.'";
+			now thirst of Kal Ren is 1;
+		say "[KalRenFuckMenu]";
 
 to say DemonFoxFirstLoss:
 	setmonster "Demon Fox";
@@ -466,10 +491,116 @@ to say DemonFoxFirstVictory:
 		now DemonFox_PlayerWon_Fucked is true; [won, let him fuck you]
 	else:
 		say "     You tell the demon that you're not interested, and he nods. 'A pity. You looked like you'd be a fun partner,' he laments. 'I shall respect your wishes, however. If you ever change your mind, you know where to find me.' In a blinding flash of light, the fox is suddenly gone, the tome lying where he once stood.";
+
+
+Section 5 - Sex Menu
+
+to say KalRenFuckMenu:
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if hunger of Kal Ren is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Suck his Cock";
+		now sortorder entry is 1;
+		now description entry is "";
+	[]
+	if hunger of Kal Ren is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Ride his Cock";
+		now sortorder entry is 2;
+		now description entry is "";
+	[]
+	if hunger of Kal Ren is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Present Yourself";
+		now sortorder entry is 3;
+		now description entry is "";
+	[]
+	if thirst of Kal Ren is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Worship his Ass with your Tongue";
+		now sortorder entry is 4;
+		now description entry is "";
+	[]
+	if thirst of Kal Ren is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer your Cock as a Toy";
+		now sortorder entry is 5;
+		now description entry is "";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: Shall you [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "Suck his Cock":
+					say "[KalRenFuck1]";
+				else if nam is "Ride his Cock":
+					say "[KalRenFuck2]";
+				else if nam is "Present Yourself":
+					say "[KalRenFuck3]";
+				else if nam is "Worship his Ass with your Tongue":
+					say "[KalRenFuck4]";
+				else if nam is "Offer your Cock as a Toy":
+					say "[KalRenFuck5]";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	now TomeTimer is turns;
+	wait for any key;
+	clear the screen and hyperlink list;
+
+to say KalRenFuck1: [Suck his Cock]
+	say "     [if player is kinky]Sliding to your knees without bothering to disrobe, you smear the fox's sheath over your cheeks, burying your face in the plump ring of leathery flesh around its apex. Sealing your mouth over its salty surface, you suckle, delving your tongue inside to tease his shaft and moaning as it bucks against your appendage, greeting your efforts with droplets of glowing virility. B[else]B[end if]arely able to contain your excitement, you disrobe before the masculine fox, unashamed of your growing excitement[if Player is kinky]. The scent clinging to your nose from his musky sheath settles a lusty haze over you, and you can hear your heartbeat in your ears as your sight arrows to nothing but that delightfully awful scent of demonic fox cock[end if]. You know that he's productive, and as much as you'd love to carry his scent around with you, you're unsure what his cum would do to your clothing.";
+	say "     'Eager. Could it be that winning our little spat was nothing more than an attempt to save face?' Pushing his peeking cock against your face, the demon fox demands his due, his hips working his slimy tip over your face in a delightfully degrading and surprisingly gentle motion. That teasing tone flushes your cheeks, and you follow its path, finally capturing his cock as it flops free from his sheath. His knot hasn't swollen yet, but you endeavor to change that fact, setting your gaze on the fluffy pubic fur at the base of your prize. Inch after inch disappears into your mouth, encouraged by a playful, condescending growl, and soon your vision is obscured by the fluff, your huffing breaths taking in intoxicating musk. Slow bobs test your throat's ability to handle him, and, satisfied, you slurp away, growing bolder by the second.";
 	WaitLineBreak;
+	say "     Praising your efforts in a huffing voice, the demonic fox meets each worshipful bob of your stuffed mouth with a slow thrust, dumping claiming globs of approval down your throat. 'Ah, this is somewhat of a rarity. Was your pride what drove you to defeat me, despite your love of cock?' Drool dripping from his open mouth, Kal' Ren increased his pace, taking over and leaving you with little to do but stare up at him, relaxing your throat for his pointed tip. The heavy rhythm of balls slapping against your chin, the enticing aroma of demonic musk, and whispered (though vaguely insulting) praise mix into a submissive cocktail, scrambling your brain and reducing you to nothing more than a bundle of desperate nerves. It isn't until Kal Ren's cock has worked your lips into a lather of orange pre, covering your chest in spiderwebs of mixed fluids and bringing you to the edge, that you recognize the telltale throb of an impending meal.";
+	say "     Opening your throat, you gurgle as he unleashes a flood of searing cum, your eyes slipping closed as you endeavor to swallow every drop, releasing your meager contribution to the mess on the ground below as your stomach swells with his demonic offering. His departure saddens you, but a final belch of cum rewards your devotion, marking your nose with powerful musk. A flash of light leaves you alone with your sloshing stomach and sloppy reminders of your devotion to the fox's cock, festooning your naked body. Shaky and musk drunk, you re-equip yourself, thankful that nothing happens upon you in your moment of weakness.";
+	NPCSexAftermath Player receives "OralCock" from Kal Ren;
+
+to say KalRenFuck2: [Ride his Cock]
+	say "     'Finished playing the hero, are you? I can't say I blame you. I am rather irresistible.' Smirking as he speaks, the fox sits, his legs spread to show off those churning orbs. Patting his knee, he beckons to you. 'Pants off, then. It's time to show that you deserve my attention.' Scrambling to disrobe, you throw yourself into the fox's waiting lap, settling your rump against that peeking tip before you realize how eager you are for it. It's too late to rethink your choices, though. Seconds after, that slick cock slots itself against your hole, and clawed fingers clamp around your waist, holding you in place for a piercing thrust that spills Kal' Ren's length into your waiting hole. 'What's the matter, kit? Is it too much for you?' Taunting you with his muzzle inches from your ear, Kal' Ren slaps your stuffed ass, growling his pleasure as your hole reflexively tightens, wringing his shaft. 'You wanted to ride me, so why not get to work?' Loosening his grip, he pants, his hips bucking insistently to stir your innards.";
+	say "     As much as you hate to admit it, he's right. From the moment he stuffed himself into you, you felt that it [italic type]belonged[roman type] there. Shaking your head to clear the submissive thought, you drape your arms over the demonic fox's shoulders, wiggling your ass and then bringing it down on that swollen knot. If Kal' Ren wants you to give yourself to him, you will-  but you won't make it easy. 'Fiesty kit. Admit it. You need this.' Kal' Ren coos, his growling voice almost affectionate as he slaps his heavy balls against your bouncing ass, meeting each of your movements with an impatient thrust. Squirting desire slickens the way, and before long, the space echoes with sloppy noises. Your inner walls feel like they'll melt from searing pre, his heated shaft, and the claws digging into your waist, but you refuse to give up, clamping yourself around his cock. There has to be a way to show that you're not just his pet. You're doing this because you want to, not as some sick way to give yourself to him as a sex slave. Zeroing in on his open, sneering muzzle, you steel your resolve. It's time to give him a taste of his own medicine!";
+	WaitLineBreak;
+	say "     Capturing the demon fox's lips with your own, you silence his taunts with your tongue. His muzzle is as hot as the rest of him, and you can feel his thrusts speed as you force a kiss on the surprised vulpine. He doesn't push you away, instead countering with his slippery appendage, invading your mouth with wet slurps that smear slick drool over every inch. Before long, he's turned the tables, fucking your throat with his flat tongue, and his knot slams against your hole, threatening to break you open. Thankfully for the sanctity of your abused hole, the fox doesn't stuff his knot past your entrance, instead grinding it against your stubborn clench as fiery ropes fill your innards, coating every inch of your insides in clinging heat and swelling your stomach into a perverse pseudo-pregnancy. His tongue continues its domineering slurp long after he's finished stuffing your hole, only withdrawing once you grow faint and paint his muscular stomach with your load.";
+	say "     As you pant, desperate to catch your breath, the fox licks his lips, that dextrous appendage rolling over sharp teeth in an exaggerated motion. 'Nice try, kit, but no matter how you struggle, I know that what you truly want is to be mine. You can't defeat your desires.' Cradling your chin in one paw, the fox stops your attempts to look away. A hungry expression covers his muzzle, and you feel your heart skip a beat before he speaks. 'I suppose I'll have to keep showing you your place. Do struggle, though. It's fun to watch.' Condescending as it is, the laugh that the fox leaves behind as he flashes out of existence sends a chill through your body. Was he right? Staring down at your dripping cock, you can't deny the intensity of the orgasm submitting to him tore from your body. Shaking your head, you gather your gear, massaging the spot where the fox's paw stung your ass cheek. Why did the pain feel so right?";
+	NPCSexAftermath Player receives "AssFuck" from Kal Ren;
+
+to say KalRenFuck3: [present yourself]
+	say "     'What's this? Have you learned your place?' Raising an eyebrow as you strip and present your ass, Kal' Ren licks his lips, closing the distance between you to press his sheath between your cheeks. His pointed tip claims your hole with a sticky squirt, leaving a slick film hot enough to bring a slight sting to his grind. 'If you want to be marked, all you have to do is ask.' Shaking your head in denial, you resist the urge to spear yourself on that pointed tip. You want to feel that perfect cock inside you, that's all. It has nothing to do with becoming his pet. Whether you're lying to yourself remains to be seen. 'Ah, then you haven't succumbed. Pity.' Drawing a yelp from your lips as he shoves forward, the fox buries several inches of heated flesh past your clenching ring, hunching over your back. Contorting to reach your ear, he places both hands on his hips, whispering in a greedy, deep growl. 'I'll have to show you what it could be like if you gave yourself to me.'";
+	say "     Before you can rethink your choices, the fox's claws dig into your waist, his cock withdrawing until his pointed tip bounces against your hole, then stuffing you. A slow but forceful rhythm follows, creating a bulge in your stomach at the apex of his cock. His panting muzzle disappears from your ear as those claws sink in deeply enough to draw blood, and you feel your feet leave the ground as he endeavors to impale you on that thick spire. You've been reduced to nothing but a hole and a flopping, impossibly hard cock as he has his way with you. Coherent thought fades away as he pummels your prostate, and arcing strings of precum stain the ground, but he shows no signs of stopping, ruining your once-tight entrance. You're his whore- no- his fleshlight, with a body meant to please, and all you can imagine is how good it'll feel when he fills you up.";
+	WaitLineBreak;
+	say "     You cum long before the pummeling fox, whimpering your desire as he fucks you open and swinging like a ragdoll, your cock spraying its submission over your body. You can feel yourself clenching, desperately milking more steaming pre into your aching innards, and you hold your tented stomach, caressing his massive member. You know what's coming next, and you want- no, need it to happen- to be knotted by this magnificent creature. A satisfied sigh rumbles through the rutting fox as a wet pop heralds his completion, corking your innards as wave after wave blasts deep inside you, swelling your belly into a stretched dome. Paws leave your waist, and you collapse forward, your arms barely reaching the ground as the swollen bulb at the base of his cock holds you in place, dangling like a used condom from his crotch.";
+	NPCSexAftermath Player receives "AssFuck" from Kal Ren;
+
+to say KalRenFuck4: [worship his ass]
+	say "     Trembling with anticipation, you ask Kal' Ren if he's willing to follow through on your suggestion. All the while, you watch those myriad tails sway and curl, obscuring muscular cheeks and fanning a musk that brings a mouthful of drool into existence. You need him to sit on your face, now! Even the tinge of shame at wanting something so degrading isn't enough to stop your imagination from running wild, stiffening your manhood until it hurts. 'Impatient, are we, hero? I suppose I did promise I'd let you taste me.' Seemingly relishing your desire, the fox licks his lips, his cock peeking from its home to drool to the floor. 'Alright. Sit.' He commands with one sharp claw pointing downward. Grumbling at the implication that you're nothing more than a trained dog about to receive a treat, you lie on the ground in the indicated spot, shifting uncomfortably as your cock [if player is not naked]rubs against the inside of your pants[else]bounces against your bare stomach[end if]. However, this angle allows you a peek into the shade behind the fox's balls, and as your imagination runs wild, a protest dies in your throat.";
+	say "     'Hah. If I knew this would shut you up, I would have sat on your face long ago.' Taunting you even as he flicks his tails upward and squats over you, Kal' Ren teases you with a shake of his hips, showing off an onyx patch of skin beneath, ringed by red fur. Musk intensifies as he settles into place, inches above your face. 'Breathe it in, kit. You're the first to experience this privilege.' Flushing as his onyx pucker flexes, you bathe in a wave of earthy musk that rolls over you, accompanied by heat from the fox's supernaturally sizzling hole. You breathe deeply, intoxicated by how deliciously manly he smells, and raise your head, pressing your nose against his pucker to snort more of that heady scent. Heated cheeks wreathe your face, flexing to trap you in place, and your mouth hangs open, your tongue dripping in anticipation.";
+	WaitLineBreak;
+	say "     The soft worship you expected to give that ass is rudely interrupted by the slam of the fox's weight, crushing your face beneath muscular cheeks. Barely protected by his sculpted mounds' padding, you bounce off the ground below, coming to rest with your world swallowed up by searing flesh and heated fur. 'Oh, come now, kit. You didn't expect me to take a passive role in this. It's not in my nature.' Muffled as it is by the expanse of his ass, Kal' Ren's condescending tone vibrates through your head. 'Get to work before I change my mind and mount your face.' You don't need him to tell you twice. Testing that hole with a long lick, you feel it flex and clench beneath your touch, so tight that you're sure no one's ever entered its depths [if AnalVirgin of Kal Ren is false]besides you[end if]. It tastes even better than it smells, like salt and musk, and something you can't quite place, infusing every lick with warmth. Before long, you're attacking that hole with your tongue, slurping away and coating your face in dripping drool.";
+	say "     'Good kit. Fuck, that's better than I thought it would be.' As you fill the air between his cheeks with wet, sloppy sounds of worship, Kal' Ren growls, rocking his hips and smearing your face between his cheeks, treating you as nothing more than a toy. Wet, slick sounds from above tell you all you need to know about his enjoyment, and heated drips rain down [if player is naked]on your naked body[else]staining your clothes with his infernal pre[end if]. Unsure of time's passage, you suck at Kal' Ren's pucker until it loosens enough to slip your tongue inside, then slurp your way inside, mashing your nose against it as his efforts to get off grow fevered, his thrusting hips threatening to slam your head against the ground. Sitting down hard, he traps you, clamping down on your tongue and cutting off your air supply as the fox's body moves in obvious orgasm.";
+	WaitLineBreak;
+	say "     Five productive spurts with the intensity of a gushing hose paint your [if player is naked]naked body[else]clothes[end if], marking you with the demon fox's scent for the foreseeable future. That hole relaxes to a gentle pulse on all sides of your tongue, and just as your vision starts to gain hazy starbursts and your lungs scream for air, the fox's ass raises. Gasping for air, you can only watch as that dusky hole retreats into the distance, replaced by a twitching cock that marks your face with its last gooey dribble. 'That was surprising, kit. Perhaps I should dominate you this way more often. I wonder if you're sturdy enough to serve as my toy.' Voice holding a small amount of condescending affection, Kal' Ren praises you in a roundabout way, his claw trailing over your [if player is naked]bare erection[else]tented pants[end if]. As a flash of light removes the fox from your presence, you lay there, licking your lips free of orange cum. Your [if player is naked]body [else]outfit [end if]glistens with Kal' Ren's glowing satisfaction, and his words echo in your ears. Perhaps next time, you might convince him to ride your cock.";
+	if thirst of Kal Ren is 1:
+		now thirst of Kal Ren is 2;
+
+to say KalRenFuck5: [offer your cock]
+	say "     [if player is not naked]Hooking your fingers into your waistband to bare your [else]Taking hold of your nude [end if]erection, you offer your [cock of player] penis to the fox, asking if he'd like to use you to get off. His gaze brings an eager throb to your cock, and you feel you'll cum on the spot. '[if player is not naked]Strip and s[else]S[end if]it.' Kal' Ren says with an eager smirk, pushing at your shoulders. Before you finish complying, he stuffs two fingers in your mouth, swabbing your throat with thrusting fingers until your saliva covers those furry digits, the excess drooling down to your bare chest. For a moment, you worry that it was all a ruse to ram his cock down your throat, but those fingers disappear beneath his tail. Smearing your drool over his pucker as he pushes you onto your back, slotting your cock between his muscular cheeks and rolling its tip against his tight pucker, he pauses, digging his claws into your bare chest.";
+	say "     'Beg for it.' He says with a hungry stare, clenching his cheeks as his heavy paws pin you to the ground. Your cock feels like it will melt away between those cheeks, and the slick, silky hole prodding against your tip promises a heavenly grip, demanding your subservience. Without missing a beat, you beg for Kal' Ren's hole, your needy cock at odds with your pride. Nothing else matters besides sinking yourself to the root. You know he won't accept anything less than complete submission, and you're past the point where that choice would bother you. 'Good kit.' Pleased with your subservience, the fox rocks backward, swallowing your [cock of player] shaft into impossibly tight depths. Somehow, you doubt that he's as untouched as he seems, but through some magic, he's wringing your cock, crushing it in slick warmth that feels like it could rip your member from its base.";
+	WaitLineBreak;
+	say "     Unable to resist, you helplessly thrust into the fox's slow rhythm, your helpless member gushing to ease the way and slickening your union. With each passing moment, he grows more insistent, speeding his hips and slapping his cheeks against your hips hard enough that your balls begin to ache. You get the feeling that if you cum before your vulpine master, he'll punish you, but you can feel the tide rising from your balls, threatening to christen the fox's hole with its [if AnalVirgin of Kal Ren is true]first [end if]load. 'Right there. Harder.' Eyes flashing and dick slapping your chest, Kal' Ren quickens his pace as he demands more, his hole clamping down with every slap of those dominating cheeks. A fountain of glowing precum coats your bare chest and stomach, and he seems too enthralled with the sensations your cock provides to tend to himself. You aren't sure whether that's a compliment or his way of demanding a hands-free orgasm, but you couldn't care less.";
+	say "     'Fuck.' With only a single word, snarled through clenched teeth and accompanied by drool dripping from the corners of his mouth, the demonic fox fires his satisfaction over your chest, raining down gooey strings of orange cum that mark you with his scent. Before you know it, his inner walls clamp like an angry gorilla's fist, ripping your orgasm from your sore balls. Milking you for every drop, he traps your gushing member in place, his tightness letting nothing escape[if player is kinky]. Cool air assaults your cock as it's ripped from the comfortably steaming depths, but before you can protest, the fox covers your mouth with his drooling hole. Rocking his hips, he wordlessly demands you clean up your mess, grunting his pleasure as your tongue sets to work. You ride out the afterglow beneath that muscled ass, his grinding rhythm rolling a mixture of sweat and cum over your face, leaving you with a reminder of your place[end if]. Soon enough, a familiar flash leaves you alone with your thoughts, panting in a puddle of orange cum. Your muscles ache, and it's several minutes before you can move your legs, but you can't help but think it was worth it. Idly, you wonder if the nanites could repair a broken pelvis.";
+	NPCSexAftermath Kal Ren receives "AssFuck" from Player;
 
 
-Section 5 - NPC Declaration
+Section 6 - NPC Declaration
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -510,9 +641,9 @@ PenileVirgin of Kal Ren is false.
 SexuallyExperienced of Kal Ren is false.
 TwistedCapacity of Kal Ren is True. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Kal Ren is true. [steriles can't knock people up]
-MainInfection of Kal Ren is "".
+MainInfection of Kal Ren is "Demon Fox".
 Description of Kal Ren is "Demonic Fox".
 Conversation of Kal Ren is { "Infernal growling" }.
-The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed."
+The scent of Kal Ren is "     Kal Ren smells earthy, with a hint of something wild and untamed.".
 
 Demon Fox ends here.
