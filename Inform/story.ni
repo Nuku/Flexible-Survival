@@ -261,7 +261,6 @@ Part 2 - Quests & Events
 
 Include AG Beach Events by Aureas Gigas.
 Include Ancient Tome by Wahn.
-Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Avatar of Hope by Prometheus.
