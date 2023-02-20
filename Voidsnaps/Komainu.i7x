@@ -23,8 +23,11 @@ to GoodDoggyEvent: [Komainu]
 		LineBreak;
 		say "     'Don't be sad, puppy. I know what you boys like. You'll let me pet you more if I make you happy, won't you?' The maned creature sighs happily and rubs his cheek against the husky's, ignoring the smaller male's lowered ears. Lifting his prey with little effort, he spreads the husky's legs, giving you an eyeful of the pink hole between his cheeks below that flagging tail. With the difference in their size, you assume that he's about to give the alpha husky a reaming, but instead, he lifts the nude creature's crotch to eye level, dragging a surprised gasp from the alpha husky. A lapping tongue draws a confused moan from the husky's lips, coating his dangling orbs in a layer of drool, and the soft sounds of a suckling maw fill the air as the peculiar creature treats him to his oral expertise. Slowly, the husky's expression fades from bewilderment to surprise and then to a melting, pleasured expression, his tongue hanging out and his paws moving to the top of a bobbing head.";
 		say "     Moments pass as increasingly sloppy sounds mingle with the alpha husky's pleasured sounds, his hips moving in an unmistakable rhythm as his giant companion sucks his manhood. Any hint of struggle disappears in pursuit of more pleasure, and a high-pitched, desperate whine fills the air as he crams himself as deeply as he can, going still as his balls churn, his hole twitching and winking. You grow jealous as wet gulps echo through the small space, and you barely prevent yourself from calling out, asking to join. You're still not sure if the strange creature would react the same to your presence. [bold type]Perhaps you should search for it another time[roman type].";
+		now Resolution of Good Doggy is 1; [Player watched]
 	else: [leave]
 		LineBreak;
 		say "     Deciding not to risk becoming the fluffy creature's next 'victim,' you turn and walk away. Your life is hard enough without a clingy wall of fluff.";
+		now Resolution of Good Doggy is 99; [Player skipped out on the event, no interest]
+	now Good Doggy is resolved; [won't happen again]
 
 Komainu ends here.

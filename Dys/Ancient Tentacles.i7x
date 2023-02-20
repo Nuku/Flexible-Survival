@@ -133,10 +133,6 @@ to say TentaclesFirstEncounter:
 		now TentacleStatus is 12; [got raped]
 		UpdateTomeEventPending;
 
-to say TentaclesFirstRead:
-	say "     As you read about the mass of tentacles, your eyes widen in horror. Apparently, the tentacles will not only rape the unlucky victim, they also sometimes lay eggs in them! No one is exactly sure why the tentacles do this, or who they'll do it to, as it seems to be random. If there's one good thing to note, it's that the tentacles don't usually fertilize the eggs. Instead, they leave them there for the victim to do with as they please. [if Player is puremale]Interestingly[else]Thankfully[end if], they only seem to be interested in [italic type]males[roman type], oddly enough. You shut the book after reading the page, shaking your head in attempt to get thought of egg-laying tentacles out of your head.";
-	now TentacleRead is true;
-	now TomeInteractions is 2;
-	now TomeEventPending is true;
+
 
 Ancient Tentacles ends here.
