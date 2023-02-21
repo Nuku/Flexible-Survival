@@ -629,7 +629,7 @@ Sarea of NightmareGruntRelationship is "Nowhere".
 
 NightmareStablemasterEventsTimer is a number that varies. NightmareStablemasterEventsTimer is usually 20000.
 
-instead of going to Master's Office while (Resolution of NightmareStablemasterEvents >= 1 and Stablemaster is in Master's Office and NightmareStablemasterEventsTimer - turns < 16):
+instead of going to Master's Office while (Resolution of NightmareStablemasterEvents >= 1 and Stablemaster is in Master's Office and NightmareStablemasterEventsTimer - turns > 16):
 	if Resolution of NightmareStablemasterEvents is 1:
 		say "     As you go about your way to knock on the office's door before entering, you hear someone calling you from behind. 'Hey, you! Aren't you that new face from the other day? Huh, guess boss took a liking to you!' It does not take you long to realize who this is, one of the horsemen grunts the Stablemaster has patrolling The Stables. This time, he seems to be alone. 'Surprising to see you walk around so relaxed, like nothing would trouble you anymore... Are you some kind of protégé now, eh?' The towering horseman crosses his arms as he stands in front of you, almost judging you with his gaze alone. 'Guess you have to thank someone for that, don't you? After all, it was I who decided to throw you in and let boss decide what to do with you. Usually I just kick the bastards out to not bother his ass.'";
 		LineBreak;
