@@ -430,7 +430,7 @@ Figure of Hadiya_icon is the file "Hadiya_ig.jpg".
 Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_naked_icon is the file "Harold_naked.jpg".
-Figure of Helen_naked_icon is the file "Helen.png".
+Figure of Helen_naked_icon is the file "Helen.jpg".
 Figure of Hobo_icon is the file "Hobo.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
 Figure of Isaac_clothed_icon is the file "Isaac_clothed.jpg".
@@ -628,6 +628,10 @@ Figure of Xaedihr_Underwear_icon is the file "Xaedihr_Underwear.jpg".
 Figure of Xaedihr_NudeSoft_icon is the file "Xaedihr_NudeSoft.jpg".
 Figure of Xaedihr_NudeHard_icon is the file "Xaedihr_NudeHard.jpg".
 Figure of Xaedihr_Portrait_icon is the file "Xaedihr_Portrait.jpg".
+Figure of Xerxes_awesome_hard_icon is the file "Xerxes_awesome_hard.jpg".
+Figure of Xerxes_awesome_soft_icon is the file "Xerxes_awesome_soft.jpg".
+Figure of Xerxes_hard_icon is the file "Xerxes_hard.jpg".
+Figure of Xerxes_soft_icon is the file "Xerxes_soft.jpg".
 Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
@@ -1839,6 +1843,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Xaedihr_NudeSoft"	Figure of Xaedihr_NudeSoft_icon	"Gherod"	g-black	"normal"
 "Xaedihr_NudeHard"	Figure of Xaedihr_NudeHard_icon	"Gherod"	g-black	"normal"
 "Xaedihr_Portrait"	Figure of Xaedihr_Portrait_icon	"Gherod"	g-black	"normal"
+"Xerxes awesome soft"	Figure of Xerxes_awesome_soft_icon	"SteppeCrow"	g-White	"normal"
+"Xerxes awesome hard"	Figure of Xerxes_awesome_hard_icon	"SteppeCrow"	g-White	"normal"
+"Xerxes soft"	Figure of Xerxes_soft_icon	"SteppeCrow"	g-White	"normal"
+"Xerxes hard"	Figure of Xerxes_hard_icon	"SteppeCrow"	g-White	"normal"
 "Yatur_clothed"	Figure of Yatur_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"

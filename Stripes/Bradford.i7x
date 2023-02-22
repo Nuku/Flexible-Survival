@@ -19,22 +19,18 @@ when play begins:
 to say ResolveEvent Bounty Hunter:
 	follow the breast descr rule;
 	if perception of Player > 15 or "Wary Watcher" is listed in feats of Player:
-		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you.";
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. It's only moments before you were going to be grabbed from behind that you realize that things were actually too quiet. Going back on alert, you're able to dodge the oncoming grapple and roll to the side. Getting up a few feet away, you find it is a tough looking bull-man confronting you. ";
 	else:
-		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip [if strength of Player > 18]before you break yourself free with your enhanced might (8 dmg)[else]until you see spots before he tosses you roughly against the wall (16 dmg)[end if]. Turning, you find it is a tough looking bull man confronting you.";
+		say "     Your exploration of the city takes you past a small bar. Noticing no activity, you pause for a moment and peek inside. But without warning, you find yourself grappled from behind. He squeezed you in his crushing grip [if strength of Player > 18]before you break yourself free with your enhanced might (8 dmg)[else]until you see spots before he tosses you roughly against the wall (16 dmg)[end if]. Turning, you find it is a tough looking bull man confronting you. ";
 		if strength of Player > 18:
 			decrease HP of Player by 8;
 		else:
 			decrease HP of Player by 16;
+	say "Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
+	say "     'Sorry [']bout that. Thought you might've been someone else,' he says, slipping the shotgun into a leather holster at his hip. 'Tellin['] who's who these days ain't easy.' No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, an open vest and a gold chain with a bounty hunter's badge attached to it. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
 	WaitLineBreak;
-	say "     Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if Breast Size of Player > 4]. And while they do linger on your [short breast size desc of Player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
-	say "     'Sorry [']bout that. Thought you might've been someone else,' he says, slipping the shotgun into a leather holster at his hip. 'Tellin['] who's who these days ain't easy.'";
-	WaitLineBreak;
-	say "     No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, an open vest and a gold chain with a bounty hunter's badge attached to it. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
-	say "     This guy's been transformed into a stocky bull of a man. His bovine head is on a short neck and has its horns protruding from the sides of his temples. His body's bulky with muscle, and while he stands only a little above six feet tall, he looks like he could take on someone much larger with his bare hands. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
-	WaitLineBreak;
-	say "     You start to ask him what all of that was about, but he waves you off, saying it's none of your business. He gives you another look over. 'You do seem to be keepin['] it together pretty good though. Care to chat for a bit. I got a bit of a business proposition for you.' And while there's nothing quite like having been held at gunpoint by someone to start a relationship, you do decide to go ahead and hear him out.";
-	say "     Crossing the street, he enters another storefront and leads up into what was formerly a second floor accounting office. While straining to look professional, the former businessplace is clearly cheap and trashy. The office furniture is old and mismatched, and the walls are covered in ad posters to have your taxes done and claims about big returns. Given the neighborhood, that's unsurprising.";
+	say "     This guy's been transformed into a stocky bull of a man. His bovine head is on a short neck and has its horns protruding from the sides of his temples. His body's bulky with muscle, and while he stands only a little above six feet tall, he looks like he could take on someone much larger with his bare hands. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs. You start to ask him what all of that was about, but he waves you off, saying it's none of your business. He gives you another look over. 'You do seem to be keepin['] it together pretty good though. Care to chat for a bit. I got a bit of a business proposition for you.'";
+	say "     While there's nothing quite like having been held at gunpoint by someone to start a relationship, you do decide to go ahead and hear him out. Crossing the street, he enters another storefront and leads up into what was formerly a second floor accounting office. While straining to look professional, the former businessplace is clearly cheap and trashy. The office furniture is old and mismatched, and the walls are covered in ad posters to have your taxes done and claims about big returns. Given the neighborhood, that's unsurprising.";
 	WaitLineBreak;
 	move player to Bradford's Camp;
 	AddNavPoint Bradford's Camp;
@@ -102,28 +98,22 @@ Instead of conversing the Bradford:
 		now Bounty Hunter is resolved;
 		AddNavPoint Bradford's Camp;
 	else if HP of Bradford is 1:
-		say "     'The name's Bradford,' he says, holding out his hand to shake. 'I didn't mean to start us off on the wrong foot. Like I said - kinda tough to tell who's who out there these days. Makes my job as a bounty hunter all the harder. Which is what I wanted to talk about.' He takes a breath and uses the moment to peek through the blinds, scanning up and down the street.";
-		say "     'Now, as you can prob'bly guess, I'm lookin['] for someone who should be comin['] by here sooner or later. But it's takin['] longer'n expected. With all them monsters about, there's plenty of bounty contracts for a guy like me, but I don't want to miss my chance with this guy. Whole reason I came to this God-forsaken city in the first place. Ended up bullified for my troubles. Ain't no way I'm leavin['] without him. But that ain't why I called you up here.'";
-		say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him.";
-		WaitLineBreak;
-		say "     'Now, like I said, I got me a mite more contracts than I can handle on my own. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].'";
+		say "     'The name's Bradford,' he says, holding out his hand to shake. 'I didn't mean to start us off on the wrong foot. Like I said - kinda tough to tell who's who out there these days. Makes my job as a bounty hunter all the harder. Which is what I wanted to talk about.' He takes a breath and uses the moment to peek through the blinds, scanning up and down the street. 'Now, as you can prob'bly guess, I'm lookin['] for someone who should be comin['] by here sooner or later. But it's takin['] longer'n expected. With all them monsters about, there's plenty of other work for a guy like me, but I don't want to miss my chance with this guy. Whole reason I came to this God-forsaken city in the first place. Ended up bullified for my troubles. Ain't no way I'm leavin['] without him. But that ain't why I called you up here.'";
+		say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him. 'Now, like I said, there's work to be done - not really bounty contracts, more like street-cleaning. No one wants these critters delivered to them or anything, they just wanna to seem them off the streets - roughed up and whatnot, so they crawl into their holes for a while, and maybe learn to not jump regular folks who're out and about. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].' ";
 		if HumorousList is banned:
-			say "     He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to bannin['].' He turns the page towards you so you can see the red [']BANNED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
+			say "He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to bannin['].' He turns the page towards you so you can see the red [']BANNED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
-			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty.";
-			say "     'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
+			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 4;
 			now HP of Bradford is 3;
 		else if "Female Preferred" is listed in feats of Player:
-			say "     He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
+			say "He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to gender lockin['].' He turns the page towards you so you can see the red [']CLOSED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
-			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though - out in the main part of the city.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it states the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty.";
-			say "     'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
+			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though - out in the main part of the city.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it states the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get a bunch of [']em before I got here. Once you've got to last of th['], come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 4;
 			now HP of Bradford is 3;
 		else:
-			say "     He pulls out a print-out sheet with a grayscale image of a walking phallus. The top of the page has [']BOUNTY['] across it and more details typed out below the image. Among that is mention of stuff like [']high output['], [']long-range semen launching['] and [']concerns about spreading the infection at a distance[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]three remaining[roman type] to complete the bounty.";
-			say "     'You take this and see if you can track down a few more of these things. I was able to get most of [']em, but I guess they've learned not to come around here. Once you've got to last of [']em, come back here and I'll cut you in on the reward.'";
+			say "He pulls out a print-out sheet with a grayscale image of a walking phallus. The top of the page has [']BOUNTY['] across it and more details typed out below the image. Among that is mention of stuff like [']high output['], [']long-range semen launching['] and [']concerns about spreading the infection at a distance[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]three remaining[roman type] to complete the bounty. 'You take this and see if you can track down a few more of these things. I was able to get most of [']em, but I guess they've learned not to come around here. Once you've got to last of [']em, come back here and I'll cut you in on the reward.'";
 			now bradfordbounty is 3;
 			now HP of Bradford is 2;
 	else if HP of Bradford is 2 and bradfordbounty <= 0:
@@ -340,7 +330,7 @@ to say demonBruteBounty:
 		now demonBruteBountyState is true;
 		now bradfordBountyNum is 1;
 		now bradfordbounty is 5;
-		say "'Alright, here you go. Says you gotta kill five of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
@@ -350,7 +340,7 @@ to say twistedPimpBounty:
 		now twistedPimpBountyState is true;
 		now bradfordBountyNum is 2;
 		now bradfordbounty is 4;
-		say "'Alright, here you go. Says you gotta kill four of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
@@ -360,7 +350,7 @@ to say saberkittyBounty:
 		now saberKittyBountyState is true;
 		now bradfordBountyNum is 3;
 		now bradfordbounty is 6;
-		say "'Alright, here you go. Says you gotta kill six of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat six of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
@@ -370,7 +360,7 @@ to say alphaHuskyBounty:
 		now alphaHuskyBountyState is true;
 		now bradfordBountyNum is 4;
 		now bradfordbounty is 4;
-		say "'Alright, here you go. Says you gotta kill four of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat four of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
@@ -380,7 +370,7 @@ to say latexErmineBounty:
 		now latexErmineBountyState is true;
 		now bradfordBountyNum is 5;
 		now bradfordbounty is 5;
-		say "'Alright, here you go. Says you gotta kill five of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat five of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 
@@ -390,7 +380,7 @@ to say spidergirlBounty:
 		now spidergirlBountyState is true;
 		now bradfordBountyNum is 6;
 		now bradfordbounty is 7;
-		say "'Alright, here you go. Says you gotta kill seven of [']em, good luck!'";
+		say "'Alright, here you go. Says you gotta defeat seven of [']em, good luck!'";
 	else:
 		say "'Hmm, looks like you already did this one, sorry. I'll tell you if this ever opens up again.'";
 

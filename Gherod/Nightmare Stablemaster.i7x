@@ -7,6 +7,14 @@ Version 2 of Nightmare Stablemaster by Gherod begins here.
 
 [The Nightmare Stablemaster lore has also been expanded. To explain his appearance, the Nightmare is now considered an infection of demonic origin. Therefore, the Stablemaster holds supernatural abilities that are reminiscent of devils.]
 
+
+a postimport rule:
+	if Nightmarish Horse Business is resolved and Resolution of Nightmarish Horse Business < 99 and fancyquest < 16:
+		move Stablemaster to Master's Office;
+		change the north exit of Employee Access to Master's Office;
+		change the south exit of Master's Office to Employee Access;
+		now NightmareOfficeRoomConnection is 1; [room connected]
+
 Section 1 - Pre-Event
 
 Table of GameEventIDs (continued)
@@ -636,7 +644,7 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 		say "     ([link]Y[as]y[end link]) - Thank him for that, respectfully.";
 		say "     ([link]N[as]n[end link]) - Thank him for that, but sarcastically.";
 		if player consents:
-			Linebreak;
+			LineBreak;
 			say "     You do not really find any benefit for antagonizing the horseman grunt, so you simply thank him for having done that, as you had a great time getting to know the Stablemaster, and it was indeed thanks to him. 'Huh... No more sass? Wow, I didn't think it'd be so quick. Seems like he already got you, uh... fixed up? Eh, you know what I mean, all submissive and stuff. He does that to everyone first, then decides what to do with them. It's like a game, we all went through that...' By the looks of it, you still retain freedom and your own will, so no, you are not by any means being affected by whatever he is saying, and you tell him that. 'Is that so? Alright... Well, if you're being nice to me, I'll be nice back at you, as well as my buds... But try anything funny and you'll regret it, bitch.'";
 			say "     After hearing his words, you nod to him and tell him not to worry, that you know how all this works. 'Good thing you do. Or I'd have to teach you the hard way...'";
 		else:

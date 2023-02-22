@@ -5,15 +5,12 @@ Version 2 of Ancient Tentacles by Dys begins here.
 
 [ TentacleInteractions tracks the number of times the player interacted     ]
 [ with the tentacles                                                        ]
-[ TentacleRead indicates whether or not the player has read about the       ]
-[ tentacles                                                                 ]
 [ TentacleStatus stores the state of the player and the tentacles           ]
 [   0  = Never encountered                                                  ]
 [   10 = Encountered and fled                                               ]
 [   12 = Encountered and got raped                                          ]
 
 TentacleInteractions is a number that varies. TentacleInteractions is usually 0.
-TentacleRead is a truth state that varies. TentacleRead is usually false.
 TentacleStatus is a number that varies. TentacleStatus is usually 0.
 
 LastTentacleFuck is a number that varies. [@Tag:NotSaved]
@@ -107,8 +104,8 @@ Section 2 - Initial Events
 to say TentaclesFirstEncounter:
 	say "     As you're going about your business, something suddenly wraps around your legs. You're harshly yanked backwards, and you fling out your arms in a desperate attempt to avoid smashing your face on the ground. Once that's been taken care of, you whirl around to look at what's ensnared you. The sight that greets you makes your skin go cold. A writhing mass of purple tentacles are jutting out of the ground, each coated in a slick, sticky slime. Desperately, you yank your foot away, managing to get it out of the tendril's grasp.";
 	say "     [bold type]You need to take advantage of you momentary freedom! What do you do?[roman type][line break]";
-	say "     [link]Run away as fast as you can![as]y[end link] - (Y)[line break]";
-	say "     [link]See if you can find some sort of central mass.[as]n[end link] - (N)[line break]";
+	say "     ([link]Y[as]y[end link]) - Run away as fast as you can!";
+	say "     ([link]N[as]n[end link]) - See if you can find some sort of central mass.";
 	if Player consents:
 		say "     You dash off into the city, having no idea where you're going. The mass of tentacles are following closely behind for a while, but soon enough, they seem to reach the perceived limits of their length. You keep running for a while longer, just to be sure that you've managed to escape them. When you're sure you're in the clear, you stop, panting to catch your breath. That was too close for comfort...";
 		now TentacleInteractions is 1;

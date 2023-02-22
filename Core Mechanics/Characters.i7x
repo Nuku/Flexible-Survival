@@ -428,7 +428,6 @@ Definition: A person (called x) is herm:
 Definition: A person (called x) is neuter:
 	if Cock Count of x is 0 and Cunt Count of x is 0, yes;
 
-
 Definition: A person (called x) is CockFitsInPlayerPussy:
 	if "Twisted Capacity" is listed in the feats of Player, yes;
 	if Cock Length of x > Cunt Depth of Player + 1, no; [some stretching allowed]
@@ -496,6 +495,11 @@ Definition: A person (called x) is pansexual:
 	else:
 		no;
 
+Definition: A person (called x) is CoA:
+	if "Center of Attention" is listed in feats of x:
+		yes;
+	else:
+		no;
 
 Chapter 4 - Infection Based
 

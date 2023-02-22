@@ -4,6 +4,7 @@ Sex and Infection Functions by Core Mechanics begins here.
 
 Definition: A person (called x) is sterile:
 	if "Sterile" is listed in feats of x, yes;
+	if Sterile of x is true, yes;
 	no;
 
 Definition: A person (called x) is FullyNewTypeInfected:

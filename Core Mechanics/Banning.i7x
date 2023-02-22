@@ -43,7 +43,7 @@ to new ban menu:
 	let nbmexit be 0;
 	while nbmexit is 0:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
-		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
+		say "[bold type]Warding will remove all qualifying monsters from appearing as random encounters, but you can still find them by specifically hunting for them or if they are directly written into a given scene. Banning will completely remove the chance to encounter said monsters entirely, both random and even hunting for them and in scenes. Combat will be skipped if such creatures are called up. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
 		say "[line break][bold type]FLAGS[roman type][line break]";
 		while countnumber <= number of entries in FlagList:
 			say "[link][countnumber] - [entry countnumber of FlagList][as][countnumber][end link]: [run paragraph on]";

@@ -3518,8 +3518,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is Susanoversize;
 		-- "SvenStory1":
 			now TruthVarValue entry is SvenStory1;
-		-- "TentacleRead":
-			now TruthVarValue entry is TentacleRead;
 		-- "Terminatorsleep":
 			now TruthVarValue entry is Terminatorsleep;
 		-- "TerminatorSleepActivated":
@@ -7200,8 +7198,6 @@ to VariableTruthLoad:
 					now Susanoversize is TruthVarValue entry;
 				-- "SvenStory1":
 					now SvenStory1 is TruthVarValue entry;
-				-- "TentacleRead":
-					now TentacleRead is TruthVarValue entry;
 				-- "Terminatorsleep":
 					now Terminatorsleep is TruthVarValue entry;
 				-- "TerminatorSleepActivated":

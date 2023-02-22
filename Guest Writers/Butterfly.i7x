@@ -261,7 +261,7 @@ To say butterfly attack:
 	if ButterflyRaped is 1 or ButterflyRaped is 2:
 		say "The Butterfly girl glares at you and pushes you to the ground. 'Hmph!' she huffs, then scowls. 'My turn now.' She discards her negligee and roughly sits her striped rotund bum down on your face. 'Lick,' she commands, and as your eyes adjust to the light, you can make out the shape of her sphincter before you as she tears off your clothes.";
 		if "Sterile" is not listed in feats of Player:
-			add "Sterile" to feats of Player;
+			FeatGain "Sterile";
 		if Player is male:
 			say "She grabs [if Cock Count of Player > 1]one of[end if]your [cocktext]shaft[smn] in her hand and squeezes it painfully. 'If you don't want to lose this, start licking.' Possibly due to the nanites, you find yourself turned on by the butterfly's newfound assertiveness. You oblige and begin licking her asshole as commanded. Her proboscis shoots down the hole at the tip of [if Cock Count of Player > 1]one of [end if]your [cocktext]cock[smn] but it's different from before as she penetrates deeper, all the way to your [Ball Size Adjective of Player] [Balls]. Her long tongue pierces through the valves and begins to suck the stored seed right out of your balls. You feel your cock[smn] soften and your balls shrink as your mojo is drawn out of them, leaving you sterile. As your groin convulses in pain, she recoils her tongue and chides, 'You're not licking.'";
 			if "One Way" is not listed in feats of Player:
@@ -304,7 +304,7 @@ To say butterfly attack:
 		now ButterflyRaped is 0;
 		now ButterflyRevenge is True;
 		if "Sterile" is not listed in feats of Player:
-			add "Sterile" to feats of Player;
+			FeatGain "Sterile";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Butterfly":
