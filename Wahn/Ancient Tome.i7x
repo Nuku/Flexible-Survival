@@ -1,5 +1,12 @@
-Version 1 of Ancient Tome by Wahn begins here.
-[ Version 1 - First Event ]
+Version 2 of Ancient Tome by Wahn begins here.
+[ Version 2 - Merged Additional Tome Scenes into the main Tome file                    ]
+
+[ Versions of Additional Tome Scenes                                                   ]
+[ v1 - Adds tentacles and demon fox                                                    ]
+[ v2 - Breaks up the file into more abstract pieces                                    ]
+[ v3 - Added support for the Dullahan summon - Gherod                                  ]
+[ v4 - Added support for Drelgoth - Gherod                                             ]
+[ v5 - Straightened out reading/summoning with the tome                                ]
 
 [ TomeFound  - Tracking variable for interaction with Eric                             ]
 [   0: not found                                                                       ]
@@ -19,8 +26,28 @@ Version 1 of Ancient Tome by Wahn begins here.
 [ 100: player took the book right from the start                                       ]
 [ 101: Eric is afraid of the book and was offered it back before                       ]
 
+[ TENTACLE CODE - Dys/Ancient Tentacles.i7x                                            ]
+[ DEMON FOX CODE - Dys/Demon Fox.i7x                                                   ]
+
+[ TomeTimer tracks how long it's been since the player has been                        ]
+[ influenced by the tome                                                               ]
+[ TomeInfluence tracks how much the player has been influenced                         ]
+[   0 = Never influenced. Cannot use tome                                              ]
+[   1 = Influenced once. Cannot use tome                                               ]
+[   2 = Influenced twice. Cannot use tome                                              ]
+[   3 = Influenced three times. Can now use the tome                                   ]
+[ TomeInteractions tracks the number of times the player has used the tome.            ]
+[ TomeEventPending flags if a tome event is waiting to fire                            ]
+
+"Adds Ancient Tome item and actions with it."
+
 TomeFound is a number that varies.
 lastTomeInteraction is a number that varies.
+TomeTimer is a number that varies. TomeTimer is usually 5000.
+TomeInfluence is a number that varies. TomeInfluence is usually 0.
+TomeInteractions is a number that varies. TomeInteractions is usually 0.
+TomeEventPending is a truth state that varies. TomeEventPending is usually false.
+TomeInfluenceTimer is a number that varies. TomeInfluenceTimer is usually 5000.
 
 An everyturn rule: [item cleanup]
 	if carried of ancient tome > 1:
@@ -153,12 +180,13 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 			now EricVirginityTaken is 7; [impregnated with tentacle spawn]
 		now lastTomeInteraction is turns;
 
-Ancient Tome is a grab object. Ancient Tome is not temporary.
-Ancient Tome has a usedesc "[TomeUse]".
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "ancient tome"	"A large book, bound in black leather. There is no title on its cover, only a triangle-symbol with a slit-pupiled eye branded into the leather."	1	ancient tome
+
+Ancient Tome is a grab object. Ancient Tome is not temporary.
+Ancient Tome has a usedesc "[TomeUse]".
 
 to say TomeUse:
 	LineBreak;
@@ -196,5 +224,211 @@ instead of trading the ancient tome when the current action involves the Eric:
 		now TomeFound is 1; [Eric got the book now]
 	else if TomeFound is 101: [Eric is afraid of the book and was offered it back before]
 		say "     You shouldn't tease Eric with the tome any further. He was genuinely afraid the last time. Confronting him with the book would just be cruel after that.";
+
+
+Section 2 - Menus
+
+to say TomeSexMenu:
+	say "     The dark book seems to draw you towards it. You can't help but to be tempted to use it. Do you give in? If so, what will you do with it?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if "Tome_Tentacle_Read" is listed in Traits of Player and Player is puremale and TentacleInteractions > 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon a tentacle monster";
+		now sortorder entry is 1;
+		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
+	[]
+	if "Tome_DemonFox_Read" is listed in Traits of Player and Player is puremale and DemonFoxInteractions > 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon a demon fox";
+		now sortorder entry is 2;
+		now description entry is "The demon fox sounds like it could be fun";
+	[]
+	if "Tome_DemonLover_Read" is listed in Traits of Player and Resolution of MeetingDrelgoth < 99:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon a demon lover";
+		now sortorder entry is 3;
+		now description entry is "Maybe having a demonic companion would not be so bad";
+	[]
+	if Resolution of Corruption of Dreams > 0 and Resolution of Dullahan Knight is not 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Summon the Dullahan";
+		now sortorder entry is 4;
+		now description entry is "Face the mythical dark knight";
+	[]
+	if Resolution of Hellish Trashpile > 2 and Resolution of Hellish Trashpile < 99 and Resolution of Hell Realm is 0:
+		choose a blank row from table of fucking options;
+		now title entry is "Perform the Demonic Ritual";
+		now sortorder entry is 99;
+		now description entry is "Try to mimic the ritual you saw in the tape";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows from table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[line break][link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows from table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber from table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is:
+					-- "Summon a tentacle monster":
+						say "[TentacleSex]";
+					-- "Summon a demon fox":
+						say "[DemonFoxSummon]";
+					-- "Summon a demon lover":
+						say "[DrelgothSummon]"; [on his file]
+					-- "Perform the Demonic Ritual":
+						say "[HellRealmRitual]";
+					-- "Read on the mythical Dullahan":
+						say "[DullahanFirstRead]";
+					-- "Summon the Dullahan":
+						say "[DullahanSummon]";
+				wait for any key;
+		else if calcnumber is 0:
+			say "     Change your mind and do something else?";
+			if Player consents:
+				now sextablerun is 1;
+				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
+				wait for any key;
+			else:
+				say "Pick an option.";
+		else:
+			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+Section 3 - Use Scenes
+
+to say TomeExpansionUse:
+	if TomeInfluence is 0: [Never influenced, can't read]
+		say "     You open the old book and flip through a few pages. Sadly, it seems to be written in a squiggly script that you can make no heads or tails of, and the images in it are mildly disturbing, full of weird creatures and situations. A shiver runs down your spine as you close the book again.";
+	else if TomeInfluence is 1: [Influenced once, can't read]
+		say "     You open the dark book and flip through a few pages. Sadly, you're still unable to make heads or tails of the script inside. Something about it makes you shiver in dread, making you somewhat okay with your inability to understand its contents.";
+	else if TomeInfluence is 2: [Influenced twice, can't read]
+		say "     You open the thick tome and skim across a few pages. Surprisingly, you can actually make out a few words here and there, though they aren't near enough for you to actually [italic type]read[roman type] the thing. You tremble involuntarily before shutting the book, somewhat glad that you aren't able to read it.";
+	else: [Influenced thrice, can finally read]
+		if TomeTimer - turns >= 4:
+			if TomeInteractions is 0: [First use]
+				say "     You look over the ancient book, examining it closely as you ponder, what exactly, you can do with it. [if TomeFound is 4]You saw what happened to Eric. Even still, you could give it a read... [else if TomeFound is 20]You saw what nearly happened to Eric. Even still, you could give it a read... [else if TomeFound is 3]Something just doesn't feel right about it, even though Eric seemed relatively unaffected by it. Even still, you could give it a read... [else]Perhaps you could give it a read? [end if]It [italic type]is[roman type] a book, after all.";
+				LineBreak;
+				say "     [link](Y)[as]y[end link] - Give it a quick read.";
+				say "     [link](N)[as]n[end link] - It's probably best not to.";
+				if Player consents:
+					say "     You open the tome to a random page, deciding that no real harm can come from just quick glance at it. Your eyes skim over page after page of text and drawings depicting all sorts of monsters and demons, taking all the information in eagerly. For some reason you can't quite comprehend, the contents of the book have really piqued your interest. Nearly two hours later, you find that you've read more than half of the large books contents, and you suddenly blink, realizing how much time you've spent doing this. Shutting the book, you heave a sigh as you place it in your pack before moving on. There's some part of you that eagerly awaits further reading.";
+					now TomeTimer is turns;
+					now TomeInteractions is 1;
+				else:
+					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
+			if TomeInteractions is 1: [Second use]
+				say "[TomeReadMenu]";
+			else if TomeInteractions is 2: [3+ uses]
+				say "     Do you want to [link]read the tome[as]y[end link] (y), or [link]use the tome[as]n[end link] (n)?";
+				if Player consents:
+					say "[TomeReadMenu]";
+				else:
+					say "[TomeSexMenu]";
+		else:
+			say "     You contemplate using the dark book for only a moment before shaking your head. Using it too often may be a bad idea.";
+
+to say TomeReadMenu:
+	say "     You pull the tome out of your pack once more, looking over its leather cover for a moment before deciding that giving it another read wouldn't hurt. After all, delving into a mythic tome of unknown origins could never have any bad consequences, could it? Lamenting the total lack of an index in this thing, you're left to just browse at random, quickly finding something that seems interesting. The page on the left of the open book depicts a sort of mass of tentacles[if TomeFound is 4], possibly related to the ones that assaulted Eric. [else if TomeFound is 20], possibly related to the ones that nearly kidnapped Eric. [else]. [end if]Each of the tendrils is a sort of bluish-purple, and they all seem to be covered in some sort of clear slime. The adjacent page depicts a demonic-looking anthro fox, with a lengthy description beneath the detailed image of the creature. Turning another page, you see a vague description of an attractive man, by society's standards, with the description below detailing it as a sort of soulbound... Lover?";
+	say "     [bold type]What do you want to have a closer look at?[roman type][line break]";
+	let Tome_Read_Choices be a list of text;
+	add "Read about the tentacle monster." to Tome_Read_Choices;
+	add "Read about the demonic fox." to Tome_Read_Choices;
+	add "Read about the demon lover." to Tome_Read_Choices;
+	if Resolution of Corruption of Dreams > 0 and Resolution of Dullahan Knight is 0: [extra demonic summoning unlocked]
+		add "Read on the mythical Dullahan." to Tome_Read_Choices;	
+	add "Close the book and put it away." to Tome_Read_Choices;	
+	let Tome_Read_Choice be what the player chooses from Tome_Read_Choices;
+	if Tome_Read_Choice is:
+		-- "Read about the tentacle monster.":
+			say "[TentaclesFirstRead]";
+		-- "Read about the demonic fox.":
+			say "[DemonFoxFirstRead]";
+		-- "Read about the demon lover.":
+			say "[DemonLoverFirstRead]";
+		-- "Read on the mythical Dullahan.":
+			say "[DullahanFirstRead]";
+		-- "Close the book and put it away.":
+			say "      Closing the book with a solid thud, you heft its weight and put it back into your backpack.";
+
+to say TentaclesFirstRead:
+	say "     As you read about the mass of tentacles, you can't help but be drawn in by the shockingly detailed descriptions of its behavior. Apparently, the tentacles will not only rape the unlucky victim, they also sometimes lay eggs in them! No one is exactly sure why the tentacles do this, or who they'll do it to, as it seems to be random. If there's one good thing to note, it's that the tentacles don't usually deposit fertilized eggs, leaving the victim with their insides stuffed with inert, gelatinous orbs. [if Player is puremale]Interestingly[else]Thankfully[end if], they only seem to be interested in [italic type]males[roman type], oddly enough. At the bottom of the page are instructions of how to summon the creature. You shut the book after reading the page, shaking your head in an attempt to get intrusive thoughts of egg-laying tentacles out of your head.";
+	TraitGain "Tome_Tentacle_Read" for Player;
+	now TomeEventPending is true;
+
+to say DemonFoxFirstRead:
+	say "     Looking over the passage dedicated to the demonic fox, you manage to learn a few things. The demon fox is said to be able to change its size to whatever it desires. Supposedly, he's possessive, with a pathological need to force submission in others. Anyone who has encountered the beast has reaffirmed that fact.";
+	say "     According to the page's short physical description, the fox is taller than the average human, with hulking muscles and two demonic horns between vulpine ears. His fur is mostly black but bright, blazing red around his stomach, chest, and part of his lower jaw, while his eyes are an arcane yellow with slitted pupils. Three tails jut from his rear end, moving independently at his beck and call to trap unwary prey.";
+	say "     A quickly jotted addendum adds that his cum is bright orange and glows like hot lava, with a steaming heat that nearly hurts. There are some stains at the bottom of the page too, a streak of... something, and several splotches. Eww, given the haphazard way that the words above are written, you can just imagine what [italic type]that[roman type] is.";
+	say "     [if Player is puremale]Interestingly[else]Thankfully[end if], he only seems to be attracted to males.";
+	TraitGain "Tome_DemonFox_Read" for Player;
+	now TomeEventPending is true;
+
+to say DemonLoverFirstRead:
+	say "     Browsing the pages on this mysterious demon lover, you cannot find much other than a vague description of an attractive and caring male individual. It seems this ritual is meant to invoke a lover of some kind, though you could guess that, if it comes from this tome, it might certainly be demonic in nature. Some of its requirements mention that it draws from your emotions, desire and needs. Only someone truly depraved would summon something like them!";
+	TraitGain "Tome_DemonLover_Read" for Player;
+
+Section 4 - Other Stuff
+
+to UpdateTomeEventPending:
+	if TomeEventPending is true:
+		if DemonFoxRead is true and TentacleRead is true and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
+			now TomeEventPending is true;
+		else:
+			now TomeEventPending is false;
+	else:
+		now TomeEventPending is true;
+
+Section 5 - Influence system
+
+an everyturn rule:
+	if carried of ancient tome > 0 and TomeEventPending is false:
+		if TomeInfluence is 0: [Never tempted by the book]
+			if TomeInfluenceTimer - turns >= 2:
+				say "     As you go about your business, you mind keeps going to the book inside your bag. You can't help but be tempted to pull out the [bold type]ancient tome[roman type], just to see why you're so drawn to it.";
+				now TomeInfluenceTimer is turns;
+				now TomeInfluence is 1;
+		else if TomeInfluence is 1: [Tempted by the book once]
+			if TomeInfluenceTimer - turns >= 2:
+				say "     You glance at your bag, a sudden desire to read the [bold type]ancient tome[roman type] entering your mind. Something about the book seems to be calling to you, and you can't help but be just a bit fearful of the thing.";
+				now TomeInfluenceTimer is turns;
+				now TomeInfluence is 2;
+		else if TomeInfluence is 2: [Tempted by the book twice]
+			if TomeInfluenceTimer - turns >= 2:
+				say "     You blink, suddenly aware that your hand is reaching into your bag, seemingly on its own accord. Wondering what could possibly be going on, you grab the first thing you touch and pull it out. It just so happens to be the [bold type]ancient tome[roman type]! You glance over its leather cover, running your fingers across its surface for a second before you flip the cover open, going to a random page. Much to your amazement, you can actually read the words there! [bold type]Perhaps you could give it a read, now that you can actually do so?[roman type][line break]";
+				now TomeInfluenceTimer is turns;
+				now TomeInfluence is 3;
+		else if TomeInfluence is 3: [Tempted fully]
+			if TomeInfluenceTimer - turns >= 2:
+				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it [italic type]wants[roman type] you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
+				now TomeInfluenceTimer is turns;
+	if DemonFoxRead is true and DemonFoxInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 4 and daytimer is night:
+		say "[DemonFoxFirstEncounter]";
+	if TentacleRead is true and TentacleInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
+		say "[TentaclesFirstEncounter]";
+
+
+Section 6 - Dev Cheats
+
+GetTome is an action applying to nothing.
+Understand "zGiveTome" as GetTome.
+
+check GetTome:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+Carry out GetTome:
+	say "     An ancient tome appears in the air before you, dropping weightily into your grasp.";
+	ItemGain ancient tome by 1;
 
 Ancient Tome ends here.
