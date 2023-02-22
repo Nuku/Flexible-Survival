@@ -1645,6 +1645,7 @@ to say UrikSexMenu:
 		clear the screen and hyperlink list;
 
 to say UrikFirstFuck_Lair:
+	project the Figure of Urik_naked_icon;
 	say "     Walking up to Urik, you hook a hand under one of the leather straps crossing his broad chest, and start to guide the big brute along by it, making a beeline to one of the long tables standing in the room. As soon as you are there, you clear some room at the end with a swipe of your arm, pushing the half-filled mugs of orc brew on it further down, then slap the surface of the table and command Urik to bend over it. 'Wait, you mean you want -' the large orc starts to say, but he's drowned out by a bunch of orc warriors pointing and laughing, hollering for their friends to 'Come watch as Urik's being fucked'. When you don't correct them, instead pulling on your new orc breeder's shoulder to get him moving, Urik gives in after a little resistance, bending over as you instructed, his hands gripping the sides of the solid wooden table.";
 	say "     Seeing him like that ass out and getting ready, you slap the rounded cheeks of Urik's bare butt, leaving a hand-print until it fades away some seconds later. Urik replies only with a groan... but you can see his cock throb inside the stretchy pants Boghrim put on him. Your orc slut he likes it rough! Quickly[if player is not naked] getting rid of your own clothes and gear[end if], you step up behind the powerful orc and smack your shaft into the crack between his buttocks. As you rub yourself against him, you revel in your ownership and power over this green-skinned man - and the sensations of his warm skin against yours of course. Other orcs in the room close in all around the two of you, with cheers and gropes coming from them, the former for you, the latter mostly focused on Urik, although there are a few touches on your own naked body that aren't quite the shoulder-slaps of congratulation most orcs give you.";
 	WaitLineBreak;
@@ -1694,6 +1695,7 @@ to say UrikFirstFuck_Lair:
 	NPCSexAftermath Urik receives "AssFuck" from Player;
 
 to say UrikFirstFuck_Library_Missionary:
+	project the Figure of Urik_naked_icon;
 	say "     Walking up to Urik, you stroke a hand down his muscle-packed chest, then move it over to squeeze the side of his hips. 'Like my body, eh [UrikPlayerAddress]?' the orc says in reply, squaring his shoulders proudly and flexing a little. Then you tell him that the time has finally come to enjoy his sweet ass, and he stiffens visibly as he hears those words, with his breath speeding up and the irises of his pear-green eyes widening. It is kind of funny how quickly this absolute powerhouse of a man can be reduced to someone akin to a virgin teen about to have his first time. Putting a hand on his shoulder to connect with him, you tell the orc with a smile that he'll enjoy it. He still seems somewhat apprehensive, which isn't much of a surprise as Urik is actually pretty close to being an anal virgin in this matter, most likely only ever having been a top until the episode with Toven where he was made to take the former breeder's cock. Given their recuperative powers, this orc surely will have become as tight as before by now.";
 	say "     You let your hand on his hip wander further, gripping a firm buttock of the large orc while imagining the squeeze of his hole on your [cock of player] cock. 'Man, I've seen that expression often, just I never thought I'd be at the receiving end of it from you. It always was just my biker bros, or orc buddies, as we were about to pounce on a dude. Hell, I remember making that smirk when I was approaching a young punk of a bike cop, reflecting at me in his sunglasses, all confident in his badge and all that shit...' While it certainly sounds to be an interesting anecdote of a story, you recognize what Urik is doing, perhaps subconsciously or not, trying to delay the inevitable. Moving your hand from his shoulder to rest on the left pec of the orc, you can feel the rapid throb of his heart and meet his gaze as the orc looks at you with the question of what is going on in his eyes. Calmingly telling Urik to relax and that it'll be okay, you gently push aside his squeamishness.";
 	WaitLineBreak;
@@ -2003,7 +2005,7 @@ instead of navigating Grey Abbey Library while ("Library Move Underway" is liste
 					TraitGain "Chris - Knows Happy Breeder" for Urik;
 					TraitGain "Urik - Knows Neutral" for Chris;
 			else if Libido of Chris is 2: [orc warrior]
-				if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits: [player's subbing for Chris, orc got rougher] [TODO: split out subby dad?]
+				if "Subby Bro" is listed in Traits of Chris or "Subby Dad" is listed in Traits of Chris: [player's subbing for Chris, orc got rougher] [TODO: split out subby dad?]
 					say "     Chris strides up to Urik, coming fairly close before the two of them size each other up. The older orc is a fair bit bigger than Chris, which is saying a lot, given that Chris out-masses most bodybuilders. Grunting in recognition of each other's strength, Chris still tries a sudden chest-bump against the other orc, as if trying to push him over. Urik pushes right back, grunting into Chris's face with his tusks bared. No matter what his role to you, the orc is far from ready to just give in to others.";
 					TraitGain "Chris - Knows Dom" for Urik;
 					TraitGain "Urik - Knows Neutral" for Chris;
@@ -2426,7 +2428,7 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
 
-after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik > 8) and PlayerFriended of Urik is true and Felinoid Companion is tamed and "Klauz Encounter 1_Done" is not listed in Traits of Urik): [post-bird Klauz encounter]
+after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik > 8) and PlayerFriended of Urik is true and Felinoid Companion is tamed and "Klauz Encounter 1_Done" is not listed in Traits of Urik) and Player is not CoA: [post-bird Klauz encounter]
 	if debugactive is 1:
 		say "     DEBUG: Urik has an encounter with Klauz, after relationship decisions have been made; Loyalty of Urik: [Loyalty of Urik ], current turn: [turns][line break]";
 	try looking;
@@ -2585,7 +2587,7 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 		say "     Shaking your head, you tell the orc that you don't plan on trekking through half the city in the middle of the nanite apocalypse, just to find something to drink for him. Urik grumbles a little and is visibly deflated, but soon replies, 'Fine, [UrikPlayerAddress]. Would have been fun, but I know what you say goes. Forget about it then.'";
 		now Perception of Urik is 5; [after the beer trip - completed or skipped]
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

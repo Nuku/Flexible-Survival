@@ -846,7 +846,7 @@ An everyturn rule:
 		now Elijah is nowhere;
 		say "Your mind wanders momentarily to the angel you once saw fighting those demons, but soon forget about him and return to your more immediate concerns.";
 	[NPC Interaction section - sorted by Elijah HP state and NPC/pet - see file header]
-	if (HP of Elijah is 1 or HP of Elijah is 2) and (NPCintCounter - turns > 2):
+	if (HP of Elijah is 1 or HP of Elijah is 2) and (NPCintCounter - turns > 2) and Player is not CoA:
 		if (player is in Bunker):
 			if Candy is in Bunker and ElijahChar-A is "0":
 				say "     While taking your break before heading back into the city, you spot Candy kneeling beside the injured angel's bunk. The coon is helping him drink some water out of a bottle, then eases him back down on the bunk as his patient loses consciousness again. It seems Candy still has some of his health-care training intact from his past life. And what he also has is curiosity and an active interest in other men - while checking that the angel is resting comfortably, Candy lifts his sheet and peeks under it, giggling girlishly. He whispers 'Get well soon, big boy,' to the sleeping angel, then goes back to his own bunk.";
@@ -885,7 +885,7 @@ An everyturn rule:
 				say "     Honey frets nervously at your side, clutching herself to you tightly as you take a moment to look over the injured angel.";
 				now ElijahChar-J is "1";
 				now NPCintCounter is turns;
-	else if (HP of Elijah is 3) and (NPCintCounter - turns > 2): [virgin-mode]
+	else if (HP of Elijah is 3) and (NPCintCounter - turns > 2) and Player is not CoA: [virgin-mode]
 		if (player is in Bunker):
 			if Candy is in Bunker and (ElijahChar-A is "0" or ElijahChar-A is "1"):
 				say "     While taking a break in the bunker, you pass Candy and Elijah going up into the library and catch some of their conversation. Candy says, '...and I even follow some of the rules you guys have. Isn't there something like 'love thy neighbor like yourself'? I sure love to stroke my dick and a hard shaft inside me, so of course I'm happy to do so for other men, too.' Elijah looks a bit puzzled at Candy's logic. Other parts of his anatomy seem to agree with the playful coon though, judging from the slight bulge in his tunic.";
@@ -929,7 +929,7 @@ An everyturn rule:
 				say "     Elijah steps out of the bunker and into the library, passing through the stacks before finally selecting a book. With book in hand, he heads over to Fang and pets [ObjectPro of Fang] lightly on the head. 'I thank and commend you for your vigilance. Your protection of this safe haven will not go unrewarded,' he states before turning and heading back into the bunker.";
 				now ElijahChar-I is "2";
 				now NPCintCounter is turns;
-	else if (HP of Elijah is 4) and (NPCintCounter - turns > 2): [more human-like, nice guy]
+	else if (HP of Elijah is 4) and (NPCintCounter - turns > 2) and Player is not CoA: [more human-like, nice guy]
 		if (player is in Bunker):
 			if (Candy is in Bunker) and (ElijahChar-A is "0" or ElijahChar-A is "1" or ElijahChar-A is "2"):
 				say "     While taking a break in the bunker, you see Elijah walking up to Candy holding a rectangular box in colorful wrapping paper behind his back. He hands it over to the coon, who squeals 'A present? Oooh, thank you honey.' As Candy weighs it in his hands and shakes the box softly to try to figure out what it is, Elijah explains 'I found it in one of the offices next door. Apparently it was meant as a prank for a Christmas party. I thought... you might like it.'";
@@ -991,7 +991,7 @@ An everyturn rule:
 				NPCSexAftermath Fang receives "Stroking" from Elijah;
 				now ElijahChar-I is "3";
 				now NPCintCounter is turns;
-	else if HP of Elijah is 99 and NPCintCounter - turns > 2: [evil, very direct sex-fiend]
+	else if HP of Elijah is 99 and NPCintCounter - turns > 2 and Player is not CoA: [evil, very direct sex-fiend]
 		if Player is in Bunker:
 			if (Candy is in Bunker) and CuckList is not banned and (ElijahChar-A is "0" or ElijahChar-A is "1" or ElijahChar-A is "2" or ElijahChar-A is "3") and lastfuck of Elijah - turns >= 12:
 				say "     While taking a break in the bunker, you see Elijah step up to Candy from behind and grab his ass. A furry bun in each hand, he squeezes them a bit, saying 'Bend over, I wanna fuck.' Candy replies 'Rather direct, aren't you now, hun. But I like men who know what they want.' He then takes up position against the nearest wall, bracing himself with his arms and pushing his ass back invitingly. Elijah grins at you as he steps out of his leather pants, then moves behind Candy, rubbing his long and hard cock against the fur of Candy's ass. He plays with Candy for a moment, running his manhood up and down his crack, pushing against his pucker, then going back to rubbing against his fur. When he has Candy mewling in need, he suddenly thrusts deep inside the coon, making him gasp as he adjusts to the size of the invader. Then he really goes to town on the boytoy, shafting him hard and deep between moments where he stops all of a sudden until Candy begs him needily to go on and fuck him.";
@@ -1078,7 +1078,7 @@ An everyturn rule:
 				now ElijahChar-I is "4";
 				now NPCintCounter is turns;
 
-after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4):
+after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of Elijah is 2 and NPCintCounter - turns > 4) and Player is not CoA:
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 1/2 WALKIN[line break]";
@@ -1120,7 +1120,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 1 or HP of
 		now ElijahChar-J is "1";
 	now NPCintCounter is turns;
 
-after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4): [virgin-mode]
+after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCintCounter - turns > 4) and Player is not CoA: [virgin-mode]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 3 WALKIN[line break]";
@@ -1162,7 +1162,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 3 and NPCi
 		now ElijahChar-J is "2";
 	now NPCintCounter is turns;
 
-after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4): [more human-like, nice guy]
+after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCintCounter - turns > 4) and Player is not CoA: [more human-like, nice guy]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 4 WALKIN[line break]";
@@ -1220,7 +1220,7 @@ after going inside from the Grey Abbey Library while (HP of Elijah is 4 and NPCi
 		now ElijahChar-J is "3";
 	now NPCintCounter is turns;
 
-after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4): [evil, very direct sex-fiend]
+after going inside from the Grey Abbey Library while (HP of Elijah is 99 and NPCintCounter - turns > 4) and Player is not CoA: [evil, very direct sex-fiend]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     ELIJAH 99 WALKIN[line break]";

@@ -657,7 +657,7 @@ Instead of fucking the Jennifer:
 			say "     Soon, you reach the point of no return, gasping loudly as your seed shoots into Jennifer's body. Your forceful spurts and the helping force of gravity make sure all of it ends up deep inside her ready womb. The crowd around you cheers and you can hear moans and lustful growls echo through the warehouse as many of them decide to follow your lead, both in the private section and right around you in the training area. Meanwhile, you slowly go down to your knees, lowering Jennifer to lie on her back with your cock still deep inside her and lean over her to make out.";
 			NPCSexAftermath Jennifer receives "PussyFuck" from Player;
 			let Jpregchance be a random number from 1 to 20;
-			if Jpregchance > 10:
+			if Jpregchance > 10 and Sterile of Player is false:
 				now Jenniferpregnant is 48;      [48h till birth]
 				now thirst of Jennifer is 1;     [invisible pregnancy for the first 24h]
 				if Jenniferwolves is 0: [first kid]
@@ -820,7 +820,7 @@ to say JenniferSex4: [Jennifer's pussy fucked by player]
 		say "     Soon, you reach the point of no return, gasping loudly as your seed shoots into Jennifer's body. Your forceful spurts and the helping force of gravity make sure all of your [Cum Load Size of Player] load ends up deep inside her ready womb. The crowd around you cheers and you can hear moans and lustful growls echo through the warehouse as many of them decide to follow [if HP of Septus < 7]your[else]the team's top couple's[end if] lead, both in the private section and right around you in the training area. Meanwhile, you slowly go down to your knees, lowering Jennifer to lie on her back with your cock still deep inside her and lean over her to make out some more.";
 		let Jpregchance be a random number from 1 to 20;
 		if HP of Septus >= 7, increase jpregchance by 2;
-		if Jpregchance > 10 and thirst of Jennifer is 0:
+		if Jpregchance > 10 and thirst of Jennifer is 0 and Sterile of Player is false:
 			now Jenniferpregnant is 48;
 			now thirst of Jennifer is 1;
 			if Jenniferwolves is 0: [first kid]

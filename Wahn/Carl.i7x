@@ -986,7 +986,7 @@ to say CarlShower_CarlAss:
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang > 1 and HP of Fang < 6) and (lastfuck of Fang - turns) > 12):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 0 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang > 1 and HP of Fang < 6) and (lastfuck of Fang - turns) > 12) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1130,7 +1130,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 				now level of Carl is 55;
 			NPCSexAftermath Carl receives "AssFuck" from Fang;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and (level of Carl is 1 or level of Carl is 2) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang is 2 and (lastfuck of Carl - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1147,7 +1147,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		say "     Coming into the library, you walk in on Carl - kneeling behind Fang's rear end and with one hand on the wolf's hard cock. Judging from the way his crotch is pressed against your pet wolf's ass, the transformed soldier fucked the feral wolf and knotted him. A puddle of cum on the ground under Fang shows that he returned the favor afterwards, jerking Fang off. They stay in that position for about a minute more, then Carl pulls out of Fang's cum-filled ass with a wet slurp and pats him on the head. 'That's a good wolf - you really have an awesome ass on you, Fang.' With that, the husky collects his clothes and leaves to freshen up.";
 	NPCSexAftermath Fang receives "AssFuck" from Carl;
 
-instead of navigating Grey Abbey Library while ((HP of Carl > 3 and HP of Carl < 50) and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (HP of Fang is 2 or HP of Fang is 3 or HP of Fang is 4) and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while ((HP of Carl > 3 and HP of Carl < 50) and (level of Carl is 51 or level of Carl is 52) and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and (HP of Fang is 2 or HP of Fang is 3 or HP of Fang is 4) and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1163,7 +1163,7 @@ instead of navigating Grey Abbey Library while ((HP of Carl > 3 and HP of Carl <
 		say "     Coming into the library, you notice that Fang isn't at his usual spot. As you look around for him and listen, you hear grunts and low growls coming from the upper floor of the building. You've got a good suspicion what might be happening up there, which is confirmed a moment later when you recognize Carl and Fang as the source of the noises. Leaving Fang to enjoy the submissive soldier's ass in peace, you turn your attention to other things.";
 	NPCSexAftermath Carl receives "AssFuck" from Fang;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang > 2 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 50 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang > 2 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1187,7 +1187,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		say "     Leaving the two canines to sort out their dominance issues, you walk to another part of the library and don't look back as you hear a yowl and rhythmic slapping noises coming from behind you.";
 	NPCSexAftermath Carl receives "AssFuck" from Fang;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 53 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang is 5 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and level of Carl is 53 and Carl is in Grey Abbey 2F and Fang is in Grey Abbey Library and HP of Fang is 5 and (lastfuck of Fang - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1229,7 +1229,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 			say "     Leaving the two canines to bond with each other, you walk to another part of the library and don't look back as you hear a grunts and rhythmic slapping noises coming from behind you.";
 		NPCSexAftermath Fang receives "AssFuck" from Carl;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Libido of Carl is 0 and Carl is in Grey Abbey 2F and Helen is in Grey Abbey Library and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1310,13 +1310,16 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now Libido of Carl is 100;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 50 and Dexterity of Carl is 0 and Carl is in Grey Abbey 2F and Xerxes is in Grey Abbey Library and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: CARL & XERXES - SEX WALK-IN - HP of CARL: [HP of Carl], DEXTERITY OF CARL: [dexterity of Carl][line break]";
-	project Figure of Fang_hard_icon;
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_hard_icon;
+	else:
+		project Figure of Xerxes_awesome_hard_icon;
 	if HP of Carl > 9 and HP of Carl < 30: [normal Carl]
 		say "     Coming into the library, you notice Carl standing at the foot of the stairs leading up, with Xerxes circling and sniffing him. The husky soldier waves to you and asks 'What kind of dog did you say he originally was? Because he certainly seems very friendly and... interested in my furry self.' Walking over to them, you tell the transformed soldier that Xerxes once was a German shepherd. As he hears your voice, the human dog stops sniffing Carl's crotch and almost pounces on you, eagerly greeting his master and[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds] saying 'Carl nice' with a cheeky grin[else] giving a few happy yips and barks, looking from you to Carl[end if]. Eyes glued to Xerxes['] muscular and naked form, especially with the unobstructed view of his asshole and dangling cock he's giving him right now, Carl suddenly feels the urgent need to adjust the growing bulge in his pants. Visibly swallowing, he then looks up at you and gives a hopeful wag of his tail. 'Your... doggie really has a very nice body. Any chance I could have some fun with Xerxes? He certainly seems willing enough.'";
 		LineBreak;
@@ -1382,7 +1385,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 			say "     As you silently shake your head, Carl's tail and ears dip a bit in disappointment. Still, you're his alpha, so he obediently lets the matter drop and goes back to his lookout-spot up on the upper library level.";
 			now Dexterity of Carl is 100;
 
-instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and ((Libido of Carl > 0 and Libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds):
+instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and ((Libido of Carl > 0 and Libido of Carl < 100) or (dexterity of Carl > 0 and dexterity of Carl < 100)) and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/HUMAN DOG SEX WALKIN [line break]";
@@ -1404,7 +1407,7 @@ instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl
 			say "     After a while of just holding Xerxes from behind and slowly stroking his body while waiting for his knot to go down, Carl says 'You're an amazing, sexy guy, Xerxes. As long as the alpha allows it, I'm gonna use every chance I get to do you...'";
 		NPCSexAftermath Xerxes receives "AssFuck" from Carl;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker):
+instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl is 0 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1433,7 +1436,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 
 		now lust of Carl is 2; [didn't watch]
 	NPCSexAftermath Candy receives "AssFuck" from Carl;
 
-instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl > 0 and lust of Carl < 100 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds):
+instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F and lust of Carl > 0 and lust of Carl < 100 and (lastfuck of Carl - turns) > 8 and Candy is in Bunker and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: CARL/CANDY REPEAT SEX WALKIN [line break][line break]";
@@ -1443,7 +1446,7 @@ instead of going up from Grey Abbey Library while (HP of Carl > 9 and HP of Carl
 	say "     'Wow - that was great!' Candy pants after catching his breath, then continues with, 'You're a sexy beast with that knotted cock of yours.' In reply, Carl barks out 'Yeah, what can I say - your tight little hole brings out my wild side! Can't wait to sink my bone into this shapely bun the next time.' At that, he moves his hips a little bit, lightly pulling against the inside of Candy's pucker with the still fully hard knot inside him and making the coon gasp in lust from the sensation. Then he relents and pushes forward again, grinding his loins against the candy striper's butt while waiting for his knot to go down. You leave the two of them like that and go back down into the library.";
 	NPCSexAftermath Candy receives "AssFuck" from Carl;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 0 and Carl is in Grey Abbey 2F and David is in Bunker) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1466,7 +1469,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 	if Loyalty of Carl < 10:
 		increase Loyalty of Carl by 1; [for player heroics, and guidance]
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 4 and David is in Bunker):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 1 and Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 4 and David is in Bunker) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1506,7 +1509,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 	now thirst of Carl is 2;
 	NPCSexAftermath David receives "AssFuck" from Carl;
 
-instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 6 succeeds):
+instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 6 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1535,7 +1538,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		say "     You decide to give them their privacy and not go after them, though you can't help but hear a few gasped moans echo from back where the two soldiers went. Seems like they're having quite a bit of fun with each other...";
 	NPCSexAftermath David receives "AssFuck" from Carl;
 
-instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds):
+instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of Carl < 30 and thirst of Carl is 2 and Carl is in Grey Abbey 2F and David is in Bunker and (lastfuck of Carl - turns > 8) and (lastfuck of David - turns > 8) and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: CARL & DAVID - SEX WALK-IN - HP of CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";
@@ -1545,8 +1548,7 @@ instead of going to Bunker while (HP of David is 4 and HP of Carl > 3 and HP of 
 	say "     Literally tied to David by his cock, Carl stays like that, hips pressed against the young man's cheeks, but they do lie down on their sides in a bit more comfortable a position. 'Feels good to let off some steam, doesn't it?' Carl softly says to David and strokes his chest, who chuckles and replies 'Oh yeah - as crazy as it feels to say that. Before all this, I'd never have believed someone telling me that I'd let myself be mounted by a male superior, and a dog to boot. But having your knot in me sure feels nice...'";
 	NPCSexAftermath David receives "AssFuck" from Carl;
 
-
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 50 and Intelligence of Carl is 0 and gsd_pet >= 60 and gshep is tamed): [Carl present in the library, locked into regular/beta, first time, Korvin tamed and blackcollar]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 50 and Intelligence of Carl is 0 and gsd_pet >= 60 and gshep is tamed) and Player is not CoA: [Carl present in the library, locked into regular/beta, first time, Korvin tamed and blackcollar]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin FIRST Talk WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 	if HP of Carl is 10: [regular Carl]
@@ -1603,7 +1605,7 @@ after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of
 			now Intelligence of Carl is 99; [stopped beta Carl/Korvin]
 	now lastCarlKorvinInteraction is turns;
 
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 50 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4): [Carl present in the library, locked into regular, had a talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 50 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4) and Player is not CoA: [Carl present in the library, locked into regular, had a talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin Talk WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 	say "     Coming up the library stairs, you look see Carl and Korvin over in a reading nook, sitting next to each other on a sofa. The two of them are talking with one another, each with a bottle of beer in their hand. Curiosity directs your next steps closer to them, allowing you to overhear the soldier say, '...and that's how I ended up here.' Korvin's face shows a dark expression and he growls with his teeth showing, then barks out, 'Man, that Allen dude is a real bastard! I know you military guys are tight as fuck usually, must have been a low blow to be betrayed like that!' Carl simply frowns and nods in reply, with Korvin filling the uncomfortable silence after by taking a swig from his bottle.";
@@ -1625,7 +1627,7 @@ after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of
 
 [TODO: Add scene of Carl wanting to talk about Korvin - why he has a collar and all]
 
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 51 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4): [Carl present in the library, locked into regular, had the origin talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 51 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4) and Player is not CoA: [Carl present in the library, locked into regular, had the origin talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin Jerking WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 	say "     As you are halfway up the library stairs, you hear Carl calling out, 'Hey Korvin, come over here for a moment.' Climbing up the remaining steps, the husky comes into sight, standing at his window observation post, with Korvin coming up next to him, a curious expression on his face. The husky soldier's tail wags as he grins at his friend, then turns his gaze to the window, nodding at something beyond. 'Have a look, we got some stuff going on over there!' Curious, the German shepherd steps up besides his buddy, then Carl points at something. 'Look at those babies bounce, on both of em!' Korvin lets out a bark, his gaze zeroing in on the roof of a building across the road. You yourself take a few steps to see what's got them so interested, and a moment later you see them:";
@@ -1650,7 +1652,7 @@ after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of
 	now Intelligence of Carl is 52; [regular Carl and blackcollar Korvin jerked off together]
 	now lastCarlKorvinInteraction is turns;
 
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 52 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4): [Carl present in the library, locked into regular, had a wank before, Korvin tamed and blackcollar, 4+ turns since last encounter]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 52 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4) and Player is not CoA: [Carl present in the library, locked into regular, had a wank before, Korvin tamed and blackcollar, 4+ turns since last encounter]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin Talk WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 	say "     Coming up the library stairs, you look see Carl and Korvin over in a reading nook, sitting next to each other on a sofa. The two of them are talking with one another, each with a bottle of beer in their hand. Curiosity directs your next steps closer to them, allowing you to make out that they seem to be talking about their past conquest. Korvin is enthusiastically going into a lot of detail, complete with lewd gestures as he recounts, 'So, this goo thing was kinda purple in color, but see-through, offering itself to me for a fuck. Big boobs and a girly face, but down at the hips, she was packing a long schlong. Not solid or anything, just more goo. Man, it wiggled around like a tentacle and I had to smack it away a time or two as I was thrusting into the bitch. Now, you'd think that it's boring to just hump a big clump of jelly, but that stuff's alive in the best way! A moment after I had slammed into the mass, it molded itself into a pussy, tight as fuck and just made for my dick!'";
@@ -1681,7 +1683,7 @@ after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of
 	now lastCarlKorvinInteraction is turns;
 
 [
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 53 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4): [Carl present in the library, locked into regular, had the origin talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 53 and gsd_pet >= 60 and gshep is tamed and lastCarlKorvinInteraction - turns > 4) and Player is not CoA: [Carl present in the library, locked into regular, had the origin talk before, Korvin tamed and blackcollar, 4+ turns since last encounter]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin Sex WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 	say "     As you are halfway up the library stairs, you hear Korvin saying, 'Man, look at that huge bitch! Those are some nice melons on her!' Climbing up the remaining steps, the German shepherd comes into sight, standing next to Carl at his window observation post, overlooking the street. 'Oh hey, and there's someone else coming now, a dude. Looks like they're expecting each other,' the husky soldier comments the scene the two of them are observing, tail wagging in rhythm with Korvin as they enjoy their people-watching. Korvin chuckles and adds, 'Hah, what do you expect their kids will look like, with a big, scaly woman like that and a pathetic little runt like him to knock her up?' Carl replies, 'Hey, he's not so bad, downright cute really. Look at those pointy ears and that tail. [if player is male]I'm definitely not complaining that he isn't wearing pants either. [end if]And maybe they're just friends, hell could even be brother and sister, with the crazy changes everyone is going through, and -' The other dog laughs as Carl's words suddenly stop and Korvin grins at him.";
@@ -1710,7 +1712,7 @@ after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of
 ]
 
 [
-after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 54 and gsd_pet >= 60 and gshep is tamed and "Carl_Disagreement_Rules" is listed in Traits of Korvin and lastCarlKorvinInteraction - turns > 16): [Carl present in the library, locked into regular, Korvin tamed and blackcollar, talked to Korvin about rules, 16+ turns since last encounter]
+after going up from Grey Abbey Library while (Carl is in Grey Abbey 2F and HP of Carl is 10 and Intelligence of Carl is 54 and gsd_pet >= 60 and gshep is tamed and "Carl_Disagreement_Rules" is listed in Traits of Korvin and lastCarlKorvinInteraction - turns > 16) and Player is not CoA: [Carl present in the library, locked into regular, Korvin tamed and blackcollar, talked to Korvin about rules, 16+ turns since last encounter]
 	if debugactive is 1:
 		say "     DEBUG: Carl/Korvin Apology WALKIN; HP of Carl: [HP of Carl], Intelligence of Carl: [Intelligence of Carl][line break]";
 		say "     ...";

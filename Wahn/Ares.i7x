@@ -433,6 +433,10 @@ to say AresHelenParkFuck:
 			now HelenPregnant is 1;             [pregnancy timer]
 
 to say AresXerxesWalk:
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
+	else:
+		project Figure of Xerxes_awesome_soft_icon;
 	say "     As you look down at Xerxes, happily padding around in the library, you remember one of Mike's other dogs - Ares. With Mike busy caring for Lea, the human dog doesn't get out much from his kennel these days, so you decide to go and take him for a walk - and Xerxes too, while you're at it. You whistle to call Xerxes, making the dog with the buck-naked body of a young man immediately rush to you from where he was. He comes to stand beside you, looking happy at getting his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' he says with a wide grin[end if]. Explaining that you're gonna take him for a walk and to see the other dogs, you find yourself with a very exuberant and happy Xerxes, eager to go out with you. With your human dog by your side, you leave the library and make your way through the mostly empty streets, thankful that you seem to have chosen a lull in the creature activity in this area for your little excursion. Maybe they're asleep... or busy fucking each other - no matter which, you arrive unmolested at Mike's House not too much later and are greeted by the stag after knocking on the door.";
 	say "     'Oh, hello - and hello Xerxes,' he says, patting his head, then allowing him to trot inside and go see Lea. While the two human dogs happily yip and sniff at each other, Mike asks 'So, what brings you here? No problems with Xerxes, I hope?' Assuring him that you're very happy with having Xerxes as your pet, you tell him that you just wanted to take him and Ares out for a walk. The anthro stag smiles as he hears your explanation and he says [if HP of Ares is 1]'Ah, so you decided to take Ares out? Thanks a lot, that really helps and he and I appreciate it. There's a park in the residential area down the street, just a few blocks over. Just don't let him pull you around too much. He needs a bit of a firm hand.' [else if HP of Ares > 1]'Another trip with Ares? Thanks for taking such good care of him. Maybe, if we make it out of all this, I should hire you as a professional dog-walker.' [end if]With that, Mike just waves you into the kennel area and turns his attention to Xerxes and Lea, who were getting a bit wild in their reunion.";
 	WaitLineBreak;
@@ -459,6 +463,10 @@ to say AresXerxesWalk:
 to say AresXerxesParkMounting:
 	setmonster "Human";
 	choose row MonsterID from the Table of Random Critters;
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_hard_icon;
+	else:
+		project Figure of Xerxes_awesome_hard_icon;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		LineBreak;

@@ -29,23 +29,11 @@ Version 4 of Adam by Wahn begins here.
 Stamina of Adam is usually 10000.
 AdamDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 1 - Events
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 [...]
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 2 - NPC
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -85,13 +73,7 @@ to say AdamDesc:
 		say "DEBUG -> HP of Adam: [HP of Adam] <- DEBUG[line break]";
 	say "     The offspring of Elaine Scott and the minotaur out in the middle of the camp, Adam is a... half-minotaur you'd say. While his lower body consists of furred, two-jointed legs and hooves like his father's, from the waist up he's almost completely human, with only small nubby horns poking out from under his shoulder-length brown hair. All in all, he's much less bulky than his father, having a more slender build and the upper body of a fit young man of about nineteen. His handsome, beardless face is very open and he smiles a lot. At the moment he's dressed in a black t-shirt and wide camo-shorts - with a hole in the back to allow for his moderately long flexible tail (which has a larger tuft of brown fur at the end).";
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 3 - Conversation
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 instead of conversing Adam:
 	project Figure of Adam_icon;
@@ -245,13 +227,7 @@ to say AdamTalkSex: [Talk to Adam about sex, after sexing him up]
 	else:
 		say "     You bring the subject of sex to the half-minotaur, who immediately blushes, pulling his shoulder-length hair back and scratching his head slightly. 'It felt... really good. I think that was the best thing I've done in a while... you're really good with your hands.' he says, chuckling amidst every word. He's still nervous about this matter, but it's clear that he enjoyed it. 'Sometimes I... do it myself. It doesn't feel the same as when someone else is touching it, though... I wish we could do it more often...' Adam's cheeks are so red by now, and his breathing got slightly deeper, evident signs of arousal.";
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 4 - Sex
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 Instead of fucking Adam:
 	project Figure of Adam_icon;
@@ -701,13 +677,7 @@ to say AdamAssFucked: [give Adam's tight ass a good fucking]
 		NPCSexAftermath Adam receives "AssFuck" from Player;
 		NPCSexAftermath Adam receives "OralCock" from Player;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 5 - Fitness Training
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 to say AdamFitness:
 	if Stamina of Adam - turns < 9: [trained together in the last 24 hours]
@@ -922,13 +892,7 @@ to say AdamShowerAssPlay:
 	say "     You laugh back, grabbing Adam back up for a passionate kiss. His hot and wet body rubs against yours as you enjoy your shower moment just a little longer. 'This was good... you're so much fun to have around.' he says before he plants another kiss on your lips. 'We should probably finish up here before someone comes.' With the point taken, you both hurry up washing whatever's left from your sensual affair, turn off the water and grab a towel to dry yourself off. The half-minotaur follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
 	now lastfuck of Adam is turns;
 
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 Section 6 - Ending
-[***********************************************************]
-[***********************************************************]
-[***********************************************************]
 
 [
 Table of GameEndings (continued)

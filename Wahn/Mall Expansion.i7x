@@ -9,7 +9,7 @@ Version 1 of Mall Expansion by Wahn begins here.
 lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 10000.
 BullTerrierSiblingsVar is a number that varies.
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is listed in companionList of Player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is listed in companionList of Player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin sniffs out a fertile bull terrier - BullTerrierSiblingsVar: [BullTerrierSiblingsVar][line break]";

@@ -1007,7 +1007,7 @@ to say FirstTimeGabrielSleepBJ:
 		say "     Grabbing a handful of his brown curls, you wrench the tamed angel back from your cock and give him a stern talking-to. With him soon being almost in tears, you declare that he will not be getting what he wanted because of his disobedience. Instead, you keep a tight grip on his hair and jerk off, quickly pushing yourself over the edge and blasting cum all over his glorious curls to give him a somewhat patchy appearance. With a dire warning that he may not remove the cum until it's well and truly dried, you send him scurrying away.";
 		now Libido of Gabriel is 12; [sleep sucking forbidden]
 
-after of going to Bunker while (David is bunkered and Gabriel is bunkered and Charisma of Gabriel is 0):
+after of going to Bunker while (David is bunkered and Gabriel is bunkered and Charisma of Gabriel is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Talk Walkin[line break]";
 	say "     As you enter the bunker, you see David and Gabriel stand not too far away, next to one of the side walls of the underground refuge. They're talking, with the male soldier's back turned your way and you overhear David say, 'Wait, you mean -?' 'Yes, I'm the [master]'s servant. Before, I was someone else, something else. [SubjectProCap of Player] fought and won against me, held me down and changed me. Now I belong to [ObjectPro of Player].' Gabriel pats the leather restraint cuffs resting around his wrists, then lowers his hands to rest just above his crotch as he bends his head. 'B-but that's slavery! No one can own other people!' David replies in a shocked tone, only to find the angel reaching out to cover his mouth with a gentle touch of his fingers. 'My kind was made to serve, to follow the grand plan to perfection. But how could I do so after having been changed? Impure thoughts in my head and the urges of this new flesh between my legs, they mark me as an abomination. I bear the mark of the [master], so now I serve [ObjectPro of Player].'";
@@ -1099,12 +1099,12 @@ to say GabrielDavidInteractionStatus:
 		-- 99: [interaction forbidden]
 			say "Lowering his head in a show of submission, Gabriel says, 'I've been avoiding him, as you commanded. It isn't always easy, living here together and with him curious and trying to talk to me. But I can manage it and obey.'";
 
-after of going to Bunker while (David is bunkered and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)): [he needs to talk about Gabriel]
+after of going to Bunker while (David is bunkered and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [he needs to talk about Gabriel]
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
 	say "[DavidGabrielTalkAftermath]";
 
-after of going to Parade Ground while (David is in Parade Ground and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)): [he needs to talk about Gabriel]
+after of going to Parade Ground while (David is in Parade Ground and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [he needs to talk about Gabriel]
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
 	say "[DavidGabrielTalkAftermath]";
@@ -1191,7 +1191,7 @@ to say DavidGabrielTalkAftermath2:
 
 
 
-after of going to Bunker while (David is bunkered and Gabriel is bunkered and (Charisma of Gabriel is 11 or Charisma of Gabriel is 31 or Charisma of Gabriel is 51 or Charisma of Gabriel is 71) and Libido of Gabriel > 9 and Stamina of Gabriel - turns > 7 and (Intelligence of Gabriel is 1 or Intelligence of Gabriel is 41)): [Gabriel + David present, David and player talked after precious scene, Gabriel Cumslut Stage 2, not fed cum for a day, sex allowed]
+after of going to Bunker while (David is bunkered and Gabriel is bunkered and (Charisma of Gabriel is 11 or Charisma of Gabriel is 31 or Charisma of Gabriel is 51 or Charisma of Gabriel is 71) and Libido of Gabriel > 9 and Stamina of Gabriel - turns > 7 and (Intelligence of Gabriel is 1 or Intelligence of Gabriel is 41)) and Player is not CoA: [Gabriel + David present, David and player talked after precious scene, Gabriel Cumslut Stage 2, not fed cum for a day, sex allowed]
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Cumslut Walkin[line break]";
 	say "     As you enter the main room of the bunker, you see the white-winged form of Gabriel stand over to the side, at the end of one of the numerous beds down here. He is bare-ass naked except for the collar and cuffs you put on him. Meanwhile, the bed is occupied by the sleeping form of David, obviously completely unaware yet of the attention your angelic pet is giving him. Then Gabriel leans forward and reaches out to take hold of the blanket covering the stretched-out soldier, gently lifting it and pulling it down over his form. He feasts his eyes on David's bare chest, putting a hand on it and slowly stroking over the light fuzz covering his pecs, then the treasure trail down towards the man's crotch. Still hesitating before he lays his fingers on the fabric of the somewhat oversized pair of boxer shorts the soldier must have scavenged somewhere, Gabriel becomes aware of you at that moment. He flinches and looks up with a guilty expression as he meets your eyes, the hand frozen in movement just above David's crotch.";

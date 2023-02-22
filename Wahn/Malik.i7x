@@ -334,7 +334,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 	move Malik to Looted Shops;
 	now Intelligence of Malik is 1; [moving in and out of the Looted Shops room]
 
-after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris is 2 and Stamina of Chris > 0 and Strength of Chris > 0 and Stamina of Malik - turns > 4 and a random chance of 1 in 3 succeeds):
+after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris is 2 and Stamina of Chris > 0 and Strength of Chris > 0 and Stamina of Malik - turns > 4 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Malik training scene; Strength of Chris: [Strength of Chris], Stamina of Chris: [Stamina of Chris], Stamina of Malik: [Stamina of Malik][line break]";
 	let randomnumber be a random number from 1 to 3;

@@ -1,6 +1,6 @@
 Version 1 of Bad Alexandra by Wahn begins here.
-[ Originally authored by Stripes                    ]
-[ Version 1 - Separation from Good Alexandra        ]
+[ Originally authored by Stripes                      ]
+[ Version 1 - Separation from Good Alexandra          ]
 [ Version 1.1 - Beta Fang Content added by Prometheus ]
 
 [ HP of Alexandra                                   ]
@@ -1284,7 +1284,7 @@ To impregAlexandraChance with (x - text):
 	if "Fertility Treatments" is listed in Traits of Alexandra:
 		increase AlexandraPregChance by 2; [20% extra chance]
 		increase MaxPups by 2; [2 more max pups]
-	if Sterile of Alexandra is false and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
+	if Sterile of Alexandra is false and Sterile of Player is false and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
 		now AlexandraGrowingPups is a random number between 2 and MaxPups;
 		if debugactive is 1:
 			say "     Impregnation successful! [AlexandraGrowingPups] pups are growing in Alexandra now!";
@@ -1316,6 +1316,8 @@ To impregAlexandraChance with (x - text):
 			say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
 			if Sterile of Alexandra is true:
 				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
+			if Sterile of Player is true:
+				say "     Note: The Player is sterile, so no matter how high the chance is, it can't succeed.";
 
 an everyturn rule:
 	if HP of Alexandra > 0 and HP of Alexandra < 50:
@@ -1420,7 +1422,7 @@ an everyturn rule:
 				now AlexandraGrowingPups is 0; [no pups in her now]
 				now lust of Alexandra is 0;
 				now HP of Alexandra is 4;
-		else if Fang is booked and Fang is Male and HP of Fang < 6 and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned:
+		else if Fang is booked and Fang is Male and HP of Fang < 6 and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned and Player is not CoA:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			project Figure of Fang_hard_icon;
 			if level of Alexandra is 0: [first time]

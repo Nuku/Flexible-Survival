@@ -1975,7 +1975,7 @@ to say SpikeSleepSex5:
 
 Section 6 - NPC Interaction (Tehuantl)
 
-instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and doberman companion is tamed and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
+instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and doberman companion is tamed and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: Tehuantl/Spike Talk Walkin; Energy of Spike: [Energy of Spike][line break]";
@@ -2082,7 +2082,7 @@ instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turn
 			now Energy of Spike is 100; [stopped things cold]
 	now LastTehuantlSpikeScene is turns;
 
-instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and Energy of Spike > 3 and Energy of Spike < 100 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
+instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and Energy of Spike > 3 and Energy of Spike < 100 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	say "     As you walk up the stairs of the library, you're greeted by the sight of Tehuantl standing at one of the windows, dutifully keeping watch. His gaze sweeps over the street outside, left and right, before he glances into the interior of the building a little while later and sees you. As your eyes meet, the jaguar's tail twitches and he starts walking over, clearly having something on his mind that he needs to talk to you about. Kneeling before you, he says, 'Tlacahua,' falling back to his natural Nahuatl word for master. 'I humbly beg your guidance. As you know, I have been instructing your [if MaxHP of Spike is 1]offspring[else]canine follower[end if], teaching him the arts of war. Part of that is bonding with your fellow warriors, but recently I fear I strayed beyond what I should. In the throes of lust, I dirtied his fur with my seed, then licked him clean. As his scent filled my nose I admit I felt the desire to serve him as I do you. Physically, not just as a warrior-slave.'";
 	LineBreak;
@@ -2113,20 +2113,20 @@ instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F 
 		now Energy of Spike is 100; [stopped things cold]
 
 [
-after navigating Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and Spike is in Sitting Area and Energy of Spike > 0 and Energy of Spike < 4 and HP of Tehuantl > 49 and HP of Tehuantl < 100):
+after navigating Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and Spike is in Sitting Area and Energy of Spike > 0 and Energy of Spike < 4 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
 	say "     You arrive at the library and climb the steps to the front door, then slip inside, happy to have made it back to your refuge. Yet almost as soon as the door swings shut behind you, fighting noises reach your ears, coming from somewhere upstairs. Concerned about the people you've brought here, you quickly rush up the stairs, almost stumbling once or twice as you jump over a few of them in your haste. What awaits you upstairs is a fight, but surely not what you expected it to be: One of the two opponents is Tehuantl, carrying nothing but his shield and using it to deflect blows rained onto him by Spike, and with a mop of all things. 'Faster! Try to switch up your moves, some low, some high!' the jaguar warrior calls out to the young dobie with a grin on his muzzle, then easily parries another swipe of the improvised weapon. ";
 ]
 
 Section 7 - NPC Interaction (Urik, controlled)
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerControlled of Urik is true and Stamina of Spike is 0):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerControlled of Urik is true and Stamina of Spike is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
 	say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
 	say "[SpikeMeetsUrik_Control]";
 
-after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerControlled of Urik is true and Stamina of Spike is 0):
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerControlled of Urik is true and Stamina of Spike is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2150,7 +2150,7 @@ to say SpikeMeetsUrik_Control:
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 1 and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 1 and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2179,7 +2179,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
 
-after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 2 and a random chance of 1 in 2 succeeds):
+after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 2 and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2215,7 +2215,7 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 		say "     Quietly chuckling to yourself about how much Urik seems to enjoy the drill instructor role, you busy yourself with some other things, like having a look out the windows to ovserve the approaches to the library for example. While you do that, the two men continue running without pause, with Spike panting louder every time he passes. Eventually, the young man can't help but stumble to a stop, bracing his upper body with his arms on both thighs as he gasps for breath. Stepping up close to tower over him, Urik gruffly remarks, 'That's it? Already winded, boy? With this little stamina, you might just outrun a street dog. A three-legged one, with fleas!' Not really ready to give any sort of verbal reply, Spike shows the orc his middle finger, which makes Urik laugh. 'Fun aside, I'm impressed. Ya didn't whine or beg, just kept running. Good doggie!' He gives the dobie a 'friendly' slap on the back that's still hard enough to send the anthro dog stumbling forward, then chuckles as he moves away.";
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2256,7 +2256,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 52; [new weights for Spike, future trainings without shakes]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 4 or Stamina of Spike is 52) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 4 or Stamina of Spike is 52) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2286,7 +2286,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		now Stamina of Spike is 53; [training without shakes, shirtless pushups done]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 5) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 5) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2304,7 +2304,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Stamina of Spike is 6; [Spike got a jockstrap now]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 6 or Stamina of Spike is 53) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 6 or Stamina of Spike is 53) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Story Time - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2339,7 +2339,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	increase Stamina of Spike by 1; [either it's 7 or 54 now - storytime with Urik]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 7 or Stamina of Spike is 54) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 7 or Stamina of Spike is 54) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2377,7 +2377,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 8 or Stamina of Spike is 55) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 8 or Stamina of Spike is 55) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2410,8 +2410,6 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
-
-
 
 to say SpikeTalk11: [talk about Urik]
 	if Stamina of Spike is 1:
@@ -2501,7 +2499,7 @@ to say SpikeTalk11: [talk about Urik]
 
 Section 8 - NPC Interaction (Urik, befriended)
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2511,7 +2509,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, still keeping the dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
 	say "[SpikeMeetsUrik_Friend]";
 
-after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40): [excludes forcefully broken in Spike]
+after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40) and Player is not CoA: [excludes forcefully broken in Spike]
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2562,7 +2560,7 @@ to say SpikeMeetsUrik_Friend:
 		add "Spike_Player_Son" to Traits of Urik; [he knows]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 1 and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 1 and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2582,7 +2580,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 2; [Spike got his first (normal energy) drink]
 	now SpikeEventCooldown is turns;
 
-after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 2 and a random chance of 1 in 2 succeeds):
+after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 2 and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2601,7 +2599,7 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 	now Dexterity of Spike is 3; [Spike got his second (normal) drink]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 3 or Dexterity of Spike is 50 or Dexterity of Spike is 51) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 3 or Dexterity of Spike is 50 or Dexterity of Spike is 51) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2623,7 +2621,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 4; [new weights for Spike]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 4 or Dexterity of Spike is 52) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 4 or Dexterity of Spike is 52) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2644,7 +2642,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 5; [training without shakes, shirtless pushups done]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 5) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 5) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2678,7 +2676,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 6; [Spike got a jockstrap now]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 6) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 6) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Story Time - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2711,7 +2709,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 7; [storytime with Urik done]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 7) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 7) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;
@@ -2767,7 +2765,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	now Dexterity of Spike is 8; [Urik and Spike did Yoga]
 	now SpikeEventCooldown is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 8 or Dexterity of Spike is 55) and a random chance of 1 in 2 succeeds):
+after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 8 or Dexterity of Spike is 55) and a random chance of 1 in 2 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
 	try looking;

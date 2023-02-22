@@ -14,6 +14,10 @@ instead of going up from Bunker while (Xerxes is in Grey Abbey Library and Snow 
 to say XerxesSnowInteraction:
 	if debugactive is 1:
 		say "     DEBUG: NPC INTERACTION WALKIN - XERXES/SNOW[line break]";
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
+	else:
+		project Figure of Xerxes_awesome_soft_icon;
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1: [playing ball]
@@ -126,6 +130,10 @@ instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl >
 to say CarlXerxesInteraction:
 	if debugactive is 1:
 		say "     DEBUG: NPC INTERACTION WALKIN - CARL/XERXES[line break]";
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
+	else:
+		project Figure of Xerxes_awesome_soft_icon;
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1: [playing ball]
@@ -154,6 +162,7 @@ instead of going up from Bunker while (Carl is in Grey Abbey 2F and HP of Carl >
 to say CarlHelenInteraction:
 	if debugactive is 1:
 		say "     DEBUG: NPC INTERACTION WALKIN - CARL/HELEN[line break]";
+	project Figure of Helen_naked_icon;
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1: [playing ball]
