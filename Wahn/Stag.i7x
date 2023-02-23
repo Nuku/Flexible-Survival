@@ -638,8 +638,8 @@ instead of conversing Mike:
 			say "     ([link]N[as]n[end link]) - Female.";
 			if Player consents:
 				LineBreak;
-				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Xerxes, a black-haired male looking about nineteen years old, with muscled runner's legs and strong arms. He attentively looks to Mike as he explains that you're his new master, then comes over to you to sniff you and lick your hand.";
-				say "     After getting a bottle of lube as additional present from Mike, you bring your new pet to the library. Hopefully he'll make a good guard-dog... although the other possibilities sound enticing too.";
+				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Xerxes, a black-haired male looking about nineteen years old, with muscled runner's legs and strong arms. He attentively looks to Mike as he explains that you're his new master, then comes over to you to sniff you and lick your hand. After getting a bottle of lube as additional present from Mike, you bring your new pet to the library. Hopefully he'll make a good guard-dog... although the other possibilities sound enticing too.";
+				project Figure of Xerxes_soft_icon;
 				move Xerxes to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
 				now HP of Xerxes is 1;
@@ -648,6 +648,7 @@ instead of conversing Mike:
 				say "     Mike takes you to the kennel, where you have a look at his 'dogs'. In the end, you choose Helen, a black haired female looking about nineteen years old, with a shapely body and nice perky breasts. She attentively looks to Mike as he explains that you're her new master, then comes over to you to sniff you and lick your hand.";
 				say "     Looking down over Helen's naked body, Mike strokes the bulge in his pants, then looks back to you. 'I used condoms when I picked her cherry and trained her, so no worries about that. If you plow that field and bring out some seeds, they're all yours. Might be best to act quick if you got any male pets or want to take her out for walks without all kinds of critters smelling a fertile female...'";
 				say "     You bring your new pet to the library. Hopefully she'll make a good guard-dog... although the other possibilities sound enticing too.";
+				project Figure of Helen_naked_icon;
 				move Helen to the Grey Abbey Library;
 				move player to the Grey Abbey Library;
 				now HP of Helen is 1;
@@ -786,14 +787,17 @@ to say XerxesDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Xerxes], LUST: [lust of Xerxes] <- DEBUG[line break]";
 	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
 		say "     Originally one of Mike's dogs, Xerxes is now a young human male of about nineteen. He has short black hair and a well-developed physique, with muscular arms and legs. All in all a very handsome guy - but no matter what he looks like - there's still only a dog's mind behind his eyes, so he walks on all fours and only uses barks and growls as communication. He watches you attentively, eager to follow the commands of his master";
 		if lust of Xerxes is 2:
 			say ". You are quite pleased by having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young man that would make him even more [if carried of awesome fruit > 0][link]awesome[as]give awesome fruit to Xerxes[end link][else]awesome[end if]";
 		say ".";
 	else if lust of Xerxes is 3:
+		project Figure of Xerxes_awesome_soft_icon;
 		say "     Originally one of Mike's dogs, Xerxes is now a young human male of about nineteen. His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan. His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place. All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
 		say "     He has started to act a little differently since you gave him that strange fruit though. Sometimes, it's as simple as him giving you a more human smile than a canine one when he looks at you. He seems to listen more attentively and his barks aren't as loud and excited. Other times, he's trying to pick up his various dog toys with his hands. You've even spotted him trying to stand on his hind legs as a begging dog would all on his own. When he notices you watching, he barks happily and waits attentively for the commands of his master.";
 	else:
+		project Figure of Xerxes_awesome_soft_icon;
 		say "     Originally one of Mike's dogs, Xerxes is now a young human male of about nineteen. His beautiful body is fit and toned with muscular arms and legs and his skin possesses a light, even tan. His handsome face is framed by long, black hair that goes down to his shoulders and never seems to have a hair out of place. All in all, he's a very handsome guy, but inside he's still a loyal and obedient dog.";
 		if lust of Xerxes is 7:
 			say "     Wearing nothing, the only adornment he has is the detailed tattoo he received when visiting Kara. Starting at his neck is a detailed collar of deep black with red spikes added to it. Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good boy' written on it in cursive writing. Also attached to it is a red leash that hangs down from his neck, crosses one of his smooth pecs and goes back over his left shoulder to run down his back. Just a few inches before reaching the handhold, the red switches into rainbow banding, ending in a purple loop [']resting['] against his ass. The whole tattoo is very detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into his skin.";
@@ -802,10 +806,13 @@ to say XerxesDesc:
 
 instead of conversing Xerxes:
 	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him and talk with him. Or rather to him - as he still only has the mind of a dog and mostly replies with 'Woof?', 'Woof.' and 'Woof!'";
 	else if lust of Xerxes is 3:
+		project Figure of Xerxes_awesome_soft_icon;
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him and talk with him. Or rather to him, though he seems to be listening to you more attentively than he has in the past, almost as if he can understand you. Certainly his barks of response seem more varied and coincide with points you bring up.";
 	else:
+		project Figure of Xerxes_awesome_soft_icon;
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him. He [one of]snuggles up at your feet[or]rests his head in your lap[at random] and listens to you talk. He doesn't say much and mostly barks in response, but will occasionally use one of his spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being his favorites, though you've heard him use at least a couple dozen and he seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastXerxesTalk - turns > 8:
@@ -824,10 +831,16 @@ Instead of fucking Xerxes:
 	if (lastfuck of Xerxes - turns < 5):
 		say "     Xerxes still seems a bit worn out from the last fun-time. Let him rest a bit more...";
 	else if lust of Xerxes is 3:
+		project Figure of Xerxes_awesome_hard_icon;
 		say "[AwesomeXerxesSex0]";
 	else if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and player is not neuter:
+		project Figure of Xerxes_awesome_hard_icon;
 		say "[AwesomeXerxesSex1]";
 	else:
+		if lust of Xerxes < 3:
+			project Figure of Xerxes_hard_icon;
+		else:
+			project Figure of Xerxes_awesome_hard_icon;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -1426,8 +1439,8 @@ instead of trading the awesome fruit when the current action involves the Xerxes
 	if lust of Xerxes < 2:
 		say "     Aren't you jumping the gun a little?";
 	else if lust of Xerxes is 2:
-		say "     Looking over at the young man with the mind of a dog, you can't help but smile at what a fine pet he's turned out to be. Deciding to see if you might make him even more awesome, you pull out the strange fruit you found and call him over. Hearing you call for him, he comes rushing over on all fours with a happy bark, panting with a big doggy smile on his face. You pet the young man's head and scritch his ears.";
-		say "     Holding out the shiny fruit, you give it a little shake and his eyes lock on it. 'Does my good boy want a treat?' Xerxes bounds around you and barks excitedly. Telling him to sit, he obediently plops down onto his rear, sitting attentively. Running him through a few other tricks, you rub his head again, call him a good boy again and give him the fruit.";
+		project Figure of Xerxes_awesome_soft_icon;
+		say "     Looking over at the young man with the mind of a dog, you can't help but smile at what a fine pet he's turned out to be. Deciding to see if you might make him even more awesome, you pull out the strange fruit you found and call him over. Hearing you call for him, he comes rushing over on all fours with a happy bark, panting with a big doggy smile on his face. You pet the young man's head and scritch his ears. Holding out the shiny fruit, you give it a little shake and his eyes lock on it. 'Does my good boy want a treat?' Xerxes bounds around you and barks excitedly. Telling him to sit, he obediently plops down onto his rear, sitting attentively. Running him through a few other tricks, you rub his head again, call him a good boy again and give him the fruit.";
 		say "     Laying down on the floor, he gives the fruit a sniff and pants happily. Pressing the large fruit between his balled-up hands as if they were paws, he fumbles to keep it in place as he takes big bites out of it. As he consumes its juicy flesh, subtle changes start to occur. His body, already quite fit, becomes perfectly toned while his skin gains a nice, even tan and loses any imperfections. His hair, previously short and unkempt, grows out into long, flowing locks. As he's finishing off the fruit, he's moved to sitting and holding the fruit in his hands. After gulping down the last bite, he licks his fingers clean and then gives you a rather human smile before barking happily and dashing off on all fours. As he goes off, the view has you fairly certain that his cock and balls have also grown a little.";
 		now lust of Xerxes is 3;
 	else:

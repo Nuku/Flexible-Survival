@@ -1154,7 +1154,7 @@ after of going to Parade Ground while thirst of David is 5 and HP of David is 3:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, OK - just buddies, you say. I'll go back to Ann then when all this is over.'";
 
-after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and (DavidBunkerEntry - turns > 8) and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50 and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 0) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
@@ -1194,7 +1194,7 @@ after of going to Bunker while Dexterity of David is 0 and HP of David is 4 and 
 			say "     Walking over towards David's bed, you shake your head at Sven as he sits down next to the sleeping man, but the snow leopard doesn't really notice it, being all eyes for the handsome soldier. He has already started to gently tug the blanket off David by the time you get there, revealing part of the man's naked, muscular chest. Then you're up close and in Sven's face, doing your best to keep quiet and not wake David as you give the snow leopard a clear head-shake in negation and make shooing motions away from the soldier.";
 			say "     Sven looks from you to the sleeping man, pointing at the two of you and pantomiming with his hands gripping each other, then shrugs and gives a bit of a disappointed huff. He throws you a somewhat reluctant nod, then leans in and teasingly runs his hand over the curve of David's erection, making the man moan in his sleep. After steeling that little touch, the snow leopard gives David a last hungry look before flouncing away. This leaves you standing next to a still sleeping soldier, leaving the man none the wiser that he almost got a 'happy ending' to his dream from your feline friend.";
 
-after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50:
+after of going to Bunker while Dexterity of David is 1 and HP of David is 4 and Sven is in Bunker and HP of Sven >= 8 and HP of Sven < 50 and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: DAVID/SVEN (DEXTERITY 1) WALKIN[line break]";
 	if HP of Sven < 30: [pet Sven]
@@ -1227,7 +1227,7 @@ after of going to Bunker while thirst of David is 5 and HP of David is 4:
 		now thirst of David is 10; [fuck-buddy]
 		say "     'Oh, OK - just buddies, you say. I'll go back to Ann then when all this is over.";
 
-after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0 and Eric is not slutstored: [David spots Eric's genitals and wants to talk about them]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 0 and Eric is not slutstored and Player is not CoA: [David spots Eric's genitals and wants to talk about them]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1269,7 +1269,7 @@ after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP 
 	else:
 		say "ERROR-Eric-[HP of Eric]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
-after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50): [David finds out about Erica]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric is 200 and (lust of Erica is 0 or lust of Erica is 50) and Player is not CoA: [David finds out about Erica]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERICA (LUST [lust of DAVID]) 1 WALKIN[line break]";
 	project the figure of David_face_icon;
@@ -1281,7 +1281,7 @@ after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP
 		say "     You shake your head and reply that that's not quite it and make some vague mentions of Erica's extraordinary transformations, as compared to the regular stuff going on these days. David looks over to Erica and opens his mouth to ask for specifics, but you put a hand on his arm and shake your head. After all, Erica might not want just anyone to know everything about her, so David will just have to ask her himself if he is curious enough. That explanation seems enough for the young man... for now, but the interested gleam in his eye shows you that it won't be the end of it with him.";
 	now lust of Erica is 1;
 
-after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1: [David talks with Eric about his gender and they exchange stories]
+after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1 and Player is not CoA: [David talks with Eric about his gender and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/ERIC TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1289,7 +1289,7 @@ after of going to Bunker while Eric is in Bunker and thirst of David > 5 and HP 
 	say "     [DavidEricTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if Player is in Bunker and Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1:
+	if Player is in Bunker and Eric is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Eric > 0 and lust of Eric is 1 and Player is not CoA:
 		say "     As you spend some time in the bunker, you notice David and Eric sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricTalk]";
@@ -1299,7 +1299,7 @@ An everyturn rule: [you can just wait for them to talk too]
 		now Libido of David is 81; [The urges push through]
 		now BrutusEscalationTimer is 0;
 
-after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1: [David talks with Erica and they exchange stories]
+after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1 and Player is not CoA: [David talks with Erica and they exchange stories]
 	if debugactive is 1:
 		say "     DEBUG: DAVID/Erica TALK WALKIN[line break]";
 	say "     As you enter the bunker, you see David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
@@ -1307,12 +1307,12 @@ after of going to Bunker while Erica is in Bunker and thirst of David > 5 and HP
 	say "     [DavidEricaTalk]";
 
 An everyturn rule: [you can just wait for them to talk too]
-	if Player is in Bunker and Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1:
+	if Player is in Bunker and Erica is in Bunker and thirst of David > 5 and HP of David is 4 and HP of Erica > 0 and lust of Erica is 1 and Player is not CoA:
 		say "     As you spend some time in the bunker, you notice David and Erica sitting together on one of the far bunks, talking. Curious about what's going on, you unobtrusively walk closer and overhear:";
 		LineBreak;
 		say "     [DavidEricaTalk]";
 
-instead of going to Bunker while HP of David is 4 and (Libido of David is 57): [David wants Brutus to get out more]
+instead of going to Bunker while HP of David is 4 and (Libido of David is 57) and Player is not CoA: [David wants Brutus to get out more]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS TRIP INTERACTION[line break]";
@@ -1320,7 +1320,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 57): [
 	say "     As you enter the bunker, David is already waiting for you and waves you over. When you come closer, he says, 'I've been thinking... about Brutus, you know. He's never had a normal life, has he? Just forever as a rampaging beast like that one demon who attacked me.' The young man shudders, rubbing the healed claw-mark on his side as he thinks back to it, then catches himself and continues, 'So - how about we take Brutus out for a nice trip or two, show him what he's been missing. Come on, it'll be good for him and between the three of us, there shouldn't be too much danger in going outside. I bet you know a few nice places to visit. Just talk to me if you wanna go out...'";
 	now Libido of David is 58;
 
-instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or Libido of David is 1 or Libido of David is 50 or Libido of David is 52 or Libido of David is 58 or Libido of David is 81 or Libido of David is 83) and demon brute is listed in companionList of Player: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or Libido of David is 1 or Libido of David is 50 or Libido of David is 52 or Libido of David is 58 or Libido of David is 81 or Libido of David is 83) and demon brute is listed in companionList of Player and Player is not CoA: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 1[line break]";
@@ -1465,7 +1465,7 @@ instead of going to Bunker while HP of David is 4 and (Libido of David is 0 or L
 		say "     It is clear that he has genuine feelings about David and does feel very attached to the young soldier. Still, the purple giant's careful choice of words to you just now makes you think that... there might be more to this. You should think carefully if you really do want to fulfill his request.";
 		now Libido of David is 84;
 
-instead of going to Bunker while HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 52 and Libido of David < 80 and a random chance of 1 in 3 succeeds: [David reacts when the player comes in with the demon brute pet]
+instead of going to Bunker while HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 52 and Libido of David < 80 and a random chance of 1 in 3 succeeds and Player is not CoA: [David reacts when the player comes in with the demon brute pet]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: DAVID/BRUTUS INTERACTION 2[line break]";
@@ -1489,7 +1489,7 @@ instead of going to Bunker while HP of David is 4 and demon brute is listed in c
 		else: [Brutus is rather more obvious]
 			say "     As you walk into the bunker with Brutus in tow, the large demon makes a beeline for David, who was just [one of]reading a book[or]sorting through his supplies[or]cleaning his weapon[or]making his bed[or]folding his clothes[at random]. With a loud 'Hey there, David!' he pulls the young soldier into a tight embrace, the smaller human pressed against his muscled chest. Then he lowers his head and runs his forked tongue along his friend's neck before giving him a lust-filled kiss that is eagerly returned. Watching them make out, you notice the demon's hand cupping David's ass as he holds him, giving it an appreciative squeeze. Putting the man down some short while later, Brutus walks back to you and takes his usual place - behind your shoulder on the right side.";
 
-instead of navigating Grey Abbey Library while (HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 81 and Libido of David < 86 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while (HP of David is 4 and demon brute is listed in companionList of Player and Libido of David > 81 and Libido of David < 86 and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1887,7 +1887,7 @@ instead of going down from the Grey Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and royal tiger is listed in companionList of Player and (lastRyouseiDavidInteraction - turns > 6)):
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and royal tiger is listed in companionList of Player and (lastRyouseiDavidInteraction - turns > 6)) and Player is not CoA:
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

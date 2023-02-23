@@ -14,7 +14,7 @@ ResolveFunction of Gryphon Milkman is "[ResolveEvent Gryphon Milkman]".
 Sarea of Gryphon Milkman is "Outside".
 when play begins:
 	add Gryphon Milkman to BadSpots of FurryList;
-	add Gryphon Milkman to badspots of HermList;
+	add Gryphon Milkman to BadSpots of HermList;
 
 to say ResolveEvent Gryphon Milkman:
 	project the figure of Garrett_icon;
@@ -33,7 +33,7 @@ ResolveFunction of Free Milk is "[ResolveEvent Free Milk]".
 Sarea of Free Milk is "Outside".
 when play begins:
 	add Free Milk to BadSpots of FurryList;
-	add Free Milk to badspots of HermList;
+	add Free Milk to BadSpots of HermList;
 
 to say ResolveEvent Free Milk:
 	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
@@ -49,7 +49,7 @@ ResolveFunction of Abandoned Milk is "[ResolveEvent Abandoned Milk]".
 Sarea of Abandoned Milk is "Outside".
 when play begins:
 	add Abandoned Milk to BadSpots of FurryList;
-	add Abandoned Milk to badspots of HermList;
+	add Abandoned Milk to BadSpots of HermList;
 
 to say ResolveEvent Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
@@ -156,29 +156,34 @@ to say garrettsexmenu:
 		now player_puregryph is true;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Hand job";
 	now sortorder entry is 1;
-	now description entry is "share a mutual hand-job with the male gryphon";
+	now description entry is "Share a mutual hand-job with the male gryphon";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked";
 	now sortorder entry is 2;
-	now description entry is "let Garrett mount you and fill you";
+	now description entry is "Let Garrett mount you and fill you";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Fuck him";
 	now sortorder entry is 3;
-	now description entry is "pound the gryphon stud's ass";
+	now description entry is "Pound the gryphon stud's ass";
+	[]
 	if Player_puregryph is true:
 		if lasthgryphon_TG is not 255:
 			choose a blank row in table of fucking options;
 			now title entry is "Gryphon 3some";
 			now sortorder entry is 6;
-			now description entry is "have a threesome with another male gryphon";
+			now description entry is "Have a threesome with another male gryphon";
 		if lastfgryphon_TF is not 255:
 			choose a blank row in table of fucking options;
 			now title entry is "Feral 3some";
 			now sortorder entry is 7;
-			now description entry is "have a threesome with a feral gryphon";
+			now description entry is "Have a threesome with a feral gryphon";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";

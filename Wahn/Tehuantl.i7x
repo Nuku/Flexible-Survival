@@ -100,7 +100,7 @@ to say TehuantlSex:
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing herself, paying particular attention to her groin[or]lounging around the library[at random], you consider having some fun with her.";
 			say "[TehuantlSexMenu]";
 		else:
-			project the Figure of Tehuantl_Male_clothed_icon;
+			project the Figure of Tehuantl_Male_hard_icon;
 			say "     Spotting your feline pet [one of]stretching suggestively[or]bathing himself, paying particular attention to his groin[or]lounging around the library[at random], you consider having some fun with the muscular jaguar.";
 			say "[TehuantlSexMenu]";
 
@@ -478,7 +478,7 @@ after navigating Grey Abbey Library:
 		say "     The air is still thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat. You can't help but wonder about finding something to help the poor [bold type]feline[roman type] find some [bold type]relief[roman type].";
 	else if HP of Tehuantl > 14:
 		if TehuantlStatus is 2:
-			if a random chance of ( lastfuck of Tehuantl - turns ) in 20 succeeds:
+			if a random chance of ( lastfuck of Tehuantl - turns ) in 20 succeeds and Player is not CoA:
 				say "[TehuantlBunkerScenes]";
 			else:
 				say "     The air is thick with the powerful scent of feline arousal. It would seem Tehuantl is still in heat once again.";
@@ -580,7 +580,7 @@ to say ResolveEvent Feline Relief:
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 
-instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)):
+instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turns > 6) and (Tehuantl is in Grey Abbey 2F and Libido of Tehuantl < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (HP of Carl > 9 and HP of Carl < 50 and Carl is in Grey Abbey 2F)) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/CARL TALK WALKIN; Libido of TEHUANTL: [Libido of Tehuantl][line break]";
@@ -630,7 +630,7 @@ instead of going up from Grey Abbey Library while ((LastTehuantlCarlScene - turn
 			NPCSexAftermath Tehuantl receives "AssFuck" from Carl;
 	now LastTehuantlCarlScene is turns;
 
-instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed)):
+instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - turns > 6 and (Tehuantl is in Grey Abbey 2F and TehuantlKorvinRelationship is 0 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and (gsd_pet >= 60 and gshep is tamed) and Player is not CoA):
 	move player to Grey Abbey 2F; [TODO: Rebuild this scene to match the more complex relationships with Korvin]
 	if debugactive is 1:
 		say "     DEBUG: TEHUANTL/Korvin TALK WALKIN; TehuantlKorvinRelationship: [TehuantlKorvinRelationship][line break]";

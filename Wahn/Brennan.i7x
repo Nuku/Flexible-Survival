@@ -104,6 +104,9 @@ Lone Survivor is a situation.
 ResolveFunction of Lone Survivor is "[ResolveEvent Lone Survivor]".
 Sarea of Lone Survivor is "Outside".
 
+when play begins:
+	add Lone Survivor to BadSpots of TransList;
+
 to say ResolveEvent Lone Survivor:
 	if BrennanRelationship is 0:
 		say "     The streets seem fairly empty right now - a good time to be out and about, scavenging or hunting for whatever. Skirting around a burned-out car here and there, piles of trash or even rubble from buildings destroyed in fights (or overenthusiastic lovemaking), you make good progress on your way. Soon, you arrive at a fairly big intersection of roads, dominated by a multi-car pileup. Glancing at the four directions meeting here, broad and open spaces with no real cover or concealment, you're not surprised to find numerous piles of torn and cum-stained clothing scattered about. This must be a prime hunting spot for ferals, running down people or swooping in from above to catch those exposed in the open, which means that the numerous personal vehicle wrecks - and a mangled greyhound bus on the opposite side of where you stand - have in all likelihood not been looted yet!";
@@ -1856,6 +1859,8 @@ instead of fucking the Brennan:
 		say "     Something tells you that just stepping forward and demanding sex isn't exactly the right way to go here. Maybe talking to him about it first would be a good idea.";
 	else if Libido of Brennan is 101:
 		say "     After having shown him a cold shoulder when he revealed his birth-gender, you don't think sex with Brennan is on the table anymore...";
+	else if Libido of Brennan is 102:
+		say "     You don't think sex with Brennan is on the table anymore...";
 	else if (TimekeepingVar is 1 or TimekeepingVar is 0 or TimekeepingVar is -1 or TimekeepingVar is -7 or TimekeepingVar is -8 or TimekeepingVar is 7):
 		say "     He's asleep. Better wait till Brennan has rested up.";
 	else: [ready for sex]

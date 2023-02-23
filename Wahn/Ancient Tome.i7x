@@ -293,13 +293,9 @@ to say TomeSexMenu:
 						say "[DullahanSummon]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "     Change your mind and do something else?";
-			if Player consents:
-				now sextablerun is 1;
-				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
-				wait for any key;
-			else:
-				say "Pick an option.";
+			now sextablerun is 1;
+			say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
+			wait for any key;
 		else:
 			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -326,9 +322,7 @@ to say TomeExpansionUse:
 					now TomeInteractions is 1;
 				else:
 					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
-			if TomeInteractions is 1: [Second use]
-				say "[TomeReadMenu]";
-			else if TomeInteractions is 2: [3+ uses]
+			else if TomeInteractions is 1: [Second+ use]
 				say "     Do you want to [link]read the tome[as]y[end link] (y), or [link]use the tome[as]n[end link] (n)?";
 				if Player consents:
 					say "[TomeReadMenu]";
@@ -345,8 +339,8 @@ to say TomeReadMenu:
 	add "Read about the demonic fox." to Tome_Read_Choices;
 	add "Read about the demon lover." to Tome_Read_Choices;
 	if Resolution of Corruption of Dreams > 0 and Resolution of Dullahan Knight is 0: [extra demonic summoning unlocked]
-		add "Read on the mythical Dullahan." to Tome_Read_Choices;	
-	add "Close the book and put it away." to Tome_Read_Choices;	
+		add "Read on the mythical Dullahan." to Tome_Read_Choices;
+	add "Close the book and put it away." to Tome_Read_Choices;
 	let Tome_Read_Choice be what the player chooses from Tome_Read_Choices;
 	if Tome_Read_Choice is:
 		-- "Read about the tentacle monster.":
@@ -358,7 +352,7 @@ to say TomeReadMenu:
 		-- "Read on the mythical Dullahan.":
 			say "[DullahanFirstRead]";
 		-- "Close the book and put it away.":
-			say "      Closing the book with a solid thud, you heft its weight and put it back into your backpack.";
+			say "     Closing the book with a solid thud, you heft its weight and put it back into your backpack.";
 
 to say TentaclesFirstRead:
 	say "     As you read about the mass of tentacles, you can't help but be drawn in by the shockingly detailed descriptions of its behavior. Apparently, the tentacles will not only rape the unlucky victim, they also sometimes lay eggs in them! No one is exactly sure why the tentacles do this, or who they'll do it to, as it seems to be random. If there's one good thing to note, it's that the tentacles don't usually deposit fertilized eggs, leaving the victim with their insides stuffed with inert, gelatinous orbs. [if Player is puremale]Interestingly[else]Thankfully[end if], they only seem to be interested in [italic type]males[roman type], oddly enough. At the bottom of the page are instructions of how to summon the creature. You shut the book after reading the page, shaking your head in an attempt to get intrusive thoughts of egg-laying tentacles out of your head.";
@@ -381,7 +375,7 @@ Section 4 - Other Stuff
 
 to UpdateTomeEventPending:
 	if TomeEventPending is true:
-		if DemonFoxRead is true and TentacleRead is true and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
+		if "Tome_DemonFox_Read" is listed in Traits of Player and "Tome_Tentacle_Read" is listed in Traits of Player and (TentacleInteractions is 0 or DemonFoxInteractions is 0): [One event completed, but another is pending.]
 			now TomeEventPending is true;
 		else:
 			now TomeEventPending is false;
@@ -408,12 +402,12 @@ an everyturn rule:
 				now TomeInfluenceTimer is turns;
 				now TomeInfluence is 3;
 		else if TomeInfluence is 3: [Tempted fully]
-			if TomeInfluenceTimer - turns >= 2:
+			if TomeInfluenceTimer - turns >= 8:
 				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it [italic type]wants[roman type] you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
 				now TomeInfluenceTimer is turns;
-	if DemonFoxRead is true and DemonFoxInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 4 and daytimer is night:
+	if "Tome_DemonFox_Read" is listed in Traits of Player and DemonFoxInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 4 and daytimer is night:
 		say "[DemonFoxFirstEncounter]";
-	if TentacleRead is true and TentacleInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
+	else if "Tome_Tentacle_Read" is listed in Traits of Player and TentacleInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and ((TomeTimer - turns >= 4 and a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11)):
 		say "[TentaclesFirstEncounter]";
 
 

@@ -1901,7 +1901,6 @@ Name(text)	Type(text)
 "sugferretjoke"	"truth state"
 "Susanoversize"	"truth state"
 "SvenStory1"	"truth state"
-"TentacleRead"	"truth state"
 "Terminatorsleep"	"truth state"
 "TerminatorSleepActivated"	"truth state"
 "thmpregdetect"	"truth state"

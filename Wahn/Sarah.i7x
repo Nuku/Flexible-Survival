@@ -653,7 +653,6 @@ to say SarahFucking:
 				say "     Holding on to you and trembling in lust that only slowly ebbs off, Sarah keeps panting rapidly for some time, then eventually releases you to pull back from between her legs. Letting go of the black panties, you watch them flick back up to cover her crotch again (apparently quite good elastic in this brand) - which of course gets them even more soaked through with the husky's femcum. Then your viewpoint shifts as Sarah gently pulls up on your jaw, guiding you to look at her, then raise a bit to meet her for another sensual kiss. 'That was amazing,' she tells you with a smile, then strokes your cheek affectionately. 'Thank you for... going slow. I know you'd like to do other things, but I think I need this. Slowly trying things out before going too far. Sex as a husky is still so new for me.' After another quick peck on your lips, she slides her legs to the side and gets up, grabbing a towel to rub herself down with and clean up.";
 				NPCSexAftermath Player receives "OralPussy" from Sarah;
 				now SarahCured is 5;
-				now lastfuck of Sarah is turns;
 			else: [fail the charisma check]
 				LineBreak;
 				say "     Doing your best to underline each word with sincerity and trust, you try to explain that she doesn't have to fear this part of herself. Sex is natural, and swearing off it entirely surely can't be the way to go. You keep arguing that her inner husky lust doesn't control her anymore and she can go on living like she wants to. And yet... sadly do not manage to convince Sarah to believe it. 'I - I can't. I'm so sorry,' she replies with a whine and wanders some distance away from you, giving a sad wave.";
@@ -758,7 +757,8 @@ to say SarahFucking:
 				say "     Deciding to make sure your pet's complete surrender is a memorable occasion, you slowly push her down onto her back, eager to introduce her to her new position as a proper pet by filling her womb with your strong fertile seed. You grin as she spreads herself before you, her new collar shining brightly around her neck as she finally gives into her animalistic need to be owned and used by a strong alpha. Your new pet eagerly spreads her legs for you without any prompting, seeming to fully embrace her new role instead of fighting it now that she is properly collared. You spare a moment to admire her fine husky body, soft and sweet and so very sexy, before you move up between her legs, your stiff [Cock of Player] cock rubbing up against her heat-filled passage and making her whine softly with need. Not one to leave a horny bitch unattended, you pull her hips towards you even as you nudge apart those sexy folds and push into her waiting pussy.";
 				say "     Your new pet gasps and inner muscles clutch your shaft tightly as you fill her up in one sure stroke. Lowering your head to her shoulder you begin to rock your hips against hers, your cock moving within her soft body and making her pant and gasp with every rough movement. Her soft fur rubbing up against you is sheer pleasure, even as her every pleading noise begs for you to fill her body up with your fertile cum. Her arms wrap around your shoulders as she holds onto you tightly, completely giving herself up to the carnal pleasure of the act of mating, your orgasm drawing ever closer as you prepare to give her body the life giving seed it so desires. Finally unable to hold back any longer, you shout out your pleasure to the stone walls of the bunker as you fill your new pet's needy womb with your sperm, triggering her own powerful orgasm. And thus Sarah's fate is forever sealed to be nothing more than a happily fucked little husky pet, her only purpose now to bring you pleasure and bear your pups...";
 				NPCSexAftermath Sarah receives "PussyFuck" from Player;
-				increase SarahPregnant by 24;
+				if Player is not Sterile:
+					increase SarahPregnant by 24;
 		else:
 			say "     Deciding to make sure your pet's complete surrender is a memorable occasion, you slowly push her down to the ground, her eyes flashing eagerly as she moves to obey her new master. Grinning you slowly move between her legs, your hand rubbing across her damp pussy for a minute to ensure she is well and truly excited. You slowly crawl over her body, giving your new pet a good look at your female attributes, then turn around and slowly position your damp pussy above her face. Your new bitch licks her lips, which makes that sloppy husky tongue brush against your skin while you take in her stretched-out form, so naked and ready for you. 'Good little bitches get to taste their mistresses,' you say to the excited husky underneath you, then you slowly lower your pussy down to her muzzle, moaning as she begins to lick eagerly at your already damp lips. 'And the very best little pets get to have their mistresses lick them as well,' you murmur as you carefully get into classical 69 position on top of her soft furred form, your face coming to rest just above Sarah's pussy as you brace yourself on all fours.";
 			say "     Your pet's body tenses in anticipation and joy as she realizes what a lovely reward she is about to get for her submission, then she shudders as you slowly run your tongue over her heat-swollen mound. You tease Sarah's clit with your teeth lightly, nibbling at the edges and making her gasp in pleasure. Her soft cries of pleasure are muffled by your own pussy, as she intensifies her licking of your own soft walls. Groaning at the touch of your pet's talented tongue, you begin to lap and suck at her own passage, teasing her insides with your tongue even as your bodies begin to rub together in pleasure. You lose track of time as you play with and tease your pet, the mutual pleasure washing away all other petty concerns as the two of you celebrate your pet's new status together.";
@@ -801,7 +801,8 @@ to say SarahFucking:
 					say "     Groaning loudly, you feel your cock pressing up against the entrance to Sarah's fertile womb - just in time for a powerful orgasm to rock you to your very core. You start to pump your seed into the fertile husky's eager and receptive body, spurt after spurt of cum ensuring her belly will soon be swelling with your pups. The feel of her womb being invaded by your strong blasts of sperm triggers another orgasm in your fine husky bitch, causing her to shudder and gasp underneath you, her eyes rolling back in her head as you bring her to her second earth shattering orgasm in mere minutes.";
 					say "     Slowly pulling out of her semi-conscious form, you find yourself grinning in amusement at how much fun your lovely little pet is. Standing up to prepare to head back out into the city, you spare a minute to pat your little husky's soft belly, now nice and full of your seed, you just can't wait to see it when you return, all nice and rounded - only then it will be full of your little husky pups instead.";
 					NPCSexAftermath Sarah receives "PussyFuck" from Player;
-					increase SarahPregnant by 24; [knocked her up]
+					if Player is not Sterile:
+						increase SarahPregnant by 24; [knocked her up]
 				else: [male player]
 					say "     Your pet grins as you approach, quickly positioning herself on all fours before you like a good little bitch. Her rear is pointed towards you even as she lifts her tail up in an unspoken invitation, swollen sex and thighs damp with evidence of her excitement and need. 'Well aren't you the eager little slut,' You tease Sarah with a smug little grin as you slowly trace your hand along her back, making her shudder in anticipation. In response to your teasing taunt, your pet only moans slightly as she lifts her tail up even higher, raising her hips while she lowers the front part of her body closer to the ground.";
 					say "     Sarah's collar seems to gleam around her soft throat as she does her best to live up to her new title of slut, presenting herself to you and whining softly in need. Her quickly wagging tail brushes up against your chest in swish after swish as you position yourself behind your well-trained bitch, her body responding with pleasure to your touch and at the first brush of your shaft against her nether region. You don't waste any time with foreplay since you know that your pet is more than ready to be used like the submissive animal you have trained her to be. Taking a tight grip of the panting bitch's furry hips, you thrust your erect rod deep into her wet cunt.";
@@ -811,7 +812,8 @@ to say SarahFucking:
 					WaitLineBreak;
 					say "     As your orgasm fades, you find yourself panting in victory as your submissive little bitch moans underneath you. She lets out happy whining as you pet her a few times, then slowly pull out of the eager little slut, letting her collapse into a puddle of her own juices. You grin at the dreamy look on Sarah's face as she revels in the joy of being just another pet and animal for you to use, a slave to her own needs and your desires. You leave her there in the bunker like that, rubbing her pussy and stroking her now slightly swollen belly with her soft husky paws. Well fucked and well seeded with your virile sperm, you can't wait to see how the puppies turn out...";
 					NPCSexAftermath Sarah receives "PussyFuck" from Player;
-					increase SarahPregnant by 24; [knocked her up]
+					if Player is not Sterile:
+						increase SarahPregnant by 24; [knocked her up]
 			else: [female player]
 				say "     Approaching your pet, you smile as she eagerly lies back on the floor at your approach, spreading her legs eagerly even as she massages her breasts with her soft paws. Seeing her spread eagerly before you like that, you decide to take advantage of her position and slowly move so you are kneeling between her thighs. One of your hands slides down to tease her pussy for a minute, making Sarah moan as your other hand guides her to lie back on the floor of the bunker. Realizing what is about to happen she eagerly lies back and lifts her ass off the ground slightly as you position yourself between her legs, lifting your leg over hers as you stretch out on the floor as well.";
 				say "     Sarah gasps and whines in need and pleasure as your pussy rubs up against hers, and you moan as well at the feel of her damp passage rubbing up against your own. Enjoying the sensations you begin to rub and grind against her crotch, your eyes closing to fully concentrate on scissoring with Sarah. Your little husky pet eagerly begins to return the favor, making the feel of your pussies rubbing against each other even better as your juices mingle together. You find yourself stroking and petting her legs as you move your bodies together, your hands occasionally reaching down to stroke the area where your clits are rubbing against each other, even as your pet does the same.";
@@ -1214,7 +1216,7 @@ instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 
 
 Section 4.2 - Carl
 
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3):
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1229,7 +1231,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is i
 	now CarlSarahInteraction is 1;
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)):
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if CarlSarahInteraction is 1:
 		if debugactive is 1:
@@ -1263,7 +1265,7 @@ to say SarahCarlScene2:
 	now CarlSarahInteraction is 3; [played poker]
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH TALKS TO THE PLAYER ABOUT CARL (S/C SCENE 3) - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
@@ -1339,7 +1341,7 @@ to say SarahCarlOral2F:
 		now CarlSarahSex is 2;
 	now lastCarlSarahInteraction is turns;
 
-instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds):
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	move player to Grey Abbey 2F;
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
@@ -1390,7 +1392,7 @@ after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra
 
 Section 4.5 - Eric
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
 	if EricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1430,7 +1432,7 @@ to say SarahEricScene3:
 	now EricSarahInteraction is 3;
 	now lastEricSarahInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1454,7 +1456,7 @@ to say SarahCboyEricScene0:
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
 	now lastEricSarahInteraction is turns;
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
 	if cboyEricSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 1 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1513,7 +1515,7 @@ One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexan
 
 Section 4.6 - Fang
 
-instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang < 5 and HP of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3):
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang < 5 and HP of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1541,7 +1543,7 @@ instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is i
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
 
-instead of going to Courtyard while (HP of Fang is 3 or HP of Fang is 4) and FangSarahInteraction is 1 and SarahCured > 3 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang gets his own back against Sane Sarah]
+instead of going to Courtyard while (HP of Fang is 3 or HP of Fang is 4) and FangSarahInteraction is 1 and SarahCured > 3 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [Alpha Fang gets his own back against Sane Sarah]
 	project the figure of Sarah_clothed_icon;
 	say "     As you enter the courtyard, you catch sight of Sarah sitting on the edge of the fountain with her back to you, softly humming to herself. Figuring that you might go and have a conversation with her, you begin to approach but someone barges past you as you take a step forward. Annoyed that someone would be so rude, you turn to give them a piece of your mind but stifle any retort as you discover that is Fang and he looks intent on sneaking up the husky, giving you a firm look to communicate that you should remain quiet. Despite the knowledge that this is unlikely to end well, and any desire that you have to warn Sarah of his approach, you submit to your Alpha's will and step back silently to allow him to proceed unhindered. With a grateful nod, the wolf resumes stalking forward, the female canine oblivious to his presence. You only hope that she'll understand and forgive you, or even better not know that you stood by and did nothing.";
 	say "     Maybe she caught his scent, heard his claws on the path, or merely sensed that something was wrong, but as Fang gets within a couple of meters of her, Sarah turns her head and sees the advancing wolf. Her eyes widen as she hurriedly begins to rise, but as she turns her foot-paws get tangled and she sprawls face-first onto the ground, leaving her exposed as the wolf closes the gap. Before she can recover, Fang is atop her, pressing a paw against her back while remaining clear of her fiercely kicking legs, learning from the last time the force that she can put behind them. 'Be still,' the Alpha snarls, putting more pressure on his paw to hold her down. 'Fuck you. Get off me you flea-ridden mutt. I will never submit to you,' Sarah spits back, wriggling desperately in a futile attempt to get free.";
@@ -1554,7 +1556,7 @@ instead of going to Courtyard while (HP of Fang is 3 or HP of Fang is 4) and Fan
 	now FangSarahInteraction is 2;
 	now lastFangSarahInteraction is turns;
 
-instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds: [Alpha Fang and Slutty Sarah]
+instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [Alpha Fang and Slutty Sarah]
 	project the figure of Sarah_naked_icon;
 	say " 	Entering the library, you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
 	say " 	Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";
@@ -1570,7 +1572,7 @@ instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4
 
 Section 4.7 - David
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)) and Player is not CoA:
 	if DavidSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 1 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";

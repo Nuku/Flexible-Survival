@@ -35,11 +35,9 @@ Definition: A person is fastlearning:
 
 [a function that helps shorthand feat checks]
 to decide if the/-- Player has (x - a text) :
-	if x is listed in Feats of Player: 
+	if x is listed in Feats of Player:
 		decide yes;
 	decide no;
-
-
 
 Table of gainable feats
 title	subtable	description	toggle
@@ -106,7 +104,7 @@ To Featget:
 		while 1 is 1:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				say "[link][y] - [title entry][as][y][end link][line break]";
+				say "[link][y] - [title entry][as][y][end link]: [line break]";
 			say "[link]0 - ABORT[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
@@ -145,7 +143,7 @@ To FunFeatget:
 		while 1 is 1:
 			repeat with y running from 1 to number of filled rows in table of gainable feats:
 				choose row y from the table of gainable feats;
-				say "[link][y] - [title entry][as][y][end link][line break]";
+				say "[link][y] - [title entry][as][y][end link]: [description entry][line break]";
 			say "[link]0 - ABORT[as]0[end link][line break]";
 			say "Type the number corresponding to the feat you want> [run paragraph on]";
 			get a number;
@@ -172,10 +170,9 @@ To addfeat (x - text) with (y - text):
 		now title entry is X;
 		now toggle entry is gainfeat rule;
 		now description entry is Y;
-
+		sort table of Gainable Feats in title order;
 
 instead of addfeating the fun feats:
-	[TODO: Investigate why this is commented out]
 	if "Male Preferred" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "Single Sexed" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player and "Always A Pussy" is not listed in feats of Player:
 		if isHellhound is false or ( isHellhound is true and maleHound is true ):
 			addfeat "Male Preferred" with "Outside of special circumstances, you'll remain a guy";
@@ -239,16 +236,17 @@ instead of addfeating the fun feats:
 	if "Strong Psyche" is not listed in feats of Player, addfeat "Weak Psyche" with "Having a higher mental susceptibility to corruption by the nanites, you have a weaker grip on your human identity";
 	if "Weak Psyche" is not listed in feats of Player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your human identity";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water";
-	if "Open World" is not listed in feats of Player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are";
 	addfeat "Ultimatum" with "You have enough! Choosing Ultimatum grants you a 10% point bonus at game end, but you [bold type]no longer receive Fun Feats[roman type]";
+	addfeat "Center of Attention" with "NPCs in the library/bunker will refrain from seeking out sexual connections with each other, only looking to you instead";
 
 instead of addfeating the basic feats:
+	if "Open World" is not listed in feats of Player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are";
 	addfeat "Survivalist" with "You are great at scavenging. When doing such, you get a +4 to finding things";
 	addfeat "Roughing It" with "You can take a quick nap w/o a cot anywhere... just sleep with one eye open";
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Gas Cloud" with "Create a dissipating cloud to help you flee";
 	if "Sterile" is not listed in feats of Player, addfeat "Fertile" with "You are especially good at producing children. Increase to chance of multiple";
-	if "Fertile" is not listed in feats of Player, addfeat "Sterile" with "You are incapable of mothering a child";
+	if "Fertile" is not listed in feats of Player, addfeat "Sterile" with "You are incapable of fathering and/or mothering a child";
 	if "Fertile" is listed in feats of Player:
 		addfeat "Maternal" with "You love children. Faster gestation and improves morale from childbirth";
 	if number of filled rows in the Table of PlayerChildren > 0:
@@ -347,7 +345,7 @@ This is the gainfeat rule:
 	choose row Current Menu Selection in table of gainable feats;
 	let nam be title entry;
 	if autofeatloading is false:
-		say "You've chosen '[title entry]': [description entry][line break]";
+		say "You've chosen [bold type]'[title entry]'[roman type]: [description entry][line break]";
 		say "Is this what you want?";
 	if autofeatloading is true or player consents:
 		add nam to feats of Player;

@@ -72,19 +72,19 @@ to say freeing_aurora:
 				say "you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
 			now HP of frost giantess is 1;
 			now Resolution of Giant's Frozen Yogurt is 2;	[Tried and failed to help Aurora]
-		if aurorafreed is true:
-			say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
-			WaitLineBreak;
-			say "     Once she's had a chance to recover, she looks much better. The giant woman looks [if scalevalue of Player < 5]down [end if]at you with a friendly smile. 'Come here, cutie!' she exclaims, grabbing you in those strong arms of hers, crushing you in an over-enthusiastic hug. 'Thank you, thank you, thank you so much.' She turns from side to side roughly while squeezing you tight. You manage a weak groan that gets her to stop. 'Oh, sorry. I guess I don't really know my own strength.'";
-			say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
-			now HP of frost giantess is 2;
-			now frost giantess is tamed;
-			add "Tamed" to Traits of frost giantess;
-			move Aurora to Breakroom;
-			say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-			increase score by 10;
-			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
-			now Giant's Frozen Yogurt is resolved;
+	if aurorafreed is true:
+		say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
+		WaitLineBreak;
+		say "     Once she's had a chance to recover, she looks much better. The giant woman looks [if scalevalue of Player < 5]down [end if]at you with a friendly smile. 'Come here, cutie!' she exclaims, grabbing you in those strong arms of hers, crushing you in an over-enthusiastic hug. 'Thank you, thank you, thank you so much.' She turns from side to side roughly while squeezing you tight. You manage a weak groan that gets her to stop. 'Oh, sorry. I guess I don't really know my own strength.'";
+		say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
+		now HP of frost giantess is 2;
+		now frost giantess is tamed;
+		add "Tamed" to Traits of frost giantess;
+		move Aurora to Breakroom;
+		say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+		increase score by 10;
+		now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
+		now Giant's Frozen Yogurt is resolved;
 
 
 Section 2 - Pet Data

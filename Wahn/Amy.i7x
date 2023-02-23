@@ -292,7 +292,6 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 	now lastfuck of Amy is turns + 4;
 	if HP of Amy is 2:[mature virgin]
 		say "     As you enter the library, Amy walks up to you, something clearly on her mind. She says 'I've been feeling some... urges lately, and read up a bit about that. There were some novels over in that section -' At that, she points to a large bookcase over on a nearby wall, bearing a sign with 'Romance' on it. As she does so, Amy's arm brushes against her breast, causing the young husky to moan before she can stop herself. Biting her lip, she continues 'I-I... would you be my first? It's supposed to be with someone you care for and - you saved me from those ferals out on the streets, brought me here, allowed me to learn so much.' The young husky woman is clearly aching to be fucked - but before you can say anything about it, she turns her head a bit and says 'Oh, but you were just going somewhere, weren't you? I don't want to distract you, so I'll just... be here and if you ever want to spend some time with me.'";
-		say "     Intro Description";
 		say "     [bold type]How do you want to deal with this?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - Have sex with her right now.";
 		say "     [link](2)[as]2[end link] - Tell her to wait just a little longer.";
@@ -319,7 +318,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			now HP of Amy is 101;
 	else if HP of Amy is 10:[mature virgin, told the player she's horny]
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
-	else if HP of Amy > 10 and CuckList is not banned:
+	else if HP of Amy > 10 and CuckList is not banned and Player is not CoA:
 		say "[AmyNPCSexTable]";
 
 to say AmyNPCSexTable:
@@ -350,6 +349,10 @@ to say AmyNPCSexTable:
 	if AmyChosenCandidate is:
 		-- "Xerxes": [Xerxes]
 			if thirst of Amy is 0: [first interest of Xerxes in her]
+				if lust of Xerxes < 3:
+					project Figure of Xerxes_hard_icon;
+				else:
+					project Figure of Xerxes_awesome_hard_icon;
 				say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... you can see Xerxes standing on all fours not too far from the young husky, his eyes riveted on her naked form. The erection visible under his toned body shows that he's very interested indeed. Nevertheless, your well-behaved and trained dog doesn't act on his desires, just watching her intently.";
 				say "     As you walk up beside him, the human dog gives you an exuberant greeting and licks your hand, then gives a little pleading whine [if lust of Xerxes > 2]followed by the question 'Master's Friend - Sex?' [end if]and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
 				LineBreak;
@@ -377,6 +380,10 @@ to say AmyNPCSexTable:
 					say "     Shaking your head to the dog in the body of a human teenager, you take Xerxes to his cot, some distance away from Amy. After having him sit on it, you continue to tell him that he should stay away from Amy. Your pet gives a somewhat sad yip as he looks over at the naked husky again, then accepts his master's orders and lies down.";
 					now thirst of Amy is 99; [Xerxes/Amy sex forbidden]
 			else if (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
+				if lust of Xerxes < 3:
+					project Figure of Xerxes_hard_icon;
+				else:
+					project Figure of Xerxes_awesome_hard_icon;
 				say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 				say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4]. Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
 				if Lust of Amy is 0:
@@ -385,6 +392,10 @@ to say AmyNPCSexTable:
 						now Lust of Amy is 24;
 				NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 			else if (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Xerxes]
+				if lust of Xerxes < 3:
+					project Figure of Xerxes_hard_icon;
+				else:
+					project Figure of Xerxes_awesome_hard_icon;
 				say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Xerxes is crouched on his cot, watching her from a distance. Obedient as ever, the human dog does follow your orders to stay away from Amy to the letter, though that doesn't mean his interest in her isn't still burning bright. All on its own, a wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun, to go over there and take Amy for a ride, just now. A bit naughty towards the dutiful human dog, savoring something denied to him right before his eyes, but... that's half the thrill of it, isn't it?";
 				say "     [bold type]Do you want to fuck Amy while Xerxes watches?[roman type][line break]";
 				LineBreak;
@@ -1211,7 +1222,7 @@ to say AmyFirstFuck:
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
 		NPCSexAftermath Amy receives "PussyFuck" from Player;
 		let AmyPregchance be a random number from 1 to 20;
-		if AmyPregchance > 7:
+		if AmyPregchance > 7 and Sterile of Player is false:
 			now Lust of Amy is 24;
 	else if Player is female: [females]
 		say "     After quickly stripping off your clothes, you let your gaze wander over Amy's naked form, a shiver of excitement going through you as you look at her female curves. The husky knowingly smiles, arching her back a bit to present her four breasts to you, sensually stroking over them. 'I'm waiting for you,' she coos, giving you her best 'come hither' look. Kneeling down beside her, you bring your mouth to hers and kiss her, your hands roaming over her body, then holding her to lower her onto her back. Lying on top of her, you make out with the hot little husky, bringing her arousal she hasn't felt before. Then you move lower, cupping her breasts and playfully sucking on her nipples before going even further down her body and arriving at her pussy. Carefully spreading the husky's sensitive pussy lips, you put your tongue to it and lick, paying close attention to her clit. Amy gasps loudly as she experiences oral sex for the first time.";
@@ -1357,7 +1368,7 @@ to say AmySex4: [Amy's pussy fucked by player]
 		say "     Immensely satisfied, you stay like that on top of her for a while, then pull your softening cock out and lie down with Amy. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";
 		if Lust of Amy is 0:
 			let AmyPregchance be a random number from 1 to 20;
-			if AmyPregchance > 10:
+			if AmyPregchance > 10 and Sterile of Player is false:
 				now Lust of Amy is 24;
 	NPCSexAftermath Amy receives "PussyFuck" from Player;
 

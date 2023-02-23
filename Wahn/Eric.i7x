@@ -2255,7 +2255,7 @@ to say EricSex14: [threesome with Carl]
 
 Section 4 - Events
 
-instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and Eric is not slutstored and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid Companion is tamed and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32 or HP of Eric is 99) and Eric is not slutstored and (lastfuck of Eric - turns) > 12) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2369,7 +2369,7 @@ instead of navigating Grey Abbey Library while (level of Eric is 0 and Felinoid 
 			now level of Eric is 1;
 			now lastfuck of Eric is turns;
 
-instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and Eric is not slutstored and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and ((level of Eric is 4 and (HP of Eric is 11 or HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15 or HP of Eric is 22 or HP of Eric is 32) or (level of Eric > 0 and level of Eric < 99 and HP of Eric is 99))) and Eric is not slutstored and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2400,7 +2400,7 @@ instead of navigating Grey Abbey Library while (Felinoid Companion is tamed and 
 		say "     The animalistic coupling of Klauz and his entranced partner is quite a show, driving your arousal to new heights as you watch. With the stamina of a wild beast, the felinoid drives his cock into Eric's pussy relentlessly, until finally the cuntboy's moans and noises rise up to a climactic shout, announcing his orgasm to anyone in hearing range. Visibly satisfied in making him come, Klauz isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat throws himself on the floor right at that spot to lounge in satisfaction, taking Eric with him, still impaled on the feline's shaft and soon held against his soft belly fur with a muscular forelimb.";
 		NPCSexAftermath Eric receives "PussyFuck" from Klauz;
 
-after going down from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99):
+after going down from Grey Abbey Library while (Level of Eric > 0 and Level of Eric < 4 and Eric is in Bunker and HP of Eric < 99) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST-FELINOID-SEX WALKIN [line break]";
 	try looking;
@@ -2428,7 +2428,7 @@ after going down from Grey Abbey Library while (Level of Eric > 0 and Level of E
 		say "     Putting your arms around Eric and holding him, you console him with calm words, explaining to him that you're not angry or anything. After all, it's partly your fault for bringing Klauz here with you (and letting him fuck Eric, but he doesn't need to know that). Telling Eric just not to fall for the felinoid's charms and arousing musk again, you give the visibly relieved athlete a kiss on the cheek and leave him to get back to his bunk.";
 		now Level of Eric is 99;
 
-after going down from Grey Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds):
+after going down from Grey Abbey Library while (Level of Eric is 4 and Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and (lastfuck of Eric - turns) > 12 and a random chance of 1 in 3 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC BUNKER-FELINOID-SEX WALKIN (CBOY ERIC ONLY SO FAR)[line break]";
 	try looking;
@@ -2437,7 +2437,7 @@ after going down from Grey Abbey Library while (Level of Eric is 4 and Eric is i
 	say "     The animalistic coupling of the felinoid and his eager and willing partner is quite a show, driving your arousal to new heights as you watch. Mostly content to let Eric ride his cock, Klauz nevertheless sometimes humps his crotch up without warning and shafts Eric deeply, drawing ecstatic howls from the young man. Eventually, the student athlete's moans and pants rise up to a climactic shout, announcing his orgasm far and wide. Purring even louder in obvious satisfaction at having made Eric come, the felinoid isn't far behind, burying his hard cock all the way in the young human's pussy and holding still, only his balls pulsing as they fill him up with his seed. When he finishes cumming, the big cat rolls over on his side to lounge in satisfaction, taking Eric with him, still impaled on his shaft and soon held against soft belly fur with a muscular forelimb.";
 	NPCSexAftermath Eric receives "PussyFuck" from Klauz;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Sitting Area and Dexterity of Eric is 0):
+after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and Rane is in Sitting Area and Dexterity of Eric is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE TALK EVENT [line break]";
 	try looking;
@@ -2446,7 +2446,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 	say "     'So - he's an oni. Called Rane,' Eric says thoughtfully, then asks, 'And you're sure he's... safe, to be around? Hm, you must have - otherwise you wouldn't have brought him, right? Guess I should learn not to judge people by their looks. It is just... he looks pretty fierce. So tall, and muscle-packed, plus there's the horns too.' The young man gives a little helpless shrug, and you can feel that he can't help but hold some reservation still - not after his previous encounters with some of the bigger and fiercer infected, like the furling that bit him, or his ex-girlfriend now being a cheerleader hulk with a massive dick between her legs. You spend a few more minutes trying to calm Eric further, explaining in a soft voice that Rane just isn't the type to get violent about sexual matters. Eventually, the college athlete gives a relieved sigh, then says, 'Okay, thanks. I'll get some jogging done between the rows of bookshelves in the library then. Gotta stay in shape, and I've hidden down here for long enough.' A moment later, he's gone after giving a friendly smile, leaving you standing in the room on your own.";
 	now Dexterity of Eric is 1;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Sitting Area and findwires is 2 and fixedgens > 2):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 10 or HP of Eric is 11 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 1 and Rane is in Sitting Area and findwires is 2 and fixedgens > 2) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE SHOWER EVENT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2517,7 +2517,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		say "     Nah, it'll be alright. Rane isn't a bad guy. And anyways, you can't babysit Eric all the time. With a shrug, you turn your attention to other matters.";
 		now Dexterity of Eric is 2;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 2) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC RANE AFTERMATH TALK - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2537,7 +2537,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		say "     Nah, he'll be alright on his own. Eric can get his act together and deal with stuff, no need to involve yourself. No need at all. With a shrug, you turn your attention elsewhere.";
 		now Dexterity of Eric is 4;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Sitting Area):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 3 or Dexterity of Eric is 4) and Rane is in Sitting Area) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2572,7 +2572,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 	now Dexterity of Eric is 5;
 	now EricFleeingCountdown is turns; [12 turns from now, he'll have run off, leaving a note]
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns < 13) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLEEING FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2582,7 +2582,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 	now Dexterity of Eric is 6; [Eric's gone!]
 	now Eric is nowhere;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC FLED FROM RANE - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2591,7 +2591,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 	now Dexterity of Eric is 6; [Eric's gone!]
 	now Eric is nowhere;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC RESCUED AFTERMATH - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2661,7 +2661,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		now Dexterity of Eric is 8; [Eric and Rane Talked]
 	now lastRaneEricInteraction is turns;
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)):
+after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric is 8 or Dexterity of Eric is 9)) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC POST MAKE-UP SEX WITH RANE - CHAT - DEXTERITY OF ERIC: [Dexterity of Eric][line break]";
 	try looking;
@@ -2689,7 +2689,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and (HP of
 		now Dexterity of Eric is 11;
 	now lastRaneEricInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric > 7 and Dexterity of Eric < 40) and Rane is in Sitting Area and lastRaneEricInteraction - turns > 8 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and (Dexterity of Eric > 7 and Dexterity of Eric < 40) and Rane is in Sitting Area and lastRaneEricInteraction - turns > 8 and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2737,13 +2737,13 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eri
 [   6: Carl fucked Eric                                              ]
 [  50: player told Carl to stop pursuing Eric                        ]
 
-after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored):
+after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS CARL - CHAT - CarlEricInteraction: [CarlEricInteraction]";
 	try looking;
 	say "[EricMeetsCarl]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction is 0 and Eric is not slutstored) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2757,7 +2757,7 @@ to say EricMeetsCarl:
 	now CarlEricInteraction is 1;
 	now lastCarlEricInteraction is turns;
 
-after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)):
+after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)) and Player is not CoA:
 	try looking;
 	if CarlEricInteraction is 1:
 		if debugactive is 1:
@@ -2776,7 +2776,7 @@ after going up from Bunker while (Eric is in Bunker and Carl is in Grey Abbey 2F
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 3 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 0 and CarlEricInteraction < 5 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6)) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2797,7 +2797,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in
 			say "     DEBUG: ERIC & CARL SPEND TIME TOGETHER 4 - CarlEricInteraction: [CarlEricInteraction]";
 		say "[EricCarlScene4]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Carl is in Grey Abbey 2F and CarlEricInteraction > 4 and CarlEricInteraction < 50 and (lastfuck of Carl - turns) > 4 and Eric is not slutstored and (lastCarlEricInteraction - turns > 6) and HP of Eric > 0 and HP of Eric < 21 and a random chance of 1 in 4 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3250,19 +3250,19 @@ to say EricCarlThreesome8: [player rides Carl's cock while Eric straddles his fa
 	NPCSexAftermath Carl receives "OralPussy" from Eric;
 
 
-after going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+after going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsAlexandra]";
 
-after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsAlexandra]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3329,13 +3329,13 @@ to say EricMeetsAlexandra:
 		now AlexandraEricInteraction is 99; [Eric + Alexandra interaction stopped]
 
 
-after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
+after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsUrik]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Thirst of Urik > 0 and PlayerRomanced of Urik is false and "Selective Breeding" is not listed in Traits of Urik and UrikEricInteraction is 0) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3391,7 +3391,7 @@ to say EricMeetsUrik:
 
 [ (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and ((lastUrikEricInteraction - turns) > 8)]
 
-after going up from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and (lastUrikEricInteraction - turns) > 8):
+after going up from Grey Abbey Library while (Eric is in Bunker and HP of Eric > 9 and HP of Eric < 20 and Urik is in Sitting Area and (UrikEricInteraction is 1 or UrikEricInteraction is 2) and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC WATCHES URIK - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
@@ -3430,7 +3430,7 @@ to say EricWatchesUrik:
 		now UrikEricInteraction is 3; [Eric got fed orc cum by Urik]
 	now lastUrikEricInteraction is turns;
 
-after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 3) and (lastUrikEricInteraction - turns) > 8):
+after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 3) and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC AND URIK 69 - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
@@ -3465,7 +3465,7 @@ to say EricUrik69:
 	now UrikEricInteraction is 4; [Urik and Eric had a 69]
 	now lastUrikEricInteraction is turns;
 
-after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 4) and (lastUrikEricInteraction - turns) > 8):
+after going up from Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 4) and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC AND URIK BJ - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
@@ -3509,7 +3509,7 @@ to say EricUrikBJ:
 	now UrikEricInteraction is 5; [Urik and Eric talked and Urik got a BJ]
 	now lastUrikEricInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 5) and (lastUrikEricInteraction - turns) > 8):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 5) and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3581,7 +3581,7 @@ to say EricUrikHangOut:
 		now UrikEricInteraction is 50; [Urik stopped from breeding Eric's pussy, but Eric's desire to get fucked is awakened]
 	now lastUrikEricInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 6) and (lastUrikEricInteraction - turns) > 8):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction is 6) and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3620,7 +3620,7 @@ to say EricUrikLibraryFuck:
 	now UrikEricInteraction is 7; [Urik bred Eric's ass]
 	now lastUrikEricInteraction is turns;
 
-after going to Sitting Area while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction > 6) and a random chance of 1 in 3 succeeds and (lastUrikEricInteraction - turns) > 8):
+after going to Sitting Area while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Urik is in Sitting Area and (UrikEricInteraction > 6) and a random chance of 1 in 3 succeeds and (lastUrikEricInteraction - turns) > 8) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: ERIC + URIK FUCK IN THE LIBRARY - UrikEricInteraction: [UrikEricInteraction][line break]";
 	try looking;
@@ -3650,7 +3650,7 @@ to say EricUrikLibraryFuckRepeat:
 
 [ Ryousei Interactions                 ]
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger is listed in companionList of Player):
+after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger is listed in companionList of Player) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Ryousei [line break]";
 	try looking;
@@ -3664,7 +3664,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 	now RyouseiEricInteraction is 1;
 	now lastRyouseiEricInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3672,7 +3672,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is
 		say "     DEBUG: Eric & Ryousei talk in the Library - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, you spot your anthro tiger companion Ryousei sitting cross-legged in front of one of the low sofa tables in the back of the room - and next to him Eric, listening to a tale the feline recounts with avid interest. Curious about what they're talking about, you set out towards the two of them. Ryousei's rich, deep voice carries quite well in the quiet library, so even before you reach them, you overhear, [RyouseiTellsEricAStory]";
 
-after going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+after going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei talk in the Library - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	try looking;
@@ -3706,7 +3706,7 @@ to say RyouseiTellsEricAStory:
 		now RyouseiEricInteraction is 2; [watched them have story time]
 	now lastRyouseiEricInteraction is turns;
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -3714,7 +3714,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and Ryousei is
 		say "     DEBUG: Eric & Ryousei do tai chi - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	say "     As you enter the library, [RyouseiAndEricDoTaiChi]";
 
-after going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds):
+after going down from Grey Abbey 2F while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric < 99 and RyouseiEricInteraction > 0 and (lastRyouseiEricInteraction - turns) > 8 and a random chance of 1 in 5 succeeds) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric & Ryousei do tai chi - RyouseiEricInteraction: [RyouseiEricInteraction], lastRyouseiEricInteraction: [lastRyouseiEricInteraction], current turn: [turns][line break]";
 	try looking;
@@ -3739,7 +3739,7 @@ to say RyouseiAndEricDoTaiChi:
 		now RyouseiEricInteraction is 3; [watched them do tai chi]
 	now lastRyouseiEricInteraction is turns;
 
-after going to Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric > 9 and HP of Eric < 20 and RyouseiEricInteraction is 3 and (lastRyouseiEricInteraction - turns) > 8):
+after going to Grey Abbey Library while (Eric is in Bunker and Ryousei is in Grey Abbey Library and HP of Eric > 9 and HP of Eric < 20 and RyouseiEricInteraction is 3 and (lastRyouseiEricInteraction - turns) > 8) and Player is not CoA:
 	project the Figure of Ryousei_face_icon;
 	say "     As you walk into the front section of the library, you see Eric a little distance ahead of you, moving towards a somewhat out of the way corner of the expansive room. You know that this is where Ryousei has made his camp, so your curiosity drives you to follow the red-head college student and see what is going on. Walking along the curved row of bookshelves that divides the otherworldly tiger's domain from the main room, you can see Eric through the gap between the books and shelving. He looks happy and eager, most likely being out to continue his exercises or story time with Ryousei. Yet as the young man reaches a certain spot along his route, he suddenly pauses in his steps, holding his breath for a moment as he looks ahead, then goes on more slowly, as if not to make a sound. As you move into a better position along the bookshelf to see what Eric is looking at, you see that it is Ryousei - sitting on the ground cross-legged, dressed in nothing more than his white fundoshi underwear and meditating with closed eyes.";
 	say "     The anthro tiger really is a sight to behold - regal and cultured even in just his underwear, he sits there with a serene expression on his face and breathes in and out slowly, his muscular chest expanding and contracting with each breath. Eric almost seems spell-bound at the sight, walking closer with soft steps and his gaze wandering over the tiger's almost naked form. Shyly biting his lip, as if nervous about making a sound to disturb the otherworldly being, the young trans-man slowly drifts closer and closer. When only a few steps divide the two of them, you notice a change in Ryousei's breathing, with the tiger's nostrils flaring a little as he draws in a deeper breath, then another. A heartbeat later, he opens his eyes and gives Eric a warm smile, waving him closer. 'Welcome, young one. What brings you to me littler corner of this grand library? Shall we share stories, train, or are there... [italic type]other[roman type] desires you want to fulfill?'";
@@ -3797,7 +3797,7 @@ after going to Grey Abbey Library while (Eric is in Bunker and Ryousei is in Gre
 
 [ Sven Interactions                    ]
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1):
+after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and HP of Sven >= 30 and HP of Sven < 50 and ConfSvenEricInteraction < 1) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Confident Sven [line break]";
 	try looking;
@@ -3816,7 +3816,7 @@ after going down from the Grey Abbey Library while (Eric is in Bunker and HP of 
 
 [ Fang Interactions                    ]
 
-instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and Fang is Male and HP of Fang < 6 and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12):
+instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in Grey Abbey Library and Fang is Male and HP of Fang < 6 and (HP of Eric > 9 and HP of Eric < 20) and (lastfuck of Eric - turns) > 12) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

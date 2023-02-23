@@ -1340,12 +1340,13 @@ to contentrestrictionmenu:
 		say "(3) [link]WS Content[as]3[end link] - [bold type][if WSLevel is 1]None[else if WSLevel is 2]Normal[else if WSLevel is 3]Full[end if][roman type][line break]";
 		say "(4) [link]Vore/UB Content[as]4[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if UBLevel is 1]None[else if UBLevel is 2]Normal[else if UBLevel is 3]Full[end if][roman type][line break]";
 		say "(5) [link]Ovi Pregnancy[as]5[end link] - [bold type][if OvipregLevel is 1]Never[else]Normal[end if][roman type][line break]";
+		say "(6) Player character is [if Player is CoA]the [else]NOT the [end if][link]Center of Attention[as]6[end link] of relationships in the library/bunker (disables NPC sexual relations independent of the player character). [roman type][line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-5)>[run paragraph on]";
+			say "Choice? (0-6)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 5:
+			if calcnumber >= 0 and calcnumber <= 6:
 				break;
 			else:
 				say "Invalid Entry";
@@ -1360,6 +1361,11 @@ to contentrestrictionmenu:
 			try voremenuing; [see Core Mechanics/Settings Menus.i7x]
 		else if calcnumber is 5:
 			try oviadjusting; [see Core Mechanics/Settings Menus.i7x]
+		else if calcnumber is 6:
+			if "Center of Attention" is listed in Feats of player:
+				remove "Center of Attention" from Feats of Player;
+			else:
+				add "Center of Attention" to Feats of Player;
 		else:
 			now contentrestrictionmenuexit is 1;
 

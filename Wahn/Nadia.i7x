@@ -501,7 +501,7 @@ to say NadiaSex4: [Fuck her pussy]
 			WaitLineBreak;
 			say "     After it's all over, the two of you lie in her nest for a long while to recover from your orgasms, Nadia gently nuzzling at you with her beak. 'Wait for the harvest,' she says. 'I promise it'll be good.'";
 	NPCSexAftermath Nadia receives "PussyFuck" from Player;
-	if NadiaPregCounter1 is 0: [not already preggers]
+	if NadiaPregCounter1 is 0 and Sterile of Player is false: [not already preggers & Player fertile]
 		now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 	else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 		let NadiaPregChance be a random number from 1 to 20;
@@ -529,7 +529,7 @@ to say NadiaSex5: [flying and fucking]
 		say "     Finally, you can't take it any longer. The heat of the chase has soundly worked its way into the base of your shaft and it explodes into Nadia, her cunt clenching tight to ensure that not one drop is wasted when it could go towards growing another child in her. Moaning and chirping, she pushes herself off the ground with her hands, perhaps vaguely aware of the fact that she should be back in her nest to brood and lay the life that's no doubt taken root inside her, but falls back with a whimper. You gently coax Nadia into your embrace, reassuring the broody bird that you'll protect her out here and that nothing will happen to her nest and brood while she's away and also taking the opportunity to suck at her nipples.";
 		say "     'Bad!' she says halfheartedly. 'That's for the children...mmm...oh...' Soothed, she chirps happily and snuggles up against you, her feathers still slick in spots from your recent exertions.";
 		NPCSexAftermath Nadia receives "PussyFuck" from Player;
-		if NadiaPregCounter1 is 0: [not already preggers]
+		if NadiaPregCounter1 is 0 and Sterile of Player is false: [not already preggers & Player fertile]
 			now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 		else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
@@ -555,7 +555,7 @@ to say NadiaSex5: [flying and fucking]
 		say "     Easing Nadia onto her knees, her pregnant belly supported in her lap, you tell Nadia it's her turn now, and thrust your cock in her face, already glistening with precum. Nadia looks a little pouty at the idea of perfectly good seed being wasted, but you pat her on the head and tell her you'll pull out beforehand and fill her up properly before finishing. That simple promise breaks any inhibitions the broody bird has, and she eagerly stuffs as much of your length as she can into her beak - it's a little rough, but she doesn't have teeth and the workings of her tongue more than makes up for it. Nadia leans back with the effort of sucking you off, her eyes closed in wonder and concentration, and it's only when you feel your balls beginning to churn that you pull out, strings of precum glistening as they fall away from Nadia's beak. There's barely enough time to tip her forward onto all fours and ram your pulsating shaft into her from behind before you blast into her, great gouts of seed entering her already filled womb and swelling it a little further. Her wings beat at the air as she finally orgasms with a squawk, the familiar, rhythmic contractions of her slick tunnel making sure no drop of your cum is wasted.";
 		say "     Nadia doesn't want to let go of you at first, savoring the all too brief sensation of you inside her, but eventually relents and snuggles up to your side, rubbing the swell of her belly eagerly. Hopefully, this'll mean another chick will start growing inside her...if it makes her all the more pliable to doing this again, all the better.";
 		NPCSexAftermath Nadia receives "PussyFuck" from Player;
-		if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
+		if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0 and Sterile of Player is false: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
 			if NadiaFertilityCounter > 17: [matron stage]
 				if NadiaPregChance > 5: [75% chance]

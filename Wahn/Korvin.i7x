@@ -1895,7 +1895,7 @@ Growls wants to go out and fight (if no combat in several rounds)
 ["Library_private lover" - Player wants to be the main partner of Korvin, only threesomes allowed (maybe)    ]
 [   + "Harem Master" player feat - sharing the Harem together                                                ]
 
-instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and Amy is booked and "Relationship_Talk_Done" is listed in Traits of Korvin and "Amy_Korvin_FirstInteraction_Done" is not listed in Traits of Korvin and (HP of Amy is 11 or HP of Amy is 10 or HP of Amy is 101) and Lust of Amy is 0): [Korvin tamed, confident Korvin (blackcollar), learned about his past and made/let him stay, Amy Present, had relationship talk, Amy either fucked, ready for sex or player not interested in her, not pregnant]
+instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Resolution of Trucker Bar is 2 or Resolution of Trucker Bar is 3 and Amy is booked and "Relationship_Talk_Done" is listed in Traits of Korvin and "Amy_Korvin_FirstInteraction_Done" is not listed in Traits of Korvin and (HP of Amy is 11 or HP of Amy is 10 or HP of Amy is 101) and Lust of Amy is 0) and Player is not CoA: [Korvin tamed, confident Korvin (blackcollar), learned about his past and made/let him stay, Amy Present, had relationship talk, Amy either fucked, ready for sex or player not interested in her, not pregnant]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2194,7 +2194,7 @@ instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60
 			TraitGain "Amy_Interaction_Friendly" for Korvin;
 	TraitGain "Amy_Korvin_FirstInteraction_Done" for Korvin;
 
-instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Spike is booked and "Korvin - Met Collarless" is listed in Traits of Spike and "Korvin - Challenging Dude" is not listed in Traits of Spike): [Korvin tamed, confident Korvin (blackcollar), Spike Present, Spike met Korvin without a collar]
+instead of navigating Grey Abbey Library while (gshep is tamed and gsd_pet >= 60 and Spike is booked and "Korvin - Met Collarless" is listed in Traits of Spike and "Korvin - Challenging Dude" is not listed in Traits of Spike) and Player is not CoA: [Korvin tamed, confident Korvin (blackcollar), Spike Present, Spike met Korvin without a collar]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

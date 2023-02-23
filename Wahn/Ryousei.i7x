@@ -713,7 +713,6 @@ to say RyouseiPlayer69: [player 69 with Ryo]
 		NPCSexAftermath Ryousei receives "Other" from Player;
 	NPCSexAftermath Player receives "OralCock" from Ryousei;
 
-
 to say RyouseiPlayerFrot: [frot with Ryo]
 	if "KnowsFrot" is not listed in Traits of Ryousei:
 		say "     Smiling eagerly, you tell the tiger that you want to frot, which draws a curious expression from the otherworldly feline. It becomes apparent that he's not quite following what you mean, so you stroke a hand down the front of his broad, muscular chest and say that you could explain, but it might be a lot more fun if you just show him. Chuckling warm-heartedly, the anthro tiger purrs as he replies, 'How could I resist such a charming offer? Lead on, I'll follow where you take me.' ";
@@ -809,27 +808,31 @@ to say RyouseiXerxesSex: [Ryousei, Xerxes & the player have fun]
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of navigating Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
+		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going outside from Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going outside from Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
+		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
-instead of going down from Grey Abbey 2F while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0):
+instead of going down from Grey Abbey 2F while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: RYOUSAI / XERXES MEETING[line break]";
+		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
 	say "[RyouseiMeetsXerxes]";
 
 to say RyouseiMeetsXerxes:
+	if lust of Xerxes < 3:
+		project Figure of Xerxes_soft_icon;
+	else:
+		project Figure of Xerxes_awesome_soft_icon;
 	say "     As you walk into the library, Xerxes immediately rushes towards you on all fours and gives happy barks. Eager to greet his master, the naked human circles you with exuberant energy, then jumps up to brace himself with both hands on your shoulder and licks you in the face, happily [if lust of Xerxes > 2]yammering, 'Master's back! Master's back! Xerxes missed Master!' [else]barking to greet you. [end if]While you deal with the very excitable dog in the body of a nineteen-year-old, drop dead gorgeous man with black hair and a charming smile, you become aware that Ryousei is watching you with a raised eyebrow, standing not too far away. As you meet his eyes, the anthro tiger clears his throat and says, 'What an interesting... pet, you have there. I was under the impression that humans usually are more, well... civilized. What's his story?'";
 	say "     Tousling your human dog's hair, you explain to Ryousei that Xerxes actually isn't a human. Or wasn't originally, at least - until the whole trouble with the nanites started and everything went to hell. By the time you proceed to explaining about Mike, the dog trainer turned anthro stag, Xerxes begins trotting over to Ryousei to check out your new friend. 'Ah - I see,' the tiger general tells you with a thoughtful nod, holding a clawed hand out for Xerxes to sniff. 'Now if you will forgive me my ignorance - what exactly is a dog? We do not have such beasts in my plane. Maybe... similar to an ahuizotl? Those are sometimes trained to infiltrate enemy lines and drown their men when they least expect it.'";
 	WaitLineBreak;
@@ -841,6 +844,10 @@ to say RyouseiMeetsXerxes:
 		LineBreak;
 		say "     Calling out to Xerxes, you stop the human dog cold and he immediately turns away from nuzzling Ryousei's crotch to look at you attentively. With a casual command, you send him off to his bedding and the black-haired stud happily obeys, dashing over and laying down. Following the young man's movement with an attentive look, Ryousei lets his gaze rest on Xerxes for a moment longer, then turns to you and nods. 'A well-behaved pet. My compliments to you as his master.'";
 	else:
+		if lust of Xerxes < 3:
+			project Figure of Xerxes_hard_icon;
+		else:
+			project Figure of Xerxes_awesome_hard_icon;
 		LineBreak;
 		say "     Walking over, you join the proud tiger and your human dog. With a smile on your face at him petting Xerxes and stroking his hair, the next thing you do is give a sharp whistle, making the young man whirl around to eagerly look up at you, followed by one of the 'special' commands Mike trained into his transformed animals - and Xerxes immediately reacts, pushing his head and chest down to the ground and raising the very shapely ass on his lithely muscled body. With his legs spreading a little too, he's the very image of a receptive bottom. Ryousei lets his gaze wander over the young man's form, then looks at you with a raised eyebrow. Chuckling, he nods appreciatively and says, 'A well-behaved pet. My compliments to you as his master.'";
 		say "     There is a slight bulge at the crotch of Ryousei's kimono, making it obvious that Xerxes charms haven't been without effect - and you capitalize on that, offering your otherworldly companion some fun with him. The muscular tiger's tail twitches in the air behind him for a second, then the anthro feline gives a rumbling purr as he looks down upon Xerxes still holding his position. Not taking his eyes off the sun-bronzed round buns your pet presents, Ryousei says, 'Domo arigato, my friend. A very generous offer.' As the tiger's hands move to undo the knot of his kimono's belt, he casually adds, 'As a wise man told me, 'Should you find yourself in an oni's lair, drink from the skull if he offers it - or it might soon be your own head serving as a cup.' Not that I want to compare you to a red-skinned demonic brute, of course. Still - I learned my lessons well and it always pays to be courteous to your host. Especially if he offers such a treat, which I gladly accept.'";
@@ -869,7 +876,7 @@ instead of going up from Grey Abbey Library while (royal tiger is listed in comp
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
 
-instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Rane is in Sitting Area and RyouseiRane is 0):
+instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Rane is in Sitting Area and RyouseiRane is 0) and Player is not CoA:
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";

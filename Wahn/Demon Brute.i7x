@@ -1,6 +1,5 @@
 Version 7 of Demon Brute by Wahn begins here.
 [Expansion & Rewriting by Wahn]
-[Version 6.1 - More/improved victory sex w/Brutus - Stripes]
 [Version 7 - Introducing Evil Demon Brute path - Gherod]
 [- Originally Authored By: Leo X -]
 [Todo: Endings]
