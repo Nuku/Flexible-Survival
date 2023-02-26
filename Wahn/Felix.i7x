@@ -232,75 +232,80 @@ instead of conversing the Felix:
 to say FelixTalkMenu:
 	project the Figure of Felix_icon;
 	blank out the whole of table of fucking options;
+	say "     [bold type]What do you want to talk with Felix about?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
-	now description entry is "Talk a bit about this and that.";
-	now toggle entry is FelixTalk rule;
-	choose a blank row in table of fucking options;
+	now description entry is "Talk a bit about this and that";
+	[]
 	if (Libido of Felix is 1 or Libido of Felix is 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Search for signs of his stalker";
 		now sortorder entry is 2;
-		now description entry is "Look around in the high grass.";
-		now toggle entry is FelixTalk rule;
+		now description entry is "Look around in the high grass";
+	[]
 	if (Libido of Felix is 3):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the stalker";
 		now sortorder entry is 3;
-		now description entry is "Inquire if he saw something.";
-		now toggle entry is FelixTalk rule;
+		now description entry is "Inquire if he saw something";
+	[]
 	if (Libido of Felix is 5):
 		choose a blank row in table of fucking options;
 		now title entry is "Tell him about Andre";
 		now sortorder entry is 4;
-		now description entry is "Explain who's stalking him and why.";
-		now toggle entry is FelixTalk rule;
+		now description entry is "Explain who's stalking him and why";
+	[]
 	if (Libido of Felix is 99):
 		choose a blank row in table of fucking options;
 		now title entry is "Tell him about his stalker";
 		now sortorder entry is 5;
-		now description entry is "Explain that you took care of things.";
-		now toggle entry is FelixTalk rule;
+		now description entry is "Explain that you took care of things";
+	[]
 	if (Libido of Thomas > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the herd";
 		now sortorder entry is 6;
-		now description entry is "Chat about Thomas centaur herd.";
-		now toggle entry is FelixTalk rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Wave him off as you don't want to talk after all.";
-	now toggle entry is FelixTalk rule;
+		now description entry is "Chat about Thomas centaur herd";
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the FelixTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Just chat a bit"):
-			say "[FelixTalk1]";
-		if (nam is "Search for signs of his stalker"):
-			say "[FelixTalk2]";
-		if (nam is "Ask about the stalker"):
-			say "[FelixTalk3]";
-		if (nam is "Tell him about Andre"):
-			say "[FelixTalk4]";
-		if (nam is "Tell him about his stalker"):
-			say "[FelixTalk5]";
-		if (nam is "Ask about the herd"):
-			say "[FelixTalk6]";
-		else if (nam is "Nothing"):
-			say "[FelixTalk10]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[FelixTalk1]";
+				if (nam is "Search for signs of his stalker"):
+					say "[FelixTalk2]";
+				if (nam is "Ask about the stalker"):
+					say "[FelixTalk3]";
+				if (nam is "Tell him about Andre"):
+					say "[FelixTalk4]";
+				if (nam is "Tell him about his stalker"):
+					say "[FelixTalk5]";
+				if (nam is "Ask about the herd"):
+					say "[FelixTalk6]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the young centaur, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say FelixTalk1:
 	say "     You talk a while with Felix and tell him how things were before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
@@ -346,7 +351,6 @@ to say FelixTalk4:
 	now HP of Felix is 2;
 	move Andre to Dry Plains;
 
-
 to say FelixTalk5:
 	say "     You walk up to Felix and tell him, 'You can stop worrying now - turns out it was some sort of lizard dude stalking you, but I took care of things. He won't be bothering you anymore. Oh, and he had this...' With that, you pull out the leather pouch and hand it to Felix. He looks surprised to see it, saying, 'Hey, I lost this - I thought I'd never see it again. Guess my stalker picked it up, hm?' He gives you a hug, then continues, 'Thank you so much for bringing it back.' Opening up the bag, he looks through its contents - a book, a small plastic dragon, pens and various knickknacks come to light. 'This is everything I ever owned - my favorite toys and possessions from all the weeks of my childhood. One of my father's mares gave it to me when he threw me out.'";
 	LineBreak;
@@ -372,9 +376,6 @@ to say FelixTalk6:
 		if Libido of Felix is 6:
 			say "     Giving a smile and a small wave to Andre, Felix shares a longing look with his friend, then shakes it off not to be rude to you. 'And then there's of course our honorary herd member, even though he's not a centaur. I can't thank you enough for bringing Andre to me.'";
 
-to say FelixTalk10:
-	say "     Having decided not to want to talk to Felix after all, you wave him off and turn away.";
-
 Section 3 - Fucking Felix
 
 Instead of fucking the Felix:
@@ -398,66 +399,81 @@ Instead of fucking the Felix:
 
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
+	say "     [bold type]What do you want to do with Felix?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Let the young centaur blow you.";
-		now toggle entry is FelixSex rule;
+		now description entry is "Let the young centaur blow you";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Felix cock";
 	now sortorder entry is 2;
-	now description entry is "Put Felix long horsecock in your mouth.";
-	now toggle entry is FelixSex rule;
+	now description entry is "Put Felix long horsecock in your mouth";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
-		now description entry is "Put the young centaur's mouth to good use.";
-		now toggle entry is FelixSex rule;
+		now description entry is "Put the young centaur's mouth to good use";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger Felix ass";
 	now sortorder entry is 4;
-	now description entry is "Stimulate the young centaur's ass.";
-	now toggle entry is FelixSex rule;
+	now description entry is "Stimulate the young centaur's ass";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Andre fuck Felix";
 	now sortorder entry is 5;
-	now description entry is "See the big lizard mount his boyfriend.";
-	now toggle entry is FelixSex rule;
+	now description entry is "See the big lizard mount his boyfriend";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Felix fuck Andre";
 	now sortorder entry is 6;
-	now description entry is "See the big lizard being fucked by his boyfriend.";
-	now toggle entry is FelixSex rule;
+	now description entry is "See the big lizard being fucked by his boyfriend";
+	[]
 	sort the table of fucking options in sortorder order;
 	change the current menu to table of fucking options;
 	carry out the displaying activity;
 	clear the screen;
-
-This is the FelixSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[FelixSex1]";
-		if (nam is "Suck Felix cock"):
-			say "[FelixSex2]";
-		if (nam is "Have him lick your pussy"):
-			say "[FelixSex3]";
-		if (nam is "Finger Felix ass"):
-			say "[FelixSex4]";
-		if (nam is "Watch Andre fuck Felix"):
-			say "[FelixSex5]";
-		if (nam is "Watch Felix fuck Andre"):
-			say "[FelixSex6]";
-		wait for any key;
-	now lastfuck of Felix is turns;
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[FelixSex1]";
+				if (nam is "Suck Felix cock"):
+					say "[FelixSex2]";
+				if (nam is "Have him lick your pussy"):
+					say "[FelixSex3]";
+				if (nam is "Finger Felix ass"):
+					say "[FelixSex4]";
+				if (nam is "Watch Andre fuck Felix"):
+					say "[FelixSex5]";
+				if (nam is "Watch Felix fuck Andre"):
+					say "[FelixSex6]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the young centaur, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say FelixSex1: [cock sucked by Felix]
 	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek and lean close to him. You whisper, 'You know what would be hot?' and pull Felix hands down to your crotch. 'You sucking off my cock.' Smiling, Felix pulls out your hard [Cock of Player] cock, pumping it in his hand. 'Anything for you, man. You saved me and brought Andre and me together.'";
@@ -573,46 +589,48 @@ instead of conversing the Andre:
 
 to say AndreTalkMenu:
 	project the Figure of Andre_face_icon;
+	say "     [bold type]What do you want to talk with Andre about?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
 	now description entry is "Talk a bit about this and that.";
-	now toggle entry is AndreTalk rule;
-[
-	choose a blank row in table of fucking options;
+	[
 	if (Libido of Thomas > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the herd";
 		now sortorder entry is 5;
 		now description entry is "Chat about Thomas centaur herd.";
-		now toggle entry is AndreTalk rule;
-]
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Wave him off as you don't want to talk after all.";
-	now toggle entry is AndreTalk rule;
+	]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the AndreTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Just chat a bit"):
-			say "[AndreTalk1]";
-		if (nam is "Ask about the centaur herd"):
-			say "[AndreTalk5]";
-		else if (nam is "Nothing"):
-			say "[AndreTalk10]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Just chat a bit"):
+					say "[AndreTalk1]";
+				if (nam is "Ask about the centaur herd"):
+					say "[AndreTalk5]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the plains lizard, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say AndreTalk1:
 	say "     You talk a while with Andre about how things were for the two of you before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
@@ -623,8 +641,6 @@ to say AndreTalk1:
 to say AndreTalk5:
 	say "     <ask about the rest of the herd>";
 
-to say AndreTalk10:
-	say "     Having decided not to want to talk to Andre after all, you wave him off and turn away.";
 
 to say Plains Lizard wins:
 	say "     Standing over you with raised claws, the lizard guy suddenly looks at his claw, then you, and shakes his head. An expression of shame and embarrassment comes to his face and he stops attacking you. 'Err - sorry about that. I - I just couldn't stop when I was... I should just go.' With a last, longing look towards the distant centaurs, he drops something beside you and dashes off through the high grass, away from you and them.";
@@ -829,72 +845,77 @@ Instead of fucking the Andre:
 
 to say AndreSexMenu:
 	project the Figure of Andre_icon;
+	say "     [bold type]What do you want to do with Andre?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Let the lizard blow you.";
-		now toggle entry is AndreSex rule;
+		now description entry is "Let the lizard blow you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Andre's cock";
 	now sortorder entry is 2;
-	now description entry is "Put Andre's cock in your mouth.";
-	now toggle entry is AndreSex rule;
+	now description entry is "Put Andre's cock in your mouth";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
-		now description entry is "Put the lizard's mouth to good use.";
-		now toggle entry is AndreSex rule;
+		now description entry is "Put the lizard's mouth to good use";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger Andre's ass";
 	now sortorder entry is 4;
-	now description entry is "Stimulate the lizard guy's ass.";
-	now toggle entry is AndreSex rule;
+	now description entry is "Stimulate the lizard guy's ass";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Andre fuck Felix";
 	now sortorder entry is 5;
-	now description entry is "See the big lizard mount his boyfriend.";
-	now toggle entry is AndreSex rule;
+	now description entry is "See the big lizard mount his boyfriend";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Watch Felix fuck Andre";
 	now sortorder entry is 6;
-	now description entry is "See the big lizard being fucked by his boyfriend.";
-	now toggle entry is AndreSex rule;
+	now description entry is "See the big lizard being fucked by his boyfriend";
 	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the AndreSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[AndreSex1]";
-		if (nam is "Suck Andre's cock"):
-			say "[AndreSex2]";
-		if (nam is "Have him lick your pussy"):
-			say "[AndreSex3]";
-		if (nam is "Finger Andre's ass"):
-			say "[AndreSex4]";
-		if (nam is "Watch Andre fuck Felix"):
-			say "[FelixSex5]";
-		if (nam is "Watch Felix fuck Andre"):
-			say "[FelixSex6]";
-		wait for any key;
-	now lastfuck of Andre is turns;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[AndreSex1]";
+				if (nam is "Suck Andre's cock"):
+					say "[AndreSex2]";
+				if (nam is "Have him lick your pussy"):
+					say "[AndreSex3]";
+				if (nam is "Finger Andre's ass"):
+					say "[AndreSex4]";
+				if (nam is "Watch Andre fuck Felix"):
+					say "[FelixSex5]";
+				if (nam is "Watch Felix fuck Andre"):
+					say "[FelixSex6]";
+					wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the plains lizard, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say AndreSex1: [cock sucked by Andre]
 	say "     Walking up to Andre, you run a hand over his long scaled neck, pulling his head towards you a bit so you can whisper in his ear. 'I'm really horny right now. Could you do me a favor and blow me off?' Looking at you, then your crotch, the big lizard replies, 'S-sure. I totally owe you for bringing Felix and me together.'";

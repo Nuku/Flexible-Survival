@@ -113,6 +113,8 @@ To fight:
 						now needed is ( level of x ) times 6;
 					if XP of x >= needed and level of x < level of Player and humanity of Player > 0:
 						pet level up x;
+	else:
+		say "     Note: No possible creature to be encountered could be found. This might be caused by having various things banned, taking the creatures out of the game, or being low level in a higher level area. Dangerous enemies are excluded to avoid low level players being stomped flat, unless hard mode is enabled.";
 	if debugactive is 1:
 		say "     DEBUG: Random Monster Choosing Ended[line break]";
 	rule succeeds;

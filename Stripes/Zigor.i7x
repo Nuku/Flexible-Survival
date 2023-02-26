@@ -93,6 +93,7 @@ Zigor is a man. Zigor is in Cuero Lobo.
 Description of Zigor is "[zigordesc]".
 Conversation of Zigor is { "Hola!" }.
 The icon of Zigor is Figure of Zigor_icon.
+MainInfection of Zigor is "Leather Wolf".
 zigseat is a number that varies.		[seat configuration: 0 = normal, 1 = taur]
 zigorcycle is a truth state that varies. zigorcycle is usually false. [Monitors if Zigor's training has been cycled.]
 zigorhadiyaquest is a truth state that varies. zigorhadiyaquest is usually false. [Msg about leather jacket for Hadiya's quest]
@@ -380,8 +381,84 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 to say randomwolfgimp:
 	say "[one of]Miguel[or]Emilio[or]Fernando[or]Javier[in random order]";
 
+Section 5 - infection
 
-Section 5 - Endings
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "Wolfman";
+	add "Leather Wolf" to infections of CanineList;
+	add "Leather Wolf" to infections of FurryList;
+	add "Leather Wolf" to infections of NatureList;
+	add "Leather Wolf" to infections of MaleList;
+	add "Leather Wolf" to infections of KnottedCockList;
+	add "Leather Wolf" to infections of TaperedCockList;
+	add "Leather Wolf" to infections of SheathedCockList;
+	add "Leather Wolf" to infections of BipedalList;
+	add "Leather Wolf" to infections of TailList;
+	now Name entry is "Leather Wolf";
+	now enemy title entry is "Leather Wolf";
+	now enemy Name entry is "Zigor";
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "Placeholder infection";
+	now defeated entry is "Placeholder infection";
+	now victory entry is "Placeholder infection";
+	now desc entry is "Placeholder infection";
+	now face entry is "a canine muzzle sticking out of your wolf-like head. The sharp teeth inside it make your smiles and growls pretty unforgettable for others, and the long tongue should come in handy for French kissing";
+	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands";
+	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
+	now tail entry is "You have a fluffy, mid-length tail growing out of your spine, just above the grabbable buns of your ass.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]lupine[or]wolf[or]knotted[at random]";
+	now face change entry is "it stretches out into a large lupine muzzle, filled with a predator's sharp teeth. A shift goes through your worldview when your ears become pointed and move to the top of your head, your vision becomes somehow 'sharper' and new scents assail your now much more sensitive nose"; [ format as "Your face feels funny as (your text)." ]
+	now body change entry is "it morphs into a well toned human-wolf hybrid shape. With the crunching noise of breaking bones, your legs become digitigrade - now ending in large paws instead of feet. Your arms meanwhile fill out with muscles, lengthen a bit and also change the form of their joints slightly. Still, they're closer to human than the legs - even with the new sharp claws at the ends of your fingers"; [ format as "Your body feels funny as (your text)." ]
+	now skin change entry is "dense black fur spreads rapidly over your form. Well, mostly black - your chest shows a large '22' on it in blood-red fur, just like your back"; [ format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a mid-length lupine tail sprouts from your backside"; [ format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your member grows thicker as the top of it grows to a sharp point, a large canine knot forming at the base of your new lupine sheath"; [ format as "Your cock feels funny as (your text)." ]
+	now str entry is 17;
+	now dex entry is 16;
+	now sta entry is 15;
+	now per entry is 12;
+	now int entry is 12;
+	now cha entry is 14;
+	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 50;
+	now lev entry is 6;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10;               [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12;        [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3;          [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2;             [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0;         [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]          [ Width of female sex the infection will try to give a player. ]
+	now SeductionImmune entry is false;
+	now libido entry is 40;
+	now loot entry is "";   [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
+	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]strong[or]tall[or]powerful[at random]";
+	now type entry is "lupine";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+
+Section 6 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)

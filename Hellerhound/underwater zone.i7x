@@ -117,7 +117,7 @@ to swimmingfight:
 		if FurryList is banned:
 			increase T by 1;
 		else:
-			challenge "Otter";
+			challenge "Sea Otter";
 	if T is 6:
 		if MaleList is banned:
 			increase T by 1;

@@ -693,6 +693,7 @@ Instead of fucking J'reth:
 	else if HP of J'Reth is 2:
 		if carried of tasty peach > 4:
 			say "     You politely cough to catch J'Reth's attention, the morose draco-mantis slowly looking up as you search through your backpack for the peaches that you got for him. After a moment you find them and present them to the surprised young man, the several small bruises on the fruit's skin doing little to diminish the obvious pleasure spreading across his face at not merely tinned, but fresh peaches. 'Wow... um, I don't know what to say other than thank you. I didn't expect anyone to be willing to devote time to cheering me up. Especially when it likely involved searching around the city. I might have to name my firstborn after you. You know... if I ever have a firstborn... Forget I said that. Please?' J'Reth blushes deeply and attempts to distract himself by taking a bite out of a peach. Letting out a sigh, he relaxes back on his bed for a moment before stirring again as his cock begins to swell from his crotch. 'I've heard of peaches being an aphrodisiac, but that was more effective than I would have expected. I haven't felt this horny in ages. Up for some intimate touching?' It looks like J'Reth is open to your advances now.";
+			ItemLoss tasty peach by 5;
 			now HP of J'Reth is 3;
 		else:
 			say "     'Sorry. I still feel down at the moment. I'm sure someone else would be willing if you're that desperate for sex.' Perhaps you should get [bold type]five peaches[roman type] from the park?";

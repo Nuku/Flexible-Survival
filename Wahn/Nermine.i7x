@@ -215,6 +215,12 @@ instead of conversing the Nermine:
 		now sortorder entry is 8;
 		now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
 	[]
+	if Carried of Demon Tooth > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "A demon tooth";
+		now sortorder entry is 9;
+		now description entry is "Hand Nermine a demon tooth and see what she makes of it";
+	[]
 	if (Libido of Danny is 4 or Libido of Danny is 5) and NermineBukkakeTurn - turns > 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Starting her ritual to transform the mall rat";
@@ -281,6 +287,8 @@ instead of conversing the Nermine:
 					say "[RareItemQuestTalk]";
 				else if (nam is "Rare Infections"):
 					say "[RareInfectionMenu]";
+				else if (nam is "A demon tooth"):
+					say "[Nermine_DemonToothTrade]";
 				else if (nam is "Helping Brennan"):
 					say "[NermineBrennanTalk]";
 				else if (nam is "Starting her ritual to transform the mall rat"):

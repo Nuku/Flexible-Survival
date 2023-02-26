@@ -322,7 +322,7 @@ to say TomeExpansionUse:
 					now TomeInteractions is 1;
 				else:
 					say "     You shake your head, deciding that there's not really any benefit to reading the contents of the book, before you place it back in your pack and move along.";
-			else if TomeInteractions is 1: [Second+ use]
+			else if TomeInteractions > 0: [Second+ use]
 				say "     Do you want to [link]read the tome[as]y[end link] (y), or [link]use the tome[as]n[end link] (n)?";
 				if Player consents:
 					say "[TomeReadMenu]";

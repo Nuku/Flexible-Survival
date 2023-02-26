@@ -252,69 +252,68 @@ instead of conversing the Thomas:
 
 to say ThomasTalkMenu:
 	LineBreak;
-	if graphics is true:
-		project the figure of Thomas_face_icon;
-	say "What do you want to talk with Thomas about?";
+	project the figure of Thomas_face_icon;
+	say "     [bold type]What do you want to talk with Thomas about?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
-	now description entry is "Talk a bit about this and that.";
+	now description entry is "Talk a bit about this and that";
 	[]
 	if (HP of Thomas is 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into sex as a mare";
 		now sortorder entry is 2;
-		now description entry is "Make him open up to having a pussy.";
+		now description entry is "Make him open up to having a pussy";
 	[]
 	if (lust of Thomas is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk him into anal sex";
 		now sortorder entry is 3;
-		now description entry is "Make him open his horizons a bit.";
+		now description entry is "Make him open his horizons a bit";
 	[]
 	if (HP of Thomas is 51):
 		choose a blank row in table of fucking options;
 		now title entry is "Come clean and tell him he's a herm";
 		now sortorder entry is 4;
-		now description entry is "Admit that you lied about him having a pussy.";
+		now description entry is "Admit that you lied about him having a pussy";
 	[]
 	if (Libido of Thomas > 0 and Libido of Thomas is not 20):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about his herd";
 		now sortorder entry is 5;
-		now description entry is "Chat about Thomas centaur herd.";
+		now description entry is "Chat about Thomas centaur herd";
 	[]
 	if (ThomasQuestVar is 0 and (ThomasSaved - Turns > 10)):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer your help for some revenge on his centaur rapists";
 		now sortorder entry is 6;
-		now description entry is "Take out those three centaurs for good.";
+		now description entry is "Take out those three centaurs for good";
 	[]
 	if (ThomasQuestVar is 1 and carried of soda >= 5):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Thomas five soda cans";
 		now sortorder entry is 7;
-		now description entry is "Hand in supplies for Thomas revenge plan.";
+		now description entry is "Hand in supplies for Thomas's revenge plan";
 	[]
 	if (ThomasQuestVar is 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Go meet the prairie dogs";
 		now sortorder entry is 8;
-		now description entry is "Go meet the diggers for Thomas trap.";
+		now description entry is "Go meet the diggers for Thomas's trap";
 	[]
 	if (ThomasQuestVar is 3):
 		choose a blank row in table of fucking options;
 		now title entry is "Help lure the centaur trio into the trap";
 		now sortorder entry is 9;
-		now description entry is "Time to finally get some revenge.";
+		now description entry is "Time to finally get some revenge";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Nothing";
 	now sortorder entry is 10;
-	now description entry is "Wave him off as you don't want to talk after all.";
+	now description entry is "Wave him off as you don't want to talk after all";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

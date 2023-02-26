@@ -159,6 +159,9 @@ instead of conversing the Chris:
 	say "[ChrisTalkMenu]";
 
 instead of trading the orc brew when the current action involves the Chris:
+	say "[Chris_OrcBrewGive]";
+
+to say Chris_OrcBrewGive:
 	if Libido of Chris is 0:
 		say "     You hand Chris the mug of orc brew, which the young man accepts and looks at with interest. With a smile on your face, you tell him that it is time for [if Thirst of Val is 2]your boy[else]him[end if] to become a real man. Opening the lid, he sniffs at it, and watches the liquid slosh around in the mug as he shakes it slightly. The look in his face tells you that he's tempted to try it, partly because of the thrill of doing something forbidden, but his breeder dad's command to stay away from the drink holds him back. Biting his lip as he looks at you, Chris says 'Thanks. I - a nip at it wouldn't be so bad, would it? Just a little...'";
 		say "     [bold type]Do you try to convince Chris to drink the orc brew, knowing that it'll most likely transform him into a brutish orc warrior?[roman type][line break]";
@@ -295,8 +298,10 @@ to say WarrorChrisRelationship5:
 to say WarriorChrisWrapup:
 	say "After the orc comes down from his orgasm and the immediate urges of lust flare down a little, you talk a little bit more with his new warrior persona. Doing so, you find that the young man is now far more direct and action-oriented, focusing on physical solutions to most problems. Not always the smartest thing to do, but he's got the physique to work things out, that's for sure. Meanwhile, his libido seems to have gotten a permanent boost, with an underlying level of raw urges always ready to burst forth and drive him to fuck and breed.";
 
-
 instead of trading the orc cum when the current action involves the Chris:
+	say "[Chris_OrcCumGive]";
+
+to say Chris_OrcCumGive:
 	if Libido of Chris is 0:
 		say "     You hand Chris the bottle of orc cum, which the young man accepts and looks at with interest. Taking off the cap of the plastic water bottle he sniffs at it, then licks his lips, obviously tempted to drink the light green, thick and creamy liquid. His hand starts to rise a bit with the bottle, then he stops himself. Biting his lip as he looks at you, Chris says 'Thanks, but... Dad warned me about doing this. I shouldn't - or should I? It smells really nice...'";
 		say "     [bold type]Do you convince Chris to drink the orc cum, knowing that it'll most likely transform him into a submissive orc breeder?[roman type][line break]";
@@ -368,6 +373,18 @@ to say ChrisTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Ask where he got the underwear";
 	[]
+	if Carried of Orc Cum > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk Chris into drinking orc cum";
+		now sortorder entry is 4;
+		now description entry is "Hand him a bottle of man-milk";
+	[]
+	if Carried of Orc Brew > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Talk Chris into drinking orc brew";
+		now sortorder entry is 5;
+		now description entry is "Hand him a mug of orc brew";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -389,6 +406,10 @@ to say ChrisTalkMenu:
 					say "[ChrisTalk2]";
 				else if nam is "His undies":
 					say "[ChrisUndieTalk]";
+				else if nam is "Talk Chris into drinking orc cum":
+					say "[Chris_OrcCumGive]";
+				else if nam is "Talk Chris into drinking orc brew":
+					say "[Chris_OrcBrewGive]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;

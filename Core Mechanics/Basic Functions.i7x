@@ -203,30 +203,34 @@ to PlayerMaxHeal:
 	now HP of Player is maxHP of Player;
 
 to PlayerHealed (N - number):
-	LineBreak;
-	say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
-	increase HP of Player by N;
-	if HP of Player > maxHP of Player:
-		now HP of Player is maxHP of Player;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
+		increase HP of Player by N;
+		if HP of Player > maxHP of Player:
+			now HP of Player is maxHP of Player;
 
 to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
-	LineBreak;
-	say "     [bold type]Your hitpoints are reduced by [N]![roman type][line break]";
-	decrease HP of Player by N;
-	if HP of Player < 0:
-		now HP of Player is 0;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your hitpoints are reduced by [N]![roman type][line break]";
+		decrease HP of Player by N;
+		if HP of Player < 0:
+			now HP of Player is 0;
 
 to SanLoss (N - number):
-	LineBreak;
-	say "     [bold type]Your sanity has decreased by [N]![roman type][line break]";
-	decrease humanity of Player by N;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your sanity has decreased by [N]![roman type][line break]";
+		decrease humanity of Player by N;
 
 to SanBoost (N - number):
-	LineBreak;
-	say "     [bold type]Your sanity has increased by [N]![roman type][line break]";
-	increase humanity of Player by N;
-	if humanity of Player > 100:
-		now humanity of Player is 100;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your sanity has increased by [N]![roman type][line break]";
+		increase humanity of Player by N;
+		if humanity of Player > 100:
+			now humanity of Player is 100;
 
 to SanReset:
 	LineBreak;
@@ -234,18 +238,20 @@ to SanReset:
 	now humanity of Player is 100;
 
 to LibidoLoss (N - number):
-	LineBreak;
-	say "     [bold type]Your libido has decreased by [N]![roman type][line break]";
-	decrease Libido of Player by N;
-	if Libido of Player < 0:
-		now Libido of Player is 0;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your libido has decreased by [N]![roman type][line break]";
+		decrease Libido of Player by N;
+		if Libido of Player < 0:
+			now Libido of Player is 0;
 
 to LibidoBoost (N - number):
-	LineBreak;
-	say "     [bold type]Your libido has increased by [N]![roman type][line break]";
-	increase Libido of Player by N;
-	if Libido of Player > 100:
-		now Libido of Player is 100;
+	if N is not 0:
+		LineBreak;
+		say "     [bold type]Your libido has increased by [N]![roman type][line break]";
+		increase Libido of Player by N;
+		if Libido of Player > 100:
+			now Libido of Player is 100;
 
 to LibidoReset:
 	LineBreak;

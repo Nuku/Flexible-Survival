@@ -11,7 +11,7 @@ Beach Plaza	"Beach Plaza"
 Beach Plaza is a Room.
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
 Description of beach plaza is "[BeachPlazaDesc]".
-earea of Beach Plaza is "Outside".
+earea of Beach Plaza is "Beach".
 
 after looking while player is in Beach Plaza:
 	project the Figure of Map_Beach_1_icon;
@@ -21,7 +21,7 @@ to say BeachPlazaDesc:
 	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.";
 
 Beach Exit is a door. Beach Exit is dangerous.
-The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
+The marea of Beach Exit is "Beach". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -62,7 +62,7 @@ Boardwalk2	"Boardwalk"
 Boardwalk2 is a Room.
 Description of Boardwalk2 is "[BoardwalkDesc]".
 Boardwalk2 is a room with printed name "Boardwalk".
-earea of Boardwalk2 is "Outside".
+earea of Boardwalk2 is "Beach".
 
 after looking while player is in Boardwalk2:
 	project the Figure of Map_Beach_2_icon;

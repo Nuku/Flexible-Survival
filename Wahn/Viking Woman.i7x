@@ -1272,54 +1272,63 @@ instead of conversing the Sonya:
 		say "[SonyaTalkMenu]";
 
 to say SonyaTalkMenu:
+	say "     [bold type]What do you want to talk with Sonya about?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about the things happening along the coast";
 	now sortorder entry is 1;
 	now description entry is "Have her tell you what she's seen while exploring.";
-	now toggle entry is SonyaTalk rule;
-	choose a blank row in table of fucking options;
+	[]
 	if (VikingKidCounter is 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about your child";
 		now sortorder entry is 2;
 		now description entry is "Ask her about your offspring.";
-		now toggle entry is SonyaTalk rule;
+	[]
 	else if (VikingKidCounter > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about your children";
 		now sortorder entry is 3;
 		now description entry is "Ask her about your offspring.";
-		now toggle entry is SonyaTalk rule;
-[
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about the Vikings";
 	now sortorder entry is 3;
 	now description entry is "Ask her about her family and Vikings in general.";
-	now toggle entry is SonyaTalk rule;
-]
+	]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the SonyaTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Talk about the things happening along the coast"):
-			say "[SonyaTalk1]";
-		if (nam is "Talk about your child"):
-			say "[SonyaTalk2]";
-		if (nam is "Talk about your children"):
-			say "[SonyaTalk2]";
-		if (nam is "Talk about the Vikings"):
-			say "[SonyaTalk3]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Talk about the things happening along the coast"):
+					say "[SonyaTalk1]";
+				if (nam is "Talk about your child"):
+					say "[SonyaTalk2]";
+				if (nam is "Talk about your children"):
+					say "[SonyaTalk2]";
+				if (nam is "Talk about the Vikings"):
+					say "[SonyaTalk3]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the female viking, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say SonyaTalk1:
 	let randomnumber be a random number from 1 to 10;
