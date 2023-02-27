@@ -1500,6 +1500,7 @@ to say UrikCumDelivery:
 	say "     Stepping up to the orc, you smile at him, followed by digging a bottle of orc cum from your pack and handing it over to him. The big, green-skinned brute looks at the plastic bottle in his hands, filled with its opaque white-ish contents and can't help but lick his lips immediately. 'Thank you, [UrikPlayerAddress]! Just what I need if the cravings hit me!' He seems to be fighting with the urge to just chug down the contents of the bottle right away for a second, then lowers it on one hand and doesn't look down after that. Seems like he really does want to stash it somewhere for later.";
 	if Thirst of Urik < 10:
 		increase Thirst of Urik by 1;
+	ItemLoss orc cum by 1;
 
 to say UrikPregDiscussion:
 	if PlayerFriended of Urik is true:

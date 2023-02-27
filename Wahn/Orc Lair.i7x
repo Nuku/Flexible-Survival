@@ -428,9 +428,9 @@ instead of going West from Dark Hallway 1:
 			if Player consents: [make a getaway]
 				LineBreak;
 				let bonus be (( Dexterity of Player minus 10 ) divided by 2);
-				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]:[line break]";
-				if dice + bonus >= 15:
+				let diceroll be a random number from 1 to 20;
+				say "You roll 1d20([diceroll])+[bonus] vs 15 and score [diceroll plus bonus]:[line break]";
+				if diceroll + bonus >= 15:
 					LineBreak;
 					say "     You carefully manage to exit the room unseen and shut the door behind you. A thin layer of nervous sweat covers your brow as you breathe a sigh of relief at having escaped a potentially fatal situation.";
 				else:
@@ -566,7 +566,7 @@ To LootLocker:
 	let bonus be (( Strength of Player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus] (Strength Check)[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
 	increase diceroll by bonus;
 	if diceroll > 18:
 		say "     Proving your strength, you lift the locker slowly, slowly - then change your grip to grab under it and start pushing against the front side to get it back up. Sweat is running down your brow soon and you start to feel the strain making your muscles tremble, then you finally reach the tipping point and the locker's momentum pulls it to slam against the wall with a loud crash that pops the door open. A [bold type]police vest[roman type] tumbles out of the locker and lands at your feet, making all the effort worth it. You quickly pick it up.";
@@ -883,9 +883,9 @@ This is the EscapeOption rule:
 to say EscapeOption1:
 	say "     You dig around among the shredded belongings of various people brought here as slaves, and...";
 	let bonus be (( perception of Player minus 10 ) divided by 2);
-	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] vs 19 and score [dice plus bonus]: (Perception Check)[line break]";
-	if dice + bonus >= 19:
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Perception Check):[line break]";
+	if diceroll + bonus >= 19:
 		say "     ...after some time searching and almost giving up hope multiple times, you do find a key. Judging from the dried cum on it, some orc must have dropped it while busy with entertaining himself. After cleaning it as good as you can with a piece of ripped fabric, you grab the key and let yourself out of the cell. When you close the door behind you, its lock automatically snaps closed again.";
 		ItemGain Cell Key by 1;
 		move player to Breeder Lockup A;
@@ -917,9 +917,9 @@ to say EscapeOption1:
 to say EscapeOption2:
 	say "     You snatch up the hairpin you spotted before and try to pick the lock.";
 	let bonus be (( dexterity of Player minus 10 ) divided by 2);
-	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] vs 19 and score [dice plus bonus]: (Dexterity Check)[line break]";
-	if dice + bonus >= 19:
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]19[roman type] (Dexterity Check):[line break]";
+	if diceroll + bonus >= 19:
 		say "     ...after some tricky fiddling around, you manage to unlock the cell door with a click and slip outside. When you close the door behind you, its lock automatically snaps closed again.";
 		move player to Breeder Lockup A;
 		now OrcSlaverStatus is 2;
@@ -950,9 +950,9 @@ to say EscapeOption2:
 to say EscapeOption3:
 	say "     You take a few steps back and rush at the door, trying to batter it down by brute strength...";
 	let bonus be (( strength of Player minus 10 ) divided by 2);
-	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] vs 21 and score [dice plus bonus]: (Strength Check)[line break]";
-	if dice + bonus >= 21:
+	let diceroll be a random number from 1 to 20;
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]21[roman type] (Strength Check):[line break]";
+	if diceroll + bonus >= 21:
 		say "     ...and after some throwing yourself against it several times, you manage to break the lock. After that it's no problem at all to just walk outside.";
 		if Player is in Slave Cell 1:
 			now Cell Door 1 is unlocked;

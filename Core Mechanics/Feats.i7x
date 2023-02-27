@@ -33,12 +33,6 @@ Definition: A person is fastlearning:
 	if "Fast Learner" is listed in feats of Player, yes;
 	no;
 
-[a function that helps shorthand feat checks]
-to decide if the/-- Player has (x - a text) :
-	if x is listed in Feats of Player:
-		decide yes;
-	decide no;
-
 Table of gainable feats
 title	subtable	description	toggle
 "Nothing"	--	"Nothing here."	gainfeat rule

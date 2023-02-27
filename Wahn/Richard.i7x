@@ -109,12 +109,13 @@ to say RichardDesc:
 		project Figure of Richard_satyr_soft_icon;
 		say "     The satyr boy is wearing a loose, short-sleeved t-shirt with the college's logo on it as well as a pair of camo cargo pants. The virile male is currently sitting at his computer, tapping away at the keys with an open book to his left. Upon closer examination you see that he is writing what looks to be an essay, huh. Apparently even with the nanite apocalypse, school still goes on. It's not long until Richard feels your eyes on him, causing him to turn and wave at you, a happy smile on his face.";
 	else:
+		project Figure of Richard_human_clothed_icon;
 		say "     Richard has a tall frame, with nice muscles on his body without appearing to bulky. Looks like he's into sports, but seems to be doing something that requires a fair bit of running and dexterity, rather than brute strength. Currently he's dressed in a black Phi Alpha Nu t-shirt and jeans. As he notices your attention, he focuses the gaze of his two emerald-green eyes on you, with a smile spreading over his features. Mid-length curly hair frames his handsome face.";
 
 Section 2 - Talking with Richard
 
 instead of conversing the Richard:
-	if SatyrFratRichardRelationship < 4: [should be not yet available]
+	if SatyrFratRichardRelationship < 4:
 		project Figure of Richard_human_clothed_icon;
 		say "     As you walk up to Richard, who's on his computer, he turns to you with a smile. 'What's up?' he asks you, turning his chair to face you.";
 	else:
@@ -330,13 +331,17 @@ to say Richard Guard Sex:
 
 instead of fucking Richard:
 	if (lastfuck of Richard - turns < 3): [he got fucked in the last 9 hours = 3 turns]
-		say "     The satyr chuckles at you before waving you off. 'Down [if Player is female]girl[else]boy[end if]! I need time to rest,' he jokingly tells you.";
+		say "     The young man chuckles at you before waving you off. 'Down [if Player is female]girl[else]boy[end if]! I need time to rest,' he jokingly tells you.";
 	else:
-		project Figure of Richard_satyr_hard_icon;
 		say "     While Richard is tapping away at his keyboard, you think of how you can use that body of his.";
 		say "[RichardSexMenu]";
 
 to say RichardSexMenu:
+	if SatyrFratRichardRelationship > 3 and SatyrFratRichardRelationship < 90:
+		project Figure of Richard_satyr_hard_icon;
+	else:
+		project Figure of Richard_human_hard_icon;
+	say "<Writer's Note: Sadly, he currently doesn't have a scene set for his human form, so for now only the satyr scenes are available here.>";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

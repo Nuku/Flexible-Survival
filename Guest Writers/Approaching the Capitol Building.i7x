@@ -30,7 +30,7 @@ Approaching the Capitol Building	"Approaching the Capitol Building"
 
 Approaching the Capitol Building is a Room. Description of Approaching the Capitol Building is "[app_cap_bldg_desc]".
 The Approaching the Capitol Building is fasttravel.
-earea of Approaching the Capitol Building is "Outside".
+earea of Approaching the Capitol Building is "Capitol".
 [  The Approaching the Capitol Building is private.	]
 
 to say app_cap_bldg_desc:

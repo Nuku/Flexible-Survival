@@ -67,47 +67,57 @@ to say beattheFireSprite:
 to say beatFireSpriteguy:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male and Cock Length of Player > 24:
 		choose a blank row in table of fucking options;
 		now title entry is "Masturbation";
 		now sortorder entry is 1;
-		now description entry is "have the sprite stroke you off";
+		now description entry is "Have the sprite stroke you off";
+	[]
 	if Player is male and Cock Length of Player < 25:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "fuck the sprite's ass";
+		now description entry is "Fuck the sprite's ass";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get fucked";
 		now sortorder entry is 3;
-		now description entry is "ride the sprite's cock";
+		now description entry is "Ride the sprite's cock";
+	[]
 	if Player is female and Cunt Depth of Player > 24:
 		choose a blank row in table of fucking options;
 		now title entry is "Insertion";
 		now sortorder entry is 4;
-		now description entry is "use the sprite as a 'special' toy";
+		now description entry is "Use the sprite as a 'special' toy";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 5;
-		now description entry is "have the sprite eat you out";
+		now description entry is "Have the sprite eat you out";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 6;
-		now description entry is "have the sprite suck you off";
+		now description entry is "Have the sprite suck you off";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "Confirmation: Would you like to [description entry]?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
 				if title entry is "Masturbation":
 					say "[FireSpriteMasturbate]";
@@ -122,48 +132,62 @@ to say beatFireSpriteguy:
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
 				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
+			wait for any key;
 		else:
-			say "Invalid Option.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say beatFireSpritegirl:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male and Cock Length of Player > 24:
 		choose a blank row in table of fucking options;
 		now title entry is "Masturbation";
 		now sortorder entry is 1;
 		now description entry is "have the sprite stroke you off";
+	[]
 	if Player is male and Cock Length of Player < 25:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her";
 		now sortorder entry is 2;
 		now description entry is "fuck the sprite's pussy";
+	[]
 	if Player is female and Cunt Depth of Player > 24:
 		choose a blank row in table of fucking options;
 		now title entry is "Insertion";
 		now sortorder entry is 3;
 		now description entry is "use the sprite as a 'special' toy";
+	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
 		now description entry is "have the sprite eat you out";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
 		now description entry is "have the sprite suck you off";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
-		say "Pick the corresponding number (1-[number of filled rows in table of fucking options])> [run paragraph on]";
+		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "Confirmation: Would you like to [description entry]?";
+			say "[title entry]: [description entry]?";
 			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
 				if title entry is "Masturbation":
 					say "[FireSpriteMasturbate]";
@@ -176,8 +200,13 @@ to say beatFireSpritegirl:
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
 				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding against having some fun with the sprite, you release [if FireSpritemode is 0]her[else]him[end if] and send [if FireSpritemode is 0]her[else]him[end if] scampering off into the city with a light kick in the ass.";
+			wait for any key;
 		else:
-			say "Invalid Option.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say FuckFireSprite:
 	if FireSpritemode is 0:

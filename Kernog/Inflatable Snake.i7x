@@ -259,7 +259,7 @@ to inflatableSnakeSanityPassive: [Passively decreases the player's sanity attrib
 	if  inflatableSnakeBodyParts is 1 and (enduring is false or (enduring is true and a random chance of 1 in 2 succeeds)):
 		SanLoss(1);
 	else:
-		SanLoss((inflatableSnakeBodyParts + psycheadjust) / endureadj);
+		SanLoss((inflatableSnakeBodyParts + 1 + psycheadjust) / endureadj);
 
 to inflatableSnakeSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 	let endureadj be 1;
@@ -269,7 +269,7 @@ to inflatableSnakeSanityOrgasm: [Causes sanity to sharply plummet upon orgasm.]
 	let psycheModifier be 1;
 	if inflatableSnakeBodyParts > 2:
 		increase psycheModifier by 1;
-	SanLoss((inflatableSnakeBodyParts * 2 + psycheadjust * psycheModifier) / endureadj);
+	SanLoss((inflatableSnakeBodyParts * 2 + 1 + psycheadjust * psycheModifier) / endureadj);
 
 Section 2 - Creature Insertion
 

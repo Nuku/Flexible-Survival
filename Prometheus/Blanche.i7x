@@ -1195,31 +1195,31 @@ to say ResolveEvent Scavenging the Park:
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
 		say "     Introductions having been made, it doesn't take you too long to finish showing Blanche and Sturm around the library from bunker to attic and all the facilities in between. Nonetheless, they seem exhausted by the end so after you bring them back to the computer lab where the rest of their family has made a cozy looking corner for them all to sleep in at night. You would imagine that they have much to talk about. You'll come back later.";
-		Move player to Grey Abbey Library;
-		move Blanche to Computer Lab;
-		move Sturm to Computer Lab;
-		move Bianca to Computer Lab;
-		move Ernest to Computer Lab;
-		move Claude to Computer Lab;
-		move Penelope to Computer Lab;
-		move Wendis to Computer Lab;
-		move Bernard to Breakroom;
-		move Maeve to Breakroom;
-		move Lumi to Computer Lab;
-		move Casper to Computer Lab;
-		now Office Den is unknown;
-		now Charisma of Blanche is 1;
-		now hp of Sturm is 1;
-		now hp of Bianca is 1;
-		now hp of Ernest is 1;
-		now hp of Claude is 1;
-		now hp of Penelope is 1;
-		now hp of Wendis is 1;
-		now hp of Bernard is 1;
-		now hp of Maeve is 1;
-		now hp of Lumi is 1;
-		now hp of Casper is 1;
-		now Scavenging the Park is resolved;
+	Move player to Grey Abbey Library;
+	move Blanche to Computer Lab;
+	move Sturm to Computer Lab;
+	move Bianca to Computer Lab;
+	move Ernest to Computer Lab;
+	move Claude to Computer Lab;
+	move Penelope to Computer Lab;
+	move Wendis to Computer Lab;
+	move Bernard to Breakroom;
+	move Maeve to Breakroom;
+	move Lumi to Computer Lab;
+	move Casper to Computer Lab;
+	now Office Den is unknown;
+	now Charisma of Blanche is 1;
+	now hp of Sturm is 1;
+	now hp of Bianca is 1;
+	now hp of Ernest is 1;
+	now hp of Claude is 1;
+	now hp of Penelope is 1;
+	now hp of Wendis is 1;
+	now hp of Bernard is 1;
+	now hp of Maeve is 1;
+	now hp of Lumi is 1;
+	now hp of Casper is 1;
+	now Scavenging the Park is resolved;
 
 
 Section 2 - Office Den

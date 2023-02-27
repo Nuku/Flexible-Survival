@@ -76,52 +76,59 @@ to say HHNerd loses:
 		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, popping off its cork and throwing its contents at you. You do your best to evade, but even so, some of the stuff splashes on you - and forces you almost to your knees with its stench. Man - what kind of chemical was that? A bit dazed by this unexpected attack, you stumble backwards and frantically throw off soiled clothing and try to rub the scent off your skin... which gives Clyde easily enough time to run off. The last you hear from him are the words 'You'll regret resisting against me!', shouted over his shoulder.";
 	else:
 		say "     Finding himself on the losing side of your confrontation, Clyde quickly pulls a small test-tube out of his pocket, getting ready to... do something with it you guess. As you don't want to find out, you react instantly and slap his hand to the side, sending the glass vial flying away. After that, you set an end to the fight with a punch to Clyde's nose, sending the nerdy guy sprawling on the ground. Groaning, he sits up on the ground, wiping a small amount of blood from his nose as he says 'Okay, you win. The cleverer give in, so stop hitting me.'";
-		say "     Now that you've got him at your mercy, what do you do with Clyde?";
 		wait for any key;
 		say "     [HHNerdSexMenu]";
 
 to say HHNerdSexMenu:
+	say "     [bold type]Now that you've got him at your mercy, what do you do with Clyde?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 1;
-		now description entry is "Pound Clyde's butt.";
-		now toggle entry is HHNerdSex rule;
+		now description entry is "Pound Clyde's butt";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
-	now description entry is "Suck the nerd's horsecock.";
-	now toggle entry is HHNerdSex rule;
+	now description entry is "Suck the nerd's horsecock";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Give him a kick and leave";
 	now sortorder entry is 10;
-	now description entry is "Just walk away from the nerdy bastard.";
-	now toggle entry is HHNerdSex rule;
+	now description entry is "Just walk away from the nerdy bastard";
 	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the HHNerdSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Fuck his ass"):
-			say "[HHNerdSex1]";
-		if (nam is "Blow him off"):
-			say "[HHNerdSex2]";
-		else if (nam is "Give him a kick and leave"):
-			say "     Giving Clyde a kick, you turn around and walk away. It's doubtful that he'll learn anything from this, but sometimes kicking people just feels good.";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck his ass"):
+					say "[HHNerdSex1]";
+				if (nam is "Blow him off"):
+					say "[HHNerdSex2]";
+				else if (nam is "Give him a kick and leave"):
+					say "     Giving Clyde a kick, you turn around and walk away. It's doubtful that he'll learn anything from this, but sometimes kicking people just feels good.";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding that he's not worth your time, you just turn around and walk away.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say HHNerdSex1:
 	say "     Standing over Clyde, you undo your pants and drop them, letting your [cock size desc of Player] [Cock of Player] shaft dangle before his eyes. [if Cock Length of Player < 10]He scoffs 'You call that a penis? Such a little - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [else if Cock Length of Player < 20]He scoffs 'You think you're big, don't you? If you had just submitted as you're supposed to, I'd have shown you - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [else]He scoffs 'You might be hung like me, but I bet I'm much better in - *hnggg*' ...as it turns out, a quick pull on his mane of hair is an effective way of shutting this pain in the ass up. [end if]Telling the stuck-up student that you'll show him what his behavior gets him, you order him to get on all fours. After a moment's hesitation, he complies, getting into position with his ass raised high, though not without giving a little annoyed grunt as he does so.";

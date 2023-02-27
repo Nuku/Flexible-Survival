@@ -123,6 +123,12 @@ Figure of Imp_face_icon is the file "Imp_face.jpg".
 Figure of Incubus_clothed_icon is the file "Incubus_clothed.jpg".
 Figure of Incubus_naked_icon is the file "Incubus_naked.jpg".
 Figure of Kangaroo_icon is the file "Red Kangaroo.jpg".
+Figure of Knight_clothed_icon is the file "Knight_clothed.jpg".
+Figure of Knight_clothed_armed_icon is the file "Knight_clothed_armed.jpg".
+Figure of Knight_clothed_shirtless_icon is the file "Knight_clothed_shirtless.jpg".
+Figure of Knight_clothed_undies_icon is the file "Knight_clothed_undies.jpg".
+Figure of Knight_hard_icon is the file "Knight_hard.jpg".
+Figure of Knight_soft_icon is the file "Knight_soft.jpg".
 Figure of Lamia_icon is the file "FSTF_Lamia.jpg".
 Figure of LatexErmine_icon is the file "latexermine_ig.jpg". [creature loss variant]
 Figure of LatexErmineBlue_icon is the file "FSTF_LatexErmineBlue_ig.jpg". [color variants]
@@ -532,6 +538,7 @@ Figure of Ranae_rags_icon is the file "Ranae_rags.jpg".
 Figure of Ranae_dress_icon is the file "Ranae_dress.jpg".
 Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
+Figure of Rane_butt_icon is the file "Rane_butt.jpg".
 Figure of Richard_human_clothed_icon is the file "Richard_human_clothed.jpg".
 Figure of Richard_human_hard_icon is the file "Richard_human_hard.jpg".
 Figure of Richard_satyr_soft_icon is the file "Richard_satyr_soft.jpg".
@@ -545,6 +552,7 @@ Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
 Figure of Ryan_pillow_icon is the file "Ryan_pillow.jpg".
 Figure of Ryan_panties_icon is the file "Ryan_panties.jpg".
 Figure of Ryan_naked_icon is the file "Ryan_naked.jpg".
+Figure of Ryousei_clothed_icon is the file "Ryousei_clothed.jpg".
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
@@ -1551,6 +1559,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Katya"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Klauz_face"	Figure of Klauz_face_icon	"SineAlas"	g-black	"normal"
 "Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-white	"normal"
+"Knight_clothed"	Figure of Knight_clothed_icon	"Keitaro87"	g-white	"normal"
+"Knight_clothed_armed"	Figure of Knight_clothed_armed_icon	"Keitaro87"	g-white	"normal"
+"Knight_clothed_shirtless"	Figure of Knight_clothed_shirtless_icon	"Keitaro87"	g-white	"normal"
+"Knight_clothed_undies"	Figure of Knight_clothed_undies_icon	"Keitaro87"	g-white	"normal"
+"Knight_hard"	Figure of Knight_hard_icon	"Keitaro87"	g-white	"normal"
+"Knight_soft"	Figure of Knight_soft_icon	"Keitaro87"	g-white	"normal"
 "Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Koghh_naked"	Figure of Koghh_naked_icon	"Kupo Klein"	g-white	"normal"
 "Koghh_Yatur_naked"	Figure of Koghh_Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -1674,6 +1688,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ranae dress"	Figure of Ranae_dress_icon	"SteppeCrow"	g-White	"normal"
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
+"Rane_butt"	Figure of Rane_butt_icon	"Lyttathebug"	g-white	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
 "Reptaur_hard"	Figure of Reptaur_hard_icon	"SteppeCrow"	g-white	"normal"
 "Reptaur_soft"	Figure of Reptaur_soft_icon	"SteppeCrow"	g-white	"normal"
@@ -1682,12 +1697,15 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Richard_satyr_hard"	Figure of Richard_satyr_hard_icon	"SteppeCrow"	g-White	"normal"
 "Richard_satyr_soft"	Figure of Richard_satyr_soft_icon	"SteppeCrow"	g-White	"normal"
 "Rod"	Figure of Rod_icon	"Ticl"	g-white	"normal"
+"Roman"	Figure of Roman_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Roman"	Figure of Roman_naked_icon	"SteppeCrow"	g-White	"normal"
 "Ronda"	Figure of Ronda_icon	"Ticl"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
 "Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
 "Ryan pillow"	Figure of Ryan_pillow_icon	"SteppeCrow"	g-White	"normal"
 "Ryan panties"	Figure of Ryan_panties_icon	"SteppeCrow"	g-White	"normal"
 "Ryan naked"	Figure of Ryan_naked_icon	"SteppeCrow"	g-White	"normal"
+"Ryousei_clothed"	Figure of Ryousei_clothed_icon	"Vashaa"	g-White	"normal"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
@@ -2600,6 +2618,7 @@ carry out artistcredits:
 	say "     Karel by Reaper3d @ https://www.furaffinity.net/user/reaper3d/[line break]";
 	say "     Katya by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Klauz by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Knight by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
@@ -2633,10 +2652,12 @@ carry out artistcredits:
 	say "     Ranae by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
+	say "     Rane (butt) by Lyttathebug @ furaffinity.net[line break]";
 	say "     Rod by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
 	say "     Ronda by Ticl @ https://www.furaffinity.net/user/ticl/[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
 	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
+	say "     Ryousei (clothed) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";

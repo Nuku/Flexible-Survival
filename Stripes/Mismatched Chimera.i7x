@@ -142,7 +142,6 @@ to say losetomischim:
 			increase MonsterID by 1;
 			choose row MonsterID from Table of Random Critters;
 
-
 to say beatthemischim:
 	if inasituation is true:
 		say ""; [dealt with in the source event]

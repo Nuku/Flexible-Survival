@@ -618,7 +618,7 @@ to say Bucky_Person:
 	if (number of bunkered people + number of booked people > 2):
 		say "After that, you announce publicly that Bucky is not a doll or anything, but a person, and he needs all the support he can get to become normal again.";
 	LineBreak;
-	if Alexandra is booked or Alexandra is bunkered: [70/30]
+	if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50: [70/30] [bad Alexandra]
 		say "     Alexandra saunters closer, letting her gaze drift up and down over Bucky, then raising a hand to snap her fingers right in front of his face. 'Yeah, with a 1000 yard stare like that... good luck with your little project. Hell, this is worse than the girls I was called in to handle in that one human trafficking case we had. At least they were still... in there, you know. Flinched away from men.' Her lips pull back to expose sharp canine teeth, showing the anger the tough bitch feels at those who abuse innocents. 'Where did you get this broken little buck anyways? Did you pull him out of a fuckpile somewhere and clean him up or something?' When you mention the mannequin warehouse, she grimaces and shakes her head. 'Funny place for you finding your altruistic side. You're a moody fucker, anyone ever tell you that? Hell, you beat me into submission one day, the next you're coddling this buck,' the doberwoman says with a shrug, then walks away.";
 		TraitGain "Bucky - Seen him" for Alexandra;
 		WaitBreakReactions;
@@ -810,7 +810,7 @@ to say Bucky_Toy:
 		if (number of bunkered people + number of booked people > 2):
 			say "After that, you announce publicly that Bucky is not actually a person, but just a really realistic cuntboy doll.";
 		LineBreak;
-		if Alexandra is booked or Alexandra is bunkered: [70/30]
+		if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50: [70/30]
 			say "     Alexandra saunters closer, letting her gaze drift up and down over Bucky. 'Sure this isn't some poor twink that hit his head? Seems pretty fucking life-like to me.' With a snort, she then comments, 'You really are one kinky fucker, boss!' After that, the doberwoman walks away.";
 			TraitGain "Bucky - Seen him" for Alexandra;
 			WaitBreakReactions;
@@ -1007,7 +1007,7 @@ to say Hercules_Person:
 	if (number of bunkered people + number of booked people > 2):
 		say "After that, you announce publicly that Hercules is not a doll or anything, but a person, and he needs all the support he can get to become normal again.";
 	LineBreak;
-	if Alexandra is booked or Alexandra is bunkered: [70/30]
+	if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50: [70/30]
 		say "     Alexandra saunters closer, letting her gaze drift up and down over Hercules, resting for a moment at his crotch, with a well-sized, if soft, equine cock and weighty balls exposed by his nakedness. Then she raises a hand to snap her fingers right in front of his face. 'Yeah, with a 1000 yard stare like that... good luck with your little project. Hell, this is worse than the girls I was called in to handle in that one human trafficking case we had. At least they were still... in there, you know. Flinched away from men.' Her lips pull back to expose sharp canine teeth, showing the anger the tough bitch feels at those who abuse innocents. 'Where did you get this broken hunk anyways? Did you pull him out of a fuckpile somewhere and clean him up or something?' When you mention the mannequin warehouse, she grimaces and shakes her head. 'Funny place for you finding your altruistic side. You're a moody fucker, anyone ever tell you that? Hell, you beat me into submission one day, the next you're coddling a braindead horse like this,' the doberwoman says with a shrug, then walks away.";
 		TraitGain "Hercules - Seen him" for Alexandra;
 		WaitBreakReactions;
@@ -1200,7 +1200,7 @@ to say Hercules_Toy:
 		if (number of bunkered people + number of booked people > 2):
 			say "After that, you announce publicly that Hercules is not actually a person, but just a really realistic horseman stud doll.";
 		LineBreak;
-		if Alexandra is booked or Alexandra is bunkered: [70/30]
+		if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50: [70/30]
 			say "     Alexandra saunters closer, letting her gaze drift up and down over Hercules. 'Well, well - what do we have here? That's one big stud you've brought over! Is he... fully functional, and all that?' Alexandra says, adding a wave to indicate the soft cock down at the Clydesdale's crotch as she says the last sentence. As you nod, she snorts and comments, 'You really are one kinky fucker, boss! Bet you'll want to watch as I use this thing, eh?' After that, the doberwoman walks away.";
 			TraitGain "Hercules - Seen him" for Alexandra;
 			WaitBreakReactions;
