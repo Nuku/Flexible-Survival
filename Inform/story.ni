@@ -430,7 +430,7 @@ Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
 Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
-Include Cannon by Guest Writers.
+Include Cannon by Wahn.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by Guest Writers.
