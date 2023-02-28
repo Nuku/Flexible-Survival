@@ -516,31 +516,31 @@ to say KalRen_PlayerWonFuckMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck his Cock";
 		now sortorder entry is 1;
-		now description entry is "";
+		now description entry is "You can't resist the call of that musky fox cock. You're not willing to become his pet, but a taste wouldn't hurt, would it?";
 	[]
 	if hunger of Kal Ren is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his Cock";
 		now sortorder entry is 2;
-		now description entry is "";
+		now description entry is "Sit on Ren's cock. It just looks so inviting...";
 	[]
 	if hunger of Kal Ren is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Present Yourself";
 		now sortorder entry is 3;
-		now description entry is "";
+		now description entry is "Bend over and present yourself. You can't take it anymore! You need that dick inside you.";
 	[]
 	if thirst of Kal Ren is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Worship his Ass with your Tongue";
 		now sortorder entry is 4;
-		now description entry is "";
+		now description entry is "Ren's muscled ass has caught your eye. Just a taste...";
 	[]
 	if thirst of Kal Ren is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer your Cock as a Toy";
 		now sortorder entry is 5;
-		now description entry is "";
+		now description entry is "You don't care whether you sound desperate, you need your cock in his hole, now!";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
