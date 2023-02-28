@@ -223,6 +223,7 @@ to say SusanDesc:
 		say "     You let your gaze roam over Susan's body, following the curves of her cream-colored breasts barely hidden by a fairly ripped tank top. The protruding nipples of the anthro are clearly visible through the thin fabric. Further down on the level of her crotch, you can see a noticeable bulge in her short-shorts, leaving little doubt that this young woman is packing something extra down there. Casually observing her, you notice that from time to time, she lets a hand stray down to the bulge of her short shorts, lightly rubbing and adjusting it.";
 	else if Cock Length of Susan > 10 and Susan is in Primary Lab: [buck mode in Trevor Labs]
 		SusanMaleHerm_Base; [Used both for Dr. Matt & Dr. Mouse form - moved below as a callout so the text isn't duplicated]
+		project Figure of Susan_MHerm_shortshorts_icon;
 		if "Samson Active" is listed in Traits of Susan: [Samson description, male pronouns]
 			say "     Having physically grown in size since you first found him, Samson's body is now conforming to much more of a masculine shape that includes broadened shoulders and chest, as well as more muscle tone of the arms and legs. His bosom appears to have shrunk a bit - or maybe it's just that the anthro's pectoral muscles have filled in, catching up to stick out above a flat belly and well-defined abs. That's not to say that he's turned completely male though, as you can still see some rounded curves of Samson's breasts at the lower edge of his pecs, with nicely large areolas and protruding nipples. He's still a herm, but a decidedly masculine one now. Glancing down at the crotch of your deer friend, you can see that the bulge in the short-shorts is larger than it was before too, and you know full well that an 11-inch cock is just waiting for you within.";
 		else: [Susan description, female pronouns]
@@ -277,6 +278,8 @@ to SusanTalkMenu: [TODO: Add talk option about sexual orientation]
 	let DoneTalking be false;
 	if Cock Length of Susan < 11: [FHerm mode]
 		project the Figure of Susan_face_icon;
+	else:
+		project Figure of Susan_MHerm_shortshorts_icon;
 	LineBreak;
 	say "     [bold type]What do you want to talk to [PosAdj of Susan] about?[roman type][line break]";
 	LineBreak;
@@ -510,6 +513,7 @@ instead of going to Primary Lab while (M-Herm Susan Transformation End is active
 	say "[ResolveEvent M-Herm Susan Transformation End]";
 
 to say ResolveEvent M-Herm Susan Transformation End:
+	project Figure of Susan_MHerm_shortshorts_icon;
 	say "     As you step into the laboratory room once more, you Dr. Matt standing next to one of the examination tables, on which a large and fairly muscular anthro deer lies outstretched. He's naked, with your gaze automatically being drawn to his manhood lying on his stomach, sizable even given that it is soft in the somewhat chilly room. The doctor in his hazmat suit is standing with his back to you, making your approach unnoticed by him and blocking the face and chest of the deer from your sight. Only an impressive rack of antlers can be seen past him. Your imagination goes through a flurry of thoughts of who this might be. Where did he come from? Maybe he came looking for Susan? Tracked her here by scent? But then, Orthas didn't say anything about a new arrival, either. And where [italic type]is[roman type] your very special deer anyways? You're not seeing her in here! Worry builds moment by moment as scenarios of what might have happened build up in your mind - only to be interrupted as Dr. Matt speaks.";
 	say "     'Fascinating. You are quite healthy, impressively so. To be honest, before the outbreak of the current calamity, I never had a patient in such excellent physical condition.' As he picks up a clipboard and makes some notes on it, you hear the patient ask, 'Yes, but does this mean I'll just continue shifting like this? I hadn't even gotten used to my old body, and now I'm... different, again!' The voice is immediately familiar to you, despite a slight shift in its tone. That's Susan! Walking a few steps to the side, you see your realization confirmed, as it is indeed your deer friend on the table, albeit with somewhat masculinized features of her face, as well as broader shoulders and more muscular shape. Her pecs have gotten bigger with muscle and stick out, de-empathizing the herm's breasts, even while she still has nicely big, perky nipples.";
 	WaitLineBreak;
@@ -709,7 +713,10 @@ to say SusanRelationshipTalk:
 	now PlayerFriended of Susan is true;
 
 instead of conversing the Susan:
-	project the Figure of Susan_face_icon;
+	if Cock Length of Susan < 11: [FHerm mode]
+		project the Figure of Susan_face_icon;
+	else:
+		project Figure of Susan_MHerm_shortshorts_icon;
 	if HP of Doctor Matt < 7:
 		say "     Maybe you should talk to Dr. Matt first and learn about the results of his examination.";
 	else if HP of Doctor Matt is 7: [ready for experiment]
@@ -803,7 +810,10 @@ to SusanTalkHospital:
 Section 3 - Sex with Susan
 
 to say sexwithSusan:
-	project the Figure of Susan_face_icon;
+	if Cock Length of Susan < 11: [FHerm mode]
+		project the Figure of Susan_face_icon;
+	else:
+		project Figure of Susan_MHerm_shortshorts_icon;
 	if lastfuck of Susan - turns < 4:
 		say "     'As fun as it is, I do need a little break every now and again,' [Susan] says with a chuckle.";
 	else if HP of Doctor Matt < 7: [not yet ready for the experiment]
@@ -841,7 +851,10 @@ to SusanSexMenu:
 	else if "Submissive" is listed in Traits of Susan:
 		now SusanDom is false;
 		now SusanSub is true;
-	project the Figure of Susan_face_icon;
+	if Cock Length of Susan < 11: [FHerm mode]
+		project Figure of Susan_FHerm_hard_icon;
+	else:
+		project Figure of Susan_MHerm_hard_icon;
 	LineBreak;
 	say "     [bold type]What do you want to do with Susan?[roman type][line break]";
 	LineBreak;

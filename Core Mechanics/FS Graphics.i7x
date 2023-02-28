@@ -186,6 +186,9 @@ Figure of Sabretooth_soft_icon is the file "Sabretooth_soft.jpg".
 Figure of Sabretooth_hard_icon is the file "Sabretooth_hard.jpg".
 Figure of Sabretooth_clothed_icon is the file "Sabretooth_clothed.jpg".
 Figure of Sabretooth_naked_icon is the file "Sabretooth_naked.jpg".
+Figure of Sascha_turtleneck_icon is the file "Sascha_turtleneck.jpg".
+Figure of Sascha_shirt_icon is the file "Sascha_shirt.jpg".
+Figure of Sascha_bottomless_icon is the file "Sascha_bottomless.jpg".
 Figure of SeaDragoness_NSFW_icon is the file "Sea Dragoness_NSFW.jpg".
 Figure of SeaDragoness_SFW_icon is the file "Sea Dragoness_SFW.jpg".
 Figure of SeaDragon_hard_icon is the file "Sea Dragon hard.jpg".
@@ -437,6 +440,10 @@ Figure of Hayato_icon is the file "Hayato_reading.jpg".
 Figure of Harold_icon is the file "Harold.jpg".
 Figure of Harold_naked_icon is the file "Harold_naked.jpg".
 Figure of Helen_naked_icon is the file "Helen.jpg".
+Figure of Hercules_soft_icon is the file "Hercules_soft.jpg".
+Figure of Hercules_hard_icon is the file "Hercules_hard.jpg".
+Figure of Hercules_kilt_icon is the file "Hercules_kilt.jpg".
+Figure of Hercules_towel_icon is the file "Hercules_towel.jpg".
 Figure of Hobo_icon is the file "Hobo.jpg".
 Figure of Honey_icon is the file "Honey_ig.jpg".
 Figure of Isaac_clothed_icon is the file "Isaac_clothed.jpg".
@@ -594,8 +601,9 @@ Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
 Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
-Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
-Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
+Figure of Susan_MHerm_shortshorts_icon is the file "Susan_MHerm_shortshorts.jpg".
+Figure of Susan_MHerm_shorts_icon is the file "Susan_MHerm_shorts.jpg".
+Figure of Susan_MHerm_hard_icon is the file "Susan_MHerm_hard.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
 Figure of Sven_tail_icon is the file "Sven_tail.jpg".
 Figure of Tanuki_Dad_hard_icon is the file "Tanuki_Dad_hard.jpg".
@@ -1506,6 +1514,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
 "Henry_soft"	Figure of Henry_soft_icon	"CastBound"	g-white	"normal"
 "Henry_hard"	Figure of Henry_hard_icon	"CastBound"	g-white	"normal"
+"Hercules_soft"	Figure of Hercules_soft_icon	"SteppeCrow"	g-white	"normal"
+"Hercules_hard"	Figure of Hercules_hard_icon	"SteppeCrow"	g-white	"normal"
+"Hercules_towel"	Figure of Hercules_towel_icon	"SteppeCrow"	g-white	"normal"
+"Hercules_kilt"	Figure of Hercules_kilt_icon	"SteppeCrow"	g-white	"normal"
 "Herm Hyena_naked"	Figure of Herm_Hyena_naked_icon	"Vashaa"	g-White	"normal"
 "Hyena_Matriarch_clothed_icon"	Figure of Hyena_Matriarch_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Hyena_Matriarch_hard_icon"	Figure of Hyena_Matriarch_hard_icon	"SteppeCrow"	g-white	"normal"
@@ -1715,6 +1727,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sabretooth_soft"	Figure of Sabretooth_soft_icon	"Vashaa"	g-White	"normal"
 "Sabretooth_clothed"	Figure of Sabretooth_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Sabretooth_naked"	Figure of Sabretooth_naked_icon	"SteppeCrow"	g-white	"normal"
+"Sascha_turtleneck"	Figure of Sascha_turtleneck_icon	"CastBound"	g-black	"normal"
+"Sascha_shirt"	Figure of Sascha_shirt_icon	"CastBound"	g-black	"normal"
+"Sascha_bottomless"	Figure of Sascha_bottomless_icon	"CastBound"	g-black	"normal"
 "Sally"	Figure of Sally_icon	"Furball"	g-white	"normal"
 "Sand Man"	Figure of SandMan_icon	"Rastear"	g-black	"normal"
 "Sandy"	Figure of sandy_icon	""	g-white	"normal"
@@ -1787,6 +1802,9 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Susan_FHerm_clothed"	Figure of Susan_FHerm_clothed_icon	"Vashaa"	g-white	"normal"
 "Susan_FHerm_hard"	Figure of Susan_FHerm_hard_icon	"Vashaa"	g-white	"normal"
+"Susan_MHerm_shortshorts"	Figure of Susan_MHerm_shortshorts_icon	"Vashaa"	g-white	"normal"
+"Susan_MHerm_shorts"	Figure of Susan_MHerm_shorts_icon	"Vashaa"	g-white	"normal"
+"Susan_MHerm_hard"	Figure of Susan_MHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
@@ -2436,6 +2454,7 @@ carry out artistcredits:
 	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hellfire Demon by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Helot by Obieblu @ tumblr.com[line break]";
+	say "     Hercules by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
 	say "     Hermaphrodite Gryphon by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
@@ -2659,6 +2678,7 @@ carry out artistcredits:
 	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Ryousei (clothed) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
+	say "     Sascha (jogging) by CastBound @ https://www.furaffinity.net/user/castbound/[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Sam (as Vixentaur) by Anymouse1968 @ furaffinity.net[line break]";
