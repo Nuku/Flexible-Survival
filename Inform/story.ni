@@ -376,6 +376,7 @@ Include Special Forces Events by Vinickus.
 Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Sugar Feud by AGentlemanCalledB.
+Include Sunbathing Gator by Voidsnaps.
 Include TFTG Feats by Luneth.
 Include Tidepool Event by Guest Writers.
 Include Toy Store by Song.
@@ -429,7 +430,7 @@ Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
 Include Cambion Male by Gherod.
 Include Candy Striper by Stripes.
-Include Cannon by Wahn.
+Include Cannon by Guest Writers.
 Include Cat Ninjas by Stripes.
 Include Catgirl by Wahn.
 Include Caveman by Guest Writers.
