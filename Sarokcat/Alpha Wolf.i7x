@@ -47,7 +47,6 @@ to say Alpha Wolf attack:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Wolf";
 			else:
 				say "'Bad little wolf, not being ready for the packleader,' the large canine beast says, baring his teeth at your defeated form, causing you to cringe in submission. 'Next time I'm sure you will do better, won't you?' the large Alpha asks you, and you find yourself nodding submissively in agreement. 'Good, you had better,' the large beast mutters as it stalks away, leaving you lying there submissively in the road, worried about his last statement.";
-			infect "Alpha Wolf";
 		else:
 			if Player is female:
 				say "     The wolf grabs you and throws you down onto the ground again, his rough, paw-like hand keeping a strong steady pressure up as it grips the back of your neck, while his other moves between your legs, seemingly satisfied with what he finds there, the lupine beast lets out a pleased grunt. Gripping your neck tighter, the beast forces your face down into the ground. As he positions himself behind you, you can hear his harsh panting breath while he moves his hard lupine cock up between your thighs. Your body shudders as his pointed tip probes the entrance to your feminine passage, before thrusting himself into you in one hard, swift thrust.";

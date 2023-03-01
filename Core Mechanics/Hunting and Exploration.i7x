@@ -558,10 +558,64 @@ This is the explore rule:
 			now battleground is "void";
 			wait for any key;
 	if something is 0:
-		if battleground is "Smith Haven":
-			say "Wandering around a bit, stroll through the Smith Haven Mall, but don't find anything that really draws your attention right now.";
-		else:
-			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of Player].";
+		if battleground is "Smith Haven": [populated, crowded haven]
+			say "     Wandering around a bit, you stroll through the overfilled Smith Haven Mall and ";
+			let randomnumber be a random number from 1 to 10;
+			if randomnumber is:
+				-- 1:
+					say "happen upon a group of dogs of varying breeds playing cards on a collapsible table. They seem to be playing for dog treats. You contemplate joining them, but you feel out of place as a bulldog in a visor stares at you expectantly. Finally, you return to the [location of Player].";
+				-- 2:
+					say "pass by an anthro fox and rat, dressed in somewhat threadbare, but well-patched clothes. They've got backpacks and gear, complete with melee weapons, and apparently are preparing for an expedition out into the city. Brave plans, as they're not looking like the most hard-boiled fighters. But then, maybe they don't need to be, if they're stealthy. You stop and give them some tips from your own forays in the city, then return to the [location of Player].";
+				-- 3:
+					say "see a dejected man with curly blonde hair, wearing a diaper and nothing else. As he holds a pink bow and arrow in his hands, he sobs into a colorful bunny's chest. You catch a snippet of their conversation, but all you can make out is 'I'm useless! Everyone's already fucking all the time. I barely have time to nock an arrow before they're on the ground, humping away!' Deciding to leave the poor thing to his woes, you return to the [location of Player].";
+				-- 4:
+					say "see the towering shape of a minotaur stick out of the crowd. He walks with his head bent down a bit, trying to avoid his horns catching on any store-signs. As the man turns to stop at a place a little ahead, you can see quite a lot of grey in his fur, with an almost comically small set of glasses sitting on his muzzle. Certainly not an easy infection to have, and still retain your normal life in society. Not wanting to make it obvious you were staring at him, you then return to the [location of Player].";
+				-- 5:
+					say "come across a harried-looking border collie trying her best to corral a swarm of children. Given that there are... eight, no nine, different species of kids among her flock, this is far from an easy task. You help out by turning around a little goat boy who was strolling off to the side, gently encouraging him to go back to his kindergarten group. The collie throws you a thankful look before having to return her attention to her flock. With a smile on your face, you return to the [location of Player].";
+				-- 6:
+					say "stumble over an undulating mass of insects. A chorus of tiny voices screams 'Hey buddy! Watch where you're goin' as the swarm flows into the vague shape of a human man, shaking its head in disgust. Confused, you return to the [location of Player], resolving to watch your feet in the future. Don't want to crush any important parts of someone!";
+				-- 7:
+					say "see a white rabbit whizz by, screaming something about being late as it checks an old pocket-watch and adjusts a top hat. He nearly slams into a few other creatures on his way past, then disappears into the mall bathroom. Disregarding the odd fellow's rudeness, you return to the [location of Player], wondering where he had to be in such a rush.";
+				-- 8:
+					say "almost collide with a vaguely human-shaped being, with its form hard to make out hidden beneath a black robe with a large hood pulled over the head. From beneath that, you can see the silvery gleam of what must be large eyes, and not much else. 'Excuse me,' the creature says in a genderless voice, looking down to the plate it is carrying in what is more a claw than a hand, which holds [one of]a piece of pie[or]a number of apple slices[or]a wobbling piece of jelly[or]a rubik's cube[at random]. With a metallic scraping sound that you interpret as a sigh of relief for the safety of its treat, the being then moves on through the crowd. Shaking your head about the variety of beings here in the mall, you return to the [location of Player].";
+				-- 9:
+					say "notice an argument break out between a cat and a dog nearby, quickly turning into a rolling ball of hissing, biting fur. You contemplate stepping in, but before you can step forward, their snarls have devolved into something more carnal, and their movements take on a less innocent tone. Before long, they're standing and dusting each other off, sharing a lingering gaze, then walking off hand in hand. Shrugging, you return to the [location of Player], letting the two lovebirds work out their squabble in peace.";
+				-- 10:
+					say "walk past what appears to be a group of people in futuristic uniforms, carrying some metallic object that chirps and beeps as they move it over nearby mutants. You can vaguely make out a conversation about a 'directive,' but not much else. Knowing how most interactions turn out in the city, you let them be, returning to the [location of Player] and not sparing them another thought.";
+		else: [everywhere else]
+			say "     Wandering the ruined, monster-infested city, you ";
+			let randomnumber be a random number from 1 to 15;
+			if randomnumber is:
+				-- 1:
+					say "come across an excessively large splattering of cum, with the clear outline of a person in the middle. You can only imagine what happened to them after that. Thinking that it might be best to watch out for whatever did that, you make your way back to the [location of Player].";
+				-- 2:
+					say "come across a pile of filled water balloons coated in cum. Somehow you don't think they're filled with water... Deciding not to stick around, you hurry back to the [location of Player], making a mental note to watch out for whatever plans to throw those.";
+				-- 3:
+					say "find one of those commercial dumpsters, which has been re-used as a nest by... something. Inside are the broken fragments of what looks like several eggs, large enough to have held a person. Who knows what hatched, and if that brood is still around, so you quickly make your way back to the [location of Player].";
+				-- 4:
+					say "happen upon a group of mutants playing dice in the street. It's fairly wholesome, until you realize that they're trading sexual favors, rather than money. Shaking your head, you return to the [location of Player].";
+				-- 5:
+					say "spot a gaggle of anthro weasels with colorful pirate outfits, 'armed' with plastic sabers. They seem more comical than a threat, shouting for booty to be plundered, and with one at the back of the crowd having [italic type]two eyepatches[roman type] on at the same time. Still, they might just swarm you if you're not careful, so you decide it best to go the other way and return to the [location of Player].";
+				-- 6:
+					say "stumble upon a sleeping creature in the middle of the street, using an old trash bag as a pillow. You feel sorry for the poor thing, but you know better than to wake it. That peaceful facade might hide oversexed insanity beneath its surface! Returning to the [location of Player] you wonder if things will ever return to normal.";
+				-- 7:
+					say "see a car moving along the street somewhere ahead of you, a rarity these days with the countless crashes and looting during the outbreak of the nanite infection. Then you look closer and see that it [italic type]isn't[roman type] actually a car, at least not one with wheels. The shape matches, but there are countless chitinous legs underneath, propelling it forward with disconcerting swiftness. It rushes up to a passing creature, and with a swing of a door, that poor soul vanishes inside of the monstrous vehicle. You decide to hurry back to the [location of Player] before you get to be the next victim.";
+				-- 8:
+					say "notice a vaguely rodent-like mutant squatting naked in the street with a sign held in both hands stating 'will fuck for food,' in an obviously misspelled, shaky script. You contemplate offering it some of your supplies, but another creature steps up, stuffing its cock down the rodent's throat, and you give the two some privacy, returning to the [location of Player] as wet sounds echo behind you.";
+				-- 9:
+					say "spot a line of charred spots, crossing the road in a line. They almost look like... human footprints? Whatever made these, it seared them into the asphalt. The trail ends at the smoking ruins of a collapsed building, with glowing embers visible between the rubble. You don't really want to know what happened there and hurry back to the [location of Player].";
+				-- 10:
+					say "hear a strange honking sound. A gaggle of creatures wearing hastily applied clown makeup shoves past you and clambers into a nearby car, filling it with so many bodies that you wonder how it's even possible! Shaking your head, you return to the [location of Player], hoping that you weren't hallucinating.";
+				-- 11:
+					say "step out of the way as what appears to be a bus whizzes by you. Strangely, upon closer inspection, it appears to be a cat with ten legs and a body in the shape of a bus, complete with windows and passengers! Contemplating the direction the creature ran off in, you decide to return to the [location of Player], rather than letting yourself get caught up in such strange shenanigans.";
+				-- 12:
+					say "see an electricity pole a little ahead of you sway and tremble, then fall over with a creak and crash, accompanied by snapping lines whipping through the air like whips. Moving forward a little, you see that some sort of giant insect snapped the pole off with its mandibles, and now is dragging it off, away from the road. Maybe it'd be best to avoid this area, so you hurry back to the [location of Player].";
+				-- 13:
+					say "watch as a tree grows arms and legs, then bows in your direction, producing a suitcase from thin air. As it lumbers off, you muse that it seems like they're in a hurry. You'd better return to the [location of Player], rather than bothering the wooden creature.";
+				-- 14:
+					say "see the shadow of... something creep out of an alley, a little distance ahead of you. Curious what would be making [italic type]that[roman type] shape as its shadow, you stop and watch, before realizing that with the light coming from further down the road, there couldn't be anything in the alley that throws this dark blotch - and there's nothing ahead on the road either! The source-less shadow oozes across the asphalt, then vanishes underneath a car wreck, almost as if waiting for prey. You decide it best to turn around and return to the [location of Player].";
+				-- 15:
+					say "hear a screeching sound, similar to a tea kettle at full boil. Strangely it seems to be coming from a latex creature's mouth as it stands in front of an abandoned store. You contemplate offering to help the strange thing, but you know better by now. Instead, you return to the [location of Player] and continue exploring.";
 	follow the turnpass rule;
 	rule succeeds.
 
