@@ -37,7 +37,7 @@ to say PublicDormFucking:
 	say "     [bold type]Do you peep on in the obvious public sex?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
-	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
+	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:
 		say "     Your interest getting the better of you, you edge close and peer on into the room. When you can see what's in there you can see a naked male wolf-morph and an equally naked, to your surprise human who is spread out on his stomach on the bed. The wolf on the other hand is stroking is hard-on with one hand while fingering the male's hole with the other. 'Mmm fuck, you're still tight as ever babe,' the wolf mutters, adding another finger to his partner's ass. 'I bet you can't wait till you take my knot,' the canine teases his boyfriend. 'Of course I can't... it'll feel so fucking good.' The human moans this out loud, pushing back against the digits.";
 		say "     Appearing to be unable to wait any longer, the wolf-morph sits up on his knees and positions his hard cock at the hole of his partner before pushing in. This causes the human to gasp out in both pain and pleasure as the tip of his lover's dick pops into his ass. From your spot you can clearly see the canine's shaft slowly going in, inch by inch, spreading his boyfriend wide who appears to be enjoying it thoroughly by fact that his tongue is lolled out and he's moaning loudly. Once the wolf is fully sheathed, he leans over the back of his partner and pulls him into a kiss, the two practically trading spit.";
