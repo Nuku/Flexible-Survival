@@ -76,7 +76,8 @@ instead of sniffing Malik:
 to say MalikDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Malik] <- DEBUG[line break]";
-	say "     Your son Malik has the typical looks of an orc warrior, standing about 7 feet tall with a broad-shouldered frame and slightly oversized hands and feet, at least compared to a human. Green-skinned and strong, he has a moderate dusting of black body hair over his bulging muscles, almost all of which are on full display as the orc only ever wears a somewhat ragged loincloth that barely covers his long schlong of a cock. Malik's face with its square jaw and somewhat brutish features is topped by a short mane of black hair that almost hides his bluntly pointed ears.";
+	project Figure of Malik_loincloth_icon;
+	say "     Your son Malik has the typical looks of an orc warrior, standing about 7 feet tall with a broad-shouldered frame and slightly oversized hands and feet, at least compared to a human. Green-skinned and strong, he has a moderate dusting of black body hair over his bulging muscles, almost all of which are on full display as the orc only ever wears a somewhat ragged loincloth that barely covers his long schlong of a cock. Malik's face with its square jaw and somewhat brutish features is topped by dark brown hair, cropped close to the skin around his pointed ears and the sides, while being tufted up on top of his head.";
 	if Loyalty of Malik > 5: [respect locked]
 		say "     As he notices your attention on himself, the young orc gives you a smile and a respectful nod.";
 	else if Loyalty of Malik > 0: [a little respect there]
@@ -117,6 +118,7 @@ instead of conversing the Malik:
 	say "[MalikTalkMenu]";
 
 to say MalikTalkMenu:
+	project Figure of Malik_loincloth_icon;
 	LineBreak;
 	say "     [bold type]What do you want to talk with Malik about?[roman type][line break]";
 	now sextablerun is 0;
@@ -217,6 +219,7 @@ Instead of fucking the Malik:
 	if (lastfuck of Malik - turns < 2):
 		say "     Malik puts a hand on your chest to hold you back and says, 'Give a guy a moment to rest!'";
 	else:
+		project Figure of Malik_hard_icon;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		say "     [bold type]What do you want to do with the orc?[roman type][line break]";
@@ -329,6 +332,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris is 2 and Daytimer is day and Intelligence of Malik is 0 and Strength of Chris > 0 and (Loyalty of Malik > 0 or Loyalty of Malik < 0)):
 	if debugactive is 1:
 		say "     DEBUG: Malik NPC Placement Scene; Libido of Malik: [Libido of Malik][line break]";
+	project Figure of Malik_loincloth_icon;
 	say "     As you enter the area, your gaze falls upon Chris, who is casually standing against one of the bookshelves, an orc brew in his hand. The orc warrior greets you with a smile, then draws you closer and gives you a possessive kiss. You start to chat a little, only to be interrupted by a call of, 'Hey dad - err, dads!' coming from the side. It's Malik, your firstborn son with Chris, who comes strolling up to stand before you. Broad-shouldered and with bulging muscles, he's almost the archetype of a proud orc warrior. 'Just wanted to tell ya that I'm gonna go out and hang in the street most of the time from now on. The library's swell and all, but I want some more action! New people wandering by to fuck and all that, hah!' Showing a confident, tusk-bearing grin, he exchanges a fist-bump with Chris, then squeezes the side of your arm as he adds, 'Gonna be out at the looted shops during the days. See ya, breeder-dad!'";
 	say "     With that said, the young brute walks off to go to his new haunt. Looking after his son with a proud look on his face, Chris then leans in to you to lightly nip the side of your neck with his tusks. 'It'll be good for him to get a nice parade of possible breeders to pick from. Hell, if I didn't have your sweet ass to fill with orclings, I'd be right along to fuck any dude we could catch!' Before you can think of anything to say in reply, your orc warrior lover starts kissing you again, making out with you and pushing his tongue into your mouth to wrestle with yours. The next little while is spent in the arms of your big, strong orc, with all you can think of being his touch and kisses.";
 	move Malik to Looted Shops;
@@ -340,10 +344,12 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
 		-- 1: [cum production]
+			project Figure of Malik_hard_icon;
 			say "     As you enter the area, your gaze falls upon Chris and Malik doing push-ups next to each other. Far from being a regular fitness workout though, the two of them have come up with a definitely orcish way to do their training. The two brutish males are naked, sweaty, and erect, with their dicks pushing into some sort of red-white pillows every time they go down. Then you blink and have a second look, realizing that there's a bit more to the cock-receptacles than that - it wasn't initially too easy to see, but the squishy pillow actually has paws and a head: They're latex foxes! Chris and Malik must have fucked them a few times already to make them quite this stretched with fluid! 'Remember son, muscles isn't the only part of you that needs to build its stamina! The balls are among the most important bits on an orc,' your orc warrior mate grunts as he pumps himself up and down a few more times, then blasts yet another load into the fox, which swells with the squeak of straining latex.";
 			say "     Meanwhile, Malik pounds his own training toy, but then suddenly pulls out of the creature, creating a tiny fountain of cum as it starts to leak his previous deposits. Pinching the rubbery material of the latex fox's buttocks between his fingers, he stops it from making too much of a mess, then looks over to his father with a bit of a shame-faced expression. 'Sorry, just couldn't go on. My balls are drained!' Chris chuckles loudly and pats his offspring on the side, casually continuing his push-ups with one arm. 'It's alright son, that's why we train this. Before long, you'll be ready to breed all the men you want nonstop! But now... wanna see how high these things bounce?' Before you know what's going on, he stands up with the balloon-like latex fox still impaled on his cock, and Malik joins his father in a quick dash towards the front of the building.";
 			say "     Laughing like drunk frat boys, the two of them pull a window open and chuck their captives out of it. There's a squishing, squeaking noise from the street below and you see a colossal splash of cum streak upwards, leaving a white streak up the wall and onto the roof of the building across the street. Following the orcs, you look outside and see that the foxes seem to have weathered their fall without anything more than a few scrapes, and are weakly crawling down the street, leaving a wet trail behind them.";
 		-- 2: [strength]
+			project Figure of Malik_soft_icon;
 			say "     As you enter the area, your gaze falls upon your orc warrior son Malik, stretched out on the ground and lifting a set of weights. They're of the self-made variety, consisting of a road-sign pole, with both ends punched through the centers of several canal lids. The whole thing must weigh a lot, which doesn't stop the young buck of an orc from moving it up and down in the air in a steady rhythm. It's not like there isn't sweat visible on his chest, brow and arms, but a regular human would definitely be outmatched here. Noticing your presence, the orc grins and between the grunts of lifting his weights, he calls out, 'Heya breeder-dad! Wanna join me in the workout?' He gives a nod of his head, indicating something along the line his body is stretched out.";
 			say "     With your eyes wandering along Malik's form, you notice some heavy handheld fitness weights scattered on the ground to the side of the orc's hips. That's not all that draws your gaze though, as the traditional orcish loincloth Malik is wearing has fallen to the side during his training, allowing the young male's cock to stand proudly erect in open view. Blood's not the only thing pumping for him right now, with a glistening drop of pre-cum starting to trickle down the side of his shaft right before your eyes. Casually glancing around, you see that Chris isn't actually in sight, apparently busy somewhere else in the library right now.";
 			LineBreak;
@@ -367,6 +373,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 				if Loyalty of Malik > -6 and Loyalty of Malik < 6: [relationship building phase]
 					increase Loyalty of Malik by 1; [good clean family fun makes Malik happy]
 			else if calcnumber is 2: [blow]
+				project Figure of Malik_hard_icon;
 				LineBreak;
 				if Loyalty of Malik < 6: [not locked in as respecting the player]
 					say "     Moving closer to the young orc, you sit down on the ground next to him and reach out for his erection, wrapping your fingers around its girthy shaft. 'You really are just a hungry breeder[if Loyalty of Malik > 0] after all[end if]! Dad won't mind if I use a slut like you! Go on, suck it!' he grunts during a short break with the weights resting on the ground, letting out a satisfied moan as you lean over his crotch and slurp your tongue over his dickhead. 'Yeah, just like that,' he says with a chuckle, then picks up his weights again and starts to work them up and down. You kinda fall into the same rhythm as him, bobbing your head after wrapping your lips around the green shaft and tracing the veins of his dick with your tongue. Grunts and sucking noises fill the upper floor of the library as Malik works up a nice sweat and burn in the muscles of his arms while you service him orally.";
@@ -391,6 +398,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 					if a random chance of 1 in 4 succeeds: [25% chance]
 						decrease Loyalty of Malik by 1; [disappointment]
 		-- 3: [running outside]
+			project Figure of Malik_loincloth_icon;
 			say "     As you enter the area, your gaze falls upon your orc warrior son Malik just getting up from the sofa standing against the back wall. Tall, broad-shouldered and with quite a few bulging muscles under his green skin, it's sometimes hard to imagine that this hunk of a man was birthed by you not all that long ago. The nanites have for sure changed this world in quite interesting ways. Malik greets you with a broad grin and a wave, 'Heya breeder-dad! I was just gonna go out for a bit of a run. Wanna come with? It'll be fun!' Coming to stand in front of you, he cups the bulge in his loincloth with one hand and winks.";
 			LineBreak;
 			say "     [bold type]How do you react to the invitation?[roman type][line break]";
@@ -410,6 +418,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Libido of Chris 
 				say "     Replying to the orc that you'd love to spend some time with him, you allow him to lead you down the stairs and out into the street. 'There's a lot of interesting things to find in the neighborhood,' Malik grunts with a tusk-bearing grin, then sets off at a well-paced jogging speed, with you close behind. As you're moving through the empty streets with the orc, you can't help but smile to yourself about his outfit - a very loose loincloth just flapping in the wind, not really hiding anything at all, and bare feet below. Not that the latter makes any difficulty for your son, as the tough skin on his large feet is more than enough to deal with even the glass shards and rubble that cover the street in places. And for the former, he apparently loves to show off his huge dick and would no doubt have whipped it out to shock passersby even if the city was still a civilized place.";
 				say "[MalikRunningTraining]";
 			else if calcnumber is 2: [blow]
+				project Figure of Malik_hard_icon;
 				LineBreak;
 				if Loyalty of Malik < 6: [not locked in as respecting the player]
 					say "     Moving closer to the young orc, you stroke the back of his hand and tell him that you're down for some fun, then let him lead you down the stairs and out onto the street. 'There's a lot of interesting things to find in the neighborhood,' Malik grunts with a tusk-bearing grin, then sets off at a well-paced jogging speed, with you close behind. As you're moving through the empty streets with the orc, you can't help but smile to yourself about his outfit - a very loose loincloth just flapping in the wind, not really hiding anything at all, and bare feet below. Not that the latter makes any difficulty for your son, as the tough skin on his large feet is more than enough to deal with even the glass shards and rubble that cover the street in places. And for the former, he apparently loves to show off his huge dick and would no doubt have whipped it out to shock passersby even if the city was still a civilized place.";
@@ -488,6 +497,7 @@ to say MalikRunningTraining:
 	follow the turnpass rule;
 
 to say MalikRunningCaptiveSexMenu:
+	project Figure of Malik_hard_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

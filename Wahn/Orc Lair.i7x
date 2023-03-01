@@ -823,62 +823,64 @@ Carry out CellEscape:
 to say EscapeMenu:
 	setmonster "Orc Warrior";
 	blank out the whole of table of fucking options;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Search the cell for anything of use";
 	now sortorder entry is 1;
 	now description entry is "Maybe one of the orcs lost a key or something...";
-	now toggle entry is EscapeOption rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pick the lock";
 	now sortorder entry is 2;
 	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right.";
-	now toggle entry is EscapeOption rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Break the lock";
 	now sortorder entry is 3;
 	now description entry is "Just smash it.";
-	now toggle entry is EscapeOption rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sabotage the lock";
 	now sortorder entry is 4;
 	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards.";
-	now toggle entry is EscapeOption rule;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Wait to get fucked, then sneak out afterwards";
 	now sortorder entry is 5;
 	now description entry is "Tire them out and escape while they sleep.";
-	now toggle entry is EscapeOption rule;
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 10;
-	now description entry is "Exit this menu.";
-	now toggle entry is EscapeOption rule;
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the EscapeOption rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Search the cell for anything of use"):
-			say "[EscapeOption1]";
-		if (nam is "Pick the lock"):
-			say "[EscapeOption2]";
-		if (nam is "Break the lock"):
-			say "[EscapeOption3]";
-		if (nam is "Sabotage the lock"):
-			say "[EscapeOption4]";
-		if (nam is "Wait to get fucked, then sneak out afterwards"):
-			say "[EscapeOption5]";
-		else if (nam is "Nothing"):
-			say "     ";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Search the cell for anything of use"):
+					say "[EscapeOption1]";
+				if (nam is "Pick the lock"):
+					say "[EscapeOption2]";
+				if (nam is "Break the lock"):
+					say "[EscapeOption3]";
+				if (nam is "Sabotage the lock"):
+					say "[EscapeOption4]";
+				if (nam is "Wait to get fucked, then sneak out afterwards"):
+					say "[EscapeOption5]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say EscapeOption1:
 	say "     You dig around among the shredded belongings of various people brought here as slaves, and...";
@@ -1697,7 +1699,11 @@ instead of conversing the Orc Mob:
 					WaitLineBreak;
 					say "     As you make your way through the dark woods, your idle thoughts go back to the incident with the feral gryphon. This would be a far better place to catch one of those beasts - with no real room for him to spread his wings and take off. And wouldn't it be a nice coincidence if just that specific one you saw fled here and was trying to hide behind that tree over to your left, or that one over there on the right? Thinking about him, you can picture the muscled flanks of the quadrupedal beast, the pattern of those large wings, and... suddenly the howl of a wolf, no two, three, then five (!) brings you back to focusing on your surroundings. Growls and shouts, the crash of snapping branches and general fighting wake your curiosity and have you sprinting forward along the thin dirt trail you're on, soon coming into sight of a small clearing, filled with fighting creatures.";
 					say "     The young orc warrior you followed before is there, and it seems he found a feral too: a wolf... and his four pack-mates. Orcs may be strong, but they're not almighty - and with five wolves growling and snapping at him from all sides, the green-skinned brute is in a bit of trouble. He's already got slashes and shallow bites on his arms and legs - already healing, of course, but still wearing him down bit by bit. As you watch, one of the wolves suddenly jumps forward and catches the orc's loincloth between his jaws, wrenching on it and throwing the ripped fabric aside with the orc teen now completely nude. Two others follow up and nip at the slave hunter's heels, making him stumble and barely keep his footing.";
+					LineBreak;
 					say "     [bold type]Seems like he's in trouble and will lose soon - and maybe more than just the fight, judging from the erect canine shafts dangling under the bodies of the wolves. Do you want to help him?[roman type][line break]";
+					LineBreak;
+					say "     ([link]Y[as]y[end link]) - Can't leave an orc brother hanging. Get in there and take the wolf down together!";
+					say "     ([link]N[as]n[end link]) - If he can't handle himself, he deserves what's coming for him next. No need to intervene...";
 					if Player consents:
 						LineBreak;
 						say "     Stepping out from behind the tree, you take several steps towards the fight, then shout at them to leave the other orc alone. Everyone's attention is drawn over to you for a second, then the largest of the wolves gives a commanding growl to his companions, followed by the barked words 'finish him'. And with that, the alpha wolf dashes towards you, leaving his subordinates to wrestle down the orc while he takes care of the new prey - you.";
@@ -1720,7 +1726,10 @@ instead of conversing the Orc Mob:
 						say "     The large, black-furred wolf sinks to the ground, his tail tucked between his legs. His ears droop back and he starts to slink away from you - but this time you manage to pounce atop him before he can get away and pin him down. He whines and growls, but seems to submit, at least for the moment. Having gained the upper hand over the alpha wolf, you have the time to look up and check out the other four wolves - only to find that there are five, by now. The one additional wolf surrounded by the others has a thoroughly cum-drenched back end, as well as a wet muzzle which he licks cum off as you watch. Seems like the beasts fucked the orc into submission - and transformation. The new omega fuckhole of the pack whines as one of the others wedges his muzzle under his tail and gives a lick, then jumps on his back to thrust into him.";
 						say "     You shout at the wolves from where you're pinning their leader, making their heads turn towards you in what seems like shock and even the humping wolf freezes in his movements. They are clearly unsure what to do now, seeing that you've defeated the strongest member of their pack... and from the way they're panting a lot, you can tell that the fight against the former orc in their midst took quite a bit out of them too. Hesitantly, the wolves pad towards you a tiny bit, looking at one another - but clearly, they've mostly been followers until now, and you've got a large hand wrapped around the muzzle of their alpha, silencing any command he might give. In the end, the lack of leadership makes it easy to frighten the wolves off with an aggressive bellow, showing your tusks in defiance, and with some whines, they flee into the woods - not without their new recruit though, nipping at his heels to drive him into the right direction. Who knows, maybe the transformed orc will become a new alpha once he's fully accepted his new form. Or not, it's hard to tell.";
 						LineBreak;
-						say "     This now leaves you alone in the wood, with a powerful feral beast in your grasp and at your mercy. In short, he's exactly what you need to impress everyone back at the orc lair. [bold type]Do you want to introduce the canine into his new role as an orcish fuckhole ([link]Y[as]y[end link]), or maybe just knock him out, leaving the beast to roam free while you go back empty handed ([link]N[as]n[end link])?[roman type][line break]";
+						say "     [bold type]This now leaves you alone in the wood, with a powerful feral beast in your grasp and at your mercy. In short, he's exactly what you need to impress everyone back at the orc lair. [roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Introduce the canine into his new role as an orcish fuckhole!";
+						say "     ([link]N[as]n[end link]) - Knock him out, leaving the beast to roam free while you go back empty handed.";
 						if Player consents:
 							LineBreak;
 							project the Figure of AlphaWolf_hard_icon;

@@ -495,6 +495,12 @@ Figure of Lilith_boobs_icon is the file "Succubus_boobs.jpg".
 Figure of Lindsey_hard_icon is the file "Lindsey_hard.jpg".
 Figure of Lindsey_soft_icon is the file "Lindsey_soft.jpg".
 Figure of Malakhi_icon is the file "Malakhi.jpg".
+Figure of Malik_hard_icon is the file "Malik_hard.jpg".
+Figure of Malik_soft_icon is the file "Malik_soft.jpg".
+Figure of Malik_loincloth_icon is the file "Malik_loincloth.jpg".
+Figure of Malik_mpreg_hard_icon is the file "Malik_mpreg_hard.jpg".
+Figure of Malik_mpreg_soft_icon is the file "Malik_mpreg_soft.jpg".
+Figure of Malik_mpreg_loincloth_icon is the file "Malik_mpreg_loincloth.jpg".
 Figure of MasterMind_icon is the file "MasterMind_ig.jpg".
 Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
@@ -601,6 +607,8 @@ Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
 Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
+Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
+Figure of Susan_FHerm_hard_icon is the file "Susan_FHerm_hard.jpg".
 Figure of Susan_MHerm_shortshorts_icon is the file "Susan_MHerm_shortshorts.jpg".
 Figure of Susan_MHerm_shorts_icon is the file "Susan_MHerm_shorts.jpg".
 Figure of Susan_MHerm_hard_icon is the file "Susan_MHerm_hard.jpg".
@@ -630,8 +638,30 @@ Figure of Tyke_clothed_icon is the file "Tyke_clothed.jpg".
 Figure of Tyke_naked_icon is the file "Tyke_naked.jpg".
 Figure of Urik_ass_icon is the file "Urik_ass.jpg".
 Figure of Urik_clothed_icon is the file "Urik_clothed.jpg".
-Figure of Urik_face_icon is the file "Urik_face.jpg".
 Figure of Urik_naked_icon is the file "Urik_naked.jpg".
+Figure of Urik_angry_face_icon	is the file "Urik_angry_face.jpg".
+Figure of Urik_angry_hard_icon	is the file "Urik_angry_hard.jpg".
+Figure of Urik_annoyed_face_icon	is the file "Urik_annoyed_face.jpg".
+Figure of Urik_annoyed_hard_icon	is the file "Urik_annoyed_hard.jpg".
+Figure of Urik_happy_businessman_icon	is the file "Urik_happy_businessman.jpg".
+Figure of Urik_happy_clothed_biker_clean_icon	is the file "Urik_happy_clothed_biker_clean.jpg".
+Figure of Urik_happy_clothed_biker_dirty_icon	is the file "Urik_happy_clothed_biker_dirty.jpg".
+Figure of Urik_happy_clothed_biker_shirtless_icon	is the file "Urik_happy_clothed_biker_shirtless.jpg".
+Figure of Urik_happy_clothed_loincloth_icon	is the file "Urik_happy_clothed_loincloth.jpg".
+Figure of Urik_happy_face_icon is the file "Urik_happy_face.jpg".
+Figure of Urik_happy_hard_icon	is the file "Urik_happy_hard.jpg".
+Figure of Urik_happy_hard_biker_icon	is the file "Urik_happy_hard_biker.jpg".
+Figure of Urik_happy_lifeguard_icon	is the file "Urik_happy_lifeguard.jpg".
+Figure of Urik_happy_naked_hard_icon	is the file "Urik_happy_naked_hard.jpg".
+Figure of Urik_happy_naked_mpreg_hard_icon	is the file "Urik_happy_naked_mpreg_hard.jpg".
+Figure of Urik_happy_naked_soft_icon	is the file "Urik_happy_naked_soft.jpg".
+Figure of Urik_happy_shorts_icon	is the file "Urik_happy_shorts.jpg".
+Figure of Urik_happy_soft_icon	is the file "Urik_happy_soft.jpg".
+Figure of Urik_happy_thong_icon	is the file "Urik_happy_thong.jpg".
+Figure of Urik_happy_towel_icon	is the file "Urik_happy_towel.jpg".
+Figure of Urik_neutral_face_icon	is the file "Urik_neutral_face.jpg".
+Figure of Urik_neutral_shorts_icon	is the file "Urik_neutral_shorts.jpg".
+Figure of Urik_neutral_hard_icon	is the file "Urik_neutral_hard.jpg".
 Figure of Valerie_icon is the file "Valerie.jpg".
 Figure of Violet_face_icon is the file "Violet_face.jpg".
 Figure of Voodoo_Gecko_icon is the file "Voodoo_Gecko.jpg".
@@ -1613,6 +1643,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Malakhi & Barnabas"	Figure of Malakhi_Barnabas_icon	"Jahi"	g-black	"normal"
 "Malakhi & Kano"	Figure of Malakhi_Kano_icon	"Jahi"	g-black	"normal"
 "Mall Map"	Figure of Map_Smith_Haven_Mall_icon	"Anonymous"	g-black	"normal"
+"Malik_hard"	Figure of Malik_hard_icon	"SteppeCrow"	g-White	"normal"
+"Malik_soft"	Figure of Malik_soft_icon	"SteppeCrow"	g-White	"normal"
+"Malik_loincloth"	Figure of Malik_loincloth_icon	"SteppeCrow"	g-White	"normal"
+"Malik_mpreg_hard"	Figure of Malik_mpreg_hard_icon	"SteppeCrow"	g-White	"normal"
+"Malik_mpreg_soft"	Figure of Malik_mpreg_soft_icon	"SteppeCrow"	g-White	"normal"
+"Malik_mpreg_loincloth"	Figure of Malik_mpreg_loincloth_icon	"SteppeCrow"	g-White	"normal"
 "Mammoth"	Figure of Mammoth_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV1"	Figure of Mammoth_CV1_icon	"Boo3"	g-white	"normal"
 "Mammoth_CV2"	Figure of Mammoth_CV2_icon	"Boo3"	g-white	"normal"
@@ -1843,8 +1879,30 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Tyke_naked"	Figure of Tyke_naked_icon	"TylerAz"	g-white	"normal"
 "Urik_ass"	Figure of Urik_ass_icon	"Kupo Klein"	g-white	"normal"
 "Urik_clothed"	Figure of Urik_clothed_icon	"Kupo Klein"	g-white	"normal"
-"Urik_face"	Figure of Urik_face_icon	"SineAlas"	g-black	"normal"
+"Urik_happy_face"	Figure of Urik_happy_face_icon	"SineAlas"	g-black	"normal"
 "Urik_naked"	Figure of Urik_naked_icon	"Kupo Klein"	g-white	"normal"
+"Urik_angry_face"	Figure of Urik_angry_face_icon	"Lyttathebug"	g-black	"normal"
+"Urik_angry_hard"	Figure of Urik_angry_hard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_annoyed_face"	Figure of Urik_annoyed_face_icon	"Lyttathebug"	g-black	"normal"
+"Urik_annoyed_hard"	Figure of Urik_annoyed_hard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_businessman"	Figure of Urik_happy_businessman_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_clothed_biker_clean"	Figure of Urik_happy_clothed_biker_clean_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_clothed_biker_dirty"	Figure of Urik_happy_clothed_biker_dirty_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_clothed_biker_shirtless"	Figure of Urik_happy_clothed_biker_shirtless_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_clothed_loincloth"	Figure of Urik_happy_clothed_loincloth_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_hard"	Figure of Urik_happy_hard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_hard_biker"	Figure of Urik_happy_hard_biker_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_lifeguard"	Figure of Urik_happy_lifeguard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_naked_hard"	Figure of Urik_happy_naked_hard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_naked_mpreg_hard"	Figure of Urik_happy_naked_mpreg_hard_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_naked_soft"	Figure of Urik_happy_naked_soft_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_shorts"	Figure of Urik_happy_shorts_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_soft"	Figure of Urik_happy_soft_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_thong"	Figure of Urik_happy_thong_icon	"Lyttathebug"	g-black	"normal"
+"Urik_happy_towel"	Figure of Urik_happy_towel_icon	"Lyttathebug"	g-black	"normal"
+"Urik_neutral_face"	Figure of Urik_neutral_face_icon	"Lyttathebug"	g-black	"normal"
+"Urik_neutral_shorts"	Figure of Urik_neutral_shorts_icon	"Lyttathebug"	g-black	"normal"
+"Urik_neutral_hard"	Figure of Urik_neutral_hard_icon	"Lyttathebug"	g-black	"normal"
 "Valerie"	Figure of Valerie_icon	"Sususmiles"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
@@ -2646,6 +2704,7 @@ carry out artistcredits:
 	say "     Lindsey by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	[say "     Logan by Rik @ https://www.furaffinity.net/user/almee/[line break]";] [WIP]
 	say "     Malakhi by Jahi @ https://www.furaffinity.net/user/jahi/[line break]";
+	say "     Malik by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
@@ -2710,7 +2769,8 @@ carry out artistcredits:
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
 	say "     Tyke by TylerAz @ https://www.furaffinity.net/user/tyleraz[line break]";
 	say "     Urik Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
-	say "     Urik by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Urik (original) by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
+	say "     Urik (HD) by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Valerie by Sususmiles @ furaffinity.net[line break]";
 	say "     Violet Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Xaedihr by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";

@@ -58,8 +58,8 @@ to say Sun_Gator_TouchChoice:
 			say "     'Fuck yeah, [if player is male]boy[else if player is female]girl[else]kiddo[end if]. You know how to treat a man. You should see me again if you want another drink. I'll let you suck my cock as often as you like.' Licking his lips and settling back, he strokes his spent cock idly, his eyes drifting closed and a snaggle-toothed, serene smile across his maw. Licking stray cum from your fingers, you leave the gator to sleep off his orgasm, making a mental note of his sunbathing spot. You don't think you'll be able to go long without another bout with that scaly cock.";
 			NPCSexAftermath Player receives "OralCock" from Suchos;
 			now Resolution of Sunbathing Gator is 1; [Player sucked him off]
-		-- "You only wanted a glance, nothing more.": 
-			say "     After a quick glance at the alligator, you shake your head. You're not interested in exploring his body, and you'd prefer not to spend any longer in his company. Hopefully he understands. The gator only shrugs when you speak, settling back on the sand and cocking his head to the side in a pointed motion, shooing you away. [italic type]You doubt you'll run into him again, and even if you do, he won't want to interact with you. [roman type][LineBreak]";
+		-- "You only wanted a glance, nothing more.":
+			say "     After a quick glance at the alligator, you shake your head. You're not interested in exploring his body, and you'd prefer not to spend any longer in his company. Hopefully he understands. The gator only shrugs when you speak, settling back on the sand and cocking his head to the side in a pointed motion, shooing you away. [italic type]You doubt you'll run into him again, and even if you do, he won't want to interact with you. [roman type][line break]";
 			now Resolution of Sunbathing Gator is 100; [no interest, avoiding]
 
 Table of GameCharacterIDs (continued)
