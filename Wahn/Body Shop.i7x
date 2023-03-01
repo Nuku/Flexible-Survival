@@ -433,7 +433,7 @@ to MoreauFaceSelection:
 			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
-				-- "An demon brute face":
+				-- "A demon brute face":
 					setmonster "Demon Brute";
 				-- "A fennec's face":
 					setmonster "Fennec";
@@ -830,7 +830,7 @@ to MoreauTailSelection:
 	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A gryphon's tail";
+	now title entry is "A gryphon tail";
 	now sortorder entry is 4;
 	now description entry is "Get a gryphon tail";
 	[]
@@ -845,12 +845,12 @@ to MoreauTailSelection:
 	now description entry is "Get a naga tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "An orc breeder's booty";
+	now title entry is "An orc breeder booty";
 	now sortorder entry is 7;
 	now description entry is "Get an orc breeder ass";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A satyr's tail";
+	now title entry is "A satyr tail";
 	now sortorder entry is 8;
 	now description entry is "Get a satyr tail";
 	[]
@@ -886,19 +886,19 @@ to MoreauTailSelection:
 				if title entry is:
 				-- "A demon brute tail":
 					setmonster "Demon Brute";
-				-- "A fennec's tail":
+				-- "A fennec tail":
 					setmonster "Fennec";
 				-- "A German shepherd tail":
 					setmonster "German Shepherd Male";
-				-- "A gryphon's tail":
+				-- "A gryphon tail":
 					setmonster "Blue Gryphon Herm";
 				-- "An equine tail":
 					setmonster "Horseman";
-				-- "A naga's tail":
+				-- "A naga tail":
 					setmonster "Naga";
-				-- "An orc breeder's booty":
+				-- "An orc breeder booty":
 					setmonster "Orc Breeder";
-				-- "A satyr's tail":
+				-- "A satyr tail":
 					setmonster "Satyr";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";

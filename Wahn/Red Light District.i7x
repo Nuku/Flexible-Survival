@@ -24,7 +24,7 @@ Exploring the City Dummy Room	"Exploring the City Dummy Room"
 Exploring the City Dummy Room is a room.
 Exploring the City Dummy Room is south of Red Light Street.
 
-The marea of Red Light Street is "Outside".
+The marea of Red Light Street is "Red".
 
 after looking while player is in Entrance to the Red Light District:
 	if findwires < 2 and fixedgens < 3:

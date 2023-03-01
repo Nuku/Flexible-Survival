@@ -815,9 +815,9 @@ to say testosterone pill use:
 		now Cunt Tightness of Player is 0;
 		now Cunt Depth of Player is 0;
 		increase Cock Length of Player by 2;
+		increase Ball Size of Player by 2;
 		if Ball Size of Player > 7:
 			now Ball Size of Player is 7;
-		increase Ball Size of Player by 2;
 		follow the cock descr rule;
 		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]! ";
 		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [Skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";

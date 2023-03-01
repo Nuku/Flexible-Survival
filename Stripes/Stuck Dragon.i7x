@@ -461,117 +461,48 @@ Carry out dragonhatching:
 
 to say dragonchange:
 	now Libido of Player is 75;
-	if "Male Preferred" is not listed in feats of Player:
-		turn the Player into a "Slutty Dragoness";
-		now Breast Size of player is 0;
-		now Nipple Count of player is 0;
-		if ( "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player ) and dragontype is 0:
-			say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 1;
-			now Cock Length of Player is 24;
-			now Ball Size of Player is 5;
-			now Cunt Count of Player is 1;
-			now Cunt Depth of Player is 20;
-			now Cunt Tightness of Player is 15;
-			now dragontype is 1;
-		else if dragontype is 0:
-			say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now Ball Size of Player is 0;
-			now Cunt Count of Player is 1;
-			now Cunt Depth of Player is 20;
-			now Cunt Tightness of Player is 15;
-			now dragontype is 1;
-		else if tempnum is 1:	[re-UB]
-			SanLoss 10;
-			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
-			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg. It takes you a few moments to break free and emerge as a slutty dragoness much like the one you were recently inside";
-			now dragontype is 1;
-			if Player is not female:
-				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices.";
-				now Cunt Count of Player is 1;
-				now Cunt Depth of Player is 8;
-				now Cunt Tightness of Player is 4;
-			else:
-				say ".";
-		else if tempnum is 2:	[captured-UB]
-			SanLoss 10;
-			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
-			say "     You're uncertain how long you've been asleep, but eventually you wake up in the warm enclosure of an egg. It takes you a few moments to break free and emerge as a slutty dragoness much like the one you were recently inside";
-			now dragontype is 1;
-			if Player is not female:
-				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices";
-				now Cunt Count of Player is 1;
-				now Cunt Depth of Player is 20;
-				now Cunt Tightness of Player is 15;
-			if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 24;
-				now Ball Size of Player is 5;
-			else:
-				now Cock Count of Player is 0;
-				now Cock Length of Player is 0;
-				now Ball Size of Player is 0;
-			say ". You can see that she's brought you back to her lair, but the dragoness doesn't give you a chance to enjoy your freedom, stuffing you right back into cunt again. You moan and squirm, much to her delight, as she uses you like a toy again.";
-		else:						[reinfection to slutty dragoness]
-			say "     Soaked by the dragoness's juices as she orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform into a slutty dragoness like her";
-			now dragontype is 1;
-			if Player is not female:
-				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. Wet juices soak your thighs as you feel a fresh pussy grow in and you orgasm hard.";
-				now Cunt Count of Player is 1;
-				now Cunt Depth of Player is 8;
-				now Cunt Tightness of Player is 4;
-			else:
-				say ".";
-	else:
+	if (SubjectPro of Player is "he" or (SubjectPro of Player is "shi" and a random chance of 1 in 2 succeeds) or (SubjectPro of Player is "they" and a random chance of 1 in 2 succeeds)): [males + anyone who chose male pronouns + 50% of herms and neuters]
 		turn the Player into a "Horny Dragon";
-		now Breast Size of player is 0;
-		now Nipple Count of player is 0;
+		choose row with Name of "Horny Dragon" in Table of Random Critters;
+		follow the sex change rule;
+		say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
 		if dragontype is 0:
-			say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 1;
-			now Cock Length of Player is 24;
-			now Ball Size of Player is 56;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
-			now Cunt Tightness of Player is 0;
 			now dragontype is 2;
 		else if tempnum is 1:	[re-UB]
-			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg. It takes you a few moments to break free and emerge as a horny dragon to mate with the wonderful dragoness";
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg. It takes you a few moments to break free and emerge.";
 			now dragontype is 2;
-			let xx be 0; [random spacer]
-			if Player is not male:
-				say " with the throbbing cock you now possess.";
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 8;
-				now Ball Size of Player is 2;
-			else:
-				say ".";
 		else if tempnum is 2:	[captured-UB]
-			say "     You're uncertain how long you've been asleep, but eventually you wake up in the warm enclosure of an egg. It takes you a few moments to break free and emerge as a horny dragon to mate with the wonderful dragoness";
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+			say "     You're uncertain how long you've been asleep, but eventually you wake up in the warm enclosure of an egg. It takes you a few moments to break free and emerge, soaked in wet juices. You can see that she's brought you back to her lair, but the dragoness doesn't give you a chance to enjoy your freedom, stuffing you right back into cunt again. You moan and squirm, much to her delight, as she uses you like a toy again.";
 			now dragontype is 2;
-			if Player is not male:
-				say " with the throbbing cock you now possess";
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 24;
-				now Ball Size of Player is 56;
-				now Cunt Count of Player is 0;
-				now Cunt Depth of Player is 0;
-				now Cunt Tightness of Player is 0;
-			say ". You can see that she's brought you back to her lair, but the dragoness doesn't give you a chance to enjoy your freedom, stuffing you right back into cunt again. You moan and squirm, much to her delight, as she uses you like a toy again.";
 		else:						[reinfection to horny dragon]
-			say "     Soaked by the dragoness's juices as she orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform into a horny dragon to mate with her";
+			say "     Soaked by the dragoness's juices as she orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform.";
 			now dragontype is 2;
-			if Player is not male:
-				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. A bulge of throbbing, sensitive flesh forms at your crotch, growing out to form a new cock for you. It pulses in your hand and bursts forth with its first blasts of hot, dragon cum.";
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 8;
-				now Ball Size of Player is 2;
-			else:
-				say ".";
+	else:
+		turn the Player into a "Slutty Dragoness";
+		say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
+		choose row with Name of "Slutty Dragoness" in Table of Random Critters;
+		follow the sex change rule;
+		if dragontype is 0: [first time (?)]
+			now dragontype is 1;
+		else if tempnum is 1:	[re-UB]
+			SanLoss 10;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+			say "     You're uncertain how long you've been asleep, but eventually you wake up in the familiar enclosure of the egg. It takes you a few moments to break free and emerge, soaked in wet juices.";
+			now dragontype is 1;
+		else if tempnum is 2:	[captured-UB]
+			SanLoss 10;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+			say "     You're uncertain how long you've been asleep, but eventually you wake up in the warm enclosure of an egg. It takes you a few moments to break free and emerge, soaked in wet juices. You can see that she's brought you back to her lair, but the dragoness doesn't give you a chance to enjoy your freedom, stuffing you right back into cunt again. You moan and squirm, much to her delight, as she uses you like a toy again.";
+			now dragontype is 1;
+		else:	[reinfection to slutty dragoness]
+			say "     Soaked by the dragoness's juices as she orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform.";
+			now dragontype is 1;
 	if lust of Christy > 0:
 		now lastChristyfucked is turns + 24;
 		say "[dragonessupdate]"; [advancing and clearing Christy's egg status]
@@ -1017,21 +948,45 @@ Section 12 - CV Dragon Change
 
 to say dragonchange2:
 	now Libido of Player is 75;
-	if "Male Preferred" is not listed in feats of Player:
+	if (SubjectPro of Player is "he" or (SubjectPro of Player is "shi" and a random chance of 1 in 2 succeeds) or (SubjectPro of Player is "they" and a random chance of 1 in 2 succeeds)): [males + anyone who chose male pronouns + 50% of herms and neuters]
+		turn the Player into a "Horny Dragon";
+		choose row with Name of "Horny Dragon" in Table of Random Critters;
+		follow the sex change rule;
+		if dragontype < 3 and tempnum is 3:
+			if dragontype is 0:		[ not previously UB'd - new to form ]
+				say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
+			else:
+				say "     You look down at your body and discover that this experience has restored your draconic infection, completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
+			if dragontype is 1 or dragontype is 2:
+				now dragontype is 6;
+			else:
+				now dragontype is 4;
+		else if tempnum is 1:	[re-CV]
+			SanLoss 10;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
+			say "     It takes a while before your senses return enough for you to take note of your changes, having become a horny dragon much like him.";
+			if dragontype is 3 or dragontype is 4:
+				now dragontype is 4;
+			else if dragontype is 5 or dragontype is 6:
+				now dragontype is 6;
+		else:						[reinfection to horny dragon]
+			say "     Soaked by the torrent of dragon's sperm as he orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform into a horny dragon much like him.";
+			if dragontype is 1 or dragontype is 2:
+				now dragontype is 2;
+			else if dragontype is 3 or dragontype is 4:
+				now dragontype is 4;
+			else if dragontype is 5 or dragontype is 6:
+				now dragontype is 6;
+	else:
 		turn the Player into a "Slutty Dragoness";
-		now Breast Size of player is 0;
-		now Nipple Count of player is 0;
+		choose row with Name of "Slutty Dragoness" in Table of Random Critters;
+		follow the sex change rule;
 		if ( "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player ) and ( dragontype < 3 ) and tempnum is 3:
 			if dragontype is 0:		[ not previously UB'd - new to form ]
 				say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
 			else:
 				say "     You look down at your body and discover that this experience has restored your draconic infection, completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 1;
-			now Cock Length of Player is 24;
-			now Ball Size of Player is 56;
-			now Cunt Count of Player is 1;
-			now Cunt Depth of Player is 20;
-			now Cunt Tightness of Player is 15;
 			if dragontype is 1 or dragontype is 2:
 				now dragontype is 5;
 			else:
@@ -1041,12 +996,6 @@ to say dragonchange2:
 				say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
 			else:
 				say "     You look down at your body and discover that this experience has restored your draconic infection, completely transformed into a Slutty Dragoness! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now Ball Size of Player is 0;
-			now Cunt Count of Player is 1;
-			now Cunt Depth of Player is 20;
-			now Cunt Tightness of Player is 15;
 			if dragontype is 1 or dragontype is 2:
 				now dragontype is 5;
 			else:
@@ -1060,13 +1009,6 @@ to say dragonchange2:
 				now dragontype is 3;
 			else if dragontype is 5 or dragontype is 6:
 				now dragontype is 5;
-			if Player is not female:
-				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices.";
-				now Cunt Count of Player is 1;
-				now Cunt Depth of Player is 8;
-				now Cunt Tightness of Player is 4;
-			else:
-				say ".";
 		else:						[reinfection to slutty dragoness]
 			say "     Soaked by the torrent of dragon's sperm as he orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform into a slutty dragoness for him to mate";
 			if dragontype is 1 or dragontype is 2:
@@ -1075,64 +1017,6 @@ to say dragonchange2:
 				now dragontype is 3;
 			else if dragontype is 5 or dragontype is 6:
 				now dragontype is 5;
-			if Player is not female:
-				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. Wet juices soak your thighs as you feel a fresh pussy grow in and you orgasm hard.";
-				now Cunt Count of Player is 1;
-				now Cunt Depth of Player is 8;
-				now Cunt Tightness of Player is 4;
-			else:
-				say ".";
-	else:
-		turn the Player into a "Horny Dragon";
-		now Breast Size of player is 0;
-		now Nipple Count of player is 0;
-		if dragontype < 3 and tempnum is 3:
-			if dragontype is 0:		[ not previously UB'd - new to form ]
-				say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
-			else:
-				say "     You look down at your body and discover that this experience has restored your draconic infection, completely transformed into a Horny Dragon! While not as big as [Christy], you have become quite the sexy beast.";
-			now Cock Count of Player is 1;
-			now Cock Length of Player is 24;
-			now Ball Size of Player is 56;
-			now Cunt Count of Player is 0;
-			now Cunt Depth of Player is 0;
-			now Cunt Tightness of Player is 0;
-			if dragontype is 1 or dragontype is 2:
-				now dragontype is 6;
-			else:
-				now dragontype is 4;
-		else if tempnum is 1:	[re-CV]
-			say "     It takes a while before your senses return enough for you to take note of your changes, having become a horny dragon much like the one you were recently inside";
-			if dragontype is 3 or dragontype is 4:
-				now dragontype is 4;
-			else if dragontype is 5 or dragontype is 6:
-				now dragontype is 6;
-			if Player is not male:
-				say " with the throbbing cock you now possess.";
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 8;
-				now Ball Size of Player is 2;
-			else:
-				say ".";
-		else:						[reinfection to horny dragon]
-			say "     Soaked by the torrent of dragon's sperm as he orgasms hard, you can feel your dragon infection reasserting itself. You groan in lustful pleasure as you transform into a horny dragon much like him";
-			if dragontype is 1 or dragontype is 2:
-				now dragontype is 2;
-			else if dragontype is 3 or dragontype is 4:
-				now dragontype is 4;
-			else if dragontype is 5 or dragontype is 6:
-				now dragontype is 6;
-			if Player is not male:
-				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. A bulge of throbbing, sensitive flesh forms at your crotch, growing out to form a new cock for you. It pulses in your hand and bursts forth with its first blasts of hot, dragon cum.";
-				now Cock Count of Player is 1;
-				now Cock Length of Player is 8;
-				now Ball Size of Player is 2;
-			else:
-				say ".";
-[	if lust of Christy > 0:
-		now lastChristyfucked is turns + 24;
-		say "[dragonessupdate]"; [advancing and clearing Christy's egg status]	]	[ unnecessary for CV-based change ]
-
 
 Section 13 - Sex w/Male Christy
 

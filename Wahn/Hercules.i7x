@@ -50,16 +50,21 @@ Conversation of Hercules is { "Woof." }.
 to say HerculesDesc:
 	say "     Hercules formerly was one of those mannequin creatures, but now has taken on the appearance of a proud Clydesdale stallion, standing about six and a half feet tall on his large hooves. His powerful frame is very well muscled underneath a coat of short brown fur, with longer, snowy white fur feathering out around his wrists and ankles, creating an interesting contrast in his coloring. Along the same lines, up at the masculine and square muzzle of the big man, white fur stretches from just beneath his mouth up to the start of his ears, while the cheeks on both sides are brown, and a bit of a black mane covers the top of his head. And finally, despite starting out as a sexless doll, the anthro equine is quite definitely anatomical correct, as a weighty pair of full balls dangle freely between his legs, with a no doubt massive horsecock currently mostly retracted into its sheath.";
 	if "Private Sex Toy" is listed in Traits of Hercules:
+		project Figure of Hercules_soft_icon;
 		say "     Having found this impressive example of masculinity in a warehouse among hundreds of motionless mannequins, and determined that he's apparently without any impulse to do anything on his own, making him uniquely pliable for others to control. You obviously grabbed the horseman for your own use, as a nice and obedient sex toy like this is just what you need.";
 	else if "Public Sex Toy" is listed in Traits of Hercules:
+		project Figure of Hercules_soft_icon;
 		say "     Having found this impressive example of masculinity in a warehouse among hundreds of motionless mannequins, and determined that he's apparently without any impulse to do anything on his own, making him uniquely pliable for others to control. You obviously grabbed the horseman to position him in the library, as a nice and obedient sex toy like this is just what the place needed.";
 	else if "Therapy Project" is listed in Traits of Hercules:
 		say "     Having found this tragic example of a being's reasoning being stretched past its breaking point due to the sinister impact of the transformation nanites ravaging the city, you took Hercules from the warehouse you found him in, bringing him here to the library. The chance of reclaiming him from the catatonia-like state he currently is in might be slim, but you thought it'd be a worthwhile endeavor. Hopefully he can be convinced that he shouldn't just despair and stay in this doll-like state, but can be... real, can be alive.";
 		if "Naked" is listed in Traits of Hercules:
+			project Figure of Hercules_soft_icon;
 			say "     Looking at the horseman, you're struck by the realization that having him standing here in the nude might actually be a first thing you can do something about as a first step. Maybe you could try to address that side of things in an attempt to give your equine friend some dignity? [bold type]Try talking to him to explain what you're gonna do.[roman type][line break]";
 		else if "Towel" is listed in Traits of Hercules:
+			project Figure of Hercules_towel_icon;
 			say "     As a stopgap measure to not have him remain nude and exposing himself to his surroundings, you've tied a large white towel around his hips, giving Hercules some dignity back.";
 		else if "Kilt" is listed in Traits of Hercules:
+			project Figure of Hercules_kilt_icon;
 			say "     It took some effort, but you acquired a fairly nice kilt with a checkerboard pattern, large enough to fit the large equine. With him now no longer constantly exposing himself to his surroundings, this is giving Hercules some dignity back.";
 
 The scent of Hercules is "     Hercules smells of clean fur, with a little bit of masculine musk underlying it. There's no trace of artificial smells from the former mannequin - but neither is there too much else, like sweat for example. You're not even certain if he can sweat...".
@@ -75,6 +80,7 @@ instead of conversing the Hercules:
 to say HerculesToyTalkMenu:
 	if Humanity of Hercules is 0:
 		say "     Stepping up to the motionless horseman, still standing in the pose that you last put him in, you grin at having such a neat toy to play with. Quipping that he's here to serve, you gloss over the fact that he's not showing any outward reaction to your presence.";
+	project Figure of Hercules_soft_icon;
 	say "     [bold type]What do you want to address with Hercules?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -114,6 +120,12 @@ to say Hercules_SexToyMonologue:
 	say "     Moving even closer to the large and muscular equine, you bring your hands forward to touch his chest while saying that you're so happy you found him before anyone else claimed the fuck-toy that he is. Letting your fingers wander over the firm, furred abs as you look up at his still and emotionless face, you tell him and the world that you can do anything you want with him. With that handsome muzzle, nudging apart his lips with your fingers to feel over the broad tongue beyond, his magnificent body and also the proud cock he bears for the world to see. Moving down to feel over the skin of his sheath, you can't help but love that your equine fuck-toy is fully functional in this regard, as his cock begins to push out and rests warmly in your hand, while Hercules at the same time has no will or wish to act on his own at all. So while he may not be the most engaging of sexual partners, he's perfectly pliable to serve every last wish of yours. Completing your little tour and self-congratulatory victory lap of touring his body, you give the towering figure a slap on his bare butt before walking away with a spring in your step.";
 
 to say HerculesPersonTalkMenu:
+	if "Naked" is listed in Traits of Hercules:
+		project Figure of Hercules_soft_icon;
+	else if "Towel" is listed in Traits of Hercules:
+		project Figure of Hercules_towel_icon;
+	else if "Kilt" is listed in Traits of Hercules:
+		project Figure of Hercules_kilt_icon;
 	if Humanity of Hercules is 0:
 		say "     Stepping up to the motionless horseman, still standing in the pose that you last put him in, you greet him and give a friendly smile, glossing over the fact that he's not showing any outward reaction to your presence.";
 	say "     [bold type]What do you want to address with Hercules?[roman type][line break]";
@@ -170,16 +182,19 @@ to say HerculesPersonTalkMenu:
 
 to say Hercules_Naked to Towel:
 	say "     Addressing the silently listening horseman, you explain that you want to give him some clothing, of a sort. Most people don't just casually stand around naked - or at least mostly only nudists do - and you felt like he should have some dignity too, as he's not a statue after all. Further, waving a hand at the fairly enormous stature that Hercules has (as compared to a default human), you go on to say that it'll be somewhat difficult to get him something to wear, but you had an idea that'll do for now. That said, you pull out a white bath-towel that you dug out in the bunker from one of the shelves earlier, where it had been stashed in a vacuum-sealed plastic bag. Draping your towel around the horseman's hips, you pull it taut, then tuck in the upper edge under the waistline and fasten it in place. There, that'll do for now! Finally, you tap Hercules on the arm and tell him you hope he likes it, and that he just needs to tell you if he wants to go back to nakedness, or something else. There isn't any reaction, but you still have a good feeling about what you did for him.";
+	project Figure of Hercules_towel_icon;
 	remove "Naked" from Traits of Hercules;
 	TraitGain "Towel" for Hercules;
 
 to say Hercules_Kilt to Towel:
 	say "     Addressing the silently listening horseman, you explain that... well, the towel did look pretty great on him. In your opinion, maybe even better than the kilt... so you kinda do want to put it back on him. Looking into his eyes to try to glean any reaction, you ask if he's okay with switching back. Waiting five seconds, ten, then fifteen, you finally give him a friendly pat on the arm, and say that you'll take that as him being fine with it for now, but he need only give you some sort of signal and you'll help him do whatever he wants instead. That said, you pull out the white bath-towel again and quickly remove the kilt. Draping your towel around the horseman's hips, you pull it taut, then tuck in the upper edge under the waistline and fasten it in place. There, that'll do for now! There still isn't any reaction from him, but you hope you did the right thing.";
+	project Figure of Hercules_towel_icon;
 	remove "Kilt" from Traits of Hercules;
 	TraitGain "Towel" for Hercules;
 
 to say Hercules_Towel to Kilt:
 	say "     Addressing the silently listening horseman, you explain proudly that you got him something new to wear. A real piece of clothing this time! That said, you pull the oversized kilt out and hold it up for him to see. Looking into the equine's eyes to try to glean any reaction, you ask if he's okay with switching over to this new garment. Waiting five seconds, ten, then fifteen, you finally give him a friendly pat on the arm, and say that you'll take that as him being fine with it for now, but he need only give you some sort of signal and you'll help him do whatever he wants instead. That said, you give the white towel around his hips a little tug, pulling it loose and letting it fall down to pool around his hooves, then wrap the kilt around the horseman's broad hips. Tightening the straps on the right, then the left, it's firmly in place on Hercules now! There still isn't any reaction from him, but you still have a good feeling about what you did for him.";
+	project Figure of Hercules_kilt_icon;
 	remove "Towel" from Traits of Hercules;
 	TraitGain "Kilt" for Hercules;
 
@@ -187,6 +202,12 @@ Section 3 - Sex
 
 Instead of fucking the Hercules:
 	if "Therapy Project" is listed in Traits of Hercules:
+		if "Naked" is listed in Traits of Hercules:
+			project Figure of Hercules_soft_icon;
+		else if "Towel" is listed in Traits of Hercules:
+			project Figure of Hercules_towel_icon;
+		else if "Kilt" is listed in Traits of Hercules:
+			project Figure of Hercules_kilt_icon;
 		say "     Given that you're aiming to make Hercules feel [italic type]more[roman type] like a person and bring him out of his current state, simply making use of him sexually without getting any sort of consent would surely be counterproductive. Your conscience raises a protest and (for now) reins in your more animalistic impulses.";
 	else if "Private Sex Toy" is listed in Traits of Hercules:
 		say "[Hercules_Sexmenu]";
@@ -194,6 +215,7 @@ Instead of fucking the Hercules:
 		say "[Hercules_Sexmenu]";
 
 to say Hercules_Sexmenu:
+	project Figure of Hercules_hard_icon;
 	if Humanity of Hercules is 0:
 		say "     Stepping up to the motionless horseman, still standing in the pose that you last put him in, you grin at having such a neat toy to play with. Quipping that he's here to serve, you gloss over the fact that he's not showing any outward reaction to your presence.";
 	say "     [bold type]What sort of fun do you want to have with Hercules?[roman type][line break]";

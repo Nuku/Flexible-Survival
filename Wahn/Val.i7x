@@ -96,47 +96,55 @@ instead of conversing the Val:
 	say "[ValTalkMenu]";
 
 to say ValTalkMenu:
+	say "     [bold type]What do you want to talk with Val about?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about him";
 	now sortorder entry is 1;
 	now description entry is "Let him tell you about himself";
-	now toggle entry is ValTalk rule;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Offer to free him";
 	now sortorder entry is 2;
 	now description entry is "Offer him his freedom";
-	now toggle entry is ValTalk rule;
 	[]
 	if ValPregnancy > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Talk about his pregnancy";
 		now sortorder entry is 3;
 		now description entry is "Ask him how he feels about being with child";
-		now toggle entry is ValTalk rule;
 	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the ValTalk rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Talk about him"):
-			say "[ValTalk1]";
-		if (nam is "Offer to free him"):
-			say "[ValTalk2]";
-		if (nam is "Talk about his pregnancy"):
-			say "[ValTalk3]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Talk about him"):
+					say "[ValTalk1]";
+				if (nam is "Offer to free him"):
+					say "[ValTalk2]";
+				if (nam is "Talk about his pregnancy"):
+					say "[ValTalk3]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the orc breeder, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say ValTalk1:
 	say "     Val's brows draw together a bit as he tries to think back to his old self. Finally he says, 'I - I can't remember Vincent too well anymore.' Biting his lip, he continues, [one of]'I think I worked... in a store? A clothing store? Terribly long hours, and rude customers, and then... I was sorting items from the dressing rooms back to their places when I changed suddenly. Fur, and fangs and a fox tail.' He rubs the base of his spine thoughtfully, then shrugs.[or]'Master Mul says he doesn't matter anymore, so I guess it's okay.'[or]'He was a fox, no a man - a fox-man? Different than I am now anyways.' With a shrug, he stops trying to remember.[or]'There was a lot of running and hiding from the monsters on the streets, I was never safe. Not like now, with the powerful masters taking care of me.'[or]'He never thought about doing anything with a man. Strange, hm? I don't think I'd want to live without my masters. I'm here for their pleasure.'[at random]";

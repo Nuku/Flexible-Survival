@@ -88,6 +88,10 @@ IcarusAmySex is a number that varies.
 AlexandraAmySex is a number that varies.
 CarlAmySex is a number that varies.
 
+a postimport rule:
+	if HP of Amy is 0: [shouldn't be in that state, bugfix code]
+		now HP of Amy is 2;
+
 Table of GameCharacterIDs (continued)
 object	name
 Amy	"Amy"

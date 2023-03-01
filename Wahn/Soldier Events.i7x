@@ -1306,9 +1306,11 @@ to say EvilOption_Amy_4: [thrash the German shepherd]
 	say "     Telling the German shepherd to get on all fours and wait like that, head down, eyes closed and ass up, you then snap your fingers at the husky and point her at your gear, which she hastily brings you. As you quietly put your stuff on again, you gruffly tell the male canine that he shouldn't dare to leave that position, or to look up, and the cowed dog nods obediently. Then you tap the female anthro's arm and wave her to follow you, strolling down the street and leaving the German shepherd behind. A cruel grin crosses your face as you wonder if someone will find him like that and make use of him before the street dog eventually decides to disobey. Not your problem though, and you can't really take him with you to continue his training as you've already got one dog on your hands.";
 	say "     As you make your way towards the library, you realize at that point that you don't even have anything to call her, so you decide to pick out a name for the bitch. As your thoughts roam through various options, you're drawn back to your time in school and give a little snort as you remember a certain cheerleader. Amusement painted on your lips, you clearing your throat and tell the anthro that you'll call her Amy from now on - after an old schoolmate who also was a slutty little bitch. The back-handed slap at the original Amy goes straight over the husky's head, with her simply looking at you and saying, 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then continue on your way, eventually reaching the library.";
 	TraitGain "Street dog trained" for Amy;
+	now HP of Amy is 2;
 
 to say EvilOption_Amy_5: [just leave]
 	say "     As you make your way towards the library, you realize at that point that you don't even have anything to call her, so you decide to pick out a name for the bitch. As your thoughts roam through various options, you're drawn back to your time in school and give a little snort as you remember a certain cheerleader. Amusement painted on your lips, you clearing your throat and tell the anthro that you'll call her Amy from now on - after an old schoolmate who also was a slutty little bitch. The back-handed slap at the original Amy goes straight over the husky's head, with her simply looking at you and saying, 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then continue on your way, eventually reaching the library.";
+	now HP of Amy is 2;
 
 to say AllenFriend_BreedingDavies:
 	if "Allen Focused Interest" is listed in Traits of Allen:
@@ -1583,7 +1585,7 @@ to say ResolveEvent Lone Soldier:
 			say "     Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
 			ItemGain food by 1;
 			ItemGain water bottle by 1;
-			now Resolution of Lone Soldier is 4; [told Monty the truth]
+			now Resolution of Lone Soldier is 5; [told Monty the truth]
 		else: [watch him strip]
 			LineBreak;
 			if graphics is true:
@@ -1650,12 +1652,12 @@ to say ResolveEvent Lone Soldier:
 				say "     'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright?' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
 				ItemGain food by 1;
 				ItemGain water bottle by 1;
-				now Resolution of Lone Soldier is 5; [ignored the plug]
+				now Resolution of Lone Soldier is 6; [ignored the plug]
 	else: [don't warn him]
 		LineBreak;
 		say "     The hyena pounces on the black soldier from behind, clawed hands leaving bloody grooves in his skin as she digs her fingers into his shoulders and wraps her legs around his waist. But contrary to what she seems to have expected, he isn't forced against the wall - instead, the man braces against the impact by tensing his muscular arms, stopping that part of the attack cold. Still, he's got an aggressive hyena hanging on his back now, clawing and trying to bite... so the guy does another unexpected thing - he grabs hold of her and keeps the hyena from letting go, then throws himself against the wall backwards. The impact drives the air out of his attacker's lungs, as does the next, and the next - and while the soldier does get clawed up a bit more, soon the hyena passes out and falls off his back, landing in a heap on her unconscious companion.";
 		say "     Gasping for breath and bruised, the soldier stumbles away from the beaten hyenas, then braces himself against a dumpster to compose himself. After a short moment, he looks back to his attackers, nodding to himself that they're no longer a threat. Then the man suddenly turns his head and looks right in your direction! He must have caught a glimpse of movement from you in the corner of his eye. 'Fuck, another savage!' he swears loudly and clenches his fist - but only for a second before he winces and looks down at his bruised knuckles. Fist-fights against anthro animals sure are hard on a guy and even with the ever-present nanites, it'll take some moments before he heals... so the soldier chooses retreat over an uncertain fight. Without another word, he starts to run for the other end of the alley, leaving you far behind in mere moments. Then he's gone around the far corner, out of sight.";
-		now Resolution of Lone Soldier is 5; [didn't warn Monty]
+		now Resolution of Lone Soldier is 7; [didn't warn Monty]
 	now Lone Soldier is resolved;
 
 

@@ -71,6 +71,8 @@ to say TESlaveSexMenu:
 	now non-infectious entry is true;
 	setmonster "Herm Human";
 	choose row MonsterID from the Table of Random Critters;
+	say "     [bold type]What do you want to do with the thought eater's 'distraction'? Lee seems eager to do whatever you want...[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	if Player is male:
@@ -78,82 +80,77 @@ to say TESlaveSexMenu:
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the herm slave blow you";
-		now toggle entry is TESlaveSex rule;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck his cock";
 	now sortorder entry is 2;
 	now description entry is "Put the Asian dude's shaft in your mouth";
-	now toggle entry is TESlaveSex rule;
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the herm slave's mouth to good use";
-		now toggle entry is TESlaveSex rule;
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the herm slave's pussy with your cock";
-		now toggle entry is TESlaveSex rule;
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 5;
 		now description entry is "Ride the Asian dude's cock";
-		now toggle entry is TESlaveSex rule;
 	if (Cock Count of Player > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take his ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the herm slave's ass with your cock";
-		now toggle entry is TESlaveSex rule;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let him fuck your ass";
 	now sortorder entry is 7;
 	now description entry is "Ride the Asian dude's cock";
-	now toggle entry is TESlaveSex rule;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Nothing";
-	now sortorder entry is 8;
-	now description entry is "Don't have sex with the herm slave after all";
-	now toggle entry is TESlaveSex rule;
 	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the TESlaveSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry]?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[TESlaveSex1]";
-		if (nam is "Suck his cock"):
-			say "[TESlaveSex2]";
-		else if (nam is "Have him lick your pussy"):
-			say "[TESlaveSex3]";
-		else if (nam is "Fuck his pussy"):
-			say "[TESlaveSex4]";
-		else if (nam is "Let him fuck your pussy"):
-			say "[TESlaveSex5]";
-		else if (nam is "Take his ass"):
-			say "[TESlaveSex6]";
-		else if (nam is "Let him fuck your ass"):
-			say "[TESlaveSex7]";
-		else if (nam is "Nothing"):
-			say "[TESlaveSexCancel]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[TESlaveSex1]";
+				if (nam is "Suck his cock"):
+					say "[TESlaveSex2]";
+				else if (nam is "Have him lick your pussy"):
+					say "[TESlaveSex3]";
+				else if (nam is "Fuck his pussy"):
+					say "[TESlaveSex4]";
+				else if (nam is "Let him fuck your pussy"):
+					say "[TESlaveSex5]";
+				else if (nam is "Take his ass"):
+					say "[TESlaveSex6]";
+				else if (nam is "Let him fuck your ass"):
+					say "[TESlaveSex7]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Changing your mind, you step back from Lee's almost naked form and look down the hallway again. Your moment of hesitation has allowed the thought eater to get away, vanishing from sight. He must have gone into one of the side passages, but you can't tell which one. Not much point in running after him now. You leave the Asian man standing alone in the underground passage, looking relieved that his master got away, in addition to a somewhat dejected look at you spurning him offering himself.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say TESlaveSex1: [cock sucked by Lee]
 	say "     As you put your hands on his shoulders and softly push down on them, the slave willingly kneels, eager to fulfill his task. While you drop your pack and gear, his hands are on your hips, sliding down any clothing you're wearing to reveal your already half-hard manhood. He takes it in his hand, jerking it a few times, then looks up at you with a submissive expression and proceeds to lick your balls, taking one, then the other into his mouth and playing his tongue over them. Holding your cock up, he then slowly licks up its underside before finally arriving at the tip. 'I've trained a lot to better please my master,' he says with a dreamy smile, then slides his soft lips over your cockhead.";
@@ -211,9 +208,6 @@ to say TESlaveSex7: [player's ass fucked by Lee]
 	say "     With you having gotten your rocks off and his master having gotten away, Lee gives a pleased smile and lets himself go as well, no longer holding back on his own orgasm. After a few more strokes, he sinks his manhood into your ass all the way with a loud grunt, shooting blast after blast of cum deep into your hole. Panting, he stays on top of you for a while longer, stroking your side lazily. Then he gives you a quick kiss on the back and scoots back a bit, pulling his softening cock out of you before saying 'There, wasn't that better than hurting the master?' His eyes get a faraway look for a second, then he continues 'I have to return to my chamber now. Please don't try to follow me.' With that, he jumps up and dashes off down the nearest hallway, pretty fast in his unencumbered, nearly naked state.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Herm Human";
 	infect "Herm Human";
-
-to say TESlaveSexCancel: [don't have sex with Lee]
-	say "     Changing your mind, you step back from Lee's almost naked form and look down the hallway again. Your moment of hesitation has allowed the thought eater to get away, vanishing from sight. He must have gone into one of the side passages, but you can't tell which one. Not much point in running after him now. You leave the Asian man standing alone in the underground passage, looking relieved that his master got away, in addition to a somewhat dejected look at you spurning him offering himself.";
 
 to say Thought_Eater_Desc:
 	setmongender 3;

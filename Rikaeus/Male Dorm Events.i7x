@@ -55,7 +55,7 @@ to say MaleDormSlut1:
 	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
-	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
+	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:
 		say "     'Mmm, fuck the dorm slut is tight as always,' a voice moans to your back right. Turning around you spot a group of three males: a lizard, a wolf, and a jock bunny, surrounding a twink-ish male fox. Out of the four of them, only the vulpine is as naked as can be, the others are currently still wearing their clothing. Though, you can tell that the voice you heard from earlier was the bunny, as he was currently balls deep into the bare-bodied guy below him. At the other end of him was the lizard who was happily fucking the fox's mouth, balls slapping against his chin. It didn't take long for the lapine to release his load, and instead of in his hole the male ends up spraying it all over the vulpine's back.";
 		say "     Taking the bunny's place is the wolf, while the lizard is still content to take purchase in the fox's mouth. 'Now remember, don't knot with him. We don't want to be stuck here for an hour or two,' the one at the front says. The canine rolled his eyes before slamming into the vulpine rather roughly. 'I know I know. This isn't my first rodeo with the slut.' You turn your attention to the guy getting fucked and notice he's pretty into it, moaning and groaning loudly as they all fuck him, minus the lapine who is simply sitting on a chair, watching it all. You realize that the fox notices you out of the corner of his eyes but doesn't say anything.";
@@ -70,7 +70,7 @@ to say MaleDormSlut2:
 	say "     [bold type]Do you go forward despite the sounds you hear?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're really curious, so of course.";
-	say "     ([link]Y[as]y[end link]) - No, you'd rather not at the moment.";
+	say "     ([link]N[as]n[end link]) - No, you'd rather not at the moment.";
 	if Player consents:
 		say "     You come upon a familiar sight. It is Justin, the dorm slut being fucked by the trio from before. Just like last he is currently being fucked by the bunny who is clearly enjoying it just like the other time. At the other end of him was the lizard who was happily fucking the cock hound's mouth, balls slapping against his chin. By now though, your... new friend appears to have noticed you but doesn't say anything again, content to deepthroat the cock in his mouth. It didn't take long for the lapine to release his load, and instead of in his hole the male ends up spraying it all over the vulpine's back.";
 		say "     Taking the bunny's place is the wolf, while the lizard is still content to take purchase in the Justin's mouth. 'Now remember, don't knot with him. I really don't want to be here forever,' the one at the front says. The canine rolls his eyes before slamming into the vulpine rather roughly. 'You don't need to mention that every time, it was one time!' You turn your attention to the guy getting fucked and notice he's pretty into it, moaning and groaning loudly as they all fuck him, minus the lapine who is simply sitting on a chair, watching it all just like before.";

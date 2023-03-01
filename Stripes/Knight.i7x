@@ -33,8 +33,9 @@ to say knightdesc:
 		if knightcrestnum is 10, now knightcrestnum is 1;
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus].";
-	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face with [one of]a short beard[or]long, flowing hair[or]a small scar that makes him look rugged without disfiguring him[or]a square jaw and noble features[or]wavy brown hair[in random order]. He is a tall and fit man, his body strong from training and combat. Equipped in a chainmail coat, this is covered by a loose tunic of bright colors. The emblem on his chest is one of a crest depicting [stateknightcrest]. He wears rather plain breeches with leather boots below the waist, the former showing a prominent package beneath the [one of]brown[or]gray[or]tan[or]dusty[at random] fabric.";
-	say "     Sizing you up, he reaches for the sword at his side. ";
+	project Figure of Knight_clothed_armed_icon;
+	say "     Before you stands the striking figure of a knight in his livery. He has an attractive, manly face, framed by black hair and a full beard covering his square jaw. He is a tall and fit man, his body strong from training and combat. His upper body is covered in a fine chainmail coat, further supplemented by a shiny breastplate and bracers. Over his shoulder and down the back hangs a long cloak, bearing [stateknightcrest] embroidered across the middle. He wears rather plain breeches with some armor plates strapped over them, and leather boots.";
+	say "     Sizing you up with emerald-green eyes, he reaches for the sword at his side. ";
 	if kpstatus is 1:				[player is Knight]
 		if Player is herm:
 			say "'Greetings. [']Tis surprising to see a noble knight and beautiful lady in one, but these are strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
@@ -99,6 +100,7 @@ to say stateplayercrest:
 to say losetoknight:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project Figure of Knight_hard_icon;
 	if kpstatus is 1:
 		if HP of Player > 0:
 			say "     You lower your [if weapon object of Player is journal]hands[else][weapon object of Player][end if] and drop to one knee before the knight. He smiles as you yield to him and moves closer. 'I would have enjoyed seeing our fight through to the end, but I can see you are eager to enjoy the festivities afterwards.' Sheathing his blade, he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
@@ -148,6 +150,7 @@ to say losetoknight:
 			say "     Rather than fight further, you submit to the armored knight. Flourishing his sword, he strikes a pose with a smile. 'It seems even monsters such as you have heard of my great deeds. And so you must also have heard of my other greatness,' he adds, lowering his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
 		else:
 			say "     His last blow strikes you hard, knocking you to the ground with a pained groan. And while the hardworking nanites quickly seal the wounds, you're still quite hurt and unable to keep fighting. '[one of]I have slain the monster[or]And again I have proven my heroism against yon monstrous foe[or]Another act of heroism against a monstrous beast[or]Another evil beast defeated in the name of honor[at random],' the knight declares with a flourish of his sword. Looking down at you, he sees you still alive and breathing. 'Ah, the beast still lives? An opportunity to celebrate my noble victory,' he declares, pulling down his breeches to reveal his impressive 10-inch manhood. As you stare at it, he removes your gear and any clothing, leaving you bare.";
+		WaitLineBreak;
 		if Player is female:
 			say "[knightwins_vaginal]";
 		else:
@@ -169,6 +172,7 @@ to say knightwins_vaginal:
 		say "     'So you see, O beast, the might and vigor of a noble knight,' ";
 	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body in a mix of groping and caressing	[if kpstatus < 3 and player is male]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his impressive manhood gliding in and out of you, rubbing across your slick vaginal walls has you grinding back against him with growing yearning. The knight holds a steady pace, his balls slapping against your thighs and crotch as he fucks the [if kpstatus is 1]noble maiden[else if kpstatus is 2]lass-in-training[else if kpstatus is 3]female peasant[else]defeated she-monster[end if] beneath him.";
 	say "     You have a couple of quick orgasms as the victorious knight fucks you by the time he quickens his pace with a lustful groan. Soon after, he grabs your ass and drives hard into you, groaning his release as he sends gooey blasts of his semen into your quivering cunny. You cry out in carnal delight, climaxing hard as you feel the strong knight's virile seed shooting into you, boldly seeking to fill your womb and impregnate you. Once done, the knight slips his slick cock from your creamy pussy and [if kpstatus > 2]wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing[else]moves around to have you suck it clean before resheathing it in his breeches and departing[end if].[impregchance]";
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Knight";
 
 to say knightwins_anal:
 	say "     The bold knight [if HP of Player > 0]gets[else]guides[end if] you onto all fours. With your backside presented to him, he takes a moment to eye it [if kpstatus < 3]appreciatively [end if]while running a hand across it. Taking your hips in hand, he lines up behind you, teasing his stiff shaft against your pucker before [if kpstatus is 4]firmly thrusting[else]slowly easing[end if] into you. You can't help but moan at the intrusion, his enlarged manhood bringing unexpected pleasure[if HP of Player > 0]. The initial few thrusts are enough to get you quite aroused and any restraint you may have had quickly slips away[else]. After the initial few thrusts, you start to delight in the buggering, your earlier resistance slipping away[end if].";
@@ -181,10 +185,12 @@ to say knightwins_anal:
 	else:
 		say "     'So you see, O beast, the might and vigor of a noble knight,' ";
 	say "he says[if kpstatus > 2] pompously[end if] as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body in a mix of groping and caressing[if kpstatus < 3 and player is male]. He even reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure[end if]. The feel of his enlarged manhood gliding in and out of you[if Player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace further until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if Player is male]. You cum hard in response, your cock[smn] twitching and throbbing as you drain your [Ball Size Adjective of Player] [Balls] with a lustful moan[end if]. Once done, the knight slips his slick cock from your rear and wipes his [']sword['] across your buttocks before resheathing it in his breeches and departing.[mimpregchance]";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Knight";
 
 to say beattheknight:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project Figure of Knight_clothed_icon;
 	say "     You are victorious over the knight, forcing him to yield and withdraw. ";
 	if kpstatus is 1:
 		say "'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before leaving.";

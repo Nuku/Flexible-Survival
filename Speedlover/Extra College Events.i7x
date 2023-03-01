@@ -453,7 +453,8 @@ check browselibrary:
 	if lastlibrarybrowse - turns < 8, say "Even if reading is an enjoyable way to spend time, you can't spend all day here! You should worry about other priorities..." instead;
 
 carry out browselibrary:
-	LibrarySexEvent;
+	if Player is not CoA:
+		LibrarySexEvent;
 	now lastlibrarybrowse is turns;
 	Follow the turnpass rule;
 

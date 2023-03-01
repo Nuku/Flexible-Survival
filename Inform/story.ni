@@ -645,6 +645,7 @@ Include Rubber Tigress by Sarokcat.
 Include Ruby by CrimsonAsh.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
+Include Sascha by Voidsnaps.
 Include Salamander by Stripes.
 Include Sand Man by Wahn.
 Include Satyr by Sarokcat.

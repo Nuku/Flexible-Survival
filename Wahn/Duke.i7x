@@ -247,61 +247,73 @@ instead of fucking the Duke:
 					now lastfuck of Duke is turns;
 
 to say DukeSexMenu:
+	say "     [bold type]What do you want to do with Duke?[roman type][line break]";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Put your shepherd friend's mouth to good use.";
-		now toggle entry is DukeSex rule;
+		now description entry is "Put your shepherd friend's mouth to good use";
+	[]
 	if (HP of Duke > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Duke a blowjob";
 		now sortorder entry is 3;
-		now description entry is "Blow off the German shepherd.";
-		now toggle entry is DukeSex rule;
+		now description entry is "Blow off the German shepherd";
+	[]
 	if (HP of Duke > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Finger his ass";
 		now sortorder entry is 4;
-		now description entry is "Finger-fuck Duke and jerk him off at the same time.";
-		now toggle entry is DukeSex rule;
+		now description entry is "Finger-fuck Duke and jerk him off at the same time";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Duke's ass";
 		now sortorder entry is 6;
-		now description entry is "Fill the German shepherd's ass with your cock.";
-		now toggle entry is DukeSex rule;
+		now description entry is "Fill the German shepherd's ass with your cock";
+	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 7;
-		now description entry is "Take his canine shaft in the back door and be knotted by him.";
-		now toggle entry is DukeSex rule;
+		now description entry is "Take his canine shaft in the back door and be knotted by him";
+	[]
 	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
-
-This is the DukeSex rule:
-	choose row Current Menu Selection in table of fucking options;
-	let nam be title entry;
-	say "[title entry]: [description entry][line break]";
-	say "Is this what you want?";
-	if Player consents:
-		decrease menu depth by 1;
-		clear the screen;
-		if (nam is "Have him blow your cock"):
-			say "[DukeSex1]";
-		else if (nam is "Give Duke a blowjob"):
-			say "[DukeSex2]";
-		else if (nam is "Finger his ass"):
-			say "[DukeSex3]";
-		else if (nam is "Take Duke's ass"):
-			say "[DukeSex4]";
-		else if (nam is "Let him fuck your ass"):
-			say "[DukeSex5]";
-		wait for any key;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Have him blow your cock"):
+					say "[DukeSex1]";
+				else if (nam is "Give Duke a blowjob"):
+					say "[DukeSex2]";
+				else if (nam is "Finger his ass"):
+					say "[DukeSex3]";
+				else if (nam is "Take Duke's ass"):
+					say "[DukeSex4]";
+				else if (nam is "Let him fuck your ass"):
+					say "[DukeSex5]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the German shepherd, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
 
 to say DukeSex1: [cock sucked by Duke]
 	say "     Rubbing your crotch, you tell Duke how much you'd appreciate some attention from him, pulling out your already half-hard shaft in an obvious invitation. With a smiling face, the German shepherd sinks to his knees and starts licking your manhood and balls, showing good skill in the use of his long and flexible tongue. Taking your shaft into his muzzle, carefully using his lips and tongue to hold it away from his teeth, Duke bobs up and down, sending shivers of pleasure up your spine. Meanwhile, he moves a hand up to tease and caress your balls, fondling them softly between his fingers.";

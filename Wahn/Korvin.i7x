@@ -85,7 +85,7 @@ to say gsd_recruited:
 		else if (number of bunkered people + number of booked people is 3):
 			say "Seeing some movement of the other inhabitant of the library, you decide it might be best to explain what's going on with Korvin now moving in. [bold type]Calling everyone together, you lay things out, to the following reactions:[roman type][line break]";
 		LineBreak;
-		if Alexandra is booked or Alexandra is bunkered:
+		if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50:
 			say "     Alexandra crosses her arms and looks Korvin up and down, her gaze lingering on his muscles and crotch. Despite the physical interest that she can't quite hide behind her tough bitch persona, the next words out of the ex-cop's mouth are snarky and mocking. 'Got some sort of dog fetish, boss? Dragging in a mangy street mutt. Looks like you roughed him up too!' Before you can think of a reply, Korvin's already barking back, 'Up yours, slut! I saw how you stared at my sheath!' He grabs his crotch suggestively, then raises the hand while turning it around, finishing up with a middle finger for Alexandra. She snorts, looking at her nails and just letting his shot back roll off her.";
 			WaitBreakReactions;
 		if Amy is booked or Amy is bunkered:

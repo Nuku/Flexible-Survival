@@ -16,7 +16,7 @@ to say ResolveEvent Hidden Grate:
 		say "You give the sewer grate a solid heave, ";
 		let the bonus be (( Strength of Player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus]: ";
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Strength Check):[line break]";
 		increase dice by bonus;
 		if dice > 15:
 			say "You manage to lift the grate out of the way, and descend into the gloomy light below.";
@@ -77,7 +77,7 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 	if "Survivalist" is listed in feats of Player, increase bonus by 4;
 	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]8[roman type] (Perception Check):[line break]";
 	if dice plus bonus > 7:
 		say "[ResolveFunction of Potential Resources]";
 		try looking;

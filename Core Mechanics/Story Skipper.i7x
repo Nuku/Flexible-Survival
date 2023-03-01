@@ -205,6 +205,9 @@ to EventRestore:
 				[bugfix code for people wrongly assigning "Dry Plains" instead of "Plains"]
 				if sarea of EventObject is "Dry Plains":
 					now sarea of EventObject is "Plains";
+				[bugfix code for people wrongly assigning "Urban Forest" instead of "Forest"]
+				if sarea of EventObject is "Urban Forest":
+					now sarea of EventObject is "Forest";
 				[
 				if debug is at level 10:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";

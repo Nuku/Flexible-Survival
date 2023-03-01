@@ -63,6 +63,16 @@ to say Dobermandesc:
 			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
+		if PlayerFucked of Alexandra is false:
+			LineBreak;
+			say "     [bold type]Given that the woman seems fairly sane, despite being nonhuman, and you're a (more or less) innocent citizen, you wonder if it might be a good idea to give in?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Show your peaceful side, don't provoke her and see where things go from there.";
+			say "     ([link]N[as]n[end link]) - Fuck the police! Maybe even literally, these days...";
+			if Player consents:
+				say "[Alexandra_NonResist]";
+			else:
+				say "     Nah, why talk if violence can solve this matter much faster? You ready yourself for taking her down...";
 	else if dobielibido < 100 or inasituation is true:
 		project the figure of Alexandra_clothed1_frown_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
@@ -93,57 +103,70 @@ to say losetoDoberman:
 	else:
 		say "[losetodobie3]";
 
-to say losetodobie1:		[low-lust player loss]
+to say Alexandra_NonResist:
+	setmonster "Doberman Bitch";
 	choose row MonsterID from the Table of Random Critters;
-	if dobieresist is 0:
-		if dobielibido is 0:
-			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name? Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it. Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?";
-			say "     [bold type]If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Try making friends.";
-			say "     ([link]N[as]n[end link]) - Bide your time.";
-			if Player consents:
-				let bonus be (( charisma of Player minus 10 ) divided by 2);
-				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus]=[dice + bonus] vs 16: ";
-				if dice + bonus >= 16:
-					say "     Deciding to risk it, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her. At first, she remains curt with you, but her loneliness in this situation wins out and she starts to open up. 'My name's Officer Friedrich, but I guess you can call me Alexandra. It's good to run into someone who's sane and friendly. All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes. But I can't give up. Just before communications went down entirely, the emergency reports said that the military would be sent in. We've just got to hold out,' she says, a bit of desperation in her voice. You both fall silent for a while She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest.";
-					say "     'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.' She gives you some quick directions to the [bold type]Police Station Twelve[roman type] and tells you to stop by when you get a chance.";
-					now dobielibido is -100;
-					now fightoutcome is 19;
-					AddNavPoint Police Station Twelve;
-					move Alexandra to Police Station Twelve;
-					now HP of Alexandra is 50;
-					now area entry is "Nowhere";
-					increase score by 20;
-				else:
-					say "Deciding to give it a shot, you try to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
-					now dobielibido is -1;
-			else:
-				say "     Suspecting that the infection has affected her mind, given how she's transformed and acting, you respond calmly, but are careful not to divulge anything that might put you or the bunker at risk. As your talking to her, your eyes wander from time to time to her bosom, catching a faint scent of arousal coming from her. It seems she's feeling the effects of the infection as well. Perhaps you can take advantage of that when you're better prepared to put her in her place. 'Eyes up here,' she growls, noticing your lecherous gaze.";
-				now dobielibido is 1;
-		else if dobielibido < 0:
-			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman again. It takes her a few moments to recognize you, shaking her single-minded focus on her duty. 'I thought I told you to stay off the streets. It's good to see you've still got some control in there, but it's not safe. If you keep roaming around, something's going to get you eventually. How are you holding up, citizen? Do you still remember your name? Where you lived and worked?' She starts up with her basic set of questions again, wanting to make sure your mind stays together.";
+	if dobielibido is 0:
+		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name? Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it. Seeing how she seems at least somewhat stable, shall you risk talking to her some more or will you play it safe and keep your trap shut for now?";
+		LineBreak;
+		say "     [bold type]If you'd like to try making friends with her, you should talk to her. If you'd rather bide your time until you can deal with the strange Doberwoman, it'd be best to keep things to a minimum so she can't track you down later.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Try making friends.";
+		say "     ([link]N[as]n[end link]) - Bide your time.";
+		if Player consents:
 			let bonus be (( charisma of Player minus 10 ) divided by 2);
-			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]+[0 - dobielibido]=[dice + bonus - dobielibido] vs 16: ";
-			if dice + bonus - dobielibido >= 16:
-				say "     Again trying to reach her, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her. At first, she remains curt with you, but this time you're able to get through to her as her loneliness in this situation wins out and she starts to open up. 'My name's Officer Friedrich, but I guess you can call me Alexandra. It's good to run into someone who's sane and friendly. All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes. But I can't give up. Just before communications went down entirely, the emergency reports said that the military would be sent in. We've just got to hold out,' she says, a bit of desperation in her voice. You both fall silent for a while.";
-				say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.' She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
+			let diceroll be a random number from 1 to 20;
+			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
+			if diceroll + bonus >= 16:
+				LineBreak;
+				say "     Deciding to risk it, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her. At first, she remains curt with you, but her loneliness in this situation wins out and she starts to open up. 'My name's Officer Friedrich, but I guess you can call me Alexandra. It's good to run into someone who's sane and friendly. All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes. But I can't give up. Just before communications went down entirely, the emergency reports said that the military would be sent in. We've just got to hold out,' she says, a bit of desperation in her voice. You both fall silent for a while She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest.";
+				say "     'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.' She gives you some quick directions to the [bold type]Police Station Twelve[roman type] and tells you to stop by when you get a chance.";
 				now dobielibido is -100;
+				now fightoutcome is 19;
 				AddNavPoint Police Station Twelve;
+				move Alexandra to Police Station Twelve;
 				now HP of Alexandra is 50;
 				now area entry is "Nowhere";
 				increase score by 20;
 			else:
-				say "You attempt again to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
-				decrease dobielibido by 2;
+				LineBreak;
+				say "Deciding to give it a shot, you try to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
+				now dobielibido is -1;
 		else:
-			say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name? Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it.";
-		say "     'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder. 'I want you to return to your home, take cover and wait this thing out.";
-		say "[weaponconf]";
-		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if Libido of Player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2]. At least it seems you've made a new friend in this messed up world[end if].";
-		SanBoost 12;
+			LineBreak;
+			say "     Suspecting that the infection has affected her mind, given how she's transformed and acting, you respond calmly, but are careful not to divulge anything that might put you or the bunker at risk. As your talking to her, your eyes wander from time to time to her bosom, catching a faint scent of arousal coming from her. It seems she's feeling the effects of the infection as well. Perhaps you can take advantage of that when you're better prepared to put her in her place. 'Eyes up here,' she growls, noticing your lecherous gaze.";
+			now dobielibido is 1;
+	else if dobielibido < 0:
+		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman again. It takes her a few moments to recognize you, shaking her single-minded focus on her duty. 'I thought I told you to stay off the streets. It's good to see you've still got some control in there, but it's not safe. If you keep roaming around, something's going to get you eventually. How are you holding up, citizen? Do you still remember your name? Where you lived and worked?' She starts up with her basic set of questions again, wanting to make sure your mind stays together.";
+		let bonus be (( charisma of Player minus 10 ) divided by 2);
+		let diceroll be a random number from 1 to 20;
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
+		if diceroll + bonus - dobielibido >= 16:
+			LineBreak;
+			say "     Again trying to reach her, you respond cordially, answering her questions in a friendly manner while trying to strike up a conversation with her. At first, she remains curt with you, but this time you're able to get through to her as her loneliness in this situation wins out and she starts to open up. 'My name's Officer Friedrich, but I guess you can call me [bold type]Alexandra[roman type]. It's good to run into someone who's sane and friendly. All too often, and the more the longer this goes on, I meet infected people who've let themselves run wild with their changes. But I can't give up. Just before communications went down entirely, the emergency reports said that the military would be sent in. We've just got to hold out,' she says, a bit of desperation in her voice. You both fall silent for a while.";
+			say "     She pours some water from a thermos into the lid and passes it to you. 'Don't worry, it's safe,' she says, drinking down the rest. 'Look, you're the first stable person I've seen in days. You try to keep it together, please. When this is done, I want to know that I've gotten at least one person out of this mess. I'm holed up in what's left of my station. You should come by sometime. I'd really appreciate the company.' She gives you some quick directions to the [bold type]Police Station[roman type] and tells you to stop by when you get a chance.";
+			now dobielibido is -100;
+			AddNavPoint Police Station Twelve;
+			now HP of Alexandra is 50;
+			now area entry is "Nowhere";
+			increase score by 20;
+		else:
+			LineBreak;
+			say "You attempt again to strike up a conversation with her while responding to her questions. You try to win her over, but end up coming across like you're trying to pick up the cop that's pulled you over for speeding. She largely ignores your attempts to be friendly, seeming too focused on her perceived duties to respond.";
+			decrease dobielibido by 2;
+	else:
+		LineBreak;
+		say "     You drop your fighting stance and put your arms up, surrendering to the strange cop woman. For a moment, you think she's going to go all [']police brutality['] on you or pull some sexy [']bad cop['] routine, but instead she just looks you over briefly. 'It's good to see that you've still got some control in there. Things are really crazy out there right now. Do you still remember your name? Where you lived and worked?' She asks you some basic questions, not to get the information but to make sure you can still remember it.";
+	say "     'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder. 'I want you to return to your home, take cover and wait this thing out.";
+	say "[weaponconf]";
+	say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if Libido of Player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2]. At least it seems you've made a new friend in this messed up world[end if].";
+	SanBoost 12;
+	now combat abort is 1;
+
+to say losetodobie1:		[low-lust player loss]
+	choose row MonsterID from the Table of Random Critters;
+	if dobieresist is 0:
+		say "[Alexandra_NonResist]";
 	else if Libido of Player >= 110:
 		if dobielibido < 1, now dobielibido is 1;
 		say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";

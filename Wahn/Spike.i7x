@@ -393,7 +393,7 @@ to say SpikeAccepted:
 		else:
 			say "The two of you talk a little more about what's going on around the library, then Spike goes upstairs to hang out in a corner he claimed as his own.";
 		LineBreak;
-		if Alexandra is booked or Alexandra is bunkered:
+		if (Alexandra is booked or Alexandra is bunkered) and HP of Alexandra < 50:
 			say "     Alexandra crosses her arms and looks Spike up and down, her gaze lingering on the collar around his neck before meeting his gaze. 'Think you're ready to play with the big boys now, eh? Well, I won't stop you - gotta learn to stand on your own feet, and make what mistakes you must.' Glancing at you, she ";
 			if MaxHP of Spike is 1: [player spike]
 				if "Cuckold" is listed in Feats of Player:

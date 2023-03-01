@@ -25,7 +25,7 @@ to SunbathingGatorEvent:
 	let Sun_Gator_Initial_Choice be what the player chooses from Sun_Gator_Initial_Choices;
 	if Sun_Gator_Initial_Choice is:
 		-- "Take a closer look at the alligator. His weighty [italic type]assets[roman type] are sure worth a second glance!":
-			say "     Apologizing, you start to stand, your gaze lingering on that soft, foreskin-hooded cock. It's not an uncommon sight in the city, but the way the green skin of his balls catches the light, and the spongy head's darker green glistening at its apex, providing a counterpoint to its cream-colored foreskin, sticks in your brain. You wouldn't mind worshipping something so delicious-looking! 'Heh. I see y'have good taste.' The gator catches you staring, reaching down to peel back his foreskin and show off that sweaty shaft. He's still soft, but his cock fills his massive paw without a problem, twitching like an awakening beast. 'If y'like, you can have a closer look. I could use a coat of sunscreen. These lighter scales aint so different from skin. Sunburns easy.' Holding out a bottle of tanning lotion he produces from a backpack at his side, he propositions you, presenting you with a choice.";
+			say "     Apologizing, you start to stand, your gaze lingering on that soft, foreskin-hooded cock. It's not an uncommon sight in the city, but the way the green skin of his balls catches the light, and the spongy head's darker green glistening at its apex, providing a counterpoint to its cream-colored foreskin, sticks in your brain. You wouldn't mind worshipping something so delicious-looking! 'Heh. I see y'have good taste.' The gator catches you staring, reaching down to peel back his foreskin and show off that sweaty shaft. He's still soft, but his cock fills his massive paw without a problem, twitching like an awakening beast. 'If y'like, you can have a closer look. I could use a coat of sunscreen.' Holding out a bottle of tanning lotion he produces from a backpack at his side, he propositions you, presenting you with a choice.";
 			say "[Sun_Gator_TouchChoice]";
 		-- "You're interested in interacting with him, but you're a bit busy. You'll come back later.":
 			say "     You'll see the alligator later. You make sure to tell him that you'd love to interact with him on a more personal level later, but you're a bit busy at the moment. He shrugs and nods his head, scratching his belly lazily. 'No problem, kid. I'm here all the time. Nothing better t'do.'";
@@ -58,10 +58,9 @@ to say Sun_Gator_TouchChoice:
 			say "     'Fuck yeah, [if player is male]boy[else if player is female]girl[else]kiddo[end if]. You know how to treat a man. You should see me again if you want another drink. I'll let you suck my cock as often as you like.' Licking his lips and settling back, he strokes his spent cock idly, his eyes drifting closed and a snaggle-toothed, serene smile across his maw. Licking stray cum from your fingers, you leave the gator to sleep off his orgasm, [if PlayerMet of Suchos is false]making a mental note of his sunbathing spot [else] reminding yourself to return later [end if]. You don't think you'll be able to go long without another bout with that scaly cock.";
 			NPCSexAftermath Player receives "OralCock" from Suchos;
 			now Resolution of Sunbathing Gator is 1; [Player sucked him off]
-		-- "You only wanted a glance, nothing more.": 
-			say "     After a quick glance at the alligator, you shake your head. You're not interested in exploring his body, and you'd prefer not to spend any longer in his company. Hopefully he understands. The gator only shrugs when you speak, settling back on the sand and cocking his head to the side in a pointed motion, shooing you away. [italic type]You doubt you'll run into him again, and even if you do, he won't want to interact with you. [roman type][Line Break]";
+		-- "You only wanted a glance, nothing more.":
+			say "     After a quick glance at the alligator, you shake your head. You're not interested in exploring his body, and you'd prefer not to spend any longer in his company. Hopefully he understands. The gator only shrugs when you speak, settling back on the sand and cocking his head to the side in a pointed motion, shooing you away. [italic type]You doubt you'll run into him again, and even if you do, he won't want to interact with you. [roman type][line break]";
 			now Resolution of Sunbathing Gator is 100; [no interest, avoiding]
-	now PlayerMet of Suchos is true;
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -72,23 +71,23 @@ ScaleValue of Suchos is 3. [human sized]
 Body Weight of Suchos is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Suchos is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-Androginity of Suchos is 1. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Suchos is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Androginity of Suchos is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Suchos is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Suchos is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Suchos is 5. [length in inches]
 Breast Size of Suchos is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Suchos is 2. [count of nipples]
 Asshole Depth of Suchos is 9. [inches deep for anal fucking]
 Asshole Tightness of Suchos is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-Cock Count of Suchos is 1. [number of cocks]
-Cock Girth of Suchos is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Suchos is 12. [length in inches]
-Ball Count of Suchos is 2. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Suchos is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-Cunt Count of Suchos is 0. [number of cunts]
-Cunt Depth of Suchos is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Suchos is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-Clit Size of Suchos is 0. [size 1-5, very small/small/average/large/very large]
+Cock Count of Suchos is 0. [number of cocks]
+Cock Girth of Suchos is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Suchos is 0. [length in inches]
+Ball Count of Suchos is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Suchos is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Suchos is 1. [number of cunts]
+Cunt Depth of Suchos is 9. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Suchos is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Suchos is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Suchos is false.
 PlayerRomanced of Suchos is false.

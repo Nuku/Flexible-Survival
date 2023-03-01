@@ -1001,7 +1001,7 @@ to attributeinfect silence state is ( Silence - a number ): [sets the player val
 						now z is not equipped;
 					else if (scalevalue of Player - size of z is -1):
 						if Silence is 0:
-							say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
+							say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of Player is 3;
 	if there is a body descriptor in row MonsterID of the Table of Random Critters:
