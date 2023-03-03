@@ -558,7 +558,7 @@ Include Jaguar Warrior by AGentlemanCalledB.
 Include Junkman by Stripes.
 Include Kangaroo by Guest Writers.
 Include Killer Whale by Stripes.
-Include Knight by Stripes.
+Include Knight by Voidsnaps.
 Include Koballoon by Song.
 Include Kobold Gang by Closerhenry.
 Include Koghh by Wahn.
@@ -637,7 +637,7 @@ Include Red Oni by Stripes.
 Include Reindeer by Stripes.
 Include Reptaur by Kaleem mcintyre.
 Include Retriever by AGentlemanCalledB.
-Include Rhino by Stripes.
+Include Rhino by Voidsnaps.
 Include Robed Cultist by Wahn.
 Include Rodeo Clown by Stripes.
 Include Rubber Drake by Song.
