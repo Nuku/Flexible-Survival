@@ -279,6 +279,11 @@ Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Alpha_hard_icon is the file "Alpha_hard.jpg".
 Figure of Alpha_soft_icon is the file "Alpha_soft.jpg".
+Figure of Alpha_Fang_fem_icon is the file "Alpha_Fang_fem.jpg".
+Figure of Alpha_Fang_hard_icon is the file "Alpha_Fang_hard.jpg".
+Figure of Alpha_Fang_soft_icon is the file "Alpha_Fang_soft.jpg".
+Figure of Alpha_Fang_hyper_hard_icon is the file "Alpha_Fang_hard.jpg".
+Figure of Alpha_Fang_hyper_soft_icon is the file "Alpha_Fang_soft.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
 Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
@@ -419,6 +424,7 @@ Figure of Erin_face_icon is the file "Erin_face.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Fang_face_icon is the file "Fang_face.jpg".
+Figure of Fang_bellyrub_icon is the file "Fang_bellyrub.jpg".
 Figure of Fang_fem_icon is the file "Fang_fem.jpg".
 Figure of Fang_hard_icon is the file "Fang_hard.jpg".
 Figure of Fang_soft_icon is the file "Fang_soft.jpg".
@@ -1301,6 +1307,11 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_naked_frown"	Figure of Alexandra_naked_frown_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
+"Alpha_Fang_fem"	Figure of Alpha_Fang_fem_icon	"SteppeCrow"	g-white	"normal"
+"Alpha_Fang_hard"	Figure of Alpha_Fang_hard_icon	"SteppeCrow"	g-white	"normal"
+"Alpha_Fang_soft"	Figure of Alpha_Fang_soft_icon	"SteppeCrow"	g-white	"normal"
+"Alpha_Fang_hyper_hard"	Figure of Alpha_Fang_hyper_hard_icon	"SteppeCrow"	g-white	"normal"
+"Alpha_Fang_hyper_soft"	Figure of Alpha_Fang_hyper_soft_icon	"SteppeCrow"	g-white	"normal"
 "Alpha Wolf hard"	Figure of AlphaWolf_hard_icon	"Vashaa"	g-White	"normal"
 "Alpha Wolf naked"	Figure of AlphaWolf_naked_icon	"Vashaa"	g-White	"normal"
 "AlphaOne soft"	Figure of Alpha_soft_icon	"SteppeCrow"	g-White	"normal"
@@ -1485,6 +1496,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Ewe"	Figure of Ewe_icon	"Vashaa"	g-white	"normal"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-white	"normal"
 "Fang_face"	Figure of Fang_face_icon	"SineAlas"	g-black	"normal"
+"Fang_bellyrub"	Figure of Fang_bellyrub_icon	"Visage48"	g-black	"normal"
 "Fang_fem"	Figure of Fang_fem_icon	"SteppeCrow"	g-white	"normal"
 "Fang_hard"	Figure of Fang_hard_icon	"SteppeCrow"	g-white	"normal"
 "Fang_soft"	Figure of Fang_soft_icon	"SteppeCrow"	g-white	"normal"
@@ -2662,6 +2674,7 @@ carry out artistcredits:
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Fang (headshot) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Fang (body) by Steppecrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
+	say "     Fang (bellyrub) by Visage48 @ https://www.furaffinity.net/user/visage48/[line break]";
 	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by ConnyChiwa @ https://www.furaffinity.net/user/connychiwa/[line break]";
@@ -2826,7 +2839,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
