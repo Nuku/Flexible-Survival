@@ -1011,7 +1011,7 @@ Lux & Amy Sexual Interest is a situation.
 The level of Lux & Amy Sexual Interest is 0.
 The sarea of Lux & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&AmySexualInterestEvent;
 
 to Lux&AmySexualInterestEvent: [Lux and Amy express interest in each other] [Noon-Early Night] [Tummy Rubs]
@@ -1041,7 +1041,7 @@ Umbra & Amy Sexual Interest is a situation.
 The level of Umbra & Amy Sexual Interest is 0.
 The sarea of Umbra & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&AmySexualInterestEvent;
 
 to Umbra&AmySexualInterestEvent: [Umbra and Amy express interest in each other] [Noon-Early Night] [Asks Amy to read him some adult literature as Lux is busy]
@@ -1337,7 +1337,7 @@ Prereq1Resolution of Lux & Amy First Mating is { 1 }.
 The level of Lux & Amy First Mating is 0.
 The sarea of Lux & Amy First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux is 4 and (hp of Amy > 10 and hp of Amy < 13) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Amy Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Amy Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
 	Lux&AmyFirstMatingEvent;
 
 to say Lux&AmyFirstMatingEvent: [Amy is mounted and bred by Lux] [Pre Dawn] [Quiet (or not) corner of the library]
@@ -1360,7 +1360,7 @@ Prereq1Resolution of Umbra & Amy First Mating is { 1 }.
 The level of Umbra & Amy First Mating is 0.
 The sarea of Umbra & Amy First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Umbra is 4 and (hp of Amy > 10 and hp of Amy < 13) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Amy Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Amy Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
 	Umbra&AmyFirstMatingEvent;
 
 to say Umbra&AmyFirstMatingEvent: [Amy is mounted and bred by Umbra] [Pre Dawn] [Quiet (or not) corner of the library]

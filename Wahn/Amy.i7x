@@ -180,7 +180,7 @@ An everyturn rule:
 	if AmyMaturityCounter > 1:
 		decrease AmyMaturityCounter by 1;
 
-instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns > 3):
+instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns > 3 and Amy is booked):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY SOLO WALKIN [line break]";
@@ -192,7 +192,7 @@ instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns
 	else if AmyMaturityCounter > 1:
 		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
-instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotted - turns > 3):
+instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotted - turns > 3 and Amy is booked):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -206,7 +206,7 @@ instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotte
 	else if AmyMaturityCounter > 1:
 		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
-instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
+instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12 and Amy is booked):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: AMY LUST WALKIN [line break]";
@@ -220,7 +220,7 @@ instead of going up from Bunker while ((HP of Amy > 1 and HP of Amy < 90) and (l
 	else:
 		say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
-instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and Libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and Libido of Amy > 3 and NadiaChickCounter > 3 and a random chance of 1 in 3 succeeds and Amy is booked):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -233,7 +233,7 @@ instead of navigating Grey Abbey Library while (lastAmySpotted - turns > 24 and 
 	say "     Entering the library, you're treated to the sight of Nadia having descended to the library's first floor, the colorful avian woman having left the familiar comforts of her nest. The reason for that soon becomes clear: massed in front of her in what used to be an old reading area are a number of both Amy and Nadia's younger children, and the latter is putting her education to good use, holding an impromptu class of sorts. She reads to the youngsters from an array of books, teaching them some basic mathematics while Amy acts as her teaching assistant, nipping rowdy canine and avian kids alike into line and supplying her with class materials from the stacks. The husky herself watches the class between such activities, clearly intent on learning as much as she can, too.";
 	say "     The sight of the odd impromptu class, carried out by the two mothers, is quite encouraging. Compared to the numerous feral mutants in the city, it's nice to know that at least some of the next generation are having what humanity they were born with reinforced as opposed to the other way around.";
 
-instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1):
+instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 and lust of Amy > 1 and lust of Amy < 13 and NadiaPregVisibility > 1 and Amy is booked):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -287,7 +287,7 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 			LineBreak;
 			say "     'All right then, I'll give it a try.' Amy sounds pretty unsure, though.";
 
-instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12):
+instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 90) and (lastfuck of Amy - turns) > 12 and Amy is booked):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
