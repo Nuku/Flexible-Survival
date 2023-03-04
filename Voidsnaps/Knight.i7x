@@ -3,15 +3,32 @@ Version 2 of Knight by Voidsnaps begins here.
 
 "Adds a Knight creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Creature Responses
+Section 1 - Loot Table
+
+to say GenerateTrophyList_Knight:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "stray links" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "dirty water" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "food" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "water bottle" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "indigo potion" to CombatTrophyList;
+	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
+		add "clean bandages" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
+Section 2 - Creature Responses
 
 kpstatus is a number that varies. kpstatus is usually 4.
 knightcrestnum is a number that varies. knightcrestnum is usually 1.
 playercrestnum is a number that varies. playercrestnum is usually 0.
 
 to say knightdesc:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	[Sets target gender of Knight infection according to Player preferences]
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
@@ -37,6 +54,8 @@ to say knightdesc:
 		increase knightcrestnum by 1;
 		if knightcrestnum is 10, now knightcrestnum is 1;
 	[]
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus].";
 	project Figure of Knight_clothed_armed_icon;
@@ -90,7 +109,7 @@ to say stateplayercrest:
 	else if Playercrestnum is 1:
 		say "a well-hung lion passant guardant";
 	else if Playercrestnum is 2:
-		say "a pair of heraldric dragons performing mutual fellatio";
+		say "a pair of heraldic dragons performing mutual fellatio";
 	else if Playercrestnum is 3:
 		say "a knight carnally riding a gryphon";
 	else if Playercrestnum is 4:
@@ -108,6 +127,8 @@ to say stateplayercrest:
 	else:
 		say "a chain-wrapped sword with handle nestled firmly in cleavage";
 
+to say playercrestzeroed:
+	now playercrestnum is 0;
 
 to say losetoknight:
 	if inasituation is true:
@@ -175,44 +196,43 @@ to say losetoknight:
 to say knightwins_vaginal: [TODO: individualize these more, or just replace them entirely with something better]
 	if kpstatus is 1: [Player knight]
 		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your pussy with rough fingers, drawing dewy droplets of feminine lubricant from your depths as he teases your clit. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your wet folds before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Is this not the finest way to end a battle, my lady knight?' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if commiting it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting.";
+		say "     'Is this not the finest way to end a battle, my lady knight?' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if committing it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting.";
 		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";
 	else if kpstatus is 2: [Player squire]
-		say "      The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your pussy with rough fingers, drawing dewy droplets of feminine lubricant from your depths as he teases your clit. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your wet folds before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Your training begins now. Prepare yourself, squire,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if commiting it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting. It's all worth it of course, to serve your noble knight, as he deserves!";
-		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";	
+		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your pussy with rough fingers, drawing dewy droplets of feminine lubricant from your depths as he teases your clit. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your wet folds before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
+		say "     'Your training begins now. Prepare yourself, squire,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if committing it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting. It's all worth it of course, to serve your noble knight, as he deserves!";
+		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";
 	else if kpstatus is 3: [Player human]
 		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your pussy with rough fingers, drawing dewy droplets of feminine lubricant from your depths as he teases your clit. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your wet folds before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Rejoice, peasant. It's not often that one as lowborn as yourself enjoys the attentions of one of my station,' he says pompously as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if commiting it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting. Still, you endure, knowing that resistance will draw his ire";
-		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean with watering eyes.";	
+		say "     'Rejoice, peasant. It's not often that one as lowborn as yourself enjoys the attentions of one of my station,' he says pompously as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if committing it to memory. [if player is male]He reaches around to take hold of your erection, stroking it in time to his thrusting, adding to your pleasure. [end if]The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your nether lips until they sting. Still, you endure, knowing that resistance will draw his ire";
+		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean with watering eyes.";
 	else if kpstatus is 4: [Player creature]
 		say "     The bold knight pushes you onto all fours. Eying your pussy with a lecherous grin, he jams his fingers into your pussy, his voice echoing in your ears. 'For a beast, you've got a pleasant enough hole. I suppose I won't have to be gentle. Rutting males wouldn't offer you that kindness.' Rough fingering squeezes wetness from your aching pussy, and you grit your teeth, determined not to enjoy the knight's unwanted advances. Finally, his calloused fingers slurp free from your drooling cunt and he lines himself up, gripping your hips and sliding his stiff shaft against your wet folds before slamming himself to the root with a grunt. You can't help but hiss between clenched teeth at the intrusion, his enlarged manhood bringing unwanted pleasure along with throbbing pain. After the initial few thrusts, you give in to your carnal side and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'So you see, filthy beast, the might and vigor of a noble knight,' he says with a sneer as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if to sear your humilation into your memory. The feel of his impressive manhood gliding in and out of you soon drags an unbidden moan from your clenched lips, and you subtly push back, earning a chuckle and a slap to your ass.";
+		say "     'So you see, filthy beast, the might and vigor of a noble knight,' he says with a sneer as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if to sear your humiliation into your memory. The feel of his impressive manhood gliding in and out of you soon drags an unbidden moan from your clenched lips, and you subtly push back, earning a chuckle and a slap to your ass.";
 		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your womb. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, smearing his cock over your face and demanding your subservience with a condescending tone. 'Suckle, foul beast. Perhaps civilized seed will tame your savage heart.' You contemplate biting his cock, but your exhaustion gets the better of you and you lap the mess away like a defeated dog.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Knight";
 
 to say knightwins_anal:
 	if kpstatus is 1: [Player knight]
 		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your ass with rough fingers, spitting on your upturned hole and jabbing his fingers past your clenching pucker to explore your inner walls. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your slickened pucker before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Is this not the finest way to end a battle, my errant knight?' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if commiting it to memory. Reaching around to [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your ass cheeks until they sting.";
+		say "     'Is this not the finest way to end a battle, my errant knight?' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if committing it to memory. Reaching around to [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your ass cheeks until they sting.";
 		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you clamp around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against inner walls and filling your bowels. Once done, the knight slips his slick cock from your creamy asshole, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";
 	else if kpstatus is 2: [Player squire]
-		say "    The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your ass with rough fingers, spitting on your upturned hole and jabbing his fingers past your clenching pucker to explore your inner walls. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your slickened pucker before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Your training begins now. Prepare yourself, squire,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body in a mix of groping and caressing. [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The feel of his impressive manhood gliding in and out of you[if Player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if Player is male]. You cum hard in response, your cock twitching and throbbing as you drain your [Ball Size Adjective of Player] balls with a lustful moan[end if]. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";	
+		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your ass with rough fingers, spitting on your upturned hole and jabbing his fingers past your clenching pucker to explore your inner walls. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your slickened pucker before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
+		say "     'Your training begins now. Prepare yourself, squire,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body in a mix of groping and caressing. [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The feel of his impressive manhood gliding in and out of you[if Player is male], pressing at your prostate and drooling[else] as it drools[end if] copious amounts of precum has you grinding back against him with yearning. Seeing your need, he quickens his pace until finally his groaning release unleashes gooey blasts of his semen into your clenching bowels[if Player is male]. You cum hard in response, your cock twitching and throbbing as you drain your [Ball Size Adjective of Player] balls with a lustful moan[end if]. Once done, the knight slips his slick cock from your creamy pussy, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";
 	else if kpstatus is 3: [Player human]
 		say "     The bold knight guides you onto all fours. Bare and vulnerable, you shiver as he takes a moment to eye it appreciatively, running a hand between your legs. He fondles your ass with rough fingers, spitting on your upturned hole and jabbing his fingers past your clenching pucker to explore your inner walls. Taking your hips in hand, he lines up behind you, sliding his stiff shaft against your slickened pucker before slowly easing into you, bottoming out. You can't help but moan at the intrusion, his enlarged manhood bringing considerable pleasure. After the initial few thrusts, you start to delight in the fucking you're receiving, and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'Rejoice, peasant. It's not often that one as lowborn as yourself enjoys the attentions of one of my station,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if commiting it to memory. Reaching around to [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your ass cheeks until they sting.";
+		say "     'Rejoice, peasant. It's not often that one as lowborn as yourself enjoys the attentions of one of my station,' he says as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if committing it to memory. Reaching around to [if Player is male]take hold of your erection,[else]rub your nullified bulge[end if] stroking it in time to his thrusting, adding to your pleasure. The sensation of his impressive manhood gliding in and out of you sets your world aflame, sending tingles through your body as he stirs your innards with long thrusts, slapping his balls against your ass cheeks until they sting.";
 		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you clamp around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against inner walls and filling your bowels. Once done, the knight slips his slick cock from your creamy asshole, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, thrusting away as you slurp him clean.";
 	else if kpstatus is 4: [Player creature]
 		say "     The bold knight pushes you onto all fours. Eying your asshole with a lecherous grin, he jams his fingers into it without warning, his voice echoing in your ears. 'For a beast, you've got a pleasant enough hole. I suppose I won't have to be gentle. Rutting males wouldn't offer you that kindness.' Rough fingering squeezes a whimper from your lips, but a wad of spit coats your entrance to ease the way, and you grit your teeth, determined not to enjoy the knight's unwanted advances as he works you open. Finally, his calloused fingers slurp free from your drooling cunt and he lines himself up, gripping your hips and sliding his stiff shaft against your cheeks before slamming himself to the root with a grunt. You can't help but hiss between clenched teeth at the intrusion, his enlarged manhood bringing unwanted pleasure along with throbbing pain as it savages your prostate. After the initial few thrusts, you give in to your carnal side and [if HP of Player > 0]any restraint you may have had quickly slips away[else]your earlier resistance slips away[end if].";
-		say "     'So you see, filthy beast, the might and vigor of a noble knight,' he says with a sneer as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if to sear your humilation into your memory. The feel of his impressive manhood gliding in and out of you soon drags an unbidden moan from your clenched lips, and you subtly push back, earning a chuckle and a slap to your ass.";
+		say "     'So you see, filthy beast, the might and vigor of a noble knight,' he says with a sneer as he quickens his pace and fucks you with added flourish and vigor. His hands roam over your [bodydesc of Player] body, caressing every inch of you as if to sear your humiliation into your memory. The feel of his impressive manhood gliding in and out of you soon drags an unbidden moan from your clenched lips, and you subtly push back, earning a chuckle and a slap to your ass.";
 		say "     Quick, jabbing thrusts awaken something inside of you, and before long, you're squirming, begging for more as you gush around that heroic dick. Grabbing your ass and driving hard into you, the knight groans his release as he sends throbbing waves of his seed splashing against your prostate. Once done, the knight slips his slick cock from your creamy asshole, straddling your face and wiping his cock across your lower lip. Slipping his half-hard shaft between your lips for a quick clean, he grips your hair, smearing his cock over your face and demanding your subservience with a condescending tone. 'Suckle, foul beast. Perhaps civilized seed will tame your savage heart.' You contemplate biting his cock, but your exhaustion gets the better of you and you lap the mess away like a defeated dog.";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Knight";
 
 to say beattheknight:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
-	project Figure of Knight_clothed_icon;
 	say "     You are victorious over the knight, forcing him to yield and withdraw. ";
 	if kpstatus is 1:
 		say "'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before leaving.";
@@ -223,8 +243,139 @@ to say beattheknight:
 	else:
 		say "'You are a powerful one, O beast, to have bested a knight such as I. Perhaps one day we will do epic battle again, but for now, you are the victor,' he declares, withdrawing with his sword still drawn.";
 
-to say playercrestzeroed:
-	now playercrestnum is 0;
+to say expanded_beattheknight: [switch this against the function above once completed]
+	project Figure of Knight_clothed_icon;
+	say "     You are victorious over the knight, forcing him to yield. ";
+	if kpstatus is 1: [Player Knight]
+		say "'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before attempting to leave. Over his shoulder, he shoots you a cocky grin. 'I can't imagine you will win our next bout.'";
+	else if kpstatus is 2: [Player Squire]
+		say "'You are quite strong for a squire. Perhaps it is time you became a knight in your own right? Regardless, I salute you,' he declares with a flourish of his sword before attempting to leave. Over his shoulder, he shoots you a cocky grin. 'Though next time, I think you'll find I won't hold back.'";
+	else if kpstatus is 3: [Player Human]
+		say "'You are surprisingly strong and well-trained for a peasant. You might make a good knight if you took up a noble cause. Regardless, I must declare you the victor,' he says with a nod while sheathing his sword before attempting to leave. Over his shoulder, he shoots you a cocky grin. 'Though first, you'd have to apprentice under a knight. Find me again if you wish to serve me.'";
+	else: [any other Player]
+		say "'You are a powerful beast. Perhaps one day we will do epic battle again, but for now, you are the victor,' he declares, withdrawing with his sword still drawn. A lecherous grin spreads across his face, and you swear you see the piece of armor above his crotch twitch as he continues. 'Should you renounce your evil ways, perhaps you could become a captive beast. I'll admit, you are not unpleasing to the eye.'";
+	LineBreak;
+	say "     [bold type]Do you allow the knight to leave? He attacked you, and that usually has consequences in this city...[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Just let the weird guy go. The less time you have to spend with him the better.";
+	say "     ([link]N[as]n[end link]) - Stop him and give a reminder that he owes you a boon. There's a bunch of fun you could have with him.";
+	if Player consents: [let him go]
+		LineBreak;
+		say "     Shaking your head, you decide against stopping the strange knight, allowing him to retreat from view. You're not in the mood. Shouldering your pack, you continue exploring, putting the knight from your mind.";
+	else:
+		if kpstatus is 1: [Player Knight]
+			say "     Stopping the knight in his tracks, you push him back onto his ass, admonishing him for his rudeness. In these lands, a knight has to offer his betters a token of their affection. Such a blatant violation of the chivalric code requires punishment! Taken aback, the knight mulls over your words, then swallows, setting aside his sword and shield. 'Forgive my rudeness then. I was not aware of the traditions of this land. How might I correct this egregious error?' Dropping to one knee, he bows before you, his short, sweat-dripping hair messy from your fight.";
+		else if kpstatus is 2: [Player Squire]
+			say "     Stopping the knight in his tracks, you block his path, swallowing as you prepare to confront a knight despite your lowly station. Stumbling over your words, you explain that to commemorate your victory, you would like to test the knight's sexual prowess. Disappearing without allowing you this boon would be an unchivalrous thing to do. Taken aback, the knight mulls over your words, then smirks, setting aside his sword and shield. 'Forgive my rudeness then. I was not aware of the traditions of this land. How might I correct this egregious error?' Standing before you, he crosses his arms, awaiting your answer as his exposed muscles and short hair glisten with sweat from your altercation.";
+		else if kpstatus is 3: [Player Human]
+			say "     Stopping the knight in his tracks, you block his path, indignantly demanding to know what the fuck is wrong with him. You were going about your own business, and he attacked you. Isn't it a knight's duty to protect the 'peasants' rather than accost them? Scoffing at your words, the knight sets aside his sword and shield, running a hand through his hair and shaking his head. 'You've got guts, peasant. Alright, I shall grant you this boon. How do you wish to exact your vengeance? Speak up.'";
+		else: [any other Player]
+			say "     Stopping the knight in his tracks, you confront him about his arrogant, awful comments about your appearance. This 'beast' just kicked his ass. Does he think he can walk away from you without repercussions? If you endure his abuse, you'll get something out of it! Taken aback, the knight laughs, looking you up and down. 'Perhaps I was wrong about you, beast. Allow me to apologize for my behavior. How might I atone?' His apology sounds condescending, but he awaits your answer, arms crossed and eyebrow cocked.";
+		say "[RandomKnight_SexMenu]";
+
+to say RandomKnight_SexMenu:
+	project Figure of Knight_clothed_icon;
+	say "     [bold type]What exactly do you want to do with the handsome knight?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Willingly suck his cock and worship his body";
+	now sortorder entry is 1;
+	now description entry is "Get on your knees and show the knight a good time";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Demand he worship your body and dick";
+	now sortorder entry is 2;
+	now description entry is "Take pleasure from his oral service";
+	[]
+	if Player is male: [male+herm]
+		choose a blank row in table of fucking options;
+		now title entry is "Sink your cock into the knight's tight hole";
+		now sortorder entry is 3;
+		now description entry is "Sheathe yourself in the muscular man's ass";
+	[]
+	if Player is male: [male+herm]
+		choose a blank row in table of fucking options;
+		now title entry is "Sink your cock into the knight's tight hole";
+		now sortorder entry is 4;
+		now description entry is "Sheathe yourself in the muscular man's ass";
+	[]
+	Sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Willingly suck his cock and worship his body."):
+					say "[Knight_Random_GiveBJ]";
+				else if (nam is "Willingly ride his cock, for your shared pleasure"):
+					say "[Knight_Random_RideCock]";
+				else if (nam is "Demand he worship your body and dick"):
+					say "[Knight_Random_GetBJ]";
+				else if (nam is "Sink your cock into the knight's tight hole"):
+					say "[Knight_Random_AssFuck]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Changing your mind about this whole thing, you tell the knight that he's released from his obligation - this time. 'How peculiar folk live in this domain,' he comments with a raised eyebrow, then shrugs. 'Very well, I will take my leave then. Goodday, my worthy opponent.'";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say Knight_Random_GiveBJ:
+	say "     The scent pouring off of the sweaty man is intoxicating, and as you breathe it in, standing before him, you can't help the ideas streaming into your head. You may have won, but the thought of giving yourself to this hunk of man grows by the second. Steeling yourself, you broach the subject, asking if the knight would let you inspect the battle-hardened body beneath his armor. 'Peculiar... Perhaps thou wouldst be more at home presenting thyself?' The knight teases you, flexing one of his biceps and grinning. 'I jest. No doubt you could smite me twice over in my weakened state.' Starting to disrobe, he pauses, then offers you his arm. 'Thou wish to peek beneath mine armor? Then 'tis only fair that the work falls to your capable hands.'";
+	say "     Somehow, even after you beat the knight, he disarmed you with that devilishly handsome smile. Without thinking, you reach out, fingers releasing the straps of the knight's bracers, and peeling them away, revealing glistening, tanned, muscled forearms with corded veins. Swinging a sword must be quite the workout. Next, your trembling fingers work their way up those bulging biceps, rolling over hard muscle...";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	CreatureSexAftermath "Player" receives "OralCock" from "Knight";
+
+to say Knight_Random_RideCock:
+	if Player is female: [pussy available]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+		CreatureSexAftermath "Player" receives "PussyFuck" from "Knight";
+	else: [assfucks ho!]
+		say "     ";
+		say "     ";
+		WaitLineBreak;
+		say "     ";
+		say "     ";
+		CreatureSexAftermath "Player" receives "AssFuck" from "Knight";
+
+to say Knight_Random_GetBJ:
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	CreatureSexAftermath "Knight" receives "OralCock" from "Player";
+
+to say Knight_Random_AssFuck:
+	say "     ";
+	say "     ";
+	WaitLineBreak;
+	say "     ";
+	say "     ";
+	CreatureSexAftermath "Knight" receives "AssFuck" from "Player";
 
 
 Section 2 - Creature Insertion
@@ -259,7 +410,7 @@ When Play begins:
 	now body change entry is "changes spread through it. Your muscles tense and flex and your body reshapes itself, in time becoming that of a tall and fit [if Player is female]woman[else]man[end if]. Your body is toned and muscled, looking and feeling like that of a trained warrior. As you look down at your chest, a loose tunic forms across your torso. In bright blue, pink and white, it bears the crest of a cock ejaculating in a fleur-de-lis pattern at its center. Any attempt to cover or remove this has it return in short order[playercrestzeroed]";
 	now skin change entry is "exciting tingles run all over your [bodydesc of Player] body. Your flesh shifts and changes, subtly at first, until eventually becoming smooth, lightly tanned and quite human in appearance. Your right hand shows callouses from wielding something heavy and feels somehow empty without it. A few scars form, showing marks of past battles fought";
 	now ass change entry is "your buttocks muscles firm up, fit for riding (or being ridden)";
-	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cockflesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
+	now cock change entry is "it pulses and throbs in arousal. Precum dribbles out with each pulse and your cock-flesh changes as well. By the time you orgasm from the transformation, you're left with a very human-looking cock";
 	now str entry is 17; [ These are now the creature's stats... ]
 	now dex entry is 19; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 15; [ These values may be used as part of alternate combat. ]
@@ -285,9 +436,9 @@ When Play begins:
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
 	now loot entry is "stray links"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 44; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is "knightly man-milk";
+	now CumItem entry is "knightly seed";
+	now TrophyFunction entry is "[GenerateTrophyList_Knight]";
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]toned[or]muscled[or]fit[at random]";
 	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
@@ -408,17 +559,53 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "stray links"	"A few stray links of chainmail that appear to have come off of something larger."	1	stray links
 
-stray links is a grab object. It is infectious. Strain of stray links is "Knight".
+stray links is a grab object.
 
 Usedesc of stray links is "[straylinkseffect]";
 
 to say straylinkseffect:
 	LineBreak;
 	say "     You take out a handful of the chainmail links you found earlier and roll them around in your hand. As you do this, their number decreases as they disappear unnoticed into your palm. By the time you take notice of this, the tingles of infection has spread into you.";
+	infect "Knight";
 
 instead of sniffing stray links:
 	say "The small links of metal have no particular scent to them.";
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"knightly seed"	"A small plastic bottle, halfway filled with white-ish opaque fluid. One could mistake it for some sort of white syrup, if someone hadn't written 'knightly seed' across a label on its front. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	knightly seed
+
+knightly seed is a grab object.
+knightly seed is temporary.
+knightly seed is cum.
+knightly seed is infectious.
+Strain of knightly seed is "Knight".
+Usedesc of knightly seed is "[KnightCumUse]";
+
+to say KnightCumUse:
+	say "     Following the strange urge you have, you slam back the bottle of knightly seed you found. It has a light, not unpleasant taste to it that stays with you for a while, clinging to your tongue and the back of your throat. ";
+	LibidoBoost 5;
+	PlayerDrink 5;
+
+the scent of knightly seed is "The contents of the bottle have the unmistakable scent of human semen.".
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"knightly man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Knightly Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	knightly man-milk
+
+knightly man-milk is a grab object.
+knightly man-milk is milky.
+Purified of knightly man-milk is "distilled milk".
+knightly man-milk is infectious.
+Strain of knightly man-milk is "Rhino".
+Usedesc of knightly man-milk is "[knightly man-milk use]";
+
+to say knightly man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the knightly man-milk run over your tongue and down your throat. Tastes rich and filling. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing knightly man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really, though there's a hint of something buttery and musky.";
 
 [
 Section 4 - Endings
