@@ -818,10 +818,10 @@ check CellEscape:
 Carry out CellEscape:
 	say "     So, how do you want to get out of here?";
 	wait for any key;
-	say "     [EscapeMenu]";
+	say "[EscapeMenu]";
 
 to say EscapeMenu:
-	setmonster "Orc Warrior";
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
