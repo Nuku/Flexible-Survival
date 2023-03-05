@@ -19,8 +19,13 @@ to say GenerateTrophyList_Knight:
 		add "indigo potion" to CombatTrophyList;
 	if a random chance of (10 + LootBonus) in 100 succeeds: [rare drop]
 		add "clean bandages" to CombatTrophyList;
+	if a random chance of (5 + LootBonus) in 100 succeeds: [rare drop]
+		add "medieval breastplate" to CombatTrophyList;
 	if Debug is at level 10:
 		say "DEBUG: Trophy List: [CombatTrophyList].";
+
+
+
 
 Section 2 - Creature Responses
 
@@ -597,7 +602,7 @@ knightly man-milk is a grab object.
 knightly man-milk is milky.
 Purified of knightly man-milk is "distilled milk".
 knightly man-milk is infectious.
-Strain of knightly man-milk is "Rhino".
+Strain of knightly man-milk is "Knight".
 Usedesc of knightly man-milk is "[knightly man-milk use]";
 
 to say knightly man-milk use:
