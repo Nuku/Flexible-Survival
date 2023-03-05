@@ -1,5 +1,4 @@
 Version 2 of Knight by Voidsnaps begins here.
-[Version 2.0 - Unfucked the code, unfucked the writing, unfucked the content. Will likely have an associated NPC and scenes related to them.]
 [Version 2.0 - Unfucked the code, unfucked the writing, unfucked the content. Will likely have an associated NPC and scenes related to them. Also added win scenes.]
 
 "Adds a Knight creature to Flexible Survival's Wandering Monsters table"
@@ -305,7 +304,7 @@ to say RandomKnight_SexMenu:
 	now title entry is "Milk the knight";
 	now sortorder entry is 6;
 	now description entry is "Milk a hot bottle of knightly seed from him for reasons unknown";
-	[]
+	[]	
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
