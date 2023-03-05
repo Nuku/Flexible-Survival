@@ -11,6 +11,52 @@ Section 1 - Creature Responses
 matriarchdefeated is a number that varies.
 matriarchowned is a number that varies.
 
+to say hyenamat_challenge: [challenging the matriarch to become the new matriarch]
+	now inasituation is true;
+	now fightoutcome is 100;
+	Challenge "Hyena Herm";
+	if fightoutcome >= 10 and fightoutcome <= 19:
+		Challenge "Hyena Herm";
+		if fightoutcome >= 10 and fightoutcome <= 19:
+			Challenge "Hyena Matriarch";
+			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
+				increase score by 0; [do nothing extra]
+			else if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
+				increase score by 0; [do nothing extra]
+		else if fightoutcome >= 20 and fightoutcome <= 29:		[lose to guard #2]
+			say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
+			say "[matriarch attack]";
+			hyenaify; [second infect to match matriarch fight loss]
+			decrease morale of Player by 5;
+	else if fightoutcome >= 20 and fightoutcome <= 29:			[lose to guard #1]
+		say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
+		say "[matriarch attack]";
+		hyenaify; [second infect to match matriarch fight loss]
+		decrease morale of Player by 5;
+	if fightoutcome >= 30:									[flee any fight]
+		say "     Your attempt to flee results in the mocking laugh of the rest of the gang. Several of them grab onto you and you're dragged back in front of the matriarch, who strikes your several times while the other hyenas hold you. You are then tossed to the ground at her feet.";
+		say "[matriarch attack]";
+		hyenaify; [second infect to match matriarch fight loss]
+		decrease morale of Player by 10;
+		now HP of Player is 1;
+	now inasituation is false;
+
+to say hyenamat_victorytf: [victory transformation into hyena matriarch]
+	say "     As the hyena orgy goes on, you feel a growing sense of confidence and empowerment. Looking over yourself, you can see that the victory has not left you unchanged. Your hyena body's gotten larger and stronger with an improved physique. You gain several inches of height as well, making you all the more impressive for leading the gang. You've become a powerful figure suitable for your new role as the gang's matriarch.";
+	setmonster "Hyena Matriarch" silently;
+	turn the Player into a "Hyena Matriarch";
+	choose row MonsterID from the Table of Random Critters;
+	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 5; [Size of breasts infection will try to attain ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 15;
+	now Cunt Tightness entry is 9;
+	follow the sex change rule;
+	follow the sex change rule;
+	if Libido of Player < libido entry, now Libido of Player is libido entry;
+
 to say matriarch attack:
 	project Figure of Hyena_Matriarch_hard_icon;
 	[puts Herm Hyena as lead monster in case of impregnation]

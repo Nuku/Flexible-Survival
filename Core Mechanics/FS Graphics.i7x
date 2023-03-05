@@ -230,6 +230,8 @@ Figure of Wereraptor_male_soft_icon is the file "Wereraptor_male_soft.jpg".
 Figure of Werewolf_female_icon is the file "Werewolf.jpg".
 Figure of Werewolf_hard_icon is the file "Werewolf_hard.jpg".
 Figure of Werewolf_clothed_icon is the file "Werewolf_clothed.jpg".
+Figure of WerewolfBrute_soft_icon is the file "WerewolfBrute_soft.jpg".
+Figure of WerewolfBrute_hard_icon is the file "WerewolfBrute_hard.jpg".
 Figure of Wildcat_icon is the file "wildcat_ig.jpg".
 Figure of Wood_Elf_icon is the file "Wood Elf.jpg".
 Figure of WrestlingWolf_hard_icon is the file "Wrestling Wolf_hard.jpg".
@@ -1925,6 +1927,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Werewolf (female)"	Figure of Werewolf_female_icon	"Watsup"	g-white	"normal"
 "Werewolf clothed"	Figure of Werewolf_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Werewolf naked"	Figure of Werewolf_hard_icon	"SteppeCrow"	g-white	"normal"
+"WerewolfBrute_soft"	Figure of WerewolfBrute_soft_icon	"Gherod"	g-dark-gray	"normal"
+"WerewolfBrute_hard"	Figure of WerewolfBrute_hard_icon	"Gherod"	g-dark-gray	"normal"
 "Wereraptor female"	Figure of Wereraptor_female_icon	"Vashaa"	g-white	"normal"
 "Wereraptor male hard"	Figure of Wereraptor_male_hard_icon	"Vashaa"	g-white	"normal"
 "Wereraptor male soft"	Figure of Wereraptor_male_soft_icon	"Vashaa"	g-white	"normal"
@@ -2599,6 +2603,7 @@ carry out artistcredits:
 	say "     Voodoo Gecko by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Wereraptor by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Werewolf (female) by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
+	say "     Werewolf Brute by Gherod @ https://twitter.com/gherodv ; https://www.instagram.com/gherodv/[line break]";
 	say "     Wildcat by Strype @ furaffinity.net[line break]";
 	say "     Wolftaur by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Wood Elf by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
