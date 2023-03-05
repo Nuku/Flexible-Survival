@@ -934,6 +934,7 @@ Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Wahn.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
+Include Ryan by Fuxi.
 Include Sally by Stripes.
 Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
