@@ -81,7 +81,7 @@ To say Leopardman loses:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -89,7 +89,7 @@ To say Leopardman loses:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Immediately fall to your knees and worship this feline adonis"):
@@ -100,17 +100,11 @@ To say Leopardman loses:
 						say "[LeopardmanVictorySexAnal]";
 					if (nam is "Face Fuck"):
 						say "[LeopardmanVictorySexFaceFuck]";
-			else if calcnumber is 100:
-				say "Leave him?";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Yes.";
-				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
-					now sextablerun is 1;
-					say "     You step back from the Leopardman, shaking your head as he gives you a shocked look.";
 					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the leopardman, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
