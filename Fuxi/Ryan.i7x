@@ -48,6 +48,7 @@ The scent of Ryan is "Ryan smells of sex, heat, and fruit."
 to say RyanDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Jerome: [HP of Jerome], Libido of Jerome: [Libido of Jerome] <- DEBUG[line break]";
+	project Figure of Ryan_panties_icon;
 	say "     Looking Ryan up and down, you take in the lithe for looking Ryan up and down, you take in the lithe fox's features. Currently lounging on your bed, your lovely fennec is covered head to paw in silky golden fur that nicely complements his ocean-blue eyes. Despite Ryan's timidity, he wears only flimsy black lace panties that do scantly anything to hide his heated pussy or curvy bum. Noticing your attention, Ryan smiles at you. 'Is there anything you need, sir?'";
 
 
@@ -57,7 +58,8 @@ instead of conversing the Ryan:
 	say "[RyanTalkMenu]";
 
 to say RyanTalkMenu:
-	say "     What do you wish to talk about with the fennec fox?";
+	project Figure of Ryan_panties_icon;
+	say "     [bold type]What do you wish to talk about with the fennec fox?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -194,7 +196,7 @@ to say RyanBeachDateFlee:
 	say "     Realizing you're in a losing battle, you turn and run. Scooping up Ryan, you flee as fast as you can while pursued momentarily by your orca attacker, but your desperation gives you the edge. Winding through alleyways, you quickly manage to shake off the feral brute. Panting for breath, you and Ryan fall to the floor to recover energy before journeying to the library. Through your fatigue, you apologize for your failure to properly recognize the threats at the beach and your inability to fight them off, but Ryan's fretting cuts you off, 'You've nothing to be sorry for, sir. At least you tried your even bleeding still! I couldn't do anything at all to help,' your lover says worried and quite ashamed of himself as he looks over your wounds. Assuring Ryan you're okay, you begin the walk back to the library, relieved he's not upset with you and that you avoided any more threats. Back home, you go down to your bed and lay your tired fox down, apologizing for your failure one last time. You promise to grow stronger and let Ryan enjoy a proper day at the beach someday.";
 
 to say RyanBeachDateVictory:
-	say "     Defeating the orca. You give him a few vengeful farewell kicks and leave him knocked out on the cold concrete, then call out to Ryan and enter the Beach Plaza. Ryan seems amazed by the relative peace and normality around him as street hawkers sell clothes, brushes, soaps, and food while all kinds of infected go about their daily lives, chatting calmly or enjoying treats from a nearby cafe under parasols. 'It's amazing, sir. I didn't think anything like this could exist anymore,' Ryan whispers. Smiling proudly at your fox's evident enjoyment, you buy some gear from one of the many vendors and grab Ryan's hand to guide him down the long stairs to the beach. ";
+	say "     Defeating the orca, you give him a few vengeful farewell kicks and leave him knocked out on the cold concrete, then call out to Ryan and enter the Beach Plaza. Ryan seems amazed by the relative peace and normality around him as street hawkers sell clothes, brushes, soaps, and food while all kinds of infected go about their daily lives, chatting calmly or enjoying treats from a nearby cafe under parasols. 'It's amazing, sir. I didn't think anything like this could exist anymore,' Ryan whispers. Smiling proudly at your fox's evident enjoyment, you buy some gear from one of the many vendors and grab Ryan's hand to guide him down the long stairs to the beach.";
 	say "     Breathing in deeply, you both enjoy the crisp ocean breeze forgetting momentarily the crisis and all the horrible things you've endured as you bask in the warm sunshine. Ryan seems especially beautiful like this, his silky golden fur shining in the sunlight. 'It's like paradise here, amazingly peaceful, perfectly hot, and this sand feels so natural to me,' your mate mutters. His infection seems to have given him a fondness for this environment. Given Ryan's never been to this beach, it's up to you to take charge. Petting his head softly, you ask whether your lovely fox would like a nice warm meal.";
 	WaitLineBreak;
 	say "     'That sounds fantastic, sir. The trip here really worked up my appetite, and the food I saw looks delicious!' Ryan beams at you. Grabbing his hand again, you guide your fennec to Sunny Snacks and direct Ryan to a patio table. You quickly order and return to him with two hotdogs and fries. It's not the fanciest or largest meal for either of you. Still, after eating nothing but cold and canned food for far longer than anyone ever should, it's a scrumptious treat for the two of you. Chuckling slightly at the ordinarily polite and proper vulpine wolfing down his food, you teasingly ask whether he'd like dessert. 'Yes, please!' Ryan replies, his ear reddening slightly at your tone. Patting his head, you order a sundae for your fox, which he devours with the same gusto he did the hotdog and fries. It's a rather expensive treat, over 500 credits, but given how little you have to spend on and how overjoyed your lover is, it's a price well worth paying.";
@@ -231,7 +233,8 @@ instead of fucking Ryan:
 
 to say RyanSexMenu:
 	if debugactive is 1:
-		say "     DEBUG -> Ryan Sex Menu";
+		say "     DEBUG -> Ryan Sex Menu.";
+	project Figure of Ryan_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -258,10 +261,10 @@ to say RyanSexMenu:
 	now description entry is "Orally pleasure the fox";
 	[]
 	if Player is male and scalevalue of Player > 1:
-	choose a blank row in table of fucking options;
-	now title entry is "Use his Ears";
-	now sortorder entry is 5;
-	now description entry is "Masturbate with his sinfully-soft ears";
+		choose a blank row in table of fucking options;
+		now title entry is "Use his Ears";
+		now sortorder entry is 5;
+		now description entry is "Masturbate with his sinfully-soft ears";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -284,7 +287,7 @@ to say RyanSexMenu:
 					say "[RyanSex2]";
 				else if nam is "Fingering":
 					say "[RyanSex3]";
-				else if nam is "Cunnilingus":
+				else if nam is "Give Cunnilingus":
 					say "[RyanSex4]";
 				else if nam is "Use his Ears":
 					say "[RyanSex5]";
@@ -338,7 +341,7 @@ Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
 "Ryan's Ending"	"NPC"	""	Ryan's Ending rule	900	false
 
-This is Ryan's Ending rule:
+This is the Ryan's Ending rule:
 	if hp of Ryan > 0:
 		trigger ending "Fang's Epilogue";
 		if humanity of Player < 20:
