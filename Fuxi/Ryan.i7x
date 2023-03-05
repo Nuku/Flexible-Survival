@@ -59,6 +59,7 @@ instead of conversing the Ryan:
 
 to say RyanTalkMenu:
 	project Figure of Ryan_panties_icon;
+	let TalkDone be false;
 	say "     [bold type]What do you wish to talk about with the fennec fox?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -111,17 +112,22 @@ to say RyanTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Ryan's Past"):
 					say "[RyanTalk1]";
-				if (nam is "Space and Cleanliness"):
+				else if (nam is "Space and Cleanliness"):
 					say "[RyanTalk2]";
-				if (nam is "Boop"):
+				else if (nam is "Boop"):
 					say "[RyanTalk3]";
-				if (nam is "Sexual Experience"):
+				else if (nam is "Sexual Experience"):
 					say "[RyanTalk4]";
-				if (nam is "Beach Date"):
+				else if (nam is "Beach Date"):
 					say "[RyanTalk5]";
-				if (nam is "Share Meal"):
+					now TalkDone is true;
+				else if (nam is "Share Meal"):
 					say "[RyanTalk6]";
-				wait for any key;
+					now TalkDone is true;
+				if TalkDone is false:
+					say "[RyanTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back, indicating an end to the conversation. Ryan looks about to say something before shaking his head and stepping back too.";
