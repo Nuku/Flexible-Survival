@@ -50,12 +50,12 @@ To say Leopardman loses:
 	else:
 		say "     The leopardman staggers back, his feline muzzle scrunched up in pain as he clutches at his wounds and glares at you for a minute. You don't give him a chance to react. With quick reflexes, you soon have him pinned to a nearby brick wall. It's got holes galore, and frankly isn't that stable, but you have the advantage, and you doubt he can topple anything in his weekend state.";
 		LineBreak;
-		say "What do you want to do with the Leopardman?";
+		say "     [bold type]What do you want to do with the Leopardman?[roman type][line break]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Immediately fall to your knees and worship this feline adonis";
+		now title entry is "Immediately fall to your knees and worship this feline Adonis";
 		now sortorder entry is 1;
 		now description entry is "While he's at your mercy, why not show him true appreciation";
 		[]
@@ -92,7 +92,7 @@ To say Leopardman loses:
 				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
-					if (nam is "Immediately fall to your knees and worship this feline adonis"):
+					if (nam is "Immediately fall to your knees and worship this feline Adonis"):
 						say "[LeopardmanVictorySexOral]";
 					if (nam is "Beg him to let you worship his paws"):
 						say "[LeopardmanVictorySexPaw]";
