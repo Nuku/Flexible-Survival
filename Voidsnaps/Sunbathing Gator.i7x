@@ -19,7 +19,7 @@ to SunbathingGatorEvent:
 	say "     [bold type]What do you want to do now?[roman type][line break]";
 	LineBreak;
 	let Sun_Gator_Initial_Choices be a list of text;
-	add "Take a closer look at the alligator. His weighty [italic type]assets[roman type] are sure worth a second glance!." to Sun_Gator_Initial_Choices;
+	add "Take a closer look at the alligator. His weighty [italic type]assets[roman type] are sure worth a second glance!" to Sun_Gator_Initial_Choices;
 	add "You're interested in interacting with him, but you're a bit busy. You'll come back later." to Sun_Gator_Initial_Choices;
 	add "Apologize and back away. Best to avoid this reptile." to Sun_Gator_Initial_Choices;
 	let Sun_Gator_Initial_Choice be what the player chooses from Sun_Gator_Initial_Choices;
