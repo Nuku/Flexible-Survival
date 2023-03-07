@@ -241,6 +241,8 @@ carry out navigating:
 	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
+	now Player is in Travelling;
+	follow turnpass rule;
 	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
@@ -254,7 +256,6 @@ carry out navigating:
 	if HP of Velos > 2, move Velos to the noun;
 	now Player is in noun;
 	follow the ngraphics_blank rule;
-	follow turnpass rule;
 
 NavCheckReturn is a truth state that varies.
 
