@@ -351,6 +351,7 @@ Instead of fucking the Nadia:
 			now lastfuck of Nadia is turns;
 
 to say NadiaSexMenu:
+	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	say "     [bold type]What do you want to do with Nadia?[roman type][line break]";
 	[

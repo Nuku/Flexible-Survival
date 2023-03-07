@@ -460,7 +460,7 @@ Virgin of Candy is true.
 AnalVirgin of Candy is false.
 PenileVirgin of Candy is false.
 SexuallyExperienced of Candy is true.
-MainInfection of Candy is "Candy Striper".
+MainInfection of Candy is "Raccoon".
 
 Description of Candy is "[coondesc]".
 Conversation of Candy is { "Cock!" }.

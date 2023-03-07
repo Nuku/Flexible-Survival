@@ -1422,7 +1422,7 @@ an everyturn rule:
 				now AlexandraGrowingPups is 0; [no pups in her now]
 				now lust of Alexandra is 0;
 				now HP of Alexandra is 4;
-		else if Fang is booked and Fang is Male and HP of Fang < 6 and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned and Player is not CoA:
+		else if Fang is booked and Fang is Male and HP of Fang < 6 and Alexandra is booked and player is in Grey Abbey Library and CuckList is not banned and a random chance of 5 in 10 succeeds and Player is not CoA:
 			if XP of Alexandra is 0, now XP of Alexandra is turns; [starts counter on any turn (except turn 0, which will start next turn)]
 			project Figure of Fang_hard_icon;
 			if level of Alexandra is 0: [first time]
@@ -1434,7 +1434,7 @@ an everyturn rule:
 					say "     What's yours is yours, but what's yours is his, it seems.";
 					say "[badAlexandraFang1]";
 			else if level of Alexandra is 2: [shared bitch]
-				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16) and a random chance of 1 in 5 succeeds: [horny wolf, horny dobie, last scene 2 days back]
+				if (lastfuck of Fang - turns >= 8) and (lastfuck of Alexandra - turns >= 6) and (XP of Alexandra - turns >= 16) and a random chance of 5 in 10 succeeds: [horny wolf, horny dobie, last scene 2 days back]
 					say "     As you're taking a moment before getting on to other tasks, you hear some soft growling coming from over at the library entrance. Heading over, you notice that Fang's sniffing around Alexandra again. His canine shaft is dangling erect between the wolf's legs and it is clear what he intends to do with the bitch. As the former cop sees that you're watching, she grins and looks right into your eyes as her hands move to undo the button of her pants. Sliding them down over her long legs, she bares her lower half for everyone to see - and Fang immediately circles around her to stick his muzzle between those legs and lap at her crotch.";
 					say "     Panting in arousal at the wolf licking her, Alexandra smirks at you and shrugs out of her leather jacket in a very provocative way, baring her breasts shaking them in your direction. Seems like she enjoys teasing you while being with another male quite a bit. After having already allowed for them to mate before, you can't help but feel aroused at the sight and drift even closer, ready to watch them go at it.";
 					say "[badAlexandraFang4]";

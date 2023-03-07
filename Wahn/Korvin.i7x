@@ -994,7 +994,7 @@ to say gshep_inactive_scene:
 			say "[gshep_collar_prompt]";
 
 to say gshep_collar_prompt:
-	if ( gshep_postfight + gshep_sexscene + gshep_bed_scene + gshep_inactive ) >= 5:
+	if ( gshep_postfight + gshep_sexscene + gshep_bed_scene + gshep_inactive ) >= 6:
 		say "     Thinking it over, you've done quite a bit of work training that independent streak out of Korvin. Perhaps it's time to find a proper collar for your cowed dog - something suitable to put the tough bitch in his place. You'll have to keep your eyes open for a [bold type]pet shop[roman type] where you might find one.";
 	else:
 		say "     Thinking it over, you've done quite a bit of work training Korvin to accepting his new role. Perhaps it's time to find a proper collar for your attack dog. He'd probably like something suitably butch to match his tough-guy attitude. You'll have to keep your eyes open for a [bold type]pet shop[roman type] where you might find one.";
