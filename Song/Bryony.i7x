@@ -5,22 +5,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Bryony	"Bryony"
 
-Bryony is a woman. Bryony is in Equinoid Camp.
-[Physical details as of game start]
+Bryony is a woman.
+Bryony is in Equinoid Camp.
 ScaleValue of Bryony is 4. [large human sized]
 SleepRhythm of Bryony is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Bryony is 1. [X cock]
-Cock Length of Bryony is 14. [X Inches]
-Ball Size of Bryony is 8.
-Ball Count of Bryony is 2. [X balls]
-Cunt Count of Bryony is 1. [X pussy]
-Cunt Depth of Bryony is 12. [X Cunt]
-Cunt Tightness of Bryony is 4. [X Cunt]
-Nipple Count of Bryony is 1. [X nipples]
-Breast Size of Bryony is 4. [X at the start]
+Body Weight of Bryony is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Bryony is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Bryony is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Bryony is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Bryony is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Bryony is 8. [length in inches]
+Breast Size of Bryony is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Bryony is 2. [count of nipples]
+Asshole Depth of Bryony is 12. [inches deep for anal fucking]
+Asshole Tightness of Bryony is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Bryony is 1. [number of cocks]
+Cock Girth of Bryony is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Bryony is 14. [Length in Inches]
+Ball Count of Bryony is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Bryony is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Bryony is 1. [number of cunts]
+Cunt Depth of Bryony is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Bryony is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Bryony is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Bryony is false. [can not take oversized members without pain]
-Sterile of Bryony is false.
 PlayerMet of Bryony is false.
 PlayerRomanced of Bryony is false.
 PlayerFriended of Bryony is false.
@@ -31,6 +40,8 @@ Virgin of Bryony is false.
 AnalVirgin of Bryony is false.
 PenileVirgin of Bryony is false.
 SexuallyExperienced of Bryony is true.
+TwistedCapacity of Bryony is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Bryony is false. [steriles can't knock people up]
 MainInfection of Bryony is "Black Equinoid".
 Description of Bryony is "[BryonyDesc]".
 Conversation of Bryony is { "Watch yourself." }.

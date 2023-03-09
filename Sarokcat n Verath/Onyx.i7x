@@ -189,21 +189,29 @@ object	name
 Onyx	"Onyx"
 
 Onyx is a man.
-[Physical details as of game start]
 ScaleValue of Onyx is 3. [human sized]
 SleepRhythm of Onyx is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Onyx is 1. [X cock]
-Cock Length of Onyx is 4. [X Inches]
-Ball Size of Onyx is 3.
-Ball Count of Onyx is 2. [X balls]
-Cunt Count of Onyx is 0. [X pussy]
-Cunt Depth of Onyx is 0. [X Cunt]
-Cunt Tightness of Onyx is 0. [X Cunt]
-Nipple Count of Onyx is 2. [X nipples]
-Breast Size of Onyx is 0. [X at the start]
+Body Weight of Onyx is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Onyx is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Onyx is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Onyx is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Onyx is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Onyx is 8. [length in inches]
+Breast Size of Onyx is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Onyx is 2. [count of nipples]
+Asshole Depth of Onyx is 10. [inches deep for anal fucking]
+Asshole Tightness of Onyx is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Onyx is 1. [number of cocks]
+Cock Girth of Onyx is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Onyx is 3. [Length in Inches]
+Ball Count of Onyx is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Onyx is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Onyx is 0. [number of cunts]
+Cunt Depth of Onyx is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Onyx is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Onyx is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Onyx is false. [can not take oversized members without pain]
-Sterile of Onyx is false.
 PlayerMet of Onyx is false.
 PlayerRomanced of Onyx is false.
 PlayerFriended of Onyx is false.
@@ -214,6 +222,8 @@ Virgin of Onyx is true.
 AnalVirgin of Onyx is true.
 PenileVirgin of Onyx is true.
 SexuallyExperienced of Onyx is false.
+TwistedCapacity of Onyx is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Onyx is false. [steriles can't knock people up]
 MainInfection of Onyx is "Horseman".
 Description of Onyx is "[onyxappearance]".
 Conversation of Onyx is { "Help me!" }.
@@ -243,6 +253,26 @@ To say onyxappearance:[his description at each stage, comments on what each stag
 			say "     'As you can see, I found a way to fit in!' She laughs, gesturing to a quieter corner of the room to talk. You ask her how she's feeling.";
 			say "     'Oh, I'm feeling great! There's so much energy here, and I love to dance... I'm not quite as good as my brothers and sisters, but I'm quickly catching on!' She winks at you before moving in closer, 'Anyways, if you ever feel the need for a good time, don't be afraid to ask...' Grinning, she's called over to attend some patrons, leaving you to ponder the situation as she gives you a rather telling view of her exposed ass.";
 			now XP of onyx is 30;
+			now Onyx is Female;
+			now Body Weight of Onyx is 3;
+			now Body Definition of Onyx is 6;
+			now Androginity of Onyx is 8;
+			now Mouth Length of Onyx is 10;
+			now Mouth Circumference of Onyx is 4;
+			now Tongue Length of Onyx is 10;
+			now Breast Size of Onyx is 4;
+			now Asshole Depth of Onyx is 20;
+			now Asshole Tightness of Onyx is 2;
+			now Cock Count of Onyx is 0;
+			now Cock Girth of Onyx is 0;
+			now Cock Length of Onyx is 0;
+			now Ball Count of Onyx is 0;
+			now Ball Size of Onyx is 0;
+			now Cunt Count of Onyx is 1;
+			now Cunt Depth of Onyx is 20;
+			now Cunt Tightness of Onyx is 3;
+			now Clit Size of Onyx is 3;
+			now MainInfection of Onyx is "Mareslut";
 		else:
 			say "     The tall horseboy is seated at one of the empty stalls, and is idly watches the strippers at the lounge. His features have continued to change from when you rescued him from the library, and his face is nearly a full equine muzzle now, and underneath the desk, you are all to well aware of how very equine his legs and body has become. Onyx doesn't seem to mind the changes at all anymore however, and he looks up at you with a rather sexy smile as you approach.";
 	else if XP of Onyx >= 10 and XP of Onyx <= 19:		[Onyx free - stallion at Library, wants player mare]
@@ -326,6 +356,26 @@ instead of conversing the Onyx:
 			say "     'As you can see, I found a way to fit in!' She laughs, gesturing to a quieter corner of the room to talk. You ask her how she's feeling.";
 			say "     'Oh, I'm feeling great! There's so much energy here, and I love to dance... I'm not quite as good as my brothers and sisters, but I'm quickly catching on!' She winks at you before moving in closer, 'Anyways, if you ever feel the need for a good time, don't be afraid to ask...' Grinning, she's called over to attend some patrons, leaving you to ponder the situation as she gives you a rather telling view of her exposed ass.";
 			now XP of onyx is 30;
+			now Onyx is Female;
+			now Body Weight of Onyx is 3;
+			now Body Definition of Onyx is 6;
+			now Androginity of Onyx is 8;
+			now Mouth Length of Onyx is 10;
+			now Mouth Circumference of Onyx is 4;
+			now Tongue Length of Onyx is 10;
+			now Breast Size of Onyx is 4;
+			now Asshole Depth of Onyx is 20;
+			now Asshole Tightness of Onyx is 2;
+			now Cock Count of Onyx is 0;
+			now Cock Girth of Onyx is 0;
+			now Cock Length of Onyx is 0;
+			now Ball Count of Onyx is 0;
+			now Ball Size of Onyx is 0;
+			now Cunt Count of Onyx is 1;
+			now Cunt Depth of Onyx is 20;
+			now Cunt Tightness of Onyx is 3;
+			now Clit Size of Onyx is 3;
+			now MainInfection of Onyx is "Mareslut";
 		else:
 			if femonyxq is 2:
 				say "     'Geez, it sure is loud in here.' You ask if he'll be OK, to which he silently nods. 'It could be worse, the dancers are very entertaining. I... Strangely envy them, having the courage to be the center of attention like that...' He briefly seems lost in thought before returning his attention to you, blushing slightly, 'Anyways, Harold seems like a nice guy, and he think he can get me started off working at tables. Thank you!' Nodding, you decide to leave the equine to enjoy the show.";
@@ -378,7 +428,7 @@ Instead of fucking the Onyx:
 	if Player is neuter:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	else if XP of Onyx is 9:
-		say "     'Oh? Sex is probably the last thing on my mind right now...' he says, perhaps dishonestly, while he gawks at the strippers... Peculiar fellow, it's perhaps best you ask him later.";
+		say "     'Oh? Sex is probably the last thing on my mind right now...' he says, perhaps dishonestly, while he gawks at the strippers... Peculiar fellow, it would perhaps be best if you ask him later.";
 	else if lastfuck of onyx - turns < 6:
 		say "     'Sorry there, friend,' Onyx says with a sad shake of [if ( XP of Onyx >= 30 and XP of Onyx <= 49 ) or ( XP of Onyx >= 80 and XP of Onyx <= 99 )]her[else]his[end if] equine head. 'I need a bit more time to recover after our last romp, maybe you could come back then?' the transformed equine says with a teasing look as [if ( XP of Onyx >= 30 and XP of Onyx <= 49 ) or ( XP of Onyx >= 80 and XP of Onyx <= 99 )]she goes back to what she[else]he goes back to what he[end if] was doing.";
 	else if XP of Onyx < 3 or XP of Onyx is 100:
@@ -424,6 +474,16 @@ Instead of fucking the Onyx:
 				infect "Stallionboi";
 				now Onyxboislut is 1;
 			now XP of Onyx is 60;
+			now Body Weight of Onyx is 5;
+			now Body Definition of Onyx is 7;
+			now Androginity of Onyx is 2;
+			now Mouth Length of Onyx is 10;
+			now Mouth Circumference of Onyx is 4;
+			now Tongue Length of Onyx is 10;
+			now Asshole Depth of Onyx is 18;
+			now Cock Girth of Onyx is 4;
+			now Cock Length of Onyx is 20;
+			now Ball Size of Onyx is 4;
 			if fancyquest > 0:
 				increase score by 0; [do nothing action]
 			else:
@@ -436,6 +496,26 @@ Instead of fucking the Onyx:
 				say "     You shake your head slightly to clear it as you push the surprised Onyx back up against the wall, the changing equine seemingly surprised as you take charge of the situation. He moans slightly as your hands roam his body teasingly, your touch lingering on his almost flat crotch and his slightly swelling chest even as you rub your already aroused body against the new equines increasingly sexy form. You can feel yourself grinning as the unsure equine begins to moan with arousal and respond to your dominant touch with increasing submissiveness, his instincts obviously taking over as his body begins to change under your sexual assault. He moans helplessly as he clutches you tight, the slight swellings on his chest blossoming forth into fully formed breasts under your hands, even as you can feel his already diminutive manhood shrink and vanish into his body. For some reason the feeling of Onyx becoming a mare under your touch only increases your arousal, your own pussy dampening with need as you rub your crotch against that of the Stables newest black mare. She moans and throws her head back submissively, and you can see her muzzle shifting and becoming fully equine even as you slip one of your fingers inside her newly formed pussy and begin to massage her velvety soft new mound teasingly. 'Now that's a good looking mare,' you find yourself whispering to the changing mare as her eyes drift closed and she gives herself over to the pleasure of your touch, your arousal growing even harder to contain as you rub your heat-filled body up against the newly formed mare's sexy black form.";
 				say "     Before long you are moaning almost as hard as Onyx is, as her hands begin to wander your form as well, as she gives herself over to the submissive desires of her new body completely, and you shudder with pleasure as she whinnies in pleasure as her first female orgasm wracks her body. The pleasure of taming the sexy mare, and the feel of her body shuddering helplessly against yours, is too much to contain, and you gasp in orgasm as well, pleasure shooting through your body even as the new female Onyx's form slips down the wall limply, with a dazed look in her fully equine new eyes. You find yourself feeling increasingly powerful and dominant as you look down on where Onyx is panting breathlessly against the wall, even as her new hooftipped hands roam her changed body happily. Feeling strangely satisfied with your work here, you gather your wits about you as you prepare to head out to continue roaming the Stables, although you do find yourself thinking that maybe you should come back to visit your own personal pet mare again as soon as she has recovered....";
 			now XP of Onyx is 80;
+			now Onyx is Female;
+			now Body Weight of Onyx is 3;
+			now Body Definition of Onyx is 6;
+			now Androginity of Onyx is 8;
+			now Mouth Length of Onyx is 10;
+			now Mouth Circumference of Onyx is 4;
+			now Tongue Length of Onyx is 10;
+			now Breast Size of Onyx is 4;
+			now Asshole Depth of Onyx is 20;
+			now Asshole Tightness of Onyx is 2;
+			now Cock Count of Onyx is 0;
+			now Cock Girth of Onyx is 0;
+			now Cock Length of Onyx is 0;
+			now Ball Count of Onyx is 0;
+			now Ball Size of Onyx is 0;
+			now Cunt Count of Onyx is 1;
+			now Cunt Depth of Onyx is 20;
+			now Cunt Tightness of Onyx is 3;
+			now Clit Size of Onyx is 3;
+			now MainInfection of Onyx is "Mareslut";
 			now lastfuck of onyx is turns;
 			if fancyquest > 0:
 				increase score by 0; [do nothing action]
@@ -701,6 +781,18 @@ to say onyxboral0:
 	increase Libido of Player by 10;
 	if Libido of Player > 100, now Libido of Player is 100;
 	now XP of onyx is 8;
+	now Body Weight of Onyx is 5;
+	now Body Definition of Onyx is 5;
+	now Androginity of Onyx is 2;
+	now Mouth Length of Onyx is 10;
+	now Mouth Circumference of Onyx is 4;
+	now Tongue Length of Onyx is 10;
+	now Asshole Depth of Onyx is 18;
+	now Asshole Tightness of Onyx is 2;
+	now Cock Count of Onyx is 1;
+	now Cock Girth of Onyx is 3;
+	now Cock Length of Onyx is 16;
+	now Ball Size of Onyx is 3;
 
 to say onyxboral1:
 	say "     Advancing upon him, you're already [if scalevalue of Player > 3]doubled over[else]on the move[end if] to relinquish his member of its scant confines.";
@@ -713,6 +805,16 @@ to say onyxboral1:
 	if a random chance of 1 in 3 succeeds or the player is dominant:
 		if Libido of Player > 100, now Libido of Player is 100;
 		now XP of Onyx is 10;
+		now Body Weight of Onyx is 5;
+		now Body Definition of Onyx is 7;
+		now Androginity of Onyx is 2;
+		now Mouth Length of Onyx is 10;
+		now Mouth Circumference of Onyx is 4;
+		now Tongue Length of Onyx is 10;
+		now Asshole Depth of Onyx is 18;
+		now Cock Girth of Onyx is 4;
+		now Cock Length of Onyx is 20;
+		now Ball Size of Onyx is 4;
 
 to say onyxboral2:
 	say "     As you advance upon him, he moves to grab a seat before he lets you [if scalevalue of Player > 3]move down[else]get to work[end if] on his already-exposed member, now too large to possibly fit in such paltry attire.";

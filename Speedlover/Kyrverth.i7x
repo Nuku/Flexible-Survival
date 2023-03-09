@@ -59,36 +59,48 @@ Kyrverth	"Kyrverth"
 
 [Declaring a fuckton of variables. Keep scrolling - nothing to see here.					]
 [Compulsory Variables here:														]
-Kyrverth is a man. The HP of Kyrverth is usually 0.
-[Physical details as of game start]
+Kyrverth is a man.
+Kyrverth is in Dragons Den.
+The HP of Kyrverth is usually 0.
 ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]
 SleepRhythm of Kyrverth is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Kyrverth is 1. [One cock]
+Body Weight of Kyrverth is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kyrverth is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kyrverth is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kyrverth is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kyrverth is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kyrverth is 6. [length in inches]
+Breast Size of Kyrverth is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kyrverth is 0. [count of nipples]
+Asshole Depth of Kyrverth is 4. [inches deep for anal fucking]
+Asshole Tightness of Kyrverth is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kyrverth is 1. [number of cocks]
+Cock Girth of Kyrverth is 2. [Starts small and grows with Kyrverthstage]
 Cock Length of Kyrverth is 4. [Starts small and grows with Kyrverthstage]
-Ball Size of Kyrverth is 2. [Starts small and grows with Kyrverthstage]
-Ball Count of Kyrverth is 2. [2 Balls, they change size as you go.]
-Cunt Count of Kyrverth is 0. [No cunt]
-Cunt Depth of Kyrverth is 0. [No cunt]
-Cunt Tightness of Kyrverth is 0. [No cunt]
-Nipple Count of Kyrverth is 0. [No Nipples]
-Breast Size of Kyrverth is 0. [No boobs]
+Ball Count of Kyrverth is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kyrverth is 1. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Starts small and grows with Kyrverthstage]
+Cunt Count of Kyrverth is 0. [number of cunts]
+Cunt Depth of Kyrverth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kyrverth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kyrverth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Kyrverth is false. [can not take oversized members without pain]
-Sterile of Kyrverth is true.
 PlayerMet of Kyrverth is false.
 PlayerRomanced of Kyrverth is false.
 PlayerFriended of Kyrverth is false.
 PlayerControlled of Kyrverth is false.
+PlayerFucked of Kyrverth is false.
 OralVirgin of Kyrverth is true.
 Virgin of Kyrverth is true.
 AnalVirgin of Kyrverth is true.
 PenileVirgin of Kyrverth is true.
 SexuallyExperienced of Kyrverth is false.
+TwistedCapacity of Kyrverth is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kyrverth is true. [steriles can't knock people up]
 MainInfection of Kyrverth is "".
 Description of Kyrverth is "[KyrverthDesc]".
 Conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
 The scent of Kyrverth is "[KyrverthSmellDesc]".
-Kyrverth is in Dragons Den.
 [Normal Variables																]
 KyrverthStage is a number that varies. KyrverthStage is usually 0.
 KyrverthQuestGiven is a number that varies. KyrverthQuestGiven is usually 0.
@@ -198,6 +210,8 @@ to say KyrverthTalk: [Quest turnin check]
 		increase score by 10;
 		now Cock Length of Kyrverth is 8;
 		now Ball Size of Kyrverth is 3;
+		now Asshole Depth of Kyrverth is 8;
+		now Asshole Tightness is 2;
 		now KyrverthTimer is turns;
 	else if (carried of stray links >= 3 and KyrverthStage is 1 and KyrverthQuestGiven is 1): [Quest 2 end]
 		say "     [bold type]Aware of the three links of chainmail in your backpack, you [one of]wonder whether to give[or]consider giving[or]think about giving[at random] them to Kyrverth[roman type][line break]";
@@ -216,9 +230,12 @@ to say KyrverthTalk: [Quest turnin check]
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
 			increase score by 15;
-			now Cock Length of Kyrverth is 16;
-			now Ball Size of Kyrverth is 4;
 			now ScaleValue of Kyrverth is 3;
+			now Cock Length of Kyrverth is 16;
+			now Cock Girth of Kyrverth is 3;
+			now Ball Size of Kyrverth is 4;
+			now Asshole Depth of Kyrverth is 16;
+			now Asshole Tightness is 3;
 			now KyrverthTimer is turns;
 			move player to High Rise District;
 		else:
@@ -243,7 +260,9 @@ to say KyrverthTalk: [Quest turnin check]
 		EnableKyrverthItemEvents;
 		now ScaleValue of Kyrverth is 4;
 		now Cock Length of Kyrverth is 28;
+		now Cock Girth of Kyrverth is 4;
 		now Ball Size of Kyrverth is 5;
+		now Asshole Depth of Kyrverth is 28;
 		WaitLineBreak;
 	else if Kyrverthitemget is not 0 and KyrverthStage is 3:
 		say "     As you are about to talk to Kyrverth, you are reminded of the [KyrverthItemSay]. [bold type]Should you give it to him?[roman type][line break]";
@@ -262,7 +281,10 @@ to say KyrverthTalk: [Quest turnin check]
 			increase score by 10;
 			now ScaleValue of Kyrverth is 5;
 			now Cock Length of Kyrverth is 60;
+			now Cock Girth of Kyrverth is 5;
 			now Ball Size of Kyrverth is 7;
+			now Asshole Depth of Kyrverth is 60;
+			now Asshole Tightness is 4;
 			move player to High Rise District;
 		else:
 			say "[KyrverthNormalChat]";
