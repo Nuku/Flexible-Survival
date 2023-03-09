@@ -26,21 +26,30 @@ object	name
 Kitsune	"Kitsune"
 
 Kitsune is a man.
-[Physical details as of game start]
+Kitsune is in Foxy Hideaway.
 ScaleValue of Kitsune is 3. [human sized]
 SleepRhythm of Kitsune is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cock Count of Kitsune is 1. [X cock]
-Cock Length of Kitsune is 11. [X Inches]
-Ball Size of Kitsune is 7.
-Ball Count of Kitsune is 2. [X balls]
-Cunt Count of Kitsune is 0. [X pussy]
-Cunt Depth of Kitsune is 0. [X Cunt]
-Cunt Tightness of Kitsune is 0. [X Cunt]
-Nipple Count of Kitsune is 2. [X nipples]
-Breast Size of Kitsune is 0. [X at the start]
+Body Weight of Kitsune is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kitsune is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kitsune is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kitsune is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kitsune is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kitsune is 8. [length in inches]
+Breast Size of Kitsune is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kitsune is 2. [count of nipples]
+Asshole Depth of Kitsune is 12. [inches deep for anal fucking]
+Asshole Tightness of Kitsune is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kitsune is 1. [number of cocks]
+Cock Girth of Kitsune is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kitsune is 11. [Length in Inches]
+Ball Count of Kitsune is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kitsune is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kitsune is 0. [number of cunts]
+Cunt Depth of Kitsune is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kitsune is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kitsune is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-TwistedCapacity of Kitsune is true. [can take oversized members without pain]
-Sterile of Kitsune is false.
 PlayerMet of Kitsune is false.
 PlayerRomanced of Kitsune is false.
 PlayerFriended of Kitsune is false.
@@ -51,10 +60,11 @@ Virgin of Kitsune is false.
 AnalVirgin of Kitsune is false.
 PenileVirgin of Kitsune is false.
 SexuallyExperienced of Kitsune is true.
+TwistedCapacity of Kitsune is true. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kitsune is false. [steriles can't knock people up]
 MainInfection of Kitsune is "Kitsune".
 Description of Kitsune is "A beautiful silver vulpine stands on two digitigrade legs while looking at you with heated, but controlled eyes. Nine tails dance teasingly behind the fox-man's back as he smiles at you good-naturedly. His long and lithe form seems to almost sway slightly with the subtle motions of Kitsune rocking his hips from side to side. His smile soon turns saucy as Kitsune looks you up and down, his eyes lingering a particularly long time on your groin as though studying a tempting morsel, before he looks up to your face once again. With a predatory grin crossing his muzzle, you can't help but feel slightly on edge as the feral nature of the other shines through the graceful visage that the vulpine puts on for you. Though somewhat human-like in appearance, there is no doubt of the fox-man's animal nature as Kitsune stares at you with a growing hunger. A slow sweep of a red tongue along full and pale lips lets you know not to forget this.".
 Conversation of Kitsune is { "Hmmm!" }.
-Kitsune is in Foxy Hideaway.
 
 Kitsunetalk is a number that varies.
 Kitsunearoused is a number that varies.
