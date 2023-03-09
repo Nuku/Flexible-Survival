@@ -969,7 +969,7 @@ Include The-Voice by Luneth.
 Include Thomas by Wahn.
 Include Thunderbolt by CrimsonAsh.
 Include Timothy by Sarokcat.
-Include Tobias by Wahn.
+Include Tobias by Voidsnaps.
 Include Toron by Gherod.
 Include Tristian by Verath.
 Include Urik by Wahn.
