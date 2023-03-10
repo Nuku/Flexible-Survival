@@ -155,7 +155,7 @@ to say GloryChoices:
 to say GloryChoice1: [player charm]
 	let bonus be (( charisma of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
+	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 15:
 		say "     Going into a pep talk full of conviction and understanding, you manage to stop Glory from crying and even earn a weak smile from her. At the end of your talk, she feels at least a little better about herself and the fact that she survived everything that happened to her. Your guess is that she has taken a step or two back from the ledge and now isn't in the immediate danger of cracking under the pressure that living in this fallen city brings with it. She still does have a severe aversion to the equine parts of her body and is horrified by what happened between herself and her brother though. Only time will tell if she'll be able to cope with all that in the long term. For now, the young woman thanks you for your kindness and then goes to approach one of the nearby mall rats, asking for a place where she can stay in the mall.";
 		now GloryFate is 3; [consoled]
