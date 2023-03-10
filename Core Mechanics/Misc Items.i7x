@@ -280,8 +280,12 @@ indigo potion is fast.
 Usedesc of indigo potion is "[indigo potion use]";
 
 to say indigo potion use:
-	say "You pop the cork and down the potion in a single gulp. NNNGggghhhaaAHH! Its sour taste has you pulling a pained grimace, but somehow you feel better for having drunk that stuff.";
-	PlayerHealed 20;
+	if HP of Player < MaxHP of Player:
+		say "You pop the cork and down the potion in a single gulp. NNNGggghhhaaAHH! Its sour taste has you pulling a pained grimace, but somehow you feel better for having drunk that stuff.";
+		PlayerHealed 20;
+	else:
+		say "You're not hurt, so you decide to keep your potion for when you actually need it.";
+		ItemGain indigo potion by 1 silently; [quietly giving back the auto-destroyed item]
 
 instead of sniffing indigo potion:
 	say "Just sniffing this stuff makes your nose itch. It's got a sharp, chemical smell.";

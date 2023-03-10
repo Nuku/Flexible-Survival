@@ -77,7 +77,7 @@ Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 Sarea of Meet the Nemean Lion is "Plains".
 
-instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
+instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 3 succeeds):
 	move player to Dry Plains;
 	MeettheNemeanLionEvent;
 
@@ -212,7 +212,7 @@ Prereq1Resolution of Too Many Heads is { 1, 2 }.
 The level of Too Many Heads is 30.
 Sarea of Too Many Heads is "Junkyard".
 
-instead of going to Junkyard while (Too Many Heads is active and Too Many Heads is not resolved and TwelveLaborsStage is 2 and a random chance of 1 in 5 succeeds):
+instead of going to Junkyard while (Too Many Heads is active and Too Many Heads is not resolved and TwelveLaborsStage is 2 and a random chance of 1 in 3 succeeds):
 	move player to Junkyard;
 	TooManyHeadsEvent;
 

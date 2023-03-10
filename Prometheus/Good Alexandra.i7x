@@ -1936,7 +1936,7 @@ To impregGoodAlexandraChance with (x - text):
 	let MaxPups be 3;
 	if hp of Cleo is 0:
 		now MaxPups is 1; [there can be only one!]
-	if Sterile of Alexandra is false and hunger of Alexandra is 1 and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
+	if Sterile of Alexandra is false and Sterile of Player is false and hunger of Alexandra is 1 and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
 		if hp of Cleo is 0:
 			now AlexandraGrowingPups is 1;
 		else:
@@ -1963,6 +1963,8 @@ To impregGoodAlexandraChance with (x - text):
 				say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
 			if Sterile of Alexandra is true:
 				say "     Note: She's on contraceptives, so no matter how high the chance is, it can't succeed.";
+			else if Sterile of Player is true:
+				say "     Note: You're currently unable to impregnate others. If you wish to reverse this, see Dr. Medea.";
 
 an everyturn rule:
 	if hunger of Alexandra is 1:

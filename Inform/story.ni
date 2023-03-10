@@ -223,7 +223,7 @@ Include Hellfire Club by Gherod.
 Include High Rise District by Guest Writers.
 Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
-Include Hyena Hideout by Stripes.
+Include Hyena Gang by Stripes.
 Include Junkyard and Warehouse by Wahn.
 Include Kitsune Hideaway by Shadowwolf94.
 Include Lair Of The Lupines by Gherod.
@@ -934,6 +934,7 @@ Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Wahn.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
+Include Ryan by Fuxi.
 Include Sally by Stripes.
 Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.

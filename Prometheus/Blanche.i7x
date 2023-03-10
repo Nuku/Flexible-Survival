@@ -157,7 +157,7 @@ Sarea of Blanche's Brood is "Nowhere".
 when play begins:
 	add Blanche's Brood to badspots of MaleList;
 
-instead of navigating Office Den while ("Blanche - OfficeEvent" is listed in traits of Blanche and Blanche's Brood is unresolved):
+instead of navigating Office Den while ("Blanche - OfficeEvent" is listed in traits of Blanche and Blanche's Brood is unresolved) and Player is not CoA:
 	say "[NavCheck Office Den]";
 	if NavCheckReturn is false, stop the action;
 	move player to Office Den;
@@ -184,7 +184,7 @@ Scavenging the Park is a situation.
 ResolveFunction of Scavenging the Park is "[ResolveEvent Scavenging the Park]".
 Sarea of Scavenging the Park is "Nowhere".
 
-instead of navigating Office Den while (daytimer is day and Best Wolf is not listed in companionList of Player and "Blanche - OfficeEvent" is listed in traits of Blanche and Blanche's Brood is resolved and Scavenging the Park is unresolved):
+instead of navigating Office Den while (daytimer is day and Best Wolf is not listed in companionList of Player and "Blanche - OfficeEvent" is listed in traits of Blanche and Blanche's Brood is resolved and Scavenging the Park is unresolved) and Player is not CoA:
 	say "[NavCheck Office Den]";
 	if NavCheckReturn is false, stop the action;
 	move player to Office Den;
@@ -537,6 +537,12 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - Cool Mom" for Bubble;
 			TraitGain "Sturm - Big Boy" for Bubble;
 			WaitBreakReactions;
+		[if Bucky is booked or Bucky is bunkered:
+			say "     ";
+			TraitGain "Bucky - Adoptive Daughter" for Blanche;
+			TraitGain "Bucky - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Bucky;
+			TraitGain "Sturm - Flatterer" for Bucky;]
 		if Candy is booked or Candy is bunkered:
 			say "     Candy's eyes barely register Blanche's presence, instead being drawn to looking Sturm up and down. 'Mmm, I see something I like. If you ever want a good time, come find me, or better yet have a sample now,' the coon purrs, turning around and glancing over his shoulder as he flips the hem of his skirt up provocatively. 'My, aren't you forward,' Blanche mutters under her breath, watching her son's reaction out of the corner of her eye. 'Um. Perhaps another time. I've only just got here and I don't know you yet,' he replies, though his eyes remain fixed on Candy's twitching hole. 'Sure thing big boy. I'll be around,' the pink raccoon shoots back, leaving with a wink. 'You're making friends already dear,' Blanche teases her son.";
 			TraitGain "Candy - Shameless Slut" for Blanche;
@@ -777,6 +783,12 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Blanche - New Friend" for Helen;
 			TraitGain "Sturm - New Friend" for Helen;
 			WaitBreakReactions;
+		[if Hercules is booked or Bucky is bunkered:
+			say "     ";
+			TraitGain "Hercules - Adoptive Daughter" for Blanche;
+			TraitGain "Hercules - Beautiful Husky" for Sturm;
+			TraitGain "Blanche - Cuddly Woman" for Hercules;
+			TraitGain "Sturm - Flatterer" for Hercules;]
 		if Hobo is booked or Hobo is bunkered:
 			say "     Hobo excitedly rushes around the wolves, proudly showing off a tennis ball that he must have found somewhere. 'Do you want me to throw the ball for you?' Blanche asks, the dog drops it on the floor and noses it forward, watching intently as it is picked up. Blanche gently lobs it towards an area devoid of furniture smiling as Hobo charges after it. Amusingly, Sturm takes a half-step after it too, almost as if he was about to chase the ball as well, his mother spotting this out of the corner of her eye and smirking. 'Neither of you is to mention this. Ever,' Sturm growls. After playing with Hobo for a few minutes, Blanche tires and Hobo wanders off again, wagging his tail.";
 			TraitGain "Hobo - Regular Dog" for Blanche;
@@ -1195,31 +1207,31 @@ to say ResolveEvent Scavenging the Park:
 			WaitBreakReactions;
 		now IntroReactionCounter is 0; [reset]
 		say "     Introductions having been made, it doesn't take you too long to finish showing Blanche and Sturm around the library from bunker to attic and all the facilities in between. Nonetheless, they seem exhausted by the end so after you bring them back to the computer lab where the rest of their family has made a cozy looking corner for them all to sleep in at night. You would imagine that they have much to talk about. You'll come back later.";
-	Move player to Grey Abbey Library;
-	move Blanche to Computer Lab;
-	move Sturm to Computer Lab;
-	move Bianca to Computer Lab;
-	move Ernest to Computer Lab;
-	move Claude to Computer Lab;
-	move Penelope to Computer Lab;
-	move Wendis to Computer Lab;
-	move Bernard to Breakroom;
-	move Maeve to Breakroom;
-	move Lumi to Computer Lab;
-	move Casper to Computer Lab;
-	now Office Den is unknown;
-	now Charisma of Blanche is 1;
-	now hp of Sturm is 1;
-	now hp of Bianca is 1;
-	now hp of Ernest is 1;
-	now hp of Claude is 1;
-	now hp of Penelope is 1;
-	now hp of Wendis is 1;
-	now hp of Bernard is 1;
-	now hp of Maeve is 1;
-	now hp of Lumi is 1;
-	now hp of Casper is 1;
-	now Scavenging the Park is resolved;
+		Move player to Grey Abbey Library;
+		move Blanche to Computer Lab;
+		move Sturm to Computer Lab;
+		move Bianca to Computer Lab;
+		move Ernest to Computer Lab;
+		move Claude to Computer Lab;
+		move Penelope to Computer Lab;
+		move Wendis to Computer Lab;
+		move Bernard to Breakroom;
+		move Maeve to Breakroom;
+		move Lumi to Computer Lab;
+		move Casper to Computer Lab;
+		now Office Den is unknown;
+		now Charisma of Blanche is 1;
+		now hp of Sturm is 1;
+		now hp of Bianca is 1;
+		now hp of Ernest is 1;
+		now hp of Claude is 1;
+		now hp of Penelope is 1;
+		now hp of Wendis is 1;
+		now hp of Bernard is 1;
+		now hp of Maeve is 1;
+		now hp of Lumi is 1;
+		now hp of Casper is 1;
+		now Scavenging the Park is resolved;
 
 
 Section 2 - Office Den
@@ -1750,12 +1762,13 @@ to say sexwithBlanche01: [Missionary]
 	say ". She gives you a big hug and an even bigger kiss before stretching out on her [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if]. 'Be sure to come back and breed me like that again soon,' she rumbles.";
 	if HP of Blanche is 4 or ( HP of Blanche > 7 and Blanche is not pregnant and a random chance of 2 in 3 succeeds ):
 		say "     Blanche remains resting on her [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] for a while, smiling happily as she caresses her belly. You think nothing of it at first, but after a while you realize that [if Ball Size of Player >= 5]the bulge from your semen's not fully disappeared[else]her tummy's showing a small bulge now[end if]. You've knocked up the white wolf[if HP of Blanche > 4] again[end if]!";
-		if HP of Blanche is 14:
-			now HP of Blanche is 12;
-		else:
-			increase HP of Blanche by 1;
-		now Libido of Blanche is turns;
-		now lust of Blanche is turns;
+		if Sterile of Player is false:
+			if HP of Blanche is 14:
+				now HP of Blanche is 12;
+			else:
+				increase HP of Blanche by 1;
+			now Libido of Blanche is turns;
+			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say sexwithBlanche02: [Doggystyle]
@@ -1765,12 +1778,13 @@ to say sexwithBlanche02: [Doggystyle]
 	say "     The two of you continue to rut like animals, panting and kissing one another. As you feel your climax approaching, you [if BodyName of Player is listed in infections of caninelist or FaceName of Player is listed in infections of caninelist]bite down onto the back of her neck and [end if]drive yourself fully into her. Your [Cock of Player] cock throbs and pulses as you fire shot after shot of gooey seed into her [if Blanche is not pregnant]waiting womb[else]quivering cunt[end if]. She howls in orgasmic release, adding her feminine juices to the slick mess squishing around your cock and leaking down both your thighs[if Blanche is not pregnant]. You breed her for all you're worth, eager to see her grow heavy with more of your pups[else]. Despite her already being pregnant, you pump as much semen as you can into her, further testament to your virility[end if]. Once you're spent and pull out, Blanche rolls over onto her side, panting heavily with a canine smile plastered across her muzzle. 'Oh, that's just what I needed. You're great.'";
 	if HP of Blanche is 4 or ( HP of Blanche > 7 and Blanche is not pregnant and a random chance of 2 in 3 succeeds ):
 		say "     Blanche remains resting on her [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] for a while, smiling happily as she caresses her belly. You think nothing of it at first, but after a while you realize that [if Ball Size of Player >= 5]the bulge from your semen's not fully disappeared[else]her tummy's showing a small bulge now[end if]. You've knocked up the white wolf[if HP of Blanche > 4] again[end if]!";
-		if HP of Blanche is 14:
-			now HP of Blanche is 12;
-		else:
-			increase HP of Blanche by 1;
-		now Libido of Blanche is turns;
-		now lust of Blanche is turns;
+		if Sterile of Player is false:
+			if HP of Blanche is 14:
+				now HP of Blanche is 12;
+			else:
+				increase HP of Blanche by 1;
+			now Libido of Blanche is turns;
+			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say sexwithBlanche03: [Blowjob]
@@ -1808,10 +1822,11 @@ to say sexwithBlanche07:	[cowgirl position]
 	say "     As her excitement builds, you can see her getting close to climax. She releases a hungry, needy growl and starts riding you faster, grinding that round butt of hers down onto your lap. Your cock throbs and pulses inside her, your balls feeling heavy with seed for the [if Blanche is pregnant]pregnant[else]fecund[end if] wolfess. Her growling gets louder until she finally throws her head back in a howl of climactic release. Feeling the grip of her fluttering vagina and the hot rush of flesh juices, you move your hands to grab her ass as push your hips up. Your [Ball Size Adjective of Player] balls release their [Cum Load Size of Player] load and your hot seed shoot into her[if blanche is not pregnant] waiting womb[end if]. Once you're both done riding out this powerful orgasm, she slides herself slowly off your softening member and you let her have the bed to rest after giving her a tender kiss.";
 	if Blanche is not pregnant and a random chance of 2 in 3 succeeds:
 		say "     Blanche remains resting on her bed for a while, smiling happily as she caresses her belly. You think nothing of it at first, but after a while you realize that [if Ball Size of Player >= 5]the bulge from your semen's not fully disappeared[else]her tummy's showing a small bulge now[end if]. You've knocked up the white wolf again!";
-		if HP of Blanche is 14:
-			now HP of Blanche is 12;
-		now Libido of Blanche is turns;
-		now lust of Blanche is turns;
+		if Sterile of Player is false:
+			if HP of Blanche is 14:
+				now HP of Blanche is 12;
+			now Libido of Blanche is turns;
+			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say CuddlewithBlanche: [Cuddling]
@@ -1963,7 +1978,7 @@ to say OfficeBlancheFamilyEvents:
 
 Section 3.2 - Library Events
 
-instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Booked):
+instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Booked) and Player is not CoA:
 	say "     Entering the computer room, you immediately notice Blanche sitting on the floor against the wall with Fang lying across her lap, the white wolf leaning over top of the darker-furred lupine and hugging [ObjectPro of Fang] tightly as tears trickle down her face. 'I'm so glad to have found you again. After what my parents did to you...' Blanche sobs, squeezing Fang against her even tighter. 'Don't dwell on past. Together again,' your [if hp of Fang is 2]omega [else if hp of Fang is 3 or hp of Fang is 4 or HP of Fang is 6]alpha [else if hp of Fang is 5]beta [else]guard [end if]replies, pressing [ObjectPro of Fang]self firmly into the MILF's embrace. 'It's been years. I haven't done much with my life since then, but what did you do? I'm assuming that you haven't been a wolf all this time,' Blanche asks, a wet snort suggesting that she had tried to laugh but that a sob had occurred simultaneously. 'I have not,' Fang replies, remaining silent for a moment as [SubjectPro of Fang] eases [ObjectPro of Fang]self from the anthro wolf's grasp and licks her face to dry the tears.";
 	if Fang is Male: [Fang is Male]
 		say "     'Hospital first to save eye. Left scar but could have been worse,' Fang begins, pausing as Blanche runs a hand over his face, tracing the old wound with her fingers. 'Then court case. You know result. Wanted to see you, but you were gone. Not your fault.' The white wolf nods her head in commiseration, snuggling even closer to him. 'Finished school, went to college. Had a girlfriend.' He once again pauses, waiting for Blanche's reaction. 'I'm pleased for you. You had no way of knowing that we would see each other again. You were no longer mine...' she reassures him sadly. 'Joined army like my father. Found out girlfriend pregnant. Daughter born while away. Missed much of her life,' Fang laments, the pain of being absent from a child's life something that Blanche can only imagine, the white wolf sympathetically kissing him on the nose but otherwise remains quiet so as to allow him to continue.";
@@ -1990,7 +2005,7 @@ instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Boo
 	now Charisma of Blanche is 2;
 	move Player to Grey Abbey Library;
 
-instead of going to Computer Lab while Charisma of Blanche is 2 and Blanche is in Computer Lab and a random chance of 1 in 2 succeeds: [Blanche away]
+instead of going to Computer Lab while Charisma of Blanche is 2 and Blanche is in Computer Lab and Player is not CoA and a random chance of 1 in 2 succeeds: [Blanche away]
 	say "     Blanche is strangely absent when you enter the computer room and it doesn't take Sturm long to spot you, hurriedly ending a conversation with Claude, and rushing over. 'Have you seen Mom?' he asks worriedly. 'I came back from scavenging and she wasn't here. No one seems to have seen her leave, but I can't find her anywhere in the library.' That he hasn't made any snide comments or even accused you of being involved shows just how concerned he is. When you reply in the negative, his face falls but he thanks you nonetheless. 'I'll gather my family and we can organize a search party. Wait here,' he instructs you before dashing away, leaving you standing there awkwardly. A few moments later, Blanche's children are arrayed around you with Sturm beside you, outlining his plan. You have to admit, it is rather a thorough plan, but before anyone can move, Penelope speaks up.";
 	say "     'Don't you think you're jumping to conclusions?' she gently chides her elder brother. 'Mom is capable of looking after herself, despite how we all treat her. If she's out in the city, she's out there of her own free will. Someone would have seen her being kidnapped if that were the case.' A hush falls over the white wolves as they watch Sturm and Penelope stare at each other. 'But she can't fight as well as us,' Sturm replies, clenching and releasing his fists repeatedly. 'You're right. She can't. But she knows that as well as we do, so I'm sure she'll be careful. Mommy is marginally less impetuous than say Claude or Wendis,' his sister replies, making a joke in an attempt to defuse the situation. Her brother snorts, but otherwise remains grim. 'Perhaps she needed a break from us,' Bernard suggests. 'Or found someone to get it on with,' Bianca adds. 'Really? When [if Fang is Male]Wolf [else]Lupa [end if]is right there guarding the door? Why would she need to leave when [SubjectPro of Fang][']s there?' Lumi cuts in, eyeing the quadrupedal wolf lustfully.";
 	WaitLineBreak;
@@ -2001,7 +2016,7 @@ instead of going to Computer Lab while Charisma of Blanche is 2 and Blanche is i
 	move Blanche to Nowhere;
 	now Charisma of Blanche is 3;
 
-instead of going to Computer Lab while Charisma of Blanche is 3 and (Blanche is Booked or Blanche is Bunkered) and Best Wolf is not listed in companionList of Player and a random chance of 1 in 2 succeeds: [Trip to the Mall]
+instead of going to Computer Lab while Charisma of Blanche is 3 and (Blanche is Booked or Blanche is Bunkered) and Best Wolf is not listed in companionList of Player and Player is not CoA and a random chance of 1 in 2 succeeds: [Trip to the Mall]
 	say "     You come face to face with Blanche as you enter the makeshift den, surrounded by her substantial brood. 'Oh good. I was just about to send Lumi to find you. We were about to go on an expedition to the mall and I hoped that you might join us,' she greets you, giving you a kiss on the cheek. 'I asked [if Fang is Male]Wolf [else]Lupa [end if]to come with us too, but [SubjectPro of Fang] said that [SubjectPro of Fang] had to keep watch on the library. Sometimes I wonder how much becoming a literal wolf has affected [ObjectPro of Fang],' she pouts. 'I suppose you'll just have to suffer us without [ObjectPro of Fang],' Blanche teases before turning to do another headcount of her children. 'Usual instructions. Pair up and keep an eye on those behind you to make sure that they don't end up separated from the group. If someone is foolish enough to attack us, let Sturm, Penelope, Bernard, and Lumi take the front line.'";
 	say "     They seem quite accustomed to this, so after expressing their understanding, everyone files out of the library behind you and Blanche. 'I don't think any of them have been to the mall before, so this should be quite a treat. I also have a surprise for them when we get there,' Blanche whispers to you. The trip to the mall is uneventful and you soon arrive outside where some wolverine guards eye your approaching pack with suspicion to rival Sturm's. Fortunately, they seem to relax a little when the matriarch of your group cheerily waves to them and they don't impede you from entering the shopping complex. 'I will admit that I hadn't considered that such a large group might be problematic,' she confides to you before addressing her offspring again. 'You may all freely look around in your pairs, but I want us all to meet up in the food court in an hour for a surprise. Now go and explore without upsetting any of the guards or shop owners.' Moments later, you are left alone with Blanche, with even Sturm eager to sate his curiosity of this new place. 'Might I beg your company as I window-shop?' Blanche propositions you, to which you agree.";
 	WaitLineBreak;

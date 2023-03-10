@@ -231,7 +231,7 @@ to say BernardTalk3: [Family Meal]
 	else if TimekeepingVar is 3 or TimekeepingVar is -5: [Evening] [Blanche, Bernard, Maeve, Lumi]
 		say "     You sit down for dinner with Blanche, Lumi, and Maeve while Bernard prepares [one of]pasta[or]pizza[at random] and a choice of soda or water. It is very reminiscent of the pre-nanite world, though you aren't sure where they found the ingredients. Best not to ask. Instead you discuss [one of]some of the interesting parts of Blanche's childhood[or]Maeve's progress with her magic tricks[or]whether Lumi is willing to share her balls yet[at random]. Overall, it is a very enjoyable and comforting experience, fulfilling your immediate need for food, drink, and company.";
 	SanBoost 10;
-	PlayerEat 12;
+	PlayerEat 20;
 	PlayerDrink 25;
 	now FamilyMealCooldown is 5;
 
