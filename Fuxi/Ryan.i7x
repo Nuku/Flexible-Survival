@@ -5,6 +5,10 @@ Version 1 of Ryan by Fuxi begins here.
 
 Section 1 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Ryan	"Ryan"
+
 Ryan is a man.
 ScaleValue of Ryan is 3. [X sized]
 Body Weight of Ryan is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]

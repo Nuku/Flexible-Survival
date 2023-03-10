@@ -8,7 +8,7 @@ a postimport rule:
 
 Section 1 - Events
 
-after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random chance of 1 in 3 succeeds:
+after going to Smith Haven Mall Lot East while PlayerMet of Tobias is false and a random chance of 1 in 3 succeeds:
 	say "     Walking over the expansive parking lot of the Smith Haven Mall, you let your gaze wander over the countless parked cars: many stand neatly aligned in their squares, most likely belonging to people that never left the safe confines of the mall, or possibly those that never made it back here at all. Others are more scattered, often in clumps around the entrances and exits of the lot, from when people started to panic and got involved in all sorts of collisions and accidents. The crunching noise of glass shards under your feet makes you stop and look at the nearest damaged car, half-hidden behind the delivery truck its front is crumpled against. You can't help but idly wonder what may have happened to the driver on the fateful day that the nanite apocalypse came into full swing.";
 	say "     As you stand there, movement on the far side of the car catches your eye. An anthro Doberman dressed in jeans and an open vest, as well as black leather gloves, steps into view from the other side of the truck, holding the leashes for two other Dobermans, one male one female. They are anthro canines, just like him, but in sharp contrast, they are naked and on all fours with collars and muzzles on them. The leashed bitch looks back at you and gives a whine, trying to move back behind the truck, but her owner(?) is having none of it, looking impatiently at the other dobie and keeping her on a tight leash. 'What is it now?' the standing man barks out, then follows her gaze to you and scoffs at her. 'Oh? Being watched by [ObjectPro of Player] has your panties in a twist? Let me remind you - animals don't wear any of those. You're a pet, bitch, and not an obedient one right now. I told you to do your business [italic type]now[roman type]!'";
 	WaitLineBreak;
@@ -17,7 +17,6 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	WaitLineBreak;
 	now PlayerMet of Tobias is true; [player knows his name]
 	say "[TobiasTalkMenu]";
-	now HP of Tobias is 1; [initial event done]
 	now Refugee Mare is active;
 
 to say TobiasTalkMenu:
@@ -31,10 +30,11 @@ to say TobiasTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Learn more about Tobias";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask what he is doing at the mall";
-	now sortorder entry is 2;
-	now description entry is "Find out what he is doing here";
+	if Player is not in Tobias's Trailer:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask what he is doing at the mall";
+		now sortorder entry is 2;
+		now description entry is "Find out what he is doing here";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about dog training";
@@ -156,7 +156,7 @@ to say TobiasTalk1: [Ask him about himself]
 	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbors, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
 
 to say TobiasTalk2: [Ask what he is doing at the mall]
-	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. That can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup [if HP of Tobias is 0]just now[else]when we met[end if].";
+	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. That can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup.";
 
 to say TobiasTalk3: [Talk about dog training]
 	say "     Tobias gives you a knowing nod and clears his throat. 'The difficult part about any training with canines isn't to get them started doing something. No, it's keeping them from being obsessed with things once they start. Here, let me demonstrate.' Stepping forward, the dog trainer loosens the straps of the leather muzzle on Dane and pulls it off, then tells him, 'Go on boy, lick your balls.' In reply, Dane gives a happy bark, followed by the submissive dobie curling up on the ground and lapping at his own crotch. Watching the naked young man pleasure himself, Tobias adds, 'It wouldn't do to have a movie dog actually go through with mauling an actor instead of just lightly biting them in the ass, so control is a [italic type]very[roman type] important thing. Even if they do not want to follow a command, it [italic type]must[roman type] be obeyed instantly. Just look at Dane for example.'";
@@ -190,9 +190,7 @@ to say TobiasTalk4: [Offer to have sex with him]
 			if player consents:
 				LineBreak;
 				say "     Nodding emphatically, you feel the collar slip around your neck, its padded material settling snugly around your throat. The sensation is intensely erotic, and your sex stirs as the bone-shaped tag settles into place. Checking its label, you feel your cheeks flush. It proudly proclaims that you're a [']Puppy Slut.['] 'Good puppy.' Tobias praises you, his fingers teasing your ears as though you're a dog that's just performed a trick. 'Let's get your treat.' He says, unzipping his jeans and letting them fall past his muscular thighs, pooling at his feet. He's not wearing underwear, and his canine cock spills forth, sending masculine musk across your face as it bounces in greeting, its knot partially swollen and throbbing with his heartbeat. 'Uh-uh. Tongue only. Puppies don't suck- they lick.' Tobias admonishes you as your drooling mouth attempts to capture that big cock. Stepping closer, he assaults your senses with heavy balls and his drooling dick, filling your world with unfiltered manliness. Something close to a whine wells up as you follow his directions, your tongue trailing up the underside in long laps that smear precum over your face.";
-				say "     Watching you with silent approval, Tobias strips out of his vest, his efforts sending trails of pre over your face and slopping your tongue over his manhood until it shines with drool. You're starting to settle into your routine of a long lick followed by a swallow of what you gather from that gooey river when he snaps his fingers, forcing your nose against his balls. 'Stay.' Stricken by the sudden loud noise, you stop, panting softly and huffing the Doberman's musky sack. Moments pass, and you contemplate disobeying as your mouth waters, demanding another taste of canine manhood. You barely manage to hold it together, your [if player is herm]cock and pussy [else if player is male]cock [else if player is female]pussy [end if]throbbing between your spread legs and messing the sheets below with [if player is herm]twin steady drools [else]a steady drool[end if] of arousal. 'Good puppy.' Tobias trails a paw over your head to the nape of your neck, repeating the motion until a needy sound vibrates through your throat. 'I know, pup. I'll breed you, don't you worry.' He coos, pushing you back onto the bed and slipping between your legs, letting his pulsing spire drag over your genitals, lingering to [if player is female]prod against your sopping pussy [else if player is male and ball count of player > 1]hot dog the space between your balls [else if player is male and ball count of player < 2]roll against the base of your cock[end if].";
 				WaitLineBreak;
-				say "     'Hope you're ready for a rough ride, pup. I only do anal unless I'm trying to fuck a litter into a needy bitch[if player is mpreg_ok] though your scent tells me that's what I'm about to do[end if].' Punctuating his words with a slow press, he invades your rear entrance, gentle pressure sending a dull pain through you as his large shaft spreads you, inch by inch. 'Don't be afraid to whine, puppy. Master's right here.' He murmurs in your ear, his teeth nipping at its tip. The Doberman's not exactly gentle, but at least his first few thrusts are slow and measured, giving you just enough time to adjust to his size before he slides home, then works up to a breakneck pace that brings panting high-pitched noises from your throat. You're helpless beneath his onslaught (messing his abs with your helplessly twitching cock/drooling juices helplessly from your untouched pussy to lubricate his plunging cock.) A steady stream of praise murmurs from the Doberman's lips, barely audible over the wet plunge of his jackhammering cock. Vaguely, you hear the words 'good,' 'bitch,' and 'cocksleeve' as your face flushes with embarrassment and arousal. For some reason, his words feel almost as good as the pounding your ass is receiving! Is it the praise or the humiliation of being referred to as his pet?";
 				say "     'Here comes the knot, puppy.' Tobias's lusty whisper warns you, panting in your ear as a slurping pop follows a blooming pain in your backdoor. Now tied, he bastes your insides with creamy virility, never stopping his ramming thrusts as his paws grip your leash, tugging it to bring your mouth to his and slopping his canine tongue between your lips in a deep, passionate kiss. Helpless beneath Tobias's dick, you go limp, squirting your desire between your body and his and riding out a hands-free orgasm powered by nothing but your backdoor's violation. You break from your obedient dog role as you come down, wrapping your arms around the gently rocking Doberman and squeezing him closer. 'Fuck, pup. Haven't had an ass that good in years. How about I keep that collar on you? You're too damn hot not to claim.' Tobias murmurs as he returns your embrace, his expression returned to its usual jovial, easygoing baseline. 'Don't worry. Still not planning on sticking you in a kennel.' Wrapped in the afterglow and buried under the affectionate Doberman, you feel pressure to answer.";
 				LineBreak;
 				say "     [bold type]Do you want to let him collar you? You guess he won't be interested in pushing your relationship further if you deny him[roman type].";
@@ -217,7 +215,6 @@ to say TobiasTalk4: [Offer to have sex with him]
 	change the south exit of Overgrown Lot to Smith Haven Mall Lot East;
 
 to say TobiasTalk5: [Bad end. Become a dog.]
-	say "     Weary of the city's danger and excited by what you've seen of Tobias's training process, you ask him if he's willing to take on a third pet. (Dane looks happy enough, and you'd like to be a good dog like him!/You think you could be a prize bitch like Cara.) Tobias steps closer, looking you over and circling you, his paw reaching out to test your arms and midsection, lifting your chin and searching your eyes for something unknown. 'You're aware that you won't come back from this, right? After you consent, there's no safe word, no running off, nothing but training and living as my pet. I need to hear you say you understand. Repeat after me: Tobias, I want you to train me to be a good (dog/bitch).' Faced with a decision, you flush, unable to meet the Doberman's piercing green eyes.";
 	LineBreak;
 	say "     [bold type]Is this really what you want? If you let Tobias train you, you'll be his. There's no turning back. [roman type][line break]";
 	LineBreak;
@@ -351,8 +348,6 @@ Conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
 
 to say TobiasDesc:
-	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Tobias] <- DEBUG[line break]";
 	say "     Tobias Black is an anthro Doberman with a fairly muscular build and a stance that brings to mind a soldier ready for combat. Standing at roughly six feet tall, he has green eyes and well trimmed short chestnut brown, styled immaculately into rolling, pointed waves with buzzed sides. He wears a rugged pair of jeans and an open vest with lots of pockets. A pair of somewhat scratched dog tags hangs around his neck.";
 
 instead of conversing the Tobias:
