@@ -52,7 +52,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Sheep"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Sheep"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Ewe" to infections of BovineList;
 	add "Ewe" to infections of FurryList;
 	add "Ewe" to infections of NatureList;
@@ -62,22 +62,22 @@ When Play begins:
 	add "Ewe" to infections of BipedalList;
 	add "Ewe" to infections of TailList;
 	now Name entry is "Ewe";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She moves forward and rubs her soft wool over your body.[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully before striking at your weak spots![or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]";
 	now defeated entry is "[ewe loss]";
 	now victory entry is "[ewe attack]";
 	now desc entry is "";
-	now face entry is "short black muzzle"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "short black muzzle"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "stocky, but feminine, with lovely curves to your body. Your arms are thinner, ending in dainty, hoof-like hands which struggle to handle items at times. Your legs have strong thighs for leaping and crossing rough terrain and slender calves ending in dark hooves";
 	now skin entry is "[one of]woolly[or]soft wool[or]white fleeced[at random]";
 	now tail entry is "A short, round, sheep-like nub of a tail sits right over your ass, occasionally flicking one way or another in response to some stimulus, often lifting up teasingly above your rear."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheep-like[or]ram[or]black and pink spotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "you feel your ears stretch out to the sides of your head, your face pushing forward into a sheep-like muzzle"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body seems to swell out slightly as it takes on a somewhat stocky yet feminine appearance, your fingers fusing into three almost hooflike fingers. The muscles in your legs then shift, making it easier to move on your new hooves"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it is covered in soft woolen fleece, almost begging to be touched"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startles you as it pushes its way out above your increasingly cute ass"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "you feel your ears stretch out to the sides of your head, your face pushing forward into a sheep-like muzzle"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your body seems to swell out slightly as it takes on a somewhat stocky yet feminine appearance, your fingers fusing into three almost hooflike fingers. The muscles in your legs then shift, making it easier to move on your new hooves"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it is covered in soft woolen fleece, almost begging to be touched"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "your ass expands into a more rounded shape. A short round nub of a tail startles you as it pushes its way out above your increasingly cute ass"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it twists and warps between your legs, growing thicker as it takes on a black and pink tint, before drawing up into a new sheath between your legs"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 16;
@@ -103,17 +103,17 @@ When Play begins:
 	now libido entry is 80;
 	now loot entry is "tainted wool";
 	now lootchance entry is 20;
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]cute[at random]";
-	now type entry is "ovine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "ovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
-	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -124,7 +124,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -181,7 +181,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

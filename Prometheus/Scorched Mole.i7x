@@ -23,66 +23,66 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Mole"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Mole"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Scorched Mole" to infections of FeralList;
 	add "Scorched Mole" to infections of NatureList;
 	add "Scorched Mole" to infections of MaleList;
 	add "Scorched Mole" to infections of TaperedCockList;
 	add "Scorched Mole" to infections of QuadrupedalList;
 	add "Scorched Mole" to infections of TailList;
-	now Name entry is "Scorched Mole";      [The creature's name as displayed and used in naming descriptions]
+	now Name entry is "Scorched Mole"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Scorched Mole";
 	now enemy Name entry is "Scorched Mole";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "[one of]The Giant Mole slashes at you with its claws![or]The Giant Mole attempts to bite you![or]The Giant Mole charges at you![or]The Giant Mole attempts to disembowel you![at random]";   [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheScorchedMole]";            [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetoScorchedMole]";               [ Text when monster wins. Change 'template' as above. ]
-	now desc entry is "[ScorchedMoledesc]";                  [ Description of the creature when you encounter it. ]
-	now face entry is "now a head described by this text";      [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a well-described new form put here";   [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "fur/scales/patterns that now cover your";   [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "Your tail gets a full sentence ending in a period.";   [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "feline";                  [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "your head changes in some descriptive manner";   [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body takes on a newly described form";   [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "you gain fur/scales/skin/patterns described herein";   [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your tail or ass changes in the manner described by this text";   [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it takes on a new, kinky form";      [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 20;         [ These are now the creature's stats... ]
-	now dex entry is 16;         [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 20;         [ These values may be used as part of alternate combat.]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
+	now attack entry is "[one of]The Giant Mole slashes at you with its claws![or]The Giant Mole attempts to bite you![or]The Giant Mole charges at you![or]The Giant Mole attempts to disembowel you![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheScorchedMole]"; [ Text when monster loses. Change 'template' as above. ]
+	now victory entry is "[losetoScorchedMole]"; [ Text when monster wins. Change 'template' as above. ]
+	now desc entry is "[ScorchedMoledesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "now a head described by this text"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "that of a well-described new form put here"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "fur/scales/patterns that now cover your"; [ Skin desc., format as the text "Your body is covered in (your text) skin." Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "Your tail gets a full sentence ending in a period."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "feline"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "your head changes in some descriptive manner"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your body takes on a newly described form"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "you gain fur/scales/skin/patterns described herein"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your tail or ass changes in the manner described by this text"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it takes on a new, kinky form"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 20; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
 	now per entry is 20;
 	now int entry is 20;
 	now cha entry is 20;
-	now sex entry is "Male";                      [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 100;                           [ The monster's starting hit points. ]
-	now lev entry is 16;                           [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 20;                          [ Monster's average damage when attacking. ]
-	now area entry is "Nowhere";                  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;                         [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 15;                  [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 3;                    [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 6;                       [ Number of breasts the infection will give a player. ]
-	now Breast Size entry is 1;                   [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now Male Breast Size entry is 0;              [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;                         [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 12;                   [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 8;                    [ Width in inches of female sex the infection will try to give a player. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 100; [ The monster's starting hit points. ]
+	now lev entry is 16; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 20; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 6; [ Number of breasts the infection will give a player. ]
+	now Breast Size entry is 1; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 12; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 8; [ Width in inches of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is true;
-	now libido entry is 0;                       [ Target libido the infection will rise towards. ]
-	now loot entry is "";                         [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;                    [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 4;                         [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "imposing";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
-	now type entry is "mole-ish";               [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;                 [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is true;            [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;                [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now libido entry is 0; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "imposing"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now type entry is "mole-ish"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -93,7 +93,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -150,7 +150,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

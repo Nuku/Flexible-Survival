@@ -83,7 +83,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Donkey"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Donkey"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Donkeyman" to infections of EquineList;
 	add "Donkeyman" to infections of FurryList;
 	add "Donkeyman" to infections of NatureList;
@@ -93,20 +93,20 @@ When Play begins:
 	add "Donkeyman" to infections of BipedalList;
 	add "Donkeyman" to infections of TailList;
 	now Name entry is "Donkeyman";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]";
 	now defeated entry is "[Donkeyman loses]";
 	now victory entry is "[Donkeyman wins]";
 	now desc entry is "[DonkeymanDesc]";
-	now face entry is "that of a narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "that of a narrow donkey-like face, with a crudely made leather mask covering most of your muzzle, which only emphasizes your striking donkey-like eyes and expressive large equine ears which sit on top of your new face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "powerful and muscular, built much like a beast of burdens, you have broad shoulders and powerfully built legs, you have managed to find some boots somewhere to cover your rough, mostly human feet and have made a rough harness out of strips of leather and rope to help make you feel more comfortable";
 	now skin entry is "[one of]gray furred[or]coarse furred[or]rough gray[at random]";
 	now tail entry is "You have a long, silken furred donkey tail emerging from above your tight ass. A small strip of leather has been tied at the base to help keep it together and pulled up to give a proper view of your rear to anyone who might be interested in looking."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thick[or]equine[or]donkey[at random]";
-	now face change entry is "it pushes out into a rather narrow equine muzzle, and your eyes blur as your ears lengthen and shift to the top of your head. Blinking you reach up to feel your changed donkey-like face, and as your eyes begin to focus again you realize that your face feels rather vulnerable and naked. Glancing around you quickly spot several bits of cloth and leather nearby, and after a little bit of work you soon feel much better with a rough leather mask wrapped around your equine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it shifts and changes and begins to bulge with muscles, you groan as your shoulders broaden and your build becomes more suited to that of a working beast, your [Skin of Player] chest seemingly to advertise the fact that you could now likely pull a cart or load easily enough. Unfortunately your chest feels disturbingly bare without a harness of some kind over it, almost as if you should be hitched up to something, looking around however you fail to spot anything that could be used as a proper harness, and so end up making do with some rope from your pack. And while it does look rather interesting, it makes you feel much happier and sexier to have it on"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "it pushes out into a rather narrow equine muzzle, and your eyes blur as your ears lengthen and shift to the top of your head. Blinking you reach up to feel your changed donkey-like face, and as your eyes begin to focus again you realize that your face feels rather vulnerable and naked. Glancing around you quickly spot several bits of cloth and leather nearby, and after a little bit of work you soon feel much better with a rough leather mask wrapped around your equine snout"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it shifts and changes and begins to bulge with muscles, you groan as your shoulders broaden and your build becomes more suited to that of a working beast, your [Skin of Player] chest seemingly to advertise the fact that you could now likely pull a cart or load easily enough. Unfortunately your chest feels disturbingly bare without a harness of some kind over it, almost as if you should be hitched up to something, looking around however you fail to spot anything that could be used as a proper harness, and so end up making do with some rope from your pack. And while it does look rather interesting, it makes you feel much happier and sexier to have it on"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "it tightens and stretches across your body, coarse gray and black fur pushing out of it as your new donkey-like hide";
 	now ass change entry is "your ass tightens and becomes more muscular, and the area above your ass is tickled by the soft strands of hair pushing out of them, the soft strands of your new tail tickling your ass and legs slightly as it extends out behind you. The sensations making you shudder with each step as your tail brushes up against your thighs and ass, you look around for some way to keep it stable and out of the way, and spotting a bit of leather nearby, you gather the strands of your new donkey-like tail together and tie it with the leather, enjoying both the look and feel of the leather on your new appendage";
 	now cock change entry is "it draws up close to your body, its tip flattening as it flares out into a more equine shape as your skin bulges out to form a proper donkey-like sheath around it"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -116,10 +116,10 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 14;
 	now cha entry is 16;
-	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 60;
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 7; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
@@ -134,16 +134,16 @@ When Play begins:
 	now libido entry is 75; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]hard-working[at random]";
 	now type entry is "[one of]asinine[or]donkey-like[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -155,7 +155,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -212,7 +212,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

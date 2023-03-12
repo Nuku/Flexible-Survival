@@ -107,7 +107,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Wolftaur"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Wolftaur"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Wolftaur" to infections of CanineList;
 	add "Wolftaur" to infections of FurryList;
 	add "Wolftaur" to infections of NatureList;
@@ -118,22 +118,22 @@ When Play begins:
 	add "Wolftaur" to infections of TaurList;
 	add "Wolftaur" to infections of TailList;
 	now Name entry is "Wolftaur";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed fore-paw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaur's strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]";
 	now defeated entry is "[Wolftaur loss]";
 	now victory entry is "[Wolftaur victory]";
 	now desc entry is "[WolftaurDesc]";
-	now face entry is "a long, wolf-like muzzle, your new yellow eyes gleaming out of your lupine face, while your changed canine ears swivel to pick up the slightest new sounds. At this point, it would be hard to tell the difference between your face and a wolftaur's"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "lean and rather well built. Your lower body is that of a fully canine beast and is standing easily on its four lupine paws, while your rather humanoid torso extends upwards from where a normal wolf would have its head, your claw-tipped hands and lean form giving you a rather lean and sexy appearance"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
+	now face entry is "a long, wolf-like muzzle, your new yellow eyes gleaming out of your lupine face, while your changed canine ears swivel to pick up the slightest new sounds. At this point, it would be hard to tell the difference between your face and a wolftaur's"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "lean and rather well built. Your lower body is that of a fully canine beast and is standing easily on its four lupine paws, while your rather humanoid torso extends upwards from where a normal wolf would have its head, your claw-tipped hands and lean form giving you a rather lean and sexy appearance"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, lupine tail stretching happily from just above your rear end, its presence somehow feeling so very right and natural as it lifts up to show off your ass for any other lupine that might be around."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it stretches out into a large lupine muzzle, your eyes blurring and the sounds of the world seeming muffled as your face shifts and changes. New scents explode through your brain as your new muzzle finishes forming, and the world seems to come into better focus and your hearing seems to sharpen considerably as your face settles into its new wolf like appearance"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it seems to stretch and twist, making you collapse to the ground as your lower torso seems to lengthen, your feet shifting and changing as they become proper wolf paws, and your legs twist into the rear legs of a canine. At the same time, a new set of limbs is pushing out of your lower body. You groan at the strange sensation of your body twisting and changing as two new canine forelegs push out of your body, even as your spine seems to snap and twist, your lower body seeming to draw up behind you as it changes into a new more canine form. Eventually the changes stop, and you find yourself standing up on your new canine paws, almost instinctively knowing how to maneuver this new bestial form of yours"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it seems to shiver and tingle pleasantly, a soft coat of underfur spreading across your body and making you moan in pleasure. Almost immediately afterwards you feel a soft, almost ticklish sensation as thicker gray wolf fur pushes out over your softer fur, your new coat of gray fur covering your body completely and making you feel strangely safe"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a large lupine tail pushes its way out of your rear, as your muscles seem to tighten. Your new long lupine appendage feels amazing as you wag it happily behind you a few times, somehow feeling like a completely natural part of your body"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it stretches out into a large lupine muzzle, your eyes blurring and the sounds of the world seeming muffled as your face shifts and changes. New scents explode through your brain as your new muzzle finishes forming, and the world seems to come into better focus and your hearing seems to sharpen considerably as your face settles into its new wolf like appearance"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it seems to stretch and twist, making you collapse to the ground as your lower torso seems to lengthen, your feet shifting and changing as they become proper wolf paws, and your legs twist into the rear legs of a canine. At the same time, a new set of limbs is pushing out of your lower body. You groan at the strange sensation of your body twisting and changing as two new canine forelegs push out of your body, even as your spine seems to snap and twist, your lower body seeming to draw up behind you as it changes into a new more canine form. Eventually the changes stop, and you find yourself standing up on your new canine paws, almost instinctively knowing how to maneuver this new bestial form of yours"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it seems to shiver and tingle pleasantly, a soft coat of underfur spreading across your body and making you moan in pleasure. Almost immediately afterwards you feel a soft, almost ticklish sensation as thicker gray wolf fur pushes out over your softer fur, your new coat of gray fur covering your body completely and making you feel strangely safe"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a large lupine tail pushes its way out of your rear, as your muscles seem to tighten. Your new long lupine appendage feels amazing as you wag it happily behind you a few times, somehow feeling like a completely natural part of your body"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "your aching member grows thicker, tapering to a sharp point, and a large canine knot forms at the base of it as your cock is engulfed in your new lupine sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 15;
@@ -141,36 +141,36 @@ When Play begins:
 	now per entry is 17;
 	now int entry is 12;
 	now cha entry is 16;
-	now sex entry is "Female";             [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 60;
-	now lev entry is 8;                    [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 10;                  [ Amount of Damage monster Does when attacking.]
-	now area entry is "Zoo";               [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 0;                  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 0;            [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 0;             [ Size of balls ]
-	now Nipple Count entry is 6;                [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;            [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 10; [ Amount of Damage monster Does when attacking.]
+	now area entry is "Zoo"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls ]
+	now Nipple Count entry is 6; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 5; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 14;
 	now Cunt Tightness entry is 9;
 	now SeductionImmune entry is false;
-	now libido entry is 60;                [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";                  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;             [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 4;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]tauric[or]bestial[or]animalistic[at random]";
-	now type entry is "lupine";            [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
-	now resbypass entry is false;          [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;         [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "wtaurpounce";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "wtaurpounce"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 [
@@ -180,7 +180,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -237,7 +237,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -286,13 +286,13 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the wtaurpounce rule:		[double-damage pouncing]
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 );  [+50% damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 67 ); [+50% damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 	say "The [one of][Name entry][or]wolf[or]lupine taur[or]wolf-creature[purely at random] growls and pounces roughly atop you, [one of]knocking[or]sending[or]slamming[purely at random] you down briefly under it. Its many paws pummel you, trying to knock the resistance out of you while you're surrounded in his strong, musky scent. This [one of]powerful[or]strong[or]devastating[purely at random] assault does [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[noshieldabsorbancy]";  [unable to use shield while pinned]
+	say "[noshieldabsorbancy]"; [unable to use shield while pinned]
 	if absorb > dam:
 		now absorb is dam;
 	if absorb > 0:

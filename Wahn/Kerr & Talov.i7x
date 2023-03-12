@@ -323,7 +323,7 @@ an everyturn rule: [Kerr & Talov Specific]
 				say "     As the party finally winds down in the early morning, Kerr and Talov put away their stuff, then [one of]stagger through the door into the game room, arm in arm[or]stroll through the door into the game room, with Kerr letting Talov go first with a flourish, groping his ass as he passes[or]walk through the door into the game room, stopping for a second as Kerr gives Talov a loving kiss on the cheek before stepping through[at random].";
 			else if Player is in PAN Frat Game Room:
 				say "     [One of]Arm in arm and swaying a little, [or]One after another, close together, [or]Arm in arm, [at random]Kerr and Talov come in from the direction of the living room, then immediately make a beeline for one of the sofas in here. [one of]Sharing some light groping and a kiss, the two of them lie down and doze off, [or]Kerr lies down first, stretching himself out on his back, then holding open his arms for his partner to join him in a gentle embrace holding him against his body. They fall asleep like that quickly, [at random]with Talov half sprawled across his partner's chest.";
-			now Kerr & Talov is in PAN Frat Game Room;		[else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning]
+			now Kerr & Talov is in PAN Frat Game Room; [else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning]
 		[else if TimekeepingVar is 5 or TimekeepingVar is -3:] [noon]
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]

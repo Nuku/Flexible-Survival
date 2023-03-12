@@ -31,7 +31,7 @@ to say ResolveEvent Giant's Frozen Yogurt:
 			say "[freeing_aurora]";
 		else:
 			say "     You take a few steps back from the moat of lava and tell her that you don't know how to get her across. You tell her to go back into the yogurt shop and wait for the military rescue. She nods, seeming a little cheered to hear that a rescue will come. She thanks you for trying and staggers her way back inside. You wipe your sweaty brow, glad you've managed to avoid possible trouble.";
-			now Resolution of Giant's Frozen Yogurt is 99;	[Did not help Aurora]
+			now Resolution of Giant's Frozen Yogurt is 99; [Did not help Aurora]
 			now Giant's Frozen Yogurt is resolved;
 	else:
 		say "     You manage to make your way back to the molten moat encircling Aurora and the trendy yogurt shop she's been trapped in. Calling out to her, she emerges and waves happily to you. You head back over to the broken section of wall to make another attempt at knocking it over to make a bridge.";
@@ -71,7 +71,7 @@ to say freeing_aurora:
 			else:
 				say "you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
 			now HP of frost giantess is 1;
-			now Resolution of Giant's Frozen Yogurt is 2;	[Tried and failed to help Aurora]
+			now Resolution of Giant's Frozen Yogurt is 2; [Tried and failed to help Aurora]
 	if aurorafreed is true:
 		say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
 		WaitLineBreak;
@@ -83,7 +83,7 @@ to say freeing_aurora:
 		move Aurora to Breakroom;
 		say "     (Aurora the frost giantess is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Aurora[end link][roman type] or [bold type][link]ally frost giantess[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Aurora[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 		increase score by 10;
-		now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
+		now Resolution of Giant's Frozen Yogurt is 1; [Recruited Aurora]
 		now Giant's Frozen Yogurt is resolved;
 
 

@@ -26,30 +26,30 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Man-eating Plant"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Man-eating Plant"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Man-eating Plant" to infections of PlantList;
 	add "Man-eating Plant" to infections of NatureList;
 	add "Man-eating Plant" to infections of HermList;
 	add "Man-eating Plant" to infections of TentacleCockList;
 	add "Man-eating Plant" to infections of BipedalList;
 	add "Man-eating Plant" to infections of TailList;
-	now Name entry is "Man-eating Plant"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Man-eating Plant";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[ManEatingPlantVoreScene]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[ManEatingPlantDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "androgynous face with surrounded with petals, and with a small orifice replacing your mouth, which can turn into a gaping maw"; [ Face description, format as "Your face is (your text)"]
-	now body entry is "smooth and flexible, its pores emiting a sweet, aluring fragrance"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "green plant-like"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
+	now face entry is "androgynous face with surrounded with petals, and with a small orifice replacing your mouth, which can turn into a gaping maw"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "smooth and flexible, its pores emiting a sweet, aluring fragrance"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "green plant-like"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "A long, arm-thick vine extends from your lower back, wiggling slowly, and involuntarily latching on objects and people brushing past it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]tentacle[else][one of]vine-like[or]tentacle[or]green tendril[at random][end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your hair coalesce together, and turn into petals of many colors. Your nose disappears, and a strange sensation spreads through your mouth as it seals up and your teeth disappear. It is replaced by a small hole, which stretches to an unbelievable size as you try to open your mouth and shout. It feels moist with various fluids, which drool on your chin."; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts. Your start to sweat constantly, and your body is quickly surrounded by a small mist of sweet, enticing pheromones."; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin turns into a plant-like green color!"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a very strange sensation spreads around your waist and your spine seems to stretch almost painfully! Reaching back you find it has expanded into a two-meter long vine, as thick as your arm. It suddenly wraps and squeezes around a nearby object. It seems that this new limb retains the vestigal reflexes of its original species!"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "your hair coalesce together, and turn into petals of many colors. Your nose disappears, and a strange sensation spreads through your mouth as it seals up and your teeth disappear. It is replaced by a small hole, which stretches to an unbelievable size as you try to open your mouth and shout. It feels moist with various fluids, which drool on your chin."; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "a sudden surge of vines and roots spread like an infection through your body from a seed hidden inside of you. Your legs become root-like vines that dig into the ground if you stay in one place for too long, while the rest of your body shifts. Your start to sweat constantly, and your body is quickly surrounded by a small mist of sweet, enticing pheromones."; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "your skin turns into a plant-like green color!"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a very strange sensation spreads around your waist and your spine seems to stretch almost painfully! Reaching back you find it has expanded into a two-meter long vine, as thick as your arm. It suddenly wraps and squeezes around a nearby object. It seems that this new limb retains the vestigal reflexes of its original species!"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it swells into an odd, bulb-like shape and turns a green, plant-like color, while small green tendrils spread over your groin like roots"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 12;
 	now dex entry is 16;
@@ -60,7 +60,7 @@ When Play begins:
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 60;
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 6; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Island"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 4; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 20; [ Length infection will make cock grow to if cocks]
@@ -75,16 +75,16 @@ When Play begins:
 	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "man-eating flower seed";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "feminine";
 	now type entry is "plant";
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -96,7 +96,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -153,7 +153,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

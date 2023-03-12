@@ -23,6 +23,8 @@ false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout an
 
 When Play begins:
 	add "Anthro Dragoness" to infections of ReptileList;
+	add "Anthro Dragoness" to infections of InternalCockList;
+	add "Anthro Dragoness" to infections of InternalBallsList;
 	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 

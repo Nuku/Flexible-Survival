@@ -34,7 +34,7 @@ to say ResolveEvent Equineguardpost:
 			now Equineguardpost is resolved;
 			now skip is 1;
 		if skip is 1:
-			say "";  [skips the win/lose portion entirely because of bans]
+			say ""; [skips the win/lose portion entirely because of bans]
 		else if lost is 1:
 			say "     Beaten and left to lie in the corridor outside the guardpost, you barely manage to crawl back towards the entryway, your battered and well-used form needing quite a bit of rest before you can attempt something like that again...";
 		else:
@@ -144,7 +144,7 @@ to say ResolveEvent Hardware Fort:
 			hardwarefortphase2;
 	else:
 		say "     Wandering through the streets of the city, you come across the lot of what appears to have once been a major hardware store. The place currently looks a bit like a fortress right now, as someone or several someones have obviously been scavenging cars and other items from around the city, and piling them up around the store. Whoever it was has also obviously been using some of the tools from the hardware store to help reinforce their not so little junk fortress, making the prospect of getting inside seem even more intimidating. Sighing as you look the situation over, you shake your head and decide to continue on your way, as even though the hardware store is probably well stocked with quite a few useful items, you can't really think of a need for that much hardware, and any smaller items you need can probably be found elsewhere for less of a fight than this obviously promises to be.";
-		now Hardware Fort is inactive;  [closing event for now]
+		now Hardware Fort is inactive; [closing event for now]
 	now showlocale is true;
 
 
@@ -191,7 +191,7 @@ to hardwarefortphase3:
 		fight;
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware is 2:
-				fight;  [third fight if returning attempt]
+				fight; [third fight if returning attempt]
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 				increase HP of Player by 20;
@@ -208,7 +208,7 @@ to hardwarefortphase3:
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
-		now fancyquest is 101;  [cancelled]
+		now fancyquest is 101; [cancelled]
 		now Resolution of Hardware Fort is 101; [lost]
 		now Hardware Fort is resolved;
 
@@ -229,7 +229,7 @@ to hardwarefortphase4-basic:
 			challenge "Blue Gryphon Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if recoveredhardware < 3:
-					challenge "Wyvern";  [one less fight on re-tries]
+					challenge "Wyvern"; [one less fight on re-tries]
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					challenge "Harpy";
 					if fightoutcome >= 10 and fightoutcome <= 19:
@@ -250,7 +250,7 @@ to hardwarefortphase4-basic:
 			hardwarefortphase4fail;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
-		now fancyquest is 101;  [cancelled]
+		now fancyquest is 101; [cancelled]
 		now Resolution of Hardware Fort is 101; [lost]
 		now Hardware Fort is resolved;
 
@@ -260,7 +260,7 @@ to hardwarefortphase4-10plus:
 		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware < 3:
-				challenge "Hawkman Male";  [one less fight on re-tries]
+				challenge "Hawkman Male"; [one less fight on re-tries]
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				challenge "Wyvern";
 				if fightoutcome >= 10 and fightoutcome <= 19:
@@ -284,7 +284,7 @@ to hardwarefortphase4-10plus:
 			hardwarefortphase4fail;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
-		now fancyquest is 101;  [cancelled]
+		now fancyquest is 101; [cancelled]
 		now Resolution of Hardware Fort is 101; [lost]
 		now Hardware Fort is resolved;
 
@@ -296,7 +296,7 @@ to hardwarefortphase4-20plus:
 			challenge "Hawkman Male";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if recoveredhardware < 3:
-					challenge "Wyvern";  [one less fight on re-tries]
+					challenge "Wyvern"; [one less fight on re-tries]
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					challenge "Wyvern";
 					if fightoutcome >= 10 and fightoutcome <= 19:
@@ -318,7 +318,7 @@ to hardwarefortphase4-20plus:
 			hardwarefortphase4fail;
 	else if fightoutcome >= 30:	[fled any fight]
 		say "     Having fled, you end up leaving the working horsemen to fend for themselves, much to the angry cries of several of them. They are none too pleased with your cowardice. They seem to fare fairly well, able to hold their ground while working. Rather than risk entering the fray again, you escape in the confusion, heading back towards the library to rest and recover.";
-		now fancyquest is 101;  [cancelled - fled]
+		now fancyquest is 101; [cancelled - fled]
 		now Resolution of Hardware Fort is 101; [lost]
 		now Hardware Fort is resolved;
 
@@ -335,8 +335,8 @@ to hardwarefortphase4fail:
 		say "     Beaten and abused by the victorious avian, you force yourself to your feet and make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
 	else:
 		say "     Somehow managing to make your escape from the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
-	now fancyquest is 102;  [cancelled - failed too often]
-	now Resolution of Hardware Fort is 102;  [cancelled - failed too often]
+	now fancyquest is 102; [cancelled - failed too often]
+	now Resolution of Hardware Fort is 102; [cancelled - failed too often]
 	now Hardware Fort is resolved;
 
 to hardwarefortphase5:

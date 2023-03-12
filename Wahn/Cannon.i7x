@@ -198,7 +198,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Cock Cannon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Cock Cannon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Cock Cannon" to infections of BodyHorrorList;
 	add "Cock Cannon" to infections of HumorousList;
 	add "Cock Cannon" to infections of MaleList;
@@ -206,23 +206,23 @@ When Play begins:
 	add "Cock Cannon" to infections of TailList;
 	add "Cock Cannon" to infections of CockVoreList;
 	add "Cock Cannon" to infections of InternalBallsList;
-	now Name entry is "Cock Cannon"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Cock Cannon";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "ERROR! Cock Cannon: Attack"; [Text used when the monster makes an Attack]
 	now defeated entry is "[cannon loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[cannon wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[cannon desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "devoid of any features except for a large slit in the center of a fleshy, mushroom-shaped head with a raised rim towards the back. You're able to 'see' your surroundings through echolocation, sending clicking vibrations from the slit, and it serves as a mouth too, enabling you to suck up food and fluids. Thus you can live fairly normally despite your lack of a mouth or eyes"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "relatively tube-shaped, but able to bend and flex freely in any direction. It looks like the shaft of a penis from the hips upwards, while your two sturdy legs end in digitigrade feet with three large claws"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "smooth, veiny"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
+	now face entry is "devoid of any features except for a large slit in the center of a fleshy, mushroom-shaped head with a raised rim towards the back. You're able to 'see' your surroundings through echolocation, sending clicking vibrations from the slit, and it serves as a mouth too, enabling you to suck up food and fluids. Thus you can live fairly normally despite your lack of a mouth or eyes"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "relatively tube-shaped, but able to bend and flex freely in any direction. It looks like the shaft of a penis from the hips upwards, while your two sturdy legs end in digitigrade feet with three large claws"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "smooth, veiny"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Your ass has the perfect bubble butt shape, with two nicely round and full globes sticking out behind your back. Above the buns of your booty, a thin and fairly long tail extends from your tailbone, ending in a prehensile tail spade."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "body-length"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your head swells out until it is mushroom-shaped, with a slightly raised rim on the back side. Your eyes, nose, and mouth disappear, leaving you momentarily blind before a large vertical slit opens in the center of your curved head. Somehow, you're able to 'see' through the slit, as it seems to vibrate almost imperceptivity, sending out echolocation signals. Experimenting a little, you quickly learn to focus your new perception by controlling the slit's opening"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it thickens to a fairly tube-like shape from the hips upwards, losing all other curves and features until it looks like the shaft of a penis. Meanwhile, your legs become solid and sturdy, ending in digitigrade feet with three large claws"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it becomes smooth and hairless, with a some large veins visible beneath the skin"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it plumps up, forming nicely smooth and quite rounded buttocks. A momentary itching sensation around your tailbone resolves itself when a slender tail forms behind your back, ending in a triangular tail-spade"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "your head swells out until it is mushroom-shaped, with a slightly raised rim on the back side. Your eyes, nose, and mouth disappear, leaving you momentarily blind before a large vertical slit opens in the center of your curved head. Somehow, you're able to 'see' through the slit, as it seems to vibrate almost imperceptivity, sending out echolocation signals. Experimenting a little, you quickly learn to focus your new perception by controlling the slit's opening"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it thickens to a fairly tube-like shape from the hips upwards, losing all other curves and features until it looks like the shaft of a penis. Meanwhile, your legs become solid and sturdy, ending in digitigrade feet with three large claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it becomes smooth and hairless, with a some large veins visible beneath the skin"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it plumps up, forming nicely smooth and quite rounded buttocks. A momentary itching sensation around your tailbone resolves itself when a slender tail forms behind your back, ending in a triangular tail-spade"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it gets absorbed into and replaced by your body"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 10;
@@ -230,10 +230,10 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 10;
-	now sex entry is "Male"; 		[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 20;
 	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 0; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Red"; [ Current options are 'Outside' and 'Mall' and 'Park' and 'Red' Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 50; [ Length infection will make cock grow to if cocks]
@@ -248,16 +248,16 @@ When Play begins:
 	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]sexualized[or]phallic[or]twisted[at random]";
 	now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "cockcannon"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -269,7 +269,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -326,7 +326,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

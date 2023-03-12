@@ -38,7 +38,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Rubber Tiger"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Rubber Tiger"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Rubber Tigress" to infections of FelineList;
 	add "Rubber Tigress" to infections of FurryList;
 	add "Rubber Tigress" to infections of LatexList;
@@ -48,22 +48,22 @@ When Play begins:
 	add "Rubber Tigress" to infections of BipedalList;
 	add "Rubber Tigress" to infections of TailList;
 	now Name entry is "Rubber Tigress";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She swipes at you with her surprisingly sharp claws.[or]The rubber beast rubs itself on you, leaving a patch of orange and black rubber attached to your skin.[or]The beast draws back for a second, and then springs forward in a rush, knocking you to the ground.[or]Crouching low for a second, the tigress explodes into motion as she lashes you again and again with her rubber paws.[or]She opens her muzzle wide, revealing the inside of her pink rubber mouth, and her soft rubber teeth, before clamping her jaws down on your arm, strangely for being bitten by the squeaky rubber beast, it actually feels kind of good.[or]The tigress grabs some nearby fair prizes, and starts throwing them at you![or]Panting as she shows off her body, she turns to wiggle her ass at you, it isn't until you feel something on your leg that you realize she has rubbed her tail up the inside of your thighs, leaving a trail of rubber behind.[or]She slams herself into you recklessly, her hands moving to do all she can to spread her orange rubber-like coating to your body as well.[at random]";
 	now defeated entry is "[Rubber Tigress loss]";
 	now victory entry is "[Rubber Tigress attack]";
 	now desc entry is "[RubberTigress_Desc]";
-	now face entry is "bright and shiny orange and black striped face, its tiger-like appearance somehow conveying both sexiness and cuteness at the same time. With an overlarge muzzle and soft rubber whiskers, your rubber tiger ears cocked forward while your overlarge cat-like eyes stare out of your tiger"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "sleek and smooth, your body is built for stalking and hunting, with large exaggerated muscles and your hands and feet converted into overlarge tiger paws"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "[one of]orange and black striped[or]squeaky rubber[or]tiger-striped[or]tight rubberized[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
+	now face entry is "bright and shiny orange and black striped face, its tiger-like appearance somehow conveying both sexiness and cuteness at the same time. With an overlarge muzzle and soft rubber whiskers, your rubber tiger ears cocked forward while your overlarge cat-like eyes stare out of your tiger"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "sleek and smooth, your body is built for stalking and hunting, with large exaggerated muscles and your hands and feet converted into overlarge tiger paws"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]orange and black striped[or]squeaky rubber[or]tiger-striped[or]tight rubberized[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have long, tiger-like tail curling behind you, its orange and black stripes shining like the fine rubber it's made of in the light. As it lashes behind you, you can swear the thick rubber appendage is almost eagerly waiting for a chance to rub itself up against a partner."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]black rubber[or]tiger[or]rubber tiger[or]barbed rubber[or]sheathed rubber feline[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it seems to melt and reshape itself, your mouth opening wide in a yawn as it seems to stretch forward in a blob of rubber that slowly resolves itself into a new feline muzzle soft rubber whiskers springing out from the sides of your muzzle with soft sproinging noises. Your longer tongue explores your new mouth, finding the strange rubbery taste not at all displeasing as you play with your rubbery teeth, and your eyes go wide as they change to a more exaggerated feline look, while your ears change to stick out perkily from the top of your head"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "Your body seems to lengthen and change, becoming much more flexible and rubbery, as your hands and feet stretch out into overlarge tiger paws, making walking and picking things up slightly more difficult, although you get the hang of your new appendages after a minute"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it seems to stretch itself tight over your frame, its colors blending and blurring until you find yourself completely covered in orange and black striped rubber. The squeaky and smooth texture feeling amazing on you as stroke it in amazement"; [Your skin feels funny as (your text)" ]
-	now ass change entry is "you stumble for a minute, the rubber on your body seeming to pool itself together in a large blob hanging off your ass, your balance is thrown off for a second as the rubber stretches out and for a minute you think it is going to fall right off you to the ground. To your surprise however, the mass of rubber seems to lengthen into a long cylinder hanging off of you, and the telltale orange and black stripes soon show up on your new tiger-like tail. The mass of rubber seeming almost a part of you now as you adjust your balance to having a rubber tail lashing excitedly behind you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it seems to melt and reshape itself, your mouth opening wide in a yawn as it seems to stretch forward in a blob of rubber that slowly resolves itself into a new feline muzzle soft rubber whiskers springing out from the sides of your muzzle with soft sproinging noises. Your longer tongue explores your new mouth, finding the strange rubbery taste not at all displeasing as you play with your rubbery teeth, and your eyes go wide as they change to a more exaggerated feline look, while your ears change to stick out perkily from the top of your head"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "Your body seems to lengthen and change, becoming much more flexible and rubbery, as your hands and feet stretch out into overlarge tiger paws, making walking and picking things up slightly more difficult, although you get the hang of your new appendages after a minute"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it seems to stretch itself tight over your frame, its colors blending and blurring until you find yourself completely covered in orange and black striped rubber. The squeaky and smooth texture feeling amazing on you as stroke it in amazement"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "you stumble for a minute, the rubber on your body seeming to pool itself together in a large blob hanging off your ass, your balance is thrown off for a second as the rubber stretches out and for a minute you think it is going to fall right off you to the ground. To your surprise however, the mass of rubber seems to lengthen into a long cylinder hanging off of you, and the telltale orange and black stripes soon show up on your new tiger-like tail. The mass of rubber seeming almost a part of you now as you adjust your balance to having a rubber tail lashing excitedly behind you"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "you gasp and moan, feeling like something is massaging your cock, it feels as if your cock has been stuffed into a mold and is now reshaping itself under the invisible pressure, and it feels so good while it does so. Looking down you can see your cock narrowing into a long tapered point, with soft barbs covering it from the tip until the midpoint, more surprisingly though, it seems made entirely of black rubber, like some strange sort of exotic dildo, as it sticks out of your new white rubber sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 18;
@@ -71,35 +71,35 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 14;
-	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 45;
-	now lev entry is 6;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 11;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Fair";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 12;  [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 3;  [ Size of balls ]
-	now Nipple Count entry is 0;  [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 2;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 11; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Fair"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 3; [ Size of balls ]
+	now Nipple Count entry is 0; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 2; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
-	now libido entry is 30;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "Tiger patch";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 67;  [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "sleek";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is "Tiger patch"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 67; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "sleek"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]feline[or]tigrine[at random]";
 	now magic entry is false;
-	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -110,7 +110,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -167,7 +167,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

@@ -35,9 +35,9 @@ Section 1 - Fighting and Capturing the Brute
 
 to say demonbrutedesc:
 	setmongender 3;
-	follow the monster combat mode rule;  [select the combat mode for first-strike]
+	follow the monster combat mode rule; [select the combat mode for first-strike]
 	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 10;  [reset likelihood of alt attack]
+	now alt1chance entry is 10; [reset likelihood of alt attack]
 	if DBCaptureQuestVar is 5:
 		say "The large demon stretches its body, ropes of muscles rippling under dark purple skin and the spade-tipped tail whipping through the air. Then it turns its head towards you, red eyes glowing with hatred. With a roar, it rushes forward with outstretched claws.";
 	else:
@@ -327,27 +327,27 @@ to say Brutus_DBCapture:
 				let num be sortorder entry;
 				now sextablerun is 1;
 				if num is 1:
-					say "[dbcapturesex_01]";  [fuck it]
+					say "[dbcapturesex_01]"; [fuck it]
 				else if num is 2:
-					say "[dbcapturesex_02]";  [spit roast]
+					say "[dbcapturesex_02]"; [spit roast]
 				else if num is 3:
-					say "[dbcapturesex_03]";  [DP]
+					say "[dbcapturesex_03]"; [DP]
 				else if num is 4:
-					say "[dbcapturesex_04]";  [tag team]
+					say "[dbcapturesex_04]"; [tag team]
 				else if num is 5:
-					say "[dbcapturesex_05]";  [Brutus fucks]
+					say "[dbcapturesex_05]"; [Brutus fucks]
 				else if num is 6:
-					say "[dbcapturesex_06]";  [bj]
+					say "[dbcapturesex_06]"; [bj]
 				else if num is 7:
-					say "[dbcapturesex_07]";  [cunn]
+					say "[dbcapturesex_07]"; [cunn]
 				else if num is 8:
-					say "[dbcapturesex_08]";  [vaginal]
+					say "[dbcapturesex_08]"; [vaginal]
 				else if num is 9:
-					say "[dbcapturesex_09]";  [anal]
+					say "[dbcapturesex_09]"; [anal]
 				else if num is 10:
-					say "[dbcapturesex_10]";  [Brutus rides - vag]
+					say "[dbcapturesex_10]"; [Brutus rides - vag]
 				else if num is 11:
-					say "[dbcapturesex_11]";  [Brutus rides - anal]
+					say "[dbcapturesex_11]"; [Brutus rides - anal]
 				wait for any key;
 		else:
 			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
@@ -537,20 +537,20 @@ to say Nermine_DemonToothTrade:
 						end the story saying "An enraged demon brute dragged you off to hell.";
 					else if fightoutcome >= 30: [fled]
 						say "     Seems like this was a bit too much for you to take on. Running out of the building, closely followed by the enraged demon, you flee for your life and only barely make an escape. Well, there goes your one and only try for this ritual. But then, maybe that's for the best...";
-						now DBCaptureQuestVar is 99;   [ritual failed]
+						now DBCaptureQuestVar is 99; [ritual failed]
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 						say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to turn into a fine purple mist - but instead of dispersing in the air as before, it swirls around as one tight mass. The cloud of mist wavers as if it's fighting against some pull, then is drawn towards the pentagram in an elongated stream. Whirling around in an ever-tightening spiral, the purple mist finally is absorbed by the now blackened demon tooth in the brazier. As the last bit of it vanishes, the fire and surrounding candles are blown out by a sudden wind, silence falling over the room only disturbed by quiet ticking sounds of the slowly cooling brazier.";
 						WaitLineBreak;
 						say "     Looks like it worked. You carefully fish out the tooth from amongst the ashes and put it in your pocket, then make your way back to Nermine's shop. The jackalwoman seems just a bit surprised when you hand her the demon tooth. 'Congratulations. Nermine is glad you were not eaten. Rare to see business with demons work out.' She looks closely at the tooth, then continues 'One can feel it struggling to get out, your captive. Might even break free over time - let me put a stop to that.' Opening a box in one of the many shelves, the jackalwoman grabs a rough chunk of clear crystal, then touches it with the sharp end of the tooth and murmurs something. A swirl of dark purple flows from the contact point, filling the center of the crystal with a wavering cloud. Setting the changed crystal back into its box, Nermine says 'There, this is the demon power your captive no longer has - and payment for Nermine. He is controllable now.'";
 						say "     With skilled fingers, Nermine clamps the tooth into a small metal socket with a loop on the back and pulls a leather string through that. She hands you your new demontooth amulet and leans close to whisper some magical words you can use to summon the captured demon from within.";
-						now DBCaptureQuestVar is 5;   [captured and controlled]
+						now DBCaptureQuestVar is 5; [captured and controlled]
 						now demon brute is tamed;
 						add "Tamed" to Traits of demon brute;
 						LineBreak;
 						say "     (Brutus the demon brute is now a possible ally! You can make him your active ally by typing [bold type][link]ally Brutus[end link][roman type] or [bold type][link]ally demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Brutus[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				else:
 					say "     Getting cold feet at almost he last second, you blow out the candles and douse the brazier. Well, there goes your one and only try for this ritual. With the herbs already up in smoke, you won't have any for a second try. But then, maybe that's for the best...";
-					now DBCaptureQuestVar is 99;  [failed]
+					now DBCaptureQuestVar is 99; [failed]
 			else:
 				say "     As you shake your head, the jackalwoman says 'Nermine cannot help you unless you bring enough demon essence to paint the needed symbols. Go out and gather...' She describes the amount you need, which you'd say translates to three bottles of demon seed.";
 		else:
@@ -1817,22 +1817,22 @@ When Play begins:
 	add "Demon Brute" to infections of BipedalList;
 	add "Demon Brute" to infections of TailList;
 	now Name entry is "Demon Brute";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The brute [one of]throws a powerful punch[or]swings a great fist[or]begins to kick wildly with powerful legs[at random].";
 	now defeated entry is "[demon brute loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[demon brute wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[demonbrutedesc]";  [ Description of the creature when you encounter it.]
-	now face entry is "very inhuman, with a pair of slits for nostrils, sharp teeth, and yellow eyes with red slitted pupils. The top of your head is crowned by three matching pairs of horns, curved and getting smaller front to back";  [ Face description, format as "Your face is (your text)"]
-	now body entry is "now large and muscle-bound, any body-builder would be proud to have it";  [ Body Description, format as "Your Body is (your text)."]
+	now desc entry is "[demonbrutedesc]"; [ Description of the creature when you encounter it.]
+	now face entry is "very inhuman, with a pair of slits for nostrils, sharp teeth, and yellow eyes with red slitted pupils. The top of your head is crowned by three matching pairs of horns, curved and getting smaller front to back"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "now large and muscle-bound, any body-builder would be proud to have it"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "deep purple";
 	now tail entry is "You have a long demon tail that sways back and forth behind you, equipped with a spaded tip and everything.";
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]";
-	now face change entry is "you begin to feel your skull reshaping under your skin. Your nose disappears, leaving a pair of slits. A strange feeling in your mouth heralds your teeth changing, sharpening and becoming longer to give you a monstrous smile. Finally three pairs of horns grow out of the top of your head, with the front pair the largest, the others getting smaller towards the back. Even your eyes have changed, the white parts now yellow and around red, slitted pupils"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now face change entry is "you begin to feel your skull reshaping under your skin. Your nose disappears, leaving a pair of slits. A strange feeling in your mouth heralds your teeth changing, sharpening and becoming longer to give you a monstrous smile. Finally three pairs of horns grow out of the top of your head, with the front pair the largest, the others getting smaller towards the back. Even your eyes have changed, the white parts now yellow and around red, slitted pupils"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "your arms and legs begin to grow longer and more muscular. Your chest widens as well.";
 	now skin change entry is "you begin to feel a strange burning sensation. You look down, and realize that your skin has turned a deep shade of purple";
-	now ass change entry is "you feel it becoming tighter, leaner, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "you feel it becoming tighter, leaner, and more fit. This is followed by a strange feeling at the base of your spine, and then there is a very strange, and painful, burning sensation, as if your flesh is boiling and liquefying. The pain lasts for some time, but, when it finally subsides, you can feel your new, long demon tail sway back and forth behind you, equipped with a spaded tip and everything"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it begins to grow thicker, large bumps sprouting up all across its surface";
 	now str entry is 20;
 	now dex entry is 9;
@@ -1856,19 +1856,19 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 30;
-	now loot entry is "demon seed";     [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 50;         [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now loot entry is "demon seed"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]muscular[or]powerful[at random]";
-	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
-	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now type entry is "demonic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is true; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "demonbrute"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
@@ -1879,7 +1879,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1936,7 +1936,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -2004,7 +2004,7 @@ this is the bruteforce rule:
 	now alt1chance entry is 5;
 	choose row MonsterID from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
-	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );  [double damage]
+	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [double damage]
 	if HardMode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 		now dam is (dam * 150) divided by 100;
 		say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";

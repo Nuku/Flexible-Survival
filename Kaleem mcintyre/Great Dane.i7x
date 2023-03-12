@@ -81,7 +81,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Great Dane"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Great Dane"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Great Dane" to infections of CanineList;
 	add "Great Dane" to infections of FurryList;
 	add "Great Dane" to infections of NatureList;
@@ -94,13 +94,13 @@ When Play begins:
 	now Name entry is "Great Dane"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Great Dane Fighter";
 	now enemy Name entry is "Rogue";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The Great Dane attacks with a blinding series of punches![or]The Great Dane kicks you hard enough that spit flies free from your [FaceSpeciesName of Player in lower case] mouth![or]The Great Dane uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane sends a right hook firmly across your jaw![or]The Great Dane slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane kick you in the chest forcing air to gush out from your lungs![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheGreat Dane]"; [ Text when monster loses. Change 'Great Dane' as above. ]
 	now victory entry is "[losetoGreat Dane]"; [ Text when monster wins. Change 'Great Dane' as above. ]
 	now desc entry is "[Great Danedesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "somewhat rectangular shaped as you have a flat muzzle, square jaw, and strong canine chin jutting out from your face. With dark [one of]green[or]brown[or]azure[at random]colored eyes the Great Dane face you now possess is something to be feared, especially as you wrinkle your overly droopy lips from over your impressive fangs. Oddly, or maybe cutely enough, your nose is pink in color and your ears are sticking up onto your head in a puppy-like manner"; [ Face. Format as Your face is [Face of Player]. ]
-	now body entry is "muscular and toned to perfection enough to rival that of a pro boxer. With your biceps literally bulging as you curl your arms together you look something like a walking wet dream or a furry porn star as your body has lost almost every trace of fat that could be found to supplement the strength behind your new form. Your torso possesses a firm six pack, while your chest looks about though it's been cut from the finest marble and yet your most striking feature is the black spot on your chest where your heart would be. This spot, by the way, is dark gray, almost black for some reason"; [ Body. Format as "Your body is [Body of Player]." ]
+	now face entry is "somewhat rectangular shaped as you have a flat muzzle, square jaw, and strong canine chin jutting out from your face. With dark [one of]green[or]brown[or]azure[at random]colored eyes the Great Dane face you now possess is something to be feared, especially as you wrinkle your overly droopy lips from over your impressive fangs. Oddly, or maybe cutely enough, your nose is pink in color and your ears are sticking up onto your head in a puppy-like manner"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "muscular and toned to perfection enough to rival that of a pro boxer. With your biceps literally bulging as you curl your arms together you look something like a walking wet dream or a furry porn star as your body has lost almost every trace of fat that could be found to supplement the strength behind your new form. Your torso possesses a firm six pack, while your chest looks about though it's been cut from the finest marble and yet your most striking feature is the black spot on your chest where your heart would be. This spot, by the way, is dark gray, almost black for some reason"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "dense bluish gray"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Your ass is tightly packed with muscles while your long, but thin tail is curved upwards and wagging slightly."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]canid[or]thick and tapered[or]dark red almost maroon[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
@@ -133,16 +133,16 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is "trophy bandage"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 35; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]brawny[or]beefy[or]sturdy[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "powerstrike1"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -154,7 +154,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -211,7 +211,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

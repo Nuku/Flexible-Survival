@@ -124,7 +124,7 @@ to say Yamato Dragon attack:
 				else if MYDAM is 3 or player is twistcapped:
 					say ". Beleaguered cries, your [if Cock Count of Player > 1]unattended dicks eagerly spend their [Cum Load Size of Player] load across your torso, dripping down to the earth below in the wake of his release[else if Player is male]unattended dick eagerly spends its [Cum Load Size of Player] load across your torso, dripping down to the earth below in the wake of his release[else if Player is female]unattended cunt[sfn] eagerly gush against the open air, dripping down to the earth below in the wake of his release[else]your protests are undermined by your own tainted lust[end if], belly gradually bloating as you abide every last drop of his release, finding yourself lost in a stupor of wanton hunger.";
 					say "     His cock gradually softening, the dragon pulls you free of it, the wet sound of its departure filling the [if daytimer is night]night [end if]sky before he descends and setting you down onto the ground once more. The dragon seems both very pleased with himself and with his exceptional little cum dumpster, thick tongue offering you a slight show of affection before departing. It takes you awhile to recover from your bloated and fatigued self, but in due time you find the clarity to gather your things, departing once more.[mimpregchance]";
-				if MYDGM is 0, now MYDGM is 1;    [now familiar w/Yamato's impressive size]
+				if MYDGM is 0, now MYDGM is 1; [now familiar w/Yamato's impressive size]
 				if MYDAM is 0:
 					now MYDAM is 1;
 				else if MYDAM < 3 and player is not twistcapped and "Microwaved" is listed in feats of Player:
@@ -213,7 +213,7 @@ to say Yamato Dragon attack:
 					say "     [if scalevalue of Player > 4]Impressive in size as you are, the serpent is still quite larger than you, making you unsure of how he'll even be able to fit his massive dick inside you[else if scalevalue of Player is 4]Fairly large as you are, the serpent is substantially larger, making you unsure of how he'll even be able to fit his massive dick inside you[else]Given how massive the serpent is compared to you, his dick is absolutely terrifying! There's no way that thing will fit inside you without splitting you in half[end if]; regardless, he seems unphased by the potential limitations of this prospect, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 					say "     Deep rumbles of tainted need escaping the dragon's lips, he sinks each successive inch at a relentless pace, even when it [if scalevalue of Player is 3]quickly[else]eventually[end if] reaches your perceived limitations, the overwhelming sensation of such an intense violation rising to seemingly impossible heights until you[if scalevalue of Player is 3], somehow,[end if] take his cock's head.";
 					say "     Pulling you back, against his rough frame, you're forced to watch yourself as he plunges ever-deeper, belly [if scalevalue of Player is 3]already[else]quickly[end if] bulging with his overwhelming intrusion. It is clear now that he commands some otherworldly power, allowing him to utterly break past your previous limitations, though this doesn't spare you from the sheer intensity of the sensation, making it a fight to merely stay conscious.";
-					if MYDGM is 0, now MYDGM is 1;    [now familiar w/Yamato's impressive size]
+					if MYDGM is 0, now MYDGM is 1; [now familiar w/Yamato's impressive size]
 				else if MYDAM is 1 and player is not twistcapped:
 					say "     With an audible gulp[if HP of Player > 0 or player is submissive], and even though you'd normally be a bit more complicit to these circumstances[end if], you can't help but feel ill-at-ease for what is about to transpire; regardless, he seems unphased by your present anxiety, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 					say "     Deep rumbles of tainted need escaping the dragon's lips, he sinks each successive inch at a relentless pace, the overwhelming sensation of such an intense violation rising to seemingly impossible heights until you take his cock's head. Pulling you back, against his rough frame, you're forced to watch yourself as he plunges ever-deeper, belly [if scalevalue of Player is 3]already[else]quickly[end if] bulging with his overwhelming intrusion. As tightly fitting as you remain, it appears that you're getting slightly better as the creature's undersized cocksleeve.";
@@ -237,7 +237,7 @@ to say Yamato Dragon attack:
 				else if MYDAM is 3 or player is twistcapped:
 					say "     Wanton moans squeezed from your lips, [if Player is male] your own, strained cock[smn] eagerly spending your [Cum Load Size of Player] load across your torso and the dragon's scales in the wake of his release[else if Player is female]cunt[sfn] eagerly dripping down across your crotch and the dragon's scales in the wake of his release[else]elicited by your tainted lust[end if], belly [if scalevalue of Player is 3]quickly[else]gradually[end if] bloating as you take every last drop of his release, and losing yourself in a stupor of twisted hunger.";
 					say "     Finally wrenching his softening cock from your abused, [bodytype of Player] form, the loud, wet sound of its departure filling the air, he casually sets you back down on the ground. The beast seems both very pleased with himself and with his exceptional little cum dumpster, thick tongue offering you a slight show of affection against your bloated self before departing. It takes you awhile to recover from your stretched and fatigued self, but in due time you find your clarity and gather your things, departing once more.[mimpregchance]";
-				if MYDGM is 0, now MYDGM is 1;    [now familiar w/Yamato's impressive size]
+				if MYDGM is 0, now MYDGM is 1; [now familiar w/Yamato's impressive size]
 				if MYDAM is 0:
 					now MYDAM is 1;
 				else if MYDAM < 3 and player is not twistcapped and "Microwaved" is listed in feats of Player:
@@ -911,13 +911,14 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Yamato Dragon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Yamato Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Yamato Dragon" to infections of ReptileList;
 	add "Yamato Dragon" to infections of FeralList;
 	add "Yamato Dragon" to infections of MythologicalList;
 	add "Yamato Dragon" to infections of FemaleList;
 	add "Yamato Dragon" to infections of BarbedCockList;
 	add "Yamato Dragon" to infections of InternalCockList;
+	add "Yamato Dragon" to infections of InternalBallsList;
 	add "Yamato Dragon" to infections of QuadrupedalList;
 	add "Yamato Dragon" to infections of FlightList;
 	add "Yamato Dragon" to infections of TailList;
@@ -925,9 +926,9 @@ When Play begins:
 	add "Yamato Dragon" to infections of FirebreathList;
 	add "Yamato Dragon" to infections of TailweaponList;
 	now Name entry is "Yamato Dragon";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The serpentine dragon[or]The Yamato Dragon[or]It[purely at random] [one of]snaps its neck forward like a snake to bite at you.[or]whips its tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its clawed paws.[at random]";
 	now defeated entry is "[Yamato Dragon loss]";
 	now victory entry is "[Yamato Dragon attack]";
@@ -966,16 +967,16 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "dragon scale";
 	now lootchance entry is 40;
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]elongated[at random]";
 	now type entry is "[one of]draconic[or]serpentine[at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0;
 	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
@@ -987,7 +988,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1044,7 +1045,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

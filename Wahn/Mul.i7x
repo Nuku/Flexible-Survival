@@ -106,12 +106,12 @@ instead of fucking Mul:
 
 instead of going East from Dark Hallway 1 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
 	now inasituation is true;
-	now OrcSpecialFightNumber is 1;   [meeting Mul]
+	now OrcSpecialFightNumber is 1; [meeting Mul]
 	challenge "Orc Warrior";
 
 instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
 	now inasituation is true;
-	now OrcSpecialFightNumber is 1;   [meeting Mul]
+	now OrcSpecialFightNumber is 1; [meeting Mul]
 	challenge "Orc Warrior";
 
 Section 2 - Locker Room Sex
