@@ -128,8 +128,8 @@ When Play begins:
 	now victory entry is "[DireWolfLoss]";
 	now desc entry is "[DireWolfDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dire wolf face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feral canine[or]dire wolf[or]lupine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]

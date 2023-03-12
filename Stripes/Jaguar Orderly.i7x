@@ -127,7 +127,7 @@ When Play begins:
 	now desc entry is "[jaguardesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "feline head with dark spots covering your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "stocky, but strong. You can feel the powerful muscles under your skin. Your feline paws clench into hard fists when angry"; [ Body Description, format as "Your Body is (your text)."]
-	now skin entry is "golden-yellow fur with black rosettes all over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "golden-yellow fur with black rosettes all over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "Behind you lashes a spotted, feline tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "deep, angry red"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "remolds itself into a blunt, feline muzzle with powerful jaws and sharp teeth"; [ face change text. format as "Your face feels funny as (your text)." ]

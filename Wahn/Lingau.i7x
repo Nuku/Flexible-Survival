@@ -240,7 +240,7 @@ When Play begins:
 	now victory entry is " ";
 	now desc entry is "     This isn't supposed to be an actual infection, just a stand-in - please report how you saw this.";
 	now face entry is "fairly inhuman, quite wide and with a pair of slits for nostrils. Your toothless mouth stretches the whole width of your head, harboring a quite long and broad tongue";  [ Face description, format as "Your face is (your text)"]
-	now body entry is "now broad, yet moderately muscled";  [ Body Description, format as "Your Body is (your text)"]
+	now body entry is "now broad, yet moderately muscled";  [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "yellow, bumpy";
 	now tail entry is "";
 	now cock entry is "tapered";

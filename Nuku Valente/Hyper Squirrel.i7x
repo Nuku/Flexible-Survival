@@ -11,6 +11,7 @@ Hyper Squirrel Girl	"Hyper Squirrel Girl"
 
 Hyper Squirrel Girl is a situation.
 ResolveFunction of Hyper Squirrel Girl is "[ResolveEvent Hyper Squirrel Girl]".
+Sarea of Hyper Squirrel Girl is "Outside".
 hsrp is a number that varies.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
 nosquirrelanal is a truth state that varies. nosquirrelanal is usually false.

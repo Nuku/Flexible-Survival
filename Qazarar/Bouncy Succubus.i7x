@@ -191,8 +191,8 @@ When Play begins:
 	now victory entry is "[BouncySuccubusLoss]";
 	now desc entry is "[BouncySuccubusDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "smooth and beautiful, with curling devilish horns"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "humanoid in shape, but inhumanly bouncy"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]rubbery[or]red rubber[or]elastic[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "humanoid in shape, but inhumanly bouncy"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]rubbery[or]red rubber[or]elastic[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a thin and winding tail that ends in a cute spade."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]demonic[or]infernal[or]tainted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it twists into a new shape, leaving you with a cute and feminine face"; [ face change text. format as "Your face feels funny as (your text)." ]

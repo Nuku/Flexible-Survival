@@ -747,8 +747,8 @@ When Play begins:
 	now defeated entry is "[fsdm loss]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[fsdm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[fsdm desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth. Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck"; [ Reference "You have a (your text) face."]
-	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication"; [ Body Description, format as "Your Body is (your text)"]
+	now face entry is "very much draconic in shape, adorned with a set of barbed and savage teeth. Clearly aquatic in design, ridges and fins adorn the sides of your head, and you find it a challenge to maneuver any building with such an elongated neck"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "distinctly bloated and bulky fare, though somewhat streamlined in presentation, inferring that you'd be better suited for hauling it underwater, if your webbed and finned limbs were any indication"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "[one of]light blue, smooth[or]light blue[or]light blue, delicate[at random]"; [Reference "Your body is covered in (your text) skin"]
 	now tail entry is "You have a long, somewhat bulky tail, top adorned with a sail-like fin.";
 	now cock entry is "[one of]spade-tipped and tapered[or]black[at random]";

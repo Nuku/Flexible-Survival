@@ -584,7 +584,7 @@ name	desc	weight	object
 
 spiked collar is equipment.
 It is not temporary.
-The placement of spiked collar is "face".
+The placement of spiked collar is "neck".
 The slot of spiked collar is "neck".
 The descmod of spiked collar is "You're wearing a black leather collar around your neck, one with rounded metal spikes protruding from it. You can't help but feel like a badass with this on.".
 the scent of spiked collar is "This collar smells like leather with a mix of polished metal.".
@@ -596,7 +596,7 @@ name	desc	weight	object
 
 silk collar is equipment.
 It is not temporary.
-The placement of silk collar is "face".
+The placement of silk collar is "neck".
 The slot of silk collar is "neck".
 The descmod of silk collar is "Around your neck is a fuzzy silk collar, made with silky-smooth material and feeling nice to the touch. All you can think about is how wonderful it feels.".
 the scent of silk collar is "The silky collar smells like fuzz.".
@@ -608,7 +608,7 @@ name	desc	weight	object
 
 nametag collar is equipment.
 It is not temporary.
-The placement of nametag collar is "face".
+The placement of nametag collar is "neck".
 The slot of nametag collar is "neck".
 The descmod of nametag collar is "Worn around your neck is a red collar, with a metal nametag hanging off of it. It's engraved with your name, proudly displaying it to the world.".
 the scent of nametag collar is "Your collar smells like nylon, with a hint of metal from the nametag.".

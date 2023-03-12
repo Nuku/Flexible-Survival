@@ -3288,8 +3288,10 @@ to TruthVariableSave:
 			now TruthVarValue entry is inheat;
 		-- "insectlarva":
 			now TruthVarValue entry is insectlarva;
-		-- "internalbypass":
-			now TruthVarValue entry is internalbypass;
+		-- "internalCockbypass":
+			now TruthVarValue entry is internalCockbypass;
+		-- "internalBallsbypass":
+			now TruthVarValue entry is internalBallsbypass;
 		-- "isHellhound":
 			now TruthVarValue entry is isHellhound;
 		-- "ishunting":
@@ -6966,8 +6968,10 @@ to VariableTruthLoad:
 					now inheat is TruthVarValue entry;
 				-- "insectlarva":
 					now insectlarva is TruthVarValue entry;
-				-- "internalbypass":
-					now internalbypass is TruthVarValue entry;
+				-- "internalCockbypass":
+					now internalCockbypass is TruthVarValue entry;
+				-- "internalBallsbypass":
+					now internalBallsbypass is TruthVarValue entry;
 				-- "isHellhound":
 					now isHellhound is TruthVarValue entry;
 				-- "ishunting":

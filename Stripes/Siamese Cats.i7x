@@ -321,7 +321,7 @@ When Play begins:
 	now desc entry is "[siamesecatdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a feline head with large ears and a darker area over your muzzle and face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "slender and feline in form, with sharp claws on your paw-like hands"; [ Body Description, format as "Your body is (your text)."]
-	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "smooth, creamy fur which grows darker at the ends of your limbs to cover your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a long, slender cat's tail covered in dark fur."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "russet brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts into a feline muzzle. Your ears become large and dark colored, as does your muzzle and much of your face"; [ face change text. format as "Your face feels funny as (your text)." ]

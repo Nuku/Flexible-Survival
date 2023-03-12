@@ -108,8 +108,8 @@ When Play begins:
 	now victory entry is "[peacockvictory]";
 	now desc entry is "[peacockdesc]";
 	now face entry is "bird-like. You pass quite a bit of your time admiring it"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[peacockskin]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "tall and slender; your legs are double-jointed and bird-like, while your arms have been mutated into feathered wings, ending with five extra-thick feathers, flexible and mobile as fingers"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[peacockskin]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "[peacocktail]."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]thin red[or]undulated[or]avian-like[at random]";
 	now face change entry is "your entire head gets reshaped in the shape of a bird head"; [ face change text. format as "Your face feels funny as (your text)." ]

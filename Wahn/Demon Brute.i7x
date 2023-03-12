@@ -1825,7 +1825,7 @@ When Play begins:
 	now victory entry is "[demon brute wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[demonbrutedesc]";  [ Description of the creature when you encounter it.]
 	now face entry is "very inhuman, with a pair of slits for nostrils, sharp teeth, and yellow eyes with red slitted pupils. The top of your head is crowned by three matching pairs of horns, curved and getting smaller front to back";  [ Face description, format as "Your face is (your text)"]
-	now body entry is "now large and muscle-bound, any body-builder would be proud to have it";  [ Body Description, format as "Your Body is (your text)"]
+	now body entry is "now large and muscle-bound, any body-builder would be proud to have it";  [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "deep purple";
 	now tail entry is "You have a long demon tail that sways back and forth behind you, equipped with a spaded tip and everything.";
 	now cock entry is "[one of]demonic[or]demon[or]infernal[or]bump-ridden[at random]";

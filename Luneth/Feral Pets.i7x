@@ -59,6 +59,11 @@ to say DismissSnips:
 	else: [dismissing him in the Computer Lab]
 		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, clearly more than happy to be able to rest.";
 
+an everyturn rule:
+	if Player is in Traveling:
+		if Snips is in Traveling and a random chance of 1 in 3 succeeds:
+			say "     [one of]Raising his eyestalks to look at you, Snips gives a few snaps of its claws, then starts to rush forward on many legs, doing its best to keep up with you. [or]Raising both claws as if to take on the world, Snips moves to your side. [at random][line break]";
+
 Table of GameCharacterIDs (continued)
 object	name
 Snips	"Snips"
@@ -683,6 +688,10 @@ to say DismissHobo:
 	else: [dismissing him in the Computer Lab]
 		say "     Walking over to the cubicle that Hobo has made into his own little house, you lean down, giving the faithful dog a tight hug. With a final ear rub that leaves Hobo's tail wagging, you tell him to take it easy at home for awhile.";
 
+an everyturn rule:
+	if Player is in Traveling:
+		if Hobo is in Traveling and a random chance of 1 in 3 succeeds:
+			say "     [one of]As you get going, Hobo immediately makes a beeline to your side, keeping a lookout with his sharp eyes, and sharper nose and ears. [or]Waggig tail held high, Hobo trots a few steps in front of you as you set out, keeping a lookout for possible danger. [at random][line break]";
 
 Table of GameCharacterIDs (continued)
 object	name

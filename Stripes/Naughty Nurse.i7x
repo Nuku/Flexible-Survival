@@ -229,7 +229,7 @@ When Play begins:
 	now desc entry is "[VixenNurseDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "a vulpine head with a long muzzle and teeth. You have steely-gray eyes and silver fur covers your face"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "seductively curved, with a tight, bubble butt. Your hands have hard, black claws at their fingertips and your feet are digitigrade paws now"; [ Body Description, format as "Your body is (your text)."]
-	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "smooth, silver-colored fur over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "From the base of your spine, you have a silver fox's luxurious tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "steely-gray vulpine"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and stretches, gaining a long, slender muzzle which ends in a black nose and whiskers. Silvery fur covers his muzzle as your ears move upwards and grow into pointed, vulpine ears"; [ face change text. format as "Your face feels funny as (your text)." ]

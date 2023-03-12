@@ -139,8 +139,8 @@ When Play begins:
 	now victory entry is "[VixenKunoichiLoss]";
 	now desc entry is "[VixenKunoichiDesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "A"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "A"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]A[or]A[or]A[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "A"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]A[or]A[or]A[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "A"; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]A[or]A[or]A[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "A"; [ face change text. format as "Your face feels funny as (your text)." ]

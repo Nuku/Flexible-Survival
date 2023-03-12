@@ -34,7 +34,6 @@ NPC Nexus	"NPC Nexus"
 NPC Nexus	"nothing"
 NPC Nexus	"nowhere"
 SituationNexus	"SituationNexus"
-Travelling	"Travelling"
 
 NPC Nexus is a room.
 Description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord. Also - DON'T PANIC - Trixie will be along in the next turn to pick you up for a trip back into the bunker".
@@ -44,12 +43,11 @@ Description of SituationNexus is "This is the extradimensional storage room for 
 
 Table of GameRoomIDs (continued)
 Object	Name
-Travelling	"Travelling"
+Traveling	"Traveling"
 
-Travelling is a room.
-Description of Travelling is "You set out towards your destination...".
-The earea of Travelling is "Outside".
-
+Traveling is a room.
+Description of Traveling is "You set out towards your destination...".
+The earea of Traveling is "Outside".
 
 Section 3 - Main Hub and other standard rooms
 

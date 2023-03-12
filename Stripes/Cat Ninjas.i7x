@@ -125,7 +125,7 @@ When Play begins:
 	now desc entry is "[ninjadesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a normal cat, with a small muzzle, green eyes and pointed ears"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "slender and flexible, with a feline form. You have sharp, retractable claws on your paw-like hands and footpaws"; [ Body Description, format as "Your body is (your text)."]
-	now skin entry is "orange tabby fur with brown stripes and lighter patches at your muzzle, chest and inner thighs. The fur is quite soft and feels good against your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "orange tabby fur with brown stripes and lighter patches at your muzzle, chest and inner thighs. The fur is quite soft and feels good against your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a long, slender cat's tail covered in orange fur with brown stripes."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "softly barbed cock"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts into a feline muzzle. Your ears become pointed and cat-like and your eyes become green with slit pupils for seeing in the dark"; [ face change text. format as "Your face feels funny as (your text)." ]

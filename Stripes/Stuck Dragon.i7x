@@ -1326,6 +1326,7 @@ When Play begins:
 	add "Horny Dragon" to infections of HermList;
 	add "Horny Dragon" to infections of TaperedCockList;
 	add "Horny Dragon" to infections of InternalCockList;
+	add "Horny Dragon" to infections of InternalBallsList;
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
 	add "Horny Dragon" to infections of OviImpregnatorList;
@@ -1503,6 +1504,7 @@ When Play begins:
 	add "Slutty Dragoness" to infections of HermList;
 	add "Slutty Dragoness" to infections of TaperedCockList;
 	add "Slutty Dragoness" to infections of InternalCockList;
+	add "Slutty Dragoness" to infections of InternalBallsList;
 	add "Slutty Dragoness" to infections of QuadrupedalList;
 	add "Slutty Dragoness" to infections of TailList;
 	add "Slutty Dragoness" to infections of OviImpregnatorList;

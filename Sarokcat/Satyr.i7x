@@ -138,8 +138,8 @@ When Play begins:
 	now victory entry is "[Satyr attack]";
 	now desc entry is "[Satyr_Desc]";
 	now face entry is "rough mostly human-like face, though the goat-like beard, goat horns, and the lusty look filling your eyes show it to truly be a satyr's"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "short and rather stocky. Your upper body is that of a well-built man, while your lower body rests on two exceptionally well-built goat-like legs, your nimble goat hooves ringing off the floor with every step"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]goat furred[or]tough[or]rugged[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "short and rather stocky. Your upper body is that of a well-built man, while your lower body rests on two exceptionally well-built goat-like legs, your nimble goat hooves ringing off the floor with every step"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]goat furred[or]tough[or]rugged[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a short, stubby goat tail positioned behind you, seeming to move jauntily with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]goat-like[or]bestial[or]satyr[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face shifts and changes, horns growing out of your forehead as a goat-like beard sprouts from your chin. You can feel your mind filling up with images of wine, women, and song, though with more emphasis on the women then the other two admittedly"; [ face change text. format as "Your face feels funny as (your text)." ]

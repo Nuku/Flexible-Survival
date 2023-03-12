@@ -150,8 +150,8 @@ When Play begins:
 	now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[wrwolfdesc]";
 	now face entry is "a long canine muzzle sticking out of your wolf-like head. Your mouth hangs open in a lupine grin, revealing your new sharp teeth"; [ Face description, format as "Your face is (your text)"]
-	now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now body entry is "lean and well muscled, your canine form standing easily on its new digitigrade legs. You're somewhat surprised that your paw-like hands are still able to do the things they could when still human"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "[one of]black furred[or]rugged furred[or]furry[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin."]
 	now tail entry is "You have a thick canine tail wagging happily behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]wolf[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it stretches out into a large lupine muzzle. At first you're a bit overwhelmed at the new scents you're experiencing, but soon you come to terms with it"; [ face change text. format as "Your face feels funny as (your text)." ]

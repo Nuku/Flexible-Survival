@@ -279,7 +279,7 @@ to say nullpowderuse:
 							else:
 								now Cock Count of Player is 0;
 								follow the cock descr rule;
-								say "     You apply the powder to all your rods. After a bit of work, they all shrink down to nothing. With no companion, your balls also disappear[if Player is internal], though it doesn't really make any visual difference[end if]";
+								say "     You apply the powder to all your rods. After a bit of work, they all shrink down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if]";
 						else:
 							decrease Cock Count of Player by 1;
 							follow the cock descr rule;
@@ -287,7 +287,7 @@ to say nullpowderuse:
 					else:
 						now Cock Count of Player is 0;
 						follow the cock descr rule;
-						say "     You apply the powder to your rod. After a bit of work, it shrinks down to nothing. With no companion, your balls also disappear[if Player is internal], though it doesn't really make any visual difference[end if]";
+						say "     You apply the powder to your rod. After a bit of work, it shrinks down to nothing. With no companion, your balls also disappear[if Player is internalBalls], though it doesn't really make any visual difference[end if]";
 				else:
 					if Cock Length of Player > 29:
 						decrease Cock Length of Player by 6;
@@ -311,7 +311,7 @@ to say nullpowderuse:
 				else:
 					decrease Ball Size of Player by 1;
 				follow the cock descr rule;
-				say "     You apply the powder to [if Player is internal]where your sack might be[else]your sack[end if]. After a while, they[if Player is internal] seem to[end if] shrink down to the point where you[if Player is internal], presumably,[end if] have [Ball Size Adjective of Player] [Balls].";
+				say "     You apply the powder to [if Player is internalBalls]where your sack might be[else]your sack[end if]. After a while, they[if Player is internalBalls] seem to[end if] shrink down to the point where you[if Player is internalBalls], presumably,[end if] have [Ball Size Adjective of Player] [Balls].";
 			now Trixieexit is 1;
 		else if calcnumber is 3:
 			if Player is not female:

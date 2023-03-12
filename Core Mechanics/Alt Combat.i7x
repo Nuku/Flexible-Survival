@@ -486,7 +486,7 @@ This is the player attack rule:
 			else:
 				say "[line break]You give [one of]your opponent[or]your enemy[or]the [EnemyNameOrTitle][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of Player] [one of]wang[or]cock[or]prick[purely at random][smn] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internal:
+		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internalBalls:
 			increase bonusattack by 1;
 			let dammy be 0;
 			now dammy is ( Ball Size of Player + a random number between 1 and 3);
