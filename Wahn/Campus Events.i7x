@@ -18,7 +18,7 @@ ResolveFunction of Marching Band is "[ResolveEvent Marching Band]".
 Sarea of Marching Band is "Campus".
 
 to say ResolveEvent Marching Band:
-	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position, once everyone's gotten off one last time. The horny group then marches off playing the national anthem as they make their way towards one of the fields.";
+	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blowjob, or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position, once everyone's gotten off one last time. The horny group then marches off playing the national anthem as they make their way towards one of the fields.";
 	increase score by 1;
 	now Marching Band is resolved;
 

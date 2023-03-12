@@ -232,7 +232,7 @@ to say sexwithSandra:
 		say "[sandrasex2]";
 	else if Player is neuter:
 		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, OK? Sorry.'";
-	else if HP of Sandra is 0 and player is male:
+	else if HP of Sandra is 0 and Player is male:
 		say "[sandrasex_leadin]";
 		say "[sandrasex1]";
 	else:
@@ -267,7 +267,7 @@ to say sandrasexmenu:
 	now title entry is "Cunnilingus";
 	now sortorder entry is 2;
 	now description entry is "Eat the bunny girl out";
-	if Player is male or ( player is female and rabbitsibling >= 2 ):
+	if Player is male or ( Player is female and rabbitsibling >= 2 ):
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 3;

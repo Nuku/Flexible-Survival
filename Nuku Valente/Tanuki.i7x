@@ -449,14 +449,14 @@ to say usetancoin:
 	say "[line break]     You flip the coin";
 	if internalbypass is false:
 		say "... It lands leaf-side up";
-		if Player is not male or (player is male and CockName of Player is not listed in infections of InternalCockList):
+		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalbypass is true;
 	else:
 		say "... It lands dragon-side up";
-		if Player is not male or (player is male and CockName of Player is not listed in infections of InternalCockList):
+		if Player is not male or (Player is male and CockName of Player is not listed in infections of InternalCockList):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";

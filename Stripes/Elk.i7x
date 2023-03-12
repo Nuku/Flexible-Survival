@@ -360,7 +360,7 @@ Usedesc of elk antler is "[elkantleruse]".
 It is temporary.
 
 to say elkantleruse:
-	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if Player is elkfaced and player is male]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
+	say "     Looking over the antler, you feel a strange compulsion that you don't resist[if Player is elkfaced and Player is male]. Placing the piece of horn against one of your own antlers, there is a strange, crunchy sound as they fuse together. This is soon followed by the tingle of the nanites spreading through you[else]. Placing the piece of horn against the side of your head, there is a strange, crunching sound as they fuse together. You can feel the bony chunk sinking into you even as the tingles of nanites begin[end if].";
 	setmonster "Elk";
 	choose row MonsterID from the Table of Random Critters;
 	if "Male Preferred" is listed in feats of Player:

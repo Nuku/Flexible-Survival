@@ -143,7 +143,7 @@ to say sblsex1:		[fuck skunkgirl]
 	CreatureSexAftermath "Skunk" receives "PussyFuck" from "Player";
 
 to say sblsex2:		[fellatio]
-	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blow job[if skrp is 1]. Your lower head moans in pleasure. '[one of]Mmmm... open wide[or]Take it all, slut[or]Suck us good, girl[at random],' she says excitedly[end if]. The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if Cock Length of Player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if]. You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
+	say "     The skunk runs her paws over your stiff cock, licking and kissing at it before opening her muzzle wide and giving you a blowjob[if skrp is 1]. Your lower head moans in pleasure. '[one of]Mmmm... open wide[or]Take it all, slut[or]Suck us good, girl[at random],' she says excitedly[end if]. The skunk's talented muzzle works over your dripping shaft, lavishing attention upon it[if Cock Length of Player > 12] and eventually managing to get the whole big thing stuffed down her throat[end if]. You moan and growl in pleasure at her expert work, eventually cumming hard and blasting your hot seed down her throat, feeding your buxom servant a heavy load of skunk cum.";
 	CreatureSexAftermath "Skunk" receives "OralCock" from "Player";
 
 to say sblsex3:		[skunkbeast tops player]
@@ -155,7 +155,7 @@ to say sblsex3:		[skunkbeast tops player]
 			break;
 	say "     As the skunk is running her paws over your body in tribute to her [if Player is purefemale]mistress[else]master[end if], you notice the scent of another in the air. A skunkbeast snuffles towards you, having been drawn by your scent[if skrp is 1]. The skunk face at your groin smiles at the sight of him. '[one of]Oh, look at how hung he is[or]Just what we need[or]Oh baby[at random]!' she moans excitedly, your shared cunt getting wet at the sight of him[end if]. You rumble happily and shift around and present your rump to him, offering your dripping cunt to the sexy beast. He growls and climbs atop your [bodydesc of Player] form, sinking his large cock into your skunkbeast body and stuffing you oh so wonderfully. As he pounds away at you, the skunk girl [if Player is male]licks and sucks at your cock until you cum down her throat[else]latches onto one of your nipples, nursing for your milk[end if]. When the skunkbeast atop you finally cums, you both growl loudly, loving the sensation of his ample load being blasted into your needy womb as he seeks to breed you.";
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Skunkbeast Lord";
-	if player is male:
+	if Player is male:
 		CreatureSexAftermath "Skunk" receives "OralCock" from "Player";
 
 to say sblsex4:		[cunnilingus]

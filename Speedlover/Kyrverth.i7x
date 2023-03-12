@@ -637,7 +637,7 @@ instead of fucking the Kyrverth:
 	else if KyrverthStage is 4:
 		say "     'It wouldn't fit - hell, I doubt that little body could even get me hard.'";
 	else if KyrverthStage is 6:
-		say "     'C'mon [one of]dude[or][if player is female]girl[else]man[end if][at random], you know it wouldn't fit.'";
+		say "     'C'mon [one of]dude[or][if Player is female]girl[else]man[end if][at random], you know it wouldn't fit.'";
 	else:
 		say "     'You're nice and all, but I really need to focus on my hoard'";
 
@@ -771,9 +771,9 @@ to say KyrverthLargePlayerAnal:
 	KyrverthSexInfect;
 
 to KyrverthSexInfect:
-	if player is male or player is herm:
+	if Player is male or player is herm:
 		infect "Horny Dragon";
-	else if player is female:
+	else if Player is female:
 		infect "Slutty Dragoness";
 
 Section 4 - Events
@@ -856,7 +856,7 @@ Sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
 
 when play begins: [flags for blocking this event]
 	add Strange Sighting to BadSpots of MaleList;
-	add Strange Sighting to badspots of FeralList;
+	add Strange Sighting to BadSpots of FeralList;
 	add Strange Sighting to BadSpots of FurryList;
 
 to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
@@ -896,7 +896,7 @@ Jewel Heist is resolved.
 
 when play begins: [flags for blocking this event]
 	add Jewel Heist to BadSpots of MaleList;
-	add Jewel Heist to badspots of FeralList;
+	add Jewel Heist to BadSpots of FeralList;
 	add Jewel Heist to BadSpots of FurryList;
 
 to say ResolveEvent Jewel Heist:
@@ -1033,23 +1033,23 @@ Valuable Museum Artifact is inactive.
 
 when play begins: [flags for blocking these events]
 	add Valuable Museum Artifact to BadSpots of MaleList;
-	add Valuable Museum Artifact to badspots of FeralList;
+	add Valuable Museum Artifact to BadSpots of FeralList;
 	add Valuable Museum Artifact to BadSpots of FurryList;
 	add Valuable Warehouse Artifact to BadSpots of MaleList;
-	add Valuable Warehouse Artifact to badspots of FeralList;
+	add Valuable Warehouse Artifact to BadSpots of FeralList;
 	add Valuable Warehouse Artifact to BadSpots of FurryList;
 	add Valuable RLD Artifact to BadSpots of MaleList;
-	add Valuable RLD Artifact to badspots of FeralList;
+	add Valuable RLD Artifact to BadSpots of FeralList;
 	add Valuable RLD Artifact to BadSpots of FurryList;
 	add Valuable Stables Artifact to BadSpots of MaleList;
-	add Valuable Stables Artifact to badspots of FeralList;
+	add Valuable Stables Artifact to BadSpots of FeralList;
 	add Valuable Stables Artifact to BadSpots of FurryList;
 	[Something to play with later, but not right now:		]
 	[let eventlist be {"Valuable Museum Artifact", "Valuable Warehouse Artifact", "Valuable RLD Artifact", "Valuable Stables Artifact"};
 	let badspotlist be {"guy", "feral", "furry"};
 	repeat with x running from 0 to 3:
 		repeat with y running from 0 to 3:
-			add (entry x of eventlist) to badspots of (entry y of badspotlist);]
+			add (entry x of eventlist) to BadSpots of (entry y of badspotlist);]
 
 
 to say ResolveEvent Valuable Museum Artifact:

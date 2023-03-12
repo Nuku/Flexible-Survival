@@ -31,7 +31,7 @@ to say CheetahWomanWins:
 
 
 To say CheetahWomanLoses:
-	if (player is male and Cock Length of Player <= 18) or player is female:
+	if (Player is male and Cock Length of Player <= 18) or Player is female:
 		say "     You find yourself considering having some fun with the cheetah woman. [bold type]Do you take advantage of the situation and use her to sate your lusts?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";

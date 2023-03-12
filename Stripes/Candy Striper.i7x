@@ -46,7 +46,7 @@ to say losetocandycoon:
 			if a random chance of x in 150 succeeds:
 				say "     Glancing down at you, he notices that you'd gotten hard while sucking him off and grins. 'Mmm... looks like someone's still up for more,' he giggles, pushing you down onto all fours. 'Now, where were we before you insisted on showing me how much you wanted my cock?'";
 				WaitLineBreak;
-				say "     You realize that he's still intent on fucking you even after the blow job, but you don't find yourself adverse to the prospect anymore. Lost in a rush of hormones from the girly coon's sweet seed, you move into position willingly for him this time. As you raise your ass for him, he pumps a hand over his waning erection[if anallevel is 3] while running a paw over your bottom. He pops a finger into his muzzle and draws it out slowly before working the wet digit into your anus to open you up[else], bringing it back up for another go[end if] before pressing his slick cock between your cheeks. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your cock[smn] while he pounds away at your ass with soft moans and squeals of pleasure. You can't help but respond in kind, succumbing further to your lusts. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.";
+				say "     You realize that he's still intent on fucking you even after the blowjob, but you don't find yourself adverse to the prospect anymore. Lost in a rush of hormones from the girly coon's sweet seed, you move into position willingly for him this time. As you raise your ass for him, he pumps a hand over his waning erection[if anallevel is 3] while running a paw over your bottom. He pops a finger into his muzzle and draws it out slowly before working the wet digit into your anus to open you up[else], bringing it back up for another go[end if] before pressing his slick cock between your cheeks. After a few strokes to enjoy the feel of your bottom against his hot-pink shaft, he presses its glans against your back passage and slowly sinks it into you. His paws move around to play with your cock[smn] while he pounds away at your ass with soft moans and squeals of pleasure. You can't help but respond in kind, succumbing further to your lusts. His hot-pink cock sinks into you again and again with practiced strokes. The stimulation quickly gets you quite aroused and you're leaking precum all over the coon's paws. Leaning overtop you, he licks and nibbles at your ears, moaning that you're such a nice fuck and a good patient who'll get his hot medicine real soon. True enough, in a few more strokes you can feel the pink raccoon thrust hard into you and pump his hot seed deep into your bowels. His paws work at your cock frantically, coaxing you to climax moments later.";
 				say "     Finished with you, the coon slides his spent shaft out and gives you a kiss, rich with the taste of cotton candy before leaving you to recover.";
 				now Libido of Player is ( Libido of Player + Libido of Player + libido entry ) / 3;
 				infect "Raccoon"; [extra infection for double-sex]
@@ -384,7 +384,7 @@ to say coonpetsex3:		[coon offers ass]
 	now Libido of Player is ( Libido of Player + 1 ) / 3;
 	NPCSexAftermath Candy receives "AssFuck" from Player;
 
-to say coonpetsex4:		[coon offers blow job]
+to say coonpetsex4:		[coon offers blowjob]
 	say "     Coming up to you as you take a short break, your pet snuggles up to you on his knees. Eager to please you as always, he nuzzles your crotch gently and makes a soft churring noise, glancing up at you with an eager look. You stroke his ears and nod, wordlessly giving the raccoon permission to please you. He smiles up at you with adoration, pawing at your pants with desperate need, freeing your shaft from the fabric and beginning to work it with his usual vigor. His practiced muzzle is a delight, working over your cock with eager skill. His agile fingers caress your balls and the base of your shaft as his tongue plays along your shaft and glans, while his other paw moves under his skirt to stroke himself as he sucks you off. Your excitement builds quickly, and soon you reward your obedient pet with a well earned treat, the coon swallowing down your whole load while staining his cute outfit with his own, filling the area with his inexplicably arousing cotton candy scent.";
 	now Libido of Player is ( Libido of Player + 1 ) / 2;
 	NPCSexAftermath Candy receives "OralCock" from Player;
@@ -547,12 +547,12 @@ to say sexwithCandy:
 			now description entry is "Take a turn as bottom";
 			[]
 			choose a blank row in table of fucking options;
-			now title entry is "Get a blow job";
+			now title entry is "Get a blowjob";
 			now sortorder entry is 3;
 			now description entry is "Have him suck you off";
 			[]
 			choose a blank row in table of fucking options;
-			now title entry is "Give a blow job";
+			now title entry is "Give a blowjob";
 			now sortorder entry is 4;
 			now description entry is "Suck the cute coon off";
 			[]
@@ -948,7 +948,7 @@ This is the Candy's Epilogue rule:
 				else:
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like a protective big sister. Wanting to do good on the outside and drawing on what he still remembers of his past, he begins nurse training, and proves quite adept at it despite his regular lewd suggestions of 'sexual healing' and 'sweet injections.' The raccoon soldiers are always eager patients, coming to him for the most minor of complaints and are always up for Candy's playful suggestions. Outside of his work, he seems to spend a lot of time stealing your clothes and teasing and enticing every male he can. You would put a stop to it if he wasn't so damn cute in your outfits, and at least he always does the laundry on time.";
 			if pigfucked > 0:
-				if ( Cock Count of Player is 0 and player is female ) or ( Cunt Count of Player is 0 and pigfucked > 2 ):
+				if ( Cock Count of Player is 0 and Player is female ) or ( Cunt Count of Player is 0 and pigfucked > 2 ):
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together at your place. It is clear that he is upset with your decision to join Philip at his farm, but has his own life as well (thanks to you) and has to accept your decision. He does visit from time to time, but only when Philip is out, preferring you instead come visit him at his sex den. You are always careful to clean the boar's strong scent from you before going over, lest it spoil the mood. He always has at least one of his coon soldier bois over to play with, so he's never lonely and the visit is always fun.";
 				else:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together. You have to take care to wash the boar's strong scent from you after sex, lest it upset the gay coonboi. Aside from holiday get-togethers with all your new, transformed family of friends, you make sure they are kept apart.";
@@ -966,9 +966,9 @@ This is the Candy's Epilogue rule:
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
-			if ( pigfucked > 0 ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and player is female and Philip is in the Large Shed ):
+			if ( pigfucked > 0 ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female and Philip is in the Large Shed ):
 				say "     Your raccoon pet seems jealous of the affection you give Philip. He mopes quietly if he sees you being affectionate with him or notices the boar's strong scent on you after you've had sex with him. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you share with him. ";
-				if ( Cock Count of Player is 0 and player is female ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and player is female ):	[Female at farm OR F/H Piggy at farm]
+				if ( Cock Count of Player is 0 and Player is female ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and Player is female ):	[Female at farm OR F/H Piggy at farm]
 					say "     When the coon gets even more sullen after the move to the pig farm and your oncoming litter, Philip has had enough. The next time the coon hisses at him when he strokes your pregnant belly, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 				else if Player has a non-shifting body of "Messy Pig" or Player has a non-shifting body of "Piggy" and pigfucked > 0:
 					if pigfucked > 2:						[M Piggy sub]

@@ -695,25 +695,25 @@ to say LilithSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the succubus ass with your cock";
 	[]
-	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - A";
 		now sortorder entry is 6;
 		now description entry is "Have the succubus suck Brutus while you fuck her from behind";
 	[]
-	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - B";
 		now sortorder entry is 7;
 		now description entry is "Lie on the bed with Lilith riding your cock while she sucks off Brutus";
 	[]
-	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - A";
 		now sortorder entry is 8;
 		now description entry is "Face-Fuck Lilith while Brutus pounds her pussy";
 	[]
-	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - B";
 		now sortorder entry is 9;

@@ -69,7 +69,7 @@ to say losetoDVtaur3:	[DV nursing]
 	say "     She grinds her hips down onto you, rubbing her wet, dripping pussy and ridged, dragon cock against your [Skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [Cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her cum and juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
 	CreatureSexAftermath "Dracovixentaur" receives "Stroking" from "Player";
 
-to say losetoDVtaur4:	[DV blow job]
+to say losetoDVtaur4:	[DV blowjob]
 	say "     Having defeated you, the dracovixentaur rumbles excitedly and presses you to the ground. She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
 	say "     Stepping over you, she presses her throbbing cock to your face, precum spurting from it across your lips. The musky fluid tastes of spices and perfume and is quite exciting. You find yourself wanting more and lick at her dribbling glans before welcoming her cock into your mouth. You moan in pleasure as that ridged length slides past your lips and over your tongue before pressing its tapered glans down your throat. She presses one of her forepaws at the back of your head, encouraging you to bob your head over her meat as she fucks your face while her rearmost pair of breasts rub against the top of your head. You reach up and knead her hefty balls and finger her dripping pussy until she finally cums, feeding you a heavy load of her exotically tasting semen. Once she's done, you're left feeling full from her large load.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Dracovixentaur";
@@ -80,7 +80,7 @@ to say beattheDVtaur:
 	else if a random number between 1 and 100 < DVtaurcatch and ( player is not neuter):
 		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her.";
 		if Player is male:
-			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2)[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
+			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2)[as]2[end link], get a [link]blowjob (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>";

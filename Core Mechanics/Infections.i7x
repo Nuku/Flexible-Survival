@@ -68,7 +68,7 @@ This is the sex change rule:
 			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [CockName of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
 	[COCK ADDITIONS/SUBSTRACTIONS]
 	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player and singlesexadjust is not 3: [player currently female, single sexed]
-		[Adds extra cocks if the player has less than the infection, unless "Female Preferred" is selected or a single sexed player is female]
+		[Adds extra cocks if the player has less than the infection, unless "Female Preferred" is selected or a single sexed Player is female]
 		let prevcock be Cock Count of Player;
 		if Player is not male: [adds a cock if the player has none]
 			increase Cock Count of Player by 1;
@@ -221,7 +221,7 @@ This is the sex change rule:
 to grow cock by (x - a number):
 	if "Female Preferred" is listed in feats of Player:
 		continue the action;
-	else if "Single Sexed" is listed in feats of Player and player is female:
+	else if "Single Sexed" is listed in feats of Player and Player is female:
 		say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
 		remove womanhood from Player;
 	let prevcock be Cock Length of Player;

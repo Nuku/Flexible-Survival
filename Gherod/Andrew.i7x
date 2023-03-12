@@ -166,19 +166,19 @@ to say AndrewTalkMenu:
 	clear the screen and hyperlink list;
 
 to say AndrewTalkHimself:
-	say "     You ask him to tell you a bit more about himself, since he doesn't seem to talk much about that particular subject. 'You want to know more about me? Oh... Well, let's see...' he takes a moment to think 'As I've already told you, I kinda work here... Well, kinda, because it's not like I have a contract or anything, but I do get plenty of free drinks and tips for throwing in a good show. I'm quite the dancer, too... Maybe you should watch me dancing sometime, [if player is male]or... you know, join me and show everyone some man on man action[else]maybe you could learn a thing or two[end if]...' he replies with a charming wink, his naturally flirty attitude being quite obvious to you.";
+	say "     You ask him to tell you a bit more about himself, since he doesn't seem to talk much about that particular subject. 'You want to know more about me? Oh... Well, let's see...' he takes a moment to think 'As I've already told you, I kinda work here... Well, kinda, because it's not like I have a contract or anything, but I do get plenty of free drinks and tips for throwing in a good show. I'm quite the dancer, too... Maybe you should watch me dancing sometime, [if Player is male]or... you know, join me and show everyone some man on man action[else]maybe you could learn a thing or two[end if]...' he replies with a charming wink, his naturally flirty attitude being quite obvious to you.";
 	say "     'But I suppose you want to know more than that... Well, can't say I was much different before this whole craziness happened. I was always quite the club boy, loved meeting new people, have lots of fun, going to lots of parties, sucking a lot of dick...' - he adds a naughty grin at the latter - 'And now it's even better, since everyone seems more keen on getting down to business. Outside of Palomino, well... At least now it's acceptable to teach the naughties a lesson in a multitude of ways. I guess it could be worse! We all could have been turned into chastity nuns. Wouldn't that be tragic?!'";
 	say "     You move on to another subject as he finishes speaking.";
 
 to say AndrewTalkWork:
-	say "     Since he mentioned he [']kinda['] worked here, you ask him to explain his [']kinda['] work. 'I help people relax, of course! Pure entertainment! Seeing a sexy black wolf doing some sexy dancing on stage is, for sure, a great way to cheer up! Especially if you have the option to offer him some additional fun...' he says[if player is male], while eyeing you from head to feet as he bites his lower lip suggestively[else] with a mischievous wink[end if] 'I can say that I help a lot of people. Almost a one percent rate of success for any hung stud who wants a good time with me. Not to brag, of course, I just happen to fully dedicate myself to my partner once it's time to get down to business, and that drastically improves things. In short, I'm a happy worker who makes people happy.'";
+	say "     Since he mentioned he [']kinda['] worked here, you ask him to explain his [']kinda['] work. 'I help people relax, of course! Pure entertainment! Seeing a sexy black wolf doing some sexy dancing on stage is, for sure, a great way to cheer up! Especially if you have the option to offer him some additional fun...' he says[if Player is male], while eyeing you from head to feet as he bites his lower lip suggestively[else] with a mischievous wink[end if] 'I can say that I help a lot of people. Almost a one percent rate of success for any hung stud who wants a good time with me. Not to brag, of course, I just happen to fully dedicate myself to my partner once it's time to get down to business, and that drastically improves things. In short, I'm a happy worker who makes people happy.'";
 	say "     You thank him for his input.";
 
 to say AndrewTalkSex:
 	say "     Anyone could notice that Andrew tends to prefer the masculine kind of fellows, but you want to know more about that, so you ask him. 'Well... It's not like I don't like women, I just prefer the studs a lot more. So why should I have one if the other gets me going like crazy? When I have plenty of dudes to pick from, I don't see the point... I just can't resist the manly scent, a strong masculine body, that good hard dick and nice tight little holes...' The wolf takes a pause to adjust his bulge, very noticeably growing as he talks about this. 'Damn, I think I need another fuck.' he finishes, giggling by the end of it.";
 
 to say AndrewTalkFur:
-	say "     Knowing this isn't exactly a request anyone makes, you compliment the sexy wolf's look before following up with your intention. 'Ah, I see... You like the wolf look[if player is male], yeah? But you could also just blow me and drink my load, instead... It would have the same effect, not to mention it's much more fun... But alright[else], hmm[end if]... I suppose I could hand you some, since it grows back up nearly instantly. Give me a second.' he says, heading somewhere out of view for a couple of minutes, then returning with a tuft of his own fur in his paw. 'Here you go, sweetie. Show me the results later, alright?' he says, handing you the fur as he gives you a wink.";
+	say "     Knowing this isn't exactly a request anyone makes, you compliment the sexy wolf's look before following up with your intention. 'Ah, I see... You like the wolf look[if Player is male], yeah? But you could also just blow me and drink my load, instead... It would have the same effect, not to mention it's much more fun... But alright[else], hmm[end if]... I suppose I could hand you some, since it grows back up nearly instantly. Give me a second.' he says, heading somewhere out of view for a couple of minutes, then returning with a tuft of his own fur in his paw. 'Here you go, sweetie. Show me the results later, alright?' he says, handing you the fur as he gives you a wink.";
 	ItemGain black wolf fur by 1;
 
 Section 3 - Sexy Times
@@ -209,7 +209,7 @@ to say sexwithAndrew:
 			say "[AndrewDemonShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that";
-			if player is male:
+			if Player is male:
 				say " you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package.";
 				WaitLineBreak;
 				say "[AndrewSexMenu]";
@@ -226,7 +226,7 @@ to say sexwithAndrew:
 			say "[AndrewBrutusShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that";
-			if player is male:
+			if Player is male:
 				say " you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package.";
 				WaitLineBreak;
 				say "[AndrewSexMenu]";

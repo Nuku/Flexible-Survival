@@ -128,7 +128,7 @@ to say Gwensexmenu:
 		now sortorder entry is 2;
 		now description entry is "have a go at Gwen's ass";]
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 3;
 		now description entry is "have Gwen suck you off";
 	choose a blank row in table of fucking options;
@@ -167,7 +167,7 @@ to say Gwensexmenu:
 					say "[Gwensex1]";
 				else if nam is "Anal":
 					say "[Gwensex2]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[Gwensex3]";
 				else if nam is "Eat her out":
 					say "[Gwensex4]";

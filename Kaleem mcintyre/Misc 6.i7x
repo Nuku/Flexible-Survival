@@ -185,7 +185,7 @@ ResolveFunction of Guess that Character Three is "[ResolveEvent Guess that Chara
 Sarea of Guess that Character Three is "Red".
 When play begins:
 	Add Guess that Character Three to BadSpots of FurryList;
-	Add Guess that Character Three to badspots of HermList;
+	Add Guess that Character Three to BadSpots of HermList;
 	Add Guess that Character Three to BadSpots of MaleList;
 
 to say ResolveEvent Guess that Character Three:

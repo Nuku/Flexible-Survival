@@ -878,25 +878,25 @@ Instead of fucking Xerxes:
 			now sortorder entry is 6;
 			now description entry is "Fill the human dog's ass with your cock.";
 		[]
-		if (player is male and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (Player is male and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
 		[]
-		if (player is female and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (Player is female and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Klauz";
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
@@ -1493,7 +1493,7 @@ to say AwesomeXerxesSex2:
 	say "     When you go inside, Kara smiles and greets you before turning to the newcomer and inspecting the human dog's naked body. 'And who do we have here?' she asks you, her hyena mind quickly assessing that Xerxes is your subordinate. 'This here is Xerxes, my pet. He's been a good boy and so we're here to get him a tattoo,' you tell her before looking down at the object of your conversation. Xerxes is quite excited, looking all around the room and shifting around with barely contained enthusiasm. Of everything in the room, Kara draws his attention the most. Rubbing his head, he settles down momentarily. 'Xerxes, this is my friend Kara. She's going to give you your tattoo,' you say, patting his side as a signal he can go, he heads over to the hyena on all fours and looks up at her with a happy smile on his handsome face.";
 	WaitLineBreak;
 	say "     'Doggy friend! Xerxes tattoo,' he says cheerfully, nosing at Kara's crotch and starts licking her sheath. Already starting to poke out from the sight of the sexy young man, her cock stiffens further and is soon buried in your pet's mouth. She moans softly and rubs a paw over his head. 'I'm a hyena you silly... Ngg... friendly fellow, isn't he?' she adds to you and you can't help but smile.";
-	say "     While she's getting an introductory blow job from the dog-minded young man, you fill her in on the basics of the situation. As you talk, you take a seat and enjoy the show, watching the young man work that throbbing hyena cock with his mouth and putting his increasing manual talents to work as well. He's clearly very eager to please this new friend who's going to give him his tattoo and does his very best, working her cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls his face forward, locking that knot of hers in his mouth and feeding her load to him while hot juices run down her thighs from him fingering her pussy to orgasm as well. Once he manages to pop his lips around her knot, he smiles up at her happily.";
+	say "     While she's getting an introductory blowjob from the dog-minded young man, you fill her in on the basics of the situation. As you talk, you take a seat and enjoy the show, watching the young man work that throbbing hyena cock with his mouth and putting his increasing manual talents to work as well. He's clearly very eager to please this new friend who's going to give him his tattoo and does his very best, working her cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls his face forward, locking that knot of hers in his mouth and feeding her load to him while hot juices run down her thighs from him fingering her pussy to orgasm as well. Once he manages to pop his lips around her knot, he smiles up at her happily.";
 	NPCSexAftermath Xerxes receives "OralCock" from Kara;
 	WaitLineBreak;
 	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' she says with a grin. Xerxes, not picking up on her teasing, whines softly and his shoulders sag in disappointment. '...but for such a good doggy, I'm sure I can make the time.' This perks your pet right back up and he bounds around on all fours before jumping up and kissing her with several quick licks before diving his tongue into her muzzle. She moans and pats him until he settles down enough to drop back down. He then hops eagerly into the tattooing chair, his enthusiasm barely contained. She turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy. Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet. 'Do you like this one? I think it's just right for a good boy like you,' she says, scritching his ear. Xerxes barks happily and nuzzles into the scritches, clearly pleased with her choice.";
@@ -1670,25 +1670,25 @@ Instead of fucking Helen:
 			now sortorder entry is 4;
 			now description entry is "Fill the human dog's pussy with your cock.";
 		[]
-		if (player is male and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (Player is male and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Klauz";
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		[]
-		if (player is female and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (Player is female and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
@@ -2328,7 +2328,7 @@ to say AwesomerHelenSex2:
 	say "     When you go inside, Kara smiles and greets you before looking over the newcomer. 'And who do we have here?' she asks you, her hyena mind quickly assessing that Helen is your subordinate. 'This here is Helen, my pet. She's been a good girl and so we're here to get her a tattoo,' you tell her before looking down at the object of your conversation. Helen is quite excited, looking all around the room and shifting around with barely contained enthusiasm. Of everything in the room, Kara draws her attention the most. Rubbing her head, she settles down momentarily. 'Helen, this is my friend Kara. She's going to give you your tattoo,' you say, patting her side as a signal she can go. She heads over to the hyena on all fours and looks up at her with a happy smile on her lovely face.";
 	WaitLineBreak;
 	say "     'Doggy friend! Helen tattoo,' she says cheerfully, nosing at Kara's crotch and starts licking her sheath. Already starting to poke out from the sight of the sexy young woman, her cock stiffens further and is soon buried in your pet's mouth. She moans softly and rubs a paw over her head. 'I'm a hyena you silly... Ngg... friendly girl, isn't she?' she adds to you and you can't help but smile.";
-	say "     While she's getting an introductory blow job from the dog-minded young woman, you fill her in on the basics of the situation. As you talk, you take a seat and enjoy the show, watching the lovely woman work that throbbing hyena cock with her mouth and putting her increasing manual talents to work as well. She's clearly very eager to please this new friend who's going to give her a tattoo and does her very best, working Kara's cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls Helen's face forward, locking that knot of hers in her mouth and feeding her load to the eager woman while hot juices run down her thighs from her fingering her pussy to orgasm as well. Once she manages to pop her lips around her knot, she smiles up at the hyena happily.";
+	say "     While she's getting an introductory blowjob from the dog-minded young woman, you fill her in on the basics of the situation. As you talk, you take a seat and enjoy the show, watching the lovely woman work that throbbing hyena cock with her mouth and putting her increasing manual talents to work as well. She's clearly very eager to please this new friend who's going to give her a tattoo and does her very best, working Kara's cock, knot, sheath, balls and pussy with great enthusiasm until she growls and pulls Helen's face forward, locking that knot of hers in her mouth and feeding her load to the eager woman while hot juices run down her thighs from her fingering her pussy to orgasm as well. Once she manages to pop her lips around her knot, she smiles up at the hyena happily.";
 	NPCSexAftermath Helen receives "OralCock" from Kara;
 	WaitLineBreak;
 	say "     'Now, I am quite busy and I'm not really sure if I've got the time to do a tattoo,' Kara says with a grin. Helen, not picking up on her teasing, whines softly and her shoulders sag in disappointment. '...but for such a good doggy, I'm sure I can make the time.' This perks your pet right back up and she bounds around on all fours before jumping up and kissing the hyena with several quick licks before diving her tongue into her muzzle. She moans and pats her until she settles down enough to drop back down. She then hops eagerly into the tattooing chair, her enthusiasm barely contained. The hyena turns to you and asks if either of you had anything particular in mind and you shake your head, telling her to do whatever your pet wants as long as it's nothing too crazy. Grinning happily, Kara pulls out a book of samples and flips through it, showing one to your pet. 'Do you like this one? I think it's just right for a good girl like you,' she says, scritching her ear. Helen barks happily and nuzzles into the scritches, clearly pleased with her choice.";

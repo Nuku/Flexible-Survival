@@ -21,13 +21,13 @@ ResolveFunction of The Sword in the Stone is "[ResolveEvent The Sword in the Sto
 Sarea of The Sword in the Stone is "Forest".
 
 when play begins:
-	add The Sword in the Stone to badspots of MaleList;
-	add The Sword in the Stone to badspots of IncestList;
-	add The Sword in the Stone to badspots of NonconList;
+	add The Sword in the Stone to BadSpots of MaleList;
+	add The Sword in the Stone to BadSpots of IncestList;
+	add The Sword in the Stone to BadSpots of NonconList;
 
 NathanielHP is a number that varies. NathanielHP is usually 0.
 
-to say ResolveEvent The Sword in the Stone (while demonologist is tamed and player is male):
+to say ResolveEvent The Sword in the Stone (while demonologist is tamed and Player is male):
 	say "     As you wander through the forest, you find a old beaten path that leads deeper into the woods. Following this path, you enter into a section of woods that feels almost magical. The air temperature drops to that of a chilly morning, a slight frost forming over nearby folliage. Emerging from the dense overgrowth, you see a resplendent longsword sticking inside of a rock in the center of a clearing ahead of you. Letting out a relieved sigh, you begin to make your way to the clearing. The sword looks beautiful, glinting in the faint light that makes it through the canopy. You now stand infront of the sword, what do you do?";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Try to pull the sword out of the stone.";

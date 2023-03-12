@@ -230,13 +230,13 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Jerk off on [ObjectPro of Blue Speaker]";
 	[]
-	if (player is male ):
+	if (Player is male ):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's mouth";
 		now sortorder entry is 2;
 		now description entry is "Give the goo person a direct cum injection";
 	[]
-	if (player is male and Libido of Blue Speaker is 1): [female shape]
+	if (Player is male and Libido of Blue Speaker is 1): [female shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's pussy";
 		now sortorder entry is 3;
@@ -254,7 +254,7 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Let the goo person fuck your ass";
 	[]
-	if (player is female and Libido of Blue Speaker is 2): [male shape]
+	if (Player is female and Libido of Blue Speaker is 2): [male shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Blue fuck your pussy";
 		now sortorder entry is 6;

@@ -853,55 +853,55 @@ to say SarahSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Lie back and let the husky please you";
 	[]
-	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and Player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest a tit-fuck";
 		now sortorder entry is 3;
 		now description entry is "Ask your husky friend to let you grind your cock between her breasts";
 	[]
-	if SarahCured > 5 and player is male: [player-dominant oral is okay]
+	if SarahCured > 5 and Player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Tit-fuck the sexy husky";
 		now sortorder entry is 4;
 		now description entry is "Grind your cock between her breasts";
 	[]
-	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and Player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest face-fucking her";
 		now sortorder entry is 5;
 		now description entry is "Ask your husky friend to let you fuck her muzzle";
 	[]
-	if SarahCured > 5 and player is male: [player-dominant oral is okay]
+	if SarahCured > 5 and Player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck Sarah";
 		now sortorder entry is 6;
 		now description entry is "Grind your cock against that talented tongue in her muzzle";
 	[]
-	if SarahCured is 5 and player is female: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and Player is female: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest grinding your pussy against her muzzle";
 		now sortorder entry is 7;
 		now description entry is "Ask your husky friend to let you use her muzzle";
 	[]
-	if SarahCured > 5 and player is female: [player-dominant oral is okay]
+	if SarahCured > 5 and Player is female: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy-grind Sarah's muzzle";
 		now sortorder entry is 8;
 		now description entry is "Grind your pussy against Sarah's muzzle";
 	[]
-	if SarahCured is 6 and player is male: [never talked about sex before]
+	if SarahCured is 6 and Player is male: [never talked about sex before]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck her";
 		now sortorder entry is 9;
 		now description entry is "Try to get into Sarah's pussy (for her first time as a husky)";
 	[]
-	if SarahCured > 7 and player is male: [at least had the "I want to fuck you" talk with Sarah]
+	if SarahCured > 7 and Player is male: [at least had the "I want to fuck you" talk with Sarah]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Sarah ride your dick (anal)";
 		now sortorder entry is 10;
 		now description entry is "Allow the husky to ride you - with your dick in her ass";
 	[]
-	if SarahCured > 7 and player is male: [Sarah is okay with doggy style (anal)]
+	if SarahCured > 7 and Player is male: [Sarah is okay with doggy style (anal)]
 		choose a blank row in table of fucking options;
 		now title entry is "Pound Sarah doggy style (anal)";
 		now sortorder entry is 11;

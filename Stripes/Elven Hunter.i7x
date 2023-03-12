@@ -785,12 +785,12 @@ to say CastienSexMenu:
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job (receiving)";
+		now title entry is "Blowjob (receiving)";
 		now sortorder entry is 7;
 		now description entry is "Have him put that muzzle of his to use on your cock";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Blow job (giving)";
+	now title entry is "Blowjob (giving)";
 	now sortorder entry is 8;
 	now description entry is "Reward your loyal dog by allowing him to face-fuck you";
 	[]
@@ -821,9 +821,9 @@ to say CastienSexMenu:
 					say "[Castien_sex05]";
 				else if nam is "Tell him to take you (anal)":
 					say "[Castien_sex06]";
-				else if nam is "Blow job (receiving)":
+				else if nam is "Blowjob (receiving)":
 					say "[Castien_sex07]";
-				else if nam is "Blow job (giving)":
+				else if nam is "Blowjob (giving)":
 					say "[Castien_sex08]";
 		else if calcnumber is 0:
 			now sextablerun is 1;

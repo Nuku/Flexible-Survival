@@ -788,7 +788,7 @@ Instead of fucking Toron:
 				now description entry is "Get on the other side of the counter and play with his butt... at your own risk";
 			[]
 			if daytimer is day:
-				if player is male:
+				if Player is male:
 					choose a blank row in table of fucking options;
 					now title entry is "Fuck his ass";
 					now sortorder entry is 1;

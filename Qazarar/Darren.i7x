@@ -190,7 +190,7 @@ to say DarrenSexMenu:
 	now sortorder entry is 2;
 	now description entry is "See about getting some salamander dick";
 	[]
-	if player is male and (Loyalty of Darren > 2):
+	if Player is male and (Loyalty of Darren > 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;

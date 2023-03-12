@@ -226,7 +226,7 @@ to DullahanSex:
 	now sortorder entry is 1;
 	now description entry is "Treat the Dullahan with a cock worship session";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have the demon knight turn around and bend over";
 		now sortorder entry is 2;

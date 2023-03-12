@@ -21,21 +21,21 @@ to say losetobirdofparadise:
 	say "     The rather rambunctious mating dance over with, the bird woman takes a deep breath and starts to sing. The very notion sounds silly at first, but as the music begins to flow and ebb around you, you suddenly find your will to fight on rapidly draining. Surrounded by song, you're content to stand motionless with your mouth agape as the bird of paradise steps forward, her talons clicking against the ground in time with her music. Those eyes, that glassy stare, they seem to grow to fill the entire world as your surroundings melt away, leaving nothing but the clear light blue of the avian's gaze and the music - oh god, the music, you're sure that the bird of paradise hasn't so much as touched you and yet against all logic, you feel warm and good all over and there's a dull heat pulsing down below and the song, it's everywhere, EVERYWHERE!";
 	say "     You can't take it anymore; throbbing in time to bird of paradise's mesmerizing singing, you barely feel your [if Player is male]balls empty themselves as she sinks her cunt down over your pulsing shaft and your [end if][if Cunt Count of Player > 1]cunts explode in oozing wetness and[else if Cunt Count of Player is 1]cunt explode in oozing wetness and your [end if]spine tingles as shivers run down its length. Unable and unwilling to fight back, you can only lie exhausted on the ground, squirming with the last of your strength as the unearthly beauty of bird of paradise's music completely overwhelms you, and darkness slowly falls.";
 	now Libido of Player is Libido of Player / 2;
-	if player is male:
+	if Player is male:
 		CreatureSexAftermath "Bird of Paradise" receives "PussyFuck" from "Player";
 	else:
 		CreatureSexAftermath "Bird of Paradise" receives "Other" from "Player";
 
 
 to say beatthebirdofparadise:
-	if bopdefeated is 3 and player is male:
+	if bopdefeated is 3 and Player is male:
 		increase bopdefeated by 1;
 		say "     As your blows stagger the beautiful bird, you leap forward and tackle her to the ground before she can make her escape like the others. She squawks and flaps her wings wildly, trying to break free, but is too weakened by the fight to get away. Having been worked up by her lustful dancing and alluring song, you're reluctant to let her go now that you've got her. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
 		if Player consents:
 			say "[bopvictorysex1]";
 		else:
 			say "     You pin the bird firmly to the ground, hand around her beak to keep her silent. You growl at the bird and grind a knee into her ribs, threatening to do worse if she bothers you again. Feeling you've made your point, you release her with a final swat on her feathered rear, sending her flying away with a pained chirp.";
-	else if bopdefeated > 3 and player is male and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
+	else if bopdefeated > 3 and Player is male and a random chance of bopdefeated in ( bopdefeated + 3 ) succeeds:
 		increase bopdefeated by 1;
 		say "     Getting yourself into position, you move in close and knock the beautiful bird to the ground with your final blow only to tackle her down moments later. She squawks and tries to get free, but you've gotten quite worked up from her tempting show and consider getting yourself some release. Shall you have your way with the vibrant bird (Y) or shall you let her go (N)?";
 		if Player consents:

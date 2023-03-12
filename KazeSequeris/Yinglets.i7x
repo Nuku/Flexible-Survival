@@ -22,13 +22,13 @@ to say YingletsSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Be fucked by them";
 		now sortorder entry is 0;
 		now description entry is "Make it up to the poor guys";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck them";
 		now sortorder entry is 2;
@@ -272,7 +272,7 @@ This is the Yinglet Infection rule:
 		trigger ending "Yinglet "; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     At some point, you start thinking about what you're going to do when you're rescued from this place. You imagine what kind of life you'd have in this tiny weasel-rat body of yours. All those humans, and other creatures bigger than you... You'd have to spend all your time not desperately trying not to get stepped on! You consider a job, or a mate... and soon you realize... thinking is hard. But you're so good at it! Yes, back in society, you're a pest at best. But here, you are soso smart! The smartest, strongest yinglet! You decide you no longer wish to be rescued.";
-			say "     You roam the area and seek out all the yinglets you can. After a masterful display of your slightlyaboveaverage strength and wit, they decide to follow you for safety and guidance. You start your own yinglet enclave, where you are heralded by your lessers as [if player is male]Patriarch. You're the best hunter, fisher, and you know where to find the best clams! You teach your lessers how to fight and defend the females, and of course, you have priority in the female's breeding schedule. Failing that, there's always a smaller male to slide yourself into when the need is great. [else]Matriarch. You have plenty of males to protect you, and you teach them all the best ways to find food. When you aren't teaching and caring for the young, you're busy making more of them. You have your pick of the males, and of course only the ones you deep worthy get a shot at you. In the end, you may have thrown away your humanity, but among the yinglets, you're a queen! [end if]Yinglets often return to you with their finding of shiny-things, which you gladly accept or bestow upon your favorite underlings as rewards. Sometimes they find more of those little gem-things, filled with swirling liquid. Outsiders who find themselves turned into yinglets themselves soon come to terms with their new position and gladly join your enclave. Thoughts of civilization soon fade into a distant memory, your new life is far more interesting now.";
+			say "     You roam the area and seek out all the yinglets you can. After a masterful display of your slightlyaboveaverage strength and wit, they decide to follow you for safety and guidance. You start your own yinglet enclave, where you are heralded by your lessers as [if Player is male]Patriarch. You're the best hunter, fisher, and you know where to find the best clams! You teach your lessers how to fight and defend the females, and of course, you have priority in the female's breeding schedule. Failing that, there's always a smaller male to slide yourself into when the need is great. [else]Matriarch. You have plenty of males to protect you, and you teach them all the best ways to find food. When you aren't teaching and caring for the young, you're busy making more of them. You have your pick of the males, and of course only the ones you deep worthy get a shot at you. In the end, you may have thrown away your humanity, but among the yinglets, you're a queen! [end if]Yinglets often return to you with their finding of shiny-things, which you gladly accept or bestow upon your favorite underlings as rewards. Sometimes they find more of those little gem-things, filled with swirling liquid. Outsiders who find themselves turned into yinglets themselves soon come to terms with their new position and gladly join your enclave. Thoughts of civilization soon fade into a distant memory, your new life is far more interesting now.";
 		else:
 			say "     When the rescue came, you weren't too sure what to do with yourself. Your new body made most forms of labor difficult, but eventually you found a use for it. You volunteer yourself to join the relief forces. Fighter, you are not, but your small body and keen perception make you ideal for scouting difficult terrain. You've got a penchant for finding people, and an even greater one for finding shiny valuables that make a pretty penny on the side (when you don't keep it for your own personal collection). You're content with your new life and body, and despite the teasing from your much larger teammates, you come to feel welcome among them. Plus, your unique body and all its flexibilities turn out to be quite a hit for those with a more... exotic taste. You don't spend your nights lonely.";
 

@@ -55,7 +55,7 @@ Centaur Gangbang is a situation.
 ResolveFunction of Centaur Gangbang is "[ResolveEvent Centaur Gangbang]". The level of Centaur Gangbang is 5.
 Sarea of Centaur Gangbang is "Plains".
 when play begins:
-	add Centaur Gangbang to badspots of HermList;      [Thomas becomes a herm in/after this scene]
+	add Centaur Gangbang to BadSpots of HermList;      [Thomas becomes a herm in/after this scene]
 	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
 
 to say ResolveEvent Centaur Gangbang:
@@ -661,7 +661,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Thomas pussy to make him cum.";
 	[]
-	if (player is male and (HP of Thomas is 3 or HP of Thomas is 4 or HP of Thomas is 5)):
+	if (Player is male and (HP of Thomas is 3 or HP of Thomas is 4 or HP of Thomas is 5)):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
@@ -679,7 +679,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Stimulate the herm centaur's ass with your hand.";
 	[]
-	if (player is male and lust of Thomas > 1):
+	if (Player is male and lust of Thomas > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Thomas ass";
 		now sortorder entry is 8;

@@ -46,7 +46,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is male: [Anal]
+		else if Player is male: [Anal]
 			say "     Softly grasping your shaft with a paw, the catboy gently begins to stroke up and down as he talks to you. 'I went out in the city [one of]once [or]a while ago [or]a few times [at random]and but I hadn't trained enough. The college is so much safer. We might battle with each other with sex as the reward, but it's more of a game here rather than a desire to harm or rape anyone. Just a way of getting stronger and socializing.' You're not sure whether he is trying to convince you or himself, but you have to admit that he does have a point. The college residents are a lot more amiable than many of the feral beasts roaming the ruins of the city. Feeling a little sorry for the neko cosplayer and wanting to reassure him that there are no hard feelings, you lie on your back and spread your buttocks apart to present yourself as available to him. His pupils narrow as your action captures his focus entirely, the kitty slowly drawn towards the inviting sight before him.";
 			say "     'Such an enticing view. I hope that you won't mind if I take a closer look,' he says, giving your exposed flesh a couple of slaps as he kneels between your legs. One of his fingers traces down from the back of your knee to the cleft of your ass where he gently presses the joint of a curled finger into your resistant sphincter, making you moan softly. Chuckling at your reaction, the cosplayer leans in until his nose is pressed to the underside of your scrotum, a tickle of air playing across the skin as he takes in your scent, the ever-present smell of sweat particularly potent. You flinch as you feel something wet, assumedly his tongue, lather across your hole in a curiously intimate manner, both readying you for penetration while also for both yours and his pleasure in itself. The catboy's eyes lock with your own and the corner of his mouth twitches up at his enjoyment of such salacious behavior before he drives his tongue into you to slicken the walls of your anus.";
 			WaitLineBreak;
@@ -73,7 +73,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is female: [Vaginal]
+		else if Player is female: [Vaginal]
 			say "     He wraps his paw around your shoulder as he begins speaking to you. 'I went out in the city [one of]once [or]a while ago [or]a few times [at random]and ended up getting beaten on all counts. The college is so much safer. We might battle with each other with sex as the reward, but it doesnt mean we cant build personal connections with each other after the fact. Speaking of which, I would love to synchronise with you on a more personal level if you have some time later, perhaps for dinner.' You roll your eyes at his silly pick-up line, but inwardly you are impressed by his willingness to attempt an actual relationship. Deciding that something like that shouldn't go unrewarded, you move your lips into his, giving him a rather deep kiss. breaking from the kiss, you move yourself in front of him and spread your legs as you hold your vagina open with two fingers, an implicit invitation that causes him to break free from the flinch status your kiss had on him. ";
 			say "     Taking you up on your invitation, he moves onto his hands and knees as he bends forward to take in the scent of your arousal moments before he begins licking the petals of your dew laden pussy, coating them in his saliva as he works his way inwards. You moan heavily in appreciation of his choice of getting you prepped instead of just spearing your pussy when the chance presented itself, momentarily pleased at his actions serving as evidence of the nekomimis intentions towards finding romance rather than simply shooting and scooting. While the moments pass by of this treatment, you feel a jolt of pleasure ripple from your vagina causing you to unexpectedly screech with ecstasy as his tongue licks your sweet spot. The nekomimi boy twitches his ears a bit before removing his face from within the confines of your pussy, flashing you a smile as he takes a bit of your dew and begins to coat his hardening cock with it, making sure to slather it evenly.";
 			WaitLineBreak;
@@ -136,7 +136,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is male: [Anal]
+		else if Player is male: [Anal]
 			say "     Softly grasping your shaft with a paw, the catboy gently begins to stroke up and down as he talks to you. 'I went out in the city [one of]once [or]a while ago [or]a few times [at random]and it was really scary. The college is so much safer. We might fight and have sex with each other, but it's more of a game here rather than a desire to harm or rape anyone. Just a way of blowing off steam and socializing.' You're not sure whether he is trying to convince you or himself, but you have to admit that he does have a point. The college residents are a lot more amiable than many of the feral beasts roaming the ruins of the city. Feeling a little sorry for the neko and wanting to reassure him that there are no hard feelings, you lie on your back and spread your buttocks apart to present yourself as available to him. His pupils narrow as your action captures his focus entirely, the kitty slowly drawn towards the inviting sight before him.";
 			say "     ";
 			WaitLineBreak;
@@ -162,7 +162,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is female: [Vaginal]
+		else if Player is female: [Vaginal]
 			say "     ";
 			say "     ";
 			WaitLineBreak;
@@ -223,7 +223,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is male: [Anal]
+		else if Player is male: [Anal]
 			say "     Softly grasping your shaft with a paw, the catboy gently begins to stroke up and down as he talks to you. 'I went out in the city [one of]once [or]a while ago [or]a few times [at random]and it was really scary. The college is so much safer. We might fight and have sex with each other, but it's more of a game here rather than a desire to harm or rape anyone. Just a way of blowing off steam and socializing.' You're not sure whether he is trying to convince you or himself, but you have to admit that he does have a point. The college residents are a lot more amiable than many of the feral beasts roaming the ruins of the city. Feeling a little sorry for the neko and wanting to reassure him that there are no hard feelings, you lie on your back and spread your buttocks apart to present yourself as available to him. His pupils narrow as your action captures his focus entirely, the kitty slowly drawn towards the inviting sight before him.";
 			say "     ";
 			WaitLineBreak;
@@ -249,7 +249,7 @@ to say losetoNekomimiBoy:
 					WaitLineBreak;
 					say "     ";
 					say "     ";]
-		else if player is female: [Vaginal]
+		else if Player is female: [Vaginal]
 			say "     ";
 			say "     ";
 			WaitLineBreak;

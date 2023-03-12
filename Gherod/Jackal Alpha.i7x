@@ -46,7 +46,7 @@ to say Alpha Jackal Wins:
 	else:
 		say "     Unable to offer any resistance to the buff jackal, he approaches you unchallenged, his enormous equipment starting to twitch as the male canine, surprisingly effortlessly, given the oversized nature of his sheathed hose and dandling balls, walks towards you. A grin shows across his jackal face, hinting at something more wicked than his gentle words suggest, but his voice is calm and collected, so soft and soothing that you feel inclined to immediately trust him. 'Just accept my gift, it is one of great prestige...' he says, reaching towards you in a very tender manner as you helplessly give in.";
 		WaitLineBreak;
-		if player is male:
+		if Player is male:
 			let randomnumber be a random number from 1 to 3;
 			if randomnumber is:
 				-- 1:

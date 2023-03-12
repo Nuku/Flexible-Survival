@@ -1,6 +1,6 @@
 extends Node
 """
-This is a class that can be used to create room objects that can be populated 
+This is a class that can be used to create room objects that can be populated
 with information.
 """
 class_name FSRoom
@@ -14,7 +14,7 @@ ROOM PROPERTIES:
 var room_name = "Room Name"
 var room_description = "Room Description"
 var north_exit
-var north_room_name 
+var north_room_name
 var south_exit
 var south_room_name
 var east_exit
@@ -43,12 +43,12 @@ func _ready() -> void:
 
 """
 FUNCTION:
-	constructs a dictionary of exit directions and the rooms they lead to in order 
-	to send it to the location processor. 
+	constructs a dictionary of exit directions and the rooms they lead to in order
+	to send it to the location processor.
 """
-func prepare_information(): 
+func prepare_information():
 	print("prepare_information called successfully")
-	#true if a match is found. needed because apparently 3 continues in a row makes a match statement check every sing block. including autofiring the default when it shouldn't. 
+	#true if a match is found. needed because apparently 3 continues in a row makes a match statement check every sing block. including autofiring the default when it shouldn't.
 	var fixing_stupid_bug := false
 	#executes each block of code if the value is true
 	match true:
@@ -83,7 +83,7 @@ func prepare_information():
 			fixing_stupid_bug = true
 			continue
 		southwest_exit:
-			room_exits["southwest"] = southwest_room_name 
+			room_exits["southwest"] = southwest_room_name
 			fixing_stupid_bug = true
 			continue
 		up_exit:
@@ -99,7 +99,7 @@ func prepare_information():
 				printerr("Error: Room has no exits:", room_name)
 	#apparently signals down work in class resources
 	#emit_signal("room_information_sent", room_name, room_exits)
-	
+
 	#debug code
 	#print(room_exits)
 	return room_exits

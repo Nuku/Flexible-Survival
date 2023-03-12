@@ -532,7 +532,7 @@ to say sexwithBradfordDesktop:	[desktop fuck]
 	else:
 		now mooing is 0;
 	if HP of Bradford < 7, increase HP of Bradford by 1;
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Bradford;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Bradford;
@@ -579,7 +579,7 @@ to say sexwithBradfordMidnight: [night sex with Bradford]
 	if HP of Bradford < 8, increase HP of Bradford by 1;
 	follow the turnpass rule;
 	follow the turnpass rule;
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Bradford;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Bradford;

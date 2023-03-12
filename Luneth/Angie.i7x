@@ -44,7 +44,7 @@ AngieTrapped is a situation.
 ResolveFunction of AngieTrapped is "[ResolveEvent AngieTrapped]".
 Sarea of AngieTrapped is "Zoo".
 when play begins:
-	add AngieTrapped to badspots of HermList;
+	add AngieTrapped to BadSpots of HermList;
 	add AngieTrapped to BadSpots of FurryList;
 
 to say ResolveEvent AngieTrapped:

@@ -198,7 +198,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if Player is male]male[else]neuter[end if], now [breast size desc of Player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly.";
-			if gestation of child < 1 and ( player is female or player is mpreg_ok ) and skipturnblocker is 0:
+			if gestation of child < 1 and ( Player is female or player is mpreg_ok ) and skipturnblocker is 0:
 				if pregtype is 1 and Cunt Count of Player is 0:
 					now pregtype is 2;
 				say "[detailbirth]";

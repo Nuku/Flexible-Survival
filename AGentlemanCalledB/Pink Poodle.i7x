@@ -68,7 +68,7 @@ To say beatthePinkPoodle:
 	if nopoodlesex > 2 and ( the remainder after dividing nopoodlesex by 5 is not 0 ):
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog, but decide to leave her be as you have with her kind in the past.";
 		increase nopoodlesex by 1;
-	else if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+	else if HP of Dominick >= 60 and HP of Dominick < 100 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 		say "     Defeated, the [if poodleapproved is 1]alluring[else]haughty[end if] poodle falls to her hands and knees with a whimper. As she whines up at you with pleading puppy dog eyes, you realize you could have some fun with the beaten dog.";
 		if Player is male:
 			say "     Looking over the pink poodle, you feel an urge to [link]send her to Dominick (1)[as]1[end link] to breed, though you're also tempted to [link]fuck her (2)[as]2[end link] yourself or [link]have her suck you off (3)[as]3[end link] instead. You could also control your urges and [link]leave her be (0)[as]0[end link]?";

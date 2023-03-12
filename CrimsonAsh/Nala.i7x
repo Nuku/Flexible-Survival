@@ -18,7 +18,7 @@ Sarea of Harmless Joke is "Nowhere".
 
 when play begins:
 	add Harmless Joke to BadSpots of FemaleList;
-	add Harmless Joke to badspots of DemonList;
+	add Harmless Joke to BadSpots of DemonList;
 
 instead of navigating Grey Abbey Library while (Harmless Joke is active and Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
@@ -40,7 +40,7 @@ Sarea of Fool Me Once is "Nowhere".
 
 when play begins:
 	add Fool Me Once to BadSpots of FemaleList;
-	add Fool Me Once to badspots of DemonList;
+	add Fool Me Once to BadSpots of DemonList;
 
 after resting while (Fool Me Once is active and Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
 	project Figure of Nala_clothed_icon;
@@ -61,7 +61,7 @@ Sarea of Fool Me Twice is "Nowhere".
 
 when play begins:
 	add Fool Me Twice to BadSpots of FemaleList;
-	add Fool Me Twice to badspots of DemonList;
+	add Fool Me Twice to BadSpots of DemonList;
 
 after resting while (Fool Me Twice is active and Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
 	project Figure of Nala_clothed_icon;

@@ -101,7 +101,7 @@ to say SatyrFratSexMenu:
 	now sortorder entry is 5;
 	now description entry is "See what happens with the cute guy as he drinks the heady liquid";
 	[]
-	if SatyressStage > 0 and player is male:
+	if SatyressStage > 0 and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Get it on with a sexy satyress - publicly";
 		now sortorder entry is 6;
@@ -316,7 +316,7 @@ to say SatyrFratSex4: [Bj for Richard]
 		WaitLineBreak;
 		say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself, [if Player is male]splattered all over chest with your own cum[else if Player is female]all sweaty and dripping femcum from your pussy[else]all sweaty as you are[end if], then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
 		say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by offering his t-shirt as an impromptu towel, he later bids you farewell and goes upstairs to clean himself up too.";
-		if player is female:
+		if Player is female:
 			NPCSexAftermath Player receives "PussyFuck" from Richard;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Richard;
@@ -336,7 +336,7 @@ to say SatyrFratSex4: [Bj for Richard]
 		WaitLineBreak;
 		say "     Breathlessly lying under the college age hunk that you just had very public sex with, you look down over yourself, [if Player is male]splattered all over chest with your own cum[else if Player is female]all sweaty and dripping femcum from your pussy[else]all sweaty as you are[end if], then up at the still panting and widely grinning Richard and finally at the crowd of people in the room. With the show being over now, they mostly turned back to dancing, although you can see several couples making out, as well as a blowjob between two guys going on over there in the corner. Mission accomplished, one could say...";
 		say "     Richard stays inside you for a while longer, enjoying the feeling of being so close to you and sharing a few kisses, then he eventually pulls out with a sigh and says, 'You were simply amazing, baby. Wow, really.' After proceeding to help you clean up by licking your chest clean, he later bids you farewell and goes upstairs to wash up himself too.";
-		if player is female:
+		if Player is female:
 			NPCSexAftermath Player receives "PussyFuck" from Richard;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Richard;

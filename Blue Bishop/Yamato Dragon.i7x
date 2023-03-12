@@ -39,7 +39,7 @@ to say Yamato Dragon attack:
 			say "     '[one of]Very wise to back down, little one, lest you make a fool of yourself[or]You are not as foolish a little thing as I had expected. Very well[or]I see your need is just as great as mine[at random].' In the wake of his remark he demands that you free yourself of any other attire you might have on, forced to oblige, else he tear them free of you.";
 		else:
 			say "     '[one of]Impudent little whelp, you are now mine[or]It amuses me that you thought you could contest my will[or]Know your place, little thing[or]Such gall, you will suffer from more than defeat[at random]!' Taunting you, as he does, it's very clear that you're now at the mercy of this impressive, serpentine creature.";
-		if "Touched by Madness" is listed in feats of Player and player is male and Cock Length of Player < 20 and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
+		if "Touched by Madness" is listed in feats of Player and Player is male and Cock Length of Player < 20 and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
 			If MYDTBMM is 0:
 				say "     Before he sets himself on you, the dragon stops dead in his tracks, apparently stricken by some sort of irreverent thought. Pondering for a moment, he seem to struggle with himself before the creature looks like he's come to some conclusion, demented grin across his scaled lips.";
 				say "     'N-no... I have something different in store for you...' To punctuate his foreboding remark, he pulls you closer, draconic snout descending to engulf your crotch. Caressed by his slick tongue's immediate and shameless affection, your cock[smn] [ismv] driven hard before he relents, appearing satisfied.";
@@ -1301,7 +1301,7 @@ This is the Yamato Dragon Infection rule:
 		trigger ending "Yamato Dragon Infection";
 		if humanity of Player < 10:
 			if YDSF is 0:
-				if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
+				if Player is female and (Cock Count of Player is 0 or (Player is male and a random chance of 1 in 2 succeeds)):
 					if MaleList is banned or MaleList is warded:
 						now YDSF is 4;
 					else:

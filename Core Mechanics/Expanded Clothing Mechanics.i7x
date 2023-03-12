@@ -139,27 +139,27 @@ to CalculateEquipmentValues:
 		if "rebellious" is listed in traits of z:
 			increase PlayerClothingRebellious by 1;
 		if "cute" is listed in traits of z:
-			if player is male:
+			if Player is male:
 				increase PlayerClothingTrap by 1;
-			else if player is female:
+			else if Player is female:
 				increase PlayerClothingCute by 1;
 		if "slutty" is listed in traits of z:
-			if player is male:
+			if Player is male:
 				increase PlayerClothingSissy by 1;
-			else if player is female:
+			else if Player is female:
 				increase PlayerClothingSlutty by 1;
 		if "bimbo" is listed in traits of z:
-			if player is male:
+			if Player is male:
 				increase PlayerClothingHimbo by 1;
-			else if player is female:
+			else if Player is female:
 				increase PlayerClothingBimbo by 1;
 		if "brah" is listed in traits of z:
-			if player is male:
+			if Player is male:
 				increase PlayerClothingBrah by 1;
 		if "mistress" is listed in traits of z:
-			if player is male:
+			if Player is male:
 				increase PlayerClothingMaster by 1;
-			else if player is female:
+			else if Player is female:
 				increase PlayerClothingMistress by 1;
 		if "slave" is listed in traits of z:
 			increase PlayerClothingSlave by 1;

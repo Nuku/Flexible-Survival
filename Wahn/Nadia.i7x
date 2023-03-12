@@ -378,7 +378,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock";
 	[]
-	if (player is male and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
+	if (Player is male and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;

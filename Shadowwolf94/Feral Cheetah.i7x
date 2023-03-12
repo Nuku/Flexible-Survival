@@ -58,7 +58,7 @@ To say cheetah defeat:
 		now description entry is "Screw the spotted cat";
 		[
 		choose a blank row in table of fucking options;
-		now title entry is "Get a blow job";
+		now title entry is "Get a blowjob";
 		now sortorder entry is 4;
 		now description entry is "Make the kitty blow you";
 		]
@@ -110,7 +110,7 @@ To say cheetah defeat:
 					say "[beatthecheetah02]";
 				-- "Ride the cheetah's cock - anal":
 					say "[beatthecheetah03]";
-				[-- "Get a blow job":
+				[-- "Get a blowjob":
 					say "[beatthecheetah04]";
 				-- "Get eaten out":
 					say "[beatthecheetah05]";
@@ -148,13 +148,13 @@ to say beatthecheetah03:	[ride - anal]
 	LineBreak;
 	say "     Rolling back over and standing back up, the cougar gives you a strange look, as if he can't believe he fucked your ass and enjoyed it. 'I - er - got to go.' comes from lips that aren't too well shaped for human words, then the large cat dashes off without allowing for a reply.";
 	infect "Feral Cheetah";
-[to say beatthecheetah04:	[get blow job]
+[to say beatthecheetah04:	[get blowjob]
 	say "     Striding up to the ";
 	infect "Feral Cheetah";
 to say beatthecheetah05:	[get cunnilingus]
 	say "     ";
 	infect "Feral Cheetah";
-to say beatthecheetah06:	[give blow job]
+to say beatthecheetah06:	[give blowjob]
 	say "     The sight of the male cat's member makes your [if Player is female]folds wet[else]pucker twitch[end if] in anticipation, and you move forward excitedly, running a hand through the soft fuzz on the cheetah's furred underside and making him moan in pleasant surprise. You rub his cock, wondering at its smooth feel in your hands, until it grows out, a bit smaller than you would have expected. Leaning forward, you proceed to suck him off, the warm flesh of his cock filling your mouth as the little barbs on it run along your tongue.";
 ]
 to say beatthecheetah07:	[Make him your mate]

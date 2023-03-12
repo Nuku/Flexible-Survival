@@ -17,7 +17,7 @@ Peacocked is a number that varies. Peacocked is usually 0.
 when play begins:
 	add Captivating Plumage to BadSpots of MaleList;
 	add Captivating Plumage to BadSpots of FemaleList;
-	add Captivating Plumage to badspots of HermList;
+	add Captivating Plumage to BadSpots of HermList;
 
 to say ResolveEvent Captivating Plumage:
 	if debugactive is 1:

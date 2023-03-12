@@ -1,5 +1,5 @@
 Version 2 of Rhino by Voidsnaps begins here.
-[Version 2 adds new scenes, updates what's there, and fixes the ending to be proper english.]
+[Version 2 adds new scenes, updates what's there, and fixes the ending to be proper English.]
 
 "Adds a Rhino creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 

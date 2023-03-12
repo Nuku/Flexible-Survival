@@ -96,7 +96,7 @@ ResolveFunction of Angel vs Demons is "[ResolveEvent Angel vs Demons]". The leve
 Sarea of Angel vs Demons is "Red".
 when play begins:
 	add Angel vs Demons to BadSpots of MaleList; [Elijah is male]
-	add Angel vs Demons to badspots of DemonList; [demons everywhere - he might even become one]
+	add Angel vs Demons to BadSpots of DemonList; [demons everywhere - he might even become one]
 
 to say ResolveEvent Angel vs Demons:
 	if HP of Gabriel is 0:
@@ -705,7 +705,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you,' he says, then adds, 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and player is male):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
@@ -779,7 +779,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and player is male and DemonBruteStatus is 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male and DemonBruteStatus is 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
@@ -1462,38 +1462,38 @@ to say ElijahSexMenu:
 		now sortorder entry is 3;
 		now description entry is "Fill the angel's ass with your cock";
 	[]
-	if (player is male) and (ElijahChar-C is "3") and HP of Sven >= 8 and HP of Sven < 30:
+	if (Player is male) and (ElijahChar-C is "3") and HP of Sven >= 8 and HP of Sven < 30:
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Sven";
 		now sortorder entry is 5;
 		now description entry is "Share Sven's mouth and ass with Elijah";
 	[]
-	if (player is female) and (ElijahChar-C is "3") and HP of Sven >= 8 and HP of Sven < 30:
+	if (Player is female) and (ElijahChar-C is "3") and HP of Sven >= 8 and HP of Sven < 30:
 		choose a blank row in table of fucking options;
 		now title entry is "Have sex with Elijah and Sven";
 		now sortorder entry is 6;
 		now description entry is "Have Elijah and Sven fuck your pussy";
 	[]
 [	***triggers for scenes w/confident Sven.]
-	if (player is male) and ((ElijahChar-D is "2") or (ElijahChar-D is "4")) and Felinoid companion is tamed:
+	if (Player is male) and ((ElijahChar-D is "2") or (ElijahChar-D is "4")) and Felinoid companion is tamed:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Elijah and the Felinoid";
 		now sortorder entry is 7;
 		now description entry is "Take two hot creature's asses.";
 	[]
-	if (player is female) and ((ElijahChar-D is "2") or (ElijahChar-D is "4")) and Felinoid companion is tamed:
+	if (Player is female) and ((ElijahChar-D is "2") or (ElijahChar-D is "4")) and Felinoid companion is tamed:
 		choose a blank row in table of fucking options;
 		now title entry is "Have Elijah and the Felinoid fuck you";
 		now sortorder entry is 8;
 		now description entry is "Take two males in your pussy.";
 	[]
-	if (player is male) and ((ElijahChar-A is "3") or (ElijahChar-A is "4")) and (Candy is in Bunker):
+	if (Player is male) and ((ElijahChar-A is "3") or (ElijahChar-A is "4")) and (Candy is in Bunker):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Elijah as he takes Candy's ass";
 		now sortorder entry is 9;
 		now description entry is "Have some fun with your coon and angel friends.";
 	[]
-	if (player is female) and ((ElijahChar-A is "3") or (ElijahChar-A is "4")) and (Candy is in Bunker):
+	if (Player is female) and ((ElijahChar-A is "3") or (ElijahChar-A is "4")) and (Candy is in Bunker):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Elijah's cock as Candy fucks him";
 		now sortorder entry is 10;
@@ -1523,13 +1523,13 @@ to say ElijahSexMenu:
 		now sortorder entry is 14;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and Player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Elijah dominate Brutus and you";
 		now sortorder entry is 15;
 		now description entry is "Get fucked by Brutus while Elijah rides his ass";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah is 50 and player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah is 50 and Player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Make Brutus fuck Elijah";
 		now sortorder entry is 15;

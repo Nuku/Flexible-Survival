@@ -245,7 +245,7 @@ to say Pet MuttSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Roll [PetMuttName] over and mount him";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 3;

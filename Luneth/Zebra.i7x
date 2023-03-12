@@ -17,12 +17,12 @@ to say Zebra wins:
 			say "     DEBUG: Empty scene in the file 'Zebra.i7x' - Dealing with the event outcome is taken care of at the event source[line break]";
 		stop the action;
 	else: [regular combat victory over the player]
-		if ((player is male) and (player is submissive) and (LostToZebra is 3)):
+		if ((Player is male) and (player is submissive) and (LostToZebra is 3)):
 			say "     'What? You again?!' The zebra man looks at your panting form with a puzzled look on his face. His expression changes to a leering grin. 'You must be one of those beta males I've heard the [one of]huskies[or]wolves[or]German Shepherds[at random] talking about.' [if Player is mpreg_ok]The stallion bends down and sniffs you. 'Or even one of those omega males!' he says with a grin. [end if]He taps the side of his muzzle thoughtfully. 'Well, I was always told never to look a gift horse in the mouth, and I'm not going to start now.' He steps up to you, bumping your face with his huge dick. [bold type]What will your stud do next?[roman type][line break]";
 			increase LostToZebra by 1;
 			wait for any key;
 			say "[ZebraDommingPlayerSexMenu]";
-		else if ((player is male) and (player is submissive) and (LostToZebra > 3)):
+		else if ((Player is male) and (player is submissive) and (LostToZebra > 3)):
 			say "     The stallion knocks you over with a little kick. 'Back again, eh? Can't say I blame you, my little boy mare. After all, who could resist all of this?' The zebra man strikes a few poses, his muscled body rippling as he showcases his arms and chest. He finishes the routine by slapping your face with his massive prick. [bold type]'Now, what to do with my new favorite mare?'[roman type][line break]";
 			wait for any key;
 			say "[ZebraDommingPlayerSexMenu]";

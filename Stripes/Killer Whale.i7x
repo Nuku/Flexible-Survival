@@ -312,11 +312,11 @@ This is the Killer Whale Infection rule:
 		trigger ending "Killer Whale Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [SUCCUMB]
 			say "     As the last of your humanity is washed away like a sand castle by the waves of the ocean, you are drawn back to the beachside. You join the other beachgoers and lose yourself in the enjoyment of the beachfront area. You swim among the other creatures, strong and powerful. You are not troubled by the other predators often and happily satisfy your urges on the others swimming in the area.";
-			if orcadom < 4 and player is male:
+			if orcadom < 4 and Player is male:
 				say "     The only difficulties you have are with the other male orcas in the area, as you fight with them over the territory and to defend the breeding females of your pod.";
 			else if Player is male:
 				say "     Having driven away several of the other muscled orcamen from the area, the territory is yours and you have little trouble driving away the other, weaker males. With the territory near the city claimed as yours, you build up a large pod of females to breed. Those killer whales who do venture into your waters are quickly beaten and dominated as you did the others before them.";
-			else if orcafdom < 4 and player is female:
+			else if orcafdom < 4 and Player is female:
 				say "     You find a powerful male among the other killer whales swimming in the waters around the city and join his pod, relishing the feel of him atop you. He breeds you, and the other females of the pod, often, to add to his mates. The males, when mature, are driven off to find pods of their own. You miss them a little, but there will always me more young ones, as your mate is strong and virile.";
 			else if Player is female:
 				say "     Doubtlessly unprepared for a reign such as yours, you wrangle together a number of males and females for your own pod, wherein the males are subjugated to your whims and to those of the females whom you matron over. Rarely do you find a consort to sufficiently placate your desires, but when you do, you make considerable use of them, regardless of their compliance.";

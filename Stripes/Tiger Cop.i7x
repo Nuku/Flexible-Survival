@@ -14,7 +14,7 @@ pquest is a number that varies.
 
 when play begins:
 	add Policeman to BadSpots of MaleList;
-	add Policeman to badspots of HermList;
+	add Policeman to BadSpots of HermList;
 	add Policeman to BadSpots of FurryList;
 
 TigerCopRoomConnection is a number that varies.[@Tag:NotSaved]
@@ -649,7 +649,7 @@ to say losetotigercop:
 			say "     'Bah, I knew you were a no good punk.' The tiger cop shakes his head, seeming almost disappointed. 'Just leave, away from my turf. I won't be so nice the next time, so you better watch your back.' Not one to question your luck, you leave while you have the chance, wary of encountering the cop again.";
 			now pquest is 99;
 	else:
-		if a random chance of 1 in 3 succeeds and ( player is female or anallevel > 1 ):
+		if a random chance of 1 in 3 succeeds and ( Player is female or anallevel > 1 ):
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
 			if Player is female:
 				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of Player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";

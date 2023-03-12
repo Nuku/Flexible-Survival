@@ -132,9 +132,9 @@ Instead of fucking the Tyr:
 					say "[TyrLost_Neuter]";
 		else:
 			now TyrDefeated is 0;
-			if a random chance of 2 in 6 succeeds and player is female:
+			if a random chance of 2 in 6 succeeds and Player is female:
 				say "[TyrWon_Cunnilingus]";
-			else if a random chance of 1 in 6 succeeds and player is female:
+			else if a random chance of 1 in 6 succeeds and Player is female:
 				say "[TyrWon_Training]";
 			else if Player is female:
 				say "[TyrWon_Vaginal]";
@@ -169,7 +169,7 @@ to TyrSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Receive Fellatio";
 		now sortorder entry is 4;
-		now description entry is "beat him and get a blow job";
+		now description entry is "beat him and get a blowjob";
 		if lust of Tyr >= 3 and Libido of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Fuck him";

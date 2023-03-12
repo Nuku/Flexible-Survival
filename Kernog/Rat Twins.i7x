@@ -207,7 +207,7 @@ to say ErinFuckBottom:
 	say "     You stay there for a while, Erin and you trying to catch back your breath. Eventually, the male rat parts away from you[if Player is male], his crotch covered with your own semen[end if], but not before giving you a languorous kiss on the lips. 'I need some rest, but you are more than welcome if you want to do it again,' the male rodent tells you, before helping you to stand up and giving your clothes back.";
 	if Player is male or anallevel is 3:
 		NPCSexAftermath player receives "AssFuck" from Erin;
-	else if (player is female or player is herm):
+	else if (Player is female or player is herm):
 		NPCSexAftermath player receives "PussyFuck" from Erin;
 	now isTwinHere is 0;
 

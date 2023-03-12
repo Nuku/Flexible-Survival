@@ -634,9 +634,9 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     [link](0)[as]0[end link] - Do nothing.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
-				say "Choice? (0-[if LoganCommand is 2 and player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
+				say "Choice? (0-[if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
 				get a number;
-				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and player is male):
+				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and Player is male):
 					break;
 				else if calcnumber is 1 or calcnumber is 0:
 					break;

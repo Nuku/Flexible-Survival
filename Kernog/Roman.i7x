@@ -488,13 +488,13 @@ to say RomanFuck2:
 		now sortorder entry is 2;
 		now description entry is "Everything is in the name";
 	[]
-	if (player is female and Breast Size of Player > 0):
+	if (Player is female and Breast Size of Player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Tribadism";
 		now sortorder entry is 3;
 		now description entry is "Have some [']girl time['] with Roman";
 	[]
-	if (player is female and Breast Size of Player is 0):
+	if (Player is female and Breast Size of Player is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Cunt-boy special";
 		now sortorder entry is 4;

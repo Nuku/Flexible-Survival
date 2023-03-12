@@ -114,7 +114,7 @@ to say hermlatexvix_06:
 	CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Vixen Herm";
 
 to say hermlatexvix_10:
-	say "***get a blow job";
+	say "***get a blowjob";
 
 to say hermlatexvix_11:
 	say "***get pussy eaten";

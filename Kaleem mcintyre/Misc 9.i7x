@@ -57,7 +57,7 @@ ResolveFunction of The Magic Cap is "[ResolveEvent The Magic Cap]". The level of
 Sarea of The Magic Cap is "Museum".
 When play begins:
 	Add The Magic Cap to BadSpots of FurryList;
-	Add The Magic Cap to badspots of HermList;
+	Add The Magic Cap to BadSpots of HermList;
 
 to say ResolveEvent The Magic Cap:
 	say "     Feeling as though something is drawing you inside of the museum, you find yourself walking into the Egyptian exhibit area of the once prominent edifice without exactly knowing why. Looking around to make sure that nothing dangerous is lurking throughout the hallways, as something usually is given the craziness happening with the city, you find that luck is with you today as there is no one around. Breathing a sigh of relief you continue following this dogged sensation tugging at you all the way until you come to an ornamental Egyptian glass case... which just so happens to be open.";

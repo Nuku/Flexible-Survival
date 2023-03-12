@@ -32,7 +32,7 @@ This will give you syntax highlighting, so you can tell which parts are text tha
 Install packages by going to: File -> Settings -> Install
 
 ### c. install the Atom package `atom-ctags`
-This package lets you index the Flexible Survival definitions to make searching easier. Ever wonder what `player is male` is actually defined as? `CTRL+SHIFT+R` and type `male` to find out!
+This package lets you index the Flexible Survival definitions to make searching easier. Ever wonder what `Player is male` is actually defined as? `CTRL+SHIFT+R` and type `male` to find out!
 
 You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. If you want to do this automatically, run the `sync.bat` script (described below) and you can ignore this part.
 

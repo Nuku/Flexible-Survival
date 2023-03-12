@@ -29,7 +29,7 @@ Sarea of Succubus Offspring Meeting is "Nowhere".
 
 when play begins:
 	add Succubus Offspring Meeting to BadSpots of FemaleList;
-	add Succubus Offspring Meeting to badspots of IncestList;
+	add Succubus Offspring Meeting to BadSpots of IncestList;
 
 to say LilithTalkAerana:
 	say "     With all due respect for the lady demoness['] hard work at giving birth to her offspring, you ask if it would be possible to bring a female child out to the world, if you kept on providing the [italic type]required deposits[roman type]. Lilith chuckles at your words, as if she was amused by your request, but eventually gives out a reply. 'We are vastly more complex than your definitions of gender, but I understand the meaning of your request.' she says, leaving a smile across her flawless face. 'Very well, you may have a daughter the next time we bed together. Though I hope you know what you are asking.' she finishes speaking, leaving a quite cryptic warning in the end that you will only understand when you see it. Probably.";
@@ -298,7 +298,7 @@ to say AeranaSexMenu: [only open when Aerana's personality is NEUTRAL]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her give you a blowjob";
 		now sortorder entry is 1;
@@ -530,7 +530,7 @@ Sarea of AAHellfire is "Nowhere".
 [ 4 - Player left]
 [ 99 - Player left before the discussion]
 
-after going to Burned-Out Chapel while (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and player is male and a random chance of 1 in 2 succeeds): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
+after going to Burned-Out Chapel while (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and Player is male and a random chance of 1 in 2 succeeds): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
 	say "     As you enter the nave of the ruined chapel, you hear multiple voices, familiar ones, in what seems to be a rather lit discussion. This is an odd event, as this place is usually quite silent and calm, with only Lilith and her children occasionally conversing, if anything at all. Curiosity slides deep into your thoughts and leads you to walk into the space where you can finally see the family reunited. As the demonic sorceress herself stands in the altar, your two shared offspring, Aerana and Atticus, seem to be arguing with one another while a large crimson demon, completely naked, lies tied up and bound between them, with a hood over his head. The entire scene is, indeed, a rare sight, and as the demons see you approach, they hold their words for brief moments.";
 	say "     'Oh, it is you. A timely arrival, I must admit,' says Lilith as she beckons you to come closer. 'Don't you happen to know, by any chance, why this red vermin was trespassing our territory?' she asks, with an authoritative tone which also seems slightly angry, as she points at the demon between them. You are able to identify him as a common Hellfire Demon, one of Mogdraz's lackeys. 'Since you have been there on occasion... Not that I personally mind it, but I trust that you'd know how to keep certain things in their due places... And the fact is that they grow bolder by the day, which is an odd coincidence.' Aerana turns to you after her mother has spoken, her eyes piercing yours as she opens her mouth to talk...";
 	WaitLineBreak;

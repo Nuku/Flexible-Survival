@@ -273,7 +273,7 @@ to say losetofpony:
 		say "     She rides you eagerly, her hooves rubbing over your [bodytype of Player] body[if rfponytype is 2], her wings aflutter with excitement[else if rfponytype is 3] while glowing magic from her horn lets her grope your balls[end if]. You can feel her hot juices running down your shaft and across your balls as she rides your rod faster and faster. As the happy [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if] squeezes and grinds down hard onto your cock, she smiles and swishes her flowing [rfponycolor2] hair. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her, you cum hard, pumping your hot load into the pleased pony as a fresh rush of hot juices from her soaks your crotch. Once you're drained, she nuzzles your cheek and pulls off[if Cock Length of Player > 20] with a groan[end if].";
 	else:
 		say "     Grinning down at you, she giggles all the more as she looks over your prone form. 'Oh, we are going to be such great friends. I can tell,' the [rfponycolor1] pony says, hopping atop you. She raises her [rfponycolor2] tail and grinds her wet mare's pussy down into your face, the scent and sweetness of her juices overpowering your senses. You lick your lips, getting your first sample of her juices before diving your tongue into her juicy, mare's pussy. She moans and nickers happily[if rfponytype is 2] as her wings flutter[end if], giggling about what a good friend you are and to lick her faster.";
-		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
+		say "     Grabbing onto her ass right on those designs of [rfponybm] on each flank, you squeeze tightly and pull her delicious pussy to your face. You lap away eagerly, finding the [if rfponytype is 1]pony[else if rfponytype is 2]pegasus[else]unicorn[end if]'s taste delightful. It is sugary, saccharine, almost tooth-rottingly sweet, but it seems wonderful to you and you lick for more and more[if rfponytype is 3 and Player is female]. She uses glowing magic from her horn to tease your pussy before forming a phallic force to thrust and pound into you while you eat her out[else if rfponytype is 3]. She uses glowing magic from her horn to tease your tight pucker before forming a phallic force to thrust and pound into you while you eat her out[end if]. With your excitement and lust growing, your confused mind is happy to have met such a pretty, lovely and oh so friendly pony. Giggling merrily along with her as she climaxes, your face is covered in her sweet, sticky juices and you lap up as much of it as you can get. After a few more climaxes like that, she's finally satisfied and stands back up.";
 	say "     'I hope to see you again, my new friend. It's been magic.' That said, she [if rfponytype is 2]flies[else]trots[end if] off, probably in search of another new friends. It's some time before your head clears enough for you to get up and head on your way.";
 
 
@@ -670,7 +670,7 @@ to selectbootymark:
 		-- 13:
 			now pfpbootymark is "a cuckoo chick in a nest";
 		-- 14:
-			now pfpbootymark is "an alert doberman with a blue ribbon";
+			now pfpbootymark is "an alert Doberman with a blue ribbon";
 		-- 15:
 			now pfpbootymark is "a collection of puppies";
 		-- 16:
@@ -728,7 +728,7 @@ to selectbootymark:
 	if "Physical Booster" is listed in feats of Player, add "a muscly arm" to pfpbmList;
 	if "Mental Booster" is listed in feats of Player, add "a throbbing brain" to pfpbmList;
 	if "Cuckold" is listed in feats of Player, add "a cuckoo chick in a nest" to pfpbmList;
-	if "Top Dog" is listed in feats of Player, add "an alert doberman with a blue ribbon" to pfpbmList;
+	if "Top Dog" is listed in feats of Player, add "an alert Doberman with a blue ribbon" to pfpbmList;
 	if "Proud Parent" is listed in feats of Player, add "a collection of puppies" to pfpbmList;
 	if "Black Belt" is listed in feats of Player, add "a gi and black belt" to pfpbmList;
 	if "One Way" is listed in feats of Player, add "a one-way street sign" to pfpbmList;

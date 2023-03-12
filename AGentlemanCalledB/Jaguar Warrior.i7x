@@ -113,7 +113,7 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 	now sortorder entry is 1;
 	now description entry is "Grab him by the scruff of the neck and make him acknowledge you as his [master]";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Rub his balls and then fuck his ass"; [-> male T]
 		now sortorder entry is 2;
@@ -125,7 +125,7 @@ to say JaguarWarriorCaptured: [TODO: Add tracking to the way the player took him
 		now sortorder entry is 3;
 		now description entry is "Get the kitty hot and ready, then ride him";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Tease his nipples and then fuck his ass"; [-> female T]
 		now sortorder entry is 4;

@@ -19,7 +19,7 @@ ResolveFunction of Garage Demon is "[ResolveEvent Garage Demon]".
 The sarea of Garage Demon is "Capitol".
 when play begins:
 	add Garage Demon to BadSpots of MaleList;
-	add Garage Demon to badspots of DemonList;
+	add Garage Demon to BadSpots of DemonList;
 
 to say ResolveEvent Garage Demon:
 	if debugactive is 1:
@@ -259,7 +259,7 @@ to say sexwithHayato:
 		say "     Despite its obvious age, it turns easily and the gears in the mechanism run smoothly. The bands around his waist and between his legs steps out further with each turn of the key until they finally release. And that's not all that is released. Free from its bonds, his crimson cock surges to full erection, sending the unlatched metal clattering across the ground.";
 		say "     Now free from their containment, you're not even sure how his large equipment could even fit within the restraint. The oni's transformed manhood is a thick pillar of red flesh, hard and throbbing with need. While shaped like a man's cock, it is considerably larger and thicker with throbbing veins. It is a little over a foot in length and leaks precum steadily. Like the rest of him, it is a bright red in color, only darkening to a near-black shade of red at the glans. Below it hangs his ponderous ballsack, containing his large, firm testicles. The feel of them in your hand and the knowledge that they are heavy with his pent-up semen - virgin semen at that - practically makes your mouth water.";
 		WaitLineBreak;
-		say "     Lowering yourself down between his legs, you bring your mouth to his erection and start licking over it. It twitches and unleashes a healthy gush of precum, which you lap up eagerly. The oni pants, his yellow eyes rolling back in his head as you work your mouth over his virgin shaft and start sucking on it. You guzzle down several rich mouthfuls of his precum before pulling off again, taking delight at his groan of disappointment. As much as you'd like to keep on sucking him, you worked too hard to get this to blow his first time on a blow job.";
+		say "     Lowering yourself down between his legs, you bring your mouth to his erection and start licking over it. It twitches and unleashes a healthy gush of precum, which you lap up eagerly. The oni pants, his yellow eyes rolling back in his head as you work your mouth over his virgin shaft and start sucking on it. You guzzle down several rich mouthfuls of his precum before pulling off again, taking delight at his groan of disappointment. As much as you'd like to keep on sucking him, you worked too hard to get this to blow his first time on a blowjob.";
 		if Player is female:
 			say "     Moving back up, you pull yourself into his lap, [if scalevalue of Player < 3]hugging your arms around as much of his broad chest as your small body can hold[else if scalevalue of Player is 3]wrapping your arms around the larger fellow's broad chest[else]draping your arms around his shoulders and neck while you kiss him[end if]. You grind your pussy down onto that pulsing rod of his and shift your hips to lower yourself down onto it. You watch as his gruff face is overcome with ecstasy as you push your cunt down around his cock, taking the transformed man's virginity. With that thick rod inside you, you take it slow at first, mainly for the sake of making the pent-up oni last a little longer. Despite your efforts, it ends up being a little short, but you are treated to such a thick geyser of cum while the demon ogre cries out in lustful release after his self-imposed abstinence that it is well worth it. The feel of those seemingly unending pulses of his spurting rod as his tainted seed stuffs you full and overflows from your cunt sends you into orgasm as well, your needy vagina milking the oni for more and more until he finally collapses backwards in a daze. You grin and pull off of him slowly, smiling smugly at the messy pool of cum covering his lower body and the garage floor between his legs. Your womb sloshes with his semen, stuffed full and hot with his demonic load.[fimpregchance][fimpregchance]";
 		else:
@@ -447,7 +447,7 @@ to say ResolveEvent Noh Mask:
 			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
 			now HP of Hayato is 12; [didn't fight]
 	else if HP of Hayato is 12: [lost or didn't fight]
-		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blow jobs[or]recovering after fucking her[at random].";
+		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blowjobs[or]recovering after fucking her[at random].";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
 		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
 		LineBreak;
@@ -515,7 +515,7 @@ ResolveFunction of Oni Lair is "[ResolveEvent Oni Lair]". Oni Lair is inactive. 
 The sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to BadSpots of MaleList;
-	add Oni Lair to badspots of DemonList;
+	add Oni Lair to BadSpots of DemonList;
 
 to say ResolveEvent Oni Lair:
 	if debugactive is 1:

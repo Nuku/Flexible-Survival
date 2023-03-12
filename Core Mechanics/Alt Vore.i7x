@@ -386,9 +386,9 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvbp_dolphin]";
 	else if Player is male and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer04]";
-	else if currentmonster is cocked and ( player is female or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+	else if currentmonster is cocked and ( Player is female or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer05]";
-	else if hvorecount is odd and currentmonster is cocked and ( player is female or anallevel > 1 ):
+	else if hvorecount is odd and currentmonster is cocked and ( Player is female or anallevel > 1 ):
 		say "[hvorebyplayer02]";
 	else:
 		say "[hvorebyplayer03]";
@@ -507,7 +507,7 @@ to say hvbp_ewe:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or player is male ) and MaleList is not banned:
+	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or Player is male ) and MaleList is not banned:
 		setmonster "Ram";
 		choose row MonsterID from the Table of Random Critters;
 

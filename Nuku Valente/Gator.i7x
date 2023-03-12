@@ -375,7 +375,7 @@ to say GatorDenSex:
 		[Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.]
 		decrease humanity of Player by a random number from 5 to 20;
 	else: [Sex]
-		if a random chance of 1 in 2 succeeds and player is male: [She wants to be fucked]
+		if a random chance of 1 in 2 succeeds and Player is male: [She wants to be fucked]
 			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of Player], [Cock of Player] cock[smn] rise[smv] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
 			if Cock Length of Player < 4:
 				say "     She gets an odd expression when you sink into her, then looks over her shoulder. 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside of the gator as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";

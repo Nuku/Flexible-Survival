@@ -534,7 +534,7 @@ to say JenniferTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "Join the group of naked young women for some practice moves";
 	[]
-	if (HP of Septus < 7 or HP of Septus >= 50) and player is male and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and BodyName of Player is "Football Wolfman" and HP of Player > 0:
+	if (HP of Septus < 7 or HP of Septus >= 50) and Player is male and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and BodyName of Player is "Football Wolfman" and HP of Player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest you become team manager";
 		now sortorder entry is 100;
@@ -683,7 +683,7 @@ Instead of fucking the Jennifer:
 		else if lastfuck of Jennifer - turns < 4 and HP of Septus >= 50 and HP of Septus < 99: [cheer-leading player]
 			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'Oh, while we often do have some... fun times with each other in the squad, cheer-leading does take some hard work. Sorry, but I do have some training of my own to do. The girls are working on a new move and they'll need me there to help them get it right. I'm sure you understand - and you're welcome to join us.' Giving you a playful grope and another kiss, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. Maybe you really should join their training sometime and get to learn more moves with your pom-poms...";
 		else:
-			if HP of Septus < 7 and lust of Jennifer > 0 and the remainder after dividing lust of Jennifer by 3 is 0 and player is male:
+			if HP of Septus < 7 and lust of Jennifer > 0 and the remainder after dividing lust of Jennifer by 3 is 0 and Player is male:
 				say "     Heading off to grab Jennifer for some fun, you spot her finishing up with [one of]a pair of Players[or]one of the other players[or]another wolfman[or]a wolfman's cock in her mouth[or]sucking off a pair of wolves[at random]. Being horny, having to wait and watch is a little frustrating. You can't help but think it'd be nice to not have to share her around with the whole team and wonder how you might be able to manage that. This is only added to as she comes over to you still sticky with cum from the encounter. Not noticing the possessive look you're giving her, she smiles and heads over to you, eager as always for more.";
 			else if HP of Septus > 49:
 				say "     Heading off to grab Jennifer for some fun, you spot her finishing up with [one of]a pair of Players[or]one of the other players[or]a wolfman's cock in her mouth[or]sucking off a pair of wolves[at random]. You're tempted to simply join her take care of the handsome and strong players, but Jennifer finishes up, then comes over to you all still sticky with cum from the encounter. She smiles as she approaches, eager as always for more.";

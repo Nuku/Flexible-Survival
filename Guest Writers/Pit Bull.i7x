@@ -87,9 +87,9 @@ to say losetopitbull_f:[Female Pit Bull Defeat Scenes]
 		else if scalevalue of Player < 4:
 			say "     Amused, she gives your rear an audible smack and watches you flinch before you watch as she slowly pushes two of her fingers into your exposed anal ring. Writhing in discontent, her irreverent inspection is briefly concluded, only to be replaced by the whole of her fist! [if Player is twistcapped]Thankfully, your infection abides such an intrusion in spite of its size and belligerence, though this only serves to amuse the rough dog and encourage her to assault you more harshly[else]You feel a sharp pain as your beleaguered hole is stretched so suddenly, your impotent struggles an endless source of entertainment to the rough dog[end if].";
 		say "     [if Cock Count of Player > 1]Cocks driven erect by her influence, their need for attention is left largely disregarded by the canine[else if Player is male]Cock driven erect by her influence, its need for attention is left largely disregarded by the canine[else if Cunt Count of Player > 1]Cunts dripping wet with a needy hunger in the wake of her influence, their desire for attention is left largely disregarded by the canine[else if Player is female]Cunt dripping wet with a needy hunger in the wake of her influence, its desire for attention is left largely disregarded by the canine[else]Twisted lust gradually overwhelming you, she doesn't appear to regard your genderless state[end if]; rather, she intends to stimulate you purely by force. You feel her knuckles grind against your [if Player is male]prostate[else]passage[end if] with a reckless abandon";
-		if Libido of Player > 69 and player is male:
+		if Libido of Player > 69 and Player is male:
 			say ". You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
-		else if Libido of Player > 69 and player is female:
+		else if Libido of Player > 69 and Player is female:
 			say ". You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. She's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. Her clear annoyance is inevitably abated when she seems satisfied in her goal of humiliating you, regardless.";
 		else if Player is not neuter:
 			say ". [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your ";
@@ -154,9 +154,9 @@ to say losetopitbull_m:[Male Pit Bull Defeat Scenes]
 		else if scalevalue of Player < 4:
 			say "     Amused, he gives your rear an audible smack and watches you flinch before you watch as he slowly pushes two of his fingers into your exposed anal ring. Writhing in discontent, his irreverent inspection is briefly concluded, only to be replaced by the whole of his fist! [if Player is twistcapped]Thankfully, your infection abides such an intrusion in spite of its size and belligerence, though this only serves to amuse the rough dog and encourage him to assault you more harshly[else]You feel a sharp pain as your beleaguered hole is stretched so suddenly, your impotent struggles an endless source of entertainment to the rough dog[end if].";
 		say "     [if Cock Count of Player > 1]Cocks driven erect by his influence, their need for attention is left largely disregarded by the canine[else if Player is male]Cock driven erect by his influence, its need for attention is left largely disregarded by the canine[else if Cunt Count of Player > 1]Cunts dripping wet with a needy hunger in the wake of his influence, their desire for attention is left largely disregarded by the canine[else if Player is female]Cunt dripping wet with a needy hunger in the wake of his influence, its desire for attention is left largely disregarded by the canine[else]Twisted lust gradually overwhelming you, he doesn't appear to regard your genderless state[end if]; rather, he intends to stimulate you purely by force. You feel his knuckles grind against your [if Player is male]prostate[else]passage[end if] with a reckless abandon";
-		if Libido of Player > 69 and player is male:
+		if Libido of Player > 69 and Player is male:
 			say ". You almost immediately fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 4]drenching your torso and neck[else]seed wasted against your torso[end if]. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
-		else if Libido of Player > 69 and player is female:
+		else if Libido of Player > 69 and Player is female:
 			say ". You almost immediately cry out in orgasm, your sexual fluids dripping down and only serving to lubricate what thrusts that might follow. He's actually a bit surprised by this, probably not suspecting you to be this pathetically easy to get off. His clear annoyance is inevitably abated when he seems satisfied in his goal of humiliating you, regardless.";
 		else if Player is not neuter:
 			say ". [if Libido of Player > 33]It's not long before you[else]It seems like forever until you finally[end if] cry out in orgasm, your ";
@@ -209,7 +209,7 @@ To say beatthepitbull:
 			now sortorder entry is 5;
 			add 5 to randompitbullchoice;
 	if pitbullgender is 1:
-		if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+		if HP of Dominick >= 60 and HP of Dominick < 100 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Recruit for Dominick";
 			now sortorder entry is 99;
@@ -220,7 +220,7 @@ To say beatthepitbull:
 		if anallevel > 1:
 			add 7 to randompitbullchoice;
 	say "     With one final effort you set upon the canine, who falls under the weight of your superior prowess[run paragraph on]";
-	if ( humanity of Player - Libido of Player ) < 0 and (player is male or player is male) and (HP of Dominick < 60 or HP of Dominick >= 100):
+	if ( humanity of Player - Libido of Player ) < 0 and (Player is male or Player is male) and (HP of Dominick < 60 or HP of Dominick >= 100):
 		say ". Compelled by your lust, you lose your self-control and seek to sate your sexual needs using your fallen foe. You immediately remove what attire might obstruct your tainted endeavor and advance upon them.";
 		sort randompitbullchoice in random order;
 		if entry 1 of randompitbullchoice is 1, say "[pitbull_vsex1]";
@@ -230,7 +230,7 @@ To say beatthepitbull:
 		if entry 1 of randompitbullchoice is 5, say "[pitbull_vsex5]";
 		if entry 1 of randompitbullchoice is 6, say "[pitbull_vsex6]";
 		if entry 1 of randompitbullchoice is 7, say "[pitbull_vsex7]";
-	else if Libido of Player >= 30 and (player is male or player is male):
+	else if Libido of Player >= 30 and (Player is male or Player is male):
 		say ". As they lay before you this might be an opportune moment to satisfy any lingering need you might possess. Looking over the fallen canine, you quickly weigh your possible options for sexual fun[if HP of Dominick >= 60 and HP of Dominick < 100 and pitbullgender is 1], including possibly trying to turn this junkyard dog into another pet for Dominick[end if].";
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;

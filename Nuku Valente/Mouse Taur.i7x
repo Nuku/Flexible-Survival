@@ -47,7 +47,7 @@ Sarea of Find Porn Store is "Red".
 When play begins:
 	add Find Porn Store to BadSpots of FurryList;
 	add Find Porn Store to BadSpots of FemaleList;
-	add Find Porn Store to badspots of HermList;
+	add Find Porn Store to BadSpots of HermList;
 
 to say ResolveEvent Find Porn Store:
 	FindPornStore;

@@ -624,7 +624,7 @@ to say GildwingClanAccept:
 		say "     Your vision turns blurry and your head aches as it rearranges its shape. Pressure builds at the back of your skull as two small kobold horns grow, and by the time the headache clears and your vision returns, you are met with a small draconic snout with a mouth filled with pointy little teeth, making you look similar to a small dragon.";
 		LineBreak;
 		[Cock&Balls]
-		if player is male:
+		if Player is male:
 			say "     Your crotch feels warm as your arousal flares, causing your [if player is internal][Cock of Player] cock to stir within you, slowly pushing its way out from your vent, beginning to pulse as its shape changes to something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws back into your genital slit[else][Cock of Player] cock to harden and grow to its full length, beginning to pulse as its shape starts to change. Your balls pull up, and for a moment you are worried that you are losing them, but you can feel them traveling within you to become internal. At the same time, your dick becomes something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. You feel a new depth push inward as a vent is formed to house your new reptilian length. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws into your genital slit, leaving it impossible to tell your gender merely by looking at your groin[end if].";
 			WaitLineBreak;
 		[Womb]

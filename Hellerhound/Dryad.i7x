@@ -17,7 +17,7 @@ the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap
 Section 2 - Creature Insertion
 
 To say dryad defeat:
-	if Libido of Player > 25 and player is male:
+	if Libido of Player > 25 and Player is male:
 		say "     The dryad staggers back and stumbles into a tree. Trapped between you and it, she moans weakly. With her nude form on display, you can't help but run your eyes over her slender body, going from her lovely bosom and down to her syrupy pussy. You find her quite tantalizing to look at, and you're tempted to do much more than look. [bold type]Shall you try to have your way with her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have some fun with the dryad.";
