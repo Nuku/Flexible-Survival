@@ -18,7 +18,6 @@ a postimport rule:
 	if TailName of Player is "Elven Hunter", now TailName of Player is "Elven Male";
 	if CockName of Player is "Elven Hunter", now CockName of Player is "Elven Male";
 
-
 to say GenerateTrophyList_ElvenHunter:
 	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
 	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
