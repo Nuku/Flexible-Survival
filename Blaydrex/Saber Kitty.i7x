@@ -61,7 +61,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Sabretooth"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Sabretooth"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Saber Kitty" to infections of FelineList;
 	add "Saber Kitty" to infections of FurryList;
 	add "Saber Kitty" to infections of NatureList;
@@ -71,58 +71,58 @@ When Play begins:
 	add "Saber Kitty" to infections of BipedalList;
 	add "Saber Kitty" to infections of TailList;
 	now Name entry is "Saber Kitty"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks and grinds her body against your. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random]."; [ Successful attack message ]
 	now defeated entry is "[saber_loses]";
 	now victory entry is "[saber_wins]";
 	now desc entry is "[SaberKittyDesc]";
-	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "feminine, with curves to your body that are to die for and some sexy abs. Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things. Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
 	now skin entry is "covered in a soft beige fur that turns white on the front of your torso and the inside of your ass cheeks";
 	now tail entry is "You have a short saber kitty tail that is covered in fur. It is adorable and seems to wag like a dog tail when you get too excited."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "barbed and knotted saber"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "you feel your ears tingle and move to the top of your head and arch up in a feline fashion. You watch in horror and fascination as your face pushes out into a cute feline muzzle. Your top canine teeth begin to ache as they grow and push their way out so they are always showing"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body aches pleasurably as all excess fat dissipates and it takes on an athletic and feminine appearance. Your legs creak as they become digitigrade. Your arms become sleek and yet slightly muscular ending in pawed hands that are fully usable and have claws"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "soft, short beige fur sprouts all over your body except on the front of your torso and the inside of your legs and butt where it is white"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it pushes out into a shapely, feminine, yet muscular ass. You can't help but moan as a tail begins to push out. It is short and covered in fur, but adorable"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "you feel your ears tingle and move to the top of your head and arch up in a feline fashion. You watch in horror and fascination as your face pushes out into a cute feline muzzle. Your top canine teeth begin to ache as they grow and push their way out so they are always showing"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your body aches pleasurably as all excess fat dissipates and it takes on an athletic and feminine appearance. Your legs creak as they become digitigrade. Your arms become sleek and yet slightly muscular ending in pawed hands that are fully usable and have claws"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "soft, short beige fur sprouts all over your body except on the front of your torso and the inside of your legs and butt where it is white"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it pushes out into a shapely, feminine, yet muscular ass. You can't help but moan as a tail begins to push out. It is short and covered in fur, but adorable"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "you fall to your knees, humping the air. The end tapers and grows feline-like barbs. The base begins to form a large knot, like that of a canine. As the transformation ends the cock retreats into a newly formed sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-	now str entry is 10;      [ These are now the creature's stats... ]
-	now dex entry is 15;      [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 10;      [ These values may be used as part of alternate combat.]
+	now str entry is 10; [ These are now the creature's stats... ]
+	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 10; [ These values may be used as part of alternate combat.]
 	now per entry is 10;
 	now int entry is 1;
 	now cha entry is 20;
-	now sex entry is "Female";        [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 45;               [ The monster's starting HP. ]
-	now lev entry is 10;              [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 12;             [ Monster's average damage when attacking. ]
-	now area entry is "Outside";      [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 0;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 0;       [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 0;        [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 2;           [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 5;       [ Size of breasts the infection will try to attain. ]
-	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 15;      [ Depth of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 6;        [ Width of female sex the infection will try to give a player. ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 45; [ The monster's starting HP. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12; [ Monster's average damage when attacking. ]
+	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 0; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 15; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
-	now libido entry is 90;           [ Target libido the infection will rise towards. ]
+	now libido entry is 90; [ Target libido the infection will rise towards. ]
 	now loot entry is "smilodon cum"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 75;       [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
+	now lootchance entry is 75; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "smilodon cum";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;             [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "slender, yet slightly muscled and sexy";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "slender, yet slightly muscled and sexy"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender" Use [one of] to vary ]
 	now type entry is "feline";
-	now magic entry is false;         [ Is this a magic creature? true/false (normally false) ]
-	now resbypass entry is false;     [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now DayCycle entry is 0;    [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -133,7 +133,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -190,7 +190,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

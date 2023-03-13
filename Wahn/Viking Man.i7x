@@ -195,8 +195,8 @@ When Play begins:
 	add "Viking Man" to infections of BipedalList;
 	now Name entry is "Viking Man";
 	now enemy title entry is "Viking Warrior";
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[VikingManAttacks]";
 	now defeated entry is "[VikingManLoses]";
 	now victory entry is "[VikingManWins]";
@@ -221,32 +221,32 @@ When Play begins:
 	now HP entry is 80;
 	now lev entry is 9;
 	now wdam entry is 15;
-	now area entry is "Nowhere";             [ Case sensitive]
+	now area entry is "Nowhere"; [ Case sensitive]
 	[now area entry is "Nowhere";]         [ TODO: Disable until update]
-	now Cock Count entry is 1;             [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Count entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 10;
-	now Ball Size entry is 2;              [ Size of balls ]
-	now Nipple Count entry is 2;           [ Number of nipples. ]
-	now Breast Size entry is 0;            [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;             [ number of pussies if sex is 'Female' or 'Both' ]
+	now Ball Size entry is 2; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples. ]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0;         [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
-	now libido entry is 60;                [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "dried cod";         [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 40;            [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;                  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is "dried cod"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 40; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "Nordic"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "human";             [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is "Viking Woman"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;         [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is "Viking Woman"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -314,7 +314,7 @@ When Play begins:
 	now Legs Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes nice and round"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is "human ass"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

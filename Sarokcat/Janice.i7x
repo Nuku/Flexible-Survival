@@ -130,7 +130,7 @@ instead of conversing the Janice:
 			say "     Finding your crotch lacking in a gender, she seems a little disappointed, but instead lets her paws roam across your [bodytype of Player] form. As she caresses your body, she grinds her juicy pussy against your leg and nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. She lavishes attention upon you while rubbing her wet petals against your thigh until she cries out in orgasm. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as wipes up some juices from her crotch and sucks them from her fingertips before moving onto grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
 		infect "Arctic fox";
-		if janicearoused is 0, now janicearoused is 1;  [player now passed Janice's test, willing or not]
+		if janicearoused is 0, now janicearoused is 1; [player now passed Janice's test, willing or not]
 		if janicetalk < 4, now janicetalk is 4;
 		now HP of Kristen is 12;
 	else if HP of Kristen >= 16 and a random chance of 1 in 3 succeeds:

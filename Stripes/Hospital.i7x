@@ -1701,7 +1701,7 @@ to say hospquestpt12:
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Hospital";
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	setmonster "Mismatched Chimera";
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";

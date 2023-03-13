@@ -49,7 +49,7 @@ to say ResolveEvent toy store:
 		now toystoreseen is true;
 		now Resolution of Toy Store is 99; [Saw Store, May Return Later]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [Redundant check to clear prop for players who don't lose/submit]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [Redundant check to clear prop for players who don't lose/submit]
 	WaitLineBreak; [Pause to ensure all content is fully seen before moving back to previous nav point]
 
 
@@ -129,7 +129,7 @@ to say toystoreloss:
 	setmonster "Latex Fox"; [Redundant code here because Inform throws a fit otherwise!]
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [Allows the fox to infect again]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [Allows the fox to infect again]
 	infect "Latex Fox";
 	infect "Latex Fox";
 	infect "Latex Fox";

@@ -55,8 +55,8 @@ Centaur Gangbang is a situation.
 ResolveFunction of Centaur Gangbang is "[ResolveEvent Centaur Gangbang]". The level of Centaur Gangbang is 5.
 Sarea of Centaur Gangbang is "Plains".
 when play begins:
-	add Centaur Gangbang to badspots of HermList;      [Thomas becomes a herm in/after this scene]
-	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
+	add Centaur Gangbang to badspots of HermList; [Thomas becomes a herm in/after this scene]
+	add Centaur Gangbang to BadSpots of MaleList; [male centaurs]
 
 to say ResolveEvent Centaur Gangbang:
 	project the Figure of CentaurStallion_hard_icon;
@@ -203,18 +203,18 @@ Sterile of Thomas is false. [steriles can't knock people up]
 MainInfection of Thomas is "Centaur Stallion".
 Description of Thomas is "[ThomasDesc]".
 Conversation of Thomas is { "Mew!" }.
-lastThomasTalk is a number that varies. lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
-ThomasSaved is a number that varies. ThomasSaved is usually 555.					[saved to put in a delay of at least 10 turns before Felix shows up]
+lastThomasTalk is a number that varies. lastThomasTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
+ThomasSaved is a number that varies. ThomasSaved is usually 555. [saved to put in a delay of at least 10 turns before Felix shows up]
 SandySaved is a number that varies. SandySaved is usually 555. [saved to put in a delay of at least 10 turns before Jill shows up]
 FelixSaved is a number that varies. FelixSaved is usually 555. [saved to put in a delay of at least 8 turns before Felix quest starts]
-ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0.			[quest stage variable]
+ThomasQuestVar is a number that varies. ThomasQuestVar is usually 0. [quest stage variable]
 ThomasPregnancy is a number that varies. [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
 The icon of Thomas is Figure of Thomas_soft_icon.
 
 An everyturn rule:
 	if Thomas is in the Dry Plains and HP of Thomas is 4: [4 = invisibly pregnant]
 		if ThomasPregnancy is 36:
-			now HP of Thomas is 5;                                  [5 = visible pregnancy]
+			now HP of Thomas is 5; [5 = visible pregnancy]
 		increase ThomasPregnancy by 1;
 
 instead of sniffing Thomas:
@@ -512,7 +512,7 @@ to say ThomasTalk9:
 	say "     'Ah, there you are - I'd been wondering if Thomas sent me on a wild goose chase. Name's Vance, by the way. And those are the bitches I was promised?' He nods towards the pit and sets down the sack. It's dog food, you can see now. 'Bit unruly and noisy, but I guess that'll stop in time. Oh well, I've got time to kill - they'll get hungry sometime.' Patting the sack of dry dog food, he gives the captured centaurs a somewhat hungry look. You leave him and his future husky bitches and start walking back towards your usual meeting place with Thomas.";
 	now ThomasQuestVar is turns;
 	now SandySaved is turns;
-	increase Libido of Thomas by 1;    [Sandy]
+	increase Libido of Thomas by 1; [Sandy]
 
 instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and Libido of Thomas < 10 and ThomasSaved - turns > 10):
 	say "[NavCheck Dry Plains]";

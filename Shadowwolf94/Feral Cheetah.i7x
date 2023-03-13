@@ -210,7 +210,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Cheetah"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Cheetah"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Feral Cheetah" to infections of FelineList;
 	add "Feral Cheetah" to infections of FurryList;
 	add "Feral Cheetah" to infections of FeralList;
@@ -220,23 +220,23 @@ When Play begins:
 	add "Feral Cheetah" to infections of SheathedCockList;
 	add "Feral Cheetah" to infections of BipedalList;
 	add "Feral Cheetah" to infections of TailList;
-	now Name entry is "Feral Cheetah"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Feral Cheetah";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]bites with sharp fangs, drawing blood[or]slashes at you, opening large wounds [or]leaps over you, slashing as it is flying[at random]!"; [Text used when the monster makes an Attack]
 	now defeated entry is "[cheetah defeat]";
 	now victory entry is "[cheetah victory]";
 	now desc entry is "[cheetahdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "feline, with an actively twitching nose"; [ Face description, format as "Your face is (your text)"]
-	now body entry is "lithe and strong, with a shape for speed and muscles for true strength"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "smooth spotted fur over your"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "feline, with an actively twitching nose"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "lithe and strong, with a shape for speed and muscles for true strength"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "smooth spotted fur over your"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Your tail is decently sized, spotted, and whipping back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "tan spined, and sheathed cheetah "; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it grows longer, the front narrowing, and both eyes looking ahead. Your pupils dilate oddly, and you realize they have become slitted"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your spine bends, shoving you onto all fours as the rest of your body changes shape, leaving you with a lithe, rippling body"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it grows spotted fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it grows more compact and muscles grow and shift beneath the surface, perfect for running. A furry, lithe tail sprouts out a second later "; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it grows longer, the front narrowing, and both eyes looking ahead. Your pupils dilate oddly, and you realize they have become slitted"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your spine bends, shoving you onto all fours as the rest of your body changes shape, leaving you with a lithe, rippling body"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it grows spotted fur"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it grows more compact and muscles grow and shift beneath the surface, perfect for running. A furry, lithe tail sprouts out a second later "; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "spines grow out, and a furry sheath covers the bottom"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 26;
@@ -262,16 +262,16 @@ When Play begins:
 	now libido entry is 25; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dirty water";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]animalistic[or]sleek[at random]";
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -283,7 +283,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -340,7 +340,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

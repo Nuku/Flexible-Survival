@@ -285,9 +285,9 @@ When Play begins:
 	add "Seraphim Warrior" to the infections of BipedalList;
 	add "Seraphim Warrior" to the infections of FlightList;
 	now Name entry is "Seraphim Warrior";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Gabriel";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The Seraphim calls out, 'Surrender! This just prolongs your pain. It will be over quickly if you do not struggle.' Then he smites you with a faintly glowing hand.[or]Your angelic opponent calls out, 'Stop fighting, foolish mortal - I only want to help you!' Then he gives you a hard punch in the face, a mixture of regret and annoyance on his face.[or]Hooking a foot behind your leg, the Seraphim pulls it out from under you. As you crash down on the ground, he calls out, 'Surrender, I do not wish to hurt you more than necessary.'[at random]";
 	now defeated entry is "[SeraphDefeated]";
 	now victory entry is "[SeraphVictorious]";
@@ -295,48 +295,48 @@ When Play begins:
 	now face entry is "quite beautiful, with chiseled features bare of even the slightest imperfection. A full head of shoulder-length and slightly curled brown hair frames the picture of a handsome male";
 	now body entry is "that of a well-built and muscular human being, toned and strong. It is garbed in a robe of pure white, flowing fabric. Two large wings sprout from your back, bearing white feathers";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now tail entry is "You have a round, firm bubble butt, just waiting to be grabbed."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into perfectly sculpted male features. Shoulder-length locks of brown hair form to frame your handsome visage"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a very well-built form, leaving you with a toned and strong human-like body. A moment later, a pair of large white wings unfold behind your back, leaving you to wonder if you might fly once you've figured out how they actually work. Then finally, there is a short ringing in the air behind you, as if from hundreds of tiny bells, leaving you to find a neatly folded white robe on the ground as you turn around. Slipping into the silk-soft item of clothing, you just feel right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a firm, round bubble butt";
 	now cock change entry is "it becomes human-like, uncut and well-proportioned";
-	now str entry is 20;                  [ These are now the creature's stats... ]
-	now dex entry is 18;                  [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 16;                  [ These values may be used as part of alternate combat.]
+	now str entry is 20; [ These are now the creature's stats... ]
+	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 16; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 16;
 	now cha entry is 18;
-	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 85;
-	now lev entry is 13;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 12;                 [ Monster's average damage when attacking. ]
-	now area entry is "Nowhere";          [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now lev entry is 13; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 9;
-	now Ball Size entry is 3;            [ Size of balls ]
-	now Nipple Count entry is 2;               [ Number of nipples. ]
-	now Breast Size entry is 0;           [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now Ball Size entry is 3; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples. ]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 6;
 	now Cunt Tightness entry is 4;
 	now SeductionImmune entry is true;
-	now libido entry is 0;               [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";                 [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;            [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 0; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "angelic";
 	now type entry is "angel";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -347,7 +347,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -404,7 +404,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

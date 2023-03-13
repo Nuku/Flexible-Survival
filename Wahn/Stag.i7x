@@ -212,9 +212,9 @@ When Play begins:
 	add "Blacktail Stag" to infections of BipedalList;
 	add "Blacktail Stag" to infections of TailList;
 	now Name entry is "Blacktail Stag";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is "Mike";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]He pushes you down against the ground with strong arms and gives you a blow in the ribs.[or]You stumble and nearly fall down as he gives you a rough shove.[or]His horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection and drives the air from your lungs.[at random]";
 	now defeated entry is "[Stag loses]";
 	now victory entry is "[Stag wins]";
@@ -239,31 +239,31 @@ When Play begins:
 	now HP entry is 55;
 	now lev entry is 9;
 	now wdam entry is 9;
-	now area entry is "Nowhere";          [ Case sensitive]
-	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now area entry is "Nowhere"; [ Case sensitive]
+	now Cock Count entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 11;
-	now Ball Size entry is 3;            [ Size of balls ]
-	now Nipple Count entry is 2;               [ Number of nipples. ]
-	now Breast Size entry is 0;           [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now Ball Size entry is 3; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples. ]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
-	now libido entry is 30;               [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "fit";   [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "cervine";          [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "fit"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "cervine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -274,7 +274,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -331,7 +331,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -532,7 +532,7 @@ Instead of fucking Mike:
 					else if (nam is "Take Mike's ass"):
 						say "[MikeSex5]";
 					infect "Blacktail Stag";
-					infect "Blacktail Stag";          [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
+					infect "Blacktail Stag"; [since it's the only source for the infection and you got to wait between scenes, let's make him double infective]
 					now lastfuck of Mike is turns;
 					wait for any key;
 			else if calcnumber is 0:
@@ -1776,7 +1776,7 @@ Instead of fucking Helen:
 An everyturn rule:
 	if Helen is in the Grey Abbey Library and thirst of Helen > 0:
 		if HelenPregnant is 36:
-			now thirst of Helen is 2;   [visible pregnancy]
+			now thirst of Helen is 2; [visible pregnancy]
 		increase HelenPregnant by 1;
 
 
@@ -1815,9 +1815,9 @@ to say HelenSex3: [her pussy fucked]
 	say "     Helen's moans build up into a crescendo, echoing loudly through the library as she orgasms. You yourself are not far behind and soon give a deep moan as your balls start twitching and send spurt after spurt of cum to fill Helen's womb. With your cock delivering your seed into her, you pull Helen's upper body against your chest, and give her a deep kiss. Then, after your last shot, you pull her down to lie together with you on the cot and enjoy each other's warmth and closeness for a while as you come down from your respective orgasms[if lust of Helen >= 4]. 'Mmm... Master fuck Helen good,' she mumbles softly, snuggling up to you lovingly[end if][if lust of Helen >= 7] as you kiss along the tattooed collar ringing her neck[end if].";
 	NPCSexAftermath Helen receives "PussyFuck" from Player;
 	if thirst of Helen is 0: [not pregnant]
-		now thirst of Helen is 1;           [pregnant]
-		now Libido of Helen is 1;           [...by the player]
-		now HelenPregnant is 1;             [pregnancy timer]
+		now thirst of Helen is 1; [pregnant]
+		now Libido of Helen is 1; [...by the player]
+		now HelenPregnant is 1; [pregnancy timer]
 
 to say HelenSex4: [Player fucks the felinoid as he shafts Helen]
 	say "     Accompanied by Klauz, you walk over to the cot you put up here in the library for Helen. The large cat sniffs the human-dog's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer 'You want another round with her? Sure.' With a quick whistle you summon Helen, the dog in the buck-naked body of a young woman immediately rushing to you from where she was patrolling through the long rows of bookshelves in the library. She hesitates for a second as she sees the felinoid, then continues walking closer, happy to get her master's attention. Soon she's standing on all fours next to you. 'Good dog' you say as you crouch down beside her, patting her head and stroking her smooth skin and pert breasts. Klauz immediately joins you on Helen's other side, rubbing the side of his furred body against your dog's naked form. The effects of his touch and heady musk take effect almost immediately, with Helen's breathing becoming quicker as she pants in lust and her pussy gets moist and ready for sex.";
@@ -2187,9 +2187,9 @@ to say HelenBeachWalk:
 		say "     The two of your lie there for a short while, enjoying the sounds of the waves crashing against the shore. When Helen seems rejuvenated enough, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks, 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. The look on Helen's face seems very appreciative of the walk you took her on.";
 		CreatureSexAftermath "Helen" receives "PussyFuck" from "Sandman";
 		if thirst of Helen is 0: [not pregnant]
-			now thirst of Helen is 1;           [pregnant]
-			now Libido of Helen is 1;           [...by the sandman]
-			now HelenPregnant is 1;             [pregnancy timer]
+			now thirst of Helen is 1; [pregnant]
+			now Libido of Helen is 1; [...by the sandman]
+			now HelenPregnant is 1; [pregnancy timer]
 	else:
 		say "     With his attention focused on Helen, the sandman is too distracted to notice you. Irritated that the sand-yellow Casanova would try something like this to your pet, you deliver a fierce blow to the back of his head. Stunned by this attack the smooth-talker and stealth fucker is easily pushed away from your startled pet. Delivering a couple more strikes to the stupefied hunk, you are able to chase him off easily, with him grumbling while readjusting his speedo. Wanting to make sure the sandman didn't do any harm to the youthful human canine, you take her over to a nearby abandoned umbrella. Based on the pink beach towels, feminine sunglasses, and the lime green dildo inside one of the beach bags, it seems like a couple of ladies set out for an extra fun day at the beach.";
 		say "     Examining Helen, you see no damage done to her. However, your beautiful pet seems incredibly turned on. She pants in an erotic manner, lowering her front and raising her ass, wiggling it towards you while whimpering for a good fucking. Moving backwards a little, she soon is rubbing up against your crotch. [if Player is male]Your cock starts to harden with each rocking motion[else]Your crotch is quite sensitive to Helen's rocking motions[end if]. Stripping off any gear, you then encourage Helen to keep going, your libido inflamed by the sexy pet's antics.";
@@ -2201,9 +2201,9 @@ to say HelenBeachWalk:
 			NPCSexAftermath Helen receives "PussyFuck" from Player;
 			say "     When Helen and you seem rejuvenated enough to travel, you decide to return to the abbey. While walking back through the beach plaza you see the fox in the Bermuda shorts again, smiling he asks 'Did you two have a fun time at the beach?' Contented, your youthful pet barks a muted happy reply. Softly chuckling the fox says, 'I'll take that as a yes,' he then bids you a fond farewell as you leave the plaza. It is an uneventful walk back to the Abbey. She soon walks over to one of her common resting places, circles a couple of times, then lies down. The look on Helen's face seems very appreciative of the walk you took her on.";
 			if thirst of Helen is 0: [not pregnant]
-				now thirst of Helen is 1;           [pregnant]
-				now Libido of Helen is 1;           [...by the player]
-				now HelenPregnant is 1;             [pregnancy timer]
+				now thirst of Helen is 1; [pregnant]
+				now Libido of Helen is 1; [...by the player]
+				now HelenPregnant is 1; [pregnancy timer]
 		else:
 			say "     Pulling the lime green dildo out of the bag, you place it close to Helen's face. The curious transformed canine starts sniffing the sex toy and on smelling the scent of the previous owner's female juices, she starts to lap the shaft and the tip. After a couple of laps you then begin to guide the human-like shaft between her lips. Initially Helen is a little nervous, but as you use your unoccupied hand to rub the lips of her pussy and her clit, she soon relaxes. Although initially wary, she is soon bobbing her head forwards and backwards on the sex toy, you can feel her tongue swirling around the rod. It doesn't take long before she is deep-throating the phallus.";
 			say "     When the pole seems like it is nice and wet, you pull it from your companion's maw and move around her to set it against the young woman's dripping wet pussy. Grunting softly as you insert the decently sized sex toy inside her, Helen turns her head to look back at you, whining softly in a plea to push deeper. Happy to fulfill your obedient companion's request, you start to thrust the rod in and out of her. Moaning and yipping, she arches her back and rocks her hips to meet your movements. While thrusting the dildo you use your other hand to explore Helen's body - switching up between cupping her breasts, grabbing her firm booty[if lust of Helen >= 7], running your fingers down the rope of her leash tattoo[end if], and rubbing her clit.";
@@ -2227,9 +2227,9 @@ instead of going up from Bunker while (Helen is in the Grey Abbey Library and la
 		now HP of Helen is 11;
 	now lastfuck of Helen is turns;
 	if thirst of Helen is 0: [not pregnant]
-		now thirst of Helen is 1;           [pregnant]
-		now Libido of Helen is 3;           [...by the Felinoid]
-		now HelenPregnant is 1;             [pregnancy timer]
+		now thirst of Helen is 1; [pregnant]
+		now Libido of Helen is 3; [...by the Felinoid]
+		now HelenPregnant is 1; [pregnancy timer]
 
 instead of going up from Bunker while (Helen is in the Grey Abbey Library and lastfuck of Helen - turns > 5 and (HP of Helen is 1 or HP of Helen is 11) and Fang is in the Grey Abbey Library and Fang is Male and HP of Fang < 6 and lastfuck of Fang - turns > 7) and Player is not CoA:
 	move player to Grey Abbey Library;
@@ -2264,9 +2264,9 @@ instead of going up from Bunker while (Helen is in the Grey Abbey Library and la
 	now lastfuck of Helen is turns;
 	now lastfuck of Fang is turns;
 	if thirst of Helen is 0: [not pregnant]
-		now thirst of Helen is 1;           [pregnant]
-		now Libido of Helen is 2;           [...by Fang]
-		now HelenPregnant is 1;             [pregnancy timer]
+		now thirst of Helen is 1; [pregnant]
+		now Libido of Helen is 2; [...by Fang]
+		now HelenPregnant is 1; [pregnancy timer]
 	NPCSexAftermath Helen receives "PussyFuck" from Fang;
 
 Chapter 5 - Awesomer Helen
@@ -2341,9 +2341,9 @@ to say AwesomerHelenSex2:
 	WaitLineBreak;
 	say "     The tattoo looks very realistic and the leash seems to drape naturally across your pet's body as if it's really there, like it belongs there. Surprised and impressed by the level of work that Kara's put into the piece, being far more than you'd expected, you thank her very much for it with a lustful kiss and grope. Helen, clearly pleased as well, happily turns around in front of the mirror and gingerly touches her rapidly healing skin. After the two of you properly show your thanks to the talented hyena, leaving her wet, sticky and thoroughly satisfied, you head back with your loyal pet at your right side, her head held high as she walks alongside you so her new tattoo can be on display.";
 	if thirst of Helen is 0: [not pregnant]
-		now thirst of Helen is 1;           [pregnant]
-		now Libido of Helen is 4;           [...by Kara]
-		now HelenPregnant is 1;             [pregnancy timer]
+		now thirst of Helen is 1; [pregnant]
+		now Libido of Helen is 4; [...by Kara]
+		now HelenPregnant is 1; [pregnancy timer]
 	WaitLineBreak;
 	increase score by 50;
 	increase lust of Helen by 1;

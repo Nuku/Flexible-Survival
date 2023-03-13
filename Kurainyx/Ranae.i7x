@@ -73,7 +73,7 @@ when play begins:
 	add Starving Frog to BadSpots of FurryList;
 
 to say ResolveEvent Starving Frog:
-	now hunger of Ranae is 1;		[Met Ranae]
+	now hunger of Ranae is 1; [Met Ranae]
 	project Figure of Ranae_rags_icon;
 	say "     While wandering through the sewers, you hear the splashing of water and someone softly mumbling coming down from one of the passageways. Creeping down the tunnel, you round the corner and spot a frog woman digging through a flooded hole in the wall. She looks rather thin, and her skin is a dull green. 'Come on, come on...' she says to herself as she continues to search the hole. After a few moments, she withdraws her arms from the crevice with a weary sigh. 'Nothing...' The female amphibian moves to leave, but she freezes when she happens to turn in your direction and spots you. With a startled yelp, she hastily backpedals away from you.";
 	if BodyName of Player is "Human" and player is pure:
@@ -93,18 +93,18 @@ to say ResolveEvent Starving Frog:
 			say "     'Um, excuse me?' Ranae sheepishly offers, to which you merely wave off with a smile. 'I really can't thank you enough for your kindness. I'm afraid that I don't have anything to offer you in return... Oh, wait. I know! Could you please follow me?' You oblige Ranae and let her lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in a dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I know that it doesn't come close to repaying you, but if you ever need a place to rest or someone to talk to, I'll be here.'";
 			ItemLoss food by 1;
 			ItemLoss water bottle by 1;
-			now hunger of Ranae is 2;		[Gave Ranae one round of food and water]
-			now Resolution of Starving Frog is 2;	[Gave supplies to Ranae]
+			now hunger of Ranae is 2; [Gave Ranae one round of food and water]
+			now Resolution of Starving Frog is 2; [Gave supplies to Ranae]
 		else:
 			LineBreak;
 			say "     When you tell Ranae that you aren't able to spare any supplies, her shoulders droop in dejection, and she listlessly gazes down at the ground. 'I... I understand... Thanks for at least listening... I guess...' An awkward silence passes between the two of you. Eventually, Ranae meekly asks, 'Um, do you maybe want to see where I live? You know... just in case...' Although she doesn't finish her sentence, it's obvious that she's clinging to the hope that you'll help her out later. You let the frog lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in an dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I'll be here if you ever need a place to rest or someone to talk to... or help me out...' She adds that last part in a whisper that you barely hear it.";
-			now hunger of Ranae is 1;		[Met Ranae but did not give her food and water]
-			now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
+			now hunger of Ranae is 1; [Met Ranae but did not give her food and water]
+			now Resolution of Starving Frog is 1; [Did not give supplies to Ranae]
 	else:
 		WaitLineBreak;
 		say "     When you tell Ranae that you aren't able to spare any supplies, her shoulders droop in dejection, and she listlessly gazes down at the ground. 'I... I understand... Thanks for at least listening... I guess...' An awkward silence passes between the two of you. Eventually, Ranae meekly asks, 'Um, do you maybe want to see where I live? You know... just in case...' Although she doesn't finish her sentence, it's obvious that she's clinging to the hope that you'll help her out later. You let the frog lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in an dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I'll be here if you ever need a place to rest or someone to talk to... or help me out...' She adds that last part in a whisper that you barely hear it.";
-		now hunger of Ranae is 1;		[Met Ranae but did not give her food and water]
-		now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
+		now hunger of Ranae is 1; [Met Ranae but did not give her food and water]
+		now Resolution of Starving Frog is 1; [Did not give supplies to Ranae]
 	now Starving Frog is resolved;
 	AddNavPoint Froggy Hideout;
 	move Ranae to Froggy Hideout;
@@ -118,7 +118,7 @@ to say ResolveEvent Rundown Boutique:
 	ItemGain water bottle by 1;
 	WaitLineBreak;
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of Player < 3], given how you're too small for it[else if scalevalue of Player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
-	now hunger of Ranae is 5;		[Found black dress]
+	now hunger of Ranae is 5; [Found black dress]
 	now Rundown Boutique is resolved;
 
 to say ResolveEvent Boarded-up Building:		[Figurine]
@@ -128,7 +128,7 @@ to say ResolveEvent Boarded-up Building:		[Figurine]
 	say "     However, not wanting to give up so quickly, you make your way to the opposite side of the building and find a sleeping bag and a small pack tucked away in the corner. You quickly check to make sure that there's nothing else in the rest of the building before you search through the makeshift camp. Judging by the layer of dust on the items, it looks like the owner of the meager belongings will not be returning. Searching through the pack, you find a tin of food, which you happily pocket, as well as an odd object wrapped up with newspaper. Peeling away the paper, you find a small figurine of a woman attached to a dome-like wooden base.";
 	say "     The tiny female is wearing a green dress that completely covers her legs, and she has one arm raised up high with another stretched out in a dancing pose. Turning the object around, you find a wind-up key at the back of the base. You give the key a few turns, which makes the figurine start to slowly spin around as the soft sounds of a music box begins playing. Although the song and dance is short, it is charming enough to make you smile a little. As you look over the figurine, wondering what you're going to do with it, the dancer's green dress grabs your attention, the color almost the same shade as Ranae's skin. Perhaps the frog girl will appreciate a gift like this. After covering the gift back up with newspaper and safely tucking the gift away in your pack, you exit the building through the same window you crawled in through, making a note to bring your find to Ranae when you have the time.";
 	ItemGain food by 1;
-	now perception of Ranae is 1;		[Found figurine]
+	now perception of Ranae is 1; [Found figurine]
 	now Boarded-up Building is resolved;
 
 to say ResolveEvent Ransacked Shop:		[Drapes]
@@ -136,13 +136,13 @@ to say ResolveEvent Ransacked Shop:		[Drapes]
 	say "     Taking a look through the broken window, you see that although the shop has been looted, there still seems to be various items lying around. Figuring that it's at least worth a quick look, you climb in through the window, careful to avoid the broken glass. Searching around, you find an assortment of items, all with handmade price tags attached to them, and you guess that this place used to be a sort of pawn shop. Unfortunately, anything worthwhile seems to already be gone, and all of the things that have been left behind are either of little use or too bulky to safely carry out of here. It doesn't take long for you to finish searching the small storefront, and you head through a doorway in the back, only to find a room barely bigger than a closet. With a small desk and a filing cabinet with three drawers in one corner and several small boxes in another, this tiny space doubled as an office and a storage room.";
 	say "     Searching through the filing cabinet first, you find receipts and business-related papers in the top two drawers that pretty much confirms that the shop had been cheating their customers out of a fair deal. When you open the bottom drawer, you find some books, but more importantly, a bottle of water. With the current state of the place and the reputation of the former store owner, you have no qualms taking the precious supply for yourself. You then move on to the boxes, opening them one by one as you search their contents. At first, all you find are various odd knick-knacks or low-quality items that don't look like they would have sold, but you pause when you eventually come upon a bundle of green fabric, its color reminding you of Ranae. Unfolding your find, you see that the fabric is actually a set of drapes with an embroidered pattern of swirls decorating its front. Thinking that the frog staying in the library might like these drapes to help decorate her living space, you stow them into your bag. Finding nothing else of interest in the shop, you climb back through the broken window and resume your exploration.";
 	ItemGain water bottle by 1;
-	now intelligence of Ranae is 1;		[Found drapes]
+	now intelligence of Ranae is 1; [Found drapes]
 	now Ransacked Shop is resolved;
 
 to say ResolveEvent Trench Coat Salesman:		[Bracelet]
 	say "     As you make your way through the city, you stop when you hear someone call out with a 'Pssst.' Looking around, you see your caller standing in a nearby alleyway, waving you over with a black and brown paw. Though the person doesn't seem to be hostile, the long trench coat that almost reach down to their feet and a fedora hat that covers their face doesn't completely put you at ease. Cautiously walking over to the suspicious figure, you're able to see that the person is a male raccoon. 'Hey, you want to buy something?' the raccoon asks as he uses a hand to grab one side of his coat and pull it wide open. Though this act reveals that he's wearing nothing underneath his coat, essentially showing you his furry body, your gaze is focused on the rings, necklaces, bracelets, watches, and other shiny accessories that adorn the inside of his coat. 'I got only the finest stuff here,' the raccoon says with a smirk. 'C'mon, pick a few. I'll give you a good price on them.' However, you aren't able to browse his wares for long before someone from behind yells, 'Hey, you!'";
 	say "     Spinning around, you see two harpies approaching, but for some reason, they both seem to be ignoring you in favor of angrily glaring at the raccoon. 'You sold us fake jewelry!' one of the winged females accuses, and the other one promptly adds, 'Yeah! You're going to pay for trying to trick us!' The raccoon yelps and swiftly bolts into the alley, and you have to jump out of the way of the two raging harpies as they pursue the sleazy salesman. The din caused by the wild chase soon fades away, leaving you by yourself. Shaking your head over the odd scenario, you're about to leave when something shimmering on the ground catches your eye. Picking up the object, you see that it's a silver-colored bracelet with its center holding several emeralds arranged in a circular pattern. The raccoon must have dropped this bracelet in his haste to escape, but given the unsatisfied harpies from earlier, this is no doubt just another piece of fake jewelry. Still, the bracelet looks nice enough. Perhaps Ranae would like it.";
-	now charisma of Ranae is 1;		[Found bracelet]
+	now charisma of Ranae is 1; [Found bracelet]
 	now Trench Coat Salesman is resolved;
 
 
@@ -175,7 +175,7 @@ instead of navigating Froggy Hideout:
 		WaitLineBreak;
 		project Figure of Ranae_dress_icon;
 		say "     'It's absolutely perfect,' Ranae says, slowly twirling around to get a look at the new her. 'I still can't believe you actually got this just for me.' Eventually, she stops her one woman fashion show and walks over to you with a mischievous smirk. Playfully scratching the underside of your chin with a finger, she teases, 'Careful now. If I didn't know any better, I'd think that you're out to spoil me.'";
-		now hunger of Ranae is 6;		[Gave dress to Ranae]
+		now hunger of Ranae is 6; [Gave dress to Ranae]
 
 
 Section 3 - Ranae
@@ -330,18 +330,18 @@ to say RanaeSupplies:
 	if carried of food > 0 and carried of water bottle > 0:
 		if hunger of Ranae is 1:
 			say "     Ranae's eyes grow wide as you dig out a bottle of water and a package of food from your pack and hold them out to her. She moves closer, her gaze locked on the precious supplies, but when her hands reach for the rations, she hesitates and looks back up at you. You give her a smile and a nod, and the frog squeals in delight as she takes your gifts. 'Oh my god! Finally, water! I never thought that I'd miss clean water!' she cries before popping the cap off of the bottle and begin guzzling down the life-giving liquid. The amphibian drains the entire bottle in a matter of moments, and she promptly rips into the food right afterwards. The entire time, you just awkwardly stand there, watching as Ranae gorges herself, her loud chomping echoing through the sewer. It doesn't take long for her to finish devouring her meal, and you can already see that her belly is no longer concaved. The frog licks her fingers to get the last crumbs, only to freeze when she glances in your direction, and her face flushes red when she realizes that you're still here. 'Um, excuse me?' Ranae sheepishly offers, to which you merely wave off with a smile.";
-			now hunger of Ranae is 2;		[Gave Ranae one round of food and water]
+			now hunger of Ranae is 2; [Gave Ranae one round of food and water]
 		else if hunger of Ranae is 2:
 			say "     A wide smile graces Ranae's face when you take out another helping of water and food and hold them out to her. Again, she looks up at you, silently asking your permission, and after you give her a nod, she gleefully accepts your offerings. 'Thank you, thank you, thank you!' she exclaims before tearing into the supplies. Just like before, Ranae's ravenous hunger makes her forgo her decency and table manners, but despite her loud, sloppy eating, you find the act oddly endearing and cute. Unsurprisingly, Ranae finishes her meal in a matter of moments, and she sighs in contentment, only to make an embarrassed meep as she turns to you with her face flushed red and a nervous chuckle. 'S-sorry... again...' she apologizes. 'I think I'll be less messy the next time since I'm not starving anymore. Er, n-not that I'm implying that I expect you to help me again... although I certainly would not object if you did.'";
-			now hunger of Ranae is 3;		[Gave Ranae two rounds of food and water]
+			now hunger of Ranae is 3; [Gave Ranae two rounds of food and water]
 		else if hunger of Ranae is 3:
 			say "     Ranae's attention immediately focuses on the food and water you pull out of your pack, and this time, she doesn't hesitate to take the offering when you hold it out to her. As usual, she chugs down the water at a frightening rate, however, this time, she stop when there is about a third of the water left before she screws the cap back on. She does the same with the food, quickly gorging herself but leaving a portion of it for later. 'Thank you so much for everything. I'm feeling a lot better,' Ranae comments as she pats her filled stomach. Even without her mentioning it, the contrast between now and when you first met the frog lady is as clear as day and night. Her now vibrant green skin is looking healthily moist, giving it a faint sheen. No longer being just skin and bones, Ranae has quite the lithe build with a modest pair of breasts on her chest. The only exception of her pert figure is her ass. While not the largest, the amphibian female's butt was still a very much respectable size, and the perfectly round figure more than made up for any size concerns.";
 			say "     Ranae clears her throat, breaking your stare of her bodacious butt. 'S-seems that you like a certain part of me,' she remarks, along with a giggle tinged with both embarrassment and delight. She brings her hands to her boobs and then slowly drags them through her body, going down her sides and then circling her curvaceous rear. 'It's a good thing that I'm feeling stronger now because I think I know the perfect way I can repay you for your kindness.' She ends her offer with a smoldering gaze, however, after a few moments, her face grows red as she averts her gaze. 'Th-that is, if you want to, of course.'";
-			now hunger of Ranae is 4;		[Gave Ranae three rounds of food and water]
-			now Rundown Boutique is active;		[Event to get dress for Ranae]
+			now hunger of Ranae is 4; [Gave Ranae three rounds of food and water]
+			now Rundown Boutique is active; [Event to get dress for Ranae]
 		else if hunger of Ranae is 6:
 			say "     Ranae giggles as you present her with another round of supplies. 'You know, I would've been fine with trying to find my own supplies, but you just keep giving them to me. How can I say no to someone who just wants to keep serving me?' The frog woman takes your offering, quickly stashing them away in the corner, before giving you a nod of approval. 'Tell you what: if you really are intent on serving me, find me some junk food, like some [bold type]chips and soda[roman type]. The stuff you've been giving me is alright and all, but they're also getting boring.'";
-			now hunger of Ranae is 7;		[Gave Ranae four rounds of food and water]
+			now hunger of Ranae is 7; [Gave Ranae four rounds of food and water]
 		else:
 			say "     Error encountered. Please report this bug on the Discord channel. Ranae Hu: [hunger of Ranae]";
 		ItemLoss food by 1;
@@ -353,12 +353,12 @@ to say RanaeJunkFood:
 	if carried of chips > 0 and carried of soda > 0:
 		if hunger of Ranae is 7:
 			say "     When you hold out your newest offering, Ranae eagerly takes them from you with a grin. She opens the chips first, but her grin shrinks slightly when she peers inside. 'Aww. Half of the chips in here are crushed. Still, I suppose given the circumstances, I cannot fault you for this.' She picks out an unbroken chip and eats it, giving a hum of satisfaction as she savors the salty treat. She eats a few more chips before setting the bag aside and then move on to the soda. Opening the can, she takes a sip and nods in approval. 'At least this soda is still fizzy. Good work. I could use some more though. I know that too much junk food is not good for you, but after everything I went through, I deserve to indulge myself a bit.'";
-			now hunger of Ranae is 8;		[Gave Ranae one round of chips and soda]
+			now hunger of Ranae is 8; [Gave Ranae one round of chips and soda]
 		else if hunger of Ranae is 8:
 			say "     You barely take out more chips and soda from your pack before Ranae snatches them from you and moves to stash them in the corner. However, she pauses when she looks over the supplies that had been accumulating there. 'You know, this place is getting a bit cramped, and I'm going to run out of space if you keep bringing me stuff. I need someplace bigger and better.' The library that you have been using as your base of operations quickly comes to mind, and when you mention it to the frog, her eyes widen in surprise. 'I know that place. You actually have that whole building to yourself?' Before you could tell Ranae more about the library, she shoves a few pillows into your arms. 'Come on. I can't wait to see my new home. A place as grand as that will be perfect for me!' Despite having to carry all of Ranae's belongings, it was hardly a burden since all she was bringing was a few pillows and her supplies, most of which were actually gifts from you. Thankfully, the journey back to the library went without a hitch. ";
 			if number of booked people + number of bunkered people > 0:
 				say "As the two of you enter the library, Ranae pauses when she sees one of the other denizens that live with you. 'Really? There's others here.' Ranae lets out an exasperated sigh as she looks around the area. 'At least it's better than that hole in the wall I was in.'";
-			now hunger of Ranae is 9;		[Ranae moved to library]
+			now hunger of Ranae is 9; [Ranae moved to library]
 			now Froggy Hideout is unknown;
 			move player to Sitting Area;
 			move Ranae to Sitting Area;

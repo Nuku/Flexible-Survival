@@ -82,23 +82,23 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Rabbit";
-	now Name entry is "Rabbit"; [Name of your new Monster]
+	now Name entry is "Rabbit";
 	now enemy title entry is "Rabbit Pack";
 	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]They pounce on you all at the same time![or]One of them crawls on your back and hits you in the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down![or]One of them manages to flank you and attack by surprise.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[rabpackbeaten]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[rabpackvictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[rabpackdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "that of a rabit, with distinctive ears sprouting from the top of your head and flopping downwards"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "short but agile"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "short fur covering almost every inch of your body"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "that of a rabit, with distinctive ears sprouting from the top of your head and flopping downwards"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "short but agile"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "short fur covering almost every inch of your body"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "human-like"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes... your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "A little tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "you feel your head spin and lose consciousness. When you wake up, you open your eyes... your multiple pair of eyes. To your horror, you see that you have been split into many smaller copies of your previous form! Luckily, you retained your personality and mental sanity... but for how long?"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "a little coating of fur covers you from head to toe. Feels almost like velvet"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "A little tail sprouts, waggling"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it becomes humanlike, covered with foreskin. A pair of soft balls descends as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 6;
 	now dex entry is 15;
@@ -106,7 +106,7 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Both"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 80;
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4; [ Amount of Damage monster Does when attacking.]
@@ -124,16 +124,16 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0;
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]youthful[or]slender[or]cute[at random]";
 	now type entry is "[one of]bunny[or]rabbit[at random]";
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -202,7 +202,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

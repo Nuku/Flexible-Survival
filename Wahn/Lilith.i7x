@@ -106,12 +106,12 @@ An everyturn rule:
 			now LilithPregnancy is 0;
 		else:
 			say "You have a strange feeling in your body, as if you somehow just know that one of your offspring has entered this world. Maybe you should back to the Burned-Out Chapel and check with Lilith.";
-			now LilithPregnancy is 4;     [so she can tell the player about their kid in the next meeting]
+			now LilithPregnancy is 4; [so she can tell the player about their kid in the next meeting]
 		now LilithPregCounter is 0;
 	if LilithPregCounter is 12:
-		now LilithPregnancy is 3;   [very visible pregnancy]
+		now LilithPregnancy is 3; [very visible pregnancy]
 	if LilithPregCounter is 24:
-		now LilithPregnancy is 2;   [visible pregnancy]
+		now LilithPregnancy is 2; [visible pregnancy]
 	if LilithPregCounter > 1:
 		decrease LilithPregCounter by 1;
 
@@ -549,7 +549,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 				if LilithPregnancy is 0 and Sterile of Player is false: [not already preggers, player not sterile]
 					let LilithPregChance be a random number from 1 to 20;
 					if LilithPregChance > 5: [75% chance]
-						now LilithPregCounter is 48;      [48 turns till birth]
+						now LilithPregCounter is 48; [48 turns till birth]
 						now LilithPregnancy is 1; [invisibly pregnant]
 			else if Player is female:
 				LineBreak;
@@ -801,7 +801,7 @@ to say LilithSex4: [Fuck her pussy]
 	if LilithPregnancy is 0 and Sterile of Player is false: [not already preggers, player not sterile]
 		let LilithPregChance be a random number from 1 to 20;
 		if LilithPregChance > 5: [75% chance]
-			now LilithPregCounter is 48;      [48 turns till birth]
+			now LilithPregCounter is 48; [48 turns till birth]
 			now LilithPregnancy is 1; [invisibly pregnant]
 	wait for any key;
 
@@ -824,7 +824,7 @@ to say LilithSex6: [Spit-Roast her with Brutus]
 	if LilithPregnancy is 0 and Sterile of Player is false: [not already preggers, player not sterile]
 		let LilithPregChance be a random number from 1 to 20;
 		if LilithPregChance > 5: [75% chance]
-			now LilithPregCounter is 48;      [48 turns till birth]
+			now LilithPregCounter is 48; [48 turns till birth]
 			now LilithPregnancy is 1; [invisibly pregnant]
 	wait for any key;
 
@@ -838,7 +838,7 @@ to say LilithSex7: [Threesome with Brutus]
 	if LilithPregnancy is 0 and Sterile of Player is false: [not already preggers, player not sterile]
 		let LilithPregChance be a random number from 1 to 20;
 		if LilithPregChance > 5: [75% chance]
-			now LilithPregCounter is 48;      [48 turns till birth]
+			now LilithPregCounter is 48; [48 turns till birth]
 			now LilithPregnancy is 1; [invisibly pregnant]
 	wait for any key;
 
@@ -866,7 +866,7 @@ to say LilithSex9: [sandwich fuck with Brutus]
 	if LilithPregnancy is 0 and Sterile of Player is false: [not already preggers, player not sterile]
 		let LilithPregChance be a random number from 1 to 20;
 		if LilithPregChance > 5: [75% chance]
-			now LilithPregCounter is 48;      [48 turns till birth]
+			now LilithPregCounter is 48; [48 turns till birth]
 			now LilithPregnancy is 1; [invisibly pregnant]
 	wait for any key;
 

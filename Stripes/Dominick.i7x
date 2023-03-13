@@ -1236,7 +1236,7 @@ Section 9 - Forced Breederslut and Forced Breederslut Boy TF
 
 An everyturn rule:
 	if ForcedBreederslutTF is 4:
-		increase score by 0;  [do nothing statement]
+		increase score by 0; [do nothing statement]
 	else:
 		if ForcedBreederslutTF >= 1:
 			if FaceName of Player is not "Breederslut":
@@ -1271,7 +1271,7 @@ An everyturn rule:
 
 An everyturn rule:
 	if ForcedBreederslutBoyTF is 4:
-		increase score by 0;  [do nothing statement]
+		increase score by 0; [do nothing statement]
 	else:
 		if ForcedBreederslutBoyTF >= 1:
 			if FaceName of Player is not "Breederslut":

@@ -631,12 +631,20 @@ Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
 
-A person can be internal. A person is usually not internal.
+A person can be internalcock. A person is usually not internalcock.
 
-internalbypass is a truth state that varies. internalbypass is usually false.
+internalcockbypass is a truth state that varies. internalcockbypass is usually false.
 
-Definition: A person (called x) is internal:
-	if CockName of x is listed in infections of InternalCockList and internalbypass is false, yes;
+Definition: A person (called x) is internalcock:
+	if CockName of x is listed in infections of InternalCockList and internalcockbypass is false, yes;
+	no;
+
+A person can be internalBalls. A person is usually not internalBalls.
+
+internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
+
+Definition: A person (called x) is internalBalls:
+	if CockName of x is listed in infections of InternalBallsList and internalBallsBypass is false, yes;
 	no;
 
 A person can be sheathed. A person is usually not sheathed.

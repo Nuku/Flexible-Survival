@@ -34,7 +34,7 @@ Orcish Slave Raid is a situation.
 ResolveFunction of Orcish Slave Raid is "[ResolveEvent Orcish Slave Raid]".
 Sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
-	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
+	add Orcish Slave Raid to BadSpots of MaleList; [male orcs]
 
 to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
@@ -651,11 +651,11 @@ after going west from Breeder Lockup A:
 		say "     There is something... familiar about the orc breeder in this cell. At first you can't quite say what exactly, but as you look into his eyes and see them widening as he examines you in turn, you realize that this once was the fox who ran into you while fleeing from the orcs. He must have a pretty low resistance to the nanites to be transformed so completely in such short time. As the two of you get over the moment of mutual recognition, he says 'Hello again... or... just hello. You met Vincent before - I - I'm Val now.'";
 		now HP of Val is 1;
 	if ValPregnancy > 1 and HP of Val < 2:
-		now HP of Val is 2;   [the player has seen that he's pregnant]
+		now HP of Val is 2; [the player has seen that he's pregnant]
 	if ValPregnancy is 4:
 		say "     Seeing Val, you immediately notice that he isn't pregnant anymore. The orc follows your gaze to his stomach and explains 'I've given birth while you were out. You should have seen my beautiful little boy, growing up so quickly to a handsome young orc. Master Mul named him 'Chotuzz' and traded him to another orc. I'm sure he'll make a fine breeder for his new master...' Val smiles as he says this, but you notice a hint of sadness in his eyes. Maybe you could have changed something at his son's fate if you had been here for the birth...";
 		now ValPregnancy is 0;
-		now HP of Chris is 100;  [lost]
+		now HP of Chris is 100; [lost]
 
 after going east from Breeder Lockup A:
 	try looking;
@@ -1082,7 +1082,7 @@ An everyturn rule:
 		say "[BoghrimSlaveDeal]";
 	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		now inasituation is true;
-		now OrcSpecialFightNumber is 1;   [meeting Mul]
+		now OrcSpecialFightNumber is 1; [meeting Mul]
 		challenge "Orc Warrior"; [fighting Mul]
 	if Mul is in Slave Cell 2 or Mul is in Slave Cell 1:
 		if (player is in Slave Cell 2 and Mul is in Slave Cell 2) or (player is in Slave Cell 1 and Mul is in Slave Cell 1):

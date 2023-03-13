@@ -81,15 +81,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Human"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Human"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Amazonian" to infections of HumanList;
 	add "Amazonian" to infections of HistoricalList;
 	add "Amazonian" to infections of HermList;
 	add "Amazonian" to infections of BipedalList;
-	now Name entry is "Amazonian"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Amazonian";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She[or]The Amazonian[or]The Amazon woman[or]The muscular herm[at random] [one of]strikes you with a powerful punch[or]connects with a snap kick[or]strikes you with a powerful blow[at random].";
 	now defeated entry is "[beattheamazonian]";
 	now victory entry is "[losetoamazonian]";
@@ -99,8 +99,8 @@ When Play begins:
 	now skin entry is "bronze-toned";
 	now tail entry is ""; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]uncircumcised[or]human[or]normal, flesh-toned[or]thin, mushroom-shaped[at random]";
-	now face change entry is "you feel your head alter, bones reshaping as a warmth suffuses your skin. There is a sense of pressure and almost taffy-like stretching as your skull reforms into a delicate and feminine shape. It is once again human... but beautifully so in a way that is undeniable"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "you feel muscles and bones shifting as many changes occur. Many pounds of pure muscle begin stretching your skin almost to the point where you fear it will split! You feel more muscles threatening to split your skin wide open as it is drawn tight against the emerging strength on your bones. A burning and stretching sensation fills your legs and feet, muscles and tendons stretching as raw strength is quickly gained. Your Achilles tendon shortens suddenly, forcing you to walk on the balls of your feet. Interestingly, this is to your advantage as it keeps you ready to react to danger more quickly than if your feet sat flat on the ground"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "you feel your head alter, bones reshaping as a warmth suffuses your skin. There is a sense of pressure and almost taffy-like stretching as your skull reforms into a delicate and feminine shape. It is once again human... but beautifully so in a way that is undeniable"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "you feel muscles and bones shifting as many changes occur. Many pounds of pure muscle begin stretching your skin almost to the point where you fear it will split! You feel more muscles threatening to split your skin wide open as it is drawn tight against the emerging strength on your bones. A burning and stretching sensation fills your legs and feet, muscles and tendons stretching as raw strength is quickly gained. Your Achilles tendon shortens suddenly, forcing you to walk on the balls of your feet. Interestingly, this is to your advantage as it keeps you ready to react to danger more quickly than if your feet sat flat on the ground"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "any hair or fur you may have immediately falls out as your skin begins to take on a heavily tanned tone. The only hair left is on top of your head and your eyebrows, even those look to be shaped in a vain and beautiful way";
 	now ass change entry is "you feel your ass tensing up, the flesh tightening with a sudden expansion of muscle and a bit of fatty padding";
 	now cock change entry is "you feel a burning sensation in your cock as it reforms into a perfectly normal human one... though uncircumcised";
@@ -110,7 +110,7 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 10;
 	now cha entry is 12;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 66; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -128,16 +128,16 @@ When Play begins:
 	now libido entry is 45; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "estosterogen pill";
 	now lootchance entry is 12; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]amazonian[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -149,7 +149,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -206,7 +206,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

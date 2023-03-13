@@ -103,17 +103,17 @@ This is the turnpass rule:
 		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny is sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player >= 4:
-			if CockName of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player >= 6:
-			if CockName of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if Ball Size of Player >= 7:
-			if CockName of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internalBalls:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
@@ -126,7 +126,7 @@ This is the turnpass rule:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
-		else if Player is internal:
+		else if Player is internalBalls:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";

@@ -137,14 +137,14 @@ to say losetoenhancedchimera:
 to say ec_sex:
 	say "[ec_reset]";
 	if Player is female and a random chance of 3 in 5 succeeds:
-		say "The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of Player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigor. You can feel the heavy slaps of the chimera's large ballsack against [if Player is male and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
+		say "The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your pussy and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of Player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigor. You can feel the heavy slaps of the chimera's large ballsack against [if Player is male and player is not internalBalls]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
 		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into you over and over again. The feel of that spearhead tip spreading your vaginal walls open, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if HP of Player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if Player is fpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost as the creature attempts to sire another of her kind in you[else]. The idea of her changing you in random ways or siring almost anything inside you arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your womb. And with the knot there, it ensures it all remains inside you so you're properly infected and bred by her load before she pulls out and departs.";
 		if hospquest >= 19:
 			say "     [fimpregchance]";
 		else:
 			say "     [randomfimpreg]";
 	else if anallevel > 1 and ( Cunt Count of Player is 0 or anallevel is 3 ) and ( ( a random chance of anallevel in 5 succeeds and Cock Count of Player is 0 ) or ( a random chance of anallevel in 7 succeeds and player is male ) ):
-		say "The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of Player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigor. You can feel the heavy slaps of the chimera's large ballsack against [if Player is male and player is not internal]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
+		say "The hybrid creature pushes you down onto a nearby hospital bed, bending you over it. With a little fumbling with your remaining clothes, she gets itself lined up with your anal ring and mounts you with a throaty purr. The creature's [headadjdata] mouth [if HP of Player > 0]nips tenderly along[else]bites down upon[end if] your neck as she thrusts her ridged cock into you again and again with increasing vigor. You can feel the heavy slaps of the chimera's large ballsack against [if Player is male and player is not internalBalls]your own[else]your thighs[end if]. Those balls feel quite full, probably stuffed to the brim with a slurry of hybrid semen mixed from whatever may have in part been used to help concoct this chimera.";
 		say "     The horny creature continues her vigorous humping, driving her hybridized shaft into your ass over and over again. The feel of that spearhead tip pushing its way into your bowels, the texture of the ridged shaft sliding along your inner walls, the growing firmness of the knot at its base - all of these exciting sensations build your arousal higher and higher[if HP of Player <= 0] despite yourself[end if]. Her myriad of scents becomes exciting to you and soon you're panting and moaning for the chimera to fill you[if Player is mpreg_able] and breed you[end if]. She releases a pleased rumble at your words and drives harder into you[if hospquest >= 19]. That latent chimera treatment inside you tingles in anticipation of getting a boost from the creature pounding away at your ass[else]. The prospect of her changing you in random and unexpected ways starts arouses you greatly[end if]. As you push back into her final thrusts, you both moan in pleasure as she knots you fully. Moments after, you feel the first of many shots of her hot seed, thick and plentiful from her throbbing balls being shot deep into your bowels. And with the knot there, it ensures it all remains inside you so you're properly infected[if Player is mpreg_able] and bred[end if] by her load before she pulls out and departs.";
 		if hospquest >= 19:
 			say "     [mimpregchance]";
@@ -184,7 +184,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Chimera"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Chimera"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Enhanced Chimera" to infections of BodyHorrorList;
 	add "Enhanced Chimera" to infections of HybridList;
 	add "Enhanced Chimera" to infections of ScienceList;
@@ -196,9 +196,9 @@ When Play begins:
 	add "Enhanced Chimera" to infections of TailList;
 	add "Enhanced Chimera" to infections of TailweaponList;
 	now Name entry is "Enhanced Chimera"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]enhanced chimera[or]powerful chimera[or]hybrid creature[or]lustful chimera[at random] [one of]strikes you with one of its powerful backhand[or]bashes you with an armored fist[or]charges you with its horns[or]head-butts you hard enough to make your head ring[or]slashes at you with its claws[or]gnaws at your arm with its mix of sharp teeth[or]growls and kicks you hard with a powerful leg[or]spins around sharply to bash you against a wall with its big tail[at random]!";
 	now defeated entry is "[beattheenhancedchimera]"; [ Text when monster loses. ]
 	now victory entry is "[losetoenhancedchimera]"; [ Text when monster wins. ]
@@ -237,16 +237,16 @@ When Play begins:
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]powerful[or]strong[at random]";
 	now type entry is "[one of]chimeric[or]hybrid[or]mutant[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -258,7 +258,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -315,7 +315,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

@@ -247,7 +247,7 @@ to say ResolveEvent Vet Supplies:
 			remove "Single Sexed" from feats of Player, if present;
 			remove "Always Cocky" from feats of Player, if present;
 			remove "Always A Pussy" from feats of Player, if present;
-			now GenderLock is 0;  [gender lock variable nulled to remove no-lock bonus]
+			now GenderLock is 0; [gender lock variable nulled to remove no-lock bonus]
 		if calcnumber is 1:
 			say "[vetsup_fshots]";
 		else if calcnumber is 2:
