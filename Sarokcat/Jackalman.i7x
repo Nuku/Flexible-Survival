@@ -29,7 +29,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Jackal"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Jackal"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Jackalman" to infections of CanineList;
 	add "Jackalman" to infections of FurryList;
 	add "Jackalman" to infections of NatureList;
@@ -40,22 +40,22 @@ When Play begins:
 	add "Jackalman" to infections of BipedalList;
 	add "Jackalman" to infections of TailList;
 	now Name entry is "Jackalman";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
 	now defeated entry is "[jackalman loss]";
 	now victory entry is "[jackalman attack]";
 	now desc entry is "The jackalman is watching you!!";
-	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal-like feet, your hands ending in sharp jackal-like claws. Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "narrow canine face, with a long sleek muzzle full of sharp teeth and a nicely flattened forehead, your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. Your powerful jaws pull your lips back in a feral grin as you admire your new face"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "strong and powerful, nicely muscled with bestial digitigrade legs and jackal-like feet, your hands ending in sharp jackal-like claws. Your tough body displays your feral power for all to see, and is a perfect type of body for such a powerful jackal man like yourself"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, sleek jackal's tail attached to your rear, swaying happily over your thickly muscled ass in a predatory manner as you move."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]jackalman[or]jackal-like[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek black muzzle, while your eyes blur as they shift in both color and position, new sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your shape changes and seems to grow slightly more powerful, the muscles moving around under the skin as it becomes both stronger and sleeker. You can feel your legs shift and change as well, causing you to stumble forward slightly as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet as they shift into a more powerful predatory stance. Soon your feet finish changing and you find yourself balancing easily on your new jackal-like paws, as you stand on your new digitigrade jackal legs, and flex your new strong clawed hands"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of thick dark fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a strange tingling sensation seems to come from your rear, as it tightens somewhat, then you can feel a strong pulling sensation as a thick black canine tail pushes out from your rear, lengthening until it is down past your knees before your new appendage is finished growing"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "as your mouth stretches and pushes forward in a massive yawning motion, the muscles reforming as it pushes out into a sleek black muzzle, while your eyes blur as they shift in both color and position, new sounds and smells explode through your enhanced senses as your new jackal's muzzle finishes forming and your ears finish shifting into proper canine ears, swiveling around on top of your head like a proper jackal's"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your shape changes and seems to grow slightly more powerful, the muscles moving around under the skin as it becomes both stronger and sleeker. You can feel your legs shift and change as well, causing you to stumble forward slightly as your heels seem to shift upwards on your legs, shifting your weight forward onto the balls of your changing feet as they shift into a more powerful predatory stance. Soon your feet finish changing and you find yourself balancing easily on your new jackal-like paws, as you stand on your new digitigrade jackal legs, and flex your new strong clawed hands"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "A soft tingling sensation spreads across your skin as soft, sleek, black jackal fur begins to push its way out of your body, swiftly covering your body in a sexy coat of thick dark fur"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a strange tingling sensation seems to come from your rear, as it tightens somewhat, then you can feel a strong pulling sensation as a thick black canine tail pushes out from your rear, lengthening until it is down past your knees before your new appendage is finished growing"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "your shaft thins and changes, its tip tapering to a point while its base seems to swell up slightly before being covered in a soft black sheath of fur. Your balls tingle slightly as they swell with strongly fertile jackal seed"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 18;
@@ -63,35 +63,35 @@ When Play begins:
 	now per entry is 20;
 	now int entry is 16;
 	now cha entry is 28;
-	now sex entry is "Male";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 100;
-	now lev entry is 10;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 30;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Shop";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 9;  [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 2;  [ Size of balls ]
-	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 4;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 10; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 30; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Shop"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 2; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 4; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 9;
 	now Cunt Tightness entry is 4;
 	now SeductionImmune entry is false;
-	now libido entry is 25;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 25; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]powerful[at random]";
-	now type entry is "canine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;
-	now resbypass entry is true;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -102,7 +102,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -159,7 +159,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -205,9 +205,9 @@ to jackalmanify:
 			now MonsterID is y;
 			break;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]  [swap to allow infection...]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]  [swap to allow infection...]
 	infect;
-	now non-infectious entry is true;  [...then close to prevent random infection]
+	now non-infectious entry is true; [...then close to prevent random infection]
 
 
 Section 3 - Endings

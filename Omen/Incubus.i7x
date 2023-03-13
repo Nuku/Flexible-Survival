@@ -223,16 +223,16 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Demon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Demon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Incubus" to infections of DemonList;
 	add "Incubus" to infections of OtherworldlyList;
 	add "Incubus" to infections of MaleList;
 	add "Incubus" to infections of BipedalList;
 	add "Incubus" to infections of TailList;
 	now Name entry is "Incubus"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[incubus fight]"; [ Successful attack message ]
 	now defeated entry is "[beattheincubus]"; [ Text when monster loses. ]
 	now victory entry is "[losetoincubus]"; [ Text when monster wins. ]
@@ -242,7 +242,7 @@ When Play begins:
 	now skin entry is "[one of]soft, human[or]pristine[or]perfect[at random]";
 	now tail entry is "You have a round bubble butt with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer, more sexually attractive appearance. Small horns push out of your brow"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer, more sexually attractive appearance. Small horns push out of your brow"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "it is reshaped into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder, you stare in wonder as two small bulges of flesh push out of your back, before popping open in an almost orgasmic release. Unfurling further and further after that, you soon have a pair of large dark red bat wings on your back";
 	now skin change entry is "your skin seems to soften and smooth out, any blemishes and unwanted hair wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a perfect, sexy ass, forming a wonderfully fuckable bubble butt. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end";
@@ -271,16 +271,16 @@ When Play begins:
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is "libido pill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is male]handsome[else]sultry[end if][at random]";
 	now type entry is "demonic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -292,7 +292,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -349,7 +349,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

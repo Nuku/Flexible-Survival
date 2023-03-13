@@ -76,17 +76,17 @@ When Play begins:
 	add "Xeno Drone" to infections of TailList;
 	add "Xeno Drone" to infections of OviImpregnatorList;
 	add "Xeno Drone" to infections of TailweaponList; [usable for Tail Strike feat]
-	now Name entry is "Xeno Drone"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Xeno Drone";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The Xeno[or]The alien[or]The creature[at random] attacks using its [one of]sharpened claws[or]deadly talons[or]vicious claws[or]slashing tail[at random]!";
 	now defeated entry is "[beatthexeno]";
 	now victory entry is "[losetoxeno]";
 	now desc entry is "[xenodesc]";
 	now face entry is "a thin elongated skull that curves backwards towards the top. Your eyes are large black orbs encased in sunken sockets. You have no gums, and your teeth are silvery, long, straight, and densely packed in several rows. Behind your first mouth is a second smaller mouth able to extend out atop your black tongue. This smaller mouth has smaller, but equally fearsome, razor-sharp teeth";
 	now body entry is "large, but oddly enough you can see your [skin] fold around your ribs and bones as it all forms into an exoskeleton[if the player is not xenoskinned] just beneath your taut skin[end if]. Your animal-like body has hints of feminine curves and wide, bony hips[if Nipple Count of Player > 0 and Breast Size of Player > 5]. Your breasts, heavy with milk, leak a green acid with each bounce[end if][if Player is xenoskinned and Nipple Count of Player > 0]. You easily notice green blood vessels and veins running along your breasts and converging on your nipples[end if]. Your long, thin arms and legs bend in odd places, and you're able to walk both upright and on all fours, moving surprisingly silently despite your hard claws. From your back grow breathing tubes that take in air for you[if Player is herm and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. Encircled by these is a wet, vaginal opening to complete your ovipositor. You thankfully have a normal, [cunt size desc of Player] pussy beneath your cock as well, allowing you to enjoy a good fucking as well[else if Player is female and the player is xenococked]. Your [cunt size desc of Player] juicy pussy has a quartet of inch-long, squirming tendrils around it that rub constantly against your folds, feeling wonderfully stimulating and making you crave a good fucking to fill it[else if Player is male and the player is xenococked]. Your cock extends out like a hard, phallic probe with squirming, inch-long tendrils at its tip. These rub against your glans and cumslit, keeping you aroused and eager to find a wet hole to fill[end if]";
-	now skin entry is "hard, black exoskeleton"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "hard, black exoskeleton"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long tail consisting of many vertebrae but completely absent of any muscle. It hovers behind you, snaking this way and that, slashing its pointed, razor-sharp end through the air as if eager to find something to sink into.";
 	now cock entry is "[one of][if Player is female]ovipositor[else]probing[end if][or]black[or]ebon[or]tendrilled[at random]";
 	now face change entry is "you suddenly get a massive headache as your skull reshapes and stretches itself as any hair you have falls from it. Your skull changes, becoming completely smooth and elongated. As your headache subsides, you feel a sharp pain in your mouth as your gums pull away your teeth elongate and gather in several pointed rows. Your tongue erupts in pain as you feel it thicken and lengthen, splitting off to form a second, smaller mouth filled with more sharp teeth";
@@ -100,7 +100,7 @@ When Play begins:
 	now per entry is 12; [bears are good at finding stuff]
 	now int entry is 14; [not that much of a bear with little brain]
 	now cha entry is 6; [because you wouldn't want to argue]
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 80; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15; [Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -118,16 +118,16 @@ When Play begins:
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "acid milk";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bony[or]twisted[or]unnatural[or]hardened[at random]";
 	now type entry is "[one of]xeno[or]alien[or]monstrous[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -139,7 +139,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -196,7 +196,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

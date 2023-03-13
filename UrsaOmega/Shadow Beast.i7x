@@ -109,58 +109,58 @@ When Play begins:
 	add "Shadow Beast Male" to infections of FeralmindList;
 	add "Shadow Beast Male" to infections of TailList;
 	now Name entry is "Shadow Beast Male";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The beast disappears in a flicker of darkness before reappearing behind you, striking at you![or]The beast lashes out with its tentacles![or]The beast leaps at you![or]The Shadow Beast firmly makes its point![or]One of its tentacles whips though the air and gives you a painful slap.[or]A slash of a clawed paw leaves bloody marks on you.[at random]";
-	now defeated entry is "[beattheshadowbeast]";       [ Text when monster loses. Change 'shadowbeast' as above. ]
-	now victory entry is "[losetoshadowbeast]";         [ Text when monster wins. Change 'shadowbeast' as above. ]
+	now defeated entry is "[beattheshadowbeast]"; [ Text when monster loses. Change 'shadowbeast' as above. ]
+	now victory entry is "[losetoshadowbeast]"; [ Text when monster wins. Change 'shadowbeast' as above. ]
 	now desc entry is "[shadowbeastdesc]";
-	now face entry is "that of a panther, sleek and predatory";  [ Face. Format as Your face is [Face of Player]. ]
+	now face entry is "that of a panther, sleek and predatory"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "the form of a large feral cat, but with two long tentacles emerging from your back";
-	now skin entry is "dark-furred";  [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
-	now tail entry is "You have a feline tail that twitches this way and that behind you.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now skin entry is "dark-furred"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
+	now tail entry is "You have a feline tail that twitches this way and that behind you."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "feline";
-	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and cat-like ears";  [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now face change entry is "it reforms into the visage of a panther, complete with a sleek predatory muzzle and cat-like ears"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "it cracks and shifts into a quadrupedal stance, becoming sleek and muscled. You feel like a coiled spring, ready to pounce on prey at a moment's notice. Two long black tentacles with strong gripping pads at their ends grow out of your back, giving you another pair of appendages";
 	now skin change entry is "inky black fur covers you from head to toe";
-	now ass change entry is "your new feline tail pushes out from somewhere above your rear";  [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
-	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with";  [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
+	now ass change entry is "your new feline tail pushes out from somewhere above your rear"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "it becomes more tapered, the head of your shaft growing wicked-looking barbs to stimulate your mates with"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 14;
 	now dex entry is 18;
 	now sta entry is 12;
 	now per entry is 15;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male";              [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 30;
-	now lev entry is 3;                   [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 5;                  [ Monster's average damage when attacking. ]
-	now area entry is "Sealed";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 15;          [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 3;            [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 6;               [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 5; [ Monster's average damage when attacking. ]
+	now area entry is "Sealed"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 6; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]           [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]            [ Width in inches of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
-	now libido entry is 60;               [ Target libido the infection will rise towards. ]
-	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]lithe[or]sleek[or]toned[at random]";  [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"]
-	now type entry is "[one of]feline[or]cat-like[at random]";    [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
+	now libido entry is 60; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lithe[or]sleek[or]toned[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"]
+	now type entry is "[one of]feline[or]cat-like[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human...]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -171,7 +171,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -228,7 +228,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

@@ -92,6 +92,6 @@ to say ResolveEvent OtterBoi Meeting:
 	WaitLineBreak;
 	say "     You chuckle, dismissing his apology and pat off his shoulders, finally managing to quell those thoughts and impulses that sprung up earlier. You watch over his shuddering form, grinning - and can't help but enjoy how easily you reduced him into a squirming mess. Alas, you fix your foggy head and wave him a goodbye, leaving him there, trembling because of your presence. Perhaps you'll bump into him again someday, perhaps not. The infection seems to take away people you see everyday, and judging by how blushy he was... He might just submit at some point.";
 	now OtterBoi Meeting is resolved;
-	[ now XXX is active;   [enable follow-up events as needed]]
+	[ now XXX is active; [enable follow-up events as needed]]
 
 Walkinmall ends here.

@@ -886,7 +886,7 @@ to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
 		now KyrverthEndingTimer is turns;
 		now Resolution of Strange Sighting is 1; [player did not encounter Kyrverth. End things here.]
 	now KyrverthTimer is Turns; [deprecated but leaving in here because it's useful]
-	now Strange Sighting is resolved;  [it won't happen again]
+	now Strange Sighting is resolved; [it won't happen again]
 
 Jewel Heist is a situation.
 ResolveFunction of Jewel Heist is "[ResolveEvent Jewel Heist]".

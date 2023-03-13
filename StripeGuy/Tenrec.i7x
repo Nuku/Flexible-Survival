@@ -107,7 +107,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Tenrec"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Tenrec"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Tenrec" to infections of FurryList;
 	add "Tenrec" to infections of NatureList;
 	add "Tenrec" to infections of MaleList;
@@ -117,9 +117,9 @@ When Play begins:
 	add "Tenrec" to infections of TailList;
 	add "Tenrec" to infections of TailweaponList;
 	now Name entry is "Tenrec";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The tenrec lunges for you with both paws slashing![or]The sleek fisherstud darts left, then right, and traps you in a tight hug with his large tail, grinding his cock up against you![or]The limber otter-shrew feints left and strikes with his large tail![or]The fisherman reaches into his loose coat and pulls out a large fish. Which is then chucked at your head![or]The no-nonsense tenrec just punches you upside your head like an errant cub.[or]With a snarl, the tenrec uses his sharp teeth to bite you![or]The horny male grabs hold of a passing net, swinging above you. He uses his height to splatter precum all over you![at random]";
 	now defeated entry is "[Tenrec loses]";
 	now victory entry is "[Tenrec Victory]";
@@ -129,8 +129,8 @@ When Play begins:
 	now skin entry is "[one of]chestnut brown[or]water resistant[or]slightly oily[or]musky Tenrec fur[at random]";
 	now tail entry is "You have a very long tail, strangely ridged along the top and hairless. It is like a vertical wall of muscle, moving from side to side as if to help you swim through the air as you walk."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]otter-shrew[or]pinkish tenrec[or]slightly tapered[at random]";
-	now face change entry is "your skull suddenly thinks it is part torpedo, pushing forward and slimming down considerably. Your ears shrink and shift, moving upwards where they will cause the least turbulence. Pain flares around your eyes as new nictating membranes form, sliding over your eyes as a second set of lids. Further forward, your mouth takes on the shape of a dagger, or needle-nose pliers, a narrow toothy muzzle perfect for clamping on fish and digging them out of mud. From either side, a vast array of vibrissae spout from nose to cheekbones, forming a massive facial tactile array"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "everything begins to ache, then throb, from inside out as your bones reshape. Some lengthen, others shorten, and the sensation of your spine sprouting almost puts you on the ground. Your shoulders draw inward, body narrowing and becoming streamlined. Your arm tremble, fingers growing fine and slender, tipped with sharp little claws perfect for gripping prey. It is almost enough to distract you from the sticky feeling of webbing forming between your digits, confirming what your torpedo-shaped body is made for"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now face change entry is "your skull suddenly thinks it is part torpedo, pushing forward and slimming down considerably. Your ears shrink and shift, moving upwards where they will cause the least turbulence. Pain flares around your eyes as new nictating membranes form, sliding over your eyes as a second set of lids. Further forward, your mouth takes on the shape of a dagger, or needle-nose pliers, a narrow toothy muzzle perfect for clamping on fish and digging them out of mud. From either side, a vast array of vibrissae spout from nose to cheekbones, forming a massive facial tactile array"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "everything begins to ache, then throb, from inside out as your bones reshape. Some lengthen, others shorten, and the sensation of your spine sprouting almost puts you on the ground. Your shoulders draw inward, body narrowing and becoming streamlined. Your arm tremble, fingers growing fine and slender, tipped with sharp little claws perfect for gripping prey. It is almost enough to distract you from the sticky feeling of webbing forming between your digits, confirming what your torpedo-shaped body is made for"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
 	now skin change entry is "rich chestnut colored fur erupts from your skin, sensation traveling in waves as layers of waterproof fur emerge";
 	now ass change entry is "muscle is packed on, pelvis creaking as your hips widen to make more room for your muscular tailbase. Your spine seems to shift upwards, if that were possible, allowing your rudder-like tail to unfurl above your newly empowered rump";
 	now cock change entry is "it flushes a bright pink before settling to a rich muted red, taking on a slightly tapered profile. Ridges and veins briefly surge from the surface before the shaft retracts into a well-shielded tenrec sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -143,7 +143,7 @@ When Play begins:
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 65;
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 7; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Warehouse"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks]
@@ -158,16 +158,16 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]whippy[or]limber[or]lithe[or]slender[at random]";
 	now type entry is "[one of]musteline[or]tenrec[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -179,7 +179,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -236,7 +236,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

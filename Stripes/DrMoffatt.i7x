@@ -677,7 +677,7 @@ to hyperskunkdose:
 			now MonsterID is y;
 			break;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect "Hyperskunk";
 	now non-infectious entry is true;
 

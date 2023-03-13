@@ -51,7 +51,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Feral Shaft Beast"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Feral Shaft Beast"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Feral Shaft Beast" to infections of BodyHorrorList;
 	add "Feral Shaft Beast" to infections of FeralList;
 	add "Feral Shaft Beast" to infections of HermList;
@@ -59,23 +59,23 @@ When Play begins:
 	add "Feral Shaft Beast" to infections of QuadrupedalList;
 	add "Feral Shaft Beast" to infections of TailList;
 	add "Feral Shaft Beast" to infections of TailweaponList;
-	now Name entry is "Feral Shaft Beast"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Feral Shaft Beast";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The creature turns quickly, hitting you with her heavy tail[or]The beast throbs and shoots a huge glob of seed from her head with the pressure of a fire hose at your face[or]The beast charges towards you and tackles you[or]Her tentacles wiggle around and lash at you like whips[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[feral shaft beast defeat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[feral shaft beast victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]     As you walk, you find a powerful musk filling your lungs. Your skin tingles and a chill run downs your spine as wet sounds resonate behind you, and when you turn to face the source, you lay your eyes on a beast like no other.[line break]     Standing on all fours, the purple-skinned monster is an abomination of breasts and phalluses. Her veiny skin throbs, looking slick and moist with a thin layer of her own liquid musk. Her head is a massive, thick-necked shaft with a glans-like tip that reminds you of a dragon's snout. The toes on her front and rear paws terminate in penis-like protrusions that drool on the ground as she walks. Stretching out from her rear is a massive tail with a dribbling crown that's as large as her head, and the tail's underside is covered from base to tip with two rows of heavy, dripping breasts. Eight massive, cock-like tentacles wriggle around on the monster's back, each as thick as one of your arms and five feet in length. The creature's head is pointed at you, and the urethra stretches open to reveal three massive cocktongues that slide out and wiggle in your direction, just as dexterous the tentacles on her back.[line break]     As the creature moves closer to fight you, you can't help but balk at the eight H cup breasts on her front and the massive, four foot long spire between her legs, the underside of which is lined with twin rows of orange-sized tits. Behind that imposing pillar of flesh rests a huge ballsack with four watermelon-sized testicles. You can't even begin to fathom how such a thing could be created, much less be able to move, but she's clearly eager to play with you as she prepares to take what she wants by force."; [ Description of the creature when you encounter it.]
-	now face entry is "smoothed out into a featureless, snout-like glans, with a thick and swollen neck that throbs on every breath. Your urethra frequently drips a sticky, cum-like substance and can be spread to reveal three prehensile cocktongues, each as thick as a human's arm and four feet long from base to drippling tip"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "a blissful symphony. It pulses and throbs constantly at any stimulation. There are eight cunts along the sides of your spine, arranged in parallel like the breasts in front of you, each wide cunt drooling heavily. Your eight thick cock tentacles push and wiggle out from those cunts, each reaching five feet from base to tip and as thick as a human's arm, highly prehensile and moving as if they had minds of their own. Your hands and feet have changed to give you a more feral stance, as have your shoulders and rear. Your fingers and toes have been replaced with prehensile, foot-long cocks. Your belly tingles constantly, and you feel things moving inside of it - living things"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "purple, veiny, slick and cock-like"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "smoothed out into a featureless, snout-like glans, with a thick and swollen neck that throbs on every breath. Your urethra frequently drips a sticky, cum-like substance and can be spread to reveal three prehensile cocktongues, each as thick as a human's arm and four feet long from base to drippling tip"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "a blissful symphony. It pulses and throbs constantly at any stimulation. There are eight cunts along the sides of your spine, arranged in parallel like the breasts in front of you, each wide cunt drooling heavily. Your eight thick cock tentacles push and wiggle out from those cunts, each reaching five feet from base to tip and as thick as a human's arm, highly prehensile and moving as if they had minds of their own. Your hands and feet have changed to give you a more feral stance, as have your shoulders and rear. Your fingers and toes have been replaced with prehensile, foot-long cocks. Your belly tingles constantly, and you feel things moving inside of it - living things"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "purple, veiny, slick and cock-like"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Your tail is as heavy and thick as one of your legs, and it's slightly longer than one as well. The tip is a large, swollen, pointy cock-head which is almost the size of your own length's head. The underside of the tail is covered with rows of breasts from its base to the glans at its tip, the breasts larger near the base and tapering towards the end."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[if looknow is 1]draconian-shaped cock tip. There are eight small breasts lining its underside, proportional to the size of your tool. Your manhood is also ridged along the sides and barbed all over the glans and edges, forming quite an interesting[else]draconian and breasted[end if]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it pops and swells, pushing forward. Your eyes close and cease to exist, along with your nose and ears, all facial features fading except for your lips, which spread wider. Your face pushes into a smooth draconian snout while the back of your head takes a penile approach, small barbs forming around the edges. A pair of foot-long, cock-shaped horns grow at the back of your head, each dripping heavily with male musk, just as your lips drool with female juices. Your tongue then swells and pushes out like a powerful tendril, two feet long and as thick as a golf ball, drooling from the now swollen cock-head at the tip. Your neck swells and pulses as four rings of round bumps sprout evenly along it, each bump taking the shape of a grape-sized clitoris"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it swells and pulses all over, moans escaping your lips as you rub your body in corrupted lust. Your hands and feet swell large, each finger and toe extending, pulsing and then growing into foot-long cocks. Eight cunts swell and split open along your spine, your back dripping as they drool heavily and then spread wide open to allow eight long tentacles to slide out and wiggle around out of control, each as thick as a human arm. You fall on all fours as your arms and legs change, followed by your shoulders and rear, their new structure forcing you into a quadrupedal stance"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it tingles and pulses, purple shades spreading all over it with veins showing here and there. You then feel an unbearable heat spread all over, your body releasing a thick layer of musky sweat that coats you from head to toe, making your skin glisten and drip"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it trembles and tickles. You grow a massive cock tail which curls up proudly, flopping down shortly after with the weight of the many rows of breasts spreading over its underside. The cocktip swells until it's nearly size of your head, and the slit at its tip begins to drool thick, heady cum"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it pops and swells, pushing forward. Your eyes close and cease to exist, along with your nose and ears, all facial features fading except for your lips, which spread wider. Your face pushes into a smooth draconian snout while the back of your head takes a penile approach, small barbs forming around the edges. A pair of foot-long, cock-shaped horns grow at the back of your head, each dripping heavily with male musk, just as your lips drool with female juices. Your tongue then swells and pushes out like a powerful tendril, two feet long and as thick as a golf ball, drooling from the now swollen cock-head at the tip. Your neck swells and pulses as four rings of round bumps sprout evenly along it, each bump taking the shape of a grape-sized clitoris"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it swells and pulses all over, moans escaping your lips as you rub your body in corrupted lust. Your hands and feet swell large, each finger and toe extending, pulsing and then growing into foot-long cocks. Eight cunts swell and split open along your spine, your back dripping as they drool heavily and then spread wide open to allow eight long tentacles to slide out and wiggle around out of control, each as thick as a human arm. You fall on all fours as your arms and legs change, followed by your shoulders and rear, their new structure forcing you into a quadrupedal stance"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it tingles and pulses, purple shades spreading all over it with veins showing here and there. You then feel an unbearable heat spread all over, your body releasing a thick layer of musky sweat that coats you from head to toe, making your skin glisten and drip"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it trembles and tickles. You grow a massive cock tail which curls up proudly, flopping down shortly after with the weight of the many rows of breasts spreading over its underside. The cocktip swells until it's nearly size of your head, and the slit at its tip begins to drool thick, heady cum"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it swells and throbs, each pulse spreading changes from base to tip. The sides form subtle ridges, followed by the growth of eight small, dripping tits along its underside. With a wave of lust, the tip tapers to a point and begins to drool heavily, barbs spreading over the glans and edges"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 30;
 	now dex entry is 5;
@@ -83,10 +83,10 @@ When Play begins:
 	now per entry is 25;
 	now int entry is 10;
 	now cha entry is 10;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 80;
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 24; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 24; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 40; [ Length infection will make cock grow to if cocks]
@@ -101,16 +101,16 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "psionic larva";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]hyper-sexualized[or]twisted[or]warped[or]genital-covered[as decreasingly likely outcomes]";
 	now type entry is "mutant"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -122,7 +122,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -179,7 +179,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

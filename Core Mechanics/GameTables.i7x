@@ -23,6 +23,8 @@ false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout an
 
 When Play begins:
 	add "Anthro Dragoness" to infections of ReptileList;
+	add "Anthro Dragoness" to infections of InternalCockList;
+	add "Anthro Dragoness" to infections of InternalBallsList;
 	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 
@@ -1786,7 +1788,8 @@ Name(text)	Type(text)
 "inasituation"	"truth state"
 "inheat"	"truth state"
 "insectlarva"	"truth state"
-"internalbypass"	"truth state"
+"internalCockbypass"	"truth state"
+"internalBallsbypass"	"truth state"
 "isHellhound"	"truth state"
 "ishunting"	"truth state"
 "joannadogsaved"	"truth state"

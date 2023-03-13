@@ -241,7 +241,11 @@ carry out navigating:
 	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
-	now Player is in Travelling;
+	now Player is in Traveling;
+	if companionList of Player is not empty:
+		repeat with y running through companionList of Player:
+			if NPCObject of y is not Nullpet:
+				now NPCObject of y is in location of Player;
 	follow turnpass rule;
 	let the bonus be (( Perception of Player minus 10 ) divided by 2);
 	now battleground is "Outside";

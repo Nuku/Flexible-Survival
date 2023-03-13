@@ -49,7 +49,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Ant"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Ant"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Army Ant" to infections of InsectList;
 	add "Army Ant" to infections of FurryList;
 	add "Army Ant" to infections of NatureList;
@@ -60,8 +60,8 @@ When Play begins:
 	add "Army Ant" to infections of OviImpregnatorList;
 	now Name entry is "Army Ant"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Ant Warrior";
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The army ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The army ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the army ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the army ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The army ant delivers a sweeping blow, stooping low with he strike while his leg kicks out.[or]With his sinews creaking tightly, the army ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the army ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
 	now defeated entry is "[beatthearmyant]"; [ Text when monster loses. ]
 	now victory entry is "[losetoarmyant]"; [ Text when monster wins. Change 'template' as above. ]
@@ -100,17 +100,17 @@ When Play begins:
 	now libido entry is 5;
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]toned[or]segmented[or]shiny[or]fit[or]masculine[or]lean[or]plated[at random]";
 	now type entry is "[one of]ant[or]insectoid[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -121,7 +121,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -178,7 +178,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

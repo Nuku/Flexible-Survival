@@ -280,12 +280,13 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Inflatable Snake"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Inflatable Snake"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Inflatable Snake" to infections of ReptileList;
 	add "Inflatable Snake" to infections of LatexList;
 	add "Inflatable Snake" to infections of ToyList;
 	add "Inflatable Snake" to infections of TaperedCockList;
 	add "Inflatable Snake" to infections of InternalCockList;
+	add "Inflatable Snake" to infections of InternalBallsList;
 	add "Inflatable Snake" to infections of TailList;
 	add "Inflatable Snake" to infections of SerpentineList;
 	add "Inflatable Snake" to infections of NotBreathingList;
@@ -293,9 +294,9 @@ When Play begins:
 	add "Inflatable Snake" to infections of TailweaponList;
 	add "Inflatable Snake" to infections of VoreList;
 	now Name entry is "Inflatable Snake";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The [one of]snake winds itself around your leg, squeezing as it tries to scale your body[or]transparent snake snaps at your arm as you try to attack it[or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully[at random]!";
 	now defeated entry is "[beattheinflatablesnake]";
 	now victory entry is "[losetoinflatablesnake]";
@@ -334,16 +335,16 @@ When Play begins:
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flexible[or]slender[or]serpentine[at random]";
 	now type entry is "[one of]reptilian[or]serpentine[or]snake-like[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true; [We manually manage the infections]
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger60"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;

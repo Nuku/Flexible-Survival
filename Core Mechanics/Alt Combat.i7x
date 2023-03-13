@@ -486,7 +486,7 @@ This is the player attack rule:
 			else:
 				say "[line break]You give [one of]your opponent[or]your enemy[or]the [EnemyNameOrTitle][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of Player] [one of]wang[or]cock[or]prick[purely at random][smn] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internal:
+		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internalBalls:
 			increase bonusattack by 1;
 			let dammy be 0;
 			now dammy is ( Ball Size of Player + a random number between 1 and 3);
@@ -1262,10 +1262,10 @@ to win:
 				now ubprompted is true; [player will be prompted for ub]
 	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
 		now ok is 0;
-		VoriaPostCombat;	[Carnivorous Plant vore scene. Scenes in Voria file]
-		now fightoutcome is 15;	[Voria vored foe]
-	else if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
-		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
+		VoriaPostCombat; [Carnivorous Plant vore scene. Scenes in Voria file]
+		now fightoutcome is 15; [Voria vored foe]
+	else if voreprompted is true and ubprompted is true: [both vore and ub are possible]
+		if vorechoice is 0 and ubchoice is 0: [player has full choice]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
@@ -1281,7 +1281,7 @@ to win:
 				now fightoutcome is 14; [player ub'ed foe]
 			else:
 				now ok is 1;
-		else if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
+		else if vorechoice is 1 and ubchoice is 1: [player has choice ub/vore]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
 			now calcnumber is -1;
 			while calcnumber < 1 or calcnumber > 2:
@@ -1295,12 +1295,12 @@ to win:
 				now ok is 0;
 				ubbyplayer; [See Alt Vore file]
 				now fightoutcome is 14; [player ub'ed foe]
-		else if vorechoice is 1 and ubchoice is 0:				[hunger overrides ub]
+		else if vorechoice is 1 and ubchoice is 0: [hunger overrides ub]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the emptiness in your stomach that wins out and you don't hold it back. You advancing on them with the intent to sate your stomach's call with the [EnemyNameOrTitle].";
 			now ok is 0;
 			vorebyplayer; [See Alt Vore file]
 			now fightoutcome is 13; [player vored foe]
-		else if vorechoice is 0 and ubchoice is 1:				[ub overrides hunger]
+		else if vorechoice is 0 and ubchoice is 1: [ub overrides hunger]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. In the end, it is the hollowness in your uterus that wins out and you don't hold it back. You advancing on them with the intent to use the [EnemyNameOrTitle] to fill the emptiness you feel in your womb.";
 			now ok is 0;
 			ubbyplayer; [See Alt Vore file]
@@ -1396,7 +1396,7 @@ to win:
 	now automaticcombatcheck is 0; [combat is over, reset to zero]
 	if gshep is listed in companionList of Player:
 		increase gshep_fights by 1;
-		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
+		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ): [checks on Korvin's post-fight 'feedback']
 			if gshep_fights > 2 and inasituation is false and GShepLastScene - turns >= 4:
 				say "[gshep_postfightargue]";
 	follow the ngraphics_blank rule;

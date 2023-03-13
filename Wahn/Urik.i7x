@@ -141,6 +141,11 @@ to say DismissUrik:
 		say "     You tell Urik that you don't need him right now. He looks over and gives you a tusk-bearing grin, followed by the words, 'Later then, [UrikPlayerAddress]. I'll make my way back to the library.' With that said, he wanders off and is quickly out of sight.";
 	move Urik to Sitting Area;
 
+an everyturn rule:
+	if Player is in Traveling:
+		if Urik is in Traveling and a random chance of 1 in 3 succeeds:
+			say "     [one of]'It's good to get out on the road again! Can't let you have all the fun on your own,' Urik comments with a gruff chuckle as you set out. [or]'Think we'll find some man eye-candy on the way? Not that I'm on the hunt anymore, but... you know,' Urik comments with a gruff chuckle as you set out. [at random][line break]";
+
 to say SexwithUrikCompanion:
 	if Player is not in Sitting Area and Player is not in Main Hall:
 		say "     Looking at the towering orc warrior and how pumped up he is about the prospect of fighting again, an inner voice tells you that maybe you should only have sex in the [bold type]Sitting Area[roman type] of the library or the [bold type]Main Hall[roman type] of the orc lair.";

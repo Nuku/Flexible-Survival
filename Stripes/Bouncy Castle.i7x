@@ -69,10 +69,10 @@ to say ResolveEvent Snared Vixen:
 		now HP of Bubble is 1;
 		[moved generating Dolphinlist to the game start, see above]
 		now vixcountdown is 29;
-		now Resolution of Snared Vixen is 1;	[Vixen was taken to Bouncy Castle]
+		now Resolution of Snared Vixen is 1; [Vixen was taken to Bouncy Castle]
 	else: [Aborts finding the Bouncy Castle entirely]
 		say "     Deciding that it's not of interest to you, you turn away and head back the way you came.";
-		now Resolution of Snared Vixen is 99;	[Ignored Vixen]
+		now Resolution of Snared Vixen is 99; [Ignored Vixen]
 	now Snared Vixen is resolved;
 
 

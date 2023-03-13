@@ -178,7 +178,7 @@ to say ResolveEvent FindingMidnight:
 				now Midnight is in Zoo Giftshop;
 				Infect "Panther Herm";
 				now player is in Zoo Giftshop;
-				now battleground is "void";  [blocks a random fight after this]
+				now battleground is "void"; [blocks a random fight after this]
 				now AngieAroused is 50;
 				now Resolution of FindingMidnight is 1; [Angie still focused on Midnight]
 			else: [Angie likes the player more than Midnight]
@@ -236,7 +236,7 @@ to say ResolveEvent FindingMidnight:
 					Infect "Panther Herm";
 					now AngieAroused is 7;
 				now player is in Zoo Giftshop;
-				now battleground is "void";  [blocks a random fight after this]
+				now battleground is "void"; [blocks a random fight after this]
 				now Resolution of FindingMidnight is 4; [player turned Angie down to mount them]
 			now FindingMidnight is resolved;
 		else:

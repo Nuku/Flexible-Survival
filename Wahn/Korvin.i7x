@@ -302,6 +302,11 @@ to say DismissKorvin:
 	else: [dismissing him in the abbey]
 		say "     With a shrug of his shoulders, Korvin goes back to doing whatever it is he does when passing the time.";
 
+an everyturn rule:
+	if Player is in Traveling:
+		if Korvin is in Traveling and a random chance of 1 in 3 succeeds:
+			say "     [one of]'Time to knock some heads, eh? If anyone looks at us funny, they won't know what hit them!' Korvin barks out, his tail wagging as he steps to your side and gives you a grinning nod. [or]'It's gonna be a good day to get out on the streets, I just know it!' Korvin comments, happy to get going. [at random][line break]";
+
 gshep_fights is a number that varies.
 gshep_postfight is a number that varies. [post-fight argument]
 gshep_sexscene is a number that varies. [sex-role argument]
