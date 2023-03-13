@@ -5,6 +5,7 @@ a postimport rule:
 	if PlayerMet of Tobias is true:
 		change the north exit of Smith Haven Mall Lot East to Overgrown Lot;
 		change the south exit of Overgrown Lot to Smith Haven Mall Lot East;
+		move Tobias to Tobias's Trailer;
 
 Section 1 - Events
 
