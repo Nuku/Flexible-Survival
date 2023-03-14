@@ -239,7 +239,7 @@ to say TomeSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
 	[]
-	if "Tome_DemonFox_Read" is listed in Traits of Player and Player is puremale and DemonFoxInteractions > 0:
+	if "Tome_DemonFox_Read" is listed in Traits of Player and "DemonFoxGone" is not listed in Traits of Kal Ren and Player is puremale and DemonFoxInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a demon fox";
 		now sortorder entry is 2;

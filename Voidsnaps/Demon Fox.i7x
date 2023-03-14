@@ -341,8 +341,8 @@ to say DemonFoxSummon:
 			say "[PlayerSubmitted_KalRen_Arc]";
 	else if DemonFox_PlayerFled is true:
 		if PlayerMet of Kal Ren is false: [first encounter after the fight]
-			say "     'Well, if it isn't the flighty kit from before...' the beast purrs. 'Will you run away again? I won't stop you.' You blink at him incredulously. Waving dismissively, he continues. 'I won't. I can see that I won't get far by chasing you. Frankly, it bores me.'";
-			say "     'Perhaps we can attempt to be civil. I'm Kal Ren, but you can call me Ren, if you'd prefer.' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I believe that's enough chit-chat for now. Perhaps sometime in the future, we can have another go.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
+			say "     'Well, if it isn't the flighty kit from before...' the beast rolls his eyes. 'Will you run away again? I won't stop you.' You blink at him incredulously. Waving dismissively, he continues. 'I won't. I can see that I won't get far by chasing you. Frankly, it bores me.'";
+			say "     'Perhaps we can attempt to be civil. I'm Kal Ren, but you can call me Ren, if you'd prefer.' Tentatively, you introduce yourself as well. 'See? That wasn't so hard, now was it, kit?' he asks. 'However, I believe that's enough chit-chat for now. Perhaps sometime in the future, you'll give yourself to me.' With that, the fox disappears in another flash of light, leaving you confused at everything that just transpired.";
 			now PlayerMet of Kal Ren is true;
 		else: [previously introduced by name]
 			say "[PlayerFled_KalRen_Arc]";
@@ -524,10 +524,40 @@ to say PlayerSubmitted_KalRen_Arc:
 Section 8 - Player Fled Arc
 
 to say PlayerFled_KalRen_Arc:
-	say "<Writer's Note: Please have patience, this content arc is in progress.>";
-
-to say KalRen_PlayerFledFuckMenu:
-	say "...";
+	say "      Greeting you with a grimace and a dismissive wave of his paw, the demon fox speaks in a condescending tone. 'You again? I grow tired of your presence. I have no use for cowards not [italic type]man enough [roman type]to submit to me. [bold type]Would you prefer to stop summoning me, or would you rather I force the issue?'[roman type][line break]";
+	let KalRenFledChoices be a list of text;
+	add "Submit to the fox. What he's saying sounds ominous. Best to stay on his good side." to KalRenFledChoices;
+	add "Offer to stop summoning him. You still have business with other denizens of the tome." to KalRenFledChoices;
+	add "Taunt him. He couldn't catch you before. What could he possibly do to you now?" to KalRenFledChoices;
+	let KalRenFledChoice be what the player chooses from KalRenFledChoices;
+	if KalRenFledChoice is:
+		-- "Submit to the fox. What he's saying sounds ominous. Best to stay on his good side.": [Defaults to Submissive route]
+			LineBreak;
+			say "     Meekly, you step closer, promising to submit to the fox as long as you don't have to face whatever consequences his words foreshadowed. Your apology is weak, and you sweat bullets as you watch his face contort into laughter, but you feel instant relief as the fox's expression cracks into an impish smile and he wipes his eyes theatrically. 'Oh, cowardly kit. Don't worry, I won't hold it against you. Let's start over now that you know your place. We'll pretend this never happened.'";
+			now DemonFox_PlayerFled is false;
+			now DemonFox_PlayerSubmitted is true;
+		-- "Offer to stop summoning him. You still have business with other denizens of the tome.": [Removes Kal Ren from save.]
+			LineBreak;
+			say "     The truth is, you're not interested in Kal Ren. Now that you've met him, you believe that he's a reasonable enough fox, so you decide to be honest. If you promise not to summon him, that should be enough to keep you out of his hair. 'Fine.' The fox sighs, shrugging his shoulders. 'What's another hundred years? I suppose, since you asked nicely, I'll rest a while until the book falls into the hands of someone more fun.'";
+			TraitGain "DemonFoxGone" for Kal Ren;
+		-- "Taunt him. He couldn't catch you before. What could he possibly do to you now?": [Bad Idea. Your funeral.]
+			LineBreak;
+			say "     You taunt Kal Ren, demanding to know what his problem is. He couldn't catch you before, so how is that your problem? You'll do whatever you please! Confident in your ability to escape and emboldened by his quiet stare, you make the mistake of stepping closer.";
+			if vorelevel >= 2: [more vore selected]
+				say "     The sound of clanking teeth silences you before you finish your last words. Perhaps you shouldn't be mouthy around something that can eat you in a single bite.";
+				wait for any key;
+				now battleground is "Void";
+				the Player was ended by "Demon Fox";
+				trigger ending "Player has died";
+				end the story saying "You have been eaten by an irate demon fox.";
+			if vorelevel is 1:
+				say "     Death by Demon fox. You were dead before you realized he'd moved.";
+				wait for any key;
+				now battleground is "Void";
+				the Player was ended by "Demon Fox";
+				trigger ending "Player has died";
+				end the story saying "You have been killed by an irate demon fox.";
+	now TomeTimer is turns;
 
 Section 9 - Player Won Arc
 
