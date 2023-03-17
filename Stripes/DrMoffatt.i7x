@@ -134,14 +134,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Moffatt	"Doctor Moffatt"
 
-Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
-Description of Doctor Moffatt is "[drmoffattdesc]".
+Doctor Moffatt is a woman.
+Doctor Moffatt is in Psych Department.
+ScaleValue of Doctor Moffatt is 3. [human sized]
+SleepRhythm of Doctor Moffatt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Moffatt is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Moffatt is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Moffatt is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Moffatt is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Moffatt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Moffatt is 7. [length in inches]
+Breast Size of Doctor Moffatt is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Moffatt is 2. [count of nipples]
+Asshole Depth of Doctor Moffatt is 12. [inches deep for anal fucking]
+Asshole Tightness of Doctor Moffatt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Moffatt is 1. [number of cocks]
+Cock Girth of Doctor Moffatt is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Moffatt is 24. [Length in Inches]
+Ball Count of Doctor Moffatt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Moffatt is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Moffatt is 0. [number of cunts]
+Cunt Depth of Doctor Moffatt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Moffatt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Moffatt is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Moffatt is false.
+PlayerRomanced of Doctor Moffatt is false.
+PlayerFriended of Doctor Moffatt is false.
+PlayerControlled of Doctor Moffatt is false.
+PlayerFucked of Doctor Moffatt is false.
+OralVirgin of Doctor Moffatt is false.
+Virgin of Doctor Moffatt is false.
+AnalVirgin of Doctor Moffatt is false.
+PenileVirgin of Doctor Moffatt is false.
+SexuallyExperienced of Doctor Moffatt is true.
+TwistedCapacity of Doctor Moffatt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Moffatt is false. [steriles can't knock people up]
 MainInfection of Doctor Moffatt is "Hyperskunk".
+Description of Doctor Moffatt is "[drmoffattdesc]".
 Conversation of Doctor Moffatt is { "..." }.
+the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
-
-the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 
 to say drmoffattdesc:
 	if level of Doctor Moffatt is 0:

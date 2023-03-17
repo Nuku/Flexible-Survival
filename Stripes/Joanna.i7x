@@ -102,6 +102,19 @@ to say ResolveEvent Overrun Garden:
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if HP of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[else]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
 			now HP of Joanna is 1;
 			now lust of Joanna is 0;
+			now Tongue Length of Joanna is 14;
+			now Breast Size of Joanna is 4;
+			now Asshole Depth of Joanna is 12;
+			now Asshole Tightness of Joanna is 3;
+			now Cock Count of Joanna is 4;
+			now Cock Girth of Joanna is 2;
+			now Cock Length of Joanna is 12;
+			now Ball Count of Joanna is 2;
+			now Ball Size of Joanna is 4;
+			now Cunt Count of Joanna is 3;
+			now Cunt Depth of Joanna is 12;
+			now Cunt Tightness of Joanna is 3;
+			now Clit Size of Joanna is 1;
 			now Resolution of Overrun Garden is 1; [helped and won]
 	else:
 		LineBreak;
@@ -545,14 +558,50 @@ Table of GameCharacterIDs (continued)
 object	name
 Joanna	"Joanna"
 
-Joanna is a woman. Joanna is in Flower Garden.
+Joanna is a woman.
+Joanna is in Flower Garden.
+ScaleValue of Joanna is 3. [human sized]
+SleepRhythm of Joanna is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Joanna is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Joanna is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Joanna is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Joanna is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Joanna is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Joanna is 10. [length in inches]
+Breast Size of Joanna is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Joanna is 2. [count of nipples]
+Asshole Depth of Joanna is 8. [inches deep for anal fucking]
+Asshole Tightness of Joanna is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Joanna is 0. [number of cocks]
+Cock Girth of Joanna is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Joanna is 0. [Length in Inches]
+Ball Count of Joanna is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Joanna is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Joanna is 1. [number of cunts]
+Cunt Depth of Joanna is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Joanna is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Joanna is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Joanna is false.
+PlayerRomanced of Joanna is false.
+PlayerFriended of Joanna is false.
+PlayerControlled of Joanna is false.
+PlayerFucked of Joanna is false.
+OralVirgin of Joanna is false.
+Virgin of Joanna is false.
+AnalVirgin of Joanna is true.
+PenileVirgin of Joanna is true.
+SexuallyExperienced of Joanna is true.
+TwistedCapacity of Joanna is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Joanna is true. [steriles can't knock people up]
+MainInfection of Joanna is "".
 Description of Joanna is "[joannadesc]".
 Conversation of Joanna is { "Sunshine!" }.
+The scent of the Joanna is "[joannascent]".
 lastjoannajuice is a number that varies. lastjoannajuice is usually 555.
 joannatalk is a number that varies.
 joannaoffernum is a number that varies.
-
-the scent of the Joanna is "[joannascent]".
 
 to say joannascent:
 	if HP of Joanna is not 0 and HP of Joanna < 90:

@@ -220,14 +220,14 @@ Colleen	"Colleen"
 
 Colleen is a woman.
 [Physical details as of game start]
-ScaleValue of Colleen is 3. [human sized]
+ScaleValue of Colleen is 3. [5' 6"]
 Body Weight of Colleen is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Colleen is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 Androginity of Colleen is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Colleen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Mouth Length of Colleen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Colleen is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Colleen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Colleen is 6. [length in inches]
+Tongue Length of Colleen is 5. [length in inches]
 Cock Count of Colleen is 0. [number of cocks]
 Cock Girth of Colleen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Colleen is 0. [length in inches]

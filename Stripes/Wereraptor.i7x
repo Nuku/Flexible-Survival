@@ -61,6 +61,12 @@ to say ResolveEvent Paleontology Professor:
 					increase morale of Player by 2;
 					increment carried of chips;
 					raptorrelease;
+					now Androginity of Doctor Utah is 2;
+					Cock Count of Doctor Utah is 1;
+					Cock Girth of Doctor Utah is 3;
+					Cock Length of Doctor Utah is 8;
+					Ball Count of Doctor Utah is 2;
+					Ball Size of Doctor Utah is 3;
 				else:
 					LineBreak;
 					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
@@ -85,6 +91,11 @@ to say ResolveEvent Paleontology Professor:
 					increase morale of Player by 2;
 					increment carried of chips;
 					raptorrelease;
+					now Androginity of Doctor Utah is 8;
+					Cunt Count of Doctor Utah is 1;
+					Cunt Depth of Doctor Utah is 10;
+					Cunt Tightness of Doctor Utah is 2;
+					Clit Size of Doctor Utah is 2;
 				else:
 					LineBreak;
 					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. There is some pleading and cursing, but you continue to go, feeling a little bad about your decision.";
@@ -98,6 +109,7 @@ to say ResolveEvent Paleontology Professor:
 			if Player consents:
 				LineBreak;
 				say "     A faint scratching at the wooden door from the inside bring to back to the situation at hand. It seems someone's become trapped. Concerned that he may starve or dehydrate before rescue finally arrives, you should probably help him out.";
+				now UtahGender is 1;
 				say "     [bold type]Shall you let the guy out?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
@@ -125,6 +137,12 @@ to say ResolveEvent Paleontology Professor:
 					LineBreak;
 					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
 					now UtahGender is 1;
+				now Androginity of Doctor Utah is 2;
+				Cock Count of Doctor Utah is 1;
+				Cock Girth of Doctor Utah is 3;
+				Cock Length of Doctor Utah is 8;
+				Ball Count of Doctor Utah is 2;
+				Ball Size of Doctor Utah is 3;
 			else:
 				say "     A faint scratching at the wooden door from the inside bring to back to the situation at hand. It seems someone's become trapped. Concerned that she may starve or dehydrate before rescue finally arrives, you should probably help her out.";
 				now UtahGender is 2;
@@ -155,6 +173,11 @@ to say ResolveEvent Paleontology Professor:
 					LineBreak;
 					say "     Deciding not to risk letting out whatever creature may be lurking in there, you back away slowly and go looking elsewhere. As you move away, there is another plea for help, followed by growling and clawing at the door. 'Let me out or I'll find you. I will find you and come for you in the night, prey. And I will GUT you!' it hisses angrily, scratching wildly at the sturdy wooden door. The tirade descends into nothing but growls and hisses as whatever is inside vents its rage. Fearing that it may actually get out and find you, you flee quickly.";
 					now UtahGender is 2;
+				now Androginity of Doctor Utah is 8;
+				Cunt Count of Doctor Utah is 1;
+				Cunt Depth of Doctor Utah is 10;
+				Cunt Tightness of Doctor Utah is 2;
+				Clit Size of Doctor Utah is 2;
 	now Paleontology Professor is resolved;
 
 
