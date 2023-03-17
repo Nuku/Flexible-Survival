@@ -477,7 +477,7 @@ Sterile of Candy is false. [steriles can't knock people up]
 MainInfection of Candy is "Raccoon".
 Description of Candy is "[coondesc]".
 Conversation of Candy is { "Cock!" }.
-The scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex."
+The scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex.".
 candytalk is a number that varies.
 lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
 coonsex is a number that varies.
