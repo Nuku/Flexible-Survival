@@ -88,9 +88,48 @@ object	name
 Gang members	"Gang members"
 
 Gang members is a man.
+
+
+Gang members is a man.
+Gang members is in Hyena hideout.
+ScaleValue of Gang members is 3. [human sized]
+SleepRhythm of Gang members is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Gang members is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Gang members is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Gang members is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Gang members is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Gang members is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Gang members is 6. [length in inches]
+Breast Size of Gang members is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Gang members is 2. [count of nipples]
+Asshole Depth of Gang members is 10. [inches deep for anal fucking]
+Asshole Tightness of Gang members is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Gang members is 0. [number of cocks]
+Cock Girth of Gang members is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Gang members is 0. [Length in Inches]
+Ball Count of Gang members is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Gang members is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Gang members is 0. [number of cunts]
+Cunt Depth of Gang members is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Gang members is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Gang members is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Gang members is false.
+PlayerRomanced of Gang members is false.
+PlayerFriended of Gang members is false.
+PlayerControlled of Gang members is false.
+PlayerFucked of Gang members is false.
+OralVirgin of Gang members is true.
+Virgin of Gang members is true.
+AnalVirgin of Gang members is true.
+PenileVirgin of Gang members is true.
+SexuallyExperienced of Gang members is false.
+TwistedCapacity of Gang members is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Gang members is true. [steriles can't knock people up]
+MainInfection of Gang members is "".
 Description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.".
 Conversation of gang members is { "Yap!" }.
-Gang members is in Hyena hideout.
 
 instead of sniffing Gang members:
 	say "The gang members smell like hyenas[if matriarchdefeated > 0 and matriarchowned is 0]. Their strong, dominant scents make you want to submit to them[end if].";

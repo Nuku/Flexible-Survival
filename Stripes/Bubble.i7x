@@ -3,7 +3,31 @@ Version 1 of Bubble by Stripes begins here.
 [Version 1.3 - Code and writing cleanup. Added additional comments for clarity - Song]
 
 "Adds Bubble the Inflatable Vixen as an NPC to the Flexible Survival game."
-[To understand HP of Bubble values, see Section 9]
+
+[ HP of Bubble           ]
+[ 0 = not started        ]
+[ 1 = Bouncy Castle open ]
+[ 2 = Arrive at BC       ]
+[ 3 = released           ]
+[ 4 = brought home       ]
+[ 5 = talked             ]
+[ 6 = had sex            ]
+[ 7 = High Dive scene    ]
+[ 8 = Did UB on player   ]
+[                        ]
+[ 99 = too late @ BC     ]
+[ 100 = too late         ]
+
+[ Libido of Bubble        ]
+[ 0 = slender (deflated)  ]
+[ 1 = plump (inflated)    ]
+
+[ infvulpstate            ]
+[ 0 = unset (deflated)    ]
+[ 1 = deflated (set)      ]
+[ 2 = deflated (locked)   ]
+[ 3 = inflated (set)      ]
+[ 4 = inflated (locked)   ]
 
 Section 0 - Basic Structure
 
@@ -11,11 +35,46 @@ Table of GameCharacterIDs (continued)
 object	name
 Bubble	"Bubble"
 
-Bubble is a person.
+Bubble is a woman.
+ScaleValue of Bubble is 3. [human sized]
+SleepRhythm of Bubble is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Bubble is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Bubble is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Bubble is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Bubble is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Bubble is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Bubble is 8. [length in inches]
+Breast Size of Bubble is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Bubble is 2. [count of nipples]
+Asshole Depth of Bubble is 12. [inches deep for anal fucking]
+Asshole Tightness of Bubble is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Bubble is 0. [number of cocks]
+Cock Girth of Bubble is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Bubble is 0. [Length in Inches]
+Ball Count of Bubble is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Bubble is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Bubble is 1. [number of cunts]
+Cunt Depth of Bubble is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Bubble is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Bubble is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Bubble is false.
+PlayerRomanced of Bubble is false.
+PlayerFriended of Bubble is false.
+PlayerControlled of Bubble is false.
+PlayerFucked of Bubble is false.
+OralVirgin of Bubble is false.
+Virgin of Bubble is false.
+AnalVirgin of Bubble is true.
+PenileVirgin of Bubble is true.
+SexuallyExperienced of Bubble is true.
+TwistedCapacity of Bubble is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Bubble is false. [steriles can't knock people up]
+MainInfection of Bubble is "Inflatable Vulpine".
 Description of Bubble is "[bubbledesc]".
 Conversation of Bubble is { "Yay!" }.
-
-the scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
+The scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
 
 Section 1 - Description
 
@@ -281,31 +340,6 @@ to say bubblesex12:
 
 
 Section 9 - Information
-
-[ HP of Bubble           ]
-[ 0 = not started        ]
-[ 1 = Bouncy Castle open ]
-[ 2 = Arrive at BC       ]
-[ 3 = released           ]
-[ 4 = brought home       ]
-[ 5 = talked             ]
-[ 6 = had sex            ]
-[ 7 = High Dive scene    ]
-[ 8 = Did UB on player   ]
-[                        ]
-[ 99 = too late @ BC     ]
-[ 100 = too late         ]
-
-[ Libido of Bubble        ]
-[ 0 = slender (deflated)  ]
-[ 1 = plump (inflated)    ]
-
-[ infvulpstate            ]
-[ 0 = unset (deflated)    ]
-[ 1 = deflated (set)      ]
-[ 2 = deflated (locked)   ]
-[ 3 = inflated (set)      ]
-[ 4 = inflated (locked)   ]
 
 [ word lists:
 

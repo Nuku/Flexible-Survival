@@ -72,14 +72,14 @@ object	name
 Lumi	"Lumi"
 
 Lumi is a woman.
-ScaleValue of Lumi is 3. [human sized]
+ScaleValue of Lumi is 4. [6' 4"]
 Body Weight of Lumi is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Lumi is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Lumi is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Lumi is 10.
+Mouth Length of Lumi is 9.
 Mouth Circumference of Lumi is 3.
-Tongue Length of Lumi is 10.
+Tongue Length of Lumi is 9.
 Breast Size of Lumi is 1.
 Nipple Count of Lumi is 2.
 Asshole Depth of Lumi is 10.

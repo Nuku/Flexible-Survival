@@ -517,21 +517,55 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Mouse	"Doctor Mouse"
 
-Doctor Mouse is a person. Doctor Mouse is in Hidden Lab.
+Doctor Mouse is a man.
+Doctor Mouse is in Hidden Lab.
+ScaleValue of Doctor Mouse is 2. [human sized]
+SleepRhythm of Doctor Mouse is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Mouse is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Mouse is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Mouse is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Mouse is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Mouse is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Mouse is 5. [length in inches]
+Breast Size of Doctor Mouse is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Mouse is 2. [count of nipples]
+Asshole Depth of Doctor Mouse is 6. [inches deep for anal fucking]
+Asshole Tightness of Doctor Mouse is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Mouse is 1. [number of cocks]
+Cock Girth of Doctor Mouse is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Mouse is 6. [Length in Inches]
+Ball Count of Doctor Mouse is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Mouse is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Mouse is 0. [number of cunts]
+Cunt Depth of Doctor Mouse is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Mouse is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Mouse is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Mouse is false.
+PlayerRomanced of Doctor Mouse is false.
+PlayerFriended of Doctor Mouse is false.
+PlayerControlled of Doctor Mouse is false.
+PlayerFucked of Doctor Mouse is false.
+OralVirgin of Doctor Mouse is true.
+Virgin of Doctor Mouse is true.
+AnalVirgin of Doctor Mouse is true.
+PenileVirgin of Doctor Mouse is true.
+SexuallyExperienced of Doctor Mouse is false.
+TwistedCapacity of Doctor Mouse is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Mouse is true. [steriles can't knock people up]
+MainInfection of Doctor Mouse is "".
+Description of Doctor Mouse is "[DrMouseDesc]".
+Conversation of Doctor Mouse is { "Squeak!" }.
+The scent of Doctor Mouse is "The lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 lastDrMousefucked is a number that varies. lastDrMousefucked is usually 500.
 understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 DoctorMouseProgress is a number that varies.
 
-Description of Doctor Mouse is "[DrMouseDesc]".
-
 to say DrMouseDesc:
 	project Figure of DrMouse_clothed_icon;
 	say "     Dr. Mouse is a slender, white mouse with red eyes and a pink nose and ears. He's dressed in a white labcoat and doctor's attire, with a thin tail poking out behind his back. Most of the time he is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
-
-Conversation of Doctor Mouse is { "Squeak!" }.
-
-the scent of Doctor Mouse is "The lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 
 the linkaction of Doctor Mouse is "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link][if hospquest >= 14], [link]volunteer[end link][end if][line break]";
 

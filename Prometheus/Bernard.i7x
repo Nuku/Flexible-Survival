@@ -82,14 +82,14 @@ object	name
 Bernard	"Bernard"
 
 Bernard is a man.
-ScaleValue of Bernard is 4. [human sized]
+ScaleValue of Bernard is 4. [7' 1"]
 Body Weight of Bernard is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Bernard is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Bernard is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Bernard is 12.
+Mouth Length of Bernard is 10.
 Mouth Circumference of Bernard is 3.
-Tongue Length of Bernard is 12.
+Tongue Length of Bernard is 10.
 Breast Size of Bernard is 0.
 Nipple Count of Bernard is 2.
 Asshole Depth of Bernard is 10.

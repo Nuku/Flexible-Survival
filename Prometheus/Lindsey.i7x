@@ -26,14 +26,14 @@ Lindsey	"Lindsey"
 
 Lindsey is a man.
 [Physical details as of game start]
-ScaleValue of Lindsey is 3. [human sized]
+ScaleValue of Lindsey is 4. [6' 10"]
 Body Weight of Lindsey is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Lindsey is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 Androginity of Lindsey is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Lindsey is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Mouth Length of Lindsey is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Lindsey is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Lindsey is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Lindsey is 6. [length in inches]
+Tongue Length of Lindsey is 7. [length in inches]
 Cock Count of Lindsey is 1. [number of cocks]
 Cock Girth of Lindsey is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Lindsey is 10. [length in inches]

@@ -83,17 +83,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Sven	"Sven"
 
-Sven is a man. Sven is in Sven's Place. The HP of Sven is normally 0.
+Sven is a man.
+Sven is in Sven's Place.
+The HP of Sven is normally 0.
 ScaleValue of Sven is 3. [human sized]
-Cock Count of Sven is 1.
-Cock Length of Sven is 8.
-Ball Size of Sven is 5. [golfball sized balls]
-Ball Count of Sven is 2.
-Cunt Count of Sven is 0.
-Cunt Depth of Sven is 0.
-Cunt Tightness of Sven is 0.
-Nipple Count of Sven is 2.
-Breast Size of Sven is 0.
+SleepRhythm of Sven is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Sven is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sven is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sven is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sven is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sven is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sven is 6. [length in inches]
+Breast Size of Sven is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sven is 2. [count of nipples]
+Asshole Depth of Sven is 10. [inches deep for anal fucking]
+Asshole Tightness of Sven is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sven is 1. [number of cocks]
+Cock Girth of Sven is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sven is 8. [Length in Inches]
+Ball Count of Sven is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sven is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sven is 0. [number of cunts]
+Cunt Depth of Sven is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sven is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sven is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Sven is false.
 PlayerRomanced of Sven is false.
@@ -105,15 +119,15 @@ Virgin of Sven is true.
 AnalVirgin of Sven is true.
 PenileVirgin of Sven is false.
 SexuallyExperienced of Sven is true.
+TwistedCapacity of Sven is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sven is false. [steriles can't knock people up]
 MainInfection of Sven is "Snow Leopard".
-
 Description of Sven is "[SvenDesc]".
 Conversation of Sven is { "Mew!" }.
+The scent of Sven is "[SvenScent]".
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
 SvenCandyMsg is a number that varies. SvenCandyMsg is usually 0.
 SvenStory1 is a truth state that varies. SvenStory1 is usually false.
-
-the scent of Sven is "[SvenScent]".
 
 to say SvenScent:
 	if HP of Sven < 5 or HP of Sven is 50: [no sex yet, not fully transformed]
@@ -888,11 +902,47 @@ Table of GameCharacterIDs (continued)
 object	name
 Svetlana	"Svetlana"
 
-Svetlana is a woman. Description of Svetlana is "[SvetlanaDesc]".
+Svetlana is a woman.
+ScaleValue of Svetlana is 3. [human sized]
+SleepRhythm of Svetlana is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Svetlana is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Svetlana is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Svetlana is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Svetlana is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Svetlana is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Svetlana is 6. [length in inches]
+Breast Size of Svetlana is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Svetlana is 6. [count of nipples]
+Asshole Depth of Svetlana is 10. [inches deep for anal fucking]
+Asshole Tightness of Svetlana is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Svetlana is 0. [number of cocks]
+Cock Girth of Svetlana is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Svetlana is 0. [Length in Inches]
+Ball Count of Svetlana is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Svetlana is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Svetlana is 1. [number of cunts]
+Cunt Depth of Svetlana is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Svetlana is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Svetlana is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Svetlana is false.
+PlayerRomanced of Svetlana is false.
+PlayerFriended of Svetlana is false.
+PlayerControlled of Svetlana is false.
+PlayerFucked of Svetlana is false.
+OralVirgin of Svetlana is false.
+Virgin of Svetlana is false.
+AnalVirgin of Svetlana is true.
+PenileVirgin of Svetlana is false.
+SexuallyExperienced of Svetlana is true.
+TwistedCapacity of Svetlana is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Svetlana is false. [steriles can't knock people up]
+MainInfection of Svetlana is "Snow Leopard".
+Description of Svetlana is "[SvetlanaDesc]".
 Conversation of Svetlana is { "Mew!" }.
+The scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".
 [uses same variables as Sven for easier saving and restoration.]
-
-the scent of the Svetlana is "Svetlana smells of aroused female snow leopard. Lisa's scent clings to her as well.".
 
 to say SvetlanaDesc:
 	if HP of Sven < 53:

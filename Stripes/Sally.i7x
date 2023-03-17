@@ -8,12 +8,47 @@ object	name
 Sally	"Sally"
 
 Sally is a woman.
+ScaleValue of Sally is 3. [human sized]
+SleepRhythm of Sally is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Sally is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sally is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sally is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sally is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sally is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sally is 6. [length in inches]
+Breast Size of Sally is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sally is 6. [count of nipples]
+Asshole Depth of Sally is 12. [inches deep for anal fucking]
+Asshole Tightness of Sally is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sally is 1. [number of cocks]
+Cock Girth of Sally is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sally is 9. [Length in Inches]
+Ball Count of Sally is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sally is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sally is 1. [number of cunts]
+Cunt Depth of Sally is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sally is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sally is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sally is false.
+PlayerRomanced of Sally is false.
+PlayerFriended of Sally is false.
+PlayerControlled of Sally is false.
+PlayerFucked of Sally is false.
+OralVirgin of Sally is true.
+Virgin of Sally is true.
+AnalVirgin of Sally is true.
+PenileVirgin of Sally is true.
+SexuallyExperienced of Sally is false.
+TwistedCapacity of Sally is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sally is true. [steriles can't knock people up]
+MainInfection of Sally is "".
 Description of Sally is "[sallydesc]".
 Conversation of Sally is { "Fuck me!" }.
-lastSallyfucked is a number that varies. lastSallyfucked is usually 555.
+The scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.".
 the icon of Sally is figure of Sally_icon.
-
-the scent of Sally is "The cute, little huskybunny herm smells of arousal and sex.".
+lastSallyfucked is a number that varies. lastSallyfucked is usually 555.
 
 to say sallydesc:
 	say "     This creature, once the intellectual Dr. Matt, is now nothing more than a horny slut and your personal toy. The mouse's injection has left him a mindless, lustful creature eager for sex. Sally, as you've decided to call her, is a cute and sexy huskybunny herm with no desires greater than satisfying her physical desires and yours. The slutty hybrid has fluffy fur with husky markings and tail, but a bunny muzzle and ears. Her body is something between the two, a sensual mix of canine and lapine, with lovely curves and big, rabbit footpaws. As a herm, she has six large, perky breasts, with the upper pair being above-average in size and shrinking slightly for the subsequent two rows. Her nine inch cock is almost constantly hard and both it and her wet pussy dribble with arousal.";

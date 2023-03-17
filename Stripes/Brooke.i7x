@@ -3,6 +3,14 @@ Version 1 of Brooke by Stripes begins here.
 
 "Adds a primarily M/M Otter NPC named Brooke to the Flexible Survival game."
 
+[ HP of Brooke                      ]
+[ 0 = Nothing                       ]
+[ 1 = Talked w/him                  ]
+[ 2 = Received oral                 ]
+[ 3 = Fucked him                    ]
+[ 4 = Fucked him again              ]
+[ 5 = Fucked by him                 ]
+
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Brooke is in NPC Nexus:
 		move Brooke to Palomino;
@@ -13,7 +21,30 @@ Table of GameCharacterIDs (continued)
 object	name
 Brooke	"Brooke"
 
-Brooke is a man. Brooke is in The Palomino.
+Brooke is a man.
+Brooke is in The Palomino.
+ScaleValue of Brooke is 3. [human sized]
+SleepRhythm of Brooke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Brooke is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Brooke is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Brooke is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Brooke is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Brooke is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Brooke is 6. [length in inches]
+Breast Size of Brooke is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Brooke is 2. [count of nipples]
+Asshole Depth of Brooke is 12. [inches deep for anal fucking]
+Asshole Tightness of Brooke is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Brooke is 1. [number of cocks]
+Cock Girth of Brooke is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Brooke is 6. [Length in Inches]
+Ball Count of Brooke is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Brooke is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Brooke is 0. [number of cunts]
+Cunt Depth of Brooke is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Brooke is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Brooke is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Brooke is false.
 PlayerRomanced of Brooke is false.
@@ -25,8 +56,12 @@ Virgin of Brooke is true.
 AnalVirgin of Brooke is false.
 PenileVirgin of Brooke is false.
 SexuallyExperienced of Brooke is true.
+TwistedCapacity of Brooke is true. [Twisted Characters can take any penetration, no matter the size] [Otter. :P]
+Sterile of Brooke is false. [steriles can't knock people up]
+MainInfection of Brooke is "Sea Otter".
 Description of Brooke is "[brookedesc]".
 Conversation of Brooke is { "Sneak off with me?" }.
+The scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 brookeandrewtalk is a truth state that varies. brookeandrewtalk is usually false.
 The icon of Brooke is Figure of Brooke_icon.
 brookeanal is a number that varies.
@@ -34,8 +69,6 @@ brookeanal is a number that varies.
 
 to say brookedesc:
 	say "     Among the people dancing at the club, this otter catches your eye. Perhaps it's his lovely, cream colored fur, or his pretty-boy face. It might be the way he moves his slender and flexible body to the music in a way all his own. Or maybe the colorful bracelets glowing in the blacklight. No, if you must be honest with yourself, it's totally that plump sheath, heavy balls and tight booty of his. For while he wears a tight black t-shirt, numerous bracelets and anklets, he's nude from the waist down. And from the way he's moving that rudder-like tail of his, he has no problem raising it and showing off his toned rear to the nearby guys.";
-
-the scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 
 
 Section 2 - Conversation
@@ -220,13 +253,5 @@ Section 8 - Infection Mechanic
 to brookeinfect:
 	setmonster "Sea Otter";
 	infect "Sea Otter";
-
-[ HP of Brooke                      ]
-[ 0 = Nothing                       ]
-[ 1 = Talked w/him                  ]
-[ 2 = Received oral                 ]
-[ 3 = Fucked him                    ]
-[ 4 = Fucked him again              ]
-[ 5 = Fucked by him                 ]
 
 Brooke ends here.

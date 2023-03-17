@@ -317,11 +317,48 @@ object	name
 Christy	"Christy"
 Christy	"Christopher"
 
-Christy is a woman. Christy is in Back Room. Description of Christy is "[christydesc]".
-Conversation of Christy is { "Rawr!" }.
-MainInfection of Christy is "Slutty Dragoness".
+Christy is a woman.
+Christy is in Back Room.
 understand "Christopher" as Christy.
 understand "Chris" as Christy.
+ScaleValue of Christy is 5. [human sized]
+SleepRhythm of Christy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Christy is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Christy is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Christy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Christy is 36. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Christy is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Christy is 36. [length in inches]
+Breast Size of Christy is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Christy is 0. [count of nipples]
+Asshole Depth of Christy is 36. [inches deep for anal fucking]
+Asshole Tightness of Christy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Christy is 0. [number of cocks]
+Cock Girth of Christy is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Christy is 0. [Length in Inches]
+Ball Count of Christy is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Christy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Christy is 1. [number of cunts]
+Cunt Depth of Christy is 36. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Christy is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Christy is 4. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Christy is false.
+PlayerRomanced of Christy is false.
+PlayerFriended of Christy is false.
+PlayerControlled of Christy is false.
+PlayerFucked of Christy is false.
+OralVirgin of Christy is true.
+Virgin of Christy is true.
+AnalVirgin of Christy is true.
+PenileVirgin of Christy is true.
+SexuallyExperienced of Christy is false.
+TwistedCapacity of Christy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Christy is false. [steriles can't knock people up]
+MainInfection of Christy is "Slutty Dragoness".
+Description of Christy is "[christydesc]".
+Conversation of Christy is { "Rawr!" }.
 christysausage is a truth state that varies. christysausage is usually false.		[has Christy mentioned the sausage?]
 mchristytop is a truth state that varies. mchristytop is usually false.			[has male Christy topped (M/F or M/M)?]
 mchristyanal is a truth state that varies. mchristyanal is usually false.			[has male Christy topped anal-style?]
@@ -938,6 +975,16 @@ instead of trading the super spicy sausage when the current action involves the 
 		if Libido of Christy is odd, increase Libido of Christy by 1;
 		now lastfuck of Christy is turns + 24;
 		now HP of Christy is 50;
+		now Androginity of Christy is 2;
+		now Cock Count of Christy is 1;
+		now Cock Girth of Christy is 4;
+		now Cock Length of Christy is 30;
+		now Ball Count of Christy is 2;
+		now Ball Size of Christy is 6;
+		now Cunt Count of Christy is 0;
+		now Cunt Depth of Christy is 0;
+		now Cunt Tightness of Christy is 0;
+		now Clit Size of Christy is 0;
 		now MainInfection of Christy is "Horny Dragon";
 	else:
 		LineBreak;
