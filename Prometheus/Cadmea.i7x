@@ -28,14 +28,14 @@ object	name
 Cadmea	"Cadmea"
 
 Cadmea is a woman.
-ScaleValue of Cadmea is 3. [human sized]
+ScaleValue of Cadmea is 3. [5' 2"]
 Body Weight of Cadmea is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Cadmea is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Cadmea is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Cadmea is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Cadmea is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Cadmea is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Cadmea is 8. [length in inches]
+Tongue Length of Cadmea is 7. [length in inches]
 Breast Size of Cadmea is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Cadmea is 2. [count of nipples]
 Asshole Depth of Cadmea is 12. [inches deep for anal fucking]

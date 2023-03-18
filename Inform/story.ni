@@ -946,7 +946,7 @@ Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
 Include Sheng by Rikaeus.
-Include Sidney by Stripes.
+Include Sidney by Prometheus.
 Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.

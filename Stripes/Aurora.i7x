@@ -18,7 +18,7 @@ when play begins:
 	add Giant's Frozen Yogurt to BadSpots of FemaleList;
 
 to say ResolveEvent Giant's Frozen Yogurt:
-	if HP of frost giantess is 0:			[first time finding]
+	if HP of frost giantess is 0: [first time finding]
 		say "     Turning down some damaged streets, you get to an area where the ground is cracked and there are several flows of molten magma. As you're surveying this, you hear a booming female voice call out to you. Looking over, you find a large figure standing on the opposite side of one of these lava streams. She waves her arms frantically over her head and continues to call out, trying to get your attention. Curiously cautious, you approach.";
 		say "     The giantess stands roughly ten or eleven feet tall and has a strong build with some obvious muscle to it. Her skin is powder blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. While proportionately about a C-cup to her size, that makes them something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame.";
 		WaitLineBreak;
@@ -131,6 +131,45 @@ object	name
 Aurora	"Aurora"
 
 Aurora is a woman.
+Description of Aurora is "[AuroraDesc]".
+
+Aurora is a woman.
+ScaleValue of Aurora is 5. [giant sized]
+SleepRhythm of Aurora is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Aurora is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Aurora is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Aurora is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Aurora is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Aurora is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Aurora is 8. [length in inches]
+Breast Size of Aurora is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Aurora is 2. [count of nipples]
+Asshole Depth of Aurora is 16. [inches deep for anal fucking]
+Asshole Tightness of Aurora is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Aurora is 0. [number of cocks]
+Cock Girth of Aurora is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Aurora is 0. [Length in Inches]
+Ball Count of Aurora is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Aurora is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Aurora is 1. [number of cunts]
+Cunt Depth of Aurora is 16. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Aurora is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Aurora is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Aurora is false.
+PlayerRomanced of Aurora is false.
+PlayerFriended of Aurora is false.
+PlayerControlled of Aurora is false.
+PlayerFucked of Aurora is false.
+OralVirgin of Aurora is true.
+Virgin of Aurora is true.
+AnalVirgin of Aurora is true.
+PenileVirgin of Aurora is true.
+SexuallyExperienced of Aurora is false.
+TwistedCapacity of Aurora is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Aurora is true. [steriles can't knock people up]
+MainInfection of Aurora is "".
 Description of Aurora is "[AuroraDesc]".
 
 instead of sniffing Aurora:

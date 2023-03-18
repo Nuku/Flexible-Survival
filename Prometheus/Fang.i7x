@@ -63,9 +63,9 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Body Weight of Fang is 6;
 			now Body Definition of Fang is 7;
 			now Androginity of Fang is 2;
-			now Mouth Length of Fang is 12;
+			now Mouth Length of Fang is 10;
 			now Mouth Circumference of Fang is 4;
-			now Tongue Length of Fang is 12;
+			now Tongue Length of Fang is 10;
 			now Breast Size of Fang is 0;
 			now Nipple Count of Fang is 8;
 			now Asshole Depth of Fang is 12;
@@ -84,9 +84,9 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Body Weight of Fang is 6;
 			now Body Definition of Fang is 7;
 			now Androginity of Fang is 2;
-			now Mouth Length of Fang is 10;
+			now Mouth Length of Fang is 8;
 			now Mouth Circumference of Fang is 4;
-			now Tongue Length of Fang is 10;
+			now Tongue Length of Fang is 8;
 			now Breast Size of Fang is 0;
 			now Nipple Count of Fang is 8;
 			now Asshole Depth of Fang is 12;
@@ -100,14 +100,14 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Cunt Depth of Fang is 0;
 			now Cunt Tightness of Fang is 0;
 			now Clit Size of Fang is 0;
-		else if HP of Fang is 3 or HP of Fang is 4:
+		else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6:
 			now ScaleValue of Fang is 4;
 			now Body Weight of Fang is 6;
 			now Body Definition of Fang is 7;
 			now Androginity of Fang is 2;
-			now Mouth Length of Fang is 14;
+			now Mouth Length of Fang is 12;
 			now Mouth Circumference of Fang is 4;
-			now Tongue Length of Fang is 14;
+			now Tongue Length of Fang is 12;
 			now Breast Size of Fang is 0;
 			now Nipple Count of Fang is 8;
 			now Asshole Depth of Fang is 12;
@@ -128,9 +128,9 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Body Weight of Fang is 6;
 			now Body Definition of Fang is 7;
 			now Androginity of Fang is 6;
-			now Mouth Length of Fang is 12;
+			now Mouth Length of Fang is 10;
 			now Mouth Circumference of Fang is 4;
-			now Tongue Length of Fang is 12;
+			now Tongue Length of Fang is 10;
 			now Breast Size of Fang is 0;
 			now Nipple Count of Fang is 8;
 			now Asshole Depth of Fang is 12;
@@ -149,9 +149,9 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Body Weight of Fang is 6;
 			now Body Definition of Fang is 7;
 			now Androginity of Fang is 6;
-			now Mouth Length of Fang is 12;
+			now Mouth Length of Fang is 8;
 			now Mouth Circumference of Fang is 4;
-			now Tongue Length of Fang is 12;
+			now Tongue Length of Fang is 8;
 			now Breast Size of Fang is 0;
 			now Nipple Count of Fang is 8;
 			now Asshole Depth of Fang is 12;
@@ -251,14 +251,14 @@ object	name
 Fang	"Fang"
 
 Fang is a person.
-ScaleValue of Fang is 3. [human sized]
+ScaleValue of Fang is 3. [6' 6"]
 Body Weight of Fang is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Fang is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Fang is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Fang is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Fang is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Fang is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Fang is 12. [length in inches]
+Tongue Length of Fang is 10. [length in inches]
 Breast Size of Fang is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Fang is 8. [count of nipples]
 Asshole Depth of Fang is 12. [inches deep for anal fucking]

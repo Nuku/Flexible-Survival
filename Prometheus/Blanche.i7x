@@ -1271,14 +1271,14 @@ object	name
 Blanche	"Blanche"
 
 Blanche is a woman. Blanche is in Office Den.
-ScaleValue of Blanche is 3. [human sized]
+ScaleValue of Blanche is 3. [6']
 Body Weight of Blanche is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Blanche is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Blanche is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Blanche is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Blanche is 9. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Blanche is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Blanche is 10. [length in inches]
+Tongue Length of Blanche is 9. [length in inches]
 Breast Size of Blanche is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Blanche is 2. [count of nipples]
 Asshole Depth of Blanche is 10. [inches deep for anal fucking]

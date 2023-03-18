@@ -7,12 +7,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Rod Mallrat	"Rod Mallrat"
 
-Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
-Description of rod mallrat is "[roddesc]".
-The icon of Rod Mallrat is figure of Rod_icon.
-Rod is a trader.
+Rod Mallrat is a man. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
 Rod Mallrat is in Mall FoodCourt.
-Conversation of Rod Mallrat is { "empty" };
+Rod is a trader.
+ScaleValue of Rod Mallrat is 3. [human sized]
+SleepRhythm of Rod Mallrat is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Rod Mallrat is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Rod Mallrat is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Rod Mallrat is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Rod Mallrat is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Rod Mallrat is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Rod Mallrat is 5. [length in inches]
+Breast Size of Rod Mallrat is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Rod Mallrat is 2. [count of nipples]
+Asshole Depth of Rod Mallrat is 8. [inches deep for anal fucking]
+Asshole Tightness of Rod Mallrat is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Rod Mallrat is 1. [number of cocks]
+Cock Girth of Rod Mallrat is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Rod Mallrat is 6. [Length in Inches]
+Ball Count of Rod Mallrat is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Rod Mallrat is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Rod Mallrat is 0. [number of cunts]
+Cunt Depth of Rod Mallrat is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Rod Mallrat is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Rod Mallrat is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Rod Mallrat is false.
+PlayerRomanced of Rod Mallrat is false.
+PlayerFriended of Rod Mallrat is false.
+PlayerControlled of Rod Mallrat is false.
+PlayerFucked of Rod Mallrat is false.
+OralVirgin of Rod Mallrat is false.
+Virgin of Rod Mallrat is true.
+AnalVirgin of Rod Mallrat is true.
+PenileVirgin of Rod Mallrat is false.
+SexuallyExperienced of Rod Mallrat is true.
+TwistedCapacity of Rod Mallrat is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Rod Mallrat is false. [steriles can't knock people up]
+MainInfection of Rod Mallrat is "Slut Rat".
+Description of rod mallrat is "[roddesc]".
+Conversation of Rod Mallrat is { "empty" }.
+The scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home[else]Rod smells of slutty rats and sex. Lots of sex[end if].".
+The icon of Rod Mallrat is figure of Rod_icon.
 
 to say roddesc:
 	project Figure of Rod_icon;
@@ -20,8 +57,6 @@ to say roddesc:
 		say "     Rod is a tall handsome figure of a man, if you ignore the fact that he's half rat[if Ronda is not in Mall Atrium]. He's looking a little disheveled of late[end if]. A long narrow snout has a twitching wet nose, and a long naked pink tail flickers behind him. He wears clothes that look like they belong in a Hot Topic, and he is usually just chilling out, propped up against something and looking to be in no great hurry at all.";
 	else:
 		say "     Rod has become a sexy slut rat. She has curvy hips, a tight waist and large bosom. She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch. She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her. She has black fur and a long, naked rat tail. She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
-
-the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home[else]Rod smells of slutty rats and sex. Lots of sex[end if].".
 
 instead of conversing Rod Mallrat:
 	project Figure of Rod_icon;
@@ -116,10 +151,47 @@ Table of GameCharacterIDs (continued)
 object	name
 Ronda Mallrat	"Ronda Mallrat"
 
-Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
+Ronda Mallrat is a woman. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
+Ronda Mallrat is in Mall Atrium.
+ScaleValue of Ronda Mallrat is 3. [human sized]
+SleepRhythm of Ronda Mallrat is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Ronda Mallrat is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Ronda Mallrat is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Ronda Mallrat is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Ronda Mallrat is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Ronda Mallrat is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Ronda Mallrat is 5. [length in inches]
+Breast Size of Ronda Mallrat is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Ronda Mallrat is 2. [count of nipples]
+Asshole Depth of Ronda Mallrat is 8. [inches deep for anal fucking]
+Asshole Tightness of Ronda Mallrat is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Ronda Mallrat is 0. [number of cocks]
+Cock Girth of Ronda Mallrat is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Ronda Mallrat is 0. [Length in Inches]
+Ball Count of Ronda Mallrat is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Ronda Mallrat is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Ronda Mallrat is 1. [number of cunts]
+Cunt Depth of Ronda Mallrat is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Ronda Mallrat is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Ronda Mallrat is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Ronda Mallrat is false.
+PlayerRomanced of Ronda Mallrat is false.
+PlayerFriended of Ronda Mallrat is false.
+PlayerControlled of Ronda Mallrat is false.
+PlayerFucked of Ronda Mallrat is false.
+OralVirgin of Ronda Mallrat is false.
+Virgin of Ronda Mallrat is false.
+AnalVirgin of Ronda Mallrat is false.
+PenileVirgin of Ronda Mallrat is true.
+SexuallyExperienced of Ronda Mallrat is true.
+TwistedCapacity of Ronda Mallrat is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Ronda Mallrat is false. [steriles can't knock people up]
+MainInfection of Ronda Mallrat is "Slut Rat".
 Description of Ronda Mallrat is "[Rondadesc]".
 Conversation of Ronda is { "empty" }.
-Ronda Mallrat is in Mall Atrium.
+The scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home[else]Ronda smells of slutty rats, cheap perfume and lots of sex[end if].".
 
 a postimport rule: [bugfixing rules for players that import savegames]
 	if HP of Ronda is 100:
@@ -139,8 +211,6 @@ to say Rondadesc:
 		say "Ronda is a slut rat now, with a sexy body, dark fur and a horny disposition. She wears a black leather outfit like the other slut rats and carries herself with confidence, being one of the earliest and most dominant rats in the group. And her new fucktoy, Rod, has made her even more popular, with her other slut rat sisters lavishing attention upon her to be allowed an opportunity to stuff her one-time boyfriend. Knowing to look for it, you can spot her heart-shaped marking on her thigh, though it's changed from red to a deep black, even darker than the fur around it. She may retain a few traces of her old personality thanks to having Rod there, but she is thoroughly a horny slut rat now.";
 	else:
 		say "ERROR-Ronda-[HP of Ronda]L: You should not be able to converse with Ronda at this point.";
-
-the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home[else]Ronda smells of slutty rats, cheap perfume and lots of sex[end if].".
 
 instead of conversing Ronda Mallrat:
 	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and Rondahosp is 0:
