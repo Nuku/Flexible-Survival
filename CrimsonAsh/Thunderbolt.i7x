@@ -18,6 +18,23 @@ an everyturn rule:
 
 Section 1 - Events
 
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Campus Thunder"	Campus Thunder	"[EventConditions_Campus Thunder1]"	College Administration Building	2500	2	100
+3	"Campus Thunder"	Campus Thunder	"[EventConditions_Campus Thunder1]"	College Campus Entrance	2500	2	100
+3	"Campus Thunder"	Campus Thunder	"[EventConditions_Campus Thunder1]"	College Walkway Northwest	2500	2	100
+3	"Campus Thunder"	Campus Thunder	"[EventConditions_Campus Thunder1]"	College Walkway Northeast	2500	2	100
+3	"Campus Thunder"	Campus Thunder	"[EventConditions_Campus Thunder2]"	College Walkway East	2500	2	100
+
+to say EventConditions_Campus Thunder1:
+	if LastCampusWalkin - turns > 0 and ThunderTrackingVariable is 0:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+to say EventConditions_Campus Thunder2:
+	if LastCampusWalkin - turns > 0 and ThunderTrackingVariable is 1:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+
 Table of GameEventIDs (continued)
 Object	Name
 Campus Thunder	"Campus Thunder"
@@ -26,22 +43,6 @@ Campus Thunder is a situation.
 ResolveFunction of Campus Thunder is "[ResolveEvent Campus Thunder]".
 The level of Campus Thunder is 0.
 Sarea of Campus Thunder is "Campus". [Fountain]
-
-instead of going south from College Administration Building while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
-	move player to College Fountain;
-	ThunderboltEncounter1;
-
-instead of going north from College Campus Entrance while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
-	move player to College Fountain;
-	ThunderboltEncounter1;
-
-instead of going east from College Walkway Northwest while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
-	move player to College Fountain;
-	ThunderboltEncounter1;
-
-instead of going west from College Walkway Northeast while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
-	move player to College Fountain;
-	ThunderboltEncounter1;
 
 to say ResolveEvent Campus Thunder:
 	if ThunderTrackingVariable is 0: [never met]
@@ -57,10 +58,6 @@ to ThunderboltEncounter1:
 	now ThunderTrackingVariable is 1;
 	now Resolution of Campus Thunder is 1; [first meeting done]
 	now LastCampusWalkin is turns;
-
-instead of going southeast from College Walkway East while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 1):
-	move player to Greek Street;
-	ThunderboltEncounter2;
 
 to ThunderboltEncounter2:
 	say "     Once again wandering the college property, you hear from behind some buildings the loud and unmistakable 'neigh!' of a horse. Peeking from behind a corner you gasp slightly as you spot the horse mascot Thunderbolt. He's hitched to a post in a make-shift stable surrounded by hay and a nearby trough full of water. But what really draws your eye is his raging equine erection, fully hardened and pulsing slightly. Turning to look your way he whinnies and starts to trot closer, only to be stopped by his leash tied to the post. The large stallion rears up and whinnies again in frustration. It's abundantly clear this impressive beast is in rut. He looks to you with pleading eyes, shakes his well-groomed mane and then turns to his side showing off a truly impressive musculature and nearly two feet of erect horse cock. Almost seems like... he's trying to seduce you by flaunting his equine body.";
