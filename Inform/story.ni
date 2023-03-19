@@ -370,6 +370,7 @@ Include Sex Ed by Prometheus.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
 Include Smith Haven Mall by Wahn.
+Include Snake Charmer by Fenekku.
 Include Soldier Events by Wahn.
 Include SpartanVikingCouple by Rikaeus.
 Include Special Forces Events by Vinickus.
