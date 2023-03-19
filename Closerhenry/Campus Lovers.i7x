@@ -14,6 +14,19 @@ a postimport rule: [bugfixing rules for players that import savegames]
 	if CampusCoupleRelationship is 1: [event resolved the right way, room not connected yet]
 		connect Jadako's Room;
 
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Campus Lovers"	Campus Lovers	"[EventConditions_Campus Lovers1]"	College Fountain	2500	3	100
+3	"Campus Lovers"	Campus Lovers	"[EventConditions_Campus Lovers2]"	Dorm Street	2500	3	100
+
+to say EventConditions_Campus Lovers1:
+	if CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+to say EventConditions_Campus Lovers2:
+	if CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Campus Lovers	"Campus Lovers"
@@ -26,18 +39,7 @@ when play begins:
 	add Campus Lovers to BadSpots of MaleList;
 	add Campus Lovers to BadSpots of FurryList;
 
-instead of going to College Fountain while (Campus Lovers is active and Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
-	move player to College Fountain;
-	CampusLoversEvent;
-
-instead of going to Dorm Street while (Campus Lovers is active and Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
-	move player to Dorm Street;
-	CampusLoversEvent;
-
 to say ResolveEvent Campus Lovers:
-	CampusLoversEvent;
-
-to CampusLoversEvent:
 	if CampusLoversTrackingVariable is 0:
 		say "     You are walking around the campus searching for anything interesting when you hear a yell. Thinking someone may be in trouble, you turn in the direction to see a lithe feline running up to a tall dog morph. The sleek cat has a mixture of orange and black fur colors, surrounding the white fur on his belly. He looks young, maybe just short of twenty. Must have been one of the students here. He wears no clothes, allowing you to easily see his flaccid penis and golf-ball-sized testes. The burly canine has scruffy, brown fur which highlights his chest, rippling with muscles. He wears an unzipped jacket with the college's logo on it, as well as some athletic shorts. The anthro student tries to embrace his older acquaintance, exclaiming 'Coach Weber!', but the canine softly pushes the cat away. 'Oh, Jadako! I, uh, don't think we should do that. I'm your teacher, and... well... you're naked...' he stutters sheepishly.";
 		say "     [bold type]This sounds pretty juicy. Do you want to try to get closer and listen?[roman type][line break]";

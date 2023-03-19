@@ -1410,7 +1410,6 @@ Name(text)	Type(text)
 "VentDomSize"	"number"
 "VentFluidAmount"	"number"
 "VentFoxContentLevel"	"number"
-"VentFoxEncounterCount"	"number"
 "VentFoxLastFed"	"number"
 "VentFoxRelationship"	"number"
 "VentOviAmount"	"number"
