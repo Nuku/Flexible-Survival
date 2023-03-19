@@ -178,9 +178,9 @@ check turncountdisplay:
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
 
-PregStatus is an action applying to nothing.
-understand "zPreg Status" as PregStatus.
-understand "zPregStatus" as PregStatus.
+PregStatus is an action applying to one topic.
+understand "zPreg Status [text]" as PregStatus.
+understand "zPregStatus [text]" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:
@@ -188,71 +188,76 @@ check PregStatus:
 		stop the action;
 
 carry out PregStatus:
-	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
+	let PregCheckObj be Player;
+	if topic understood is not "Player":
+		repeat with x running through persons:
+			if printed name of x exactly matches the text topic understood, case insensitively:
+				now PregCheckObj is x;
+	say "     DEBUG: Preg Status of [PregCheckObj]:[line break]";
 	say "impreg_ok: ";
-	if Player is impreg_ok:
+	if PregCheckObj is impreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]impreg_able: ";
-	if Player is impreg_able:
+	if PregCheckObj is impreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]impreg_now: ";
-	if Player is impreg_now:
+	if PregCheckObj is impreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]partial_vacant: ";
-	if Player is partial_vacant:
+	if PregCheckObj is partial_vacant:
 		say "+";
 	else:
 		say "-";
 	say "[line break]total_vacant: ";
-	if Player is total_vacant:
+	if PregCheckObj is total_vacant:
 		say "+";
 	else:
 		say "-";
 	LineBreak;
 	say "[line break]fpreg_ok: ";
-	if Player is fpreg_ok:
+	if PregCheckObj is fpreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]fpreg_able: ";
-	if Player is fpreg_able:
+	if PregCheckObj is fpreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]fpreg_now: ";
-	if Player is fpreg_now:
+	if PregCheckObj is fpreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]female_vacant: ";
-	if Player is fem_vacant:
+	if PregCheckObj is fem_vacant:
 		say "+";
 	else:
 		say "-";
 	LineBreak;
 	say "[line break]mpreg_ok: ";
-	if Player is mpreg_ok:
+	if PregCheckObj is mpreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]mpreg_able: ";
-	if Player is mpreg_able:
+	if PregCheckObj is mpreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]mpreg_now: ";
-	if Player is mpreg_now:
+	if PregCheckObj is mpreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]male_vacant: ";
-	if Player is male_vacant:
+	if PregCheckObj is male_vacant:
 		say "+";
 	else:
 		say "-";

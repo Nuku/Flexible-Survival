@@ -209,7 +209,7 @@ Include Black Market by Luneth.
 Include Black Market Items by Luneth.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
-Include Bunker Communal Shower Events by Luneth.
+Include Bunker Communal Shower Events by Wahn.
 Include Camp Bravo by Wahn.
 Include Camp Of The Snake by Gherod.
 Include Tenvale College Campus by Rikaeus.
@@ -835,6 +835,7 @@ Include Hadiya by Stripes.
 Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Gherod.
+Include Helen by Wahn.
 Include Hellfire Workers by Gherod.
 Include Help Book by Prometheus.
 Include Henry by Wahn.
@@ -983,6 +984,7 @@ Include Wendis by Prometheus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Wyatt by Gherod.
+Include Xerxes by Wahn.
 Include Yolanda by Stripes.
 Include Zdravko by Gherod.
 Include Zeke by Qazarar.

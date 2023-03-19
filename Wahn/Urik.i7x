@@ -88,6 +88,7 @@ Version 2 of Urik by Wahn begins here.
 
 CandyUrikInteraction is a number that varies.
 lastCandyUrikInteraction is a number that varies.[@Tag:NotSaved] lastCandyUrikInteraction is usually 20000.
+lastUrikWalkInEvent is a number that varies.[@Tag:NotSaved] lastUrikWalkInEvent is usually 20000.
 Stamina of Urik is usually 20000.[@Tag:NotSaved]
 
 
@@ -177,7 +178,7 @@ Cock Length of Urik is 15. [length in inches]
 Ball Count of Urik is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Urik is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Urik is 0. [number of cunts]
-Cunt Depth of Urik is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Urik is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Urik is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Urik is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -460,7 +461,7 @@ to say UrikCumEffects:
 	say "     'So yeah, drunk and horny, all that good shit. And of course, if they become a breeder or just after a day or three, the guys you breed have their tummies swelling with an orcling. Maybe even twins if you really gave it to him good, or after a gangbang with a bunch of tops. Being pumped full of load after load kicks that off, making a breeding pouch in em, I mean. I remember there was one guy someone brought in who took almost a week to fully transform - stayed mostly human for a few days before he went green. Even so, he had his first little one the very next day after reaching the lair.' He gets a bit of a thoughtful expression for a moment, then adds, 'You know, I dumped loads in a fair number of breeders in the lair, and lots of guys outside of it. Mostly just once for the latter ones, so I don't think any of it took, but... I've been wondering if some of the breeder's orclings were mine. It's been a regret of mine, having become old without ever having had family. Mh, maybe if Dec had lived, we'd have adopted someone after settling down.'";
 	say "     The orc looks at the ground for a second, thinking, with his expression darkening quickly and him adding, 'But even if some orclings were mine, it didn't count for much in the [if Urik is not in Main Hall]old [end if]lair. The mob of guys kinda just absorbed any new warrior and any new orc never really was [italic type]mine[roman type]. Never had the chance to get to know em before they became just another rowdy punk.' Urik runs a hand through his long, black hair, biting his lip as he reaches back to rub his own buttocks for a second. 'As for being on the other end... man, there's nothing coming even close to describe how amazing orc cum is! You desire it, crave it, and only that will hit your special itch. Might just be orcs for the next one, but... when I chug down a good mouthful of creamy cum, it's like my asshole is itching for more to be shot into it. Fill me good, knock me up. Like... yeah, like a bitch in heat, kinda.'";
 	WaitLineBreak;
-	say "     'Personally, it also makes my dick hard as a rock, and I kinda want to sink that into someone. Not as urgently as getting my ass stuffed, but it's a proper drive to rut!' He grabs his crotch with a grin, as if to whip out his cock to demonstrate, then winks at you. 'Like [if Hunger of Chris is 0]that other orc you brought in[else]Chris[end if] for example - having a [if Libido of Chris is 1]breeder[else]stud[end if] right here in the library with me, strolling past with [if libido of chris is 1]his fertile ass[else]the faint smell of orc cum in the air after he jerks off[end if]... that drives me wild!' Urik snorts, then looks at you once more before he says, 'But there's more - remember all those breeders in the lair? If you think of it, they look like muscular gym bunnies even though most of what they do is lie around all day and get boned! Turns out orc cum really bulks you up too! Been feeling it myself a bit, lately.' ";
+	say "     'Personally, it also makes my dick hard as a rock, and I kinda want to sink that into someone. Not as urgently as getting my ass stuffed, but it's a proper drive to rut!' He grabs his crotch with a grin, as if to whip out his cock to demonstrate, then winks at you. 'Like [if Hunger of Chris is 0]that other orc you brought in[else]Chris[end if] for example - having a [if Libido of Chris is 1]breeder[else]stud[end if] right here in the library with me, strolling past with [if libido of Chris is 1]his fertile ass[else]the faint smell of orc cum in the air after he jerks off[end if]... that drives me wild!' Urik snorts, then looks at you once more before he says, 'But there's more - remember all those breeders in the lair? If you think of it, they look like muscular gym bunnies even though most of what they do is lie around all day and get boned! Turns out orc cum really bulks you up too! Been feeling it myself a bit, lately.' ";
 	say "     That said, Urik takes a pose and flexes, making the muscles under his skin bulge to show his massive, herculean physique. Thinking back to the first time you ran into him, you got to admit that he looks even more toned than back then. 'Orclings work the same, pretty much. The little ones are born shredded as fuck - no wonder, marinating in all the loads that are pumped into their breeder daddies. Might actually be that the more loads the breeders get, the bigger the orc warriors that come out. From what the others told me, the first day after the breakout was a nonstop gangbang with everyone filling the piggies they overwhelmed. And the firstborn are among the stronger orcs - you know, Yatur, Koghh, Mul, and so on.'";
 	TraitGain "Orc Cum Lore" for Urik;
 
@@ -666,7 +667,7 @@ to say UrikTalk5: [talk about Spike]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     As you pose a question about what exactly he did feed Spike, Urik clears his throat and says, 'It's all good stuff in there, just what the boy needs. Protein powder, clean water and so on, you know.' Raising an eyebrow and giving him a pointed look, you wait for him to continue, at which point Urik rubs the back of his neck. '...and maybe just, er, half a load of my cum. Thereabouts,' he adds in a casual tone of voice. 'Hey, why are you looking at me like that?! It's good for him, you know. What do you think makes orclings strong and grow so much right away once they're 'out of the pouch'?' As a reminder that his all-male species has a peculiar way of reproduction, the orc gives his own buttock a slap, drawing your attention to it. 'It didn't look like he's turning green or getting tusks, so you don't have to worry about Spike becoming an orc. It'll just make him build some mass quicker, alright? And maybe become a little bit horny.'";
-				say "     The last sentence Urik said fairly quietly, and you read between the lines to realize that being dosed with Urik's cum will make Spike grow muscle mass, but also push the Doberman's arousal, with the possibility of making him quite plyable and hungry for more. Enough of it will likely put him in a blissed-out state of drunken lust. [bold type]Given this realization, what do you want to do about the matter?[roman type][line break]";
+				say "     The last sentence Urik said fairly quietly, and you read between the lines to realize that being dosed with Urik's cum will make Spike grow muscle mass, but also push the Doberman's arousal, with the possibility of making him quite pliable and hungry for more. Enough of it will likely put him in a blissed-out state of drunken lust. [bold type]Given this realization, what do you want to do about the matter?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let Urik continue to hand out his special shakes.";
 				say "     ([link]N[as]n[end link]) - Enough of this. Forbid the orc to dose Spike!";
@@ -2009,14 +2010,35 @@ to say UrikSex_Submission: [player submits to Urik - bad end if the player treat
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while ("Library Move Underway" is listed in Traits of Urik and Loyalty of Urik is 1):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LibraryTransfer"	Urik_LibraryTransfer	"[EventConditions_Urik_LibraryTransfer]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LibraryTransfer"	Urik_LibraryTransfer	"[EventConditions_Urik_LibraryTransfer]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_LibraryTransfer:
+	if "Library Move Underway" is listed in Traits of Urik and Loyalty of Urik is 1: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_LibraryTransfer	"Urik_LibraryTransfer"
+
+Urik_LibraryTransfer is a situation.
+ResolveFunction of Urik_LibraryTransfer is "[ResolveEvent Urik_LibraryTransfer]".
+Sarea of Urik_LibraryTransfer is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_LibraryTransfer:
 	if debugactive is 1:
 		say "     DEBUG: Urik Arrival[line break]";
 	Load_Urik_Clothed_Image;
-	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";
+	say "you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
 	if (number of bunkered people + number of booked people > 2): [anyone there besides just Urik?]
 		if (number of bunkered people + number of booked people > 3):
 			say "     While you talk with the orc, you notice some movement in out of the way spots of the library, like between the shelves. Realizing that you kind of just set up an orc invasion of the library without warning anyone about it, you're prompted to clear your throat and call everyone in the building together, to explain what Urik is doing here. [bold type]Within a few minutes, everyone is gathered and you lay things out, to the following reactions:[roman type][line break]";
@@ -2179,15 +2201,38 @@ instead of navigating Grey Abbey Library while ("Library Move Underway" is liste
 	remove "Library Move Underway" from Traits of Urik;
 	move Urik to Sitting Area;
 	now Loyalty of Urik is 2; [arrived safely and had a talk with the player]
+	now Urik_LibraryTransfer is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 2 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LibraryDefense"	Urik_LibraryDefense	"[EventConditions_Urik_LibraryDefense]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LibraryDefense"	Urik_LibraryDefense	"[EventConditions_Urik_LibraryDefense]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_LibraryDefense:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 2: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_LibraryDefense	"Urik_LibraryDefense"
+
+Urik_LibraryDefense is a situation.
+ResolveFunction of Urik_LibraryDefense is "[ResolveEvent Urik_LibraryDefense]".
+Sarea of Urik_LibraryDefense is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_LibraryDefense:
 	if debugactive is 1:
 		say "     DEBUG: Urik comments about defensibility[line break]";
 	Load_Urik_Clothed_Image;
-	say "     As you turn the corner into 7th street, you immediately notice Urik leaning against the outside wall next to the planters flanking the library entrance. The towering orc has his arms crossed in front of his chest and is letting his gaze sweep over the T-intersection in front of the Grey Abbey Library. While you're still approaching, you hear a rustling nose, made by a shopping cart with a half-broken wheel being pushed over asphalt. From the west, two humanoid figures come into view a second later, with one pushing the cart, the other trying to look imposing with a length of pipe held in hands covered by shaggy brown fur on their back sides. You can't make out much more of their shapes, or even genders, as the two of them wear very baggy hoodies with the hoods up. Pushing himself off from the wall, Urik puts two fingers into his mouth and lets out a cuttingly loud whistle.";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you turn the corner into 7th street, you immediately notice Urik leaning against the outside wall next to the planters flanking the library entrance. The towering orc has his arms crossed in front of his chest and is letting his gaze sweep over the T-intersection in front of the Grey Abbey Library. ";
+	else:
+		say "     As you walk into the entrance area of the library, you catch someone large and green out on the road in front of the library, through one of the windows flanking the door. It's an orc - and one you know: Urik! Curious what he's doing out there, you open the door and take the steps down to street level to approach the large man. ";	
+	say "While you're still approaching, you hear a rustling nose, made by a shopping cart with a half-broken wheel being pushed over asphalt. From the west, two humanoid figures come into view a second later, with one pushing the cart, the other trying to look imposing with a length of pipe held in hands covered by shaggy brown fur on their back sides. You can't make out much more of their shapes, or even genders, as the two of them wear very baggy hoodies with the hoods up. With an amused chuckle, Urik puts two fingers into his mouth and lets out a cuttingly loud whistle.";
 	say "     'Some advice for looting, kids: Always be aware whose turf you're on when doing it. This place for example,' he indicates over his shoulder with his thumb, 'you better make a wide circle around. Unless you're eager for a good shafting, hah!' Reaching down to adjust his - very - visible cock in the tight stretch-pants he's wearing, Urik gives the scavengers a tusk-baring grin. The two figures freeze in motion, and you can make out 'Shit, since when do we have green giants around here?! Think we can take him?' and 'Fuck no! Look at the dude!' Then they hurriedly turn flee away down the street, both dragging on the shopping cart to keep it upright and rolling as fast as they can. Urik laughs as he watches them go, then turns his head to acknowledge you.";
 	WaitLineBreak;
 	say "     'Hey [UrikPlayerAddress], just getting to know the neighbors. Though I think those two came from elsewhere. This part of the city is more picket fences, less hoody muggers. Hell, most hybrids and critters I saw all day weren't even armed, and they ran as soon as they saw me. Pity really, could have used a workout,' the orc says in a conversational tone, cracking his knuckles to accompany his last words. 'That's something I wanted to talk to you about by the way. I mean, the library is a nice place, roomy and whatnot, but it's not exactly a fortress, is it? Too open, with many windows and it's not like you have a key to the place either, right? If those two punks were any indication, intruders wouldn't exactly be dangerous, but having to be alert in your own lair all the time would be annoying.' He mimes slapping away some imaginary enemy and draws a face.";
@@ -2221,6 +2266,8 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 		say "     Clearing your throat, you tell the orc that you do not want him to construct any obvious marker, and that he shouldn't be frightening random passersby either. They might not all be out to ransack the library or make other trouble. Snorting and raising one eyebrow, the orc looks at you and replies, 'Really? You've seen the shit going on everywhere! But fine, forget I said anything!' With a shrug, he turns around and walks into the building right after that.";
 		add "Marker_Rejected" to Traits of Urik;
 	now Loyalty of Urik is 3; [Urik's concerns about the library building were addressed or discarded]
+	now Urik_LibraryDefense is resolved;
+	now lastUrikWalkInEvent is turns;
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -2236,10 +2283,23 @@ The linkaction of Territory Marker is "Possible Actions: [link]smell[as]smell Te
 
 The scent of Territory Marker is "The large sign smells of metal and paint.".
 
-after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik is 3 and Stamina of Urik - turns > 8):
-	if debugactive is 1:
-		say "     DEBUG: Urik eats his own cum - last cum had in turn: [Stamina of Urik], current turn: [turns][line break]";
-	try looking;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_CumNeeds"	Urik_CumNeeds	"[EventConditions_Urik_CumNeeds]"	Sitting Area	2500	2	100
+
+to say EventConditions_Urik_CumNeeds:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 3 and Stamina of Urik - turns > 8: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_CumNeeds	"Urik_CumNeeds"
+
+Urik_CumNeeds is a situation.
+ResolveFunction of Urik_CumNeeds is "[ResolveEvent Urik_CumNeeds]".
+Sarea of Urik_CumNeeds is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_CumNeeds:
 	project the Figure of Urik_neutral_hard_icon;
 	say "     Walking along the upper floor of the library, you hear some noises coming from up ahead, slurping sounds as well as moans. Curious about what exactly is going on, you glance around the corner of a bookshelf first, allowing you to see your big orc warrior/breeder Urik lying stretched-out on a sofa in the back of the sitting area. He's completely naked, fingers wrapped around the towering pole of his manhood as he strokes it furiously. His other hand is between his legs, fingers buried in his own asshole, fingering his prostate to push himself over the edge. Scant moments after you lay eyes on him, the orc lets out a loud groan and humps his hips up into the air while his cock erupts like a geyser and showers his broad chest in thick, creamy streaks of cum. Even while still stroking himself, Urik immediately begins to scoop up his own load, hungrily sucking it off his fingers. Feasting your eyes on the large, green-skinned hunk, you decide to walk up to him openly, grinning as he soon notices your approach and pulls his hand away from his face.";
 	say "     'Hey [UrikPlayerAddress], I was just...' he says, sitting up and trying to hide what he was doing. Yet even as he does so, the orc seems painfully aware of how he looks right now, naked and covered in cum, and he can't seem to find anything to say to explain that away. Finally, he seems to shrink a little in shame, bursting out with, 'Fuck, you saw it all, didn't you? Me gobbling down my own spunk like a weak little breeder! I couldn't resist the craving anymore! Man, once you've got that taste on your mind, it doesn't let you go.' His pear-green eyes glaze over as he seems to relive a recent memory for a moment, and he adds, 'Especially after sucking down I don't know how many loads when Boghrim was face-fucking me.' Shaking his head and giving in to his inner urges, the orc strokes a hand over the bulging pecs of his chest, wiping up more cum. It draws some strings between his fingers as he licks them clean one by one.";
@@ -2269,28 +2329,75 @@ after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik i
 		say "     As you begin to lay into him verbally, the orc raises his hands defensively and says, 'Wow, [UrikPlayerAddress]! I didn't mean it that way! Relax! I was just... asking, you know.' You give him a hard stare and remind the orc who his master is, then walk away, leaving him lying there on the sofa. Internally, you make up your mind not to give him any orc cum, even if you have it, so Urik doesn't think he has won.";
 	now Stamina of Urik is turns;
 	now Loyalty of Urik is 4; [player made a decision about Urik's cum needs]
+	now Urik_CumNeeds is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 4 and a random chance of 1 in 3 succeeds): [Urik has loot]
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LootIntro"	Urik_LootIntro	"[EventConditions_Urik_LootIntro]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LootIntro"	Urik_LootIntro	"[EventConditions_Urik_LootIntro]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_LootIntro:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 4: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_LootIntro	"Urik_LootIntro"
+
+Urik_LootIntro is a situation.
+ResolveFunction of Urik_LootIntro is "[ResolveEvent Urik_LootIntro]".
+Sarea of Urik_LootIntro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_LootIntro:
 	if debugactive is 1:
 		say "     DEBUG: Urik Loot[line break]";
 	Load_Urik_Clothed_Image;
-	say "     As you arrive at the library, a 'Hey [UrikPlayerAddress]!' shout from the side draws your attention to one of the reading nooks nearby. In it, you see Urik sitting on a sofa, hand raised to wave you over. As you proceed to stride towards him, you notice something in the orc's big hand. It's a good sixteen inches long, fairly thick and meaty, and the big man brings it up to his face to take a large bite out of it when you come to stand before him. Mumbling a little with his mouth full, Urik asks, 'Want some salami?' He grins broadly as you ask where he got that, and then reaches behind the sofa, lifting a shopping bag into view to offer it to you. Swallowing, the orc explains, 'I went to check out the neighborhood a little while you were out, [UrikPlayerAddress]. Good territory you got here. Might help that it didn't have any orcs so far, kicking in doors, hah! I bet there's a bunch more stuff to find too.'";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";	
+	say "a 'Hey [UrikPlayerAddress]!' shout from the side draws your attention to one of the reading nooks nearby. In it, you see Urik sitting on a sofa, hand raised to wave you over. As you proceed to stride towards him, you notice something in the orc's big hand. It's a good sixteen inches long, fairly thick and meaty, and the big man brings it up to his face to take a large bite out of it when you come to stand before him. Mumbling a little with his mouth full, Urik asks, 'Want some salami?' He grins broadly as you ask where he got that, and then reaches behind the sofa, lifting a shopping bag into view to offer it to you. Swallowing, the orc explains, 'I went to check out the neighborhood a little while you were out, [UrikPlayerAddress]. Good territory you got here. Might help that it didn't have any orcs so far, kicking in doors, hah! I bet there's a bunch more stuff to find too.'";
 	say "     Glancing in the bag he handed you, you see several more food items that have a long shelf life and surely are still good. Besides that, there's a bottle of soda in there too. You thank the orc for finding supplies, which Urik eats up with a broad grin. Dropping the salami onto his lap, he raises his arms demonstratively and alternately flexes one bicep, then the other, showing off a little. 'Wanna go out looting together sometime, [UrikPlayerAddress]? Would be fun.'";
 	ItemGain food by 3;
 	ItemGain soda by 1;
 	now Loyalty of Urik is 5; [gave the player some loot]
+	now Urik_LootIntro is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik is 5): [neither bro'd nor sluttified, all three Loyalty building events done]
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_BroOrSlut"	Urik_BroOrSlut	"[EventConditions_Urik_BroOrSlut]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_BroOrSlut"	Urik_BroOrSlut	"[EventConditions_Urik_BroOrSlut]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_BroOrSlut:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 5: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_BroOrSlut	"Urik_BroOrSlut"
+
+Urik_BroOrSlut is a situation.
+ResolveFunction of Urik_BroOrSlut is "[ResolveEvent Urik_BroOrSlut]".
+Sarea of Urik_BroOrSlut is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_BroOrSlut:
 	if debugactive is 1:
 		say "     DEBUG: Urik Decision Time - Bro or Slut[line break]";
 	project Figure of Urik_neutral_shorts_icon;
-	say "     As you arrive at the library, you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through a thick book in his hands. Looks like some sort of technical manual. 'Hey [UrikPlayerAddress],' he says upon noticing you, standing up and taking a few steps forward. 'You know, having had a little time sitting here in the library now, I couldn't help but start thinking a bit. What's the plan with the move? Why send me here?' The orc looks at you with a neutral expression, but you pick up on a little bit of a hopeful undertone to his words. ";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";
+	say "you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through a thick book in his hands. Looks like some sort of technical manual. 'Hey [UrikPlayerAddress],' he says upon noticing you, standing up and taking a few steps forward. 'You know, having had a little time sitting here in the library now, I couldn't help but start thinking a bit. What's the plan with the move? Why send me here?' The orc looks at you with a neutral expression, but you pick up on a little bit of a hopeful undertone to his words. ";
 	if "Marker_Accepted" is listed in Traits of Urik:
 		say "You having chosen to accept him marking your territory ";
 	else if "Marker_Discouraged" is listed in Traits of Urik:
@@ -2338,15 +2445,37 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 		add "Private_Breeder" to Traits of Urik; [just the player gets to use his ass]
 		now PlayerControlled of Urik is true; [squashed his hopes, told him he's just a cumslut]
 	now Loyalty of Urik is 6; [bro/slut decision made]
+	now Urik_BroOrSlut is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik is 6 and orc supersized breeder is not listed in companionList of Player and a random chance of 2 in 5 succeeds): [Urik catches a hawkman]
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Urik_HawkmanAttack"	Urik_HawkmanAttack	"[EventConditions_Urik_HawkmanAttack]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Urik_HawkmanAttack"	Urik_HawkmanAttack	"[EventConditions_Urik_HawkmanAttack]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_HawkmanAttack:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and PlayerFriended of Urik is true and Loyalty of Urik is 6 and orc supersized breeder is not listed in companionList of Player and a random chance of 2 in 5 succeeds: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_HawkmanAttack	"Urik_HawkmanAttack"
+
+Urik_HawkmanAttack is a situation.
+ResolveFunction of Urik_HawkmanAttack is "[ResolveEvent Urik_HawkmanAttack]".
+Sarea of Urik_HawkmanAttack is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_HawkmanAttack:
 	if debugactive is 1:
 		say "     DEBUG: Urik catches a hawkman[line break]";
 	project the Figure of Urik_angry_face_icon;
-	say "     After a trip through the wild streets of the city, you walk up the stairs to the entrance of the Grey Abbey Library. Stepping inside, you take a deep breath, happy to be back in your home for the apocalypse, a safe and peacef-[line break]";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     After a trip through the wild streets of the city, you walk up the stairs to the entrance of the Grey Abbey Library. Stepping inside, you take a deep breath, happy to be back in your home for the apocalypse, a safe and peacef-[line break]";
+	else:
+		say "     As you walk up to the front entrance of the library, you can't help but feel happy that you've got such a good base to weather the apocalypse, so very safe and peacef-[line break]";
 	say "     *CRASH*[line break]";
 	say "     *SCREECH*[line break]";
 	say "     *THUD*[line break]";
@@ -2424,8 +2553,27 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Play
 		now Loyalty of Urik is 8; [hawkman dealt with, grumpy Urik]
 	if orc supersized breeder is listed in companionList of Player:
 		remove orc supersized breeder from companionList of Player;
+	now Urik_HawkmanAttack is resolved;
+	now lastUrikWalkInEvent is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik is 7 or Loyalty of Urik is 8)): [post-bird discussion]
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_PostBirdDiscussion"	Urik_PostBirdDiscussion	"[EventConditions_Urik_PostBirdDiscussion]"	Sitting Area	2500	2	100
+
+to say EventConditions_Urik_PostBirdDiscussion:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 7 or Loyalty of Urik is 8: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_PostBirdDiscussion	"Urik_PostBirdDiscussion"
+
+Urik_PostBirdDiscussion is a situation.
+ResolveFunction of Urik_PostBirdDiscussion is "[ResolveEvent Urik_PostBirdDiscussion]".
+Sarea of Urik_PostBirdDiscussion is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_PostBirdDiscussion:
 	if debugactive is 1:
 		say "     DEBUG: Post-bird discussion with Urik, Loyalty of Urik: [Loyalty of Urik ], current turn: [turns][line break]";
 	try looking;
@@ -2489,22 +2637,67 @@ after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik 
 			now PlayerRomanced of Urik is true; [1:1 relationship - well, at least for Urik's end of the deal]
 			add "Private Breeder" to Traits of Urik; [he may not touch others]
 	now Loyalty of Urik is 9; [had a talk after the hawkman incident]
+	now Urik_PostBirdDiscussion is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Loyalty of Urik is 9): [Urik wants to go looting]
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LootingOffer"	Urik_LootingOffer	"[EventConditions_Urik_LootingOffer]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_LootingOffer"	Urik_LootingOffer	"[EventConditions_Urik_LootingOffer]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_LootingOffer:
+	if (lastUrikWalkInEvent - turns > 2) and PlayerFriended of Urik is true and Loyalty of Urik is 9: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_LootingOffer	"Urik_LootingOffer"
+
+Urik_LootingOffer is a situation.
+ResolveFunction of Urik_LootingOffer is "[ResolveEvent Urik_LootingOffer]".
+Sarea of Urik_LootingOffer is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_LootingOffer:
 	if debugactive is 1:
 		say "     DEBUG: Urik offers looting[line break]";
 	Load_Urik_Clothed_Image;
-	if Urik is in Sitting Area:
-		say "     As you arrive at the library, you immediately see Urik, who's casually leaning against the corner of the front desk, waiting for you. 'Hey [UrikPlayerAddress]!' he calls out, coming to a stand and walking up to you. Offering a respectful fist-bump that you return, the orc clears his throat, 'Just so you know, I've been looking around a bit in the neighborhood. Found some places not too far away that could have great loot. So... how about we have a little trip?' With a hopeful expression, the orc wiggles his eyebrows at you, then steps back over to the desk, leaning over it to grab a large sports bag that he demonstratively holds up, showing you just how much room for loot is in it. Finally, he hangs it over one shoulder by a solid-looking strap, grinning as he ways, 'I'm ready anytime, just talk to me and say the word!'";
+	if orc supersized breeder is not listed in companionList of Player:
+		if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+			say "     As you arrive at the library and step into the building, ";
+		else:
+			say "     As you walk up to the front entrance of the library, ";
+		say "you immediately see Urik, who's casually leaning against the corner of the front desk, waiting for you. 'Hey [UrikPlayerAddress]!' he calls out, coming to a stand and walking up to you. Offering a respectful fist-bump that you return, the orc clears his throat, 'Just so you know, I've been looking around a bit in the neighborhood. Found some places not too far away that could have great loot. So... how about we have a little trip?' With a hopeful expression, the orc wiggles his eyebrows at you, then steps back over to the desk, leaning over it to grab a large sports bag that he demonstratively holds up, showing you just how much room for loot is in it. Finally, he hangs it over one shoulder by a solid-looking strap, grinning as he ways, 'I'm ready anytime, just talk to me and say the word!'";
 	else if orc supersized breeder is listed in companionList of Player:
-		say "     As you arrive at the library and enter, Urik reaches out and taps your shoulder. 'Hey [UrikPlayerAddress]. I wanted to talk to you about something,' he says, coming to a stand before you and meeting your gaze. 'Remember that I checked out the neighborhood a bit on the way here? Well, there actually were a few places nearby that looked like they might have great loot. So... how about we have a little trip? Didn't want to bring it up before, since the location is actually fairly close to here, and I needed to get something from here anyways.' With a hopeful expression, the orc wiggles his eyebrows at you, then walks over to the front desk, leaning over it to grab a large sports bag stashed behind. Demonstratively holding it up, the orc shows you just how much room for loot is in it, then hangs it over one shoulder by a solid-looking strap. 'I'm ready anytime, just talk to me and say the word!'";
+		if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+			say "     As you arrive at the library and step into the building, ";
+		else:
+			say "     As you walk up to the front entrance of the library, ";
+		say "Urik reaches out and taps your shoulder. 'Hey [UrikPlayerAddress]. I wanted to talk to you about something,' he says, coming to a stand before you and meeting your gaze. 'Remember that I checked out the neighborhood a bit on the way here? Well, there actually were a few places nearby that looked like they might have great loot. So... how about we have a little trip? Didn't want to bring it up before, since the location is actually fairly close to here, and I needed to get something from here anyways.' With a hopeful expression, the orc wiggles his eyebrows at you, then walks over to the front desk, leaning over it to grab a large sports bag stashed behind. Demonstratively holding it up, the orc shows you just how much room for loot is in it, then hangs it over one shoulder by a solid-looking strap. 'I'm ready anytime, just talk to me and say the word!'";
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
+	now Urik_LootingOffer is resolved;
+	now lastUrikWalkInEvent is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik > 8) and PlayerFriended of Urik is true and Felinoid Companion is tamed and "Klauz Encounter 1_Done" is not listed in Traits of Urik) and Player is not CoA: [post-bird Klauz encounter]
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_KlauzEncounter1"	Urik_KlauzEncounter1	"[EventConditions_Urik_KlauzEncounter1]"	Sitting Area	2500	2	100
+
+to say EventConditions_Urik_KlauzEncounter1:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and (Loyalty of Urik > 8) and PlayerFriended of Urik is true and Felinoid Companion is tamed and "Klauz Encounter 1_Done" is not listed in Traits of Urik and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_KlauzEncounter1	"Urik_KlauzEncounter1"
+
+Urik_KlauzEncounter1 is a situation.
+ResolveFunction of Urik_KlauzEncounter1 is "[ResolveEvent Urik_KlauzEncounter1]".
+Sarea of Urik_KlauzEncounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_KlauzEncounter1:
 	if debugactive is 1:
 		say "     DEBUG: Urik has an encounter with Klauz, after relationship decisions have been made; Loyalty of Urik: [Loyalty of Urik ], current turn: [turns][line break]";
 	try looking;
@@ -2574,14 +2767,30 @@ after going to Sitting Area while (Urik is in Sitting Area and (Loyalty of Urik 
 		else if "Private Breeder" is listed in Traits of Urik:
 			TraitGain "Klauz Encounter 1_Committed, refused to fuck Klauz" for Urik;
 	TraitGain "Klauz Encounter 1_Done" for Urik;
+	now Urik_KlauzEncounter1 is resolved;
+	now lastUrikWalkInEvent is turns;
 
 [ ------------------------------------------------------------------------------------------------ ]
 
 [
-instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Loyalty of Urik > 8 and Urik is booked and Korvin is booked and "Relationship_Talk_Done" is listed in Traits of Korvin):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_KorvinEncounter1"	Urik_KorvinEncounter1	"[EventConditions_Urik_KorvinEncounter1]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_KorvinEncounter1:
+	if (lastUrikWalkInEvent - turns > 2) and PlayerFriended of Urik is true and Loyalty of Urik > 8 and Urik is booked and Korvin is booked and "Relationship_Talk_Done" is listed in Traits of Korvin and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_KorvinEncounter1	"Urik_KorvinEncounter1"
+
+Urik_KorvinEncounter1 is a situation.
+ResolveFunction of Urik_KorvinEncounter1 is "[ResolveEvent Urik_KorvinEncounter1]".
+Sarea of Urik_KorvinEncounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_KorvinEncounter1:
 	if debugactive is 1:
 		say "     DEBUG: Urik meets Korvin[line break]";
 	say "     Making your way through the city on the way back to your home base in the Grey Abbey Library, you soon see the familiar shape rise up before you. Thankfully your trip was fairly uneventful, as you managed to avoid the attention from the more hostile infected, and others went out of your way or were 'busy' fucking each other's brains out. Crossing the street [if Territory Marker is in Main & 7th Street]and walking past the territory marker for your 'tribe' that Urik put up[end if] you stride up the broad steps in front of the library door and enter the building, with the heavy front door swinging shut with a comforting thud behind you. You start to relax, having reached your safe home territory, but before you can do much more than start to put down some of your gear, two voices call out to you almost at the same time:";
@@ -2623,18 +2832,38 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 ["Library_private lover" - Player wants to be the main partner of Korvin, only threesomes allowed (maybe)    ]
 [   + "Harem Master" player feat - sharing the Harem together                                                ]
 
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_BeerRequest"	Urik_BeerRequest	"[EventConditions_Urik_BeerRequest]"	Grey Abbey Library	2500	2	100
 
-instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true and Perception of Urik is 3 and a random chance of 1 in 3 succeeds): [Urik wants beer]
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Urik_BeerRequest"	Urik_BeerRequest	"[EventConditions_Urik_BeerRequest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_BeerRequest:
+	if (lastUrikWalkInEvent - turns > 2) and PlayerFriended of Urik is true and Perception of Urik is 3: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_BeerRequest	"Urik_BeerRequest"
+
+Urik_BeerRequest is a situation.
+ResolveFunction of Urik_BeerRequest is "[ResolveEvent Urik_BeerRequest]".
+Sarea of Urik_BeerRequest is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_BeerRequest:
 	if debugactive is 1:
 		say "     DEBUG: Urik wants beer[line break]";
 	Load_Urik_Clothed_Image;
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";	
 	if Urik is in Sitting Area:
-		say "     As you arrive at the library and go inside, you see Urik off to one side, sitting at one of the desks near the walls, where he is flipping through a motorcycle magazine. ";
+		say "you see Urik off to one side, sitting at one of the desks near the walls, where he is flipping through a motorcycle magazine. ";
 	else if orc supersized breeder is listed in companionList of Player:
-		say "     As you arrive at the library and go inside, Urik clears his throat and tells you that he'll take a break for a little while. As you nod and tell him that is fine, the orc strolls off to one side, sitting down at one of the desks near the walls, starting to flip through a motorcycle magazine he had picked out earlier. ";
+		say "Urik clears his throat and tells you that he'll take a break for a little while. As you nod and tell him that is fine, the orc strolls off to one side, sitting down at one of the desks near the walls, starting to flip through a motorcycle magazine he had picked out earlier. ";
 	say "While casually reading the articles, the orc grabs the bottle of soda standing on the table in front of him and takes a swig of it, only to grimace and plunk the plastic bottle back down. Curiosity drives you to walk closer and ask what's wrong, with the orc turning his upper body partly around to greet you. 'Oh, hey [UrikPlayerAddress]! It's just... I hate how this stuff tastes. Sickly sweet and chemical. What kind of name is 'Ocean Breeze' for something to drink anyways?!' Snatching up the bottle and showing you the flashy label and the neon blue contents, the orc puts the lid back on before flinging it aside in disgust, to hit the ground near the corner of the room.";
 	say "     Grumbling, Urik stands up and leans against the wall, crossing his arms with a sour expression on his face. 'I know the whole city's gone to shit, but I could really use a drink! A good drink, not just any swill in a bottle. That I can find without too much trouble. No wonder kinds these days are such rotten punks, if they drink that shit all the time!' He waves over to the discarded soda bottle, then looks back at you. 'Ah, before you ask - I'm not talking about orc brew either. Sure, that stuff has the proper amount of alcohol to pack some punch, but... if you ask me, it kinda tastes like ass. And not in a good way!' Rolling his eyes, he continues, 'Fuck! You can bet that most of the good stuff that was in the city has been chugged by now, or is in the hands of someone who'll not part with it easy. And it's not like there'll be any deliveries anytime soon, not with that military blockade.'";
 	WaitLineBreak;
@@ -2663,19 +2892,42 @@ instead of navigating Grey Abbey Library while (PlayerFriended of Urik is true a
 		LineBreak;
 		say "     Shaking your head, you tell the orc that you don't plan on trekking through half the city in the middle of the nanite apocalypse, just to find something to drink for him. Urik grumbles a little and is visibly deflated, but soon replies, 'Fine, [UrikPlayerAddress]. Would have been fun, but I know what you say goes. Forget about it then.'";
 		now Perception of Urik is 5; [after the beer trip - completed or skipped]
+	now Urik_BeerRequest is resolved;
+	now lastUrikWalkInEvent is turns;
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)) and Player is not CoA:
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_CandyEncounter1"	Urik_CandyEncounter1	"[EventConditions_Urik_CandyEncounter1]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_CandyEncounter1"	Urik_CandyEncounter1	"[EventConditions_Urik_CandyEncounter1]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Urik_CandyEncounter1:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik > 8 and Loyalty of Urik < 80 and PlayerFriended of Urik is true and "Selective Breeding" is not listed in Traits of Urik and Loyalty of Urik > 8 and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_CandyEncounter1	"Urik_CandyEncounter1"
+
+Urik_CandyEncounter1 is a situation.
+ResolveFunction of Urik_CandyEncounter1 is "[ResolveEvent Urik_CandyEncounter1]".
+Sarea of Urik_CandyEncounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_CandyEncounter1:
 	if debugactive is 1:
 		say "     DEBUG: Urik grabs Candy - CandyUrikInteraction: [CandyUrikInteraction], lastCandyUrikInteraction: [lastCandyUrikInteraction], current turn: [turns][line break]";
 	Load_Urik_Clothed_Image;
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";
 	if PlayerRomanced of Urik is true:
-		say "     As you enter the library, you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc warrior/breeder Urik is showing a very respectable bulge in his stretchy stripper-pants. 'Like what you see?' Candy asks him, glancing over his shoulder and giggling. The towering orc grunts in response, baring his tusks as he responds, 'Bah, I got someone real to be with. Though maybe if [SubjectPro of Player] wants, we'll pound you together later and use you as the breeder slut you are.' With that said, the orc turns a cold shoulder to the raccoon and just walks away.";
+		say "you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc warrior/breeder Urik is showing a very respectable bulge in his stretchy stripper-pants. 'Like what you see?' Candy asks him, glancing over his shoulder and giggling. The towering orc grunts in response, baring his tusks as he responds, 'Bah, I got someone real to be with. Though maybe if [SubjectPro of Player] wants, we'll pound you together later and use you as the breeder slut you are.' With that said, the orc turns a cold shoulder to the raccoon and just walks away.";
 		now CandyUrikInteraction is 101; [Urik gave Candy the cold shoulder]
 	else:
-		say "     As you enter the library, you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc warrior/breeder Urik is striding up towards Candy in a purposeful manner, showing a very respectable bulge in his stretchy stripper-pants. Before you can do or say anything about it, Urik simply grabs Candy off the sofa and throws him over his shoulder, making the raccoon squeal in surprise. Seems he didn't expect anyone to just man-handle him.";
+		say "you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc warrior/breeder Urik is striding up towards Candy in a purposeful manner, showing a very respectable bulge in his stretchy stripper-pants. Before you can do or say anything about it, Urik simply grabs Candy off the sofa and throws him over his shoulder, making the raccoon squeal in surprise. Seems he didn't expect anyone to just man-handle him.";
 		say "     'What are you on about? You were lounging around like a little breeder slut itching for a fuck!' the orc says in an amused tone, reaching up to cup Candy's ass with a large hand and squeezing his buttocks a little. Then the orc hooks a single finger under the panties on the pink raccoon, ripping them away effortlessly and dropping the shredded fabric on the ground. This leads Candy to give Urik's back a light slap as he complains, 'Hey! Hon, I like the hands-on approach but you got to leave the outfit intact! Do you know how hard it is to - ooooohhhhhHHHHH!' Having just pushed a spit-covered finger past Candy's pucker to try out the gay raccoon's fuck-hole, Urik thrusts his digit in and out rapidly a few times, making Candy writhe in his position over the orc's shoulder. Despite how much the moaning raccoon fidgets at the merciless stimulation, Urik holds him firmly with his other arm, making sure he doesn't fall off.";
 		WaitLineBreak;
 		say "     Eventually, Urik relents, pulling out of Candy's hole again and slapping his captive's ass moderately hard. 'You'll do, breeder slut. And if you don't want that stupid girly shit ripped off you, don't wear it when flaunting your ass!' Panting for several more seconds after Urik stops finger-fucking him, Candy gasps out, 'Umm... okay. Whatever you say big guy.' Looks like Candy bit off a bit more than he expected with this orc, getting a taste of the green brute's dominance now. Still, it looks like he's enjoying the treatment nonetheless and just has to adjust his mannerisms to this new demanding fuck-buddy. 'That's better,' Urik replies in a gruff tone, 'You'll make a proper breeder after some hard pounding, I'm sure! Let's see if I can't fuck you green!' With that said, the orc turns around and starts walking towards the stairs to the upper floor, no doubt intending to introduce his captive to a thick cock on 'his' sofa. Coming up close to you, the orc gives a respectful nod as he is about to walk by.";
@@ -2722,8 +2974,27 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Loya
 			say "     Stopping the orc cold with a firm-voiced command, you stand with crossed arms waiting for Urik to turn around. 'Aw, come on!' he groans out between his tusks, pointing at Candy. 'The slut was just asking for it, and you weren't using him, so I -' Urik falls silent as you wave him off, and command that he put the raccoon down. With a sigh, he obeys, setting the candy striper down on his slender paws. You nod at the show of submission and step up to the orc brute. Touching his side just above the hips, you give him a little squeeze and say that this is your lair, and you just don't want him fucking Candy. 'As you command, [UrikPlayerAddress],' he replies, not particularly happy about the decision, but ready enough to obey.";
 			say "     After Urik gives you a respectful nod and then stomps up the stairs, you hear someone clearing his throat behind you. It is Candy, striking a sexy but also exasperated pose with one hand on his hip. 'Way to kill the mood,' he complains, throwing a look filled with longing after the orc. With that said, the pink raccoon turns on his heel and stalks off to find something else to amuse himself with.";
 			now CandyUrikInteraction is 100; [further interaction forbidden]
+	now Urik_CandyEncounter1 is resolved;
+	now lastUrikWalkInEvent is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik > 5 and ("Braiding_Ignored" is not listed in Traits of Urik and "Braiding_Watched" is not listed in Traits of Urik and "Braiding_Helped" is not listed in Traits of Urik) and a random chance of 1 in 3 succeeds):
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_BraidingIntro"	Urik_BraidingIntro	"[EventConditions_Urik_BraidingIntro]"	Sitting Area	2500	2	100
+
+to say EventConditions_Urik_BraidingIntro:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik > 5 and ("Braiding_Ignored" is not listed in Traits of Urik and "Braiding_Watched" is not listed in Traits of Urik and "Braiding_Helped" is not listed in Traits of Urik) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_BraidingIntro	"Urik_BraidingIntro"
+
+Urik_BraidingIntro is a situation.
+ResolveFunction of Urik_BraidingIntro is "[ResolveEvent Urik_BraidingIntro]".
+Sarea of Urik_BraidingIntro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_BraidingIntro:
 	if debugactive is 1:
 		say "     DEBUG: Urik braids his hair: [Loyalty of Urik], current turn: [turns][line break]";
 	try looking;
@@ -2757,8 +3028,26 @@ after going to Sitting Area while (Urik is in Sitting Area and Loyalty of Urik >
 	else:
 		say "     Shrugging to yourself, you turn your attention elsewhere.";
 		add "Braiding_Ignored" to Traits of Urik;
+	now Urik_BraidingIntro is resolved;
+	now lastUrikWalkInEvent is turns;
 
-after going to Sitting Area while (Urik is in Sitting Area and Gregory is in Sitting Area and ("Gregory_Stretching_Seen" is not listed in Traits of Urik and "Gregory_Stretching_Ignored" is not listed in Traits of Urik) and a random chance of 1 in 3 succeeds):
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Urik_GregoryStretching"	Urik_GregoryStretching	"[EventConditions_Urik_GregoryStretching]"	Sitting Area	2500	2	100
+
+to say EventConditions_Urik_GregoryStretching:
+	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Gregory is in Sitting Area and "Gregory_Stretching_Seen" is not listed in Traits of Urik and "Gregory_Stretching_Ignored" is not listed in Traits of Urik: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Urik_GregoryStretching	"Urik_GregoryStretching"
+
+Urik_GregoryStretching is a situation.
+ResolveFunction of Urik_GregoryStretching is "[ResolveEvent Urik_GregoryStretching]".
+Sarea of Urik_GregoryStretching is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Urik_GregoryStretching:
 	if debugactive is 1:
 		say "     DEBUG: Urik stretches Gregory: [Loyalty of Urik], current turn: [turns][line break]";
 	try looking;
@@ -2782,7 +3071,8 @@ after going to Sitting Area while (Urik is in Sitting Area and Gregory is in Sit
 	else:
 		say "     Shrugging to yourself, you turn your attention elsewhere.";
 		add "Gregory_Stretching_Ignored" to Traits of Urik;
-
+	now Urik_GregoryStretching is resolved;
+	now lastUrikWalkInEvent is turns;
 
 to say GreyAbbeyLibraryObservation_Urik:
 	project the figure of Urik_clothed_icon;
