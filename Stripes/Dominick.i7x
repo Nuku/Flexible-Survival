@@ -4,6 +4,43 @@ Version 2 of Dominick by Stripes begins here.
 
 "Adds an ultra-dominant male Husky NPC to Flexible Survival."
 
+[  HP of Dominick        ]
+[  0 = Not met           ]
+[  1 = Met               ]
+[  2 = Talked            ]
+[  3 = Gave oral         ]
+[  4 = Had sex           ]
+[  5 = More sex          ]
+[ 10 = Beta              ]
+[ 20 = Omega             ]
+[ 30 = Forced Beta       ]
+[ 40 = Forced Sissy Beta ]
+[ 50 = Forced Omega      ]
+[ 60 = Sub Dominick      ]
+
+[  XP of Dominick - total captures ]
+
+[  Libido of Dominick - last capture ]
+[ 1 = Female Husky   ]
+[ 2 = Pit Bull       ]
+[ 3 = Pink Poodle    ]
+
+[ Future parts notes ]
+[ Heat w/auto-sex - * ]
+[ Remaining scenes ]
+[ Cum meal: bowl/twat ]
+[ Compulsion mechanic ]
+[ Beta - Training - * ]
+[      - Capture: Female Husky - * ]
+[      - Capture: Pit Bull (F) - * ]
+[      - Capture: Pink Poodle? - * ]
+[      - Reward: F Husky ]
+[      - Reward: Pit Bull ]
+[      - Reward: P Poodle ]
+[ Omega ]
+[ Cock size v. Breederslut body - * ]
+[ Full TF fuck-spree ]
+
 ForcedBreederslutTF is a number that varies.
 ForcedBreederslutBoyTF is a number that varies.
 
@@ -145,7 +182,44 @@ Table of GameCharacterIDs (continued)
 object	name
 Dominick	"Dominick"
 
-Dominick is a person. Dominick is in Happy Puppy Kennel.
+Dominick is a man.
+Dominick is in Happy Puppy Kennel.
+ScaleValue of Dominick is 3. [human sized]
+SleepRhythm of Dominick is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Dominick is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Dominick is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Dominick is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Dominick is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Dominick is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Dominick is 7. [length in inches]
+Breast Size of Dominick is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Dominick is 2. [count of nipples]
+Asshole Depth of Dominick is 10. [inches deep for anal fucking]
+Asshole Tightness of Dominick is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Dominick is 1. [number of cocks]
+Cock Girth of Dominick is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Dominick is 10. [Length in Inches]
+Ball Count of Dominick is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Dominick is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Dominick is 0. [number of cunts]
+Cunt Depth of Dominick is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Dominick is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Dominick is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Dominick is false.
+PlayerRomanced of Dominick is false.
+PlayerFriended of Dominick is false.
+PlayerControlled of Dominick is false.
+PlayerFucked of Dominick is false.
+OralVirgin of Dominick is true.
+Virgin of Dominick is true.
+AnalVirgin of Dominick is true.
+PenileVirgin of Dominick is false.
+SexuallyExperienced of Dominick is true.
+TwistedCapacity of Dominick is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Dominick is false. [steriles can't knock people up]
+MainInfection of Dominick is "Breederslut". [Hopefully right. What his children should be, rather than what he is.]
 Description of Dominick is "[dominickdesc]".
 Conversation of Dominick is { "Bitches love me!" }.
 the scent of the Dominick is "Dominick has a strong, commanding scent that makes you want to bury your face in his balls and take a big, strong whiff of him.".
@@ -1307,45 +1381,6 @@ An everyturn rule:
 				now tail of Player is "You have a short, fluffy tail that curls up cutely.";
 			if scalevalue of Player is not 2:
 				now scalevalue of Player is 2;
-
-Section 10 - Notes
-
-[  HP of Dominick        ]
-[  0 = Not met           ]
-[  1 = Met               ]
-[  2 = Talked            ]
-[  3 = Gave oral         ]
-[  4 = Had sex           ]
-[  5 = More sex          ]
-[ 10 = Beta              ]
-[ 20 = Omega             ]
-[ 30 = Forced Beta       ]
-[ 40 = Forced Sissy Beta ]
-[ 50 = Forced Omega      ]
-[ 60 = Sub Dominick      ]
-
-[  XP of Dominick - total captures ]
-
-[  Libido of Dominick - last capture ]
-[ 1 = Female Husky   ]
-[ 2 = Pit Bull       ]
-[ 3 = Pink Poodle    ]
-
-[ Future parts notes ]
-[ Heat w/auto-sex - * ]
-[ Remaining scenes ]
-[ Cum meal: bowl/twat ]
-[ Compulsion mechanic ]
-[ Beta - Training - * ]
-[      - Capture: Female Husky - * ]
-[      - Capture: Pit Bull (F) - * ]
-[      - Capture: Pink Poodle? - * ]
-[      - Reward: F Husky ]
-[      - Reward: Pit Bull ]
-[      - Reward: P Poodle ]
-[ Omega ]
-[ Cock size v. Breederslut body - * ]
-[ Full TF fuck-spree ]
 
 
 Dominick ends here.

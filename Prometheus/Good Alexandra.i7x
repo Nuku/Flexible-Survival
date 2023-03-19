@@ -109,7 +109,7 @@ Alexandrastory3 is a truth state that varies.
 
 
 [Alexandra is a woman.
-ScaleValue of Alexandra is 3. [human sized]
+ScaleValue of Alexandra is 3. [5' 5"]
 Body Weight of Alexandra is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Alexandra is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]

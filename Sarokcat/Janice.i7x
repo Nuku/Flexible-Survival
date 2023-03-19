@@ -53,8 +53,6 @@ Asshole Tightness of Janice is 2. [asshole tightness 1-5, "extremely tight, tigh
 Nipple Count of Janice is 2. [count of nipples]
 Breast Size of Janice is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
-TwistedCapacity of Janice is false. [can not take oversized members without pain]
-Sterile of Janice is true.
 PlayerMet of Janice is false.
 PlayerRomanced of Janice is false.
 PlayerFriended of Janice is false.
@@ -65,7 +63,9 @@ Virgin of Janice is false.
 AnalVirgin of Janice is true.
 PenileVirgin of Janice is true.
 SexuallyExperienced of Janice is true.
-MainInfection of Janice is "".
+TwistedCapacity of Janice is false. [can not take oversized members without pain]
+Sterile of Janice is false.
+MainInfection of Janice is "Arctic fox".
 Description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 Conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.

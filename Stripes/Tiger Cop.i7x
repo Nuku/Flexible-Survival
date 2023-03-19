@@ -185,21 +185,56 @@ Table of GameCharacterIDs (continued)
 object	name
 Sgt Marks	"Sgt Marks"
 
-Sgt Marks is a man. Sgt Marks is in Police Car.
+Sgt Marks is a man.
 understand "tiger" as Sgt Marks.
 understand "Sergeant Marks" as Sgt Marks.
 understand "cop" as Sgt Marks.
 understand "policeman" as Sgt Marks.
+Sgt Marks is in Police Car.
+ScaleValue of Sgt Marks is 4. [7 foot]
+SleepRhythm of Sgt Marks is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Sgt Marks is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sgt Marks is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sgt Marks is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sgt Marks is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sgt Marks is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sgt Marks is 6. [length in inches]
+Breast Size of Sgt Marks is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sgt Marks is 2. [count of nipples]
+Asshole Depth of Sgt Marks is 10. [inches deep for anal fucking]
+Asshole Tightness of Sgt Marks is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sgt Marks is 1. [number of cocks]
+Cock Girth of Sgt Marks is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sgt Marks is 8. [Length in Inches]
+Ball Count of Sgt Marks is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sgt Marks is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sgt Marks is 0. [number of cunts]
+Cunt Depth of Sgt Marks is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sgt Marks is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sgt Marks is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sgt Marks is false.
+PlayerRomanced of Sgt Marks is false.
+PlayerFriended of Sgt Marks is false.
+PlayerControlled of Sgt Marks is false.
+PlayerFucked of Sgt Marks is false.
+OralVirgin of Sgt Marks is true.
+Virgin of Sgt Marks is true.
+AnalVirgin of Sgt Marks is true.
+PenileVirgin of Sgt Marks is false.
+SexuallyExperienced of Sgt Marks is true.
+TwistedCapacity of Sgt Marks is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sgt Marks is false. [steriles can't knock people up]
+MainInfection of Sgt Marks is "Malayan Tiger Male".
 Description of Sgt Marks is "[SgtMarks_Desc]".
+Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
+The scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
+sgtmarkstalk is a number that varies.
 
 to say SgtMarks_Desc:
 	project Figure of SgtMarks_clothed_icon;
 	say "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
-
-Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
-sgtmarkstalk is a number that varies.
-
-the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
 
 Instead of conversing the Sgt Marks:
 	project Figure of SgtMarks_clothed_icon;

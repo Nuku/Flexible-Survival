@@ -170,15 +170,50 @@ object	name
 Solstice	"Solstice"
 
 Solstice is a woman.
+ScaleValue of Solstice is 3. [human sized]
+SleepRhythm of Solstice is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Solstice is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Solstice is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Solstice is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Solstice is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Solstice is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Solstice is 6. [length in inches]
+Breast Size of Solstice is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Solstice is 2. [count of nipples]
+Asshole Depth of Solstice is 10. [inches deep for anal fucking]
+Asshole Tightness of Solstice is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Solstice is 0. [number of cocks]
+Cock Girth of Solstice is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Solstice is 0. [Length in Inches]
+Ball Count of Solstice is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Solstice is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Solstice is 1. [number of cunts]
+Cunt Depth of Solstice is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Solstice is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Solstice is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Solstice is false.
+PlayerRomanced of Solstice is false.
+PlayerFriended of Solstice is false.
+PlayerControlled of Solstice is false.
+PlayerFucked of Solstice is false.
+OralVirgin of Solstice is false.
+Virgin of Solstice is false.
+AnalVirgin of Solstice is false.
+PenileVirgin of Solstice is true.
+SexuallyExperienced of Solstice is true.
+TwistedCapacity of Solstice is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Solstice is true. [steriles can't knock people up]
+MainInfection of Solstice is "Vulpogryph".
 Description of Solstice is "[solsticedesc]".
 Conversation of Solstice is { "Treasure!" }.
+The scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.".
 
 to say solsticedesc:
 	say "     Transformed by the strange artifact you helped her recover, Solstice has become an unusual, gryphon-like creature. Her upper body is decidedly avian in nature, with black feathers and a crow's head and beak. Her eyes are sharp and have a lustful glint as they look at you. She has a pair of broad, black wings attached to her back as well. Her paws resemble bird-like talons. There are some hints of her previous, vulpine nature as well, with foxish ears and mammalian breasts filling her red shirt. Her lower body is largely unchanged and is that of a sexy, multi-tailed vixen, though those tails are now covered in black plumage. Her fur is a silvery gray in stark contrast to her darker feathers. Along with her red, sleeveless top, the vulpogryph wears a pair of khaki shorts with attached pouches. She's even set up her bedroll in one of the reading rooms to the side of the library and is keeping her small backpack there as well.";
 
 the linkaction of Solstice is "Possible Actions: [link]talk[as]talk Solstice[end link], [link]smell[as]smell Solstice[end link], [link]fuck[as]fuck Solstice[end link], [link]lesson[as]lesson Solstice[end link][line break]";
-
-the scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.".
 
 Instead of conversing Solstice:
 	say "[one of]'It's so nice being here with you, my sweetie,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures. We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if Player is fullyvg]'You make such a sexy vulpogryph, my dear. I knew you'd make a wonderful mate,' [else if Player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear. You'll be my perfect mate,' [else]'I think you'd look much better as a sexy vulpogryph like me, hon,' [end if]she purrs sensually as she runs her taloned paws over you.[or]'Mmm... you should stay here with me, sexy. We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";

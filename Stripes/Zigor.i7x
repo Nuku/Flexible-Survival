@@ -89,16 +89,51 @@ Table of GameCharacterIDs (continued)
 object	name
 Zigor	"Zigor"
 
-Zigor is a man. Zigor is in Cuero Lobo.
+Zigor is a man.
+Zigor is in Cuero Lobo.
+ScaleValue of Zigor is 3. [human sized]
+SleepRhythm of Zigor is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Zigor is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Zigor is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Zigor is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Zigor is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Zigor is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Zigor is 7. [length in inches]
+Breast Size of Zigor is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Zigor is 2. [count of nipples]
+Asshole Depth of Zigor is 10. [inches deep for anal fucking]
+Asshole Tightness of Zigor is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Zigor is 1. [number of cocks]
+Cock Girth of Zigor is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Zigor is 8. [Length in Inches]
+Ball Count of Zigor is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Zigor is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Zigor is 0. [number of cunts]
+Cunt Depth of Zigor is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Zigor is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Zigor is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Zigor is false.
+PlayerRomanced of Zigor is false.
+PlayerFriended of Zigor is false.
+PlayerControlled of Zigor is false.
+PlayerFucked of Zigor is false.
+OralVirgin of Zigor is false.
+Virgin of Zigor is true.
+AnalVirgin of Zigor is false.
+PenileVirgin of Zigor is false.
+SexuallyExperienced of Zigor is true.
+TwistedCapacity of Zigor is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Zigor is false. [steriles can't knock people up]
+MainInfection of Zigor is "Leather Wolf".
 Description of Zigor is "[zigordesc]".
 Conversation of Zigor is { "Hola!" }.
+The scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 The icon of Zigor is Figure of Zigor_icon.
-MainInfection of Zigor is "Leather Wolf".
 zigseat is a number that varies.		[seat configuration: 0 = normal, 1 = taur]
 zigorcycle is a truth state that varies. zigorcycle is usually false. [Monitors if Zigor's training has been cycled.]
 zigorhadiyaquest is a truth state that varies. zigorhadiyaquest is usually false. [Msg about leather jacket for Hadiya's quest]
-
-the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 
 to say zigordesc:
 	say "     Zigor the leather wolf has the build of an average, fit human being, but altered to have lupine features, most prominently his head, hands, feet and tail. Given that he's wearing/bonded to a leather outfit that covers most of him, you can only see portions of his pelt. His fur contains a mix of gray, black, brown and rust colors that make him stand out from the other wolves you've seen. The leather portions of his hide cover his chest, legs and forearms. It is made of black leather with even some metal rings and straps built into it as well as a separate leather patch that partially covers his plump, pierced sheath. The wolf has a rich, sensual voice and speaks with a distinctly Spanish accent that turns you on every time you hear it.";

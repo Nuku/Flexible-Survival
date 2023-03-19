@@ -947,9 +947,9 @@ Body Weight of Hope-Born Dragon is 6. [scale of 1-9 for body weight, grouped int
 Body Definition of Hope-Born Dragon is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Hope-Born Dragon is 5. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Hope-Born Dragon is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Hope-Born Dragon is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Hope-Born Dragon is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Hope-Born Dragon is 10. [length in inches]
+Tongue Length of Hope-Born Dragon is 12. [length in inches]
 Breast Size of Hope-Born Dragon is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Hope-Born Dragon is 0. [count of nipples]
 Asshole Depth of Hope-Born Dragon is 12. [inches deep for anal fucking]
@@ -1295,6 +1295,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Ball Size of Hope-Born Dragon is 2;
+				now Cunt Depth of Hope-Born Dragon is 6;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Ball Size of Hope-Born Dragon is 2;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Cunt Depth of Hope-Born Dragon is 6;
 		else if calcnumber is 2: [Size 2]
 			if ScaleValue of Hope-Born Dragon > 2:
 				LineBreak;
@@ -1307,6 +1323,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Ball Size of Hope-Born Dragon is 3;
+				now Cunt Depth of Hope-Born Dragon is 8;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Ball Size of Hope-Born Dragon is 3;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Cunt Depth of Hope-Born Dragon is 8;
 		else if calcnumber is 3: [Size 3]
 			if ScaleValue of Hope-Born Dragon > 3:
 				LineBreak;
@@ -1319,6 +1351,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 12;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Ball Size of Hope-Born Dragon is 5;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Cunt Depth of Hope-Born Dragon is 12;
 		else if calcnumber is 4: [Size 4]
 			if ScaleValue of Hope-Born Dragon > 4:
 				LineBreak;
@@ -1331,6 +1379,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 24;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Ball Size of Hope-Born Dragon is 5;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Cunt Depth of Hope-Born Dragon is 24;
 		else if calcnumber is 5: [Size 5]
 			if ScaleValue of Hope-Born Dragon < 5:
 				LineBreak;
@@ -1339,6 +1403,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 30;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 36;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Ball Size of Hope-Born Dragon is 6;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 30;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Cunt Depth of Hope-Born Dragon is 36;
 	else: [Not Anthro]
 		say "     [bold type]How large would you like [Hope-BornDragonName] to be?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - About the size of a cat. (Size 1)";

@@ -2739,8 +2739,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is VentFluidAmount;
 		-- "VentFoxContentLevel":
 			now NumberVarValue entry is VentFoxContentLevel;
-		-- "VentFoxEncounterCount":
-			now NumberVarValue entry is VentFoxEncounterCount;
 		-- "VentFoxLastFed":
 			now NumberVarValue entry is VentFoxLastFed;
 		-- "VentFoxRelationship":
@@ -6406,8 +6404,6 @@ to VariableNumberLoad:
 					now VentFluidAmount is numberVarValue entry;
 				-- "VentFoxContentLevel":
 					now VentFoxContentLevel is numberVarValue entry;
-				-- "VentFoxEncounterCount":
-					now VentFoxEncounterCount is numberVarValue entry;
 				-- "VentFoxLastFed":
 					now VentFoxLastFed is numberVarValue entry;
 				-- "VentFoxRelationship":

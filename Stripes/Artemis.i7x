@@ -142,6 +142,42 @@ object	name
 Artemis	"Artemis"
 
 Artemis is a woman.
+ScaleValue of Artemis is 3. [human sized]
+SleepRhythm of Artemis is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Artemis is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Artemis is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Artemis is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Artemis is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Artemis is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Artemis is 7. [length in inches]
+Breast Size of Artemis is 1. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Artemis is 0. [count of nipples]
+Asshole Depth of Artemis is 12. [inches deep for anal fucking]
+Asshole Tightness of Artemis is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Artemis is 0. [number of cocks]
+Cock Girth of Artemis is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Artemis is 0. [Length in Inches]
+Ball Count of Artemis is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Artemis is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Artemis is 0. [number of cunts]
+Cunt Depth of Artemis is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Artemis is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Artemis is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Artemis is false.
+PlayerRomanced of Artemis is false.
+PlayerFriended of Artemis is false.
+PlayerControlled of Artemis is false.
+PlayerFucked of Artemis is false.
+OralVirgin of Artemis is true.
+Virgin of Artemis is true.
+AnalVirgin of Artemis is true.
+PenileVirgin of Artemis is true.
+SexuallyExperienced of Artemis is false.
+TwistedCapacity of Artemis is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Artemis is true. [steriles can't knock people up]
+MainInfection of Artemis is "".
 Description of Artemis is "[ArtemisDesc]".
 
 instead of sniffing Artemis:
@@ -1090,28 +1126,47 @@ to say artemismod1:
 	say "     You kneel behind her, carefully holding the prepped pseudo-pussy in one hand and caressing the tigress's rear in the other. With her ass to you and tail raised, you notice a small problem as you're moving to place it. The toy you've got will need to be put inside the tigress if you're going to be able to properly attach it. Your eyes lock onto the only orifice available there and you let your fingers drift across her rubbery anus, probing it questioningly. Certainly the tigress has no digestive system and thus no need for that hole as it is. And given how Artemis is mrowling eagerly and pushes her hips back, it looks like she agrees with your plan. Her hole stretches easily enough around your fingers, opening and relaxing as you probe its soft, rubbery walls.";
 	say "     The plan agreed upon, you spread her hole open with the fingers of one hand and move the toy into place with the other. With your digits inside the gel-like cunt, you start to push it into her. At first, you have a bit of difficulty moving it into her anus, but once the first inch or so is in, it becomes easier to slide more and more in. As it works its way deeper, the pussy toy starts to fuse with her with the tigress's color seeping into it. Coming to life, the changing hole ripples and squeezes around your finger as it becomes a part of her. Once the toy's pulled fully into her, the kitty moans and mewls in pleasure, new cunt quivering as she orgasms. As she does, the edges of what was once her anus change shape, forming wet folds and lips, turning into an invitingly wet pussy.";
 	now lust of rubber tigress is 1;
+	now Asshole Depth of Artemis is 0;
+	now Asshole Tightness of Artemis is 0;
+	now Cunt Count of Artemis is 1;
+	now Cunt Depth of Artemis is 12;
+	now Cunt Tightness of Artemis is 2;
+	now Clit Size of Artemis is 1;
 
 to say artemismod2:
 	say "     Deciding to get kinky with the installation of the vaginal toy on the rubber tigress, you start opening its packaging. This gets the kitty excited, mrowling and presenting herself to you. Clearly she's quite excited about this, but hasn't quite figured out what you have in store for her yet. It certainly feels like the gel-like material will be pleasant around [if Player is male]your[else]a[end if] cock. You smear some rubber cement on it so it can become fixed in place and hopefully become a part of her.";
 	say "     You kneel beside her, carefully holding the prepped pseudo-pussy in one hand and stroking the rubber kitty with the other. She tries to move to bring her rear towards you, but you keep your hand on her back, keeping her in place. When she turns to look at you and gives another needy mrowl, you push the toy into her open mouth. She works her rubbery jaw at the sudden intrusion, but the cement has already started to bond and her orange color begins bleeding into the sex toy.";
 	say "     Your digits, still inside the gel-like cunt, can feel her muzzle working the pleasurable toy around your fingers. Coming to life, the changing hole ripples and squeezes around your fingers as it becomes a part of her. Once the toy's fully joined with her, the kitty gives muffled moans and mewls from her new, pussy-like mouth. Her tongue, having gained textured ridges like the inside of the toy, starts to lick across your fingertips. Her new, vaginal maw sucks on your digits like they were a cock until her hot, juicy cum soaks your fingers as she orgasms. As she does, the edges of what was once her lips change shape, forming wet folds and petals, turning into an invitingly wet pussy.";
 	now lust of rubber tigress is 2;
+	now Cunt Count of Artemis is 1;
+	now Cunt Depth of Artemis is 12;
+	now Cunt Tightness of Artemis is 2;
+	now Clit Size of Artemis is 1;
 
 to say artemismod3:
 	say "     Deciding to install the dildo on the rubber tigress, you start to open its packaging. This gets the kitty excited, mrowling and rolling over onto her back as she spreads her hind limbs wide. Clearly she's quite excited about this and you find yourself getting eager to give it a try as well. You run your fingers across the feline toy, brushing across the soft, flexible [']barbs[']. It certainly feels like the latex cock will provide a lot of stimulation to any hole it's stuffed into. You smear some rubber cement on the base of it so it can become fixed in place and hopefully become a part of her.";
 	say "     You kneel down beside her, carefully moving the dildo into position while holding her thigh steady. She does her best to stay still and you make sure you get it lined up and centered properly before pressing it into place. You hold it there while the glue bonds. Soon the black latex at the base of the toy and her orange rubber start to meld together, forming a sheath for what is quickly becoming her new cock. Before being attached, the toy was fairly soft and a little floppy, having been made with a flexible latex material, but as it becomes a part of her, it grows firmer and starts to drip with slick precum lubricant. She rocks her hips, moaning and mewling in pleasure as she thrusts into your hand until her new penis pulses and sprays a sticky load of latex semen across her body.";
 	now thirst of rubber tigress is 1;
+	now Cock Count of Artemis is 1;
+	now Cock Girth of Artemis is 3;
+	now Cock Length of Artemis is 9;
 
 to say artemismod4:
 	say "     Deciding to get kinky with the installation of the dildo on the rubber tigress, you start opening its packaging. This gets the kitty excited, mrowling and rolling over onto her back as she spreads her hind limbs wide. Clearly she's quite excited about this, but hasn't quite figured out what you have in store for her yet. You run your fingers across the feline toy, brushing across the soft, flexible [']barbs[']. It certainly feels like the latex cock will provide a lot of stimulation to any hole it's stuffed into. You smear some rubber cement on the base of it so it can become fixed in place and hopefully become a part of her.";
 	say "     You kneel beside her, carefully holding the prepped pseudo-cock in one hand and stroking the rubber kitty's belly with the other. She tries to raise up her hips towards you, but you keep your hand on her tummy, keeping her in place. When she turns to look at you and gives another needy mrowl, you push the back end of the toy into her open mouth. She works her rubbery jaw at the sudden intrusion, but the cement has already started to bond and her orange color begins bleeding into the base of the sex toy.";
 	say "     Your digits, still around the false feline phallus, can feel her muzzle working the pleasurable toy across your fingers. Coming to life, the changing dildo starts licking your fingers. Before being attached, the toy was fairly soft and a little floppy, having been made with a flexible latex material, but as it becomes a part of her, it grows firmer and starts to drip with slick precum lubricant. Once the toy's fully joined with her, the kitty gives muffled moans and mewls as you stroke her cock-like tongue. She purrs in pleasure, phallic tongue protruding from her muzzle so you can stroke it until her new penis pulses and sprays a sticky load of latex semen across the ground, only to be licked up by that textured cocktongue shortly thereafter.";
 	now thirst of rubber tigress is 2;
+	now Cock Count of Artemis is 1;
+	now Cock Girth of Artemis is 3;
+	now Cock Length of Artemis is 9;
 
 to say artemismod5:
 	say "     Deciding to get kinky with the installation of the dildo on the rubber tigress, you start opening its packaging. This gets the kitty excited, mrowling and rolling over onto her back as she spreads her hind limbs wide, though it's the tail resting at her side that gets your interest. Clearly she's quite excited about this, but hasn't quite figured out what you have in store for her yet. You run your fingers across the feline toy, brushing across the soft, flexible [']barbs[']. It certainly feels like the latex cock will provide a lot of stimulation to any hole it's stuffed into. You smear some rubber cement on the base of it so it can become fixed in place and hopefully become a part of her.";
 	say "     You kneel beside her, carefully holding the prepped pseudo-cock in one hand and stroking the rubber kitty's belly with the other. She tries to raise up her hips towards you, but you move to catch the tiger by the tail. When she turns to look at you and gives another needy mrowl, you push the back end of the toy onto the tip of her tail. Her rubbery body rolls back onto all fours, but you hold it in place while the glue bonds. Soon the black latex at the base of the toy and her orange rubber start to meld together, forming a permanent connection with a sheath of black rubber to cover her new, sexual tailtip. Before being attached, the toy was fairly soft and a little floppy, having been made with a flexible latex material, but as it becomes a part of her, it grows firmer and starts to drip with slick precum lubricant. She pistons her tail, moaning and mewling in pleasure as she thrusts into your hand until her new penis pulses and sprays a sticky load of latex semen across her body.";
 	now thirst of rubber tigress is 3;
+	now Cock Count of Artemis is 1;
+	now Cock Girth of Artemis is 3;
+	now Cock Length of Artemis is 9;
 
 to say artemispostmod:
 	say "     Artemis seems quite pleased with her new modification[if lust of rubber tigress is not templust and thirst of rubber tigress is not tempthirst]s[end if], strutting around proudly at her new sexual nature on display. ";
@@ -1307,21 +1362,31 @@ to say artemisengulf_SF_mod:
 
 to say artemis_set_genitals:
 	if lust of rubber tigress is 1:				[resetting pre-engulf values]
-		now Cunt Count of rubber tigress is 1;
-		now Cunt Depth of rubber tigress is 12;
-		now Cunt Tightness of rubber tigress is 9;
+		now Asshole Depth of Artemis is 0;
+		now Asshole Tightness of Artemis is 0;
+		now Cunt Count of Artemis is 1;
+		now Cunt Depth of Artemis is 12;
+		now Cunt Tightness of Artemis is 2;
+		now Clit Size of Artemis is 1;
+	else if lust of rubber tigress is 2:
+		now Cunt Count of Artemis is 1;
+		now Cunt Depth of Artemis is 12;
+		now Cunt Tightness of Artemis is 2;
+		now Clit Size of Artemis is 1;
 	else:
-		now Cunt Count of rubber tigress is 0;
-		now Cunt Depth of rubber tigress is 0;
-		now Cunt Tightness of rubber tigress is 0;
-	if thirst of rubber tigress is 1:
-		now Cock Count of rubber tigress is 1;
-		now Cock Length of rubber tigress is 9;
-		now Ball Size of rubber tigress is 9;
+		now Cunt Count of Artemis is 0;
+		now Cunt Depth of Artemis is 0;
+		now Cunt Tightness of Artemis is 0;
+	if thirst of rubber tigress > 0:
+		now Cock Count of Artemis is 1;
+		now Cock Girth of Artemis is 3;
+		now Cock Length of Artemis is 9;
+		now Ball Size of Artemis is 0;
 	else:
-		now Cock Count of rubber tigress is 0;
-		now Cock Length of rubber tigress is 0;
-		now Ball Size of rubber tigress is 0;
+		now Cock Count of Artemis is 0;
+		now Cock Length of Artemis is 0;
+		now Ball Size of Artemis is 0;
+		now Ball Size of Artemis is 0;
 
 
 Chapter 2 - Modified Engulfing Scenes

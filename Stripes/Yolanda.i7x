@@ -54,21 +54,56 @@ Table of GameCharacterIDs (continued)
 object	name
 Yolanda	"Yolanda"
 
-Yolanda is a woman. Yolanda is in The Raven Nest.
+Yolanda is a woman.
+Yolanda is in The Raven Nest.
+ScaleValue of Yolanda is 3. [human sized]
+SleepRhythm of Yolanda is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Yolanda is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Yolanda is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Yolanda is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Yolanda is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Yolanda is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Yolanda is 6. [length in inches]
+Breast Size of Yolanda is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Yolanda is 0. [count of nipples]
+Asshole Depth of Yolanda is 8. [inches deep for anal fucking]
+Asshole Tightness of Yolanda is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Yolanda is 0. [number of cocks]
+Cock Girth of Yolanda is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Yolanda is 0. [Length in Inches]
+Ball Count of Yolanda is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Yolanda is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Yolanda is 1. [number of cunts]
+Cunt Depth of Yolanda is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Yolanda is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Yolanda is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Yolanda is false.
+PlayerRomanced of Yolanda is false.
+PlayerFriended of Yolanda is false.
+PlayerControlled of Yolanda is false.
+PlayerFucked of Yolanda is false.
+OralVirgin of Yolanda is false.
+Virgin of Yolanda is false.
+AnalVirgin of Yolanda is true.
+PenileVirgin of Yolanda is true.
+SexuallyExperienced of Yolanda is true.
+TwistedCapacity of Yolanda is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Yolanda is true. [steriles can't knock people up]
+MainInfection of Yolanda is "".
 Description of Yolanda is "[yolandadesc]".
 Conversation of Yolanda is { "Caw!" }.
+the scent of Yolanda is "The raven smells of bird feathers and feminine arousal.".
+the icon of Yolanda is figure of Yolanda_icon.
 yolandaqytat is a truth state that varies. yolandaqytat is usually false.
 yolandatreasure is a truth state that varies. yolandatreasure is usually false.
 yolandakeyfob is a truth state that varies. yolandakeyfob is usually false.
-
-the icon of Yolanda is figure of Yolanda_icon.
 
 to say yolandadesc:
 	say "     Upon casual examination, Yolanda appears to be a normal raven, but enlarged to human scale and wearing some golden jewelry. Keeping to the posture of a bird most of the time, it takes a while to realize that she can take on a more human posture when she feels it's necessary and even has small, taloned hands hidden under her wings['] primary feathers. She has sharp eyes, a sharper beak and an even sharper tongue.";
 	if HP of Yolanda >= 6:
 		say "     She's set up a new nest for herself up here on the second floor of the library in an open spot near a window. She's gathered some cushions you recognize as coming from the chairs and sofa, though others seem new and may have been taken from nearby buildings. While she's protectively keeping much of her sex toys and collection of shinies in the packs, she's got an assortment of each out for her to enjoy. There's also signs of her having discreetly put in some new anchor points for her kinkier gear.";
-
-the scent of Yolanda is "The raven smells of bird feathers and feminine arousal.".
 
 
 Section 2 - Conversation
