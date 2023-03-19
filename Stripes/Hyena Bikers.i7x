@@ -451,7 +451,11 @@ Sterile of Grant is true. [steriles can't knock people up]
 MainInfection of Grant is "Hyena Herm". [Grant is male though.]
 Description of Grant is "[grantdesc]".
 Conversation of Grant is { "Cool!" }.
+<<<<<<< HEAD
 The scent of Grant is "".
+=======
+The scent of Grant is "     Grant smells very strongly of lupine arousal, the heady pheromones likely to make you light-headed should you remain long.".
+>>>>>>> upstream/master
 granttalk is a number that varies.
 grantbitch is a number that varies.
 grantsex is a number that varies.
