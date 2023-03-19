@@ -144,10 +144,27 @@ a postimport rule:
 
 Section 1 - Introduction
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and "Missing Puppy" is not listed in Traits of Alexandra and Libido of Alexandra > 2 and HP of Spike is 0):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Alexandra_Spike_Missing"	Alexandra_Spike_Missing	"[EventConditions_Alexandra_Spike_Missing]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Alexandra_Spike_Missing"	Alexandra_Spike_Missing	"[EventConditions_Alexandra_Spike_Missing]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Alexandra_Spike_Missing:
+	if (Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and "Missing Puppy" is not listed in Traits of Alexandra and Libido of Alexandra > 2 and HP of Spike is 0): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Alexandra_Spike_Missing	"Alexandra_Spike_Missing"
+
+Alexandra_Spike_Missing is a situation.
+ResolveFunction of Alexandra_Spike_Missing is "[ResolveEvent Alexandra_Spike_Missing]".
+Sarea of Alexandra_Spike_Missing is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Alexandra_Spike_Missing:
 	if debugactive is 1:
 		say "     DEBUG: Missing puppy[line break]";
 	if HP of Alexandra < 3 or HP of Alexandra is 4: [bad Alexandra, never been pregnant or post-pregnancy]
@@ -157,7 +174,11 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 			project the figure of Alexandra_clothed_preg_icon;
 	else:
 		project the figure of Alexandra_face_icon;
-	say "     As you arrive at the library, you find Alexandra leaned against the edge of the front desk, pushing herself to a stand immediately as she hears the door open. The ex-cop seems tense and actually worried, but clearly not about yourself, as she slumps back once she realizes it is you. She puts her guard back up a second later, showing the typical bad-bitch expression, but you can't miss the fact that she's focused on the front door and appears to be waiting for someone. ";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";
+	say "you find Alexandra leaned against the edge of the front desk, pushing herself to a stand immediately as she hears the door open. The ex-cop seems tense and actually worried, but clearly not about yourself, as she slumps back once she realizes it is you. She puts her guard back up a second later, showing the typical bad-bitch expression, but you can't miss the fact that she's focused on the front door and appears to be waiting for someone. ";
 	if MaxHP of Spike is 2: [Fang is the dad for Spike]
 		say "Curiosity starts to build further in your mind as you catch sight of Fang sitting fairly close to the doberwoman, and similarly attentive to anyone entering. The wolf looks back and forth between you and Alexandra, then settles down again. ";
 	else if MaxHP of Spike is 3 and gshep is not listed in companionList of Player: [Korvin is the dad for Spike, not accompanying the player]
@@ -255,12 +276,26 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		-- 9:
 			decrease AlexandraNelsonPups by 1; [Nelson]
 	add "FatherCount_Correct" to Traits of Spike; [check for imports]
+	now Alexandra_Spike_Missing is resolved;
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and "Missing Puppy" is listed in Traits of Alexandra and HP of Spike is 0 and LastFuck of Spike - turns > 24):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Spike_Intro"	Spike_Intro	"[EventConditions_Spike_Intro]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Spike_Intro:
+	if (Alexandra is in Grey Abbey Library and "Missing Puppy" is listed in Traits of Alexandra and HP of Spike is 0 and LastFuck of Spike - turns > 24): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Intro	"Spike_Intro"
+
+Spike_Intro is a situation.
+ResolveFunction of Spike_Intro is "[ResolveEvent Spike_Intro]".
+Sarea of Spike_Intro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Intro:
 	now Spike is in Grey Abbey Library;
-	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Meeting Spike[line break]";
 	project the figure of Spike_face_icon;
@@ -382,6 +417,7 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		now HP of Spike is 99;
 		now Spike is nowhere;
 	now PlayerMet of Spike is true;
+	now Spike_Intro is resolved;
 
 to say SpikeAccepted:
 	say "As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be. ";
