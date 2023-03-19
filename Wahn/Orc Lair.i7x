@@ -827,27 +827,27 @@ to say EscapeMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Search the cell for anything of use";
 	now sortorder entry is 1;
-	now description entry is "Maybe one of the orcs lost a key or something...";
+	now description entry is "Maybe one of the orcs lost a key or something";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pick the lock";
 	now sortorder entry is 2;
-	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right.";
+	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Break the lock";
 	now sortorder entry is 3;
-	now description entry is "Just smash it.";
+	now description entry is "Just smash it";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sabotage the lock";
 	now sortorder entry is 4;
-	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards.";
+	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Wait to get fucked, then sneak out afterwards";
 	now sortorder entry is 5;
-	now description entry is "Tire them out and escape while they sleep.";
+	now description entry is "Tire them out and escape while they sleep";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

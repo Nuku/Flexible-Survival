@@ -184,7 +184,7 @@ Cock Length of Thomas is 28. [length in inches]
 Ball Count of Thomas is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Thomas is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Thomas is 1. [number of cunts]
-Cunt Depth of Thomas is 24. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Thomas is 24. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Thomas is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Thomas is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -514,10 +514,27 @@ to say ThomasTalk9:
 	now SandySaved is turns;
 	increase Libido of Thomas by 1; [Sandy]
 
-instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and Libido of Thomas < 10 and ThomasSaved - turns > 10):
-	say "[NavCheck Dry Plains]";
-	if NavCheckReturn is false, stop the action;
-	move player to Dry Plains;
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Thomas_Felix_Encounter1"	Thomas_Felix_Encounter1	"[EventConditions_Thomas_Felix_Encounter1]"	Dry Plains	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Thomas_Felix_Encounter1"	Thomas_Felix_Encounter1	"[EventConditions_Thomas_Felix_Encounter1]"	Dry Plains	2500	2	100
+
+to say EventConditions_Thomas_Felix_Encounter1:
+	if HP of Thomas > 0 and HP of Thomas < 100 and Libido of Thomas < 10 and ThomasSaved - turns > 10: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Thomas_Felix_Encounter1	"Thomas_Felix_Encounter1"
+
+Thomas_Felix_Encounter1 is a situation.
+ResolveFunction of Thomas_Felix_Encounter1 is "[ResolveEvent Thomas_Felix_Encounter1]".
+Sarea of Thomas_Felix_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Thomas_Felix_Encounter1:
 	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a visibly exhausted teenage centaur. 'Please, can you help me save him? We can't let him get caught by that! Maybe just wave at it then run the other way, leading it away?'";
 	LineBreak;
 	say "     [bold type]What's your reply?[roman type][line break]";
@@ -542,11 +559,30 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 		say "     Shouting 'Sorry, I can't fight that.' you run away and only look back when you're in a somewhat safe distance. From there, you see Thomas attack the huge creature and get thrown aside with an almost casual slap. Not long after, the behemoth finally catches up with the young centaur it was chasing and... stuffs him into its pussy? Now that's a rather strange and somewhat disturbing sight. You doubt that what will emerge from those folds later will still be a centaur...";
 		say "     Having struggled to his feet, Thomas limps away from the scene towards you, a rather disappointed expression on his face. 'You were right - it's just too strong,' he sighs, then leaves.";
 		increase Libido of Thomas by 20;
+	now Thomas_Felix_Encounter1 is resolved;
 
-instead of navigating Dry Plains while ((Libido of Thomas is 1 or Libido of Thomas is 11 or Libido of Thomas is 21) and SandySaved - turns > 10):
-	say "[NavCheck Dry Plains]";
-	if NavCheckReturn is false, stop the action;
-	move player to Dry Plains;
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Thomas_Jill_Encounter1"	Thomas_Jill_Encounter1	"[EventConditions_Thomas_Jill_Encounter1]"	Dry Plains	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Thomas_Jill_Encounter1"	Thomas_Jill_Encounter1	"[EventConditions_Thomas_Jill_Encounter1]"	Dry Plains	2500	2	100
+
+to say EventConditions_Thomas_Jill_Encounter1:
+	if (Libido of Thomas is 1 or Libido of Thomas is 11 or Libido of Thomas is 21) and SandySaved - turns > 10: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Thomas_Jill_Encounter1	"Thomas_Jill_Encounter1"
+
+Thomas_Jill_Encounter1 is a situation.
+ResolveFunction of Thomas_Jill_Encounter1 is "[ResolveEvent Thomas_Jill_Encounter1]".
+Sarea of Thomas_Jill_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Thomas_Jill_Encounter1:
 	project the Figure of Jill_icon;
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
 	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if Libido of Thomas is 1 or Libido of Thomas is 21]Sandy and sends her away so she'll be safe[else if Libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers, 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
@@ -596,6 +632,7 @@ instead of navigating Dry Plains while ((Libido of Thomas is 1 or Libido of Thom
 		say "     Apologizing and saying it's not your fight, you run away. Somehow you doubt that they'll be able to make a stand without you... so you likely won't see Thomas anymore.";
 		now Thomas is nowhere;
 		now HP of Thomas is 100;
+	now Thomas_Jill_Encounter1 is resolved;
 
 to say LoseToCentaurs2:
 	say "     Badly beaten, you fall to the ground and can't do anything but watch as the stallions subdue Thomas and Jill. [if HP of Thomas < 51]When someone notices that Thomas is a herm, many of the guys spring instant erections and start fucking him in a not at all gentle gangbang[else]With several guys holding Thomas down, he's mounted by one of the stallions, who just rams his whole horsecock in his ass. After he fills your friend with his load, another takes his place, then another[end if]. Before long, load after load of cum dumped into his body start to show their impact. Thomas features become rounder, his chest bulges outward to form big breasts and his cock shrinks until it's gone completely. He soon stops struggling and only moans as the next centaur thrusts into his pussy, now completely reduced to a needy mare in heat.";
