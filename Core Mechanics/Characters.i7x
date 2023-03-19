@@ -40,6 +40,8 @@ A person has a number called SubVsDom. [range from -100 (sub) to 0 (vers) to +10
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
+A person has a number called ImpregTimer.
+A person has a number called OffspringCount.
 
 [ body numerical variables for all characters ]
 A person has a number called Body Weight. Body Weight is usually 5.
@@ -73,6 +75,8 @@ A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
 A person has a text called linkaction.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved][just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called LastSexualPartner.[@Tag:NotSaved]
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
 A person has a text called FirstOralPartner.

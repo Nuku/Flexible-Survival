@@ -164,6 +164,7 @@ Chapter 3 - Automatic Actions
 After going:
 	try looking;
 	plot;
+	WalkInEvent_Check;
 
 To Plot:
 	let x be the location;

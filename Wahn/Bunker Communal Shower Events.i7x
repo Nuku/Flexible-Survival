@@ -1,4 +1,5 @@
-Bunker Communal Shower Events by Luneth begins here.
+Bunker Communal Shower Events by Wahn begins here.
+[ Originally Authored by Luneth ]
 
 [ Energy of Eric (see bunker communal shower event file)             ]
 [   0: never showered in the bunker                                  ]
@@ -37,8 +38,59 @@ Carry out Showering:
 	if Eric is in bunker and (HP of Eric > 41 and HP of Eric < 99) and (TimekeepingVar is 0 or TimekeepingVar is 1 or TimekeepingVar is -7 or TimekeepingVar is -8) and Energy of Eric < 49 and a random chance of 2 in 4 succeeds: [Eric present, orc cocked and non virgin, midnight or early morning, not driven away before, 33% chance]
 		say "[EricShower_OrcCock]";
 	else: [default shower scene]
-		say "     Turning on the shower, you test the temperature of the water with your hand and deciding that it will have to do, you slowly undress and step under the spray. As the water begins to flow over your body, you attempt to let all the stress of the day float away, even if only for a few minutes. After a quick and relaxing shower, you turn the water off again and grab one of the towels stacked up near the entrance, rubbing yourself dry and getting dressed once more. Being clean and comfortable, you feel better in your skin and more like yourself than you've been in a while.";
-		SanBoost 5;
+		say "     [bold type]What exactly do you want to do in the shower?[roman type][line break]";
+		LineBreak;
+		let Communal_Shower_Choices be a list of text;
+		add "Just wash yourself. Being clean is very relaxing and good for your mental health too." to Communal_Shower_Choices;
+		[
+		if EXAMPLENPC is in Bunker:
+			add "Invite EXAMPLENPC to scrub down with you. Just some casual hangout getting clean together. (Nonsexual)" to Communal_Shower_Choices;
+			[additional checks if they would be open for such stuff]
+				add "Invite EXAMPLENPC to scrub down with you, and possibly have sex as you do." to Communal_Shower_Choices;
+		if Player is herm:
+			add "Stroke your dick and pussy. Some relaxing masturbation under the hot water is just what you need..." to Communal_Shower_Choices;
+		else if Player is puremale:
+			add "Stroke your dick. Some relaxing masturbation under the hot water is just what you need..." to Communal_Shower_Choices;
+		else if Player is purefemale:
+			add "Stroke your pussy. Some relaxing masturbation under the hot water is just what you need..." to Communal_Shower_Choices;
+		else: [neuters]
+			add "Stroke your body and crotch. Some relaxing masturbation under the hot water is just what you need..." to Communal_Shower_Choices;
+		]
+		let Communal_Shower_Choice be what the player chooses from Communal_Shower_Choices;
+		if Communal_Shower_Choice is:
+			-- "Just wash yourself. Being clean is very relaxing and good for your mental health too.":
+				LineBreak;
+				say "     Turning on the shower, you test the temperature of the water with your hand and deciding that it will have to do, you slowly undress and step under the spray. As the water begins to flow over your body, you attempt to let all the stress of the day float away, even if only for a few minutes. After a quick and relaxing shower, you turn the water off again and grab one of the towels stacked up near the entrance, rubbing yourself dry and getting dressed once more. Being clean and comfortable, you feel better in your skin and more like yourself than you've been in a while.";
+				SanBoost 5;
+			-- "Stroke your dick and pussy. Some relaxing masturbation under the hot water is just what you need...":
+				LineBreak;
+				say "[Communal_Shower_Herm_Masturbation]";
+			-- "Stroke your dick. Some relaxing masturbation under the hot water is just what you need...":
+				LineBreak;
+				say "[Communal_Shower_Male_Masturbation]";
+			-- "Stroke your pussy. Some relaxing masturbation under the hot water is just what you need...":
+				LineBreak;
+				say "[Communal_Shower_Female_Masturbation]";
+			-- "Stroke your body and crotch. Some relaxing masturbation under the hot water is just what you need...":
+				LineBreak;
+				say "[Communal_Shower_Neuter_Masturbation]";
+
+to say Communal_Shower_Herm_Masturbation:
+	say "...";
+	NPCSexAftermath Player receives "Stroking" from Player;
+
+to say Communal_Shower_Male_Masturbation:
+	say "...";
+	NPCSexAftermath Player receives "Stroking" from Player;
+
+to say Communal_Shower_Female_Masturbation:
+	say "...";
+	NPCSexAftermath Player receives "Stroking" from Player;
+
+to say Communal_Shower_Neuter_Masturbation:
+	say "...";
+	NPCSexAftermath Player receives "Stroking" from Player;
+
 
 Section 2 - Events where an NPC uses the bunker shower
 [These serve as mainly player walk-in events or potentially as talk menu options for NPCs.]
