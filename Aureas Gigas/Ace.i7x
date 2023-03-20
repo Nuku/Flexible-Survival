@@ -233,16 +233,18 @@ to say EventConditions_VanessaAceOralCuckScene:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 to say EventConditions_SnowAceCuckScene1:
-	if (Snow is in Grey Abbey Library and (lastfuck of Snow - turns >= 8) and HP of Ace > 1 and SnowAceInteraction is 0 and "Cuckold" is listed in feats of Player)
-		now CurrentWalkinEvent_ConditionsMet is true;
+	say "This is Disabled.";
+[	if (Snow is in Grey Abbey Library and (lastfuck of Snow - turns >= 8) and HP of Ace > 1 and SnowAceInteraction is 0 and "Cuckold" is listed in feats of Player)
+		now CurrentWalkinEvent_ConditionsMet is true;]
 
-Table of GameEventIDs (continued)
-Object	Name
-VanessAceOralCuckScene	"VanessAceOralCuckScene"
 
 VanessaAceOralCuckScene is a situation.
 ResolveFunction of VanessaAceOralCuckScene is "[ResolveEvent VanessaAceOralCuckScene]".
 Sarea of VanessaAceOralCuckScene is "Nowhere".
+
+Table of GameEventIDs (continued)
+Object	Name
+VanessaAceOralCuckScene	"VanessAceOralCuckScene"
 
 to say ResolveEvent VanessaAceOralCuckScene:
 	say "     Walking up to the entrance of the library, you spot Ace the osprey near the front door. The athletic raptor is wearing his flightsuit taut against his muscles he has a back pack laden with supplies- and beside him is Vanessa, the flanks of her rear legs pressed against the wall. Looks like the centauress is having a seemingly friendly chat with the former pilot. But it might be more than just platonic, as you notice that she has her military jacket open wider than normal, baring her breasts fully. Trying as he might to look at the tauress's face, the avian pilot can't help but occasionally peek at Vanessa's breasts, his wagging a bit quicker every time he does. Curious of the things they're talking about, you wander a bit closer.";
