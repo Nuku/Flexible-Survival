@@ -218,15 +218,33 @@ to say AceSex2: [Ace fucks Izzy and players pussy]
 	say "     Seeing as you won, the osprey begins sliding into you. With how horny and needy you are the anthro bird of prey begins pounding into your slick cunt. His well-trained athleticism means that the hunk is able to fuck you at full force slamming his thick cock deep inside you again and again. You start to orgasm, squirting on his engorged phallus. With you sated, Izzy becomes the focus of Aces attention. He starts to jackhammer his subs cunt. In between breaths, he utters, 'Better cum for me quick fuckslut.' the woman on top of you had fucked her partner enough times to star bucking your hips in perfect unison with his thrusts. Looking at the couples faces you can see both are on the verge of climax. Soon, the well-endowed soldier lets out a bird-like cry as he cums, his cock pulsing as he unloads his virile essence inside the cuckooess. Some of the cum leaking out of Izzy drops out of her pussy and onto you. While you recover from the experience, the two bird grabs some handkerchiefs and begins to clean you off.";
 	NPCSexAftermath Player receives "PussyFuck" from Ace;
 
-instead of navigating Grey Abbey Library while "Cuckold" is listed in feats of Player and (lastfuck of Vanessa - turns >= 8) and HP of Ace > 1 and HP of Vanessa > 4 and VanessaAceInteraction is 0:
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: Vanessa makes a move on Ace - VanessaAceInteraction: [VanessaAceInteraction][line break]";
-	say "[VanssaAceOralCuckScene]";
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"VanessaAceOralCuckScene"	VanessaAceOralCuckScene	"[EventConditions_VanessaAceOralCuckScene]"	Grey Abbey Library	2500	2	100
+3	"SnowAceCuckScene1"	SnowAceCuckScene1	"[EventConditions_SnowAceCuckScene1]"	Grey Abbey Library	2500	2	100
 
-to say VanssaAceOralCuckScene:
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"VanessaAceOralCuckScene"	VanessaAceOralCuckScene	"[EventConditions_VanessaAceOralCuckScene]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_VanessaAceOralCuckScene:
+	if "Cuckold" is listed in feats of Player and (lastfuck of Vanessa - turns >= 8) and HP of Ace > 1 and HP of Vanessa > 4 and VanessaAceInteraction is 0:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+to say EventConditions_SnowAceCuckScene1:
+	if (Snow is in Grey Abbey Library and (lastfuck of Snow - turns >= 8) and HP of Ace > 1 and SnowAceInteraction is 0 and "Cuckold" is listed in feats of Player)
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+VanessAceOralCuckScene	"VanessAceOralCuckScene"
+
+VanessaAceOralCuckScene is a situation.
+ResolveFunction of VanessaAceOralCuckScene is "[ResolveEvent VanessaAceOralCuckScene]".
+Sarea of VanessaAceOralCuckScene is "Nowhere".
+
+to say ResolveEvent VanessaAceOralCuckScene:
 	say "     Walking up to the entrance of the library, you spot Ace the osprey near the front door. The athletic raptor is wearing his flightsuit taut against his muscles he has a back pack laden with supplies- and beside him is Vanessa, the flanks of her rear legs pressed against the wall. Looks like the centauress is having a seemingly friendly chat with the former pilot. But it might be more than just platonic, as you notice that she has her military jacket open wider than normal, baring her breasts fully. Trying as he might to look at the tauress's face, the avian pilot can't help but occasionally peek at Vanessa's breasts, his wagging a bit quicker every time he does. Curious of the things they're talking about, you wander a bit closer.";
 	say "     Ace is the speaking at the moment and says, '...I think that allowing infected soldiers back into service would definitively be of use to the military. A lot of the infections keep troops in fighting form. I mean check out these guns.' He flexes his well toned biceps, the fabric grips his arms tightly. Vanessa wraps a hand around the muscle and teasingly says, 'Not bad for a flyboy. I didn't know daredevils like you had time to work out.' With an amused chuckle Ace playfully replies, 'It's something to do in the off time. And you're one to talk about daredevil acts, jumping out of a plane is not thing most sane people do.' The two soldiers laugh, but the conversation goes a bit more serious as Vanessa asks, 'Do you think the top brass is really going to be OK with a bunch of lusty mutants who might mess with squad cohesion?' A loud gale blows past as the osprey contemplates her answer.";
 	WaitLineBreak;
@@ -252,13 +270,15 @@ to say VanssaAceOralCuckScene:
 		say "     Giving a loud greeting, you watch Ace turn to look at you, his tapered tip jutting out of unzipped part of jumpsuit, dripping a small amount of precum. The osprey's eyes enlarge as he tries to move his hand off his would be partner when he sees the emotions on your face. Trying to remove that cat that swallowed the canary expression off his face, he stammers as he says, 'Hey there Buddy... well, I was were just getting to know Vanessa better. You don't meet too many sane troops in this environment.' He starts to nervously ramble while clumsily trying to zip his flightsuit up. He then steps two steps away from the centauress, his eyes expressing a sense of shame as he looks at the floor while the tent in flight suit bulges out.";
 		say "     You ease a bit of the tension in the room by telling Ace that it is not a friendship ruining moment - he didn't start this, after all. With the weight of that off his shoulders, the settlement leader cools down a smidge. Meanwhile, Vanessa stands up turns to look at him giving him a look at curvy her breasts, then utters, 'Well daredevil, looks like you couldn't commit. It's a shame.' With that, the centaur woman trots away, purposefully lifting her tail to give a look at her wet pussy. When she is gone, Ace apologizes to you and adds, 'Sorry about that, I didn't know that you and her were like that. I won't do anything with her in the future, I don't want to lose a friendship in this city. It's rare to find a [if Player is female]lady[else]man[end if] with your type of style out in the city.'";
 		now VanessaAceInteraction is 100; [stopped things cold]
-instead of navigating Grey Abbey Library while (Snow is in Grey Abbey Library and (lastfuck of Snow - turns >= 8) and HP of Ace > 1 and SnowAceInteraction is 0 and "Cuckold" is listed in feats of Player):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: Ace bangs Snow - SnowAceInteraction: [SnowAceInteraction][line break]";
-	say "[SnowAceCuckScene1]";
+	now VanessaAceOralCuckScene is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+SnowAceCuckScene1	"SnowAceCuckScene1"
+
+SnowAceCuckScene1 is a situation.
+ResolveFunction of SnowAceCuckScene1 is "[ResolveEvent SnowAceCuckScene1]".
+Sarea of SnowAceCuckScene1 is "Nowhere".
 
 to say SnowAceCuckScene1:
 	say "     Ready to head back home, you make your way back to the library through the desolate streets. Passing some burned-out or wrecked cars, countless pieces of garbage litter the ground and flutter about with a gust of wind. Once you have arrived at the front of the Grey Abbey Library, you double check the area to make sure that no feral is stalking you. There's no movement and the only sounds you are hear are the clanging of tools and quiet chatter that are coming from inside the abbey, so you walk up the concrete steps to enter the building. The cheery tone of a masculine baritone and a higher pitched feminine voice conversing amicably.";
@@ -287,5 +307,6 @@ to say SnowAceCuckScene1:
 		say "     With a harsh yell, you call out the osprey's name, making him wrench his eyes away from the lusty femme right next to him. The intense, pleasure-focused look in his eyes turns into one of worry as he sees the anger on your face, clamping his beak close to shut. 'Shit, that's not good...' The cocksure attitude he normally exudes has been snuffed out. The blustering avian realizes that he is a guest at your residence, and thus he needs to do as you say here. Relenting on his desires, Ace backs away from the titillating herm. Apologizing, the raptor states, 'Sorry about all this. I thought it was OK with both of you.'";
 		say "     After giving Ace a calmer statement thanking him for following your request, Snow begins walking off, muttering under her breath that she needs to blow off some steam what with the massive hard on that she's packing. Her bushy tail sways as she slinks away before giving Ace one final tempting wink. Ace decides to refuse the call and you pat him on the back. Still feeling slightly irritated from what almost happened, you suggest that he check on how Staghorn is doing. Understanding that you need both some space and time to cool off, Ace begins to head out down the path back to his community, giving you a wave as he leaves.";
 		now SnowAceInteraction is 100; [stopped things cold]
+	now SnowAceCuckScene1 is resolved;
 
 Ace ends here.
