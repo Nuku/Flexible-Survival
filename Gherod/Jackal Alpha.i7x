@@ -580,7 +580,7 @@ jackal alpha cum is infectious. Strain of jackal alpha cum is "Jackal Femboy".
 Usedesc of jackal alpha cum is "[jackal alpha cum use]";
 
 to say jackal alpha cum use:
-	say "Lifting the flask to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the flask to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich, sweet and animal-like. Swishing it around in your mouth a little, you finish the flask off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

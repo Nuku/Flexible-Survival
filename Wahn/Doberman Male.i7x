@@ -221,7 +221,7 @@ doberman male cum is a grab object. doberman male cum is cum.
 Usedesc of doberman male cum is "[doberman male cum use]";
 
 to say doberman male cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 	if "Iron Stomach" is not listed in feats of player:
