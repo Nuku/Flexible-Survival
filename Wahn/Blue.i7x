@@ -248,7 +248,7 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Pound the goo person's ass";
 	[]
-	if Libido of Blue Speaker is 2 and player is not neuter: [male shape and gendered player]
+	if Libido of Blue Speaker is 2 and Player is not neuter: [male shape and gendered player]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Blue fuck your ass";
 		now sortorder entry is 5;

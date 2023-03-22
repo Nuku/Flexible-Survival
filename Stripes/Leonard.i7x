@@ -492,7 +492,7 @@ to Leonardmatesex:
 		now sortorder entry is 5;
 		now description entry is "Have the lion mount you like a beast";
 		[]
-		if ( player is not neuter ) and HP of Leonard >= 17:
+		if ( Player is not neuter ) and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid foot rub";
 			now sortorder entry is 6;
@@ -504,7 +504,7 @@ to Leonardmatesex:
 			now sortorder entry is 7;
 			now description entry is "Fuck one of the maids";
 		[]
-		if ( player is not neuter ) and Leonardcaraway is true:
+		if ( Player is not neuter ) and Leonardcaraway is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Sexy chef";
 			now sortorder entry is 8;

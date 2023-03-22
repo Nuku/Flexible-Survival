@@ -49,7 +49,7 @@ to say losetopewter:
 		say "     You choose to surrender to the lithe assailant, compelling him to back away for a second to assess your action";
 	else:
 		say "     Too exhausted to fight back any further, you fall to your knees, leaving yourself at the assailant's mercy";
-	if a random chance of 1 in 6 succeeds or (player is kinky and a random chance of 1 in 3 succeeds):
+	if a random chance of 1 in 6 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds):
 		say ". Pondering what to subject you to for a moment, his maw eventually widens into a bright grin, bouncing up and down with excitement. Circling around to your back, it shoves and nips at you until you're forced to move forward, pushed along down a ruined path by the creature's assertive insistence.";
 		say "     In the distance, you begin to hear cacophony of wanton, muffled sounds, suggesting that the beast intends to subject you to his kin";
 		if HP of Player < 1 and player is not submissive:
@@ -145,7 +145,7 @@ to pewterbind:
 			pewterlustsate;
 			if pewtercuntvar2 > 0:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
-			if pewterassvar2 > 0 and player is mpreg_ok:
+			if pewterassvar2 > 0 and Player is mpreg_ok:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Pewter Consort";
 			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
 			now lustatt is Libido of Player;

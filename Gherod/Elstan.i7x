@@ -48,7 +48,7 @@ Sterile of Elstan is true. [steriles can't knock people up]
 MainInfection of Elstan is "Werewolf Brute".
 Description of Elstan is "[Elstandesc]".
 Conversation of Elstan is { "<This is nothing but a placeholder!>" }.
-The scent of Elstan is "     Elstan's scent is quite beastlike and masculine, nearly intoxicatingly so[if player is submissive]. It arouses you, getting you to think how good it would be to serve him[else if player is dominant]. It fills you with an urge to compete with him for who is stronger[else]. It makes your groin tingle and your heart race[end if].".
+The scent of Elstan is "     Elstan's scent is quite beastlike and masculine, nearly intoxicatingly so[if Player is submissive]. It arouses you, getting you to think how good it would be to serve him[else if player is dominant]. It fills you with an urge to compete with him for who is stronger[else]. It makes your groin tingle and your heart race[end if].".
 
 to say ElstanDesc:
 	say "     This brute seems to be a bodybuilder, judging by how much muscle he has, but you cannot deny that he is, by werewolf brute standards, a quite handsome fellow. The tall and muscular lupine beast has light brown fur and seems very proud of his physique, always standing up straight with his large chest puffed out. He could very well rival even Jett in strength, as you really cannot see anyone else with as much bulk as him other than the alpha himself. He does not wear anything to cover his sheathed bits, which hang heavily between his legs, and also seem to be bigger than most. However, his expression does not inspire confidence, making him seem not easily approachable. Whenever you pass by him, his crystal blue eyes only trace your figure with clear contempt.";
@@ -157,7 +157,7 @@ to say ElstanTalkSex:
 			now Libido of Elstan is 1;
 		else if Libido of Elstan is 2:
 			say "     Given your last encounter, you tell him you would like to know more about his sexual interests, even though he gave you a glimpse of what really gets him going. 'Thought it'd be quite obvious when I brought you to my room. You still didn't get it? Dumb slut...' he chuckles when he insults you, not able to help himself but to smile. 'But that's alright. I'll know where to find your ass so I can keep reminding you.'";
-			if player is submissive:
+			if Player is submissive:
 				say "     [italic type]And you blush, due to your submissive instincts, seeing how much he likes to belittle you. There is a lot of stuttering in your words afterwards, which amuses the werewolf. 'Oh... The little bitch likes being told [SubjectPro]'s a dumb slut? What a fucking loser...' The humiliation is real, but Elstan also begins to pop a boner, his crimson rod poking out of his thick furred sheath and rising up. 'You better start walking out of here while you can. I'll know where to find your ass when I feel like using it again.'";
 
 Section 1-2 - Elstan Sex
@@ -247,7 +247,7 @@ to say ElstanSexMuscleWorship:
 	say "     The only reason you continue to wash him with compliments, unless you actually and genuinely meant all of it, is that every nice word seems to make that sizable and thick red prick of his perk up more and more, to the point he has got a throbbing boner, prompting the werewolf to look at you with bedroom eyes. 'Fuck, you learn quickly too... Seems like you know just how to woo me,' he says to you in a deep and soft tone that makes your tummy rumble, all while he walks up to you and pushes you against a wall. He leans over towards you, his muzzle mere inches away from your face, arms pushing against the rocky surface behind you... and he speaks again, almost whispering, 'And are you gonna do something about it, or is that all talk and no action?'";
 	WaitLineBreak;
 	say "     Hearing his words and feeling the air around you heat up, you begin to feel like you are nearly drowning in a sea of pheromones, with that musky, beastlike scent of Elstan's sweat, which is so masculine and powerful that your loins begin to cry in need of touch";
-	if player is submissive:
+	if Player is submissive:
 		say ". This [italic type]is certainly enough to alter your expression, as you cannot help but look back into his eyes with a pleading and helpless gaze, which only flares the almost predatory glare Elstan has over you. It evidently turns him on, knowing how easily your submissive instincts dance to his whims, at his command, eager to please him[roman type]";
 	else:
 		say ". This evidently rubs him just right, knowing how easily he can turn you on and have his way, even when he simply lets his body speak.";

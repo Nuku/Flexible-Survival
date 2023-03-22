@@ -75,7 +75,7 @@ to say losetogob_f:
 		if gobdem is true:
 			say "[one of]Ha, ha, yes, bye[or]Bye, mine, heh[or]Good, good[at random]";
 		else:
-			say "[if HP of Player > 0 or player is submissive][one of]Not half bad, I've certainly had worse[or]That was some nice, quick fun[or]Ah, it's good to get some proper satisfaction around here[at random][else][one of]Not half bad, once you learned your place[or]See? That wasn't all that bad[or]Maybe next time would give me less trouble[at random][end if]";
+			say "[if HP of Player > 0 or Player is submissive][one of]Not half bad, I've certainly had worse[or]That was some nice, quick fun[or]Ah, it's good to get some proper satisfaction around here[at random][else][one of]Not half bad, once you learned your place[or]See? That wasn't all that bad[or]Maybe next time would give me less trouble[at random][end if]";
 		say ".' [if scalevalue of Player > 4]She pats you teasingly on the top of your head[else]She gives you a playful swat on your behind[end if] before departing, the creature finding a tiny tunnel in the junk before descending within it. Now free, you suppose you could be worse for wear, though you are somewhat disoriented by the influence of her infection. You stagger off, wanting to get some distance before the scent of sex draws others.";
 	CreatureSexAftermath "Player" receives "OralPussy" from "Goblin";
 

@@ -287,7 +287,7 @@ to say losetowereraptor:
 to say beatthewereraptor:
 	if wrcurseNermine is 9:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
-	else if BodyName of Player is "Wereraptor" and player is not neuter:
+	else if BodyName of Player is "Wereraptor" and Player is not neuter:
 		if wrmode is 1:
 			project Figure of Wereraptor_female_icon;
 		else:

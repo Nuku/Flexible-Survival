@@ -253,7 +253,7 @@ to say Pet MuttSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Submit to breeding by [PetMuttName]";
 	[]
-	if player is not neuter:
+	if Player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock";
 		now sortorder entry is 2;

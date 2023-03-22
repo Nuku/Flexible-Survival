@@ -501,7 +501,7 @@ to say ResolveEvent One Fiery Trick:
 				say "     ([link]N[as]n[end link]) - You shall leave immediately.";
 				if player consents:
 					LineBreak;
-					if player is kinky:
+					if Player is kinky:
 						say "     [italic type]Due to your kinky nature, you begin to think that this might not be such a bad idea, after all... Even though the situation is quite absurd. You then proceed to place the gag and the blindfold back around Arad's head and mouth, pretending you did not remove them in the first place, but just the feeling of putting these back on him begins to arouse you... He gladly cooperates and lets you put them back on as closely as they were before. Then, you proceed to wait for the coyote while half-hoping what Arad said is actually true...[roman type][line break]";
 						increase Libido of Player by 10;
 					else:

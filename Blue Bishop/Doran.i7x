@@ -739,13 +739,13 @@ to say DoranSexMenu: [Doran Sex Protocol]
 			now sortorder entry is 2;
 			now description entry is "Service Doran's tailhole";
 		[]
-		if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and player is kinky:
+		if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and Player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Worship [ghis] balls";
 			now sortorder entry is 3;
 			now description entry is "Praise those massive balls";
 		[]
-		if DoranBallModStatus > 0 and player is kinky:
+		if DoranBallModStatus > 0 and Player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Worship [ghis] seed";
 			now sortorder entry is 4;
@@ -947,11 +947,11 @@ to say DoranSexMenu: [Doran Sex Protocol]
 to say DoranAutoSexProtocol:
 	if DoranRole is 1 and a random chance of 1 in 2 succeeds:
 		say "[DoranNeutral_69]"; [69 Scene]
-	else if anallevel is 3 and DoranRoleIntensity is 0 and ((player is kinky and a random chance of 1 in 5 succeeds) or (a random chance of 1 in 8 succeeds)) and DoranRimmingStatus is not 1:
+	else if anallevel is 3 and DoranRoleIntensity is 0 and ((Player is kinky and a random chance of 1 in 5 succeeds) or (a random chance of 1 in 8 succeeds)) and DoranRimmingStatus is not 1:
 		say "[DoranDom_FaceSitting]"; [rimjob scene]
-	else if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and ((player is kinky and a random chance of 1 in 4 succeeds) or (a random chance of 1 in 7 succeeds)):
+	else if DoranBallModStatus > 0 and DoranInternal is false and DoranRoleIntensity is 0 and ((Player is kinky and a random chance of 1 in 4 succeeds) or (a random chance of 1 in 7 succeeds)):
 		say "[DoranDom_BallWorship]"; [Ball Worship]
-	else if DoranBallModStatus > 0 and ((player is kinky and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
+	else if DoranBallModStatus > 0 and ((Player is kinky and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
 		say "[DoranDom_CumWorship]"; [Cum Worship]
 	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and ((Cunt Count of Player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (Player is female and a random chance of 1 in 4 succeeds)) and (scalevalue of Player > 1 or player is twistcapped):
 		say "[DoranDom_Anal]"; [anal sex scene]
@@ -972,7 +972,7 @@ to say DoranAutoSexProtocol:
 
 an everyturn rule:
 	if Player is in Rocky Outcropping and Doran is visible: [Auto-Fire Protocol]
-		if DoranRoleIntensity is 0 and DoranRole <= 0 and DoranAutofireIntensity > 0 and (player is not neuter) and DoranRoleplayInSession is 0:
+		if DoranRoleIntensity is 0 and DoranRole <= 0 and DoranAutofireIntensity > 0 and (Player is not neuter) and DoranRoleplayInSession is 0:
 			increase score by 0;
 		else:
 			continue the action;
@@ -3491,7 +3491,7 @@ carry out DoranDiscuss:
 		say "[DoranDiscuss_2]"; [Of Hobbies and Imagination]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 2;
-	else if DoranDiscussionProgress is 2 and player is submissive and DoranRoleIntensity is 0: [Player must be submissive and Doran must be at max intensity]
+	else if DoranDiscussionProgress is 2 and Player is submissive and DoranRoleIntensity is 0: [Player must be submissive and Doran must be at max intensity]
 		say "[DoranDiscuss_3]"; [Of Masters and Pets]
 		now DoranLastDiscussion is turns;
 		now DoranDiscussionProgress is 3;
@@ -4190,7 +4190,7 @@ to say DoranRP_VirileBeastScene:
 		NPCSexAftermath Player receives "AssFuck" from Doran;
 
 to say DoranRP_VirileBeastScenePool:
-	if DoranRP_var4 is 1 and (a random chance of 1 in 6 succeeds or (player is kinky and a random chance of 1 in 4 succeeds)): [WS Opener]
+	if DoranRP_var4 is 1 and (a random chance of 1 in 6 succeeds or (Player is kinky and a random chance of 1 in 4 succeeds)): [WS Opener]
 		say "     You are awoken from your prior lapse in consciousness to feel of a hot liquid rushing against your face. It only takes a second for the acrid stench and taste to inform you that you're being marked again by the [gdragon], [if tempnum is 0]meekly obliging such harsh treatment, much to [ghis] approval[else]instinctively spitting it out and struggling once more to free yourself of [ghis] hold, to little avail[end if]. Satisfied with [ghis] little wake-up call, the beast continues going about the business [ghe] had planned for [ghis] little toy.";
 		now DoranDiscussion_var1 is 0;
 		now DoranRP_var4 is 2;
@@ -4208,7 +4208,7 @@ to say DoranRP_VirileBeastScenePool:
 	else: [Sleeping Dragon]
 		say "     Roused once more from unconsciousness, you can feel the [gdragon] on top of you, though the limp manner in which [ghe] is splayed against you and the loud snoring [ghe] makes, it's clear [ghe]'s fallen asleep. It takes a second of shifting to realize that, in spite [ghis] state of rest, [ghe]'s still very much aroused and impaling you through your doubtlessly very worn hole. [if tempnum is 1]Weakly, you attempt to free yourself from under [ghim], but the activity[else]Beleaguered groans and protests in being forced to abide [ghis] weight[end if] seems to stir [ghim] partially awake once more, renewed thrusts against you - initially idle and half-hearted - grow increasingly deliberate, until a groggy roar from the sordid beast punctuates another gout of [ghis] heady seed. It looks to be a sufficient wake-up call for [ghim], anyways, and nips [ghis][if scalevalue of Player < 4] little[end if] [if DoranRP_var1 is 0]trespasser[else]trophy[end if] in cheeky approval.";
 		now DoranDiscussion_var1 is 1;
-	if DoranRP_var4 is 1 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)): [WS "Feeding"]
+	if DoranRP_var4 is 1 and (a random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)): [WS "Feeding"]
 		if DoranDiscussion_var1 is 1:
 			say "     Pulling free from you, [ghe] moves around to aim [ghis] softened and cum-dripping";
 		else:

@@ -44,7 +44,7 @@ ResolveFunction of Four Leg Wrath is "[ResolveEvent Four Leg Wrath]".
 Sarea of Four Leg Wrath is "Plains".
 
 to say ResolveEvent Four Leg Wrath:
-	if scalevalue of player > 4: [no matter the state of the quest, going into this event while under any of those conditions will overwrite progression with this new variant. Diavoborg will immediately notice the player and engage them.]
+	if scalevalue of Player > 4: [no matter the state of the quest, going into this event while under any of those conditions will overwrite progression with this new variant. Diavoborg will immediately notice the player and engage them.]
 		say "     Amidst your walking through the dry plains, you often expect to encounter some of its creatures roaming around, which makes you be extra careful when making your way through the wide open terrain. Your advantage is that you can see anyone coming from miles away, but then... Are you not absolutely, incredibly [bold type]huge[roman type] as well? Nothing here, not even one thing, can help you conceal yourself from possible dangers, but taking up such a size may mean that you, all by yourself, can be one dangerous opponent to anyone who dares to face you... right?";
 		say "     One of the rarest finds who inhabits this area is one certain red behemoth, whom you might have or yet not encountered during your past adventures. Clearly, he is not the first thing you see, which means that this beast person is very cautious. Once you find yourself within his proximity, you will most likely be noticed and engaged upon immediately. If you want to [bold type]know more about him and follow him about more discreetly[roman type], you might want to continue seeking him under a [bold type]smaller frame[roman type]... Or you can simply just continue and face the beast right now, as soon as you find him.";
 		Linebreak;
@@ -336,18 +336,18 @@ to say ResolveEvent That Red Cave:
 	WaitLineBreak;
 	say "     You follow a path near the base of the mountains, on the border shared with Mount Shirley. But before proceeding any further, you decide to take a little rest...";
 	WaitLineBreak;
-	if Resolution of Four Leg Wrath is 3 and scalevalue of player < 5: [Ended as smaller than Diavoborg and is still smaller]
+	if Resolution of Four Leg Wrath is 3 and scalevalue of Player < 5: [Ended as smaller than Diavoborg and is still smaller]
 		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
 		say "     So after a few moments of search, you let you guard down and decide to take into your resting efforts once more...";
 		WaitLineBreak;
 		say "     ... Then suddenly, an enormous creature jumps out of nowhere towards you, pinning you down under its heavy, clawed paw, and proceeds to give you a very, very large and wet lick on the face. It is the red behemoth. 'Look who's here! I thought you'd have been eaten by now! Glad to see my tasty snack found its way to my trap!' Your eyes widen in realization, then revolt takes over as you discover that you have been tri-... He speaks again before you can finish that thought. 'I'm just kidding. It would have been a genius move on my part... which also surprises me that it would have worked, somehow... But that wasn't my intention. I just wanted to say hi.' he says, giving you another lick as you attempt to process what is happening. 'And by the way, the name is Diavoborg. You can call me Diavol, though, if my name makes your tongue twist and swirl too much.' - he says, smiling, then continues - 'You look tired. Wanna head inside?' His grin is very wide, open enough so you can see his gaping throat from where you are, and you blink for a moment... 'Not inside ME, you dork. I mean my lair. Home. Whatever you want to call it. I'm not going to eat you! Or at least without consent...' he ends with a chuckle.";
 		say "     Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
-	else if Resolution of Four Leg Wrath is 3 and scalevalue of player > 4: [Ended as smaller than Diavoborg but arrives bigger]
+	else if Resolution of Four Leg Wrath is 3 and scalevalue of Player > 4: [Ended as smaller than Diavoborg but arrives bigger]
 		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'Wow!' It is the behemoth, who was probably surprised at your change of looks. 'I almost didn't recognize you! Wooow... You're big, now.' Though he seems quite amazed at the fact you grew some extra feet in height, he, for some reason, remains cautious. 'Does that mean you can become of different sizes and shapes depending on what ends up transforming you... or something? Well, that's... cool...! I just hope you won't, like, have a weird effect on me or something, if we end up... Er... You know.' You assure him that you never actually had any experience in which you were the one transforming another, to his relief.";
 		say "     'That's great, then! Alright, uh... I can't say I'm not pleased! It's been ages since I had a friend the same size as me. The name is Diavoborg, by the way. You can call me Diavol, though, if my name makes your tongue twist and swirl too much.' - he says, smiling, then continues - 'You look tired. Wanna head inside? It's warm and safe in my cave! Well, maybe not the warmest place, but I can guarantee it's safe, at least!' Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
-	else if Resolution of Four Leg Wrath is 4 and scalevalue of player > 4: [Ended as same size as Diavoborg and arrives big still]
+	else if Resolution of Four Leg Wrath is 4 and scalevalue of Player > 4: [Ended as same size as Diavoborg and arrives big still]
 		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a familiar voice booming out from a relative distance. 'You've made it! I was wondering when you'd show up!' It is Diavoborg, who comes to approach you eagerly. 'Hopefully you didn't find much trouble your way? I'm sorry this location is a bit... far from everything, but I can guarantee its safety, above all!' he says, putting one of his front paws on your shoulder as he smiles. 'You look tired. Wanna head inside?' Since he is making the invitation, perhaps you should take it. You did not come all the way here to leave with no results, after all your effort. You nod at the big beast, and so he helps you up and pushes you gently to walk in front of him. 'It's not too far. Just keep going forward, then turn around that corner over there, and we'll be close.' he tells you, as you both make your way towards your next destination.";
-	else if Resolution of Four Leg Wrath is 4 and scalevalue of player < 5: [Ended as same size as Diavoborg but arrives smaller]
+	else if Resolution of Four Leg Wrath is 4 and scalevalue of Player < 5: [Ended as same size as Diavoborg but arrives smaller]
 		say "     ... And as you are about to take a seat and lean back against a rocky bump, you hear a strange noise. It sounded like someone had suddenly start walking... Someone heavy, causing some tiny pebbles to roll down the slope as you glance around, trying to catch a clue of what it was, but you find nothing. It could be just a bird or something, so nothing too important to note. Perhaps you are being paranoid, even...";
 		say "     So after a few moments of search, you let you guard down and decide to take into your resting efforts once more...";
 		WaitLineBreak;
@@ -617,25 +617,25 @@ to say DiavoborgTalkSex:
 		say "     Now that you have talked to him about all the basic things, it is a good a time as any to ask him about sex. Grabbing the subject, you ask the questions away.";
 		if Libido of Diavoborg is 1: [already flirted with him]
 			say "     'Ah, I saw the question coming, given how our last meeting out there went. I suppose you wanted to get a good look at these...?' he asks, giving you a clear view at his male junk by spreading his front legs to the sides, basketball-sized balls resting on the ground below a pretty thick and long, gargantuan-sized cock, that only made sense to exist on a beast as big as him. You already know that behind those there is a pussy, whose dimentions are not far behind his masculine appendage.";
-			if scalevalue of player < 5:
+			if scalevalue of Player < 5:
 				say "     'Answering your question, I would be more than glad to receive a balls massage or something like that. If you are so willing to offer me a good time... I will let you.'";
 				say "     It looks like Diavoborg is more than willing to let you touch him. Perhaps you should start by following his suggestion...?";
-			else if scalevalue of player > 4:
+			else if scalevalue of Player > 4:
 				say "     'Well, I suppose you could give me a blowjob. Fuck, it's been forever since I had an actual proper one, given the fact nobody can take my size... Fortunately, you seem more than capable of taking it in your mouth... and maybe other places, in the future.' he says, winking at the end with a clearly suggestive innuendo.";
 				say "     It looks like Diavoborg is more than willing to have sex with you. Perhaps you should start by following his suggestion...?";
 			now Libido of Diavoborg is 2;
 		else if Libido of Diavoborg is 0: [first time mentioning something sexual]
-			if scalevalue of player < 5 and Resolution of Four Leg Wrath is 3:
+			if scalevalue of Player < 5 and Resolution of Four Leg Wrath is 3:
 				say "     He just stares at you with an incredulous expression, looking over your much smaller size with a nearly mocking expression. 'Oh my... Is that really why you followed me about?!' his tone sounds almost as if he was offended, but then it becomes clear the beast is only amused. 'I am not one for kink-shaming, but don't you think we are a little, uh... Too different? Like in size and shape...?' he asks, but at the same time, he is slowly readjusting his position to give you a clear view at his male junk by spreading his front legs to the sides, basketball-sized balls resting on the ground below a pretty thick and long, gargantuan-sized cock, that only made sense to exist on a beast as big as him. You already know that behind those there is a pussy, whose dimentions are not far behind his masculine appendage.";
 				say "     'Hey, my eyes are up here, snack.' you are called into the realization that you were so rudely staring at his privates, and immediately return your gaze to his. 'I mean, I couldn't fuck you or anything of the sort... But we don't have to [italic type]fuck[roman type], right? There are a lot more ways to do this, if you are into... overly large sizes. Oh, I know... You could rub my balls, for starters. How does that sound?' he makes the suggestion, purposely making his massive orbs very visible to you.";
 				WaitLineBreak;
 				say "     It looks like Diavoborg is more than willing to let you touch him. Perhaps you should start by following his suggestion...?";
-			else if scalevalue of player < 5 and Resolution of Four Leg Wrath is 4:
+			else if scalevalue of Player < 5 and Resolution of Four Leg Wrath is 4:
 				say "     'Oh, well... I'd like to say that, yes, I'd be fucking down for it! But you had to go and shrink! I had a bunch of different ideas that we could try out together as massive beings...' he says, with a tone of disappointment in his voice, but then, he slowly readjusts his position to give you a clear view at his male junk by spreading his front legs to the sides, basketball-sized balls resting on the ground below a pretty thick and long, gargantuan-sized cock, that only made sense to exist on a beast as big as him. You already know that behind those there is a pussy, whose dimentions are not far behind his masculine appendage. Now, he knows he made you look.";
 				say "     'I mean... I couldn't fuck you or anything of the sort... But we don't have to [italic type]fuck[roman type], right? There are a lot more ways to do this, if you are into... overly large sizes. Oh, I know... You could rub my balls, for starters. How does that sound?' he makes the suggestion, purposely making his massive orbs very visible to you.";
 				WaitLineBreak;
 				say "     It looks like Diavoborg is more than willing to let you touch him. Perhaps you should start by following his suggestion...?";
-			else if scalevalue of player > 4:
+			else if scalevalue of Player > 4:
 				say "     'Fuck yeah! I'm so down to get a blowjob from you! Er, wait, was that a bit too forward? Well, uh, yeah, I'm... I want that, if you're offering.' he says, and while stuttering at his eagerness, he pops a slowly growing boner right in front of you, which he tries to hide in vain. 'Sorry, I... It's been a really, really long while since I've had a proper one. Nobody can take my size around here, but fortunately you can... in your mouth and perhaps in other places as well...' he says, turning the situation around successful while winking at the end with a clearly suggestive innuendo.";
 				say "     It looks like Diavoborg is more than willing to have sex with you. Perhaps you should start by following his suggestion...?";
 			now Libido of Diavoborg is 2;
@@ -643,12 +643,12 @@ to say DiavoborgTalkSex:
 		say "     You have already talked to the red behemoth about this, and estipulated you could have some fun together. Perhaps you should give it a try?";
 	else if Libido of Diavoborg > 2: [Had the first interaction]
 		say "     After having done the deeds, you figured it should be for the best if you checked on him. He may be a big and tough beast, but he is still human, deep down, who got infected with the nanites. 'Oh, don't worry about me' - he says, chuckling amidst his words - 'Like I told you, my mind is still solidly sane, and it will be kept that way. Although I am curious as to what kinds of things I can do with this body... Maybe sometime we can explore some new things. All in due safety, of course.'";
-		if scalevalue of player < 5 and Libido of Diavoborg < 4:
+		if scalevalue of Player < 5 and Libido of Diavoborg < 4:
 			if Loyalty of Diavoborg >= 10 and vorelevel > 2:
 				say "     It is true that behemoths the behemoths do have some very... peculiar ways to mess with smaller creatures. Now that you have built some trust with the red beast, perhaps you can convince him, suggest, or even present yourself to the possibilities of him doing more extreme stuff with you.";
 			else:
 				say "     It is true that the behemoths do have some very... peculiar ways to mess with smaller creatures, and you have a feeling Diavoborg never tried any of those. Try building a bigger trust with him and he might be more open to try more kinky things, though [bold type]you have to want them to happen...[roman type][line break]";
-		else if scalevalue of player < 5 and Libido of Diavoborg >= 4:
+		else if scalevalue of Player < 5 and Libido of Diavoborg >= 4:
 			say "     'I gotta say, though... So far, I loved every moment you spent inside me.' he adds, giving you a mischievous grin. Looks like he is enjoying his time with you a lot.";
 
 to say DiavoborgTalkGender:
@@ -692,9 +692,9 @@ Instead of fucking Diavoborg:
 		say "     Given the short time that passed since your last sexual interaction with Diavoborg, it might be too early to suggest another go. How about you try that again later?";
 	else if Libido of Diavoborg >= 2:
 		say "     You approach the red behemoth with your intentions clear, as he smiles back at you with eagerness. 'Seems like someone's in the mood... I guess I have some free time for a pretty snack such as yourself.' he says, turning towards you with utmost interest for your request.";
-		if scalevalue of player > 4:
+		if scalevalue of Player > 4:
 			say "     You are of [bold type]the same size as[roman type] Diavoborg, which allows you to get into different kinds of activities with the red behemoth. You will be locked out of [italic type]size difference scenes[roman type], however.";
-		else if scalevalue of player < 5:
+		else if scalevalue of Player < 5:
 			say "     You are [bold type]smaller than[roman type] Diavoborg, which allows you to get into size difference interactions with the red behemoth. You will be locked out of [italic type]same size scenes[roman type], however.";
 		WaitLineBreak;
 		say "     [bold type]What shall you do with Diavoborg?[roman type][line break]";
@@ -702,7 +702,7 @@ Instead of fucking Diavoborg:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if scalevalue of player < 5: [smaller than Diavoborg]
+		if scalevalue of Player < 5: [smaller than Diavoborg]
 			choose a blank row in table of fucking options;
 			now title entry is "Massage his balls";
 			now sortorder entry is 1;
@@ -737,7 +737,7 @@ Instead of fucking Diavoborg:
 					now sortorder entry is 6;
 					now description entry is "Allow Diavoborg to put you in his mouth and swallow you";
 		[]
-		else if scalevalue of player > 4: [same size as Diavoborg]
+		else if scalevalue of Player > 4: [same size as Diavoborg]
 			choose a blank row in table of fucking options;
 			now title entry is "Suck his cock";
 			now sortorder entry is 1;

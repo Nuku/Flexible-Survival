@@ -304,7 +304,7 @@ to say dominick_sexmenu:
 		now sortorder entry is 2;
 		now description entry is "Get bounced on the husky's big pole";
 	[]
-	if ((Player is female and HP of Dominick >= 4) or player is mpreg_ok):
+	if ((Player is female and HP of Dominick >= 4) or Player is mpreg_ok):
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;

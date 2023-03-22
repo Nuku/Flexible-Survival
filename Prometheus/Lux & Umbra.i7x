@@ -1189,7 +1189,7 @@ Prereq1Resolution of Lux & Player First Mating is { 1 }.
 The level of Lux & Player First Mating is 0.
 The sarea of Lux & Player First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and player is not neuter and FemaleList is not banned and Resolution of Lux & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Fang Sexual Interest is resolved and Lux & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and FemaleList is not banned and Resolution of Lux & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Fang Sexual Interest is resolved and Lux & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&PlayerFirstMatingEvent;
 
 to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Entrance to Library]
@@ -1233,13 +1233,13 @@ Prereq1Resolution of Umbra & Player First Mating is { 1 }.
 The level of Umbra & Player First Mating is 0.
 The sarea of Umbra & Player First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&PlayerFirstMatingEvent;
 
 to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near Entrance to Library]
 	if Player is male: [Male or Herm]
 		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
-			if player is submissive: [Player is Penetrated]
+			if Player is submissive: [Player is Penetrated]
 				say "     ";
 				say "     ";
 				WaitLineBreak;
@@ -1252,7 +1252,7 @@ to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near
 				say "     ";
 				say "     ";
 		else: [Non-wolf scene]
-			if player is submissive: [Player is penetrated]
+			if Player is submissive: [Player is penetrated]
 				say "     ";
 				say "     ";
 				WaitLineBreak;

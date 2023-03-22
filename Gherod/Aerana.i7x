@@ -537,7 +537,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"AAHellfire"	AAHellfire	"[EventConditions_AAHellfire]"	Burned-Out Chapel	2500	2	100
 
 to say EventConditions_AAHellfire:
-	if (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and player is male): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
+	if (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and Player is male): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

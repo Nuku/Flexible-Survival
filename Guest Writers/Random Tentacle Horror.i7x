@@ -32,7 +32,7 @@ to say horror victory:
 	else:
 		now cuntsmall is 0;
 	let mpregpath be 0;
-	if Player is not female and player is mpreg_ok, now mpregpath is 1;
+	if Player is not female and Player is mpreg_ok, now mpregpath is 1;
 	if ( "Male Preferred" is listed in feats of Player and mpregpath is 0) or "Sterile" is listed in feats of Player:
 		say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 	else if gestation of child > 0:
@@ -42,7 +42,7 @@ to say horror victory:
 		else:
 			say "The many tentacles wrap around you, eager to abuse, when they seem to notice something. Being entirely useless for their needs, the creature hurls you to the ground in disgust, but then leaves you.";
 			now lasttentaclebattleoutcome is 5;
-	else if Player is not female and player is mpreg_ok:
+	else if Player is not female and Player is mpreg_ok:
 		if tentaclerape is 0:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission, the creature approaches you excitedly, extending its many tentacles towards you as it does so. The creature wraps you in its slime-coated appendages and flips you over, handling you like a prized possession. Tentacles crawl over your body and under your clothing before pulling away, ripping the garments from your body. A slimy tentacle probes over your body as the creature draws you closer. As the tendril glides between your ass cheeks, the tentacled monstrosity releases a gurgle of surprised delight upon detecting the secret hidden within your derriere.";

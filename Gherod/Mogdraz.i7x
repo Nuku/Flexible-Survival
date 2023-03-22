@@ -112,7 +112,7 @@ Sterile of Mogdraz is true. [steriles can't knock people up]
 MainInfection of Mogdraz is "Hellfire Demon".
 Description of Mogdraz is "[Mogdrazdesc]".
 Conversation of Mogdraz is { "<This is nothing but a placeholder!>" }.
-The scent of Mogdraz is "     Mogdraz smells faintly of brimstone, but he has a rather attractive, masculine scent. Being near him makes you feel more [if player is submissive]submissive, your knees weakening in his presence[else if player is dominant]dominant, empowered by his mighty presence[else if player is kinky]kinky, your mind contemplating all the possibilities[else]prone to sexual debauchery[end if]".
+The scent of Mogdraz is "     Mogdraz smells faintly of brimstone, but he has a rather attractive, masculine scent. Being near him makes you feel more [if Player is submissive]submissive, your knees weakening in his presence[else if player is dominant]dominant, empowered by his mighty presence[else if Player is kinky]kinky, your mind contemplating all the possibilities[else]prone to sexual debauchery[end if]".
 
 to say MogdrazDesc:
 	project figure of Mogdraz_clothed_icon;
@@ -244,9 +244,9 @@ to say MogdrazTalkMenuJobs:
 to say MogdrazTalkJobsEscort:
 	if Resolution of HellfireEscort is 99: [lost and locked]
 		say "     Due to your terrible last performance while working for him, Mogdraz has dismissed your services indefinitely. You won't even ask him about it, as you know what the answer will be.";
-	else if scalevalue of player > 4:
+	else if scalevalue of Player > 4:
 		say "     To ask the demon Lord about potential jobs, you bring up the subject as politely as possible. He immediately shakes his head in response. 'I apologize, but I have no need for someone of your particular... dimensions. Perhaps if you were to be a tad bit shorter? Even my most submissive clientele would not be able to quite endure someone with your stature...'";
-	else if player is neuter:
+	else if Player is neuter:
 		say "     To ask the demon Lord about potential jobs, you bring up the subject as politely as possible. He immediately shakes his head in response. 'Well, despite many of my clients being fond of either oral or anal, not sporting any kind of genitalia is a massive hindrance. I'm afraid I will have to refuse you until further notice. And if you are wondering how I can see that, well... It is quite obvious.'";
 		say "     It seems you cannot work as an escort without having neither a dick nor a pussy. You must have at least one of these!";
 	else if HellfireEscortCooldown - turns < 8:
@@ -1483,7 +1483,7 @@ to MogdrazRomanceStrollMuseumCerberusFight:
 		WaitLineBreak;
 		say "[MogdrazRomanceStrollMuseumExplore]";
 	else if fightoutcome is 30: [fled]
-		say "     You did manage to evade the cerberus, but Mogdraz stops you from getting away. 'What are you doing?! Get back on the fight, you wimp!' His voice sounds very commanding[if player is submissive][italic type], and it even sort of turns you on hearing him talk to you like that[roman type][end if]...";
+		say "     You did manage to evade the cerberus, but Mogdraz stops you from getting away. 'What are you doing?! Get back on the fight, you wimp!' His voice sounds very commanding[if Player is submissive][italic type], and it even sort of turns you on hearing him talk to you like that[roman type][end if]...";
 		WaitLineBreak;
 		MogdrazRomanceStrollMuseumCerberusFight;
 
@@ -1664,7 +1664,7 @@ to say MogdrazSexMenu:
 
 to say MogdrazHandjob:
 	say "     It is somewhat difficult to speak when a powerful demon such as Mogdraz eyes you from head to feet, who expects your answer patiently, but you manage to tell him that you would like to, perhaps, use your hands on him. He says nothing more, replying only with a smile and a gesture, beckoning you to come closer. Once you are withing his reach, he pulls you gently and lets you sit by his right side on the expansive velvet red sofa. Then, he slides his powerful arm around your shoulders and embraces you to lean for a kiss. The Demon Lord is simply making out with you right here, out in the open, and everyone who cared would be able to see you two exchanging tongues. This whole scene makes your heart beat harder, getting you all hot and bothered.";
-	say "     He pulls his lips from yours after a while, taking a moment to stroke your cheek and bring his hand to your face from around your shoulder. His muscular leg is bumping against yours, and [if scalevalue of player < 4]as there is a considerable size difference between you and him, you feel completely overtaken by the large devil's heat against your skin[else]you feel his heat against your body[end if], a sign of desire and arousal pulsing through him as an obvious erection forms underneath his dark leather pants. 'Of course I'd let you touch me...' says the devil as he takes you for another kiss. Your tongues mingle together for some more before he lets you take a breath, whispering in a deep and velvety tone 'You deserve that much...' With this said, he actually encourages you by bringing your hand over to his hairy pecs, adorned by a black leather harness, from where you can start moving your touch lower...";
+	say "     He pulls his lips from yours after a while, taking a moment to stroke your cheek and bring his hand to your face from around your shoulder. His muscular leg is bumping against yours, and [if scalevalue of Player < 4]as there is a considerable size difference between you and him, you feel completely overtaken by the large devil's heat against your skin[else]you feel his heat against your body[end if], a sign of desire and arousal pulsing through him as an obvious erection forms underneath his dark leather pants. 'Of course I'd let you touch me...' says the devil as he takes you for another kiss. Your tongues mingle together for some more before he lets you take a breath, whispering in a deep and velvety tone 'You deserve that much...' With this said, he actually encourages you by bringing your hand over to his hairy pecs, adorned by a black leather harness, from where you can start moving your touch lower...";
 	WaitLineBreak;
 	project figure of Mogdraz_nakedhard_icon;
 	say "     You catch Mogdraz breathing deeply as your fingers follow the trail from between his rippling abs to just above the pants. He takes things into his own hands from here, undoing its buttons and sliding that fat and red monstrous cock to the outside. The fine piece of meat is still hardening before your eyes, getting bigger and thicker by the second. He looks down at you, caressing your ear affectionately, and finally, he asks you, 'Hold it...' in an almost whispering tone. Your fingers had remained at just a mere few inches from touching his member, which is by now fully engorged and ready for action, and now with his request made, you can move your hand over his shaft to then wrap your fingers around it.'";

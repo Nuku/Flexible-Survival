@@ -185,10 +185,10 @@ to say ResolveEvent Junkyard Utility:
 		if a random chance of 1 in 4 succeeds:
 			increase searchesUtSit by 1;
 			if a random chance of 1 in 2 succeeds: [12.5% chance for rusty nail]
-				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
+				say "a rusty nail! [if scalevalue of Player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
 				ItemGain rusty nail by 1;
 			else if a random chance of 1 in 2 succeeds: [6.25% chance for sharp screw]
-				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
+				say "a sharp screw! [if scalevalue of Player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
 				ItemGain sharp screw by 1;
 			else: [increments variable]
 				say "nothing particularly useful. ";

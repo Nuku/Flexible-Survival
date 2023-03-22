@@ -569,10 +569,10 @@ Instead of fucking the Christy:
 		say "     Deciding you want to enjoy the lovely dragoness's body again, you slide up beside her and start scritching along her neck and nuzzle up to her head. She rumbles softly as you find some sensitive spots in need of attention. 'Mmm... feeling playful again... I could really stand to be filled again. Ah! I mean, I can feel my body wanting it again, but I really shouldn't.' You keep scritching and nuzzling her, telling her she'll feel better afterwards. 'Well, I guess you're right. Another good fucking would do me a world of good. Oh... I need to watch my language!' she chides herself as she turns around, offering her large cunt to you again.";
 		say "[christysex]";
 		increase HP of Christy by 1;
-	else if dragonessfuck > 0 and ( a random chance of 3 in 5 succeeds ) and player is not neuter and ( HP of Christy is 7 or ( HP of Christy is 6 and dragontype is 0 ) ):
+	else if dragonessfuck > 0 and ( a random chance of 3 in 5 succeeds ) and Player is not neuter and ( HP of Christy is 7 or ( HP of Christy is 6 and dragontype is 0 ) ):
 		say "[christyuhoh]";
 	else if HP of Christy > 3:
-		if ( player is not neuter ) and a random chance of 2 in 5 succeeds:
+		if ( Player is not neuter ) and a random chance of 2 in 5 succeeds:
 			say "[christyoral]";
 		else if HP of Christy >= 8:
 			say "     Looking for more dragonloving, you nuzzle and scritch her head, getting her to rumble in pleasure as you tend to those sensitive spots she liked getting scritched the most. 'Mmm... are you looking to give me a good pounding again? I could certainly go for that. A good screw would feel wonderful. Eep!' she exclaims, blushing at her words. 'Oh whatever. You know I need it, so just get back there and give it to me hard.' Pleased with how readily she's welcoming your advances now, you move around behind her and rub up against her dripping slit.";

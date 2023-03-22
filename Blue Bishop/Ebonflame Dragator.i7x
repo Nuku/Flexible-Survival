@@ -89,7 +89,7 @@ to say ebgatordesc:
 			else:
 				increase ebgatorcarrying by 1;
 	else if ebneuterswitch is false:
-		if Player is male_vacant and anallevel > 1 and ((anallevel is 2 and (player is kinky or player is mpreg_ok)) or anallevel is 3):
+		if Player is male_vacant and anallevel > 1 and ((anallevel is 2 and (Player is kinky or Player is mpreg_ok)) or anallevel is 3):
 			if a random chance of ebgatorcarrying in 4 succeeds:
 				now impregnatevalid is true;
 				now ebgatorcarrying is 1;

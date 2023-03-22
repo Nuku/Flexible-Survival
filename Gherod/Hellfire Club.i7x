@@ -104,7 +104,7 @@ to BurnsLikeHell3: [final stage]
 	say "     ... But suddenly, a red flash attacks your eyes, and a quite familiar one as well. You are left, once more, dazzled and confused, unable to see nor think for several seconds. Then, you look behind you, and everything is gone. There is absolutely no sign of any fight. The plaza is empty and abandoned, as expected under normal circumstances.";
 	say "     Just what the hell is happening? You identified this as the same flash you experienced in the Crimson Street...";
 	WaitLineBreak;
-	say "     'Don't you think you've seen enough, [if Player is female]young lady[else if Player is male]young man[else]young pal[end if]? You gotta pay if you want a VIP seat for the show...' a rather deep and masculine voice speaks behind you, and soon, there are two Hellfire Demons surrounding each opposite side of you, [if scalevalue of player < 4]towering over you menacingly[else]standing at your already considerable height[end if] while looking at you in the eye, though something is quite different about them when compared to the common street ones. 'So first you follow us, and now you got curious enough to walk the entire way down to our combat zone? You seem to be looking for trouble...' says the other demon, who arrives in last. It jumps to your eyes that he has got a scar across his right eye, a quite distinguishing feature. It looks like you have no way out of this situation, and in your current state, your movements do not seem to respond well. You feel sluggish, and it gets hard to think, just like the previous times you have encountered this same duo.";
+	say "     'Don't you think you've seen enough, [if Player is female]young lady[else if Player is male]young man[else]young pal[end if]? You gotta pay if you want a VIP seat for the show...' a rather deep and masculine voice speaks behind you, and soon, there are two Hellfire Demons surrounding each opposite side of you, [if scalevalue of Player < 4]towering over you menacingly[else]standing at your already considerable height[end if] while looking at you in the eye, though something is quite different about them when compared to the common street ones. 'So first you follow us, and now you got curious enough to walk the entire way down to our combat zone? You seem to be looking for trouble...' says the other demon, who arrives in last. It jumps to your eyes that he has got a scar across his right eye, a quite distinguishing feature. It looks like you have no way out of this situation, and in your current state, your movements do not seem to respond well. You feel sluggish, and it gets hard to think, just like the previous times you have encountered this same duo.";
 	say "     'Boss says we should take what we find interesting. I find this cute [boygirl] interesting. What do you say, brother? Should we?' asks the demon in front of you to the scarred one, as the latter puts a large hand over your shoulder from behind you, a fiery touch that nearly burns your skin. 'Well, I suppose [SubjectPro] was already interested in seeing our nice hideout, and [SubjectPro] almost got there, were it not for the trick Mogdraz taught us to deceive stalkers. Illusion magic! One snap of fingers and bam, nothing is as it was! Pretty cool, right?' You believe that question was directed at you, but the uncertainty of it left you speechless as they continued to speak. 'Well, now...'";
 	WaitLineBreak;
 	say "     The demon in front of you steps towards you as he lays a finger below your chin, then trailing down over to your chest... 'We'll have to tie you up and cover your head with something. Doesn't mean you can't come willingly, though. Mogdraz ordered us to take you in, and we have the means to subdue you, so you have no choice but to come. Still, how unpleasant it would be if we had to force you...!' As he glares at you, an extremely burning feeling forms on top of your spine, as if threatening to run down and drop you numb to the ground. There really is no way out of this, as you were ambushed and caught off guard by the demons. Any attempts to fight them would result in ultimate failure. But if you do not wish to come willingly, you will have to risk it.";
@@ -162,13 +162,13 @@ to say MogdrazIntro:
 	if player is dominant:
 		WaitLineBreak;
 		say "     'So... you seek power over others. One slave, a couple, or a full harem of them, independently of their own willingness, it doesn't really matter to you as long as your pleasure is achieved... Or perhaps there is something deep down within you that seeks unconditional adoration, someone whose mind would be solely focused on you... no matter their state of sanity. Well, [bold type]Dominants[roman type] are not always like this, however, some may also simply crave to give affection and security to a more submissive lover... Which are you[if player is not defaultnamed], dear [name of player][else], I wonder[end if]...? Well, I know... but... do you?' He gives you a grin that sends shivers down your spine, and you feel like he knows your deepest darkest secrets, even those you don't remember you have.";
-	else if player is submissive:
+	else if Player is submissive:
 		WaitLineBreak;
 		say "     'You have the urge to worship and serve another person, or be tossed around, used and abused by the most eager to claim you...? Or is it simply the lack of willingness to make decisions by yourself, so you would rather rely on someone else to do the thinking? Oh, to let your mind break in favor for someone much more powerful, much more worthy, in exchange of eternal servitude... Is that what you crave for? Or are you simply looking for a lover who would make you feel comfortable and safe in their embrace...? All the bitches are submissives, but not all the [bold type]Submissives[roman type] desire to become someone else's bitch... So, which are you[if player is not defaultnamed], dear [name of player][else], I wonder[end if]...? Well, I know... but... do you?' He gives you a grin that sends shivers down your spine, and you feel like he knows your deepest darkest secrets, even those you don't remember you have.";
 	else:
 		WaitLineBreak;
 		say "     'Neither dominant nor submissive... No inclination towards any of the two? That may mean a lot of things. Either you are a versatile, and do not mind being in either sides of the power game, or you don't really know what you want! Let us hope that it's the first[if player is not defaultnamed], dear [name of player][else], my dear[end if], and not the last... Because that would be shameful.' You feel like he is judging you, but you clearly do not want to contest his words. The grin he gives you sends shivers down your spine, and you feel like he knows your deepest darkest secrets, even those you don't remember you have.";
-	if player is kinky:
+	if Player is kinky:
 		WaitLineBreak;
 		say "     He does not stop there, locking his gaze with yours once again. 'Oh, there is more... A very long list of special... hm... tastes.' he gives you a smirk as he slowly strokes your cheek. 'I totally understand you. Why would one stick to vanilla practices if... There is so much more to be had? I admit, this is my favorite trait. Always a good surprise to encounter someone [bold type]Kinky[roman type], such as yourself.'";
 	if "MPreg" is listed in feats of Player and Player is male and player is not female:
@@ -693,7 +693,7 @@ to say HellfireClubEscortNormal: [A roll on various possible encounters]
 					say "[HellfireClubEscortNormal1LustDemon]"; [Incubus or Succubus]
 				else: [one in the dominant clientele is picked instead]
 					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
-			else if player is submissive:
+			else if Player is submissive:
 				if a random chance of 4 in 6 succeeds: [more chance to get a dominant client]
 					say "[HellfireClubEscortNormal1HellDemon]"; [Hellfire Demon or Demoness]
 				else: [one in the submissive clientele is picked, instead]
@@ -763,7 +763,7 @@ Section 3-1 - Escort Normal Scenes
 
 to say HellfireClubEscortNormal1a: [a shy incubus]
 	project figure of Incubus_clothed_icon;
-	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very handsome man, tall and lean, with plenty of demonic attributes, strongly resembling an incubus, pretty much like the ones normally seen roaming the college. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. He stands at the door, examining you. By the looks of it, he definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
+	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very handsome man, tall and lean, with plenty of demonic attributes, strongly resembling an incubus, pretty much like the ones normally seen roaming the college. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. He stands at the door, examining you. By the looks of it, he definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if Player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Go to him.";
 	say "     ([link]N[as]n[end link]) - Let him come to you.";
@@ -787,7 +787,7 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				else if player is submissive: [Submissive penalty]
+				else if Player is submissive: [Submissive penalty]
 					say "     [italic type]Because you're Submissive, you will probably have an issue, here...[roman type][line break]";
 					decrease HCEClientSatisfaction by 1;
 					say "(-1)[line break]";
@@ -808,7 +808,7 @@ to say HellfireClubEscortNormal1a: [a shy incubus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				else if player is submissive: [Submissive penalty]
+				else if Player is submissive: [Submissive penalty]
 					say "     [italic type]Your submissive instincts are going to be an issue, here...[roman type][line break]";
 					decrease HCEClientSatisfaction by 1;
 					say "(-1)[line break]";
@@ -930,7 +930,7 @@ to HellfireClubEscortNormal1aFuck: [males only]
 	say "     His legs are at your reach, so you grab them and pull him to you in order to get a better grasp of his body, then proceed to slowly thrust in deep and out of his hole, keeping your gaze locked on his crimson eyes as he beckons you to fuck him harder. Not intending to deny such a request, you pick up the pace and fuck him a bit faster, the inner walls of his ass hugging your shaft and pulsing around it as you move it, its softness even sending you the good kind of shivers up your spine, which tempts you to let out a few moans. As you catch up with your own desire to claim his butt, it is easy to just embrace the feeling and pound him harder, each movement becoming faster than the last at a steady pacing, all while the handsome demon encourages you to continue, his own nine incher hard and swinging around before your eyes with each thrust you give into him.";
 	WaitLineBreak;
 	say "     Without any further ado, you decide to give him your all, fucking him faster and harder, deeper and rougher... To achieve this, you lift your leg and place your knee at the edge to get a better position as you lean the rest of your body towards the incubus, almost pinning him down, and let your hips and glutes do the rest by pounding him mercilessly. Your own lust is increasingly higher and is just telling you to destroy that ass as much as possible, ";
-	if player is kinky and player is not submissive:
+	if Player is kinky and player is not submissive:
 		say "[italic type]and it gets the best of you, as you find yourself aggressively humping the demon, grabbing his neck to a point he is almost choking, probably calling him all sorts of filthy names as you remind him that you own him with a few another slaps around his buttocks. But he really, really seems to like this rough, dominant and kinky attitude of yours.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -951,7 +951,7 @@ to HellfireClubEscortNormal1aGetFucked: [females only]
 	say "     As you are riding him, you make sure he stays powerless as you assume control, never letting him touch or grab you in any way. You slowly raise yourself and crouch back down, letting him feel your moist tunnel around his shaft deeper and deeper, eventually picking up the pace so that you can freely jump on his cock and give his much awaited pleasure. Now, as you are doing it, you feel the incubus wanting to move his hips to thrust into you himself, and this time, you allow him the freedom. After all, he waited for this, and he has to get some work done as well... He does it quite hard, pounding at your cunt in a way you can even feel his balls hitting you with each thrust.";
 	WaitLineBreak;
 	say "     Though as you see him get too enthusiasmed, you order him to slow down... And then you make him do so, as he seems to take some time to obey you. You do not think he is ready to reach his climax so soon, and you want to tease him for a while, to feel his throbbing cock inside you begging for your mercy while you take a moment to enjoy yourself. Your own lust is increasingly higher and is just telling you to edge the handsome devil as much as you can, ";
-	if player is kinky and player is not submissive:
+	if Player is kinky and player is not submissive:
 		say "[italic type]and it gets the best of you, as you find yourself grabbing his nuts and squeeze them just enough to make him squirm while probably calling him all sorts of filthy names as you remind him that you own him, with a few another slaps around his face and cheeks. But he really, really seems to like this rough, dominant and kinky attitude of yours.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -966,7 +966,7 @@ to HellfireClubEscortNormal1aGetFucked: [females only]
 
 to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 	project figure of Succubus_clothed_icon;
-	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very beautiful woman, tall and slim, with plenty of demonic attributes, strongly resembling a succubus, pretty much like the ones normally seen roaming this district. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. She stands at the door, examining you. By the looks of it, She definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
+	say "     After some time readying yourself for what is to come, someone arrives at your room. Surprisingly, it is someone... seemingly shy. As you get a better view at your client, you notice a very beautiful woman, tall and slim, with plenty of demonic attributes, strongly resembling a succubus, pretty much like the ones normally seen roaming this district. But, as opposed to most who would be more than ready to provoke and seduce you, this one seems particularly faltering. She stands at the door, examining you. By the looks of it, She definitely seems to be a submissive. It appears you will have to take the lead[if player is dominant], which should be very easy for someone as dominant as you are...[else if Player is submissive], despite your submissive tendencies...[else]...[end if][line break]";
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Go to her.";
 	say "     ([link]N[as]n[end link]) - Let her come to you.";
@@ -990,7 +990,7 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				else if player is submissive: [Submissive penalty]
+				else if Player is submissive: [Submissive penalty]
 					say "     [italic type]Because you're Submissive, you will probably have an issue, here...[roman type][line break]";
 					decrease HCEClientSatisfaction by 1;
 					say "(-1)[line break]";
@@ -1011,7 +1011,7 @@ to say HellfireClubEscortNormal1b: [a shy submissive succubus]
 					say "     [italic type]Because you're Dominant, you feel particularly confident about this...[roman type][line break]";
 					increase HCEClientSatisfaction by 1;
 					say "(+1)[line break]";
-				else if player is submissive: [Submissive penalty]
+				else if Player is submissive: [Submissive penalty]
 					say "     [italic type]Because you're Submissive, you will probably have an issue, here...[roman type][line break]";
 					decrease HCEClientSatisfaction by 1;
 					say "(-1)[line break]";
@@ -1133,7 +1133,7 @@ to HellfireClubEscortNormal1bFuck: [males only]
 	say "     His legs are at your reach, so you grab them and pull him to you in order to get a better grasp of his body, then proceed to slowly thrust in deep and out of his hole, keeping your gaze locked on his crimson eyes as he beckons you to fuck him harder. Not intending to deny such a request, you pick up the pace and fuck him a bit faster, the inner walls of his ass hugging your shaft and pulsing around it as you move it, its softness even sending you the good kind of shivers up your spine, which tempts you to let out a few moans. As you catch up with your own desire to claim his butt, it is easy to just embrace the feeling and pound him harder, each movement becoming faster than the last at a steady pacing, all while the handsome demon encourages you to continue, his own nine incher hard and swinging around before your eyes with each thrust you give into him.";
 	WaitLineBreak;
 	say "     Without any further ado, you decide to give him your all, fucking him faster and harder, deeper and rougher... To achieve this, you lift your leg and place your knee at the edge to get a better position as you lean the rest of your body towards the incubus, almost pinning him down, and let your hips and glutes do the rest by pounding him mercilessly. Your own lust is increasingly higher and is just telling you to destroy that ass as much as possible, ";
-	if player is kinky and player is not submissive:
+	if Player is kinky and player is not submissive:
 		say "[italic type]and it gets the best of you, as you find yourself aggressively humping the demon, grabbing his neck to a point he is almost choking, probably calling him all sorts of filthy names as you remind him that you own him with a few another slaps around his buttocks. But he really, really seems to like this rough, dominant and kinky attitude of yours.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1154,7 +1154,7 @@ to HellfireClubEscortNormal1bFaceSit: [females only]
 	say "     As you are riding her, you make sure she stays powerless as you assume control, never letting her touch or grab you in any way. You slowly raise yourself and crouch back down, letting her catch some air before feeling your moist lower lips descending upon her face once more, and have her return to her duty of licking and kissing your pussy thoroughly. She lets you have all the control, indeed, as she does not even fight you once you get rougher about it. You doubt you could go this hard on her face if she wasn't a demoness, but she seems to love every second of it as she continues to tonguefuck your demanding cunt at an increasingly higher pace, wiggling and licking at your most sensitive areas to send you shivers of pleasure all over your body.";
 	WaitLineBreak;
 	say "     Though as you see her get too enthusiasmed, you order her to slow down... And then you make her do so, as she seems to take some time to obey you. In fact, it is just feeling too good, and you do not think you are ready to hit your climax just yet. You want to play with her a while more, make her lick you for a while longer";
-	if player is kinky and player is not submissive:
+	if Player is kinky and player is not submissive:
 		say "[italic type]... and it gets the best of you, as you find yourself grabbing her head and pulling it into your cunt while probably calling her all sorts of filthy names as you remind him that you own her, with a few another slaps around her face, body and ass. But she really, really seems to like this rough, dominant and kinky attitude of yours.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1170,7 +1170,7 @@ to HellfireClubEscortNormal1bFaceSit: [females only]
 to say HellfireClubEscortNormal1c:
 	project figure of HellfireDemon_softnoharness_icon;
 	say "     After some time readying yourself for what is to come, someone arrives at your room. And whoever this is makes a huge ruckus as he walks inside, naked and proud. 'Heyo, cutie! I heard Mogdraz employed his most recent special guest here? Well, nothing else would please me more than spend my whole salary just to fuck you my way for the next few hours!' It is not a strange creature, by any means, but one of the Hellfire lackeys, a crimson demon like those who roam the streets at night. This one seems to have paid his boss to have some quality time with you, and he seems to want to have things his way. Hellfire demons are large and muscular, and the same goes for their dicks, thick and long by about nearly a foot and half!";
-	say "     He closes the door behind him and walks towards you, slowly and eyeing you from head to feet, as if... appreciating you, or maybe he is just considering what he wants to do with you. Perhaps his hardening shaft, which is raising up intimidatingly with each second, is a sign of his current intentions... Or maybe the demon has something entirely different in mind. Whatever he picks, [if player is submissive]your submissive tendencies will, for sure, be useful here[else]you should do what he tells you, or you might end up pissing him off... And Mogdraz wouldn't be happy about it[end if].";
+	say "     He closes the door behind him and walks towards you, slowly and eyeing you from head to feet, as if... appreciating you, or maybe he is just considering what he wants to do with you. Perhaps his hardening shaft, which is raising up intimidatingly with each second, is a sign of his current intentions... Or maybe the demon has something entirely different in mind. Whatever he picks, [if Player is submissive]your submissive tendencies will, for sure, be useful here[else]you should do what he tells you, or you might end up pissing him off... And Mogdraz wouldn't be happy about it[end if].";
 	WaitLineBreak;
 	let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
 	if randomnumber is:
@@ -1182,7 +1182,7 @@ to say HellfireClubEscortNormal1c:
 			if player consents: [He's pleased to know of your eagerness]
 				Linebreak;
 				say "     Of course, you will do as he says. Without any further ado, you begin to lie down on the floor by his request, your head ending up in the space between his feet as he positions himself above you. 'Ahh, that's a really good [boygirl] if I see one.'";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1219,7 +1219,7 @@ to say HellfireClubEscortNormal1c:
 			if player consents:
 				Linebreak;
 				say "     Leaning back onto the bed, you let the demon climb on top of you, his thick muscular legs ending up on each side of your torso as he rests his considerable weight on top of you. He really is heavy, though he makes sure he does not crush you. Giving his cock a few stroke as he looks at you in the eye, you have an idea of what he wants...";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1257,7 +1257,7 @@ to say HellfireClubEscortNormal1c:
 			if player consents:
 				Linebreak;
 				say "     It really feels good, the way he caresses your ass and spreads your cheeks around, showing how much he wants to claim it for today's session. 'Yeah, that's what I'm gonna do... Fuck that ass until you beg me to stop... Well, I lie, I wouldn't stop even if you begged me.' he says, teasing you some more, before he gives the order 'Now, bend over for me.'";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1291,7 +1291,7 @@ to say HellfireClubEscortNormal1c:
 				say "     You decide to pick the foot worship option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demon grins eagerly. 'Yeah, great idea. How about you lie down on the floor and let me give it to you, eh?' he orders you, and since the idea was yours, you do not really have any issue with obliging his request.";
-					if player is submissive: [this nets the player a good bonus start for choosing well]
+					if Player is submissive: [this nets the player a good bonus start for choosing well]
 						say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 						now HCEClientSatisfaction is 3;
 						say "(+3)[line break]";
@@ -1309,7 +1309,7 @@ to say HellfireClubEscortNormal1c:
 				say "     You decide to pick the cock suck option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demon grins eagerly. 'Ohhh, I could really use a blowjob right now, actually... Yeah, that sounds great! Lie down on the bed and let me claim that mouth.' he orders you, and since the idea was yours, you do not really have any issue with obliging his request.";
-					if player is submissive: [this nets the player a good bonus start for choosing well]
+					if Player is submissive: [this nets the player a good bonus start for choosing well]
 						say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 						now HCEClientSatisfaction is 3;
 						say "(+3)[line break]";
@@ -1325,7 +1325,7 @@ to say HellfireClubEscortNormal1c:
 			else if calcnumber is 3:
 				Linebreak;
 				say "     You decide to pick the ass fuck option, to which the demon grins eagerly. 'Fuck yeah! I never say no to fucking some ass! Good that you're eager to do that for me, too... Now, bend over while I prepare you for this big bad boy here...' he orders you, and since the idea was yours, you do not really have any issue with obliging his request.";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1341,7 +1341,7 @@ to HellfireClubEscortNormal1cFeet:
 	say "     Once in a while, he grinds it against you, then makes you lick his sole from every angle, including his heel, which he absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels fucking good... You're good at this, eh? I gotta let boss know you like worshipping demon feet...' he taunts you, as you are forced to merely withstand his will and oblige his desire. The red devil really seems to enjoy this, as well, as you often catch him moaning while he strokes his own dick, giving you quite a view whenever his foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' he asks you, noticing your interest in watching him from below. Though he has an interesting way of letting you watch... by still covering your whole face with his large foot and letting you peek between his toes. 'Yeah, you can take a break now and look...'";
 	WaitLineBreak;
 	say "     His dong looks massive from your perspective, as well as his heavy sack, which he handles with care. Rubbing each orb across with his thick clawed fingers from one hand, while the other strokes his long and thick shaft up and down, almost hypnotically, as he keeps his gaze locked on your barely visible eye... He grins, as a thick drop of precum oozes from the tip of his meatlog, then falling all the way onto one of his toes. 'Aww... You've got me so excited that you made me leak... Would you mind cleaning that off for me?' he asks, which you know it is more like an order, as he directs his wet toe over to your mouth. Naturally, you let it in, wrapping your lips around the toe - carefully though, since there is a sharp black claw at the tip - and suck off the sweet precum droplet.";
-	if player is kinky and player is not dominant:
+	if Player is kinky and player is not dominant:
 		say "     [italic type]Although as a little bonus for him, and due to your love for kinky stuff, you give him an especially dedicated sucking all over his toes equally, putting each and every single one of them in your mouth, one at a time, to provide them with your share of tongue love. 'Damn... Now aren't you a good little bitch, too? I love it...'[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1417,11 +1417,11 @@ to HellfireClubEscortNormal1cAssFuck:
 		say "     [italic type]He is still holding you underneath him, with his cock buried deep inside your ass, enjoying these last moments of warmth around his sizable erection. Though you feel him still throbbing and hard, as if ready for another round. You delight the hellfire demon by letting him know that he can do it again, and no additional words are necessary. He gives you a toothy grin as he whispers 'Horny little shit, you... Mind if I try to find out how many more loads you can take?' Following this, you withstand round two, and even a three, of intense assfucking until you can barely move your legs...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
-		if player is kinky:
+		if Player is kinky:
 			say "     [italic type]During the whole process, he finds rougher ways to get [']playful['] with you, by either putting his muscular arm around your neck and choke you, or spanking your ass as he keeps on fucking you relentlessly, or even making you swallow his own spit as he kisses you. You are kinky enough to encourage him to continue doing all of this, which only makes him throb harder.[roman type][line break]";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
-		if player is submissive:
+		if Player is submissive:
 			say "     [italic type]Obviously, during the next few moments, you have no problem with keeping on saying that he owns you, that you are his little bitch, and to claim you, to make you his, to enslave you for all eternity and even take your soul along... You are not careful with your words, but in this case, that is not a problem. You really push the demon's dominant buttons to the maximum, and he fucks you so good that you will, most definitely, dream about it for the next few nights.[roman type][line break]";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
@@ -1433,7 +1433,7 @@ to HellfireClubEscortNormal1cAssFuck:
 
 to say HellfireClubEscortNormal1d:
 	say "     After some time readying yourself for what is to come, someone arrives at your room. And whoever this is makes a huge ruckus as she walks inside, naked and proud. 'Heyo, cutie! I heard Mogdraz employed his most recent special guest here? Well, nothing else would please me more than spend my whole salary just to use you for the next few hours!' It is not a strange creature, by any means, but one of the Hellfire lackeys, a crimson demoness like those who roam the streets at night. This one seems to have paid his boss to have some quality time with you, and she seems to want to have things her way. Hellfire demonesses are large and muscular, with quite perky tits and a big ego to go with it all.";
-	say "     She closes the door behind him and walks towards you, slowly and eyeing you from head to feet, as if... appreciating you, or maybe she is just considering what she wants to do with you. Whatever she picks, [if player is submissive]your submissive tendencies will, for sure, be useful here[else]you should do what she tells you, or you might end up pissing her off... And Mogdraz wouldn't be happy about it[end if].";
+	say "     She closes the door behind him and walks towards you, slowly and eyeing you from head to feet, as if... appreciating you, or maybe she is just considering what she wants to do with you. Whatever she picks, [if Player is submissive]your submissive tendencies will, for sure, be useful here[else]you should do what she tells you, or you might end up pissing her off... And Mogdraz wouldn't be happy about it[end if].";
 	WaitLineBreak;
 	let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
 	if randomnumber is:
@@ -1445,7 +1445,7 @@ to say HellfireClubEscortNormal1d:
 			if player consents: [She's pleased to know of your eagerness]
 				Linebreak;
 				say "     Of course, you will do as she says. Without any further ado, you begin to lie down on the floor by her request, your head ending up in the space between her feet as she positions himself above you. 'Ahh, that's a really good [boygirl] if I see one.'";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1482,7 +1482,7 @@ to say HellfireClubEscortNormal1d:
 			if player consents:
 				Linebreak;
 				say "     Leaning back onto the bed, you let the demoness climb on top of you, her thick muscular legs ending up on each side of your torso as she rests her considerable weight on top of you. She really is heavy, though she makes sure she does not crush you. Giving her already soaking wet vulva a few stroke as she looks at you in the eye, you have an idea of what she wants...";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1520,7 +1520,7 @@ to say HellfireClubEscortNormal1d:
 			if player consents:
 				Linebreak;
 				say "     It really feels good, the way she caresses your ass and spreads your cheeks around, showing how much she wants to claim it for today's session. 'Now, wouldn't it be fun to play with your ass, this time? There are so many fun tools around here... How about a strap-on?' she says, before she gives the order 'Now, bend over for me.'";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1554,7 +1554,7 @@ to say HellfireClubEscortNormal1d:
 				say "     You decide to pick the foot worship option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demoness grins eagerly. 'Yesss, great idea. How about you lie down on the floor and let me give it to you, eh?' she orders you, and since the idea was yours, you do not really have any issue with obliging her request.";
-					if player is submissive: [this nets the player a good bonus start for choosing well]
+					if Player is submissive: [this nets the player a good bonus start for choosing well]
 						say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 						now HCEClientSatisfaction is 3;
 						say "(+3)[line break]";
@@ -1571,7 +1571,7 @@ to say HellfireClubEscortNormal1d:
 				say "     You decide to pick the facesit option, ";
 				if a random chance of 1 in 2 succeeds: [he might really like it, or just be 'meh' about it but do it anyway]
 					say "to which the demoness grins eagerly. 'Ohhh, my pussy could use the love, actually... Yes, that sounds great! Lie down on the bed and let me claim that whole face.' she orders you, and since the idea was yours, you do not really have any issue with obliging her request.";
-					if player is submissive: [this nets the player a good bonus start for choosing well]
+					if Player is submissive: [this nets the player a good bonus start for choosing well]
 						say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 						now HCEClientSatisfaction is 3;
 						say "(+3)[line break]";
@@ -1587,7 +1587,7 @@ to say HellfireClubEscortNormal1d:
 			else if calcnumber is 3:
 				Linebreak;
 				say "     You decide to pick the ass pegging option, to which the demoness grins eagerly. 'Oh yes... Delightful! I never say no to some anal play! Good that you're eager to do that for me, too... Now, bend over while I prepare you for the biggest strap-on size...' she orders you, and since the idea was yours, you do not really have any issue with obliging her request.";
-				if player is submissive: [this nets the player a good bonus start for choosing well]
+				if Player is submissive: [this nets the player a good bonus start for choosing well]
 					say "     [italic type]Because you're Submissive, you feel particularly comfortable with this situation...[roman type][line break]";
 					now HCEClientSatisfaction is 3;
 					say "(+3)[line break]";
@@ -1602,7 +1602,7 @@ to HellfireClubEscortNormal1dFeet:
 	say "     Once in a while, she grinds it against you, then makes you lick her sole from every angle, including her heel, which she absolutely insists on pushing it down your mouth to feel your lips part around it. 'That feels really good... You're good at this, eh? I gotta let boss know you like worshipping demon feet...' she taunts you, as you are forced to merely withstand her will and oblige her desire. The red deviless really seems to enjoy this, as well, as you often catch her moaning while she fondles her wet cunt, giving you quite a view whenever her foot isn't covering your eyes. 'Oh... you wanna see me for a bit?' she asks you, noticing your interest in watching her from below. Though she has an interesting way of letting you watch... by still covering your whole face with her sizable foot and letting you peek between her toes. 'Yeah, you can take a break now and look...'";
 	WaitLineBreak;
 	say "     She really looks powerful from your perspective, her vast and supple breasts bouncing around as she caresses them with one hand while the other is kept rubbing at her vulva and clit, occasionally sinking into her curls whenever she wants to finger herself. During all this time she keeps her gaze locked on your barely visible eye, grinning, as a drop of her own juices, leaking from her soaking cunt, falls all the way onto one of her toes. 'Aww... You've got me so excited that my pussy's just leaking, now... Would you mind cleaning that off for me?' she asks, which you know it is more like an order, as she directs her wet toe over to your mouth. Naturally, you let it in, wrapping your lips around the toe - carefully though, since there is a sharp black claw at the tip - and suck off the sweet precum droplet.";
-	if player is kinky and player is not dominant:
+	if Player is kinky and player is not dominant:
 		say "     [italic type]Although as a little bonus for her, and due to your love for kinky stuff, you give her an especially dedicated sucking all over her toes equally, putting each and every single one of them in your mouth, one at a time, to provide them with your share of tongue love. 'Damn... Now aren't you a good little bitch, too? I love it...'[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1624,7 +1624,7 @@ to HellfireClubEscortNormal1dFaceSit:
 	say "     In order to perform your job adequately, you simply wiggle your tongue all over, as you push it inside her, to give her additional stimulation while you are essentially smothered by her. It is more a matter of endurance, in this case, but she enjoys the control she has over you, grabbing your head and make your whole face dive into her sex up between breaks to make sure she does not suffocate you. On the occasion, she lets you give her a good lick around her privates instead, which means her labia on the outside and around her clit. She seems to enjoy it a lot, as she orders you to do it often while you are supposed to be catching your breath, instead, but obviously, you oblige her request which makes her happy.";
 	WaitLineBreak;
 	say "     She gets to be very rough with you on the next few moments. Riding your face, pushing it against her vulva, slapping it, among other places, calling you names and continuing to remember that you are her bitch as she continues her relentless humping. A heavy girl she is, effectively pinning you down against her with no other choice but to endure her harsh treatment, which she seems to be enjoying profoundly, moaning louder as time goes by";
-	if player is kinky and player is not dominant:
+	if Player is kinky and player is not dominant:
 		say ". But [italic type]your love for the kinkiness and submission is noted, leaving you almost as aroused as her, which only encourages her to continue to fully enjoy this moment as she sees fit.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
@@ -1657,11 +1657,11 @@ to HellfireClubEscortNormal1dPegging:
 		say "     [italic type]She is still holding you underneath her, with her strap-on buried deep inside your ass, as you get to enjoy these last moments with her. Though she feels you still craving for more, ready for another round. You delight the hellfire demoness by letting her know that she can do it again, and no additional words are necessary. She gives you a toothy grin as she whispers 'Horny little shit, you... Mind if I try to find out many more times I can throw you over the edge?' Following this, you withstand round two, and even a three, of intense assfucking until you can barely move your legs...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
 		say "(+1)[line break]";
-		if player is kinky:
+		if Player is kinky:
 			say "     [italic type]During the whole process, she finds rougher ways to get [']playful['] with you, by either putting her muscular arm around your neck and choke you, or spanking your ass as she keeps on fucking you relentlessly, or even making you swallow her own spit as she kisses you. You are kinky enough to encourage her to continue doing all of this, which only makes her go harder on you.[roman type][line break]";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
-		if player is submissive:
+		if Player is submissive:
 			say "     [italic type]Obviously, during the next few moments, you have no problem with keeping on saying that she owns you, that you are her little bitch, and to claim you, to make you hers, to enslave you for all eternity and even take your soul along... You are not careful with your words, but in this case, that is not a problem. You really push the demoness['] dominant buttons to the maximum, and she fucks you so good that you will, most definitely, dream about it for the next few nights.[roman type][line break]";
 			increase HCEClientSatisfaction by 1;
 			say "(+1)[line break]";
@@ -1956,7 +1956,7 @@ to HellfireClubEscortNormal3aFuck:
 	say "     'Take it all... All of it... to the last drop...' You make a huge mess as his orgasm, seemingly endless, continues to fill your every space inside your being, leaking from your mouth and ass as its impossibly overwhelming quantity cannot be contained inside you. But yet, it continues, more and more cum being pumped into you without cease as your senses begin to fade...";
 	increase HCEClientSatisfaction by 2;
 	say "(+2)[line break]";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]Your submissive instincts greatly pleased the nightmare stallion.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2201,7 +2201,7 @@ to HellfireClubEscortNormal3bFuck:
 	say "     'Take it all... All of it... to the last drop...' You make a huge mess as her orgasm, seemingly endless, continues to fill your every space inside your being, leaking from your mouth and ass as its impossibly overwhelming quantity cannot be contained inside you. But yet, it continues, more and more cum being pumped into you without cease as your senses begin to fade...";
 	increase HCEClientSatisfaction by 2;
 	say "(+2)[line break]";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]Your submissive instincts greatly pleased the nightmare herm mare.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2281,7 +2281,7 @@ to HellfireEscortNormal4aSuckCock:
 	WaitLineBreak;
 	clear the screen;
 	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... strange taste in your mouth, somewhat sweet and quite intriguing, and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2291,7 +2291,7 @@ to HellfireEscortNormal4aSuckCock:
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
 		increase HCEClientSatisfaction by 3;
 		say "(+3)[line break]";
-	if player is kinky:
+	if Player is kinky:
 		WaitLineBreak;
 		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2315,7 +2315,7 @@ to HellfireEscortNormal4aGetOral:
 	WaitLineBreak;
 	clear the screen;
 	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... odd warm sensation down your groin... and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2325,7 +2325,7 @@ to HellfireEscortNormal4aGetOral:
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
 		increase HCEClientSatisfaction by 3;
 		say "(+3)[line break]";
-	if player is kinky:
+	if Player is kinky:
 		WaitLineBreak;
 		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2403,7 +2403,7 @@ to HellfireEscortNormal4bLickPussy:
 	WaitLineBreak;
 	clear the screen;
 	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... strange taste in your mouth, somewhat sweet and quite intriguing, and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2413,7 +2413,7 @@ to HellfireEscortNormal4bLickPussy:
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
 		increase HCEClientSatisfaction by 3;
 		say "(+3)[line break]";
-	if player is kinky:
+	if Player is kinky:
 		WaitLineBreak;
 		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2437,7 +2437,7 @@ to HellfireEscortNormal4bGetOral:
 	WaitLineBreak;
 	clear the screen;
 	say "     You suddenly hear a snap of fingers and shake your head, only finding yourself in confusion as nobody is in the room with you. There is this... odd warm sensation down your groin... and you are naked. The sheets over your bed are wrinkled, and the door was left ajar. You try to remember what happened, but you are not able to. It is as if someone was here and then left... and with them, they took your memories. Well, it does look like you have done your job, but you have no idea how your performance was.";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, and that it was a very praised aspect of your behavior...[roman type][line break]";
 		increase HCEClientSatisfaction by 1;
@@ -2447,7 +2447,7 @@ to HellfireEscortNormal4bGetOral:
 		say "     [italic type]A lingering thought in the back of your head reminds you of obedience, which... seems odd, given how dominant you are. Something broke in your mind, and you cannot tell what... But there is a certainty that your client thoroughly enjoyed this.[roman type][line break]";
 		increase HCEClientSatisfaction by 3;
 		say "(+3)[line break]";
-	if player is kinky:
+	if Player is kinky:
 		WaitLineBreak;
 		say "     [italic type]The way you were so receptive to the charms of his strange client was also noted, thanks to your kinkiness. Something tells you that it could only be beneficial.[roman type][line break]";
 		increase HCEClientSatisfaction by 1;

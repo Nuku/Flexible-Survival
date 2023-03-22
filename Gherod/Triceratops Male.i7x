@@ -22,12 +22,12 @@ to say Triceratops Male Wins:
 		say ""; [dealt with at the source of the event]
 	else:
 		if HP of Player > 0: [player submitted]
-			if scalevalue of player < 3:
+			if scalevalue of Player < 3:
 				say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'Heh, I don't judge you. A shorty like you would never be a match for me... But you still get the loser's reward! Hehe...' he says, walking towards you with clear mischief in his eyes.";
 			else:
 				say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'What's this?! A weakling like you dares to waste my time like this? Get up and fight! Heh... Unless...' he shouts, walking towards you with clear mischief in his eyes.";
 		else:
-			if scalevalue of player < 3:
+			if scalevalue of Player < 3:
 				say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! What a puny little thing! Did you really expect to beat me looking that small? Time to teach you a lesson, wimp!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";
 			else:
 				say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! Can't take any more? Is that all you've got?! Come on, fight!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";

@@ -16,7 +16,7 @@ Version 1 of Landon by Luneth begins here.
 [ 0 - no gender lock                                                            ]
 [ 1 - treats the Player is male                                                 ]
 [ 2 - treats the Player is female                                               ]
-[ 3 - treats the player is neuter                                               ]
+[ 3 - treats the Player is neuter                                               ]
 [ 4 - pure male lock (views player as a masculine who is biologically male)     ]
 [ 5 - trap male lock (views player as a feminine who is biologically male)      ]
 [ 6 - pure female lock (views player as a feminine who is biologically female)  ]

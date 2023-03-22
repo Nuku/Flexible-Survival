@@ -188,7 +188,7 @@ to say DrelgothTalkSexConditions:
 	else:
 		now DrelgothDoneTalking is true;
 		WaitLineBreak;
-		if player is submissive:
+		if Player is submissive:
 			DrelgothTalkSexConditionsSub;
 		else if player is dominant:
 			DrelgothTalkSexConditionsDom;

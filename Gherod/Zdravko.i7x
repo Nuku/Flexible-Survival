@@ -450,7 +450,7 @@ to say ZdravkoTalkTransformation:
 to say ZdravkoTalkSex:
 	say "     And what about his sexual life? What would the bull have to say? Just wondering about it will not give you any answers, so you decide to ask him that yourself. 'You mean... you wanna know if I'm open for some fun? You can get straight to the subject.' he says, and you might as well ask him about that, too, just in case... 'I'm pansexual, so anyone can come ride the bull...' - he makes the pun a bit too proud of himself, chuckling - 'Though seriously speaking, yeah I'm down for fucking you, if you want. I'm a strict top, though, so if you're expecting me to bend over or do what you ask, forget it. I say how deep and you take it there, be a good [boygirl] and you get a generous reward in the end. If that ain't working for you, then I'm sorry... Maybe we can just be friends instead of fuck buddies.'";
 	say "     'Though, if you wanna take it... You'll enjoy it. Guaranteed.' he finishes speaking, with confidence overflowing.";
-	if player is submissive:
+	if Player is submissive:
 		WaitLineBreak;
 		say "     [italic type]Knowing he's just your type, a dominant big bull for your submissive self, does make you feel a bit... strange, your heartbeat accelerating as your cheeks turn red[roman type]... 'That's one look I know. You and I are going to get along just fine.'";
 	else if player is dominant:

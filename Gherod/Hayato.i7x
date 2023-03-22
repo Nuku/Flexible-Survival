@@ -1245,7 +1245,7 @@ increase score by 25;
 unleashredoni;
 
 
-	else if HP of Hayato is 21 and player is not neuter and a random chance of 1 in 3 succeeds:
+	else if HP of Hayato is 21 and Player is not neuter and a random chance of 1 in 3 succeeds:
 		say "     As you chat with Hayato, your thoughts return to the problem of the Oni Lair you discovered.";
 		say "     [bold type]Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?[roman type][line break]";
 		LineBreak;

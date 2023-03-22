@@ -30,7 +30,7 @@ to say losetovixentaur:
 to say beatthevixentaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Samantha down, having beaten the fight out of her.";
-	else if a random number between 1 and 100 < vixentaurcatch and ( player is not neuter):
+	else if a random number between 1 and 100 < vixentaurcatch and ( Player is not neuter):
 		say "     The beaten vixentaur backs away from you, stumbling somewhat from her wounds. Like the others, she prepares to shove you back, but you move in time to grab her and push her to the ground. With her caught, you consider having some fun with her.";
 		say "     [bold type]Shall you go ahead with that plan?[roman type][line break]";
 		LineBreak;

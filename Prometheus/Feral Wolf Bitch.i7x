@@ -43,7 +43,7 @@ to say Feral Wolf Bitch attack:
 		else:
 			if Player is female:
 				say "     Offering you a dark growl as a parting remark, you tremble at what ill intent she might have in store for you should you meet her again.";
-				if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds))):
+				if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds))):
 					say "You look as you see her position herself above you. You begin to think that she must want your mouth next when she starts to empty her bladder all over your torso and face. ";
 			else:
 				say "     The feral wolf roars as she slams you down onto your back. She then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see her feminine sex quickly begin to line with dew, getting rather slick. A few drops of musky pre begin dripping off her pussy, landing in your mouth and on your face. The strong smell of her musk makes you shiver and groan slightly as she continues to slowly paint your face with her pre, drop by drop.";
@@ -63,7 +63,7 @@ to say BeatFeralWolfBitch:
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else if inasituation is false and FeralWolfBitchFight is not 3 and (HP of Fang is 0 or hp of Fang is 98):		[Checking to add Fang before running the regular wolf scenes]
-		if a random number between 1 and 100 < ( FemFangCount - 95 ) and (player is not neuter ):	[3rd to 5th wolf]
+		if a random number between 1 and 100 < ( FemFangCount - 95 ) and (Player is not neuter ):	[3rd to 5th wolf]
 			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as she whimpers and cowers before you. She even pisses a little to show her submission to you. From the scars on her muzzle and sides, you can see that she's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of her pack, might make an obedient, if still somewhat feral, pet. You could take her with you, if you're willing to risk bringing such a beast back with you.";
 			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";

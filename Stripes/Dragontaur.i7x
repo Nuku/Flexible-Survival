@@ -24,7 +24,7 @@ to say losetodragontaur:
 to say beatthedragontaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
-	else if a random number between 1 and 100 < dragontaurcatch and ( player is not neuter):
+	else if a random number between 1 and 100 < dragontaurcatch and ( Player is not neuter):
 		say "     The beaten dragontaur backs away from you, stumbling somewhat from his injuries. Like the others, he prepares to release a blast of flame to allow his escape, but you rush forward and clamp his muzzle shut in an arm lock. He thrashes briefly before exhaling a cloud of smoke as the flames fail. You press him to the ground and pin down his wings.";
 		say "     [bold type]With him caught, you consider having some fun with him. Shall you go ahead with that plan?[roman type][line break]";
 		LineBreak;

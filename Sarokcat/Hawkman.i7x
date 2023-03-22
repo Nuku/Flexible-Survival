@@ -22,7 +22,7 @@ to say Hawkman wins:
 		say ""; [details are taken care of at the event source]
 	else:
 		now nohawkmansex is 0;
-		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
+		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( Player is mpreg_ok and a random chance of 2 in 5 succeeds ):
 			if Player is not female and a random chance of 3 in 5 succeeds:
 				if HP of Player > 0:
 					say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";

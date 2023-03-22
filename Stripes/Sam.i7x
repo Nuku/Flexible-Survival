@@ -597,7 +597,7 @@ to assaultonminilab:
 		else:
 			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.";
 		let surrender be 0;
-		if humanity of Player < 50 or Libido of Player > 50 or player is kinky or player is submissive:
+		if humanity of Player < 50 or Libido of Player > 50 or Player is kinky or Player is submissive:
 			say "     You watch the beautiful tauric feline that had once been Sam rumble a pleased growl from out of her throat while looking adoringly at her new mistress.";
 			say "     [bold type]Should give in to the tigertaur and have her claim you as a pet as well?[roman type][line break]";
 			LineBreak;

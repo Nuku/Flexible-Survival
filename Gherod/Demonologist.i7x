@@ -1011,13 +1011,13 @@ to say XaedihrTalkSex:
 		else if loyalty of Xaedihr < 0: [negative disposition]
 			say "     You decide to approach Xaedihr with the subject of sex in mind. As you introduce the matter, your give him some heads up on what you'd like to do with him. He rolls his eyes impatiently. 'As I said, I can fuck you if you want it that badly. Just don't pester me with ifs and don'ts and go directly to what matters. That's such a turn-off when all we want is a quick release.' he finishes, turning to his books and ignoring your presence from that moment onwards.";
 	else if libido of Xaedihr > 0 and playerfucked of Xaedihr is true: [already fucked]
-		if libido of Xaedihr is 2 and loyalty of Xaedihr > 9 and player is submissive: [triggers Dom Xaedihr]
+		if libido of Xaedihr is 2 and loyalty of Xaedihr > 9 and Player is submissive: [triggers Dom Xaedihr]
 			DomXaedihr1;
 			stop the action;
-		else if libido of Xaedihr is 5 and loyalty of Xaedihr > 9 and player is submissive: [more Dom Xaedihr]
+		else if libido of Xaedihr is 5 and loyalty of Xaedihr > 9 and Player is submissive: [more Dom Xaedihr]
 			DomXaedihr2;
 			stop the action;
-		else if libido of Xaedihr is 6 and loyalty of Xaedihr > 9 and player is submissive: [more Dom Xaedihr]
+		else if libido of Xaedihr is 6 and loyalty of Xaedihr > 9 and Player is submissive: [more Dom Xaedihr]
 			DomXaedihr3;
 			stop the action;
 		else if loyalty of Xaedihr > -1: [at least neutral disposition]

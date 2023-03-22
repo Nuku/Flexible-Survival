@@ -883,7 +883,7 @@ to say BallsyHungHorsemanSexMenu:
 
 to say BHHFistCock:
 	say "     Knowing that the horseman seems open to some other options, you ask him if, instead of going for a mushroom, he would be happy to try something else, perhaps using only your hands.";
-	if scalevalue of player >= 4:
+	if scalevalue of Player >= 4:
 		say "     He frowns at you, looking at your height and the size of your arms. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";
 	else:
 		say "     'Only your hands, you say? Hm... There's an interesting idea...' The horseman then proceeds to unzip his bulgy pants and unleash the oversized beast of a cock right before your eyes with a wide grin on his long muzzle. It hangs just by his knees, still soft, an equine dong so massive it would look more natural on an actual horse, accompanied by a heavy set of balls underneath the big meat, each about the size of apples. You even have trouble thinking how he could shove all of that inside such a tight pair of leather pants. 'How about this, you give my dick a good rub, get it nice and hard... and we'll see what happens. It'll depend on how good you are with them.'";
@@ -944,7 +944,7 @@ to say BHHFistCock:
 
 to say BHHFuckCock:
 	say "     Knowing that the horseman seems open to some other options, you ask him if, instead of going for a mushroom, he would be happy to try something else, perhaps using only your hands, and you mention that if he is so hung, you could probably fit your own cock in his.";
-	if scalevalue of player >= 4:
+	if scalevalue of Player >= 4:
 		say "     He frowns at you, looking at your height and overall large frame. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";
 	else if cock length of player > 16:
 		say "     He frowns at you, looking at the grand size of your [if player is naked]cock[else]bulge[end if]. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";

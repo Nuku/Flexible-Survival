@@ -360,7 +360,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[][
-		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
+		if anallevel > 2 and VentFoxContentLevel > 2 and Player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;

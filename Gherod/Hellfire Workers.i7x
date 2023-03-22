@@ -1327,7 +1327,7 @@ to say ExoticEscortsAgranothSession:
 		say "     He then beckons you to approach him. By simply placing his hand forward closed as a fist and moving his index finger one time from your direction to his, a compulsion forms in your will to follow his command.";
 		if player is dominant:
 			say "     Normally, given your dominant personality, this would not affect you in the slightest, but there is something very unique about this demon that you cannot resist. While you reluctantly follow his order, your ego is shattered and you feel helpless. The heat is excruciating, weakening your movements and thoughts as you remain at his mercy. This demon owns you, either you like it or not.";
-		else if player is submissive:
+		else if Player is submissive:
 			say "     As you easily obey due to your submissive tendencies, a sort of tingling pleasure hits you by surprise as your lust is prompted, like a positive reinforcement. Your eagerness cause the demon's grin to widen, and the unbearable heat around you shifts into a more pleasant warmth, leaving you in a hazy bliss.";
 		else:
 			say "     Strangely, you feel no will to disobey. In fact, you carry on his order without giving it much thought, and as you do this, a sort of tingling pleasure hits you by surprise as your lust is prompted, like a positive reinforcement. The demon enjoys seeing you not attempting to resist it and shifts the air around you into a much more tolerable warmth.";

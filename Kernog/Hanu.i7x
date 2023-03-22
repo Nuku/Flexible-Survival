@@ -595,7 +595,7 @@ to say losetoWukongThugs:
 		let randomnumber be a random number between 1 and 3;
 		if randomnumber is 1:
 			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of Player] pussy, jackhammering your cervix with his member";
-		else if randomnumber is 2 and player is kinky:
+		else if randomnumber is 2 and Player is kinky:
 			say "     Another monkey takes advantage of the confusion and slams a pair of fingers down your [cunt size desc of Player] pussy. Two quickly become three, then four, until the primate eventually manages to slip the five fingers inside and forms a fist inside of you";
 		else:
 			say "     Another monkey takes advantage of the confusion and dives head-first on your [cunt size desc of Player] pussy, nibbling on your clit and licking inside, making a game of getting as far as possible";

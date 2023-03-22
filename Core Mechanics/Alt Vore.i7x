@@ -229,7 +229,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_baldeagle]";
 	else if Name entry is "Hawkman Male" and a random chance of 3 in 5 succeeds:
 		say "[vbp_hawkman]";
-	else if Name entry is "Blue Gryphon Herm" and player is not neuter and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Blue Gryphon Herm" and Player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_hermgryph]";
 	else if vorecount > 4 and Name entry is "Leopardman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_leopardman]";
@@ -237,7 +237,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_gazelle]";
 	else if Name entry is "Elk" and vorespecial1 is true and a random chance of 3 in 5 succeeds:
 		say "[vbp_elk]";
-	else if Name entry is "Messy Pig" and vorespecial1 is true and player is not neuter and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Messy Pig" and vorespecial1 is true and Player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_messypig]";
 	else if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and Name entry is not "Snake" and Name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";

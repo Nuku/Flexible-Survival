@@ -40,7 +40,7 @@ to say Smilodon Male Wins:
 	else:
 		project Figure of Sabretooth_naked_icon;
 		if HP of Player > 0: [player submitted]
-			if player is submissive:
+			if Player is submissive:
 				say "     As you drop to your knees and raise your hands up in surrender, the big feline retracts his claws and approaches you, putting a paw over your chin and pulling you close to his soft fur, nearly pinning you down under his big body as he forces you to sit on the ground and below him. 'Skipping the fighting, then, isn't it? Good [boygirl]... I'm a catman made for love, not for war.' he says, giving the side of your waist a tap. 'Now come touch me... I know you want to.' he adds, grabbing your hand and rubbing it across his chest, having you feel his soft fur under your palms. 'Petting the cat is much better than fighting him, yeah? Bet you want him to give you a big treat...' adds the smilodon with a predatory grin, as things are about to get dirtier...";
 			else:
 				say "     As you drop to your knees and raise your hands up in surrender, the big feline man assesses the situation with plenty of interest, retracting his claws and looking at you some more, as he approaches you steadily. 'Figured the big cat is too much for you to handle, huh? Or maybe you just wanna try him out that badly?' he says, giving his furred nuts a little scratch as they bounce around heavily. 'Don't worry, I'll let you.' he adds, teasing you to touch him and feel his soft fur all over his large body. 'Give the cat a nice petting... and he'll give you a big treat.' adds the smilodon with a predatory grin, as things are about to get dirtier...";
@@ -58,7 +58,7 @@ to say Smilodon Male Wins:
 				if Player is male:
 					say "     You were not left behind on the climax, as his stroking, combined with the prostate smashing you experienced until this, that big hard cock throbbing and pounding at your sensitive pleasure spot, just made you cum as hard onto the ground, a gush of sperm making a trail forward with the force it came through.";
 				WaitLineBreak;
-				if player is submissive:
+				if Player is submissive:
 					say "     Then, the smilodon cuddles with you for some additional time, praising your submission to him and stroking your head and face as if you were his pet. 'You've been such a good [boygirl] to me... I should keep you, to be honest. Breed you full everyday and fuck you until you can't walk. You'd like that, wouldn't you?' he asks you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but I'll want your [if Player is female]pussy[else]ass[end if] ready for me when we meet again, yeah? I'll pound you even harder, then, and fill you up even more.'";
 				else:
 					say "     Then, the smilodon cuddles with you for some additional time, not really caring if you would like to or not. His strength overpowers yours at this point, and you do not really have a choice. 'Wasn't that a good time, you and me? Fucking like animals, you taking my load... Why can't you realize it'd be so much better if you were my little slut...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just bend over. Take my cock. You'll enjoy it way, way more like that, trust me...'";
@@ -78,7 +78,7 @@ to say Smilodon Male Wins:
 				WaitLineBreak;
 				say "     Though, he does not let his edge break that easily, slowing down and enjoying these close moments as much as he can, passing you all his affection as he now only slowly thrusts into your mouth. 'You're gonna swallow your big catman's load?' he asks you, stroking your cheek and looking down at you, his big hand feeling soft against your skin. As the male smilodon locks gaze in your eyes, you almost feel compelled to nod. 'That's a nice little kitten. Have it, then... you deserve it.' It is not like you have a choice. Once he tightens his grasp around your head, again, he resumes thrusting at full speed. It does not take long until the large feline blows his full load down your throat, forcing you to swallow his creamy and warm spunk, drop after drop delivered with each throb of his thick cock in your mouth, until the very last.";
 				say "     He holds his member deep down your mouth until he is done, only then pulling it out as you struggle to catch your breath. 'Feeling a bit tired? Aw...' With these words, the catman crouches down and takes you for a cuddly embrace, now whispering in your ear";
-				if player is submissive:
+				if Player is submissive:
 					say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'I gotta go now, but make sure you are ready to kneel the next time we meet. Don't fight it... I know you'll want more of this.'";
 				else:
 					say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... How long will it take for you to understand you'd be so much happier submitting to me, right away...?' he teases you, licking at your neck with more of that dominant affection of his. 'Next time we meet, just kneel and take my cock. You'll enjoy it way, way more like that, trust me...'";
@@ -151,9 +151,9 @@ to say Smilodon Male Desc:
 	else:
 		project Figure of Sabretooth_clothed_icon;
 		say "     In front of you stands a large feline male, with an appearance resembling a smilodon from the ice age, except this one's standing on two strong legs supporting his bulky furred body, very much like a werebeast. He sports a pair of long fangs coming out of his mouth, menacingly sharp, emphasizing the fierce look in his feline and fuzzy muzzle, and his muscular body is covered in golden fur with brown stripes and spots, only attaining a lighter color around his front torso. He also has a short brown mane coming from behind his head towards his lower back, and on his behind sticks out a small but fuzzy tail, barely moving. His equipment is quite sizable, with a thick sheath and a pair of hanging nuts that would make some males jealous, inevitably drawing your eyes in as he walks towards you intimidatingly.";
-		if player is not dominant and scalevalue of player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
+		if player is not dominant and scalevalue of Player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
 			if Lust of Ranfer < 2:
-				if player is submissive:
+				if Player is submissive:
 					say "     He gives his own furred sack a not subtle at all scratching while he eyes you from head to toe. 'You know what... Why don't we skip the fighting and just have you bend over for me? Give the big cat some relief and take his load...' he says, noticing your submissive instincts through your body language. 'Or we can play rough. I love playing rough.' he adds, stretching his claws out and getting ready to tackle you.";
 				else:
 					say "     'Do you like rough play?' he says, sticking his claws out. 'Come on, I won't hurt you... Much.' As soon as he finishes talking, he gets ready to tackle you.";
@@ -406,7 +406,7 @@ instead of fucking Ranfer:
 	say "[SexWithRanfer]";
 
 to say SexWithRanfer:
-	if scalevalue of player > 3:
+	if scalevalue of Player > 3:
 		say "     When approaching the large smilodon male, you give him a suggestive glance over his muscular body and tell him you would love to have some fun with him. He, however... seems to find your big size a little off for his tastes, you can tell. 'Well, uh... I'm not so sure, myself... I can't even find the drive you call you [']kitten['], anymore, as you are so much bigger, now... I liked you better when you were smaller, in all honesty!'";
 		say "     Ranfer turned you down for being bigger than him. Maybe he just prefers smaller partners...";
 	else:
@@ -526,7 +526,7 @@ to say RanferSexFacefucked:
 	WaitLineBreak;
 	say "     Though, he does not let his edge break that easily, slowing down and enjoying these close moments as much as he can, passing you all his affection as he now only slowly thrusts into your mouth. 'You're gonna swallow your big catman's load?' he asks you, stroking your cheek and looking down at you, his big hand feeling soft against your skin. As the male smilodon locks gaze in your eyes, you almost feel compelled to nod. 'That's a nice little kitten. Have it, then... you deserve it.' It is not like you have a choice. Once he tightens his grasp around your head, again, he resumes thrusting at full speed. It does not take long until the large feline blows his full load down your throat, forcing you to swallow his creamy and warm spunk, drop after drop delivered with each throb of his thick cock in your mouth, until the very last.";
 	say "     He holds his member deep down your mouth until he is done, only then pulling it out as you struggle to catch your breath. 'Feeling a bit tired? Aw...' With these words, the catman crouches down and takes you for a cuddly embrace, now whispering in your ear";
-	if player is submissive:
+	if Player is submissive:
 		say ". 'I really should keep you... have you worship me everyday and unload my balls inside you, feeding you lots and lots of this sweet cum down your throat... Bet you'd like that...' he teases you, licking at your neck with more of that dominant affection of his, tempting you to follow through with his words. 'Thanks for coming by. I'll definitely love to dominate you, again.'";
 	else:
 		say ". 'Didn't that feel good? Just letting yourself go... Worshipping me, you swallowing my load... Much better than fighting, yeah?' he teases you, licking at your neck with more of that dominant affection of his. 'Thanks for coming by. I'll definitely love to dominate you, again.'";

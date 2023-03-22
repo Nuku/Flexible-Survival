@@ -597,9 +597,9 @@ to say GildwingClanAccept:
 		say "[KoboldEyeMenu]";
 		say "[KoboldScaleMenu]";
 		[Size]
-		if scalevalue of player > 2 or scalevalue of player < 2:
-			say "     [if scalevalue of player < 2]You are struck with dizziness as you suddenly start to expand, increasing in size until you reach around half the size of a human.[else if scalevalue of player > 2]You are struck with dizziness as the world seems to grow around you shrink closer to the ground, stopping at around half the size of a human.[else][end if]";
-			now scalevalue of player is 2;
+		if scalevalue of Player > 2 or scalevalue of Player < 2:
+			say "     [if scalevalue of Player < 2]You are struck with dizziness as you suddenly start to expand, increasing in size until you reach around half the size of a human.[else if scalevalue of Player > 2]You are struck with dizziness as the world seems to grow around you shrink closer to the ground, stopping at around half the size of a human.[else][end if]";
+			now scalevalue of Player is 2;
 			LineBreak;
 		[Skin]
 		say "     Your skin begins to itch horribly as [if KoboldScaleColor is 1]rose-red[else if KoboldScaleColor is 2]azure[else if KoboldScaleColor is 3]forest-green[else if KoboldScaleColor is 4]charcoal-black[else if KoboldScaleColor is 5]snowy-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales form to cover your whole body. They interlock and smooth out and leaving you with sleek, [if KoboldScaleColor is 1]red[else if KoboldScaleColor is 2]blue[else if KoboldScaleColor is 3]green[else if KoboldScaleColor is 4]black[else if KoboldScaleColor is 5]white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if], kobold scales.";
@@ -608,7 +608,7 @@ to say GildwingClanAccept:
 		if breast size of player > 0:
 			say "     You feel a tightness in your chest as your breasts slowly shrink until they disappear completely, leaving you smooth-chested.";
 			now Breast Size of player is 0;
-			now Nipple Count of player is 0;
+			now Nipple Count of Player is 0;
 			LineBreak;
 		[Body]
 		say "     Your legs suddenly collapse underneath you, causing you to fall to your knees. Your legs and feet quiver as they bend and reconfigure into a more draconic digitigrade shape with a three-toed, raptor-like foot. Your hands clench involuntarily as your fingers merge in such a way that you are left with only four fingers instead of five, each tipped with a small claw. Feeling stable again, you push yourself to your feet and try to get used to your new stance.";

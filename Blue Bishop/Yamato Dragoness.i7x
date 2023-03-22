@@ -35,7 +35,7 @@ to say Yamato Dragoness vic:
 		say "     You ultimately choose to surrender yourself to the serpentine dragoness's mercy, dropping what you were carrying and offering yourself freely. When it's clear that this isn't some trick she pulls closer, a mouthless voice flooding your hearing.";
 	else:
 		say "     Overwhelmed by this massive dragoness, you're grabbed by her teeth, tearing you free of what attire you might have worn and slamming you against the dirt. Head spinning and too exhausted to contest her will, you feel her talons further expose you before herself, a mouthless voice flooding your hearing.";
-	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and (a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of Player > 0:
 			say "     '[one of]Oh, such an obliging little morsel[or]Ha, my meal delivers itself to me[or]I hunger[at random]...' Given little time to reconsider your circumstance, the dragoness grabs you and pulls you close to her maw.";
 		else:
@@ -55,7 +55,7 @@ to say Yamato Dragoness vic:
 			say "     '[one of]Very wise to back down, little one, lest you make a fool of yourself[or]You are not as foolish a little thing as I had expected. Very well[or]I see your need is just as great as mine[at random].' In the wake of her remark she demands that you free yourself of any other attire you might have on, forced to oblige, else she tear them free of you.";
 		else:
 			say "     '[one of]Impudent little whelp, you are now mine[or]It amuses me that you thought you could contest my will[or]Know your place, little thing[or]Such gall, you will suffer from more than defeat[at random]!' Taunting you, as she does, it's very clear that you're now at the mercy of this impressive, serpentine creature.";
-		if "Touched by Madness" is listed in feats of Player and ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)):
+		if "Touched by Madness" is listed in feats of Player and ((Player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 4 succeeds)):
 			if FYDTBMM is 0:
 				say "     As she's about to set herself upon you, the dragoness finds herself struck by an otherworldly notion, seemingly interrupting whatever she was planning for you. For a few brief moments she appears conflicted, before she looks at you with an almost insane glare, apparently inspired by some new plan for you.";
 				say "     'N-no... What you offer is not enough, I must have all of you!' Wanton need reignited by this twisted plot, the creature pulls you into the air, ";
@@ -83,14 +83,14 @@ to say Yamato Dragoness vic:
 			else:
 				say "[if FYDTBMM is 0]shows no remorse in tormenting you, now relegating to being a mere toy for her twisted hunger[else]never relents in tormenting her toy in the name of her twisted hunger[end if]";
 			say ". These persisting motions quickly arousing you, [if Player is neuter]much in spite your lack of outlet[else if HP of Player < 1 and player is not submissive]much in spite your better judgment[else]writhing impotently against these tainted confines[end if], it's not long before ";
-			if Libido of Player > 33 and (player is not neuter):
+			if Libido of Player > 33 and (Player is not neuter):
 				say "you cry out in orgasm, [if Player is male]your throbbing, sputtering cock[smn][else]your audible climax[end if] more than enough to bring her over the edge along with you. The [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, your [if FYDTBMM is 0]uncertain[else]inevitable[end if] fate is punctuated by your sudden disappearance, pulled into the depths of her voracious portal in the wake of her bliss.";
 			else:
 				say "finally she cries out in orgasm, the [if daytimer is night]night's[else]day's[end if] light replaced with an oppressive blackness, pulled into the depths of her voracious portal in the wake of this bliss.";
 			say "     Such a prison as this, you imagine she could crush you with this grip, pulled deeper with each successive throb, seemingly going on for an eternity before you're finally granted the mercy of her comparatively less overbearing womb, only given a few seconds to appreciate the relief before thought fades from you entirely. Outwardly, [if scalevalue of Player > 3]the dragoness would no doubt look somewhat pregnant with your impressive form, though perhaps this serpentine creature perceives this as a mere trophy, signifying her[else]your captivity would be imperceivable, further punctuating this dragoness's[end if] complete and utter dominance over you.";
 			infect;
 			WaitLineBreak;
-			if (player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of Player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
+			if (Player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of Player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of Player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
 				if a random chance of 1 in 2 succeeds and MaleList is not banned:
 					say "dragon is wrapped around you. You can only assume that you weren't enough to satisfy your captor's mad need and left you another victim to keep you company. You can feel your body having long been impaled by his throbbing, ever-hard dick. Try to free yourself of him?";
@@ -206,7 +206,7 @@ to say Yamato Dragoness vic:
 						follow the cock descr rule;
 						say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random][smv] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
 			else:
-				say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is night]n[else]br[end if]ight sky, her taloned legs pull your head to her scaled snatch, revealing your imposed [if HP of Player > 0 or player is submissive]task. Obligingly[else]punishment. Reluctantly[end if], your tongue caresses along its coarse lips, had scaling gradually parting way to reveal her soft flesh, inviting your writhing organ's slick touch.";
+				say "     Grabbing you by your hind leg, you find yourself being dragged into the air, now subjected to the blowing wind along your ascent. Exposed before the [if daytimer is night]n[else]br[end if]ight sky, her taloned legs pull your head to her scaled snatch, revealing your imposed [if HP of Player > 0 or Player is submissive]task. Obligingly[else]punishment. Reluctantly[end if], your tongue caresses along its coarse lips, had scaling gradually parting way to reveal her soft flesh, inviting your writhing organ's slick touch.";
 				say "     '[one of]Yes[or]Ah[or]Mm[at random]... [one of]You will learn your place, whelp[or]You have but a taste of what I offer you[or]This is your natural appointment, under me as you are now[at random].' Her remark is punctuated by the feel of her talon";
 				if Player is not neuter:
 					say "[if Cock Count of Player > 2]s, gripping two of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Cock Count of Player is 2]s, gripping both of your now-hardening, [cock size desc of Player] cocks, putting you in an even more vulnerable position now that her sole hold on you is by your most sensitive organs[else if Cock Count of Player is 1]'s grip, latched onto your now-hardening, [cock size desc of Player] cock, the other holding your similarly serpentine torso in place[else if Cunt Count of Player > 1]'s grip on your diminutive frame, freeing one to briefly tease one of your exposed portals[else]'s grip on your diminutive frame, freeing one to briefly tease your exposed portal[end if]. Eclipsing you in size, you can't help but shudder at the overwhelming sensation of her own tongue's reciprocation across [if Cock Count of Player > 1]one of your cock's length[else if Cock Count of Player is 1]the length of your cock[else]your [bodytype of Player] form[end if].";
@@ -278,7 +278,7 @@ to say Yamato Dragoness vic:
 				if FYDM is 0, now FYDM is 1;
 				say "     Deep, approving moans escaping your captor's scaled lips, she presses you more firmly against her aching pussy, your maw quickly contending with the rising flood of her honey, senses quickly flooded with the taste and scent of her intoxicating sex. Relegated to a mere attendant to the dragoness's need, [if Player is male]you're driven erect[else if Player is female]you're made blatantly aroused[else]you find yourself tormented by an insatiable need[end if], overwhelming heat radiating from eager hole. It becomes unbearable, driving you to grind your [if Player is male]dick[smn][else if Player is female]own cunt[sfn][else]genital-less crotch[end if] against her ribbed body, slicked by her sexual fluids, the beast's wanton need rising in turn.";
 				say "     In due time the serpent cries out in bliss, deceptive vent tightening against your hands as she's wracked in the throes of her orgasm";
-				if Libido of Player > 50 and player is not neuter:
+				if Libido of Player > 50 and Player is not neuter:
 					say ", more than enough to drive you into a similar release, painting the side of her hole with your own sexual fluids";
 				else:
 					say ", forcing you to abide her wanton fury as you're beleaguered frame is doused by her bestial honey";
