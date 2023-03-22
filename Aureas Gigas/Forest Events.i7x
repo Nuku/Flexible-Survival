@@ -11,7 +11,7 @@ Sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
-	add One flew into the Cuckoos Nest to badspots of HumorousList;
+	add One flew into the Cuckoos Nest to BadSpots of HumorousList;
 	add One flew into the Cuckoos Nest to BadSpots of MaleList;
 	add One flew into the Cuckoos Nest to BadSpots of FemaleList;
 
@@ -49,7 +49,7 @@ The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
 Sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
-	add Two crash into the Cuckoos Nest to badspots of HumorousList;
+	add Two crash into the Cuckoos Nest to BadSpots of HumorousList;
 	add Two crash into the Cuckoos Nest to BadSpots of MaleList;
 	add Two crash into the Cuckoos Nest to BadSpots of FemaleList;
 

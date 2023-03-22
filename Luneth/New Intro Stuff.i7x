@@ -484,7 +484,7 @@ This will give the player a pre-created character to serve as their second party
 
 Chapter 1 - Bear (male dog)
 
-Dog male: rottweiler
+Dog male: Rottweiler
 
 Part 1 - Pre-apocalypse
 
@@ -496,7 +496,7 @@ Post-apocalypse will offer a description for the anthropomorphic versions
 
 Chapter 2 - Nefret (female cat)
 
-Cat female: egyptian mau
+Cat female: Egyptian mau
 
 Part 1 - Pre-apocalypse
 

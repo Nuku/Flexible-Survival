@@ -49,7 +49,7 @@ to say latexfoxvictory:
 
 to say latexfoxdefeat:
 	project Figure of LatexFox_hard_icon;
-	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (player is female or (player is male and anallevel > 1)):
+	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (Player is female or (Player is male and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if Player consents:
 			latexfoxdefeatsex;
@@ -59,7 +59,7 @@ to say latexfoxdefeat:
 		say "[one of]With one final lash, the latex fox begins to make a whining sound.[run paragraph on] It appears that the creature is deflating, flumping onto the ground as an inanimate pile of rubber.[run paragraph on] It's unclear if the thing is dead or simply pretending to be to make you leave[or]Striking the critter down, he yips loudly, bouncing off into the distance and away from you[at random]. With the matter attended to, you move on.";
 
 to latexfoxdefeatsex:
-	if ( player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( player is herm and a random chance of 1 in 2 succeeds ):
+	if ( Player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( player is herm and a random chance of 1 in 2 succeeds ):
 		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position.";
 		if Cunt Depth of Player < 6:
 			say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";

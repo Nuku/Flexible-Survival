@@ -101,7 +101,7 @@ To say ram_loss:
 	else:
 		say "     With a particularly vicious shove, you knock the stubborn ram to the ground, leaving him winded. [if Player is dominant]Grinning smugly, you approach the once-proud ram and pin him down with a firm foot on his chest[else]You can't help but smile from your victory as you step closer to the ram[end if]. [if Player is dominant]Considering his vulnerable position, will[else]Will[end if] you have some fun with him?";
 		if Player consents:
-			if (player is female) and (player is male):
+			if (Player is female) and (Player is male):
 				LineBreak;
 				say "     Would you rather [link]ride his cock (Y)[as]y[end link] or [link]fuck his ass (N)[as]n[end link]?";
 				if Player consents:

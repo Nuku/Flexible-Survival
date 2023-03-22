@@ -77,12 +77,12 @@ to say teddybear69:
 	if Player consents:
 		say "     Feeling too happy to take notice of what's going on, you are content to enjoy the licking and the soft feel of the bear's muzzle around your feet and ankles. As she continues to sit up, the pleasant sensation moves up to envelop more of your legs. When she reaches your hips, you start to wonder what's going on, but those thoughts are pushed aside when her tongue finds its way to your crotch again. The feel of it across your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][end if] causes you to moan and grow aroused once again.";
 		say "     While it takes a little longer to get you off this time, it is no less pleasant an experience - perhaps even better from the added sensation of her soft muzzle and throat squeezing and rubbing along your lower body. As she gets you to cum for the second time, she opens her mouth wider and raises you up. She lowers you down into her plush maw, swallowing down your [bodytype of Player] body even as she's swallowing down your sexual fluids. It is only as she ursine muzzle is closing around your head before your very eyes that you realize what's happening all too late. But you're also too fuzzy-headed and awash in pleasure to even think of resisting. You curl up happily in the warm embrace of the plush bear's belly, drifting off into a peaceful sleep.";
-		CreatureSexAftermath "Teddy Bear" receives "[if player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Teddy Bear" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Teddy Bear";
 		teddybearvored;
 	else:
 		say "     Realizing what's about to happen, you shake the fluff from your mind and pull yourself up. The plush bear gives a soft sigh of disappointment and flops back onto the ground. Her disappointment doesn't last long though, as she contents herself with [if Player is male]rubbing her cum-filled tummy[else]licking her cum-damp muzzle[end if] while your fluids are absorbed into her polyfill padding. Having dealt with the strange bear, you're now free to continue on your way.";
-		CreatureSexAftermath "Teddy Bear" receives "[if player is male]OralCock[else]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Teddy Bear" receives "[if Player is male]OralCock[else]OralPussy[end if]" from "Player";
 		CreatureSexAftermath "Player" receives "OralPussy" from "Teddy Bear";
 		now Libido of Player is ( 2 * Libido of Player ) / 3;
 

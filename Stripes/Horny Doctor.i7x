@@ -24,9 +24,9 @@ to say hornydocdesc:
 	now hdform is a random number between 0 and 6;
 	if hdform is 0, now hdformname is "mutt";
 	if hdform is 1, now hdformname is "beagle";
-	if hdform is 2, now hdformname is "rottweiler";
-	if hdform is 3, now hdformname is "samoyed";
-	if hdform is 4, now hdformname is "malamute";
+	if hdform is 2, now hdformname is "Rottweiler";
+	if hdform is 3, now hdformname is "Samoyed";
+	if hdform is 4, now hdformname is "Malamute";
 	if hdform is 5, now hdformname is "boxer";
 	if hdform is 6, now hdformname is "bulldog";
 	if hdmode is 3:				[event forces male]
@@ -89,7 +89,7 @@ to hdheatprompt:
 
 to say losetohdmale:
 	say "     The horny doctor eagerly pushes you down over a stray gurney and runs his paws roughly over you. '[if HP of Player > 0]Now that's much better. Now take your medicine like a good patient. I've got it nice and hot right here,' he chuckles, grinding his throbbing cock against your hip as he does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' he chuckles, grinding his throbbing cock against your hip as he does[end if]. No longer resisting his advances, he licks your neck and gives your crotch a probing caress, a quick examination of what fun he might have with his new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
-	if inheat is true and ( ( player is female and heatform is 0 ) or ( heatform is 1 ) ):
+	if inheat is true and ( ( Player is female and heatform is 0 ) or ( heatform is 1 ) ):
 		say "     While fondling your [if Player is female and heatform is 0]juicy cunt[else]crinkled hole[end if], the canine doctor sniffs excitedly, catching your scent in the air. 'Oh, my poor patient is in heat. I have the cure for that right here,' he says, grinding his cock against your ass harder in emphasis. In your heat-addled state, you can't help but moan and raise your ass to him, allowing him to get his doggy dong lined up with your wanton hole. 'Mmm... it's [one of]malpractice time[or]time for some practical gynecology[or]heavy-duty doctoring time[as decreasingly likely outcomes], my dear,' he says with a grin and a lick just before thrusting firmly into your [if Player is female and heatform is 0]needy cunt[else]needy back door[end if] with intent to breed you out of your heat.";
 		if Player is female and heatform is 0:
 			say "[hdmale_sex01]";
@@ -437,7 +437,7 @@ This is the Horny Doctor Infection rule:
 					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a Samoyed plaything to add some spice to his breeding bitches.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if "Sterile" is not listed in feats of Player and player is female:
+				if "Sterile" is not listed in feats of Player and Player is female:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
 			else if hospquest is 13 and HP of doctor mouse is 2:

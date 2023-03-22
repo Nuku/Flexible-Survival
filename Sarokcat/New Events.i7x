@@ -99,7 +99,7 @@ ResolveFunction of Locked Utility Room is "[ResolveEvent Locked Utility Room]".
 Sarea of Locked utility room is "Mall".
 when play begins:
 	add Locked Utility Room to BadSpots of MaleList;
-	add Locked Utility Room to badspots of DemonList;
+	add Locked Utility Room to BadSpots of DemonList;
 
 to say ResolveEvent Locked Utility Room:
 	if Resolution of Locked Utility Room is 0: [first encounter]

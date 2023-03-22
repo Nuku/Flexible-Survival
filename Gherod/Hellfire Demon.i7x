@@ -32,17 +32,17 @@ to say HellDemon wins:
 			say "     Unable to resist such a powerful presence, you immediately submit to the demon's will, his eyes following your movements with great satisfaction, as you kneel down in front of him. 'Finally someone who knows their place. That's a good start, but let's see how much you can handle.' With that said, the hellish creature prepares to use you as he sees fit...";
 			if a random chance of 1 in 2 succeeds:
 				HellDemonBJForced;
-			else if player is male or player is neuter:
+			else if Player is male or player is neuter:
 				HellDemonAnalForced;
-			else if player is female:
+			else if Player is female:
 				HellDemonPussyForced;
 		else: [player loses]
 			say "     Unable to continue fighting the so mighty and powerful demon, you immediately give in to his will, his eyes following your movements with great satisfaction as you're forced to kneel down in front of him. 'You know how to put up a fight! That left me all boned up... Perfect, I was just thinking about testing your holes.' With that said, the hellish creature prepares to use you as he sees fit...";
 			if a random chance of 1 in 2 succeeds:
 				HellDemonBJForced;
-			else if player is male or player is neuter:
+			else if Player is male or player is neuter:
 				HellDemonAnalForced;
-			else if player is female:
+			else if Player is female:
 				HellDemonPussyForced;
 
 to HellDemonBJForced:

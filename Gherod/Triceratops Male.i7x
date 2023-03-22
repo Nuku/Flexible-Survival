@@ -37,7 +37,7 @@ to say Triceratops Male Wins:
 			-- 1: [sit on face]
 				say "[TriceratopsMaleLossFacesit]";
 			-- 2: [sit on dick, else sit on face]
-				if player is male:
+				if Player is male:
 					say "[TriceratopsMaleLossAssFuck]";
 				else:
 					say "[TriceratopsMaleLossFacesit]";

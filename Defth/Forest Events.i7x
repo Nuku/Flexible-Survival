@@ -10,10 +10,10 @@ Small Cave is a situation.
 ResolveFunction of Small Cave is "[ResolveEvent Small Cave]".
 Sarea of Small Cave is "Forest".
 When play begins:
-	add Small Cave to badspots of FeralList;
+	add Small Cave to BadSpots of FeralList;
 	add Small Cave to BadSpots of FurryList;
-	add Small Cave to badspots of CockvoreList;
-	add Small Cave to badspots of VoreList;
+	add Small Cave to BadSpots of CockvoreList;
+	add Small Cave to BadSpots of VoreList;
 
 to say ResolveEvent Small Cave:
 	if glowing mushroom is owned:

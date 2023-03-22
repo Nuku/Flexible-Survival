@@ -11,7 +11,7 @@ Cow Hunting is a situation.
 ResolveFunction of Cow Hunting is "[ResolveEvent Cow Hunting]". The level of Cow Hunting is 5.
 Sarea of Cow Hunting is "Plains".
 when play begins:
-	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
+	add Cow Hunting to BadSpots of HermList; [Cuntboy cowboy]
 
 to say ResolveEvent Cow Hunting:
 	project the Figure of Corbin_face_icon;

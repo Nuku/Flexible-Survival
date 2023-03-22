@@ -15,7 +15,7 @@ to say felinoid wins:
 		if anallevel is 3, increase mchance by 2;
 		if Player is mpreg_ok, increase mchance by 2;
 		if anallevel is 1, now mchance is 0;
-		if ( player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Cunt Count of Player is 0 ):
+		if ( Player is female and Cunt Depth of Player > 7 ) or ( a random chance of mchance in 12 succeeds and Cunt Count of Player is 0 ):
 			say "     The great cat, as if accepting your submission, pads up to you and nuzzles against you firmly, its short fur tickling your cheek. Suddenly the feline butts you over onto all fours, purring in anticipation. With his strong and masculine scent filling your senses, you don't resist, wanting to keep the big cat pleased. You gasp as he paces behind you and, reaching a foreleg over your shoulder, leans his weight into you. The feline forces your [bodydesc of Player] chest to lower down into the dirt and licks slowly along your neck, sending shivers down your spine.";
 			say "     He rumbles softly into your ear and you end up raising your rear as he moves to mount you fully, sinking his feline shaft into your [if Player is female]wet pussy[else]tight ass[end if], spreading you open with his feline member. Keeping a paw at your back as a reminder of who's in charge, he starts thrusting, sliding those spines covering his cock along your inner walls. They send waves of pleasure through you as he pounds into you, thrusting harder and faster.";
 			if catnum < 3:
@@ -26,7 +26,7 @@ to say felinoid wins:
 				WaitLineBreak;
 				say "     Spent, the feline pulls his cock from your [if Player is female]creamy pussy[else]abused anus[end if] and releases you. He nuzzles at your neck and purrs softly, nudging you to get up and leave now that he's done with you. At least for the time being. Still feeling the effects of his musk and your recent pounding, you are reluctant to leave, but you obediently gather your things and head on your way, hoping you might let him, or another of these great cats, take you again soon.";
 			increase catnum by 1;
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Felinoid";
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Felinoid";

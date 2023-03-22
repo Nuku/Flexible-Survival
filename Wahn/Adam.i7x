@@ -260,25 +260,25 @@ to say AdamSexMenu:
 			now sortorder entry is 2;
 			now description entry is "Invite him for some shared self-pleasure";
 		[]
-		if "Cock Connoisseur" is not listed in Traits of Adam and player is male:
+		if "Cock Connoisseur" is not listed in Traits of Adam and Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Show him how to suck cocks";
 			now sortorder entry is 2;
 			now description entry is "Have Adam give you his first blowjob";
 		[]
-		if "Pussy Connoisseur" is not listed in Traits of Adam and player is female:
+		if "Pussy Connoisseur" is not listed in Traits of Adam and Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Show him how to lick a pussy";
 			now sortorder entry is 2;
 			now description entry is "Have Adam give you his first cunnilingus";
 		[]
-		if "Cock Connoisseur" is listed in Traits of Adam and player is male:
+		if "Cock Connoisseur" is listed in Traits of Adam and Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him blow you";
 			now sortorder entry is 2;
 			now description entry is "Put Adam's mouth to good use";
 		[]
-		if "Pussy Connoisseur" is listed in Traits of Adam and player is female:
+		if "Pussy Connoisseur" is listed in Traits of Adam and Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him lick your pussy";
 			now sortorder entry is 2;
@@ -296,13 +296,13 @@ to say AdamSexMenu:
 			now sortorder entry is 3;
 			now description entry is "Taste some half-minotaur seed";
 		[]
-		if PenileVirgin of Adam is false and "Pussy Fucker" is not listed in traits of Adam and player is female:
+		if PenileVirgin of Adam is false and "Pussy Fucker" is not listed in traits of Adam and Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Offer your pussy for him to fuck";
 			now sortorder entry is 4;
 			now description entry is "Take Adam's virginity by letting him fuck you";
 		[]
-		if PenileVirgin of Adam is false and "Pussy Fucker" is listed in traits of Adam and player is female:
+		if PenileVirgin of Adam is false and "Pussy Fucker" is listed in traits of Adam and Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Adam fuck your pussy";
 			now sortorder entry is 4;
@@ -332,7 +332,7 @@ to say AdamSexMenu:
 			now sortorder entry is 5;
 			now description entry is "Have some fun playing with Adam's ass";
 		[]
-		if lust of Adam > 0 and player is male:
+		if lust of Adam > 0 and Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Adam's ass";
 			now sortorder entry is 6;
@@ -602,7 +602,7 @@ to say AdamAssFuck_Virgin:
 	say "     ([link]N[as]n[end link]) - Your mouth.";
 	if Player consents:
 		LineBreak;
-		say "     The pleasure being yours both, you tell him to continue and enjoy filling your ass up with his load. He shows you a smile, so glad to hear that, resuming his slow and deep fucking for a while more. You give your hips a few helping movements, and he only lasts for a few more before his body stiffen in your embrace. Adam holds tight onto you with his arms as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your insides with warm cum. His climax doesn't come alone, though, [if player is male]as you spontaneously blow your load at the same time as him, covering your tummy[else]as you feel an intense surge of pleasure taking over your senses simultaneously[end if], making you hold onto the young soldier as the last drops of cum come to arrive inside your belly.";
+		say "     The pleasure being yours both, you tell him to continue and enjoy filling your ass up with his load. He shows you a smile, so glad to hear that, resuming his slow and deep fucking for a while more. You give your hips a few helping movements, and he only lasts for a few more before his body stiffen in your embrace. Adam holds tight onto you with his arms as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your insides with warm cum. His climax doesn't come alone, though, [if Player is male]as you spontaneously blow your load at the same time as him, covering your tummy[else]as you feel an intense surge of pleasure taking over your senses simultaneously[end if], making you hold onto the young soldier as the last drops of cum come to arrive inside your belly.";
 		say "     When you both finally calm down, Adam's senses return to him, and he looks at you a little surprised, but happy. 'Damn, this was... so good! It's like I just know what to do once I get into it... I really love doing this with you!' he comments, to which you respond with a laugh, letting him know that he did wonderfully well and that you too enjoy your time together, always. 'Hopefully we can do this again? I'd love to! If you want, of course... Don't want to enforce anything...' he says, and you obviously nod positively, reaching for a kiss as you lie there for a while, making out with each other before you decide it's time for a cleanup.";
 		NPCSexAftermath Player receives "AssFuck" from Adam;
 	else:
@@ -643,7 +643,7 @@ to say AdamAssFingering_Virgin:
 	say "     'If you keep up, I'll cum really fast... That feels so good...!' he tells you, and you're not exactly opposed to the idea of just keeping on going until he bursts. You can see he never really experienced an orgasm coupled with prostate stimulation. With this now in mind, you get your fingers as deep as you can, not just pushing them in and out, but giving him some wiggling as well, especially near his pleasure spot, as your other hand jerks his cock, stroking his entire length from the base of his shaft to the tip, oozing copious amounts of precum by now. The poor half-minotaur can't help but already be thrusting his hips, essentially fucking your hand as your finger his butt, so horny and excited that you've made him.";
 	say "     It doesn't take long until his grunts intensify, and so you shove your fingers as deep as you can while stroking his cock as fast as possible. He clearly wasn't expecting it to be so intense, and he sure gets loud as his cum leaves his dick, being shot so hard against the blankets that you can even hear it once it hits them, and a whole lot of it too! You continue to milk the young stud for several seconds until his orgasm subsides, his muscles even trembling from the effort. Once it all calms down, Adam turns around, pulls you on top of him and starts making out with you, as you feel his slowly softening - but still hard and warm - meat between you and him.";
 	WaitLineBreak;
-	say "     'This was so fucking good! I wasn't expecting to like it that much... I should really play with my ass more often. That is, when you're not around... Because when you are, I'll just ask you to do this again.' he tells you, very cheerful for learning something that he really enjoyed. You let him know you'd be glad to get more into it, though he really needs to keep practicing, as he's quite tight. 'I definitely will, and with your help, I'll be able to take anything in! W-well, at least it won't hurt... as much. And it depends on the person and all... Uh... Maybe I'll need your advice for that too, [if player is male]or perhaps I could start with yours[else]perhaps you know someone beginner-friendly[end if]...' You guess you've made him a versatile, but for now you reach for another kiss as you lie there for a while, making out with each other before you decide it's time for a cleanup.";
+	say "     'This was so fucking good! I wasn't expecting to like it that much... I should really play with my ass more often. That is, when you're not around... Because when you are, I'll just ask you to do this again.' he tells you, very cheerful for learning something that he really enjoyed. You let him know you'd be glad to get more into it, though he really needs to keep practicing, as he's quite tight. 'I definitely will, and with your help, I'll be able to take anything in! W-well, at least it won't hurt... as much. And it depends on the person and all... Uh... Maybe I'll need your advice for that too, [if Player is male]or perhaps I could start with yours[else]perhaps you know someone beginner-friendly[end if]...' You guess you've made him a versatile, but for now you reach for another kiss as you lie there for a while, making out with each other before you decide it's time for a cleanup.";
 	now Lust of Adam is 1; [he has been fingered]
 	now AnalVirgin of Adam is false;
 
@@ -792,13 +792,13 @@ to say AdamShowerSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Go down on your knees and give him a steamy blowjob";
 	[]
-	if "Cock Connoisseur" is listed in Traits of Adam and player is male:
+	if "Cock Connoisseur" is listed in Traits of Adam and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have his mouth on your cock";
 		now sortorder entry is 2;
 		now description entry is "Let Adam suck your dick under the hot shower";
 	[]
-	if "Pussy Connoisseur" is listed in Traits of Adam and player is female:
+	if "Pussy Connoisseur" is listed in Traits of Adam and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have his mouth on your pussy";
 		now sortorder entry is 2;
@@ -843,7 +843,7 @@ to say AdamShowerSexMenu:
 to say AdamShowerHandjob:
 	LineBreak;
 	say "     There isn't much bathing happening right now, as you're deliberately teasing Adam around his sensitive spots, especially his nipples. You even give them a gentle squeeze, pulling out a moan from the beast-boy, before you slide your hands down over his rippled abs and below. He lets you, and you're sure about what you'll feel in your grasp, a nice and throbbing ten inches long erection, perfectly human in shape, hardened by your loving touch. As soon as you wrap your fingers around it, Adam breathes deeply, to which you respond by kissing his neck and embracing him tighter. It doesn't stop there, as he turns his face to meet yours, your lips colliding with his shortly after. Rubbing his boner like only you know how, you share an intimate tongue play as the half-minotaur's hips start to give in, moving slightly with his dick under your care.";
-	say "     Gently turning the rest of him around to face you, Adam caresses the back of your head and pulls you, so you can both share the warm touch of the running water. His hands move around your chest, then to your [if player is male]cock and balls[else]genitalia[end if] to retribute the favor, and you find yourselves masturbating each other while making out, forgetting all about the world around you for a moment. As you're about to be driven over the edge, you stroke the young soldier faster and faster, to which he responds by doing his best to bring you to orgasm. Sharing some more tongue and hot saliva, you hear - and feel - the half-minotaur releasing a grunt as his grasp around you tightens. His [if player is male]skilled hands wrapped around your cock make you cum all over his abs[else]skilled fingers rubbing around your vulva make you hit your climax[end if] shortly after, and he doesn't stop stimulating you until the end of it.";
+	say "     Gently turning the rest of him around to face you, Adam caresses the back of your head and pulls you, so you can both share the warm touch of the running water. His hands move around your chest, then to your [if Player is male]cock and balls[else]genitalia[end if] to retribute the favor, and you find yourselves masturbating each other while making out, forgetting all about the world around you for a moment. As you're about to be driven over the edge, you stroke the young soldier faster and faster, to which he responds by doing his best to bring you to orgasm. Sharing some more tongue and hot saliva, you hear - and feel - the half-minotaur releasing a grunt as his grasp around you tightens. His [if Player is male]skilled hands wrapped around your cock make you cum all over his abs[else]skilled fingers rubbing around your vulva make you hit your climax[end if] shortly after, and he doesn't stop stimulating you until the end of it.";
 	WaitLineBreak;
 	say "     Not shortly after follows your beast-boy friend, shooting his load towards your torso, spurt after spurt. Were it not for the water, you would have caught a cum bath from the half-minotaur. Instead, his seed was washed off the instant it hit your body, and you're left catching your breath as you slow down your stroking on the young soldier. 'This was good... you're so much fun to have around.' he says before he plants another kiss on your lips. 'We should probably finish up here before someone comes.' With the point taken, you both hurry up washing whatever's left from your sensual affair, turn off the water and grab a towel to dry yourself off. The half-minotaur follows you soon, redressing himself [if player is not naked]as you do the same[else]while you wait for him[end if]. You give each other a pat and move out of the shower tent, feeling clean, refreshed, and a little bit sore. 'Anytime you're around, if you feel like sweating a bit, hit me up at the usual place!' says Adam as he walks away with a smile on his face, returning to his post shortly after.";
 	now lastfuck of Adam is turns;
@@ -884,7 +884,7 @@ to say AdamShowerLickPussy:
 
 to say AdamShowerAssPlay:
 	say "     There isn't much bathing happening right now, as you're deliberately teasing Adam around his sensitive spots, especially his nipples. You even give them a gentle squeeze, pulling out a moan from the beast-boy, before you plant a kiss on his lips, your hands slowly moving to his back as you pull him slightly towards you. With a grope, you feel his furred buttcheeks, which he jumps a little at the surprise of your touch. Despite this, you continue, slipping your fingers between his glutes as you continue to make out, only to feel those fit ass muscles clench with your hand between them, before they relax and give in to your caresses. At first, it's just rubbing, your bodies very close to one another, wet and warm under the hot shower, but then you figure it's time to feel his pucker. He moans as your fingers press inwards...";
-	say "     He arches his back a little as you play with his ass, just teasing him around his hole and fondling the area, though it's not long until you actually decide to shove one through his pucker. Adam embraces you, moving his lips around your neck while you feel his throbbing cock rubbing against [if player is male]yours[else]your crotch[end if], clearly excited by the sensations you're providing him. With this steamy teasing around his ass, you're now ready to turn him around and have a good look at his fuzzy ass, covered in wet but now clean and soft fur, only still soaked by the water running down you both. Now you have a clear view towards his hole, between those sexy cheeks spreading before you as your hands go for them.";
+	say "     He arches his back a little as you play with his ass, just teasing him around his hole and fondling the area, though it's not long until you actually decide to shove one through his pucker. Adam embraces you, moving his lips around your neck while you feel his throbbing cock rubbing against [if Player is male]yours[else]your crotch[end if], clearly excited by the sensations you're providing him. With this steamy teasing around his ass, you're now ready to turn him around and have a good look at his fuzzy ass, covered in wet but now clean and soft fur, only still soaked by the water running down you both. Now you have a clear view towards his hole, between those sexy cheeks spreading before you as your hands go for them.";
 	WaitLineBreak;
 	say "     Crouching down, you set your mouth ready to eat his butt, leaning over his rear to plant your lips around his pucker. He lets out a moan of joy as you go directly for it, wiggling your tongue so much that he can't help but jerk his hips against you, effetively grinding his wet ass all over your face. You make the young soldier start biting his lips, moving his hand over the back of your head, have him begging you to continue... And you do so. Within the next few minutes you're licking, tonguefucking and playing with that ass while the relaxing sensation of the warm water caresses your bodies during the whole session. After some time, you get the half-minotaur jerking off to the pleasure you're giving him, and you know what is coming next.";
 	say "     Feeling the movements of his hand rubbing down his shaft, he starts moaning and informing you that he's going to cum. You don't let go of his ass until he does, twirling and wiggling your tongue in his hole as expertly as you can, and it's not long until he delivers a loud grunt, spurts of hard shot jizz being launched a few feet ahead of him, only to be washed away by the shower's water. He keeps going at it while you're providing him reinforcement with all that mouthplay on his ass, until his orgasm finally begins to subside. He takes a deep breath before turning around to look back at you, chuckling at the situation.";

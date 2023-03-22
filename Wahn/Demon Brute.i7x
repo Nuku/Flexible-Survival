@@ -262,7 +262,7 @@ to say Brutus_DBCapture:
 		now description entry is "fuck the demon while Brutus holds it down";
 	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now description entry is "make it suck you off";
 		now sortorder entry is 6;
 	[]
@@ -1063,13 +1063,13 @@ to say DemonBruteSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck your captured demon's pussy to make him cum.";
 	[]
-	if (DemonBruteStatus > 0 and player is male):
+	if (DemonBruteStatus > 0 and Player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
 		now description entry is "Fill the your captured demon's pussy with your cock.";
 	[]
-	if (DemonBruteStatus < 2 and player is female):
+	if (DemonBruteStatus < 2 and Player is female):
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;

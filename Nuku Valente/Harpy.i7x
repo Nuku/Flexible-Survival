@@ -58,7 +58,7 @@ to say Harpy wins:
 To say Harpy loses:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
-	if harpyfight is not 3 and player is male and Libido of Player > 40 and a random chance of 1 in 3 succeeds:
+	if harpyfight is not 3 and Player is male and Libido of Player > 40 and a random chance of 1 in 3 succeeds:
 		say "     Your final blow sends the harpy tumbling to the ground momentarily. You have a brief moment to decide if you'll take advantage of her while you can. Shall you fuck the harpy?";
 		if Player consents:
 			say "     You jump atop the harpy, pinning her down before she can take to the air again. She shrieks, but is too weak to fight you off as you get your cock lined up and thrust into her. Despite her resistance, she moans in pleasure as you start pounding into her wet pussy. As her lust builds, you relax your grip so you can fondle her breasts as well. After an enjoyable ride, you drive deep into her and release your hot seed, making her shriek in delight. You pump your hot load into her before letting her get up and leave.";

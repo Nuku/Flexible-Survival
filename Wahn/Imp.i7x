@@ -71,13 +71,13 @@ to say Imp Sex Menu:
 		now sortorder entry is 1;
 		now description entry is "Snap the little demon's neck";
 	[]
-	if ImpType is 1 and player is male:
+	if ImpType is 1 and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Wrap him around your dick and jerk off";
 		now sortorder entry is 2;
 		now description entry is "Use the little demon as a cock-sleeve";
 	[]
-	if ImpType is 1 and player is female:
+	if ImpType is 1 and Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Stick him in your pussy";
 		now sortorder entry is 3;

@@ -18,7 +18,7 @@ to say beatthepiggy:
 		if Player consents:
 			say "     The player agreed to sex. Fun times begin.";
 			if Player is female:
-				say "     The player is female/herm, so sex goes like this for her.";
+				say "     The Player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
 		else:

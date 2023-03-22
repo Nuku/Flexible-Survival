@@ -129,7 +129,7 @@ to say WyattTalkPack:
 
 to say WyattTalkSex:
 	say "     As you consider Wyatt's possible sexual preferences, you ask him to talk to you about them. 'Well I'm frickin' crazy about a nice pair of tits and a juicy wet pussy I can bury my whole dick inside. Seriously, I'm a simple dude! But I guess if there's some guy who's willing enough to please then I could have him suck me off. A tight ass also works... a hole's a hole, a mouth's a mouth, and if you're good you're good. Guess being a werewolf opened my sexuality a bit, but I still really like women and they seem non-existent in this pack. I considered leaving, but... really there's nowhere for me to go and food's good. Guess it ain't too bad, really, I just gotta get creative.'";
-	if player is female and breast size of player > 0:
+	if Player is female and breast size of player > 0:
 		say "     'Although... I definitely wouldn't say no to you, [mister]... You've got at least a few things I like. And you're pretty good looking.' He winks at you with a confident smirk.";
 	if Libido of Wyatt is 0:
 		now Libido of Wyatt is 1;
@@ -149,7 +149,7 @@ instead of fucking Wyatt:
 					say "     You make a move on Wyatt, and he seems more than receptive to you. 'How's my favorite husky lover doing? I like that you keep taking good care of yourself... In fact, that alone gets me in the mood. What did you have in mind?'";
 					WaitLineBreak;
 					say "[WyattSexMenu]";
-			else if player is female and breast size of player > 0:
+			else if Player is female and breast size of player > 0:
 				if lastfuck of Wyatt - turns < 4:
 					if Perception of Wyatt is 2: [first time Wyatt sees player as something other than female husky since the transformation or a time he saw the player looking like a female husky]
 						say "     You make a move on Wyatt, but given that you have been together recently, he seems a little hesitant. Plus, he notices your different appearance. 'Hey hottie... Uh... You look a bit different! Have you been taking care of yourself properly? I'd... recommend you don't get near any other males because... I would hate to see you lose those hot feminine curves of yours.' You tell the athletic werewolf that everything is still in place, despite the changes you have gone through lately. 'That's alright, you're still hot, and I'd still fuck you senseless... if I wasn't so spent from last time. Mind, maybe... coming back later? I promise to make it up to you.'";
@@ -176,7 +176,7 @@ instead of fucking Wyatt:
 				else:
 					say "     As it seems, Wyatt is not keen on having any fun with you looking the way you look, so you simply excuse yourself and leave. 'Oh, so that's it? You're just leaving? And here I thought we had something going on since that... Well, whatever. Just hope you're happier, at least.' He then says nothing more as you simply proceed to retreat.";
 		else:
-			if player is female and breast size of player > 0:
+			if Player is female and breast size of player > 0:
 				if lastfuck of Wyatt - turns < 4:
 					say "     You make a move on Wyatt, but given your recent exchange, he dismisses your advances. 'Yeah, I'm sorry. We're fucking horny all the time, but even us werewolf brutes need some time to cooldown, you know... But you can come back later.'";
 				else:
@@ -205,7 +205,7 @@ to say WyattSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Give Wyatt a blowjob";
 	[]
-	if player is female and breast size of player > 0 and Resolution of WyattRomance >= 1 and Resolution of WyattRomance < 99:
+	if Player is female and breast size of player > 0 and Resolution of WyattRomance >= 1 and Resolution of WyattRomance < 99:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -266,7 +266,7 @@ to say WyattSexMenu:
 to say WyattSexBodyWorship:
 	say "     Looking over Wyatt's impressive physique, a thought crosses your mind as your eyes travel through his musculature, admiring every inch and corner of his mighty lean strength. The interest is evident in your gaze and the werewolf is quick to notice. 'Well, you've been looking at me for a while, is there anything you wanna say?' he asks, although you can tell the intentions behind his words as he gives you a teasing grin, bringing his paw-like hands over his hips and putting his muscular furred chest in full display. He even makes his pecs bounce with a great deal of amusement as he waits for an answer, noticing your eyes following the motions. When your focus finally returns, you tell him that you just think his body is quite attractive.";
 	say "     He raises his arms and brings his hands behind his head, giving your yearning sight a bit of muscle flexing to show off a bit more. 'Is that so? I couldn't tell by the way you're looking at me or anything...' his tone is clearly sarcastic, but the amusement in his expression leads you to believe he actually likes this";
-	if player is female and breast size of player > 0: [female scene]
+	if Player is female and breast size of player > 0: [female scene]
 		say ". 'So you like muscular guys? Strong and lean like me? Bet these muscles would feel amazing around that pretty body of yours... Well, you've got something I like too,' he means your breasts, as his eyes also stare back at you. Just the idea of the confident beastman in front of you taking interest in your body makes you unexplainably bothered, leaving you to figure out if you either like it or not. You also think his loincloth is hanging a little higher than usual.";
 		WaitLineBreak;
 		say "     'Tell you what... I'll let you touch me if you let me touch you. And there's no backing away once you're within my reach... But don't worry, I'll treat you right. The way none of these brutes can do...' You exchange looks silently for a while after he finishes speaking, and the decision lies on you to, perhaps, enjoy a body worship session. You will give Wyatt something to play with too, judging by the way he so thirstily looking at your tits.";
@@ -307,7 +307,7 @@ to WyattSexBodyWorshipContinued:
 	say "     He does not stop it until your lips collide with the surface of one of his furred pecs, then led to that very same nipple you were teasing just a few moments ago. 'Just helping you free your hands...' The werewolf smiles as you bring your tongue into play, wiggling it across that sensitive nub as you proceed to move your hands across the sides of his torso. As any werewolf brute, he is big[if scalevalue of player > 3], even for you[end if], due to how well he takes care of his body. All those muscles had a nice mass overall, which you feel up at every corner while your lips remain planted on his pecs. You also give his abs a rub, noticing how popped and rock solid they are, ondulating your touch with every bump of muscle.";
 	WaitLineBreak;
 	say "     With your focus so taken by such a beautiful body, you take some time to notice movement happening through one of his arms. Between you and him is his hard cock, which you turn down to look at. He is jerking himself off as you worship him, and given how hard it looks, everything points towards that you are doing a good job. Soon enough, Wyatt gently pulls your face back to his pecs, wanting you keep licking at his nips. 'Keep up the good work, [mister]...' This is all the encouragement you need to do your very best at moving your tongue around them, feeling his deep breaths pushing against your mouth while your head keeps locked between that large slab of muscle and the thick paw-like hand.";
-	if player is female and breast size of player > 0:
+	if Player is female and breast size of player > 0:
 		say "     'I could breed you all fucking day... Make you mine forever. Fuck, I know I want to...'";
 	else:
 		say "     'I could almost fuck your ass, [boygirl]... Maybe I will, if you keep being this well-behaved...'";
@@ -315,7 +315,7 @@ to WyattSexBodyWorshipContinued:
 	say "     Amidst his lusty words, he hastens his movements, jerking faster and faster. You think he might be getting closer, and your hands cannot have enough of that hot body, continuing to rub him all over while you are still stuck sucking on his chest. 'Yeah, worship me... You wanted it, and now you have it...' It comes to a point you also feel his entire body moving as he strokes so fast and hard, breathing deep and moaning lowly. You feel the pressure on the back of your skull disappearing as Wyatt brings his hand over his, and unsure if by a product of lust or sheer willingness to please in any way, you move your face over his furred armpit. His cock throbs compulsively then, his abs harden and he gets a bit louder, all a sign that you must have just done something he really, really likes.";
 	say "     'Fuck...! I'm gonna c-...! A-aah...!' the werewolf moans as he shoots his load right across you, his spurts of thick lupine cum ending up in the floor at a significant distance from where you both are standing. They are a significant amount, and his climax lasts for almost a full minute. He can barely keep standing as his legs bend, his fists clench, his whole body tenses up and he nearly begins howling. 'Oh fuck... I made a mess... Wasn't expecting this to turn me on so much. Shit, I better clean it up before someone comes by...' He takes a few last deep breaths as he squeezes the last drops out of his cock, contemplating the next minutes he will spend trying to clean the floor.";
 	WaitLineBreak;
-	if player is female and breast size of player > 0:
+	if Player is female and breast size of player > 0:
 		say "     'Thanks, hottie. That was fucking hot... I promise that one of these days I'll pay you back. You're not gonna want to leave...' he teases, giving you a wink and light tap on your butt while you are within his reach. It is probably for the best to leave Wyatt to his cleaning before someone, indeed, comes by and sees all this mess.";
 	else:
 		say "     'You're off the hook for now, [mister]... But keep staring at me like that and I might have to do something about it. I might be straight, but a hole's still a hole...' He shows you such a predatory glare that it gives you the chills, and suddenly you are not sure if this arouses or absolutely terrifies you. Still, you nod to him and decide to leave him be, as he has a lot of cleaning to do.";
@@ -325,7 +325,7 @@ to WyattSexBodyWorshipContinued:
 
 to say WyattSexBlowjob:
 	say "     As you wonder what you would like to do with the athletic werewolf brute, you consider asking him if he would like to simply get blown, since you feel like giving him a blowjob.";
-	if player is female and breast size of player > 0:
+	if Player is female and breast size of player > 0:
 		say "     Given that your appearance is feminine enough for him, he seems very excited to hear your offer. 'Oh, for sure! I love getting my dick sucked by cuties like you... Damn, it's already getting me hard, just thinking about it.'";
 	else:
 		say "     He looks back at you, seemingly amused at your offer. 'Well, I won't say no to an eager cocksucker... and I could use the relief. Just hope you can handle it, my [guygal].'";
@@ -342,7 +342,7 @@ to say WyattSexBlowjob:
 	if Player consents:
 		LineBreak;
 		say "     Thinking that spitting his cum out would be rude, you instead swallow it, the thick creamy liquid slowly making its way down your throat, leaving its typical aftertaste lingering at the back of your tongue.";
-		if player is female and breast size of player > 0:
+		if Player is female and breast size of player > 0:
 			say "     'Don't drink too much of it. I wouldn't want to have you lose that pretty face and become all burly and hairy... But I don't mind feeding you some more any time.' Wyatt then smiles as you head off to clean yourself up.";
 		else:
 			say "     'Glad we could find something pleasant for both. I suppose if you tend to do a good job consistently, you may have more of where it comes from.' Wyatt then smiles as you head off to clean yourself up.";
@@ -519,7 +519,7 @@ instead of going to Lair Of The Lupines Common Room while (Resolution of WyattRo
 		say "     Why should you bother the wolves in their own home ever? You decided that you have no interest in things like these and shall avoid them if similar situations arise.";
 
 to say WyattSpecialVoyeur:
-	say "     It is true that you always had a thing for this athletic werewolf. You cannot tell if it is his looks alone or the chill and cool guy attitude, but he just turns you on. Seeing him in pure bliss and lust as he fucks someone he is truly into does things to you, like blood rushing to your erogenous areas and tempting you to bring yourself some sexual pleasure. Before you know it, you have your hands over your [if player is male]cock, which was throbbing hard by now[else if player is female]pussy, which was seriously moistening up[else]sensitive spots[end if], as lust overtakes you and clouds your better judgement. Perhaps the risk of him seeing you is also contributing to this... Maybe you would not mind if he caught you.";
+	say "     It is true that you always had a thing for this athletic werewolf. You cannot tell if it is his looks alone or the chill and cool guy attitude, but he just turns you on. Seeing him in pure bliss and lust as he fucks someone he is truly into does things to you, like blood rushing to your erogenous areas and tempting you to bring yourself some sexual pleasure. Before you know it, you have your hands over your [if Player is male]cock, which was throbbing hard by now[else if Player is female]pussy, which was seriously moistening up[else]sensitive spots[end if], as lust overtakes you and clouds your better judgement. Perhaps the risk of him seeing you is also contributing to this... Maybe you would not mind if he caught you.";
 	say "     As you continue to observe the neverending thrusts, you are eventually rewarded with the sight of the wolfman pushing his cock all the way into the husky's pussy, knot and everything, as he is about to reach his climax. Then, he does not hold back, grunting and moaning as each and every spurt of cum is shot. The louder noises only makes it all seem more exciting as your gaze remains locked in the scene, watching Wyatt unload inside the husky as she, too, quivers in bliss. Once his orgasm subdues, he lowers himself upon his partner and embraces her to cuddle, as he must wait for his knot to deflate. Even this is a hot sight, as you get a good shot at every part of the brute, his ass and balls raised up as he lies down on top of her.";
 	say "     It almost looks like he lined himself up like that on purpose...";
 	WaitLineBreak;
@@ -532,7 +532,7 @@ to say WyattSpecialVoyeur:
 	say "     'Though, I don't like taking chances, so I also harvest a second item to do the job.' Wyatt then slides his hand over the top of the box and takes it off, revealing what is inside. You see the bottle of husky cum he mentioned surrounded by a pile of fur. 'Her own fur also works, though I'm led to believe cum is just a stronger transformative. If you're wondering how I know all of this, well... We've got a really smart guy in the lair that taught me all this, though it's best I don't call his name, maybe.' You then confirm that Wyatt also collects some fur from the female husky in order to secure her appearance and that he definitely has enough knowledge on how to manipulate the nanite infection, even if it does not come directly from him.";
 	say "     'Hey, I know it's a lot to ask, but... Care to keep this between you and me? I know I'm probably doing something that'll piss off the others, so I'd like to avoid having to try to explain myself and risking getting it all taken away. I'd be really happy if you kept it a secret.' The athletic werewolf then slides one of his thick paw-like hands over your jaw, caressing it affectionately as he looks directly in your eyes.";
 	WaitLineBreak;
-	if player is female and breast size of player > 0:
+	if Player is female and breast size of player > 0:
 		WyattSpecialVoyeurFemaleRoute;
 	else:
 		WyattSpecialVoyeurMaleRoute;
@@ -574,7 +574,7 @@ to WyattSpecialVoyeurMaleRoute:
 		say "     ... There is something you cannot quite tell in the way your body responds to his advances, as if you subconsciously wanted this to happen. His beastlike scent feels stronger, to an almost overbearing way, as his body meets yours and you begin to feel his weight on you. 'You're going to look beautiful, trust me. And you'll enjoy it...' he almost whispers before he starts kissing you, his long tongue soon meeting yours as you feel nearly compelled to give him entry. Soon, his mighty bulk is pressing down against you as he takes you in his total embrace, rubbing his large lupine cock between your legs, slowly driving it deeper in between them as you feel your butthole, as if per some inevitable fact, yearning for it.";
 		say "     'I know what the likes of you really enjoy, so I suppose you can have the rest of that bottle... How's that?' With a grin, he resumes pushing you atop the bed, pinning you down under him with his hulking body, giving you no room to escape his grasp, and... you really cannot even muster the will to attempt such a thing, as the sight of such a masculine werewolf brute on top of you makes your arousal spike uncontrollably. The scent emanating from him is overbearing, a masculine beastlike fragrance that clouds your mind to a point you can only think about satisfying him. It only gets worse - or better - as he jerks himself off in anticipation of what he is about to do with you.";
 		WaitLineBreak;
-		if player is male:
+		if Player is male:
 			say "     Your [cock of player] cock only throbs as hard as it can be right before the werewolf, to which he looks at with a smile. 'Would you look at that... Seems like you're enjoying the view.' Then, as unlikely as it could have seem from what you know of him, Wyatt also gives you a hand and strokes your dick for a while, his large paw-like hand rubbing all over that sensitive cockhead of yours, but so slowly that you definitely feel you are not getting enough stimulation. Your body beckons you to thrust into his hand, yet you are held tight between his strong legs, unable to move. 'So eager to become a girl for me, aren't you? Then we should get started on that...'";
 		say "     As he seems to be done teasing you, the werewolf finally grabs the bottle of husky cum he gave to the dog girl, which is still at least three quarters full, and opens it, with the evident intent of making you drink its contents. The brute leans over on top of you, with more of his body keeping you pinned down, holds your head up and brings the bottle to your lips. Amidst all this, you can feel his throbbing shaft against your midriff, its warmth obviously clashing against your average body temperature. 'There's still a lot left in it. I'd say... you can have it all.' As he finishes speaking, a grin forms across his muzzle as he pours the husky cum into your mouth and looks in your eyes with evident lust. Your mind cannot even consider the possibility of refusing the brute's will, as your body remains stuck in a stupor of horniness.";
 		say "     When your tongue makes contact with the creamy liquid, you feel ecstatic. It is not long until its saltiness beings to slowly travel down your mouth, and when the husky cum fills it, you proceed to swallow it. Wyatt is actually very careful with this as to not make you choke on it, turning this into an actual pleasant experience as you savor that seed's taste to its maximum. 'That's it... What a good girl you're gonna be...'";

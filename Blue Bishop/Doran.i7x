@@ -953,7 +953,7 @@ to say DoranAutoSexProtocol:
 		say "[DoranDom_BallWorship]"; [Ball Worship]
 	else if DoranBallModStatus > 0 and ((player is kinky and a random chance of 1 in 3 succeeds) or (a random chance of 1 in 6 succeeds)):
 		say "[DoranDom_CumWorship]"; [Cum Worship]
-	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and ((Cunt Count of Player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (player is female and a random chance of 1 in 4 succeeds)) and (scalevalue of Player > 1 or player is twistcapped):
+	else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and ((Cunt Count of Player is 0 and ((anallevel is 3 and a random chance of 2 in 3 succeeds) or (anallevel is 2 and a random chance of 1 in 2 succeeds))) or (Player is female and a random chance of 1 in 4 succeeds)) and (scalevalue of Player > 1 or player is twistcapped):
 		say "[DoranDom_Anal]"; [anal sex scene]
 	else if Player is female and Cunt Depth of Player > 4 and a random chance of 1 in 3 succeeds:
 		say "[DoranDom_Vaginal]"; [cunt sex scene]
@@ -1422,7 +1422,7 @@ to say DoranDom_CuntHandjob: [Cunt-Focused Handjob] [BODY MODDED]
 			say "     '[one of]Very good[or]Well done[at random], my [DoranPlayerRegard]. [one of]Maybe, if they're good, I'll satisfy them the next time[or]I'm sure they'll be all the more eager for the next time[at random].' [gche] struts back to where [ghe] rested, by the fire, a smug look on [ghis] face. No doubt quite amused by the trick [ghe]'s played, you're forced to move on and contend with your lingering lust.";
 	else:
 		say "     A grin emerging from [ghis] lips, [ghe] enjoys observing your increasingly desperate need for release, [ghis] endeavors persisting for a while longer before you moan out in bliss";
-		if DoranRoleIntensity is 0 and player is male:
+		if DoranRoleIntensity is 0 and Player is male:
 			say ". Deviously, [ghe] hikes up your lower torso, aiming your cock[smn] downwards upon you to douse you and your face and upper torso with your";
 		else:
 			say ", dousing your crotch[if Player is male] and torso[end if] with your";
@@ -1791,7 +1791,7 @@ to say DoranSub_SelfMilking: [Self-milking]
 								say "     You decide to leave [ghim] to [ghis] own devices, catching [ghis] breath next to the fire.";
 								say "     '[one of][DoranPlayerRegard] really tests their dragon's limits[or]I beg [DoranPlayerRegard] we don't do that often[or]I-I'm sure I'll be fine, [DoranPlayerRegard][at random]...' You imagine [ghe][']ll be back on [ghis] feet in no time. Worst case scenario, [ghe][']ll probably have to roll everywhere now.";
 					else: [blueball]
-						if tempnum is 1 and player is male:
+						if tempnum is 1 and Player is male:
 							say "     You don't think you'll be able to hold back your own bliss, however. Shall you use it to shame [ghim]?";
 							if Player consents:
 								now tempnum is 2;
@@ -1974,7 +1974,7 @@ to say DoranSub_CuntOral: [Cunt Oral] [BODY MODDED]
 		else:
 			if DoranSelfBlueballing is 1, now DoranSelfBlueballing is 2;
 			say "     You decide against it, to which [ghe] [if DoranRoleIntensity is 4]quickly nods in agreement, clearly trying to distance [ghim]self from making the request in the first place before [ghis] maw envelops[else]concedes to with little further thought on the matter, maw enveloping[end if] your flesh a second time, [ghis] endeavors now much more deliberate. Dexterous, slick appendage eager to plunge into your depths, [ghe] exhibits [if DoranRoleIntensity is 4]an obsessive[else]a clear[end if] desire to satisfy your need[if Cunt Depth of Player > 17 and DoranRoleIntensity is 4], more than eager to push the limits of how far [ghe] can thrust [ghis] tongue upon you, at expense to [ghis] own comfort[else if Cunt Depth of Player > 17], frequently pushing the limits of [ghis] ability to thrust [ghis] tongue upon you[end if]. [gche] retains a very methodical, calculated pace,[if Player is male] occasionally switching to your dick[smn] in [ghis] grip to keep you sensitive to [ghis] tongue's influence,[else if Cunt Count of Player > 1] occasionally switching to your other cunt within [ghis] reach to keep you sensitive to [ghis] tongue's influence,[end if] which proves effective at rapidly sending you ever-closer to bliss.";
-			if DoranRoleIntensity is 4 and player is male:
+			if DoranRoleIntensity is 4 and Player is male:
 				say "     The wet sounds of [ghis] attendance filling the air, it doesn't take you long before you reach your limit! You can command [ghim] to let go and free yourself to get off on the [gdragon]'s [if tempnum is 1]voluptuous tits and [end if]obedient face. Shall you? Otherwise, you'll give [ghim] what [ghe] clearly wants.";
 				if Player consents:
 					say "     Words strained under the weight of your passion, you order the beast to let go, doing as you command just before your dick[smn] erupt upon [ghis] obliging snout[if tempnum is 1] and abundant chest[end if]. Regarding in demeaning act with a wanton embrace, [ghe] patiently abides being so irreverently painted by your [Cum Load Size of Player] load. When all is said and done [ghe]'s naught but an embarrassing mess, eagerly licking [ghis] face of your spunk.";
@@ -1988,7 +1988,7 @@ to say DoranSub_CuntOral: [Cunt Oral] [BODY MODDED]
 	else:
 		say "[ghis] maw envelops your flesh a second time, [ghis] efforts now much more deliberate. Dexterous, slick appendage eager to plunge into your depths, [ghe] exhibits [if DoranRoleIntensity is 4]an obsessive[else]a clear[end if] desire to satisfy your need[if Cunt Depth of Player > 17 and DoranRoleIntensity is 4], more than eager to push the limits of how far [ghe] can thrust [ghis] tongue upon you, at expense to [ghis] own comfort[else if Cunt Depth of Player > 17], frequently pushing the limits of [ghis] ability to thrust [ghis] tongue upon you[end if]. [gche] retains a very methodical, calculated pace,[if Player is male] occasionally switching to your dick[smn] in [ghis] grip to keep you sensitive to [ghis] tongue's influence,[else if Cunt Count of Player > 1] occasionally switching to your other cunt within [ghis] reach to keep you sensitive to [ghis] tongue's influence,[end if] which proves effective at rapidly sending you ever-closer to bliss.";
 		if DoranSelfBlueballing is 1, now DoranSelfBlueballing is 2;
-		if DoranRoleIntensity is 4 and player is male:
+		if DoranRoleIntensity is 4 and Player is male:
 			say "     The wet sounds of [ghis] attendance filling the air, it doesn't take you long before you reach your limit! You can command [ghim] to let go and free yourself to get off on the [gdragon]'s [if tempnum is 1]voluptuous tits and [end if]obedient face. Shall you? Otherwise, you will give [ghim] what [ghe] clearly wants.";
 			if Player consents:
 				say "     Words strained under the weight of your passion, you order the beast to let go, doing as you command just before your dick[smn] erupt upon [ghis] obliging snout[if tempnum is 1] and abundant chest[end if]. Regarding in demeaning act with a wanton embrace, [ghe] patiently abides being so irreverently painted by your [Cum Load Size of Player] load. When all is said and done [ghe]'s naught but an embarrassing mess, eagerly licking [ghis] face of your spunk.";
@@ -2344,7 +2344,7 @@ to say DoranNeutral_69: [BODY MODDED]
 				say "     Slowly, you wrap your hand around the dripping rod, gradually pumping the impressive organ until it grows to full attention. Digits quickly [if DoranBallModStatus > 0]drowning in[else]made slick with[end if] [ghis] thick, [gmasculine] precum, your";
 				now tempnum2 is 2;
 			say " attendance is quickly reciprocated, Doran";
-			if Player is male and (((player is female or anallevel is 3) and a random chance of 1 in 2 succeeds) or (Cunt Count of Player is 0 and anallevel < 3)):
+			if Player is male and (((Player is female or anallevel is 3) and a random chance of 1 in 2 succeeds) or (Cunt Count of Player is 0 and anallevel < 3)):
 				say " wrapping [ghis] tongue around[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] dick[smn], [ghis] slick affection easily driving you hard and";
 				now tempnum3 is 1;
 				if Ball Size of Player > 5 and DoranVoreStatus is 2, now DoranCumFilled is true;
@@ -2358,7 +2358,7 @@ to say DoranNeutral_69: [BODY MODDED]
 		else:
 			now tempnum2 is 1;
 			say "     Subject to the[if scalevalue of Player < 4] substantive[end if] weight of the [gdragon], [ghe] eagerly exploits this more dominant position to thrust [ghis] dripping rod between your lips, [if scalevalue of Player < 3]quickly overwhelmed by its size, further exacerbated[else if scalevalue of Player is 3]somewhat overwhelmed by its size, further exacerbated[else]easily handling the impressive organ, even as it[end if] grows to full attention. [if DoranBallModStatus > 0]Already forced to swallow down [ghis] abundant, [gmasculine] precum[else]Taste instantly awash in [ghis] [gmasculine] flavor[end if], Doran happily offers to reciprocate your attendance, ";
-			if Player is male and (((player is female or anallevel is 3) and a random chance of 1 in 2 succeeds) or (Cunt Count of Player is 0 and anallevel < 3)):
+			if Player is male and (((Player is female or anallevel is 3) and a random chance of 1 in 2 succeeds) or (Cunt Count of Player is 0 and anallevel < 3)):
 				say "wrapping [ghis] tongue around[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] dick[smn], [ghis] slick affection easily driving you hard and";
 				now tempnum3 is 1;
 				if Ball Size of Player > 5 and DoranVoreStatus is 2, now DoranCumFilled is true;
@@ -2371,7 +2371,7 @@ to say DoranNeutral_69: [BODY MODDED]
 			say " forcing a muffled moan from your lips.";
 		say "     As [ghis] affection picks up in pace, scaled lips soon [if tempnum3 is 1]enveloping your dick[else if tempnum3 is 2]embracing your cunt[else]embracing your ass[end if], you are, in turn, driven further to [if tempnum2 is 1]pump[else]suck off[end if] [ghis] sputtering cock. Quickly [if tempnum is 2]bathed[else]awash[end if] in heat and sweat from your[if scalevalue of Player < 4] larger[end if] companion as this back-and-forth reaches a fever pitch, until [if tempnum is 2]his body begins to tremble, unable to restrain [ghim]self as [ghe] thrusts against your touch, yourself[else]your body begins to treble unable to restrain yourself as you thrust against [ghis] touch, [ghim]self[end if] doing the same.";
 		if Libido of Player > 40:
-			say "     Too sensitive to hold back for very long, you're soon letting out a[if tempnum2 is 1] stifled[end if] cry, [if tempnum3 is 1 and Cock Count of Player > 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brothers staining the rest between your torsos[else if tempnum3 is 1 and Cock Count of Player is 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brother staining the rest between your torsos[else if tempnum3 is 1]unloading your [Cum Load Size of Player] load into the beast's eager maw[else if tempnum3 is 2 and player is male]supple lips squeezing around [ghis] invading appendage as your cock[smn] fires off your [Cum Load Size of Player] load between your torsos[else if tempnum3 is 2]supple lips squeezing around [ghis] invading appendage[else if tempnum3 is 3 and player is purefemale]supple ring squeezing around [ghis] invading appendage as your dripping cunt[sfn] ache[sfv] for attention[else if tempnum is 3 and player is male]supple ring squeezing around [ghis] invading appendage as your [cock size desc of Player] cock[smn] fire[smv] off your [Cum Load Size of Player] load between your torsos[else]supple ring squeezing around [ghis] invading appendage as your writhe in insatiable lust[end if]. You're dazed by your satisfied need, but you're not done yet, and Doran drives you on to continue your end of the bargain.";
+			say "     Too sensitive to hold back for very long, you're soon letting out a[if tempnum2 is 1] stifled[end if] cry, [if tempnum3 is 1 and Cock Count of Player > 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brothers staining the rest between your torsos[else if tempnum3 is 1 and Cock Count of Player is 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brother staining the rest between your torsos[else if tempnum3 is 1]unloading your [Cum Load Size of Player] load into the beast's eager maw[else if tempnum3 is 2 and Player is male]supple lips squeezing around [ghis] invading appendage as your cock[smn] fires off your [Cum Load Size of Player] load between your torsos[else if tempnum3 is 2]supple lips squeezing around [ghis] invading appendage[else if tempnum3 is 3 and player is purefemale]supple ring squeezing around [ghis] invading appendage as your dripping cunt[sfn] ache[sfv] for attention[else if tempnum is 3 and Player is male]supple ring squeezing around [ghis] invading appendage as your [cock size desc of Player] cock[smn] fire[smv] off your [Cum Load Size of Player] load between your torsos[else]supple ring squeezing around [ghis] invading appendage as your writhe in insatiable lust[end if]. You're dazed by your satisfied need, but you're not done yet, and Doran drives you on to continue your end of the bargain.";
 		if tempnum is 1:
 			say "     It's clear [ghe] can't hold back any longer! Shall you pull [if tempnum2 is 2]in and suck [ghim] off at the last second[else]out just before [ghe] blows[end if]?";
 			if tempnum2 is 2:
@@ -2400,13 +2400,13 @@ to say DoranNeutral_69: [BODY MODDED]
 			say "     Unable to hold back any longer the [gdragon] plunges [ghis] gushing rod down your hole as far as you can take, more than enough to[if Libido of Player > 40] finally[end if] set [ghim] off, [ghis] roar in bliss muffled against your [bodytype of Player] form as your maw is quickly [if DoranBallModStatus < 0]overwhelmed[else]flooded[end if] with wave after [if DoranBallModStatus > 0]excessive[else]successive[end if] wave of [ghis] [if DoranBallModStatus > 0]seemingly endless[else]substantial[end if] load, quickly [if scalevalue of Player < 3 or DoranBallModStatus > 0]sputtering from your lips[else]making your dizzy with how much you're driven to swallow[end if][if Libido of Player > 40]. Eventually things begin to die down and you're given a moment to catch your breath[end if].";
 			if DoranVoreStatus is 2, now DoranPlayerCumFilled is true;
 		if Libido of Player < 41:
-			say "     Your turn quickly following on the heels of [ghis] own, you let out a[if tempnum2 is 1] stifled[end if] cry, [if tempnum3 is 1 and Cock Count of Player > 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brothers staining the rest between your torsos[else if tempnum3 is 1 and Cock Count of Player is 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brother staining the rest between your torsos[else if tempnum3 is 1]unloading your [Cum Load Size of Player] load into the beast's eager maw[else if tempnum3 is 2 and player is male]supple lips squeezing around [ghis] invading appendage as your cock[smn] fires off your [Cum Load Size of Player] load between your torsos[else if tempnum3 is 2]supple lips squeezing around [ghis] invading appendage[else if tempnum3 is 3 and player is purefemale]supple ring squeezing around [ghis] invading appendage as your dripping cunt[sfn] ache[sfv] for attention[else if tempnum is 3 and player is male]supple ring squeezing around [ghis] invading appendage as your [cock size desc of Player] cock[smn] fire[smv] off your [Cum Load Size of Player] load between your torsos[else]supple ring squeezing around [ghis] invading appendage as your writhe in insatiable lust[end if]. Dazed by your satisfied need, you require quite a while to catch your breath.";
+			say "     Your turn quickly following on the heels of [ghis] own, you let out a[if tempnum2 is 1] stifled[end if] cry, [if tempnum3 is 1 and Cock Count of Player > 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brothers staining the rest between your torsos[else if tempnum3 is 1 and Cock Count of Player is 2]unloading your [Cum Load Size of Player] load into the beast's eager maw, its brother staining the rest between your torsos[else if tempnum3 is 1]unloading your [Cum Load Size of Player] load into the beast's eager maw[else if tempnum3 is 2 and Player is male]supple lips squeezing around [ghis] invading appendage as your cock[smn] fires off your [Cum Load Size of Player] load between your torsos[else if tempnum3 is 2]supple lips squeezing around [ghis] invading appendage[else if tempnum3 is 3 and player is purefemale]supple ring squeezing around [ghis] invading appendage as your dripping cunt[sfn] ache[sfv] for attention[else if tempnum is 3 and Player is male]supple ring squeezing around [ghis] invading appendage as your [cock size desc of Player] cock[smn] fire[smv] off your [Cum Load Size of Player] load between your torsos[else]supple ring squeezing around [ghis] invading appendage as your writhe in insatiable lust[end if]. Dazed by your satisfied need, you require quite a while to catch your breath.";
 		if DoranVoreStatus is 2 and scalevalue of Player < 4:
 			say "     '[one of]Oh[or]Ah[or]Yes[at random], [one of]but [DoranPlayerRegard]'s fun has just begun[or][DoranPlayerRegard]'s [gdragon] isn't done with them just yet[or]now comes my favorite part[at random]!' [if tempnum is 1]Grinning at you, Doran pulls you closer, grip firmly wrapped around your smaller form[else]Still pinning you down, Doran grins at you, [ghis] tongue caressing your smaller form[end if], clearly eager to make a meal of you.";
 			DoranVoreProtocol;
 		else:
 			say "     '[one of]Oh[or]Hm[or]Yes[at random], [one of]I hope [DoranPlayerRegard] had plenty of fun[or]I hope [DoranPlayerRegard]'s [gdragon] didn't make too much of a mess[or][DoranPlayerRegard] is always fun to play with[at random]!' [if tempnum is 1]Helping you off[else]Climbing off of you[end if], Doran goes about checking you over and cleaning you up before allowing you to gather your things and go about your business once more, the [gdragon] no doubt needing a bit of time to clean up the rest of the mess.";
-	if player is male:
+	if Player is male:
 		NPCSexAftermath Doran receives "OralCock" from Player;
 	else:
 		NPCSexAftermath Doran receives "OralPussy" from Player;
@@ -3977,18 +3977,18 @@ Section 4.2 - Doran Roleplay Queries
 
 to say DoranRP_VirileBeast: [Doran RP: The Virile Beast Query]
 	say "     '[if DoranRole > 0]Ah, [DoranPlayerRegard], I must caution that this puts them in a considerably submissive position, which might not be their thing[end if]";
-	if DoranRole > 0 and anallevel is 1 and ((player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
+	if DoranRole > 0 and anallevel is 1 and ((Player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
 		say ", additionally,";
-	else if anallevel is 1 and ((player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
+	else if anallevel is 1 and ((Player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
 		say "I must caution [DoranPlayerRegard],";
-	if anallevel is 1 and player is female and Cunt Depth of Player < 5:
+	if anallevel is 1 and Player is female and Cunt Depth of Player < 5:
 		say "because they're too small for me to fit in their proper hole, I really have no choice but to take their back door, but I get the impression that's not something they would enjoy";
 	else if anallevel is 1:
 		say "this role isn't particularly bright, so It'll make little sense for me to, say, go the oral route, and I'm of the impression that they're not fond of taking it from the back door";
 	if DoranRole > 0:
 		say ".'[line break]";
 		say "     '";
-	else if anallevel is 1 and ((player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
+	else if anallevel is 1 and ((Player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
 		say ".'[line break]";
 		say "     '";
 	say "This session entails my taking the role of a libido-crazy beast who's captured [DoranPlayerRegard] for the purpose of 'breeding' - for reasons which are complicated I can't actually reproduce, but for the session we can assume that this is [ghis] motivation. It's a very simple session, entailing lots of bestial sex. Does this pique their interest?'";
@@ -4051,7 +4051,7 @@ to say DoranRP_KnightMenu: [Doran RP: The Knight Query]
 			say "     'My mistake, I'm certain I have something else they'd prefer.'";
 	else:
 		say "     'Very well. My [DoranPlayerRegard] will lose to me, and thusly they will succumb to the fate of this [gdragon]'s toy";
-		if anallevel is 1 and ((player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
+		if anallevel is 1 and ((Player is female and Cunt Depth of Player < 5) or Cunt Count of Player is 0):
 			say ". I must caution [DoranPlayerRegard], though, [if Player is female and Cunt Depth of Player < 5]because they're too small for me to fit in their proper hole I really have no choice but to take their back door, but I get the impression that's not something they would enjoy[else]for simplicity's sake I'll be sticking to the anal sex, and I'm of the impression that they're not fond of taking it from the back door[end if]";
 		say ". Is that in line with their desire?'";
 		if Player consents:
@@ -4184,7 +4184,7 @@ to say DoranRP_VirileBeastScene:
 		wait for any key;
 		say "[line break]";
 	say "     '...[run paragraph on][one of]Oh[or]Ah[or]Hm[at random], [DoranPlayerRegard], are they [one of]alright[or]OK[at random]? [one of]I hope they enjoyed this little exercise[or]I hope I wasn't too rough on them[or]I made such a mess[at random]...' Still a bit dizzy from the whole ordeal, Doran fusses over cleaning you up, eventually satisfied and setting you off once more. Funny, it feels like no time has passed at all...";
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Doran;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Doran;
@@ -4285,7 +4285,7 @@ to say DoranRP_KnightScene:
 			wait for any key;
 			say "[line break]";
 		say "     '...[run paragraph on][one of]Heh[or]Ha[or]Hm[at random], [one of]I hope [DoranPlayerRegard] enjoyed having their way with their [gdragon][or]methinks [DoranPlayerRegard]'s [gdragon] had more fun than they should've, that time[or]Always a thrill to play with [DoranPlayerRegard][at random]!' Grinning happily to you, [ghe] goes about to clean up before letting you off, clearly satisfied with the session.";
-		if player is male:
+		if Player is male:
 			NPCSexAftermath Doran receives "AssFuck" from Player;
 		else:
 			NPCSexAftermath Doran receives "AssDildoFuck" from Player;
@@ -4345,7 +4345,7 @@ to say DoranRP_KnightScene:
 			wait for any key;
 			say "[line break]";
 		say "     '...[run paragraph on][one of]Wake up[or]Rise and shine[or]Up, up[at random], [DoranPlayerRegard]! [one of]I hope they found our little adventure satisfactory[or]I hope I didn't wear them out too much[or]I'm certain they enjoyed themselves[at random]!' Taking a moment to look you over after the session had concluded, Doran eventually lets you off once [ghe]'s certain that you appear fine, allowing you to go about your business once more.";
-		if player is female:
+		if Player is female:
 			NPCSexAftermath Player receives "PussyFuck" from Doran;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Doran;

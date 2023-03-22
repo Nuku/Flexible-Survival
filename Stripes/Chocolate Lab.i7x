@@ -61,9 +61,9 @@ to say losetolab:
 			say "     As you are pushed to the ground the chocolate canine looks over your confectionary body, panting happily as it takes in your sweet cocoa aroma. Stepping back momentarily the lab releases one happy bark before burying its muzzle in your groin. You can't help but moan softly as the lab begins [if Player is herm]alternating between licking at your increasingly firm maleness and lapping at your womanly folds, quickly coating your crotch in its warm syrupy saliva[else if Player is female]lapping at your womanly folds, driving its warm sticky canine tongue into your depths[else if Player is male]licking at your increasingly firm maleness, soon coating your entire erect length in its warm syrupy saliva[else]lapping at your featureless groin[end if]. As the chocolate canine continues to pleasure you and your mind slips into the haze of your arousal, you begin to lose focus on maintaining cohesion of your confectionary body, and apparently this is exactly what your attacker wants.";
 			WaitLineBreak;
 			say "     Confused for a moment as the attention at your groin suddenly stops you look up to see the lab stepping backwards, releasing a few happy yips before crouching down and leaping towards you. Before you can react the chocolate dog lands squarely on your chest, licking your face happily as you try and push it off. It is at this point that your realize the dog is not standing on you, but IN you! You begin to panic as the lab begins to sink deeper into your body, thrashing about wildly as you attempt to separate yourself from the canine, however this only seams to make matters worse, quickening the pace of the sinking lab. You can only watch in horror as the last of the chocolaty canine disappears into your body, giving you one last bark before submerging completely. With little choice and a heavy sigh you rise to a stand on uneasy feet, already feeling the chocolate of your unwanted passenger churning and mingling with your own. You can hear its happy barking in the back of your mind, but with no way to separate yourself from the chocolate canine all you can do is gather your equipment and your resolve before making your way to a safer location.";
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "Chocolate Lab" receives "OralPussy" from "Player";
-			if player is male:
+			if Player is male:
 				CreatureSexAftermath "Chocolate Lab" receives "OralCock" from "Player";
 			now labhost is 1;
 			now labtimerA is 21;
@@ -73,9 +73,9 @@ to say losetolab:
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[smn] with a soft, wet pussy[if Cock Count of Player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.";
 		else if Player is female:	[female]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole.";
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Chocolate Lab";
-			if player is male:
+			if Player is male:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Chocolate Lab";
 				CreatureSexAftermath "Chocolate Lab" receives "PussyFuck" from "Player";
 		else:	[male]

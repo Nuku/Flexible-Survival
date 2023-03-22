@@ -384,7 +384,7 @@ to pewterbodyapply:
 	increase pewterbodyocc by 1;
 
 to pewtergenitalapply:
-	if Player is male and ((anallevel > 1 and a random chance of 1 in 2 succeeds) or (player is female and a random chance of 1 in 2 succeeds) or anallevel is 1) and Cock Count of Player > pewtercockocc:
+	if Player is male and ((anallevel > 1 and a random chance of 1 in 2 succeeds) or (Player is female and a random chance of 1 in 2 succeeds) or anallevel is 1) and Cock Count of Player > pewtercockocc:
 		if a random chance of 1 in 2 succeeds or Cock Length of Player > 14:
 			if pewtercockocc is 0:
 				say "     You shudder at the sensation of a consort's tongue along the length of [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player] dick[smn], his teasing only brief before his lips envelop its head, eager to taste your emergent sexual fluids as he continues to attend you.";

@@ -1165,7 +1165,7 @@ This is the Feral Sea Dragon Infection rule:
 		if humanity of Player < 10:
 			say "     Losing your mind to your feral compulsions your instincts draw you back to the beach - which is perhaps for the better as the infection reaches its natural conclusion and you lose almost all land-based articulation and mobility. You find yourself [if Player is female]singing[else if Player is male]roaring[else]crying[end if] out into the ocean, in search of a mate.";
 			if fsdbias is 0:
-				if Player is female and (Cock Count of Player is 0 or (player is male and a random chance of 1 in 2 succeeds)):
+				if Player is female and (Cock Count of Player is 0 or (Player is male and a random chance of 1 in 2 succeeds)):
 					if MaleList is banned or MaleList is warded:
 						now fsdbias is 4;
 					else:
@@ -1179,7 +1179,7 @@ This is the Feral Sea Dragon Infection rule:
 				say "     Your gesture is inevitably reciprocated with the song of an eager female";
 				if fsddom > 5:
 					say ", followed by another, and another... Before you even have a chance to offer yourself, you're beset by at least half a dozen dragonesses, nipping and teasing their new";
-					if BodyName of Player is "Feral Sea Dragon" and player is male:
+					if BodyName of Player is "Feral Sea Dragon" and Player is male:
 						say ", male-looking";
 					say " toy. You're dragged off and forced to spend the rest of your years forced to remain within the confines of a cave, forced to attend your many mistress's every whim and desire.";
 					if Player is male:
@@ -1194,7 +1194,7 @@ This is the Feral Sea Dragon Infection rule:
 							say ". Even as the harem swells in size, you position at the bottom of the totem pole never changes, abused by even the lowliest of dragonesses...";
 				else if fsddom > 0:
 					say ". As she approaches, you shyly offer yourself, a gesture which the dragoness eagerly obliges, apparently having grown fond of such a submissive attitude";
-					if BodyName of Player is "Feral Sea Dragon" and player is male:
+					if BodyName of Player is "Feral Sea Dragon" and Player is male:
 						say ", especially when made by one who appears male";
 					say ". You're relegated to remain within your mistress's cave, your future filled with eagerly servicing her every whim and desire.";
 					if Player is male:
@@ -1209,7 +1209,7 @@ This is the Feral Sea Dragon Infection rule:
 							say " of similarly dominant females. It's especially fun when unsuspecting trespassers stumble on the lot of you...";
 				else if Player is submissive:
 					say ". As she approaches, you shyly offer yourself, a gesture which seems to confuse the dragoness, clearly not used to such a submissive gesture";
-					if BodyName of Player is "Feral Sea Dragon" and player is male:
+					if BodyName of Player is "Feral Sea Dragon" and Player is male:
 						say ", especially by one who appears male";
 					say ". Eventually, however, the beast grows comfortable in a position of being your mistress, your future filled with eagerly servicing her every whim and desire.";
 					if Player is male:
@@ -1223,7 +1223,7 @@ This is the Feral Sea Dragon Infection rule:
 				else:
 					if Player is male:
 						say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to mount her. Rutting her fast and hard, you claim her and this territory as your own.";
-						say "     As she bears your offspring you gather other dragonesses in the area for your personal harem, and it's not long before you possess a great number of them[if MaleList is not banned and MaleList is not warded and player is female], occasionally subduing a male to use for yourself[end if]. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin.";
+						say "     As she bears your offspring you gather other dragonesses in the area for your personal harem, and it's not long before you possess a great number of them[if MaleList is not banned and MaleList is not warded and Player is female], occasionally subduing a male to use for yourself[end if]. As time would pass, your children would spread to the far corners of the world, until all who fare the sea do so with an ever-present fear of your kin.";
 					else:
 						say ". Compelled to swim into the water's depths you meet up with your new mate; though, as you approach, the sea dragoness would tease you by swimming off, eliciting your chase. It's made apparent of her intent when she leads you to a hidden cavern, offering herself before you as you approach. Such an offer the creature shows great pleasure in it's acceptance when you're compelled by your feral lust to attend her.";
 						say "     Though neither of you can bear offspring for the other, ";

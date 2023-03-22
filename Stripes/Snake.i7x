@@ -197,7 +197,7 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 		now tempnum is 0;
 	if debugactive is 1:
 		say "     DEBUG -> tempnum: [tempnum], snakehijacktimer: [snakehijacktimer], [if player is total_vacant]: player is total_vacant, [end if] <- DEBUG[line break]";
-	if "Touched by Madness" is listed in feats of Player and (player is fem_vacant or snakeocc > 0) and player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	if "Touched by Madness" is listed in feats of Player and (player is fem_vacant or snakeocc > 0) and Player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now fsnakevalid is true;
 		now msnakevalid is false;
 		if debugactive is 1:

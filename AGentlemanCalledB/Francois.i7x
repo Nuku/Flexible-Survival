@@ -123,9 +123,9 @@ to say BakeryGShep:
 			if player is herm:
 				CreatureSexAftermath "German Shepherd Male" receives "OralCock" from "Player";
 				CreatureSexAftermath "German Shepherd Male" receives "OralPussy" from "Player";
-			if player is male:
+			if Player is male:
 				CreatureSexAftermath "German Shepherd Male" receives "OralCock" from "Player";
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "German Shepherd Male" receives "OralPussy" from "Player";
 			let playernum be a random number between 1 and (100 - Libido of Player);
 			let shepnum be a random number between 30 and 100;
@@ -137,7 +137,7 @@ to say BakeryGShep:
 			say "     The thought passes however, as your lust-filled mind can only register the approach of a lovely cock towards your needy body. Chuckling slightly at the stupefied look on your face, the shepherd grabs your legs and tosses them over his shoulder. He rubs his cock over your [if Player is female]pussy[else]ass[end if] to make sure it's well lubed, then pushes inside of you with a painful slowness. You whimper and moan as he teases your innards with his member, turning you into a begging slut by the time he finally bottoms out. The shepherd that had formerly been holding your arms shifts his grip as his companion starts to thrust into you, then resumes his licking, adding a few whispers about what a needy bitch you are to cause you to blush in shame. After a few minutes of this treatment, the canine behind you growls slightly in frustration before he pushes you onto the one fucking you.";
 			say "     Without missing a beat, the shepherd pulls out and quickly repositions your body before driving his cock straight back into you. He roughly bounces you up and down on his shaft, and after the first few thrusts, your arms and legs are wrapped around him as he continues his rough fucking. Your mind dimly registers the sound of something heavy being dragged, but you're too busy yipping like a bitch in heat to pay attention. That is probably why you don't expect when your partner suddenly detaches your arms from around his body and you fall backwards. You flail in midair for a moment before your back slams into a table that the other shepherd moved over to where you were being fucked. As you gasp in pain, one of the other two shepherds grabs your head and shoves his meat down your throat. You can feel your mind slipping a bit thanks to the lack of oxygen combined with the pleasure of the two canines['] brutal fucking. It becomes hard to think about anything besides finishing this before you pass out. You can feel the third Shepherd grab one of your hands and rub it up and down his meat. Your feeble mind manages to grip your hand around it as he pumps it up and down, and before long you're stroking his pulsing shaft without his encouragement.";
 			say "     Soon you can feel each of their knots as they pound your mouth and [if Player is female]pussy[else]ass[end if], their thrusts getting harder and faster as they get close, the third thrusting into your hand as you pump up and down his shaft. Finally, they cum, shooting their loads into your body from both ends. You feel their thick knots pressing against your mouth and [if Player is female]cunt[else]ass[end if], but they hold them just outside as they fill you up. After a few pumps of cum, they both pull out and start painting your face and body with their cum along with the shepherd you've been stroking off.";
-			CreatureSexAftermath "player" receives "[if player is male]AssFuck[else if player is herm and a random chance of 1 in 2 succeeds]AssFuck[else if player is herm]PussyFuck[else if player is female]PussyFuck[end if]" from "German Shepherd Male";
+			CreatureSexAftermath "player" receives "[if Player is male]AssFuck[else if player is herm and a random chance of 1 in 2 succeeds]AssFuck[else if player is herm]PussyFuck[else if Player is female]PussyFuck[end if]" from "German Shepherd Male";
 			CreatureSexAftermath "Player" receives "OralCock" from "German Shepherd Male";
 			infect "German Shepherd Male";
 			infect "German Shepherd Male";
@@ -311,11 +311,11 @@ to say Francoissexmenu:
 		now sortorder entry is 2;
 		now description entry is "Give Francois a turn riding you.";
 	choose a blank row in table of fucking options;
-	now title entry is "Get a blow job";
+	now title entry is "Get a blowjob";
 	now sortorder entry is 3;
 	now description entry is "Ask Francois to suck you off.";
 	choose a blank row in table of fucking options;
-	now title entry is "Give a blow job";
+	now title entry is "Give a blowjob";
 	now sortorder entry is 4;
 	now description entry is "Offer to suck Francois off.";
 	sort the table of fucking options in sortorder order;
@@ -336,9 +336,9 @@ to say Francoissexmenu:
 					say "[Francoissex2]";
 				else if nam is "Get mounted":
 					say "[Francoissex4]";
-				else if nam is "Get a blow job":
+				else if nam is "Get a blowjob":
 					say "[Francoissex1]";
-				else if nam is "Give a blow job":
+				else if nam is "Give a blowjob":
 					say "[Francoissex3]";
 				now lastfuck of Francois is turns;
 			else:
@@ -399,7 +399,7 @@ to say Francoissex3:		[player performs oral]
 		say "     You let your eyes run over unusual, mottled patterns of its flesh for a moment before leaning forward and running your tongue slowly along the feline length. He moans softly and his cock twitches, a dribble of precum running down. This first taste has a decidedly [one of]canine[or]feline[or]avian[as decreasingly likely outcomes] flavor that is quite pleasant. You give him several more licks while caressing his ballsack, stroking the soft fur and feathers covering it. After your playful taste test, you drag your tongue from base to tip along its sensitive underside before aiming his cock into your mouth and sucking down on it.";
 	say "     Francois rubs his paws over your head, rubbing gently as you bob over his cock. Knowing your lover's quite experienced, you do your best to please him. Giving it your all, you work your tongue, lips, mouth and palate over his throbbing meat, paying attention to his responses so you can properly satisfy him. And your fingers get in one the action as well, rubbing at his knot when your lips aren't kissing at it and caressing his balls when they are. As you work his length in your muzzle, it dribbles with precum, providing varying musky tastes for you to savor on your tongue. Often having a clear canine flavor, at times you get something that reminds you more of cats or birds. You find yourself trying to see what new taste you can get him to release with every hard suck.";
 	if anallevel is 3 and a random chance of Libido of Player in 100 succeeds:
-		say "     Wanting to add some extra fun for you both and ensure you get the biggest bang you can from the hybrid mutt, you slip a [if scalevalue of Player > 3]finger into your mouth to get it slick before bringing it[else]pair of fingers into your mouth to get them slick before bringing them[end if] around under his tail. He moans and flips his tail up with a grin and a pant, relaxing his back entrance as you spread your saliva over it, gradually working your way into his asshole. Fingering him, you pick up the pace with the blow job and rub against his prostate, making his hips quiver. 'Oui, juste là. J'suis proche,' he pants in French, his paws moving to your shoulders for support as his cock and balls twitch. Grinning around his cock, you don't let up, working him to a fast and strong climax that has him pumping his flavorful cum down your throat. You swallow it all down happily and lick your lips when you release his spent shaft";
+		say "     Wanting to add some extra fun for you both and ensure you get the biggest bang you can from the hybrid mutt, you slip a [if scalevalue of Player > 3]finger into your mouth to get it slick before bringing it[else]pair of fingers into your mouth to get them slick before bringing them[end if] around under his tail. He moans and flips his tail up with a grin and a pant, relaxing his back entrance as you spread your saliva over it, gradually working your way into his asshole. Fingering him, you pick up the pace with the blowjob and rub against his prostate, making his hips quiver. 'Oui, juste là. J'suis proche,' he pants in French, his paws moving to your shoulders for support as his cock and balls twitch. Grinning around his cock, you don't let up, working him to a fast and strong climax that has him pumping his flavorful cum down your throat. You swallow it all down happily and lick your lips when you release his spent shaft";
 	else if a random chance of Libido of Player in 100 succeeds:
 		say "     You keep it up, working to please the friendly fellow with the many tricks you've been learning. As his knot swells, you put a hand around it, squeezing gently as if he'd managed to tie with a tight hole. This has him yip in surprise and pleasure, his hips quivering. 'J'suis sur le point de jouir,' he pants in French, his paws moving to your shoulders for support as his cock and balls twitch. Quite certain he's close now, you pull back, wrapping your free hand around his throbbing shaft and pumping it quickly. Driven over the edge by this, he cums hard, splattering his creamy load all over your face. You lick what you can get of his seed running past your lips, but are quite pleased to have your friend's load coating your face";
 	else:
@@ -812,7 +812,7 @@ to say BoysenberryBlossomGet:
 	say "     'Ah! Oui! These will do wonderfully!' Francois says as he takes the blue gel and Awesome Fruit from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small dish of fruity-smelling pastries. 'I will call them boysenberry blossoms,' Francois says with obvious excitement. 'Please, be the first to taste one, mon ami[if Player is purefemale]e[end if]!' Would you like to taste it right now? (Y/N)";
 	if Player consents:
 		say "[boysenberry blossom Use]";
-		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     Francois licks his lips as he eyes up your enlarged member, and you can't help but notice his apron tenting slightly at his crotch. 'Mmm, what a lovely side effect. I cannot wait to start selling these.'";
@@ -824,7 +824,7 @@ to say MuffinMuffinGet:
 	say "     'What a lovely combination of flavors,' Francois says as he tastes the pink gel and Awesomer Fruit. 'I must test their potential further!' After collecting a few other things from behind the counter, Francois quickly heads to his kitchen to get started. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of muffins and offers you one. Would you like to taste it right now? (Y/N)";
 	if Player consents:
 		say "[muffin muffin Use]";
-		if "Male Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is male ):
+		if "Male Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is male ):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Not my first choice, but an interesting result nonetheless,' Francois says as he watches your hand drift down towards your groin. 'I am certain it will be popular.'";
@@ -836,7 +836,7 @@ to say bleuettonneGet:
 	say "     After tasting the blue gel, Francois takes it and the chocolate milk without another word, collecting a few other things from behind the counter before hurrying back to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a small tray of chocolates. 'A simple but effective technique. You must try one,' Francois says with a smile, placing the tray on the counter in front of you. Would you like to taste one right now? (Y/N)";
 	if Player consents:
 		say "[bleuettonne Use]";
-		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+		if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 			say "     When your stomach finally stops its groaning, you look up to see Francois staring back at you, his previous happy expression somewhat dampened as a result of your reaction. You do you best to assure him that his dish was quite tasty, despite your body's apparent distaste, which helps to brighten his mood again.";
 		else:
 			say "     'Oh my, what a magnifique result,' Francois says with a grin as he watches your groin change.";
@@ -863,7 +863,7 @@ to say lollicockGet:
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
 		if a random chance of 1 in 4 succeeds:
 			now lollicockCheck is 1;
-		if CockName of Player is "candy cock" or "Female Preferred" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+		if CockName of Player is "candy cock" or "Female Preferred" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 			now lollicockCheck is 0;
 		if lollicockCheck is 1:
 			if Player is not male:
@@ -942,7 +942,7 @@ the scent of boysenberry blossom is "The small pastry has a wonderful fruity sme
 
 to say boysenberry blossom Use:
 	say "Biting into the boysenberry blossom, you are treated to a lovely fruity filling inside the flaky pastry. Eating the treat in several slow bites[run paragraph on]";
-	if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+	if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 		say " you savor the fruity pastry. It tastes great but gives you a belly ache. Clearly your body doesn't agree with something about the treat.";
 	else if Player is not male:
 		now Cock Count of Player is 1;
@@ -963,7 +963,7 @@ the scent of bleuettonne is "The small candy carries the deep, rich scent of cho
 
 to say bleuettonne Use:
 	say "     You bite into the bleuettonne and find your mouth filled with a burst of blueberry jelly, more than you would have expected from the small chocolate ball. Doing your best to not let any of the sweet treat spill[run paragraph on]";
-	if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+	if "Female Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 		say " you swallow your mouthful and finish the rest in a second satisfying bite. As the fruity filling and chocolate hit your belly it rumbles. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else if Player is not male:
 		now Cock Count of Player is 1;
@@ -1010,7 +1010,7 @@ the scent of muffin muffin is "The pink muffin carries a fruity aroma that seems
 
 to say muffin muffin Use:
 	say "     Biting into the muffin you find a sweet pink jelly fruit filling hidden inside, working your tongue into the opening, you lick the sweet treat out of the depths of the muffin before finishing it[run paragraph on]";
-	if "Male Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is male ):
+	if "Male Preferred" is listed in feats of Player or "Modest Organs" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is male ):
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else if Player is not female:
 		now Cunt Count of Player is 1;
@@ -1045,7 +1045,7 @@ to say lollicock Use:
 		say "     Wrapping your lips around the phallic treat, you begin bobbing up and down its length, savoring its sweet and salty taste as your tongue works over it. As the last of it melts away[run paragraph on]";
 		if a random chance of 1 in 4 succeeds:
 			now lollicockCheck is 1;
-		if CockName of Player is "candy cock" or "Female Preferred" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and player is female ):
+		if CockName of Player is "candy cock" or "Female Preferred" is listed in feats of Player or ( "Single Sexed" is listed in feats of Player and Player is female ):
 			now lollicockCheck is 0;
 		if lollicockCheck is 1:
 			if Player is not male:

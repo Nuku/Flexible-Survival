@@ -70,7 +70,7 @@ to say fhuskywinner:
 				say "     Riding out your respective orgasms, the two of you stay in position for a while longer, sharing light caresses as you catch cour breaths. Then eventually, the husky starts to rise, swinging her leg over you and getting to her feet. 'Thank you sweety,' she says in a well-satisfied tone, then saunters off, leaving you in a puddle of sweat to recover at your own pace.";
 				CreatureSexAftermath "Husky Bitch" receives "OralCock" from "Player";
 				CreatureSexAftermath "Player" receives "OralPussy" from "Husky Bitch";
-		else if player is female:
+		else if Player is female:
 			say "     The amorous husky bitch's eager stroking causes your pussy to open up a little and start to leak female juices, which she watches with a smile on her lips. Letting out a needy whine, the anthro woman climbs on top of you, demonstratively waving her swollen canine pussy in your face as she takes the classic '69' position, with her knees to the left and right of your head. Leaning her upper body down, the bitch runs her long, wet tongue across your folds, teasingly tracing her tongue-tip along their outsides before pushing in between them. Then her long snout descends, wet nose bumping against your clit before nuzzling your opening and allowing her long tongue to wiggle inside of you. Meanwhile on her other end, you're left to stare at a swollen cunt dripping female juices, right in front of your face. In the increasingly lust-fogged state your mind is in, it appears only natural to give back to the canine woman pleasuring you, so before long, your tongue is between her nether lips, licking and wiggling against her inner walls.";
 			say "     Moments of mutual satisfaction flow into each other, and you enjoy what feels like an eternity of arousing licks and teasing sucking, all the while you slurp up the juices of the white-furred bitch. The two of you push each other's buttons fairly evenly, speeding up your ministrations when the other finds just the right spot. This ensures a joyful escalation of the oral play going back and forth, with the husky eventually pushing you past the point of no return, following herself just a heartbeat or two later. As you are gushing all over her snout, with her licking and swallowing what she can, the bitch bucks against your tongue and leaks quite a lot of femcum, with you never stopping the laps of your tongue up and down between her nether lips.";
 			WaitLineBreak;
@@ -96,7 +96,7 @@ to say fhuskybeaten:
 		-- 3:
 			say "     Exhausted, the husky bitch slumps against you, now simply trying to keep standing on very shaky legs. Your fight really took it out of her and there are tears streaming along her furry cheeks. The sounds she makes aren't even words, simply submissive whimpers as she fearfully glances up at your face. Seems like she's realized that you're too strong for her to beat. She starts brushing her paw-hands at you gently, touching and licking your skin in an apologetic gesture";
 	let domtempting be false;
-	if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
+	if HP of Dominick >= 60 and HP of Dominick < 100 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 		now domtempting is true;
 		say ". The sight of her sends a tingle of excitement through your cunt. This cute husky girl might make a good breeder pet for Dominick. The prospect of pleasing him ends a second shiver of lust through you";
 		if Player is male:
@@ -116,7 +116,7 @@ to say fhuskybeaten:
 		now sortorder entry is 1;
 		now description entry is "Send the lust-crazed husky to Dom to be bred";
 	[]
-	if "Dominant" is listed in feats of Player and player is male and Cock Length of Player > 5 and player is knotted:
+	if "Dominant" is listed in feats of Player and Player is male and Cock Length of Player > 5 and player is knotted:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominate and tie";
 		now sortorder entry is 2;

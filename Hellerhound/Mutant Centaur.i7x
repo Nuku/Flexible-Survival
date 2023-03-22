@@ -73,7 +73,7 @@ To say Mutant Centaur Loses:
 	if Libido of Player < 50:
 		say "     The centaur groans, falling onto its face as you strike the final blow. An apple spills out of the pack on its back.";
 		ItemGain fresh apple by 1;
-	if Libido of Player > 50 and player is male:
+	if Libido of Player > 50 and Player is male:
 		say "     The centaur is lying on the ground with its tail skewed off to the side, is the perfect target for your [Cock of Player] maleness. You sidle up behind the centaur, ignored by it in the pain and embarrassment of loss, and slowly insert your cock.";
 		WaitLineBreak;
 		say "     The centaur starts as it realizes what you are doing, and two green tentacles, covered with bumps, raise out from under the body of the centaur.";
@@ -95,7 +95,7 @@ To say Mutant Centaur Loses:
 			CreatureSexAftermath "Mutant Centaur" receives "AssFuck" from "Player";
 			now Libido of Player is 0;
 			SanLoss 4;
-	if Libido of Player > 50 and Cock Count of Player is 0 and player is female:
+	if Libido of Player > 50 and Cock Count of Player is 0 and Player is female:
 		say "     The centaur groans and falls to the ground, his legs crumpling and shoving him onto his side. You get a good view of a massive, green cock with vine-like bumps on the shaft. Its sheath is a darker green, and a matching ball sack hangs down half a foot from the powerful member, two giant round forms stretching the skin. What really gets to you is the two tentacles, like growths, that sprout from stump-like protrusions of the base of its sheath.";
 		if humanity of Player < 40:
 			say "     The sight of those tentacles drives you insane with lust. You grab them and stuff them into your mouth, working your throat to get them down. They then come alive, wriggling down your stomach, into your small intestine, and then out of your hole, causing pain that when mixed with your lust turns to pleasure. The tentacles then enter your pussy, and begin to stimulate it with their wriggling. You are immobilized by the feeling of those long tendrils pumping in and out of more holes in your body than any cock could fuck, and it doesn't take long to come to climax. You cum hard, juices running out of your cunt and pushing the tendrils out with it. Then you hear a moan, and the centaur climaxes, spraying thick green seed all over the dusty ground and its underside. The tendrils retract from your body, and you leave the centaur, accepting an apple that it offers you.";
@@ -398,9 +398,9 @@ This is the Mutant Centaur Infection rule:
 		trigger ending "Mutant Centaur Infection";
 		if humanity of Player < 10:
 			say "     As your new, tainted instincts take over, you are drawn back to the plains to join the growing herd of corrupted centaurs in their fight to spread their infection to the others";
-			if centaurmate is 1 and player is female:
+			if centaurmate is 1 and Player is female:
 				say ". You are welcomed by your powerful mate, the first and strongest of the herd. Being the first of his tainted mares, you are given a place above the others and fucked often. You bear him many children, each time becoming more like him until you look as if you were made for each other, as indeed you were[if Player is male]. You are allowed to keep your cock and use it often to corrupt captured centaurs or to punish any in the herd who deserve discipline[end if]. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
-			else if centaurmate is 1 and player is male:
+			else if centaurmate is 1 and Player is male:
 				say ". You are welcomed by the herd's powerful leader, the first and strongest of the herd. Being the first he corrupted, you are given a place above the others and made into his lieutenant. He is a little disappointed that you did not return to him as a mare, but instead prepares you a special mash of tainted apples and his cum, which makes your cock grow into an impressive stallion's like his. You are allowed to use it often to corrupt captured centaurs and to punish any in the herd who deserve discipline. Over time, you conquer and corrupt the other herds, turning them into sex slaves of yours. You then spread your growing people out into the world at large to infest them with your gifts, by force if necessary.";
 			if centaurmate is 2:
 				say ". Having initially rejected the first mutant centaur's offer, you are punished for your lack of willingness to accept your place by his side. You are treated as a lowly breeding mare, mounted and fucked by any herd member who wishes to use you to slake their lusts or simply for want of someone to punish and hurt. You accept this over time, knowing it is your place[if Player is female]. You are used to train the newest members how to mount, fuck and corrupt others. You grow heavy with foals of your own and they always are taken away to be raised by the herd, denying you even the love of your children[end if][if Player is male]. Each time you feel a cock ram into you, you also feel the ivy like tentacles curling around the base of your shaft. They keep you from feeling relief for months at a time. Sometimes you're not even permitted to cum until you manage to hold the loads of every centaur in your herd at once. Your mind drifts further from your grasp as relief is obtained less and less, and soon you're just watching your body act of its own accord: your lost face stuck in a look of perpetual ecstasy[end if].";

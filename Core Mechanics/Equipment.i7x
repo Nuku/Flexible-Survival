@@ -2530,10 +2530,10 @@ Scent of orc loincloth is "The cloth has Scent of manly musk clinging to it. Jus
 
 An everyturn rule:
 	if orc loincloth is equipped:
-		if player is male and cock length of player < 14 and a random chance of 1 in 3 succeeds:
+		if Player is male and cock length of player < 14 and a random chance of 1 in 3 succeeds:
 			say "     You feel yourself getting slightly hard under the short loincloth, showing a semi-erect bulge to the world. Seems like it's bigger than before too.";
 			increase cock length of player by 1;
-		if player is male and ball size of player < 4 and a random chance of 1 in 5 succeeds:
+		if Player is male and ball size of player < 4 and a random chance of 1 in 5 succeeds:
 			say "     Your balls throb and seem to grow a little.";
 			increase ball size of player by 1;
 			increase cock length of player by 1;

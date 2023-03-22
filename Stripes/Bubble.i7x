@@ -138,7 +138,7 @@ to say bubblesex00:
 		now description entry is "stuff her [if Libido of Bubble is 0]bubble butt[else]inflated ass[end if]";
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 3;
 		now description entry is "have her suck you off";
 	if Player is female:
@@ -197,7 +197,7 @@ to say bubblesex00:
 					say "[bubblesex01]";
 				else if nam is "Anal":
 					say "[bubblesex02]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[bubblesex03]";
 				else if nam is "Get cunnilingus":
 					say "[bubblesex04]";
@@ -248,7 +248,7 @@ to say bubblesex02:
 	NPCSexAftermath Bubble receives "AssFuck" from Player;
 
 to say bubblesex03:
-	say "     Deciding you'd like a blow job, you gently lower Bubble to her knees and offer up your stiffening cock to her. Eyeing your [cock size desc of Player] penis with obvious hunger, she runs her tongue across her muzzle before plunging her mouth right over it[if Cock Length of Player > 24]. The inflatable vixen has no trouble with your [cock size desc of Player] manhood, her mouth and throat stretching easily to accommodate it all[end if]. Once she's got that black decal patch of her nose buried in your crotch, she starts sucking down on your meat like a horny vacuum. Her tongue slides slickly across your shaft, exciting you further. As she works to suck you off, you rub your hands over her latex head. Her decal eyes look up at you and she grins at the corners of her mouth. Between the smile and the way she's fingering her [if Libido of Bubble is 1]puffy-lipped [end if]pussy wildly, you can tell she's thoroughly enjoying herself.";
+	say "     Deciding you'd like a blowjob, you gently lower Bubble to her knees and offer up your stiffening cock to her. Eyeing your [cock size desc of Player] penis with obvious hunger, she runs her tongue across her muzzle before plunging her mouth right over it[if Cock Length of Player > 24]. The inflatable vixen has no trouble with your [cock size desc of Player] manhood, her mouth and throat stretching easily to accommodate it all[end if]. Once she's got that black decal patch of her nose buried in your crotch, she starts sucking down on your meat like a horny vacuum. Her tongue slides slickly across your shaft, exciting you further. As she works to suck you off, you rub your hands over her latex head. Her decal eyes look up at you and she grins at the corners of her mouth. Between the smile and the way she's fingering her [if Libido of Bubble is 1]puffy-lipped [end if]pussy wildly, you can tell she's thoroughly enjoying herself.";
 	say "     Proving herself to be part sexy vixen and part sex doll, that muzzle of hers feels great around your meat and drives you wild. From the way the [if Libido of Bubble is 0]slender[else]plump[end if] fox girl is going to town on you, it isn't long before you're cumming. You shoot blast after blast of your hot seed down the [if Libido of Bubble is 0]lithe[else]buxom[end if] inflatable's throat. She murrs happily at the taste and licks away the last few drops as you ease your spent shaft from her muzzle. She rubs her [if Libido of Bubble is 0]smooth[else]rounded[end if] tummy, enjoying the feel of your gooey cum running along her inner skin and slowly being absorbed.";
 	NPCSexAftermath Bubble receives "OralCock" from Player;
 
