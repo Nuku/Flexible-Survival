@@ -178,9 +178,9 @@ check turncountdisplay:
 carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]; Current Turn Count is [turn count]";
 
-PregStatus is an action applying to nothing.
-understand "zPreg Status" as PregStatus.
-understand "zPregStatus" as PregStatus.
+PregStatus is an action applying to one topic.
+understand "zPreg Status [text]" as PregStatus.
+understand "zPregStatus [text]" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:
@@ -188,71 +188,76 @@ check PregStatus:
 		stop the action;
 
 carry out PregStatus:
-	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
+	let PregCheckObj be Player;
+	if topic understood is not "Player":
+		repeat with x running through persons:
+			if printed name of x exactly matches the text topic understood, case insensitively:
+				now PregCheckObj is x;
+	say "     DEBUG: Preg Status of [PregCheckObj]:[line break]";
 	say "impreg_ok: ";
-	if Player is impreg_ok:
+	if PregCheckObj is impreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]impreg_able: ";
-	if Player is impreg_able:
+	if PregCheckObj is impreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]impreg_now: ";
-	if Player is impreg_now:
+	if PregCheckObj is impreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]partial_vacant: ";
-	if Player is partial_vacant:
+	if PregCheckObj is partial_vacant:
 		say "+";
 	else:
 		say "-";
 	say "[line break]total_vacant: ";
-	if Player is total_vacant:
+	if PregCheckObj is total_vacant:
 		say "+";
 	else:
 		say "-";
 	LineBreak;
 	say "[line break]fpreg_ok: ";
-	if Player is fpreg_ok:
+	if PregCheckObj is fpreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]fpreg_able: ";
-	if Player is fpreg_able:
+	if PregCheckObj is fpreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]fpreg_now: ";
-	if Player is fpreg_now:
+	if PregCheckObj is fpreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]female_vacant: ";
-	if Player is fem_vacant:
+	if PregCheckObj is fem_vacant:
 		say "+";
 	else:
 		say "-";
 	LineBreak;
 	say "[line break]mpreg_ok: ";
-	if Player is mpreg_ok:
+	if PregCheckObj is mpreg_ok:
 		say "+";
 	else:
 		say "-";
 	say "[line break]mpreg_able: ";
-	if Player is mpreg_able:
+	if PregCheckObj is mpreg_able:
 		say "+";
 	else:
 		say "-";
 	say "[line break]mpreg_now: ";
-	if Player is mpreg_now:
+	if PregCheckObj is mpreg_now:
 		say "+";
 	else:
 		say "-";
 	say "[line break]male_vacant: ";
-	if Player is male_vacant:
+	if PregCheckObj is male_vacant:
 		say "+";
 	else:
 		say "-";
@@ -309,9 +314,9 @@ to DescriptionDisplay:
 	follow the cock descr rule;
 	if Player is male:
 		if Cock Count of Player > 1:
-			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 		else:
-			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Player is female:

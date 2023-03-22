@@ -231,7 +231,7 @@ instead of addfeating the fun feats:
 	if "Weak Psyche" is not listed in feats of Player, addfeat "Strong Psyche" with "Having a higher mental resistance to corruption by the nanites, you have a stronger grip on your human identity";
 	addfeat "Junk Food Junky" with "Junk food is better for you than regular food and water";
 	addfeat "Ultimatum" with "You have enough! Choosing Ultimatum grants you a 10% point bonus at game end, but you [bold type]no longer receive Fun Feats[roman type]";
-	addfeat "Center of Attention" with "NPCs in the library/bunker will refrain from seeking out sexual connections with each other, only looking to you instead";
+	addfeat "Center of Attention" with "NPCs in the library/bunker will refrain from seeking out sexual connections with each other, only looking to you instead. (disables bunker/library NPC sexual relations independent of the player character)";
 
 instead of addfeating the basic feats:
 	if "Open World" is not listed in feats of Player, addfeat "City Map" with "You have better recall of the city layout and remember where most major landmarks are";
@@ -307,7 +307,7 @@ instead of addfeating the basic feats:
 	if dexterity of Player > 11:
 		if Cock Length of Player >= 12:
 			addfeat "Cock Slap" with "Smack around your foes with your oversized meat to show them who's boss";
-		if Ball Size of Player >= 5 and player is not internal:
+		if Ball Size of Player >= 5 and player is not internalBalls:
 			addfeat "Ball Crush" with "Slam your heavy ballsack down onto your enemy to show them who's a real man";
 		if Breast Size of Player > 2 and ( Breast Size of Player + ( Nipple Count of Player / 2 ) ) >= 7:
 			addfeat "Boob Smother" with "Smother your foes in your pillowy rack";

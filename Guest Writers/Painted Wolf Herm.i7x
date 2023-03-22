@@ -93,7 +93,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Painted Wolf"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Painted Wolf"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Painted Wolf Herm" to infections of CanineList;
 	add "Painted Wolf Herm" to infections of FurryList;
 	add "Painted Wolf Herm" to infections of NatureList;
@@ -104,23 +104,23 @@ When Play begins:
 	add "Painted Wolf Herm" to infections of SheathedCockList;
 	add "Painted Wolf Herm" to infections of BipedalList;
 	add "Painted Wolf Herm" to infections of TailList;
-	now Name entry is "Painted Wolf Herm"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Painted Wolf Herm";
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The painted wolf herm [one of]gouges you with her claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in her mouth. She bites down hard, leaving a muzzle-shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[wolfherm loses]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
 	now victory entry is "[wolfherm wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
 	now desc entry is "[mongendernum 5]     Looking over the Painted Wolf Herm, her body is covered in thick, fluffy patchwork of gold, gray, and black fur. her head is mostly canine, with rare smatterings of human and harsh, triangular ears. her body is coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. She has four heavy breasts, the first row the size of basketballs and the second row slightly smaller. her arms are still human, with the exception of tiny claws on the tips of the fingers. her legs are digitigrade, with powerful haunches and graceful calves. She has a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it. As she stands unabashed in the open, you see that she has a thick, knotted, ten-inch canine shaft. Two heavy balls rest above her dripping female sex, the aroma of which lays thick and heady in the air around you."; [ Description of the creature when you encounter it.]
-	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves"; [ Body Description, format as "Your Body is (your text)."]
+	now face entry is "mostly canine, with rare smatterings of human and harsh, triangular ears"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "coated in layers of powerful, flexing muscles that are made readily apparent with the slightest twist. Your arms are still human, with the exception of tiny claws on the tips of the fingers. Your legs are digitigrade, with powerful haunches and graceful calves"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "thick, fluffy patchwork of gold, gray, and black fur that conceals the"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a large, fluffy tail that, although similar to a husky, is lacking any curve or curl in it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]black[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your head crackles as it reforms, becoming large and canine, with harsh, triangular ears that subconsciously twist and flex"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your body burns as muscles ripple under your flesh, leaving you with the perfectly toned body of an Olympian swimmer. Your arms creak as they tingle with warmth, tiny claws pushing through the tips of your fingers. Your legs ache with pain, slowly growing more muscular, more refined as you shift onto the balls of your wide, broad feet"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin itches, thick, flat fur pushing through your flesh as you writhe, becoming a patchwork portrait of gold, gray, and black fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your ass shifts with a loud creak, a perfect fluffy tail popping out from the cleft of your butt cheeks"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "your head crackles as it reforms, becoming large and canine, with harsh, triangular ears that subconsciously twist and flex"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your body burns as muscles ripple under your flesh, leaving you with the perfectly toned body of an Olympian swimmer. Your arms creak as they tingle with warmth, tiny claws pushing through the tips of your fingers. Your legs ache with pain, slowly growing more muscular, more refined as you shift onto the balls of your wide, broad feet"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "your skin itches, thick, flat fur pushing through your flesh as you writhe, becoming a patchwork portrait of gold, gray, and black fur"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "your ass shifts with a loud creak, a perfect fluffy tail popping out from the cleft of your butt cheeks"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "your cock twitches and throbs as it becomes ebony, tapered, and swollen at the base, yearning for use"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 14;
@@ -128,7 +128,7 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 14;
-	now sex entry is "Both"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 60; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking. Claws and massive strength]
@@ -146,16 +146,16 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]muscular[or]powerful[at random]";
 	now type entry is "lupine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -167,7 +167,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -224,7 +224,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -251,7 +251,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

@@ -63,7 +63,7 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 		say "     With your mediocre prize still in your grasp, you take another glance at the empty water bottles littering the tent floor and guess that they also held unclean water as well. Upon closer inspection, you also note that the sleeping bag was mostly damaged on the inside with scratches and claw marks. Piecing together the clues, it seems like that the former owner of this camp had became infected from drinking too much tainted water and transformed during their sleep, making them go feral and abandon the camp. Perhaps that gargoyle you dealt with a few moments ago was even the same person. Regardless, it doesn't look like that they will be returning to this place, so you exit the tent as you pack away the remaining dirty water next to the can of food you found earlier.";
 		ItemGain dirty water by 1;
 		ItemGain food by 1;
-		now Resolution of Abandoned Camp is 99;		[Player vore level too low to meet Savina]
+		now Resolution of Abandoned Camp is 99; [Player vore level too low to meet Savina]
 		if vorelevel > 1:	[Event continues unless 'Less Vore' is set]
 			WaitLineBreak;
 			say "     Emerging back outside, you balk when you see the body of a snake slithering among the tree branches in front of you. The reptile is mostly green with a few splotches of either brown or dark-green dotting its body, but the more worrisome part is its size. Its girth is easily as wide as the average human, and even though you cannot see where the head or tail are, there's no doubt that this snake is far longer than any other known species. Considering how rapidly this forest had sprouted since the nanite outbreak began, it isn't farfetched to say that this beast had went through the same kind of unnatural growth. You turn to run away from the imposing animal, only to find out that the snake's long body has fully surrounded the campsite, and the coils are still closing in.";
@@ -93,10 +93,10 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 				AddNavPoint Deep Forest;
 				move Savina to Deep Forest;
 				move player to Deep Forest;
-				now Resolution of Abandoned Camp is 1;		[Hypnotized by Savina]
+				now Resolution of Abandoned Camp is 1; [Hypnotized by Savina]
 			else:		[Removes Savina from game]
 				say "     Tearing your gaze away from those bewitching eyes, you suddenly turn around and manage to slide under the ring of scales before the snake can react. A loop of coils comes crashing down from above during your hasty retreat, but you manage to evade it without losing much speed. You hear angry hissing from behind, but it quickly fades as you exit the deeper parts of the forest and vow to never go down that direction again.";
-				now Resolution of Abandoned Camp is 100;		[Ran from Savina]
+				now Resolution of Abandoned Camp is 100; [Ran from Savina]
 		now Abandoned Camp is resolved;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost fight]
 		say "     Despite the gargoyle's departure, you can almost sense his gaze on you from somewhere up in the canopy. Not wanting to stick around for a second round in your current state, you hastily gather your wits and flee the area. You'll have to better prepare yourself if you want to try and search the camp again.";
@@ -145,7 +145,7 @@ Cock Length of Savina is 0. [Length in Inches]
 Ball Count of Savina is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Savina is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Savina is 1. [number of cunts]
-Cunt Depth of Savina is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Savina is 6. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Savina is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Savina is 1. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

@@ -109,7 +109,7 @@ Alexandrastory3 is a truth state that varies.
 
 
 [Alexandra is a woman.
-ScaleValue of Alexandra is 3. [human sized]
+ScaleValue of Alexandra is 3. [5' 5"]
 Body Weight of Alexandra is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Alexandra is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
@@ -127,7 +127,7 @@ Cock Length of Alexandra is 0. [length in inches]
 Ball Count of Alexandra is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Alexandra is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Alexandra is 1. [number of cunts]
-Cunt Depth of Alexandra is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Alexandra is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Alexandra is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Alexandra is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

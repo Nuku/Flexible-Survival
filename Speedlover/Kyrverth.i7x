@@ -81,7 +81,7 @@ Cock Length of Kyrverth is 4. [Starts small and grows with Kyrverthstage]
 Ball Count of Kyrverth is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Kyrverth is 1. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Starts small and grows with Kyrverthstage]
 Cunt Count of Kyrverth is 0. [number of cunts]
-Cunt Depth of Kyrverth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Kyrverth is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Kyrverth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Kyrverth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -886,7 +886,7 @@ to say ResolveEvent Strange Sighting: [Very first meeting with the dragon]
 		now KyrverthEndingTimer is turns;
 		now Resolution of Strange Sighting is 1; [player did not encounter Kyrverth. End things here.]
 	now KyrverthTimer is Turns; [deprecated but leaving in here because it's useful]
-	now Strange Sighting is resolved;  [it won't happen again]
+	now Strange Sighting is resolved; [it won't happen again]
 
 Jewel Heist is a situation.
 ResolveFunction of Jewel Heist is "[ResolveEvent Jewel Heist]".

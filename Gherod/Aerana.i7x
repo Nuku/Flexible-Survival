@@ -19,6 +19,19 @@ Version 2 of Aerana by Gherod begins here.
 
 Section 1 - Pre-event
 
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Succubus Offspring Meeting"	Succubus Offspring Meeting	"[EventConditions_Succubus_Offspring_Meeting]"	Burned-Out Chapel	2500	2	100
+
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Succubus Offspring Meeting"	Succubus Offspring Meeting	"[EventConditions_Succubus_Offspring_Meeting]"	Burned-Out Chapel	2500	2	100
+
+to say EventConditions_Succubus_Offspring_Meeting:
+	if (Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith and Elijah is not in Burned-Out Chapel: [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex)]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Succubus Offspring Meeting	"Succubus Offspring Meeting"
@@ -35,7 +48,7 @@ to say LilithTalkAerana:
 	say "     With all due respect for the lady demoness['] hard work at giving birth to her offspring, you ask if it would be possible to bring a female child out to the world, if you kept on providing the [italic type]required deposits[roman type]. Lilith chuckles at your words, as if she was amused by your request, but eventually gives out a reply. 'We are vastly more complex than your definitions of gender, but I understand the meaning of your request.' she says, leaving a smile across her flawless face. 'Very well, you may have a daughter the next time we bed together. Though I hope you know what you are asking.' she finishes speaking, leaving a quite cryptic warning in the end that you will only understand when you see it. Probably.";
 	TraitGain "Succubus Daughter Wanted" for Lilith;
 
-after going to Burned-Out Chapel while (Succubus Offspring Meeting is not resolved and Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith and Elijah is not in Burned-Out Chapel and a random chance of 2 in 3 succeeds): [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex), 66% chance]
+to say ResolveEvent Succubus Offspring Meeting:
 	if player is not male:
 		say "     (Note: Even though you might not have a dick right now, you are still the person who fathered Aerana. That's why she will continue to call you dad throughout all content.)";
 	move Aerana to Burned-Out Chapel;
@@ -94,7 +107,7 @@ Cock Length of Aerana is 0. [length in inches]
 Ball Count of Aerana is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Aerana is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Aerana is 1. [number of cunts]
-Cunt Depth of Aerana is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Aerana is 12. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Aerana is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Aerana is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -514,12 +527,25 @@ to AeranaSexEdgingTailjob:
 
 Section 3 - Aerana Events
 
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"AAHellfire"	AAHellfire	"[EventConditions_AAHellfire]"	Burned-Out Chapel	2500	2	100
+
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"AAHellfire"	AAHellfire	"[EventConditions_AAHellfire]"	Burned-Out Chapel	2500	2	100
+
+to say EventConditions_AAHellfire:
+	if (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and player is male): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 AAHellfire	"AAHellfire"
 
 AAHellfire is a situation.
-ResolveFunction of AAHellfire is "".
+ResolveFunction of AAHellfire is "[ResolveEvent AAHellfire]".
 Sarea of AAHellfire is "Nowhere".
 
 [Resolution Stages]
@@ -530,7 +556,7 @@ Sarea of AAHellfire is "Nowhere".
 [ 4 - Player left]
 [ 99 - Player left before the discussion]
 
-after going to Burned-Out Chapel while (Succubus Offspring Meeting is resolved and Incubus Offspring Meeting is resolved and Loyalty of Aerana > 0 and Loyalty of Aerana < 50 and Loyalty of Atticus > 0 and Loyalty of Atticus < 99 and Hellfire Club is known and Player is male and a random chance of 1 in 2 succeeds): [Aerana and Atticus must have both been introduced and present in the game, be on good terms with the Player and Hellfire Club must be unlocked, player must be male]
+to say ResolveEvent AAHellfire:
 	say "     As you enter the nave of the ruined chapel, you hear multiple voices, familiar ones, in what seems to be a rather lit discussion. This is an odd event, as this place is usually quite silent and calm, with only Lilith and her children occasionally conversing, if anything at all. Curiosity slides deep into your thoughts and leads you to walk into the space where you can finally see the family reunited. As the demonic sorceress herself stands in the altar, your two shared offspring, Aerana and Atticus, seem to be arguing with one another while a large crimson demon, completely naked, lies tied up and bound between them, with a hood over his head. The entire scene is, indeed, a rare sight, and as the demons see you approach, they hold their words for brief moments.";
 	say "     'Oh, it is you. A timely arrival, I must admit,' says Lilith as she beckons you to come closer. 'Don't you happen to know, by any chance, why this red vermin was trespassing our territory?' she asks, with an authoritative tone which also seems slightly angry, as she points at the demon between them. You are able to identify him as a common Hellfire Demon, one of Mogdraz's lackeys. 'Since you have been there on occasion... Not that I personally mind it, but I trust that you'd know how to keep certain things in their due places... And the fact is that they grow bolder by the day, which is an odd coincidence.' Aerana turns to you after her mother has spoken, her eyes piercing yours as she opens her mouth to talk...";
 	WaitLineBreak;
@@ -585,7 +611,7 @@ after going to Burned-Out Chapel while (Succubus Offspring Meeting is resolved a
 		LineBreak;
 		say "     Thinking twice, you really do not want to partake in this discussion, so you bid both your children goodbye and allow them to sort themselves out on their own. 'Well, if that's so, it looks like we can solve this in a duel,' says Aerana to Atticus, and before you get dragged into this again, you take your leave. They seem to be arguing, still, but at least you will not get a headache out of it.";
 		now Resolution of AAHellfire is 99;
-	WaitLineBreak;
+	now AAHellfire is resolved;
 
 to say AeranaHellfireDemonScene:
 	say "     'But first, let us remove the hood. I need him to see who's in charge.' she says, walking up to him and pulling it off his head. The revelation is mildly shocking, but not entirely surprising, as the hellfire demon winks at you when he has a clear view of you. 'Oh, hey there! Nice to be able to breathe freely, again!' he speaks, and this handsome crimson devil is, in fact, Arad, one of the twins who guard the Hellfire Club. 'Wait, you two know each other?' she asks, and you have to say that, indeed, you do. 'Well, I really couldn't forget about such a cute face... It's always a welcome sight when [SubjectPro] walks into the Club.' says Arad as he looks at you. The succubus blinks a few times, but then returns to the priority at hand.";

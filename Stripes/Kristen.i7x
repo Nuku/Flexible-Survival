@@ -2,6 +2,33 @@ Version 2 of Kristen by Stripes begins here.
 [ Version 2.5 - Friendly Kristen special sex + 3some w/Janice ]
 "Adds an Arctic Fox named Kristen to the Flexible Survival game."
 
+[	HP of Kristen           ]
+[ 0 = not encountered     ]
+[ 1 = not saved           ]
+[ 2 = saved               ]
+[ 3 = talked to her       ]
+[                         ]
+[ 10 = player gets item   ]
+[ 11 = item given         ]
+[ 12 = triggered          ]
+[ 13 = infected, step 1   ]
+[ 14 = infected, step 2   ]
+[ 15 = infected, step 3   ]
+[ 16 = fully tf'd         ]
+
+[     XP of Kirsten       ] [not currently active, but preparatory]
+[ 0 = no spray            ]
+[ 1 = got spray           ]
+[ 2 = using spray         ]
+
+[   Libido of Kristen     ]
+[  personality tracker    ]
+[ 0 = no change           ]
+[ 1 = sexed up as human   ]
+[ 2 = reassured           ]
+[ 3 = seduced             ]
+[ 4 = forced              ]
+
 Section 1 - Event
 
 Table of GameCharacterIDs (continued)
@@ -128,17 +155,53 @@ to say krishideoutdesc:
 
 Section 2 - Kristen
 
-Kristen is a woman. Kristen is in Kristen's Hideout.
+Kristen is a woman.
+Kristen is in Kristen's Hideout.
+ScaleValue of Kristen is 3. [human sized]
+SleepRhythm of Kristen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Kristen is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kristen is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kristen is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kristen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kristen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kristen is 6. [length in inches]
+Breast Size of Kristen is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kristen is 2. [count of nipples]
+Asshole Depth of Kristen is 8. [inches deep for anal fucking]
+Asshole Tightness of Kristen is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kristen is 0. [number of cocks]
+Cock Girth of Kristen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kristen is 0. [Length in Inches]
+Ball Count of Kristen is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kristen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kristen is 1. [number of cunts]
+Cunt Depth of Kristen is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kristen is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kristen is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Kristen is false.
+PlayerRomanced of Kristen is false.
+PlayerFriended of Kristen is false.
+PlayerControlled of Kristen is false.
+PlayerFucked of Kristen is false.
+OralVirgin of Kristen is false.
+Virgin of Kristen is false.
+AnalVirgin of Kristen is true.
+PenileVirgin of Kristen is true.
+SexuallyExperienced of Kristen is true.
+TwistedCapacity of Kristen is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kristen is false. [steriles can't knock people up]
+MainInfection of Kristen is "Arctic fox".
 Description of Kristen is "[kristendesc]".
 Conversation of Kristen is { "Thanks." }.
+the scent of Kristen is "[kristenscent]".
 kristenmsg1 is a truth state that varies. kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies. kristenmsg2 is usually false.	[general info]
 kristenmsg3 is a truth state that varies. kristenmsg3 is usually false.	[J mentioned K]
 kristenmsg4 is a truth state that varies. kristenmsg4 is usually false.	[K told about J]
 kristenmsg5 is a truth state that varies. kristenmsg5 is usually false.	[prompted for blouse?]
 kristentf3fuck is a truth state that varies. kristentf3fuck is usually false.	[fucked Kristen at tf stage 3]
-
-the scent of Kristen is "[kristenscent]".
 
 to say kristenscent:
 	if HP of Kristen < 2:
@@ -740,36 +803,7 @@ to say kristenjanice3some00:
 	now lastfuck of Janice is turns;
 
 
-Section 8 - Variable Charts
-
-[	HP of Kristen           ]
-[ 0 = not encountered     ]
-[ 1 = not saved           ]
-[ 2 = saved               ]
-[ 3 = talked to her       ]
-[                         ]
-[ 10 = player gets item   ]
-[ 11 = item given         ]
-[ 12 = triggered          ]
-[ 13 = infected, step 1   ]
-[ 14 = infected, step 2   ]
-[ 15 = infected, step 3   ]
-[ 16 = fully tf'd         ]
-
-[     XP of Kirsten       ] [not currently active, but preparatory]
-[ 0 = no spray            ]
-[ 1 = got spray           ]
-[ 2 = using spray         ]
-
-[   Libido of Kristen     ]
-[  personality tracker    ]
-[ 0 = no change           ]
-[ 1 = sexed up as human   ]
-[ 2 = reassured           ]
-[ 3 = seduced             ]
-[ 4 = forced              ]
-
-Section 9 - Temporary Raw Notes
+Section 8 - Temporary Raw Notes
 
 
 [ lovers bench ]

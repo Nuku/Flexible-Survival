@@ -45,7 +45,7 @@ Cock Length of Janice is 0. [length in inches]
 Ball Size of Janice is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Ball Count of Janice is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Janice is 1. [number of cunts]
-Cunt Depth of Janice is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Janice is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Janice is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Janice is 1. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Janice is 10. [inches deep for anal fucking]
@@ -53,8 +53,6 @@ Asshole Tightness of Janice is 2. [asshole tightness 1-5, "extremely tight, tigh
 Nipple Count of Janice is 2. [count of nipples]
 Breast Size of Janice is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 [Basic Interaction states as of game start]
-TwistedCapacity of Janice is false. [can not take oversized members without pain]
-Sterile of Janice is true.
 PlayerMet of Janice is false.
 PlayerRomanced of Janice is false.
 PlayerFriended of Janice is false.
@@ -65,7 +63,9 @@ Virgin of Janice is false.
 AnalVirgin of Janice is true.
 PenileVirgin of Janice is true.
 SexuallyExperienced of Janice is true.
-MainInfection of Janice is "".
+TwistedCapacity of Janice is false. [can not take oversized members without pain]
+Sterile of Janice is false.
+MainInfection of Janice is "Arctic fox".
 Description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 Conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.
@@ -130,7 +130,7 @@ instead of conversing the Janice:
 			say "     Finding your crotch lacking in a gender, she seems a little disappointed, but instead lets her paws roam across your [bodytype of Player] form. As she caresses your body, she grinds her juicy pussy against your leg and nuzzles along your neck. She gives you small nips and nibbles while rubbing her softly furred fur against your [bodydesc of Player] body. Her touch is sensual and her scent is intense with arousal. She lavishes attention upon you while rubbing her wet petals against your thigh until she cries out in orgasm. 'Mmm... you did very well, my dear. If all goes well, I should be able to see my dear friend again soon,' she grins as wipes up some juices from her crotch and sucks them from her fingertips before moving onto grooming her fluffy fur.";
 			say "     Something about the vixen's words make you uneasy. You should probably go check on Kristen.";
 		infect "Arctic fox";
-		if janicearoused is 0, now janicearoused is 1;  [player now passed Janice's test, willing or not]
+		if janicearoused is 0, now janicearoused is 1; [player now passed Janice's test, willing or not]
 		if janicetalk < 4, now janicetalk is 4;
 		now HP of Kristen is 12;
 	else if HP of Kristen >= 16 and a random chance of 1 in 3 succeeds:

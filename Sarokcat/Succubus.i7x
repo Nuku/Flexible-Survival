@@ -89,7 +89,7 @@ to say succubus fight:
 		say "You find yourself too aroused to keep fighting the sexy seductress and drop to your knees. Having fallen under the sway of this infernal temptress, you long for her to help relieve the heat in your loins.";
 
 to say SuccubusDesc:
-	setmongender 4;  [creature is female]
+	setmongender 4; [creature is female]
 	say "     A beautiful red-headed woman steps into your way, skillfully presenting herself to enflame the interest (and possibly lust) of even the most temperate of onlookers. You can't help but look her over, taking in the long legs and shapely curves of her body. Gaze wandering up from pants seemingly painted on her legs, you see a bare midriff with flawless skin, then are captivated by two quite generous breasts cupped by a leather bra. The leather jacket she wears is pretty small, too much so to be closed - but then, it mainly serves as framing for that glorious rack of her boobs. A melodious chuckle draws your attention up to her face a moment later - gorgeously beautiful, but... not quite human, as you soon notice.";
 	say "     The woman has a pair of small horns growing out of her forehead, pointy ears and predatory eyes that have a faint amber glow to them. Blinking once or twice, you only then notice the large bat-like wings stretching out from behind her back, as well as the long and thin red tail, ending in a spaded tip. Seeing she has your undivided attention, the strange woman twists her full lips into an amused smile and says, '[one of]Oh yes, now this should be fun.'[or]You look like you need some help loosening up a bit...'[or]Let me show you how much fun a succubus can be.'[or]I wonder if you will make a better pet, or a better succubus... let's find out shall we?'[at random] Then she lifts a slender hand with rather sharp nails and steps closer - a bit like a cat closing in for the kill.";
 
@@ -102,29 +102,29 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Succubus"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Succubus"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Succubus" to infections of DemonList;
 	add "Succubus" to infections of OtherworldlyList;
 	add "Succubus" to infections of FemaleList;
 	add "Succubus" to infections of BipedalList;
 	add "Succubus" to infections of FlightList;
 	now Name entry is "Succubus";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[succubus fight]";
 	now defeated entry is "[Succubus loss]";
 	now victory entry is "[Succubus attack]";
 	now desc entry is "[SuccubusDesc]";
-	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "that of a beautiful human's, your strange slit pupiled eyes and the small horns poking out of your hair, the only clue that your almost perfect features hide the lusty desires of a succubus behind your innocent"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "surprisingly perfect, your muscles and curves nicely defined, your long eye-catching legs perfect for showing off, and your soft hands with their long nails are just made for stroking and petting the opposite sex. The only true sign of your unusual nature, are the two large bat-like wings, folded up against your back, and while they are not quite powerful enough to lift you aloft yet, though you think that might change sometime soon"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]soft, human[or]pale[or]perfect[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a perfect sexy ass with a long, slender tail attached. It is a classic devil tail: thin, red and ending in a spaded tip."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]incubus[or]perfect[or]human-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer more sexual appearance, soft horns pushing out of your lovely new waterfall of long silken hair"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "invisible hands seem to massage your muscles, rubbing and molding your body into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder you can't help but stare in wonder as two large bunches of flesh push out of your back, before shifting and stretching themselves out into two surprisingly good looking wings"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "your skin seems to soften and glow with a sexual sheen, any blemishes and unwanted hair wiped away by the amazingly wonderful feeling changes"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it tightens up into a perfect sexy ass. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into a softer more sexual appearance, soft horns pushing out of your lovely new waterfall of long silken hair"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "invisible hands seem to massage your muscles, rubbing and molding your body into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder you can't help but stare in wonder as two large bunches of flesh push out of your back, before shifting and stretching themselves out into two surprisingly good looking wings"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "your skin seems to soften and glow with a sexual sheen, any blemishes and unwanted hair wiped away by the amazingly wonderful feeling changes"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it tightens up into a perfect sexy ass. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it seems to grow partially erect and twitch eagerly, almost like it has a mind of its own, eagerly hunting for the next chance to be put to use"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 20;
@@ -132,35 +132,35 @@ When Play begins:
 	now per entry is 16;
 	now int entry is 10;
 	now cha entry is 25;
-	now sex entry is "Female";       [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 50;
-	now lev entry is 8;              [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 14;            [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Red";         [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 0;            [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 0;      [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 0;       [ Size of balls ]
-	now Nipple Count entry is 2;          [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;      [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 14; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Red"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 5; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 6;
 	now SeductionImmune entry is false;
-	now libido entry is 80;          [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "libido pill"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 20;       [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;            [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]alluring[or]sexy[or][if Player is female]sultry[else]handsome[end if][at random]";
-	now type entry is "demonic";     [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "demonic"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is true;
-	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;   [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -171,7 +171,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -228,7 +228,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -255,7 +255,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

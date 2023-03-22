@@ -31,10 +31,45 @@ Table of GameCharacterIDs (continued)
 object	name
 Lucy	"Lucy"
 
-Lucy is a woman.
+Lucy is a man.
+ScaleValue of Lucy is 3. [human sized]
+SleepRhythm of Lucy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Lucy is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Lucy is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Lucy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Lucy is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Lucy is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Lucy is 7. [length in inches]
+Breast Size of Lucy is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Lucy is 2. [count of nipples]
+Asshole Depth of Lucy is 8. [inches deep for anal fucking]
+Asshole Tightness of Lucy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Lucy is 0. [number of cocks]
+Cock Girth of Lucy is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Lucy is 0. [Length in Inches]
+Ball Count of Lucy is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Lucy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Lucy is 1. [number of cunts]
+Cunt Depth of Lucy is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Lucy is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Lucy is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Lucy is false.
+PlayerRomanced of Lucy is false.
+PlayerFriended of Lucy is false.
+PlayerControlled of Lucy is false.
+PlayerFucked of Lucy is false.
+OralVirgin of Lucy is false.
+Virgin of Lucy is false.
+AnalVirgin of Lucy is true.
+PenileVirgin of Lucy is true.
+SexuallyExperienced of Lucy is true.
+TwistedCapacity of Lucy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Lucy is false. [steriles can't knock people up]
+MainInfection of Lucy is "Slut Rat".
 Description of Lucy is "[lucydesc]".
 Conversation of Lucy is { "Hey baby!" }.
-
 the scent of Lucy is "The rat girl smells of perfume and nail polish.".
 
 to say lucydesc:

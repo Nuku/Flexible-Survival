@@ -28,7 +28,7 @@ Cock Length of Midnight is 10. [length in inches]
 Ball Size of Midnight is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Ball Count of Midnight is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Midnight is 1. [number of cunts]
-Cunt Depth of Midnight is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Midnight is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Midnight is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Midnight is 1. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Midnight is 11. [inches deep for anal fucking]
@@ -178,7 +178,7 @@ to say ResolveEvent FindingMidnight:
 				now Midnight is in Zoo Giftshop;
 				Infect "Panther Herm";
 				now player is in Zoo Giftshop;
-				now battleground is "void";  [blocks a random fight after this]
+				now battleground is "void"; [blocks a random fight after this]
 				now AngieAroused is 50;
 				now Resolution of FindingMidnight is 1; [Angie still focused on Midnight]
 			else: [Angie likes the player more than Midnight]
@@ -236,7 +236,7 @@ to say ResolveEvent FindingMidnight:
 					Infect "Panther Herm";
 					now AngieAroused is 7;
 				now player is in Zoo Giftshop;
-				now battleground is "void";  [blocks a random fight after this]
+				now battleground is "void"; [blocks a random fight after this]
 				now Resolution of FindingMidnight is 4; [player turned Angie down to mount them]
 			now FindingMidnight is resolved;
 		else:

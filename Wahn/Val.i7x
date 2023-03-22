@@ -40,7 +40,7 @@ Cock Length of Val is 8. [length in inches]
 Ball Count of Val is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Val is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Val is 0. [number of cunts]
-Cunt Depth of Val is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Val is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Val is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Val is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -193,21 +193,21 @@ An everyturn rule:
 			else:
 				LineBreak;
 				say "     Val's expression falls as you decline, and the disappointment is audible in his voice as he says, 'I - I'll just spend what time I have with Chris then... while he still is Chris.' Turning away from you, the orc breeder then walks over to his son, talking to him in a quiet voice. You decide to keep your distance and leave them to it in peace.";
-			now ValPregnancy is 0;     [no need to tell the player about the birth, as he was present]
+			now ValPregnancy is 0; [no need to tell the player about the birth, as he was present]
 		else:
 			say "     You have a strange feeling in your body, as if you somehow just know that a new life has entered this world. Maybe you should go check on Val in the orc lair...";
-			now ValPregnancy is 4;     [so he can tell the player about their kid in the next meeting]
+			now ValPregnancy is 4; [so he can tell the player about their kid in the next meeting]
 		now ValPregCounter is 0;
 	else if ValPregCounter is 3 and player is not in Slave Cell 1 and HP of Val is 2:
 		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type][line break]";
 	else if ValPregCounter is 12:
-		now ValPregnancy is 3;   [very visible pregnancy]
+		now ValPregnancy is 3; [very visible pregnancy]
 		if Player is in Slave Cell 1:
 			say "     [bold type]Seeing Val's belly bulge larger and larger, you start wondering what will happen once his time to give birth comes.[roman type][line break]";
 		else if HP of Val is 2: [player knows he is pregnant]
 			say "     [bold type]You remember that the time for the birth of Val's child should be sometime during the next day or two. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type][line break]";
 	else if ValPregCounter is 24:
-		now ValPregnancy is 2;   [visible pregnancy]
+		now ValPregnancy is 2; [visible pregnancy]
 	if ValPregCounter > 1:
 		decrease ValPregCounter by 1;
 

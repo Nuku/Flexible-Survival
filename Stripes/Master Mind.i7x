@@ -13,11 +13,46 @@ object	name
 Master Mind	"Master Mind"
 
 Master Mind is a woman.
+ScaleValue of Master Mind is 3. [human sized]
+SleepRhythm of Master Mind is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Master Mind is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Master Mind is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Master Mind is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Master Mind is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Master Mind is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Master Mind is 6. [length in inches]
+Breast Size of Master Mind is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Master Mind is 2. [count of nipples]
+Asshole Depth of Master Mind is 8. [inches deep for anal fucking]
+Asshole Tightness of Master Mind is 1. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Master Mind is 0. [number of cocks]
+Cock Girth of Master Mind is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Master Mind is 0. [Length in Inches]
+Ball Count of Master Mind is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Master Mind is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Master Mind is 1. [number of cunts]
+Cunt Depth of Master Mind is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Master Mind is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Master Mind is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Master Mind is false.
+PlayerRomanced of Master Mind is false.
+PlayerFriended of Master Mind is false.
+PlayerControlled of Master Mind is false.
+PlayerFucked of Master Mind is false.
+OralVirgin of Master Mind is true.
+Virgin of Master Mind is true.
+AnalVirgin of Master Mind is true.
+PenileVirgin of Master Mind is true.
+SexuallyExperienced of Master Mind is false.
+TwistedCapacity of Master Mind is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Master Mind is true. [steriles can't knock people up]
+MainInfection of Master Mind is "".
 Description of Master Mind is "[masterminddesc]".
 Conversation of Master Mind is { "meatbag" }.
+The scent of the Master Mind is "Master Mind has little scent of her own, through there is a faintly feminine scent to her, coming from her juicy pussy.".
 The icon of Master Mind is Figure of MasterMind_icon.
-
-the scent of the Master Mind is "Master Mind has little scent of her own, through there is a faintly feminine scent to her, coming from her juicy pussy.".
 
 to say masterminddesc:
 	say "     Imprisoned in one of the police station's cells, this gold-skinned automaton is some kind of elite model. She has a glass dome at the top of her cranium, through which you can see a computerized brain made of electronics, wires and blinking lights. It looks like something out of a 50[']s B-movie, but created with modern components. Her gold-plated skin is smooth and without blemish or patina. She is wearing a skintight silver jumpsuit that leaves little to the imagination, her firm nipples, camel toe and sexy ass all smoothly outlined by the fabric.";

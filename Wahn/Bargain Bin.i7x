@@ -464,9 +464,9 @@ to say plrtcl:
 		ItemGain water bottle by 1;
 	else:
 		let Q be a list of numbers;
-		if MaleList is not banned, add 1 to Q;  [Plush Lion]
-		if FemaleList is not banned, add 2 to Q;  [Rubber Tigress]
-		if HermList is not banned, add 3 to Q;  [Chocolate Lab]
+		if MaleList is not banned, add 1 to Q; [Plush Lion]
+		if FemaleList is not banned, add 2 to Q; [Rubber Tigress]
+		if HermList is not banned, add 3 to Q; [Chocolate Lab]
 		sort Q in random order;
 		now tempnum is entry 1 of Q;
 		if tempnum is 1:

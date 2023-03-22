@@ -323,15 +323,15 @@ When Play begins:
 	add "Blue Gryphon Herm" to infections of TailList;
 	add "Blue Gryphon Herm" to infections of OviImpregnatorList;
 	now Name entry is "Blue Gryphon Herm"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [Skin of Player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";
 	now defeated entry is "[beatthehgryphon]";
 	now victory entry is "[losetohgryphon]";
 	now desc entry is "[HermGryphonDesc]";
-	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face. Format as Your face is [Face of Player]. ]
-	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [Skin of Player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body. Format as "Your body is [Body of Player]." ]
+	now face entry is "powerful beak that protrudes in a clean curve. Above, feline ears twitch and turn above your altered features"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "dramatically altered, with powerful digitigrade legs of leonine musculature, great claws on your [Skin of Player] feetpaws. Behind you, two large feathery wings flutter on occasion"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "[one of]soft, blue, and furry[or]softly furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a thin, leonine tail swaying over your ass. Its [Skin of Player] length has a tuft of blue fur at the end."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]sheathed and black[or]knotted[or]dense, black[or]inhumanly bulging[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
@@ -373,7 +373,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -385,7 +385,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is "Blue Gryphon Herm"; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 6; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 6; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -442,7 +442,7 @@ When Play begins:
 	now Legs Color entry is "blue"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes well-rounded and blue fur sprouts all over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is "ass, covered short blue fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
-	now Ass Skin Adjective entry is "furry";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "blue"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 4; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]

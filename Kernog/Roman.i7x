@@ -62,7 +62,7 @@ Cock Length of Team Captain Roman is 0. [Length in Inches]
 Ball Count of Team Captain Roman is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Team Captain Roman is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Team Captain Roman is 1. [number of cunts]
-Cunt Depth of Team Captain Roman is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Team Captain Roman is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Team Captain Roman is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Team Captain Roman is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -270,7 +270,7 @@ to say FootballTryoutsResults:
 		now GorillasRep is 9; [star player]
 	else if TryoutScore > 4: [okay results]
 		say "     'Congratulations you made it into the team,' the primate says with a grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, you rated well in the upper third. Didn't take much convincing for everyone to agree that you deserve a shot on the team.' Waving his hand to indicate the large locker room, he goes on to say, 'Be sure to come by regularly to train. You should make it to the main team in no time.' You thank him and walk away, and into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys.";
-		now GorillasRep is 4;  [b team player]
+		now GorillasRep is 4; [b team player]
 	else: [moderate to bad results]
 		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait, I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be either a [if Player is female]water girl or a laundry girl[else]water boy or a laundry boy[end if].' Roman gives you a supportive slap on the shoulder. 'It will be no small job, managing all these boys['] laundry, but every effort counts, and for that you have my thanks. [bold type]If you work for the team enough times, I am certain that someone will put a good word for you, and put your name forward for the next draft[roman type]. Come back anytime you want, champ. I'm sure that I'll see you on the football field in no time.'";
 		now GorillasRep is 0;

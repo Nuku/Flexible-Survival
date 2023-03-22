@@ -31,7 +31,7 @@ Cock Length of Tristian is 15. [length in inches]
 Ball Count of Tristian is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Tristian is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Tristian is 0. [number of cunts]
-Cunt Depth of Tristian is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Tristian is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Tristian is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Tristian is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -212,7 +212,7 @@ to palominoinfect:
 	choose row MonsterID from the Table of Random Critters;
 	setmonster "Palomino Stallion";
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect;
 	now non-infectious entry is true;
 

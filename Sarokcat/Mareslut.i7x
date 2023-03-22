@@ -47,7 +47,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Horse"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Horse"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Mareslut" to infections of EquineList;
 	add "Mareslut" to infections of FurryList;
 	add "Mareslut" to infections of NatureList;
@@ -57,22 +57,22 @@ When Play begins:
 	add "Mareslut" to infections of BipedalList;
 	add "Mareslut" to infections of TailList;
 	now Name entry is "Mareslut";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She rubs her large, sexy breasts teasingly as she slides up against you.[or]The mare reaches out and strokes her hands over your body teasingly[or]The powerful mare moves surprisingly fast as she slams one of her hoof-like fists into your body![or]The sexy mare charges forward, running right into you![or]She gives you an equine grin for a minute, confusing you slightly, as she slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show.[or]The mare reaches out with her powerful arms, and tries to pin you up against her sexy body, rubbing her soft fur all over your skin as she moans with excitement![or]She charges forward, and her hoof-like hands reach around your head, and pull you forward until your face is buried in her ample cleavage while she moans with excitement as she rubs her soft breasts up against your face.[at random]";
 	now defeated entry is "[Mareslut loss]";
 	now victory entry is "[Mareslut attack]";
 	now desc entry is "[mongendernum 4]     Traveling through the strangely empty halls of the building, you nearly run into a large equine female coming out of one of the side rooms. 'Well what do we have here?' the sexy looking mare asks, as she looks you up and down. You find yourself examining her in return, your eyes trailing over the ample equine curves and large bosom of the [one of]sleek black[or]sexy gray[or]slutty roan[or]suede brown[or]beautiful white[at random] mare as she balances easily on her silvery hooves, her long equine tail flicking behind her in excitement as the naked and sexy mare looks you over. '[one of]I have time for a little fun,[or]You look like you need a bit of fun,[or]What a sexy looking customer. Why don't I show you around my body?[no line break][or]Why don't you stop and stay a while sexy?[no line break][or]I think you would make a very sexy looking mare, nice and sexy and slutty just like me![no line break][or]Oooh you look like you want to play! C'mon then![no line break][or]Hey sexy, care to mount up and go for a ride?[no line break][or]I just knew that [if daytimer is day]today was going to be a good day[else]tonight was going to be a good night[end if]![no line break][at random]' the mare says, before reaching out towards you eagerly.";
-	now face entry is "rather equine like, with a large kissable muzzle, and beautiful brown eyes staring out of your expressive equine "; [ Face description, format as "Your face is (your text)."]
-	now body entry is "curved and full-bodied, with sensuous and sleek curves begging to be stroked and touched, you balance easily on your new equine legs even as your slightly hoof-like hands stroke your sensitive sides absently"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]softly furred[or]chestnut furred[or]tan colored horsehide[or]short fur covered[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "rather equine like, with a large kissable muzzle, and beautiful brown eyes staring out of your expressive equine "; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "curved and full-bodied, with sensuous and sleek curves begging to be stroked and touched, you balance easily on your new equine legs even as your slightly hoof-like hands stroke your sensitive sides absently"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]softly furred[or]chestnut furred[or]tan colored horsehide[or]short fur covered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a sleek and beautiful equine tail stretching out over your well-rounded rear. Its silken-soft strands feel amazing on your sensitive [Skin of Player] skin as they trail over your rear, the sensations of your tail trailing along behind you with every step making you shudder with ever-increasing arousal as it sways behind you in a sexy invitation to anyone who might be watching."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]horse like[or]blunt[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it stretches forward, your mouth broadening as it fills with equine teeth and your nose flattening out into your new forming muzzle. New powerful scents fill your equine like nose as your eyes blur and shift position, and your ears reposition themselves on top of your changed head"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it grows sleeker and sexier, your hips broadening and your legs and arms seeming to shift, the strange sensations causing you to moan with pleasure as you collapse to the ground. You feel increasingly aroused as your legs shift, and your feet melt into proper shiny silver hooves, and your hands seem to shift and your fingers shorten and your fingernails stretch out to cover the tips with surprisingly sensitive hoof-like tips. Your changes finally completely, you find yourself standing up easily on your new equine legs, your highly aroused body burning with desire as you look around, half hoping for a sexy horseman to show up to play with"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it seems to soften slightly and change in texture, the sensations causing you to shudder with pleasure as it feels like soft hands stroking all over your body as sleek new chestnut colored horsehair covers your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "it rounds out into a properly plump shape, and your spine seems to tickle as long strands of hair begin to extend outwards from it. Their soft silken strands tickling your ass and inner thighs teasingly as a sexy equine tail forms behind you, hanging down to the back of your knees, its soft silken texture feeling surprisingly pleasurable as you swish it around experimentally a few times"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it stretches forward, your mouth broadening as it fills with equine teeth and your nose flattening out into your new forming muzzle. New powerful scents fill your equine like nose as your eyes blur and shift position, and your ears reposition themselves on top of your changed head"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it grows sleeker and sexier, your hips broadening and your legs and arms seeming to shift, the strange sensations causing you to moan with pleasure as you collapse to the ground. You feel increasingly aroused as your legs shift, and your feet melt into proper shiny silver hooves, and your hands seem to shift and your fingers shorten and your fingernails stretch out to cover the tips with surprisingly sensitive hoof-like tips. Your changes finally completely, you find yourself standing up easily on your new equine legs, your highly aroused body burning with desire as you look around, half hoping for a sexy horseman to show up to play with"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it seems to soften slightly and change in texture, the sensations causing you to shudder with pleasure as it feels like soft hands stroking all over your body as sleek new chestnut colored horsehair covers your body"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "it rounds out into a properly plump shape, and your spine seems to tickle as long strands of hair begin to extend outwards from it. Their soft silken strands tickling your ass and inner thighs teasingly as a sexy equine tail forms behind you, hanging down to the back of your knees, its soft silken texture feeling surprisingly pleasurable as you swish it around experimentally a few times"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it grows erect and aroused, before beginning to shift and change. The point of your cock broadening and flattening slightly into a rather blunt equine shape, while a proper sheath forms around the base of your cock, and a ribbed ring forms about halfway up your surprisingly slender new equine member"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 18;
@@ -80,35 +80,35 @@ When Play begins:
 	now per entry is 14;
 	now int entry is 10;
 	now cha entry is 18;
-	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 80;
-	now lev entry is 8;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 10;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Stable";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 0;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 0;  [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 0;  [ Size of balls ]
-	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 10; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Stable"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 5; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 20;
 	now Cunt Tightness entry is 6;
 	now SeductionImmune entry is false;
-	now libido entry is 65;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
+	now libido entry is 65; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "horseman cum";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]sensual[or]curvaceous[at random]";
-	now type entry is "equine";  [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "equine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
-	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -119,7 +119,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -176,7 +176,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -203,7 +203,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

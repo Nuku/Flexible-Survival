@@ -40,6 +40,8 @@ A person has a number called SubVsDom. [range from -100 (sub) to 0 (vers) to +10
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
+A person has a number called ImpregTimer.
+A person has a number called OffspringCount.
 
 [ body numerical variables for all characters ]
 A person has a number called Body Weight. Body Weight is usually 5.
@@ -73,6 +75,8 @@ A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
 A person has a text called linkaction.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved][just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called LastSexualPartner.[@Tag:NotSaved]
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
 A person has a text called FirstOralPartner.
@@ -631,12 +635,20 @@ Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
 
-A person can be internal. A person is usually not internal.
+A person can be internalcock. A person is usually not internalcock.
 
-internalbypass is a truth state that varies. internalbypass is usually false.
+internalcockbypass is a truth state that varies. internalcockbypass is usually false.
 
-Definition: A person (called x) is internal:
-	if CockName of x is listed in infections of InternalCockList and internalbypass is false, yes;
+Definition: A person (called x) is internalcock:
+	if CockName of x is listed in infections of InternalCockList and internalcockbypass is false, yes;
+	no;
+
+A person can be internalBalls. A person is usually not internalBalls.
+
+internalBallsBypass is a truth state that varies. internalBallsBypass is usually false.
+
+Definition: A person (called x) is internalBalls:
+	if CockName of x is listed in infections of InternalBallsList and internalBallsBypass is false, yes;
 	no;
 
 A person can be sheathed. A person is usually not sheathed.

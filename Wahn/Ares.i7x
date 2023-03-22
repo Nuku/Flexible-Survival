@@ -39,7 +39,7 @@ Cock Length of Ares is 9. [length in inches]
 Ball Count of Ares is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Ares is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Ares is 0. [number of cunts]
-Cunt Depth of Ares is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Ares is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Ares is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Ares is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -276,7 +276,7 @@ to say AresHelenParkMounting:
 			say "     You think a moment about it, then decide to just let them go on. After all, Helen clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Helen with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
-			now HP of Ares is 4;  [only had sex with Helen]
+			now HP of Ares is 4; [only had sex with Helen]
 		else: [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Helen, with him giving a surprised (for not being safely locked with her by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
@@ -292,7 +292,7 @@ to say AresHelenParkMounting:
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Helen, his hard cock easily finding her pussy in the typical 'doggie style' position. Fucking the young woman with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside her. Being mounted by this other animal in human form, Helen pants and yips in lust, obviously getting all her buttons pushed and being very happy at feeling his weight on her back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresHelenParkFuck]";
-			now HP of Ares is 5;     [had sex with the player and Helen]
+			now HP of Ares is 5; [had sex with the player and Helen]
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
@@ -349,9 +349,9 @@ to say AresHelenParkFuck:
 				NPCSexAftermath Helen receives "OralCock" from Player;
 				NPCSexAftermath Helen receives "PussyFuck" from Ares;
 				if thirst of Helen is 0: [not pregnant]
-					now thirst of Helen is 1;           [pregnant]
-					now Libido of Helen is 5;           [...by Ares]
-					now HelenPregnant is 1;             [pregnancy timer]
+					now thirst of Helen is 1; [pregnant]
+					now Libido of Helen is 5; [...by Ares]
+					now HelenPregnant is 1; [pregnancy timer]
 			else if calcnumber is 2:[fuck Helen]
 				say "     Jerking off slowly, you watch the human dogs couple, Ares really pounding into Helen with rapid thrusts, only slowing down a bit in the middle as he realizes he can do more than just hold on to her with his hands and starts to fondle the young woman's breasts. With Ares wandering hands now stroking and groping her chest and him getting back into his fucking rhythm soon after while still keeping that up, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed.";
 				say "     Used to having a knot, Ares would likely have stayed inside her till he got fully soft, but horny as you are, you're not patient enough to wait that long. With a little push, Ares slips out of Helen's cum-filled pussy. It's clear that he's a bit surprised about this, but having gotten his rocks off, he doesn't really mind you moving in on his bitch now. As he dismounts, he gives her crotch a good sniff, then pads to the side and sits down, a wide smile on his face.";
@@ -367,12 +367,12 @@ to say AresHelenParkFuck:
 				NPCSexAftermath Helen receives "PussyFuck" from Ares;
 				NPCSexAftermath Helen receives "PussyFuck" from Player;
 				if thirst of Helen is 0: [not pregnant]
-					now thirst of Helen is 1;           [pregnant]
+					now thirst of Helen is 1; [pregnant]
 					if a random chance of 2 in 3 succeeds:
-						now Libido of Helen is 5;           [...by Ares]
+						now Libido of Helen is 5; [...by Ares]
 					else:
-						now Libido of Helen is 1;           [...by the player]
-					now HelenPregnant is 1;             [pregnancy timer]
+						now Libido of Helen is 1; [...by the player]
+					now HelenPregnant is 1; [pregnancy timer]
 			else if calcnumber is 3:[fuck Ares]
 				say "     Quickly getting into position behind Ares, you get your throbbing cock lined up with his tailhole, then push forward just as he pulls back from another thrust into Helen. He gives a soft whimper, but takes your cock easily enough - clearly having had some training from Mike in that regard. And he even speeds up his own movements, grunting in panting in lust as each pull back from Helen's pussy impales his ass on your hard shaft. Fucking Ares feels amazing, his hot hole tight around your member. Knowing that with each thrust in his hole you're driving him into Helen's pussy at the same time, it is as if you were fucking two persons at once. Embracing him from behind, you feel Ares muscular chest and revel in the hot threesome all of you are having.";
 				say "     After you don't know how long of an amazing time for the three of you, you can hear the pitch of Helen's moans rise up into a crescendo, sounding through the whole park as she orgasms. That creates a bit of a chain reaction, as the feeling of her pussy getting all wet with femcum and the trembling of Helen's muscles pushes Ares over the edge right with her. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. And with each blast of cum into Helen, Ares anal muscles clench and tighten around your own thrusting manhood, a bit as if he was jerking you off inside his ass. The pleasant feelings that gives you can't be denied for very long, and after just a few more deep penetrations, you come, grunting almost incoherently from the force of your orgasm. Spurt after spurt of your load blasts deep into Ares, leaving you panting breathlessly while leaning against his back.";
@@ -381,9 +381,9 @@ to say AresHelenParkFuck:
 				NPCSexAftermath Helen receives "PussyFuck" from Ares;
 				NPCSexAftermath Ares receives "AssFuck" from Player;
 				if thirst of Helen is 0: [not pregnant]
-					now thirst of Helen is 1;           [pregnant]
-					now Libido of Helen is 5;           [...by Ares]
-					now HelenPregnant is 1;             [pregnancy timer]
+					now thirst of Helen is 1; [pregnant]
+					now Libido of Helen is 5; [...by Ares]
+					now HelenPregnant is 1; [pregnancy timer]
 		else if Player is female:
 			say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit while spreading your pussy lips a bit for the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue over your nether lips, then laps at your clit. As Helen starts giving you pretty good cunnilingus, you resolve to thank Mike the next time you see him for your expertly trained pet";
 			if lust of Helen < 4:
@@ -401,9 +401,9 @@ to say AresHelenParkFuck:
 			NPCSexAftermath Helen receives "PussyFuck" from Ares;
 			NPCSexAftermath Helen receives "OralPussy" from Player;
 			if thirst of Helen is 0: [not pregnant]
-				now thirst of Helen is 1;           [pregnant]
-				now Libido of Helen is 5;           [...by Ares]
-				now HelenPregnant is 1;             [pregnancy timer]
+				now thirst of Helen is 1; [pregnant]
+				now Libido of Helen is 5; [...by Ares]
+				now HelenPregnant is 1; [pregnancy timer]
 		else:
 			say "     Saying 'Good dog' you crouch down in front of Helen, patting her head and stroking over her shoulders. Your hands stray deeper and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Sitting down, you lean back a bit and present your smooth (but nonetheless quite sensitive) crotch to the young woman, who gives you a happy yip, then starts licking. She runs her talented tongue over your skin, then starts to lap at the spot where your genitals would be if you still had them. As Helen gives you quite a bit of pleasure that way, you resolve to thank Mike the next time you see him for your expertly trained pet";
 			if lust of Helen < 4:
@@ -421,16 +421,16 @@ to say AresHelenParkFuck:
 			NPCSexAftermath Helen receives "PussyFuck" from Ares;
 			NPCSexAftermath Player receives "Stroking" from Helen;
 			if thirst of Helen is 0: [not pregnant]
-				now thirst of Helen is 1;           [pregnant]
-				now Libido of Helen is 5;           [...by Ares]
-				now HelenPregnant is 1;             [pregnancy timer]
+				now thirst of Helen is 1; [pregnant]
+				now Libido of Helen is 5; [...by Ares]
+				now HelenPregnant is 1; [pregnancy timer]
 	else:
 		say "     Happy to just watch them go at it, you simply stand back and [if Player is male]jerk off a bit while you do. [else if Player is female]finger your pussy while you do so. [else]stroke your sensitive crotch while you do so. [end if]The coupling of the human dogs continues for a while, with Ares really pounding into Helen with rapid thrusts, only slowing down a bit in the middle as he realizes he can do more than just hold on to her with his hands and starts to fondle the young woman's breasts. With Ares wandering hands now stroking and groping her chest and him getting back into his fucking rhythm soon after while still keeping that up, it's not too much longer before Helen's arousal builds into a mind-blowing orgasm and she howls in lust as she comes. Feeling her pussy get all wet with femcum and Helen's inner muscles twitch around his cock was the last push Ares himself needed to reach the point of no return. He joins the young woman in climax a moment later, grinding his hips against hers as he fills her womb with his human seed. Used to having a knot, Ares stays on top of Helen for a while even after he finishes coming, then finally dismounts when his cock goes soft.";
 		NPCSexAftermath Helen receives "PussyFuck" from Ares;
 		if thirst of Helen is 0: [not pregnant]
-			now thirst of Helen is 1;           [pregnant]
-			now Libido of Helen is 5;           [...by Ares]
-			now HelenPregnant is 1;             [pregnancy timer]
+			now thirst of Helen is 1; [pregnant]
+			now Libido of Helen is 5; [...by Ares]
+			now HelenPregnant is 1; [pregnancy timer]
 
 to say AresXerxesWalk:
 	if lust of Xerxes < 3:
@@ -479,7 +479,7 @@ to say AresXerxesParkMounting:
 			say "     You think a moment about it, then decide to just let them go on. After all, Xerxes clearly seems to like it and you brought them out here for some exercise - which is what their wild coupling might be counted as. Ares fucks Xerxes with an untamed animalistic energy, his hard thrusts rubbing very sensitive and pleasurable spots inside your pet. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
-			now HP of Ares is 4;  [only had sex with Xerxes]
+			now HP of Ares is 4; [only had sex with Xerxes]
 		else: [pull Ares off]
 			LineBreak;
 			say "     Enough of this. Coming back to your senses, you shorten the leash and pull Ares off Xerxes, with him giving a surprised (for not being safely locked with him by a knot) and annoyed grunt. Then you take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";
@@ -495,7 +495,7 @@ to say AresXerxesParkMounting:
 			say "     You think a moment about it, then decide to just let Ares go on. After all, you brought them out here for some exercise - which a good fucking might be counted as. Ares quickly mounts Xerxes, Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. Fucking the young man with a wild animalistic energy, Ares hard thrusts rub very sensitive and pleasurable spots inside your human dog. Being mounted by this other animal in human form, Xerxes pants and yips in lust, obviously getting all his buttons pushed and being very happy at feeling Ares's weight on his back. Standing there and watching them, you have to admit that the hot show doesn't leave you unaffected either.";
 			LineBreak;
 			say "     [AresXerxesParkFuck]";
-			now HP of Ares is 5;     [had sex with the player and Xerxes]
+			now HP of Ares is 5; [had sex with the player and Xerxes]
 		else:
 			LineBreak;
 			say "     Enough of this. Finally coming back to your senses, you shorten the leash and take Ares further down the pathway - though not without having to pull on the rather unhappy and uncooperative human dog several steps to start him moving.";

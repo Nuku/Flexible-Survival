@@ -10,10 +10,45 @@ object	name
 Newt	"Newt"
 
 Newt is a woman.
+ScaleValue of Newt is 3. [human sized]
+SleepRhythm of Newt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Newt is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Newt is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Newt is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Newt is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Newt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Newt is 6. [length in inches]
+Breast Size of Newt is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Newt is 2. [count of nipples]
+Asshole Depth of Newt is 8. [inches deep for anal fucking]
+Asshole Tightness of Newt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Newt is 0. [number of cocks]
+Cock Girth of Newt is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Newt is 0. [Length in Inches]
+Ball Count of Newt is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Newt is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Newt is 1. [number of cunts]
+Cunt Depth of Newt is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Newt is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Newt is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Newt is false.
+PlayerRomanced of Newt is false.
+PlayerFriended of Newt is false.
+PlayerControlled of Newt is false.
+PlayerFucked of Newt is false.
+OralVirgin of Newt is false.
+Virgin of Newt is true.
+AnalVirgin of Newt is true.
+PenileVirgin of Newt is true.
+SexuallyExperienced of Newt is false.
+TwistedCapacity of Newt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Newt is false. [steriles can't knock people up]
+MainInfection of Newt is "Salamander".
 Description of Newt is "[newtdesc]".
 Conversation of Newt is { "Hiss" }.
-
-the scent of Newt is "     It is difficult to smell Newt over the vapors of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.".
+The scent of Newt is "     It is difficult to smell Newt over the vapors of the magma cave, but she does have a pleasantly arousing scent when you get up close to her.".
 
 to say newtdesc:
 	say "     Looking quite similar to the other salamander girls you've seen, her body is a mix of animal and human forms. Her body is quite effeminate, with wide hips, thighs and a slender waistline. Her breasts are quite modest B-cups. Her arms and legs are quite human, but have added flexibility and agility. She's got small, dark claws on the ends of her digits. She possesses a flat, wide head with a short muzzle that often has a cheerful smile. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";

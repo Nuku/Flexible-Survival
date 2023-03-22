@@ -86,7 +86,44 @@ Table of GameCharacterIDs (continued)
 object	name
 Hadiya	"Hadiya"
 
-Hadiya is a person. Hadiya is in Hyena Shack.
+Hadiya is a woman.
+Hadiya is in Hyena Shack.
+ScaleValue of Hadiya is 4. [tall human sized]
+SleepRhythm of Hadiya is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Hadiya is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Hadiya is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Hadiya is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Hadiya is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Hadiya is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Hadiya is 8. [length in inches]
+Breast Size of Hadiya is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Hadiya is 2. [count of nipples]
+Asshole Depth of Hadiya is 10. [inches deep for anal fucking]
+Asshole Tightness of Hadiya is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Hadiya is 1. [number of cocks]
+Cock Girth of Hadiya is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Hadiya is 10. [Length in Inches]
+Ball Count of Hadiya is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Hadiya is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Hadiya is 1. [number of cunts]
+Cunt Depth of Hadiya is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Hadiya is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Hadiya is 1. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Hadiya is false.
+PlayerRomanced of Hadiya is false.
+PlayerFriended of Hadiya is false.
+PlayerControlled of Hadiya is false.
+PlayerFucked of Hadiya is false.
+OralVirgin of Hadiya is false.
+Virgin of Hadiya is false.
+AnalVirgin of Hadiya is false.
+PenileVirgin of Hadiya is false.
+SexuallyExperienced of Hadiya is true.
+TwistedCapacity of Hadiya is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Hadiya is false. [steriles can't knock people up]
+MainInfection of Hadiya is "Hyena Herm".
 Description of Hadiya is "[hadiyadesc]".
 Conversation of Hadiya is { "Bend over!" }.
 the scent of Hadiya is "Hadiya smells like a strong, dominant hyena herm.".
@@ -102,7 +139,7 @@ to say hadiyadesc:
 	if debugactive is 1:
 		say "DEBUG (Hadiya) -> HP: [HP of Hadiya], hadiyafucked: [hadiyafucked], lastfuck: [lastfuck of Hadiya], Hyena Gang ref: [if hadiyahyg is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63):
-		say "     A tall, obviously intimidating hyena. The sharp, predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. Her shaggy fur about as well groomed as you can expect it to be in a situation like this. Just reclining against one of benches in her home and giving the intruder a curious look. She towers over you, and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to. Though for now, it doesn't seem like she's in any hurry to actually use any of them.";
+		say "     A tall, obviously intimidating hyena. The sharp, predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. Her shaggy fur is about as well groomed as you can expect it to be in a situation like this. Just reclining against one of benches in her home and giving the intruder a curious look. She towers over you[if ScaleValue of Player > 3],at least attitude-wise[end if], and by the sharp claws and various weapons, knives, and other objects on her belt she definitely could give you a hard time if she wanted to. Though for now, it doesn't seem like she's in any hurry to actually use any of them.";
 	else:
 		say "     Hadiya is a tall, obviously intimidating hyena. The sharp, predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. Her shaggy fur is a little better groomed than before and she has even managed to clean it up a little, probably making Gobby do it for her. Despite living now in the relative safety of the library, she still carries her various weapons, knives and other objects on her belt, showing she's not to be messed with. She does seem a little more relaxed though, preferring to spend her time [one of]idly plinking away at her guitar[or]getting her goblin servant to brush her knotted fur[or]molesting her goblin plaything[or]chewing on a large bone[or]leaning back in a chair with her feet up[at random] at the moment.";
 

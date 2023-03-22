@@ -217,9 +217,9 @@ an everyturn rule:
 	now tempnum is the remainder after dividing Libido of gryphoness by 4;
 	let T be ( Libido of gryphoness / 4 );
 	if tempnum is 1 or tempnum is 2: [early pregnancy or visible pregnancy]
-		decrease lust of gryphoness by 1;       [pregnancy countdown]
+		decrease lust of gryphoness by 1; [pregnancy countdown]
 		if lust of gryphoness is 0: [time for the birth]
-			increase Libido of gryphoness by 1;   [increase to tempnum 3 -> birth message for next summon primed]
+			increase Libido of gryphoness by 1; [increase to tempnum 3 -> birth message for next summon primed]
 			if Gryphoness is listed in companionList of Player: [Denise is along as a pet]
 				say "     Looking around, you notice that Denise had slipped away while you were distracted with something. You wait for a little while and she returns, but ";
 				if T is 0:
@@ -234,7 +234,7 @@ an everyturn rule:
 				if T >= 3:
 					say "with another new child. She is cradling the youngest gryphlet in her arms, nursing her from her bosom. Her pregnant belly is already going down, her child delivered while she had slipped away. You both stroke and hug your new child, looking her over. You feel a swell of happiness and love for this new child. Like her mother and siblings, the young herm has blue feathers and tawny, leonine fur. She grows quickly and is soon walking alongside her mother, a cute, younger version of Denise in miniature. As before, the eldest remaining sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
 				increase Libido of gryphoness by 1; [increase to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
-				now GryphonessKnowpreg is 0;    [reset, pregnancy over]
+				now GryphonessKnowpreg is 0; [reset, pregnancy over]
 			else if Player is in Garden View and Denise is in Garden View: [player and Denise are in the library]
 				say "     Looking around, you notice that Denise is breathing pretty hard, a hand laying on her swollen stomach. Then she meets your gaze with an intense look and gasps, 'It's time - I can feel the egg coming!' Fortunately, she isn't far from her nest, so it is easy to lead her back to it and allow her to lay on the softer cushions with her wings spread, anticipating the egg's arrival. Thankfully, laying the egg isn't too hard on her transformed physique, as Denise's folds are quite... accommodating for something with large girth coming out - or going in. The effort still clearly tires her out, puffing and panting in time with the throbbing of her womb as her body prepares to release the fully-developed egg, but she doesn't look like she's in any serious pain. After about ten minutes of working up to it, the egg is eventually crowning and slides free of her stretched pussy to land on one of the cushions of her nest.";
 				say "     The moment the egg is clear of her body, it starts to rock and shake, a faint tapping coming from within. Denise croons, bending her own head down to tap at the eggshell from the other side with her beak. Soon enough cracks appear and widen before the eggshell finally splits, spilling a small gryphlet into Denise's arms, still damp with egg fluids. Humming happily, your sexy gryphoness cradles the newborn to her breast to nurse, the chick gripping her nipple with a still soft and flexible beak. Fluffy down falls to the floor as the little blue gryphon suckles greedily, growing and gaining an early-teen body, complete with bright blue feathers and golden fur in a matter of moments. At last, the child pulls off the nipple and Denise gives her a soft pat on the head before setting her down.";
@@ -255,7 +255,7 @@ an everyturn rule:
 					say "     The cute, younger version of Denise in miniature that is yet another child you fathered with the sexy gryphoness settles into the nest with her mother, eager to learn everything she can from her and to play with the two older siblings in the nest. Your little gryphlet is even already talking just minutes after her own birth, giving you a good feeling about having brought a smart and so very cute being into this world. Seems like Denise will have three little nest-mates for some time now - or not, as the eldest sibling, by now almost fully grown to adulthood, decides to use the moment to announce that she's moving out. With a snuggle and nuzzle for all her gathered family members, the gryphon heads off into the city, using an open window to launch herself into the air. Denise calls after her, wishing her all the best in finding her fortune and a loving mate of her own.";
 					say "     As her offspring flies out of view, Denise steps up next to you and rubs her feathered cheek against the side of your head. 'I know I can't keep them forever, but it always seems strange to say goodbye to my little gryphlets. It's so much nicer to be in a nest if there's a whole family, you know.' She looks out over the city again, then back to the small gryphons still in her nest, before adding, 'How about... we make another egg? I love giving you all the children you'll ever want.'";
 				increase Libido of gryphoness by 1; [increase to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
-				now GryphonessKnowpreg is 0;   [reset, pregnancy over]
+				now GryphonessKnowpreg is 0; [reset, pregnancy over]
 			else: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
 				say "You find your mind wandering to Denise, thinking about her and [if GryphonessKnowpreg is 1]her pregnancy[else]missing her for some reason[end if]. Perhaps you should check on her.";
 			increase score by 5;

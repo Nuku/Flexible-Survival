@@ -278,7 +278,7 @@ to say DoranVictory_MountHim: [fuck the dragon]
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' is his reply, and with a bit of work and pre's slick lubrication, his tight tailpipe grows progressively willing to take your sizable tool[if Player is knotted], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	else:
 		say "     He shows absolutely no difficulty in abiding your member[if Player is knotted], even tying its knot almost immediately[end if]. He doesn't seem to mind your ease, and is more inclined to revel in your exploitation of his form, supple abyss almost overwhelming in how assertively it milks the organ. 'Harder, harder!' is his demand, greedy for your abuse, as you're compelled to start fucking him proper.";
-	say "     [if scalevalue of Player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if Player is not internal]your balls audibly slap against [ghim], a wordless remark on[else]you are overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
+	say "     [if scalevalue of Player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if Player is not internalBalls]your balls audibly slap against [ghim], a wordless remark on[else]you are overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat.";
 	say "     'P-please, fill me with c-cum...!' At the very cusp of your bliss, you maintain enough control to determine if you'd like to pull out at the last second. Shall you? Otherwise, you will give the greedy dragon what he wants.";
 	if Player consents:
 		say "     Before you are completely overtaken, you wrench your [cock size desc of Player] cock from the beast, quickly jacking it[if Cock Count of Player > 2] and one of its brothers[else if Cock Count of Player is 2] and its brother[end if] off before you cry out, coating his ass[if scalevalue of Player > 3] and back[end if] with gouts of your thick, virile seed";
@@ -400,11 +400,11 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is "Peculiar Dragon";
 	now enemy title entry is "Peculiar Dragon";
 	now enemy Name entry is "Doran";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "     [one of]With great poise, the dragon[or]Strutting close to you, he[or]He[or]The dragon[at random] [one of]sweeps his tail at you, knocking you with a concussive thud[or]strikes you with the palm of his talon, a rather painful affair even if he refrains from using his claws[or]headbutts you rather fiercely, knocking you back[or]flaps his wings in your direction, sending a thundering gust of wind upon you[at random] before he yields[one of], preening and gesturing as though to taunt you[or], strutting about a bit to give you a chance to retaliate[or], preparing for what retaliation you might offer up against him[or][at random].";
 	now defeated entry is "[Doran_Beat]";
 	now victory entry is "[Doran_Lose]";
@@ -437,22 +437,22 @@ When Play begins:
 	now Breast Size entry is 0;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 50;
 	now loot entry is "";
 	now lootchance entry is 0;
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4;
 	now body descriptor entry is "draconic";
 	now type entry is "draconic";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0;
 	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
@@ -464,7 +464,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -521,7 +521,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -548,7 +548,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -596,7 +596,7 @@ Cock Length of Doran is 18. [Length in Inches]
 Ball Count of Doran is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Doran is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Doran is 0. [number of cunts]
-Cunt Depth of Doran is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Doran is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Doran is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Doran is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1091,7 +1091,7 @@ to say DoranDom_Anal: [Anal Sex] [BODY MODDED]
 			say "[one of]my [DoranPlayerRegard] is a tight[if scalevalue of Player < 4] little[end if] bitch[or]I think my[if scalevalue of Player < 4] little[end if] [DoranPlayerRegard] enjoy being fucked silly[or]I love it when my[if scalevalue of Player < 4] little[end if] [DoranPlayerRegard] is under me like this[at random]";
 		else:
 			say "[one of]my[if scalevalue of Player < 4] little[end if] [DoranPlayerRegard] is so tight[or]I'm going to fuck my[if scalevalue of Player < 4] little[end if] [DoranPlayerRegard] silly[or]I love it when my[if scalevalue of Player < 4] little[end if] [DoranPlayerRegard] lets me do this[at random]";
-		say "!' [gchis] remark strained against [ghis] increasing fervor, each powerful thrust sending a tremor through your[if scalevalue of Player < 4] diminutive,[end if] [bodytype of Player] body. [gche] grows increasingly determined to impale you with [ghis] knot. Your hole [if Player is twistcapped or scalevalue of Player > 3]only briefly[else]somewhat[end if] stubborn about it before [ghe] finally makes headway, causing you to slowly cry out the wake of each subsequent inch before you're finally rewarded the token reprieve of engulfing the whole of [ghis] tool. This development, however, fails to make [ghim] yield for longer than a couple seconds, as you quickly feel [ghis] [if DoranInternal is true]smooth crotch[else if DoranBallModStatus > 0]massive sack[else]voluminous sack[end if] slap against your [if Ball Size of Player > 0 and player is not internal and DoranInternal is false]own[else if scalevalue of Player < 4 and DoranInternal is false]thighs[else]crotch[end if] in rapid succession.";
+		say "!' [gchis] remark strained against [ghis] increasing fervor, each powerful thrust sending a tremor through your[if scalevalue of Player < 4] diminutive,[end if] [bodytype of Player] body. [gche] grows increasingly determined to impale you with [ghis] knot. Your hole [if Player is twistcapped or scalevalue of Player > 3]only briefly[else]somewhat[end if] stubborn about it before [ghe] finally makes headway, causing you to slowly cry out the wake of each subsequent inch before you're finally rewarded the token reprieve of engulfing the whole of [ghis] tool. This development, however, fails to make [ghim] yield for longer than a couple seconds, as you quickly feel [ghis] [if DoranInternal is true]smooth crotch[else if DoranBallModStatus > 0]massive sack[else]voluminous sack[end if] slap against your [if Ball Size of Player > 0 and player is not internalBalls and DoranInternal is false]own[else if scalevalue of Player < 4 and DoranInternal is false]thighs[else]crotch[end if] in rapid succession.";
 		if Libido of Player > 35:
 			say "     The powerful dick's assault is more than enough to make you almost immediately cry out, ";
 			if Player is male:
@@ -1195,7 +1195,7 @@ to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 			say "[one of]I'm going to enjoy ruining my [DoranPlayerRegard][or]my [DoranPlayerRegard] will be walking funny after this[at random]";
 		else:
 			say "[one of]my [DoranPlayerRegard] might walk funny for a little while after this[or]I'm going to fuck my [DoranPlayerRegard] silly[at random]";
-		say "!' [gchis] remark strained against [ghis] increasing fervor, each powerful thrust sending a tremor through your[if scalevalue of Player < 4] diminutive,[end if] [bodytype of Player] body. [gche] grows increasingly determined to impale you with [ghis] knot. Your hole [if Cunt Depth of Player > 13]only briefly[else]somewhat[end if] stubborn about it before [ghe] finally makes headway, causing you to slowly cry out in the wake of each subsequent inch before you're finally rewarded the token reprieve of engulfing the whole of [ghis] tool. This development, however, fails to make [ghim] yield for longer than a couple seconds, as you quickly feel [ghis] [if DoranInternal is true]smooth crotch[else if DoranBallModStatus > 0]massive sack[else]voluminous sack[end if] slap against your [if Ball Size of Player > 0 and player is not internal and DoranInternal is false]own[else if scalevalue of Player < 4]thighs[else]crotch[end if] in rapid succession.";
+		say "!' [gchis] remark strained against [ghis] increasing fervor, each powerful thrust sending a tremor through your[if scalevalue of Player < 4] diminutive,[end if] [bodytype of Player] body. [gche] grows increasingly determined to impale you with [ghis] knot. Your hole [if Cunt Depth of Player > 13]only briefly[else]somewhat[end if] stubborn about it before [ghe] finally makes headway, causing you to slowly cry out in the wake of each subsequent inch before you're finally rewarded the token reprieve of engulfing the whole of [ghis] tool. This development, however, fails to make [ghim] yield for longer than a couple seconds, as you quickly feel [ghis] [if DoranInternal is true]smooth crotch[else if DoranBallModStatus > 0]massive sack[else]voluminous sack[end if] slap against your [if Ball Size of Player > 0 and player is not internalBalls and DoranInternal is false]own[else if scalevalue of Player < 4]thighs[else]crotch[end if] in rapid succession.";
 		if Libido of Player > 35:
 			say "     The powerful dick's assault is more than enough to make you almost immediately cry out, ";
 			if Player is male:
@@ -1316,7 +1316,7 @@ to say DoranDom_CockHandjob: [Cock-Focused Handjob] [BODY MODDED]
 		else:
 			say "     '[one of]Mm[or]Hm[or]I see[at random], [one of]it's clear my [DoranPlayerRegard] is a quite pent up[or]my [DoranPlayerRegard] doubtlessly needs their [gdragon]'s affection[or]my [DoranPlayerRegard] need but only relax[at random]...' Soft remarking";
 	say " for but a moment, the [gdragon]'s talons [if DoranRoleIntensity is 0]firmly[else]gently[end if] wrap around [if Cock Count of Player > 1]one of your [cock size desc of Player] cocks[else]your [cock size desc of Player] cock[end if], a second talon holding you in place as [ghe] [if DoranRoleIntensity is 0]roughly[else]carefully[end if] caresses your exposed length, driving you hard before the beast's intent gaze.";
-	say "     Satisfied with your offering, [ghis] scaled snout descends upon you, thick tongue's light, teasing caress enough to make the attended organ ooze pre, your[if Player is knotted] knotted[end if] tool[if Player is not internal] and [Ball Size Adjective of Player] [Balls][end if] quickly made slick with a mix of saliva and sexual fluids.";
+	say "     Satisfied with your offering, [ghis] scaled snout descends upon you, thick tongue's light, teasing caress enough to make the attended organ ooze pre, your[if Player is knotted] knotted[end if] tool[if Player is not internalBalls] and [Ball Size Adjective of Player] [Balls][end if] quickly made slick with a mix of saliva and sexual fluids.";
 	if DoranRoleIntensity is 0:
 		say "     'My[if scalevalue of Player < 3] little[end if] [DoranPlayerRegard] [one of]is so very needy[or]squirms so amusingly under their [gdragon][or]can't resist their [gdragon]'s touch[at random]...' Tongue's";
 	else:
@@ -1833,7 +1833,7 @@ to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 	else:
 		say "     [gche] shows absolutely no difficulty in taking your member[if Player is knotted], even tying with it almost immediately[end if]. [gche] doesn't seem to mind your ease, reveling in being [if DoranRoleIntensity is 4]shamelessly used[else]ridden by[end if] you, supple abyss almost overwhelming in how [if DoranRoleIntensity is 4]obligingly[else]assertively[end if] it milks the organ.";
 		say "     '[one of]Fuck me, [DoranPlayerRegard][or]Harder, [DoranPlayerRegard], harder[at random]!' [ghe] [if DoranRoleIntensity is 4]pleads[else]demands[end if], the creature greedy for your throbbing meat as you're compelled to start fucking [ghim] proper.";
-	say "     [if scalevalue of Player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if Player is not internal]your balls audibly slap against [ghim], a wordless remark on[else]overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat[if DoranBallModStatus > 0]. You hear wet sounds with each motion, as [ghe] seems to fire off a considerable gout of precum with each one[end if].";
+	say "     [if scalevalue of Player > 3]Body visibly rocking against each successive thrust[else]Larger body barely moved by[end if] each successive thrust, [if Player is not internalBalls]your balls audibly slap against [ghim], a wordless remark on[else]overtaken by[end if] your rising, wanton fervor. Your embrace on the reptile grows increasingly slick, coated by a thin veneer of sweat[if DoranBallModStatus > 0]. You hear wet sounds with each motion, as [ghe] seems to fire off a considerable gout of precum with each one[end if].";
 	say "     '[one of]P-please[or]M-more[or]A-ah[at random], [if DoranRoleIntensity is 4][one of]use me like the s-slutty cum dumpster I am[or]fill me with [DoranPlayerRegard]'s cum[or]I n-need [DoranPlayerRegard]'s cum[at random][else][one of][DoranPlayerRegard][or]d-don't hold back, [DoranPlayerRegard][or]don't s-stop, [DoranPlayerRegard][at random][end if]...!' At the very cusp of your bliss, your mind is still clear enough to determine if you'd like to pull out at the last second. Shall you? Otherwise, you will give the greedy [gdragon] what [ghe] wants.";
 	if Player consents:
 		say "     Before you are completely overtaken, you wrench your [cock size desc of Player] cock from the beast, quickly jacking it[if Cock Count of Player > 2] and one of its brothers[else if Cock Count of Player is 2] and its brother[end if] off before you cry out, coating [ghis] ass[if scalevalue of Player > 3] and back[end if] with [if Ball Size of Player > 5]voluminous [end if]gouts of your thick, virile seed[if Ball Size of Player > 5]; so substantial your payload that you render the beast a shameful, coated mess of cum[end if]. It takes you some time to recover, eventually [if scalevalue of Player < 4]climbing[else]pulling yourself[end if] off. The [gdragon] lays there for a bit, panting [ghim]self in the wake of being ravaged. [gche] eventually does crawl back to [ghis] feet, looking satisfied";

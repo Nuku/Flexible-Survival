@@ -34,7 +34,7 @@ Orcish Slave Raid is a situation.
 ResolveFunction of Orcish Slave Raid is "[ResolveEvent Orcish Slave Raid]".
 Sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
-	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
+	add Orcish Slave Raid to BadSpots of MaleList; [male orcs]
 
 to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
@@ -651,11 +651,11 @@ after going west from Breeder Lockup A:
 		say "     There is something... familiar about the orc breeder in this cell. At first you can't quite say what exactly, but as you look into his eyes and see them widening as he examines you in turn, you realize that this once was the fox who ran into you while fleeing from the orcs. He must have a pretty low resistance to the nanites to be transformed so completely in such short time. As the two of you get over the moment of mutual recognition, he says 'Hello again... or... just hello. You met Vincent before - I - I'm Val now.'";
 		now HP of Val is 1;
 	if ValPregnancy > 1 and HP of Val < 2:
-		now HP of Val is 2;   [the player has seen that he's pregnant]
+		now HP of Val is 2; [the player has seen that he's pregnant]
 	if ValPregnancy is 4:
 		say "     Seeing Val, you immediately notice that he isn't pregnant anymore. The orc follows your gaze to his stomach and explains 'I've given birth while you were out. You should have seen my beautiful little boy, growing up so quickly to a handsome young orc. Master Mul named him 'Chotuzz' and traded him to another orc. I'm sure he'll make a fine breeder for his new master...' Val smiles as he says this, but you notice a hint of sadness in his eyes. Maybe you could have changed something at his son's fate if you had been here for the birth...";
 		now ValPregnancy is 0;
-		now HP of Chris is 100;  [lost]
+		now HP of Chris is 100; [lost]
 
 after going east from Breeder Lockup A:
 	try looking;
@@ -827,27 +827,27 @@ to say EscapeMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Search the cell for anything of use";
 	now sortorder entry is 1;
-	now description entry is "Maybe one of the orcs lost a key or something...";
+	now description entry is "Maybe one of the orcs lost a key or something";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pick the lock";
 	now sortorder entry is 2;
-	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right.";
+	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Break the lock";
 	now sortorder entry is 3;
-	now description entry is "Just smash it.";
+	now description entry is "Just smash it";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sabotage the lock";
 	now sortorder entry is 4;
-	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards.";
+	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Wait to get fucked, then sneak out afterwards";
 	now sortorder entry is 5;
-	now description entry is "Tire them out and escape while they sleep.";
+	now description entry is "Tire them out and escape while they sleep";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1082,7 +1082,7 @@ An everyturn rule:
 		say "[BoghrimSlaveDeal]";
 	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		now inasituation is true;
-		now OrcSpecialFightNumber is 1;   [meeting Mul]
+		now OrcSpecialFightNumber is 1; [meeting Mul]
 		challenge "Orc Warrior"; [fighting Mul]
 	if Mul is in Slave Cell 2 or Mul is in Slave Cell 1:
 		if (player is in Slave Cell 2 and Mul is in Slave Cell 2) or (player is in Slave Cell 1 and Mul is in Slave Cell 1):

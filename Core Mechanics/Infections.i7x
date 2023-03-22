@@ -54,7 +54,7 @@ This is the sex change rule:
 			now Ball Size of Player is 4;
 		if prevcock < Ball Size of Player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
+			say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
 		[Shrinks existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
@@ -65,7 +65,7 @@ This is the sex change rule:
 			now Ball Size of Player is 3;
 		if prevcock > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [CockName of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internalBalls]internal[else]impressive[end if] [CockName of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
 	[COCK ADDITIONS/SUBSTRACTIONS]
 	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player and singlesexadjust is not 3: [player currently female, single sexed]
 		[Adds extra cocks if the player has less than the infection, unless "Female Preferred" is selected or a single sexed Player is female]
@@ -103,7 +103,7 @@ This is the sex change rule:
 			remove manhood from Player;
 		if prevcock > Cock Length of Player or prevcock2 > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if Player is internal] you imagine[end if] your [one of]balls[or]testicles[or]nuts[or]gonads[at random] become [Ball Size Adjective of Player]. ";
+			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if Player is internalBalls] you imagine[end if] your [one of]balls[or]testicles[or]nuts[or]gonads[at random] become [Ball Size Adjective of Player]. ";
 			if Cock Length of Player < 1 or Ball Size of Player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
 				remove manhood from Player;
@@ -242,7 +242,7 @@ to grow balls by (x - a number):
 		now Ball Size of Player is 5;
 	if prevcock < Ball Size of Player:		[did balls actually grow?]
 		follow the cock descr rule;
-		say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
+		say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 
 Part 2 - Breast Change
 
@@ -655,7 +655,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cock of Player is cock entry;
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
-			if Name entry is listed in infections of InternalCockList and internalbypass is true:
+			if Name entry is listed in infections of InternalBallsList and internalBallsbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 
 to NewInfectionRoll:
@@ -953,7 +953,7 @@ to NewInfectionRoll:
 			[setting the old parts too, as old infections will compare to these]
 			choose row MonsterID from the Table of Random Critters;
 			now Cock of Player is Cock Adjective entry;
-			if Name entry is listed in infections of InternalCockList and internalbypass is true:
+			if Name entry is listed in infections of InternalBallsList and internalBallsbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type][line break]";
 	else if x is 9:
 		follow the sex change rule;

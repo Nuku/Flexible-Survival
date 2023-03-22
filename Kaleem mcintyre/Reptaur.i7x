@@ -175,27 +175,28 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Reptaur"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Reptaur"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Reptaur" to infections of ReptileList;
 	add "Reptaur" to infections of HybridList;
 	add "Reptaur" to infections of FurryList;
 	add "Reptaur" to infections of HermList;
 	add "Reptaur" to infections of TaperedCockList;
 	add "Reptaur" to infections of InternalCockList;
+	add "Reptaur" to infections of InternalBallsList;
 	add "Reptaur" to infections of TaurList;
 	add "Reptaur" to infections of TailList;
 	add "Reptaur" to infections of OviImpregnatorList;
 	add "Reptaur" to infections of TailweaponList;
 	now Name entry is "Reptaur"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Reptaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is "Reptaur"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The Reptaur hefts you up into the air with one arm and then powerfully drives you into the ground![or]The Reptaur charges into at top speed![or]The Reptaur unsheathes its claws and then swipes at your face and chest![or]The Reptaur run around to your backside and then bowls you over with a fierce kick of its rear legs![or]The Reptaur launches you into the air with a sharp uppercut![or]The Reptaur coils its long tail around your throat and then slams you back and forth onto the ground![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheReptaur]"; [ Text when monster loses. Change 'Reptaur' as above. ]
 	now victory entry is "[losetoReptaur]"; [ Text when monster wins. Change 'Reptaur' as above. ]
 	now desc entry is "[Reptaurdesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything. However, your new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face. Format as Your face is [Face of Player]. ]
-	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back"; [ Body. Format as "Your body is [Body of Player]." ]
+	now face entry is "smooth and blunted with a somewhat rounded muzzle making up the end of your face. The shape of said muzzle just so happens to hinder you from smelling much of anything. However, your new serpentine tongue takes care of that small detail by [italic type]tasting[roman type] all the scents in the air around you"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "strangely mixed between that of an ungulate, a serpent, and a man. Like the centaurs of old you have the lower body of a horse, but instead of your lower end being lightly furred its smooth all over while your feet end with four digitigrade paws fitted with sharp claws instead of hooves. Your upper body is mixed between that or a serpent's and a man's as you possess two strong, but smooth arms, with muscles for days covering both your chest and back"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "bright greenish-blue scales that seem to glow almost teal in the right light"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a six foot long, two and a half foot wide tail that ends at a rounded tip, much like a rattlesnake's."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "reptilian"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
@@ -228,16 +229,16 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]sexy[or]deadly[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "reptile"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "rtaurpounce"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
@@ -249,7 +250,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -306,7 +307,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -333,7 +334,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

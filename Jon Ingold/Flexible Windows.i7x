@@ -298,12 +298,12 @@ To g-destroy (g - a g-window):
 	now g is g-unpresent;
 	delete ref-number of g;
 
-To delete (N - a number):	(- glk_window_close({N}, 0); 	-)
+To delete (N - a number):	(- glk_window_close({N}, 0); -)
 
 section - Identify glx rubbish
 
 A glulx zeroing-reference rule (this is the default removing references rule):
-	doll-up properties; 	[ rebuild I7 properties, if we need to. ]
+	doll-up properties; [ rebuild I7 properties, if we need to. ]
 	if rocks are currently unassigned, follow the allocate rocks rule;
 	repeat with g running through g-windows begin;
 		if g is not main-window
@@ -529,7 +529,7 @@ To return to main screen/window: set focus to main-window.
 Section - Setting the cursor
 
 To position the cursor in (g - a g-window) at row (y - a number) column (x - a number):
-(-	SetCursorTo({g}, {x}, {y}); 		-).
+(-	SetCursorTo({g}, {x}, {y});	-).
 
 Include (-
 

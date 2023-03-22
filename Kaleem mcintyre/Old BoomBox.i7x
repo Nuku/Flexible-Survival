@@ -14,7 +14,7 @@ instead of sniffing old boombox:
 
 Instead of using the old boombox:
 	say "     Looking over the old styled machine you find yourself wondering what flavor of music would be good to listen to right now. There are several switches, all with certain types of music on them, so you have options.";
-	say "[musicsession][line break]"; 	]
+	say "[musicsession][line break]"; ]
 
 a postimport rule:
 	if Old Record Store is resolved and Resolution of Old Record Store is 1:

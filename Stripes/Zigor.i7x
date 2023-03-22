@@ -89,16 +89,51 @@ Table of GameCharacterIDs (continued)
 object	name
 Zigor	"Zigor"
 
-Zigor is a man. Zigor is in Cuero Lobo.
+Zigor is a man.
+Zigor is in Cuero Lobo.
+ScaleValue of Zigor is 3. [human sized]
+SleepRhythm of Zigor is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Zigor is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Zigor is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Zigor is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Zigor is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Zigor is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Zigor is 7. [length in inches]
+Breast Size of Zigor is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Zigor is 2. [count of nipples]
+Asshole Depth of Zigor is 10. [inches deep for anal fucking]
+Asshole Tightness of Zigor is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Zigor is 1. [number of cocks]
+Cock Girth of Zigor is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Zigor is 8. [Length in Inches]
+Ball Count of Zigor is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Zigor is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Zigor is 0. [number of cunts]
+Cunt Depth of Zigor is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Zigor is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Zigor is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Zigor is false.
+PlayerRomanced of Zigor is false.
+PlayerFriended of Zigor is false.
+PlayerControlled of Zigor is false.
+PlayerFucked of Zigor is false.
+OralVirgin of Zigor is false.
+Virgin of Zigor is true.
+AnalVirgin of Zigor is false.
+PenileVirgin of Zigor is false.
+SexuallyExperienced of Zigor is true.
+TwistedCapacity of Zigor is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Zigor is false. [steriles can't knock people up]
+MainInfection of Zigor is "Leather Wolf".
 Description of Zigor is "[zigordesc]".
 Conversation of Zigor is { "Hola!" }.
+The scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 The icon of Zigor is Figure of Zigor_icon.
-MainInfection of Zigor is "Leather Wolf".
 zigseat is a number that varies.		[seat configuration: 0 = normal, 1 = taur]
 zigorcycle is a truth state that varies. zigorcycle is usually false. [Monitors if Zigor's training has been cycled.]
 zigorhadiyaquest is a truth state that varies. zigorhadiyaquest is usually false. [Msg about leather jacket for Hadiya's quest]
-
-the scent of the Zigor is "The wolf smells strongly of oiled leather and lupine arousal.".
 
 to say zigordesc:
 	say "     Zigor the leather wolf has the build of an average, fit human being, but altered to have lupine features, most prominently his head, hands, feet and tail. Given that he's wearing/bonded to a leather outfit that covers most of him, you can only see portions of his pelt. His fur contains a mix of gray, black, brown and rust colors that make him stand out from the other wolves you've seen. The leather portions of his hide cover his chest, legs and forearms. It is made of black leather with even some metal rings and straps built into it as well as a separate leather patch that partially covers his plump, pierced sheath. The wolf has a rich, sensual voice and speaks with a distinctly Spanish accent that turns you on every time you hear it.";
@@ -404,7 +439,7 @@ When Play begins:
 	now Name entry is "Leather Wolf";
 	now enemy title entry is "Leather Wolf";
 	now enemy Name entry is "Zigor";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "Placeholder infection";
 	now defeated entry is "Placeholder infection";
 	now victory entry is "Placeholder infection";
@@ -412,7 +447,7 @@ When Play begins:
 	now face entry is "a canine muzzle sticking out of your wolf-like head. The sharp teeth inside it make your smiles and growls pretty unforgettable for others, and the long tongue should come in handy for French kissing";
 	now body entry is "tall and well muscled, standing on two legs and showing an interesting mix of lupine and human form. While your legs are fully digitigrade and end in large paws, your arms are changed but still more human-like and end in strong, now clawed, hands";
 	now skin entry is "[one of]black furred[or]densely furred[or]furred[at random]";
-	now tail entry is "You have a fluffy, mid-length tail growing out of your spine, just above the grabbable buns of your ass.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now tail entry is "You have a fluffy, mid-length tail growing out of your spine, just above the grabbable buns of your ass."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]lupine[or]wolf[or]knotted[at random]";
 	now face change entry is "it stretches out into a large lupine muzzle, filled with a predator's sharp teeth. A shift goes through your worldview when your ears become pointed and move to the top of your head, your vision becomes somehow 'sharper' and new scents assail your now much more sensitive nose"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it morphs into a well toned human-wolf hybrid shape. With the crunching noise of breaking bones, your legs become digitigrade - now ending in large paws instead of feet. Your arms meanwhile fill out with muscles, lengthen a bit and also change the form of their joints slightly. Still, they're closer to human than the legs - even with the new sharp claws at the ends of your fingers"; [ format as "Your body feels funny as (your text)." ]
@@ -425,35 +460,35 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 14;
-	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 50;
-	now lev entry is 6;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10;               [ Monster's average damage when attacking. ]
-	now area entry is "Nowhere";         [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 12;        [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 3;          [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 2;             [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0;         [ Size of breasts the infection will try to attain. ]
+	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 10; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]          [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 40;
-	now loot entry is "";   [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]tall[or]powerful[at random]";
 	now type entry is "lupine";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 

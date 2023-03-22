@@ -94,7 +94,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Manticore"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Manticore"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Manticore" to infections of FelineList;
 	add "Manticore" to infections of HybridList;
 	add "Manticore" to infections of FurryList;
@@ -107,22 +107,22 @@ When Play begins:
 	add "Manticore" to infections of TailList;
 	add "Manticore" to infections of TailweaponList;
 	now Name entry is "Manticore";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]";
 	now defeated entry is "[Manticore loss]";
 	now victory entry is "[Manticore attack]";
 	now desc entry is "[mongendernum 3]The beat of red wings has you looking around and then up for danger. However, nothing can prepare you for what you find as a large black maned lion with rust red fur and a long scorpion tail drops down onto the ground in front of you. Larger than a normal lion and covered in a spiky crimson pelt, the creature glares at you hotly while folding its large wings behind its back and then roars a challenge at you.";
-	now face entry is "strong and angular, the likes of which you can be proud of as it shows off your leonine features. Rounded furry ears twitching curiously up above on your head, you possess a jet black mane framing the outer edges of your face to hide said ears from being seen by most. Narrow golden eyes look out to the world around you as your feline features jut out almost arrogantly at all those who would look upon your face"; [ Face description, format as "Your face is (your text)."]
+	now face entry is "strong and angular, the likes of which you can be proud of as it shows off your leonine features. Rounded furry ears twitching curiously up above on your head, you possess a jet black mane framing the outer edges of your face to hide said ears from being seen by most. Narrow golden eyes look out to the world around you as your feline features jut out almost arrogantly at all those who would look upon your face"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "thrums with ancient power as the blood of the legendary manticore sings throughout your veins. With the quadrupedal frame of a normal lion, you stand almost half a foot taller than the average king of beasts as thick muscular legs hold up your powerfully built, if not slightly bulky frame. A pair of red, bat-like wings flap slightly against your back"; [ Body Description, format as "Your Body (your text)"]
-	now skin entry is "[one of]rust red furred[or]spiky furred[or]a dense and course pelt covers your[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now skin entry is "[one of]rust red furred[or]spiky furred[or]a dense and course pelt covers your[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "Like the ancient manticores from ages past, you have a scorpion tail framing your backside, coiling tightly around your left leg. Stronger than the insect who is known for the appendage, your tail possesses a strange, mutated form of the normal manticore venom. Instead of normal poison, your tail tip can insert a strong aphrodisiac into your victims to make them susceptible to your advances, whether they want it or not."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]leonine[or]barbed[or]lion-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your features morph and reform into that of a lion-like muzzle. Course red fur covers your features from head to neck as your ears round until they are shaped like those of a lion's. An itchy feeling goes up and down your neck as more and more fur pushes out, but this time much darker than blood read as black fur surrounds your throat to become a new mane. Eyes darkening into a deep golden color your nose pushes out and then spreads until soon you have a manticore's face"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your spine pops, distends and then reforms with the expanse of two red wings tearing free from your back. Over and around the course of your body your form expands, shrinks, twists and then grows as your legs no longer can support your newly quadruped stance and now must receive aid from your front paws. Shaking yourself as a light dew of rust red fur prickles up and out of your pores you give a roaring yowl of a cry as your body expands and then contracts with extra added padding of tissue, bones and muscle as your inner organs go to shifting around. By the time it stops you now have a leonine-like form, though much more densely packed with strength as well as untapped power"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "a heavy cropping of rust red fur spills out and around your body to give you a dense pelt of armor-like fur that weapons would have a hard time breaching through"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your backside shifts with the incoming of new muscles, not to mention the lengthening growth of your scorpion tail pushing out from your spine. Gasping as the new appendage finally grows to its full length of some four and a half feet you moan as you feel something new being added inside of your body that wasn't there before. A new sac full of potent pheromones wafts out from your rear, the telltale sign of your readiness to mate as your scorpion tail wags behind your something embarrassedly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "your features morph and reform into that of a lion-like muzzle. Course red fur covers your features from head to neck as your ears round until they are shaped like those of a lion's. An itchy feeling goes up and down your neck as more and more fur pushes out, but this time much darker than blood read as black fur surrounds your throat to become a new mane. Eyes darkening into a deep golden color your nose pushes out and then spreads until soon you have a manticore's face"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your spine pops, distends and then reforms with the expanse of two red wings tearing free from your back. Over and around the course of your body your form expands, shrinks, twists and then grows as your legs no longer can support your newly quadruped stance and now must receive aid from your front paws. Shaking yourself as a light dew of rust red fur prickles up and out of your pores you give a roaring yowl of a cry as your body expands and then contracts with extra added padding of tissue, bones and muscle as your inner organs go to shifting around. By the time it stops you now have a leonine-like form, though much more densely packed with strength as well as untapped power"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "a heavy cropping of rust red fur spills out and around your body to give you a dense pelt of armor-like fur that weapons would have a hard time breaching through"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "your backside shifts with the incoming of new muscles, not to mention the lengthening growth of your scorpion tail pushing out from your spine. Gasping as the new appendage finally grows to its full length of some four and a half feet you moan as you feel something new being added inside of your body that wasn't there before. A new sac full of potent pheromones wafts out from your rear, the telltale sign of your readiness to mate as your scorpion tail wags behind your something embarrassedly"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "your shaft twitches and then flexes while thickening and then narrowing to become leonine in context. Small barbs push out along the head of your shaft, the proof of your heritage to the dominant feline clans in the world, while a thick pouch of flesh and fur bunches and the spreads to house your transformed maleness"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 20;
 	now dex entry is 19;
@@ -148,16 +148,16 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]winged[or]quadrupedal[or]strong[or]powerful[at random]";
 	now type entry is "[one of]leonine[or]feline[or]mythological[as decreasingly likely outcomes]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "manticore";
 	now BannedStatus entry is false;
@@ -169,7 +169,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -226,7 +226,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -253,7 +253,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

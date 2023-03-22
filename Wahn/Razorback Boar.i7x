@@ -765,15 +765,15 @@ When Play begins:
 	now Name entry is "Razorback Boar Male";
 	now enemy title entry is "Razorback Boar Survivalist";
 	now enemy Name entry is "Garth";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]With a deep grunt, the boar-man charges at you. You're thrown onto the ground as he bowls you over.[or]Making a fist, the razorback boar punches you in the gut, leaving you coughing for breath.[or]Snapping his head forward, the boar-man bites at you and leaves shallow gashes with his tusks.[or]Kicking a leg out from under you with one of his cloven hooves, the wild pig sends you sprawling on the ground.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[RazorbackBoar loses]";
 	now victory entry is "[RazorbackBoar wins]";
-	now desc entry is "[RazorbackBoarDesc]";            [ Description of the creature when you encounter it. ]
+	now desc entry is "[RazorbackBoarDesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "that of a wild boar, with an elongated snout showing sharp tusks. With the bristly fur covering all of it and two eyes capable of giving a very penetrating stare, you're an image of untamed spirit";
 	now body entry is "stocky in build, but quite obvious muscles make up much of that large bulk - from the broad shoulders down to the cloven hooves on which you stand. Anyone looking at you can easily see why wild boars shouldn't be messed with";
 	now skin entry is "[one of]bristly-furred[or]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a firm bubble butt, complete with a short tail ending in a brush of hairs.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now tail entry is "You have a firm bubble butt, complete with a short tail ending in a brush of hairs."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "human-like";
 	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into an elongated visage complete with a boar's snout and sharp tusks. Bristly fur sprouts all over your face, giving you a hardy appearance"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a quite stocky form, though quite a bit of that bulk is made out of muscles. Heavy-footed - or rather hoofed, as your feet transform too - you may be, but there is little doubt that you're a force to be reckoned with looking like this. You're no weakling domestic pig. No, you're a razorback boar now";
@@ -786,35 +786,35 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Male";            [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 90;
-	now lev entry is 10;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 12;               [ Monster's average damage when attacking. ]
-	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 13;        [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 3;          [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 2;             [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0;         [ Size of breasts the infection will try to attain. ]
+	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 12; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 13; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0;         [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]          [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 60;
-	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]stocky[or]bulky[or]powerful[at random]";
 	now type entry is "[one of]swine[at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -825,7 +825,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -882,7 +882,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -946,7 +946,7 @@ Cock Length of Garth is 10. [length in inches]
 Ball Count of Garth is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Garth is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Garth is 0. [number of cunts]
-Cunt Depth of Garth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Garth is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Garth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Garth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -993,7 +993,7 @@ Cock Length of Andy is 7. [length in inches]
 Ball Count of Andy is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Andy is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Andy is 0. [number of cunts]
-Cunt Depth of Andy is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Andy is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Andy is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Andy is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

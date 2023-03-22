@@ -466,7 +466,7 @@ Cock Length of Diavoborg is 54. [length in inches]
 Ball Count of Diavoborg is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Diavoborg is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Diavoborg is 0. [number of cunts]
-Cunt Depth of Diavoborg is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Diavoborg is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Diavoborg is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Diavoborg is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -487,7 +487,10 @@ Description of Diavoborg is "[Diavoborgdesc]".
 Conversation of Diavoborg is { "<This is nothing but a placeholder!>" }.
 The scent of Diavoborg is "     Diavoborg smells like a beast you can't quite compare to anything but the behemoths themselves, though perhaps the closest would be something between a bull and a dragon. It is very animalistic, nonetheless, especially around his junk, which makes you quite dizzy at first if you take a deeper whiff while standing next to him.".
 
-Understand "Diavol" as Diavoborg;
+Understand "Diavol" as Diavoborg.
+Understand "Diavo" as Diavoborg.
+Understand "Diav" as Diavoborg.
+Understand "Dia" as Diavoborg.
 
 to say DiavoborgDesc:
 	say "     The unique example of the Viper Behemoth subspecies that Diavoborg is features a dark red fur, his main characteristic, and it greatly distinguishes him from the remaining beasts of his kind. He still has teeth like razors, albeit shorter in length, and he is about the same size as other Behemoths, with the same amount of hide covering his hulking sixteen foot long frame, a generous white mane adorning his enormous head just like them, sharing the shape of his cousins regarding his two onyx horns that jut from his scalp, and equally clawed paws that scrap the ground beneath his monstrous form. The only exception is his tail, which while retaining the usual nine foot long size, its spikes are longer and stretch forward, the ones towards the center arching downwards, resembling scythes, and are venomous. He's laying it at ease for now, merely sitting in front of you as his four and a half foot long cock and basketball-sized nuts rest between his four legs, but fully exposed.";

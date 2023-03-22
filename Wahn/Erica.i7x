@@ -100,8 +100,8 @@ Temple of Hera is inactive.
 Sarea of Temple of Hera is "Museum".
 
 when play begins:
-	add Temple of Hera to BadSpots of MaleList;       [male soldiers]
-	add Temple of Hera to BadSpots of FurryList;     [female husky involved]
+	add Temple of Hera to BadSpots of MaleList; [male soldiers]
+	add Temple of Hera to BadSpots of FurryList; [female husky involved]
 
 to say ResolveEvent Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
@@ -223,7 +223,7 @@ Cock Length of Erica is 0. [length in inches]
 Ball Count of Erica is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Erica is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Erica is 1. [number of cunts]
-Cunt Depth of Erica is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Erica is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Erica is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Erica is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

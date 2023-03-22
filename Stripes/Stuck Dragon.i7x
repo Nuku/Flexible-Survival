@@ -317,11 +317,48 @@ object	name
 Christy	"Christy"
 Christy	"Christopher"
 
-Christy is a woman. Christy is in Back Room. Description of Christy is "[christydesc]".
-Conversation of Christy is { "Rawr!" }.
-MainInfection of Christy is "Slutty Dragoness".
+Christy is a woman.
+Christy is in Back Room.
 understand "Christopher" as Christy.
 understand "Chris" as Christy.
+ScaleValue of Christy is 5. [human sized]
+SleepRhythm of Christy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Christy is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Christy is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Christy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Christy is 36. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Christy is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Christy is 36. [length in inches]
+Breast Size of Christy is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Christy is 0. [count of nipples]
+Asshole Depth of Christy is 36. [inches deep for anal fucking]
+Asshole Tightness of Christy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Christy is 0. [number of cocks]
+Cock Girth of Christy is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Christy is 0. [Length in Inches]
+Ball Count of Christy is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Christy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Christy is 1. [number of cunts]
+Cunt Depth of Christy is 36. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Christy is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Christy is 4. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Christy is false.
+PlayerRomanced of Christy is false.
+PlayerFriended of Christy is false.
+PlayerControlled of Christy is false.
+PlayerFucked of Christy is false.
+OralVirgin of Christy is true.
+Virgin of Christy is true.
+AnalVirgin of Christy is true.
+PenileVirgin of Christy is true.
+SexuallyExperienced of Christy is false.
+TwistedCapacity of Christy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Christy is false. [steriles can't knock people up]
+MainInfection of Christy is "Slutty Dragoness".
+Description of Christy is "[christydesc]".
+Conversation of Christy is { "Rawr!" }.
 christysausage is a truth state that varies. christysausage is usually false.		[has Christy mentioned the sausage?]
 mchristytop is a truth state that varies. mchristytop is usually false.			[has male Christy topped (M/F or M/M)?]
 mchristyanal is a truth state that varies. mchristyanal is usually false.			[has male Christy topped anal-style?]
@@ -938,6 +975,16 @@ instead of trading the super spicy sausage when the current action involves the 
 		if Libido of Christy is odd, increase Libido of Christy by 1;
 		now lastfuck of Christy is turns + 24;
 		now HP of Christy is 50;
+		now Androginity of Christy is 2;
+		now Cock Count of Christy is 1;
+		now Cock Girth of Christy is 4;
+		now Cock Length of Christy is 30;
+		now Ball Count of Christy is 2;
+		now Ball Size of Christy is 6;
+		now Cunt Count of Christy is 0;
+		now Cunt Depth of Christy is 0;
+		now Cunt Tightness of Christy is 0;
+		now Clit Size of Christy is 0;
 		now MainInfection of Christy is "Horny Dragon";
 	else:
 		LineBreak;
@@ -1319,33 +1366,34 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Horny Dragon" to infections of ReptileList;
 	add "Horny Dragon" to infections of FurryList;
 	add "Horny Dragon" to infections of MagicalList;
 	add "Horny Dragon" to infections of HermList;
 	add "Horny Dragon" to infections of TaperedCockList;
 	add "Horny Dragon" to infections of InternalCockList;
+	add "Horny Dragon" to infections of InternalBallsList;
 	add "Horny Dragon" to infections of QuadrupedalList;
 	add "Horny Dragon" to infections of TailList;
 	add "Horny Dragon" to infections of OviImpregnatorList;
-	now Name entry is "Horny Dragon"; [Name of your new Monster]
+	now Name entry is "Horny Dragon";
 	now enemy title entry is "Horny Dragon";
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
-	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is (your text)."]
+	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "blue colored dragon scales covering your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]draconic[or]azure[or]blue dragon[at random]"; [ Cock Description, format as you have a 'size' (your text) cock.]
-	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "WIP"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "WIP"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "WIP"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "WIP"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 14;
@@ -1356,7 +1404,7 @@ When Play begins:
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 28;
 	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 4; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 24; [ Length infection will make cock grow to if cocks]
@@ -1365,22 +1413,22 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "bestial";
 	now type entry is "[one of]draconic[or]reptilian[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -1392,7 +1440,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1449,7 +1497,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -1476,7 +1524,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -1495,33 +1543,34 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Dragon"; [name of the overall species of the infection, used for children, ...]
-	now Name entry is "Slutty Dragoness"; [Name of your new Monster]
+	now Species Name entry is "Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	now Name entry is "Slutty Dragoness";
 	add "Slutty Dragoness" to infections of ReptileList;
 	add "Slutty Dragoness" to infections of FurryList;
 	add "Slutty Dragoness" to infections of MagicalList;
 	add "Slutty Dragoness" to infections of HermList;
 	add "Slutty Dragoness" to infections of TaperedCockList;
 	add "Slutty Dragoness" to infections of InternalCockList;
+	add "Slutty Dragoness" to infections of InternalBallsList;
 	add "Slutty Dragoness" to infections of QuadrupedalList;
 	add "Slutty Dragoness" to infections of TailList;
 	add "Slutty Dragoness" to infections of OviImpregnatorList;
 	now enemy title entry is "Slutty Dragoness";
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
-	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is (your text)."]
+	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "blue colored dragon scales covering your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]draconic[or]azure[or]blue dragon[at random]"; [ Cock Description, format as you have a 'size' (your text) cock.]
-	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now Ass Change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "WIP"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "WIP"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "WIP"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now Ass Change entry is "WIP"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 14;
@@ -1532,7 +1581,7 @@ When Play begins:
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 28;
 	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 4; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
 	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
@@ -1547,16 +1596,16 @@ When Play begins:
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fecund[or]bestial[at random]";
 	now type entry is "[one of]draconic[or]reptilian[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -1568,7 +1617,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1625,7 +1674,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -1652,7 +1701,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

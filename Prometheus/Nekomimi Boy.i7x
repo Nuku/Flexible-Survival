@@ -10,8 +10,8 @@ when play begins:
 [These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
 	add "Nekomimi Boy" to infections of MaleList;
 	add "Nekomimi Boy" to infections of FurryList;
-	add "Nekomimi Boy" to infections of Felinelist;      [list of feline infections]
-	add "Nekomimi Boy" to infections of BarbedCocklist;   [List of creatures with a barbed cock]
+	add "Nekomimi Boy" to infections of Felinelist; [list of feline infections]
+	add "Nekomimi Boy" to infections of BarbedCocklist; [List of creatures with a barbed cock]
 	add "Nekomimi Boy" to infections of BipedalList;
 	add "Nekomimi Boy" to infections of TailList;
 
@@ -410,36 +410,36 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Nekomimi"; [name of the overall species of the infection, used for children, ...]
-	now name entry is "Nekomimi Boy";      [The creature's name as displayed and used in naming descriptions]
+	now Species Name entry is "Nekomimi"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	now name entry is "Nekomimi Boy"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Nekomimi Boy";
 	now enemy name entry is "";
 	now enemy type entry is 0; [unique enemy]
-	now attack entry is "[one of]The Nekomimi Boy bats at you with his hands![or]The Nekomimi Boy attempts to gnaw on your fingers. Nya![or]The Nekomimi Boy pounces on you![or]The Nekomimi Boy attempts to trip you up by rubbing against your legs![at random]";   [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattheNekomimiBoy]";            [ Text when monster loses.  Change 'template' as above. ]
-	now victory entry is "[losetoNekomimiBoy]";               [ Text when monster wins.  Change 'template' as above. ]
-	now desc entry is "[NekomimiBoydesc]";                  [ Description of the creature when you encounter it. ]
-	now face entry is "human, if slightly feminine in appearance. Two cat ears sit atop your head, swiveling towards sounds. Small fangs are visible at the corners of your mouth, poking into your lower lip adorably. Neatly-combed whiskers stick out from the side of your face";      [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "human-like, but slender and flexible like a cat, giving you the impression that yoga or gymnastics would be a lot easier now. Your furry paw-like hands have sharp retractable claws that you can extend at will";   [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "unblemished smooth";   [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a slender, brown-furred cat's tail that swishes around behind you.";   [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "softly-barbed feline";                  [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "whiskers sprout from beside your upper lip and two fangs grow in your mouth until their points are visible at the corners of your mouth, adorably poking into your lower lip. Atop your head, your ears become pointed and cat-like, swivelling about as they pick up nearby sounds. By the time the transformation changes, your face looks cute and quite feminine";   [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "your bones, muscles, and tendons shift about until you feel a lot more limber than you can remember being as a human. Your hands become paw-like, the tips of your digits tipped with sharp claws";   [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it becomes extraordinarily smooth without a blemish to be found";   [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a slender, brown-furred tail like that of a cat extends from the base of your spine";   [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "the tip becomes pointy with short, soft spines that fortunately look pleasurable rather than painful along the upper part of the shaft";      [ Cock TF text, format as "Your cock feels funny as (your text)." ]
-	now str entry is 14;         [ These are now the creature's stats... ]
-	now dex entry is 16;         [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 12;         [ These values may be used as part of alternate combat.]
+	now attack entry is "[one of]The Nekomimi Boy bats at you with his hands![or]The Nekomimi Boy attempts to gnaw on your fingers. Nya![or]The Nekomimi Boy pounces on you![or]The Nekomimi Boy attempts to trip you up by rubbing against your legs![at random]"; [Text used when the monster succeeds on an attack]
+	now defeated entry is "[beattheNekomimiBoy]"; [ Text when monster loses.  Change 'template' as above. ]
+	now victory entry is "[losetoNekomimiBoy]"; [ Text when monster wins.  Change 'template' as above. ]
+	now desc entry is "[NekomimiBoydesc]"; [ Description of the creature when you encounter it. ]
+	now face entry is "human, if slightly feminine in appearance. Two cat ears sit atop your head, swiveling towards sounds. Small fangs are visible at the corners of your mouth, poking into your lower lip adorably. Neatly-combed whiskers stick out from the side of your face"; [ Face Description, format as the text "Your face is (your text)." ]
+	now body entry is "human-like, but slender and flexible like a cat, giving you the impression that yoga or gymnastics would be a lot easier now. Your furry paw-like hands have sharp retractable claws that you can extend at will"; [ Body Description, format as the text "Your body is (your text)." ]
+	now skin entry is "unblemished smooth"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
+	now tail entry is "You have a slender, brown-furred cat's tail that swishes around behind you."; [ Tail desc., written as a full sentence or left blank for none. ]
+	now cock entry is "softly-barbed feline"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
+	now face change entry is "whiskers sprout from beside your upper lip and two fangs grow in your mouth until their points are visible at the corners of your mouth, adorably poking into your lower lip. Atop your head, your ears become pointed and cat-like, swivelling about as they pick up nearby sounds. By the time the transformation changes, your face looks cute and quite feminine"; [ Face TF text, format as "Your face feels funny as (your text)." ]
+	now body change entry is "your bones, muscles, and tendons shift about until you feel a lot more limber than you can remember being as a human. Your hands become paw-like, the tips of your digits tipped with sharp claws"; [ Body TF text, format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it becomes extraordinarily smooth without a blemish to be found"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a slender, brown-furred tail like that of a cat extends from the base of your spine"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "the tip becomes pointy with short, soft spines that fortunately look pleasurable rather than painful along the upper part of the shaft"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now str entry is 14; [ These are now the creature's stats... ]
+	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 12; [ These values may be used as part of alternate combat.]
 	now per entry is 14;
 	now int entry is 14;
 	now cha entry is 16;
-	now sex entry is "Male";                      [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
-	now hp entry is 40;                           [ The monster's starting hit points. ]
-	now lev entry is 5;                           [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
-	now wdam entry is 6;                          [ Monster's average damage when attacking. ]
-	now area entry is "Campus";                  [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now sex entry is "Male"; [ Infection will move the player towards this gender.  Current: 'Male' 'Female' 'Both' ]
+	now hp entry is 40; [ The monster's starting hit points. ]
+	now lev entry is 5; [ Monster level.  (Level x 2) XP for victory.  (Level / 2) XP for losing. ]
+	now wdam entry is 6; [ Monster's average damage when attacking. ]
+	now area entry is "Campus"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 6; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 2; [ Cock width, more commonly used for ball size. ]
@@ -447,24 +447,24 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "Nekomimi Boy Fluff"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 15; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "slim";
 	now type entry is "feline";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 2; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";             [ Row used to designate any special combat features, "default" for standard combat. ]
+	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 Table of Game Objects (continued)

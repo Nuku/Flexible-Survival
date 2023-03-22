@@ -112,7 +112,7 @@ to say beattheSugarGlider:
 
 to say SugarGliderdesc:
 	project the Figure of SugarGlider_icon;
-	setmongender 4;      [creature is female]
+	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
@@ -132,7 +132,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Sugar Glider"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Sugar Glider"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Sugar Glider" to infections of FurryList;
 	add "Sugar Glider" to infections of HumorousList;
 	add "Sugar Glider" to infections of MaleList;
@@ -141,15 +141,15 @@ When Play begins:
 	add "Sugar Glider" to infections of FlightList;
 	add "Sugar Glider" to infections of TailList;
 	now Name entry is "Sugar Glider"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "The Sugar Glider [one of]reaches into her pouch, withdrawing a small piece of candy. 'Catch!' she shouts, tossing the candy towards you. Distracted by the flying sweets, she quickly steps forwards, planting a sugary kiss on your cheek before you can react[or]runs towards you before stopping suddenly and spinning her body. Her long, thick tail strikes you in the face as she spins, filling your dizzy head with her sugary sweet scent[or]strikes you with her short, sharp claws[or]leaps towards you, wrapping you in her wing-like embrace, giggling happily as you struggle to push her off[or]wraps her long, soft tail around your [bodydesc of Player] [bodytype of Player] body, temporarily distracting you from fighting[at random]."; [ Successful attack message ]
 	now defeated entry is "[beattheSugarGlider]"; [ Text when monster loses. Change 'Sugar Glider' as above. ]
 	now victory entry is "[losetoSugarGlider]"; [ Text when monster wins. Change 'Sugar Glider' as above. ]
 	now desc entry is "[SugarGliderdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "cute and rodent-like, with large eyes and swiveling ears[if Player is SugarGliderskinned and Player is male]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if Player is SugarGliderskinned]. There is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
-	now body entry is "slender and light, yet strangely soft and malleable like taffy[if Player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body. Format as "Your body is [Body of Player]." ]
+	now body entry is "slender and light, yet strangely soft and malleable like taffy[if Player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body description, format as "Your body is [Body of Player]." ]
 	now skin entry is "a short coat of sugary cotton candy like fur. It is [if Player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if Player is male]blue[else]pink[end if] cotton candy fur."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
@@ -182,16 +182,16 @@ When Play begins:
 	now libido entry is 75; [ Target libido the infection will rise towards. ]
 	now loot entry is "crushed candies"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 33; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]malleable[or]slender[or]lithe[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "marsupial"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -203,7 +203,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -260,7 +260,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -287,7 +287,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

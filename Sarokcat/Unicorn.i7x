@@ -28,7 +28,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Unicorn"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Unicorn"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Unicorn" to infections of EquineList;
 	add "Unicorn" to infections of FurryList;
 	add "Unicorn" to infections of MythologicalList;
@@ -40,20 +40,20 @@ When Play begins:
 	now Name entry is "Unicorn";
 	now enemy title entry is "Unicorn Barman";
 	now enemy Name entry is "Harold";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "His shining horn mesmerizes you completely, and you submit totally to his every sexual whim, becoming a complete and total plaything of the powerful unicorn.";
 	now defeated entry is "[Unicorn loss]";
 	now victory entry is "[Unicorn attack]";
 	now desc entry is "Sexy barkeep of DUUUUM.";
-	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "sexy equine muzzle, with a beautiful spiraling horn which almost seems to catch and reflect the light extending from your forehead above your new unicorn-like"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "slim and lithe, it is almost the very picture of perfection as you balance easily on your beautiful silvery hooves, their soft chiming noise when you walk seeming to fill the air around you with beauty, even as your dainty hoof tipped hands trace over your soft and lovely new curves"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]Beautiful white furred[or]silvery[or]unicorn furred[or]shimmering white fur[or]short brilliant fur covered[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have an amazing equine tail flicking behind you softly, its beautiful silvery white hair seeming to ripple with a rainbow of reflected colors with every move you make, even as it swishes teasingly behind you."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]equine[or]unicorn[or]blunt tipped[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "a small pain blossoms in your forehead, you find yourself groaning slightly as your face begins to flatten and push out into a soft unicorns muzzle, even as a shimmering spiral horn begins to peek out from the center of your forehead. The pain begins to subside as your ears and eyes finish shifting position, and you find yourself grinning a happy equine grin as you look at the shifting spots of color reflected off your new amazing unicorns horn"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it shifts and changes, your toes merging and melting together as your feet change into beautiful silver hooves, your legs seem to grow more muscled, with a slightly shifted heel to allow for faster running, and your fingers seem to become tipped with silver as well as your fingernails shift and stretch down past the first joint. And you find yourself stretching your new lithe and powerful body almost automatically as the changes finish, leaving you feeling surprisingly energized and aroused"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it is slowly covered in beautiful short white horse fur, your new hide of pure white hair shining brightly as it reflects the light with every move you make"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a shimmering silken tail seems to sprout behind you, its beautiful white strands falling like a waterfall down from your ass, until the tip of your new unicorn tail hangs barely a few inches above the floor"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "a small pain blossoms in your forehead, you find yourself groaning slightly as your face begins to flatten and push out into a soft unicorns muzzle, even as a shimmering spiral horn begins to peek out from the center of your forehead. The pain begins to subside as your ears and eyes finish shifting position, and you find yourself grinning a happy equine grin as you look at the shifting spots of color reflected off your new amazing unicorns horn"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it shifts and changes, your toes merging and melting together as your feet change into beautiful silver hooves, your legs seem to grow more muscled, with a slightly shifted heel to allow for faster running, and your fingers seem to become tipped with silver as well as your fingernails shift and stretch down past the first joint. And you find yourself stretching your new lithe and powerful body almost automatically as the changes finish, leaving you feeling surprisingly energized and aroused"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it is slowly covered in beautiful short white horse fur, your new hide of pure white hair shining brightly as it reflects the light with every move you make"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "a shimmering silken tail seems to sprout behind you, its beautiful white strands falling like a waterfall down from your ass, until the tip of your new unicorn tail hangs barely a few inches above the floor"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it seems to thicken, a sexy looking sheath begins to form around the base of your increasingly equine looking new cock"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 18;
@@ -61,35 +61,35 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 20;
-	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 20;
-	now lev entry is 2;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Nowhere";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now Cock Length entry is 14;  [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 3;  [ Size of balls ]
-	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 8;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 5; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 14; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 3; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 8; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 14;
 	now Cunt Tightness entry is 6;
 	now SeductionImmune entry is false;
-	now libido entry is 50;  [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
-	now loot entry is "";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
-	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
-	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now libido entry is 50; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
+	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]slender[or]perfect[at random]";
 	now type entry is "[one of]equine[or]unicorn[or]mythological[as decreasingly likely outcomes]";
 	now magic entry is true;
-	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
@@ -100,7 +100,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -157,7 +157,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -184,7 +184,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

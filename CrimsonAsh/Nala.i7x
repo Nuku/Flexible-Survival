@@ -8,24 +8,29 @@ Version 1 of Nala by CrimsonAsh begins here.
 
 Section 1 - Events
 
+
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Harmless Joke"	Harmless Joke	"[EventConditions_Harmless_Joke]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Harmless_Joke:
+	if HP of Nala is 0:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Harmless Joke	"Harmless Joke"
 
 Harmless Joke is a situation.
-ResolveFunction of Harmless Joke is "".
+ResolveFunction of Harmless Joke is "[ResolveEvent Harmless Joke]".
 Sarea of Harmless Joke is "Nowhere".
 
 when play begins:
 	add Harmless Joke to BadSpots of FemaleList;
 	add Harmless Joke to BadSpots of DemonList;
 
-instead of navigating Grey Abbey Library while (Harmless Joke is active and Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: First Nala Trick on the player - HP of Nala: [HP of Nala][line break]";
+to say ResolveEvent Harmless Joke:
 	say "     Walking up to the entrance the library, you reach to open the door leading in. But as you pull it open, you are suddenly drenched in cold water from a bucket set up over the door, soaking you through to the skin. You let out a loud yelp in surprise and start shivering while the bucket makes a hell of a racket as it clatters onto the floor. The whole situation is accompanied by a high-pitched giggling coming from somewhere inside the library. Glancing in that direction, you spot a small figure dart out of a partially opened window and out into the city. Rushing over, you look out after what must have been the trickster who set this trap for you, yet find them nowhere in sight. Grunting and cursing, you reluctantly accept your defeat and head down to the bunker to dry yourself off, now far more weary of doorways.";
 	now HP of Nala is 1; [flag set to remember the progress]
 	now Harmless Joke is resolved; [event won't happen again]
@@ -140,7 +145,7 @@ Cock Length of Nala is 0. [Length in Inches]
 Ball Count of Nala is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Nala is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Nala is 1. [number of cunts]
-Cunt Depth of Nala is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Nala is 6. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Nala is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Nala is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

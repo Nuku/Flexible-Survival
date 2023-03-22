@@ -3,6 +3,15 @@ Version 1 of Bradford by Stripes begins here.
 [ Version 2.0 - More sex scenes + added bounties and story]
 "Adds an anthro bull bounty hunter named Bradford to Flexible Survival."
 
+[                   HP of Bradford                   ]
+[ 0 = not met                                        ]
+[ 1 = met Bradford                                   ]
+[ 2 = talked to Bradford - contract #1 (Cock Cannon) ]
+[ 3 = completed contract #1 / start #2 (Latex Wolf)  ]
+[ 4 = completed contract #2 / open for sex           ]
+[ 5 = had sex with Bradford once                     ]
+[ 6 = had sex again - opens next material (later)    ]
+
 Section 1 - Lead-in Event
 
 Table of GameEventIDs (continued)
@@ -60,7 +69,44 @@ Table of GameCharacterIDs (continued)
 object	name
 Bradford	"Bradford"
 
-Bradford is a person. Bradford is in Bradford's Camp.
+Bradford is a man.
+Bradford is in Bradford's Camp.
+ScaleValue of Bradford is 4. [large human sized]
+SleepRhythm of Bradford is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Bradford is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Bradford is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Bradford is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Bradford is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Bradford is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Bradford is 8. [length in inches]
+Breast Size of Bradford is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Bradford is 2. [count of nipples]
+Asshole Depth of Bradford is 12. [inches deep for anal fucking]
+Asshole Tightness of Bradford is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Bradford is 1. [number of cocks]
+Cock Girth of Bradford is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Bradford is 10. [Length in Inches]
+Ball Count of Bradford is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Bradford is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Bradford is 0. [number of cunts]
+Cunt Depth of Bradford is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Bradford is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Bradford is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Bradford is false.
+PlayerRomanced of Bradford is false.
+PlayerFriended of Bradford is false.
+PlayerControlled of Bradford is false.
+PlayerFucked of Bradford is false.
+OralVirgin of Bradford is true.
+Virgin of Bradford is true.
+AnalVirgin of Bradford is true.
+PenileVirgin of Bradford is false.
+SexuallyExperienced of Bradford is true.
+TwistedCapacity of Bradford is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Bradford is true. [steriles can't knock people up]
+MainInfection of Bradford is "".
 Description of Bradford is "[bradforddesc]".
 Conversation of Bradford is { "Moo, mutherfuckah!" }.
 the scent of the Bradford is "The bull man has a somewhat musky scent of sweat, but not overpoweringly so.".
@@ -593,15 +639,5 @@ Section X - Notes & Debugging
 to say bradforddebug:
 	if debugactive is 1:
 		say "DEBUG (Bradford) -> HP: [HP of Bradford] <- DEBUG[line break]";
-
-
-[                   HP of Bradford                   ]
-[ 0 = not met                                        ]
-[ 1 = met Bradford                                   ]
-[ 2 = talked to Bradford - contract #1 (Cock Cannon) ]
-[ 3 = completed contract #1 / start #2 (Latex Wolf)  ]
-[ 4 = completed contract #2 / open for sex           ]
-[ 5 = had sex with Bradford once                     ]
-[ 6 = had sex again - opens next material (later)    ]
 
 Bradford ends here.

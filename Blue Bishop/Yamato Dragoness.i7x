@@ -146,7 +146,7 @@ to say Yamato Dragoness vic:
 				say "     You're gradually roused back from unconsciousness, quickly finding yourself trapped within the tight, translucent confines of an egg, compelling yourself to break free of this hot, moist prison. Exposed to the dry, [if daytimer is night]night[else]day[end if]time air once more, she at least offered the small courtesy of leaving you [if showlocale is true]in the park[else]where you first met[end if]. It takes you some time to find your things and return back from whence you came.";
 		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 			if Player is male and a random chance of 1 in 2 succeeds:
-				say "     Pinning you to the ground with a talon, you feel her scaled lips encircle your [if Player is internal]crotch, coaxing your [cock size desc of Player] cock[smn] out into the open air[else][cock size desc of Player] cock[smn], coaxing you into becoming fully hard[end if]. Satisfied with your preparation, she pulls your [if HP of Player > 0]exposed[else]battered[end if] form up into the air with her.";
+				say "     Pinning you to the ground with a talon, you feel her scaled lips encircle your [if Player is internalCock]crotch, coaxing your [cock size desc of Player] cock[smn] out into the open air[else][cock size desc of Player] cock[smn], coaxing you into becoming fully hard[end if]. Satisfied with your preparation, she pulls your [if HP of Player > 0]exposed[else]battered[end if] form up into the air with her.";
 				say "     '[one of]Such a little thing, I will grant you but a glimpse of your inevitable fate[or]So small and flightless you are, feel the open sky, as we all do[or]You will feel what only I might offer you[at random].' Drawing attention to your shared infection, her influence floods you with a rush of uncontrollable, tainted excitement at the notion of being great beast's consort.";
 				say "     Her larger frame soon entwining itself with your own, you can feel the dragoness's scales grind firmly against you";
 				if Cock Count of Player > 2:
@@ -224,7 +224,7 @@ to say Yamato Dragoness vic:
 				say "     After a few moments, she finally wrenches you free of her, setting you down on the ground by your tail. Satisfied, she grins at you for a moment before silently floating off, away from you[if Cock Count of Player > 1] and your cum-soiled self[end if], doubtlessly fatigued and lust sated. You gather your things[if Cock Count of Player > 1], clean yourself off,[end if] and depart back from whence you came.";
 		else:
 			if Player is male and a random chance of 1 in 2 succeeds:
-				say "     [if HP of Player < 1 and player is not submissive]Charged by a surge of rebellion, you make one final attempt to crawl away, only to be grabbed by the dragoness and dragged closer[else]Tainted need clear in her eyes, the dragoness shows no restraint in pulling you closer to her[end if]. [if scalevalue of Player > 4]Massive as you are, [one of]it's clear[or]you're reminded[stopping] that she eclipses even you in size[else if scalevalue of Player is 4]Fairly large as you are, [one of]it's clear[or]you're reminded[stopping] that she's much, much larger than you[else]Her appearance is somewhat intimidating, given how absolutely massive she is[end if]; regardless, you're forced to watch on as her scaled snout descends on you, tongue emerging to caress your [if Player is internal]crotch, coaxing your [cock size desc of Player] cock[smn] out into the open air[else]exposed, [cock size desc of Player] cock[smn], coaxing you into becoming fully hard[end if][if HP of Player > 0 and player is not submissive], in spite of your better judgment[end if].";
+				say "     [if HP of Player < 1 and player is not submissive]Charged by a surge of rebellion, you make one final attempt to crawl away, only to be grabbed by the dragoness and dragged closer[else]Tainted need clear in her eyes, the dragoness shows no restraint in pulling you closer to her[end if]. [if scalevalue of Player > 4]Massive as you are, [one of]it's clear[or]you're reminded[stopping] that she eclipses even you in size[else if scalevalue of Player is 4]Fairly large as you are, [one of]it's clear[or]you're reminded[stopping] that she's much, much larger than you[else]Her appearance is somewhat intimidating, given how absolutely massive she is[end if]; regardless, you're forced to watch on as her scaled snout descends on you, tongue emerging to caress your [if Player is internalCock]crotch, coaxing your [cock size desc of Player] cock[smn] out into the open air[else]exposed, [cock size desc of Player] cock[smn], coaxing you into becoming fully hard[end if][if HP of Player > 0 and player is not submissive], in spite of your better judgment[end if].";
 				say "     Blatantly revealing her plans for you, she slowly begins to shift over, lengthy, serpentine frame giving way until the creature's reptilian vent is exposed before you";
 				if FYDM is 0:
 					say ". Patiently lining herself up with you, [if Cock Length of Player < 20]you're not rightly sure how she intends to get anything out of this exchange, there's no way anyone of your size could be reasonably equipped for this monster. This reality never seems to cross her mind as[else]you imagine it must be uncommon for the monster to encounter someone as well-endowed as you are, clearly eager to get things going as[end if] she sinks ";
@@ -601,13 +601,14 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Yamato Dragon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Yamato Dragon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Yamato Dragoness" to infections of ReptileList;
 	add "Yamato Dragoness" to infections of FeralList;
 	add "Yamato Dragoness" to infections of MythologicalList;
 	add "Yamato Dragoness" to infections of FemaleList;
 	add "Yamato Dragoness" to infections of BarbedCockList;
 	add "Yamato Dragoness" to infections of InternalCockList;
+	add "Yamato Dragoness" to infections of InternalBallsList;
 	add "Yamato Dragoness" to infections of QuadrupedalList;
 	add "Yamato Dragoness" to infections of FlightList;
 	add "Yamato Dragoness" to infections of TailList;
@@ -615,9 +616,9 @@ When Play begins:
 	add "Yamato Dragoness" to infections of FirebreathList;
 	add "Yamato Dragoness" to infections of TailweaponList;
 	now Name entry is "Yamato Dragoness";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is ""; [ Specific name of unique enemy. ]
+	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The serpentine dragoness[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its talons.[at random]";
 	now defeated entry is "[Yamato Dragoness Loss]";
 	now victory entry is "[Yamato Dragoness Vic]";
@@ -656,16 +657,16 @@ When Play begins:
 	now libido entry is 30;
 	now loot entry is "dragon hair";
 	now lootchance entry is 40;
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 5;
 	now body descriptor entry is "[one of]slender[or]serpentine[or]flexible[or]strong[at random]";
 	now type entry is "draconic";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0;
 	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
@@ -677,7 +678,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -734,7 +735,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -761,7 +762,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

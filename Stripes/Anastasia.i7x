@@ -19,27 +19,6 @@ Version 5 of Anastasia by Stripes begins here.
 [ 12 = salamander raid completed ]
 
 
-ScaleValue of Anastasia is 3. [human sized]
-SleepRhythm of Anastasia is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cock Count of Anastasia is 0. [cock]
-Cock Length of Anastasia is 0. [cock length]
-Ball Size of Anastasia is 0. [number of player balls: 1, 2 or 4]
-Ball Count of Anastasia is 0. [no balls]
-Cunt Count of Anastasia is 1. [no pussy]
-Cunt Depth of Anastasia is 0. []
-Cunt Tightness of Anastasia is 0. []
-Nipple Count of Anastasia is 0. [2 nipples]
-Breast Size of Anastasia is 0. [flat]
-Humanity of Anastasia is 60.
-PlayerMet of Anastasia is false.
-PlayerRomanced of Anastasia is false.
-PlayerFriended of Anastasia is false.
-PlayerControlled of Anastasia is false.
-PlayerFucked of Anastasia is false.
-OralVirgin of Anastasia is false.
-Virgin of Anastasia is true.
-AnalVirgin of Anastasia is true.
-
 Section 1 - Events
 
 Table of GameEventIDs (continued)
@@ -77,16 +56,16 @@ to say ResolveEvent Captured Bird:
 					increase score by 15;
 					now HP of Anastasia is 1;
 					if MaleList is not banned, now Familiar Feather is active;
-					now Resolution of Captured Bird is 1;	[Saved phoenix]
-		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
+					now Resolution of Captured Bird is 1; [Saved phoenix]
+		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
-			now Resolution of Captured Bird is 2;	[Did not save phoenix]
-		if fightoutcome >= 30:							[fled]
+			now Resolution of Captured Bird is 2; [Did not save phoenix]
+		if fightoutcome >= 30: [fled]
 			say "     You manage to make your escape from the felines, leaving them to their original prize. Hearing some of the others returning, you don't stick around to see what's happening and just try and get more distance between you and the lustful predators.";
-			now Resolution of Captured Bird is 3;	[Ran from trying to save phoenix]
+			now Resolution of Captured Bird is 3; [Ran from trying to save phoenix]
 	else:
 		say "     Figuring that it's not your problem, you slip back the way you came, leaving the cats to their grisly barbecue.";
-		now Resolution of Captured Bird is 99;	[Did not try to save phoenix]
+		now Resolution of Captured Bird is 99; [Did not try to save phoenix]
 	now Captured Bird is resolved;
 
 Table of GameEventIDs (continued)
@@ -221,11 +200,47 @@ object	name
 Anastasia	"Anastasia"
 
 Anastasia is a woman.
-Description of Anastasia is "[Anastasiadesc]".
+ScaleValue of Anastasia is 3. [human sized]
+SleepRhythm of Anastasia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Anastasia is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Anastasia is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Anastasia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Anastasia is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Anastasia is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Anastasia is 6. [length in inches]
+Breast Size of Anastasia is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Anastasia is 0. [count of nipples]
+Asshole Depth of Anastasia is 12. [inches deep for anal fucking]
+Asshole Tightness of Anastasia is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Anastasia is 0. [number of cocks]
+Cock Girth of Anastasia is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Anastasia is 0. [Length in Inches]
+Ball Count of Anastasia is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Anastasia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Anastasia is 1. [number of cunts]
+Cunt Depth of Anastasia is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Anastasia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Anastasia is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Anastasia is false.
+PlayerRomanced of Anastasia is false.
+PlayerFriended of Anastasia is false.
+PlayerControlled of Anastasia is false.
+PlayerFucked of Anastasia is false.
+OralVirgin of Anastasia is true.
+Virgin of Anastasia is true.
+AnalVirgin of Anastasia is true.
+PenileVirgin of Anastasia is true.
+SexuallyExperienced of Anastasia is false.
+TwistedCapacity of Anastasia is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Anastasia is true. [steriles can't knock people up]
+MainInfection of Anastasia is "".
+Description of Anastasia is "[AnastasiaDesc]".
 Conversation of Anastasia is { "Burninate!" }.
-The icon of Anastasia is Figure of Anastasia_icon.
-
 the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".
+Humanity of Anastasia is 60.
+The icon of Anastasia is Figure of Anastasia_icon.
 
 to say Anastasiadesc:
 	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings tail feathers dance with a softly glowing flame. Her golden eyes look towards you[if loyalty of Anastasia is 2], happy to see you[else if loyalty of Anastasia is 3] lovingly[else] with curiosity[end if].";

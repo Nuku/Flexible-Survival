@@ -23,6 +23,8 @@ false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout an
 
 When Play begins:
 	add "Anthro Dragoness" to infections of ReptileList;
+	add "Anthro Dragoness" to infections of InternalCockList;
+	add "Anthro Dragoness" to infections of InternalBallsList;
 	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 
@@ -102,6 +104,10 @@ with 1000 blank rows
 
 Table of GameCharacterVariable3
 Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Affection(number)	Depravity(number)	SubVsDom(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
+with 1000 blank rows
+
+Table of GameCharacterVariable4
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Affection(number)	Depravity(number)	SubVsDom(number)	Body Weight(number)	Body Definition(number)	Androginity(number)	Mouth Length(number)	Mouth Circumference(number)	Tongue Length(number)	Breast Size(number)	Nipple Count(number)	Asshole Depth(number)	Asshole Tightness(number)	Cock Count(number)	Cock Girth(number)	Cock Length(number)	Ball Count(number)	Ball Size(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Clit Size(number)	Capacity(number)	SleepRhythm(number)	scalevalue(number)	PlayerLastSize(number)	ImpregTimer(number)	OffspringCount(number)	MainInfection(text)	FirstAnalPartner(text)	FirstVaginalPartner(text)	FirstOralPartner(text)	FirstPenilePartner(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	Originalgender(text)	PlayerOriginalgender(text)	PlayerLastGender(text)	PlayerLastBodytype(text)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFriended(truth state)	PlayerControlled(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)	PenileVirgin(truth state)	SexuallyExperienced(truth state)	TwistedCapacity(truth state)	Sterile(truth state)
 with 1000 blank rows
 
 Table of PlayerData
@@ -1408,7 +1414,6 @@ Name(text)	Type(text)
 "VentDomSize"	"number"
 "VentFluidAmount"	"number"
 "VentFoxContentLevel"	"number"
-"VentFoxEncounterCount"	"number"
 "VentFoxLastFed"	"number"
 "VentFoxRelationship"	"number"
 "VentOviAmount"	"number"
@@ -1786,7 +1791,8 @@ Name(text)	Type(text)
 "inasituation"	"truth state"
 "inheat"	"truth state"
 "insectlarva"	"truth state"
-"internalbypass"	"truth state"
+"internalCockbypass"	"truth state"
+"internalBallsbypass"	"truth state"
 "isHellhound"	"truth state"
 "ishunting"	"truth state"
 "joannadogsaved"	"truth state"

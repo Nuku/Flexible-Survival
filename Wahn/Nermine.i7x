@@ -110,7 +110,7 @@ Cock Length of Nermine is 0. [length in inches]
 Ball Count of Nermine is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Nermine is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Nermine is 1. [number of cunts]
-Cunt Depth of Nermine is 9. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Nermine is 9. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Nermine is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Nermine is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -385,18 +385,18 @@ to say NermineTalk2:
 	else if wrcurseNermine is 8 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'The dear visitor should be going to the Museum, to find the proper [bold type]dinosaur skeleton[roman type] that is needed. Furthermore, the ritual is to be performed at night. The sadly accursed person should drink the potion, spill their own blood and the curse will be drawn out. Hopefully.'";
 	else if wrcurseNermine is 9:
-		now wrcurseNermine is 10;  [This should not occur, but bumping to failure by default.]
+		now wrcurseNermine is 10; [This should not occur, but bumping to failure by default.]
 		say "     Nermine gives you an appraising look and shakes her head sadly. You know there's no point in asking her for more assistance with your curse. You will have to find another means to deal with it before it consumes you.";
-		now wrcurseNermine is 13;  [Quest closed - fail]
+		now wrcurseNermine is 13; [Quest closed - fail]
 	else if wrcurseNermine is 10:
 		say "     Nermine gives you an appraising look and shakes her head sadly. You know there's no point in asking her for more assistance with your curse. You will have to find another means to deal with it before it consumes you.";
-		now wrcurseNermine is 13;  [Quest closed - fail]
+		now wrcurseNermine is 13; [Quest closed - fail]
 	else if wrcurseNermine is 11:
 		say "     Nermine smiles as she looks you over. 'Nermine does see that the dear visitor is doing much better now. She was being hopeful that [SubjectPro of Player] would be succeeding. Now perhaps that Nermine has helped, the curse-free guest might consider to help Nermine in turn?' she says with a wink and a swish of her tail as she places the silver knife into her display case for rare items with delicate care. 'Resilience as [SubjectPro of Player] has proven is valuable indeed.";
-		now wrcurseNermine is 13;  [Quest closed - succeed]
+		now wrcurseNermine is 13; [Quest closed - succeed]
 	else if wrcurseNermine is 12:
 		say "     Nermine looks you over. 'Nermine see that the visitor has decided to keeping their raptor nature. Nermine hopes that this is the right decision for them.'";
-		now wrcurseNermine is 14;  [Quest closed - wereraptor]
+		now wrcurseNermine is 14; [Quest closed - wereraptor]
 
 to say NermineTalk3:
 	if debugactive is 1:
@@ -1333,7 +1333,7 @@ To say jackaltotemmagic:
 
 An everyturn rule:
 	if JackalBoyTF is 5:
-		increase score by 0;  [do nothing statement]
+		increase score by 0; [do nothing statement]
 	else:
 		if JackalBoyTF >= 1:
 			if TailName of Player is not "Jackalboy":

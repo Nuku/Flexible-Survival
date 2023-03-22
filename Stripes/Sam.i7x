@@ -136,7 +136,44 @@ Table of GameCharacterIDs (continued)
 object	name
 Sam	"Sam"
 
-Sam is a man. Sam is in Mini-Lab.
+Sam is a man.
+Sam is in Mini-Lab.
+ScaleValue of Sam is 3. [human sized]
+SleepRhythm of Sam is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Sam is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sam is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sam is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sam is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sam is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sam is 4. [length in inches]
+Breast Size of Sam is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sam is 2. [count of nipples]
+Asshole Depth of Sam is 8. [inches deep for anal fucking]
+Asshole Tightness of Sam is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sam is 1. [number of cocks]
+Cock Girth of Sam is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sam is 6. [Length in Inches]
+Ball Count of Sam is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sam is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sam is 0. [number of cunts]
+Cunt Depth of Sam is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sam is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sam is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sam is false.
+PlayerRomanced of Sam is false.
+PlayerFriended of Sam is false.
+PlayerControlled of Sam is false.
+PlayerFucked of Sam is false.
+OralVirgin of Sam is true.
+Virgin of Sam is true.
+AnalVirgin of Sam is true.
+PenileVirgin of Sam is true.
+SexuallyExperienced of Sam is false.
+TwistedCapacity of Sam is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sam is false. [steriles can't knock people up]
+MainInfection of Sam is "".
 Description of Sam is "[samdesc]".
 Conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
@@ -329,6 +366,26 @@ to say SamTalk:
 				say "     Her tail uncoils and flops down on the ground as she's left panting and rumbling softly in ecstasy from her orgasm. You smile down at her and wipe yourself off on a dry patch of her fur. She motions for you to come around and she kisses you passionately, her arms around you in a tight hug.";
 				say "     'That was really nice. I can't wait to try it again. Mmm... there's so many creatures out there I haven't tried with a pussy yet. I'm going to have to start all over again,' she says with a dreamy smile on her face, already imagining all the new fun she can have. You get the sinking feeling that you haven't really helped the situation much. Well, at least Sam isn't nearly so aggressive now.";
 				now HP of Sam is 56;
+				now ScaleValue of Sam is 4;
+				now Body Weight of Sam is 6;
+				now Body Definition of Sam is 5;
+				now Androginity of Sam is 5;
+				now Mouth Length of Sam is 12;
+				now Mouth Circumference of Sam is 4;
+				now Tongue Length of Sam is 12;
+				now Breast Size of Sam is 5;
+				now Nipple Count of Sam is 2;
+				now Asshole Depth of Sam is 12;
+				now Cock Count of Sam is 1;
+				now Cock Girth of Sam is 4;
+				now Cock Length of Sam is 12;
+				now Ball Count of Sam is 2;
+				now Ball Size of Sam is 4;
+				now Cunt Count of Sam is 1;
+				now Cunt Depth of Sam is 12;
+				now Cunt Tightness of Sam is 3;
+				now Clit Size of Sam is 2;
+				now MainInfection of Sam is "Dracovixentaur";
 				now icon of Sam is figure of Dracovixentaur_icon;
 				now lastfuck of Sam is turns;
 				tripletaur_active; [activate all three taur creatures]
@@ -647,6 +704,18 @@ to say samtf_maledragon:
 	SanBoost 5;
 	increase morale of Player by 2;
 	now HP of Sam is 10;
+	now ScaleValue of Sam is 4;
+	now Body Weight of Sam is 6;
+	now Body Definition of Sam is 7;
+	now Mouth Length of Sam is 12;
+	now Mouth Circumference of Sam is 4;
+	now Tongue Length of Sam is 12;
+	now Nipple Count of Sam is 0;
+	now Asshole Depth of Sam is 12;
+	now Cock Girth of Sam is 4;
+	now Cock Length of Sam is 12;
+	now Ball Size of Sam is 4;
+	now MainInfection of Sam is "Dragontaur";
 	move Sam to large shed;
 	move player to large shed;
 
@@ -660,6 +729,26 @@ to say samtf_femalevixen:
 	SanBoost 5;
 	increase morale of Player by 2;
 	now HP of Sam is 30;
+	now ScaleValue of Sam is 4;
+	now Body Weight of Sam is 5;
+	now Body Definition of Sam is 5;
+	now Androginity of Sam is 8;
+	now Mouth Length of Sam is 8;
+	now Mouth Circumference of Sam is 4;
+	now Tongue Length of Sam is 8;
+	now Breast Size of Sam is 5;
+	now Nipple Count of Sam is 2;
+	now Asshole Depth of Sam is 12;
+	now Cock Count of Sam is 0;
+	now Cock Girth of Sam is 0;
+	now Cock Length of Sam is 0;
+	now Ball Count of Sam is 0;
+	now Ball Size of Sam is 0;
+	now Cunt Count of Sam is 1;
+	now Cunt Depth of Sam is 12;
+	now Cunt Tightness of Sam is 3;
+	now Clit Size of Sam is 3;
+	now MainInfection of Sam is "Vixentaur";
 	now icon of Sam is figure of Vixentaur_icon;
 	move Sam to large shed;
 	move player to large shed;
@@ -674,6 +763,26 @@ to say samtf_hermboth: [Not for release yet]
 	SanBoost 5;
 	increase morale of Player by 2;
 	now HP of Sam is 50;
+	now ScaleValue of Sam is 4;
+	now Body Weight of Sam is 6;
+	now Body Definition of Sam is 5;
+	now Androginity of Sam is 5;
+	now Mouth Length of Sam is 12;
+	now Mouth Circumference of Sam is 4;
+	now Tongue Length of Sam is 12;
+	now Breast Size of Sam is 5;
+	now Nipple Count of Sam is 2;
+	now Asshole Depth of Sam is 12;
+	now Cock Count of Sam is 1;
+	now Cock Girth of Sam is 4;
+	now Cock Length of Sam is 12;
+	now Ball Count of Sam is 2;
+	now Ball Size of Sam is 4;
+	now Cunt Count of Sam is 1;
+	now Cunt Depth of Sam is 12;
+	now Cunt Tightness of Sam is 3;
+	now Clit Size of Sam is 2;
+	now MainInfection of Sam is "Dracovixentaur";
 	now icon of Sam is figure of Dracovixentaur_icon;
 	move Sam to large shed;
 	move player to large shed;

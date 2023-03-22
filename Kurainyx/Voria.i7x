@@ -50,7 +50,7 @@ Cock Length of Voria is 12. [Length in Inches]
 Ball Count of Voria is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Voria is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Voria is 2. [number of cunts]
-Cunt Depth of Voria is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Voria is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Voria is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Voria is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -96,12 +96,12 @@ to say ResolveEvent Plant Takeover:
 		move Player to Grey Abbey Garden;
 		move Voria to Grey Abbey Garden;
 		now HP of Voria is 1;
-		now resolution of Plant Takeover is 1;  [Player took Voria back to Abbey]
+		now resolution of Plant Takeover is 1; [Player took Voria back to Abbey]
 	else:
 		LineBreak;
 		say "     Given the state of the store, taking home strange, unknown plants doesn't seem like a good idea. You leave the carnivorous be and exit the store with two more bottles of water, albeit dirty ones, in your pack.";
 		now HP of Voria is 99;
-		now resolution of Plant Takeover is 99;	[Player left Voria at garden store]
+		now resolution of Plant Takeover is 99; [Player left Voria at garden store]
 	now Plant Takeover is resolved;
 	ItemGain dirty water by 2;
 
@@ -124,7 +124,7 @@ to say VoriaDesc:
 		say "     When you go to check on Voria, the fly-eating plant you rescued from the garden store, you are surprised to see that it has grown to the height of a water bottle. While Voria is still relatively small, to have almost doubled its size in a short amount of time is a bit alarming. As you crouch down and move closer to inspect the unusual plant, you're surprised again when Voria's blue head moves. Its movements are sluggish, but after a few seconds, Voria's head is directly facing you. When you get back up, you notice that Voria's head shifts a little to stare at your crotch instead.";
 		if player is Neuter:	[Player has no parts to water Voria]
 			say "     Voria then seems to wilt slightly in disappointment as its head turns away from you. Perhaps the plant was hoping you either had a cock or cunt, for whatever odd reason. If you do get an addition to your featureless crotch later on, maybe you should see what kind of reaction you can get from Voria.";
-			now HP of Voria is 8;	[Did not water Voria]
+			now HP of Voria is 8; [Did not water Voria]
 		else:
 			say "     You move side to side, just to be sure that you weren't seeing things, but there's no mistaking it: Voria's head clearly follows your [if Player is male]cock[smn][else]cunt[sfn][end if] as you move around. The perverse environment where you first found Voria has apparently infected the plant, leaving you wondering what you should do with it. The thought of getting rid of Voria crosses your mind, but with the plant seemingly posing no danger at the moment, not to mention the work you put into saving it, you push the idea aside for now. Clearly Voria wants sex, but given the impracticability of trying to fornicate with the small plant, you figure that [italic type]watering[roman type] Voria with your sexual juices via masturbation will have to do. This leaves you with the choice of either leaving Voria alone for now, or indulge its perverse need.";
 			say "     [bold type]Do you want to water Voria?[roman type][line break]";
@@ -137,7 +137,7 @@ to say VoriaDesc:
 			else:
 				LineBreak;
 				say "     Erring on the side of caution, you back away from Voria, and the plant wilts slightly in disappointment as you move away. You make a note to check on Voria later to see how it's doing.";
-				now HP of Voria is 8;	[Did not water Voria]
+				now HP of Voria is 8; [Did not water Voria]
 	else if HP of Voria is 8:	[Have not watered Voria yet]
 		say "     Checking up on the odd plant again, you find that Voria has not grown at all since the last time. Either Voria is done with its strange growth, or for some reason, it needs you to fulfill its perverse need for it to continue maturing.";
 		if player is Neuter:	[Player has no parts to water Voria]
@@ -189,7 +189,7 @@ to say VoriaDesc:
 		WaitLineBreak;
 		say "     When you finally stand in front of the main part of the plant's body, the vine slips away from your hand, and Voria dips her head to softly rub it against your body. Although it is a bit odd that you're effectively being nuzzled by a giant plant, you're glad to not be next on Voria's menu, and you return the affection by patting it on its large head, eliciting a quiet, but deep purr from it. It seems like you won't have to worry about Voria because it recognizes you as its caretaker and master. You're glad that the abbey now has a new guard to help keep the place safe, and since Voria has the ability to move around, maybe you can even have it follow you around during your exploration.";
 		say "     (Voria the carnivorous plant is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Voria[end link][roman type] or [bold type][link]ally carnivorous plant[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
-		now HP of Voria is 23;	[Voria fully grown]
+		now HP of Voria is 23; [Voria fully grown]
 		now Carnivorous Plant is tamed;
 		add "Tamed" to Traits of Carnivorous Plant;
 	else:
@@ -214,7 +214,7 @@ to say VoriaWatering:	[Player watering/masturbation scene]
 		say "Your hand wraps around your shaft and begins pumping up and down, pleasurable tingles already starting to build up in your loins. [if cock count of player > 2]At the same time, your other hand does the same with another of your dicks, effectively doubling your stimulation. [else if cock count of player > 1]At the same time, your other hand does the same with your other dick, effectively doubling your stimulation. [end if]Though tending to yourself is not as satisfactory as doing it with someone else, you know yourself the best, as well as the best way to pleasure yourself. You know when and where to hit your most pleasurable spots. It doesn't take too long for you to work yourself up, and as if sensing your impending climax, Voria leans forward as much as its rooted self can. With a moan of delight, you finally get your release, and you make sure to aim your cock[smn] at Voria as your cum starts flowing. The plant shakes happily as you shower it with your protein-rich, musky fluid. Once you come down from your high, you see that the small plant and the area of dirt around it is covered with splotches of your white gift. Though Voria doesn't seem to be moving, you presume that the plant is somehow enjoying your gift to it, and after cleaning yourself off, you decide to let Voria be for the time being.";
 	else:
 		say "You sit down so that your cunt[sfn] is right in front of Voria, and your hand gets right to work in tending to your pussy. [if cunt count of player > 2]At the same time, your other hand does the same with another of your pussies, effectively doubling your stimulation. [else if cunt count of player > 1]At the same time, your other hand does the same with your other pussy, effectively doubling your stimulation. [end if]Though tending to yourself is not as satisfactory as doing it with someone else, you know yourself the best, as well as the best way to pleasure yourself. You know when and where to hit your most pleasurable spots. It doesn't take too long for you to work yourself up, and as if sensing your impending climax, Voria leans forward as much as its rooted self can. With a moan of delight, you finally get your release, and as your fem-cum starts flowing, you make sure to aim it right at Voria. The plant shakes happily as you shower it with your musky juices. Once you come down from your high, you see that the small plant and the area of dirt around it is covered with splotches of your spent lust. Though Voria doesn't seem to be moving, you presume that the plant is somehow enjoying your gift to it, and after cleaning yourself off, you decide to let Voria be for the time being.";
-	now HP of Voria is 9;	[Player watered Voria]
+	now HP of Voria is 9; [Player watered Voria]
 
 Section 4 - Pet
 
@@ -271,7 +271,7 @@ understand "Voria Cheat" as VoriaCheat.
 
 carry out VoriaCheat:	[Cheat to instantly access Voria pet]
 	move Voria to Grey Abbey Garden;
-	now HP of Voria is 23;	[Voria fully grown]
+	now HP of Voria is 23; [Voria fully grown]
 	now Carnivorous Plant is tamed;
 	add "Tamed" to Traits of Carnivorous Plant;
 
@@ -379,7 +379,7 @@ to VoriaPostCombat:	[Voria vore scenes after you win a fight against a voreable 
 	else:
 		LineBreak;
 		say "     Turning around, you decide to keep watch for anything that might interrupt your hungry plant friend's meal. For a while, you hear nothing but the rustling of Voria's leaves and vines, as well as the moans of arousal of the bound prey. Eventually, those sounds are replaced by a short series of wet squelches. A moment later, things quiet down, and you turn back around to see no sign of the defeated foe except for the satisfied smile on Voria's mouth. With your plant fed and ready to go, the two of you resume your explorations.";
-	now hunger of Voria is 0;	[Voria doesn't need to eat for 8 turns as the player's pet]
+	now hunger of Voria is 0; [Voria doesn't need to eat for 8 turns as the player's pet]
 
 to say VoriaPCAssPound:	[Player sticks dick in enemy butt]
 	say "     Not wanting to pass up this opportunity to have some fun with your plant companion, you walk over to the bound victim as you set down your gear, and your hands begin stroking your [Cock of Player] dick. As if sensing your anal intent, Voria pulls the helpless victim onto one of its bed-sized leaves and flips them over onto their stomach while still continuing to suck on the captive shaft. Several smaller vines slither forward to grope at its prey's rear cheeks before spreading them wide, giving you clear access to your target's asshole. Between watching Voria's debaucherous capture and the few moments of warm-up you gave yourself, your cock is nice and hard, ready to plunder your enemy's booty.";

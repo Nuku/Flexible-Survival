@@ -1,7 +1,7 @@
 Version 1 of Pet Mutt by CrimsonAsh begins here.
 [Version 1 - Put into its own file]
 
-[ Energy of Pet Mutt: charge-up for item presents    ]
+[ With new walkin table, Energy no longer tracks event cooldown    ]
 
 PetMuttBreed is a text that varies.
 PetMuttColor is a text that varies.
@@ -16,7 +16,24 @@ Section 1 - Events
 [***********************************************************]
 [***********************************************************]
 
-after going to Main & 7th Street while (Pet Mutt is in Main & 7th Street and Energy of Pet Mutt > 8 and a random chance of 1 in 3 succeeds):
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+4	"Pet_Mutt_Looting"	Pet_Mutt_Looting	"[EventConditions_Pet_Mutt_Looting]"	Main & 7th Street	2500	8	50
+
+to say EventConditions_Pet_Mutt_Looting:
+	if Pet Mutt is in Main & 7th Street:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Pet_Mutt_Looting	"Pet_Mutt_Looting"
+
+Pet_Mutt_Looting is a situation.
+ResolveFunction of Pet_Mutt_Looting is "[ResolveEvent Pet_Mutt_Looting]".
+Sarea of Pet_Mutt_Looting is "Nowhere".
+
+to say ResolveEvent Pet_Mutt_Looting:
 	let randomnumber be a random number from 1 to 3;
 	say "     As you walk onto the street, you call see [PetMuttName] as he quickly dashes out from under his small makeshift home. His tail is wagging wildly and he seems more eager than normal as he sprints in your direction. Before you can ask or even wonder if something's amiss he stops, skidding a foot or so and stopping before you. A [if randomnumber is 1]bottle of soda[else if randomnumber is 2]can of food[else]medkit[end if] drops from his maw and at your feet with a clatter. He pants and looks at you simply. Now it's your turn to cock your head to the side at your hound. You lean down and pick it up, examining the item for a moment before smiling and placing it in your pack after wiping some grool and grime from its surface. 'Such a good boy,' you praise, leaning down and giving both his ears a ruffle, patting and scruffing over his fur. Which quickly turns into a chest and belly rub when he lays down. His leg kicks as you scratch his tummy and his tongue lolls out happily. What an adorable pooch!";
 	if randomnumber is:
@@ -30,9 +47,6 @@ after going to Main & 7th Street while (Pet Mutt is in Main & 7th Street and Ene
 			LineBreak;
 			ItemGain medkit by 1;
 	now Energy of Pet Mutt is 0;
-
-an everyturn rule:
-	increase Energy of Pet Mutt by 1;
 
 [***********************************************************]
 [***********************************************************]
@@ -65,7 +79,7 @@ Cock Length of Pet Mutt is 9. [length in inches]
 Ball Count of Pet Mutt is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Pet Mutt is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Pet Mutt is 0. [number of cunts]
-Cunt Depth of Pet Mutt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Pet Mutt is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Pet Mutt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Pet Mutt is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

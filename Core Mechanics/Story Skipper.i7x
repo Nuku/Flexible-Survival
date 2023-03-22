@@ -17,6 +17,7 @@ The File of CharacterSave (owned by another project) is called "FSCharacterSave"
 The File of CharacterVariableSave (owned by another project) is called "FSCharacterVariableSave".
 The File of CharacterVariable2Save (owned by another project) is called "FSCharacterVariable2Save".
 The File of CharacterVariable3Save (owned by another project) is called "FSCharacterVariable3Save".
+The File of CharacterVariable4Save (owned by another project) is called "FSCharacterVariable4Save".
 The File of SexStats (owned by another project) is called "SexStats".
 The File of UnbornChildSave (owned by another project) is called "FSUnbornChildSave".
 The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
@@ -385,11 +386,12 @@ to CharacterSave:
 	blank out the whole of Table of GameCharacterVariables; [empty out all old data]
 	blank out the whole of Table of GameCharacterVariable2; [empty out all old data]
 	blank out the whole of Table of GameCharacterVariable3; [empty out all old data]
+	blank out the whole of Table of GameCharacterVariable4; [empty out all old data]
 	blank out the whole of Table of GameTraits; [empty out all old data]
-	if number of persons > number of rows in the table of GameCharacterVariable3: [making sure we got enough room for all situations]
-		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariable3. Please report this on the FS Discord.";
-	repeat with x running through persons: [rebuilds the table of GameCharacterVariable3 with current data]
-		choose a blank row in the Table of GameCharacterVariable3;
+	if number of persons > number of rows in the table of GameCharacterVariable4: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Characters in the table of GameCharacterVariable4. Please report this on the FS Discord.";
+	repeat with x running through persons: [rebuilds the table of GameCharacterVariable4 with current data]
+		choose a blank row in the Table of GameCharacterVariable4;
 		if there is a object of X in the Table of GameCharacterIDs:
 			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
 			now Name entry is CharacterName;
@@ -448,6 +450,8 @@ to CharacterSave:
 			now SleepRhythm entry is SleepRhythm of x;
 			now scalevalue entry is The scalevalue of x;
 			now PlayerLastSize entry is PlayerLastSize of x;
+			now ImpregTimer entry is ImpregTimer of x;
+			now OffspringCount entry is OffspringCount of x;
 			[Texts]
 			now MainInfection entry is MainInfection of x;
 			now FirstAnalPartner entry is FirstAnalPartner of x;
@@ -482,15 +486,16 @@ to CharacterSave:
 					now TraitText entry is entry y of Traits of x;
 		else:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
-	write File of CharacterVariable3Save from the Table of GameCharacterVariable3; [freshly made table gets saved to file]
+	write File of CharacterVariable4Save from the Table of GameCharacterVariable4; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
 	blank out the whole of Table of GameCharacters; [empty after saving]
 	blank out the whole of Table of GameCharacterVariables; [empty after saving]
 	blank out the whole of Table of GameCharacterVariable2; [empty after saving]
 	blank out the whole of Table of GameCharacterVariable3; [empty after saving]
+	blank out the whole of Table of GameCharacterVariable4; [empty after saving]
 	blank out the whole of Table of GameTraits; [empty after saving]
 	if debug is at level 10:
-		say "DEBUG -> File of CharacterVariable3Save written.[line break]";
+		say "DEBUG -> File of CharacterVariable4Save written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
 
 to CharacterRestore:
@@ -498,8 +503,106 @@ to CharacterRestore:
 	blank out the whole of Table of GameCharacterVariables; [empty out to have a clean slate]
 	blank out the whole of Table of GameCharacterVariable2; [empty out to have a clean slate]
 	blank out the whole of Table of GameCharacterVariable3; [empty out to have a clean slate]
+	blank out the whole of Table of GameCharacterVariable4; [empty out to have a clean slate]
 	blank out the whole of Table of GameTraits; [empty out to have a clean slate]
-	if the File of CharacterVariable3Save exists: [new, expanded character variable file]
+	if the File of CharacterVariable4Save exists: [new, expanded character variable file]
+		say "Restoring Characters...";
+		read File of CharacterVariable4Save into the Table of GameCharacterVariable4;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable4:
+			choose row x in the Table of GameCharacterVariable4;
+			let CharacterIdName be Name entry;
+			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				if there is a name of LocationName entry in the Table of GameRoomIDs:
+					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
+					move CharacterObject to TargetRoom, without printing a room description;
+				else:
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
+					move CharacterObject to NPC Nexus;
+				[Numbers]
+				now Energy of CharacterObject is Energy entry;
+				now HP of CharacterObject is HP entry;
+				now MaxHP of CharacterObject is MaxHP entry;
+				now XP of CharacterObject is XP entry;
+				now Level of CharacterObject is Level entry;
+				now Armor of CharacterObject is Armor entry;
+				now Weapon Damage of CharacterObject is Weapon Damage entry;
+				now Strength of CharacterObject is Strength entry;
+				now Dexterity of CharacterObject is Dexterity entry;
+				now Stamina of CharacterObject is Stamina entry;
+				now Charisma of CharacterObject is Charisma entry;
+				now Intelligence of CharacterObject is Intelligence entry;
+				now Perception of CharacterObject is Perception entry;
+				now Hunger of CharacterObject is Hunger entry;
+				now Thirst of CharacterObject is Thirst entry;
+				now Morale of CharacterObject is Morale entry;
+				now Lust of CharacterObject is Lust entry;
+				now Libido of CharacterObject is Libido entry;
+				now Loyalty of CharacterObject is Loyalty entry;
+				now Humanity of CharacterObject is Humanity entry;
+				now Affection of CharacterObject is Affection entry;
+				now Depravity of CharacterObject is Depravity entry;
+				now SubVsDom of CharacterObject is SubVsDom entry;
+				now Body Weight of CharacterObject is Body Weight entry;
+				now Body Definition of CharacterObject is Body Definition entry;
+				now Androginity of CharacterObject is Androginity entry;
+				now Mouth Length of CharacterObject is Mouth Length entry;
+				now Mouth Circumference of CharacterObject is Mouth Circumference entry;
+				now Tongue Length of CharacterObject is Tongue Length entry;
+				now Breast Size of CharacterObject is Breast Size entry;
+				now Nipple Count of CharacterObject is Nipple Count entry;
+				now Asshole Depth of CharacterObject is Asshole Depth entry;
+				now Asshole Tightness of CharacterObject is Asshole Tightness entry;
+				now Cock Count of CharacterObject is Cock Count entry;
+				now Cock Girth of CharacterObject is Cock Girth entry;
+				now Cock Length of CharacterObject is Cock Length entry;
+				now Ball Count of CharacterObject is Ball Count entry;
+				now Ball Size of CharacterObject is Ball Size entry;
+				now Cunt Count of CharacterObject is Cunt Count entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
+				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				now Clit Size of CharacterObject is Clit Size entry;
+				now Armor of CharacterObject is Armor entry;
+				now Capacity of CharacterObject is Capacity entry;
+				now SleepRhythm of CharacterObject is SleepRhythm entry;
+				now scalevalue of CharacterObject is The scalevalue entry;
+				now PlayerLastSize of CharacterObject is PlayerLastSize entry;
+				now ImpregTimer of CharacterObject is ImpregTimer entry;
+				now OffspringCount of CharacterObject is OffspringCount entry;
+				[Texts]
+				now MainInfection of CharacterObject is MainInfection entry;
+				now FirstAnalPartner of CharacterObject is FirstAnalPartner entry;
+				now FirstVaginalPartner of CharacterObject is FirstVaginalPartner entry;
+				now FirstOralPartner of CharacterObject is FirstOralPartner entry;
+				now FirstPenilePartner of CharacterObject is FirstPenilePartner entry;
+				now Cock Size Desc of CharacterObject is Cock Size Desc entry;
+				now Cunt Size Desc of CharacterObject is Cunt Size Desc entry;
+				now Breast Size Desc of CharacterObject is Breast Size Desc entry;
+				now Short Breast Size Desc of CharacterObject is Short Breast Size Desc entry;
+				now Originalgender of CharacterObject is Originalgender entry;
+				now PlayerOriginalGender of CharacterObject is PlayerOriginalGender entry;
+				now PlayerLastGender of CharacterObject is PlayerLastGender entry;
+				now PlayerLastBodytype of CharacterObject is PlayerLastBodytype entry;
+				[Truth States]
+				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				now PlayerFriended of CharacterObject is PlayerFriended entry;
+				now PlayerControlled of CharacterObject is PlayerControlled entry;
+				now PlayerFucked of CharacterObject is PlayerFucked entry;
+				now OralVirgin of CharacterObject is OralVirgin entry;
+				now Virgin of CharacterObject is Virgin entry;
+				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				now PenileVirgin of CharacterObject is PenileVirgin entry;
+				now SexuallyExperienced of CharacterObject is SexuallyExperienced entry;
+				now TwistedCapacity of CharacterObject is TwistedCapacity entry;
+				now Sterile of CharacterObject is Sterile entry;
+				[
+				if debug is at level 10:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+				]
+			else:
+				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
+	else if the File of CharacterVariable3Save exists: [old file for backwards compatibility, only used if the new file does not exist]
 		say "Restoring Characters...";
 		read File of CharacterVariable3Save into the Table of GameCharacterVariable3;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable3:
@@ -594,7 +697,7 @@ to CharacterRestore:
 				]
 			else:
 				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
-	else if the File of CharacterVariable2Save exists: [new, expanded character variable file]
+	else if the File of CharacterVariable2Save exists: [old file for backwards compatibility, only used if the new file does not exist]
 		say "Restoring Characters...";
 		read File of CharacterVariable2Save into the Table of GameCharacterVariable2;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariable2:
@@ -686,7 +789,7 @@ to CharacterRestore:
 				]
 			else:
 				say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs! Please report this message on the FS Discord!";
-	else if the File of CharacterVariableSave exists: [new, expanded character variable file]
+	else if the File of CharacterVariableSave exists: [old file for backwards compatibility, only used if the new file does not exist]
 		say "Restoring Characters...";
 		read File of CharacterVariableSave into the Table of GameCharacterVariables;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacterVariables:

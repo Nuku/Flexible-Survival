@@ -185,21 +185,56 @@ Table of GameCharacterIDs (continued)
 object	name
 Sgt Marks	"Sgt Marks"
 
-Sgt Marks is a man. Sgt Marks is in Police Car.
+Sgt Marks is a man.
 understand "tiger" as Sgt Marks.
 understand "Sergeant Marks" as Sgt Marks.
 understand "cop" as Sgt Marks.
 understand "policeman" as Sgt Marks.
+Sgt Marks is in Police Car.
+ScaleValue of Sgt Marks is 4. [7 foot]
+SleepRhythm of Sgt Marks is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Sgt Marks is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Sgt Marks is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Sgt Marks is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Sgt Marks is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Sgt Marks is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Sgt Marks is 6. [length in inches]
+Breast Size of Sgt Marks is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Sgt Marks is 2. [count of nipples]
+Asshole Depth of Sgt Marks is 10. [inches deep for anal fucking]
+Asshole Tightness of Sgt Marks is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Sgt Marks is 1. [number of cocks]
+Cock Girth of Sgt Marks is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Sgt Marks is 8. [Length in Inches]
+Ball Count of Sgt Marks is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Sgt Marks is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Sgt Marks is 0. [number of cunts]
+Cunt Depth of Sgt Marks is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Sgt Marks is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Sgt Marks is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Sgt Marks is false.
+PlayerRomanced of Sgt Marks is false.
+PlayerFriended of Sgt Marks is false.
+PlayerControlled of Sgt Marks is false.
+PlayerFucked of Sgt Marks is false.
+OralVirgin of Sgt Marks is true.
+Virgin of Sgt Marks is true.
+AnalVirgin of Sgt Marks is true.
+PenileVirgin of Sgt Marks is false.
+SexuallyExperienced of Sgt Marks is true.
+TwistedCapacity of Sgt Marks is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Sgt Marks is false. [steriles can't knock people up]
+MainInfection of Sgt Marks is "Malayan Tiger Male".
 Description of Sgt Marks is "[SgtMarks_Desc]".
+Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
+The scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
+sgtmarkstalk is a number that varies.
 
 to say SgtMarks_Desc:
 	project Figure of SgtMarks_clothed_icon;
 	say "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.";
-
-Conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
-sgtmarkstalk is a number that varies.
-
-the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
 
 Instead of conversing the Sgt Marks:
 	project Figure of SgtMarks_clothed_icon;
@@ -738,7 +773,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Tiger"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Tiger"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Malayan Tiger Male" to infections of FelineList;
 	add "Malayan Tiger Male" to infections of FurryList;
 	add "Malayan Tiger Male" to infections of NatureList;
@@ -747,23 +782,23 @@ When Play begins:
 	add "Malayan Tiger Male" to infections of SheathedCockList;
 	add "Malayan Tiger Male" to infections of BipedalList;
 	add "Malayan Tiger Male" to infections of TailList;
-	now Name entry is "Malayan Tiger Male"; [Name of your new Monster]
-	now enemy title entry is "Malayan Tiger Male"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is "Sgt Marks"; [specific name of unique enemy]
-	now enemy type entry is 2; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now Name entry is "Malayan Tiger Male";
+	now enemy title entry is "Malayan Tiger Male"; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
+	now enemy Name entry is "Sgt Marks"; [ Specific name of unique enemy. ]
+	now enemy type entry is 2; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[tigercopdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "that of a beautiful tiger-like appearance, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human-like hands with their tiger-like claws tipping your fingers complete the look"; [Your Body is (your text)"]
-	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
+	now face entry is "that of a beautiful tiger-like appearance, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human-like hands with their tiger-like claws tipping your fingers complete the look"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ Skin Description, format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]feline[or]Tiger[or]barbed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitching as it flattens out, newly discovered scents washing over you as it merges into your new muzzle. Your eyes narrow into slitted cat-like pupils, and your ears finishing their adjustment to their new place on top of your head"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner. You stumble as your legs shift underneath you, your ankles stretching upwards as your feet expand and change, shifting your balance to the balls of your new paw-like feet, and the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your ass grows powerfully muscled, and a long sleek tiger tail erupts outwards from your tailbone, soon it is lashing around behind you in long natural motions, almost feeling as if it had always been a part of you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitching as it flattens out, newly discovered scents washing over you as it merges into your new muzzle. Your eyes narrow into slitted cat-like pupils, and your ears finishing their adjustment to their new place on top of your head"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner. You stumble as your legs shift underneath you, your ankles stretching upwards as your feet expand and change, shifting your balance to the balls of your new paw-like feet, and the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "your ass grows powerfully muscled, and a long sleek tiger tail erupts outwards from your tailbone, soon it is lashing around behind you in long natural motions, almost feeling as if it had always been a part of you"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tiger's sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 20;
@@ -774,7 +809,7 @@ When Play begins:
 	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 90;
 	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 12; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Nowhere"; [ Location of monster, start nowhere, High if active]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
@@ -789,16 +824,16 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sultry[or]alluring[or]curvaceous[or]flexible[at random]";
 	now type entry is "feline"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is "Malayan Tiger Herm"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is "Malayan Tiger Herm"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -810,7 +845,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -867,7 +902,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -894,7 +929,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

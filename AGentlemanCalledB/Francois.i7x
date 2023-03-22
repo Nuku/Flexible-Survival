@@ -23,9 +23,9 @@ ResolveFunction of Gourmet Treats is "[ResolveEvent Gourmet Treats]". The level 
 Sarea of Gourmet Treats is "High".
 
 when play begins:
-	add Gourmet Treats to BadSpots of MaleList;       [random encounter may involve male opponents]
-	add Gourmet Treats to BadSpots of FemaleList;     [random encounter may involve female opponents]
-	add Gourmet Treats to BadSpots of FurryList;     [random encounter will involve canine opponents]
+	add Gourmet Treats to BadSpots of MaleList; [random encounter may involve male opponents]
+	add Gourmet Treats to BadSpots of FemaleList; [random encounter may involve female opponents]
+	add Gourmet Treats to BadSpots of FurryList; [random encounter will involve canine opponents]
 
 to say ResolveEvent Gourmet Treats:
 	if HP of Karen is 1:
@@ -1071,8 +1071,8 @@ the scent of dragon moelleux is "     The small chocolate cake smells rich and s
 to say dragonmoelleuxuse:
 	if inafight is 1:
 		choose row MonsterID from the Table of Random Critters;
-		let dam be a random number between 80 and ( 120 + level of Player );   [base between 8-12+ after later division by 10]
-		increase dam by ( level of Player * 8 ) + ( a random number between 2 and level of Player * 2 );   [+0.8-1.0/lvl after div by 10]
+		let dam be a random number between 80 and ( 120 + level of Player ); [base between 8-12+ after later division by 10]
+		increase dam by ( level of Player * 8 ) + ( a random number between 2 and level of Player * 2 ); [+0.8-1.0/lvl after div by 10]
 		let playerfireresist be 0;
 		if "Natural Armaments" is listed in feats of Player: [+10%]
 			increase dam by ( dam / 10 );
@@ -1085,8 +1085,8 @@ to say dragonmoelleuxuse:
 		let playerdam be dam; [grabbing dam value before adjusting for target resistance]
 		if Name entry is listed in infections of Firebreathlist: [-20% against fire breathers]
 			decrease dam by ( dam / 5 );
-		now dam is dam / 10;                              [division by 10 to normalize]
-		increase dam by ( stamina of Player - 10 ) / 2;   [stamina boosted damage]
+		now dam is dam / 10; [division by 10 to normalize]
+		increase dam by ( stamina of Player - 10 ) / 2; [stamina boosted damage]
 		say "     Quickly swallowing the warm chocolate cake, you feel a growing heat welling up in your belly. Soon you can hold it in no longer and unleash a powerful gout of flame at the [Name entry], burning them for [dam] damage![hydraharming]";
 		decrease monsterHP by dam;
 		now playerdam is ( playerdam / 3) / 10;
@@ -1150,7 +1150,7 @@ to gingerbreadinfect:
 			now MonsterID is y;
 			break;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect "Gingerbread";
 	now non-infectious entry is true;
 
@@ -1194,7 +1194,7 @@ to cheesecakeinfect:
 			now MonsterID is y;
 			break;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect "Cheesecake";
 	now non-infectious entry is true;
 

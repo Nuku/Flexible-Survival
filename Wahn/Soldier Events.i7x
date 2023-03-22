@@ -74,9 +74,9 @@ Soldier Squad is a situation.
 ResolveFunction of Soldier Squad is "[ResolveEvent Soldier Squad]".
 Sarea of Soldier Squad is "Warehouse".
 when play begins:
-	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
-	add Soldier Squad to BadSpots of FemaleList;      [one changes into a female husky]
-	add Soldier Squad to BadSpots of FurryList;     [female husky involved]
+	add Soldier Squad to BadSpots of MaleList; [male soldiers]
+	add Soldier Squad to BadSpots of FemaleList; [one changes into a female husky]
+	add Soldier Squad to BadSpots of FurryList; [female husky involved]
 	add Soldier Squad to BadSpots of NonconList;
 	add Soldier Squad to BadSpots of IncestList;
 	add Soldier Squad to BadSpots of FeralList;
@@ -594,11 +594,11 @@ to say ResolveEvent Soldier Squad:
 				if fightoutcome >= 20 and fightoutcome <= 29: [lost] [TODO: Adjust first paragraph]
 					say "     After finishing with you, the German shepherd turns to your husky companion. Having followed everything that happened, she's pretty excited, standing there on all fours and squirming a bit as female juices drip from her pussy. Virgin as she is, she hasn't yet realized that she can stroke herself with her paw-hands. The male dog-morph gets behind the husky, leaning over her and reaching around to fondle her four breasts. Grinning, he says to you 'A fine bitch you have here - no, had. She's mine now!'";
 					say "     With that, he thrusts forward, burying his erection in her body with one swift move. Feeling the virgin's hymen break and hearing her pained yip at losing her cherry, the shepherd laughs. 'And a virgin too - this is just too great. Let's knock you up, girlie... make your first time memorable with a litter of my pups.' You can only helplessly watch the dog fuck her like a wild animal until he knots in her and starts filling her with his seed. A look of pure bliss comes over the young husky and she moans as his sperm impregnates her for the very first time. Accompanied by the mocking laughter of the German shepherd still tied to his new bitch, you slink away in defeat. [if Resolution of Soldier Squad is 95]So much for your plans of taking her for yourself - in this case, deviousness couldn't hold up to violence. Too bad you weren't more cautious. [else]The best laid plans can end up in dark corners, and you can't help but wonder if you made things better or worse for the young woman, serving her up to this street dog. [end if][line break]";
-					now HP of Amy is 100;   [removed from game]
+					now HP of Amy is 100; [removed from game]
 					now Amy is nowhere;
 				else if fightoutcome >= 30: [fled]
 					say "     Fleeing from combat with the German shepherd, you run off without looking back. The dog-morph shouts after you 'You better run, coward. Not even man enough to lose properly. Guess I'll have to make do with your girlie...' Sliding to a halt around the next corner, you realize the husky didn't come with you when you fled. Oh damn - the thought of going back goes through your mind, then gets interrupted by a dog's yip from the way you came, signifying that your former opponent just took the girl's virginity. Too late now to do anything, you start walking away again... [if Resolution of Soldier Squad is 95]So much for your plans of taking her for yourself - in this case, deviousness couldn't hold up to violence. Too bad you weren't more cautious. [else]The best laid plans can end up in dark corners, and you can't help but wonder if you made things better or worse for the young woman, serving her up to this street dog. [end if][line break]";
-					now HP of Amy is 100;   [removed from game]
+					now HP of Amy is 100; [removed from game]
 					now Amy is nowhere;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     Having defeated the German shepherd and knocked him out, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are not nice people. Then some shadows flick over you two - seems your little fight attracted the attention of a pair of hawkmen, who are swooping in to grab some easy prey!";
@@ -606,12 +606,12 @@ to say ResolveEvent Soldier Squad:
 					if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 						say "     Being defeated by the hawkman and thrown to the ground gives him and his buddy the opportunity to go after your husky companion. Together, they grab her by both arms and then simply carry the lightweight female off into the air, no doubt to make use of her to their heart's content on a roof somewhere, or to go straight to their nesting place with a new female to breed and keep. [if Resolution of Soldier Squad is 95]So much for your plans of taking her for yourself - in this case, deviousness couldn't hold up to violence. Too bad you weren't more cautious. [else]The best laid plans can end up in dark corners, and you can't help but wonder if you made things better or worse for the young woman, serving her up to these avian predators. [end if][line break]";
 						TraitGain "Amy - Vanished" for Allen;
-						now HP of Amy is 100;   [removed from game]
+						now HP of Amy is 100; [removed from game]
 						now Amy is nowhere;
 					else if fightoutcome >= 30: [fled]
 						say "     Fleeing from combat with the hawkman, you run off without looking back. Looks like you got away clean and... sliding to a halt around the next corner, you suddenly realize the husky didn't come with you when you fled. Oh damn - you look back around the corner of the building and see the lightweight husky being carried aloft in the grasp of both hawkmen, quickly vanishing from sight as they fly away. [if Resolution of Soldier Squad is 95]So much for your plans of taking her for yourself - in this case, deviousness couldn't hold up to violence. Too bad you weren't more cautious. [else]The best laid plans can end up in dark corners, and you can't help but wonder if you made things better or worse for the young woman, serving her up to these avian predators. [end if][line break]";
 						TraitGain "Amy - Vanished" for Allen;
-						now HP of Amy is 100;   [removed from game]
+						now HP of Amy is 100; [removed from game]
 						now Amy is nowhere;
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 						if Resolution of Soldier Squad is 95: [evil players]
@@ -619,7 +619,7 @@ to say ResolveEvent Soldier Squad:
 						else: [good players]
 							say "     Beating off the first hawkmen leads to his buddy jumping in to assist his companion - though he's mostly just harassing you to keep you off his friend, not really staying close to properly fight. Seems like this one has some respect for you now, after seeing you kick the first one's tailfeathers. This gives you the opportunity to grab your husky and run off, leaving the avian predators behind. Running for a block or so before snatching the anthro by the arm and pulling her to a stop, you see her being wide-eyed and panting. Putting an arm around her supportively and telling her to calm down you wait for the husky to come out of flight-mode, followed by her asking, 'Why were they so mean?' With a helpless shrug, you tell her that many of those she can encounter here in the city are... just not good people, and warn her to be more careful in the future. Somewhat wide-eyed, she nods, saying 'I will, I promise!'";
 							say "     As you continue on towards the library, you talk a little with the young woman. Realizing that you don't even have anything to call her, the conversation swings over to the importance of names, which seems to be a new concept for her. As the anthro husky tries to pick a certain bark as her name, which is wholly unsuitable, you begin to realize that you'll have to pick for her. Walking along, you chance seeing a poster of a movie plastered on a nearby wall, 'The Life of Amelia Earhart'. Clearing your throat, you're about to suggest Amelia to the husky, then pause and decide that something shorter would be better. So, Amy. The husky looks at you and says, 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then continue on your way, eventually reaching the library.";
-							now HP of Amy is 1;  [in the library, child-like]
+							now HP of Amy is 1; [in the library, child-like]
 							now AmyMaturityCounter is 24;
 						TraitGain "Player - Stole Amy" for Allen;
 						move Amy to Grey Abbey Library;
@@ -639,7 +639,7 @@ to say ResolveEvent Soldier Squad:
 					now Resolution of Soldier Squad is 94; [evil path, Amy dealt with]
 				else:
 					now Resolution of Soldier Squad is 4; [neutral path, Amy dealt with]
-				now HP of Amy is 90;  [she's back in the room]
+				now HP of Amy is 90; [she's back in the room]
 			else if calcnumber is 3: [fuck her]
 				LineBreak;
 				say "     You say hello to the [if Resolution of Soldier Squad is 95]little slut[else]young woman[end if] as she licks over your face and sniffs you, then ask if she can talk. In response, she tilts her head a bit, with a look of curious concentration crossing her features, followed by the cautious words, '...talk? I - I haven't before, but I guess I can. You smell nice.' Her tail ramps up to exuberant wagging once more and she smiles at you. Making sure to keep your voice friendly and welcoming, you tell her she's a good [if Resolution of Soldier Squad is 95]bitch[else]dog[end if] while starting to stroke over her hair, then down to her shoulder. Surely a beautiful [if Resolution of Soldier Squad is 95]piece of ass[else]girl[end if] like her knows to be obedient and to follow what she's told, right? Finding you looking into her face expectantly, she hesitantly replies '...yes?' A grin on your face, you move your hands to her four breasts, cupping them and pinching her nipples lightly.";
@@ -660,7 +660,7 @@ to say ResolveEvent Soldier Squad:
 					now Resolution of Soldier Squad is 94; [evil path, Amy dealt with]
 				else:
 					now Resolution of Soldier Squad is 4; [neutral path, Amy dealt with]
-				now HP of Amy is 91;  [she's back in the room, no longer virgin]
+				now HP of Amy is 91; [she's back in the room, no longer virgin]
 			else if calcnumber is 4:[run away]
 				LineBreak;
 				say "     Just wanting to get out of the situation, you take your legs under your arms and run. Though with a dog's inborn urges being what they are, the husky follows after you, taking you up on a playful hunt. It's several blocks before you can shake her - not so much because you're faster, but rather a hawkman suddenly lunging out of the alley you just passed and pulling the dog-morph inside. Judging from the yips, grunts and moans coming from the alley soon, you don't think you'll see the husky again - at least not in a shape you recognize.";
@@ -669,7 +669,7 @@ to say ResolveEvent Soldier Squad:
 					now Resolution of Soldier Squad is 94; [evil path, Amy dealt with]
 				else:
 					now Resolution of Soldier Squad is 4; [neutral path, Amy dealt with]
-				now HP of Amy is 100;   [removed from game]
+				now HP of Amy is 100; [removed from game]
 				now Amy is nowhere;
 			increase score by 10;
 		else if calcnumber is 2:
@@ -1119,7 +1119,7 @@ to say SaveCarl: [save the husky]
 	else:
 		LineBreak;
 		say "     Pressing your lips together, you shake your head, then comment that everyone is in a bad situation these days, with few places of the city being truly safe. 'Yeah, no kidding about that. Some of the things I've seen so far on the streets... man, that was pretty monstrous. I guess I might try moving closer to the coast, heard some reports that things might be a little less violent there. Or if not there, maybe the warehouse district and harbor... less population, pre-nanites, you know. Anyways, guess I better get going. Gotta find some place of refuge before I fall asleep standing up. I'm bone-tired.' With a pinched smile, you wish Carl the best and watch him start to walk away, then turn around to move off in another direction.";
-		now HP of Carl is 50;  [sent away on his own]
+		now HP of Carl is 50; [sent away on his own]
 		now Resolution of Soldier Squad is 10; [helped Carl, sent away]
 	now PlayerMet of Carl is true;
 
@@ -1130,7 +1130,7 @@ to say WatchCarl: [watch Allen catch him]
 	WaitLineBreak;
 	say "     'Either way, you fled alone, and left both of them behind. So much for being their brave 'squad leader', eh? Of course, trying to make a getaway with Davies would have been the height of stupidity - she wouldn't get far, waddling along with her bulging belly right now.' Grabbing a handful of fur on top of Carl's head, he yanks the husky's head up to look into his eyes, 'But then, neither did you. And now you're going right back where you belong. You'll learn to obey properly soon!' With that, the man pulls his captive up, forcing him to his feet, then starts to lead him back towards the apartment building. The thought if you should feel guilty for just observing all of this like a voyeur bubbles up in your mind, but you shove it aside with a shrug, then go on to wander further through the city streets.";
 	now Resolution of Soldier Squad is 11; [abandoned Carl, watched]
-	now HP of Carl is 90;  [taken by Allen]
+	now HP of Carl is 90; [taken by Allen]
 
 to say CatchCarl: [catch Carl and hand him over to Allen]
 	say "     Dashing out of the alley, you make a quick grab for Carl, one hand around landing on his shoulder, the other reaching out to clamp around his muzzle and quell his bark of surprise. Then you hissing out between your lips that you want to help, and that he should come with you right now before it's too late. His gaze meets yours, and you can almost see the inner struggle going on through his eyes - wariness futilely trying to hold its own against the exhaustion and desperation weighing heavy on the man. After what feels like a lifetime's - or possibly just a second's - hesitation, he gives you a wordless nod. While he doesn't know you from any other random being roaming the streets of this feral city, it's pretty much 'any port in a storm' for Carl, as the saying goes. What follows is him half-stumbling, and you half-dragging the bone-tired man towards the alley. Just in time too, as you hear running footsteps from the street outside, rapidly coming closer.";
@@ -1149,7 +1149,7 @@ to say LeaveCarl: [sneak away]
 	else:
 		say "     As the transformed soldier doesn't concern you too much, you just walk deeper into the space between the two buildings. After a moment, you hear the shout, 'There you are, bitch!' followed by the sounds of clawed paws on asphalt again, two sets this time as Carl flees and Allen is right on his track. A short while later, you hear some shouting and barking in the distance, most likely belonging to the two canines as Carl's escape attempt ends in an inevitable showdown. With a shrug, you vanish back into the city streets, leaving Carl the husky behind to his unknown fate.";
 		now Resolution of Soldier Squad is 9; [abandoned Carl to Allen, player just a bystander]
-	now HP of Carl is 90;  [taken by Allen]
+	now HP of Carl is 90; [taken by Allen]
 	now battleground is "void";
 	now Soldier Squad is resolved;
 
@@ -1363,8 +1363,8 @@ Human Urges is a situation.
 ResolveFunction of Human Urges is "[ResolveEvent Human Urges]".
 Sarea of Human Urges is "Red".
 when play begins:
-	add Human Urges to BadSpots of MaleList;      [male soldier]
-	add Human Urges to BadSpots of FemaleList;     [female soldier]
+	add Human Urges to BadSpots of MaleList; [male soldier]
+	add Human Urges to BadSpots of FemaleList; [female soldier]
 
 to say ResolveEvent Human Urges:
 	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans. Their city-camouflage clothing strewn about on the floor and rifles leaning against the opposite wall, you see two soldiers in intimate embrace on a bed. It's a man and a woman, with his hips pumping up and down as he fucks her with fast strokes while she holds him close to her body. One doesn't have to be infected with nanites to feel the basic urges of human existence - and with what's going on in the city and the sexual sights around here especially, those two turned to each other to let off some steam.";
@@ -1381,8 +1381,8 @@ Soldiers & Snowmeows is a situation.
 ResolveFunction of Soldiers & Snowmeows is "[ResolveEvent Soldiers & Snowmeows]".
 Sarea of Soldiers & Snowmeows is "Red".
 when play begins:
-	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
-	add Soldiers & Snowmeows to BadSpots of FurryList;    [snow leopard involved]
+	add Soldiers & Snowmeows to BadSpots of MaleList; [male soldier & snow leopard]
+	add Soldiers & Snowmeows to BadSpots of FurryList; [snow leopard involved]
 
 SnowmeowSoldierStatus is a number that varies. SnowmeowSoldierStatus is usually 0.
 
@@ -1479,7 +1479,7 @@ to say ResolveEvent Soldiers & Snowmeows:
 			say "     Silently stepping out of the store, you leave the two of them to do what they will.";
 			now Resolution of Soldiers & Snowmeows is 9; [left reunion]
 		now SnowmeowSoldierStatus is 3;
-		now Soldiers & Snowmeows is resolved;  [for now]
+		now Soldiers & Snowmeows is resolved; [for now]
 
 Table of GameEventIDs (continued)
 Object	Name

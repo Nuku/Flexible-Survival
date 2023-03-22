@@ -94,29 +94,29 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Raccoon"; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is "Raccoon"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	add "Raccoon" to infections of FurryList;
 	add "Raccoon" to infections of NatureList;
 	add "Raccoon" to infections of MaleList;
 	add "Raccoon" to infections of BipedalList;
 	add "Raccoon" to infections of TailList;
-	now Name entry is "Raccoon"; [Name of your new Monster]
+	now Name entry is "Raccoon";
 	now enemy title entry is "Candy Striper Raccoon";
 	now enemy Name entry is "Candy";
-	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]The uniformed raccoon gropes you firmly![or]The candy-striped raccoon beats you mercilessly with his teddy bear![or]The effeminate raccoon scratches at you with his claws![or]The effeminate raccoon shrieks and kicks you in the shin![or]The pink raccoon gives you a firm slap across the face![or]The girly coon slaps at you repeatedly![or]The candy striper manages a hard bite to your upper arm![or]The uniformed coon latches onto you and humps itself against you![or]The pink raccoon pulls you into a sudden, cotton-candy flavored kiss while its paws grope your ass![or]The raccoon turns and grinds his butt against your crotch, moaning with arousal![or]The pink raccoon turns and flips up the back of his skirt with his tail, exposing his cute bottom, hard cock and full balls, and his tailhole to you, in an effort to entice you to play![at random]";
 	now defeated entry is "[beatthecandycoon]";
 	now victory entry is "[losetocandycoon]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[candycoondesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "girlish, raccoon head with luscious lips and a mask of pink around your eyes"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "slender and effeminate, with nimble little hands with pink claws. You smell faintly of cotton candy and lust"; [ Body Description, format as "Your Body is (your text)."]
+	now face entry is "girlish, raccoon head with luscious lips and a mask of pink around your eyes"; [ Face description, format as "Your face is [Face of Player]." ]
+	now body entry is "slender and effeminate, with nimble little hands with pink claws. You smell faintly of cotton candy and lust"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "soft, gray fur with pink highlights over your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "From the base of your spine, you have fluffy raccoon tail with pink stripes banding it. Just below lies your equally modified rear, now the cutest of bubble butts, an ass so shaply and soft it just begs to be squeezed."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "hot-pink"; [ Cock Description, format as you have a 'size' (your text) cock.]
-	now face change entry is "it grows the pointed muzzle of a raccoon with a cute, pink nose and whiskers. Gray and white fur coats your muzzle, with a mask of pink around your eyes"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes a slender and effeminate. Your hands become nimble paws, with little pink claws at the tips of your gray-furred fingers"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "it grows a soft, gray fur with pink highlights"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "as the nanites bigin to remold it, leaving you with an adorable bubble butt. The tingling in your bum is soon overshadowed by a painful stinging as a fluffy raccoon's tail extends from your spine. Where there would be dark fur, it instead has bright pink bands to ring it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now face change entry is "it grows the pointed muzzle of a raccoon with a cute, pink nose and whiskers. Gray and white fur coats your muzzle, with a mask of pink around your eyes"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
+	now body change entry is "it becomes a slender and effeminate. Your hands become nimble paws, with little pink claws at the tips of your gray-furred fingers"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
+	now skin change entry is "it grows a soft, gray fur with pink highlights"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
+	now ass change entry is "as the nanites bigin to remold it, leaving you with an adorable bubble butt. The tingling in your bum is soon overshadowed by a painful stinging as a fluffy raccoon's tail extends from your spine. Where there would be dark fur, it instead has bright pink bands to ring it"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
 	now cock change entry is "it takes becomes hot-pink in color and otherwise human-like in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
 	now dex entry is 14;
@@ -127,7 +127,7 @@ When Play begins:
 	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 28;
 	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
-	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now wdam entry is 4; [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 6; [ Length infection will make cock grow to if cocks]
@@ -136,22 +136,22 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is "";
-	now CumItem entry is "";
-	now TrophyFunction entry is "-";
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]girly[or]effeminate[or]slender[at random]";
 	now type entry is "[one of]coon-like[or]raccoon[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -163,7 +163,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -220,7 +220,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -247,7 +247,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -440,15 +440,27 @@ Candy	"Candy"
 
 Candy is a man.
 ScaleValue of Candy is 3. [human sized]
-Cock Count of Candy is 1.
-Cock Length of Candy is 8.
-Ball Size of Candy is 5. [golfball sized balls]
-Ball Count of Candy is 2.
-Cunt Count of Candy is 0.
-Cunt Depth of Candy is 0.
-Cunt Tightness of Candy is 0.
-Nipple Count of Candy is 2.
-Breast Size of Candy is 0.
+SleepRhythm of Candy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Candy is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Candy is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Candy is 4. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Candy is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Candy is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Candy is 6. [length in inches]
+Breast Size of Candy is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Candy is 2. [count of nipples]
+Asshole Depth of Candy is 10. [inches deep for anal fucking]
+Asshole Tightness of Candy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Candy is 1. [number of cocks]
+Cock Girth of Candy is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Candy is 8. [Length in Inches]
+Ball Count of Candy is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Candy is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Candy is 0. [number of cunts]
+Cunt Depth of Candy is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Candy is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Candy is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Candy is false.
 PlayerRomanced of Candy is false.
@@ -460,16 +472,16 @@ Virgin of Candy is true.
 AnalVirgin of Candy is false.
 PenileVirgin of Candy is false.
 SexuallyExperienced of Candy is true.
+TwistedCapacity of Candy is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Candy is false. [steriles can't knock people up]
 MainInfection of Candy is "Raccoon".
-
 Description of Candy is "[coondesc]".
 Conversation of Candy is { "Cock!" }.
+The scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex.".
 candytalk is a number that varies.
 lastCandyfucked is a number that varies. lastCandyfucked is usually 555.
 coonsex is a number that varies.
 [ lust of Candy controls his interaction w/Fang]
-
-the scent of the Candy is "The candy coon smell of cotton candy, male arousal and sex."
 
 to say coondesc:
 	project Figure of Candy_clothed_icon;
@@ -749,7 +761,7 @@ after going to Grey Abbey 2F while (Candy is in the Bunker and CandyUrikInteract
 	say "     Coming up the stairs to the second floor of the library, you immediately discover Urik snoozing on his sofa... and Candy, almost fucked senseless and lying on the green brute's broad chest. He breathes like he just ran a marathon, visibly exhausted from the orc's vigorous fucking. 'Let [if HP of Candy > 2 and HP of Candy < 100]John[else]everyone[end if] know I died doing what I love,' the raccoon announces theatrically. You try not to roll your eyes too hard at his dramatics and inform him he's probably going to live, eliciting a huff from your flamboyant friend. 'You're no fun at all. Here I am having a moment and you have to rain on my parade.' You chuckle at the raccoon's behavior and head off to let him catch his breath.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP of Fang > 1) and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP of Fang > 1 and Fang is Male) and HP of Candy > 0 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -758,7 +770,7 @@ instead of navigating Grey Abbey Library while (Candy is in the Bunker and (HP o
 	say "     You walk in to see Candy petting Fang vigorously, the raccoon showering some rare non-sexual affection on the canine. 'Who's a good boy? Who's a good, big, stud boy?' he asks in a sickeningly cute tone of voice. 'It's you! It's you, you're such a good stud!' he adds in. Fang seems to be enjoying himself, judging from his kicking leg and canine grin. You guess in a world like this, a wolf acting so dog-like is hardly the weirdest thing you've ever seen happen. You continue to watch this show of affection for a little while before deciding to get back to the things you were doing before.";
 	now LastCandyWalkin is turns;
 
-instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and Fang is Male and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
