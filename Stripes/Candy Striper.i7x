@@ -715,7 +715,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory2"	CandyMemory2	"[EventConditions_CandyMemory2]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory2:
-	if (Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 2):
+	if Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 2:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -749,7 +749,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory3"	CandyMemory3	"[EventConditions_CandyMemory3]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory3:
-	if (Candy is collected and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1):
+	if Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -772,7 +772,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"CandyMemory4"	CandyMemory4	"[EventConditions_CandyMemory4]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_CandyMemory4:
-	if (Candy is collected and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1):
+	if (Candy is in the Bunker and HP of Candy > 1 and HP of Candy < 3 and LastCandyWalkin - turns > 1):
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -799,7 +799,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyReading"	CandyReading	"[EventConditions_CandyReading]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyReading:
-	if (Candy is collected and HP of Candy >= 0 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Candy >= 0 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -820,7 +820,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyCarlCompany"	CandyCarlCompany	"[EventConditions_CandyCarlCompany]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyCarlCompany:
-	if (Candy is collected and Lust of Carl > 0 and Lust of Carl < 100 and Carl is collected and LastCandyWalkin - turns > 8):
+	if (Candy is in the Bunker and Lust of Carl > 0 and Lust of Carl < 100 and Carl is in Grey Abbey 2F and LastCandyWalkin - turns > 8):
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -846,7 +846,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyReadsMedicine"	CandyReadsMedicine	"[EventConditions_CandyReadsMedicine]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyReadsMedicine:
-	if (Candy is collected and HP of Candy >= 0 and Sarah is collected and SarahSlut < 4 and daytimer is night and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Candy >= 0 and Sarah is in the Bunker and SarahSlut < 4 and daytimer is night and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -867,7 +867,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyUrikSexed"	CandyUrikSexed	"[EventConditions_CandyUrikSexed]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyUrikSexed:
-	if (Candy is collected and CandyUrikInteraction > 0 and CandyUrikInteraction < 100 and lastfuck of Urik - turns > 6 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and CandyUrikInteraction > 0 and CandyUrikInteraction < 100 and lastfuck of Urik - turns > 6 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -888,7 +888,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyFangGoodboy"	CandyFangGoodboy	"[EventConditions_CandyFangGoodboy]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyFangGoodboy:
-	if (Candy is collected and (HP of Fang > 1 and Fang is Male) and HP of Candy > 0 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and (HP of Fang > 1 and Fang is Male) and HP of Candy > 0 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -909,7 +909,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyFangThoughts"	CandyFangThoughts	"[EventConditions_CandyFangThoughts]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyFangThoughts:
-	if (Candy is collected and HP of Fang is 3 or HP of Fang is 4 and Fang is Male and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Fang is 3 or HP of Fang is 4 and Fang is Male and HP of Candy > 2 and HP of Candy < 100 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -930,7 +930,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyDeniseSinging"	CandyDeniseSinging	"[EventConditions_CandyDeniseSinging]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyDeniseSinging:
-	if (Candy is collected and HP of Candy > 0 and HP of Candy < 3 and Gryphoness is tamed and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and Gryphoness is tamed and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -951,7 +951,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyAlexandraAnnoyed"	CandyAlexandraAnnoyed	"[EventConditions_CandyAlexandraAnnoyed]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyAlexandraAnnoyed:
-	if (Candy is collected and HP of Candy > 0 and HP of Candy < 3 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Candy > 0 and HP of Candy < 3 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -972,7 +972,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 4	"CandyAlexandraQuestioning"	CandyAlexandraQuestioning	"[EventConditions_CandyAlexandraQuestioning]"	Grey Abbey Library	2500	8	50
 
 to say EventConditions_CandyAlexandraQuestioning:
-	if (Candy is collected and HP of Candy > 2 and HP of Candy < 100 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8):
+	if Candy is in the Bunker and HP of Candy > 2 and HP of Candy < 100 and HP of Alexandra > 0 and HP of Alexandra < 50 and LastCandyWalkin - turns > 8:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
