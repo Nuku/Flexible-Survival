@@ -23,7 +23,7 @@ Sarea of Fox Adventurer is "Outside".
 
 when play begins:
 	add Fox Adventurer to BadSpots of FemaleList;
-	add Fox Adventurer to badspots of HermList;
+	add Fox Adventurer to BadSpots of HermList;
 	add Fox Adventurer to BadSpots of FurryList;
 
 to say ResolveEvent Fox Adventurer:
@@ -103,7 +103,7 @@ Sarea of Onyx Crow is "Museum".
 
 when play begins:
 	add Onyx Crow to BadSpots of FemaleList;
-	add Onyx Crow to badspots of HermList;
+	add Onyx Crow to BadSpots of HermList;
 	add Onyx Crow to BadSpots of FurryList;
 
 to say ResolveEvent Onyx Crow:

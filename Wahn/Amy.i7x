@@ -395,7 +395,7 @@ to say AmyNPCSexTable:
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
 				NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
-			else if (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Xerxes]
+			else if (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and Player is male: [having sex in front of Xerxes]
 				if lust of Xerxes < 3:
 					project Figure of Xerxes_hard_icon;
 				else:
@@ -460,7 +460,7 @@ to say AmyNPCSexTable:
 					LineBreak;
 					say "     Quickly walking over there, you take Amy softly by the arm, pulling her up and walking some distance away from the felinoid with her. As she stands there, no longer in the immediate influence of your feline companion, she starts to wind down again, though she is still breathing rather heavily and stroking over her breasts with her fingers as you go pick up her book. Klauz purrs and rubs his shoulder against you as you do so, and knowing him, you just give him a quick pat on the head, holding your breath until you stand back up. 'Not her,' you tell your companion, who gives a disappointed mew, then stalks off. As you're sure that he'll try again no matter what, you warn Amy not to get too close to him in the future when you give her the book back.";
 					now level of Amy is 99;
-			else if (lastfuck of felinoid companion - turns) > 12 and level of Amy is 99 and a random chance of 1 in 5 succeeds and player is male:
+			else if (lastfuck of felinoid companion - turns) > 12 and level of Amy is 99 and a random chance of 1 in 5 succeeds and Player is male:
 				say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Klauz is sitting not too far away, silently watching with his tail twitching from time to time. Knowing the beast, he must be waiting for the right moment to get close to Amy, when she's too far in the grasp of lust to remember your warning about him and his entrancing musk. That big cat really is totally incorrigible and far too smart than is good for everyone else. As you make the first step to go and shoo him away from the young woman, a wicked little idea suddenly comes to the forefront of your mind - it would be fun to tease the felinoid and fuck Amy right before his eyes, just now. Impotently watching as someone else takes what he desires might put him in his place for once...";
 				LineBreak;
 				say "     [bold type]Do you want to fuck Amy while Klauz watches?[roman type][line break]";
@@ -628,7 +628,7 @@ to say AmyNPCSexTable:
 											now Lust of Amy is 24; [24 turns till birth]
 									NPCSexAftermath Amy receives "PussyFuck" from Player;
 									now XP of Amy is 98; [Beta Fang denied mating with Amy, satisfied Amy]
-								else if player is female:
+								else if Player is female:
 									WaitLineBreak;
 									say "     While you may not be willing to let Fang have sex with your husky-girl, you don't have any problems doing so yourself. Eyeing what you assume is one of Amy's dildoes partially obscured by her blankets, you approach and more closely inspect it after flipping the sheet aside. It has ridges up the side as well as a knot near the base, like some sort of mythical monster, and you give the canine a dirty grin. You are definitely using this. She looks excited at this development, quickly approaching you when you beckon her, pressing herself against you and locking lips with you to give a brief heated kiss. The two of you lie down together, one of your arms around her back to clutch her to your side, the husky spreading her legs in preparation for the dildo's insertion. Expecting Fang to leave, you are surprised when he lies down beside Amy with a clear view of her pussy. Caring little for his presence, you align the tip of the synthetic shaft with your partner's swollen cunt, waiting for the go ahead before pushing the dildo in all the way to the knot.";
 									say "     Amy gives a lustful moan as her walls are stretched apart by the toy's girth, releasing soft whimpers each time the ridges enter her. While her eyes are clenched shut, you notice that she is holding Fang's paw, her grip tightening each time the knot slaps against her entrance, and a corner of your mind revels in the perverse pleasure that this is as much as Fang will be getting from her unless you ever give him permission to do more. The texture of the dildo is definitely having an effect on the husky as it isn't long before her juices become more copious, splashing against your hand with each plunge of the toy. She isn't bothering to keep her voice down, loudly moaning, gasping, and egging you on, bringing a smirk to your mouth as you readily complying with her pleas to soothe the ache of her heat. Deciding to finish this, you give one last hard push and plunge the knot into the tight embrace of her cunt, triggering her climax. Both of her paws grip your wrist as she shudders in orgasm, her legs twitching sporadically and a euphoric expression on her face. When she doesn't respond to you waving a hand in front of her face, you decide to leave her under Fang's care to recover, returning to the front of the library to decide what to do next.";
@@ -639,7 +639,7 @@ to say AmyNPCSexTable:
 							else: [No sex with Amy]
 								say "     'You're kidding me. Not only am I not allowed to fuck the wolf, you won't fuck me either? Forget this, I'm going for a walk.' The husky storms off between the bookshelves, sensibly choosing to sulk in the library rather than going outside. Fang looks at you disappointedly, 'I'll talk to her and see whether I can cheer her up. Perhaps if you are unwilling or unable to properly satisfy someone you shouldn't deny them pleasures with others that they find. Alpha.' Fang bows to you and lopes off after Amy, leaving you to contemplate the encounter. While that could definitely have gone better, you place the blame on the two of them for considering having sex without your permission. If they had asked you could at least have nipped the problem in the bud. With a sigh, you return to the entrance of the library and decide what to do next.";
 								now XP of Amy is 97; [Beta Fang denied mating with Amy, player did not satisfy Amy]
-			else if (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and player is male:
+			else if (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and Player is male:
 				say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Fang is padding into her direction on silent paws. He's moving a bit hesitantly, likely remembering your commands not to bother Amy again, but the fact that his canine shaft is dangling erect between his legs shows that he really is on the way to mount her. Looks like your pet wolf needs a reminder to follow his master's orders. As you walk towards the two of them, a wicked little idea suddenly comes to the forefront of your mind - maybe you should just show the wolf that Amy is his alpha's bitch and fuck her right before his eyes, just now. The sting of impotently watching as someone else takes what he desires will remind him of his place as a lowly pack-member.";
 				say "     [bold type]Do you want to fuck Amy while ordering Fang to watch?[roman type][line break]";
 				LineBreak;
@@ -751,7 +751,7 @@ to say AmyNPCSexTable:
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
 				NPCSexAftermath Amy receives "PussyFuck" from Elijah;
-			else if (Dexterity of Amy is 99 and HP of Elijah < 99 and a random chance of 1 in 5 succeeds and player is male): [having sex in front of Elijah]
+			else if (Dexterity of Amy is 99 and HP of Elijah < 99 and a random chance of 1 in 5 succeeds and Player is male): [having sex in front of Elijah]
 				say "     As you enter the library, you see Elijah sitting cross-legged on the ground between the rows bookshelves, apparently so captivated by a good book that he just sat down right there to read it. Not far away, just around the corner of the shelves and a few steps to the side, Amy is lying on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck - and it's obvious that Elijah hasn't noticed her soft gasps and moans yet. The situation causes a wicked little idea to suddenly come to the forefront of your mind - maybe it'd be fun to go over there and take Amy for a ride just now, with the added thrill of possibly getting 'caught' if - no, when - the angel notices.";
 				say "     [bold type]Do you want to fuck Amy and make Elijah blush?[roman type][line break]";
 				LineBreak;
@@ -1081,7 +1081,7 @@ to say AmyNPCSexTable:
 					LineBreak;
 					say "     Giving a sharp whistle that attracts the two women's attention, you order Alexandra to stop. The doberwoman replies with, 'Sure thing, boss,' then tells Amy with a grin 'Sounds like [if Player is purefemale]she[else]he[end if] has some other plans for you. That'll definitively be something worth watching. See ya, little slut.' After that, Alexandra lets a hand wander down Amy's body, caressing her curves and even dipping in a finger to rub her clit, drawing a breathless moan from the young husky. Then she stands up and walks up to you, rubbing her breasts against your side as she says 'Very nice little bitch you got there. Wish you'd let me train her to be an even better pet, but you're the boss...'";
 					now AlexandraAmySex is 99; [denied, no repeats - though enabling the 'watching' scenes]
-			else if (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Alexandra]
+			else if (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and Player is male: [having sex in front of Alexandra]
 				say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Not too far from her, Alexandra is casually leaning against a bookshelf, arms crossed as she keeps an eye on the naked husky. Seems like she's still quite interested in Amy, even though she does follow your orders not to touch her. A wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun to go over there and fuck Amy right now, giving your dobie bitch a bit of a show.";
 				say "     [bold type]Do you want to fuck Amy while Alexandra watches?[roman type][line break]";
 				LineBreak;
@@ -1284,19 +1284,19 @@ to say AmySexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the husky bitch's ass with your cock";
 	[]
-	if (player is male and thirst of Amy is 1 and Xerxes is in the Grey Abbey Library):
+	if (Player is male and thirst of Amy is 1 and Xerxes is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Xerxes";
 		now sortorder entry is 6;
 		now description entry is "Have sex with both your human dog and horny husky";
 	[]
-	if (player is male and level of Amy is 1 and felinoid companion is tamed):
+	if (Player is male and level of Amy is 1 and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Klauz";
 		now sortorder entry is 7;
 		now description entry is "Have sex with both your felinoid companion and horny husky";
 	[]
-	if (player is male and XP of Amy is 1 and Fang is in the Grey Abbey Library):
+	if (Player is male and XP of Amy is 1 and Fang is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Fang";
 		now sortorder entry is 8;

@@ -47,7 +47,7 @@ Sarea of Find Porn Store is "Red".
 When play begins:
 	add Find Porn Store to BadSpots of FurryList;
 	add Find Porn Store to BadSpots of FemaleList;
-	add Find Porn Store to badspots of HermList;
+	add Find Porn Store to BadSpots of HermList;
 
 to say ResolveEvent Find Porn Store:
 	FindPornStore;
@@ -172,7 +172,7 @@ Cock Length of Lisa is 0. [Length in Inches]
 Ball Count of Lisa is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Lisa is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Lisa is 1. [number of cunts]
-Cunt Depth of Lisa is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Lisa is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Lisa is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Lisa is 2. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

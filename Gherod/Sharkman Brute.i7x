@@ -30,7 +30,7 @@ to say Sharkman Brute Wins:
 		say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No!";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "[SharkmanBruteSexMenu]";
 		else:
@@ -50,7 +50,7 @@ to say Sharkman Brute Loses:
 		say "     Facing this peculiar situation, you consider your options. Shall you even think about [bold type]having sex with the sharkman?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No!";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "[SharkmanBruteSexMenu]";
 		else:
@@ -95,10 +95,10 @@ to say SharkmanBruteSexMenu:
 	clear the screen and hyperlink list;
 
 to say SharkmanBruteSexBlowjob:
-	say "     Looking at the two red tips already poking out of the slit on his crotch, you know exactly what kind of fun you could be having with this handsome sharkman. It almost seems like he read your mind just then, as these internal cocks begin to push themselves out, growing bigger by each seconds, while your eyes glance between them and his face. 'Well, the antecipation's kinda getting me... So, uh, would you like to blow me?' he goes ahead and asks, to which you nod, bringing a hand over each of his rods and stroking them to their highest erection point. 'Oh, fuck that feels good... I like having them both worked like that, it's double the pleasure... Doesn't compare to when I used to just have one!'";
+	say "     Looking at the two red tips already poking out of the slit on his crotch, you know exactly what kind of fun you could be having with this handsome sharkman. It almost seems like he read your mind just then, as these internal cocks begin to push themselves out, growing bigger by each seconds, while your eyes glance between them and his face. 'Well, the anticipation's kinda getting me... So, uh, would you like to blow me?' he goes ahead and asks, to which you nod, bringing a hand over each of his rods and stroking them to their highest erection point. 'Oh, fuck that feels good... I like having them both worked like that, it's double the pleasure... Doesn't compare to when I used to just have one!'";
 	say "     You continue to jerk them as they keep on throbbing, putting a toothy smile on the sharkman's face. 'Yeaaah, that's great... Come put your mouth on one of them! I promise they taste great!' he asks, with the premise of a good time for the both of you. Seeing the sharkman so eager to get his dicks sucked, you figure it would be wise to not tease him about too much. Looking up at him and back down at his endowments, you bring your lips to the one to your right first and wrap them around the thick shaft. While they are not too different from a human's, their tips are pointier and somehow bend a little more, having enough flexibility to be prehensible while keeping most of its more familiar shape.";
 	WaitLineBreak;
-	say "     Now, all the remains is to bring that cock deeper into your mouth, with the other's shaft already rubbing against your left cheek. It seems he can also move them unlike most males, almost like an extra limb! 'Mmh... Yeah, you're good... warm mouth, careful with your teeth... Can't say the same about my mates back home, they're not nearly as good as you...!' Hearing his praise, you start to pick up the pace as you give him a proper blowjob to at least one of the cocks, the other being just left throbbing in your hand as you stroke it together with your oral efforts. This might seem like a lot to handle, but after a while, it does kind of feel natural to you. While it is double the work, it also seems to result in double the plasure for the sharkman, just as he said.";
+	say "     Now, all the remains is to bring that cock deeper into your mouth, with the other's shaft already rubbing against your left cheek. It seems he can also move them unlike most males, almost like an extra limb! 'Mmh... Yeah, you're good... warm mouth, careful with your teeth... Can't say the same about my mates back home, they're not nearly as good as you...!' Hearing his praise, you start to pick up the pace as you give him a proper blowjob to at least one of the cocks, the other being just left throbbing in your hand as you stroke it together with your oral efforts. This might seem like a lot to handle, but after a while, it does kind of feel natural to you. While it is double the work, it also seems to result in double the pleasure for the sharkman, just as he said.";
 	say "     It is the way he smiles and how he cannot keep his breath under a steady rhythm that further encourages you to please him, a positive feedback that triggers your sense of accomplishment, besides his words of praise and appreciation. Feeling the impact of your efforts, you stop sucking on the first cock and move to the second, once more wrapping your lips around it and bringing it as deep as possible towards your throat. 'Oooh, damn... That's going deep, alright... Ungh, can you keep stroking the other one?' You do just that, returning your hand to the first cock you left and stroke it just like you did the previous. He appreciates you for it, 'Like that, yeah... Fuck, you're so good...'";
 	WaitLineBreak;
 	say "     You merely keep this up, simply changing from one dick to another, sucking and stroking the one out of your mouth, to then have them trade places and repeat. As you keep alternating, the sharkman's sensations are refreshed, and this fact is, almost entirely by itself, responsible for making him precum like a pump tube with a leak. It has a salty taste to it, and definitely not an unpleasant one at that, with the sheer amount of liquid helping you twirl and slide your tongue around and across the tip, shaft and pretty much the whole thing a lot more easily. 'Fuuck, I swear I usually have more stamina than this, but you're taking such good care of me that I- ungh... I'm getting really close...'";
@@ -129,7 +129,7 @@ to say SharkmanBruteSBCEvent:
 	say "     Maybe you should take his offer? Otherwise, [bold type]you doubt you will be able to find him around this area again[roman type]...";
 	say "     ([link]Y[as]y[end link]) - Go with him.";
 	say "     ([link]N[as]n[end link]) - No, that is enough. You shall part ways.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     It does seem this sharkman genuinely appreciates your company and looks forward to build a friendship with you, so you see no reason to refuse his offer. Nodding along, you let him know that you shall come with him, but you do have questions regarding this underwater passage, as you cannot really breathe under these conditions... Or as far as you know. 'Oh, right! I think I can fix that. I did tell you I'm a great swimmer, so I can just hold you and take you there at full speed. Then, if you need air, I can always... give you some.' He scratches the back of his neck with mild embarrassment, and you can only wonder if that means he is suggesting some sort of mouth-to-mouth thing. 'Just in case you need it, of course! I would never take advantage of that situation...'";
 		say "     Well, with the biggest problems taken care of, you tell him to show you the way. 'Oh, sure thing! It's through here, there's a lake nearby just past these woods. I've marked the way with a few scratches on the trunks! Or more like chomps... I used my teeth.' This cunning decision might have saved you a lot of time as these woods can be quite confusing, but the sharkman finds his way pretty easily. This lake he mentioned is actually in the middle of the swamp area, where it is humid and dark. Nobody would think this could lead to a beach, so you find it important to ask him if he is sure this is the right way. 'Trust me, it is! I know what it looks like, believe me when I say I also thought it was weird as fuck!'";
@@ -353,13 +353,12 @@ name	desc	weight	object
 
 sharkman brute cum is a grab object.
 sharkman brute cum is cum.
-purified of sharkman brute cum is "distilled cum".
 sharkman brute cum is infectious.
 Strain of sharkman brute cum is "Sharkman Brute".
 Usedesc of sharkman brute cum is "[sharkman brute cum use]";
 
 to say sharkman brute cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

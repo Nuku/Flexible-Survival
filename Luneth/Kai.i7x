@@ -33,7 +33,7 @@ Cock Length of Kai is 8. [length in inches]
 Ball Count of Kai is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Kai is 1. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Kai is 0. [number of cunts]
-Cunt Depth of Kai is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Kai is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Kai is 0. [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 Clit Size of Kai is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -70,28 +70,46 @@ Section 2 - Events
 
 Part 1 - Intro
 
-after going to Public Beach while (HP of Kai is 0 and a random chance of 1 in 3 succeeds):
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"KaiInitialEncounter"	KaiInitialEncounter	"[EventConditions_KaiInitialEncounter]"	Public Beach	2500	2	100
+
+to say EventConditions_KaiInitialEncounter:
+	if HP of Kai is 0:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+KaiInitialEncounter	"KaiInitialEncounter"
+
+KaiInitialEncounter is a situation.
+ResolveFunction of KaiInitialEncounter is "[ResolveEvent KaiInitialEncounter]".
+Sarea of KaiInitialEncounter is "Beach".
+
+to say ResolveEvent KaiInitialEncounter:
 	say "     Walking to the entrance of the beach, you take a deep breath in, to smell the aromatic scent of the ocean. It draws you in, and you find you take your shoes off to feel the sand between your toes. You make your way over to the shore to walk along-side the ocean water, feeling the cool current run over your feet. Looking out to the ocean, you can see gigantic, crystal clear waves forming and crashing in the distance, the sunlight's reflection off the water creates a sparkling light that's almost blinding. The light makes your eyes start to water, making them close tight, when all of a sudden, you hear what sounds like a man hollering in excitement.";
 	say "     Opening your eyes and can see a tanned man on a surfboard, riding a huge wave that had just formed. The surfer seems to be riding the wave perfectly, when suddenly, he wipes out and disappears into the water. The waves die down and you watch worryingly for the surfer to come back to the surface. You scan all over the ocean water for the man, but see no signs of him anywhere, and everyone on the beach hasn't seemed to notice. While you're searching the ocean for the surfer, you wonder what to do? You could jump into the water and possibly save his life or just continue on your way, what will you do?";
 	LineBreak;
 	say "     [bold type]Do you wish to save the surfer?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, it's been some time since he wiped out, and he still hasn't come up for air.";
 	say "     ([link]N[as]n[end link]) - No, you're sure that this wasn't the first time he's wiped out before.";
-	if player consents: [encounter Kai]
+	if Player consents: [encounter Kai]
 		LineBreak;
 		say "     Without hesitation, you run into the water and dive head first, making your way over to the general area that the surfer was at. You put all of your strength into each stroke while swimming, when suddenly you feel a hard tug at your leg. You start to worry that you and the surfer boy may not be the only thing in the water. Swimming faster, you feel the tug once more and then even harder, but this time, you're yanked completely underwater. You start panicking as you're being pulled under and think to yourself that maybe this is it. You try to open your eyes some to possibly see what yanked you from below. Frantically looking around, you can see no visible outlines of what did this, and the water is so crystal clear that it would be very easy to.";
 		say "     You're so shook up that you hardly notice the fact that you haven't come up for some air, and you're slowly losing consciousness. Out of nowhere, you can feel something jolt past, grabbing you from behind. As you're lifted up and out of the water, you take a huge breath and cough a little of the water up. You sigh to yourself because thankfully, you didn't drown or get eaten by whatever pulled you under in the first place. That's when you remember that someone had saved you from drowning, and you turn around abruptly to see the very same tanned surfer from before. Only this time. you can see how handsome he is. He has shoulder-length sandy-blonde hair that shines in the sun and eyes so blue that they remind you of this very ocean.";
 		WaitLineBreak;
-		say "     As you're admiring him, you realize that he's laughing at you, mouth wide with razor-sharp pearly-whites. You're a little frightened seeing how sharp his teeth are, but you can't help continuing to admire him at the same time. While he continues to laugh, you finally ask him what's so funny, since you almost drowned, and from trying to save him no less? The surfer's laughs continue but start to fade, until he finally stops and takes a big breath in and then out. He finally says, 'Sorry, [if player is female]babe [else]mate [end if]for all of the laughter, but I couldn't stop myself. I just had to mess with you, and you really fell for it too!' You notice he has an Australian accent and wonder if he's from here.";
+		say "     As you're admiring him, you realize that he's laughing at you, mouth wide with razor-sharp pearly-whites. You're a little frightened seeing how sharp his teeth are, but you can't help continuing to admire him at the same time. While he continues to laugh, you finally ask him what's so funny, since you almost drowned, and from trying to save him no less? The surfer's laughs continue but start to fade, until he finally stops and takes a big breath in and then out. He finally says, 'Sorry, [if Player is female]babe [else]mate [end if]for all of the laughter, but I couldn't stop myself. I just had to mess with you, and you really fell for it too!' You notice he has an Australian accent and wonder if he's from here.";
 		say "     With a confused expression on your face, you ask him what he means and what exactly did you fall for? The surfer chuckles and says, 'Well, I saw you watching me surf, and I thought that it would be funny to mess with you a bit and pretend like I was drowning. I didn't think that you were actually going to try and save me.' It finally dawns on you that this whole thing was in fact a prank and that he faked the fall. You look down at your now soaking wet body and can't help but feel very annoyed that you got wet for nothing. You start to swim back to land so you can dry off before you leave the beach and continue on your way. At this point, the surfer can see how annoyed you are, grabs his board, and starts swimming back with you.";
 		WaitLineBreak;
-		say "     His face now turning red, he says, 'I'm sorry, [if player is female]babe [else]mate [end if]that I got you soaking wet. If you'd like, I have a towel that I can give you to dry off with.' You nod your head and continue swimming back to land with him. When the two of you, finally make it back to land, you follow him a ways to where he has a little set-up on the beach. You notice that he has blue tiger-like stripes going down his neck and back and large gill slits on both sides of his throat, which very much remind you of a tiger shark. You think to yourself that the infection must've caused this to happen. He hands you a towel, and with a shaky voice, he says, 'I'm truly sorry again. I'm Kai by the way, and anytime you would like to talk, feel free to come visit. I stay right here on the beach.' You dry yourself off with the towel and then hand it back to Kai, thanking him before continuing on your way.";
+		say "     His face now turning red, he says, 'I'm sorry, [if Player is female]babe [else]mate [end if]that I got you soaking wet. If you'd like, I have a towel that I can give you to dry off with.' You nod your head and continue swimming back to land with him. When the two of you, finally make it back to land, you follow him a ways to where he has a little set-up on the beach. You notice that he has blue tiger-like stripes going down his neck and back and large gill slits on both sides of his throat, which very much remind you of a tiger shark. You think to yourself that the infection must've caused this to happen. He hands you a towel, and with a shaky voice, he says, 'I'm truly sorry again. I'm Kai by the way, and anytime you would like to talk, feel free to come visit. I stay right here on the beach.' You dry yourself off with the towel and then hand it back to Kai, thanking him before continuing on your way.";
 		now HP of Kai is 1;
 		AddNavPoint Kai's Campsite;
 	else:
 		LineBreak;
 		say "     You decide against helping the surfer, seeing no point in soaking yourself when it's obvious that this isn't the first time he's wiped out before. You stare at the ocean for a little longer and see the man come back up from the water, with his board in hand. He swims back to shore, just fine like you had thought. You chuckle to yourself and continue on your way.";
 		now HP of Kai is 99;
+	now KaiInitialEncounter is resolved;
 
 Section 3 - Location
 

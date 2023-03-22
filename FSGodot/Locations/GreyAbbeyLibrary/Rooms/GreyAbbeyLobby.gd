@@ -12,7 +12,7 @@ EXPORT/EDITOR INPUT FIELDS====================================================
 export (String) var room_name = "Room Name"
 export (String, MULTILINE) var room_description = "Room Description"
 export (bool) var north_exit
-export (String) var north_room_name 
+export (String) var north_room_name
 export (bool) var south_exit
 export (String) var south_room_name
 export (bool) var east_exit
@@ -63,7 +63,7 @@ func update_room_object():
 	grey_abbey_lobby.west_room_name		= west_room_name
 	grey_abbey_lobby.northeast_exit		= northeast_exit
 	grey_abbey_lobby.northeast_room_name	= northeast_room_name
-	grey_abbey_lobby.northwest_exit		= northwest_exit 
+	grey_abbey_lobby.northwest_exit		= northwest_exit
 	grey_abbey_lobby.northwest_room_name	= northwest_room_name
 	grey_abbey_lobby.southeast_exit 		= southeast_exit
 	grey_abbey_lobby.southeast_room_name	= southeast_room_name

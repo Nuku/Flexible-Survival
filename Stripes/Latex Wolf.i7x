@@ -37,7 +37,7 @@ To say latex wolf wins:
 		say "[RegularLatexWolfWins]";
 
 To say RegularLatexWolfWins:
-	if ( a random chance of 1 in 4 succeeds or ( player is kinky and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
+	if ( a random chance of 1 in 4 succeeds or ( Player is kinky and a random chance of 1 in 4 succeeds ) ) and inasituation is false:
 		say "     As you go down in front of the wolf creature, [if HP of Player > 0]unwilling[else]unable[end if] to continue to oppose it, you are pounced upon by the latex creature. As it climbs atop you, it seems to lose structural integrity, melting and flowing down over you. You try to struggle as the black fluid flows over you, gradually engulfing you, but it clings to you tightly and makes it hard to move[if Cock Count of Player > 1]. As the dark goo flows over your cocks, it squeezes at them, making you aroused despite yourself[else if Cock Count of Player is 1]. As the dark goo flows over your cock, it squeezes at it, making you aroused despite yourself[end if][if Cunt Count of Player > 1]. The goo forms phallic bulges that are pressed into your cunts, stuffing them full of flowing black latex that throbs inside you, making your vaginas quiver with arousal[else if Cunt Count of Player is 1]. The goo forms phallic bulges that are pressed into your cunt, stuffing it full of flowing black latex that throbs inside you, making your vagina quiver with arousal[end if][if anallevel > 1]. More of the thick, flowing latex presses its way into your anus, stuffing your rear with a swelling cock and knot tying it inside you[end if].";
 		say "     As your body is subject to this abuse, the black goo continues to spread over you, covering your [bodydesc of Player] body and over your [FaceSpeciesName of Player in lower case] head. Your head is engulfed and your mouth and nose covered in flowing latex, cutting off your air supply momentarily. As you begin to grow woozy from lack of oxygen, an air passage is opened and you are allowed to breathe. Having seized control of your [bodytype of Player] body, the latex wolf works its flowing, rubbery goo over [if Player is female or anallevel > 1]and inside [end if]your flesh, using your body for its own pleasure. It eventually cums, spraying gooey black semen [if Player is female or anallevel > 1]inside you[else]over you[end if][if Player is male] while pumping out your own seed onto the ground. Your balls drained, it sends a tendril of black goo flowing along your urethra and flowing into your balls, claiming them with its own dark cum until they're full and swollen with it[end if].";
 		say "     Weak and thoroughly used by the wolf creature, you are left lying on the ground as it flows off of you, much of its tainted latex having bonded with you. You can feel it sinking into your [bodytype of Player] body, seeking to make you like itself.";
@@ -60,12 +60,12 @@ To say RegularLatexWolfWins:
 			say "     You fall to the ground, the latex wolf pouncing your ass and driving his red, rubbery cock into you. You groan softly at this intrusion, your body welcoming it despite the discomfort initially felt. He rocks his hips, pounding his doggy shaft in and out of your ass, squeaking with every thrust. He thrusts faster, and faster, making slapping noises where his black balls hit your ass cheeks, and finally slams his knot inside with a thrust that causes you to hunch up in pain and pleasure. He keeps trying to thrust, even when he is tied, and finally brings himself to orgasm, filling you with black, rubbery seed.";
 			CreatureSexAftermath "Player" receives "AssFuck" from "Latex Wolf";
 		else:
-			say "     [if HP of Player > 0]Willfully subjecting yourself to the beast's whims[else]Too weak to contend the beast's will any further[end if], you're forced to the ground, giving you a proper view of the canine's rubbery cock, all too eager to be put to use. He presses the twisted organ's tip against your lips, and your mouth [if HP of Player < 1 and player is not submissive]reluctantly[else]instinctively[end if] yields to the intrusion, tainted rod's taste of synthetic latex and heady, feral musk overwhelming your senses as the wolf thrusts it into the depths of this open hole.";
-			say "     Crimson knot [if scalevalue of Player > 3]immediately[else]quickly[end if] banging against your face, an irreverent illustration of his wanton lack of regard, it's not long before the beast forces you to engulf that as well, howling in carnal satisfaction as his bitter black seed floods your throat. [if HP of Player < 1 and player is not submissive]Forced[else]Compelled[end if] to swallow down the majority of it, his tainted flow does eventually subside.";
+			say "     [if HP of Player > 0]Willfully subjecting yourself to the beast's whims[else]Too weak to contend the beast's will any further[end if], you're forced to the ground, giving you a proper view of the canine's rubbery cock, all too eager to be put to use. He presses the twisted organ's tip against your lips, and your mouth [if HP of Player < 1 and Player is not submissive]reluctantly[else]instinctively[end if] yields to the intrusion, tainted rod's taste of synthetic latex and heady, feral musk overwhelming your senses as the wolf thrusts it into the depths of this open hole.";
+			say "     Crimson knot [if scalevalue of Player > 3]immediately[else]quickly[end if] banging against your face, an irreverent illustration of his wanton lack of regard, it's not long before the beast forces you to engulf that as well, howling in carnal satisfaction as his bitter black seed floods your throat. [if HP of Player < 1 and Player is not submissive]Forced[else]Compelled[end if] to swallow down the majority of it, his tainted flow does eventually subside.";
 			CreatureSexAftermath "Player" receives "OralCock" from "Latex Wolf";
 		say "     Need sufficiently sated, he pries his latex knot free of you, ebon ejaculate oozing across the ground from his spent organ";
 		let extrainfect be false;
-		if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds))):
+		if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds))):
 			say ". Not content to merely use you, he raises his leg, relieving himself over your [if scalevalue of Player > 4]massive, [else if scalevalue of Player is 4]larger, [else if scalevalue of Player < 3]smaller, [end if][bodytype of Player] form, yellowish latex spraying over your body and draining onto the street. Its strong, chemical and acrid scent fills your senses while the latex wolf marks you as his";
 			increase Libido of Player by 2;
 			decrease humanity of Player by 1;
@@ -191,7 +191,7 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 5; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
@@ -302,7 +302,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

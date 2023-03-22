@@ -41,7 +41,7 @@ ResolveFunction of Easter Eggs is "[ResolveEvent Easter Eggs]".
 Sarea of Easter Eggs is "Forest".
 when play begins:
 	add Easter Eggs to BadSpots of FurryList;
-	add Easter Eggs to badspots of HermList;
+	add Easter Eggs to BadSpots of HermList;
 
 to say ResolveEvent Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";
@@ -286,7 +286,7 @@ to say micaela_sexmenu:
 		now description entry is "Let the bunny bang you";
 	[]
 	if HP of Micaela >= 6:
-		if ( FaceName of Player is not "Easter Bunny" and BodyName of Player is not "Easter Bunny" and SkinName of Player is not "Easter Bunny" and TailName of Player is not "Easter Bunny" and CockName of Player is not "Easter Bunny" ) or ( BodyName of Player is "Easter Bunny" and player is pure ) and player is not neuter:
+		if ( FaceName of Player is not "Easter Bunny" and BodyName of Player is not "Easter Bunny" and SkinName of Player is not "Easter Bunny" and TailName of Player is not "Easter Bunny" and CockName of Player is not "Easter Bunny" ) or ( BodyName of Player is "Easter Bunny" and player is pure ) and Player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "Bunny-fucking session";
 			now sortorder entry is 4;

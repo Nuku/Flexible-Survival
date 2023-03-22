@@ -42,7 +42,7 @@ Cock Length of Jana is 0. [length in inches]
 Ball Count of Jana is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Jana is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Jana is 1. [number of cunts]
-Cunt Depth of Jana is 14. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Jana is 14. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Jana is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Jana is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -349,8 +349,8 @@ The level of Encountering Jana is 0.
 Sarea of Encountering Jana is "Stable".
 
 when play begins:
-	add Encountering Jana to badspots of FemaleList;
-	add Encountering Jana to badspots of FurryList;
+	add Encountering Jana to BadSpots of FemaleList;
+	add Encountering Jana to BadSpots of FurryList;
 
 to say ResolveEvent Encountering Jana:
 	say "     You start to wander the hallways of the Stable Hotel, looking for anything of interest, when suddenly, you turn a corner and accidentally run into a tall, athletic horse woman, face planting right between her breasts. 'Oof!' she exclaims as you bounce off her, somewhat embarrassed. 'Who the hell are you?' She scowls at your unexpected appearance. Looking over who it is you just encountered, you see the towering figure of a woman, but with the features of a horse. She possesses a striking, muscled physique, alongside an equine head and hooves, a coat of short brown fur, and a beautiful, flowing mane of deep brown. The striking Amazon of a horse is dressed in a set of leather chaps and a small corset, though how she managed to find one in her size puzzles you, given how much she towers over the average person. In her hands, she's holding a lasso and a riding crop, which she points aggressively at you as you continue to ogle her. 'And didn't your mother teach you any manners?' She seems a bit unhappy.";
