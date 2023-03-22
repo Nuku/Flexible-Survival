@@ -510,7 +510,7 @@ to say SquireServiceScene1:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Get acquainted with your knight.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
-	if player consents:
+	if Player consents:
 		say "     With your heart thumping rapidly in your chest, you slowly approach the man as he pings the last piton into the ground. Noticing a presence, the knight turns with a steady hand placed on his sword. Upon noticing your garb, he lowers his stance to a more comfortable posture and greets you with a smile. 'Ah! Hello boy, what a pleasant surprise! A bit late to set up camp, I know, but fighting evil is worthy of losing a few hours of sleep. Come now, let us go inside, it is getting cold out.' The knight opens the tent and waits patiently outside for you to enter. His calm and commanding presence quashes the anxiety you felt before, and with a goofy grin you eagerly run forward into the charming man's tent.";
 		say "     Inside the tent, you find a few items tossed about and a large bedroll splayed out on the ground. Your mentor closes the tent after he enters and motions you towards the center of the tent. For the next few minutes, you help him set up the rest of the tent interior, including a small fire with a small cooking pot. The time you spend together is simple but pleasing, exchanging soft words as he shows you how to start a fire. He lets you hold his well-polished steel sword, before requesting you help him out of his armor.";
 		WaitLineBreak;
@@ -536,7 +536,7 @@ to say SquireServiceScene2:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Sneak around the camp to get a better view.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
-	if player consents:
+	if Player consents:
 		say "     Curiosity getting the better of you, you quietly sneak around the campsite to the other side of the tent. Peering through some of the shrubbery, you find your knight in shining armor fully garbed on his knees. Beneath him is a giant wolf, nearly 10 feet in length, with paws larger than that of men. The beast is currently on its back, exposing its stomach to the knight. You can see some leather wrapped around the wolf's torso to form some kind of a saddle. Looking further down, you see your knight deep throating the beast's cock. Neither appears to have noticed you, but you can't help but be amazed by what is occurring.";
 		say "     Boldly, you walk out of your hiding spot towards your knight. The wolf tenses as you approach, attempting to discern friend from foe. Upon seeing your tabard, the beast goes back to enjoying the attention from your knight. Sitting down next to them, you marvel at the size of the wolf's phallus. The large red member stretches the jaw and throat of your knight each time he sends it down his gullet. Suddenly, the wolf lets out a howl and bucks upwards into the knight's mouth. The large knot presses against the knight's face, burying his nose in the in beast's large endowment. The handsome man chokes on the cock a bit but doesn't back down and swallows the seed eagerly.";
 		WaitLineBreak;
@@ -555,7 +555,7 @@ to say SquireServiceScene3:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Join the knight by the campfire.";
 	say "     ([link]N[as]n[end link]) - Leave for now.";
-	if player consents:
+	if Player consents:
 		say "     Walking forward with a goofy grin, you enter the campsite and greet the noble warrior. He smiles as you approach, 'Ah, good to see you again young man.' He beckons you to sit, and you gladly take a seat. You spend a few minutes talking about your recent activities before you start becoming more distracted by the outline of the man's large soft cock beneath his cotton pants. You barely notice when he stands up and walks up next to you, becoming even more mesmerized as you begin to take in the smell of the warrior. It's only after he says your name a few times that you snap out of it and look up towards the knights smirking face. 'I said let's get to your sword training, up and at em boy.'";
 		say "     Despite a little bewilderment, you manage to get up and walk over to the tent to get the wooden training swords. You bring two swords back to your master, one for each of you. He wields his sword confidently in one hand, as if it weighs nothing to him. Gulping, you steady your own sword with your other hand and wait for his signal. The battle begins with a brief 'Engarde,' followed by a series of powerful blows that you barely manage to parry. Your counter attacks are weak and easily knocked aside, you're going to have to try a lot harder if you want to impress him.:";
 		WaitLineBreak;

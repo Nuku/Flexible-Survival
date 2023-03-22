@@ -77,7 +77,7 @@ to say ResolveEvent Gargoyle Sentry:
 
 to SGargoyleExplore:
 	ItemLoss glowing mushroom by 1;
-	say "     Down the hatch goes a shroom, and you start feeling the effects almost immediately. The world around you shifts before your eyes as you feel yourself shrinking to only a few inches tall, [if player is not naked]having even shrunk through your gear and getting completely naked[else]your already naked body remaining as such, even more exposed to danger[end if]. Adrenaline rushes with the anticipation of attempting your dangerous plan before you dare to take a tiny step towards the stone perimeter. Relief arrives down your shoulders as your tiny feet makes it forward without anything out of the ordinary happening, so you start walking around slowly and, effectively, everything goes according to plan. Now that you're inside the safety perimeter, it's time to explore!";
+	say "     Down the hatch goes a shroom, and you start feeling the effects almost immediately. The world around you shifts before your eyes as you feel yourself shrinking to only a few inches tall, [if Player is not naked]having even shrunk through your gear and getting completely naked[else]your already naked body remaining as such, even more exposed to danger[end if]. Adrenaline rushes with the anticipation of attempting your dangerous plan before you dare to take a tiny step towards the stone perimeter. Relief arrives down your shoulders as your tiny feet makes it forward without anything out of the ordinary happening, so you start walking around slowly and, effectively, everything goes according to plan. Now that you're inside the safety perimeter, it's time to explore!";
 	say "     The muscular gargoyle sleeps soundly and still, looking menacingly huge from your perspective of view. You don't even want to imagine what he could do to you being of that size if he suddenly came to life and saw an intruder so small and vulnerable, meaning you shouldn't linger for long. Making your way through the rudimentary stone pavement, you head directly towards the place where you've seen the goods, a much longer way than what it would be if you were normal sized... But you manage, after about a few minutes of walking. Then, you climb up through some stones, a task surprisingly easier to accomplish while you're tiny and light, and walk over the edge of some sort of chest. Luckily, it's not closed, as there are a few objects holding the top up in place. The bottom shines, as there must be a few valuables in here!";
 	WaitLineBreak;
 	say "     Carefully, you slide down through what seems to be a large copper ingot, and land on a solid surface. More ingots of many kinds cover the bottom of the chest, shining in various colors and sizes, but all in the same shapes, as expected. Seems like the gargoyle has a knack for collecting these kinds of stuff, but now another problem arises... You're too small to carry any of this! Ingots are heavy and long, you'd be lucky if you could manage to shove even a small one out of the chest, and even then, these things would hit hard once they fell to the ground, and it would be noisy to drag them across the stones. But you're not ready to give up, yet! There must be something you can bring with you... right?";
@@ -100,7 +100,7 @@ to SGargoyleScene:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - This arouses you, so you want to get closer...";
 	say "     ([link]N[as]n[end link]) - Alive... you think?! Something will most definitely happen if you don't leave right now.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     This naughty idea doesn't leave your mind. How hot it is to face an exposed penis that can be as big as you're tall while soft, looking so smooth and appealing to the eye, and being just a few centimeters away from it, without any obstacle between it and you to keeping you from getting closer? How can you pass this opportunity? And surely, as light as you are, maybe you can just... have your fun without waking him up? A risky idea, but one that you can't miss. With the decision made, you bolster up the courage to step towards the gargoyle's considerable cock, the musk indeed becoming stronger, almost as if you were approaching an alive being's parts... It fills you with adrenaline, but it also makes you horny, and between the two, you know which you want to satisfy.";
 		say "     When you get close enough to touch it, you extend your hands and softly brush both the palms against the tip all around. To your surprise, it feels warm and oddly smooth, as if the stone was polished to the very point of it being so soft and... even slightly squishy, like a real dick. But the thought doesn't set you off, much the contrary, as you continue to rub down through the solid shaft, completely lost in the sensation. You're even able to bounce it around realistically, and the more you do, the warmer it gets... and then it shakes slightly within your grasp. Your eyes widen as the sculpture's dong hardens slowly, growing further beyond, getting erect as you massage the entire thing.";
@@ -357,13 +357,13 @@ to SGargoyleScene3:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Do everything he says.";
 	say "     ([link]N[as]n[end link]) - Try to break free from his hold, if you're strong enough (He might not like that).";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     Trying to remember something that could interest the gargoyle, you go on about one of your really odd stories while exploring the post-apocalyptic world out there. The beast's eyes widen at your tales, amazed with how crazy that last one went for you. 'Oh... How the world has changed... I could not bear standing still exposed to its new ways... It's harder to find food this way, but much safer and peaceful...' he replies, as he contemplates your words. 'That's fair, I guess I can forgive you for intruding, since you have given me something for your freedom.' The gargoyle simply lifts his weight from your body, giving you enough space to crawl away from underneath him.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Do that and leave.";
 		say "     ([link]N[as]n[end link]) - Point out the raging hard-on between his legs.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     Since you were given permission, you say your goodbyes to the gargoyle, who ignores your presence from that point on. Well, this didn't go too poorly, but you suppose there should be some other way of earning his trust...";
 		else:
@@ -409,7 +409,7 @@ to SGargoyleVisit:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, visit Krumirr, the Gargoyle Sentry.";
 	say "     ([link]N[as]n[end link]) - No, you have other things in mind.";
-	if player consents:
+	if Player consents:
 		say "     As if per something supernatural, you suddenly know exactly where to go in order to find the chapel. Without an explanation that could serve to shed some light into this, you find yourself simply following the path that has been imprinted in your brain, with the lack of better words, and bring yourself over to the small chapel that's standing right in the vicinity. A different location than last time, but you were still able to find it without any greater effort. The door opens as soon as you take a step towards it from a close distance, allowing you to walk inside.";
 		say "     Then, the doors close shut behind you, welcoming you in its abyssal darkness.";
 		say "     You have arrived at the [bold type]Chapel of Abyss[roman type][line break]";
@@ -583,7 +583,7 @@ to say KrumirrTalkLeave:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     Confirming your intention, you direct the request to Krumirr. 'You wish to go, already? That's fine, you know where to find me, I hope.' he says, before falling into his slumber once more, opening the door to allow you to walk away. With that done, you simply move outside into a foggy area, the chapel eventually fading away from behind you.";
 		say "     Once the fog lifts, you find yourself in the Grey Abbey Library.";

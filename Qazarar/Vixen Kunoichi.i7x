@@ -66,7 +66,7 @@ to say VixenKunoichiVictory: [player wins]
 					now current menu selection is calcnumber;
 					choose row calcnumber in table of fucking options;
 					say "[title entry]: [description entry]?";
-					if player consents:
+					if Player consents:
 						let nam be title entry;
 						now sextablerun is 1;
 						if (nam is "Suck her"):

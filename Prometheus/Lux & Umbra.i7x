@@ -985,7 +985,7 @@ instead of going up from Grey Abbey Library while hp of Umbra is 4 and Umbra is 
 	Umbra&CarlSexualInterestEvent;
 
 to Umbra&CarlSexualInterestEvent: [Umbra and Carl express interest in each other] [Noon-Early Night]
-	say "     Climbing the stairs to the next floor, you find Carl and Umbra keeping watch over the city through one of the windows, though you are unsure how much help the wolf is providing. While the husky is scanning the surrounding area through some binoculars, he is sitting beside him on the couch and wildly wagging his tail. Despite this, Carl seems to appreciate the company, taking the occasional break to ruffle the fur on Umbra's head or stroke a paw through his thick fur. They both turn as you step up behind them, Carl giving you a nod while your son's tail waves even more rapidly as he leaps off to greet you, bumping up against your leg and licking your hand as you affectionately pat him. 'I'd be glad to have him beside me if I were in the city, but his help is limited up here when he can't use binoculars,' the husky comments, earning a reproachful look from the dark-furred wolf. 'Hey, don't look at me like that. I said limited, not non-existent. You're good company and you demand less attention than your sister, especially with how often she asks me to play with her. I usually only get distracted by you when you stretch after getting up.'";
+	say "     Climbing the stairs to the next floor, you find Carl and Umbra keeping watch over the city through one of the windows, though you are unsure how much help the wolf is providing. While the husky is scanning the surrounding area through some binoculars, he is sitting beside him on the couch and wildly wagging his tail. Despite this, Carl seems to appreciate the company, taking the occasional break to ruffle the fur on Umbra's head or stroke a paw through his thick fur. They both turn as you step up behind them, Carl giving you a nod while your son's tail waves even more rapidly as he leaps off to greet you, bumping up against your leg and licking your hand as you affectionately pat him. 'I'd be glad to have him beside me if I were in the city, but his help is limited up here when he can't use binoculars,' the husky comments, earning a reproachful look from the dark-furred wolf. 'Hey, don't look at me like that. I said limited, not nonexistent. You're good company and you demand less attention than your sister, especially with how often she asks me to play with her. I usually only get distracted by you when you stretch after getting up.'";
 	say "     The contented look on Umbra's face suggests that he is enjoying the praise as well as one-upping Lux. He noses Carl's paw until he begins to stroke the large wolf, scritching between his ears every now and then. You hear the husky mumble, 'Who's a good boy...' to himself, though you get the impression that there is something beyond affection from the way that his eyes stray across the wolf's form from nose to tail. Perhaps feeling you watching him, Carl snatches his hand back and looks embarrassed. 'Your sister is probably missing you, Umbra. You've helped me enough for today and if you're not careful she'll find someone else to play with,' he gruffly tells the wolf. You find it doubtful considering how close Lux and Umbra are, but your son gives a nod and leisurely slides off the couch before stretching in a manner that suggests that he is as interested in Carl as the husky is in him. As he extends his hind legs, his tail raises up behind him more than one might normally expect, revealing his virginal tail-star and full sheath and balls, his scrotum twitching slightly before his tail descends and obscures yours and Carl's view of 'the goods'. As your son disappears downstairs, you turn back to the husky, a silent communication passing between you that this needs to be discussed.";
 	say "     [bold type]It would seem that both Carl and Umbra are attracted to each other. Do you wish to allow them to further this relationship?[roman type][line break]";
 	LineBreak;
@@ -1194,7 +1194,7 @@ instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar 
 
 to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Entrance to Library]
 	if Player is male: [Male or Herm]
-		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if Player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;
@@ -1207,7 +1207,7 @@ to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Ent
 			say "     ";
 			say "     ";
 	else: [Female]
-		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if Player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;
@@ -1238,7 +1238,7 @@ instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVa
 
 to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near Entrance to Library]
 	if Player is male: [Male or Herm]
-		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if Player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			if Player is submissive: [Player is Penetrated]
 				say "     ";
 				say "     ";
@@ -1265,7 +1265,7 @@ to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near
 				say "     ";
 				say "     ";
 	else: [female]
-		if player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
+		if Player is pure and (bodyname of player is "Feral Wolf Male" or bodyname of player is "Feral Wolf Bitch" or bodyname of player is "Alpha Wolf" or bodyname of player is "Dire Wolf"): [Special Wolf Scene]
 			say "     ";
 			say "     ";
 			WaitLineBreak;

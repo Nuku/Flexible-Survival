@@ -151,7 +151,7 @@ to say Smilodon Male Desc:
 	else:
 		project Figure of Sabretooth_clothed_icon;
 		say "     In front of you stands a large feline male, with an appearance resembling a smilodon from the ice age, except this one's standing on two strong legs supporting his bulky furred body, very much like a werebeast. He sports a pair of long fangs coming out of his mouth, menacingly sharp, emphasizing the fierce look in his feline and fuzzy muzzle, and his muscular body is covered in golden fur with brown stripes and spots, only attaining a lighter color around his front torso. He also has a short brown mane coming from behind his head towards his lower back, and on his behind sticks out a small but fuzzy tail, barely moving. His equipment is quite sizable, with a thick sheath and a pair of hanging nuts that would make some males jealous, inevitably drawing your eyes in as he walks towards you intimidatingly.";
-		if player is not dominant and scalevalue of Player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
+		if Player is not dominant and scalevalue of Player <= 3: [Ranfer only truly takes interest in non-dominant players who are smaller than him (he's close to the 4 value, so 3 is already smaller)]
 			if Lust of Ranfer < 2:
 				if Player is submissive:
 					say "     He gives his own furred sack a not subtle at all scratching while he eyes you from head to toe. 'You know what... Why don't we skip the fighting and just have you bend over for me? Give the big cat some relief and take his load...' he says, noticing your submissive instincts through your body language. 'Or we can play rough. I love playing rough.' he adds, stretching his claws out and getting ready to tackle you.";
@@ -602,7 +602,7 @@ to say RanferSexShrinkingShroom:
 	else: [subsequent times]
 		say "     You happen to ask Ranfer if he would be down for some size play, and show him a glowing mushroom you have gathered. His eyes widen with eagerness as he nods. 'Of course, kitten. I'm always ready to play with a shrunken tiny cute thing like yourself' he says, his loincloth wavering slightly as he gets aroused at the idea. Knowing that the big cat seems to really be looking forward to this, you nod and prepare to eat the mushroom.";
 	WaitLineBreak;
-	say "     Once the glowing mushroom goes in your mouth and you chew it down, you begin to feel the vertigo that comes with it. Your body dims in size and shape as you look at Ranfer in the eyes, the antecipation clearly causing an effect on the smilodon as he patiently awaits what comes next. His cock begins to grow out of his furred sheath from underneath the loincloth, which he flips aside and lets you have a clear look at it, shamelessly stroking it while you begin to shrink. Just like that, the male feline starts looking massive in comparison, and even more as moments pass, your vision getting closer to the ground until Ranfer's footpaws alone are enough to surpass you in height. When you look up, you see a giant catman with a rock solid erection in his hands, so turned on by the situation itself.";
+	say "     Once the glowing mushroom goes in your mouth and you chew it down, you begin to feel the vertigo that comes with it. Your body dims in size and shape as you look at Ranfer in the eyes, the anticipation clearly causing an effect on the smilodon as he patiently awaits what comes next. His cock begins to grow out of his furred sheath from underneath the loincloth, which he flips aside and lets you have a clear look at it, shamelessly stroking it while you begin to shrink. Just like that, the male feline starts looking massive in comparison, and even more as moments pass, your vision getting closer to the ground until Ranfer's footpaws alone are enough to surpass you in height. When you look up, you see a giant catman with a rock solid erection in his hands, so turned on by the situation itself.";
 	say "     As the shrinking process reaches its end, Ranfer comes down to get and grab you, bringing you over to the front of his face. You are naked and exposed before his big eyes as he examines your body, appreciating just how small you are. 'Love how tiny you look, little kitten... I might just get used to holding you like this...' he says, almost in a whispering tone, as he brings one finger to rub at your form. His paw-like hands are larger than you are tall, so his touch is enough to overwhelm you as he rubs you in all the sensitive spots, able to reach them all simultaneously with little effort due to how big he is in comparison. 'You're so cute... Makes me wanna keep you safe, even more...'";
 	WaitLineBreak;
 	say "     The smilodon then pulls his finger away and leans his face onto you, giving your whole front a tentative lick, then another from a different angle, your left side, followed by the next on the right, that slick organ of his coating you in feline saliva, feeling wet and soft against your skin. 'Mmh... you taste good, too. Don't worry, I won't eat you... I just wanna kiss you a lot...' he tells you, and within seconds, you find yourself shoved between his lips, tongue flowing and wiggling all around you as he makes out with your body, much like when he kisses you in the mouth, having you experience his passionate affection in a size-augmented fashion. Some of his whiskers tickle you as he uses every angle he has at his disposal to kiss, lick... and even suck on you.";
@@ -678,25 +678,25 @@ an everyturn rule:
 	if smilodon bodyguard is tamed and smilodon bodyguard is not listed in companionList of Player: [routine only applies if Ranfer is tamed and not summoned]
 		[if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 			move NPC to ROOM X;
-			if player is in ROOM X:
+			if Player is in ROOM X:
 				say "     NPC ARRIVES";]
 		if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn - Ranfer wakes up]
-			if player is in Makeshift Rec Room:
+			if Player is in Makeshift Rec Room:
 				say "     Ranfer is up and awake by now, and he seems to be putting his sleeping bag away. He sees you in his proximity and gives you a wink. 'Glad you're the first thing I see in the morning, kitten.' he says while doing some stretching, his muscles visibly bulging out as he flexes them right within your sight. Currently, the feline is completely naked.";
 			now Sleeping of Ranfer is false;
 		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - moving to sentinel post at Main & 7th Street]
-			if player is in Makeshift Rec Room and Ranfer is in Makeshift Rec Room:
+			if Player is in Makeshift Rec Room and Ranfer is in Makeshift Rec Room:
 				say "     The big catman passes by you after he is done with his morning routine, and after putting a loincloth on, giving you a smile. 'I'm gonna make sure no intruders disturb our shelter and give them a whack, if necessary. Meet you outside, kitten [boygirl].' he says, disappearing out of sight.";
 			else if player is in Main & 7th Street and Ranfer is not in Main & 7th Street:
 				say "     As you stand here, you see Ranfer coming out through the Library's door, wearing his usual loincloth. 'Oh, good morning kitten! Hope you haven't seen any naughties before I did.' he says, smiling, as he walks outside to do his rounds.";
 			now Ranfer is in Main & 7th Street;
 		[else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]]
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon - lunchtime]
-			if player is in Main & 7th Street:
+			if Player is in Main & 7th Street:
 				say "     Ranfer is leaning against the Library's door, munching on some canned food.";
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-			if player is in Main & 7th Street and Ranfer is in Main & 7th Street:
+			if Player is in Main & 7th Street and Ranfer is in Main & 7th Street:
 				say "     As your eyes land on Ranfer's sexy feline body, you also see him laying some preemptive traps on key locations, and when he is done, he begins to walk back inside. 'Gotta get some rest, these traps should keep us safe... Any chance you might keep me company?' he says, winking at you before going through the door.";
 			else if player is in Main & 7th Street and Ranfer is not in Main & 7th Street:
 				say "     You do not see Ranfer anywhere nearby. It seems he went back inside the Library, by now.";
@@ -707,7 +707,7 @@ an everyturn rule:
 				say "     You see Ranfer relaxing comfortably in his sleeping bag, reading a book.";
 			now Ranfer is in Makeshift Rec Room;
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - Ranfer sleeps]
-			if player is in Makeshift Rec Room:
+			if Player is in Makeshift Rec Room:
 				say "     You have a look at Ranfer's sleeping spot, to find out that he is already in a deep slumber, with a book open and turned down on top of his chest.";
 			now Sleeping of Ranfer is true;
 

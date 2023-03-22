@@ -18,7 +18,7 @@ ResolveFunction of MeetingDrelgoth is "". Sarea of MeetingDrelgoth is "Nowhere".
 [Ancient Tome entry]
 to say DrelgothSummon:
 	if Resolution of MeetingDrelgoth is 0:
-		if player is not in Maintenance Storeroom:
+		if Player is not in Maintenance Storeroom:
 			say "     Perhaps you should not attempt any weird things out here in the open. Something tells you that the bunker would be a better place suited for this, specifically your personal resting place, back in the library.";
 		else:
 			if humanity of player >= 50 and "Weak Psyche" is not listed in feats of player:
@@ -31,7 +31,7 @@ to say DrelgothSummon:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Give into it.";
 				say "     ([link]N[as]n[end link]) - You would rather not.";
-				if player consents:
+				if Player consents:
 					LineBreak;
 					say "[SummonDrelgothRitual]";
 				else:
@@ -198,7 +198,7 @@ to say DrelgothTalkSexConditions:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You want to submit.";
 			say "     ([link]N[as]n[end link]) - You want to dominate.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				DrelgothTalkSexConditionsSub;
 			else:

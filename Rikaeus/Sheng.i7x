@@ -196,7 +196,7 @@ to say ShengTalk5:
 	say "     [bold type]Do you wish to take this step in your relationship with your master?[roman type][line break]";
 	say "     [link]Y[as]y[end link] - Of course!";
 	say "     [link]N[as]n[end link] - Not yet...";
-	if player consents:
+	if Player consents:
 		say "     Nodding eagerly, your master just chuckles and picks up the collar and with a snap of his fingers it opens up. He then gestures for you to lean forward, of which you happily do so. Taking the neck item he wraps it around your neck, it snaps shut, and you instantly feel a wave of happiness go over you as you realize that you're finally owned by the white tiger. You suddenly do something you'd thought that you would never do, at least without the right amount of courage, and jump at him, hugging him and licking at his face, causing your master to chuckle and pet you on the head. 'I see my [if bodyname of player is listed in infections of CanineList]puppy[else]pet[end if] enjoys their collar.' He says, looking down at you with a smile. You nod happily, after which the white tiger puts you down. 'Now, your master needs to get back to work, be a good pet and stay out of trouble okay?' He says with a firm look causing you to nod and step back, allowing him to return to his job.";
 		now sheng's pet collar is equipped;
 		add "Sheng's Pet" to Traits of player;

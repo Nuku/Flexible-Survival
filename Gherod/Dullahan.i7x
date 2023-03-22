@@ -46,7 +46,7 @@ when play begins:
 	now defeated entry is "[DullahanVictory]";
 	now victory entry is "[DullahanDefeat]";
 	now desc entry is "[DullahanDesc]";
-	now face entry is "non-existent, instead covered with darksteel in the shape of a durable helmet. A green mist oozes from within.";
+	now face entry is "nonexistent, instead covered with darksteel in the shape of a durable helmet. A green mist oozes from within.";
 	now body entry is "statuesque and musclebound, fit for the art of battle and war. You're almost twice as tall than an average humanoid.";
 	now skin entry is "pale and scarred, like one of a seasoned warrior.";
 	now tail entry is "You have a plump, muscular ass.";
@@ -312,7 +312,7 @@ to say DullahanSummon:
 		say "     You chose to proceed with summoning a dangerous demonic creature without Xaedihr, who is an expert demonologist able to protect you significantly during your confrontations with the dark knight. The events that will follow can be punishing and unrelentless without proper guidance, and you know what will happen if you lose to the Dullahan in battle. [bold type]Are you sure you wish to delve into demonic affairs all by yourself?[roman type][line break]";
 		say "     [link](Y)[as]y[end link] - Danger? What danger? Just continue with the ritual.";
 		say "     [link](N)[as]n[end link] - Let's be cautious about this.";
-		if player consents:
+		if Player consents:
 			say "     Nonsense. You consider yourself more than capable of doing this alone. With your decision made, your get ready to perform the ritual.";
 			Linebreak;
 			DullahanSummon1;
@@ -508,7 +508,7 @@ to DullahanSummon2: [Dullahan rematch]
 	say "     He strikes you with a single question, his deep voice barging into your mind like a sharp blade onto your skin. [bold type]'Are you here for a fair duel, mortal?'[roman type][line break]";
 	say "     [link](Y)[as]y[end link] - Let's duel.";
 	say "     [link](N)[as]n[end link] - Refuse to duel him.";
-	if player consents:
+	if Player consents:
 		say "     You nod, and bring your guard up. Your acceptance is met with excitement from the knight's behalf. 'Good. Let us fight.'";
 		DullahanSummon2Fight;
 	else:

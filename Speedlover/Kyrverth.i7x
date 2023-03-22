@@ -455,7 +455,7 @@ to BodyModCheck:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Change the Dragon.";
 		say "     ([link]N[as]n[end link]) - Just Chat.";
-		if player consents:
+		if Player consents:
 			say "     You think about the items you have and consider what to give the big dragon to change him:";
 			now calcnumber is -1;
 			let menuexit be 0;
@@ -557,7 +557,7 @@ to KyrverthHornGrow:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
+			if Player consents:
 				say "You grab the vials and hand them to the eager dragon who drinks them down as quickly as he can. The effect is quicker this time 'My back!' he shouts. He twists his body half around to look at himself, giving you a good view of his spine as spikes push through the scales at regular intervals. Kyrverth shakes his back a few times to get used to the weight and inspects one of the ones on his tail. 'Now this could be really helpful if I get ambushed again, help keep them off my back'";
 				now KyrverthSpikeGrowth is 2;
 				ItemLoss Demon Seed by 2;
@@ -1232,7 +1232,7 @@ carry out KyrverthItemReturn:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return the [KyrverthItemSay].";
 		say "     ([link]N[as]n[end link]) - Keep it.";
-		if player consents:
+		if Player consents:
 			Let RandomCharvar be a random number between 1 and 30;
 			if (RandomCharvar + charisma of player) < 30:
 				say "     [bold type]Rolling [Randomcharvar]/30 + Charisma of [charisma of player] vs 30: Success[roman type]";

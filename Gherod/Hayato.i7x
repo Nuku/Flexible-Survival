@@ -441,7 +441,7 @@ to say sexwithHayato:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Yes, you want to get sexual with him.";
 			say "     ([link]N[as]n[end link]) - No, you want to think about it some more.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				say "     Well, you can help him this way, and you actually want to, so... Why not? Perhaps you will be successful... or eventually.";
 				now Energy of Hayato is 2;
@@ -917,13 +917,13 @@ to YoukaiLairXaedihrPath1:
 	say "     With the half-demon's proposition in the air, you only have to consider if either you want it or not. 'So, shall I begin?' When you turn to Hayato, he lets you know he is fine with it, and actually seems a little curious.";
 	say "     ([link]Y[as]y[end link]) - Let Xaedihr extract Hayato's [']essence['] using that quite pleasurable technique.";
 	say "     ([link]N[as]n[end link]) - You don't agree with this. Do not allow things to proceed.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     After having considered your options, you decide to let the mage have a go with Hal, since he did not seem to mind the idea that much. 'I can work with that. Hayato, please, remove your gear. We shall begin immediately.' Before he could get naked as instructed, Xaedihr's purple tendrils were already emerging from the alternative plane of existence (and from the floor) they belong, in preparation for the task ahead. Hayato feels the need to ask 'Uh, so... How will this...?' but before he can finish, the tendrils wrap themselves around his legs and crawl towards his meat, balls and ass. His eyes widen as one gentle tentacle pokes into his ass and slips itself inside, while a few others wrap themselves around his shaft and nuts, with only delicate squeezing at first.";
 		say "     'There is nothing to fear. My tendrils are never aggressive when I don't want them to be, so just relax and enjoy yourself. It will make this procedure more quick.' While the situation seems quite... scientific, the large oni seems to be feeling quite good, as he builds quite the solid erection in a matter of a few seconds. Judging by the look on his face, he never experienced anything like this. Xaedihr turns to you and explains what is happening in high detail. 'So, what my tendrils are doing is simply precise stimulation. By providing the prostate enough poking and rubbing, males are way more susceptible to orgasm, which means they do so much more quickly. All you've got to do is to follow up with the best stroking you can give, and wetness helps a lot. It is sort of what you do when you want to milk a male.'";
 		WaitLineBreak;
 		say "     You see Hayato barely being able to hold his moaning, with pleasure quite evident in his expression. You notice the tendril in his ass wiggling a lot as the others around his massive cock move and stroke him with amazing dexterity, picking up the pace soon after the oni has been thrown into bliss. 'Would you gather his genetic material for me?' says Xaedihr to you, handing you an empty bottle. 'He must be close, so get there quickly.' Nodding, you walk up to Hayato and try to position yourself in a way you can gather his cum without earning yourself an accidental bath. With enough time and patience, Hayato finally reaches his climax, and shoots a considerable load which, obviously, does not end up completely bottled up.";
-		say "     The stream of jizz covers the whole floor and continues far, far ahead... Making a mess of the library's entrance until his powerful orgasm subsides. But you managed to collect enough for the sorcerer, and he sends his tendrils away. You see them slowly crawling back to the floor, unwrapping themselves off Hayato's cock and pulling away from his ass, sliding down his legs and back into non-existence. The oni catches his breath as his senses return to him. 'I... I wasn't prepared for that.' he comments, and you see a slight hint of a smile on Xaedihr's face, but he is quick to return to the matter at hand.";
+		say "     The stream of jizz covers the whole floor and continues far, far ahead... Making a mess of the library's entrance until his powerful orgasm subsides. But you managed to collect enough for the sorcerer, and he sends his tendrils away. You see them slowly crawling back to the floor, unwrapping themselves off Hayato's cock and pulling away from his ass, sliding down his legs and back into nonexistence. The oni catches his breath as his senses return to him. 'I... I wasn't prepared for that.' he comments, and you see a slight hint of a smile on Xaedihr's face, but he is quick to return to the matter at hand.";
 		NPCSexAftermath Hayato receives "Other" from Xaedihr;
 		WaitLineBreak;
 		say "     'The reason I insisted on using my way is that, while the semen carries a lot of your essence, it wouldn't suffice. Having my tendrils feeling you allowed me to collect additional material that would ensure the success of this craft. Well, I probably should have said that before, but I wasn't quite sure it would work. It did, however.' he explains to the oni, and then turns to you. 'Anyway, give me a moment while I attempt to craft this thing.' The mage turns to his books and materials in his corner while you wait...";
@@ -987,13 +987,13 @@ to say MogdrazTalkYokLair:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Accept the deal and choose a procedure[bold type]. Warning[roman type]: there is no way back once you accept it.";
 		say "     ([link]N[as]n[end link]) - You would rather keep your souls intact.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     You feel Mogdraz's joy hearing your words of acceptance, as he enthusiastically replies 'Splendid! Now, you just made my day...!' He then invokes a sheet of paper out of thin air with a set of quill and ink, as it was once done in older times, but before he hands it over, he looks at both you and Hayato before throwing you another question. 'Very well, then, which one of you shall I claim? Or... partially claim.' A grin draws itself across his face, one that would send shivers down your spine by just looking at it. Your oni friend really does not like this, and if you intended on providing his soul, you will still need to persuade him.";
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Let Mogdraz claim ownership of a portion of your soul.";
 			say "     ([link]N[as]n[end link]) - [bold type](Charisma Roll) [roman type]Convince Hayato to hand his soul over to the Demon Lord.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				YoukaiLairMogdrazPath1;
 			else:
@@ -1026,7 +1026,7 @@ to say MogdrazTalkYokLair:
 
 to YoukaiLairMogdrazPath1:
 	say "     Making your final considerations, you give Mogdraz your final word, that you should be the one providing what he asks for. 'Nothing pleases me more than hearing that. Very well... Just sign your name down below.' he says, handing you the contract written in a demonic language, which shifts before your eyes into something you can understand. It reads as he says, a portion of your soul would become his, and you would be allowed to live as nothing ever happened, but when the time comes, you have to do your Lord's bidding. Well, besides this essentially turning you into an almost slave to the Demon Lord, it actually sounds pretty harmless. You sign your name down immediately.";
-	say "     As soon as you are done, the contract burns into non-existence, but you know that you have sealed the deal. 'Very well, now that business is over, I shall repay what I'm owed. Gladly.' says Mogdraz, smiling at you in an almost too friendly manner. It still sends you shivers.";
+	say "     As soon as you are done, the contract burns into nonexistence, but you know that you have sealed the deal. 'Very well, now that business is over, I shall repay what I'm owed. Gladly.' says Mogdraz, smiling at you in an almost too friendly manner. It still sends you shivers.";
 	say "     But you can see that Mogdraz seems [bold type]very pleased with your actions[roman type], which might prove quite advantageous in the future.";
 	increase Lust of Mogdraz by 20;
 	increase Loyalty of Mogdraz by 1;
@@ -1038,7 +1038,7 @@ to YoukaiLairMogdrazPath2:
 	say "     When he proceeds to explain the procedure you have to follow in order to breach this Youkai Lair, his expression turns into a serious one as he leans over his desk with both his hands on top. Then he grabs a pencil and a piece of paper, and scribbles something on it, shapes of buildings and other lines that seem to make some sort of map. 'This is its location. Right here, in the center, and underground. Way, way underground... The onis seem to come and go through hidden tunnels with their exits placed across several garages around the perimeter. It seems to me that they have a decent tunnel network that provides them with the mobility and presence they need. My agents have been trying to keep them under control, but we can only do so much, of course.'";
 	say "     He then points towards the middle. Not quite on the center, but a little to the side... 'Here is the spot where you should attempt to enter. This particular entrance seems to be less fortified, with only a couple of onis or so keeping guard at all times. They are quite powerful, so I don't suggest that you fight them. Instead, I shall provide you with a [bold type]visage[roman type] that will mask your true identities. I was able to procure a Red Oni visage through the Void Realm that will serve you well, and it will work for both, in case you want to work as a pair. Once you've got it with you, the visage will deceive the demons and spirits into thinking that you are one of the true Red Onis, thus allowing you to pass... Hopefully.'";
 	WaitLineBreak;
-	say "     Hopefully, he said? That really does not sound reassuring, does it? 'The chances it will work are high, as long as you don't do anything stupid or out of place. Don't refuse any offerings, don't try to escape any traditional ritual, but avoid them in the first place, if you can... Since you won't be able to replicate many of them, I'm sure. In any case, try to inform yourself about these creatures before going into their world, just to be safe. While the deal you struck with me will keep one of you safe, the other may suffer unpleasant consequences for failing. Was I clear enough?' With nothing else to ask, you nod positively. 'Good. Scout the entrance around the [bold type]Capitol Building[roman type] and look for an opportunity while you're carring the visages. Do not lose them.'";
+	say "     Hopefully, he said? That really does not sound reassuring, does it? 'The chances it will work are high, as long as you don't do anything stupid or out of place. Don't refuse any offerings, don't try to escape any traditional ritual, but avoid them in the first place, if you can... Since you won't be able to replicate many of them, I'm sure. In any case, try to inform yourself about these creatures before going into their world, just to be safe. While the deal you struck with me will keep one of you safe, the other may suffer unpleasant consequences for failing. Was I clear enough?' With nothing else to ask, you nod positively. 'Good. Scout the entrance around the [bold type]Capitol Building[roman type] and look for an opportunity while you're carrying the visages. Do not lose them.'";
 	say "     Following his warning, Toron, the bartender, appears from behind you, carrying a strange object that seems to be this so called [bold type]visage[roman type] the demon lord has been talking about. He hands it over to you, and you keep it close and safe in your [bold type]inventory.[roman type][line break]";
 	WaitLineBreak;
 	say "     [bold type]You have unlocked the Visage of the Red Oni. Use it to navigate certain areas in the Youkai Lair.[roman type][line break]";
@@ -1067,7 +1067,7 @@ to say LilithTalkYokLair:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Question what kind of object is that.";
 	say "     ([link]N[as]n[end link]) - Just let her continue.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     Of course, you have to ask what is it that you would be retrieving for her, but you are met with a blunt response. 'Now, that's none of your business, is it? It's something that belongs to me, so it should be in my possession, as all thing one owns. Wouldn't you agree?' While she is clearly being very cryptic about what sort of trinket you would be [']stealing['] back to her, you suppose it is not actually an essential information in order to perform this job adequately, given her attitude...";
 		WaitLineBreak;
@@ -1079,7 +1079,7 @@ to say LilithTalkYokLair:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - You understand, and shall do whatever she asks.";
 	say "     ([link]N[as]n[end link]) - No, you don't want to do this for her and get involved with the Hellfire Demons.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     You nod, letting her know of your consent. 'Splendid, I suppose.' she commends you, not with much enthusiasm in her tone, but rather as if something she predicted just happened. Hayato eyes you with uncertainty, suggesting that, perhaps, you would have been better seeking someone else's help, instead. 'Now, this trinket of mine has been brought to a local abandoned warehouse within the northern section of the district. Which means that I need to send someone they wouldn't suspect, at first. If you're careful enough, nobody will see you, I'm sure... So if you end up pissing them off, that's on your lack of caution...'";
 		say "     When she finishes her explanation, you still do not know what kind of trinket you are supposed to bring, so you have to ask how it looks like. She lets out a sigh. 'If it helps, it's a red colored jar. You may take this little ring as well, it will help you locate your objective.' she adds, as she hands you over a ring with a big red gem on top of it. 'Now go, before anything happens to it. I can't imagine what they would be doing to my precious artifact as we speak...'";
@@ -1156,7 +1156,7 @@ to say NermineTalkYokLair:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			YokLairNerminePath1;
 		else:
@@ -1171,7 +1171,7 @@ to say NermineTalkYokLair:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Yes, accept Nermine's offer.";
 		say "     ([link]N[as]n[end link]) - No, for now.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			YokLairNerminePath1;
 		else:

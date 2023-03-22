@@ -238,7 +238,7 @@ to say FallenKingTalkSymbiosis:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Have him join you.";
 	say "     ([link]N[as]n[end link]) - Refuse.";
-	if player consents:
+	if Player consents:
 		say "     There is no fooling yourself, here. You want this, and he knows it, so much that he even suggested it, knowing you would accept... maybe. But it is as he says, you are meant to be one, together, invincible, unstoppable... Your mind fills up in a rush, an eagerness that consumes your thoughts as you find yourself mindlessly taking a step towards the giant black goo. He then embraces you, pulling you closer, his mass surrounding you and eventually encapsulating you inside him. You are safe... Complete... Every missing piece of you has converged into a single being, giving you a sense of fulfillness. It is then that the process begins, the now joyful tyrant swirling around you as your body tingles with newfound strength. You feel like you could move a mountain on your own.";
 		say "     'Good, mortal... We are as we were meant to be.' His voice now speaks from your mind, along with your thoughts, and you cannot help but feel an extreme urge to masturbate. This lust that overtakes you is so unbearable that you touch yourself on spot, yearning for a blissful release to welcome the tyrant inside you. Every caress you give yourself is received with increased sensitivity, a pleasure so powerful your legs fall weak. You cannot help but soon arrive at your climax, [if Player is male]cumming hard and intensely[else]quivering in ecstasy[end if] for what seems like forever...";
 		WaitLineBreak;

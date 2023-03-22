@@ -269,13 +269,13 @@ to say AndrewSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Take the wolf from behind with some spectators watching";
 	[]
-	if HP of Andrew >= 2 and player is not dominant: [this scene would definitely not fit a dominant player]
+	if HP of Andrew >= 2 and Player is not dominant: [this scene would definitely not fit a dominant player]
 		choose a blank row in table of fucking options;
 		now title entry is "Get cummed on by Andrew in public";
 		now sortorder entry is 6;
 		now description entry is "Tell the wolf you want him to cum all over you with an audience";
 	[]
-	if HP of Andrew >= 2 and player is not dominant: [this scene would definitely not fit a dominant player]
+	if HP of Andrew >= 2 and Player is not dominant: [this scene would definitely not fit a dominant player]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive a bukkake";
 		now sortorder entry is 7;

@@ -119,7 +119,7 @@ to MeettheNemeanLionEvent: [Fight the Nemean Lion]
 					CreatureSexAftermath "Player" receives "OralCock" from "Nemean Lion";
 					CreatureSexAftermath "Nemean Lion" receives "AssFuck" from "Player";
 				else: [Catch Anal/ Herm choices]
-					if player is herm:
+					if Player is herm:
 						if "Less Anal" is listed in feats of Player: [Vaginal]
 							say "     Grinning at you with a gleam in his eye, Zeus raises his arms, the sky turning black above him. With a loud boom, a lightning bolt strikes the hill above you, the flash blinding you for a moment. When the stars clear from your vision, the lion has returned, its coat resplendent. Another noticeable feature is the erect pink cock bobbing beneath his golden stomach, a fine gleam of pre shining. His behavior, for it is definitely a he, is closer to that of a house cat, friendly without wishing to appear too much so, brushing against Zeus's leg as it walks past. 'I'm looking forward to this,' you hear the god mutter to himself, patting the lion between his ears. 'I suppose I'll leave you to it. Don't worry, he's a lot tamer now so any wounds you get shouldn't be too serious. Oh, and he'll be banished once you orgasm so try and forgive him if he's a little rough.' With that, the king of Olympus vanishes in a thunderclap.";
 							say "     Now that Zeus is gone, the feline shifts his focus to you, rubbing against your leg and purring. If you consider it sufficiently intelligent, then this might be attempts at bribing you into pleasuring it, and oh how you plan on doing so. [if Player is submissive]Crouching beside the lion's engorged penis, you gently begin to stroke his flank, gradually closing in on the twitching organ. Your partner's legs shiver in anticipation, copious fluids dripping onto the soil, exuding an arousing scent that stirs your loins[else]Gripping its mane, you stare it in the eyes to reinforce your dominance, being rewarded with him shrinking away and baring his throat. Content with his reaction, you crouch beside him and begin to stroke his penis, the aroma of his arousal stirring your loins[end if]. As the friction decreases over his erection, you become curious as to what his impressive cock tastes like and lie on your back below his groin, your control still maintained.";
@@ -223,7 +223,7 @@ to TooManyHeadsEvent: [Fight the Lernean Hydra]
 	say "     The junkyard is its usual cacophonous place, metal crashing and creatures roaring, but you have yet to see the supposedly larger hydra that Zeus told you about, or anything else worthy of being described as mythical, at least by nanite-apocalypse standards. Thoughts of how dull and fruitless this is distract you enough that it takes you a minute to realize that the ground is shaking and that the hub bub seems to be becoming increasingly muffled as though you are being submerged underwater. As the mound of rusting cars and defunct washing machines explodes outward, you watch as one of the largest monsters that you have seen charge through what was likely tons of scrap to glare downward at you before unleashing a roar that you can feel reverberate through your bones. Surprisingly, it only has one head, though this seems to be the only feature different from the other draconic hydras roaming the junkyard other than its vast size difference. It barely gives you a chance to run your eyes over its glistening scales, pearly fangs, and thrashing tail before its head lunges toward you, leaving you scrambling to defend yourself.";
 	challenge "Lernean Hydra Stage One";
 	if fightoutcome < 20: [player won]
-		if player is lonely: [Enemy Recovers and strengthens]
+		if Player is lonely: [Enemy Recovers and strengthens]
 			say "     Breathing a sigh of relief, you wait for one of the Olympians to come and reward you for your mighty deed. Instead, to your horror, the hydra begins to stir and you watch as one of its necks divides in two, each with a fully formed head with vengeance glowing in its beady eyes. Releasing an ear-shattering roar, the Lernean hydra charges at you once more. It would seem that your fight is not yet over...";
 			challenge "Lernean Hydra Stage Two";
 			if fightoutcome < 20: [player won]
@@ -284,7 +284,7 @@ to TooManyHeadsEvent: [Fight the Lernean Hydra]
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents: [Sex with Hydra]
-				if player is herm: [herm choices]
+				if Player is herm: [herm choices]
 					say "     [bold type]Is the Hydra male or female?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Male.";

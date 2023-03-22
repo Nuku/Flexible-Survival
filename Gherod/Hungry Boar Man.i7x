@@ -380,7 +380,7 @@ to pigfeed:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Feed Philip.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				ItemLoss food by 5;
 				say "[PhilipSpecialFeed]";
@@ -392,9 +392,9 @@ to pigfeed:
 
 to say PhilipSpecialFeed:
 	say "     Happy to deliver the good news to Philip, you let him know that you actually have plenty of food with you, and a lot to spare. 'Ooh... that's great... Now if you just came over here and let me take a look at what you've got...' he says, while lazily lying down in his muddy corner, staring at you as he gives his waiting gut a few rubs";
-	if pigfed is 3 and player is not naked:
+	if pigfed is 3 and Player is not naked:
 		say ". You walk towards him with all the food, but the pigman stops you, suddenly. 'If you're gonna come here all geared up, you better be ready to scrub the mud out of everything. I suggest you get naked...' he says, which almost seems like an order[if Player is submissive], that you are glad to follow[else]. Whatever, he does make a good point[end if], so you remove everything that is covering your body before you proceed any further.";
-	else if pigfed > 3 and player is not naked:
+	else if pigfed > 3 and Player is not naked:
 		say ". Knowing the rules, you undress before you start walking towards him with all the food.";
 	else:
 		say ". Naked as you are, you find no problem in just continuing to walk towards the muddy mess and him with all the food.";
@@ -732,7 +732,7 @@ to say sexwithphilip:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let Philip take charge.";
 	say "     ([link]N[as]n[end link]) - Back away.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		let piggymalefun be 8;
 		if Player is submissive, increase piggymalefun by 2;

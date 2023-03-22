@@ -113,11 +113,11 @@ to say krishideoutscent:
 
 to say krishideoutdesc:
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]R: You should be able to get here! Get out!";
+		say "ERROR-Kristen-[HP of Kristen]R: You shouldn't be able to get here! Get out!";
 		move player to Grey Abbey Library;
 		now Kristen's Hideout is unknown;
 	else if HP of Kristen < 12:
-		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
+		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom, and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
 	else if HP of Kristen is 12:
 		say "[kristentf_phase1]";
 		WaitLineBreak;
@@ -213,7 +213,7 @@ to say kristendesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]L: You should be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]L: You shouldn't be able to find me yet.";
 	else if HP of Kristen < 12:
 		say "     Still apparently unchanged, this Caucasian woman stands about five foot ten inches. She has a slender figure with just the right amount of sexy curves to give her feminine allure. She's wearing a white cotton shirt and black jeans. She has fair skin with only a light tan, partially from staying hidden indoors a lot lately as well as her frequent use of sunscreen. She's got shoulder-length dirty blonde hair which she wears in a ponytail. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 	else if HP of Kristen < 16:
@@ -228,7 +228,7 @@ Instead of conversing the Kristen:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]T: You should be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]T: You shouldn't be able to find me yet.";
 	else if HP of Kristen is 2:
 		say "     'Welcome to my place. Well, it's not really my place. It belongs to my friend, but it doesn't look like she's coming back by this point.' After an awkward pause, she affects some excitement in her voice and forces a smile.";
 		say "     'I was on my way to come see her when things went nutso-bonkers. It was all happening too fast - the power outage, the electronics failure, the quake, people turning into monsters... Madness! I rushed here through that chaos, got inside with her spare key and hid here overnight. I could hear the rampage growing outside. There's a club a few buildings over and the people inside must've turned into something big and destructive. A lot of the buildings along this stretch are wrecked because of it. Even the staircase up here was taken out, trapping me inside.";

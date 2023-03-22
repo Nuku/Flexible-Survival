@@ -170,7 +170,7 @@ to say TobiasTalk4: [Offer to have sex with him]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, he seems trustworthy, and you want more of his touch!";
 	say "     ([link]N[as]n[end link]) - No, you know how this goes. You go with him, attempt to have sex, and BOOM, you're a hypnotized fuckslave. No thank you!";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		if Player is in Tobias's Trailer: [already present, do not need to be led to the trailer]
 			say "     You can't quite put your finger on it, but Tobias's offer appeals to you on a primal level. That dominant touch is equal parts soothing and exciting, and you can feel your sex twitch as his fingers stroke over your cheek. You nod, breathless in the face of his masculinity, and quietly state that you'd love to be Tobias's pet as long as you can keep your humanity intact. You're not ready to become a dog and may never be. Tobias runs his fingers over the top of your head, then drapes his arm around your shoulders, leading you much like he does Dane and Cara. 'Excellent. Let's get these two in their kennels, and then we can start. It's good that you're already here. Saves me the trouble of helping you through that jagged fence.' Without waiting for your answer, he leads the dogs up the stairs and into the trailer, his dog tags jingling with each step and his jeans bulging with obvious desire.";
@@ -188,7 +188,7 @@ to say TobiasTalk4: [Offer to have sex with him]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, accept the collar and any strings attached to it.";
 			say "     ([link]N[as]n[end link]) - No, you've made it this far by following your gut feeling. If something feels wrong, best not to do it.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Nodding emphatically, you feel the collar slip around your neck, its padded material settling snugly around your throat. The sensation is intensely erotic, and your sex stirs as the bone-shaped tag settles into place. Checking its label, you feel your cheeks flush. It proudly proclaims that you're a [']Puppy Slut.['] 'Good puppy.' Tobias praises you, his fingers teasing your ears as though you're a dog that's just performed a trick. 'Let's get your treat.' He says, unzipping his jeans and letting them fall past his muscular thighs, pooling at his feet. He's not wearing underwear, and his canine cock spills forth, sending masculine musk across your face as it bounces in greeting, its knot partially swollen and throbbing with his heartbeat. 'Uh-uh. Tongue only. Puppies don't suck- they lick.' Tobias admonishes you as your drooling mouth attempts to capture that big cock. Stepping closer, he assaults your senses with heavy balls and his drooling dick, filling your world with unfiltered manliness. Something close to a whine wells up as you follow his directions, your tongue trailing up the underside in long laps that smear precum over your face.";
 				WaitLineBreak;
@@ -221,7 +221,7 @@ to say TobiasTalk5: [Bad end. Become a dog.]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, you're tired of fighting to stay human. You'd rather be a happy dog under Tobias's care.";
 	say "     ([link]N[as]n[end link]) - No, you've let a flight of fancy get the better of you. You don't want to be a dog.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     It's what you want. You repeat Tobias's words exactly, shivering as you listen to the need in your voice. You didn't realize exactly how much you desired this fate. To submit to someone and give up your humanity for happiness. The next few hours are a whirlwind. Tobias leads you to his home, a broken-down white trailer with two straw dummies leaning against it. Taking you inside and showing you to spacious kennels, he guides you into the one to the left of Dane's, stopping to slip a collar around your neck. He jingles the blank tag, kneeling to ruffle your canine ears and help you remove your clothes. 'Get some rest now. Tomorrow, your training starts.' Tobias is true to his word, and as you sleep curled up in the wooden cage, you can't help the excitement welling in your chest, mixed with slight shame. Was this the right choice? It's too late to turn back.";
 		say "     The next day, Tobias wakes you with the clatter of metal dishes. Some meaty-smelling slop sits alongside a sparkling bowl full of water, and as you reach for them with your paws, Tobias's voice stops you, harsh and biting. 'Bad dog! Use your muzzle.' Cowed, you lower your head, clumsily rolling your tongue against the warm, gooey meal and letting your tail droop between your legs. Eating is messy but doable, and your canine nose gets coated in dripping slop before you reach the bottom of the bowl, but you manage to finish it, catching yourself before you wipe your face with your paws. Instead, you turn your head, lapping at the water with nothing but your flat tongue. 'You're a fast learner. Good dog.' Rewarding you with a patting paw, Tobias clips a leash to your collar, tugging you past the empty dishes and shooting you a pointed glare as you attempt to stand. As you return to all fours, he releases Dane from his kennel, then Cara, taking all three leashes in one paw as he leads you to the front door, then down the steps.";
@@ -363,7 +363,7 @@ instead of fucking the Tobias:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah!";
 		say "     ([link]N[as]n[end link]) - Not right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[TobiasTalk4]";
 		else:
@@ -482,7 +482,7 @@ instead of going northeast from Overgrown Lot while (puppy slut collar is equipp
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you're here for another helping of Dobie Dick!"; [Sex scene with player submissive.]
 		say "     ([link]N[as]n[end link]) - No, you just wanted to say hello.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You nod, your hand raising to play with your collar as you look toward the ground, unable to look into those green eyes. You can't seem to get Tobias out of your head, and you'd like him to breed you again if he's willing. Your ass clenches at the thought, and you resist the urge to bend over right then, your hips circling and thighs rubbing together as you remember the intense sensation of being fucked so soundly. You attempt to follow Tobias into his home, but he shuts the door, shaking his head and returning a few moments later without his pets. Dragging you closer, he stuffs his tongue in your mouth, his paws roaming down to grip your ass cheeks and nearly lifting you from the steps with the sheer force of his grip. Your lungs scream for air even as his roaming tongue sends heat through your body, and you slump into his touch, shivering as his claws dig into your ass. Tobias drags you down the stairs, shoving you up against the trailer [if player is barecrotch]lining himself up with your rear entrance [else]tugging your lower garments down [end if]and thrusting into you without warning. A growling voice murmurs in your ear as he slams to the root, nearly lifting you off your feet. 'Missed you, puppy. My balls have been so fuckin' full. You don't mind, do you? Giving your ass to your master like a good little puppy slut?'";
 			say "     You nod, too breathless from the erotic assault to answer coherently. Tobias is so rough, and the way he splits your ass open has your sex drooling, despite its unattended state. You didn't know how much you wanted to be a sloppy fucktoy until now, but it feels so damn good that you wouldn't stop him if you could, instead pushing back in hopes of feeling that intoxicating flood of canine seed. 'Fuck. Take it.' Tobias says with a grunt, popping his knot past your stinging hole and flooding your inner walls with seed in thick ropes that threaten to swell your stomach. His teeth dig into your shoulder, holding you in place, and his claws tighten their hold, yanking you back into shallow thrusts until, with a sigh, he slumps against your back, panting in your ear. It was quick and dirty, but the sensation in your ass is unparalleled. As you milk the Doberman's cock, you can't help but whine softly, hoping it will draw Tobias's attention to your neglected orgasm while you shake your hips, begging for more stimulation. That can't be all, can it?";

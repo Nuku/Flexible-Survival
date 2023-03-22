@@ -102,7 +102,7 @@ to say AlphaJWinsCV:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Comply and kiss his cock.";
 	say "     ([link]N[as]n[end link]) - Refuse.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     The idea pleases you, or perhaps you see no way out of this but to please the jackal to his heart's content, so with all due care, you lean over the head of his cock and give it a big kiss. A huge spurt of precum leaks immediately as you caress the tip, coating your face in his sweet slick juice. 'Mmh, that's it...' he moans, and in your mind, you're begging for more as you indulge yourself in how addicting the whole experience feels...";
 		SanLoss 15;
@@ -119,7 +119,7 @@ to say AlphaJWinsCV:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Don't resist.";
 	say "     ([link]N[as]n[end link]) - Struggle.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     There is no point in offering any resistance to something that feels so good to you. The slippery meat of his gigantic cock slurping at your face, only pulling you deeper into its warm embrace, where you can find more of that sweet thick precum just awaiting your arrival, is actually an unforgetful experience. The jackal seems happy at your obedience, and you can definitely feel that in the way his throbbing hits your head, once you're all the way in until your neck.";
 		SanLoss 15;
@@ -136,7 +136,7 @@ to say AlphaJWinsCV:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Give in.";
 	say "     ([link]N[as]n[end link]) - Keep it together.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You lose all the will to fight, if you ever had any...";
 		SanLoss 25;
@@ -172,7 +172,7 @@ to say AlphaJWinsButtAugment:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Beg.";
 	say "     ([link]N[as]n[end link]) - Resist the urge.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     And you beg, with all your might, that he continues to fill your begging ass, telling him how badly you want it and how much you need it. Perhaps you even went a bit overboard with it, but you cannot help it. You are that desperate.";
 		SanLoss 15;
@@ -187,7 +187,7 @@ to say AlphaJWinsButtAugment:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Say [']please['].";
 	say "     ([link]N[as]n[end link]) - Fight it.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You say it, more than once, as your butt wiggles enticingly. You can't help it, you need it... Badly.";
 		SanLoss 15;
@@ -204,7 +204,7 @@ to say AlphaJWinsButtAugment:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Beg him to fuck your ass.";
 	say "     ([link]N[as]n[end link]) - Resist the temptation.";
-	if player consents:
+	if Player consents:
 		say "     At the top of your lungs, you shout and beg for him to take your ass, to fill you up with his enormous cock, to let you feel it throb and pulse inside you as it fills you up, breeding you like the slut you are! 'Ohh... you...' he answers in a breathy tone, moaning and grunting as he strokes his gigantic hard-on, savoring your words and replaying them in his mind, probably imagining how good that would feel... and you can't help but do the same...";
 		SanLoss 25;
 	else:
@@ -345,7 +345,7 @@ to say AlphaJLosesCockPlay:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Stick to handjob.";
 	say "     ([link]N[as]n[end link]) - Take your chances and use your mouth.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Perhaps that was his last attempt at trying to transform you or something, but you saw right through it. Or perhaps you just feel like giving him a handjob, instead. Nonetheless, you shut him down, and proceed to use your hands only for the rest of the fun, grabbing his massive shaft and stroking its entirety along the way, since you are not too keen on risking a transformative effect on yourself. He shows a look of disappointment, but that is replaced with pure joy as you pick up the pace, using your hands, arms and even body to rub against his cock, but all from the safe angles. He surely precums a lot, and that is something you cannot avoid. Having such a huge cock to work with can surely get messy.";
 		say "     With faster, deeper strokes, you begin to push the alpha closer to cumming, and you can definitely feel it coming closer with each pulse and throb his dick gives, and the way he seems to be moving is body suggests he might be really getting there. He whines and huffs like a needy, horny dog, almost betraying his status as an alpha, while you continue to stimulate his vast meatlog that only grows harder and longer. There is no telling how much bigger it can actually get, but you start thinking there might be some sort of magic into play at his size, were it not for the strange hieroglyphs scattered around his body and ballsack. Perhaps they are unrelated, but it is pretty unnatural to have a cock this big, drooling this much precum. Who knows how much the jackal may even cum...";

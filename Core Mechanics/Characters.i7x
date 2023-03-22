@@ -1309,7 +1309,7 @@ to say Gender Adjective of ( x - a person ):
 to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body Hair Adjective of Player] chest."]
 	if Body Hair Length of x is:
 		-- 0:
-			say "nonexistant";
+			say "nonexistent";
 		-- 1:
 			say "smooth";
 		-- 2:
@@ -1473,7 +1473,7 @@ to say Cock Girth Adjective of ( x - a person ):
 to say Ball Size Adjective of ( x - a person ):
 	if Ball Size of x is:
 		-- 0:
-			say "non-existant";
+			say "nonexistent";
 		-- 1:
 			say "[one of]acorn-sized[or]gumball-sized[at random]";
 		-- 2:
@@ -1601,7 +1601,7 @@ This is the cock descr rule:
 to say Balls:
 	say "[one of]balls[or]testicles[or]gonads[at random]";
 
-to say cum load size of ( x - a person ):
+to say Cum Load Size of ( x - a person ):
 	if Ball Size of x > 0:
 		if Ball Size of x is 1:
 			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";

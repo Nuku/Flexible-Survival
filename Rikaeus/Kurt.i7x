@@ -306,7 +306,7 @@ to say KurtSex2:
 		say "     [bold type]Have you decided to further your relationship with Kurt yet?[roman type][line break]";
 		say "     [link]Y[as]y[end link] - Yeah, he's a nice guy!";
 		say "     [link]N[as]n[end link] - No, I need more time to think.";
-		if player consents:
+		if Player consents:
 			say "     You nod your head and say that you'd love to take this relationship further, taking a step forward towards him before taking his guitar and placing it on the ground. You take your hand and run it up his shoulder, causing him to let out a rumble of pleasure. Getting closer, you climb on top of his lap and then lean forward, taking his lips with yours. Kurt happily accepts your kiss and slips his tongue into your mouth. Instead of fighting him for dominance you just let him win, allowing him to push his against your own tongue. The two of you start moaning into the kiss, enjoying the make-out session.";
 			say "     While enjoying the shark's lips, you start grinding onto his lap, which ends up getting a response from Kurt as he lets out a groan into the kiss. You can feel his cocks hardening against your rump, something that gets you yourself all heated up as well. Deciding to take this a step further, you grab at his shirt and pull it off him, revealing the muscles underneath. Quickly after you roam your hands all over him, feeling at his skin, enjoying the sensation of it under your touch. All the while this is happening your shark friend is clearly enjoying it all as he is moaning and writhing.";
 			WaitLineBreak;

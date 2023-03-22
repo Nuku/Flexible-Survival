@@ -52,7 +52,7 @@ to say losetopewter:
 	if a random chance of 1 in 6 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds):
 		say ". Pondering what to subject you to for a moment, his maw eventually widens into a bright grin, bouncing up and down with excitement. Circling around to your back, it shoves and nips at you until you're forced to move forward, pushed along down a ruined path by the creature's assertive insistence.";
 		say "     In the distance, you begin to hear cacophony of wanton, muffled sounds, suggesting that the beast intends to subject you to his kin";
-		if HP of Player < 1 and player is not submissive:
+		if HP of Player < 1 and Player is not submissive:
 			say ". Having recovered slightly, you suddenly attempt to run and avoid what may come to pass. However, the consort is right on your heels, pinning your [if scalevalue of Player > 3]larger [end if]form to the ground and compelling you into compliance once more by lashing you with his tail, each sharp, loud smack causing you to tense and writhe. Eventually, he starts compelling you back to your feet and going along again, closer to the sounds.";
 		else:
 			say ". No doubt eager and excited, the consort clearly feels you're moving too slowly, and you're made to jump when the [if scalevalue of Player > 3]smaller [end if]creature lashes you with its tail, its audible smack filling the air, the sting certainly enough motivation for you to pick up the pace.";

@@ -1219,7 +1219,7 @@ to say SamShroom:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Give the scientist a mushroom.";
 				say "     ([link]N[as]n[end link]) - Keep the mushroom to yourself.";
-				if player consents:		[Give Sam a shrinking shroom]
+				if Player consents:		[Give Sam a shrinking shroom]
 					LineBreak;
 					say "     You pull out a mushroom that you harvested from the site in question and give it to the scientist. 'Interesting... Very interesting...' Sam says as they take the shroom and slowly turn it around to examine the glowing green fungus. 'I would love to have some more of these to run tests on, but I imagine that it would be a major hassle to constantly run back and forth just to sate my curiosity. Hmm... I wonder...' Sam looks over to one of the vial stashes lying around and sifts through it, extracting one vial filled with a murky-white liquid before going outside. Curious, you follow the taur to the back of the shed where there are several large planter boxes filled with soil. Sam puts the mushroom into one of the boxes, completely covering it with dirt, and then pours the vial's contents where the fungus was planted.";
 					say "     You and Sam stare at the planter box for several minutes, and to your surprise, several tiny green mushrooms eventually pop up from the soil. Sam chuckles at your amazement and explains, 'I used extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city.' Sam looks back to the mushrooms, which seemed to have stopped growing once they were about half the size of the original. 'I'm glad to see that my little gardening project works, and although it will take a bit longer before this batch fully matures, it looks like I'll be able to grow my own mushrooms here to fuel my research. Thank you for bringing this incredible find to me. Give me a moment to study them, and I'll share whatever information that I can get.'";
@@ -1255,7 +1255,7 @@ an everyturn rule:	[Timer for Sam's Shrinking Shroom Content]
 		increase hunger of Sam by 1;
 	else if hunger of Sam is 9:		[Sam is back from searching for Shrinking Shrooms]
 		move Sam to large shed;
-		if player is in large shed:
+		if Player is in large shed:
 			say "     The shed door opens, and you turn to see Sam step in. 'Ah, you're here. As you can see, I'm back from taking a look at that miniaturized site that you told me about,' Sam greets. 'Come on. I have something to show you.' Curious, you follow the scientist to the back of the shed where there are several large planter boxes filled with soil, one of which is glowing faintly as several small, but familiar mushrooms, are growing. 'I gathered some mushrooms from the site and decided to try planting one of them. I added some extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city, and from the looks of it, my little gardening project works. It will take a bit longer before this batch fully matures, but it looks like that I'll be able to grow my own mushrooms here. I'll be able to keep on running tests on them without the inconvenience of running back and forth. Thank you for telling me about this incredible find.'";
 			now hunger of Sam is 10;
 	else if hunger of Sam > 10 and hunger of Sam < 20:	[Timer for Sam giving player a shrinking shroom]

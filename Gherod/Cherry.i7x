@@ -191,7 +191,7 @@ to say CherryTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "She seems to be particularly into it. Ask her about that";
 	[]
-	if Energy of Cherry is 3 and player is not dominant:
+	if Energy of Cherry is 3 and Player is not dominant:
 		choose a blank row in table of fucking options;
 		now title entry is "You as her sub";
 		now sortorder entry is 5;
@@ -300,9 +300,9 @@ to say CherryTalkDomination:
 			TraitLoss "Transformative Sex" for Cherry;
 		WaitLineBreak;
 		say "     She then resumes her inquiry. 'This one is a requirement, however. Would you be willing to bear my children, at some point?'";
-		if Player is male and player is not female and "MPreg" is not listed in feats of player:
+		if Player is male and Player is not female and "MPreg" is not listed in feats of player:
 			say "     You raise an eyebrow at that question, given your sex, and ask her how would that be possible given the circumstances. She immediately responds 'Dear, [']at some point['], I said. Don't think too much about it.'";
-		else if Player is male and player is not female and "MPreg" is listed in feats of player:
+		else if Player is male and Player is not female and "MPreg" is listed in feats of player:
 			say "     You know that, despite being a male, you can bear childrens of others who knock you up, and you ask her if she knew about that, already. She immediately responds 'You do have that look about yourself, my dear... I'm rarely wrong.'";
 		else if Player is female:
 			say "     You know this to be possible due to your sex, so the answer is entirely up to you.";
@@ -356,7 +356,7 @@ to say CherryTalkDomination:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Allow transformation.";
 			say "     ([link]N[as]n[end link]) - No transformation.";
-			if player consents:
+			if Player consents:
 				say "     You say that you are definitely into it and that she could feel free to do so. She nods with a smile and a hint of blush appears on her cheeks, but she tries hard to not show it. 'That is most delightful, my dear... I do appreciate your agreement on that. Although, if you, for some reason, wish to not keep getting transformative effects from our encounters, just let me know.'";
 				say "     Cherry is [bold type]now allowing her infection into you[roman type] and will transform you during sex.";
 				TraitGain "Transformative Sex" for Cherry;
@@ -373,7 +373,7 @@ to say CherryTalkDomination:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask her to keep taking contraceptives, for now.";
 			say "     ([link]N[as]n[end link]) - You are okay with getting impregnated by her.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				if Sterile of Cherry is false:
 					say "     Unfortunately, due to some personal circumstances, you have to ask her to take contraceptives in order to prevent pregnancies, as you cannot allow that to happen, right now. 'Oh? But, my dear, that is part of my deal with you. Is something the matter?' she asks, and you explain that, for now, that would be for the best of both. 'I see... I really can't deny such a request from you, although I'm sad to hear. Very well, I shall begin to take contraceptives. Hopefully this isn't forever... but I'll do this for you.'";
@@ -445,7 +445,7 @@ to say CherryFuck:
 	say "     'Enjoying the sights?' she says, teasing you as she slowly brings her hands over to her back in order to take her bra off, revealing her boobs on plain view right before your eyes, just enough size to fill your vision with joy. Another quite sizable thing is the bulge down her pants, visibly pulsing with eagerness as she grabs you by the hands and brings them over to her silhouette. You only get to see her chest as she has you touch the sides of her waist, leading you over to her slacks. 'Help me take these off, will you, my dear?' - she asks you, giving you the task to undo her belt, but stopping you midway - 'Patiently. No need to rush things.' Knowing now you have to do it as she says, you carefully remove her belt off her slacks, unbutton them, then slide them down her furred legs. You struggle a bit with her hips and thighs, as they are ample and strong enough to prove a challenge in trying to remove such tight pants.";
 	WaitLineBreak;
 	say "     Now all that is left is a feminine black thong, which matches with her bra, and fails to cover most of her meat that is already peeking outside the fabric. 'Back away, now... No touching allowed.' she orders, and you have to consent, or she won't let things continue. Stepping back and watching her from several additional inches, she begins to slide her underwear down, letting her nine incher of a knotted cock pop out, happy to be free, as a pair of plump balls rest hanging underneath, looking full. As the thong slides down to join the remaining pieces of removed clothing, she simply takes one step forward, then another, and swiftly kicks them out of the way. You are now looking at the herm pink fox naked, hard and ready to claim you.";
-	say "     'Now now... I believe you have something that belongs to me.' she suggests, making a spiral gesture with her hand, a finger pointed upwards, signaling you to turn around. You do so, bending over the couch, [if player is not naked]not before removing your gear and stripping completely naked for her[else]exposing your naked body to her[end if], and present your [if Player is female]pussy[else]ass[end if] to her. She approaches you with a hand ready to slap one of your buttocks as she admires the view. 'Now that's a good [boygirl]. Doing what you're told... Nothing pleases me more than that.' she provokes you, sliding a finger over your [if Player is female]wet curls, glistening in arousal[else]asshole, already craving for a filling[end if] and teasing you quite a bit before making another move. Now it won't be her finger, but the tip of her rod, rubbing against your sensitive [if Player is female]labia[else]anus[end if] as you can only endure the anticipation.";
+	say "     'Now now... I believe you have something that belongs to me.' she suggests, making a spiral gesture with her hand, a finger pointed upwards, signaling you to turn around. You do so, bending over the couch, [if Player is not naked]not before removing your gear and stripping completely naked for her[else]exposing your naked body to her[end if], and present your [if Player is female]pussy[else]ass[end if] to her. She approaches you with a hand ready to slap one of your buttocks as she admires the view. 'Now that's a good [boygirl]. Doing what you're told... Nothing pleases me more than that.' she provokes you, sliding a finger over your [if Player is female]wet curls, glistening in arousal[else]asshole, already craving for a filling[end if] and teasing you quite a bit before making another move. Now it won't be her finger, but the tip of her rod, rubbing against your sensitive [if Player is female]labia[else]anus[end if] as you can only endure the anticipation.";
 	WaitLineBreak;
 	say "     As she positions herself steadily behind you, grabbing your hips with both hands, she begins to push her length inside you. It's a thick one, a vulpine knotted cock invading your [if Player is female]sex[else]hole[end if] and sending you shivers of pleasure as your body welcomes it, stretching around her girth. Cherry's pulsing erection continues to drill deep inside you as she does not push back, not even once, going all in right until only her knot remains outside. Now as you are properly impaled in her member, she begins to thrust, pulling out and pushing in, fucking you in the only manner she sees most appropriate... Slow and steady at first, but increasing in intensity as she picks up the pace.";
 	say "     'That's it... taking it in like a good little pet. You're doing well...' teases the pink fox, pounding you hard and rhythmically as the sounds of intense fucking spread through her modest residence. As you feel the cock inside you pulse and throb even more, you give in to the situation completely, letting her ram into your [if Player is female]pussy[else]ass[end if] as she sees fit, as hard and as deep as the whim takes her. This goes on for several minutes without cease, her pounding keeping strong and persistent as she keeps you pinned down against her couch and underneath her presence with your [if Player is female]womanhood[else]rear[end if] up. 'Mmh... Maybe I should get ready to fill you up, now...' she says, making only a brief pause as she slows down temporarily...";

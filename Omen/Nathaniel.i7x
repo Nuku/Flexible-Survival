@@ -32,19 +32,19 @@ to say ResolveEvent The Sword in the Stone (while demonologist is tamed and Play
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Try to pull the sword out of the stone.";
 	say "     ([link]N[as]n[end link]) - Begin the ritual to call the sword's owner.";
-	if player consents:
+	if Player consents:
 		say "     Grabbing the hilt of this sword, you squat down and prepare to lift with all your might. Sadly, the sword doesn't budge. You sigh in defeat, the knowledge that you are not the chosen one stings your pride. What do you do now?";
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Clearly there's been some kind of mistake, leave for now and try again later.";
 		say "     ([link]N[as]n[end link]) - Begin the ritual to call the sword's true owner.";
-			if player consents:
+			if Player consents:
 				say "     You leave the area for now, determined that one day you will lift that sword! Though you can't shake the feeling that maybe it's not meant for you.";
 			else:
 				say "     Recalling what the book told you, you set up some candles in a concentric circle around the sword. Once that's settled, you strip off your pants and start playing with your cock. Pinching your own nipple, you reimagine the vision of the past you witnessed inside the catacombs. You try to focus on the man's thick cock when it was embedded in your asshole, stretching you wide as he began to orgasm. Rocking your hips back and forth as you swear you can feel long and thick pulses of cum splash against your prostate. Imagining the man giving your ass a firm slap as he finishes cumming in your man hole is enough to send you over the edge. You aim carefully, coating the sword at the hilt and letting it drip downwards. You groan as your balls start to feel empty and your skin tingles as a strange magic envelops you. You look excitedly over at the candles but they are not lit. Frowning, you wonder what you have done wrong.";
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - The book did state that these men are depraved, maybe the sword needs something extra (WS).";
 				say "     ([link]N[as]n[end link]) - Confused, you pick up the candles and head back to contemplate things.";
-				if player consents:
+				if Player consents:
 					say "     [if WSlevel is 3]With a content sigh, you begin to empty your bladder on command with practiced ease. You smile as you hose down the sword, spraying it from top to bottom. A candle suddenly lights up, followed by another, and another until they are all lit. You chuckle as the spell compeltes but drain the rest of your bladder for good measure.[else] You look left and right and see that the coast is clear. Blushing a little, you relax your bladder and begin to spray your piss onto the sword. You feel dirty as you do so, but for some reason it feels right. A candle suddenly lights up, followed by another, and another until they are all lit. You look down in surpise and quickly finish up your buisness.[end if] Now that the ritual is complete, you decide to wait around for a bit to see if it has a immediate effect. After an hour or so, you decide to leave and check back later".;
 					now The Sword in the Stone is resolved;
 					now The Campsite is active;
@@ -56,7 +56,7 @@ to say ResolveEvent The Sword in the Stone (while demonologist is tamed and Play
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - The book did state that these men are depraved, maybe the sword needs something extra (WS).";
 		say "     ([link]N[as]n[end link]) - Confused, you pick up the candles and head back to contemplate things.";
-		if player consents:
+		if Player consents:
 			say "     [if WSlevel is 3]With a content sigh, you begin to empty your bladder on command with practiced ease. You smile as you hose down the sword, spraying it from top to bottom. A candle suddenly lights up, followed by another, and another until they are all lit. You chuckle as the spell compeltes but drain the rest of your bladder for good measure.[else] You look left and right and see that the coast is clear. Blushing a little, you relax your bladder and begin to spray your piss onto the sword. You feel dirty as you do so, but for some reason it feels right. A candle suddenly lights up, followed by another, and another until they are all lit. You look down in surpise and quickly finish up your buisness.[end if] Now that the ritual is complete, you decide to wait around for a bit to see if it has a immediate effect. After an hour or so, you decide to leave and check back later".;
 			now The Sword in the Stone is resolved;
 			now The Campsite is active;

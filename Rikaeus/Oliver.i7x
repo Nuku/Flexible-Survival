@@ -42,7 +42,7 @@ to say ResolveEvent Leather Daddy Kitty:
 		now OliverRelationship is 2;
 		now Leather Daddy Kitty is resolved;
 		move Oliver to Kitty Sex Dungeon;
-	else if OliverRelationship is 99 or player is not submissive:
+	else if OliverRelationship is 99 or Player is not submissive:
 		say "     While exploring the high rise district you are suddenly picked and sort of cuddled into a hug. Ignoring the warmth that shoots through your body, you take a closer look at your hugger. As soon as you do, a memory comes up of a tiny little kitty that had asked you a question before sexing you up. However, this cat looks nothing like the other one besides the fur design. The one hugging you is a rather large and rotund yet fit kitty, standing at six foot tall and possibly over three hundred pounds. He's wearing a black leather harness, a cod piece that covers his rather large bulge, fingerless gloves, and a dark colored cap. The large feline is smiling at you, with a slight predatory look to his gleam. 'You must be that big kitty that my little sub told me about,' he purrs, nuzzling your neck. 'I'm sure that you like being a nice dom kitty but how about you let me break you in?' the male asks you in a husky voice.";
 		say "     That's a tempting offer, what do you want to do? Agree to be a sub to this kitty ([link]Y[as]y[end link]) or refuse ([link]N[as]n[end link])?";
 		if Player consents:

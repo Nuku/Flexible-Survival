@@ -122,7 +122,7 @@ to say VoriaDesc:
 		say "     Voria seems to be doing fine in its new home in the abbey, even if you don't notice anything noteworthy. You wonder if the plant will grow if you give it more time.";
 	else if HP of Voria is 7:	[Checkpoint 1: Watering needed]
 		say "     When you go to check on Voria, the fly-eating plant you rescued from the garden store, you are surprised to see that it has grown to the height of a water bottle. While Voria is still relatively small, to have almost doubled its size in a short amount of time is a bit alarming. As you crouch down and move closer to inspect the unusual plant, you're surprised again when Voria's blue head moves. Its movements are sluggish, but after a few seconds, Voria's head is directly facing you. When you get back up, you notice that Voria's head shifts a little to stare at your crotch instead.";
-		if player is Neuter:	[Player has no parts to water Voria]
+		if Player is Neuter:	[Player has no parts to water Voria]
 			say "     Voria then seems to wilt slightly in disappointment as its head turns away from you. Perhaps the plant was hoping you either had a cock or cunt, for whatever odd reason. If you do get an addition to your featureless crotch later on, maybe you should see what kind of reaction you can get from Voria.";
 			now HP of Voria is 8; [Did not water Voria]
 		else:
@@ -140,7 +140,7 @@ to say VoriaDesc:
 				now HP of Voria is 8; [Did not water Voria]
 	else if HP of Voria is 8:	[Have not watered Voria yet]
 		say "     Checking up on the odd plant again, you find that Voria has not grown at all since the last time. Either Voria is done with its strange growth, or for some reason, it needs you to fulfill its perverse need for it to continue maturing.";
-		if player is Neuter:	[Player has no parts to water Voria]
+		if Player is Neuter:	[Player has no parts to water Voria]
 			say "     However, you don't have the necessary [italic type]parts[roman type] to help Voria at the moment. Since the plant hasn't noticed you yet, you decide to just move on instead of disappointing Voria again.";
 		else:
 			say "     You have the necessary [italic type]parts[roman type] to help Voria right now. The question is, do you want to keep leaving Voria alone for now, or do you want to help the plant now?";

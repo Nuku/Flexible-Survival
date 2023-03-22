@@ -24,7 +24,7 @@ to say losetoFireSprite:
 		else:
 			say "[FemaleFireSpriteVicOral]";
 	else: [male sprite]
-		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( Player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
+		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( Player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( Player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
 			say "[MaleFireSpriteVicAnal]";
 		else if Player is female and a random chance of 1 in 2 succeeds:
 			say "[MaleFireSpriteVicVag]";

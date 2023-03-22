@@ -157,10 +157,10 @@ Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. 
 
 Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
 	if X is Player:
-		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]	
+		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]
 		no;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]	
+		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]
 		no;
 
 Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's ass occupied by something]
@@ -170,7 +170,7 @@ Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's 
 		if (gestation of child > 0 and pregtype is 2) or child is born, no;
 		yes;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]	
+		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]
 		yes;
 
 preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]

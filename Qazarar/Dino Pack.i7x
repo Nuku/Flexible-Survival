@@ -126,9 +126,9 @@ to say DinoPackVictory:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have fun with the little dinosaur.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
-		if player consents:
+		if Player consents:
 			say "     Now that you've decided to enjoy the colorful reptile, it's simply a matter of how. You could (Y=Ride, N=Suck).";
-			if player consents:
+			if Player consents:
 				if Player is male:
 					if (Player is female and anallevel < 3): [herm ride]
 						say "     The huge endowment sported by the dino practically demanded that you ride it, so what else are you to do? The massive dinosaur cock is already quite hard, but you kneel in front of him and begin to work up and down it with both hands, giving it that extra bit of attention to bring it to its full potential. Only a few moments of this are necessary, leaving the shaft firm between your hands, and dripping precum slightly from the tip. You pause to admire your handiwork, as well as the generous gift these small reptiles have, before finally moving on with your task. You rise fully, and position yourself above the shaft, ready to take it into yourself as deep as possible.";

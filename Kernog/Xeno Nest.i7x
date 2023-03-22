@@ -4,7 +4,7 @@ Version 1 of Xeno Nest by Kernog begins here.
 
 Event should be banned if Player has either of these:
 - ovilevel is 1
-- player is not female and does not have the mpreg feat
+- Player is not female and does not have the mpreg feat
 
 The player may choose to go fast or cautiously, in search of supplies (or give up).
 

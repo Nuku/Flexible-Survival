@@ -1112,8 +1112,8 @@ to say onyxbsubfacefuck1:
 	WaitLineBreak;
 	say "     Eyeing you from below, Onyx's gaze is of a good boy who wants to please, and you're not careless enough to go all in at once. Instead, you push in slowly, feeling your cock rubbing against his tongue and the insides of his mouth, and steadily out, the feeling being enough to make your meat pulse with desire. Such thing cannot be ignored, and inevitably, you thrust back in, faster this time. Letting your horsey stud get used to your length is important, although you can feel you won't be gentle for long, as your lust grows impatient. Holding his head in place, you pound back and forth once more, again and again, progressively harder and deeper. His hands find their place holding against your thighs, though without offering resistance.";
 	say "     Understanding this as a green light to go wild with your cravings, you tighten your grasp on the equine boy's head and release your chains. Treating his mouth and throat as a fuckhole, you're now facefucking the young stud mercilessly. Given the";
-	if cock length of player > 12:
-		say "considerable size of your manhood, his long equine muzzle doesn't save him from having to hold his breath in order to take you ballsdeep, [if cock length of player > 16]and you can even see your meat bulging from within his neck, [end if]as you notice some apparent struggle on his face. But this wouldn't be nearly as hot if he could take you so easily, and seeing your big boy trying hard to keep you happy is something that gets your gears grinding. You don't let go, instead increasing your efforts at fucking his mouth with increased momentum, and you start hearing the choking as he tries not to make it so apparent.";
+	if Cock Length of Player > 12:
+		say "considerable size of your manhood, his long equine muzzle doesn't save him from having to hold his breath in order to take you ballsdeep, [if Cock Length of Player > 16]and you can even see your meat bulging from within his neck, [end if]as you notice some apparent struggle on his face. But this wouldn't be nearly as hot if he could take you so easily, and seeing your big boy trying hard to keep you happy is something that gets your gears grinding. You don't let go, instead increasing your efforts at fucking his mouth with increased momentum, and you start hearing the choking as he tries not to make it so apparent.";
 		WaitLineBreak;
 		onyxbsubfacefuck2;
 	else:
@@ -1133,7 +1133,7 @@ to onyxbsubfacefuck2: [Player's dick is bigger than 1 ft]
 to onyxbsubfacefuckclimax:
 	say "     ([link]Y[as]y[end link]) - Cum down his throat.";
 	say "     ([link]N[as]n[end link]) - Give him a facial.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     Having decided to feed Onyx your entire load, you don't even pull out. A couple thrusts, with the friction from his tongue and the warm insides of his mouth, your balls tighten to release the seed stored within, blasting through your cock and down the stud's throat. While this happens, you feel the vibrations of his moans through your own prick as he too cums, stroking his equine shaft with so much intensity that you feel his powerful shots hitting part of your legs. When the last spurt oozes out, you pull your manhood out and squeeze it of any traces, which Onyx promptly licks and swallows. Looking up at you with a smile on his face, breathing heavily from the effort, you smile down at your subby lover and rub his ears affectionately, but you don't let him go until he licks the mess he made clean down your legs.";
 	else:
