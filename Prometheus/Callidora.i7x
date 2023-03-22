@@ -137,6 +137,15 @@ Instead of fucking Callidora:
 
 Section 4 - Events
 
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Birth of a Goddess"	Birth of a Goddess	"[EventConditions_BirthofaGoddess]"	Public Beach	2500	2	100
+
+to say EventConditions_BirthofaGoddess:
+	if daytimer is day:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Birth of a Goddess	"Birth of a Goddess"
@@ -146,14 +155,7 @@ ResolveFunction of Birth of a Goddess is "[ResolveEvent Birth of a Goddess]".
 The level of Birth of a Goddess is 0.
 Sarea of Birth of a Goddess is "Beach".
 
-instead of going to Public Beach while Birth of a Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
-	move player to Public Beach;
-	BirthofaGoddessEvent;
-
 to say ResolveEvent Birth of a Goddess:
-	BirthofaGoddessEvent;
-
-to BirthofaGoddessEvent:
 	say "     Splashing your feet around in the waves, you look around at the many other people that are enjoying their time at the beach. While you once might have seen parents with their children, now everyone looks like an adult, physical and mental development receiving a kick-start from the nanites. Nonetheless, the novelty of spending a day by the sea doesn't seem to have been diminished, the watchful eyes of the orca lifeguards largely protecting them from the likes of sea dragons and living pool-toys. To your left, a small family of wolves are sitting around a picnic basket laughing and eating sandwiches, likely with sand in them. Behind you, a group of what you assume to be students are trying to convince passersby, with mixed success, to join them in a game of volleyball with the stakes being that the winners get to have their way with the losers. Overall, it is an uplifting atmosphere, especially when compared to the dangers of some areas of the city.";
 	say "     'It's nice to see so many people enjoying the sun, isn't it?' someone comments from behind you and you look around to see whether this was specifically directed at you. You find a rather beautiful human woman gazing at you with a cheerful smile on her face, a white bikini hugging her pale curves tightly so that there is little left to the imagination while maintaining a image of tastefulness. 'Who can blame them though. With sun, sand, and sea what's there not to like. Most people behave a little better here too,' she continues with a giggle, brushing a stray strand of hair behind an ear. 'I'm overheating a bit so I'll talk to you after I've had a swim if you're still around. See you later, [if player is herm]hot stuff[else if Player is male]sexy[else if Player is female]beautiful[else]cutie[end if].' As she starts to leave, you point out that she didn't give you her name, causing her to turn back and start apologizing. 'Sorry sweet thing, it's been a while since I met someone that didn't recognize me. I'm Cally, or Callidora if I'm doing something professional,' mock rolling her eyes at the word 'professional'. Before you can stop her, she ensnares you in a tight hug, [if scalevalue of Player < 3]her firm C-cup breasts smooshing against you face[else if scalevalue of Player is 3]her cheek touching yours and firm breasts smooshed against your chest[else]your groin dangerously near her face[end if] as she cuddles you a little too over-familiarly.";
 	say "     [bold type]How do you react to this strange woman hugging you?[roman type][line break]";
@@ -224,6 +226,15 @@ to BirthofaGoddessEvent:
 		now resolution of Birth of a Goddess is 3; [Expressed your disinterest. Strongly.]
 		now Birth of a Goddess is resolved;
 
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Sunbathing Goddess"	Sunbathing Goddess	"[EventConditions_SunbathingGoddess]"	Public Beach	2500	2	100
+
+to say EventConditions_SunbathingGoddess:
+	if Birth of a Goddess is resolved and daytimer is day:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Sunbathing Goddess	"Sunbathing Goddess"
@@ -234,14 +245,7 @@ Prereq1 of Sunbathing Goddess is Birth of a Goddess.
 Prereq1Resolution of Birth of a Goddess is { 1, 2 }.
 Sarea of Sunbathing Goddess is "Beach".
 
-instead of going to Public Beach while Birth of a Goddess is resolved and Sunbathing Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
-	move player to Public Beach;
-	SunbathingGoddessEvent;
-
 to say ResolveEvent Sunbathing Goddess:
-	SunbathingGoddessEvent;
-
-to SunbathingGoddessEvent:
 	say "     Wandering through the many beach-goers, you notice a crowd gathering further away from the cliffs. Curious as to what is causing this, you make your way over, weaving through sunscreen-soaked bodies until you manage to get a clear view of who everyone seems to be focused on. Lying on the sand in a yellow polka-dot bikini is Callidora, the vessel of Aphrodite seemingly having dozed off while sunbathing, her nap allowing onlookers a chance to ogle her body. 'There's no way those are real,' you hear someone mutter. 'Someone should probably wake her. We don't want her getting sunburnt,' someone more compassionate says, nonetheless not following their own suggestion. Eventually, with no-one doing anything other than staring (with a few almost drooling), an anthro African hunting dog, her fur patterned similar to tattoos, irritably sighs before elbowing her way to the front. 'Sex-obsessed bastards,' you hear her spit under her breath as she passes by you. Kneeling beside the slumbering woman, she gently shakes her by the shoulder.";
 	say "     'Cally, you've got half the city staring at your tits. You can tell them to piss off or do a strip show, but either way, you've slept for long enough, unless you're hoping to entice the sun into fucking you,' the canine grumbles, her crude speech in stark contrast to her delicate touch. With a sensuous moan, Callidora's eyes flicker open and she looks around at the crowd before returning her attention to the hunting dog. 'Thank you, Penthesileia, though you did interrupt a pleasant dream,' the bikini-clad woman mumbles, still waking up. Laughing, the canine replies, 'I apologize if I interrupted anything dirty, but as I said, everyone is watching so you would have had an audience if you enjoyed yourself too much.' 'Would that have been so bad?' Callidora replies with a smirk. Snorting, Penthesileia turns back to the crowd. 'Show's over you perverts, let the lady wake up before she has to deal with your shit.' Muttering indignantly, the mob disperses back to swimming, relaxing, and other pleasurable activities.";
 	WaitLineBreak;
