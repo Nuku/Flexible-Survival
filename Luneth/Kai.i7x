@@ -70,7 +70,24 @@ Section 2 - Events
 
 Part 1 - Intro
 
-after going to Public Beach while (HP of Kai is 0 and a random chance of 1 in 3 succeeds):
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"KaiInitialEncounter"	KaiInitialEncounter	"[EventConditions_KaiInitialEncounter]"	Public Beach	2500	2	100
+
+to say EventConditions_KaiInitialEncounter:
+	if HP of Kai is 0:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+KaiInitialEncounter	"KaiInitialEncounter"
+
+KaiInitialEncounter is a situation.
+ResolveFunction of KaiInitialEncounter is "[ResolveEvent KaiInitialEncounter]".
+Sarea of KaiInitialEncounter is "Beach".
+
+to say ResolveEvent KaiInitialEncounter:
 	say "     Walking to the entrance of the beach, you take a deep breath in, to smell the aromatic scent of the ocean. It draws you in, and you find you take your shoes off to feel the sand between your toes. You make your way over to the shore to walk along-side the ocean water, feeling the cool current run over your feet. Looking out to the ocean, you can see gigantic, crystal clear waves forming and crashing in the distance, the sunlight's reflection off the water creates a sparkling light that's almost blinding. The light makes your eyes start to water, making them close tight, when all of a sudden, you hear what sounds like a man hollering in excitement.";
 	say "     Opening your eyes and can see a tanned man on a surfboard, riding a huge wave that had just formed. The surfer seems to be riding the wave perfectly, when suddenly, he wipes out and disappears into the water. The waves die down and you watch worryingly for the surfer to come back to the surface. You scan all over the ocean water for the man, but see no signs of him anywhere, and everyone on the beach hasn't seemed to notice. While you're searching the ocean for the surfer, you wonder what to do? You could jump into the water and possibly save his life or just continue on your way, what will you do?";
 	LineBreak;
@@ -92,6 +109,7 @@ after going to Public Beach while (HP of Kai is 0 and a random chance of 1 in 3 
 		LineBreak;
 		say "     You decide against helping the surfer, seeing no point in soaking yourself when it's obvious that this isn't the first time he's wiped out before. You stare at the ocean for a little longer and see the man come back up from the water, with his board in hand. He swims back to shore, just fine like you had thought. You chuckle to yourself and continue on your way.";
 		now HP of Kai is 99;
+	now KaiInitialEncounter is resolved;
 
 Section 3 - Location
 

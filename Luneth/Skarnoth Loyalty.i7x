@@ -112,7 +112,28 @@ Book 3 - Skarnoth Master/Slave Events
 
 Section 1 - First Event
 
-after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"SkarnothBoastLibrary"	SkarnothBoastLibrary	"[EventConditions_SkarnothBoastLibrary]"	Grey Abbey Library	2500	2	100
+
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"SkarnothBoastLibrary"	SkarnothBoastLibrary	"[EventConditions_SkarnothBoastLibrary]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_SkarnothBoastLibrary:
+	if (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+SkarnothBoastLibrary	"SkarnothBoastLibrary"
+
+SkarnothBoastLibrary is a situation.
+ResolveFunction of SkarnothBoastLibrary is "[ResolveEvent SkarnothBoastLibrary]".
+Sarea of SkarnothBoastLibrary is "Nowhere".
+
+to say ResolveEvent SkarnothBoastLibrary:
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. They both had some choice words for me, ya'know the usual [']You will never get away with this!['] mixed with a little [']You will be destroyed by our forces, a disgusting thing like you has no chance of victory![']. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and slammed her down on my cock mid-sentence, her eyes looked like they were gonna bulge out of her skull, haha!";
@@ -166,6 +187,7 @@ after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarn
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
+	now SkarnothBoastLibrary is resolved;
 
 to say SkarnothFirstEvent_Punish:
 	LineBreak;
