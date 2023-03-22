@@ -85,7 +85,7 @@ KaiInitialEncounter	"KaiInitialEncounter"
 
 KaiInitialEncounter is a situation.
 ResolveFunction of KaiInitialEncounter is "[ResolveEvent KaiInitialEncounter]".
-Sarea of KaiInitialEncounter is "Public Beach".
+Sarea of KaiInitialEncounter is "Beach".
 
 to say ResolveEvent KaiInitialEncounter:
 	say "     Walking to the entrance of the beach, you take a deep breath in, to smell the aromatic scent of the ocean. It draws you in, and you find you take your shoes off to feel the sand between your toes. You make your way over to the shore to walk along-side the ocean water, feeling the cool current run over your feet. Looking out to the ocean, you can see gigantic, crystal clear waves forming and crashing in the distance, the sunlight's reflection off the water creates a sparkling light that's almost blinding. The light makes your eyes start to water, making them close tight, when all of a sudden, you hear what sounds like a man hollering in excitement.";
