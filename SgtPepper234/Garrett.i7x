@@ -85,7 +85,7 @@ Cock Length of Garrett is 18. [Length in Inches]
 Ball Count of Garrett is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Garrett is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Garrett is 0. [number of cunts]
-Cunt Depth of Garrett is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Garrett is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Garrett is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Garrett is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -408,24 +408,19 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "gryphon cum"	"A milk bottle of processed gryphon cum that's somehow always pleasantly warm."	2	gryphon cum
 
-gryphon cum is a grab object. gryphon cum is temporary. gryphon cum is cum.
-
+gryphon cum is a grab object.
+gryphon cum is cum.
+purified of gryphon cum is "distilled cum".
+gryphon cum is infectious.
+strain of gryphon cum is "Blue Gryphon Herm".
 Usedesc of gryphon cum is "[drinkgryphoncum]";
 
 to say drinkgryphoncum:
 	say "     Popping the top off the bottle, you catch the heady and arousing scent of masculine gryphon cum. It makes your mouth water and you quickly start guzzling it down. The refined semen drink has a strong, exciting flavor that is also refreshing and satisfying.";
 	increase Libido of Player by 5;
-	PlayerDrink 6;
-	PlayerEat 3;
-	setmonster "Blue Gryphon Herm";
-	choose row MonsterID from the Table of Random Critters;
-	if Name entry is "Blue Gryphon Herm":
-		now sex entry is "Male";
-		infect;
-		now sex entry is "Both";
-	else:
-		say "ERROR: Hermaphrodite Gryphon infection not found.";
-
+	PlayerDrink 5;
+	SanLoss 5;
+	
 the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing scent of male gryphon semen.".
 
 to say garrettinfect:

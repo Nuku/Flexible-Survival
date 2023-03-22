@@ -46,7 +46,7 @@ ResolveFunction of Gryphon's Plot is "[ResolveEvent Gryphon's Plot]". The level 
 Sarea of Gryphon's Plot is "Outside".
 
 when play begins:
-	add Gryphon's Plot to BadSpots of HermList;
+	add Gryphon's Plot to badspots of HermList;
 	add Gryphon's Plot to BadSpots of FurryList;
 
 to say ResolveEvent Gryphon's Plot:

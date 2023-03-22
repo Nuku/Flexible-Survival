@@ -18,7 +18,7 @@ pubvisit is a number that varies.
 when play begins:
 	add Aussie Pub to BadSpots of FemaleList;
 	add Aussie Pub to BadSpots of MaleList;
-	add Aussie Pub to BadSpots of HermList;
+	add Aussie Pub to badspots of HermList;
 	add Aussie Pub to BadSpots of FurryList;
 
 to say ResolveEvent Aussie Pub:
@@ -373,7 +373,7 @@ to say sexwithgillian:
 		say "     Gillian smiles happily at your suggestion of sex. 'Yeah, let's have some fun,' she says as she pushes you eagerly over to the ";
 		let gilliansexlist be { 1 }; [give cunnilingus]
 		if Player is not neuter, add 2 to gilliansexList; [69]
-[		if Player is male, add 3 to gilliansexList; [get blowjob]			]
+[		if Player is male, add 3 to gilliansexList; [get blow job]			]
 		if Player is male, add 4 to gilliansexList; [fuck her]
 [		if Player is female, add 5 to gilliansexList; [strap-on: vaginal]		]
 [		if anallevel is 3 and Cunt Count of Player is 0, add 6 to gilliansexList; [strap-on: anal]	]
@@ -411,7 +411,7 @@ to say gilliansex02:	[69]
 		CreatureSexAftermath "Player" receives "OralPussy" from "Red Kangaroo";
 		CreatureSexAftermath "Red Kangaroo" receives "OralPussy" from "Player";
 
-to say gilliansex03:	[blowjob]
+to say gilliansex03:	[blow job]
 	say "couch. ***";
 
 to say gilliansex04:	[fuck her]

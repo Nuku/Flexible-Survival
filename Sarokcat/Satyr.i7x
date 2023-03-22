@@ -15,7 +15,7 @@ to say Satyr attack:
 		say "     Your mind fogs even more as the scent of wine, the satyrs musk and your own body's lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goat-like legs easily supporting both your weight, as he holds your moaning body up, you can't help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good. You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn't even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you. Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor. 'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'but I have to admit that was pretty damn good anyways. Maybe you'll let me catch ya again sometime and we can make a real nymph out of you,' the satyr finishes with a smile, then snags his wine cup from where it fell and goes looking for a refill. Slowly you manage to pull your well used body together, and you head back off into the museum halls yourself, almost looking forward to that next promised chase.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Satyr";
 		if FemaleList is not banned, infect "Greek Nymph";
-	else if ( Player is submissive and a random chance of 1 in 2 succeeds and anallevel > 1) or ( Player is mpreg_ok and a random chance of 1 in 3 succeeds ) or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
+	else if ( player is submissive and a random chance of 1 in 2 succeeds and anallevel > 1) or ( player is mpreg_ok and a random chance of 1 in 3 succeeds ) or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
 		say "     'Hey there brother! Up with you now, there are nymphs waiting for...' he starts to say before he stops short. He grins lecherously down at you as he looks you over, clearly reconsidering the options before him[if Player is submissive]. It seems your submissive instincts have kicked in and you're subconsciously taken on a rather alluring pose, putting on a rather wanton display for the horny goat man. 'Mmm... it seems I was too hasty... It seems I've found someone who wants to cavort right here,' he says, running his rough hands over your body. Your submissive needs, further awakened, have you moan softly and shift to rub against the satyr's rising erection[else]. It seems something about you has caught the horny goat man's attention. 'Mmm... it seems I was too hasty. Perhaps you'd like a drink from my horn first,' he chuckles, his cock stiffening to erection as he takes another swig of wine[end if].";
 		say "     Confused and excited by the jovial satyr and his musky male scent, you take his shaft in hand, stroke it a few times and guide it to your mouth. You slide your lips over it, slowly at first to taste his strong, masculine flavor before getting it all in and starting to work over it. You knead his hairy balls while he rubs your head and chuckles merrily, grabbing another swig of his drink, spilling some down onto you. The drops which land on his rounded belly and roll to his shaft are licked up to you, adding to the exciting taste and fueling your drunken lust all the more. Pulling free from his shaft, you wantonly lick up the wine before diving down to his balls and cleaning them as well.";
 		if BodyName of Player is not "Greek Nymph" and BodyName of Player is not "Satyr" and FaceName of Player is not "Greek Nymph" and FaceName of Player is not "Satyr":
@@ -38,7 +38,7 @@ to say Satyr attack:
 To say Satyr loss:
 	let t be a random number between ( 30 - beatsatyr ) and 125;
 [	say "Temporary value is [t]."; ]
-	if beatsatyr > 10 and Player is not neuter and t < Libido of Player:
+	if beatsatyr > 10 and player is not neuter and t < Libido of Player:
 		say "     Having knocked the satyr onto his goat ass, you feel a rush of lust wash over you after having been teased too much by these lustful creatures. You grab him by the beard before he can finish his complaint about the spilled wine and you tell him to 'Shut up and...'";
 		say "[satyrsexselection]";
 	else:
@@ -165,7 +165,7 @@ When Play begins:
 	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 70; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
@@ -276,7 +276,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

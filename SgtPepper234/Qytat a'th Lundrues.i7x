@@ -33,7 +33,7 @@ Guard Gryphon is a situation.
 ResolveFunction of Guard Gryphon is "[ResolveEvent Guard Gryphon]".
 
 when play begins:
-	add Guard Gryphon to BadSpots of HermList;
+	add Guard Gryphon to badspots of HermList;
 	add Guard Gryphon to BadSpots of FurryList;
 
 to say ResolveEvent Guard Gryphon:
@@ -59,7 +59,7 @@ to say ResolveEvent Guard Gryphon:
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Show the Gryphon Milk.";
 				say "     ([link]N[as]n[end link]) - Fight the Guard.";
-				if Player consents:
+				if player consents:
 					LineBreak;
 					say "     You try to tell the guard that you mean no harm, and fetch the bottle of Gryphon Milk from your inventory, explaining that you too have been a target of the ones they lost to the infection. She seems to lower her guard, giving you a few words. 'That's not enough. If you want to get by me, you'll have to be one like us. Either you accept those terms or you can leave right this moment.' Sounds like she's not open to negotiation, but at least you managed to avoid a fight until now. [bold type]Will you accept her terms, refuse and leave, or charge at her?[roman type][line break]";
 					LineBreak;
@@ -110,7 +110,7 @@ to say ResolveEvent Guard Gryphon:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Accept the transformation.";
 			say "     ([link]N[as]n[end link]) - Fight the Guard.";
-			if Player consents:
+			if player consents:
 				Linebreak;
 				GryphonGuardMilkSolution;
 			else:
@@ -143,7 +143,7 @@ to GryphonGuardFight:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Try to convince the guard you mean no harm.";
 		say "     ([link]N[as]n[end link]) - Demand to know what the hostilities are for.";
-		if Player consents: [friendly]
+		if player consents: [friendly]
 			Linebreak;
 			say "     Curious about her odd behavior, you question the gryphoness about it. At first, she is tight-beaked about it, but you turn your voice to a calm and collected tone, telling her that you don't mean any harm and you're just worried about the gryphons in general, adding that her hostile behavior greatly concerned you. Reluctantly, she starts to talk. 'I'm only here watching for new gryphons who've strayed away from the others of my kind. My duty is to point them towards the location that'd take them to our city.' You soon learn that place is a great staircase, ancient and powerful, and she reveals that it leads to some thing or some place called Qytat a'th Lundrues. Intrigued, you press further into the subject, asking if there is anything you can do to help. 'Well... you don't seem like a bad person, so... I'll tell you. It's a ghostly staircase that moves from time to time, but it comes to rest at the same spots. My job is to tell them where to go.' She starts to describe two apartment buildings, one red and one green, as well as a bright alley which are the meeting points in this part of the city.";
 			say "     'If you really want to help us, then... help us save the new gryphons that haven't succumbed yet, and tell them about us. We're in dire need of sane allies...' she says, in a clearly preoccupied manner. 'I'll give you directions in how to get there. But I swear, if you do anything that brings any harm to my kind... I'll make sure you pay for it.' Following this warning threat, she does end up giving you all the details you needed to know to enter their flying city. 'My name is Azure, by the way. Nice to meet you.' she adds before flying away, heading to another building to keep watch, with her emblem only slightly mussed as it flaps in the wind behind it. You get the feeling she'll hold you onto that deal.";

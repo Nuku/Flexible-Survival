@@ -10,7 +10,7 @@ ResolveFunction of Horse Sense is "[ResolveEvent Horse Sense]".
 Sarea of Horse Sense is "Plains".
 when play begins:
 	add Horse Sense to BadSpots of FurryList;
-	add Horse Sense to BadSpots of HermList;
+	add Horse Sense to badspots of HermList;
 
 to say ResolveEvent Horse Sense:
 	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [BodyType of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
@@ -39,7 +39,7 @@ ResolveFunction of Victim is "[ResolveEvent Victim]". The level of Victim is 8.
 Sarea of Victim is "Red".
 when play begins:
 	add Victim to BadSpots of FurryList;
-	add Victim to BadSpots of HermList;
+	add Victim to badspots of HermList;
 	add Victim to BadSpots of MaleList;
 
 to say ResolveEvent Victim:
@@ -108,7 +108,7 @@ Sarea of Portrait is "Outside".
 when play begins:
 	add Portrait to BadSpots of FurryList;
 	add Portrait to BadSpots of MaleList;
-	add Portrait to BadSpots of HermList;
+	add Portrait to badspots of HermList;
 
 
 to say ResolveEvent Portrait:
@@ -182,7 +182,7 @@ beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
 	add Conchien to BadSpots of FurryList;
-	add Conchien to BadSpots of HermList;
+	add Conchien to badspots of HermList;
 
 to say ResolveEvent Conchien:
 	now beauceronmet is true;
@@ -203,8 +203,8 @@ Sarea of Chocolate Treat is "High".
 
 when play begins:
 	add Chocolate Treat to BadSpots of FurryList;
-	add Chocolate Treat to BadSpots of HumorousList;
-	add Chocolate Treat to BadSpots of HermList;
+	add Chocolate Treat to badspots of HumorousList;
+	add Chocolate Treat to badspots of HermList;
 
 to say ResolveEvent Chocolate Treat:
 	setmonster "Chocolate Lab";

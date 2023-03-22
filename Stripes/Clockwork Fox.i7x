@@ -90,19 +90,19 @@ to say beatthecfg:
 	if cfgmode is 1: [female cf]
 		say "     The defeated clockwork fox girl winds down further and collapses to the floor. She moans weakly with a few clicks and whirrs as she tries to get back up, but she is too run down to do so.";
 		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and Player is male:
+		if CockName of Player is "Clockwork Fox" and player is male:
 			say "[beatthecfgirl1]";
-		else if libido of Player >= 50 and Player is male:
+		else if libido of Player >= 50 and player is male:
 			say "     You are way too turned on to do anything else but try to sate your lust...";
 			say "[beatthecfgirl2]";
-		else if Player is female:
+		else if player is female:
 			say "     You don't think you're properly equipped for this, and so you get on with your other escapades.";
 		else:
 			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to her lure as her body tempts you to come closer...";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go to her.";
 			say "     ([link]N[as]n[end link]) - Get away.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "[beatthecfgirl2]";
 			else:
@@ -111,19 +111,19 @@ to say beatthecfg:
 	else: [male cf]
 		say "     The defeated clockwork fox guy winds down further and collapses to the floor. He moans weakly with a few clicks and whirrs as he tries to get back up, but he is too run down to do so.";
 		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and Player is female:
+		if CockName of Player is "Clockwork Fox" and player is female:
 			say "[beatthecfguy1]";
-		else if libido of Player >= 50 and Player is male: [currently only males can take advantage of cf guy]
+		else if libido of Player >= 50 and player is male: [currently only males can take advantage of cf guy]
 			say "     You are way too turned on to do anything else but try to sate your lust...";
 			say "[beatthecfguy2]";
-		else if Player is female: [plays this until a female scene is added]
+		else if player is female: [plays this until a female scene is added]
 			say "     You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
 		else:
 			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to his lure as his body tempts you to come closer...";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go to him.";
 			say "     ([link]N[as]n[end link]) - Get away.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "[beatthecfgirl2]";
 			else:
@@ -137,11 +137,11 @@ to say beatthecfgirl1:
 	decrease humanity of Player by 2;
 
 to say beatthecfgirl2:
-	say "     With the sight of the defeated female before you, a metallic one at that, you lose all sense of control. Your body suddenly lights up with pure lust, your mind fogs over and your cock jerks to full attention. There's no way you can resist such a tempting specimen. As your dick dribbles, [if Player is not naked]you rip off the clothes that block your cock from that dripping pussy[else]you give your length a few strokes, prepping it for what's to come[end if]. Your body then seems to go on autopilot, your hands gripping and flipping the clicking fox onto her belly. Your cock's dribbling excitement drenches her lower back, and as you hold your hands against her shoulders, you angle your crotch towards hers.";
-	say "     Her resistance is nonexistent, and so you move your hands to grab at her hips, the angled metal plating is cool, and yet hot, to the touch. There's something about them, something that drives you to even further levels of depravity, but it's far too late to care. Her legs are spread, your hands have gotten their grip, and as you angle her towards you cock, your hips slam forward. You miss the first time, but your heated lust is too out of control to feel an ounce of embarrassment. There's only a single microsecond of hesitance as you pull back, and then you're slamming forward once more, and this time, you find your mark.";
+	say "     With the sight of the defeated female before you, a metallic one at that, you lose all sense of control. Your body suddenly lights up with pure lust, your mind fogs over and your cock jerks to full attention. There's no way you can resist such a tempting specimen. As your dick dribbles, [if player is not naked]you rip off the clothes that block your cock from that dripping pussy[else]you give your length a few strokes, prepping it for what's to come[end if]. Your body then seems to go on autopilot, your hands gripping and flipping the clicking fox onto her belly. Your cock's dribbling excitement drinches her lower back, and as you hold your hands against her shoulders, you angle your crotch towards hers.";
+	say "     Her resistance is nonexistant, and so you move your hands to grab at her hips, the angled metal plating is cool, and yet hot, to the touch. There's something about them, something that drives you to even further levels of depravity, but it's far too late to care. Her legs are spread, your hands have gotten their grip, and as you angle her towards you cock, your hips slam forward. You miss the first time, but your heated lust is too out of control to feel an ounce of embarrassment. There's only a single microsecond of hesitance as you pull back, and then you're slamming forward once more, and this time, you find your mark.";
 	WaitLineBreak;
 	say "     As your cock slips into her metallic body, you gasp at the warmth. The clockwork pussy is soft, wet and hot. It almost drives you to cum immediately, but you retain just enough control to avoid being a one-pump-chump. However, the slick feeling as you start fucking her, the mix of hot and cold as you push in and pull out, really drives you to a new high. It's almost as if this robotic entity was made for sex, and as you pick up your speed, you grin down at her, pounding her pussy with all of the power your hips can provide. The sounds of your hips slapping into her, and the feeling of folds wrapping around your cock, drive you over the edge.";
-	say "     With a powerful, guttural moan, you slam forward as hard as you can, bottoming out in her pussy. As soon as your balls slap into her, your cock fires off like a cannon. Your cum shoots into her depths, filling her up as the heat of your seed begins to surround the tip of your length. It's a feeling you'll never grow tired of. Your cock continues to pulse for a few minutes, but as you hear cries of something nearby, you quickly pull out and wipe your cock on her ass. Grabbing your things, you then head off on your own.";
+	say "     With a powerful, gutteral moan, you slam forward as hard as you can, bottoming out in her pussy. As soon as your balls slap into her, your cock fires off like a cannon. Your cum shoots into her depths, filling her up as the heat of your seed begins to surround the tip of your length. It's a feeling you'll never grow tired of. Your cock continues to pulse for a few minutes, but as you hear cries of something nearby, you quickly pull out and wipe your cock on her ass. Grabbing your things, you then head off on your own.";
 	CreatureSexAftermath "Clockwork Fox" receives "PussyFuck" from "Player";
 	increase morale of Player by 2;
 	decrease humanity of Player by 2;
@@ -153,11 +153,11 @@ to say beatthecfguy1:
 	decrease humanity of Player by 2;
 
 to say beatthecfguy2:
-	say "     With the sight of the defeated male before you, a metallic one at that, you lose all sense of control. Your body goes into autopilot, directing you to [if Player is not naked]toss aside all things blocking your cock from your prize, and then you rush right over to the fox and lift his metal legs[else]rush right over to the fox and lift his metal legs[end if]. With his legs over you shoulders, and your cock angled just right, you slam forward. His anus seems to be self-lubricating, which makes the entire situation far easier on you, since you can immediately start pounding him with all your might.";
-	say "     The lubricant feels like oil, and as you glance down, you realize that's exactly what it is. Your movements don't slow even the slightest bit, however, as you don't have the mind to care about why it's easy to fuck this tempting toy. All you care about is taking back an ounce of control over this crazy world. It may be fleeting, but you know this clockwork being is at your mercy. Your hips fly into a flurry after you fully realize that, your balls pulling up into your crotch as you keep fucking the male with utter abandon.";
+	say "     With the sight of the defeated male before you, a metallic one at that, you lose all sense of control. Your body goes into autopilot, directing you to [if player is not naked]toss aside all things blocking your cock from your prize, and then you rush right over to the fox and lift his metal legs[else]rush right over to the fox and lift his metal legs[end if]. With his legs over you shoulders, and your cock angled just right, you slam forward. His anus seems to be self-lubricating, which makes the entire situation far easier on you, since you can immediately start pounding him with all your might.";
+	say "     The lubricant feels like oil, and as you glance down, you realize that's exactly what it is. Your movements don't slow even the slightest bit, however, as you don't have the mind to care about why it's easy to fuck this tempting toy. All you care about is taking back an ounce of control over this crazy world. It may be fleeting, but you know this clockwork being is at your mercy. Your hips fly into a flury after you fully realize that, your balls pulling up into your crotch as you keep fucking the male with utter abandon.";
 	WaitLineBreak;
-	say "     It's only shortly thereafter that you release a guttural moan, your cock surges and your seed spills into the mechanical innards of the beast before you. You find yourself still thinking about pounding the fox, plowing more seed deep into his innards, and there's no reason to resist, right? So you keep fucking, keep pounding at that ass, bits of cum pulling out with you before you pound right back in. You're spreading cum all over his hole the entire time, and as you reach your second peak, you grin in satisfaction.";
-	say "     Not only did you beat this Clockwork fox, but you took it, twice, and spread your seed all over its hole. For the next while, everything that fucks this fox will be using your cum to help them along. That's the last thought you have before your give the fox a guttural grunt, releasing your seed deep within it. You hold your hips to his ass, your balls and cock pulsing as you unload everything you've got. It feels like ages before everything finally shoots out of your cock, but when it does, you yank free and stand over your conquered toy.";
+	say "     It's only shortly thereafter that you release a gutteral moan, your cock surges and your seed spills into the mechanical innards of the beast before you. You find yourself still thinking about pounding the fox, plowing more seed deep into his innards, and there's no reason to resist, right? So you keep fucking, keep pounding at that ass, bits of cum pulling out with you before you pound right back in. You're spreading cum all over his hole the entire time, and as you reach your second peak, you grin in satisfaction.";
+	say "     Not only did you beat this Clockwork fox, but you took it, twice, and spread your seed all over its hole. For the next while, everything that fucks this fox will be using your cum to help them along. That's the last thought you have before your give the fox a gutteral grunt, releasing your seed deep within it. You hold your hips to his ass, your balls and cock pulsing as you unload everything you've got. It feels like ages before everything finally shoots out of your cock, but when it does, you yank free and stand over your conquered toy.";
 	WaitLineBreak;
 	say "     With an arrogant grin, you grab you stuff and head for your next target.";
 	CreatureSexAftermath "Clockwork Fox" receives "AssFuck" from "Player";
@@ -332,7 +332,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

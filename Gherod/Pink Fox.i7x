@@ -228,22 +228,21 @@ instead of sniffing pink fox fur:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"pink fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	pink fox cum
+"Pink Fox cum"	"The white, gooey seed of one of your past lovers. Comes inside a plastic water bottle that could be mistaken for some sort of buttermilk, if someone hadn't written 'Pink Fox' across the label. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Pink Fox cum
 
-pink fox cum is a grab object.
-pink fox cum is cum.
-Usedesc of pink fox cum is "[pink fox cum use]";
+Pink Fox cum is a grab object.
+Pink Fox cum is cum.
+Pink Fox cum is infectious.
+Purified of Pink Fox cum is "distilled cum".
+Strain of Pink Fox cum is "Pink Fox".
+Usedesc of Pink Fox cum is "[Pink Fox cum use]";
 
-to say pink fox cum use:
-	say "     The warm, sticky liquid tastes very sweet as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It kind of leaves you craving for more...";
+to say Pink Fox cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it. The warm, sticky liquid tastes very sweet as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It kind of leaves you craving more...";
 	PlayerDrink 5;
 	SanLoss 5;
-	increase Libido of Player by 10;
-	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a reaction with the nanites in your system...";
-		infect "Pink Fox";
 
-instead of sniffing pink fox cum:
+instead of sniffing Pink Fox cum:
 	say "It smells a bit like you would expect cum to smell, but there is something different about it that you cannot identify.";
 
 [---]
@@ -255,14 +254,13 @@ name	desc	weight	object
 pink fox milk is a grab object.
 pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
+pink fox milk is infectious.
+Strain of pink fox milk is "Pink Fox".
 Usedesc of pink fox milk is "[pink fox milk use]";
 
 to say pink fox milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the pink fox milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
-	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a raction with the nanites in your system...";
-		infect "Pink Fox";
 
 instead of sniffing pink fox milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";

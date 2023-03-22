@@ -35,7 +35,7 @@ to say losetoincubus:
 				say "     The pleasure you feel as his large, perfect cock pushes into you is one of utter, sinful delight. He fucks you hard and fast, rocking his hips and pumping his shaft into you. His hands roam over your body, joining his tail in teasing against your flesh. It is only the soft sound of the beating of his wings that tells you how he's supporting himself so easily atop you. His body, penis, fingers, tongue, mouth and tail all move with the practiced ease of one who's spent countless ages exploring sexual pleasure and loving every moment of it. You cannot help but moan and push back into his thrusts as he buggers you, your asshole practically milking at his cock with lustful need.";
 				say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if Cock Count of Player is 1]. Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[else if Player is male]. He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load. Each sticky handful of cum is brought forward for you both to lustfully lap up[end if]. His large balls slap against your thighs as he drains his infernal seed into you. Spent, he pushes you to the ground, giving you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Incubus";
-		else if Player is submissive and ( ( Player is female and a random chance of 3 in 5 succeeds ) or ( Cock Count of Player is 0 and a random chance of anallevel in 5 succeeds ) ):
+		else if Player is submissive and ( ( player is female and a random chance of 3 in 5 succeeds ) or ( Cock Count of Player is 0 and a random chance of anallevel in 5 succeeds ) ):
 			say "     [if HP of Player > 0]Having submitted to[else]Beaten by[end if] the infernal temptation of the incubus, you are pushed down by the alluring male. Looking up at the creature who's bested you - and his stiff erection - your submissive tendencies kick in. Licking your lips, you reach for his cock without even realizing it. You only take notice of your actions and the fact that you're welcoming his perfect penis into your mouth when he chuckles darkly.";
 			say "     'It seems you're already quite well suited to becoming my slutty plaything. Go on, toy, suck that cock you so clearly desire.'";
 			say "     You blush at his order and submit yourself to the demonic tempter's will. You work your tongue along its smooth flesh and across its leaking glans. And sucking on the incubus's cock only makes you more aroused[if Player is herm], rock hard and dripping yourself[else if Player is male], rock hard yourself[else if Player is female], dripping yourself[end if]. By the point he tells you to [if Player is female]lay down and spread your legs[else]get on all fours and raise your ass[end if], you do so without hesitation.";
@@ -87,13 +87,13 @@ to IncubusSexTable:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck him";
 		now sortorder entry is 0;
 		now description entry is "Use the man's bubble butt";
 	[]
-	if Player is male:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Use his mouth";
 		now sortorder entry is 1;
@@ -161,10 +161,10 @@ to UseTheIncubusMouth
 	say "     Wanting a go at the sex demon's hot mouth, you grab his head and pull him forward onto your cock. He moans softly as you thrust between his soft, wet lips and starts sucking expertly. His hands roam across your ballsack, your thighs and your ass as he works eagerly to blow you. Your infernal lover is very good at it, working his whole mouth to build you up to the biggest climax he can. With a talent brought from centuries of such depravities, the demon's mouth offers such a sinful delight.";
 	WaitLineBreak;
 	if anallevel > 1 and a random chance of 2 in 3 succeeds:
-		say "     As the great blowjob continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and groaning, you feel a slick digit slip between your cheeks and probing at your anus. Too aroused and into getting sucked off, you don't resist as that wet finger makes its way into your rectum to rub at your prostate. You moan and clench down on it as you blow your load, shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. The finger's withdrawn slowly with a wet pop and your cock released.";
+		say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and groaning, you feel a slick digit slip between your cheeks and probing at your anus. Too aroused and into getting sucked off, you don't resist as that wet finger makes its way into your rectum to rub at your prostate. You moan and clench down on it as you blow your load, shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. The finger's withdrawn slowly with a wet pop and your cock released.";
 		say "     'Mmm... that was most enjoyable. Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease. He makes a show of licking his lips before turning and heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. It is not until he's gone that you notice the warm, wet feeling of your anus and look down to see the puddle of incubus cum with a finger streak through it.";
 	else:
-		say "     As the great blowjob continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly. This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. He licks and sucks your cock clean, then nibbles on your balls lightly.";
+		say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly. This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. He licks and sucks your cock clean, then nibbles on your balls lightly.";
 		say "     'Mmm... that was most enjoyable. Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease. He makes a show of licking his lips before turning and heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. It is not until he's gone that you notice the warm, wet feeling on your ballsack and look down to see the puddle of incubus cum with a hand streak through it.";
 	CreatureSexAftermath "Incubus" receives "OralCock" from "Player";
 	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
@@ -265,7 +265,7 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
@@ -376,7 +376,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

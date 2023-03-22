@@ -148,9 +148,9 @@ Sarea of Small Park is "High".
 when play begins:
 	add Small Park to BadSpots of FemaleList;
 	add Small Park to BadSpots of MaleList;
-	add Small Park to BadSpots of HermList;
+	add Small Park to badspots of HermList;
 	add Small Park to BadSpots of FurryList;
-	add Small Park to BadSpots of HumorousList;
+	add Small Park to badspots of HumorousList;
 
 to say ResolveEvent Small Park:
 	say "     While searching the area, you come across a small park. It is only about a hundred meters in each direction. From a distance, you spot what appear to be discarded piles of clothes, cum puddles and other signs of citizens being transformed. You don't spot any danger at the moment, so perhaps it's safe.";
@@ -220,7 +220,7 @@ to say dogparksearch:
 			say "     You resist the urge to give in to those cloying scents and move away. You try to continue searching, but find yourself drift back to the tree several times and finally decide to abandon the dog park entirely.";
 			increase score by 1;
 	if T is 10:
-		say "     You start to look around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you approach another section of the park, you hear rough panting and growling coming from the other side of a hedge. Creeping forward, you see a very large dog, possibly some form of Labrador, pounding into an increasingly canine woman. She's already largely transformed and seems as lost in her animal lusts as the dog atop her. Sensing that it's already too late to save her, you decide not to pick a fight with the big dog (and possibly his new mate as well) and sneak out of the park and put some distance between you and them.";
+		say "     You start to look around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you approach another section of the park, you hear rough panting and growling coming from the other side of a hedge. Creeping forward, you see a very large dog, possibly some form of labrador, pounding into an increasingly canine woman. She's already largely transformed and seems as lost in her animal lusts as the dog atop her. Sensing that it's already too late to save her, you decide not to pick a fight with the big dog (and possibly his new mate as well) and sneak out of the park and put some distance between you and them.";
 		increase score by 1;
 	if T is 11:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While searching, you come across what to be a jogger's gear. The discarded shorts are torn at the front, either ripped open from massive internal growth or an overeager monster seeking the goods within - it's hard to be certain. The jogger's step counter and wrist bands are also scattered among the clothes, but you're unable to find anything that could be useful to you.";
@@ -289,7 +289,7 @@ kittyness is a number that varies.
 when play begins:
 	add Veterinary Hospital to BadSpots of FemaleList;
 	add Veterinary Hospital to BadSpots of MaleList;
-	add Veterinary Hospital to BadSpots of HermList;
+	add Veterinary Hospital to badspots of HermList;
 	add Veterinary Hospital to BadSpots of FurryList;
 
 to say ResolveEvent Veterinary Hospital:
@@ -469,7 +469,7 @@ Electronics Store is a situation.
 ResolveFunction of Electronics Store is "[ResolveEvent Electronics Store]".
 Sarea of Electronics Store is "High".
 when play begins:
-	add Small Park to BadSpots of HumorousList;
+	add Small Park to badspots of HumorousList;
 
 to say ResolveEvent Electronics Store:
 	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings. They are a duo of strange, cybernetic people with vacant, luminescent eyes. Unlike any of the others you've seen in the city, you are drawn to investigate. From behind a car, you watch them as they eat the electronic hardware from the displays. One is a glossy white with blue highlights and a smooth, dome head. He is dressed in loose-fitting, slacker wear. The other has a matte black finish where he's not flesh and wearing a gray suit and charcoal tie.";
@@ -490,8 +490,8 @@ ResolveFunction of Cameo is "[ResolveEvent Cameo]". The level of Cameo is 4.
 Sarea of Cameo is "High".
 choclabfight is a number that varies.
 when play begins:
-	add Cameo to BadSpots of HermList;
-	add Cameo to BadSpots of HumorousList;
+	add Cameo to badspots of HermList;
+	add Cameo to badspots of HumorousList;
 	add Cameo to BadSpots of FurryList;
 
 to say ResolveEvent Cameo:

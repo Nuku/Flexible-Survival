@@ -467,7 +467,7 @@ to say brunchtimechange:
 		now Body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
 		now CockName of Player is "Ferret";
 		now CockSpeciesName of Player is "Ferret";
-		now Cock of Player is "ferret";
+		now Cock of Player is "Ferret";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of Player is "[one of]mustelid[or]ferret-like[at random]";
@@ -507,7 +507,7 @@ to say alexbodyreset:
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now CockName of Player is "Ferret";
 		now CockSpeciesName of Player is "Ferret";
-		now Cock of Player is "ferret";
+		now Cock of Player is "Ferret";
 
 
 to say pillowtalk:

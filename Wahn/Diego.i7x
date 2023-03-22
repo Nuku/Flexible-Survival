@@ -55,7 +55,7 @@ Cock Length of Diego is 7. [length in inches]
 Ball Count of Diego is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Diego is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Diego is 0. [number of cunts]
-Cunt Depth of Diego is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Diego is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Diego is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Diego is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -460,13 +460,13 @@ to say DiegoSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
 	[]
-	if (Player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
+	if (player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
 	[]
-	if (Player is female and DiegoChanged < 2):
+	if (player is female and DiegoChanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (vaginal)";
 		now sortorder entry is 3;
@@ -478,37 +478,37 @@ to say DiegoSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Let the coyote fuck you";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Fuck against the wall";
 		now sortorder entry is 5;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Doggy style";
 		now sortorder entry is 6;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - From behind, against the wall";
 		now sortorder entry is 7;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (Player is male and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Fuck against the wall";
 		now sortorder entry is 8;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (Player is male and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Doggy style";
 		now sortorder entry is 9;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (Player is male and DiegoButtSlut > 0):
+	if (player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - From behind, against the wall";
 		now sortorder entry is 10;
@@ -796,7 +796,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and Player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -1238,7 +1238,7 @@ instead of navigating Park Entrance while (XP of Diego is 98 or (XP of Diego > 2
 
 to say DiegoCollarWearingAftermath:
 	say "     Sauntering around you with [PosAdj of Diego] tail exuberantly wagging left and right, Diego strokes a fingertip along the outside of the band of leather around your neck. 'You see, that's a very special collar indeed. It's tradition to trick the wearer into putting it on, but other ways work too of course. But I won't let you guess any longer what it does now. Let me demonstrate: Bark for me!' Without a thought to do so, you find yourself barking on command, with some of them being a bit strangled-sounding as you try to talk, but nothing except more canine noises escape your throat. 'That's enough, quiet now,' Diego adds with a grin, instantly shutting you up. 'The collar makes the wearer obey, completely. Not anyone of course, only the one they know 'owns' it, and them. And thanks to your help my friend, that's me again!' Tracing [PosAdj of Diego] hand down your front, [SubjectPro of Diego] adds, 'This'll be so much fun! Oh, don't worry, I'll leave you be yourself mostly. But you'll help me when I need you, no questions asked! The tricks we'll be able to play, hah!'";
-	say "     'But first, there's something else you can do for me[if Player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
+	say "     'But first, there's something else you can do for me[if player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
 	if DiegoChanged > 0: [Diego got transformed away from male - let's fix that now]
 		say "Chuckling, the coyote pulls out a little vial from somewhere and adds, 'But before that, let's end the little bit of playing around we've been doing and set things as they should again!' With that, he downs the off-white liquid inside, grinning broadly as his previous male form is restored in but a moment or two. ";
 		SetMalePronouns for Diego;
@@ -1269,7 +1269,7 @@ to say DiegoCollarWearingAftermath:
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
 		TraitGain "Male_Player_Collared" for Diego; [memory point to let him remember that the player was a male before]
-	else if Player is female:
+	else if player is female:
 		say "Then [PosAdj of Diego] hand moves down to your crotch, stroking over your nether lips. 'Very nice. Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder guides you to sink down on all fours, presenting yourself in doggy-style position. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to sniff your crotch, Diego chuckles amusedly.";
 		WaitLineBreak;
 		say "     'You were a nice enough helper to team up with, but this is even better!' the coyote comments, followed by the sensation of something wet brushing against your nether lips, twitching a little as [SubjectPro of Diego] takes a deep sniff. 'Ah, the scent of a hot pussy, nothing compares to that!' [PosAdjCap of Diego] nose is replaced by a licking tongue a second later, teasing your clit and tracing the outline of your folds and making shivers of arousal run up and down your spine. The coyote proceeds to get into a much closer position behind you, aligning [PosAdj of Diego] knotted erection with your entrance. [PosAdjCap of Diego] fingers splay out on the curve of your rear as [PosAdj of Diego] claws dig lightly into your skin, getting a good grip to hold you by. With a sure, confident motion, [SubjectPro of Diego] then pushes past your welcoming folds. Going deep, [SubjectPro of Diego] spreads the warm, vet vise of your pussy around [PosAdj of Diego] erection, making you feel very good and filled.";

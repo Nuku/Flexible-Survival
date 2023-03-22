@@ -1,5 +1,5 @@
 # Welcome to Flexible Survival
-Flexible Survival, or FS for short, is a text-based RPG written in Inform 7. It is the largest project ever made in Inform, featuring hundreds of extensions, unique art, and a team of over 20 writers and coders.
+Flexible Survival, or FS for short, is a text-based RPG written in Inform 7. It is the largest project ever made in Inform, featuring hundreds of extensions, unique art, and a team of over 20 writers and coders. 
 
 ## What is FS?
 FS is an adult text RPG that focuses on themes of transformation and related topics. You can find just about any kind of fetish or kink in FS, featuring content like your standard furry creatures, to more intriguing and exotic transformations like foxes made of latex, or girls made entirely of goo! There are over 250 unique forms in Flexible Survival, and over 100 NPCs to interact with.

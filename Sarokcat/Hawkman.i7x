@@ -22,7 +22,7 @@ to say Hawkman wins:
 		say ""; [details are taken care of at the event source]
 	else:
 		now nohawkmansex is 0;
-		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( Player is mpreg_ok and a random chance of 2 in 5 succeeds ):
+		if Player is female or ( anallevel is 3 and a random chance of 2 in 5 succeeds ) or ( player is mpreg_ok and a random chance of 2 in 5 succeeds ):
 			if Player is not female and a random chance of 3 in 5 succeeds:
 				if HP of Player > 0:
 					say "     The hawkman grins wide when you give in to him and he wastes no time in leaping forward, knocking your unresisting form to the ground. He chuckles happily as he rubs his feathered form against your [bodydesc of Player] body while divesting you of your gear. Groping you between the legs as he does, he gives a cawing laugh. 'Well, you're nothing but a big hen, ain't you?' he says teasingly, nipping at your neck while grinding his stiffened member against your rear and fondling your [if Player is male]manhood as it reacts[else]your bare groin[end if].";
@@ -36,7 +36,7 @@ to say Hawkman wins:
 			else:
 				say "     The hawkman's beak spreads open in a wide grin as you finally stop fighting him. He wastes no time in leaping forward and knocking your unresisting form to the ground, chuckling happily as he rubs his surprisingly soft feathers up against your body eagerly. You find yourself moaning softly as his avian form pins you to the ground, his taloned feet gripping your legs and stroking them lightly as he spreads them wide open for him. His wings open wide and enclose the two of you in a small tent smelling strongly of his masculine presence, and your body begins to burn with need even as he positions his narrow pink cock in front of your [if Player is female]already damp female opening[else]exposed behind[end if]. You feel strangely comfortable and protected as he buries himself in your waiting [if Player is female]passage[else]hole[end if], and you moan happily with pleasure as he nuzzles your neck with his hooked raptor beak.";
 				say "     The feel of his avian organ in your body is absolutely wonderful, as it seems to reach deep inside you and stroke you in all the right places. The almost hypnotic building rhythm of his short thrusts into your body makes your mind fill with pleasure as you bury your fingers in his lovely, feathered sides. It isn't long before you are gasping and shuddering in [if Player is not neuter]orgasm[else]ecstasy[end if] underneath him as he fills your [bodydesc of Player] body with his wonderful avian seed. You can feel it flowing into you to pool inside your [if Player is female]womb[else]bowels[end if]. Your [bodytype of Player] body responds eagerly to his seeding with a rush of amazing pleasure even as he cries out his triumph to the empty streets around you. You find yourself smiling happily as he pulls himself off of you. The hawkman rubs his beak over your well-used body a few times before taking to the air again. As you begin to try to gather your wits about you, you find yourself almost idly wondering as you rub your belly whether or not you will see the handsome bird again anytime soon...[ovichance]";
-				CreatureSexAftermath "Player" receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
+				CreatureSexAftermath "Player" receives "[if player is female]PussyFuck[else]AssFuck[end if]" from "Hawkman Male";
 		else:
 			say "     Knocking you to the ground, the hawkman screams his triumph, strutting around you in a particularly avian stride. As you sit up, the birdman pushes you back down with one taloned foot before taking to the sky again. Dizzy and rubbing the bump at the back of your head, you can only stare in surprise as he begins to stroke himself off above you, the hunt and the combat obviously having only increased the strange creature's arousal. Within a minute, he shudders, his cock twitching as he covers your beaten form with his sticky white seed. The seed seems to tingle even as it sinks into your body, and the watching hawkman lets out a sound of satisfaction before flying off into the city in search of more prey, leaving you lying there trying to deal with your new changes.";
 
@@ -345,7 +345,7 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "hawkman female feathers"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "hawkman man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "hawkman male cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -500,9 +500,33 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "hawkman male cum"	"A plastic bottle filled with some virile, avian seed."	1	hawkman male cum
 
-hawkman male cum is a grab object. hawkman male cum is infectious. Strain of hawkman male cum is "Hawkman Female". hawkman male cum is cum.
+hawkman male cum is a grab object.
+hawkman male cum is infectious.
+Strain of hawkman male cum is "Hawkman Female".
+hawkman male cum is cum.
+purified of hawkman male cum is "distilled cum".
+
 the scent of hawkman male cum is "The swill has an overwhelming, masculine aroma about it.".
+
 Usedesc of hawkman male cum is "     There's so much of stuff, it's a challenge to consume all of the warm, salty fluid. By the end, you feel dizzy and a little tingly.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hawkman man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'hawkman Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hawkman man-milk
+
+hawkman man-milk is a grab object.
+hawkman man-milk is milky.
+Purified of hawkman man-milk is "distilled milk".
+hawkman man-milk is infectious.
+Strain of hawkman man-milk is "Hawkman".
+Usedesc of hawkman man-milk is "[hawkman man-milk use]";
+
+to say hawkman man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the avian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing hawkman man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Section 4 - Endings
 

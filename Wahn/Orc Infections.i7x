@@ -78,7 +78,7 @@ to say OrcVictorious:
 		if OrcSpecialFightNumber is 1: [fighting Mul in the hallway in front of the Observation room]
 			if MulAnalAcceptance > 4:
 				say "[MulBottomAnalRide]";
-			else if MulAnalAcceptance > 1 and Player is male and a random chance of 1 in 2 succeeds:
+			else if MulAnalAcceptance > 1 and player is male and a random chance of 1 in 2 succeeds:
 				say "[MulAnalRide]";
 			else:
 				say "[MulFuck2]";

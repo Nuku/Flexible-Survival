@@ -52,7 +52,7 @@ when play begins:
 	add Girl Time to BadSpots of FurryList;
 	add Girl Time to BadSpots of FemaleList;
 	add Girl Time to BadSpots of MaleList;
-	add Girl Time to BadSpots of HermList;
+	add Girl Time to badspots of HermList;
 
 to say ResolveEvent Girl Time:
 	say "     On your way to the red light district, you spot the sultry faces of several ladies, not to mention men of the night, all winking and posing while giving you [italic type]come-hither[roman type] glances. The fact that most, if not all of the people here are now covered with different textures and patterns of fur types only serve to make you shake your head and keep walking as you try not to become aroused by the prostrating mutants. You find it somewhat amazing that despite the epidemic rolling throughout the metropolis there are some things about people that will never change. This fact is proven to be even more true as your ears catch the sounds of giggling girls laughing at each other from the inside of a derelict clothing store that you are just now passing in front of. Curiosity has you taking a look inside of the rundown store before you can stop yourself.";

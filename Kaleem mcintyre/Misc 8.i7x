@@ -126,7 +126,7 @@ ResolveFunction of Controversy is "[ResolveEvent Controversy]".
 
 Sarea of Controversy is "High".
 When play begins:
-	Add Controversy to BadSpots of HumorousList;
+	Add Controversy to badspots of HumorousList;
 
 to say ResolveEvent Controversy:
 	say "     Walking down the street you find yourself coming across a boarded up mini mart with a fat black bear wearing a long overcoat and a skinny weasel with long dirty blonde hair draped down off the side of his head bobbing their heads in time with music playing on an old fashioned boombox in between them. From what you can see the weasel is smoking on something that looks like a cigarette, but from the smell that's lingering in the air you can tell that what he's trippin['] on isn't tobacco. Finding yourself getting slightly lightheaded you walk over to the others without really knowing why.";

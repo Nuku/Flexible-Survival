@@ -161,7 +161,7 @@ Barricaded Lockerroom is a situation.
 ResolveFunction of Barricaded Lockerroom is "[ResolveEvent Barricaded Lockerroom]". The level of Barricaded Lockerroom is 8.
 Sarea of Barricaded Lockerroom is "Campus".
 when play begins:
-	add Barricaded Lockerroom to BadSpots of HermList; [cuntboy, later a fight against a hulking cheerleader]
+	add Barricaded Lockerroom to badspots of HermList; [cuntboy, later a fight against a hulking cheerleader]
 
 to say ResolveEvent Barricaded Lockerroom:
 	project the Figure of Eric_FirstMeeting_hostile_icon;
@@ -260,7 +260,7 @@ Cock Length of Eric is 0. [length in inches]
 Ball Count of Eric is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Eric is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Eric is 1. [number of cunts]
-Cunt Depth of Eric is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Eric is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Eric is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Eric is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -582,7 +582,7 @@ to say EricTalkMenu:
 	now sortorder entry is 90;
 	now description entry is "Give Eric a gift";
 	[]
-	if (Player is male and "Cocked" is listed in Traits of Eric and orc pill case is owned and EricOrcPillMpreg < 2):
+	if (player is male and "Cocked" is listed in Traits of Eric and orc pill case is owned and EricOrcPillMpreg < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Talk to Eric about the orc pills";
 		now sortorder entry is 91;
@@ -1367,7 +1367,7 @@ to say EricSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Eric's pussy to make him cum";
 	[]
-	if ((HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 99) and Player is male):
+	if ((HP of Eric is 11 or HP of Eric is 13 or HP of Eric is 15 or HP of Eric is 99) and player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
@@ -1415,7 +1415,7 @@ to say EricSexMenu:
 		now sortorder entry is 12;
 		now description entry is "Have some fun with both of them together";
 	[]
-	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and HP of Eric is 99) and Player is male or Cunt Count of Player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
+	if (Level of Eric is 4 or (Level of Eric > 0 and Level of Eric < 99 and HP of Eric is 99) and player is male or Cunt Count of Player > 0): [either talked with Eric about the felinoid fucking him and having approved, or cuntboy slave Eric]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Klauz and Eric";
 		now sortorder entry is 13;

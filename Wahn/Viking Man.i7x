@@ -148,7 +148,7 @@ to say BeatenVikingManSex2: [blow him]
 
 to say BeatenVikingManSex3: [ride his cock]
 	say "...";
-	if Player is female:
+	if player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Viking Man";
 	else:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Viking Man";

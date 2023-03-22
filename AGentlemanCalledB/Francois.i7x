@@ -609,12 +609,12 @@ to say FrancoisBakingMenu:
 		now description entry is "have Francois bake a vin-coeur";
 	if 9 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
-		now title entry is "gingerbread";
+		now title entry is "Gingerbread";
 		now sortorder entry is 9;
 		now description entry is "have Francois bake some gingerbread";
 	if 10 is listed in Francois_Discovered:
 		choose a blank row in table of fucking options;
-		now title entry is "cheesecake";
+		now title entry is "Cheesecake";
 		now sortorder entry is 10;
 		now description entry is "have Francois bake a cheesecake";
 	choose a blank row in table of fucking options;
@@ -707,7 +707,7 @@ to say FrancoisBakingMenu:
 						ItemGain vin-coeur by 1;
 					else:
 						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
-				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
+				else if title entry is "Gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
 						say "     Francois takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
@@ -717,7 +717,7 @@ to say FrancoisBakingMenu:
 						ItemGain gingerbread by 2;
 					else:
 						say "You do not have the required ingredients, egg nog, pixie dust and blue gel.";
-				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
+				else if title entry is "Cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
 						say "     Francois takes the cheese, pixie dust and pink gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with creamy looking strawberry cheesecake. He divides the cake into several portions before wrapping a couple slices for you and placing the rest in one of his displays.";
@@ -933,8 +933,8 @@ name	desc	weight	object
 "dragon moelleux"	"A small chocolate cake; it seems to stay perpetually warm and glows ever so slightly from the small cracks in its surface."	1	dragon moelleux
 "fizz-aux-pommes"	"A fizzing, amber colored beverage."	1	fizz-aux-pommes
 "vin-coeur"	"A slice of cake with a rich wine and peppermint glaze and filling."	1	vin-coeur
-"gingerbread"	"A small gingerbread cookie shaped like a little man."	1	gingerbread
-"cheesecake"	"A wedge of rich strawberry cheesecake."	1	cheesecake
+"Gingerbread"	"A small gingerbread cookie shaped like a little man."	1	gingerbread
+"Cheesecake"	"A wedge of rich strawberry cheesecake."	1	cheesecake
 
 boysenberry blossom is a grab object.
 boysenberry blossom has a usedesc "[boysenberry blossom Use]".

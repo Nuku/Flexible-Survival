@@ -57,7 +57,7 @@ Cock Length of Erin is 6. [Length in Inches]
 Ball Count of Erin is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Erin is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Erin is 0. [number of cunts]
-Cunt Depth of Erin is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Erin is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Erin is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Erin is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -197,7 +197,7 @@ to say ErinFuckBottom:
 		say "[ErinVoyeurKo]";
 	WaitLineBreak;
 	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He lets you pass your fingers on his soft, gray-white fur while his own limbs run down your [BodyName of Player in lower case] back. Your two heads slowly lock with each other in a long and passionate French kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost into your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if Cock Count of Player is 1]own [Cock of Player] erection[else if Cock Count of Player > 1]pack of erected penises[else]stomach[end if] fills you with arousal and anticipation. 'Should I help you get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
-	say "     Erin helps you get on all fours, and spread your legs apart. He deftly slides under you, placing his erect cock at your level. Just as you were about to make a comment about his flexibility, Erin cuts you off by burying his muzzle into your buttcrack and giving your [if Player is male or anallevel is 3]anal ring[else]cleft[end if] a long lash of the tongue. Shivering, you bury your [FaceSpeciesName of Player in lower case] head into his crotch and take his the boy's average cock into your mouth. A heated 69 unfolds[if isTwinHere is 1] under the pleased gaze of Violet[end if]. Erin goes to town on your crotch, and you return the favor in kind. [if isTwinHere is 1 and Player is not male]You can hear Violet give her brother some advice: 'Don't forget her clit.' 'Bite it a little, she'll love it.' 'Not so fast, bro. You'll make her cum already!' [end if]Eventually, the both of you agree that you should take it up a notch. You roll off on your back and spread your legs, and Erin gets on top of you. You can feel his cock, now wet with your saliva, grinding against your [if Player is male or anallevel is 3]ass[else]pussy[end if][if isTwinHere is 1]. 'How's the view, sis?' he asks. You realize that Violet has a full view on your and Erin's crotches. 'A fucking plus,' she answers[end if].";
+	say "     Erin helps you get on all fours, and spread your legs apart. He deftly slides under you, placing his erect cock at your level. Just as you were about to make a comment about his flexibility, Erin cuts you off by burying his muzzle into your buttcrack and giving your [if Player is male or anallevel is 3]anal ring[else]cleft[end if] a long lash of the tongue. Shivering, you bury your [FaceSpeciesName of Player in lower case] head into his crotch and take his the boy's average cock into your mouth. A heated 69 unfolds[if isTwinHere is 1] under the pleased gaze of Violet[end if]. Erin goes to town on your crotch, and you return the favor in kind. [if isTwinHere is 1 and player is not male]You can hear Violet give her brother some advice: 'Don't forget her clit.' 'Bite it a little, she'll love it.' 'Not so fast, bro. You'll make her cum already!' [end if]Eventually, the both of you agree that you should take it up a notch. You roll off on your back and spread your legs, and Erin gets on top of you. You can feel his cock, now wet with your saliva, grinding against your [if Player is male or anallevel is 3]ass[else]pussy[end if][if isTwinHere is 1]. 'How's the view, sis?' he asks. You realize that Violet has a full view on your and Erin's crotches. 'A fucking plus,' she answers[end if].";
 	WaitLineBreak;
 	say "     The pendulum movement of Erin's hips has him eventually point the tip of his cock against your [if Player is male or anallevel is 3]ass[else][cunt size desc of Player] pussy[end if]. Like a ram it pushes forward, parting your inner walls in one fluid movement. Erin groans in pleasure on top of you, and wastes no time pumping his pelvis into you. The room fills with the loud and rhythmic slaps of your two bodies slamming together; first distanced and wet, then rapid and dry as you wrap your legs around the rat's torso and squeeze him against your [breast size desc of Player] bosom[if isTwinHere is 1]. Violet pumps her finger inside her pussy, trying to follow the more and more frantic pace of her sibling. You cannot see her from your position, but her loud moans are a testimony to her current state of arousal[end if].";
 	if TailName of Player is not "Human":
@@ -207,7 +207,7 @@ to say ErinFuckBottom:
 	say "     You stay there for a while, Erin and you trying to catch back your breath. Eventually, the male rat parts away from you[if Player is male], his crotch covered with your own semen[end if], but not before giving you a languorous kiss on the lips. 'I need some rest, but you are more than welcome if you want to do it again,' the male rodent tells you, before helping you to stand up and giving your clothes back.";
 	if Player is male or anallevel is 3:
 		NPCSexAftermath player receives "AssFuck" from Erin;
-	else if (Player is female or player is herm):
+	else if (player is female or player is herm):
 		NPCSexAftermath player receives "PussyFuck" from Erin;
 	now isTwinHere is 0;
 
@@ -276,7 +276,7 @@ Cock Length of Violet is 0. [Length in Inches]
 Ball Count of Violet is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Violet is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Violet is 1. [number of cunts]
-Cunt Depth of Violet is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Violet is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Violet is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Violet is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

@@ -83,7 +83,7 @@ Cock Length of Bjorn is 8. [Length in Inches]
 Ball Count of Bjorn is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Bjorn is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Bjorn is 0. [number of cunts]
-Cunt Depth of Bjorn is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Bjorn is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Bjorn is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Bjorn is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -259,7 +259,7 @@ instead of fucking Bjorn:
 		say "     He shakes his head vigorously, as if hinting that he'd rather not have sex here where his fellow tribe could see.";
 	else if (lastfuck of Bjorn - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     He chuckles at your eagerness. 'As much as I'd love to have fun with you, I need rest from last time,' he says with a smile.";
-	else if BjornRelationship > 4 and Player is neuter:
+	else if BjornRelationship > 4 and player is neuter:
 		say "     Bjorn gives an apologizing look at you as he stares at you up from his books. 'I'm sorry but I'd rather not exclude Pericles and he... finds it weird when there's not a cock to play with,' the Viking says to you. Perhaps you'd have a better chance with the couple if you were to the dominant's likes?";
 	else if BjornRelationship > 4 and Cock Count of Player > 0 and Cunt Count of Player < 1:
 		say "     He looks up at you from his books and then over at the Spartan-Helot, who is currently working on some paperwork. 'What do you wish to do? I'm sure me and Pericles would love to have fun with you,' he says with a sly smirk.";

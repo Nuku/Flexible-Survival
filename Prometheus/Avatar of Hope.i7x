@@ -4,15 +4,6 @@ Version 1 of Avatar of Hope by Prometheus begins here.
 [hp of Isharielle? Iolanthe? (Angel)]
 [hp of Illiana? (Demon)]
 
-[Update for WalkinEvents table]
-Table of NavInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Strange Visitor"	Strange Visitor	"[EventConditions_Strange_Visitor]"	Grey Abbey Library	2500	2	100
-
-to say EventConditions_Strange_Visitor:
-	if Level of Player > 30:
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Strange Visitor	"Strange Visitor"
@@ -20,6 +11,12 @@ Strange Visitor	"Strange Visitor"
 Strange Visitor is a situation.
 ResolveFunction of Strange Visitor is "[ResolveEvent Strange Visitor]".
 Sarea of Strange Visitor is "Nowhere".
+
+instead of navigating Grey Abbey Library while (Level of Player > 30 and Strange Visitor is not resolved and a random chance of 1 in 2 succeeds):
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
+	say "[ResolveEvent Strange Visitor]";
 
 to say ResolveEvent Strange Visitor:
 	say "     As you approach the library, you are concerned to find someone standing outside gazing at the entrance. While overall the rest of the city's inhabitants seem to avoid the area for some reason, what is especially worrying about this figure is that they are standing calmly outside, neither trying to gain entry nor worried about being seen. They seem to be wearing a robust ground-length coat, but for a fragment of a moment you swear that it shifts into a tattered pitch-black cloak and then pristine white armor before changing back to a coat again. If they are competent at magic, maybe that is why they are so at ease. Perhaps sensing your eyes on them, the figure turns to look at you, revealing that their face is just as obscured as the rest of them, an advanced looking combat helmet protecting the entirety of their head. 'You are [if player is not defaultnamed][name of player][else]a current occupant of this bunker[end if], yes?' they ask as you draw near, their voice surprisingly clear, if a bit clinical and emotionless, through what you assume must be hidden speakers on the mask.";

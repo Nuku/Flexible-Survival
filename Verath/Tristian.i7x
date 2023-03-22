@@ -31,7 +31,7 @@ Cock Length of Tristian is 15. [length in inches]
 Ball Count of Tristian is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Tristian is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Tristian is 0. [number of cunts]
-Cunt Depth of Tristian is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Tristian is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Tristian is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Tristian is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -165,7 +165,7 @@ to say sexwithtristian:
 		else:
 			say "     'So you want to play the mare for a handsome little stallion like me?' Tristian says teasingly, as his equine lips lightly brush over your own lips. The scent of his stallion-like musk and sandalwood cologne fills your head with need even as he runs his hand teasingly along the front of your body. 'I think that sounds like fun... only I prefer my [']mares['] to be a bit more well-endowed,' he says as he runs his hands along his leather-encased crotch teasingly. This sight makes your mouth water even as your need grows even more desperate. 'Fortunately, I don't think that will be much of a problem for long...' Tristian says, as he runs his hands over your body again, kissing you teasingly while you feel your body reshape itself to better suit his desires...";
 			palominoinfect;
-	else if HP of Tristian is 11 and Player is male:
+	else if HP of Tristian is 11 and player is male:
 		say "     Leading you into a lounge in the back, he strips you down and gets you to lay back on the padded sofa. 'How about a special reward. I think my brother's hero deserves a rare delight.' He straddles your lap, grinding his ass down over your stiff cock. 'How about it, my precious pony - have you earned a treat?'";
 		say "     [bold type]What do you reply?[roman type][line break]";
 		LineBreak;
@@ -228,7 +228,7 @@ ResolveFunction of Tristbrother is "[ResolveEvent Tristbrother]".
 Tristbrother is inactive.
 
 when play begins:
-	add Tristbrother to BadSpots of HermList;
+	add Tristbrother to badspots of HermList;
 	add Tristbrother to BadSpots of MaleList;
 	add Tristbrother to BadSpots of FurryList;
 

@@ -79,7 +79,7 @@ to say libraryentrance:
 	now title entry is "Fight!";
 	now sortorder entry is 3;
 	now description entry is "Do you fight your way past him";
-	if jamessex is 0 or ( jamessex is 1 and Player is female ) or ( jamessex is 2 and BodyName of Player is "Wolverine Guard" ):
+	if jamessex is 0 or ( jamessex is 1 and player is female ) or ( jamessex is 2 and BodyName of Player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex him up";
 		now sortorder entry is 4;

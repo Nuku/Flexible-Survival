@@ -24,7 +24,7 @@ Cock Length of Karisha is 14. [length in inches]
 Ball Count of Karisha is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Karisha is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Karisha is 1. [number of cunts]
-Cunt Depth of Karisha is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Karisha is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Karisha is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Karisha is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -169,7 +169,7 @@ To say KarishaHelp1:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, you will help the tall herm.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
-	if Player consents:
+	if player consents:
 		say "     Thank you. I will wait for your return.";
 		TraitGain "QuintusKarishaTask1" for Karisha;
 	else:
@@ -201,7 +201,7 @@ Cock Length of Dekkan is 15. [length in inches]
 Ball Count of Dekkan is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Dekkan is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Dekkan is 0. [number of cunts]
-Cunt Depth of Dekkan is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Dekkan is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Dekkan is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Dekkan is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -373,7 +373,7 @@ to say DekkanAssistance1:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, you will help the old priest.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
-	if Player consents:
+	if player consents:
 		say "     Thank you. I will wait for your return.";
 		TraitGain "QuintusDekkanTask1" for Dekkan;
 	else:
@@ -408,7 +408,7 @@ Cock Length of Barkeep is 15. [length in inches]
 Ball Count of Barkeep is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Barkeep is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Barkeep is 0. [number of cunts]
-Cunt Depth of Barkeep is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Barkeep is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Barkeep is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Barkeep is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -455,7 +455,7 @@ Cock Length of Quintus is 12. [length in inches]
 Ball Count of Quintus is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Quintus is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Quintus is 0. [number of cunts]
-Cunt Depth of Quintus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Quintus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Quintus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Quintus is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

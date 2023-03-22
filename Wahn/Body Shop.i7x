@@ -1080,7 +1080,7 @@ to say MoreauCrotchBuyPayment:
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
 		follow the sex change rule;
-		if CockName of Player is not Name entry and Player is male:
+		if CockName of Player is not Name entry and player is male:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
 			now Cock of Player is cock entry;

@@ -44,17 +44,14 @@ Purified of wyvern goop is "food".
 
 [ Cum ]
 Purified of centaur cum is "distilled cum".
-Purified of earthen seed is "distilled cum".
 Purified of demon seed is "distilled cum".
 Purified of fennec semen is "distilled cum".
 Purified of gecko cum is "distilled cum".
 Purified of hawkman male cum is "distilled cum".
 Purified of orc cum is "distilled cum".
 Purified of gryphon cum is "distilled cum".
-Purified of pewter seed is "distilled cum".
 Purified of rhino cum is "distilled cum".
 Purified of sea dragon cum is "distilled cum".
-Purified of silver semen is "distilled cum".
 Purified of smilodon cum is "distilled cum".
 Purified of wolf cum is "distilled cum".
 Purified of orc femcum is "distilled cum".

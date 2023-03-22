@@ -45,7 +45,7 @@ The data of the game is contained in a lot of variables and properties, many of 
 * `facename of player` | The infection name on the player's cock. Very useful for comparisons or, less desirably, as a descriptive element.
 * `skinname of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
 * `tailname of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
-* `CockName of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
+* `cockname of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
 
 * `body of player` | portion of the player's description dealing with their body. Generally not useful for scenes.
 * `face of player` | portion of the player's description dealing with their face. Generally not useful for scenes.
@@ -107,8 +107,8 @@ These are used as part of conditional statements or clauses to alter scenes base
 For your own sanity, only include a few of these variations in any given scene at most, as some will be more relevant than others to the events you're creating. Some writers have preferences to the aspects they like to highlight about the scene in this manner, so don't feel you have to use all the same ones as everyone else.
 
 ### Genitals
-* `if Player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
-* `if Player is female` *or* `if Cunt Count of player > 0` | does the player have any cunts? (female/herm)
+* `if player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
+* `if player is female` *or* `if Cunt Count of player > 0` | does the player have any cunts? (female/herm)
 * `if player is herm` *or* `if Cunt Count of player > 0 and Cock Count of player > 0` | does the player have both cock and cunt? (herm)
 * `if player is neuter` *or* `if Cunt Count of player is 0 and Cock Count of player is 0` | does the player have no cunt and no cock? (neuter)
 * `if Cock Count of player is 1` | does the player have a single cock?
@@ -350,7 +350,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Jackal"; [name of the overall species of the infection, used for children, ...]
 	[Add the infection to appropriate lists, see Core Mechanics\Lists and Banning.i7x]
-	add "Jackal Femboy" to infections of CanineList;
+	add "Jackal Femboy" to infections of CanineList; 
 	add "Jackal Femboy" to infections of FurryList;
 	add "Jackal Femboy" to infections of NatureList;
 	add "Jackal Femboy" to infections of MaleList;

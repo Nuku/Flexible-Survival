@@ -13,7 +13,7 @@ Sarea of Breeding Pack is "High".
 
 when play begins:
 	add Breeding Pack to BadSpots of FurryList;
-	add Breeding Pack to BadSpots of FeralList;
+	add Breeding Pack to badspots of FeralList;
 	add Breeding Pack to BadSpots of MaleList;
 
 to say ResolveEvent Breeding Pack:

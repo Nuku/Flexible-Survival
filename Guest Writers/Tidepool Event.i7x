@@ -75,7 +75,7 @@ to say tidepoolfail:
 	say "     The action stirred up so much silt and goop in the pool that you'd never mistake it for the serene, glassy spot it once was. Dragging yourself onto drier sand, you start to work at removing the shellfish latched to you. You manage to get it off, but only after [if Player is male]it teases your uncomfortably sensitive cock longer than you'd have liked[else]forcing you to cum into your palm as you try to pull it off your clit[end if]. Exhausted but wary, you decide to put some distance between yourself and the pool before sleeping this one off.";
 	CreatureSexAftermath "Player" receives "OralCock" from "Tentacle Horror";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Tentacle Horror";
-	if Player is female:
+	if player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Tentacle Horror";
 
 Tidepool Event ends here.

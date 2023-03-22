@@ -223,7 +223,7 @@ Cock Length of Erica is 0. [length in inches]
 Ball Count of Erica is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Erica is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Erica is 1. [number of cunts]
-Cunt Depth of Erica is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Erica is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Erica is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Erica is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -382,7 +382,7 @@ to say EricaSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Have some fun with both of them together";
 	[]
-	if (Level of Erica is 4 and Player is not neuter): [talked with Erica about the felinoid fucking her and having approved]
+	if (Level of Erica is 4 and player is not neuter): [talked with Erica about the felinoid fucking her and having approved]
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Klauz and Erica";
 		now sortorder entry is 8;

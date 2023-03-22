@@ -17,7 +17,7 @@ ResolveFunction of Hyena Bikers is "[ResolveEvent Hyena Bikers]".
 Sarea of Hyena Bikers is "High".
 when play begins:
 	add Hyena Bikers to BadSpots of MaleList;
-	add Hyena Bikers to BadSpots of HermList;
+	add Hyena Bikers to badspots of HermList;
 	add Hyena Bikers to BadSpots of FurryList;
 
 to say ResolveEvent Hyena Bikers:

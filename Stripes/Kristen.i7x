@@ -113,11 +113,11 @@ to say krishideoutscent:
 
 to say krishideoutdesc:
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]R: You shouldn't be able to get here! Get out!";
+		say "ERROR-Kristen-[HP of Kristen]R: You should be able to get here! Get out!";
 		move player to Grey Abbey Library;
 		now Kristen's Hideout is unknown;
 	else if HP of Kristen < 12:
-		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom, and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
+		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
 	else if HP of Kristen is 12:
 		say "[kristentf_phase1]";
 		WaitLineBreak;
@@ -213,7 +213,7 @@ to say kristendesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]L: You shouldn't be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]L: You should be able to find me yet.";
 	else if HP of Kristen < 12:
 		say "     Still apparently unchanged, this Caucasian woman stands about five foot ten inches. She has a slender figure with just the right amount of sexy curves to give her feminine allure. She's wearing a white cotton shirt and black jeans. She has fair skin with only a light tan, partially from staying hidden indoors a lot lately as well as her frequent use of sunscreen. She's got shoulder-length dirty blonde hair which she wears in a ponytail. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 	else if HP of Kristen < 16:
@@ -228,7 +228,7 @@ Instead of conversing the Kristen:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]T: You shouldn't be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]T: You should be able to find me yet.";
 	else if HP of Kristen is 2:
 		say "     'Welcome to my place. Well, it's not really my place. It belongs to my friend, but it doesn't look like she's coming back by this point.' After an awkward pause, she affects some excitement in her voice and forces a smile.";
 		say "     'I was on my way to come see her when things went nutso-bonkers. It was all happening too fast - the power outage, the electronics failure, the quake, people turning into monsters... Madness! I rushed here through that chaos, got inside with her spare key and hid here overnight. I could hear the rampage growing outside. There's a club a few buildings over and the people inside must've turned into something big and destructive. A lot of the buildings along this stretch are wrecked because of it. Even the staircase up here was taken out, trapping me inside.";
@@ -665,7 +665,7 @@ to say kristentfsexmenu:
 			now description entry is "Zake her for a ride in your lap";
 		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
+		now title entry is "Blow job";
 		now sortorder entry is 5;
 		now description entry is "Use her muzzle";
 	[]
@@ -702,7 +702,7 @@ to say kristentfsexmenu:
 				now sextablerun is 1;
 				if nam is "Fuck her":
 					say "[kristentfsex01]";
-				else if nam is "Blowjob":
+				else if nam is "Blow job":
 					say "[kristentfsex02]";
 				else if nam is "Give cunnilingus":
 					say "[kristentfsex03]";
@@ -745,7 +745,7 @@ to say kristentfsex02:
 	else:
 		say "     Kristen takes your [Cock of Player] cock in hand, pausing to admire her favorite lover's tool before getting on her knees. She cannot restrain her eagerness with your [cock size desc of Player] manhood offered up before her, taking it into her warm muzzle right away. Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod. You grip your fingers in her hair so you can thrust firmly int the slutty vixen's muzzle";
 	say "[if Player is female]. She even slips a few fingers into your juicy cunny, pushing into your feminine depths each time she sucks down hard[else if CockName of Player is not listed in infections of InternalCockList]. She rubs a paw over your ballsack, kneading and caressing your orbs, longing for their contents[end if].";
-	say "     After enjoying the blowjob for several minutes, you feel yourself getting close[if a random chance of Libido of Kristen in 6 succeeds]. With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously. With a loud groan, you empty your [Cum Load Size of Player] load across the sexy vixen's face while her tongue hangs out to catch what she can. She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[else]. Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan. You empty your [Cum Load Size of Player] load into her muzzle for her to swallow down. Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
+	say "     After enjoying the blow job for several minutes, you feel yourself getting close[if a random chance of Libido of Kristen in 6 succeeds]. With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously. With a loud groan, you empty your [Cum Load Size of Player] load across the sexy vixen's face while her tongue hangs out to catch what she can. She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[else]. Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan. You empty your [Cum Load Size of Player] load into her muzzle for her to swallow down. Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
 
 
 to say kristentfsex03:
@@ -771,7 +771,7 @@ to say kristentfsex06:
 	say "     Pulling Kristen into your arms, you hug her close, telling her you want to spend some time with your special vixen. She releases a pleased yip as you give her bottom a squeeze. Her tail flags up and she rubs her body eagerly against yours, her soft-furred bosom pressed [if Breast Size of Player > 0]against your own[else]to your chest[end if]. With loving affection in her eyes, she presses her muzzle to your lips and kisses you passionately.";
 	say "     'Oh, my wonderful mate. Here, have a seat so I might please you.' Moving to her knees between your bent legs, she nuzzles at your loins. Moaning as she scents your manhood, she places one paw on your [if CockName of Player is not listed in infections of InternalCockList]balls[else]hip[end if] even as the other moves between her legs. She starts with a few slow licks along your length before lavishing it with attention. She works her tongue agilely over every square centimeter of your [cock size desc of Player] shaft as she worships it lustfully while fingering her dripping cunny.";
 	say "     In time, the tonguework grows more heated and soon enough she's plunging her muzzle down over your erect penis. She licks and sucks at it, swallowing down your precum and searching for more. Her tongue rubs across your shaft and glans in her quest to pleasure you. Her muzzle is warm and wet, a delight around your [Cock of Player] rod[if CockName of Player is not listed in infections of InternalCockList] while she caresses your balls[end if].";
-	say "     As good as this blowjob is, you don't want to miss out on the opportunity to mate with the amorous vixen. With some reluctance, you guide her head back and, after thanking her for her wonderful work, tell her to lay down across the divan so you might fuck her. She smiles happily and, pulling her fingers from her dripping snatch with a wet slurp, moves to lay back on the plush lounger. She smiles up at you, runs her paws over her sexy body and spreads her legs, wet fingers now holding her snatch open in lustful invitation. And while you need no further enticement at this point, the sight is still a beautiful and sexy one.";
+	say "     As good as this blow job is, you don't want to miss out on the opportunity to mate with the amorous vixen. With some reluctance, you guide her head back and, after thanking her for her wonderful work, tell her to lay down across the divan so you might fuck her. She smiles happily and, pulling her fingers from her dripping snatch with a wet slurp, moves to lay back on the plush lounger. She smiles up at you, runs her paws over her sexy body and spreads her legs, wet fingers now holding her snatch open in lustful invitation. And while you need no further enticement at this point, the sight is still a beautiful and sexy one.";
 	say "     Moving overtop of your vulpine mate, you run your hands through her ivory fur. You lean in and kiss her even as you're sliding your [Cock of Player] cock into her wet and heated snatch[if Cock Length of Player < 8]with ease. Her cunny welcomes your pulsing rod into it, eager to have her mate inside her[else if Cock Length of Player < 16]steadily. Her dripping cunny stretches open, slick and ready to accommodate your pulsing rod inside it[else]slowly. Her cunny needs to stretch wide to accommodate your pulsing rod inside it, but is slick and ready thanks to her preparatory fingering[end if]. The vixen releases a deep moan of pleasure into the kiss as you thrust into her[if Cock Length of Player < 12]. Once fully hilted in her[else]. Once you've filled her with as much as she can take[end if], you ease your hips back and start thrusting, pumping your meat into the moaning fox woman while she hugs you tightly.";
 	say "     'Oh yes, baby. That feels so good. I love you so much. Mmm... fuck me, my studly mate,' she yips, grinding her hips into your thrusts. She pants heavily, already quite worked up from the fun earlier and you're also getting close to finishing. You do your best to hold out for the eager vixen while giving her the lustful pounding she desires. With one hand on her tit and the other supporting yourself, you fondle her breast and tease her nipple, loving the yips and whimpers of delight as you play with her piercing. This all soon proves to be too much for the lovely vulpine and she arches her back with a loud yiff of orgasmic release. Feeling her cunt squeezing and spasming around your shaft builds your excitement even higher and you fuck her all the more eagerly. With her orgasm waning, you reach your climax and shoot your hot seed into her, setting off a second climax in the female. The scents and sounds of sex are thick in the air as you pump [if Ball Size of Player < 24]every drop of your [Cum Load Size of Player] load into her[else]as much of your [Cum Load Size of Player] load as you can into her, the excess gushing out around your pulsing manhood[end if].";
 	say "     After your lustful mating is done, the two of you cuddle for some time. Janice, who's been watching with an eager grin and a paw between her thighs, joins the two of you for some snuggling and heavy petting once your special couples-time is over.";

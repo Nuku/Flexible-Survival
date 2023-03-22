@@ -62,7 +62,7 @@ Cock Length of Astor is 10. [Length in Inches]
 Ball Count of Astor is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Astor is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Astor is 0. [number of cunts]
-Cunt Depth of Astor is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Astor is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Astor is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Astor is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -118,7 +118,7 @@ to say AstorTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if Player consents:
+			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is:

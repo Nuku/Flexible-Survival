@@ -200,7 +200,7 @@ carry out ssvending:
 
 Section 4 - Unwanted Trouble
 
-instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chance of 2 in 3 succeeds ) and Player is not neuter:
+instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chance of 2 in 3 succeeds ) and player is not neuter:
 	say "     As you start down the steps to the beach, there's an obvious commotion going on. A large squad of muscular men in naught but sandals, red cloaks and Grecian helmets are attacking the peaceful beachgoers. Some of the latter being dragged off, though some are being assaulted right then and there. A half-dozen of these soldiers are storming up the stairs to the Sunny Snacks patio, pushing past the mutants trying to flee down the stairs. You can see Cindy, the only one left up there, about to be cornered and outnumbered by the attackers.";
 	say "     If you're going to do something, you'd best do it soon.";
 	say "     [bold type]Shall you rush up to try to help the restauranteur or clear out like the other beachgoers are trying to do?[roman type][line break]";

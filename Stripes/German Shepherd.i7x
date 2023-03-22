@@ -75,7 +75,7 @@ to say gsd_desc:
 						say "     The sight of the buff male coming closer makes you excited and you start moving towards him as any thoughts to resist or get away fade from your mind. When he gets near, you drop to all fours and press your head to his paw. You receive a head petting and scritch that makes you very happy. 'That's my good [if Player is female]bitch[else]pup[end if],' he says condescendingly as you submit immediately to him, though his acknowledgement of you as belonging to him pleases and excites you.";
 					else:
 						say "     That [bold type]scarred[roman type] German shepherd you met before is back, your paths having crossed once again. Perhaps he's been looking for you? And having found you, he approaches with a confident swagger. The buff male cracks his knuckles and gives a soft growl.";
-						say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and Player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
+						say "     'I thought I smelled you around, pup. How about you come over here and show your alpha what a good [if gsd_slut is true and player is female]bitch[else if gsd_slut is true]slut[else]beta[end if] you are?' Despite how you may normally feel about him and what he's done to you, being in the presence of your alpha dog triggers something inside you. The sound of his voice and his scent in your nose arouses you and makes you submit to him. He is your alpha and you obey, eager to please him.";
 					increase KorvinSubmitCounter by 1;
 					now combat abort is 1;
 					now fightoutcome is 22;
@@ -606,7 +606,7 @@ to say gsd_generic_vsex_08: [Force him to eat your ass]
 	say "     As soon as the male before you is sprawled out in submission, you get a brilliant idea. His chest is solid, his stomach and torso drool worthy, so why not do something that gives you a perfect seat to oggle him? His muzzle points to the sky as he pants, his tongue lolling from his mouth, and so your naked ass is soon hovering over his face. All that you get is a sudden whine as you press your hole against his muzzle. The canine is hestitant, but you give him little choice, grinding your ass against him as you feel his tongue moving into position. He doesn't quite get to fully pleasing you with it immediately, but as you glare down at his torso and remain seated, he comes to realize that he has no choice. That slimy appendage is then quickly lapping over your hole as you move to kneel, giving his tongue just enough space to play along your ass.";
 	say "     His saliva soon paints every inch of your ass crack, giving you a sense of ownership as the canine is forced to expend himself for only your pleasure. His supine position works to your advantage as you grip at his chest, grabbing and tweaking his nipples. He whines at each twist, at each abuse of his sensitive bits, but you know he likes it. Each time you do it, his cock lurches and dribbles even more pre. There's no doubt that he finds submission just as arousing as domination. So you continue to grind backwards into his mouth, letting his tongue dig deeper and deeper into your hole. There's nothing like an eager mouth and a long tongue. You're sure even he knows this, and that this is common for at least some of his kind. Still, the canine can only do so much without going deeper, and soon he jams his long appendage straight into you.";
 	WaitLineBreak;
-	say "     You let out a loud moan, probably one of your loudest yet, and grind back even harder against his tongue, fucking yourself on it. It's almost like getting fucked, but somehow better. That dexterous tongue digs into places in ways a cock never could. You're going mad with pleasure as that slimy appendage dances over your [if Player is male]prostate[else]insides[end if]. There's not enough energy left for you to control things, and soon you collapse onto his torso, your head right next to his cock. His own head tilts up to get at your ass some more. He is hooked, and you happily squeeze a hand around the base of his knot, rewarding him with pleasure as your own orgasm shoots through you. Soon you [if Player is male]fire off shot after shot of cum, plastering the fur along the canine's stomach and lower chest[else]are squirming in ecstasy as your climax surges through you in a blast[end if].";
+	say "     You let out a loud moan, probably one of your loudest yet, and grind back even harder against his tongue, fucking yourself on it. It's almost like getting fucked, but somehow better. That dexterous tongue digs into places in ways a cock never could. You're going mad with pleasure as that slimy appendage dances over your [if player is male]prostate[else]insides[end if]. There's not enough energy left for you to control things, and soon you collapse onto his torso, your head right next to his cock. His own head tilts up to get at your ass some more. He is hooked, and you happily squeeze a hand around the base of his knot, rewarding him with pleasure as your own orgasm shoots through you. Soon you [if player is male]fire off shot after shot of cum, plastering the fur along the canine's stomach and lower chest[else]are squirming in ecstasy as your climax surges through you in a blast[end if].";
 	say "     Your efforts at triggering his knot go rewarded as well, with his own seed firing into the air and falling back down on you. It feels like the pitter patter of a heavy storm, a storm of cum. You're marked, and you love it; You grow to love it even more as he works to drag your orgasm out. His tongue still plays over your insides, giving you mind shattering pleasure. He doesn't stop chowing down until that canine cock begins to recede into its sheathe. The canine leans his head back and gives your ass a slap with an open paw. You both then just stay pressed against each other, your head near his cock as his hot breath wafts over your ass. You're sure you will remember this for awhile, and that he no doubt will too. Maybe you've given him something new to think about as well.";
 	WaitLineBreak;
 	say "     You both eventually pry apart, heading off in your own directions. He seems to lick his lips as he watches you depart, a grin then spreading across your face. It serves as yet another reminder of this little adventure.";
@@ -644,13 +644,13 @@ to say gsd_special_vsex_00:
 		now sortorder entry is 3;
 		now description entry is "Pin him down and use his pole as your toy";
 	[]
-	if Player is male:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 4;
 		now description entry is "make the defeated cur suck you off";
 	[]
-	if Player is female:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 5;
@@ -1079,7 +1079,7 @@ german shepherd male cum is infectious. Strain of german shepherd male cum is "G
 Usedesc of german shepherd male cum is "[GermanShepherdMaleCumUse]";
 
 to say GermanShepherdMaleCumUse:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

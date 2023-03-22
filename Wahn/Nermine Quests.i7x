@@ -175,7 +175,7 @@ Hyena Challenge	"Hyena Challenge"
 Hyena Challenge is a situation.
 ResolveFunction of Hyena Challenge is "[ResolveEvent Hyena Challenge]". The level of Hyena Challenge is 12.
 when play begins:
-	add Hyena Challenge to BadSpots of HermList;
+	add Hyena Challenge to badspots of HermList;
 	add Hyena Challenge to BadSpots of FurryList;
 
 to say ResolveEvent Hyena Challenge:
@@ -225,7 +225,7 @@ to say ResolveEvent Hyena Challenge:
 							CreatureSexAftermath "Hyena Herm" receives "PussyFuck" from "Player";
 							if anallevel is not 1:
 								CreatureSexAftermath "Hyena Herm" receives "AssFuck" from "Player";
-							if Player is female:
+							if player is female:
 								CreatureSexAftermath "Hyena Herm" receives "OralPussy" from "Player";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
@@ -363,7 +363,7 @@ ResolveFunction of Twisted Fruit Grove is "[ResolveEvent Twisted Fruit Grove]". 
 Sarea of Twisted Fruit Grove is "Park".
 FelinoidRescued is a number that varies.
 when play begins:
-	add Twisted Fruit Grove to BadSpots of HermList;
+	add Twisted Fruit Grove to badspots of HermList;
 
 to say ResolveEvent Twisted Fruit Grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]

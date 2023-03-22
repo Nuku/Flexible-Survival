@@ -13,7 +13,7 @@ AptAid is a number that varies.
 
 Sarea of Apartment 319 is "High".
 When play begins:
-	Add Apartment 319 to BadSpots of DemonList;
+	Add Apartment 319 to badspots of DemonList;
 	Add Apartment 319 to BadSpots of FurryList;
 	Add Apartment 319 to BadSpots of MaleList;
 

@@ -157,7 +157,7 @@ Cock Length of Sylvia is 0. [length in inches]
 Ball Count of Sylvia is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sylvia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sylvia is 1. [number of cunts]
-Cunt Depth of Sylvia is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Sylvia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Sylvia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Sylvia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1021,7 +1021,7 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 	say "     ([link]N[as]n[end link]) - No. Let someone else take it. It doesn't feel right to you.";
 	if Player consents: [Do it.]
 		LineBreak;
-		if Player is knotted and player is pure and Player is male: [Special. For canidae]
+		if Player is knotted and player is pure and player is male: [Special. For canidae]
 			say "     The canine's desires speak to you on a lower level. Before you, a bitch is in need of mating and such an act is desirable for you as well. As you step towards her, shedding your clothes, the gleam in your eye causes her to shiver in anticipation. But as you reach her, Sylvia places a hand on your chest, 'I want to enjoy the buildup as well, so could we take this slowly?' While the animalistic instincts may be strong, your mind is stronger. You agree to take your time and ensure that she enjoys it. The young student beams at you and gazes appreciatively over the contours of your body and traces a finger over your torso. 'I've been looking forward to this,' she says sensually. 'You have such an aura of mystery that I'm sure attracts other people to you too,' the collie says, lightly grasping your knotted cock.";
 			say "     As she grips your member, you admire the collie's slim, toned body, your eyes spending extra seconds over her breasts and pussy. A small amount of fluid gathers on her outer lips, proof of her developing arousal. Your musings are cut short by Sylvia dropping to her knees and beginning to masturbate you, causing you to begin thrusting lightly against her fist, the stimulus that she provides being felt throughout your body. Thoughts of a long, amorous [if daytimer is day]day[else]night[end if] ahead of you fill your mind. You can feel the fur on the collie's paws as she caresses your balls and rubs your shaft, her eyes meeting your own with a needy expression. You are only too keen to oblige, pulling your length from her grasp before grabbing her head and plunging into her maw, hilting yourself on the first thrust.";
 			WaitLineBreak;

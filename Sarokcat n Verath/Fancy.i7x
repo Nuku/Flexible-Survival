@@ -75,7 +75,7 @@ Cock Length of Fancy is 0. [Length in Inches]
 Ball Count of Fancy is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Fancy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Fancy is 1. [number of cunts]
-Cunt Depth of Fancy is 24. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Fancy is 24. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Fancy is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Fancy is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -337,7 +337,7 @@ to say PonyQuest:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help Fancy.";
 		say "     ([link]N[as]n[end link]) - This is too much for you. No thanks.";
-		if Player consents:
+		if player consents:
 			LineBreak;
 			say "[ContinuePonyQuest]";
 		else:

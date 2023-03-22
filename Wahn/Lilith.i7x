@@ -57,7 +57,7 @@ Cock Length of Lilith is 0. [length in inches]
 Ball Count of Lilith is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Lilith is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Lilith is 1. [number of cunts]
-Cunt Depth of Lilith is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Lilith is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Lilith is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Lilith is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -695,25 +695,25 @@ to say LilithSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the succubus ass with your cock";
 	[]
-	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - A";
 		now sortorder entry is 6;
 		now description entry is "Have the succubus suck Brutus while you fuck her from behind";
 	[]
-	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Lilith & Brutus - B";
 		now sortorder entry is 7;
 		now description entry is "Lie on the bed with Lilith riding your cock while she sucks off Brutus";
 	[]
-	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - A";
 		now sortorder entry is 8;
 		now description entry is "Face-Fuck Lilith while Brutus pounds her pussy";
 	[]
-	if (Player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
+	if (player is male and DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99 and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Use Brutus to dominate Lilith - B";
 		now sortorder entry is 9;

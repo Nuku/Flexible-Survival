@@ -14,7 +14,7 @@ Quiet Apartment Building is a situation.
 ResolveFunction of Quiet Apartment Building is "[ResolveEvent Quiet Apartment Building]".
 Sarea of Quiet Apartment Building is "Red".
 when play begins:
-	add Quiet Apartment Building to BadSpots of HermList;
+	add Quiet Apartment Building to badspots of HermList;
 	add Quiet Apartment Building to BadSpots of FurryList;
 
 to say ResolveEvent Quiet Apartment Building:

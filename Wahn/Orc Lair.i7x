@@ -63,7 +63,7 @@ to say ResolveEvent Orcish Slave Raid:
 			else if fightoutcome >= 30: [fled]
 				say "[RunFromOrcSlavers]";
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				if BodyName of Player is "Orc Warrior" and player is pure and Player is male:
+				if BodyName of Player is "Orc Warrior" and player is pure and player is male:
 					say "     Two down, one to go. Though as you step up to the third orc, he raises his hands consolingly. 'Wait a minute! Seems like we underestimated you and you're a real orc after all...' He pulls the bundled-up fox to his side, then says 'Look, how about you stop beating up my brothers and have some fun with this little bitch instead? Freshly caught - you'd be the first one to break him in.'";
 					LineBreak;
 					say "     [bold type]Do you accept and fuck the helpless captive right then and there, then allow them to take him away afterwards?[roman type][line break]";
@@ -827,27 +827,27 @@ to say EscapeMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Search the cell for anything of use";
 	now sortorder entry is 1;
-	now description entry is "Maybe one of the orcs lost a key or something";
+	now description entry is "Maybe one of the orcs lost a key or something...";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pick the lock";
 	now sortorder entry is 2;
-	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right";
+	now description entry is "That hairpin there on the floor should suffice - if you've got the dexterity to use it right.";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Break the lock";
 	now sortorder entry is 3;
-	now description entry is "Just smash it";
+	now description entry is "Just smash it.";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Sabotage the lock";
 	now sortorder entry is 4;
-	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards";
+	now description entry is "Make the orcs themselves break the lock. You'll get fucked, but can escape afterwards.";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Wait to get fucked, then sneak out afterwards";
 	now sortorder entry is 5;
-	now description entry is "Tire them out and escape while they sleep";
+	now description entry is "Tire them out and escape while they sleep.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1247,7 +1247,7 @@ to say KoghhFuck2:
 			say "     Seems like he likes what he sees, as his cock twitches a bit and a glistening drop of precum appears at its tip. Holding his shaft out to you, the muscular orc chuckles as you immediately kneel down and eagerly slide your lips over the tip of his erect cock. Fulfilling the demands of your horny and strong master has you getting quite aroused, only helped along by the delicious and stimulating taste of his precum. Koghh lets you suck on his cock for a while, then suddenly pulls out and nods towards the sturdy leather-covered bench in the middle of the cell. 'Move over there, now!' he growls in a domineering tone that has you shivering with lust inside.";
 			WaitLineBreak;
 			say "     Quickly getting up and almost stumbling as you rush over to the bench, you're joined a moment later by your orc master, who lies down with his stomach on it. He positions himself with spread legs so his hips are just past the end of the bench, allowing his cock do dangle freely below and presenting his muscled and shapely ass to you. Looking over his shoulder, Koghh commands 'Get licking, slut!' and you of course immediately obey, kneeling behind the muscled brute. Pressing your nose against the somewhat hairy skin between his legs, you take a deep sniff of his clean, masculine smell and start lapping away at his hole. His pucker is pretty relaxed and accommodating, easily allowing you to push your tongue into his body - at which point you realize why that's the case, as you can clearly taste orc cum in his hole. While you explore his insides with your probing tongue, you idly wonder who the strong orc warrior might be having sex with and allow to fuck him.";
-			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and Player is male:
+			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and player is male:
 				LineBreak;
 				say "     [bold type]In the horny and aroused state you're in right now, your own orc nature rears its head and pushes the idea of burying your manhood in Koghh's ass to the forefront of your mind. You've got him in a perfect position to do it - but do you really want to suppress your normal submissive urges and take the chance to fuck your master?[roman type][line break]";
 				if Player consents:
@@ -1280,7 +1280,7 @@ to say KoghhFuck2:
 			say "     Seems like he likes what he sees, as his cock twitches a bit and a glistening drop of precum appears at its tip. Holding his shaft out to you, Koghh grunts in impatience as you don't react at once, then puts a hand on your shoulder and pushes down, making you kneel. The grunted command of 'Get to work, slave' and him gripping your hair finally results in you reluctantly opening your mouth and sliding your lips over the tip of his erect cock. Suckling on the orc's cock gives you a surprisingly delicious and stimulating taste of his precum, and despite yourself you can't help but get aroused. Koghh lets you suck on his cock for a while, then suddenly pulls out and nods towards the sturdy leather-covered bench in the middle of the cell. 'Move over there, now!' he growls in a domineering tone.";
 			WaitLineBreak;
 			say "     Being roughly pulled up by your arm, you're given a push towards the sturdy leather-covered bench in the middle of the cell. Stumbling over to it, you're joined a moment later by your orc master, who lies down with his stomach on it. He positions himself with spread legs so his hips are just past the end of the bench, allowing his cock do dangle freely below and presenting his muscled and shapely ass to you. Looking over his shoulder, Koghh commands 'Get licking, slut!' and you obey after he growls 'Now! I'll get angry if you make me stand up again,' kneeling behind the muscled brute. Sniffling with your nose so close to the hairy skin of his butt, you're relieved that at least he smells clean, only of the usual masculine orc scent and nothing else. With a sigh, you start lapping away at his hole. His pucker is pretty relaxed and accommodating, easily allowing you to push your tongue into his body - at which point you realize why that's the case, as you can clearly taste orc cum in his hole. While you explore his insides with your probing tongue, you idly wonder who the strong orc warrior might be having sex with and allow to fuck him.";
-			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and Player is male:
+			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and player is male:
 				LineBreak;
 				say "     [bold type]Given how horny and aroused you've gotten by now, the idea of burying your own manhood in him comes to your mind. You've got him in a perfect position to do it - do you take the chance to try fucking your 'owner'?[roman type][line break]";
 				if Player consents:

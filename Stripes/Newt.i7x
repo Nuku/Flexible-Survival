@@ -83,7 +83,7 @@ to say sexwithNewt:
 			now sortorder entry is 1;
 			now description entry is "fuck her hot cunny";
 			choose a blank row in table of fucking options;
-			now title entry is "Blowjob";
+			now title entry is "Blow job";
 			now sortorder entry is 2;
 			now description entry is "have her suck your cock";
 		if Player is male and Cock Length of Player < 18:
@@ -136,7 +136,7 @@ to say sexwithNewt:
 					now sextablerun is 1;
 					if nam is "Fuck her":
 						say "[newtsex01]";
-					else if nam is "Blowjob":
+					else if nam is "Blow job":
 						say "[newtsex02]";
 					else if nam is "Titty fuck":
 						say "[newtsex03]";
@@ -167,7 +167,7 @@ to say newtsex01:	[fuck her]
 	say "     As you fuck the hissing, panting salamander, you run your hands over her speckled skin. She winds her long tail around your waist, hugging and caressing you with it. Her smooth hide is slick with a thin layer of slime all over and bring a warm, tingle heat whenever it gets on you. And with that growing heat comes increased arousal that drives you to lust for this exotically beautiful creature all the more. Placing your hands upon her breasts, you squeeze those pert mounds of hers and tease their dark nipples by gently tugging her piercings.";
 	say "     With her legs around your hips and her tail pulling you into each thrust, you pound her hard as you both approach climax. She's panting and hissing with heated need. Steamy juices drip from her cunt as arches her back and cries out, cunt clamping down around you. The ripples and spasms of her inner walls are enough to push you over the edge and you're cumming moments later, pumping your hot seed into the furnace of her womb. You fuck that quivering hole with intensity, your lust for this red hottie driving you to give her every last drop you can. Once spent, you collapse atop her to kiss and cuddle while still buried inside her slick, creamy cunt.";
 
-to say newtsex02:	[blowjob]
+to say newtsex02:	[blow job]
 	say "     Coming up to Newt, you put your arms around her and give her a kiss. She wriggles her tongue into your mouth and runs it along your palate and even to the back of your throat. Taking a gasping breath after the long and lustful kiss, you suggest she put that wild tongue of hers to work on your cock. She grins at this and gets on her knees to get your meat in her muzzle.";
 	say "     She licks and sucks on your [Cock of Player] cock with great enthusiasm. Her tongue slides across your sensitive flesh in a myriad of delightful ways - flicking your glans, coiling around your shaft, sliding along its length[if CockName of Player is not listed in infections of InternalCockList], extending out to lick your balls[end if] and more. You caress and compliment the speckled beauty, loving all the attention. And when you do cum, you pump your [Cum Load Size of Player] load down her throat, the salamander girl hungrily swallowing it all down.";
 
