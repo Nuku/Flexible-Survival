@@ -128,11 +128,28 @@ to say ResolveEvent Trial of Courage: [Finding the amulet in the park]
 		say "     You decide not to examine the amphitheater just yet, and go back to exploring the park. Maybe another time you'll see what mysteries it holds.";
 
 
-instead of navigating Museum Foyer while (China Shop is resolved and PlayerMet of Aster is false): [meeting in the Museum]
+[Update for WalkinEvents table]
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"AsterMuseumMeeting"	AsterMuseumMeeting	"[EventConditions_AsterMuseumMeeting]"	Museum Foyer	2500	2	100
+
+to say EventConditions_AsterMuseumMeeting:
+	if (China Shop is resolved and PlayerMet of Aster is false): [meeting in the Museum]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+AsterMuseumMeeting	"AsterMuseumMeeting"
+
+AsterMuseumMeeting is a situation.
+ResolveFunction of AsterMuseumMeeting is "[ResolveEvent AsterMuseumMeeting]".
+Sarea of AsterMuseumMeeting is "Nowhere".
+
+to say ResolveEvent AsterMuseumMeeting:
 	say "     When you enter the museum, you see the minotaur you spoke to before, Aster, sitting in a chair near the doorway, his head held between his hands. When you step a little closer, he looks up and sees you. His previously glum expression brightens to a more neutral one, and he greets you. 'Hey, good to see you. Hopefully your day is going a bit better than mine.' Curious, you ask him about what happened to get him down. 'Well, I tried to get a job here, since history is a big passion of mine, and this place is in better shape than a lot of other areas around here. But I blew it. I didn't even get rejected, I just froze. I'm always like this at the worst times.' He shakes his head before lowering it back into his hands.";
 	now PlayerMet of Aster is true;
 	now Aster is in Museum Foyer;
-	move player to Museum Foyer;
+	now AsterMuseumMeeting is resolved;
 
 Section 3 - Conversation
 
