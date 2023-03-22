@@ -57,7 +57,7 @@ Cock Length of Andrew is 10. [length in inches]
 Ball Count of Andrew is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Andrew is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Andrew is 0. [number of cunts]
-Cunt Depth of Andrew is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Andrew is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Andrew is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Andrew is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -166,19 +166,19 @@ to say AndrewTalkMenu:
 	clear the screen and hyperlink list;
 
 to say AndrewTalkHimself:
-	say "     You ask him to tell you a bit more about himself, since he doesn't seem to talk much about that particular subject. 'You want to know more about me? Oh... Well, let's see...' he takes a moment to think 'As I've already told you, I kinda work here... Well, kinda, because it's not like I have a contract or anything, but I do get plenty of free drinks and tips for throwing in a good show. I'm quite the dancer, too... Maybe you should watch me dancing sometime, [if player is male]or... you know, join me and show everyone some man on man action[else]maybe you could learn a thing or two[end if]...' he replies with a charming wink, his naturally flirty attitude being quite obvious to you.";
+	say "     You ask him to tell you a bit more about himself, since he doesn't seem to talk much about that particular subject. 'You want to know more about me? Oh... Well, let's see...' he takes a moment to think 'As I've already told you, I kinda work here... Well, kinda, because it's not like I have a contract or anything, but I do get plenty of free drinks and tips for throwing in a good show. I'm quite the dancer, too... Maybe you should watch me dancing sometime, [if Player is male]or... you know, join me and show everyone some man on man action[else]maybe you could learn a thing or two[end if]...' he replies with a charming wink, his naturally flirty attitude being quite obvious to you.";
 	say "     'But I suppose you want to know more than that... Well, can't say I was much different before this whole craziness happened. I was always quite the club boy, loved meeting new people, have lots of fun, going to lots of parties, sucking a lot of dick...' - he adds a naughty grin at the latter - 'And now it's even better, since everyone seems more keen on getting down to business. Outside of Palomino, well... At least now it's acceptable to teach the naughties a lesson in a multitude of ways. I guess it could be worse! We all could have been turned into chastity nuns. Wouldn't that be tragic?!'";
 	say "     You move on to another subject as he finishes speaking.";
 
 to say AndrewTalkWork:
-	say "     Since he mentioned he [']kinda['] worked here, you ask him to explain his [']kinda['] work. 'I help people relax, of course! Pure entertainment! Seeing a sexy black wolf doing some sexy dancing on stage is, for sure, a great way to cheer up! Especially if you have the option to offer him some additional fun...' he says[if player is male], while eyeing you from head to feet as he bites his lower lip suggestively[else] with a mischievous wink[end if] 'I can say that I help a lot of people. Almost a one percent rate of success for any hung stud who wants a good time with me. Not to brag, of course, I just happen to fully dedicate myself to my partner once it's time to get down to business, and that drastically improves things. In short, I'm a happy worker who makes people happy.'";
+	say "     Since he mentioned he [']kinda['] worked here, you ask him to explain his [']kinda['] work. 'I help people relax, of course! Pure entertainment! Seeing a sexy black wolf doing some sexy dancing on stage is, for sure, a great way to cheer up! Especially if you have the option to offer him some additional fun...' he says[if Player is male], while eyeing you from head to feet as he bites his lower lip suggestively[else] with a mischievous wink[end if] 'I can say that I help a lot of people. Almost a one percent rate of success for any hung stud who wants a good time with me. Not to brag, of course, I just happen to fully dedicate myself to my partner once it's time to get down to business, and that drastically improves things. In short, I'm a happy worker who makes people happy.'";
 	say "     You thank him for his input.";
 
 to say AndrewTalkSex:
 	say "     Anyone could notice that Andrew tends to prefer the masculine kind of fellows, but you want to know more about that, so you ask him. 'Well... It's not like I don't like women, I just prefer the studs a lot more. So why should I have one if the other gets me going like crazy? When I have plenty of dudes to pick from, I don't see the point... I just can't resist the manly scent, a strong masculine body, that good hard dick and nice tight little holes...' The wolf takes a pause to adjust his bulge, very noticeably growing as he talks about this. 'Damn, I think I need another fuck.' he finishes, giggling by the end of it.";
 
 to say AndrewTalkFur:
-	say "     Knowing this isn't exactly a request anyone makes, you compliment the sexy wolf's look before following up with your intention. 'Ah, I see... You like the wolf look[if player is male], yeah? But you could also just blow me and drink my load, instead... It would have the same effect, not to mention it's much more fun... But alright[else], hmm[end if]... I suppose I could hand you some, since it grows back up nearly instantly. Give me a second.' he says, heading somewhere out of view for a couple of minutes, then returning with a tuft of his own fur in his paw. 'Here you go, sweetie. Show me the results later, alright?' he says, handing you the fur as he gives you a wink.";
+	say "     Knowing this isn't exactly a request anyone makes, you compliment the sexy wolf's look before following up with your intention. 'Ah, I see... You like the wolf look[if Player is male], yeah? But you could also just blow me and drink my load, instead... It would have the same effect, not to mention it's much more fun... But alright[else], hmm[end if]... I suppose I could hand you some, since it grows back up nearly instantly. Give me a second.' he says, heading somewhere out of view for a couple of minutes, then returning with a tuft of his own fur in his paw. 'Here you go, sweetie. Show me the results later, alright?' he says, handing you the fur as he gives you a wink.";
 	ItemGain black wolf fur by 1;
 
 Section 3 - Sexy Times
@@ -209,7 +209,7 @@ to say sexwithAndrew:
 			say "[AndrewDemonShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that";
-			if player is male:
+			if Player is male:
 				say " you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package.";
 				WaitLineBreak;
 				say "[AndrewSexMenu]";
@@ -226,7 +226,7 @@ to say sexwithAndrew:
 			say "[AndrewBrutusShow]";
 		else:
 			say "     Deciding it'd probably not be a good idea, you tell Andrew that, adding that";
-			if player is male:
+			if Player is male:
 				say " you'd be more than happy to have some fun with the wolf if he's up for it. 'Oh, I see how it is. You're just looking to get some of this,' he says, rubbing if large, firm package.";
 				WaitLineBreak;
 				say "[AndrewSexMenu]";
@@ -269,13 +269,13 @@ to say AndrewSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Take the wolf from behind with some spectators watching";
 	[]
-	if HP of Andrew >= 2 and player is not dominant: [this scene would definitely not fit a dominant player]
+	if HP of Andrew >= 2 and Player is not dominant: [this scene would definitely not fit a dominant player]
 		choose a blank row in table of fucking options;
 		now title entry is "Get cummed on by Andrew in public";
 		now sortorder entry is 6;
 		now description entry is "Tell the wolf you want him to cum all over you with an audience";
 	[]
-	if HP of Andrew >= 2 and player is not dominant: [this scene would definitely not fit a dominant player]
+	if HP of Andrew >= 2 and Player is not dominant: [this scene would definitely not fit a dominant player]
 		choose a blank row in table of fucking options;
 		now title entry is "Receive a bukkake";
 		now sortorder entry is 7;
@@ -355,7 +355,7 @@ to say AndrewSexReceiveBlowjob:
 to say AndrewSexGiveBlowjob:
 	say "     Andrew grins at your offer and runs a paw down to the bulge in his pants. 'Mmm... You want a tasty treat, hot stuff? I've got something nice and sticky all saved up, just for you...' he says while hopping up to sit at the edge of the table. He unzips his fly and pulls out his swelling cock, running his fingers over the throbbing, lupine cock. A little precum dribbles down his pointed shaft as he slips his pants down completely. The scent of aroused wolf grows stronger and you lick your lips, longing to get a taste of that thick meat.";
 	say "     Unable to resist the tantalizing offer, you bring your lips to his thick shaft and start licking and kissing at it. He moans softly and rubs his hands over your head, gently coaxing you to take it into your mouth. As he stuffs your mouth with his cock and starts thrusting into it, you work your tongue over him, excited by the taste of his precum and musky meat. You grope his heavy, enlarged balls with one hand, longing to taste their contents soon. 'Mmm... good work. Keep that up,' he says in his soft, sultry voice";
-	if player is submissive: [the original scene was clearly intended towards more submissive players]
+	if Player is submissive: [the original scene was clearly intended towards more submissive players]
 		say ". 'You love this, don't you? I bet you'd also love putting on a show for everyone to see how much you love servicing a big cock...'";
 		WaitLineBreak;
 		say "     Awash in your own arousal, you'd voice your agreement with him if your mouth weren't stuffed with delicious wolf-cock, wanting to be as much a man-whore as the sexy wolf you're blowing. You are quite certain others would be eager to use your every hole, and imagining all those different, sexy penises around you, being stroked, rubbing together, filling slick holes, turns you on all the more. You wiggle your rear and suck all the harder, which stimulates his cock to increase its flow of delicious precum. Grabbing his ass with your free hand, you slip a pair of fingers into his tailhole and prod at his prostate. This gets the wolf howling in pure bliss as his orgasm approaches, leaving you with a decision to make.";
@@ -396,7 +396,7 @@ to say AndrewSexCummedOn:
 	say "     With your hips at the edge of the nearby table and your legs spread, he moves in between them and presses his thick cock down onto yours. You can feel his warm shaft and weighty balls atop your [cock size desc of Player] man meat as his precum flows steadily, getting you both slick. He rubs his paws over them[if Cock Count of Player is 1] both[end if], sliding them against one another as he masturbates you both. The feel of his slippery cock against your [Cock of Player] member[smn] is very arousing, as you can feel every throb and pulse from his shaft against yours.";
 	WaitLineBreak;
 	say "     As your cocks are rubbed and stroked together, you let your hands wander over your [bodydesc of Player] body, teasing yourself. You notice several others gathered around the booth, watching the sexy show you two are putting on, so you increase your wanton display for them. To one side, you notice a [slutname] leaning over the booth to better watch the fun. Behind him is a [bodyselector] and it's quite clear that the pair have been inspired to have some fun of their own. Both pleased and aroused at having gotten the two males excited by your show, you reach over and stroke the [slutname]'s cheek, enjoying his moan as the [bodyselector] behind him thrusts firmly into him again.";
-	say "     Turning your attention back to Andrew, you smile up at the wolf and lick your lips, moaning for him to cum. Judging by how wet your lower belly, crotch and cock[smn] are, he's certainly getting close. Grabbing his balls and rubbing them against yours, [if player is submissive]you beg him to spray his load all over you to show everyone what a big cock slut you are[else]you ready yourself to receive his load as you encourage him to cum all over your body for everyone to see[end if]. His lupine cock twitches at this and releases a big spurt of pre across your [bodytype of Player] chest, setting your own orgasm off.";
+	say "     Turning your attention back to Andrew, you smile up at the wolf and lick your lips, moaning for him to cum. Judging by how wet your lower belly, crotch and cock[smn] are, he's certainly getting close. Grabbing his balls and rubbing them against yours, [if Player is submissive]you beg him to spray his load all over you to show everyone what a big cock slut you are[else]you ready yourself to receive his load as you encourage him to cum all over your body for everyone to see[end if]. His lupine cock twitches at this and releases a big spurt of pre across your [bodytype of Player] chest, setting your own orgasm off.";
 	WaitLineBreak;
 	say "     Your [cock size desc of Player] [Cock of Player] shaft pulses beneath his, spraying your seed across your [if Cock Length of Player < 10]belly and the underside of the wolf's cock[else]chest and face[end if]. Andrew strokes and pumps your cock[smn], making sure you have a long and enjoyable orgasm. Hearing grunts and moans to your side, you can see the couple in the other booth panting hard as the [bodyselector] cums in the [slutname]'s ass. All this sets your lupine lover off with a lustful howl that sends a big blast of wolfcum into your face. More delicious globs of his semen spray across your body and face, coating you in large splatters of musky seed. As you moan and pant while recovering from your powerful orgasm, you gather up globs of his sticky seed and lick them from your fingers. You even share a sample with the [slutname] and, from the look he and Andrew share, you expect he'll be bending over for the wolf soon.";
 	NPCSexAftermath Player receives "Other" from Andrew;

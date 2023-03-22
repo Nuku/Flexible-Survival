@@ -78,7 +78,7 @@ When play begins:
 	Add The Dorms Part Three to BadSpots of FurryList;
 	Add The Dorms Part Three to BadSpots of MaleList;
 	Add The Dorms Part Three to BadSpots of FemaleList;
-	Add The Dorms Part Three to badspots of HermList;
+	Add The Dorms Part Three to BadSpots of HermList;
 
 to say ResolveEvent The Dorms Part Three:
 	say "     Making your way through the college dorms, you find yourself stumbling over a large fluffy towel lying prone in the middle of the floor. Wondering who had left that there, you turn your head to regard several distinct noises coming out from the huge co-ed washroom on your left - or at least it's been relabeled as co-ed now. Your suspicions on the situation are confirmed after you kick the offending towel and notice that the cotton material is quite sticky with musky goop. Feeling quite curious to check it out, you do pause to wonder if you should have a look inside... for educational purposes of course.";

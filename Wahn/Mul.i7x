@@ -28,7 +28,7 @@ Cock Length of Mul is 14. [length in inches]
 Ball Count of Mul is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Mul is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Mul is 0. [number of cunts]
-Cunt Depth of Mul is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Mul is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Mul is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Mul is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -146,13 +146,13 @@ to say MulLockerroomSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Power-bottom your orcish slut";
 	[]
-	if (player is male and demon brute is tamed and DemonBruteStatus < 2):
+	if (Player is male and demon brute is tamed and DemonBruteStatus < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Brutus fuck Mul";
 		now sortorder entry is 5;
 		now description entry is "Give the demon a treat and let him sink his prick into Mul";
 	[]
-	if (player is male and felinoid companion is tamed):
+	if (Player is male and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Klauz fuck Mul";
 		now sortorder entry is 6;
@@ -735,7 +735,7 @@ to say MulLibrarySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Allow the feral wolf to mount Mul";
 	[]
-	if (HP of Sven > 7 and HP of Sven < 30 and player is male): [***sex-pet Sven only currently]
+	if (HP of Sven > 7 and HP of Sven < 30 and Player is male): [***sex-pet Sven only currently]
 		choose a blank row in table of fucking options;
 		now title entry is "Get Sven to fuck Mul";
 		now sortorder entry is 8;

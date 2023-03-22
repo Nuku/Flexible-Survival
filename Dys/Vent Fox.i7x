@@ -209,7 +209,7 @@ Cock Length of Vent is 7. [Length in Inches]
 Ball Count of Vent is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Vent is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Vent is 0. [number of cunts]
-Cunt Depth of Vent is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Vent is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Vent is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Vent is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -360,7 +360,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[][
-		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
+		if anallevel > 2 and VentFoxContentLevel > 2 and Player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;
@@ -658,9 +658,9 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     [link](0)[as]0[end link] - Do nothing.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
-				say "Choice? (0-[if LoganCommand is 2 and player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
+				say "Choice? (0-[if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
 				get a number;
-				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and player is male):
+				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and Player is male):
 					break;
 				else if calcnumber is 1 or calcnumber is 0:
 					break;

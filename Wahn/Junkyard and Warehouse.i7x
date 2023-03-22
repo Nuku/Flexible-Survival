@@ -166,7 +166,7 @@ Cock Length of Steven is 15. [length in inches]
 Ball Count of Steven is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Steven is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Steven is 0. [number of cunts]
-Cunt Depth of Steven is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Steven is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Steven is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Steven is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -288,7 +288,7 @@ to say StevenTalkFeelings:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Push the issue.";
 		say "     ([link]N[as]n[end link]) - Better back off, for now.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     'If there was some way I could get back in and talk to them, then—well I might be able to convince them I'm the same as before.' You give him the location of the alley you found, and 	the oddly convenient backdoor. 'Alright. Maybe one of these days I'll see about talking to them. But I don't think I'll want to do it alone. Can you come with me when I'm ready?' You give your assurances to him and step aside, content with where things ended up.";
 			now Resolution of Old Stallion Friendship is 2; [Event now active]
@@ -487,7 +487,7 @@ To Stevenjunkfuck:
 				else:
 					say "[Stevensuck]";
 			else if Stevenmm > 1:
-				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blow job (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
+				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blowjob (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
 					say "Choice? (1-3)>[run paragraph on]";
@@ -532,7 +532,7 @@ to say Stevensuck:
 	say "     After stroking the equine man till he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. Leaning further forward, you slip the tip into your mouth, gently sucking on it. Groaning, you feel Steven placing his hand on your head, pushing you further down on his shaft, the thick length filling up your mouth. You gulp around the length, stroking the base of it as you begin bobbing your mouth up and down.";
 	say "     Your mouth is too much for the poor equine man to take and you feel the head of his cock flare up as he climaxes, pumping his thick cum down your throat. You gulp down as much as you can, but much of it squirts out around his shaft. When he finally empties his balls you slip his length out of your mouth and take a long needed breath. Panting hard you lick your lips and get about cleaning yourself off, but not before you move up and give Steven a good long kiss. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum he gave you.";
 	NPCSexAftermath Player receives "OralCock" from Steven;
-	if ( player is submissive or ( player is mpreg_ok and Cunt Count of Player is 0 ) ) and a random chance of 2 in 5 succeeds:
+	if ( Player is submissive or ( Player is mpreg_ok and Cunt Count of Player is 0 ) ) and a random chance of 2 in 5 succeeds:
 		say "     Steven smiles down at you and strokes your head. 'Mmm... I can tell what you're really after,' he nickers before moving around behind you. He pushes you forward onto all fours and runs his hands over your [bodydesc of Player] body. 'You're really wanting the big stallion to mount you, aren't you?' he says. He runs his hand between your legs to tease your [if Player is female]pussy[else]pucker[end if] while grinding his cock against your backside, leaking the last few dribbles of his previous load onto your ass. 'How about I take you like a mare, huh?' he asks, rubbing a pair of fingers over into your needy hole. Your ";
 		if Player is submissive:
 			say "submissive urges, already fired up from sucking off the virile male, have ";
@@ -601,7 +601,7 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Encourage him to continue.";
 	say "     ([link]N[as]n[end link]) - Perhaps it's better to return another day.";
-	if player consents:
+	if Player consents:
 		say "     With a bit of prodding, you get the stallion to agree to go ahead and get it over with. The man lightly grips the pealed back bits of aluminum, slowly opening the back 'entrance' and squeezing through. Almost immediately, you follow after him. Once inside, you're relieved that his bulging body is able to hunch behind the piles of food packet boxes, water bottle crates, soda crates, and everything in between. The pile of supplies easily reaches up to neck height for the average human, making your positioning all the easier, even with the broad slab of pure muscle right next to you";
 		say "     'So what now?' Steven asks with a jittery voice. You simply nudge him with an elbow, looking at his eyes as they show a look of utter bewilderment. 'Fine.' The stallion then walks out from behind the pile of supplies, hands raised with a face full of concern. No one seems to notice at first, but as soon as just a single person sees the hulking, mostly nude male heading towards them, they gasp. That gasp then draws more attention, and then more gasps, sounding like a slowly crescendoing chorus of pure hot air. 'Run!' someone you can't identify shouts. 'No! Wait!' Steven tries to yell out over the panic. However, it does little good, everyone stampedes towards the main door. The guards are far more concerned with Steven than keeping the survivors safe.";
 		WaitLineBreak;
@@ -610,7 +610,7 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Teach them what a wild stallion can do [bold type](Steven will become temporarily unavailable).[roman type][line break]";
 		say "     ([link]N[as]n[end link]) - If they can't be convinced to stay civil, then kick them out.";
-		if player consents: [Wild Stallion]
+		if Player consents: [Wild Stallion]
 			LineBreak;
 			say "     Steven gives a look of shock, but as you rub over his flank and reach towards his cock, his look abates towards one of confusion. His muzzle then twists into a vision of pure lust as you wrap a hand around his loincloth covered dick. The strings keeping the shaft mostly out of view snap as it hardens at a ridiculous pace. A neigh then rings out from him as he shakes his head, lightly pushing you aside as he clops over to the indisposed guards. 'So you think you could stop me from taking what I want?! Huh!' The stallion then pumps at his fully hardened dong, pre spewing out across the face of the guard nearest him. Steven then slaps the man across the face with the leaking shaft, neighing out sounds of pure lust as he grips the guards head. The still human man's eyes gloss over as his lips kiss at the stallion's tip. 'So quick to fall to your betters. Let me help you fall faster.' The musk ridden male then slams his cock down the guards throat, the human gagging momentarily before miraculously overcoming that limitation.";
 			say "     Steven quickly gets into a rhythm of throat-fucking the male before him, neighing and flehmening as his cock gets coated with ever thickening saliva. The man the stallion was previous huddled over is still in the same spot, and as you glance at him, you realize that fine hairs have begun to sprout along his neck. Hunching over, you rip his shirt open, revealing hairs all over his torso, at their thickest along his lower abdomen as they trail down into his pants.";
@@ -618,7 +618,7 @@ instead of going southeast from Abandoned Lot while (Resolution of Old Stallion 
 			say "     Do you want to suck the stallion's old friend? Beware, though, as [bold type]Steven may have words with you afterwards if you do.[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents: [sucks]
+			if Player consents: [sucks]
 				Linebreak;
 				say "     You quickly rip off the rest of the man's clothes, revealing an ever lengthening, and ever more equine cock between his legs. Unable to help yourself, you lap at the tip, sucking down all of the seed the man pumps out. His product seems to increase with each passing second, and soon you find your mouth regularly filled to the brim with musky cum. You have to gulp it down just to avoid drowning, but you can't help yourself as you push your mouth further down his shaft, watching as the fur along his body spreads faster as you get further down. Soon he's neighing out of a slender equine muzzle, his newly thickened fingers gripping at your head to force you down to the base. As you gulp around the tip of the shaft, you feel it edging its way deeper inside you. The length slows in its growth, but is still quite eager to get even larger within you. A loud neigh then fills the room, your eyes darting to the side so you can just barely make out the sight of Steven's ass cheeks clenching together, the muscles held tight as the sounds of gulping gets louder.";
 				say "     You refocus on your current task, gulping down around the length deep inside your throat as the changing human begins to thrust his hips, fucking your face. At first you gag, but as you work up to the rhythm of it, you take it like a champ. With the thrusting, your gulping, and the now fully grown cock, your feel new urgency in the thrusts down your throat. Before you can panic, however, the stallion shoves you to the base once more as his cock pulses and his hips still. You feel it before you taste it, the thick globs of seed firing down your gullet and into your stomach. Four, five, eight, twelve, eighteen, and then finally the globs begin to slow, your lungs burning as you desperately claw at the crotch before you, whinnies filling your ears as the hands loosen their grip on you. You yank yourself back hard enough to land on your ass, the rest of the seed from that monolith of masculinity splattering across the once human groin and cock, some even splattering against you.";
@@ -648,20 +648,20 @@ Section 6 - Steven Bunker events
 
 [Gotta move Steven to the bunker for one event, then he'd go back to the junkyard. All of this will be for a male player.]
 
-after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and player is male and daytimer is day):
+after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and Player is male and daytimer is day):
 	say "     As you walk out onto the steps of the old library, you hear a man clear his throat. You then glance to the side, seeing the imposing figure of Steven. He's leaning against a pillar, his eyes drinking you in as he simply remains silent. A loincloth is the only thing blocking your view of his crotch, but even then, several inches of his equine shaft dangle in clear view, well past the edges of the small piece of fabric. Apparently, he's settling for just having your attention. The silence remains for several awkward seconds, forcing you to make the first move.";
 	Linebreak;
 	say "     [bold type]Do you want to question him about his presence, or do you want to simply leave him to come back another time?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents: [Starts Event]
+	if Player consents: [Starts Event]
 		LineBreak;
 		say "     You question why he's here and what may have been going down in the warehouse. He hesitates, glares up and down your form, and then clears his throat again. This time, it's followed by his deep voice answering you, 'The warehouse is now the perfect harem for me, and some of the less changed ones make for perfect bait. However, I'm not here to answer all your questions. I'm here to use you[if charisma of Steven is 1]. Your antics from before need to be paid for, and you being a good little toy will set you on that path. However, this once, I will give you the chance to back out. You did do many things that brought me great pleasure. So, I will give you the chance, this once, to avoid me and my business, and in return, I will do the same[else if charisma of Steven is 51]. Your help with getting me my new slaves will earn you a bit of fun as my toy. Then again, maybe that was a one time thing for you. If that's the case, we can both go our separate ways, permanently[end if].'";
 		LineBreak;
 		say "     [bold type]Do you want to be adopted by Steven, taken by him?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents: [Final check to continue event]
+		if Player consents: [Final check to continue event]
 			LineBreak;
 			say "     You give him a nod, and a smile streaks across his muzzle. 'Now that's a good toy.' You aren't quite sure what he has in mind for you, but you can't help but find yourself excited by the coming prospects. After what you saw in the warehouse, there's no doubt in your mind that he will pull out every stop, that he will use you in the most primal manner one can. There's not much else you could ever want, and that thought surprises you. Whether he has some primal effect on your mind, or whether his dominance has filled you with that desire, you're not sure. You're also not sure how long you were simply standing there and taking his form in, eyehumping his muscles, but he soon approaches you, grabbing an arm and hauling you out into the street.";
 			say "     You almost try to jolt away from him, your concern about the inhabitants of the city overwhelming your submission. However, Steven won't have any of it, tightening his grip on you as he feels you jolt. 'I'm going to show everyone around who you belong to. You agreed, so no trying to back out now.' Steven's gruff voice gives you goosebumps, makes you truly feel owned. He is right, however, there is no turning back now. You agreed to the will of a conquerer, and there's nothing to do but follow through. Even if you really wanted to back out, he'd still take you as his. That's exactly why you find yourself facing the cement, his hulking hands shoving you face down onto the ground.";
@@ -689,13 +689,13 @@ after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of 
 
 [Steven shows up at the bunker for a second time]
 
-after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of Steven is 52) and XP of Onyx > 9 and XP of Onyx < 20 and player is male and daytimer is day):
+after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of Steven is 52) and XP of Onyx > 9 and XP of Onyx < 20 and Player is male and daytimer is day):
 	say "     'There you are, my little bitch,' you hear a voice declare as you walk out of the library. It's Steven again.";
 	LineBreak;
 	say "     [bold type]Do you pay attention to him?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents: [Starts Event]
+	if Player consents: [Starts Event]
 		LineBreak;
 		say "     Turning around, you set your eyes on the hulking horse before you. The ex-guard seems bigger than when you last spoke to him. His height isn't noticeably different, his muscles, while more defined, don't seem to have grown outward, and yet, somehow, you feel as if you're standing before a giant: a predatory giant. 'That's how I like to be looked at. In awe. In worship, and just a touch of fear.' Something has clearly grown within him, and as Steven clops his way towards you, the wind tickling at his short fur, his cock becomes ever more present in your mind. Gone is the loincloth from before, the thing that was always soaked in musk and seed. Now there's nothing to hide his virility.";
 		say "     Steven's musk almost immediately hits you, his ever closer presence wafting the scent up to your nose. Your eyes lock onto the source of the smell, the crotch of the great equine before you. That's when you notice the longer fur around the base of his cock, his thick pubic-fur, and then you notice how sweaty the equine has gotten. 'I just got done with pounding a new recruit. He was a nice military guy, gruff, muscled, and ready to fight. However, all I had to do was whip off my loincloth and toss it in his face. Within seconds, he was begging for my cock. So, sorry if you were wanting a whiff of it. It's still balled up in his mouth.'";
@@ -710,7 +710,7 @@ after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of 
 		say "     No matter how much you might try, the halter and bit keeps you from saying a thing. The only sounds that come out of your maw are grunts, groans and indiscernible gibberish. This keeps going for what feels like half-an-hour, the big horse using you as a mount, quite literally. You're never driven too far away form the Library, but you're still shown off like some prized stallion. 'It feels pretty good up here,' Steven remarks as he slaps your back, his erection strafing back and forth between your shoulder blades. The pre leaking all over your back only makes this an even more humiliating affair, and as you question why you even agreed to this in the first place, you feel a blunt, wet object poke at your ass. It rubs back and forth, coating your rear in fluids, and as it slips between your cheeks, it swipes over your hole. The feeling of it, of the warm rod grazing your hole, reminds you exactly why you do things like this.";
 		WaitLineBreak;
 		say "     Your leash is yanked, hard, forcing you to stop as you let out gagging hacks for air. The cock behind you then slams right in. There's a sheering, almost unimaginable moment of pain, but after that brief second, ecstasy fills you, blinds you, and leaves you drooling over the metal bit in your mouth. You're filled to the brim with Onyx's cock, and as you try to move, Steven jerks on your leash. You aren't allowed to do anything other than take it. Of course, as the cock withdraws, your mind goes blank in fog. Lust infects your every thought, pleasure consuming you from the inside out.";
-		say "     All mercy that they may have had is quickly yanked away. The muscled, equine hips behind you quickly smack into your ass, pull away, and then slam back into you. This repeats, faster and faster, as if Onyx is trying to pound you into a mushy stain on the street. You're not sure if it's anger or lust that drives that cock in and out of you, and the gutteral, rasping grunts don't clear things up. However, as the speed picks up, you feel Steven begin to jack off above you. His cock grazes the back of your head every so often, his furred, yet callused, hands brushing against you as he pleasures himself.";
+		say "     All mercy that they may have had is quickly yanked away. The muscled, equine hips behind you quickly smack into your ass, pull away, and then slam back into you. This repeats, faster and faster, as if Onyx is trying to pound you into a mushy stain on the street. You're not sure if it's anger or lust that drives that cock in and out of you, and the guttural, rasping grunts don't clear things up. However, as the speed picks up, you feel Steven begin to jack off above you. His cock grazes the back of your head every so often, his furred, yet callused, hands brushing against you as he pleasures himself.";
 		WaitLineBreak;
 		say "     It is then that a telltale slam comes from behind. A warmth fills you to the brim, and a neigh of base emotion sounds out. Another neigh soon follows, and the back of your head is painted with hot cum. Whatever misses your head, splatters to the ground in-front of you. Pure white fluids dribble down over your forehead, dripping past your eyes as you close them. Soon, your entire head is plastered in equine fluids, and as the horse behind you pulls out, the one above you gets up. It takes a bit of effort for Onyx to pop his flared head out, but when he does, his load pours out over your thighs, balls and cock. It even begins to pool around your knees, caking your legs in semen. That's when you notice that you're free of the bridle and bit; even the leash and collar get taken off. All of it is covered in cum, but Steven still takes it back to his bag in front of the library, packing all of it up.";
 		say "     Your cum covered ass gets a quick smack, and then, Onyx heads up to Steven. They then lean into each other, Onyx placing his hands against Steven's chest. As they get closer and closer, you notice their heads tilt, and seconds later they're making out. Deciding you better get back to exploring before they get any other ideas for your body, you gather your things and head off. The cum eventually dries into you, but you're left feeling thoroughly marked.";

@@ -16,7 +16,7 @@ func save_all():
 	var save_dir = Directory.new()
 	if !save_dir.dir_exists(SAVE_FOLDER):
 		save_dir.make_dir(SAVE_FOLDER)
-	
+
 	var save_game = File.new()
 	save_game.open(str(SAVE_FOLDER, SAVE_NAME_TEMPLATE), File.WRITE)
 	var save_data = {}
@@ -26,13 +26,13 @@ func save_all():
 	var save_string = var2str(save_data)
 	save_game.store_string(save_string)
 	save_game.close()
-	
+
 func load_all():
 	var save_game = File.new()
 	if !save_game.file_exists(str(SAVE_FOLDER, SAVE_NAME_TEMPLATE)):
 		print("No save file detected.")
 		return
-	
+
 	save_game.open(str(SAVE_FOLDER, SAVE_NAME_TEMPLATE), File.READ)
 	var save_string = save_game.get_as_text()
 	var save_data : Dictionary = str2var(save_string)
@@ -40,11 +40,11 @@ func load_all():
 	for node in get_tree().get_nodes_in_group("save"):
 		node.load_save(save_data)
 	save_game.close()
-	
-	
+
+
 	"""
 	Node Save Function Template
-	
+
 	func save(save_data):
 		var object_dictionary = {}
 		object_dictionary['variable_name'] = 'variable_data'
@@ -52,10 +52,10 @@ func load_all():
 		save_data["<myobject>_data"] = object_dictionary
 		return
 	"""
-	
+
 	"""
 	Node Load Function Template
-	
+
 	func load_save(save_data):
 		if(!save_data.has("<nyobject>_data")):
 			#if no data is saved for this object

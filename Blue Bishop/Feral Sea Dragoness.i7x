@@ -29,7 +29,7 @@ to say fsdf attack:
 			now sex entry is "Both";
 		else:
 			now sex entry is "Male";
-	if vorelevel is 3 and scalevalue of Player < 4 and (A random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
+	if vorelevel is 3 and scalevalue of Player < 4 and (A random chance of 1 in 4 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds)):
 		if HP of Player > 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. She doesn't seem inclined to very much regard your submission as anything more than the opening for her and she betrays her innocent demeanor to immediately dive for";
 		else:
@@ -102,25 +102,25 @@ to say fsdf attack:
 					CreatureSexAftermath "Player" receives "OralPussy" from "Feral Sea Dragoness";
 		else:
 			say "     Carefully, she forces you onto your back by her snout, pinning you down in a same manner. She gives you a cute and affectionate look, much-maligned by her paradoxically bestial form[if intelligence of Player > 14]. You wager she's trying to sway you into compliance by appearing non-threatening, to little success[else]. Uncertain of her intent, you remain cautious and wait[end if].";
-			If "Touched by Madness" is listed in feats of Player and ((player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of Player < 4 and FSDOPEN < 2 and inasituation is false:
+			If "Touched by Madness" is listed in feats of Player and ((Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds) and scalevalue of Player < 4 and FSDOPEN < 2 and inasituation is false:
 				If FFSDUBM is false:
 					say "     Suddenly, she appears to become confused about these circumstances, some otherworldly influence throwing her off-kilter, going so far that she almost seems to have lost track of where she is; however, this absent-mindedness is only momentary before she snaps back to attention, feral eyes aglint with a new, twisted intent. Her affections become more fervent and insistent. Slick, dripping tongue absolutely drenching your smaller form with her salty saliva before she finally relents.";
 					say "     By now, you're clearly aroused from these tainted fluids, but she doesn't even remotely seem interested in that. Rather, she would instead pull herself over you, soft underbelly grinding against your lubricated, [bodydesc of Player] frame before she stops, showing no desire to spare you of her massive weight, her reasoning by now very clear as you feel yourself pushed past the lips of her aquatic vent.";
 					say "     Unable to contest her new desires, she begins to grind herself against the sand, her portal tightening against your wholly engulfed frame, pulling you deeper into her slick depths. This overwhelming heat; this hungry, demanding tunnel, it[if Player is not neuter]'s more than enough to set you off, almost immediately, sealing your fate when this is all that this dragoness needs to find bliss herself[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form...";
 					now FFSDUBM is true;
 				else:
-					say "     You see into her eyes and you know of her twisted intent. [if HP of Player is 0 and player is not submissive]Your better judgment drives you to try and flee, but her hold on you is absolute; you will be subject to her tainted verdict regardless. In spite of her assertion, she offers what she doubtlessly now perceives as her offspring plenty of affection, though her thick, fish-smelling tongue's endeavors are dual in purpose, preparing you for what is to follow[else]Overwhelmed by her maternal pull, she need only turn sideways, exposing her body's inviting lips to you, to compel you to them. Your tongue slathering this hole with affection as she reciprocates across your [bodydesc of Player] frame, now doubtlessly perceiving you as her offspring. What better judgment you might of had is deflected by the reality of your lack of choice[end if].";
-					say "     Blatantly aroused as you are, her satisfaction is met, [if HP of Player is 0 and player is not submissive]forcing herself down on you once more, her body's inviting lips embracing your smaller form before you disappear entirely under her[else]compelling you to enter her hungering portal, though you might only comply with your head and torso before she returns upright once more, engulfing the remainder of you with ease[end if].";
+					say "     You see into her eyes and you know of her twisted intent. [if HP of Player is 0 and Player is not submissive]Your better judgment drives you to try and flee, but her hold on you is absolute; you will be subject to her tainted verdict regardless. In spite of her assertion, she offers what she doubtlessly now perceives as her offspring plenty of affection, though her thick, fish-smelling tongue's endeavors are dual in purpose, preparing you for what is to follow[else]Overwhelmed by her maternal pull, she need only turn sideways, exposing her body's inviting lips to you, to compel you to them. Your tongue slathering this hole with affection as she reciprocates across your [bodydesc of Player] frame, now doubtlessly perceiving you as her offspring. What better judgment you might of had is deflected by the reality of your lack of choice[end if].";
+					say "     Blatantly aroused as you are, her satisfaction is met, [if HP of Player is 0 and Player is not submissive]forcing herself down on you once more, her body's inviting lips embracing your smaller form before you disappear entirely under her[else]compelling you to enter her hungering portal, though you might only comply with your head and torso before she returns upright once more, engulfing the remainder of you with ease[end if].";
 					say "     Wailing songs of her perverse need muffled within these confines, her portal tightens against your wholly engulfed frame, pulling you deeper into her slick depths as she seeks her wanton reprieve. This overwhelming heat; this hungry, demanding tunnel, now all-too familiar to you, it[if Player is not neuter]'s but a moment before it elicits your orgasm, sealing your fate when this is all that this dragoness needs to find bliss[else] torments you to no end, your fate soon sealed as the dragoness finds her bliss[end if], pulling you into that final, inevitable destination before your senses fade. The dragoness would no doubt recover and move on, the occupancy of her new captive not outwardly apparent to those who might see her large form, and doubtlessly happy that you are hers...";
 				WaitLineBreak;
-				if (player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
+				if (Player is kinky and a random chance of 1 in 3 succeeds) or a random chance of 1 in 4 succeeds:
 					say "     In due time you come to, the thick, hard walls of an egg surrounding you; however, you feel yourself slightly tumbling and shifting about, and when you attempt to break free of the egg you find yourself unable to. The heat is overwhelming, [if Player is not neuter]your arousal quickly rising once more, driving you to pleasure yourself uncontrollably within these confines, making a further mess of yourself[else]your arousal quickly rising once more, forced to abide the torment of these demented confines[end if].";
 					infect;
 					infect;
 					say "     After what seems like forever, you can see the familiar light of the outside coming through the translucent walls of your prison, compelling you to finally break free, and once you acclimate to the open air it's made very clear -why- you were forced within those confines longer than natural";
 					if a random chance of 1 in 2 succeeds and MaleList is not banned:
 						say ". A male sea dragon is before you, looking at his somewhat tired and lust-addled form, it's clear that he happened upon your egg and was compelled to use it for his own sexual gratification - much to your expense.";
-						if ( ( player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
+						if ( ( Player is kinky and a random chance of 3 in 8 succeeds) or a random chance of 1 in 5 succeeds):
 							say "     Looking at him now, he doesn't appear fully satisfied, and looks as though he might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							if Player consents:
 								let bonus be ( dexterity of Player - 10 ) / 2;
@@ -144,7 +144,7 @@ to say fsdf attack:
 							now FSDOPEN is 0;
 					else:
 						say ". Another sea dragoness is before you, [one of]though you instinctively know that it's[or]fairly certain that it's not[at random] the same one that first trapped you. Looking at her somewhat tired and lust-addled form, it's clear that she was compelled to use your egg for her own sexual gratification - much to your expense.";
-						if ((player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
+						if ((Player is kinky and a random chance of 1 in 2 succeeds) or (player is not kinky and a random chance of 1 in 5 succeeds)):
 							say "     Looking at her now, she doesn't appear fully satisfied, and looks as though she might concede to using -you- instead of your prior residence. You don't think you can take another fight, so your choice is to run or submit. Run for it?";
 							if Player consents:
 								let bonus be ( dexterity of Player - 10 ) / 2;
@@ -232,7 +232,7 @@ to say fsdfeeding:
 
 To say fsdf loss:
 	project Figure of SeaDragoness_NSFW_icon;
-	if Player is not submissive and ( Libido of Player - humanity of Player > 45 or ( Libido of Player - humanity of Player > 60 and "Dominant" is listed in feats of Player ) ) and ( BodyName of Player is "Feral Sea Dragon" or BodyName of Player is "Feral Sea Dragoness" ) and player is male:
+	if Player is not submissive and ( Libido of Player - humanity of Player > 45 or ( Libido of Player - humanity of Player > 60 and "Dominant" is listed in feats of Player ) ) and ( BodyName of Player is "Feral Sea Dragon" or BodyName of Player is "Feral Sea Dragoness" ) and Player is male:
 		say "     Just as you drive the dragoness back, the creature lets out a powerful cry that compels your twisted psyche to yield. Turning away from you, you hear her softly sing, coaxing you into overtaking her. Driven by your increasingly feral mind you slowly pull yourself on top of dragoness, much to the beast's cooing approval. You thrust impotently against her scaled haunch before you're sufficiently hard, carefully moving to guide[if Player is male] one of[end if] your [cock size desc of Player] cock[smn] into her hungry cunt.";
 		say "     [one of]You're initially gentle in forcing it in, the dragoness cooing softly as your rod slowly descends[or]Flared by a tinge of feral-charged aggression, you show your dominion by thrusting into her with sudden and reckless abandon, she wails softly in such abrasive pleasure as your drill your rod deep[at random] into the folds of her flesh. Your pace rapidly ascends as you fuck the dragoness, each thrust forcing and ecstatic wail out from the beast's lips, eager hole squeezing tightly around your[if Cock Length of Player > 15] substantial,[end if] throbbing organ.";
 		say "     Very suddenly, she cries out, reveling in being rammed underneath a virile beast such as you. The sound of her voice, along with her clenching hole, is enough to make quick work of you, forcing you to roar out in pleasure as you finally fire off your [Cum Load Size of Player] load into the dragoness.";
@@ -701,7 +701,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -828,7 +828,7 @@ to fsdfvore:
 							now struggleatt is 1;
 						else:
 							say "     Body loudly groaning, you feel it constrict around you as you're forced down past a tight ring, descending into the sea dragoness's bowels. Twisted and pushed around the monster's labyrinth of flesh, your trip meets its inevitable destination as you're forced past that final ring and hit with a wall of cool seawater. Desperately climbing to the surface, you're exposed to the elements of the outside once more.";
-							if a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds):
+							if a random chance of 1 in 3 succeeds or (Player is kinky and a random chance of 1 in 3 succeeds):
 								say "     Whining at you, annoyed, she wheels around to face you. Your captor isn't about to let her meal escape, even after being ejected so embarrassingly. You'll have to swim back before she catches up with you!";
 								now boundsegment is 2;
 								now boundcounter is 0;

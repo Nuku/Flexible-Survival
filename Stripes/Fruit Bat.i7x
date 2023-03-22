@@ -33,13 +33,13 @@ to say losetofruitbat:
 	else:
 		say "pulls you to your knees and grinds his crotch bulge against your face. With his covered manhood right there, the tantalizing fruity scent is stronger and makes your mouth water [if HP of Player > 0]involuntarily a little[else]all the more for it[end if]. Tugging down on the front of his speedo, he frees his turgid member and presses it to your lips. Tasting a mix of predominantly [one of]pineapple[or]peach[or]plum[or]apricot[or]strawberry[or]mango[or]cherry[at random] and blueberry flavors on it, you respond by opening your mouth and plunging over his eight-inch member.";
 		say "     The bat's vestigial hands rub over your head as he thrusts into your mouth. Your tongue, loving his fruity taste, slathered all across it, lapping up his precum while you rub those plump balls of his. '[one of]Mmm... that's it, sweetie. Rub those big plums of mine[or]Oh yeah, keep it up and you'll get your tasty treat[or]Mmm... berries and cream on its way, you horny thing[at random],' he moans. [if HP of Player > 0]You[else]Despite your earlier resistance, you[end if] can't help but respond, working all the harder for the delicious load he has for you as your lustful desires take control.";
-		say "     When the blow job finally becomes too much for him, your winged lover drives his cock fully into your mouth and releases a high-pitched cry of delight. Your mouth is flooded with his hot semen, splattering that blueberry goo across your palate and down your throat. You eagerly gulp it down and keep sucking for more, only releasing him after he's given up the last drops of his delicious spunk. After he eases his spent shaft from your sticky mouth, [if Player is male and a random chance of Libido of Player in 50 succeeds]his eyes are drawn to your own erection[smn] and he pushes you onto your back. Putting his muzzle around your manhood, he licks and sucks at it until his talented tongue soon pushes you over the edge and you feed your [Cum Load Size of Player] load of [CockSpeciesName of Player in lower case] cum to him in return[else]he pulls you into a kiss, thrusting his tongue into your mouth. You moan at the taste of it, fresh [one of]pineapple[or]peaches[or]plums[or]apricots[or]strawberries[or]mangos[or]cherries[at random] mixing with the lingering taste of wild blueberries already on your tongue[end if]. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
+		say "     When the blowjob finally becomes too much for him, your winged lover drives his cock fully into your mouth and releases a high-pitched cry of delight. Your mouth is flooded with his hot semen, splattering that blueberry goo across your palate and down your throat. You eagerly gulp it down and keep sucking for more, only releasing him after he's given up the last drops of his delicious spunk. After he eases his spent shaft from your sticky mouth, [if Player is male and a random chance of Libido of Player in 50 succeeds]his eyes are drawn to your own erection[smn] and he pushes you onto your back. Putting his muzzle around your manhood, he licks and sucks at it until his talented tongue soon pushes you over the edge and you feed your [Cum Load Size of Player] load of [CockSpeciesName of Player in lower case] cum to him in return[else]he pulls you into a kiss, thrusting his tongue into your mouth. You moan at the taste of it, fresh [one of]pineapple[or]peaches[or]plums[or]apricots[or]strawberries[or]mangos[or]cherries[at random] mixing with the lingering taste of wild blueberries already on your tongue[end if]. His sweet taste lingers on your lips after he's sent you on your way in a sex-addled haze.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Fruit Bat";
 
 
 to say beatthefruitbat:
 	increase frbatbeaten by 1;
-	if frbatbeaten < 2 or ( player is neuter ):
+	if frbatbeaten < 2 or ( Player is neuter ):
 		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun. He moves away from you and flaps higher into the air. '[one of]Oh, with an attitude like that, I'm sure you're sour[or]Hey, don't bruise the fruit[or]You are one bad apple[or]You're missing out on some really big, sweet plums[or]You must be rotten to the core to want to spoil my fun[at random],' he says in disgust before banking away and flying off.";
 	else:
 		say "     Your continued resistance proves to be more than the bat wants to endure in his search for fun. But this time you're ready for him and tackle him as he starts to take to the air. Unable to support the weight of both of you, he tumbles [if showlocale is true]onto the sandy beach[else]to the ground[end if] and is pinned beneath you. But you'd reacted without considering why, or even if, you want him at all. Now that you've caught the bat, what shall you do?";
@@ -55,7 +55,7 @@ to say beatthefruitbat:
 			now sortorder entry is 4;
 			now description entry is "suck each other off";]
 			choose a blank row in table of fucking options;
-			now title entry is "Blow job";
+			now title entry is "Blowjob";
 			now sortorder entry is 5;
 			now description entry is "make him suck you off";
 		if Player is female:
@@ -196,7 +196,7 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
@@ -307,7 +307,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

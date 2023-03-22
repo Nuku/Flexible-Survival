@@ -12,7 +12,7 @@ EXPORT/EDITOR INPUT FIELDS====================================================
 export (String) var room_name = "Room Name"
 export (String, MULTILINE) var room_description = "Room Description"
 export (bool) var north_exit
-export (String) var north_room_name 
+export (String) var north_room_name
 export (bool) var south_exit
 export (String) var south_room_name
 export (bool) var east_exit
@@ -39,7 +39,7 @@ func _ready() -> void:
 	#add room to group for mass information retrieval
 	"""
 	NOTE:
-		the boolean peramerter toggles persistance. "it is only used if you pack and save the node 
+		the boolean parameter toggles persistence. "it is only used if you pack and save the node
 		as PackedScene. Only persistent groups are saved into the file."
 	"""
 	self.add_to_group("rooms", false)
@@ -48,7 +48,7 @@ func _ready() -> void:
 func compile_dictionaries():
 	maintenence_storeroom_exits = maintenence_storeroom.prepare_information()
 	emit_signal("room_information_sent", room_name, maintenence_storeroom_exits)
-	print("Sending Maintainence Storeroom info")
+	print("Sending Maintenance Storeroom info")
 
 
 """
@@ -68,7 +68,7 @@ func update_room_object():
 	maintenence_storeroom.west_room_name		= west_room_name
 	maintenence_storeroom.northeast_exit		= northeast_exit
 	maintenence_storeroom.northeast_room_name	= northeast_room_name
-	maintenence_storeroom.northwest_exit		= northwest_exit 
+	maintenence_storeroom.northwest_exit		= northwest_exit
 	maintenence_storeroom.northwest_room_name	= northwest_room_name
 	maintenence_storeroom.southeast_exit 		= southeast_exit
 	maintenence_storeroom.southeast_room_name	= southeast_room_name

@@ -5,8 +5,23 @@ SylvanusLockdownTurn is a number that varies. SylvanusLockdownTurn is usually 20
 
 Section 0 - Anthro transformation eventful
 
-instead of going to PAN Frat Garden while ("Anthro" is not listed in Traits of Sylvanus and "Interim Frat President" is listed in Traits of Richard and Daytimer is night):
-	move player to PAN Frat Garden;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Sylvanus_Transforms"	Sylvanus_Transforms	"[EventConditions_Sylvanus_Transforms]"	PAN Frat Garden	2500	2	100
+
+to say EventConditions_Sylvanus_Transforms:
+	if ("Anthro" is not listed in Traits of Sylvanus and "Interim Frat President" is listed in Traits of Richard and Daytimer is night): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Sylvanus_Transforms	"Sylvanus_Transforms"
+
+Sylvanus_Transforms is a situation.
+ResolveFunction of Sylvanus_Transforms is "[ResolveEvent Sylvanus_Transforms]".
+Sarea of Sylvanus_Transforms is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Sylvanus_Transforms:
 	say "     As you're moving to step out into the garden of the frat house, you suddenly hear confused, inhuman screams coming from somewhere ahead. Freezing mid-step, you listen for a moment as your brain goes through the age-old fight or flight routine. Doesn't sound like there is a fight or anything, and worry that something bad may be happening to Sylvanus driving you to rush ahead, stumbling past other partygoers who're craning their necks to get a look at something in the grassy area of the backyard. Getting to the edge of the wooden deck, you can see that the source of the noise seems to be fraternity's goat mascot, writhing on the grass and letting out terrified shrieks that can do nothing to drown out the crunching sounds of breaking and reforming bones. The poor animal is completely freaked out by what's happening to him.";
 	say "     At the same time, two similarly freaked-out college students rush to the fence and begin struggling to climb over it, away from the transforming goat and out of the otherwise empty pen. They're apparently too drunk to register the gate about ten feet away, and in their frightened flight scream something about 'things not going as expected' and 'it was just supposed to be a prank'. The scene is one of utter confusion and shock, as none of the people present seem to know what's really going on.";
 	LineBreak;
@@ -104,6 +119,7 @@ instead of going to PAN Frat Garden while ("Anthro" is not listed in Traits of S
 		TraitGain "Only watched transformation scene" for Sylvanus;
 	now SylvanusLockdownTurn is turns;
 	TraitGain "Anthro" for Sylvanus;
+	now Sylvanus_Transforms is resolved;
 	move Player to Greek Street;
 
 instead of going east from Greek Street while ("Anthro" is listed in Traits of Sylvanus and "Introduced" is not listed in Traits of Sylvanus):
@@ -160,7 +176,7 @@ Cock Length of Sylvanus is 13. [length in inches]
 Ball Count of Sylvanus is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sylvanus is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sylvanus is 0. [number of cunts]
-Cunt Depth of Sylvanus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Sylvanus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Sylvanus is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Sylvanus is 1. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

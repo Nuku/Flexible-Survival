@@ -19,7 +19,7 @@ Constant USE_NO_STATUS_LINE 0;
 #endif;
 -).
 
-Chapter 1 - Initialisations, windows and values
+Chapter 1 - Initializations, windows and values
 
 Section - Definitions of properties and values
 

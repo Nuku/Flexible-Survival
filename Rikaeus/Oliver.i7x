@@ -33,7 +33,7 @@ when play begins:
 	add Leather Daddy Kitty to BadSpots of FurryList; [Oliver is a kitty]
 
 to say ResolveEvent Leather Daddy Kitty:
-	if OliverRelationship is 1 or player is submissive:
+	if OliverRelationship is 1 or Player is submissive:
 		say "     While exploring the high rise district you are suddenly tackled to the ground by a rotund shape. Upon closer inspection, it is a large, pudgy ocelot, standing at six feet tall and probably over three hundred pounds. He is wearing a leather harness, fingerless gloves, a cod piece covering his rather large bulge, and a cap with the same material as the harness. You are quickly distracted from his looks when you notice that the male is nuzzling your face. 'Mmmm you must be the little kitty my sub was talking about. I sure can smell him on you,' the ocelot says, inhaling your scent. Little ocelot? You hurriedly recall a submissive kitty that had asked you if you liked to be the big kitty or little one before sexing you up. 'I see that you remember him. I sure did punish him for having sex with you without my permission. But now I think it was unwarranted, you are a delectable little catch,' he purrs at you.";
 		say "     With a sigh, the chubby yet fit kitty gets off of you. 'As much as I'd like to take you here and now, you need to learn that you must come to me,' the ocelot says, starting to walk away. However, before he leaves your line of sight, the male turns towards you and smiles. 'Two things you need to know. One, your soon-to-be master's name is Oliver, I give you permission to call me by that. Two, if you wish to explore this further, make your way to the Kitty Sex Dungeon,' the dominant guy informs, winking at you before he leaves you there to muse on the brand new information you have.";
 		change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
@@ -42,7 +42,7 @@ to say ResolveEvent Leather Daddy Kitty:
 		now OliverRelationship is 2;
 		now Leather Daddy Kitty is resolved;
 		move Oliver to Kitty Sex Dungeon;
-	else if OliverRelationship is 99 or player is not submissive:
+	else if OliverRelationship is 99 or Player is not submissive:
 		say "     While exploring the high rise district you are suddenly picked and sort of cuddled into a hug. Ignoring the warmth that shoots through your body, you take a closer look at your hugger. As soon as you do, a memory comes up of a tiny little kitty that had asked you a question before sexing you up. However, this cat looks nothing like the other one besides the fur design. The one hugging you is a rather large and rotund yet fit kitty, standing at six foot tall and possibly over three hundred pounds. He's wearing a black leather harness, a cod piece that covers his rather large bulge, fingerless gloves, and a dark colored cap. The large feline is smiling at you, with a slight predatory look to his gleam. 'You must be that big kitty that my little sub told me about,' he purrs, nuzzling your neck. 'I'm sure that you like being a nice dom kitty but how about you let me break you in?' the male asks you in a husky voice.";
 		say "     That's a tempting offer, what do you want to do? Agree to be a sub to this kitty ([link]Y[as]y[end link]) or refuse ([link]N[as]n[end link])?";
 		if Player consents:
@@ -94,7 +94,7 @@ Cock Length of Oliver is 8. [Length in Inches]
 Ball Count of Oliver is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Oliver is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Oliver is 0. [number of cunts]
-Cunt Depth of Oliver is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Oliver is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Oliver is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Oliver is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

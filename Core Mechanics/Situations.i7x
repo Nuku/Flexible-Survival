@@ -86,11 +86,19 @@ Definition: A scavevent (called x) is scavable:
 
 
 CurrentWalkinEvent_ConditionsMet is a truth state that varies. CurrentWalkinEvent_ConditionsMet is usually false. [@Tag:NotSaved]
+CurrentWalkinEvent_WalkArrival is a truth state that varies. CurrentWalkinEvent_WalkArrival is usually false. [@Tag:NotSaved]
+CurrentWalkinEvent_NavArrival is a truth state that varies. CurrentWalkinEvent_NavArrival is usually false. [@Tag:NotSaved]
+
+Table of NavInEvents
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
+with 1000 blank rows
 
 Table of WalkinEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 with 1000 blank rows
+
 
 [ Priority Examples                                                                            ]
 [  1 - ASAP, Life or Death Situations (NOT REPEATABLE!)                                        ]
@@ -99,17 +107,17 @@ with 1000 blank rows
 [  4 - Repeatable Interaction/Sex Events (MINIMUM 8 turns cooldown, include % chance)          ]
 [  5 - Low Priority Filler (SHORT, just to keep a location looking active )                    ]
 
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 
-
-Table of WalkinEvents (continued)
+Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_ExampleEvent:
 	if 1 > 0: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
-	else:
-		now CurrentWalkinEvent_ConditionsMet is false;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -130,18 +138,25 @@ Level of ExampleEvent is 1. [minimum level to encounter randomly]
 to say ResolveEvent ExampleEvent:
 	if DebugLevel > 4:
 		say "     DEBUG: This is the resolve text of the ExampleEvent.";
+		if CurrentWalkinEvent_WalkArrival is true:
+			say "     DEBUG: The Player walked into this event.";
+		else if CurrentWalkinEvent_NavArrival is true:
+			say "     DEBUG: The Player Nav'd into this event.";
 
 to WalkInEvent_Check:
 	let CurrentRoom be the location;
+	now CurrentWalkinEvent_WalkArrival is false; [reset]
+	now CurrentWalkinEvent_NavArrival is false; [reset]
 	if DebugLevel > 4:
 		say "     DEBUG: Starting to check [CurrentRoom] for walkinevents.";
 	if there is an EventRoom of CurrentRoom in the Table of WalkinEvents: [only proceed if there are actually WalkinEvents for this room]
+		sort Table of WalkinEvents in Random order;
 		sort Table of WalkinEvents in Priority order;
 		if DebugLevel > 4:
 			say "     DEBUG: Sorted Table of WalkinEvents.";
 		repeat with X running from 1 to number of filled rows in Table of WalkinEvents:
 			choose row X from the Table of WalkinEvents;
-			now CurrentWalkinEvent_ConditionsMet is false;
+			now CurrentWalkinEvent_ConditionsMet is false; [reset]
 			if DebugLevel > 4:
 				say "     DEBUG: Checking Row [X].";
 			if EventRoom entry is not CurrentRoom, next; [skipping past any event that does not match the current room]
@@ -153,12 +168,50 @@ to WalkInEvent_Check:
 				say "     DEBUG: CurrentWalkinEvent_ConditionsMet true.";
 			if a random chance of EncounterPercentage entry in 100 succeeds:
 				now LastEncounterTurn entry is turns;
+				now CurrentWalkinEvent_WalkArrival is true; [Player walked into the event, vs Nav'ing to it]
 				say "[ResolveFunction of EventObject entry]";
 				break;
 			else:
 				next;
 	else:
 		if DebugLevel > 4:
-			say "     DEBUG: No walkinevents found in [CurrentRoom].";
+			say "     DEBUG: No WalkInEvents found in [CurrentRoom].";
+
+
+to NavInEvent_Check (NavTarget - a room):
+	if DebugLevel > 4:
+		say "     DEBUG: Starting to check [NavTarget] for NavInEvents.";
+	now CurrentWalkinEvent_WalkArrival is false; [reset]
+	now CurrentWalkinEvent_NavArrival is false; [reset]
+	if there is an EventRoom of NavTarget in the Table of NavInEvents: [only proceed if there are actually NavInEvents for this room]
+		sort Table of NavInEvents in Random order;
+		sort Table of NavInEvents in Priority order;
+		if DebugLevel > 4:
+			say "     DEBUG: Sorted Table of NavInEvents.";
+		repeat with X running from 1 to number of filled rows in Table of NavInEvents:
+			choose row X from the Table of NavInEvents;
+			now CurrentWalkinEvent_ConditionsMet is false;
+			if DebugLevel > 4:
+				say "     DEBUG: Checking Row [X].";
+			if EventRoom entry is not fasttravel:
+				say "     ERROR: Non-Fasttravel room [X] entered for a NavInEvent. Please report this on the FS Discord to be fixed!";
+			if EventRoom entry is not NavTarget, next; [skipping past any event that does not match the current room]
+			if EventObject entry is not WalkinAvailable, next; [resolved/inactive/not prereqcomplete events are skipped]
+			if LastEncounterTurn entry - turns <= CoolDownTurns entry, next;
+			say "[EventConditions entry]";
+			if CurrentWalkinEvent_ConditionsMet is false, next;
+			if DebugLevel > 4:
+				say "     DEBUG: CurrentWalkinEvent_ConditionsMet true.";
+			if a random chance of EncounterPercentage entry in 100 succeeds:
+				now LastEncounterTurn entry is turns;
+				now CurrentWalkinEvent_NavArrival is true; [Player Nav'd into the event, vs walking to it]
+				say "[ResolveFunction of EventObject entry]";
+				break;
+			else:
+				next;
+	else:
+		if DebugLevel > 4:
+			say "     DEBUG: No NavInEvents found in [NavTarget].";
+
 
 Situations ends here.

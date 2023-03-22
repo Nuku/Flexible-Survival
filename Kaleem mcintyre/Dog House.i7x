@@ -18,7 +18,7 @@ when play begins:
 	add DogHouse to BadSpots of FurryList;
 	add DogHouse to BadSpots of FemaleList;
 	add DogHouse to BadSpots of MaleList;
-	add DogHouse to badspots of HermList;
+	add DogHouse to BadSpots of HermList;
 
 to say ResolveEvent DogHouse:
 	if fin is 1:

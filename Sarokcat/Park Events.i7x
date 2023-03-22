@@ -13,7 +13,7 @@ Poppy Field is a situation.
 ResolveFunction of Poppy Field is "[ResolveEvent Poppy Field]".
 Sarea of Poppy Field is "Park".
 when play begins:
-	add Poppy Field to badspots of HermList;
+	add Poppy Field to BadSpots of HermList;
 
 to say ResolveEvent Poppy Field:
 	say "     Traveling through the park, you stumble into a less used area where some strange flowers appear to have taken root. Looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, and for some reason you feel like stopping to relax here for a while. Do you take a rest?";
