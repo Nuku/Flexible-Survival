@@ -29,7 +29,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Succubus Offspring Meeting"	Succubus Offspring Meeting	"[EventConditions_Succubus_Offspring_Meeting]"	Burned-Out Chapel	2500	2	100
 
 to say EventConditions_Succubus_Offspring_Meeting:
-	if (Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith and Elijah is not in Burned-Out Chapel: [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex)]
+	if (Incubus Offspring Meeting is resolved and "Succubus Daughter Born" is listed in Traits of Lilith) and Elijah is not in Burned-Out Chapel: [Aerana exists, hasn't met the player, Atticus' intro is sorted, Elijah not in there (too complex)]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
