@@ -345,7 +345,7 @@ When Play begins:
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "hawkman female feathers"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "hawkman man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "hawkman male cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -500,9 +500,33 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "hawkman male cum"	"A plastic bottle filled with some virile, avian seed."	1	hawkman male cum
 
-hawkman male cum is a grab object. hawkman male cum is infectious. Strain of hawkman male cum is "Hawkman Female". hawkman male cum is cum.
+hawkman male cum is a grab object.
+hawkman male cum is infectious.
+Strain of hawkman male cum is "Hawkman Female".
+hawkman male cum is cum.
+purified of hawkman male cum is "distilled cum".
+
 the scent of hawkman male cum is "The swill has an overwhelming, masculine aroma about it.".
+
 Usedesc of hawkman male cum is "     There's so much of stuff, it's a challenge to consume all of the warm, salty fluid. By the end, you feel dizzy and a little tingly.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"hawkman man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'hawkman Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hawkman man-milk
+
+hawkman man-milk is a grab object.
+hawkman man-milk is milky.
+Purified of hawkman man-milk is "distilled milk".
+hawkman man-milk is infectious.
+Strain of hawkman man-milk is "hawkman".
+Usedesc of hawkman man-milk is "[hawkman man-milk use]";
+
+to say hawkman man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the avian man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing hawkman man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Section 4 - Endings
 

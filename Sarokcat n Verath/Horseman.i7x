@@ -168,7 +168,9 @@ name	desc	weight	object
 instead of sniffing horseman cum:
 say "You open the lid for a moment and take a sniff. Smells much like amaretto, actually, and you're tempted to take a pull from the bottle.";
 
-horseman cum is a grab object. horseman cum is cum.
+horseman cum is a grab object. 
+horseman cum is cum.
+purified of horseman cum is "distilled cum".
 Usedesc of horseman cum is "[horseman cum use]";
 
 to say horseman cum use:

@@ -367,12 +367,13 @@ name	desc	weight	object
 
 hyena herm cum is a grab object.
 hyena herm cum is cum.
+purified of hyena herm cum is "distilled cum".
 hyena herm cum is infectious.
 Strain of hyena herm cum is "Hyena Herm".
 Usedesc of hyena herm cum is "[hyena herm cum use]";
 
 to say hyena herm cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

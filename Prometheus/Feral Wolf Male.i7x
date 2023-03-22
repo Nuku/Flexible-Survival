@@ -479,19 +479,19 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "wolf cum"	"A vial of thick, creamy, white liquid. [']Infection sample - species: wolf['] is written on the side."	1	wolf cum
 
-wolf cum is a grab object. wolf cum is cum.
-Wolf Cum is infectious. Strain of Wolf Cum is "Feral Wolf Bitch".
+wolf cum is a grab object.
+wolf cum is cum.
+purified of wolf cum is "distilled cum".
+Wolf Cum is infectious.
+Strain of Wolf Cum is "Feral Wolf Bitch".
+Usedesc of Wolf Cum is "[Wolf Cum use]";
 
 instead of sniffing wolf cum:
 	say "The wolf semen smells of wolves and cum, naturally.";
-
-Usedesc of Wolf Cum is "[Wolf Cum use]";
 
 to say Wolf Cum use:
 	say "You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";
 	if Libido of Player < 75:
 		now Libido of Player is 75;
-
-
 
 Feral Wolf Male ends here.

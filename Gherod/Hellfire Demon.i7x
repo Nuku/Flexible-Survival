@@ -564,13 +564,16 @@ name	desc	weight	object
 
 hellfire seed is a grab object.
 hellfire seed is cum.
+hellfire seed is infectious.
+Purified of hellfire seed is "distilled cum".
+Strain of hellfire seed is "Hellfire Demon".
 Usedesc of hellfire seed is "[hellfire seed use]";
 
 to say hellfire seed use:
 	say "     The warm, sticky liquid tastes almost too hot, but very sweet, as you drink it. You feel the warm seed going down your throat, leaving the delightful sensation of a tasty and hot beverage. It leaves a lingering lust for sex...";
 	PlayerDrink 5;
 	SanLoss 10;
-	increase Libido of Player by 15;
+	LibidoBoost 15;
 	if "Iron Stomach" is not listed in Feats of Player:
 		say "     It seems to cause a reaction with the nanites in your system...";
 		HellfireDemonInfect;
@@ -593,7 +596,7 @@ to say hellfire demon man-milk use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the demonic man-milk run over your tongue and down your throat. Tastes rich and oddly sweet. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a raction with the nanites in your system...";
+		say "     It seems to cause a reaction with the nanites in your system...";
 		HellfireDemonInfect;
 
 instead of sniffing hellfire demon man-milk:

@@ -4,15 +4,44 @@ Version 1 of Dryad by Hellerhound begins here.
 
 "Adds a Dryad to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Cum Vial
+Section 1 - Cum Vial and milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dryad cum"	"A bottle of dryad cum? Man, you will scavenge anything."	3	dryad cum
+"dryad cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Dryad Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dryad cum
 
-dryad cum is a grab object. dryad cum is infectious. Strain of dryad cum is "Dryad". Purified of dryad cum is "distilled cum". dryad cum is cum.
+dryad cum is a grab object.
+dryad cum is cum.
+dryad cum is infectious.
+Purified of dryad cum is "distilled cum".
+Strain of dryad cum is "dryad".
+Usedesc of dryad cum is "[dryad cum use]";
 
-the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
+to say dryad cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing dryad cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, like a mix of semen and tree sap.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dryad milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'dryad milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dryad milk
+
+dryad milk is a grab object.
+dryad milk is milky.
+Purified of dryad milk is "distilled milk".
+dryad milk is infectious.
+Strain of dryad milk is "dryad".
+Usedesc of dryad milk is "[dryad milk use]";
+
+to say dryad milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing dryad milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.";
 
 Section 2 - Creature Insertion
 
@@ -135,7 +164,7 @@ When Play begins:
 	now libido entry is 40; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "dryad cum";
 	now lootchance entry is 50; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now MilkItem entry is "dryad milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "dryad cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
