@@ -18,7 +18,7 @@ ResolveFunction of MeetingDrelgoth is "". Sarea of MeetingDrelgoth is "Nowhere".
 [Ancient Tome entry]
 to say DrelgothSummon:
 	if Resolution of MeetingDrelgoth is 0:
-		if player is not in Maintenance Storeroom:
+		if Player is not in Maintenance Storeroom:
 			say "     Perhaps you should not attempt any weird things out here in the open. Something tells you that the bunker would be a better place suited for this, specifically your personal resting place, back in the library.";
 		else:
 			if humanity of player >= 50 and "Weak Psyche" is not listed in feats of player:
@@ -31,7 +31,7 @@ to say DrelgothSummon:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Give into it.";
 				say "     ([link]N[as]n[end link]) - You would rather not.";
-				if player consents:
+				if Player consents:
 					LineBreak;
 					say "[SummonDrelgothRitual]";
 				else:
@@ -80,7 +80,7 @@ Cock Length of Drelgoth is 12. [length in inches]
 Ball Count of Drelgoth is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Drelgoth is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Drelgoth is 0. [number of cunts]
-Cunt Depth of Drelgoth is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Drelgoth is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Drelgoth is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Drelgoth is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -188,7 +188,7 @@ to say DrelgothTalkSexConditions:
 	else:
 		now DrelgothDoneTalking is true;
 		WaitLineBreak;
-		if player is submissive:
+		if Player is submissive:
 			DrelgothTalkSexConditionsSub;
 		else if player is dominant:
 			DrelgothTalkSexConditionsDom;
@@ -198,7 +198,7 @@ to say DrelgothTalkSexConditions:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You want to submit.";
 			say "     ([link]N[as]n[end link]) - You want to dominate.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				DrelgothTalkSexConditionsSub;
 			else:

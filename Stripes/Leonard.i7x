@@ -94,7 +94,7 @@ Cock Length of Leonard is 10. [10 Inches]
 Ball Count of Leonard is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Leonard is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Leonard is 0. [number of cunts]
-Cunt Depth of Leonard is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Leonard is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Leonard is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Leonard is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -412,7 +412,7 @@ to say Leonardsex_pridekitty:		[Brought Leonard a kitty from his pride]
 		say "     The other feline moves in front of you, bringing her dripping pussy to your face. With the scent of aroused feline all around you, you dive in right away, licking and kissing at those wet folds, enjoying the mewls and purrs she emits. Watching this lovely show, Leonard starts pounding you hard and fast. 'That's a good, sexy [if Player is female]girl[else]kitty[end if],' he rumbles between thrusts. 'Such a good, submissive slut you are. Lick your pride-mate's pussy. You want to earn a nice, hot load of lion cum, don't you?' You nod enthusiastically, your body lusting to feel the sexy lion breed you.";
 		say "     As he continues to tell you what an eager, needy, submissive kitties you both are, he pounds his pulsing shaft into you. You grip the sheets and beg him for him to fill you between licks, crying out for him to take you. Soon your wish is granted as the lion drives hard into you and his balls pulse as his hot seed flows deep inside you, flooding your [if Player is female]womb[else]ass[end if] with his virile sperm. The horny kitty before you grinds her pussy against your face as she cums hard as well. All of this sends you over the edge as well, climaxing as you lapping up her juices and feel your pride leader's hot load filling you.";
 		say "     After he withdraws from you and mounts the other kitty, you roll onto your back, lost in the blissful pleasure of having his hot semen filling your tummy. Watching the show, you soon feel the urge to get a turn of your own. You push yourself up and bring your dripping [if Player is female]pussy[else]asshole[end if] to the lioness's muzzle, moaning in delight as her raspy tongue starts lapping up the leonine cum leaking from your stuffed [if Player is female]cunt[else]hole[end if]. The lustful romp continues like this for some time, with the three of you swapping positions and you both getting several loads from the big male. Eventually, your threesome runs down and you all end up snuggled together on the bed, purring happily as you drift off for a quick catnap.";
-		if player is female:
+		if Player is female:
 			NPCSexAftermath Player receives "PussyFuck" from Leonard;
 		else:
 			NPCSexAftermath Player receives "AssFuck" from Leonard;
@@ -429,7 +429,7 @@ to say Leonardsex_purefeline:
 	say "     As he continues to tell you what an eager, needy, submissive kitty you are, he pounds his throbbing rod into you. You can feel the pulsing of his maleness with his power, dribbling a steady supply of precum into your [if Player is female]hot pussy[else]needy hole[end if]. His soft fur rubs against yours as your feline bodies slide against one another as his strong limbs easily support your smaller one, making sure you stay planted atop his feline penis. Not that you would consider resisting your handsome lover, but it feels so good to have him in control. Aside from squeezing your [if Player is female]your cunt[else]your tight hole[end if] around his rod, you hold yourself steady, letting Leonard use you as he pleases and loving it.";
 	say "     After a good, long pounding[if Player is female] that's had you cum several times[end if], the lion drives his stiff cock deep inside you a final time and roars loudly. You can feel his hot seed blasting into you, splashing against your [if Player is female]cervix and flowing into your womb[else]prostate and filling your bowels[end if]. You release a feline yowl of pleasure[if Player is female] and cum hard, soaking your crotch in a fresh flow of your juices and his semen[end if] as he continues breeding you like the horny [if Player is female]girl[else]girly-boy[end if] you are. By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.";
 	say "     Easing you from his lap, he lays his cum-filled kitty on the bed, guiding your head down to his cock. You take it into your mouth and lick it clean while he strokes your head and scritches your ears. 'That's right, lick your lion master clean. Yes... you're becoming a wonderful kitty girl. You'll fit in nicely with the others,' he rumbles. You blush with pride and clean him attentively. Eventually you both drift off with his half-hard cock still in your mouth as you nurse softly at it, taking a quick catnap on the soft bed.";
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Leonard;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Leonard;
@@ -447,7 +447,7 @@ to say Leonardsex_general:
 	say "     As he continues to tell you what an eager, needy, submissive kitty you are, he pounds his throbbing rod into you. You can feel the pulsing of his maleness with his power, dribbling a steady supply of precum into your [if Player is female]hot pussy[else]needy hole[end if][if Player is felinebodied]. His strong, muscled body keeps you pinned to the bed as he takes the nape of your neck in his teeth. They hold you firmly, but gently, making your feline body relax and submit to the big male. Not that you would consider resisting your handsome lover, but it feels so good to have him in control[else]. His strong, muscled body keeps you pinned to the bed, not that you would consider resisting your handsome lover[end if]. Aside from pushing your hips back into each thrust, you hold yourself steady, letting Leonard use you as he pleases and loving it[if Feline_attached > 0]. Glancing over as you hear some moaning mewls, you spot the small lioness working a [one of]pink[or]black[or]ridged[or]vibrating[at random] dildo into her cunt as she watches the sexy lion mating you[end if].";
 	say "     After a good, long fucking[if Player is female] that's had you cum several times[end if], the lion drives his stiff cock deep inside you a final time and roars loudly. You can feel his hot seed blasting into you, splashing against your [if Player is female]cervix and flowing into your womb[else]prostate and filling your bowels[end if]. You release a feline yowl of pleasure[if Player is female] and cum hard, soaking your crotch in a fresh flow of your juices and his semen[end if] as he continues breeding you like the horny [if Player is female]girl[else]girly-boy[end if] you are. By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that makes you feel fulfilled.";
 	say "     Dismounting, he pulls you close and guides your head down to his cock. You take it into your mouth and lick it clean while he strokes your head and scritches your ears. 'That's right, lick your lion master clean. Mmm... you'll make a fine kitty girl like the others,' he rumbles. You blush with pride and clean him attentively[if Feline_attached > 0]. The other kitty purrs softly and snuggles back up to your chest, taking your nipple into her muzzle and resumes nursing from you. For a moment you think that will be all, but then you feel her slide the slick toy she was using into your well-used hole, ensuring the lion's seed stays stopped up nicely inside you[end if]. Eventually you both drift off with his half-hard cock still in your mouth as you nurse softly at it, taking a quick catnap on the soft bed.";
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Leonard;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Leonard;
@@ -492,7 +492,7 @@ to Leonardmatesex:
 		now sortorder entry is 5;
 		now description entry is "Have the lion mount you like a beast";
 		[]
-		if ( player is not neuter ) and HP of Leonard >= 17:
+		if ( Player is not neuter ) and HP of Leonard >= 17:
 			choose a blank row in table of fucking options;
 			now title entry is "Maid foot rub";
 			now sortorder entry is 6;
@@ -504,7 +504,7 @@ to Leonardmatesex:
 			now sortorder entry is 7;
 			now description entry is "Fuck one of the maids";
 		[]
-		if ( player is not neuter ) and Leonardcaraway is true:
+		if ( Player is not neuter ) and Leonardcaraway is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Sexy chef";
 			now sortorder entry is 8;
@@ -655,7 +655,7 @@ to say Leonardmatesex4:			[Doggy style]
 	decrease Libido of Player by Libido of Player / 4;
 	decrease humanity of Player by 4;
 	follow the turnpass rule;
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Leonard;
 	else:
 		NPCSexAftermath Player receives "AssFuck" from Leonard;
@@ -680,7 +680,7 @@ to say Leonardmaidsex1:
 		say "     The rubbing and licking quickly starts to have an effect on you. With each lick, your foot shifts and changes a little more, soon returning to a leonine paw. As this change starts to creep up your leg, she turns her attention to your other foot, soon remaking it into a lion's paw as well. The transformation progresses up your legs, across your hips and through the rest of your body, restoring much of your matronly form.";
 	say "     The obedient maid is thorough in her attention, rubbing at your feline paws to soothe the aches of walking all around the city. You smile a toothy grin as the servile girl licks and kisses your foot, the massage both soothing and arousing. The brush of her rough tongue grooming the underside of your foot and between your feline toes is a delight. She seems pleased as well with her task, purring happily at her opportunity to bestow attention upon her loving matron. She takes particular pleasure at sucking on your toes, fellating them with her tongue as she does.";
 	WaitLineBreak;
-	say "     While you've been enjoying your foot rub, Leonard's blow job has come to an end, the [if T is 1]black-haired [end if]maid having sucked him off. She gives his cock a parting lick and moves to you, dribbles of his cum still on her muzzle";
+	say "     While you've been enjoying your foot rub, Leonard's blowjob has come to an end, the [if T is 1]black-haired [end if]maid having sucked him off. She gives his cock a parting lick and moves to you, dribbles of his cum still on her muzzle";
 	if TT is 1:
 		say ". Leonard leaves the other girl to continue tending his feet, having moved on to massaging and grooming his left one now while he leans back to enjoy the show of you being pleasured by the other two lovely servants.";
 	else:
@@ -697,9 +697,9 @@ to say Leonardmaidsex1:
 	increase Libido of Player by 8;
 	if Libido of Player > 100, now Libido of Player is 100;
 	decrease humanity of Player by 4;
-	if player is male:
+	if Player is male:
 		CreatureSexAftermath "Feline" receives "OralCock" from "Player";
-	else if player is female:
+	else if Player is female:
 		CreatureSexAftermath "Feline" receives "OralPussy" from "Player";
 
 
@@ -723,9 +723,9 @@ to say Leonardmaidsex2:
 	follow the turnpass rule;
 	CreatureSexAftermath "Feline" receives "OralCock" from "Player";
 	CreatureSexAftermath "Feline" receives "PussyFuck" from "Player";
-	if player is female:
+	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Leonard;
-	else if player is male:
+	else if Player is male:
 		NPCSexAftermath Player receives "AssFuck" from Leonard;
 
 
@@ -758,7 +758,7 @@ to say Leonardcarawaysex1:
 		CreatureSexAftermath "Feline" receives "AssFuck" from "Player";
 	else if T is 2:
 		CreatureSexAftermath "Feline" receives "PussyFuck" from "Player";
-	else if player is male:
+	else if Player is male:
 		CreatureSexAftermath "Feline" receives "OralCock" from "Player";
 	else:
 		CreatureSexAftermath "Feline" receives "OralPussy" from "Player";

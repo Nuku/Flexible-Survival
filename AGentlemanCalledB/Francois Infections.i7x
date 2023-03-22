@@ -81,12 +81,12 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Cheesecake Milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "Cheesecake Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if cheesecakemode is 1 and a random chance of 1 in 2 succeeds]slim[else if cheesecakemode is 1]delicate[else if a random chance of 1 in 2 succeeds]plump[else]luscious[end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
-	now type entry is "Cheesecake"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now type entry is "cheesecake"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
@@ -94,43 +94,6 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'cheesecake milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	cheesecake milk
-
-cheesecake milk is a grab object.
-cheesecake milk is milky.
-Purified of cheesecake milk is "distilled milk".
-cheesecake milk is infectious.
-Strain of cheesecake milk is "Cheesecake".
-Usedesc of cheesecake milk is "[cheesecake milk use]";
-
-to say cheesecake milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing cheesecake milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"cheesecake cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Cheesecake Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake cum
-
-cheesecake cum is a grab object.
-cheesecake cum is cum.
-Purified of cheesecake cum is "distilled cum".
-cheesecake cum is infectious.
-Strain of cheesecake cum is "Cheesecake".
-Usedesc of cheesecake cum is "[cheesecake cum use]";
-
-to say cheesecake cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing cheesecake cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
 
 [
 Table of New Infection Parts (continued)
@@ -289,8 +252,8 @@ When Play begins:
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Gingerbread Man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "Gingerbread Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]flat[or]confectionery[or]gingerbread[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -302,43 +265,6 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"gingerbread milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'gingerbread milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	gingerbread milk
-
-gingerbread milk is a grab object.
-gingerbread milk is milky.
-Purified of gingerbread milk is "distilled milk".
-gingerbread milk is infectious.
-Strain of gingerbread milk is "Gingerbread".
-Usedesc of gingerbread milk is "[gingerbread milk use]";
-
-to say gingerbread milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing gingerbread milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
-
-gingerbread cum is a grab object.
-gingerbread cum is cum.
-gingerbread cum is infectious.
-Purified of gingerbread cum is "distilled cum".
-Strain of gingerbread cum is "Gingerbread".
-Usedesc of gingerbread cum is "[gingerbread cum use]";
-
-to say gingerbread cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing gingerbread cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
 
 [
 Table of New Infection Parts (continued)

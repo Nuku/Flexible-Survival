@@ -11,7 +11,7 @@ Cow Hunting is a situation.
 ResolveFunction of Cow Hunting is "[ResolveEvent Cow Hunting]". The level of Cow Hunting is 5.
 Sarea of Cow Hunting is "Plains".
 when play begins:
-	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
+	add Cow Hunting to BadSpots of HermList; [Cuntboy cowboy]
 
 to say ResolveEvent Cow Hunting:
 	project the Figure of Corbin_face_icon;
@@ -163,7 +163,7 @@ Cock Length of Wendy is 0. [length in inches]
 Ball Count of Wendy is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Wendy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Wendy is 1. [number of cunts]
-Cunt Depth of Wendy is 30. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Wendy is 30. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Wendy is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Wendy is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

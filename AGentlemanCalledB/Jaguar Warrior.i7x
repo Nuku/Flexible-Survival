@@ -318,8 +318,8 @@ When Play begins:
 	now libido entry is 35; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Jaguar Milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "Jaguar Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]sleek[or]lithe[or]alluring[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -331,43 +331,6 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"jaguar milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'jaguar milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	jaguar milk
-
-jaguar milk is a grab object.
-jaguar milk is milky.
-Purified of jaguar milk is "distilled milk".
-jaguar milk is infectious.
-Strain of jaguar milk is "Jaguar Warrior".
-Usedesc of jaguar milk is "[jaguar milk use]";
-
-to say jaguar milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing jaguar milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"jaguar cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'jaguar Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	jaguar cum
-
-jaguar cum is a grab object.
-jaguar cum is cum.
-jaguar cum is infectious.
-Purified of jaguar cum is "distilled cum".
-Strain of jaguar cum is "Jaguar Warrior".
-Usedesc of jaguar cum is "[jaguar cum use]";
-
-to say jaguar cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing jaguar cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 [
 Table of New Infection Parts (continued)

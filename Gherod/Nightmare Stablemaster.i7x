@@ -27,7 +27,7 @@ Sarea of Nightmarish Horse Business is "Stable".
 
 to say NightmareStablemasterInfection:
 	if "Male Preferred" is listed in feats of Player: [only male infections]
-		if player is submissive:
+		if Player is submissive:
 			infect "Stallionboi";
 			infect "Stallionboi";
 		else:
@@ -45,7 +45,7 @@ to say ResolveEvent Nightmarish Horse Business:
 		say "     [bold type]Do you wish to attempt to outsmart the horsemen? There are at least three of them looking for a certain intruder...[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Yes, stealth up and escape.";
 		say "     ([link]N[as]n[end link]) - No, you could perhaps convince them everything is fine.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     After measuring up your options, you feel like you could have a chance at this whole [']escape unnoticed['] thing. Nevertheless, one can never be too careful, so you wait for the right time to maximize your likelihood of success. So, when the horsemen seem distracted with something else, their eyes gone from the trajectory that would meet your position, you swiftly take your leave and move as quickly, yet as silently, as you possibly can.";
 			let bonus be (( dexterity of player minus 10 ) divided by 2);
@@ -70,7 +70,7 @@ to NightmarishHorseBusinessQuestion1:
 	say "     [bold type]Should you comply and go with the horsemen to meet this Stablemaster? Or should you try and fight the three of them?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Go with them peacefully.";
 	say "     ([link]N[as]n[end link]) - To hell with that! Show them nobody gets to boss you around!";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     There is no need to get violent and, after all, you find yourself outnumbered. Perhaps it would be wise to follow these horsemen instead of fighting them, even if there is a chance that you fate would be rather unpleasant, but maybe it does not have to be so. You do not really know this Stablemaster in person, so if anything, this is a chance for you to get to know who runs this place. Whatever dangers occur, there is always a way out... Possibly. Dropping your guard and raising your hands up, you surrender to the equine men and let them know that you will come voluntarily. 'Hah, look at this one! You like doing what you're told, [boygirl]? Or are you just scared of what we could do to you?'";
 		say "     It is always the same horseman speaking, and he takes a step towards you with the others, getting uncomfortably close to you. They come near to the point of touch, the warmth of their strong bodies enveloping you from every direction. You try your best to stand your ground, but you quickly feel the control slipping away from you, if you still had the idea you had any to begin with. 'If it's the first, then you might just be in luck! The Stablemaster loves obedient good [boygirl]s like you...' The grin on his muzzle is almost unsettling, and suddenly, they all move in to grab at your stuff! 'Now, we can't have you carrying those with you, so we gotta strip you down before we go on, alright?' he explains as the remaining horsemen ensure you are left as naked as you can be, keeping all your gear on them.";
@@ -110,22 +110,22 @@ to NightmarishHorseBusinessStablemaster:
 	WaitLineBreak;
 	say "     Already looking at you from above, is an especially tall and powerful-looking equine man. This is not your typical horseman by a mile, as this one seems to be dark colored, with a mane that seems to be perpetually on fire as its flames dance on their own, and bright fiery eyes. He walks up to you while you are still on the floor, only having time to look up at the powerful horseman's burning gaze staring back at you. 'What are you? An attempt at competition... Or someone wanting to join my harem of mares?' To your shock, the second you lay your eyes on him, the dark equine man is fully naked and sporting a long erection, his dark red horse cock pointing forward firmly and throbbing. 'As you might've guessed, I own this place. And I own you now, too, for as long as you remain in it. Now, get up and let me get a good look at you.' You have barely been, literally, thrown into this and, no sooner than that, you are being given orders by a complete stranger horseman who thinks he owns you! Though, for now, you do get up, as hard as it may be with your slightly bruised up body.";
 	say "     As you trace his movements with your eyes attentively, on the fence of whatever he might have planned for you, he simply draws in closer. Something about him unsettles you, as if this horseman had some powerful aura about him that made you think twice before even considering how to act. It is almost fearful and intimidating...";
-	if player is not male and player is not female:
+	if Player is not male and Player is not female:
 		say "     'Oh, I see... A white canvas, almost. No sign of any sexual organ in your body... Only this,' he says as, suddenly, you feel his hand squeezing your buttocks and a finger slipping into the space between them, to rub at your anus. You immediately gasp at his touch, and even more as he pushes a finger inside, wiggling it against your sensitive inner flesh. 'You'd have absolutely no use other than being a fun sex toy, I'm afraid. This entry tends to be way tighter, but I'm sure that after your third horsecock or so it'll get stretched enough. If you're an especially good slut, I might make you exclusive. Or, we could just turn you into a proper mare, as that's the only role you could take besides fuck doll.'";
 	else:
-		if player is male:
+		if Player is male:
 			WaitLineBreak;
 			say "     'Hm... Interesting.' These are the words you hear before you feel his hand around your cock with a surprisingly gentle tug, though he seems to be just examining your equipment. 'My mares seldom keep one of these on them. Usually there's no need, they wouldn't make use of it either way. But seeing as you have one... Hm, it's something to consider.' You then see him stroking you, and not stopping until you build a solid erection. It feels embarrassing, but oddly pleasant, as his fingers run over your shaft and around the tip of your [cock of player] penis.";
-			if cock length of player < 8:
+			if Cock Length of Player < 8:
 				say "     'It's quite pathetic when compared to that of a horseman's, very... Human-sized. I'd say even useless if kept this small. Really, nobody here would even feel that enter them, and fucking you would just feel like fucking a mare. Nothing really to be achieved there, so might as well make you into a proper one.'";
-			else if cock length of player < 21:
+			else if Cock Length of Player < 21:
 				say "     'There's quite a potential in this one too, with this size... Could be an useful auxiliary breeding tool, if you're lucky. I'd probably keep it, to remind you and others of who's in charge here. I might love my mares, but I don't mind railing a stud just to assert dominance.'";
 			else:
 				say "     'Now now, this one's quite impressive! Such a big one... I have to admit it might be even bigger than mine...! Or, well, at least in my current form. I might even take you as my personal stallion slut. What delivers a better message than railing a stud with a dick so huge, yet kept unused for as long as I deem? It'd be even hot to see it swing around while I'm ballsdeep into you, hearing you beg for my load... Hm, I have plenty of ideas for you...'";
-			if player is female:
+			if Player is female:
 				WaitLineBreak;
 				say "     The dark horseman then gets really close to you, his hand sliding down your waist, past your sac, and towards the space between your legs, only to find itself poking at your feminine bits. You cannot deny that his oddly gentle touch arouses you. 'What's this? You've got both?! Mmh, now that's a nice surprise...' As he speaks, he wiggles his finger slightly all over your moistened lips, a tease that strikes you as nearly unbearable, and one that ends way too soon. 'Such a responsive one too. Having both sexes working at their fullest might open up several possible paths for you... Filling both roles of a stud and a mare... Hm, we'll have plenty of time to take care of that after we're done with introductions.'";
-		else if player is female:
+		else if Player is female:
 			WaitLineBreak;
 			say "     The dark horseman then gets really close to you, his hand sliding down your waist and towards the space between your legs, only to find itself poking at your feminine bits. You cannot deny that his oddly gentle touch arouses you. 'That's a good one. Pretty responsive too... Contrary to what rumors may say about me, I take pleasure in seeing my mares enjoying my administrations. Things only get rough if they don't do what they're told...' As he speaks, he wiggles his finger slightly all over your moistened lips, a tease that strikes you as nearly unbearable, and one that ends way too soon. 'We'll have plenty of time to take care of that after we're done with introductions.'";
 	WaitLineBreak;
@@ -135,8 +135,8 @@ to NightmarishHorseBusinessStablemaster:
 	say "     [bold type]What shall you do? You might only have this opportunity to attempt to befriend the Stablemaster...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Do as he says and blow him (must not have Dominant feat).";
 	say "     ([link]N[as]n[end link]) - Refuse.";
-	if player consents:
-		if player is dominant: [a dominant player would never accept these terms]
+	if Player consents:
+		if Player is dominant: [a dominant player would never accept these terms]
 			Linebreak;
 			say "     [italic type]Wait, what?! You cannot possibly be considering this! You like to dominate, not to become someone's bitch! You are nobody's bitch, that's right! And you are not about to become his bitch either [roman type]! So, you give him a fierce look and a clear negative answer. He sighs and rolls his eyes. 'Figured you'd be an insufferable cunt,' he says, as he takes a sudden step towards you and grabs your face by your jaw, 'Know you've made an enemy today, slut. If you're not going to willingly obey me, then I'm sure my boys enjoy breaking you. There's gonna be nothing left of you in that little brain of yours, only your endless craving to get owned and bred like the mare you're gonna be.' His words are calm, yet his eyes burn with the fiery wrath evident in his gaze, and fear cripples through your soul unexplainably. Whatever this horseman is... It is not normal.";
 			say "     'I'm done wasting my time with you. Grab your stuff and leave. Consider this my last merciful act, because it's only going to go downhill from now on.' He then pushes you towards the door and you feel a compelling urge to flee. You cannot explain it, and perhaps in normal circumstances you would not even be this scared, but it transcends your comprehension. Your only worry is to get to safety, and you do so as fast as you can. Now out of his room, you proceed to recover your things and run, only hearing a laughter and a few words said on your back. 'Looks like that didn't go well! Don't worry, we'll meet again, and we'll have looots of fun together...!' You presume this was the horseman from before, and if his words are true, meeting them during your exploration efforts may lead to a more problematic predicament if you fail to escape them...";
@@ -155,7 +155,7 @@ to NightmarishHorseBusinessStablemaster:
 			say "     The same happens to every drop of cum that assails your throat, coming at full force directly into your stomach as he now buries his cock deeper down, giving you no choice but to, indeed, swallow everything he gives you. 'Mmmh... yeah... Good [boygirl]... Take it all... Let that cum work your insides...' This warm, thick liquid feels almost too hot inside you, and soon, your whole body begins to tingle as its effects begin to take place...";
 			WaitLineBreak;
 			if "Male Preferred" is listed in feats of Player: [only male infections]
-				if player is submissive:
+				if Player is submissive:
 					infect "Stallionboi";
 					infect "Stallionboi";
 					say "     'Hm... Signs of a cute and good stallion boy... Yeah, I'd say that fits you. Maybe I should fuck your ass too just to make sure you fully turn into one...'";
@@ -194,7 +194,7 @@ to NightmarishHorseBusinessAlt:
 	say "     [bold type]Do you wish to attempt to outsmart the horsemen? These are the three same ones from before, and you feel it will be tougher to sneak past them now...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes, stealth up and escape.";
 	say "     ([link]N[as]n[end link]) - Fight them.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     After measuring up your options, you feel like you could have a chance at this whole [']escape unnoticed['] thing. Nevertheless, one can never be too careful, so you wait for the right time to maximize your likelihood of success. So, when the horsemen seem distracted with something else, their eyes gone from the trajectory that would meet your position, you swiftly take your leave and move as quickly, yet as silently, as you possibly can.";
 		let bonus be (( dexterity of player minus 10 ) divided by 2);
@@ -250,7 +250,7 @@ to say StablemasterHorsemenThreesomeSex:
 	say "     'C'mon over here! Let's give [ObjectPro] two of ours to suck on. I think our friend over there deserves to have [PosAdj] ass all for himself... And I like your company.' The tall horseman pulls the other one to him, placing his arm across his wide shoulders, and both embrace each other as their cocks touch, both rubbing against one another by the side of their shafts. 'Who told you to stop sucking, slut? Better get to work on these two now, or we're gonna instead give you a rough time back there...!' And then, your head is once more dragged over to the, this time, two horse cocks awaiting your affections. A glance above you shows the two making out with each other as their meats throb against your lips or hands, all while you try your best to satisfy them.";
 	say "     And as that happens, the horseman behind you continues to push more and more of his cock inside you, keen on putting it in you as deep as he can possibly go. You feel the urge to moan while you stroke and suck on both the dicks before your eyes, licking them all over before taking them, again, into your throat, one after the other. You really give it your best, but the way they continue to push you around makes it seem like it is not enough, or maybe they simply enjoy doing that to you. From grabbing your head and skullfucking you, drilling your throat as the equine man on the back pounds your ass, this sensation of fullness proves to be more pleasant than shameful, from a certain point forward...";
 	WaitLineBreak;
-	say "     You now keep your eyes closed as you let your other senses take over. Bent over the way you are, you can hold onto both the cocks in front of you while you get fucked from behind, and between all the blowjobs and facefucks, you are able to also include rubbing and stroking. Eventually, it is as if your mind was slowly slipping away, getting used to this sort of treatment as something you would do every day without a problem. All the fucking from both sides continues for a long time, with the horsemen then deciding to take turns on whoever gets to pound your ass or mouth[if player is female] without ever touching your vagina[else if player is male] without every touching your cock[end if]. 'Such a good hole! How about I fill it up, eh? I think we've got this connection going on and all...' says the only talkative horseman before giving your buttcheek a loud slap.";
+	say "     You now keep your eyes closed as you let your other senses take over. Bent over the way you are, you can hold onto both the cocks in front of you while you get fucked from behind, and between all the blowjobs and facefucks, you are able to also include rubbing and stroking. Eventually, it is as if your mind was slowly slipping away, getting used to this sort of treatment as something you would do every day without a problem. All the fucking from both sides continues for a long time, with the horsemen then deciding to take turns on whoever gets to pound your ass or mouth[if Player is female] without ever touching your vagina[else if Player is male] without every touching your cock[end if]. 'Such a good hole! How about I fill it up, eh? I think we've got this connection going on and all...' says the only talkative horseman before giving your buttcheek a loud slap.";
 	say "     The weight of his balls bouncing against your rear is evident that you are going to get a proper filling when he decides to cum, and something tells you he will be doing it inside of you, as they eventually stop taking turns on different spots. Right now, the two silent equine men are letting you worship their dicks at your own pace, often with one in your mouth and the other resting against either side of your face at their own time, and you feel them throbbing so rigidly you can tell they are also close. Everything slows down for a while as their orgasms threaten to set off, until suddenly, the tall one behind you resumes the fucking at its highest pace. 'Guess it's time to fill you up! You're gonna take every drop, yeah? Ooh, fuck... Yeah!'";
 	WaitLineBreak;
 	say "     He grunts energetically as his entire load gets pumped into your insides. You feel every gush as they are shot with great force, such is the power of the horseman's climax as he continues to pound your ass until the very end of it all. While that happens, the other two equine men decide to pull their cocks out of your mouth and stroke them themselves, to give you a full facial of horse cum. It is in such abundance that every single one of your features gets either completely covered by that thick and white substance or drenched in a more watery liquid. One of them keeps hold of your jaw and forces your mouth open while aiming some of that cum into it, having you eat a lof of it up as well.";
@@ -281,7 +281,7 @@ Cock Length of Stablemaster is 21. [length in inches]
 Ball Count of Stablemaster is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Stablemaster is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Stablemaster is 0. [number of cunts]
-Cunt Depth of Stablemaster is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Stablemaster is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Stablemaster is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Stablemaster is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -393,7 +393,7 @@ to say StablemasterTalkTransformation:
 	say "     [bold type]How would you prefer things? Do you wish to be transformed at the end of every encounter with the Stablemaster, or would you rather not[roman type]? It does not seem to make a difference for the horseman, to your luck.";
 	say "     ([link]Y[as]y[end link]) - You are fine with the transformations.";
 	say "     ([link]N[as]n[end link]) - Ask him to preserve your features.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     You let him know that you are fine with becoming one alike those who live here. He gives you a smile as he praises your choice, 'Good [boygirl]... It suits you. And if I think so, that only means I'll enjoy keeping you around even more. It's a good thing to consider, isn't it?'";
 		say "     With this, the [bold type]Stablemaster will be transforming you at the end of every sexual encounter[roman type] with him.";
@@ -643,7 +643,7 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Thank him for that, respectfully.";
 		say "     ([link]N[as]n[end link]) - Thank him for that, but sarcastically.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You do not really find any benefit for antagonizing the horseman grunt, so you simply thank him for having done that, as you had a great time getting to know the Stablemaster, and it was indeed thanks to him. 'Huh... No more sass? Wow, I didn't think it'd be so quick. Seems like he already got you, uh... fixed up? Eh, you know what I mean, all submissive and stuff. He does that to everyone first, then decides what to do with them. It's like a game, we all went through that...' By the looks of it, you still retain freedom and your own will, so no, you are not by any means being affected by whatever he is saying, and you tell him that. 'Is that so? Alright... Well, if you're being nice to me, I'll be nice back at you, as well as my buds... But try anything funny and you'll regret it, bitch.'";
 			say "     After hearing his words, you nod to him and tell him not to worry, that you know how all this works. 'Good thing you do. Or I'd have to teach you the hard way...'";
@@ -657,7 +657,7 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Of course you are, why else would you be here?";
 		say "     ([link]N[as]n[end link]) - No, not really, you are not all that much into horsepeople and do not really know why you keep coming back, either.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     You nod and admit, you are very much into people like himself. There is [italic type]something[roman type] about horsepeople that really draws you... He is happy to hear this, however, and even smiles. 'Yeah, that's... Pretty hot. I mean, you being into it makes it more fun. Kinda makes me wanna... Uh...'";
 		else:
@@ -669,7 +669,7 @@ instead of going to Master's Office while (Resolution of NightmareStablemasterEv
 		say "     However, perhaps you could do something here...";
 		say "     ([link]Y[as]y[end link]) - You actually feel bad for the grunt. Go ahead and grab his cock. If he cums, drink it as to not make a mess.";
 		say "     ([link]N[as]n[end link]) - Or not, maybe it is time to bid him goodbye.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     Really, nobody deserves to have such a low amount of options when it comes to pleasure, and it is not just because he is only a grunt that he is any different. Telling him this makes him think for a second, and he does not even notice your hand reaching for his cock. The horseman even lets out a moan as the surprise of your touch hits him. 'O-oh...' His chin drops as he watches you so tenderly move your palm around his shaft, then sliding your hand over the tip and tease it with some soft friction. 'Hnng... Fuck... R-right in front of boss['] office...?! I-I can't... B-but I want to...' Seeing how he surrenders to the sensations of having his cock stroked, you give it a fair amount of jerking as your hand fully wraps around the shaft, rubbing it back and forth as he almost neighs.";
 			say "     'Feels so fucking good... Oh fuck...' His hand soon finds its way over the back of your skull as you are [italic type]encouraged[roman type] to lean over his chest. This causes you to lie your head down between his muscular pecs as he strokes your head. 'I ain't usually this nice, and don't get used to it, but... Fuck, that feels good...' It is a quite comfortable position for yourself, actually, as this horseman's warm physique is so respectable and large that you feel something akin to safety just by embracing him. Though, given how horny he is, you doubt this will take much longer as you begin to pick up the pace. His cock immediately fully hardens in your grasp as the strokes continue, and he tries his best to not make much noise...";

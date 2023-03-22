@@ -3,24 +3,24 @@ extends Node
 
 
 """
-These are all the signals/outputs of this script to other scripts. 
+These are all the signals/outputs of this script to other scripts.
 """
-signal next_button_pressed              
-signal response_generated(text_response, is_text)                                        #tells the game that something triggered a text prompt that needs to be drawn on the screen.  
+signal next_button_pressed
+signal response_generated(text_response, is_text)                                        #tells the game that something triggered a text prompt that needs to be drawn on the screen.
 signal room_switch_intended(target_room)
 
-var current_room 		
-var location_processor 	
+var current_room
+var location_processor
 
-""" 
+"""
 INPUT:
-	A room node, supossed to be the first child of location processor and fetched
-	by the invoker of the function. 
+	A room node, supposed to be the first child of location processor and fetched
+	by the invoker of the function.
 FUNCTION:
 	called at the start of the game, sets the current_room to the starting room
-	as recieved by FS2 and drops the player into it.
+	as received by FS2 and drops the player into it.
 """
-func initialize_player_start_location(start_room):                                               
+func initialize_player_start_location(start_room):
 	current_room = start_room
 
 """
@@ -40,9 +40,9 @@ func update_current_room():
 
 """
 BUTTON INPUT:
-	We capture the input here from every button and relay it to the scripts that need to know. this keeps 
-	all the input functions in one place and makes tracing easier, as well as providing the some opportunity 
-	to use handy techniques later on. 
+	We capture the input here from every button and relay it to the scripts that need to know. this keeps
+	all the input functions in one place and makes tracing easier, as well as providing the some opportunity
+	to use handy techniques later on.
 """
 func _on_NextButton_pressed() -> void:
 	emit_signal("next_button_pressed") # Replace with function body.
@@ -64,7 +64,7 @@ func _on_Button4_pressed():
 NOTE:
 	.exits.keys doesn't seem to work. research this.
 """
-func _on_NorthwestButton_pressed() -> void:	
+func _on_NorthwestButton_pressed() -> void:
 	var room_exits = location_processor.location_exits[current_room.room_name]
 	if room_exits.keys().has("northwest"):
 		#print("room array:")
@@ -168,8 +168,8 @@ func _on_SoutheastButton_pressed() -> void:
 
 """
 FUNCTION:
-	This method disables and enables the directional buttons based on which exits 
-	are available for the current room. 
+	This method disables and enables the directional buttons based on which exits
+	are available for the current room.
 """
 
 func _on_LocationProcessor_directional_button_draw_needed() -> void:
@@ -186,57 +186,57 @@ func _on_LocationProcessor_directional_button_draw_needed() -> void:
 
 	printerr(location_processor.location_exits)
 	printerr("analyzing buttons")
-	
+
 	var room_exits = location_processor.location_exits[current_room.room_name]
 	if room_exits.keys().has("north") and  north_button.get("disabled") == true:
 		north_button.set("disabled", false)
 	elif !room_exits.keys().has("north") and north_button.get("disabled") == false:
-		north_button.set("disabled", true) 
-		
+		north_button.set("disabled", true)
+
 	if room_exits.keys().has("northeast") and  northeast_button.get("disabled") == true:
 		northeast_button.set("disabled", false)
 	elif !room_exits.keys().has("northeast") and northeast_button.get("disabled") == false:
-		northeast_button.set("disabled", true) 
-		
+		northeast_button.set("disabled", true)
+
 	if room_exits.keys().has("northwest") and  northwest_button.get("disabled") == true:
 		northwest_button.set("disabled", false)
 	elif !room_exits.keys().has("northwest") and northwest_button.get("disabled") == false:
-		northwest_button.set("disabled", true) 
-		
+		northwest_button.set("disabled", true)
+
 	if room_exits.keys().has("south") and  south_button.get("disabled") == true:
 		south_button.set("disabled", false)
 	elif !room_exits.keys().has("south") and south_button.get("disabled") == false:
-		south_button.set("disabled", true) 
-		
+		south_button.set("disabled", true)
+
 	if room_exits.keys().has("southeast") and  southeast_button.get("disabled") == true:
 		southeast_button.set("disabled", false)
 	elif !room_exits.keys().has("southeast") and southeast_button.get("disabled") == false:
-		southeast_button.set("disabled", true) 
-		
+		southeast_button.set("disabled", true)
+
 	if room_exits.keys().has("southwest") and  southwest_button.get("disabled") == true:
 		southwest_button.set("disabled", false)
 	elif !room_exits.keys().has("southwest") and southwest_button.get("disabled") == false:
-		southwest_button.set("disabled", true) 
-		
+		southwest_button.set("disabled", true)
+
 	if room_exits.keys().has("east") and  east_button.get("disabled") == true:
 		east_button.set("disabled", false)
 	elif !room_exits.keys().has("east") and east_button.get("disabled") == false:
-		east_button.set("disabled", true) 
-		
+		east_button.set("disabled", true)
+
 	if room_exits.keys().has("west") and  west_button.get("disabled") == true:
 		west_button.set("disabled", false)
 	elif !room_exits.keys().has("west") and west_button.get("disabled") == false:
-		west_button.set("disabled", true) 
-		
+		west_button.set("disabled", true)
+
 	if room_exits.keys().has("up") and  up_button.get("disabled") == true:
 		up_button.set("disabled", false)
 	elif !room_exits.keys().has("up") and up_button.get("disabled") == false:
-		up_button.set("disabled", true) 
-		
+		up_button.set("disabled", true)
+
 	if room_exits.keys().has("down") and  down_button.get("disabled") == true:
 		down_button.set("disabled", false)
 	elif !room_exits.keys().has("down") and down_button.get("disabled") == false:
-		down_button.set("disabled", true) 
-	
+		down_button.set("disabled", true)
+
 
 

@@ -267,7 +267,7 @@ to say Medeaadjustments:
 			say "     'I still would like for you to try to obtain that specialized equipment I've described. Without it, I cannot complete the procedure. If you're still interested, you should try searching the City Hospital for those items.' Additionally, with the supplies you had brought back earlier, I have developed some special pills that you might be interested in.";
 		else:
 			say "     'In thanks for your help, I can provide you with several services. As before, I can determine if you're pregnant and provide some information on the fetus. I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like. Would you like me to do that? I could make you extra fertile or even sterile if you'd like.' While she seems rather eager about the first, she's clearly less enthused about the second.";
-	if Medeaub is false and Medeaget >= 3 and player is female and Resolution of Inner Predator is not listed in { 0, 99 }:
+	if Medeaub is false and Medeaget >= 3 and Player is female and Resolution of Inner Predator is not listed in { 0, 99 }:
 		if Resolution of Inner Predator is 1:
 			say "     As you're listening to her, you feel that dark hunger inside you well up. That heady scent of reptilian arousal starts to make your mouth water. Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you. 'Hmmm... this is most interesting. And you say that your body's become capable of ingesting prey nearly your own size whole? Most intriguing.'";
 			WaitLineBreak;
@@ -280,7 +280,7 @@ to say Medeaadjustments:
 		now Medeaub is true;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is female or player is mpreg_ok:
+	if Player is female or Player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Check for pregnancy";
 		now sortorder entry is 1;

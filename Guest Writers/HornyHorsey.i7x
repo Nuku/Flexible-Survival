@@ -99,7 +99,7 @@ Cock Length of Ammy is 10. [Length in Inches]
 Ball Count of Ammy is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Ammy is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Ammy is 1. [number of cunts]
-Cunt Depth of Ammy is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Ammy is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Ammy is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Ammy is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -315,7 +315,7 @@ to say ammy_sex_fellatio_receiving:
 	say "     You need to groan at the sudden feelings as your [if Player is male]tool is[else]folds are[end if] getting worked on with expertise. [if Player is male]It doesn't take long until she takes your whole cock in to her long muzzle, fondling your [CockSpeciesName of Player in lower case] sack with one hand. [end if]You slowly start bucking in a rhythm with Ammy's [if Player is male]sucking[else]licking[end if], enjoying the very nice fellatio. Your hands roaming around until you finally get a grasp onto of her horns, guiding her movements. The other of your hand gently caresses her soft furred head in your lap. You can feel a faint warm breeze on your [Skin of Player] skin, escaping her nostrils while your body writhes within the overwhelming pleasures.";
 	say "     Meanwhile Ammy is taking care of herself with her free hand, stroking along her huge hard cock that reaches out of her twisted panties or fingering into her female sex while working at you. With a faint gaze you notice she's already drooling precum as well.";
 	say "     Brought back by another shore-bursting wave of pleasure you slowly feel your peak approaching and faintly try to push the horse between your legs away her away, but she obviously insists to continue. Along with your own groans you can hear her moan as well while [if Player is male]your shaft is locked in her mouth[else]her tongue's deep inside you[end if].";
-	if (a random chance of 1 in 2 succeeds and player is female) or Cock Count of Player < 0:
+	if (a random chance of 1 in 2 succeeds and Player is female) or Cock Count of Player < 0:
 		say "     While you keep writhing in pleasure and waiting for the moment where you simply cannot deny your peak anymore you cannot else but keep staring at Ammy's thick, drooling horsecock. You try to murmur out something but simply not being able to stop her until she seems to sense your point of interest on her and she finally [if Player is male]takes your cock out of her mouth[else]pulls out[end if]. Looking at you grinning you know that she knows what you thought as she gets up and falls onto you, kissing you. The [if Player is male]salty taste of your precum[else]nice taste of your female juices[end if] mixing with her wonderfully tasting saliva. She stays in this kiss with you for a few seconds while she positions herself onto you, slowly entering your already hypersensitive folds with her huge horsecock, making you moan loudly into her mouth during the kiss.";
 		say "     Furiously you can feel her thrusting into you, getting deeper and deeper, making horsey sounds while fucking you. A few more thrusts, getting deeper with every single one you can hear her breath heavy. Just as you feel almost like exploding from the pleasure of the deep penetration with her thick cock you can feel her cum, not simply getting but right throwing you over the edge and you start peaking with her[if Player is male], your own cock spewing jizz in between your touching bodies[end if]. Cum flooding you, squirting right out of your vagina again when she thrusts into it with another load. A few moments pass that feel like hours and Ammy collapses on top of you, licking at your neck. 'Nyaaah~ I hope that was what you had in mind,' the horse whispers into your ear and giggles.";
 		say "     You stay in this position for a few minutes, kissing and cuddling with each other in blissful afterglow.";
@@ -323,7 +323,7 @@ to say ammy_sex_fellatio_receiving:
 		say "     Your thrusting is getting more and more uncontrolled until finally you begin to orgasm. You can feel your jizz shooting into her mouth while you watch her swallowing down all of it. While you writhe your body in peak you also notice her cumming from the taste of your own cum, painting the [one of]area between your legs[or]floor under your[at random] white while juices are dripping from between her legs. You need to throw your head back as shot after shot spurts out of your cock.";
 		say "     While your orgasm finally fades, you spot Ammy's cleaning up your cock eagerly, enjoying you to the last drop. After she's done she gets up and sits next to you, leaning her curvy, soft-furred body against yours in afterglow.";
 	if a random chance of 1 in 5 succeeds, ammy_infect;
-	if player is male:
+	if Player is male:
 		NPCSexAftermath Ammy receives "OralCock" from Player;
 	else:
 		NPCSexAftermath Ammy receives "OralPussy" from Player;

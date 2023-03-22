@@ -52,7 +52,7 @@ to say ResolveEvent Fetish Store:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Enter and search.";
 		say "     ([link]N[as]n[end link]) - Leave.";
-		if player consents:
+		if Player consents:
 			FetishStoreExploration1;
 		else:
 			LineBreak;
@@ -79,7 +79,7 @@ to FetishStoreExploration1:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Take the Riding Crop.";
 	say "     ([link]N[as]n[end link]) - Leave it.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     You suppose you could at least take what you could find in the middle of this mess. You push the box out of the way and grab the riding crop, holding it firmly by its handle. Swinging it around a little to test its durability, you observe that it is still usable and serves its function. Satisfied, you place it in your inventory.";
 		ItemGain riding crop by 1;
@@ -97,7 +97,7 @@ to FetishStoreExploration2:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Go through the door."; [enter storage room]
 	say "     ([link]N[as]n[end link]) - Leave the store for now.";
-	if player consents: [storage room]
+	if Player consents: [storage room]
 		Linebreak;
 		say "     Decided, you walk towards the door, bypassing the counter and carefully stepping through the slippery floor. Cautiously, you slowly push it open, hearing it cranking as you move it further ahead. As you peek inside, you see a stairway heading deeper into what seems to be a pitch black room. You try to walk down through them as silently as possible, so that whovever is here doesn't hear you coming, holding yourself onto the wall by your left. Visibility only returns to you as you approach the end of the stairs, but you can still barely see where you're going, having to rely on your other senses to get a hold of your whereabouts.";
 		say "     As you make it to the end of the stairway, silence is the most proeminent feature. Little light creeps from the small windows at ground level, and the room's musty smell is coupled with an intense odor of sex. It's likely that numerous creatures or people came here to have their way with the toys they found, or have already been searching around. You can barely see or hear anything anymore, only shapes of what seems to be shelves, boxes and immobile human silhouettes, which are probably just lifeless mannequins. At some point, you could have sworn you saw one of them moving, but when you look again, they are as still as they could be.";
@@ -112,7 +112,7 @@ to FetishStoreExploration3:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Search the dark room."; [commit to searching storage room]
 	say "     ([link]N[as]n[end link]) - Turn tail and head back, this might be dangerous."; [leave the store]
-	if player consents:
+	if Player consents:
 		Linebreak;
 		let randomnumber be a random number from 1 to 3;
 		if randomnumber is:
@@ -159,7 +159,7 @@ to FetishStoreExploration4:
 	if calcnumber is 1: [lift the shelf on their own]
 		LineBreak;
 		say "     After thinking about your next step, you take a deep breath as you prepare yourself mentally for this rather heavy task. Moving the shelf carelessly could prove dangerous, since you don't want to end up crushed under it nor making your way to the mask even more difficult by a bad attempt. With this in thought, you search of a good place to use your strength and study your chances at succeeding for each one of the possibilities that come to your mind. When you're finally satisfied with your conclusions, you decide the best move and get ready to try moving the shelf.";
-		if HP of player < 10: [player is severely hurt]
+		if HP of Player < 10: [player is severely hurt]
 			say "     But as badly hurt as you are, this heavy fallen shelf proves to be too much for your exhausted body. You're not even able to put a decent effort as your muscles simply refuse to function. Disappointed, you turn back to where you came from, taking note of this particular corner so that you can return later, when you've fully recovered or have brought a worthy companion with you.";
 			now Resolution of Fetish Store is 3; [Found Gimp Mask, but failed to get it]
 		else:
@@ -324,7 +324,7 @@ Raided Corner Store is a situation.
 ResolveFunction of Raided Corner Store is "[ResolveEvent Raided Corner Store]". The level of Raided Corner Store is 3.
 Sarea of Raided Corner Store is "Red".
 when play begins:
-	add Raided Corner Store to badspots of HermList;
+	add Raided Corner Store to BadSpots of HermList;
 	add Raided Corner Store to BadSpots of FurryList;
 
 to say ResolveEvent Raided Corner Store:
@@ -372,7 +372,7 @@ ResolveFunction of Flooded Street is "[ResolveEvent Flooded Street]". The level 
 Sarea of Flooded Street is "Red".
 when play begins:
 	add Flooded Street to BadSpots of MaleList;
-	add Flooded Street to badspots of HumorousList;
+	add Flooded Street to BadSpots of HumorousList;
 
 to say ResolveEvent Flooded Street:
 	say "     You come across a small lake of cum blocking your path. This section of street is literally flooded with cum. Wading through the musky pond are several of those giant walking cocks. At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen. You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
@@ -402,7 +402,7 @@ ResolveFunction of Strip Bar is "[ResolveEvent Strip Bar]".
 Sarea of Strip Bar is "Red".
 stripbarcounter is a number that varies.
 when play begins:
-	add Strip Bar to badspots of HermList;
+	add Strip Bar to BadSpots of HermList;
 	add Strip Bar to BadSpots of FurryList;
 
 to say ResolveEvent Strip Bar:
@@ -493,9 +493,9 @@ Sarea of Evangelist is "Red".
 when play begins:
 	add Evangelist to BadSpots of FemaleList;
 	add Evangelist to BadSpots of MaleList;
-	add Evangelist to badspots of HermList;
+	add Evangelist to BadSpots of HermList;
 	add Evangelist to BadSpots of FurryList;
-	add Evangelist to badspots of HumorousList;
+	add Evangelist to BadSpots of HumorousList;
 
 to say ResolveEvent Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car. Still hunkered down, you see an unchanged human. Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol. He is wild-eyed and waves a bible around as he start yelling at no one. He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth. You try to calm him down, but he will have none of it. Clearly overwrought by witnessing the transforming populous from his hiding spot, he's gone off the deep end. From some of his rambling, you gather he's always been upset by the lascivious nature of the neighborhood around his home.";

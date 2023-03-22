@@ -25,7 +25,7 @@ to say Leopardman wins:
 		say "     His soft thick spotted fur tickles pleasurably as it rubs up against your [Skin of Player] skin, as he begins to rock his hips forward against yours, his barbs massaging your inner walls with small bursts of pleasure, as he slides his feline cock in and out of your increasingly lust-filled form. You feel his sharp feline teeth brush your neck and you moan as he licks across your neck several times with his raspy feline tongue, the sensation seeming strangely erotic as he rubs his muzzle against your unprotected neck teasingly. The pleasure only seems to build within you as he speeds up his thrusts, all thoughts of anything except sex driven out of your mind as your senses are overwhelmed by his masculine musk, and the feel of his silken soft fur stroking over your [bodytype of Player] body as he continues to thrust that amazingly pleasurable feline cock into your needy passage.";
 		say "     After what seems almost like an eternity of pleasure, the leopardman buries his head against your shoulders, his teeth scraping lightly against your skin as he holds you in place to receive his seed. You find yourself yowling helplessly like a cat as you feel his cock tense and fill your body with his warm, thick seed, your own orgasm smashing through you and making you feel increasingly bestial as he fills your body with his predatory seed. Eventually you can do no more than shudder limply underneath him as he pulls out of you with a look of satisfaction on his feline face, 'What a good little sexy slut you make,' he murmurs with amusement as he traces one of his clawed tips along the side of your face teasingly, 'Now that you know how good it can be, I look forward to seeing you again, my little soon-to-be Leopardess. In the meantime, though, I am sure there are still others out there for me to find and breed...' the leopardman says with a wicked grin as he begins to stalk off down the street, already looking for his next sexual conquest as he leaves you lying there trying to recover from the amazingly sexual experience.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Leopardman";
-	else if ( HP of Player > 0 and a random chance of 1 in 3 succeeds ) or ( player is submissive and a random chance of 2 in 3 succeeds ) or ( player is mpreg_ok and a random chance of 1 in 3 succeeds ):
+	else if ( HP of Player > 0 and a random chance of 1 in 3 succeeds ) or ( Player is submissive and a random chance of 2 in 3 succeeds ) or ( Player is mpreg_ok and a random chance of 1 in 3 succeeds ):
 		say "     'Well, I was certainly hoping for some more fun than this,' he rumbles as he looks over your body as you [if HP of Player > 0]give up the fight and submit to[else]collapse helplessly in front of[end if] the powerful and masculine feline. 'Without a proper breeding hole, what good are you?' the leopardman asks teasingly as he looks down at you, the evil grin spreading across his muzzle making you shudder slightly. 'Though you certainly act like a weak and needy female, now don't you?' he purrs in your ear as he pins you down suddenly. 'Maybe you just need a little more... encouragement.'";
 		say "     What he means by this becomes clear as he grinds his hard erection against your backside and gets it lined up with your asshole. You find your heart beating faster as his powerful male scent fills your mind with lust even as one of his clawed hands trails up the inside of your thighs teasingly. The feel of his soft hands tracing up your [bodydesc of Player] body making you moan with arousal and causes the leopard to grin even as he slips a paw [if Player is male]to your [cock size desc of Player] [Cock of Player] manhood. 'Already hard, I see,' he rumbles. 'I knew there was a needy fucktoy somewhere inside you looking to get fucked and bred[else]across your bare groin. 'Nothing at all, eh?' he says in surprise. 'Well, let's see if we can't get you a proper pussy so you can get bred like you so clearly want next time[end if].' And with that said, he pushes his hips forward, sinking his pointed, barbed, feline rod into you.";
 		WaitLineBreak;
@@ -59,19 +59,19 @@ To say Leopardman loses:
 		now sortorder entry is 1;
 		now description entry is "While he's at your mercy, why not show him true appreciation";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Beg him to let you worship his paws";
 			now sortorder entry is 2;
 			now description entry is "Slip yourself under his big paws";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Turn around and bend over, smacking your ass";
 			now sortorder entry is 3;
 			now description entry is "Feel him inside you and breed you";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Face Fuck";
 			now sortorder entry is 4;
@@ -110,7 +110,7 @@ To say Leopardman loses:
 		clear the screen and hyperlink list;
 
 to say LeopardmanVictorySexOral:
-	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
+	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if Player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
 	say "     The first taste of his seed, his precum, forces a desperate moan from your lips. That sound illicites a chuckle of approval from above, and one that draws a strange glee from your primal mind. Your tongue has already lashed the tip of the barbed cock before you clean, and so the only thing left to do is wrap your lips around that object of worship. As soon as you've curled your mouth around his cock, the leopardman forces his hips forward and grabs your head. He's no longer leaning against the wall, and now hunches over your form as he drives his prick straight down your throat. It's hard to care, to think beyond what pleases him, especially with all of the aphrodisac-like smells surrounding you. His musk makes your mind fall into a mire of constant need, and there's nothing you can, or want to, do to crawl out.";
 	WaitLineBreak;
 	say "     There's nothing left but to worship this great male before you, to run your hands over his abdominals and thighs, all while he begins to pound your face and throat. You gag off and on for a few minutes as he picks up speed, as his soft barbs rub against your throat, and as he grows ever more vicious in lust. So with little other choice, you force your throat to behave; Soon he's easily pushing in and out of it as you constrict your esophagus each time he thrusts in, and loosen it as he pulls out. It makes it easy for him to keep a fast rhythm. Your hands soon stroke down his furred, muscled back as they trail towards his ass. Those digits of yours then grip at his muscled rear as he pounds into you with ever more force. You're left in a daze as you hang on for dear life.";
@@ -313,7 +313,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

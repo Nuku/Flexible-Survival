@@ -47,7 +47,7 @@ Sarea of Fleeing Minotaur is "Outside".
 
 when play begins:
 	add Fleeing Minotaur to BadSpots of FurryList;
-	add Fleeing Minotaur to badspots of HermList;
+	add Fleeing Minotaur to BadSpots of HermList;
 	add Fleeing Minotaur to BadSpots of MaleList;
 
 to say ResolveEvent Fleeing Minotaur:
@@ -114,7 +114,7 @@ ResolveFunction of Captured Wyvern is "[ResolveEvent Captured Wyvern]".
 Sarea of Captured Wyvern is "Outside".
 
 when play begins:
-	add Captured Wyvern to badspots of FeralList;
+	add Captured Wyvern to BadSpots of FeralList;
 	add Captured Wyvern to BadSpots of FurryList;
 
 to say ResolveEvent Captured Wyvern:
@@ -158,7 +158,7 @@ Sarea of Secrets is "Outside".
 when play begins:
 	add Secrets to BadSpots of FurryList;
 	add Secrets to BadSpots of FemaleList;
-	add Secrets to badspots of HermList;
+	add Secrets to BadSpots of HermList;
 
 to say ResolveEvent Secrets:
 	say "     While walking through the streets of the city, you come across an old public bathroom and decide to stop in to see if the water is working in here. You doubt it'll still be running, but there's no harm in checking. Walking into the public facility, you step carefully to avoid the globs of cum, milk and urine littering the once white tiled floor and walls. You make your way to the women's side of the restrooms, figuring the men's side is probably a biohazard zone by now. Right before you head to the sinks, which are amazingly free from any kind of stains, you freeze in place as an all too familiar noise reaches your ears. The sounds of moaning and thumping are resounding from off of the stalls of the public washroom, and you immediately feel compelled to flee before trouble finds you. However, before you can beat a retreat, one of the bathroom stalls pops open. The banging you had heard was coming from the cheap tin frame and not the far wall, and quickly two half-dressed soldiers pop out and onto the ground. Both are indeed female, and the larger of the pair catches her bulk with her hands to avoid crushing her fuck buddy. You find it odd that two women could be making so much noise, but your confusion is lifted when you spot the large feline shaft connecting them together. It would seem that the larger valkyrie has been tainted by this unclean world.";
@@ -198,7 +198,7 @@ Sarea of Another Survivor is "Outside".
 
 when play begins:
 	add Another Survivor to BadSpots of FurryList;
-	add Another Survivor to badspots of HermList;
+	add Another Survivor to BadSpots of HermList;
 
 to say ResolveEvent Another Survivor:
 	say "     While exploring the city, you spot another survivor. Before you get a chance to introduce yourself, a Hermaphrodite Gryphon swoops out of the sky, snatches up the other survivor, and flies away.";
@@ -256,7 +256,7 @@ Sarea of Ice Cream Truck is "Outside".
 
 when play begins:
 	add Ice Cream Truck to BadSpots of FurryList;
-	add Ice Cream Truck to badspots of HermList;
+	add Ice Cream Truck to BadSpots of HermList;
 
 IceCreamTruckBadEnd is a truth state that varies. IceCreamTruckBadEnd is usually false.
 
@@ -277,14 +277,14 @@ to say ResolveEvent Ice Cream Truck:
 				say "cram some of the delicious cream into your cunt[sfn][if anallevel is 3] and asshole[end if], shuddering at the perverse bliss of smearing all that slimy cum along your inner walls. You gauge your elasticity by splaying your fingers apart, giving your free hand room to shovel more sticky gryphon cream into your [if anallevel is 3]needy asshole and [end if]slavering puss[yfn], soon so aroused that you can do nothing but jill yourself in absent ecstasy";
 			else:
 				say "[if anallevel > 1]cram some of the delicious cream into your asshole, your fingers sinking into your cum-sullied rear to spread and rub along your sensitive anal lining[else]gather more of the delicious cream. You slather it all over your body, gathering handfuls to devour and lick clean as you bask in the musky scent of your surroundings[end if]";
-			say ". You moan and tremble with debilitating arousal, your thoughts drifting to fantasies of being pinned down and ravaged by one of the gorgeous gryphon herms that caused the mess you're now helplessly masturbating in. You daydream of wrapping your tongue around a large, knotted length, drinking down several thick, virile loads[if Player is female or (player is male and anallevel > 1)] while fingering yourself to orgasm after orgasm[end if][if Player is male]. You lust to sink into a hot, tight pussy while nursing from your partner's furry breasts, cooing and squawking noisily as you make love in the empty streets[end if].";
+			say ". You moan and tremble with debilitating arousal, your thoughts drifting to fantasies of being pinned down and ravaged by one of the gorgeous gryphon herms that caused the mess you're now helplessly masturbating in. You daydream of wrapping your tongue around a large, knotted length, drinking down several thick, virile loads[if Player is female or (Player is male and anallevel > 1)] while fingering yourself to orgasm after orgasm[end if][if Player is male]. You lust to sink into a hot, tight pussy while nursing from your partner's furry breasts, cooing and squawking noisily as you make love in the empty streets[end if].";
 			say "     Subsumed as you are in your muddled thoughts, your eventual [if Player is neuter]sexless[else]messy[end if] climax nearly knocks you insensate. Pleasure crests in waves of euphoria that strip all sense of time of place, feeling suspended and weightless as you [if Player is not neuter]add to the mess marring the truck and [end if]bask in a wreath of mind-numbing warmth. Unable to control your spasms of orgasmic bliss, you slump face-first into the potpourri of milk and spunk, landing with a squelching splatter that excites your nanite-riddled body all over again. You roll in the muck as you continue to masturbate, your mind empty of anything but the joy of drenching yourself in the hot, sticky slime [if Player is neuter]until it[else]and contributing to the lather that[end if] cakes every inch of your body. You completely forget your goal of survival as you wallow in the intoxicating fluids, a delicious, nourishing banquet that sustains your hedonistic submission until you finally collapse after countless hazy peaks.";
 			WaitLineBreak;
 			project Figure of BlueGryphon_soft_icon;
 			say "     You awaken many hours later, completely spent and sore after the exertion. Rubbing your eyes of sleep, your swimming vision begins to normalize, and the incoherent blur of yellow and blue before you sharpens into the distinct shape of a blue gryphon's head. 'Good morning, gorgeous,' comes the beautiful creature's voice, soft and disarming, something about it leaving you utterly at ease. You struggle to rise on the truck's slippery flooring, stained in a now-cool slime of spent fluids. A smile tugs at the gryphon's furry cheeks, and she draws you in against her body, stabilizing your stumbling with her strong, buxom frame. So close to her, you are free to breathe in the scent of her arousal, squirming with need as lurid images fill the void in your mind. Your head sinks forward into the comfortable vise of her breasts, unable to find reason for concern as she cradles you close to her bosom.";
 			say "     'There, there,' the hermaphrodite croons, her soft tongue sweeping between your ears. A taloned hand reaches below to play with your tube-like tail, threading the thin appendage between her digits, snaking up to toy with the plume at its tip, then sliding all the way back down again in one slow, continuous motion. The sensual contact relaxes you further, and you realize dimly that you are safe and sound in the arms of your blue-furred lover. 'I found you lying here all alone, and I thought you might like some company,' she teases, rubbing the side of her beak against your own with a soft, seductive coo.";
-			say "     You shiver with delight as her wings wrap around your body, only to feel a twinge of shame as you reflect on the mess that mars your fur and plumage. Those concerns slough away when you feel her [if Player is male]take hold of your cock, stroking along the underside of your knotted, hardening length until it stands at full arousal in her grasp[else if Player is female]slip two fingers into your wide, deep pussy, pressing knuckle-deep into your slavering honeypot and pumping back and forth in your nectar-soaked fuckhole[else if anallevel > 1]slip two fingers into your reflexively clenching asshole, pressing knuckle-deep into your rectum and pumping back and forth along your achingly needy lining[else]rub along your featureless pelvis, her experienced touches exciting you in spite of your sexless state[end if]. A powerful need to [if Player is herm or (player is male and player is mpreg_ok)]breed and be bred[else if Player is female or player is mpreg_ok]be bred[else if Player is male]breed her[else]be fucked[end if] wells up in your body, and you pose no resistance when she sweeps you into a lusty, beak-locking kiss. Her confident steps lead you back until your legs catch on a crate, and you sink onto your back on the cum-soaked surface, the lusty herm quick to ";
-			if (player is female) or (player is herm and a random chance of 1 in 2 succeeds): [Get fucked]
+			say "     You shiver with delight as her wings wrap around your body, only to feel a twinge of shame as you reflect on the mess that mars your fur and plumage. Those concerns slough away when you feel her [if Player is male]take hold of your cock, stroking along the underside of your knotted, hardening length until it stands at full arousal in her grasp[else if Player is female]slip two fingers into your wide, deep pussy, pressing knuckle-deep into your slavering honeypot and pumping back and forth in your nectar-soaked fuckhole[else if anallevel > 1]slip two fingers into your reflexively clenching asshole, pressing knuckle-deep into your rectum and pumping back and forth along your achingly needy lining[else]rub along your featureless pelvis, her experienced touches exciting you in spite of your sexless state[end if]. A powerful need to [if Player is herm or (Player is male and Player is mpreg_ok)]breed and be bred[else if Player is female or Player is mpreg_ok]be bred[else if Player is male]breed her[else]be fucked[end if] wells up in your body, and you pose no resistance when she sweeps you into a lusty, beak-locking kiss. Her confident steps lead you back until your legs catch on a crate, and you sink onto your back on the cum-soaked surface, the lusty herm quick to ";
+			if (Player is female) or (player is herm and a random chance of 1 in 2 succeeds): [Get fucked]
 				say "[if Cunt Count of Player > 1]spread your legs and align her tapered cocktip with one of your wet, needy cunts[else]spread your legs and align her tapered cocktip with your wet, needy entrance[end if].";
 				WaitLineBreak;
 				say "     You squawk loudly as she spears into your depths, your avian mate leaning over your form with a soft, loving coo. Her scaly hands take hold of your [if Nipple Count of Player > 0 and Breast Size of Player > 0]breasts, rubbing and pinching your nipples between the firm of her talons until you leak trickles of milk beneath her touch[else]upper arms, keeping you pinned in place beneath her[end if]. You shudder and crane your head back, your elongated tongue lolling free from your beak as she grinds her hard knot to your soaked and drooling folds[if Player is male], your unattended length[smn] standing rigidly at attention[end if]. 'Look at you, so eager to be taken,' the herm coos softly. 'I'll have to bring you back to my nest after this. We'll make so many wonderful little gryphons together,' she teases, pulling her hips back just enough to drive deeply into your well-stuffed muff again. Wetness splatters against her crotch from the impact, the feeling of that amazing gryphon cock inside you making you tremble and nod with desperate approval. You're willing to say or do almost anything for more, your hips rocking meekly against the huge pole of pre-slick meat spreading you wide. 'Such a good little eggslut,' she croons, then leans down to snake her tongue along your throat, her hot breath flowing through your supple blue fur.";
@@ -295,7 +295,7 @@ to say ResolveEvent Ice Cream Truck:
 				WaitLineBreak;
 				say "     Despite the warning, her sudden withdrawal still manages to surprise you, yielding a light pang of pain in your nethers as she yanks her hard and swollen knot free from your cum-sullied snatch. You emit a long, wavering moan as a cascade of warm cream flows out from your freshly fucked pussy, leaking down [if Cunt Count of Player > 2]your lonely extra slits[else if Cunt Count of Player is 2]your lonely second slit[else if anallevel > 1]the crack of your ass[else]your thighs[end if] before dripping to the floor below. The gryphon gathers some of her escaping cum with a digit and smears it over your beak, giggling softly as your tongue chases after her delicious, dominant seed.";
 				say "     You pose no resistance as she hefts you up to your feet, slipping and stumbling a little in the slime of spent fluids. She then pulls you by the wrist with an infectious sense of excited urgency, your cunt[sfn] already soaked with need by the time you're back outside. Using the street as her runway, your mate takes off into the sky with powerful flaps her wings, and your broken mind has little trouble following her lead, joining her side in the air. You fuck and breed wildly the moment you arrive at her nest, paying no heed to the world around you in the haze of taking her cock[if Player is male] and stuffing her pussy with your own knotted tool[smn][end if].";
-			else if Player is male and player is not submissive: [Fuck her]
+			else if Player is male and Player is not submissive: [Fuck her]
 				say "straddle your waist and align your tapered cocktip with her wet, needy entrance.";
 				WaitLineBreak;
 				say "     You squawk loudly as she sinks your meaty gryphon cock into her folds, spreading herself wide around your bestial length. The lustful avian grinds down against the bulb of your knot, the squeezing tightness making you throb within her satiny walls. Her scaly hands take hold of your [if Nipple Count of Player > 0 and Breast Size of Player > 0]breasts, rubbing and pinching your nipples between the firm of her talons until you leak trickles of milk beneath her touch[else]upper arms, keeping you pinned in place beneath her[end if]. You shudder and crane your head back, your elongated tongue lolling free from your beak as she begins to rock her hips, sliding halfway up your impressive pole before making it disappear in her warm, wet oven of a cunt again. 'Such a [if Breast Size of Player > 0]gorgeous[else]handsome[end if] stud,' the gryphon coos. 'I'll have to bring you back to my nest after this. We'll make so many wonderful little gryphons together,' she teases, pulling up to the tapered tip of your dick to let her juices trickle down your sensitive cockflesh before sliding all the way back down again with almost torturous deliberation. You nod your head in desperate approval, willing to say or do almost anything for more, your hips giving needful little bucks into her gripping chalice as she leers at you sultrily. 'I knew you wanted to be mine,' she croons, then leans down to snake her tongue along your throat, her hot breath flowing through your supple blue fur.";
@@ -380,7 +380,7 @@ Sarea of Strange Preacher is "Outside".
 
 when play begins:
 	add Strange Preacher to BadSpots of FurryList;
-	add Strange Preacher to badspots of HermList;
+	add Strange Preacher to BadSpots of HermList;
 
 to say ResolveEvent Strange Preacher:
 	say "     Wandering the deserted streets, you hear what sounds like a loud voice farther down the street. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street. Moving closer in case this is some kind of trick, you get a better look at the creature and find yourself shaking your head in astonishment. With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her spread legs giving you a good look at her erect feline cock. Behind her, a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach. Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch off the ground. It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak.";
@@ -418,8 +418,8 @@ Sarea of Panther Trap is "Outside".
 
 when play begins:
 	add Panther Trap to BadSpots of FurryList;
-	add Panther Trap to badspots of HermList;
-	add Panther Trap to badspots of NonconList;
+	add Panther Trap to BadSpots of HermList;
+	add Panther Trap to BadSpots of NonconList;
 
 to say ResolveEvent Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";

@@ -31,7 +31,7 @@ The level of Captured Bird is 3.
 
 when play begins:
 	add Captured Bird to BadSpots of FemaleList;
-	add Captured Bird to badspots of HermList;
+	add Captured Bird to BadSpots of HermList;
 	add Captured Bird to BadSpots of FurryList;
 
 to say ResolveEvent Captured Bird:
@@ -274,7 +274,7 @@ to say sexwithAnastasia:
 		now lastfuck of Anastasia is turns;
 		if HP of Anastasia is 5:
 			say "[Anastasiasex00]"; [first time]
-		else if (player is not neuter) and ( ( HP of Anastasia is 9 or HP of Anastasia is 10 ) and a random chance of 1 in 2 succeeds ) or ( HP of Anastasia > 10 and a random chance of 1 in 4 succeeds ):	[volcano]
+		else if (Player is not neuter) and ( ( HP of Anastasia is 9 or HP of Anastasia is 10 ) and a random chance of 1 in 2 succeeds ) or ( HP of Anastasia > 10 and a random chance of 1 in 4 succeeds ):	[volcano]
 			say "[Anastasiasex06a]"; [volcano - lead-in]
 			if Player is male and ( a random chance of 2 in 3 succeeds or HP of Anastasia is 9 ):
 				say "[Anastasiasex06b]"; [volcano - sex]
@@ -297,7 +297,7 @@ to say sexwithAnastasia:
 			else if a random chance of 1 in 2 succeeds:
 				say "[Anastasiasex02]"; [fuck her]
 			else:
-				say "[Anastasiasex01]"; [birdy blow job]
+				say "[Anastasiasex01]"; [birdy blowjob]
 		else if Player is female and a random chance of 1 in 2 succeeds:	[wants pussy]
 			say "[Anastasiasex04]"; [receive cunnilingus]
 		else:
@@ -328,7 +328,7 @@ to Anastasiasexmenu:
 		now sortorder entry is 4;
 		now description entry is "fuck her in the lava pool";
 		choose a blank row in table of fucking options;
-		now title entry is "Birdy blow job";
+		now title entry is "Birdy blowjob";
 		now sortorder entry is 6;
 		now description entry is "take a go at the phoenix's beak";
 	if Player is female:
@@ -369,7 +369,7 @@ to Anastasiasexmenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Birdy blow job":
+				if nam is "Birdy blowjob":
 					say "[Anastasiasex01]";
 				else if nam is "Mount her":
 					say "[Anastasiasex02]";
@@ -418,7 +418,7 @@ to say Anastasiasex00:		[first time]
 		say "     Not equipped to mount the needy bird, you slide several fingers into her instead, giving her a good finger-fucking. She moans loudly and shivers in delight as your digits sink into her wonderfully hot hole. The heat of her loins fills you, filling you with vigor that flows up your arm and drives you to pound into her hard and fast. She takes this with unabashed ecstasy, reveling in it all the more as you press another finger into her and soon your entire hand. You stroke your free hand through her soft, downy feathers as you work to please her. You can feel the heat of her loins flowing into you until finally she can't hold back any longer and cries out in delight, cumming hard with a shriek of pleasure. Her hot juices wash over you, tasting delicious as you lick up as much as you can get while continuing to thrust through her climax. After slipping your hand free, you snuggle up with her, enjoying some loving nips from her large beak.";
 		NPCSexAftermath Player receives "OralPussy" from Anastasia;
 
-to say Anastasiasex01:		[blow job]
+to say Anastasiasex01:		[blowjob]
 	say "     Deciding to have some more fun with the fiery bird, you run your hands across her body, ruffling her feathers to get her excited. She nuzzles her large head against your side as you divest yourself of your clothes and gear. 'I want to try it this way, my friend,' she says, nuzzling her sharp beak down towards your cock. Eyeing her sharp beak, you stroke her head feathers and remind her to be careful. She gives your side a playful nip and releases a chirping chuckle.";
 	say "     Opening her beak, Anastasia lets your [cock size desc of Player] [Cock of Player] shaft slide into it before closing it just enough to hold it gently while her broad, thick tongue slides across it. You can't help but moan as that strong tongue slides across your cock and her searing hot breath blows sensually across your flesh, filling you with a warmth that soaks into you. You stroke her head, complimenting her on how well she's doing and how quickly she's learning. You thrust gently into her mouth, but mostly let the giant bird take care of it.";
 	if Ball Size of Player < 12:
@@ -520,7 +520,7 @@ to say Anastasiasex06c:		[volcano - basalt dildo]
 to say Anastasiasex06d:		[volcano - 69]
 	say "     Feeling the heat of the volcano surrounding and suffusing you, you are filled with lustful excitement. Eager to satisfy your intense arousal, you carefully move around atop the fiery bird and bring your head to her cloacal pussy while offering your own crotch to the sexy bird. She nuzzles at your hip and gives you a playful nip before nuzzling at your [if Player is herm]cock and cunt[else if Player is male]cock[else]cunt[end if], letting her broad tongue slide across your genitals. You moan in pleasure and bury your face in her crotch, licking and kissing at her hot cunt. Feeling far hotter than usual, this heat still brings you nothing but pleasure, adding to the strength and heat of your own arousal.";
 	say "     Your attention to the phoenix's cloacal pussy makes her moan and chirp in pleasure, which brings a smile to your face. And she returns the pleasure in kind, [if Player is male]having taken your cock into her beak and sucking eagerly upon it[else]sliding her tongue across your oversensitive pussy, making your steaming juices flow all the more[end if]. You please one another like this while the recovering phoenix floats across the lava, soaking in its power for added pleasure to this lustful encounter. And wanting to [one of]make her lava bath even more intense, you cautiously dip your hand into the magma pool and pour it over her cunt, making her squawk in sudden delight. Taking this as a good sign, you scoop several more handfuls to spread over her heated folds before take a big scoop and pour it right into her, plunging your hand into her cunt along with the red hot lava[or]satisfy her craving even more, you slide several fingers into her pussy, frigging her quickly with them. And once she's loosened up, you slide your whole hand down into her needy cunt, pumping into her hard and fast as she squawks in delight[at random]. This sends her crashing over the edge into climax, her hot, dripping cunt clenching down hard around you as her tongue goes into overdrive to get you to cum as well. You can't hold back long and are soon crying out in delight as well. You both are left moaning and panting as you float lazily atop her in the lava. After you've both had some time to recover, she takes you in her talons, along with her toy and flies you back up to the cave.";
-	if player is male:
+	if Player is male:
 		NPCSexAftermath Anastasia receives "OralCock" from Player;
 	else:
 		NPCSexAftermath Anastasia receives "OralPussy" from Player;

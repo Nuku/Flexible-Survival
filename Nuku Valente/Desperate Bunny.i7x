@@ -135,7 +135,7 @@ Cock Length of Sandra is 0. [Length in Inches]
 Ball Count of Sandra is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sandra is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sandra is 1. [number of cunts]
-Cunt Depth of Sandra is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Sandra is 12. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Sandra is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Sandra is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -232,7 +232,7 @@ to say sexwithSandra:
 		say "[sandrasex2]";
 	else if Player is neuter:
 		say "     'Uh, hon? No offense or anything, but you have nothing to play with. Fucking someone without any of that just feels weird to me, OK? Sorry.'";
-	else if HP of Sandra is 0 and player is male:
+	else if HP of Sandra is 0 and Player is male:
 		say "[sandrasex_leadin]";
 		say "[sandrasex1]";
 	else:
@@ -267,7 +267,7 @@ to say sandrasexmenu:
 	now title entry is "Cunnilingus";
 	now sortorder entry is 2;
 	now description entry is "Eat the bunny girl out";
-	if Player is male or ( player is female and rabbitsibling >= 2 ):
+	if Player is male or ( Player is female and rabbitsibling >= 2 ):
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 3;

@@ -52,7 +52,7 @@ Cock Length of Tyr is 12. [Length in Inches]
 Ball Count of Tyr is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Tyr is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Tyr is 0. [number of cunts]
-Cunt Depth of Tyr is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Tyr is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Tyr is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Tyr is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -132,9 +132,9 @@ Instead of fucking the Tyr:
 					say "[TyrLost_Neuter]";
 		else:
 			now TyrDefeated is 0;
-			if a random chance of 2 in 6 succeeds and player is female:
+			if a random chance of 2 in 6 succeeds and Player is female:
 				say "[TyrWon_Cunnilingus]";
-			else if a random chance of 1 in 6 succeeds and player is female:
+			else if a random chance of 1 in 6 succeeds and Player is female:
 				say "[TyrWon_Training]";
 			else if Player is female:
 				say "[TyrWon_Vaginal]";
@@ -169,7 +169,7 @@ to TyrSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Win: Receive Fellatio";
 		now sortorder entry is 4;
-		now description entry is "beat him and get a blow job";
+		now description entry is "beat him and get a blowjob";
 		if lust of Tyr >= 3 and Libido of Tyr >= 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Lose: Fuck him";

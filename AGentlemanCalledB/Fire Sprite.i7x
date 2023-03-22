@@ -346,8 +346,8 @@ When Play begins:
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
 	now loot entry is "glowing ember"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is "Fiery Milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "Fiery Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 1; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slim[or]lithe[or]small[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -504,7 +504,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 		say "You are [descr].";
 		WaitLineBreak;
 
-Section 4 - Glowing Ember and other items
+Section 4 - Glowing Ember
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -520,43 +520,6 @@ to say glowingemberuse:
 	say "     You come to your senses some time later. Glancing around, you find the small ember missing. It is hard to shake the strange desire to light something on fire.";
 
 Scent of glowing ember is "The small ember smells faintly smoky.".
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Fiery Cum"	"A plastic water bottle containing a moderate amount of milky white, heated liquid. Almost could be mistaken for some sort of heated milk drink, if someone hadn't written 'Fire Sprite Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	Fiery cum
-
-Fiery cum is a grab object.
-Fiery cum is cum.
-Purified of Fiery cum is "distilled cum".
-Fiery cum is infectious.
-Strain of Fiery cum is "Fire Sprite".
-Usedesc of Fiery cum is "[Fiery cum use]";
-
-to say Fiery cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes warm and slightly spicy. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 5;
-	SanLoss 5;
-
-instead of sniffing Fiery cum:
-	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda spicy.";
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"Fiery milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Fiery Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	Fiery milk
-
-Fiery milk is a grab object.
-Fiery milk is milky.
-Purified of Fiery milk is "distilled milk".
-Fiery milk is infectious.
-Strain of Fiery milk is "Fire Sprite".
-Usedesc of Fiery milk is "[Fiery milk use]";
-
-to say Fiery milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the fire sprite milk run over your tongue and down your throat. Tastes rich and extra warm. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
-	PlayerDrink 15;
-
-instead of sniffing Fiery milk:
-	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Section 5 - Endings
 

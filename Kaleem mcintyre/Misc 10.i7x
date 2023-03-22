@@ -80,7 +80,7 @@ Magical Girl is a situation.
 ResolveFunction of Magical Girl is "[ResolveEvent Magical Girl]".
 Sarea of Magical Girl is "Outside".
 When play begins:
-	Add Magical Girl to badspots of HumorousList;
+	Add Magical Girl to BadSpots of HumorousList;
 
 to say ResolveEvent Magical Girl:
 	say "     When out of the blue something falls onto your head, you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
