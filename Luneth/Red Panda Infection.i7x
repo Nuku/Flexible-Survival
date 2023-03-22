@@ -193,4 +193,22 @@ to say Red Panda cum use:
 instead of sniffing red panda cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"red panda milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'red panda milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	red panda milk
+
+red panda milk is a grab object.
+red panda milk is milky.
+Purified of red panda milk is "distilled milk".
+red panda milk is infectious.
+Strain of red panda milk is "Red Panda".
+Usedesc of red panda milk is "[red panda milk use]";
+
+to say red panda milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the panda milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing red panda milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
 Red Panda Infection ends here.

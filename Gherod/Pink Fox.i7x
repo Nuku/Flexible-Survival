@@ -232,6 +232,8 @@ name	desc	weight	object
 
 pink fox cum is a grab object.
 pink fox cum is cum.
+pink fox cum is infectious.
+Strain of pink fox cum is "Pink Fox".
 Usedesc of pink fox cum is "[pink fox cum use]";
 
 to say pink fox cum use:
@@ -239,9 +241,6 @@ to say pink fox cum use:
 	PlayerDrink 5;
 	SanLoss 5;
 	increase Libido of Player by 10;
-	if "Iron Stomach" is not listed in Feats of Player:
-		say "     It seems to cause a reaction with the nanites in your system...";
-		infect "Pink Fox";
 
 instead of sniffing pink fox cum:
 	say "It smells a bit like you would expect cum to smell, but there is something different about it that you cannot identify.";
@@ -255,6 +254,8 @@ name	desc	weight	object
 pink fox milk is a grab object.
 pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
+pink fox milk is infectious.
+Strain of pink fox milk is "Pink Fox".
 Usedesc of pink fox milk is "[pink fox milk use]";
 
 to say pink fox milk use:

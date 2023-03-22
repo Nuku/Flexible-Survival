@@ -95,6 +95,43 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'cheesecake milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	cheesecake milk
+
+cheesecake milk is a grab object.
+cheesecake milk is milky.
+Purified of cheesecake milk is "distilled milk".
+cheesecake milk is infectious.
+Strain of cheesecake milk is "Cheesecake".
+Usedesc of cheesecake milk is "[cheesecake milk use]";
+
+to say cheesecake milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and cream cheese-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing cheesecake milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"cheesecake cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Cheesecake Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	cheesecake cum
+
+cheesecake cum is a grab object.
+cheesecake cum is cum.
+Purified of cheesecake cum is "distilled cum".
+cheesecake cum is infectious.
+Strain of cheesecake cum is "Cheesecake".
+Usedesc of cheesecake cum is "[cheesecake cum use]";
+
+to say cheesecake cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, cheesy aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing cheesecake cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
+
 [
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
@@ -265,6 +302,43 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gingerbread milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'gingerbread milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	gingerbread milk
+
+gingerbread milk is a grab object.
+gingerbread milk is milky.
+Purified of gingerbread milk is "distilled milk".
+gingerbread milk is infectious.
+Strain of gingerbread milk is "Gingerbread".
+Usedesc of gingerbread milk is "[gingerbread milk use]";
+
+to say gingerbread milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the gingerbread milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing gingerbread milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"gingerbread cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'gingerbread Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	gingerbread cum
+
+gingerbread cum is a grab object.
+gingerbread cum is cum.
+gingerbread cum is infectious.
+Purified of gingerbread cum is "distilled cum".
+Strain of gingerbread cum is "Gingerbread".
+Usedesc of gingerbread cum is "[gingerbread cum use]";
+
+to say gingerbread cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and creamy, with a sweet, gingery aftertaste. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing gingerbread cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda sweet.";
 
 [
 Table of New Infection Parts (continued)

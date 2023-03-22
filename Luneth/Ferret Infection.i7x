@@ -194,4 +194,22 @@ to say Ferret cum use:
 instead of sniffing ferret cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"ferret milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'ferret milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	ferret milk
+
+ferret milk is a grab object.
+ferret milk is milky.
+Purified of ferret milk is "distilled milk".
+ferret milk is infectious.
+Strain of ferret milk is "Ferret".
+Usedesc of ferret milk is "[ferret milk use]";
+
+to say ferret milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the ferret man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing ferret milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
 Ferret Infection ends here.

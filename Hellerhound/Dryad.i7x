@@ -8,11 +8,38 @@ Section 1 - Cum Vial
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dryad cum"	"A bottle of dryad cum? Man, you will scavenge anything."	3	dryad cum
+dryad cum is a grab object.
+dryad cum is cum.
+dryad cum is infectious.
+Purified of dryad cum is "distilled cum".
+Strain of dryad cum is "dryad".
+Usedesc of dryad cum is "[dryad cum use]";
 
-dryad cum is a grab object. dryad cum is infectious. Strain of dryad cum is "Dryad". Purified of dryad cum is "distilled cum". dryad cum is cum.
+to say dryad cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
 
-the scent of dryad cum is "The dryad cum smells like a mix of semen and tree sap.".
+instead of sniffing dryad cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, like a mix of semen and tree sap.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dryad milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'dryad milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dryad milk
+
+dryad milk is a grab object.
+dryad milk is milky.
+Purified of dryad milk is "distilled milk".
+dryad milk is infectious.
+Strain of dryad milk is "dryad".
+Usedesc of dryad milk is "[dryad milk use]";
+
+to say dryad milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes sweet and honey-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing dryad milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, but with a hint of maple syrup.";
 
 Section 2 - Creature Insertion
 
