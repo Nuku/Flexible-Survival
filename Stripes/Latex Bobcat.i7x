@@ -42,7 +42,7 @@ to say BeatTheLatexBobcat:
 		now sortorder entry is 1;
 		now description entry is "screw its padded sphincter";
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 2;
 		now description entry is "use its cock-sucking muzzle";
 	choose a blank row in table of fucking options;
@@ -65,7 +65,7 @@ to say BeatTheLatexBobcat:
 				now sextablerun is 1;
 				if nam is "Fuck its ass":
 					say "[LatexBobcat_pvsex01]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[LatexBobcat_pvsex02]";
 				else if nam is "Ride it":
 					say "[LatexBobcat_pvsex03]";
@@ -125,7 +125,7 @@ When Play begins:
 	now defeated entry is "[BeatTheLatexBobcat]"; [ Text when monster loses. ]
 	now victory entry is "[LoseToLatexBobcat]"; [ Text when monster wins. ]
 	now desc entry is "[LatexBobcatDesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if SkinName of Player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if SkinName of Player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";
+	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if SkinName of Player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if SkinName of Player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blowjobs";
 	now body entry is "altered inside and out. You're now only about five and a half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
 	now skin entry is "a layer of spotted brown latex that has replaced your";
 	now tail entry is "You have a short, stubby tail make of semi-firm latex at the base of your spine. Under this tail, you've got a bubble butt with a latex fuckhole between your cheeks.";
@@ -315,7 +315,7 @@ to say bobcatinheat:
 	if Libido of Player > 99, now Libido of Player is 99;
 	if Libido of Player > 80 and slutfucked > 8 and ( location of Player is not sleepsafe or location of Player is fasttravel ):
 		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
-		let randombobcatfun be { 1 }; [blow job]
+		let randombobcatfun be { 1 }; [blowjob]
 		if Player is male and ( FemaleList is not banned or HermList is not banned ):
 			add { 2 } to randombobcatfun; [give vag]
 			if anallevel > 2, add { 3 } to randombobcatfun; [give anal]
@@ -340,7 +340,7 @@ to say bobcatinheat:
 			say "[line break][one of]You moan softly as you feel a strong, compelling urge to be played with[or]Your orifices feel empty and unused; you're tempted to find someone to satisfy your craving[or]You pant and moan as a wave of need passes through your [if Player is female and anallevel > 1]cunny and asshole[else if Player is female]cunny[else]asshole[end if], making you long for someone to fuck you[or]You feel a rush of heat to your sextoy loins and you long to find someone to use them[or]Thoughts of bending over for the next horny mutant you see become increasingly tempting[purely at random].";
 
 
-to say bobcatheatsex1:		[blow job]
+to say bobcatheatsex1:		[blowjob]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	setmongender 3; [male]
 	if HermList is not banned:
@@ -355,7 +355,7 @@ to say bobcatheatsex1:		[blow job]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector]";
 	if colorpick is not "":
 		say " with a [colorpick] coat";
-	say ". [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blow job and continues on [ghis] way.";
+	say ". [gche] decides to have a go at your mouth, sliding his cock past your lips. You moan softly and start sucking on it happily. You lick and suck on it as [ghe] grips your head and thrust into your mouth until [ghe] finally cums. You gulp down shot after shot of the hot semen satisfaction at having pleased the [bodyselector] like the horny plaything you feel yourself to happily be right now. The sated [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[end if] thanks you for the blowjob and continues on [ghis] way.";
 
 to say bobcatheatsex2:		[give vaginal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
@@ -470,12 +470,12 @@ This is the Latex Bobcat Infection rule:
 				say "     Upset by their mentally resigning you to such a fate, you resolve to not give in. You do your best to find work away from potential temptations, finding a job as part of a re-construction crew. At least there, your handles can be used to suspend you while working at heights or in tunnels. And while your coworkers do tease you from time to time, they're a tough lot and they respect your ability to resist your infection's base urges.";
 				say "     This does not mean you're not sexually active though. You enjoy sex greatly and have flings with several of your friends and co-workers, but you always keep it to manageable situations and special occasions. Giving your boss a hummer at the company Christmas party is as close as you get to spontaneous sex while on the job, for example. It's tough at times, but you live satisfied knowing you've maintained control and have dealt with your condition on your own terms instead of letting it dictate your future.";
 			else:
-				say "     Their words end up becoming true, you can only resist your new body's sexual needs for so long before the desire for sex overwhelms your reason. You make poor decisions ruled by your libido. You pick jobs based on how attractive the people there are or how much they seem interested in your sexualized body. You frequent clubs at night and let yourself get picked up by horny partners looking for a quick fuck. As it gets worse, you even end up a giving blow jobs to some stranger in an alley when he offers you some quick cash after you'd forgotten your [if Player is female]purse[else]wallet[end if].";
+				say "     Their words end up becoming true, you can only resist your new body's sexual needs for so long before the desire for sex overwhelms your reason. You make poor decisions ruled by your libido. You pick jobs based on how attractive the people there are or how much they seem interested in your sexualized body. You frequent clubs at night and let yourself get picked up by horny partners looking for a quick fuck. As it gets worse, you even end up a giving blowjobs to some stranger in an alley when he offers you some quick cash after you'd forgotten your [if Player is female]purse[else]wallet[end if].";
 				if Player is pure:
 					say "     You end up getting picked up by a well-to-do exec during one of these flings. And while you only expect it to be a one-time fuck at first, you're surprised to find him at your workplace about a week later. Seeing how you're working at a café where you're known to an increasing number of regulars to give head in the washroom for a big enough tip, he's soon getting some [']special service['] from you after slipping you the biggest tip you've ever gotten. After a few such visits, he offers to let you move in with him, promising you a life of luxury and sex at his private estate - an offer you readily accept.";
 					say "     At your new home, you're a mix of lover, playmate and sextoy for the rich executive. And while you're not his only plaything there, you are clearly one of his favorites. While not a slave and free to come and go as you please, the pampered life of living as one of his fucktoys appeals to the new you. You stay in contact with several of your friends and continue to enjoy their company, but you have little reason to go out otherwise. There's plenty of sex to be had with your lover's other guests when he's not around. And when your lover has his business friends over, the fact that you're implicitly expected to help [']entertain['] them never upsets you - if anything, it's another of the many perks of living in your luxurious and hedonistic abode.";
 				else:
-					say "     A few months after that incident, you're scouted by one of the local sex parlors after giving a recruiter a blow job at the café you work at. He talks it up while fucking your face, telling you about how much sex you could have and be making better money for it, too. While you'd normally know it's a bad decision, you're too lost in the pleasure of having a cock in your mouth to think straight. And with your shift for the night about to end, you leave there for the last time with him.";
+					say "     A few months after that incident, you're scouted by one of the local sex parlors after giving a recruiter a blowjob at the café you work at. He talks it up while fucking your face, telling you about how much sex you could have and be making better money for it, too. While you'd normally know it's a bad decision, you're too lost in the pleasure of having a cock in your mouth to think straight. And with your shift for the night about to end, you leave there for the last time with him.";
 					say "     While little seedy place is little more than a brothel, it seems wonderful to you. All you see is the opportunities for sex and can only think of the wide variety of partners you'll have. After a job interview that's more an extended orgy with the recruiter, the owner and several other employees, you barely look at the contract presented to you before signing it. You become little more than another sex slave for the sex parlor, fulfilling the lustful and occasionally deviant desires of their patrons. And while you still get paid and keep your home, you hardly ever leave. You work long hours for only a small share of the payments, but you hardly care - your true payment is all the sex you end up receiving.";
 
 Latex Bobcat ends here.

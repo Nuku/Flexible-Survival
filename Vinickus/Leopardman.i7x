@@ -59,19 +59,19 @@ To say Leopardman loses:
 		now sortorder entry is 1;
 		now description entry is "While he's at your mercy, why not show him true appreciation";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Beg him to let you worship his paws";
 			now sortorder entry is 2;
 			now description entry is "Slip yourself under his big paws";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Turn around and bend over, smacking your ass";
 			now sortorder entry is 3;
 			now description entry is "Feel him inside you and breed you";
 		[]
-		if player is male: [Option only visible for males]
+		if Player is male: [Option only visible for males]
 			choose a blank row in table of fucking options;
 			now title entry is "Face Fuck";
 			now sortorder entry is 4;
@@ -110,7 +110,7 @@ To say Leopardman loses:
 		clear the screen and hyperlink list;
 
 to say LeopardmanVictorySexOral:
-	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
+	say "     With your body so close to his, you can't help but find yourself lost in the sight of the man, the feel of the man. His fur rubs against your skin, and it drives your mind wild, drawing a moan from your clenched lips. You try to keep a tough face, a war face, but the leopardman sees right through you. His lips curl up in one of the smarmiest grins of glee you have ever seen. It only drives you further from sane thought, leaving you with nothing but need. You are just about to beg to get to worship him, but he just licks his lips and pushes off the wall, forcing you to stumble a few feet back. It is then that he leans back against the wall and folds his arms. His head then nods towards his dripping erection. You now no longer have to beg, as he simply says, 'Suck,[if Player is male] boy[else] bitch[end if].' You are then on your knees before him in seconds. There's nothing left to do but give in to your screaming mind.";
 	say "     The first taste of his seed, his precum, forces a desperate moan from your lips. That sound illicites a chuckle of approval from above, and one that draws a strange glee from your primal mind. Your tongue has already lashed the tip of the barbed cock before you clean, and so the only thing left to do is wrap your lips around that object of worship. As soon as you've curled your mouth around his cock, the leopardman forces his hips forward and grabs your head. He's no longer leaning against the wall, and now hunches over your form as he drives his prick straight down your throat. It's hard to care, to think beyond what pleases him, especially with all of the aphrodisac-like smells surrounding you. His musk makes your mind fall into a mire of constant need, and there's nothing you can, or want to, do to crawl out.";
 	WaitLineBreak;
 	say "     There's nothing left but to worship this great male before you, to run your hands over his abdominals and thighs, all while he begins to pound your face and throat. You gag off and on for a few minutes as he picks up speed, as his soft barbs rub against your throat, and as he grows ever more vicious in lust. So with little other choice, you force your throat to behave; Soon he's easily pushing in and out of it as you constrict your esophagus each time he thrusts in, and loosen it as he pulls out. It makes it easy for him to keep a fast rhythm. Your hands soon stroke down his furred, muscled back as they trail towards his ass. Those digits of yours then grip at his muscled rear as he pounds into you with ever more force. You're left in a daze as you hang on for dear life.";

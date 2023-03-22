@@ -24,7 +24,7 @@ Sarea of Abandoned Camp is "Forest".
 
 when play begins:
 	add Abandoned Camp to BadSpots of FemaleList;
-	add Abandoned Camp to badspots of FeralList;
+	add Abandoned Camp to BadSpots of FeralList;
 	add Abandoned Camp to BadSpots of MaleList;
 
 to say ResolveEvent Abandoned Camp:

@@ -23,7 +23,7 @@ to say losetoamazonian:
 			say "     Defeated by the powerful amazonian, you are unable to resist when she grabs you and presses you up against a wall. 'You fought bravely, little [if Player is female]girl[else]man[end if], but I am the greater warrior. And now, to claim my prize,' she says with a lustful grin. Baring your ass, she flips aside her loincloth to reveal her sixteen inch long cock and grind it between your cheeks. '[if Player is female]And now to prove that I am better than any man[else]And now I'll show you the only thing men are good for[end if].' And with that, she thrusts her thick rod into your [if Player is female]juicy pussy[else]tight asshole[end if].";
 			say "     [if Player is female]Your pussy is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your increasingly wet hole as you can't help but respond to the vigorous fucking you're receiving[else]Your asshole is spread open around the herm warrior's throbbing cock as she fucks you, pounding away at your painfully stretched hole. As the vigorous fucking continues, the discomfort fades and the pleasure of getting pounded in the ass grows to replace it[end if]. She keeps you pressed against the broken wall as she drives her pulsing rod into you again and again. When she finally cums, she empties her hot seed inside you, [if Player is female]coating your womb in her virile sperm[else]filling your bowels with her virile sperm[end if].";
 			say "     Once finished, she pulls out, but does not release you, instead grinding her semi-hard shaft messily against your rear. 'Mmm... I've found you to be a most enjoyable [if Player is female]mate[else]plaything[end if]. Perhaps I might keep you for my harem. Let me leave you with something to remind you to whom you belong,' she whispers softly as she licks along the edge of your ear. You feel a heat wash across your ass, your nose catching the acrid scent of urine. She's pissing on you, marking you as her property. You wriggle and squirm, but her grip is strong and you're too worn from earlier to break free. She chuckles as you try to resist, only growing more excited and you feel a surge in the flow of hot liquid. You even feel a splatter of it spray against your creamy, leaking hole, staking her claim again on it. When her bladder's drained, she releases you and drives you off, saying she looks forward to challenging you again soon.";
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
@@ -36,7 +36,7 @@ to say losetoamazonian:
 	else:
 		say "     Beaten to the ground by the powerful amazonian's last blow, you are pinned down by her. 'You fought well, little [if Player is female]girl[else]man[end if], but you are mine now,' she says with a lustful grin. Pushing aside her loincloth, she frees her large, sixteen inch member and presses it to your [if Player is female]hot pussy[else]tight asshole[end if]. 'It's time for me to claim my prize[if Player is not female] and show you the only thing men are good for[end if],' she says, thrusting her thick rod into you.";
 		say "     [if Player is female]Your cunt is spread open by her large shaft as she starts fucking you, pounding into your juicy hole with the intent of breeding another powerful amazon in you[else]Your asshole is spread open by her large shaft as she starts fucking you, pounding your tight anus to drain her balls into you like a sex slave for her needs[end if]. She keeps you pinned down with her strong body and drives her pulsing rod into you again and again, fucking you until she finally cums, emptying her hot seed inside you. Once she's done with you, she pulls out and gets up, dragging you to your feet and sending you on your way with a firm spank on your rear.";
-		if player is female:
+		if Player is female:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
 		else:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";
@@ -63,7 +63,7 @@ to say beattheamazonian:
 			CreatureSexAftermath "Amazonian" receives "PussyFuck" from "Player";
 		else:
 			say "     Pinning the amazonian woman down, you grab her cock and rub over it, intent on taking what you want from her. She moans softly as you stroke her cock to its full sixteen inches before climbing atop it. Her large, throbbing rod feels wonderful inside you as you start riding it, pushing it into your [if Player is female]juicy cunt[else]tight ass[end if] and bouncing atop it hard and fast. You ride the warrior woman's cock until she cums hard, pumping her hot load into you, claiming it for yourself with a moan of delight. When you're done with her, you pull her to her feet, squeeze her drained cock and swat her ass firmly as a reminder of her defeat.";
-			if player is female:
+			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Amazonian";
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Amazonian";

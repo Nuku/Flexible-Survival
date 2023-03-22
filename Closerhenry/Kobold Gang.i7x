@@ -251,10 +251,10 @@ to say KoboldGangOrgy:
 	WaitLineBreak;
 	say "     The combination of stimuli begins to overwhelm you - pressure building, muscles tightening, before the dazzling feeling of release fills your body. Your cum gushes into the mouth of the eagerly slurping bronze, and not long after, the blue cums as well, painting the inside of your ass with his own seed. Soon after, you find yourself being [']encouraged['] by the others to keep going, pulling you off of the blue and onto your back. The copper, not having cum just yet, aligns himself up with your [if Player is female]so far unused pussy[else]slickened rear entrance[end if] before sinking inside of you and drawing a moan from your lips. Another bronze colored kobold, this one with curved horns, crawls over your face, his reptilian meat just asking to be sucked.";
 	say "     The copper holds tightly to your waist as he begins to hump excitedly into [if Player is female]your needy sex[else]your asshole[end if]. You open your mouth to moan, though once you do, the one with the curved horns takes it as an invitation and gags you with his cock. Despite getting reamed from both ends, you still haven't forgotten the blue, who you gesture to, ordering him to suck your dick while the others work. It isn't long before the two eagerly cum inside of you, though your holes aren't empty for long before they are switched out for another group. The orgy continued for well over another hour, leaving you feeling bloated by the end while the kobolds lay scattered across the ground, exhausted. You stand up, wipe off some of the cum clinging to your body, and pick up your equipment before slipping away from the resting kobolds. You aren't sure if it is all the kobold jizz inside you, but you can't help but think how much fun it would be to become one of them.";
-	if player is female:
+	if Player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Kobold";
 		CreatureSexAftermath "Kobold" receives "OralPussy" from "Player";
-	if player is male:
+	if Player is male:
 		CreatureSexAftermath "Kobold" receives "OralCock" from "Player";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Kobold";
 

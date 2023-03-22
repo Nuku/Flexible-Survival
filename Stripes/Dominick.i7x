@@ -304,7 +304,7 @@ to say dominick_sexmenu:
 		now sortorder entry is 2;
 		now description entry is "Get bounced on the husky's big pole";
 	[]
-	if ((player is female and HP of Dominick >= 4) or player is mpreg_ok):
+	if ((Player is female and HP of Dominick >= 4) or player is mpreg_ok):
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
@@ -320,7 +320,7 @@ to say dominick_sexmenu:
 	now sortorder entry is 9;
 	now description entry is "Lavish that doggy cock with attention";
 	[]
-	if HP of Dominick >= 5 and HP of Dominick < 10 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
+	if HP of Dominick >= 5 and HP of Dominick < 10 and Player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ):
 		if "Submissive" is not listed in feats of Player and level of Player > 3:
 			choose a blank row in table of fucking options;
 			now title entry is "Beta training";

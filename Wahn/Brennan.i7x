@@ -2143,7 +2143,7 @@ ResolveFunction of Brennan Shower Walkin is "".
 Sarea of Brennan Shower Walkin is "Nowhere".
 
 when play begins:
-	add Brennan Shower Walkin to badspots of TransList;
+	add Brennan Shower Walkin to BadSpots of TransList;
 
 after going to Brennan's Bathroom while (Brennan Shower Walkin is active and Brennan Shower Walkin is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;

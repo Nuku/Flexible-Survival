@@ -460,13 +460,13 @@ to say DiegoSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
 	[]
-	if (player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
+	if (Player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
 	[]
-	if (player is female and DiegoChanged < 2):
+	if (Player is female and DiegoChanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (vaginal)";
 		now sortorder entry is 3;
@@ -478,37 +478,37 @@ to say DiegoSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Let the coyote fuck you";
 	[]
-	if (player is male and DiegoChanged > 0):
+	if (Player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Fuck against the wall";
 		now sortorder entry is 5;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (player is male and DiegoChanged > 0):
+	if (Player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Doggy style";
 		now sortorder entry is 6;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (player is male and DiegoChanged > 0):
+	if (Player is male and DiegoChanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - From behind, against the wall";
 		now sortorder entry is 7;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (player is male and DiegoButtSlut > 0):
+	if (Player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Fuck against the wall";
 		now sortorder entry is 8;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (player is male and DiegoButtSlut > 0):
+	if (Player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - Doggy style";
 		now sortorder entry is 9;
 		now description entry is "Fill the coyote's ass with your cock";
 	[]
-	if (player is male and DiegoButtSlut > 0):
+	if (Player is male and DiegoButtSlut > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's ass - From behind, against the wall";
 		now sortorder entry is 10;
@@ -1269,7 +1269,7 @@ to say DiegoCollarWearingAftermath:
 		FeatGain "Female Preferred";
 		FeatGain "Always A Pussy";
 		TraitGain "Male_Player_Collared" for Diego; [memory point to let him remember that the player was a male before]
-	else if player is female:
+	else if Player is female:
 		say "Then [PosAdj of Diego] hand moves down to your crotch, stroking over your nether lips. 'Very nice. Now be a good puppy and get into position, will you?' A paw-hand pressing down lightly on your shoulder guides you to sink down on all fours, presenting yourself in doggy-style position. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to sniff your crotch, Diego chuckles amusedly.";
 		WaitLineBreak;
 		say "     'You were a nice enough helper to team up with, but this is even better!' the coyote comments, followed by the sensation of something wet brushing against your nether lips, twitching a little as [SubjectPro of Diego] takes a deep sniff. 'Ah, the scent of a hot pussy, nothing compares to that!' [PosAdjCap of Diego] nose is replaced by a licking tongue a second later, teasing your clit and tracing the outline of your folds and making shivers of arousal run up and down your spine. The coyote proceeds to get into a much closer position behind you, aligning [PosAdj of Diego] knotted erection with your entrance. [PosAdjCap of Diego] fingers splay out on the curve of your rear as [PosAdj of Diego] claws dig lightly into your skin, getting a good grip to hold you by. With a sure, confident motion, [SubjectPro of Diego] then pushes past your welcoming folds. Going deep, [SubjectPro of Diego] spreads the warm, vet vise of your pussy around [PosAdj of Diego] erection, making you feel very good and filled.";

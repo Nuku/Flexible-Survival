@@ -21,7 +21,7 @@ ResolveFunction of Insect Hive is "[ResolveEvent Insect Hive]".
 Sarea of Insect Hive is "High".
 when play begins:
 	add Insect Hive to BadSpots of MaleList;
-	add Insect Hive to badspots of FeralList;
+	add Insect Hive to BadSpots of FeralList;
 
 to say ResolveEvent Insect Hive:
 	say "     Searching through the high rise district, you start along a shadowy alley between two towers. You slow as you spot something unusual here. Scattered in clusters along the side are sticky orbs. They have a rather gelatinous appearance and are split open with trails of sticky slime leading from them further into the alley. All of this gives you strong reason to pause, unsure if you want to continue forward.";

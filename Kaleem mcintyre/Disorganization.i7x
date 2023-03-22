@@ -15,7 +15,7 @@ DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
 	add Disorganization to BadSpots of FurryList;
 	add Disorganization to BadSpots of MaleList;
-	add Disorganization to badspots of HermList;
+	add Disorganization to BadSpots of HermList;
 
 to say ResolveEvent Disorganization:
 	If drs is 0:

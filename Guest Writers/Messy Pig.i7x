@@ -43,7 +43,7 @@ to say messypigattack:[Fight loss scenes]
 
 
 to say beatthepig:[Victory Scene]
-	if ( CockName of Player is "Messy Pig" or CockName of Player is "Piggy" ) and player is male:
+	if ( CockName of Player is "Messy Pig" or CockName of Player is "Piggy" ) and Player is male:
 		say "     The pig, when realizing that the encounter is not going well, turns to make a run for it, but as you catch a glimpse of her wet pussy as she turns away, your porcine cock throbs with need.";
 		say "     [bold type]Do you have your way with the female swine?[roman type][line break]";
 		LineBreak;

@@ -11,7 +11,7 @@ Cheerleader vs Furling is a situation.
 ResolveFunction of Cheerleader vs Furling is "[ResolveEvent Cheerleader vs Furling]". The level of Cheerleader vs Furling is 5.
 Sarea of Cheerleader vs Furling is "Campus".
 when play begins:
-	add Cheerleader vs Furling to badspots of TransList; [shemale vs cuntboy]
+	add Cheerleader vs Furling to BadSpots of TransList; [shemale vs cuntboy]
 	add Cheerleader vs Furling to BadSpots of FurryList; [Furling]
 
 to say ResolveEvent Cheerleader vs Furling:

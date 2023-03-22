@@ -311,7 +311,7 @@ to say AeranaSexMenu: [only open when Aerana's personality is NEUTRAL]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her give you a blowjob";
 		now sortorder entry is 1;

@@ -90,12 +90,12 @@ to say beatthecfg:
 	if cfgmode is 1: [female cf]
 		say "     The defeated clockwork fox girl winds down further and collapses to the floor. She moans weakly with a few clicks and whirrs as she tries to get back up, but she is too run down to do so.";
 		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and player is male:
+		if CockName of Player is "Clockwork Fox" and Player is male:
 			say "[beatthecfgirl1]";
-		else if libido of Player >= 50 and player is male:
+		else if libido of Player >= 50 and Player is male:
 			say "     You are way too turned on to do anything else but try to sate your lust...";
 			say "[beatthecfgirl2]";
-		else if player is female:
+		else if Player is female:
 			say "     You don't think you're properly equipped for this, and so you get on with your other escapades.";
 		else:
 			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to her lure as her body tempts you to come closer...";
@@ -111,12 +111,12 @@ to say beatthecfg:
 	else: [male cf]
 		say "     The defeated clockwork fox guy winds down further and collapses to the floor. He moans weakly with a few clicks and whirrs as he tries to get back up, but he is too run down to do so.";
 		WaitLineBreak;
-		if CockName of Player is "Clockwork Fox" and player is female:
+		if CockName of Player is "Clockwork Fox" and Player is female:
 			say "[beatthecfguy1]";
-		else if libido of Player >= 50 and player is male: [currently only males can take advantage of cf guy]
+		else if libido of Player >= 50 and Player is male: [currently only males can take advantage of cf guy]
 			say "     You are way too turned on to do anything else but try to sate your lust...";
 			say "[beatthecfguy2]";
-		else if player is female: [plays this until a female scene is added]
+		else if Player is female: [plays this until a female scene is added]
 			say "     You decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical vixens (or any of the other creatures) you've seen around the museum.";
 		else:
 			say "     You suppose you could make your escape, if you wanted to. The other option would be to let yourself be drawn to his lure as his body tempts you to come closer...";

@@ -10,7 +10,7 @@ Pack Bang is a situation.
 ResolveFunction of Pack Bang is "[ResolveEvent Pack Bang]".
 Sarea of Pack bang is "Forest".
 When play begins:
-	add Pack Bang to badspots of FeralList;
+	add Pack Bang to BadSpots of FeralList;
 	add Pack Bang to BadSpots of MaleList;
 
 to say ResolveEvent Pack Bang:
@@ -91,7 +91,7 @@ to say FeralWolfGangBang:
 	WaitLineBreak;
 	say "     The other wolves look angry and are fighting the one knotted in your [if Player is female]pussy[else]ass[end if]. You are pulled and pushed to your limits, and in a vain struggle to scream, your mouth is penetrated by another of the dogs who haven't had a turn yet. You feel hot cum filling your intestines as the one on your ass finally cums, but he doesn't get a chance to knot you as both dogs on your back are pushed from you. Your holes gape without a cock, especially a knotted cock, and the cold wind of the forest send chills down your spine. The dogs fighting for a turn is now just background noise, but your rest doesn't last long as other dogs finally fuck you.";
 	say "     You are always used by at least two of the horny wolves. In fact, sometimes, you feel more than two cocks penetrating your now-loose asshole[if Player is female] and another one inside of your drenched pussy[end if]. Your mouth hurts from all of the use, and all that you can taste right now is wolf's cum. Your stomach is aching with how full it is, since it was filled from both ends. But the wolves are now long gone, leaving you in a pool of cum. This finally gives you enough time to rest, until you are finally good enough to go back to your adventures.";
-	if player is female:
+	if Player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 	CreatureSexAftermath "Player" receives "OralCock" from "Feral Wolf Male";

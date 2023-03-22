@@ -1512,13 +1512,13 @@ to say SpikeSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Go down on your dobie";
 	[]
-	if AnalVirgin of Spike is true and player is male and Libido of Spike > 0 and Libido of Spike < 100:
+	if AnalVirgin of Spike is true and Player is male and Libido of Spike > 0 and Libido of Spike < 100:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Spike's virginity";
 		now sortorder entry is 4;
 		now description entry is "Introduce your dobie to taking a dick up his rear end";
 	[]
-	if AnalVirgin of Spike is false and player is male and Libido of Spike > 0 and Libido of Spike < 100:
+	if AnalVirgin of Spike is false and Player is male and Libido of Spike > 0 and Libido of Spike < 100:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Spike's ass";
 		now sortorder entry is 5;
@@ -1946,7 +1946,7 @@ to say SpikeSleepSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Go down on your dobie";
 	[]
-	if AnalVirgin of Spike is false and player is male and Libido of Spike > 0 and Libido of Spike < 100:
+	if AnalVirgin of Spike is false and Player is male and Libido of Spike > 0 and Libido of Spike < 100:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Spike's ass";
 		now sortorder entry is 4;

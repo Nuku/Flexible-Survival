@@ -19,7 +19,7 @@ squirrelspot is a number that varies.
 
 when play begins:
 	add Hyper Squirrel Girl to BadSpots of FurryList;
-	add Hyper Squirrel Girl to badspots of HermList;
+	add Hyper Squirrel Girl to BadSpots of HermList;
 
 to say ResolveEvent Hyper Squirrel Girl:
 	project the figure of Snow_icon;
@@ -267,7 +267,7 @@ to say snowsexmenu:
 			now title entry is "Anal on player";
 			now sortorder entry is 4;
 			now description entry is "Get butt-fucked by the squirrel"; ]
-		if Player is submissive and ( player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
+		if Player is submissive and ( Player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Dommed and fucked";
 			now sortorder entry is 5;

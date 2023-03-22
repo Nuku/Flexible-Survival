@@ -487,7 +487,7 @@ To Stevenjunkfuck:
 				else:
 					say "[Stevensuck]";
 			else if Stevenmm > 1:
-				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blow job (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
+				say ". As the equine man relaxes and enjoys the attention you're giving his shaft, you ponder how best to have fun with him. You might provide him with a [link]blowjob (1)[as]1[end link] or [link]let him fuck your ass (2)[as]2[end link] again. Then again, given how relaxed he is with you now and anal sex, perhaps you might even be able to convince him to [link]let you be on top (3)[as]3[end link].";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
 					say "Choice? (1-3)>[run paragraph on]";
@@ -648,7 +648,7 @@ Section 6 - Steven Bunker events
 
 [Gotta move Steven to the bunker for one event, then he'd go back to the junkyard. All of this will be for a male player.]
 
-after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and player is male and daytimer is day):
+after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of Steven is 51) and Resolution of Old Stallion Friendship is 3 and Dexterity of Steven < 1 and Player is male and daytimer is day):
 	say "     As you walk out onto the steps of the old library, you hear a man clear his throat. You then glance to the side, seeing the imposing figure of Steven. He's leaning against a pillar, his eyes drinking you in as he simply remains silent. A loincloth is the only thing blocking your view of his crotch, but even then, several inches of his equine shaft dangle in clear view, well past the edges of the small piece of fabric. Apparently, he's settling for just having your attention. The silence remains for several awkward seconds, forcing you to make the first move.";
 	Linebreak;
 	say "     [bold type]Do you want to question him about his presence, or do you want to simply leave him to come back another time?[roman type][line break]";
@@ -689,7 +689,7 @@ after going to Main & 7th Street while ((Charisma of Steven is 1 or Charisma of 
 
 [Steven shows up at the bunker for a second time]
 
-after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of Steven is 52) and XP of Onyx > 9 and XP of Onyx < 20 and player is male and daytimer is day):
+after going to Main & 7th Street while ((Charisma of Steven is 2 or Charisma of Steven is 52) and XP of Onyx > 9 and XP of Onyx < 20 and Player is male and daytimer is day):
 	say "     'There you are, my little bitch,' you hear a voice declare as you walk out of the library. It's Steven again.";
 	LineBreak;
 	say "     [bold type]Do you pay attention to him?[roman type][line break]";

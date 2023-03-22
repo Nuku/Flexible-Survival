@@ -66,7 +66,7 @@ Version 1 of Hope-Born Dragon by Prometheus begins here.
 [Dragon-Large-Horns - Large Horns]
 
 [Horn Placement]
-[Dragon-Single-Horn - Single centralised horn]
+[Dragon-Single-Horn - Single centralized horn]
 [Dragon-Single-Pair-Horns - One horn either side]
 [Dragon-Double-Pair-Horns - Two horns either side]
 
@@ -699,7 +699,7 @@ to say DragonEggHatchingProcess:
 			now Breast Size of Hope-Born Dragon is 0;
 		say "     With your decisions made, you find yourself back in the library, the egg sitting innocently in front of you.";
 		now hp of Hope-Born Dragon is 4;
-	else if hp of Hope-Born Dragon is 4: [Deciding Colour]
+	else if hp of Hope-Born Dragon is 4: [Deciding Color]
 		say "     You have grown accustomed to the egg being there, but accept that it won't be too much longer before it hatches, especially with how much you feel that you have already influenced the form of its occupant. Given this, it comes as little surprise when you feel it tugging at your consciousness as soon as you rest your hand against its alabaster-like shell. Acquiescing to its wishes, you allow your mind to be pulled within. Expecting the usual view of the dragon, you are instead met by a swarm of floating lights of many different colors. However, after a few moments, they coalesce into only fourteen, halting their movement and hovering almost expectantly in front of you. It is then that you realize that you are probably deciding on what color the dragon will be.";
 		Linebreak;
 		say "     [bold type]What color do you want the dragon to be?[roman type] (Color is purely cosmetic)[line break]";

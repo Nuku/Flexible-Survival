@@ -227,7 +227,7 @@ to say PercySexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if player is female: [only females and herms can take him in the pussy]
+	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Percy's shaft in your pussy";
 		now sortorder entry is 3;

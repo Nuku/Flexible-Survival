@@ -23,7 +23,7 @@ to say Sprite attack:
 		say "Noticing that you've stopped resisting their efforts, the swarm gives a collective 'YAY!' and dances around you in an ecstatic dance of welcoming before they buzz in all the closer, getting to work.";
 		now Spriteconsent is 1;
 		wait for any key;
-	if a random chance of 1 in 2 succeeds and player is female:
+	if a random chance of 1 in 2 succeeds and Player is female:
 		say "You look down to see [(Cunt Depth of Player divided by 4) plus one] sprites working their way into you, one after the other. Despite their forms, they slip in smoothly, wings buzzing inside of you, exciting your tunnel and clit and sensing pleasure pulsing through your form as they slowly penetrate with their tiny forms, making their way towards your waiting womb.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "City Sprite";
 		wait for any key;
@@ -33,7 +33,7 @@ to say Sprite attack:
 	if a random chance of 1 in 2 succeeds:
 		say "Your body is swarmed with the cloud, lifted up into the air and caressed from all sides. It's like sleeping on a cloud as they hold you up with hundreds of tiny hands while another hundred work on rubbing your every erogenous zone in alternating waves that has you paralyzed with pleasure.";
 		wait for any key;
-	if a random chance of 1 in 2 succeeds and player is male:
+	if a random chance of 1 in 2 succeeds and Player is male:
 		if Cock Length of Player > 12:
 			say "Your mammoth cock draws the interest of the cloud as they swarm over it, coating its length in buzzing, rubbing, forms. At the very end of it, they rub their cunts across your head and cum slit, moaning loudly as they work as if eager to somehow bare your child despite the wild size difference.";
 			CreatureSexAftermath "City Sprite" receives "PussyFuck" from "Player";
@@ -54,12 +54,12 @@ to say Sprite attack:
 To say Sprite loss:
 	if zephyrtask is 3, increase zephyrpests by 1;
 	say "The sprites disperse in an unhappy cloud of defeated fae kind, taking off in all directions. ";
-	if (Libido of Player > 50 or humanity of Player < 30) and player is male:
+	if (Libido of Player > 50 or humanity of Player < 30) and Player is male:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them. You strip off your clothes, revealing your throbbing [cock size desc of Player] [Cock of Player] dick. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
 		say "     With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [Cock of Player] shaft. Their wings tease your erect phallus as they flit around, examining your groin before getting to work. They start licking at you as they dart around your cock, leaving thin trails of saliva up and down your shaft. The largest one licks at your tip and giggles as you twitch and start to moan from their attentions. She manages to take your whole tip into her mouth and begins massaging your glans with rolling movements of her tongue. Others hold on to your shaft and start flapping their wings rapidly. It feels like your cock is covered in a bunch of vibrators. [if Ball Size of Player > 0]The last two tend to your [Ball Size Adjective of Player] balls, licking and buzzing until you are lost in a haze of pleasure. [end if]After what feels like an hour, but was really only a few minutes, you can't take any more. You climax, covering the largest sprite from head to toe in your seed.";
 		say "     After you recover, you open your pack and release the still-trapped sprites. One of the smaller fairies flies up to your ear as the rest fly away. 'If that was all you wanted, why didn't you just ask?' She circles your head once more before flying off.";
 		CreatureSexAftermath "City Sprite" receives "OralCock" from "Player";
-	else if (Libido of Player > 50 or humanity of Player < 30) and player is female:
+	else if (Libido of Player > 50 or humanity of Player < 30) and Player is female:
 		say "The horde of sprites scatters, all trying to flee. Not wanting to waste such an opportunity, you grab some of the slower or more disoriented ones and trap them in your backpack. After finding a nice quiet alley where no one will walk in on you, you crack the zipper on your backpack and peer inside. You managed to catch several of the winged women, and can think of quite a few things to do with them. You strip off your clothes, revealing your [breast size desc of Player] chest and aching pussy. You peer back into your pack, and catch three of the fairy-like creatures, putting the fearful women in a separate pouch. You address the rest, 'Now I'm going to let you out, but your friends don't go free until you finish the job.'";
 		say "     With the bag opened, the captured sprites fly out and circle around you. They coax you to sit on a nearby crate, spreading your legs for easier access to your [cunt size desc of Player] [CuntSpeciesName of Player in lower case] pussy. They flit around you, their wings teasing all your most sensitive places. As you lean against the wall behind you, the group of sprites gather at your [breast size desc of Player] breasts. They caress your soft flesh, massaging your bosom, tickling you with their wings, and teasing your nipples with their little tongues. The largest is able take your whole nipple in her mouth, and she sucks on it enthusiastically. As they pass from one breast to the next, one stays to tend to each breast. The rest continue teasing their way down your chest until they reach your dripping honey pot.";
 		WaitLineBreak;

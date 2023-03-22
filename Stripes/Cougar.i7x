@@ -49,7 +49,7 @@ to say beatthecougar:
 				CreatureSexAftermath "Cougar" receives "PussyFuck" from "Player";
 			else:
 				say "     You push her back and take her throbbing shaft in your hand, making her mrowl in delight. You stroke it a few times before climbing atop her and sinking down onto that hard meat. Its soft, feline barbs stimulate your inner walls as they slide in and out. You fondle her breasts and bounce in her lap, tweaking and teasing her nipples. Her cock throbs and pulses inside you as her excitement builds until finally she mrowls lustfully and sprays her hot cum deep inside you, painting your insides with her virile seed. You squeeze down around her, loving the hot flow into your [if Player is female]womb[else]bowels[end if]. Waiting until she's drained her balls into you, you get off her slowly. You guide her muzzle between your legs, getting her to lick your leaking [if Player is female]pussy[else]asshole[end if] clean before leaving her panting on the ground, reeking of sex.";
-				if player is female:
+				if Player is female:
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Cougar";
 				else:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Cougar";

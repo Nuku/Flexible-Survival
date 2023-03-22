@@ -160,7 +160,7 @@ To say beatthehgryphon:
 				now sortorder entry is 3;
 				now description entry is "Get that knotted cock in your ass"; ]
 			[]
-			if Player is male and Cock Length of Player > 7 and player is female and Cunt Depth of Player > 5:
+			if Player is male and Cock Length of Player > 7 and Player is female and Cunt Depth of Player > 5:
 				choose a blank row in table of fucking options;
 				now title entry is "Titty fuck + ride";
 				now sortorder entry is 4;
@@ -168,7 +168,7 @@ To say beatthehgryphon:
 			[]
 	[		if Player is male:
 				choose a blank row in table of fucking options;
-				now title entry is "Blow job";
+				now title entry is "Blowjob";
 				now sortorder entry is 5;
 				now description entry is "Get her to suck you off"; ]
 			[]
@@ -207,7 +207,7 @@ To say beatthehgryphon:
 							say "[hgryphon_pw_03]"; ]
 						else if nam is "Titty fuck + ride":
 							say "[hgryphon_pw_04]";
-	[					else if nam is "Blow job":
+	[					else if nam is "Blowjob":
 							say "[hgryphon_pw_05]"; ]
 	[					else if nam is "Blow her":
 							say "[hgryphon_pw_06]"; ]
@@ -272,7 +272,7 @@ to say hgryphon_pw_04: [titty fuck and pussy ride]
 	PlayerDrink 5;
 
 to say hgryphon_pw_05:
-	say "***blow job";
+	say "***blowjob";
 	CreatureSexAftermath "Blue Gryphon Herm" receives "OralCock" from "Player";
 
 to say hgryphon_pw_06:

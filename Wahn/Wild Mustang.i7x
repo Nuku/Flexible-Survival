@@ -284,7 +284,7 @@ to say LuciferSex7: [player strapped under Lucifer with his cock inside them]
 			say "     But even so, eventually Lucifer has his fill of carrying you around and the feeling of his cock sliding around in your sloshing hole, so he trots back to the mounting block and carefully steps over it, making sure you're not scraped by the edges as you come to rest with your back on the flat top. He whinnies loudly in a commanding tone, which brings Lee to join you before much longer. 'You okay down there,' the farmhand asks and pats your shoulder, then laughs as you reply with a moan. 'Quite a show you put on, but I guess you're exhausted as hell now. Okay, let me unstrap you.' His trained hands make quick work of undoing the leather straps, freeing Lucifer to slip away from on top of you. The feral mustang nuzzles your shoulder in a mixture of affection and dominance, and you can almost hear the meaning of, 'Good bitch' in his whinny before he trots off.";
 			WaitLineBreak;
 			say "     It takes a minute or three till you're recovered enough from the constant stimulation you just went through, then you slowly stand up on shaky legs. Lee meanwhile uses a rag he had in his back pocket to wipe the equine sex harness down and clean off the cum that leaked on it, then he packs it up and starts walking off. 'I'll be ready when you want another go. Just keep the payment ready and you're up for more equine fun-time,' he calls over his shoulder, then ducks out of the paddock through the holes between the fence boards.";
-			if player is female:
+			if Player is female:
 				NPCSexAftermath Player receives "PussyFuck" from Lucifer;
 			else:
 				NPCSexAftermath Player receives "AssFuck" from Lucifer;

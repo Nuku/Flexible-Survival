@@ -589,7 +589,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Catgirl Infection"	"Infection"	""	Catgirl Infection rule	1000	false
 
 This is the Catgirl Infection rule:
-	if Player has a body of "Catgirl" and player is female:
+	if Player has a body of "Catgirl" and Player is female:
 		trigger ending "Catgirl Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumbed]
 			say "Before long, your instincts take over, with your human life only a fading memory. Driven by powerful urges to be bred by any strong male, no matter what shape, you roam the streets of the city and flirt your sexy body in front of those you meet.";

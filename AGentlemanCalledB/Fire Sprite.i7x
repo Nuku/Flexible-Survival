@@ -5,7 +5,7 @@ Version 1 of Fire Sprite by AGentlemanCalledB begins here.
 	- Fixed female players never receiving vaginal when losing to a male sprite
 	- Fixed genital checks being in limbo at exactly 24 cock length
 	- Simplified FireSpritemode checks to reduce embedded conditionals
-	- Simplified sex checks to player is male / player is female
+	- Simplified sex checks to Player is male / Player is female
 	- By: Song
 ]
 
@@ -24,7 +24,7 @@ to say losetoFireSprite:
 		else:
 			say "[FemaleFireSpriteVicOral]";
 	else: [male sprite]
-		if ( player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
+		if ( Player is female and anallevel is 2 and a random chance of 1 in 4 succeeds ) or ( Player is female and anallevel is 3 and a random chance of 1 in 2 succeeds ) or ( player is not female and anallevel > 1 and a random chance of 1 in 2 succeeds ):
 			say "[MaleFireSpriteVicAnal]";
 		else if Player is female and a random chance of 1 in 2 succeeds:
 			say "[MaleFireSpriteVicVag]";
@@ -100,7 +100,7 @@ to say beatFireSpriteguy:
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 6;
 		now description entry is "Have the sprite suck you off";
 	[]
@@ -129,7 +129,7 @@ to say beatFireSpriteguy:
 					say "[FireSpriteInsertion]";
 				else if title entry is "Cunnilingus":
 					say "[FireSpriteCunnilingus]";
-				else if title entry is "Blow job":
+				else if title entry is "Blowjob":
 					say "[FireSpriteBlowJob]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -170,7 +170,7 @@ to say beatFireSpritegirl:
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 5;
 		now description entry is "have the sprite suck you off";
 	[]
@@ -197,7 +197,7 @@ to say beatFireSpritegirl:
 					say "[FireSpriteInsertion]";
 				else if title entry is "Cunnilingus":
 					say "[FireSpriteCunnilingus]";
-				else if title entry is "Blow job":
+				else if title entry is "Blowjob":
 					say "[FireSpriteBlowJob]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -534,7 +534,7 @@ This is the Fire Sprite Infection rule:
 			say "     As your fire sprite infection spreads through your mind like wildfire, you soon desire little more than to share the gift of the flame inside you with the world, delighting in the havoc and destruction wrought by the beautiful cleansing flames.";
 			if Player is male:
 				say "     Occasionally your fiery dreamscape is broken by another like you, a female sprite who you share your flame with, filling her body with the warmth of life to further aid in the spread of your mischief.";
-			if ( player is female and "Sterile" is not listed in feats of Player ) or player is mpreg_ok:
+			if ( Player is female and "Sterile" is not listed in feats of Player ) or player is mpreg_ok:
 				say "     Eventually you happen upon an excited male sprite who is diligently working to set a large structure aflame. After a short time the structure is ablaze around you, and he is atop you, filling your needy body with his hot seed, his thrusts imbued with a burning passion that easily matches the inferno around you.";
 		else:
 			say "     After being evacuated from the city by military forces, you have a hard time finding a place for yourself in the outside world; your small form and affinity for fire both prove to be challenges to overcome. Eventually, however, you find yourself falling in with a small group of other infected citizens, working as mercs for the various factions that slowly begin to pop up in the days to come, engaging in everything from daring rescues to simple exterminations. While you don't provide the team much in the way of raw power, your small, agile body and resistance to extreme heat prove to be useful on more than one occasion, and a well-placed fire is often just as effective in chasing off a feral as an unnecessary beating.";

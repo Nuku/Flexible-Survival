@@ -12,8 +12,8 @@ ResolveFunction of The Silent One is "".
 Sarea of The Silent One is "Nowhere".
 
 when play begins:
-	add The Silent One to badspots of OtherworldlyList;
-	add The Silent One to badspots of NonconList;
+	add The Silent One to BadSpots of OtherworldlyList;
+	add The Silent One to BadSpots of NonconList;
 
 to say The Silent One:
 	say "     While walking around the archives, you are overcome with a feeling of dread. Something is behind you, watching your every move. Slowly you turn around to see a grey robed figure standing near 10 feet tall. The face is simply an empty black hood, the sleeves appear to be empty, and the bottom of the robes fold softly on the ground. It simply moves forward in a straight line, hovering over the ground. It pauses, turning to its left and examines the bookshelf. Without warning, two thick tentacles emerge from the sleeves and wrap themselves around a few books. It slowly starts placing the books back on the shelf, though in a different order from before. It dawns on you that this might be some kind of librarian. Do you ask it for guidance or just stay out of its way?";

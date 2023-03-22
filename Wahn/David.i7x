@@ -89,7 +89,7 @@ ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
 Sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
-	add Captured Demon to badspots of DemonList; [demon brute]
+	add Captured Demon to BadSpots of DemonList; [demon brute]
 
 to say ResolveEvent Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
@@ -369,7 +369,7 @@ Instead of fucking David:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
 		[]
-		if (lust of David > 0 and player is male):
+		if (lust of David > 0 and Player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;

@@ -14,7 +14,7 @@ Guard Gryphon is a situation.
 ResolveFunction of Guard Gryphon is "[ResolveEvent Guard Gryphon]".
 
 when play begins:
-	add Guard Gryphon to badspots of HermList;
+	add Guard Gryphon to BadSpots of HermList;
 	add Guard Gryphon to BadSpots of FurryList;
 
 to say ResolveEvent Guard Gryphon:
