@@ -16,8 +16,8 @@ FUNCTION:
 	of collecting their information
 """
 func _enter_tree():
-
-
+	
+	
 
 func _ready() -> void:
 	#fetch all room information
@@ -27,12 +27,12 @@ func _ready() -> void:
 
 """
 INPUT:
-	the room name of the sending room, and a dictionary containing the exit
+	the room name of the sending room, and a dictionary containing the exit 
 	directions and the rooms they lead to.
 FUNCTION:
 	stores the dictionary of exit directions and the rooms they lead to that was
-	received into a new dictionary that lists all of them by the room that sent
-	it.
+	recieved into a new dictionary that lists all of them by the room that sent 
+	it. 
 """
 #func _on_Room_room_information_sent(sender_room_name, r_exits: Dictionary) -> void:
 #	exits_map[sender_room_name] = r_exits
@@ -42,7 +42,7 @@ FUNCTION:
 
 """
 INPUT:
-	a direction corresponding to an exit location and a room that needs to be
+	a direction corresponging to an exit location and a room that needs to be
 	connected to that direction
 FUNCTION:
 	commented out until a use is determined

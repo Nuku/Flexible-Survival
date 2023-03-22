@@ -41,7 +41,7 @@ Cock Length of Darren is 8. [Length in Inches]
 Ball Count of Darren is 4. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Darren is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Darren is 0. [number of cunts]
-Cunt Depth of Darren is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Darren is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Darren is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Darren is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -103,7 +103,7 @@ to say DarrenTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if Player consents:
+			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -190,7 +190,7 @@ to say DarrenSexMenu:
 	now sortorder entry is 2;
 	now description entry is "See about getting some salamander dick";
 	[]
-	if Player is male and (Loyalty of Darren > 2):
+	if player is male and (Loyalty of Darren > 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;
@@ -214,7 +214,7 @@ to say DarrenSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if Player consents:
+			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Offer a BJ"):

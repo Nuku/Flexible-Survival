@@ -24,9 +24,9 @@ to say hornydocdesc:
 	now hdform is a random number between 0 and 6;
 	if hdform is 0, now hdformname is "mutt";
 	if hdform is 1, now hdformname is "beagle";
-	if hdform is 2, now hdformname is "Rottweiler";
-	if hdform is 3, now hdformname is "Samoyed";
-	if hdform is 4, now hdformname is "Malamute";
+	if hdform is 2, now hdformname is "rottweiler";
+	if hdform is 3, now hdformname is "samoyed";
+	if hdform is 4, now hdformname is "malamute";
 	if hdform is 5, now hdformname is "boxer";
 	if hdform is 6, now hdformname is "bulldog";
 	if hdmode is 3:				[event forces male]
@@ -89,7 +89,7 @@ to hdheatprompt:
 
 to say losetohdmale:
 	say "     The horny doctor eagerly pushes you down over a stray gurney and runs his paws roughly over you. '[if HP of Player > 0]Now that's much better. Now take your medicine like a good patient. I've got it nice and hot right here,' he chuckles, grinding his throbbing cock against your hip as he does[else]Such a troublesome patient you're being. You don't want me to call an orderly to help me with you, do you?' he chuckles, grinding his throbbing cock against your hip as he does[end if]. No longer resisting his advances, he licks your neck and gives your crotch a probing caress, a quick examination of what fun he might have with his new patient. You can't help but moan in response, your lustful urges rapidly overpowering your good sense.";
-	if inheat is true and ( ( Player is female and heatform is 0 ) or ( heatform is 1 ) ):
+	if inheat is true and ( ( player is female and heatform is 0 ) or ( heatform is 1 ) ):
 		say "     While fondling your [if Player is female and heatform is 0]juicy cunt[else]crinkled hole[end if], the canine doctor sniffs excitedly, catching your scent in the air. 'Oh, my poor patient is in heat. I have the cure for that right here,' he says, grinding his cock against your ass harder in emphasis. In your heat-addled state, you can't help but moan and raise your ass to him, allowing him to get his doggy dong lined up with your wanton hole. 'Mmm... it's [one of]malpractice time[or]time for some practical gynecology[or]heavy-duty doctoring time[as decreasingly likely outcomes], my dear,' he says with a grin and a lick just before thrusting firmly into your [if Player is female and heatform is 0]needy cunt[else]needy back door[end if] with intent to breed you out of your heat.";
 		if Player is female and heatform is 0:
 			say "[hdmale_sex01]";
@@ -128,7 +128,7 @@ to say hdmale_sex04:
 	else:
 		say "     He shifts his attention onto your flat chest next, kneading your chest and rubbing his fingers across your chest. 'The lack of nipples[if Player is female] and breasts[end if] is most concerning. I recommend immediate treatment,' he adds before leaning down and lapping across your bare chest. His tongue slathers doggy drool across your flesh and he nips lightly at your pecs, drawing moans from you.";
 	WaitLineBreak;
-	if anallevel is 3 or ( Player is neuter ):
+	if anallevel is 3 or ( player is neuter ):
 		say "     Pulling on some latex gloves with a snap and a grin, he lubricates a finger and slips it between your ass cheeks. It is quite cool and uncomfortable at first, but quickly warms up as he probes around inside you. The wiggling of his digit becomes increasingly pleasurable as he even starts thrusting it in and out of you[if Player is male], stimulating your prostate[end if] until you're squirming and moaning from this as well.";
 	if Player is male:
 		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, he strokes and over it. Already quite hard from all the teasing, he sizes you up even as he jerks you off[if Cock Length of Player > 20]. He seems quite impressed with your [cock size desc of Player] shaft[smn][else if Cock Length of Player > 10]. He seems rather pleased with your [cock size desc of Player] shaft[smn][else if Cock Length of Player > 5]. He seems unimpressed with your [cock size desc of Player] shaft[smn][else]. He shakes his head and clucks his tongue at your [cock size desc of Player] shaft[smn][end if] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While he does this, his paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in his palm and appraising their heft[end if]. He gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
@@ -182,7 +182,7 @@ to say hdfemale_sex04:
 	else:
 		say "     She shifts her attention onto your flat chest next, kneading your chest and rubbing her fingers across your chest. 'The lack of nipples[if Player is female] and breasts[end if] is most concerning. I recommend immediate treatment,' she adds before leaning down and lapping across your bare chest. Her tongue slathers doggy drool across your flesh and she nips lightly at your pecs, drawing moans from you.";
 	WaitLineBreak;
-	if anallevel is 3 or ( Player is neuter ):
+	if anallevel is 3 or ( player is neuter ):
 		say "     Pulling on some latex gloves with a snap and a grin, she lubricates a finger and slips it between your ass cheeks. It is quite cool and uncomfortable at first, but quickly warms up as she probes around inside you. The wiggling of her digit becomes increasingly pleasurable as she even starts thrusting it in and out of you[if Player is male], stimulating your prostate[end if] until you're squirming and moaning from this as well.";
 	if Player is male:
 		say "     Taking [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] in paw, she strokes and over it. Already quite hard from all the teasing, she sizes you up even as she jerks you off[if Cock Length of Player > 20]. She seems quite impressed with[else if Cock Length of Player > 10]. She seems rather pleased with[else if Cock Length of Player > 5]. She seems unimpressed with[else]. She shakes her head and clucks her tongue at[end if] your [cock size desc of Player] shaft[smn] and leans in to give [itthemm] a quick lick and suck[if CockName of Player is not listed in infections of InternalCockList]. While she does this, her paw moves to your ballsack, rolling around your [Ball Size Adjective of Player] [Balls] in her palm and appraising their heft[end if]. She gets you to the point of drooling precum, laps some up for a taste test and then moves on.";
@@ -383,7 +383,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -437,7 +437,7 @@ This is the Horny Doctor Infection rule:
 					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a Samoyed plaything to add some spice to his breeding bitches.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
 				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr. Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
-				if "Sterile" is not listed in feats of Player and Player is female:
+				if "Sterile" is not listed in feats of Player and player is female:
 					say ". You birth many bizarre, hybrid creatures from these matings";
 				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
 			else if hospquest is 13 and HP of doctor mouse is 2:

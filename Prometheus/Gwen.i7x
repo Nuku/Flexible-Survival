@@ -46,7 +46,7 @@ Cock Length of Gwen is 0. [Length in Inches]
 Ball Count of Gwen is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Gwen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Gwen is 1. [number of cunts]
-Cunt Depth of Gwen is 12. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Gwen is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Gwen is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Gwen is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -128,7 +128,7 @@ to say Gwensexmenu:
 		now sortorder entry is 2;
 		now description entry is "have a go at Gwen's ass";]
 		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
+		now title entry is "Blow job";
 		now sortorder entry is 3;
 		now description entry is "have Gwen suck you off";
 	choose a blank row in table of fucking options;
@@ -167,7 +167,7 @@ to say Gwensexmenu:
 					say "[Gwensex1]";
 				else if nam is "Anal":
 					say "[Gwensex2]";
-				else if nam is "Blowjob":
+				else if nam is "Blow job":
 					say "[Gwensex3]";
 				else if nam is "Eat her out":
 					say "[Gwensex4]";

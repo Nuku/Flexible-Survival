@@ -267,7 +267,7 @@ retriever milk is a grab object.
 retriever milk is milky.
 Purified of retriever milk is "distilled milk".
 retriever milk is infectious.
-Strain of retriever milk is "retriever female".
+Strain of retriever milk is "Retriever Female".
 Usedesc of retriever milk is "[retriever milk use]";
 
 to say retriever milk use:
@@ -460,7 +460,7 @@ retriever man-milk is a grab object.
 retriever man-milk is milky.
 Purified of retriever man-milk is "distilled milk".
 retriever man-milk is infectious.
-Strain of retriever man-milk is "retriever male".
+Strain of retriever man-milk is "Retriever Male".
 Usedesc of retriever man-milk is "[retriever man-milk use]";
 
 to say retriever man-milk use:

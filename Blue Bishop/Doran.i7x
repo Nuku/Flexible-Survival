@@ -567,7 +567,7 @@ peculiar dragon cum is a grab object.
 peculiar dragon cum is cum.
 purified of peculiar dragon cum is "distilled cum".
 peculiar dragon cum is infectious.
-Strain of peculiar dragon cum is "peculiar dragon".
+Strain of peculiar dragon cum is "Peculiar Dragon".
 Usedesc of peculiar dragon cum is "[peculiar dragon cum use]";
 
 to say peculiar dragon cum use:
@@ -586,7 +586,7 @@ peculiar dragon man-milk is a grab object.
 peculiar dragon man-milk is milky.
 Purified of peculiar dragon man-milk is "distilled milk".
 peculiar dragon man-milk is infectious.
-Strain of peculiar dragon man-milk is "peculiar dragon".
+Strain of peculiar dragon man-milk is "Peculiar Dragon".
 Usedesc of peculiar dragon man-milk is "[peculiar dragon man-milk use]";
 
 to say peculiar dragon man-milk use:

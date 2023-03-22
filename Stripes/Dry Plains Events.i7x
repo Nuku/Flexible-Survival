@@ -52,7 +52,7 @@ Partial Ruin is a situation.
 ResolveFunction of Partial Ruin is "[ResolveEvent Partial Ruin]". The level of Partial Ruin is 5.
 Sarea of Partial Ruin is "Plains".
 when play begins:
-	add Partial Ruin to BadSpots of HermList;
+	add Partial Ruin to badspots of HermList;
 	add Partial Ruin to BadSpots of FurryList;
 
 to say ResolveEvent Partial Ruin:
@@ -198,7 +198,7 @@ Pit Trap is a situation.
 ResolveFunction of Pit Trap is "[ResolveEvent Pit Trap]". The level of Pit Trap is 5.
 Sarea of Pit Trap is "Plains".
 when play begins:
-	add Pit Trap to BadSpots of HermList;
+	add Pit Trap to badspots of HermList;
 	add Pit Trap to BadSpots of FurryList;
 
 to say ResolveEvent Pit Trap:
@@ -387,7 +387,7 @@ Treasure Hunters is a situation.
 ResolveFunction of Treasure Hunters is "[ResolveEvent Treasure Hunters]".
 Sarea of Treasure Hunters is "Plains".
 when play begins:
-	add Treasure Hunters to BadSpots of HermList;
+	add Treasure Hunters to badspots of HermList;
 	add Treasure Hunters to BadSpots of FurryList;
 
 

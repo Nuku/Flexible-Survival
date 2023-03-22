@@ -12,7 +12,7 @@ EXPORT/EDITOR INPUT FIELDS====================================================
 export (String) var room_name = "Room Name"
 export (String, MULTILINE) var room_description = "Room Description"
 export (bool) var north_exit
-export (String) var north_room_name
+export (String) var north_room_name 
 export (bool) var south_exit
 export (String) var south_room_name
 export (bool) var east_exit
@@ -39,7 +39,7 @@ func _ready() -> void:
 	#add room to group for mass information retrieval
 	"""
 	NOTE:
-		the boolean parameter toggles persistence. "it is only used if you pack and save the node
+		the boolean peramerter toggles persistance. "it is only used if you pack and save the node 
 		as PackedScene. Only persistent groups are saved into the file."
 	"""
 	self.add_to_group("rooms", false)
@@ -68,7 +68,7 @@ func update_room_object():
 	underground_restroom.west_room_name			= west_room_name
 	underground_restroom.northeast_exit			= northeast_exit
 	underground_restroom.northeast_room_name	= northeast_room_name
-	underground_restroom.northwest_exit			= northwest_exit
+	underground_restroom.northwest_exit			= northwest_exit 
 	underground_restroom.northwest_room_name	= northwest_room_name
 	underground_restroom.southeast_exit 		= southeast_exit
 	underground_restroom.southeast_room_name	= southeast_room_name

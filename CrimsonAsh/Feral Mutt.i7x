@@ -464,7 +464,7 @@ feral mutt cum is a grab object.
 feral mutt cum is cum.
 feral mutt cum is infectious.
 Purified of feral mutt cum is "distilled cum".
-Strain of feral mutt cum is "feral mutt".
+Strain of feral mutt cum is "Feral Mutt".
 Usedesc of feral mutt cum is "[feral mutt cum use]";
 
 to say feral mutt cum use:
@@ -483,7 +483,7 @@ feral mutt man-milk is a grab object.
 feral mutt man-milk is milky.
 Purified of feral mutt man-milk is "distilled milk".
 feral mutt man-milk is infectious.
-Strain of feral mutt man-milk is "feral mutt".
+Strain of feral mutt man-milk is "Feral Mutt".
 Usedesc of feral mutt man-milk is "[feral mutt man-milk use]";
 
 to say feral mutt man-milk use:

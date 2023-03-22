@@ -31,7 +31,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     Agreeing to go along, you make sure you've got your pack and gear ready before heading out together. You and Alexandra chat a little on the trip, but are mostly quiet to help avoid drawing attention to yourselves. Thankfully, aside from a few easily dispatched troublemakers, the journey there is uneventful.";
 	move player to City Hospital;
 	AddNavPoint City Hospital;
-	say "     You and the Doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
+	say "     You and the doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
 	say "     As you pass along the darkened halls, you hear some activity up ahead. You both freeze and listen, wary of danger.";
 	WaitLineBreak;
 	say "     '...coming to, dammit. Anesthesia!' a male voice barks authoritatively.";
@@ -126,7 +126,7 @@ Cock Length of Paula is 0.
 Ball Count of Paula is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Paula is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Paula is 1. [number of cunts]
-Cunt Depth of Paula is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Paula is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Paula is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Paula is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

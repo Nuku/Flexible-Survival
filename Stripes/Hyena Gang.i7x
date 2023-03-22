@@ -10,7 +10,7 @@ Hyena Gang	"Hyena Gang"
 Hyena Gang is a situation.
 ResolveFunction of Hyena Gang is "[ResolveEvent Hyena Gang]".
 when play begins:
-	add Hyena Gang to BadSpots of HermList;
+	add Hyena Gang to badspots of HermList;
 	add Hyena Gang to BadSpots of FurryList;
 
 HYG is a number that varies.

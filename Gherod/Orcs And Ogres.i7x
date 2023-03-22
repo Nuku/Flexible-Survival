@@ -73,7 +73,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask him if it is not the other way around, since the orcs enslave just about anyone.";
 			say "     ([link]N[as]n[end link]) - Apologize, you did not know.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "     Curiously, it really seemed the other way around, the orcs wanting to enslave the ogres. You make that remark, and the orc makes this angry expression at you. 'You really don't know shit about the ogres. They act like they're the victims... But they're the ones plotting against us. They wanna make us all their pets just for fun... While we wanna make some our pets for reproduction! And... fun, too, I guess. Well, at least we have a reason! Plus, we just wanna have fun fucking around and being big. Ogres just fuck and accomplish nothing, which is why they're falling back in numbers. They're not the smartest.'";
 			else:
@@ -83,7 +83,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Go and grab his cock.";
 			say "     ([link]N[as]n[end link]) - Tell him to leave, you do not want him to get in trouble.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "     Slowly, you approach him, and the orc does not move away. He simply watches you come close to him and slide a hand under his loincloth, pushing it to the side and revealing the meaty prick in its full glory, throbbing and so needy. Then, you give it a few strokes, which immediately makes him moan. 'Fuck... I really, really shouldn't...' he says, glancing over his shoulder, very worried that he might be taking too long and his group might miss him, you presume. He definitely is not the most aggressive of the orcs. In fact, he is quite different from the stereotypical orc warrior, or he would have pinned you down and fucked the hell of out of you by now. Instead, he chatted with you, and you ended up jerking him off, feeling his big dick pulsate in your hand, oozing precum...";
 				say "     'Shit...' he exclaims, as you feel his hand over yours, stopping your movements. You look at him as if asking what is wrong, and he makes this apologetic expression. 'I don't wanna risk it... They wouldn't be happy about it, and I'm definitely not looking forward to be made a breeder because of this... I seriously gotta go, it's been too long.' He then stands back, his solid erection dandling from one side to the other and refusing to soften down. 'Fuck, they'll see me like this... What do I do...' You remind him that they were supposed to be fighting, so he could come with the excuse that he got hard from rubbing too much against an ogre's ass, or something. 'Oh, yeah! That might work! Thanks, mate! I'm gonna go now, uh... see you around!' he replies, making haste towards his group.";
@@ -130,7 +130,7 @@ to say ResolveEvent Orcs And Ogres Junkyard Skirmish:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Ask him why the ogres hate orcs.";
 			say "     ([link]N[as]n[end link]) - Agree with him, it is unfortunate that ogres act this way.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "     You happen to inquire him on the situation between the orcs and the ogres as of why they cannot stand each other. He is happy to explain, although you can see the annoyance in his expression. 'Because those fuckers think WE think we are better than them. Which is true, we are, but that's on them. If they actually decided to mind their own business and don't go around trying to be better than us at everything they're not, we'd be great friends and fuck around together with absolutely no problem. Like I said, we just wanna be big and have fun. Ogres want to... I don't fucking know, eliminate competition because of their frail little egos? Pfft... They can go fuck themselves.'";
 			else:

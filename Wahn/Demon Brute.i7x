@@ -262,7 +262,7 @@ to say Brutus_DBCapture:
 		now description entry is "fuck the demon while Brutus holds it down";
 	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Blowjob";
+		now title entry is "Blow job";
 		now description entry is "make it suck you off";
 		now sortorder entry is 6;
 	[]
@@ -612,7 +612,7 @@ Cock Length of Brutus is 18. [length in inches]
 Ball Count of Brutus is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Brutus is 5. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Brutus is 0. [number of cunts]
-Cunt Depth of Brutus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Brutus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Brutus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Brutus is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1063,13 +1063,13 @@ to say DemonBruteSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck your captured demon's pussy to make him cum.";
 	[]
-	if (DemonBruteStatus > 0 and Player is male):
+	if (DemonBruteStatus > 0 and player is male):
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 5;
 		now description entry is "Fill the your captured demon's pussy with your cock.";
 	[]
-	if (DemonBruteStatus < 2 and Player is female):
+	if (DemonBruteStatus < 2 and player is female):
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
@@ -1769,7 +1769,7 @@ to say CarlTalk_DB:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - He still didn't call for assistance, so... It's probably safe.";
 			say "     ([link]N[as]n[end link]) - Now that's going too far. Enough is enough!";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "     Now, everything seems to be under control. Carl is already a professional at this, so he should be alright giving the demon brute a treat for good behavior, right? Even though he's choking big time on the fat purple cock buried deep down his throat as the demon keeps pushing the anthro canine's head. The husky has no means to resist against such a strong, massive muscular brute holding him down like that. Though this treatment doesn't last for long. With how turned on the brute was, it's only a matter of seconds until his huge cum-filled balls begin to shift their positions in order to get emptied. As the furry soldier continues to get facefucked, the demon lets out a very audible, beast-like grunt as he starts shooting in his mouth, then everywhere else around them, his heavy load making a huge mess all over as his dick keeps pumping it out in thick, long spurts of demon jizz.";
 				say "     What could be your fear before turns out to be just a [']slight['] change of pace initiated by the brute, as he immediately lets go of Carl with a snarky grin on his face. The poor anthro husky is panting, trying to catch his breath after the short, but very hard fuck in the mouth that he had, widening his eyes over the overwhelming mess the demon made with his little trick. 'Well, I... Phew... Okay, you're allowed a treat. That's fair, you did good... But please warn me before you want to do something like that again, okay?' He says, as the demon brute looks at the exhausted husky, throwing in a short phrase in response 'I like it hard... and rough.' Though it didn't seem he said that as a threat, only as an information... Probably.";

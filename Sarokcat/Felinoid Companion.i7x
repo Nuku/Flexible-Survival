@@ -166,7 +166,7 @@ Cock Length of Klauz is 9. [length in inches]
 Ball Size of Klauz is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Ball Count of Klauz is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Klauz is 0. [number of cunts]
-Cunt Depth of Klauz is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Klauz is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Klauz is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Klauz is 0. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Klauz is 10. [inches deep for anal fucking]
@@ -199,7 +199,7 @@ Instead of fucking the Klauz:
 	say "[sexwithfelinoidpet]";
 
 to say KlauzScent:
-	say "     Klauz smells strong and masculine[if Player is female or Player is mpreg_ok]. It is quite arousing[end if].";
+	say "     Klauz smells strong and masculine[if Player is female or player is mpreg_ok]. It is quite arousing[end if].";
 
 to say Klauzdesc:
 	project the Figure of Klauz_face_icon;
@@ -290,12 +290,12 @@ to say sexwithfelinoidpet:
 	setmonster "Felinoid";
 	if lastfuck of felinoid companion - turns < 4:
 		say "     You need to wait a while before making such an offer again to Klauz.";
-	else if HP of Felinoid companion > 4 and the remainder after dividing HP of Felinoid companion by 3 is 2 and Libido of Player >= 30 and Player is not neuter:
+	else if HP of Felinoid companion > 4 and the remainder after dividing HP of Felinoid companion by 3 is 2 and Libido of Player >= 30 and player is not neuter:
 		say "     Your large lion-like companion approaches you nuzzling at you trying to get your attention. You bend down to get a closer look making sure that he didn't get hurt. When you bend down, you feel his rough tongue run across your cheek. He licks your face a few more times before forcing your head down beneath him with his massive paw. Looking up, you see his large feline erection. The smell of his musk is overwhelming filling your lungs with each breath. You take a few more inhalations, savoring the felines musk before wrapping your lips gently around his cock. The barbs move from your lips down into your throat as you slowly bob your head back and forth. You run your tongue along his cock trying to please every inch. As you do so you begin frantically removing any gear possible tossing it to the side. Eventually taking off enough to expose your rear. The large feline takes notice then suddenly pulls his cock from your lips, as if he can smell your need to be [if Player is impreg_able]bred[else]fucked[end if]. He quickly moves around you. You instinctively adjust your position to all fours and reveal your [if Player is female]wet cunny[else]tight pucker[end if]. Your companion quickly mounts you and lines the tip of his wet cock with your awaiting hole.";
 		say "     He pushes his wet cock deep into you with ease. You can feel each bump and barb rub against your hole and your inner walls. Once you feel his heavy pair of balls resting against your own, he begins to hump you in earnest. His barbs fill you with pleasure as they rub against your insides[if Player is male] causing you steadily leak precum beneath you[end if]. The nubs on his shaft quickly, and repeatedly, go in and out of your [if Player is female]quivering cunny[else]clenching ring[end if] sending shivers up your spine[if Player is male]. With each hard thrust in, you can feel his balls slap against your own accompanied by a wet slurp coming from your abused hole[end if]. You can't help but moan beneath the dominant male as he fucks you. Even though he is your comrade and you took him in as your pet, you have continued to allow him to become the more dominant party, allowing him to have his way with you whenever you please. The dominant male picks up the pace of his already rough fucking.";
 		say "     After some time, he bites down hard on the nape of your neck, surely drawing blood. The rough bite sets you over the edge as you cum [if Player is male]beneath the dominant male painting the ground with your sticky seed[else]hard, your vaginal walls gripping at his feline rod[end if]. Not much longer he releases your nape and releases a loud roar as he thrusts his feline shaft deep inside of you and releases shoots his virile seed deep into you. He pulls his cock out, which causes you to moan for more, and shoots the last two or three shoots onto your ass. Which you are sure is a way to mark his territory. As per usual, he walks back around you and has you lick his cock clean. You've begun to enjoy the taste of his cum more and more, but most importantly you are happy to have pleased the dominant male. After you lick his cock clean, he struts away leaving you by yourself. You quickly put your gear back on, savoring the taste of his musk trapped on your lips.";
 		NPCSexAftermath Player receives "OralCock" from Klauz;
-		NPCSexAftermath Player receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from Klauz;
+		NPCSexAftermath Player receives "[if player is female]PussyFuck[else]AssFuck[end if]" from Klauz;
 		increase HP of Felinoid companion by 1;
 	else if BodyName of Player is "Felinoid" and player is pure and child is not born and gestation of Child is 0: [ player must not already be pregnant]
 		if Player is female:
@@ -323,7 +323,7 @@ to say sexwithfelinoidpet:
 			else:
 				say ". Already feeling quite aroused, the thought of pushing him away does not even enter your mind.";
 				say "[felinoidpet_purem]";
-		else: [ the Player is neuter, omg]
+		else: [ the player is neuter, omg]
 			say "     You almost trip, stumbling across a furry blockade to your path. Your feline companion is on his back, paws in the air and pawing in your direction. Between his hind legs, his shaft is flagged in the air, hard and ready. Your sexual urges feel a bit muted without the usual organs to express them, but you don't want to disappoint your companion, do you? Shall you play with the needy kitty?";
 			if Player consents:
 				say "[felinoidpet_puren]";

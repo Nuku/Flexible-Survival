@@ -205,7 +205,7 @@ Tainted Yacht is a situation.
 ResolveFunction of Tainted Yacht is "[ResolveEvent Tainted Yacht]".
 Sarea of Tainted Yacht is "Beach".
 when play begins:
-	add Tainted Yacht to BadSpots of HermList;
+	add Tainted Yacht to badspots of HermList;
 	add Tainted Yacht to BadSpots of FurryList;
 
 to say ResolveEvent Tainted Yacht:
@@ -269,7 +269,7 @@ Cream Stand is a situation.
 ResolveFunction of Cream Stand is "[ResolveEvent Cream Stand]". The level of Cream Stand is 2.
 Sarea of Cream Stand is "Beach".
 when play begins:
-	add Cream Stand to BadSpots of HermList;
+	add Cream Stand to badspots of HermList;
 	add Cream Stand to BadSpots of FurryList;
 
 to say ResolveEvent Cream Stand:

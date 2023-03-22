@@ -1091,7 +1091,7 @@ yamato dragon cum is a grab object.
 yamato dragon cum is cum.
 yamato dragon cum is infectious.
 Purified of yamato dragon cum is "distilled cum".
-Strain of yamato dragon cum is "yamato dragon".
+Strain of yamato dragon cum is "Yamato Dragon".
 Usedesc of yamato dragon cum is "[yamato dragon cum use]";
 
 to say yamato dragon cum use:
@@ -1110,7 +1110,7 @@ yamato dragon man-milk is a grab object.
 yamato dragon man-milk is milky.
 Purified of yamato dragon man-milk is "distilled milk".
 yamato dragon man-milk is infectious.
-Strain of yamato dragon man-milk is "yamato dragon".
+Strain of yamato dragon man-milk is "Yamato Dragon".
 Usedesc of yamato dragon man-milk is "[yamato dragon man-milk use]";
 
 to say yamato dragon man-milk use:

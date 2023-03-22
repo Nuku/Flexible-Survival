@@ -79,7 +79,7 @@ Cock Length of Icarus is 7. [Length in Inches]
 Ball Count of Icarus is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Icarus is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Icarus is 0. [number of cunts]
-Cunt Depth of Icarus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Icarus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Icarus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Icarus is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -242,7 +242,7 @@ to say icarussex_sub:
 			blank out the whole of table of fucking options;
 			if Player is male:
 				choose a blank row in table of fucking options;
-				now title entry is "Blowjob";
+				now title entry is "Blow job";
 				now sortorder entry is 2;
 				now description entry is "get him to suck you off";
 				choose a blank row in table of fucking options;
@@ -272,7 +272,7 @@ to say icarussex_sub:
 					if Player consents:
 						let nam be title entry;
 						now sextablerun is 1;
-						if nam is "Blowjob":
+						if nam is "Blow job":
 							if formcheck is 1:
 								say "[icarussex2_ap]";
 							else if formcheck is 2:
@@ -1028,7 +1028,7 @@ to say icarussex6a_dom:		[Repeatable rough scene A]
 	say "     'Down on your knees, you slut,' he orders, shoving the back of your shoulder. You comply sheepishly, submitting to your passerine master. While out in the city you may behave differently, down here you are the bird's toy. The prospect is exciting, feeling like a release from the stress of your struggles.";
 	say "     He strides in front of you and slaps his penis across your [if formcheck is 1]beak[else]muzzle[end if]. 'Open up, you cock-sucker, and get to work.' Obediently, you open your mouth and take the little guy's cock into it. The blue bird grabs your head and thrusts mercilessly into your mouth. His stiff member pushes into your mouth and throat over and over again. His rough pace makes it difficult for you, but you do your best to lick and suck on his cock in an effort to please him. His talons dig into you as his excitement builds and, taking it to mean he's enjoying your cock-sucking, you continue in earnest despite the discomfort they bring. If anything, the pain is good because it's a sign of your master's pleasure, and hence your own.";
 	say "     When Icarus cums, he blows hard. His load blasts down your throat and wind pipe. Your eyes water and it takes effort to not immediately cough, but you manage to keep licking and swallowing. When he's finished and his talons relax, you pull away, coughing up the gooey mess.";
-	say "     'That's pathetic,' Icarus grumbles. 'You can't even give a proper blowjob.' Staggered and on your knees, he quickly grabs you by the scruff and slams you forward into the old boiler. Stars fill your vision and the taste of blood is added to that of your master's seed in your mouth. You give a soft groan from the floor.";
+	say "     'That's pathetic,' Icarus grumbles. 'You can't even give a proper blow job.' Staggered and on your knees, he quickly grabs you by the scruff and slams you forward into the old boiler. Stars fill your vision and the taste of blood is added to that of your master's seed in your mouth. You give a soft groan from the floor.";
 	if wslevel > 1 and a random chance of wslevel in 5 succeeds:
 		say "     Icarus looks down at you for a moment. Taking aim with his cock, he releases a hot spray of piss onto the back of your head and then down your back. The musky, acrid fluid makes your wounds sting as he provides another reminder that you're his to use as he sees fit. You feel pathetic and weak doing this, but find it strangely arousing to let the little bird abuse you so.";
 	else:

@@ -24,7 +24,7 @@ Sarea of Abandoned Camp is "Forest".
 
 when play begins:
 	add Abandoned Camp to BadSpots of FemaleList;
-	add Abandoned Camp to BadSpots of FeralList;
+	add Abandoned Camp to badspots of FeralList;
 	add Abandoned Camp to BadSpots of MaleList;
 
 to say ResolveEvent Abandoned Camp:
@@ -145,7 +145,7 @@ Cock Length of Savina is 0. [Length in Inches]
 Ball Count of Savina is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Savina is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Savina is 1. [number of cunts]
-Cunt Depth of Savina is 6. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Savina is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Savina is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Savina is 1. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

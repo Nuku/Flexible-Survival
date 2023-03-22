@@ -64,7 +64,7 @@ Pachyderm Predicament is a situation.
 ResolveFunction of Pachyderm Predicament is "[ResolveEvent Pachyderm Predicament]".
 Sarea of Pachyderm Predicament is "Zoo".
 when play begins:
-	add Pachyderm Predicament to BadSpots of HermList;
+	add Pachyderm Predicament to badspots of HermList;
 	add Pachyderm Predicament to BadSpots of FurryList;
 
 to say ResolveEvent Pachyderm Predicament:
@@ -332,7 +332,7 @@ Feeding Time is a situation.
 ResolveFunction of Feeding Time is "[ResolveEvent Feeding Time]". The level of Feeding Time is 9.
 Sarea of Feeding Time is "Zoo".
 when play begins:
-	add Feeding Time to BadSpots of HermList;
+	add Feeding Time to badspots of HermList;
 	add Feeding Time to BadSpots of FurryList;
 
 to say ResolveEvent Feeding Time:

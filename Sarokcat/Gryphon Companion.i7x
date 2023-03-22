@@ -279,7 +279,7 @@ Lonely Gryphoness is a situation.
 ResolveFunction of Lonely Gryphoness is "[ResolveEvent Lonely Gryphoness]".
 Sarea of Lonely Gryphoness is "Outside".
 when play begins:
-	add Lonely Gryphoness to BadSpots of HermList;
+	add Lonely Gryphoness to badspots of HermList;
 	add Lonely Gryphoness to BadSpots of FurryList;
 
 gryphoncomforted is a number that varies.
@@ -334,7 +334,7 @@ Gryphoness Nest is a situation.
 ResolveFunction of Gryphoness Nest is "[ResolveEvent Gryphoness Nest]". Gryphoness Nest is inactive.
 Sarea of Gryphoness Nest is "Beach".
 when play begins:
-	add Gryphoness Nest to BadSpots of HermList;
+	add Gryphoness Nest to badspots of HermList;
 	add Gryphoness Nest to BadSpots of FurryList;
 
 to say ResolveEvent Gryphoness Nest:

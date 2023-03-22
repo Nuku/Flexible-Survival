@@ -54,7 +54,7 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
@@ -204,7 +204,7 @@ red panda milk is a grab object.
 red panda milk is milky.
 Purified of red panda milk is "distilled milk".
 red panda milk is infectious.
-Strain of red panda milk is "red panda".
+Strain of red panda milk is "Red Panda".
 Usedesc of red panda milk is "[red panda milk use]";
 
 to say red panda milk use:

@@ -333,29 +333,29 @@ Book 12 - Notes
 an everyturn rule:
 	if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 		move NPC to ROOM X;
-		if Player is in ROOM X:
+		if player is in ROOM X:
 			say "     NPC ARRIVES";
 else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]
-		if Player is in ROOM X:
+		if player is in ROOM X:
 			say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
-		if Player is in ROOM X:
+		if player is in ROOM X:
 			say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-		if Player is in ROOM X:
+		if player is in ROOM X:
 			say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 	move NPC to ROOM Y;
-	if Player is in ROOM Y:
+	if player is in ROOM Y:
 		say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-	if Player is in ROOM Y:
+	if player is in ROOM Y:
 		say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-	if Player is in ROOM Y:
+	if player is in ROOM Y:
 		say "     NPC IS PRESENT AND DOES STUFF";
 else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night]
-	if Player is in ROOM Y:
+	if player is in ROOM Y:
 		say "     NPC IS PRESENT AND DOES STUFF";
 if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]

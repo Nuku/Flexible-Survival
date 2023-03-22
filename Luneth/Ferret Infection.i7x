@@ -55,7 +55,7 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 25; [ Target libido the infection will rise towards. ]
@@ -205,7 +205,7 @@ ferret milk is a grab object.
 ferret milk is milky.
 Purified of ferret milk is "distilled milk".
 ferret milk is infectious.
-Strain of ferret milk is "ferret".
+Strain of ferret milk is "Ferret".
 Usedesc of ferret milk is "[ferret milk use]";
 
 to say ferret milk use:

@@ -760,7 +760,7 @@ Cock Length of Castien is 9. [length in inches]
 Ball Count of Castien is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Castien is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Castien is 0. [number of cunts]
-Cunt Depth of Castien is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Castien is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Castien is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Castien is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -914,12 +914,12 @@ to say CastienSexMenu:
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blowjob (receiving)";
+		now title entry is "Blow job (receiving)";
 		now sortorder entry is 7;
 		now description entry is "Have him put that muzzle of his to use on your cock";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Blowjob (giving)";
+	now title entry is "Blow job (giving)";
 	now sortorder entry is 8;
 	now description entry is "Reward your loyal dog by allowing him to face-fuck you";
 	[]
@@ -950,9 +950,9 @@ to say CastienSexMenu:
 					say "[Castien_sex05]";
 				else if nam is "Tell him to take you (anal)":
 					say "[Castien_sex06]";
-				else if nam is "Blowjob (receiving)":
+				else if nam is "Blow job (receiving)":
 					say "[Castien_sex07]";
-				else if nam is "Blowjob (giving)":
+				else if nam is "Blow job (giving)":
 					say "[Castien_sex08]";
 		else if calcnumber is 0:
 			now sextablerun is 1;

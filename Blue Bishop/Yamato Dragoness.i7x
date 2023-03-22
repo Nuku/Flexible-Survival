@@ -781,7 +781,7 @@ yamato-dragoness cum is a grab object.
 yamato-dragoness cum is cum.
 yamato-dragoness cum is infectious.
 Purified of yamato-dragoness cum is "distilled cum".
-Strain of yamato-dragoness cum is "yamato-dragoness".
+Strain of yamato-dragoness cum is "Yamato Dragoness".
 Usedesc of yamato-dragoness cum is "[yamato-dragoness cum use]";
 
 to say yamato-dragoness cum use:
@@ -800,7 +800,7 @@ yamato-dragoness milk is a grab object.
 yamato-dragoness milk is milky.
 Purified of yamato-dragoness milk is "distilled milk".
 yamato-dragoness milk is infectious.
-Strain of yamato-dragoness milk is "yamato-dragoness".
+Strain of yamato-dragoness milk is "Yamato Dragoness".
 Usedesc of yamato-dragoness milk is "[yamato-dragoness milk use]";
 
 to say yamato-dragoness milk use:

@@ -30,7 +30,7 @@ Cock Length of Zephias is 14. [length in inches]
 Ball Count of Zephias is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Zephias is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Zephias is 0. [number of cunts]
-Cunt Depth of Zephias is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Zephias is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Zephias is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Zephias is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -104,7 +104,7 @@ to say ResolveEvent Captured Soldier:
 		say "     ([link]N[as]n[end link]) - Not your problem.";
 		if Player consents:
 			LineBreak;
-			if lust of Zephias is 2 and Player is purefemale: [that Julio is gay is known, so the female sex option with him doesn't come up]
+			if lust of Zephias is 2 and player is purefemale: [that Julio is gay is known, so the female sex option with him doesn't come up]
 				say "     Coming to a decision, you speak up and ask for Zephias to let his captive go free. The spidertaur gives you a lust-filled leer, then says, 'Agreed.' Then he ruffles his captive's hair with one hand, telling the young man 'Hear that, soldier boy? She's so concerned about you that she offers himself in your place. How sweet.' He lowers the soldier to the ground, positioning him to sit against the building wall on one side of the alley, still wrapped tight in his silk bindings. 'There, you even get a ringside seat for the show,' Zephias says and chuckles. Ignoring the man mumble something into his gag, the spidertaur then turns to you and says, 'Okay Fucktoy, strip!'";
 				say "     A lustful shiver runs down your spine as you hear the hybrid creature's order, striking a chord with your submissive nature. You drop your gear on the ground and start giving the two of them a little show, stretching and turning as you slide off your clothes piece by piece. You can almost feel their eyes on your exceedingly naked form, making you feel all warm inside and very sexy. By the time you're completely naked, Zephias's human-like shaft is fully hard, jutting out from between protective chitinous plates.";
 				WaitLineBreak;

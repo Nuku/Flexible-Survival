@@ -16,7 +16,7 @@ latexhuskymode is a truth state that varies. latexhuskymode is usually false.
 
 when play begins:
 	add Shipping Container to BadSpots of FurryList;
-	add Shipping Container to BadSpots of FeralList;
+	add Shipping Container to badspots of FeralList;
 
 to say ResolveEvent Shipping Container:
 	say "     As you are exploring, you come across a semi turned onto its side with the shipping container shaken loose. Curious, you step up and find the driver's clothes in a sticky pile nearby, the trucking company's logo on both the jacket and the truck. A clipboard nearby has the shipping manifest for the load. Most of it has been faded by the sun, but the contents of the container seem to be something like [']La##x H##ky - 160 units[']. You're not quite certain what it could be, but perhaps it's something useful. If there are only 160 of them in this one large container, one might be worth snagging. Besides, live contents aren't shipped in these containers, so it's probably safe.";

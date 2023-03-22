@@ -51,7 +51,7 @@ to say ResolveEvent Tide Pool Trouble:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get closer to the strange waters.";
 	say "     ([link]N[as]n[end link]) - Decide to walk back the other way.";
-	if Player consents:
+	if player consents:
 		LineBreak;
 		say "     You slowly move toward the tide pool. The water is white from how vigorously it roils. You are closer now, close enough to see what's in the pool. There's a figure you can just barely make out in the white waters. It looks... it looks like... a slithering ball of tentacles! Or wait, no, that's just a snake coiling around something beneath the surface of the water. It's chasing something under there! Before you have a chance to back away, a rat darts out of the pool, heading right for you! The snake, in turn, slithers out of the water. You tense up, ready to fight, to defend yourself against this reptilian predator. But seeing you, the little rat hesitates, giving the snake all the time it needs to catch its prey. You stand there, almost in shock, as the snake devours the rat.";
 		say "     Once it completely swallows its prey, the snake slithers onto a nearby rock away from the shore to digest the poor rat. Looking back at the tide pool, you see that its waters are calm once more. Strange how the pool returns to normal so quickly. Now that nothing's stirring up the water, you can see some colorful fabric at the bottom of the pool. After checking to make sure nobody's around to pounce on you, you bend down to the tide pool and stick your hand into it. You retrieve what turns out to be striped board shorts and see that they're in remarkably good shape. At least you got something out of all of this, even though it has unsettled you a little to see the animals fight of life and death.";
@@ -83,14 +83,14 @@ to say ResolveEvent Lingua Franca:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try speaking to the language department.";
 	say "     ([link]N[as]n[end link]) - Leave them to their bickering.";
-	if Player consents:
+	if player consents:
 		LineBreak;
 		let bonus be (( Intelligence of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
 		if diceroll + bonus >= 18:
 			LineBreak;
-			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it's clearly French. You stifle a laugh, but that only enflames him more. Given his intensity and the gestures he's making towards his classmates, he's probably angry that he isn't a more appropriate animal, like a Gallic cock. Even though you don't speak French, you think you understand his point, so you ask him to speak more quietly. While he doesn't seem to understand English, he certainly can understand what you mean when you lower your own voice when talking to him. He then nods with a sigh.";
+			say "     You approach the group of bickering language students and get their attention with some shouts. They look at you, each just as angry as the next. Maybe this wasn't such a great idea... But then the frog clears his throat, or merely croaks you can't tell. He's wearing just a pair of boxers. When he speaks, it's clearly French. You stiffle a laugh, but that only enflames him more. Given his intensity and the gestures he's making towards his classmates, he's probably angry that he isn't a more appropriate animal, like a Gallic cock. Even though you don't speak French, you think you understand his point, so you ask him to speak more quietly. While he doesn't seem to understand English, he certainly can understand what you mean when you lower your own voice when talking to him. He then nods with a sigh.";
 			say "     The green pheasant boy chirps up something that sounds Japanese and you motion for everyone to relax. You try to console the frog, putting your hands on his shoulders and telling him, 'Viva la vida.' He laughs and clearly says 'C'est espagnol,' to which you shrug and say 'C'est la vie.' He laughs some more, and the group seems to calm down after that.";
 			say "     This mad world you find yourself in seems to be a little less mad now.";
 			increase score by 1;
@@ -121,7 +121,7 @@ to say ResolveEvent PoliSci:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Approach and ask what the problem is.";
 	say "     ([link]N[as]n[end link]) - Leave, none of their classmates want to get involved either.";
-	if Player consents:
+	if player consents:
 		LineBreak;
 		say "     Deciding to approach the raging ass, you finally hear him right as he says 'He was my friend!' You get closer, now too curious to turn back. 'You fucked my best friend!' You then realize that this is, in fact, not a debate. At all. You're too close to them, walking directly towards them, to just turn around and save face, so you try to redirect yourself towards the poli-sci building's entrance. It's just that the couple is directly in between you and the door! The donkey sees you and glares. 'Can I help you?' he asks. You try to say something, anything, but before you have a chance, the elephant girl says, 'Have you met Mark?' She lets go of her ears, grabs your arm, then pulls you towards her. She glares at the donkey boy. 'I've been fucking Mark, too.' The donkey's eyes widen and he goes silent. 'And Danny,' she says as she gestures to a passing gorilla. 'And a whole slew of other men!' If you could regret coming over here more than you already did, you would probably melt into a puddle of embarrassment.";
 		say "     The donkey takes a step back and knocks into a passing incubus, who slides his hand down the donkey's trousers without missing a beat. 'Hey buddy,' the demonic man says with a grin. The donkey boy tries to get the incubus out of his pants, but in so doing he sticks his butt out towards the other man. The demon clearly enjoys the innocent attempt to free himself from the lust demon's grasp. He gropes the ass's ass and whispers something into his ear as he coaxes the equine's cock out of his trousers. The elephant girl lets go of your arm as her apparently former boyfriend is molested, and she walks over towards the pair, no longer interested in you. Embarrassed enough, you decide to let the three have their fun without you.";
@@ -152,7 +152,7 @@ to say ResolveEvent Sewer Stalker:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Turn around and run! Find a way out of the sewers.";
 	say "     ([link]N[as]n[end link]) - Stay and continue to stare into the ball.";
-	if Player consents:
+	if player consents:
 		LineBreak;
 		say "     You close your eyes, turn around, and run as fast as you can. You open your eyes when your a few feet away from the cloaked stalker, just in time to see a demon brute start to materialize. You dart past him. You turn a corner. There's another monster lurking in the darkness. Thankfully, it isn't paying attention. From behind you, light flashes and you hear a heavy thud. Did the demon brute just succumb to the light as you did? You continue running, trying to turn the same way each time, making a circle to leave the sewers where you came in. Eventually, you find a familiar path, the where you first met that stalker. With your bearings in place, you head back to the mall, leaving the strange cloaked figure behind.";
 	else:
@@ -185,10 +185,10 @@ to say ResolveEvent Junkyard Utility:
 		if a random chance of 1 in 4 succeeds:
 			increase searchesUtSit by 1;
 			if a random chance of 1 in 2 succeeds: [12.5% chance for rusty nail]
-				say "a rusty nail! [if scalevalue of Player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
+				say "a rusty nail! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
 				ItemGain rusty nail by 1;
 			else if a random chance of 1 in 2 succeeds: [6.25% chance for sharp screw]
-				say "a sharp screw! [if scalevalue of Player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
+				say "a sharp screw! [if scalevalue of player > 2]This may be useful if you could wield it properly[else]This will make a useful weapon[end if]. ";
 				ItemGain sharp screw by 1;
 			else: [increments variable]
 				say "nothing particularly useful. ";

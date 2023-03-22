@@ -81,7 +81,7 @@ to DarkSanctum_Master_Choice:
 		LineBreak;
 		say "     'So you believe that through the use of your silver tongue that true power can be yours? Many masters of Hell in the past have shared this opinion. The real question is, do you truly understand what it takes to be a sovereign of manipulation and deceit? To walk this path is to view the world as filled with potential pawns, each one carefully chosen and placed on your board. Some will serve as champions to further your goals on the front line, others... well they are nothing more than necessary sacrifices. Are you prepared to become the ultimate puppet master, pulling the strings from the shadows?'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			now morale of The-Voice is 1;
 			DarkSanctum_Master_Confirmed;
 		else:
@@ -90,7 +90,7 @@ to DarkSanctum_Master_Choice:
 		LineBreak;
 		say "     'So you believe that through the use of your skilled leadership that true power can be yours? Many masters of Hell in the past have shared this opinion. The real question is, do you truly understand what it takes to be a sovereign of tactics and obedience? To walk this path is to view the world as a warzone, a place to be dominated and shaped in your own image. Each battle will bring your ambitions closer to fruition. Each victory will be the flames that illuminate the path that leads to your complete triumph. Are you prepared to become the ultimate conqueror, allowing the swing of your blade to decide the fate of others?'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			now morale of The-Voice is 2;
 			DarkSanctum_Master_Confirmed;
 		else:
@@ -99,7 +99,7 @@ to DarkSanctum_Master_Choice:
 		LineBreak;
 		say "     'So you believe that through the use of your primal force that true power can be yours? Many masters of Hell in the past have shared this opinion. The real question is, do you truly understand what it takes to be a sovereign of violence and subjugation? To walk this path is to view the world as a banquet, something to be owned and completely consumed by your own desires. Every voice that rises up against you is simply one more insect to crush within your iron grip. You would become a being of pure desire and destruction. Are you prepared to become the ultimate oppressor, forcing the world to bend its knee to your demands?'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			now morale of The-Voice is 3;
 			DarkSanctum_Master_Confirmed;
 		else:
@@ -224,7 +224,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'So you enjoy seeing others trapped in bondage? That eternal struggle for freedom, but the desire to be broken and claimed residing within. Truth be told, that is a very common thing for mortals to be plagued by. The return to simpler times, back when they only had to follow orders and be rewarded for their obedience. But perhaps obedience isn't your end goal. Maybe it's the punishment that truly quenches your thirst for power, the sight of unblemished flesh before you, and the anticipation of branding it as your own. I suppose only time will tell where your passion for darkness will lead.'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_BDSMInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -233,7 +233,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'Ah yes, the classic sport of shattering a being's mind. Everyone has their own tricks of the trade, mind you. I suppose that's true with any form of art though. Some simply desire to rewrite an individual's personality, turning them into a living and breathing doll. Others however, seek a more... refined form of creation within the mind. Imagine an artist at their canvas. They of course can fling random splashes of colors, but some pay attention to the small details and desire to create a true masterpiece. Mind-shattered slaves, broken dolls, or even possibly... oh what was that term that you mortals seem to enjoy so much... Ah yes, those bimbos, himbos, and hypno-sluts... Hmmhmmhmm, actually that is quite catchy. I think that I may just turn that into a song, haha.'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_Mind-breakInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -242,7 +242,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'A bit more on the basic side, but since the beginning of time, it has always been a favorite. So many questions that require answers, I believe that to be why it has remained so popular. Do you wish to become a seeder or a breeder? Do you just enjoy that large belly, or is the focus on the new life within? Ah, or perhaps you simply want an army of your own offspring, sired from coupling with others, each gaining a unique strength from the inherited combination. With mortals, this usually is a more... limited option, seeing as certain parts are needed, however on this plane, [']anything['] goes. There is power in the creation of progeny, but there is also enjoyment in the knowledge that you have captured and conquered this single aspect of another's freedom, haha.'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_PregnancyInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -251,7 +251,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'Oh well aren't you the edgy one... I will have you know that demons invented [']true['] brutality! Then we shared it with your primitive ancestors, well maybe shared isn't the proper term, but no matter, we introduced them to it, simple as that. Brutality is probably viewed as the most vile of the gifts I offer, the ability to take what you want, when you want. The classic [']might makes right['] outlook. This is a favorite for anyone that refuses to be told no, or perhaps they like being told no and honestly just enjoy taking what they want anyway. While this gift is a bit brutish by my personal standards, there is a certain beauty in the complete and utter corruption of another being through pure force.'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_BrutalityInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -260,7 +260,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'Ah, a common desire of humanity. I never quite understood it myself. After all, why would anyone want to claim that which is already their property? Hmm, but perhaps that is the entire point, the need for complete control in all aspects of their lives. From what I know of families, they are supposedly built on loyalty and kinship. Maybe that is the reason that so many desire them to warm their bed, that need for complete trust. It does bring up further questions though, who have you desired, but couldn't have before? A parent? Offspring? Maybe a sibling that pushed you to your limit and left you wanting nothing more than to claim your own piece of flesh? In all honesty, it matters very little. If they didn't take care of your needs, then they were in the wrong. A firm understanding needs to be put in place. They must learn that if you want them, it is their duty to serve you in any way possible.'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_IncestInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -269,7 +269,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'Haha, the dirty secret of the aristocracy! You may not realize this, but in the past, this was far more common than you may think. Throughout history, men and women have laid with beasts. Some believed it would give them the power of the animal, while others simply enjoyed the deviance of the act itself. You yourself have more of an insight into this situation than many others did in the past, what with the chimeras you have met in this city. I personally find it all rather fascinating, the lustful need for something completely different and inhuman. I wonder though, could this craving be more about bedding an animal? Or could it have more to do with you releasing the beast within? The truth is that it matters very little in the grander scope of things, but I do hope that if you decide to release your inner bestial essence, that you will warn me... I would love to watch the carnage, haha!'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_FeralInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:
@@ -278,7 +278,7 @@ to First_DarkSanctum_Theme_Choice:
 		LineBreak;
 		say "     'Hmm, a rather unique choice to be sure, but hardly anything all that surprising. Mortals have always desired the tightest sleeve that they can find, or the largest inserter possible. The question is, what do you truly want? Do you want to be the massive serpent that claims a tiny mortal as your toy, or the knight that bests the beast, only to turn around and claim them as spoils of your own? Remember, on this plane, anything is possible. Bodies can stretch beyond normal constraints and likewise, can revert back in an instant. So what path did you have in mind? An army of small squealing toys? Or perhaps a line-up of colossal giants, completely shocked by the fact that they are being claimed by someone much smaller than themselves and used accordingly?'";
 		say "     [bold type]Is this really what you want?[roman type][line break]";
-		if Player consents:
+		if player consents:
 			add "DarkSanctum_Size-differenceInterest" to Traits of The-Voice;
 			First_DarkSanctum_Theme_Confirmed;
 		else:

@@ -255,7 +255,7 @@ pink fox milk is a grab object.
 pink fox milk is milky.
 Purified of pink fox milk is "distilled milk".
 pink fox milk is infectious.
-Strain of pink fox milk is "pink fox".
+Strain of pink fox milk is "Pink Fox".
 Usedesc of pink fox milk is "[pink fox milk use]";
 
 to say pink fox milk use:

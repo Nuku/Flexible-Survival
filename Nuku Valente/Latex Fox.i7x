@@ -28,7 +28,7 @@ to say latexfoxvictory:
 		say "     The latex fox barely checks to see if there's anything obstructing his access before thrusting his tainted, precum-slicked dick between your cheeks, audibly squeaking as it's forced through your anal ring, causing you to squirm and writhe under his[if scalevalue of Player > 3] diminutive[end if] weight.";
 		say "     Barely needing any time to get warmed up, the creature eagerly pounds your ass, air filled with the sound of his smooth form's creaking and squeaking, matched only by his incessant yipping. Unable to restrain yourself, your [if Player is male]own, unattended dick[smn] ache[smv] against the ground[else if Player is female]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable need[end if].";
 		say "     The monster doesn't need long before his motion reaches a fever pitch[if scalevalue of Player < 4], body visibly rocking against each motion[end if]. With one final thrust, he forces his thick knot through your hole, loudly yipping as your bowels are pumped full with the twisted fox's rubbery seed";
-		if Libido of Player > 20 and Player is not neuter:
+		if Libido of Player > 20 and player is not neuter:
 			say ". More than enough to set you off as well, you [if Player is male]waste your [Cum Load Size of Player] load impotently against the ground[else if Cunt Count of Player > 1]stain the ground with your neglected pussies['] honey[else]stain the ground with your neglected pussy's honey[end if].";
 		else:
 			say ". Writhing in a lust-fueled haze, his bliss isn't enough to set you off as well, with the fox showing little interest in helping you.";
@@ -41,7 +41,7 @@ to say latexfoxvictory:
 		say "     Apparently satisfied, the monster pulls free of you and runs off, yipping happily. It takes you a while to recover from being used by the tainted creature and, eventually, you go about your business once more.";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Fox";
 	else:
-		say "     Almost immediately, your face is assaulted by the latex fox's red, oozing dick. [if HP of Player > 0 or Player is submissive]Instinctively, you allow it to be[else]Not intent on obliging the monster, he nips and claws at you until you are, tool eventually[end if] forced between your lips, taste awash in the latex flavor of his tainted organ and its precum. The creature only seems to regard fucking your face as far as it being a hole for him to do so, caring little for what you have to offer in favor of thrusting against you in a blind fervor.";
+		say "     Almost immediately, your face is assaulted by the latex fox's red, oozing dick. [if HP of Player > 0 or player is submissive]Instinctively, you allow it to be[else]Not intent on obliging the monster, he nips and claws at you until you are, tool eventually[end if] forced between your lips, taste awash in the latex flavor of his tainted organ and its precum. The creature only seems to regard fucking your face as far as it being a hole for him to do so, caring little for what you have to offer in favor of thrusting against you in a blind fervor.";
 		say "     Tongue made to caress the rubbery cock, you feel its supple, yielding texture, his body loudly squeaking and creaking with each relentless motion. Body aching with a rising need, your [if Player is male]own, unattended dick[smn] ache[smv] against the ground[else if Player is female]unattended cunt[sfn] ache[sfv] against the open air[else]genderless body aches with an insatiable lust[end if].";
 		say "     It doesn't take long before the latex fox goes rigid, forcing his knot in and yipping loudly as his dick sputters its rubbery load down your throat, pinning his crotch firm against your lips and forcing you to swallow down the tainted fluid. After the flood dies down, the creature finally pulls free of you, a string of his latex seed following in its wake.";
 		say "     Apparently satisfied, the monster runs off and leaves you, yipping happily. It takes you a while to recover from being used and your lingering, unsated lust. Eventually, you go about your business once more.";
@@ -49,7 +49,7 @@ to say latexfoxvictory:
 
 to say latexfoxdefeat:
 	project Figure of LatexFox_hard_icon;
-	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (Player is female or (Player is male and anallevel > 1)):
+	if (Libido of Player > 30 or "Dominant" is listed in feats of Player) and (player is female or (player is male and anallevel > 1)):
 		say "     Having subdued to the fox, perhaps you should use him to sate your need?";
 		if Player consents:
 			latexfoxdefeatsex;
@@ -59,7 +59,7 @@ to say latexfoxdefeat:
 		say "[one of]With one final lash, the latex fox begins to make a whining sound.[run paragraph on] It appears that the creature is deflating, flumping onto the ground as an inanimate pile of rubber.[run paragraph on] It's unclear if the thing is dead or simply pretending to be to make you leave[or]Striking the critter down, he yips loudly, bouncing off into the distance and away from you[at random]. With the matter attended to, you move on.";
 
 to latexfoxdefeatsex:
-	if ( Player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( player is herm and a random chance of 1 in 2 succeeds ):
+	if ( player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( player is herm and a random chance of 1 in 2 succeeds ):
 		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position.";
 		if Cunt Depth of Player < 6:
 			say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";
@@ -255,7 +255,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

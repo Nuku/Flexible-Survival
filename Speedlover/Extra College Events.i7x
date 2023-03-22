@@ -14,14 +14,6 @@ lastlibrarybrowse is a number that varies. lastlibrarybrowse is usually 255.
 
 Section 1 - General Events
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Cheetah Cheater"	Cheetah Cheater	"[EventConditions_Cheetah Cheater]"	College Walkway West	2500	2	100
-
-to say EventConditions_Cheetah Cheater:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Cheetah Cheater	"Cheetah Cheater"
@@ -31,20 +23,19 @@ ResolveFunction of Cheetah Cheater is "[ResolveEvent Cheetah Cheater]".
 The level of Cheetah Cheater is 0.
 Sarea of Cheetah Cheater is "Campus".
 
+after going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CheetahCheaterEvent;
+
 to say ResolveEvent Cheetah Cheater:
+	CheetahCheaterEvent;
+
+to CheetahCheaterEvent:
 	say "     Walking down a pathway in the college, two figures emerge from one side and sprint toward you. Hearing their shouts of joy even from the distance you are at, they quickly get close enough for you to make them out. A female antelope and male cheetah are neck and neck in a race, with legs that blur as they cross ground at an amazing pace. As they close in you notice there is a fence in the way. The antelope goes around it and grabs the metal pole at the edge to slingshot herself to regain some speed while the cheetah jumps over it. They both get back up to full speed again, but the cheetah is now clearly winning. The antelope gives it her best shot, but they both streak past you and cross a finish line - marked out with a bit of tape - before she can catch up.";
 	LineBreak;
 	say "     'Ian, you're such a cheater!' she pants. He turns towards her and smirks 'I know.' Her nose scrunches in confusion for a second. 'That's not what I... Oh when are you going to stop making that joke!' He laughs a little bit, 'When you manage to keep up.' She looks at him, her face pensive. 'How about...' She stands and seductively drapes herself over him. 'I show you how well I can keep up.' With a look on his face like he has won the lottery, Ian stumbles out a yes and they both dash off, presumably going somewhere private.";
 	now Cheetah Cheater is resolved;
 	now LastCampusWalkin is turns;
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Pregnant Friend"	Pregnant Friend	"[EventConditions_Pregnant Friend]"	College Walkway East	2500	2	100
-
-to say EventConditions_Pregnant Friend:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -55,7 +46,14 @@ ResolveFunction of Pregnant Friend is "[ResolveEvent Pregnant Friend]".
 The level of Pregnant Friend is 0.
 Sarea of Pregnant Friend is "Campus".
 
+after going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	PregnantFriendEvent;
+
 to say ResolveEvent Pregnant Friend:
+	PregnantFriendEvent;
+
+to PregnantFriendEvent:
 	say "     As you walk down the path you stumble upon two girls sitting on a wooden bench. One has been infected as a fox, and has fluffy fox ears on her head and a bushy tail poking through the back of the bench. She has an arm around her friend, a wolf anthro with a bulging stomach who is crying. The wolf girl has completely changed, complete with muzzle and fur all over. You step a bit closer and listen in.";
 	say "     'It all happened so fast!' she sobs 'One minute I was studying with my boyfriend, the next he's one of those wolves!' Her friend rubs her back. 'It's good to talk about it. So what happened next?' she asks. 'Well, he changed into one of those alphas, got real muscly, with a big you-know-what. I should have said no, he didn't have any condoms, but he just smelt so good and I let it happen.' Her friend takes the opportunity to jump in and say, 'It's OK, it's not your fault. So what happened next?' The wolf takes a deep breath and lets it out. 'Well, we did the deed, and he finished in me. A few minutes later I turned into this, and an hour after that, [italic type]THIS[roman type]-' she waves at her stomach '-started showing. He was really sorry after of course, got lost in his new instincts, but now I've got this...'";
 	LineBreak;
@@ -64,14 +62,6 @@ to say ResolveEvent Pregnant Friend:
 	say "     They both get up from the bench and walk down the path. You step out from behind the bush you have been hiding in and head off to continue exploring.";
 	now Pregnant Friend is resolved;
 	now LastCampusWalkin is turns;
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Art Class"	Art Class	"[EventConditions_Art Class]"	Creative Street	2500	2	100
-
-to say EventConditions_Art Class:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -82,7 +72,14 @@ ResolveFunction of Art Class is "[ResolveEvent Art Class]".
 The level of Art Class is 0.
 Sarea of Art Class is "Campus".
 
+after going to Creative Street while (Art Class is active and Art Class is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	ArtClassEvent;
+
 to say ResolveEvent Art Class:
+	ArtClassEvent;
+
+to ArtClassEvent:
 	say "     On your travels around the campus you come across an art class – not a normal one though. A group of [one of]girls[or]ladies[or]women[at random] have all pulled up a chair and an easel to [one of]sketch[or]paint[or]draw[or]capture[at random] their model, and unusually for an art class set outside, their model is a nude one – Though with everything else going on, you suppose that this isn't all that out-there of an idea. With this particular model however, you can see why there is so much female attention to this art class. At the center of the circle there is a [one of]studly stallion[or]good looking wolf[or]sexy tiger[or]handsome [one of]German shepherd[or]Alsatian[at random][or]muscled panther[or]alluring stag[or]athletic snow leopard[or]buff moose[at random] standing in a [one of]proud[or]heroic[at random] pose.";
 	say "     The instructor seems pretty good at first, but as you are standing there she quickly starts to lose her composure.[line break]";
 	say "     'You don't need to be quick, but he can't stay in that pose forever, so you definitely can't be slow'[line break]";
@@ -94,14 +91,6 @@ to say ResolveEvent Art Class:
 	now Art Class is resolved;
 	now LastCampusWalkin is turns;
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"CatsVSDogs"	CatsVSDogs	"[EventConditions_CatsVSDogs]"	Athletic Street	2500	3	100
-
-to say EventConditions_CatsVSDogs:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 CatsVSDogs	"CatsVSDogs"
@@ -111,7 +100,14 @@ ResolveFunction of CatsVSDogs is "[ResolveEvent CatsVSDogs]".
 The level of CatsVSDogs is 0.
 Sarea of CatsVSDogs is "Campus".
 
+after going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CatsVSDogsEvent;
+
 to say ResolveEvent CatsVSDogs:
+	CatsVSDogsEvent;
+
+to CatsVSDogsEvent:
 	if CatsVSDogsCounter is 1:
 		say "     On your travels you spot a tennis court between buildings. There seems to be a game going on - between cats and dogs. On one side, a panther and a lynx. On the other side a husky and a Labrador retriever. Anthro dogs and cats of many types are standing to one side watching the game. The game looks pretty intense, dogs loping around, hitting hard and trying to wear out the cats. On the other side the cats are playing tactically. Each of them stick to their positions like glue and they keep aiming for spots they think the dogs can't defend.";
 		say "     You watch the yellow ball go from one side to the other a dozen times, both sides giving as good as they get, but nothing lasts forever. One of the cats hits high, causing the ball to go near the Labrador's head. Unfortunately for him, his instincts take over and [bold type]CHOMP[roman type]. Immediately the animals in the crowd yell in victory or defeat depending on their team and everyone starts to walk off. As they leave you hear the husky say to his teammate 'Again? That's the third ball this week!'";
@@ -126,14 +122,6 @@ to say ResolveEvent CatsVSDogs:
 		now CatsVSDogs is resolved;
 	now LastCampusWalkin is turns;
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"SharkFountain"	SharkFountain	"[EventConditions_SharkFountain]"	College Fountain	2500	3	100
-
-to say EventConditions_SharkFountain:
-	if LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 SharkFountain	"SharkFountain"
@@ -143,7 +131,14 @@ ResolveFunction of SharkFountain is "[ResolveEvent SharkFountain]".
 The level of SharkFountain is 0.
 Sarea of SharkFountain is "Campus". [Fountain]
 
+after going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
+	try looking;
+	SharkFountainEvent;
+
 to say ResolveEvent SharkFountain:
+	SharkFountainEvent;
+
+to SharkFountainEvent:
 	if SharkFountainCounter is 1:
 		say "     The fountain seems very popular at the moment with students relaxing and chatting around it. Though currently, its water must only be a day or two from its next cleaning, as it is not as clear as usual. People around the edge suddenly start to point into the water, and you see a shark fin making its way around. Then in a shower of water, an anthro shark bursts from the depths of the fountain, soaking a group of students. Laughs and screams echo around the court as the shark walks back to his mates and high fives them.";
 		now SharkFountainCounter is 2;
@@ -152,14 +147,6 @@ to say ResolveEvent SharkFountain:
 		say "     It's getting late and there only seems to be one person around at the fountain as you approach it. A [if randomnumber is 1]female[else]male[end if] husky sits on the side of large structure, scribbling on a notepad. Just like earlier, the same shark anthro circles in the water of the fountain and bursts through the surface, but this time he grabs [if randomnumber is 1]her[else]him[end if] and drags [if randomnumber is 1]her[else]him[end if] in. You rush over, thinking to save [if randomnumber is 1]her[else]his[end if] life, but as you approach you see them lying in the water, the shark's twin shafts [if randomnumber is 1]each taking one hole, with his 'victim' moaning in euphoric pleasure[else]squeezed together, being shoved into the husky's ass while the anthro dog is moaning in pleasure[end if]. You decide to leave them to it[if humanity of Player <= 50]. Seeing the two of them go at it makes you wonder what those dual shafts could do for you[end if].";
 		now SharkFountain is resolved;
 	now LastCampusWalkin is turns;
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Fountain Naiad"	Fountain Naiad	"[EventConditions_Fountain Naiad]"	College Fountain	2500	3	100
-
-to say EventConditions_Fountain Naiad:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -172,19 +159,18 @@ Sarea of Fountain Naiad is "Campus".
 when play begins:
 	add Fountain Naiad to BadSpots of FemaleList;
 
+after going to College Fountain while (Fountain Naiad is active and Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
+	try looking;
+	NaiadFountainEvent;
+
 to say ResolveEvent Fountain Naiad:
+	NaiadFountainEvent;
+
+to NaiadFountainEvent:
 	say "     Walking along the campus grounds you come across a large fountain still shooting streaks of water into the air before falling back down into a large pool below. Taking a moment to appreciate the sight you gaze into the waterfall of flowing liquid and see a most unusual sight. There in the fountain, naked as the day she was born is a strikingly beautiful young woman with long blond hair. She raises her arms as the water cascades over her flawless skin and perky breasts. She is seemingly content with her public bath as she catches your gaze through the flowing water.";
 	say "     Giving a wink and turning around to show her gropeable cheeks off she runs her hands over her firm buns as you feel your arousal flaring up. You're not the only one to notice either, a few other campus goers have stopped what they were doing to ogle the bathing beauty. A few even start to stroke stiffening members or finger moistening lips in their trousers as they watch. You're half-tempted to do the same as your eyes are transfix on this unnaturally gorgeous woman bathing in public. Barely managing to pull your gaze away from her luscious figure you see many others entirely hypnotized by her soaking pale body, noticing a few of the onlookers inching closer to the fountain's edge. Deciding it's probably best to move on before this gets out of hand you turn around and leave the woman to her bath and adoring audience.";
 	now LastCampusWalkin is turns;
 	now Fountain Naiad is resolved;
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Campus Racing"	Campus Racing	"[EventConditions_Campus Racing]"	Athletic Street	2500	3	100
-
-to say EventConditions_Campus Racing:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -194,22 +180,18 @@ Campus Racing is a situation.
 ResolveFunction of Campus Racing is "[ResolveEvent Campus Racing]".
 Sarea of Campus Racing is "Campus".
 
+after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CampusRacingEvent;
+
 to say ResolveEvent Campus Racing:
+	CampusRacingEvent;
+
+to CampusRacingEvent:
 	say "     Walking along the college grounds you spot from afar what must be the campus's running track. As you draw in closer from a distance you see two distinct figures standing prepped to run near the starting line. In the first lane, a well fit centauress with a fiery rosewood mane and matching head of hair tied firmly into a ponytail atop her determined yet beautiful face. In the second lane, a powerfully built cheetah woman with orange and black fur is crouched low, ready to take off sprinting at a moment's notice. They look to one another, both smiling before you can just overhear the centauress speak up, 'Alright on the count of three, and no cheating this time Mary!' Giving a toothy smile flashing sharp pearly-white teeth the cheetah named Mary nods before licking her lips in anticipation. Looking down the track the equine athlete readies herself, padding her hooves on the soft grass below. 'Alright, one, Two... THREE!'";
 	say "     The two take off, leaving behind a small cloud of dust. The cheetah-girl on all fours takes an early head start sprinting with almost blinding speed down the track the equine runner hot on her heels. Reaching the halfway point within seconds the athletic centauress catches up with her friend, showing impressive acceleration in her galloping technique. Neck to neck, the two near the finish line and you watch with anticipation for which will win. The cheetah girl takes a small lead near the last few dozen meters before the centauress takes a sudden leap, being ahead by a few inches as they cross the white finish line. Huffing and puffing the two look to each other, with the spotted cheetah looking slightly flushed at her loss. 'Finally! I finally beat you Mary!' squeals the centauress in delight. Barely finishing the sentence the equine girl whinnies in surprise as her shapely rump is slapped by the pawed hand of her friend before the leopardess takes off running and giggling. 'Why you!' Shouts the centaur before she starts running after her mischievous friend. You take your leave from the track as they run off.";
 	now Campus Racing is resolved;
 	now LastCampusWalkin is turns;
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway West	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway East	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway Northeast	2500	3	50
-3	"Frat Party Recruiter"	Frat Party Recruiter	"[EventConditions_Frat Party Recruiter]"	College Walkway Northwest	2500	3	50
-
-to say EventConditions_Frat Party Recruiter:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -223,7 +205,26 @@ Sarea of Frat Party Recruiter is "Campus".
 when play begins:
 	add Frat Party Recruiter to BadSpots of MaleList;
 
+after going to College Walkway West while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	FratPartyRecruiterEvent;
+
+after going to College Walkway East while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	FratPartyRecruiterEvent;
+
+after going to College Walkway Northeast while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	FratPartyRecruiterEvent;
+
+after going to College Walkway Northwest while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	FratPartyRecruiterEvent;
+
 to say ResolveEvent Frat Party Recruiter:
+	FratPartyRecruiterEvent;
+
+to FratPartyRecruiterEvent:
 	if FratPartyRecruiterProgression is 0:
 		say "     Walking over the campus, you hear someone call out 'Visit Phi Alpha Nu and have the best time of your life! Party every night, and as much booze as you can drink!' You look around, and see a satyr with black fur, curly black hair, and stout but thick horns walking along the campus path, handing out fliers to everyone he passes. A lot of students turn their heads, as he has a great physique, and if not for that then they're staring at the big piece of meat swinging between his legs. He also carries what looks like a wine-skin, apparently for handing out free trials of satyr wine. You watch as he hands a flyer to a group of guys, and continue on your path. The frat house you helped Talov and Kerr mix up clearly keeps on rolling with more fun every night!";
 	else if FratPartyRecruiterProgression is 1:
@@ -240,17 +241,6 @@ to say ResolveEvent Frat Party Recruiter:
 	increase FratPartyRecruiterProgression by 1;
 	now LastCampusWalkin is turns;
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway West	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway East	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway Northeast	2500	3	50
-3	"Undie Race"	Undie Race	"[EventConditions_Undie Race]"	College Walkway Northwest	2500	3	50
-
-to say EventConditions_Undie Race:
-	if LastCampusWalkin - turns > 0: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Undie Race	"Undie Race"
@@ -259,7 +249,26 @@ Undie Race is a situation.
 ResolveFunction of Undie Race is "[ResolveEvent Undie Race]".
 Sarea of Undie Race is "Campus".
 
+after going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	UndieRaceEvent;
+
+after going to College Walkway East while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	UndieRaceEvent;
+
+after going to College Walkway Northeast while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	UndieRaceEvent;
+
+after going to College Walkway Northwest while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	UndieRaceEvent;
+
 to say ResolveEvent Undie Race:
+	UndieRaceEvent;
+
+to UndieRaceEvent:
 	say "     As you trek down the walkway, you notice that the paved alley is almost deserted, and that people begin to assemble on the side. You eventually reach a gorilla, who looks busy directing people to stay away from the path, while others install a table and put water bottles on them. [if GorillasMember is 3]'Hey, nice to see you,' the ape greets you. 'A race is going to pass through here. Can you wait on the side for a few moments?'[else]'Hey, you!' the ape hailed. 'Stay out of the walkway! Racers are going to pass through here in a few moments.'[end if]";
 	say "     You follow the instructions and, as the gorilla said, a pack of sportsmen jog down the road. They do not wear the usual running garb: they are all in their undergarments and running shoes - for those who do not have pawed feet. Virile bulges and bare breasts jiggle with each stride, under the applause and the cheers of the crowd, on each side of the walkway, cheers on the runners, and some wave their hands in response. The runners pass by the table and pick a water bottle. The first to do so is a young, albinos lizard in a red speedo. He grabs the nearest bottle, then sprinkles its content over his scaly body in order to cool off. His wet scales glisten under the light [if daytimer is night]of the lamp posts[else]of the sun[end if], and several onlookers around you cheer him on even more. The reptile winks at the audience, then begins to run away.";
 	if demon brute is listed in companionList of Player:
@@ -277,14 +286,6 @@ to say ResolveEvent Undie Race:
 
 Section 2 - Events with Specific NPCs
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Dog Meets Dog"	Dog Meets Dog	"[EventConditions_Dog Meets Dog]"	College Walkway East	2500	3	100
-
-to say EventConditions_Dog Meets Dog:
-	if LastCampusWalkin - turns > 0 and gsd_pet >= 60 and GibsonRelationship is 0 and "Library_private lover" is not listed in Traits of Korvin and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Dog Meets Dog	"Dog Meets Dog"
@@ -294,7 +295,13 @@ ResolveFunction of Dog Meets Dog is "[ResolveEvent Dog Meets Dog]".
 Sarea of Dog Meets Dog is "Campus".
 The PrereqCompanion of Dog Meets Dog is gshep.
 
+after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and Dog Meets Dog is not resolved and gshep is listed in companionList of Player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
+	DogMeetsDogEvent;
+
 to say ResolveEvent Dog Meets Dog:
+	DogMeetsDogEvent;
+
+to DogMeetsDogEvent:
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin runs into a young adult beagle boy - GibsonRelationship: [GibsonRelationship][line break]";
 	say "     Walking over the campus in the direction of the Tenvale college dorms, you notice after a few steps that something - or rather someone - is missing from your side. As you start turning around to see where your attack dog Korvin ended up, you hear the German shepherd bark out, 'What are you looking at, pup? Never seen a [italic type]real[roman type] dog before?' It turns out that Korvin stopped walking about a dozen feet back, where he is standing now, hands on his furry hips and looking down at a young adult anthro standing right in front of him. The other guy is a canine too, though shorter and of a different breed of dog - a beagle, you'd say, judging by the floppy ears and the mixture of white, tan and brown fur. Dressed in shorts and a t-shirt bearing the 'Tenvale College' logo, a backpack slung over one shoulder, the slender young man gapes at Korvin with wide eyes, then gasps out, 'I - I'm sorry sir! It's just... um, you're naked and...'";
@@ -338,13 +345,6 @@ Section 3 - Special Events / Mechanisms
 
 [Administration Introduction - Waiting for the Course Advisor]
 
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Course Advice"	Course Advice	"[EventConditions_Course Advice]"	College Administration Building	2500	3	100
-
-to say EventConditions_Course Advice:
-	now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Course Advice	"Course Advice"
@@ -357,7 +357,23 @@ when play begins:
 	add Course Advice to BadSpots of FemaleList;
 	add Course Advice to BadSpots of MaleList;
 
+after going north from College Fountain while (Course Advice is not resolved):
+	try looking;
+	AdminIntro;
+
+after going northeast from College Walkway Northwest while (Course Advice is not resolved):
+	try looking;
+	AdminIntro;
+
+after going northwest from College Walkway Northeast while (Course Advice is not resolved):
+	try looking;
+	AdminIntro;
+
 to say ResolveEvent Course Advice:
+	try looking;
+	AdminIntro;
+
+to AdminIntro:
 	say "     Exploring the campus, you come upon one of the administrative buildings of the college. Surprisingly, it all seems to be in regular use, with students coming and going... seemingly oblivious to the fact that they've almost all been transformed in various ways. You stop one anthro dolphin [one of]guy[or]girl[at random] at random as they try to push past you and go in, asking what's going on. 'Isn't it obvious? People are becoming animals and whatnot - if that's not a reason to re-evaluate the courses you take, what is? The advisory office is in there. I'm gonna go for marine biology, you know.'";
 	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well-filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
@@ -430,6 +446,7 @@ understand "explore library" as browselibrary.
 understand "explore the library" as browselibrary.
 understand "read library" as browselibrary.
 understand "read the library" as browselibrary.
+
 
 check browselibrary:
 	if Player is not in Tenvale College Library, say "You should do this at the Tenvale College Library." instead;
@@ -583,16 +600,6 @@ to RyouseiLibraryEvent:
 	else:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if FemaleList is not banned and FemaleList is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Walkway West	2500	3	100
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Walkway East	2500	3	100
-3	"Campus Patrol"	Campus Patrol	"[EventConditions_Campus Patrol]"	College Campus Entrance	2500	3	100
-
-to say EventConditions_Campus Patrol:
-	now CurrentWalkinEvent_ConditionsMet is true;
-
 Table of GameEventIDs (continued)
 Object	Name
 Campus Patrol	"Campus Patrol"
@@ -601,7 +608,23 @@ Campus Patrol is a situation.
 ResolveFunction of Campus Patrol is "[ResolveEvent Campus Patrol]".
 Sarea of Campus Patrol is "Campus".
 
+after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CampusPatrolEvent;
+
+after going to College Walkway East while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CampusPatrolEvent;
+
+after going to College Campus Entrance while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	CampusPatrolEvent;
+
 to say ResolveEvent Campus Patrol:
+	try looking;
+	CampusPatrolEvent;
+
+to CampusPatrolEvent:
 	say "     As you walk along the pathway at the edge of the central green of Tenvale college campus, your gaze falls upon a fairly large anthro wolfhound, leaning against the side of a car in the adjoining parking lot. Shirtless and showing an impressive set of abs and pecs, the canine is dressed in nothing more but a pair of cargo pants and a spiked collar. He holds a bottle of whiskey in his paw-hand, taking a swig from time to time while he watches people walk past. Soon, a young golden retriever passes by his position, which is when the dog gives her a lewd gaze and calls out, 'Hey babe, you seem like just the right bitch for me! Come on, let's make some puppies right here and now!' And with that, he steps up to the young woman and forcefully grabs her by the arm. The books the young woman was carrying are sent flying as the transformed man starts to drag her off in the direction of the parking lot, ignoring her struggles to get free.";
 	say "     The start of a shout for help is quelled by his other hand wrapping around her muzzle and clamping it shut (dropping the whiskey bottle in the process and leaving it to shatter on the asphalt of the parking lot). Before you can decide if you want to intervene or not, three strapping young Spartans in nothing more than sandals, red cloaks and helmets are already sprinting towards the scene. Within moments, they surround the kidnapper, the spear-points of their weapons an inch from his throat. Freezing in place, the wolfhound releases his grip on the girl and she wrenches herself free. 'Thanks guys,' she tells the spartan with a relieved expression, then slips out of the circle of combative young men and goes to collect her books. Meanwhile, the Spartans guide their captive to the edge of the campus at spear-point, then let him go with a dire warning not to return if he values his life... or his anal virginity.";
 	now Campus Patrol is resolved;

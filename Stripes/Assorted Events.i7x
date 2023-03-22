@@ -53,7 +53,7 @@ to say lostninjahorde:
 	infect "Ninja Cat";
 	infect "Ninja Cat";
 	[Some extra infection and sex occurrences for the orgy]
-	if Player is female:
+	if player is female:
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Ninja Cat";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Ninja Cat";
 	CreatureSexAftermath "Player" receives "OralCock" from "Ninja Cat";[The paragraph did say filling every hole]
@@ -194,7 +194,7 @@ ResolveFunction of Prank Aftermath is "[ResolveEvent Prank Aftermath]". Prank Af
 prankevent is a number that varies.
 when play begins:
 	add Prank Aftermath to BadSpots of FurryList;
-	add Prank Aftermath to BadSpots of HermList;
+	add Prank Aftermath to badspots of HermList;
 
 to say ResolveEvent Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
@@ -266,7 +266,7 @@ to say ResolveEvent Lovers Bench:
 	else if loversbench is 2:		[third+ visit]
 		say "     Returning to the area around the lovers['] bench, you decide to search around it again. Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items. Sadly, you are unable to locate anything new or of any use.";
 	repeat with companion running through companionList of Player:
-		if loversbench is 2 and printed name of companion is not listed in lbcomplist and Player is not neuter:
+		if loversbench is 2 and printed name of companion is not listed in lbcomplist and player is not neuter:
 			if pink raccoon is listed in companionList of Player:
 				WaitLineBreak;
 				setmonster "Raccoon";
@@ -381,7 +381,7 @@ to say ResolveEvent Lovers Bench:
 					say "     Running your hands over each other, you can feel the mousie's stiff cock pressing against you and you can sense what she wants of you. Unwilling to deny the needs of your sexy little lover, you lay your [bodytype of Player] body across the bench with your hips and legs hanging off the edge, offering up your [if Player is female]pussy[else]ass[end if] to the mouse girl. She runs her little paws over your backside and squeaks happily, pleased that this puts you at the perfect height for her cock. Moving in behind you, she lines up her throbbing maleness with your waiting hole and slowly sinks into you. You can't help but moan and squeak in delight as you're penetrated, gripping the wood firmly as she starts pounding into you.";
 					say "     As she continues thrusting into you, you can feel her pleasure as well as your own, sharing your growing love for each other. You can feel her cock inside you as well as the intense pleasure of your [if Player is female]wet vagina[else]tight hole[end if] sliding across her hard flesh as well as the growing pressure inside her balls. You can feel the quivering of her aroused pussy and the wet juices running down her thighs, as well as the slap of her own balls against her clit as she thrusts. Sharing in all of this, you moan loudly and grip the bench firmly, digging fresh marks into it with your nails. 'Oh, my love. It feels so good to be with you. We should be together forever,' the busty little herm squeaks. 'Accept your place with me, with all of us, and it will always be like this.' You moan and nod eagerly, pressing back into her thrusts and feeling your bond with this beautiful creature growing stronger as something about the bench makes this more like lovemaking than raw sex.";
 					say "     After a powerfully long orgasm that sends her hot seed into your [if Player is female]waiting womb and your synchronous climax[else]stuffed bottom[end if], she slides her cock slowly from you, caressing your ass. Your companion is extra-snugly after the lovemaking, nuzzling at your side as she holds your hand in hers and wraps her tail around your wrist, and you happily return this affection, feeling much closer to her.";
-					if Player is female:
+					if player is female:
 						CreatureSexAftermath "Player" receives "PussyFuck" from "Mental Mouse";
 					else:
 						CreatureSexAftermath "Player" receives "AssFuck" from "Mental Mouse";
@@ -396,13 +396,13 @@ to say ResolveEvent Lovers Bench:
 				now Resolution of Lovers Bench is 7; [Did Lovers Bench with Rachel]
 			else if equinoid warrior is listed in companionList of Player:
 				say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of Player] body. She smiles at you with a lustful hunger in her eyes. '[if Player is blequinoidbodied]Come, join me over here and I will remind you of the warm embrace of the herd[else]We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of bestial lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
-				if ( Player is purefemale ) or ( Player is female and Player is submissive ):
+				if ( player is purefemale ) or ( player is female and player is submissive ):
 					say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way to your pussy and she plunges a pair of digits into you. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
 					say "     Once her fingering has gotten you quite wet, she slips her fingers out and holds your pussy spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
 					say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mares,' the sexy warrior says with a blush. 'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your womb with her virile load. You cry out in climax as well, clenching your vagina down around that equine log to milk as much as your loving companion can give.";
 					say "     By the time your long orgasms are done, she's pumped an impressive load of her equinoid seed into your pussy. A mix of her juices and yours leaks out onto the bench to join the others, adding to the arousing scent that clings here. With another kiss, she eases her spent shaft from you. After the lovemaking, Liliana is more snuggly than usual, caressing your body tenderly as she gives your neck soft nips. Returning this affection in kind, you feel that you've grown closer to her.";
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Black Equinoid";
-				else if ( Player is male and Player is submissive and anallevel > 1) or Player is neuter:
+				else if ( player is male and player is submissive and anallevel > 1) or player is neuter:
 					say "     The young warrior pushes you down onto the bench with an excited whinny, her hands moving down to spread your legs as you lean back on it. Divesting each other of your gear, you take a moment to kiss passionately while groping one another. One of her hands finds its way between your asscheeks and rubs against your anal ring. Those roaming digits soon pry you open, thick fingers curling in your depths to stroke along your sensitive lining[if Player is male] and massage your needy prostate[end if]. Your [if Player is blequinoidbodied]knicker[else]moan[end if] of pleasure is met with her tongue pressing past your lips to wrestle with yours.";
 					say "     Once her fingering has gotten you sufficiently [if Player is male]hard and [end if]excited, she slips her fingers out and holds your hole spread open for her equinoid cock to fill. With a slow, steady thrust, she buries most of it into you while you quiver with delight in your seat. Her hooves move to your ass and grip it firmly while you grab onto the bench for support before she starts fucking you in earnest, pounding into you like a stallion. The feel of that big horsecock of hers stuffed inside you, plunging in and out, has you panting and nickering for more even as you push back into her thrusts. Your nails dig into the wood as you try to hang on (in more than one sense of the word), adding fresh marks to those of the others who've used it.";
 					say "     She pounds into you with such energy, but she is loving about it as well, something about the bench making this more like lovemaking than raw sex. 'Mmm... you're so strong, but also wonderfully eager to be ridden. When our journey's done, perhaps you'd enjoy being the first of my mates,' the sexy warrior says with a blush. [if Player is mpreg_ok]'You'd breed such mighty colts.' She ends up neighing out the last word as she thrusts deep into you and blasts her hot seed inside you, flooding your hidden womb[else]After rutting you for a good, long while, she thrusts deep into you and blasts her hot seed inside you, flooding your colon[end if] with her virile load. You [if Player is male]cry out in climax as well, clenching[else]shudder in perverse delight and clench[end if] your ass down around that equine log to milk as much as your loving companion can give.";
@@ -548,7 +548,7 @@ Sarea of PeachTree is "Park".
 peachtreefight is a number that varies.
 
 when play begins:
-	add PeachTree to BadSpots of HermList;
+	add PeachTree to badspots of HermList;
 
 to say ResolveEvent PeachTree:
 	now peachtreefight is 3;
@@ -571,7 +571,7 @@ to say ResolveEvent PeachTree:
 			else:
 				infect "Parasitic Plant";
 				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
-				if Player is female:
+				if player is female:
 					CreatureSexAftermath "Player" receives "PussyFuck" from "Parasitic Plant";
 				else:
 					CreatureSexAftermath "Player" receives "AssFuck" from "Parasitic Plant";
@@ -599,7 +599,7 @@ to say ResolveEvent PeachTree:
 		else:
 			infect "Parasitic Plant";
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
-			if Player is female:
+			if player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Parasitic Plant";
 			else:
 				CreatureSexAftermath "Player" receives "AssFuck" from "Parasitic Plant";
@@ -784,7 +784,7 @@ when play begins:
 	add Sweet Exchange to BadSpots of FurryList;
 	add Sweet Exchange to BadSpots of FemaleList;
 	add Sweet Exchange to BadSpots of MaleList;
-	add Sweet Exchange to BadSpots of HumorousList;
+	add Sweet Exchange to badspots of HumorousList;
 
 to say ResolveEvent Sweet Exchange:
 	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out. What you discover is a mob of pastel colored ferrets poinging up and down in front of a stall. Atop the stall are some sugar gliders covered in cotton candy fur. Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
@@ -818,7 +818,7 @@ when play begins:
 	add Caught Glider to BadSpots of FurryList;
 	add Caught Glider to BadSpots of FemaleList;
 	add Caught Glider to BadSpots of MaleList;
-	add Caught Glider to BadSpots of HumorousList;
+	add Caught Glider to badspots of HumorousList;
 
 to say ResolveEvent Caught Glider:
 	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-colored sugar gliders run across the laneway. In hot pursuit of her are a pack of the colorful, sugar-crazed ferrets. 'Sugar thief!' 'Come back here!' 'Don't let her get away, guys!' 'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase. Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";

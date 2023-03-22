@@ -44,7 +44,7 @@ AngieTrapped is a situation.
 ResolveFunction of AngieTrapped is "[ResolveEvent AngieTrapped]".
 Sarea of AngieTrapped is "Zoo".
 when play begins:
-	add AngieTrapped to BadSpots of HermList;
+	add AngieTrapped to badspots of HermList;
 	add AngieTrapped to BadSpots of FurryList;
 
 to say ResolveEvent AngieTrapped:
@@ -235,7 +235,7 @@ Cock Length of Angie is 8. [length in inches]
 Ball Size of Angie is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Ball Count of Angie is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Angie is 1. [number of cunts]
-Cunt Depth of Angie is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Angie is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Angie is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Angie is 1. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Angie is 10. [inches deep for anal fucking]

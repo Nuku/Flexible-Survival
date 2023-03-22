@@ -93,7 +93,7 @@ Cock Length of Nadia is 0. [length in inches]
 Ball Count of Nadia is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Nadia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Nadia is 1. [number of cunts]
-Cunt Depth of Nadia is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Nadia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Nadia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Nadia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -378,7 +378,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock";
 	[]
-	if (Player is male and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
+	if (player is male and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;

@@ -331,7 +331,7 @@ name	desc	weight	object
 Lamia cum is a grab object.
 Lamia cum is cum.
 Lamia cum is infectious.
-Strain of Lamia cum is "lamia".
+Strain of Lamia cum is "Lamia".
 Usedesc of Lamia cum is "[Lamia cum use]";
 
 to say Lamia cum use:

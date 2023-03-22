@@ -80,7 +80,7 @@ to say phiiotagammadesc:
 		WaitLineBreak;
 		move player to College Campus;
 	else if piginitiation is 1:
-		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blowjob from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
+		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
 		say "     [bold type]Shall you ask to join the frat or take the hint and leave?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Ask to join the frat.";
@@ -99,7 +99,7 @@ to say phiiotagammadesc:
 		WaitLineBreak;
 		move player to College Campus;
 	else if piginitiation is 2 or piginitiation is 3:
-		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blowjob from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
+		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
 		if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy" and FaceName of Player is not "Messy Pig" and FaceName of Player is not "Piggy":
 			say "     'Look, I told you that you can't join up without a sponsor. The mighty Phi Iota Gamma...' Again, he pauses to oink and snort loudly along with his frat brothers. '...doesn't let just anyone join up. You'll need to find a senior member in good standing willing to support your joining up. As you can see, we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.' And with this, another round of oinking and snorting starts up. No further ahead for your troubles, you turn to go even before the noise dies down.";
 		else:

@@ -236,7 +236,7 @@ batcubus milk is a grab object.
 batcubus milk is milky.
 Purified of batcubus milk is "distilled milk".
 batcubus milk is infectious.
-Strain of batcubus milk is "batcubus".
+Strain of batcubus milk is "Batcubus".
 Usedesc of batcubus milk is "[batcubus milk use]";
 
 to say batcubus milk use:

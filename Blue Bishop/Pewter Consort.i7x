@@ -850,7 +850,7 @@ name	desc	weight	object
 Pewter Consort cum is a grab object.
 Pewter Consort cum is cum.
 Pewter Consort cum is infectious.
-Strain of Pewter Consort cum is "pewter consort".
+Strain of Pewter Consort cum is "Pewter Consort".
 Usedesc of Pewter Consort cum is "[Pewter Consort cum use]";
 
 to say Pewter Consort cum use:

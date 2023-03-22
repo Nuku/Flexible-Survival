@@ -377,7 +377,7 @@ frost drake cum is a grab object.
 frost drake cum is cum.
 frost drake cum is infectious.
 Purified of frost drake cum is "distilled cum".
-Strain of frost drake cum is "frost drake".
+Strain of frost drake cum is "Frost Drake".
 Usedesc of frost drake cum is "[frost drake cum use]";
 
 to say frost drake cum use:
@@ -396,7 +396,7 @@ frost drake man-milk is a grab object.
 frost drake man-milk is milky.
 Purified of frost drake man-milk is "distilled milk".
 frost drake man-milk is infectious.
-Strain of frost drake man-milk is "frost drake".
+Strain of frost drake man-milk is "Frost Drake".
 Usedesc of frost drake man-milk is "[frost drake man-milk use]";
 
 to say frost drake man-milk use:

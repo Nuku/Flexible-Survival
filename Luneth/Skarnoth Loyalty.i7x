@@ -112,28 +112,7 @@ Book 3 - Skarnoth Master/Slave Events
 
 Section 1 - First Event
 
-[Update for WalkinEvents table]
-Table of NavInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"SkarnothBoastLibrary"	SkarnothBoastLibrary	"[EventConditions_SkarnothBoastLibrary]"	Grey Abbey Library	2500	2	100
-
-Table of WalkinEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"SkarnothBoastLibrary"	SkarnothBoastLibrary	"[EventConditions_SkarnothBoastLibrary]"	Grey Abbey Library	2500	2	100
-
-to say EventConditions_SkarnothBoastLibrary:
-	if (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-SkarnothBoastLibrary	"SkarnothBoastLibrary"
-
-SkarnothBoastLibrary is a situation.
-ResolveFunction of SkarnothBoastLibrary is "[ResolveEvent SkarnothBoastLibrary]".
-Sarea of SkarnothBoastLibrary is "Nowhere".
-
-to say ResolveEvent SkarnothBoastLibrary:
+after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP of SKARNOTH: [HP of Skarnoth], Loyalty of Skarnoth: [Loyalty of Skarnoth][line break]";
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. They both had some choice words for me, ya'know the usual [']You will never get away with this!['] mixed with a little [']You will be destroyed by our forces, a disgusting thing like you has no chance of victory![']. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and slammed her down on my cock mid-sentence, her eyes looked like they were gonna bulge out of her skull, haha!";
@@ -187,7 +166,6 @@ to say ResolveEvent SkarnothBoastLibrary:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	now SkarnothBoastLibrary is resolved;
 
 to say SkarnothFirstEvent_Punish:
 	LineBreak;
@@ -1043,12 +1021,12 @@ after going to Half-Renovated Room while (Skarnoth is booked and SkarnothMasterS
 		say "     Once you take that first shaky step, you begin to feel more confident in your choice and your steps become steadier. Stopping just in front of the horned demon you begin to feel a bit uneasy, he hasn't said anything and is just simply watching you at this point. It seems that this was just another one of Skarnoth's mind games and you turn to leave, 'Take another step and it will be your last.' Turning your head back to look at the hellspawn, you are surprised to see him with that same calm yet amused look on his face. Opening your mouth to comment on his threat, you are quickly silenced by one of his clawed digits as it presses firmly against your lips. 'There's really no need for you to talk is there [master]? Besides, I think that it's high time you listened to someone else... someone that's clearly your superior, don't you agree? Now... strip.'";
 		say "     You are caught off guard by both what Skarnoth just said to you and the fact that he attempted to give [']you['] an order. A mischievous thought enters your mind and you take a step backwards, your eyes never leaving the demons. With a wicked smile of your own, you prepare to put on a show to have the hellspawn remember who exactly is in charge here.";
 		WaitLineBreak;
-		if Player is male: [flat pecs]
+		if player is male: [flat pecs]
 			say "     Slowly, you allow your hands to caress over your pecs and begin to slide down your abs. As your palms rise up your chest again the hem of your top raises with it, exposing only the smallest hint of flesh underneath. Skarnoth's expression shows interest, however his posture shows a certain level of boredom, 'Well [master], that's a very... cute little dance you're doing there, but perhaps I should just go out and find someone else that has the necessary [']skills['] to entertain me.' Skarnoth's words instantly get under your skin and you redouble your efforts, although you can't help the feeling in the back of your mind that something here is off. Grabbing the hem of your top, you quickly pull the garment over your head, the slight chill in the air causing your nipples to harden.";
 			say "     With a smile on your lips you toss the fabric straight at the demon, but right before it's about to smack him in the face he sends it flying in another direction with a single finger, his only comment on your actions is a single raised eyebrow.";
 		else:
 			say "     "; [breasts]
-		if Player is male: [dick and balls]
+		if player is male: [dick and balls]
 		else: [pussy]
 			say "     ";
 		say "     The demon's relaxed posture soon shifts as he leans forward and sensually wraps his hands firmly around your waist, pulling you closer and without exerting any effort you're swiftly yet gently pulled onto Skarnoth's lap. Your surprise must be evident by the deep chuckle that reverberates through the hellspawn's chest, 'You look a little shocked by my actions, but is it so strange for a slave to want to be closer to their master? You would never deny me that would you?' You aren't able to poke any holes in his logic and slowly begin to nod your head in agreement, but you're stopped by a hand wrapping around the side of your throat with lightning speed, 'You have a beautiful throat my pet, although... perhaps its fragility is what gives it its allure.' Out of the corner of your eye you can see the demon lean forward and then feel the wet tip of his tongue slowly rising along your artery feeling like a trail of liquid fire.";

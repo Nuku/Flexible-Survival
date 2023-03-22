@@ -372,7 +372,7 @@ Cock Length of Sarah is 0. [length in inches]
 Ball Count of Sarah is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sarah is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sarah is 1. [number of cunts]
-Cunt Depth of Sarah is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Sarah is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Sarah is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Sarah is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -853,55 +853,55 @@ to say SarahSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Lie back and let the husky please you";
 	[]
-	if SarahCured is 5 and Player is male: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest a tit-fuck";
 		now sortorder entry is 3;
 		now description entry is "Ask your husky friend to let you grind your cock between her breasts";
 	[]
-	if SarahCured > 5 and Player is male: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Tit-fuck the sexy husky";
 		now sortorder entry is 4;
 		now description entry is "Grind your cock between her breasts";
 	[]
-	if SarahCured is 5 and Player is male: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is male: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest face-fucking her";
 		now sortorder entry is 5;
 		now description entry is "Ask your husky friend to let you fuck her muzzle";
 	[]
-	if SarahCured > 5 and Player is male: [player-dominant oral is okay]
+	if SarahCured > 5 and player is male: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck Sarah";
 		now sortorder entry is 6;
 		now description entry is "Grind your cock against that talented tongue in her muzzle";
 	[]
-	if SarahCured is 5 and Player is female: [only had Sarah-centered oral with her before]
+	if SarahCured is 5 and player is female: [only had Sarah-centered oral with her before]
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest grinding your pussy against her muzzle";
 		now sortorder entry is 7;
 		now description entry is "Ask your husky friend to let you use her muzzle";
 	[]
-	if SarahCured > 5 and Player is female: [player-dominant oral is okay]
+	if SarahCured > 5 and player is female: [player-dominant oral is okay]
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy-grind Sarah's muzzle";
 		now sortorder entry is 8;
 		now description entry is "Grind your pussy against Sarah's muzzle";
 	[]
-	if SarahCured is 6 and Player is male: [never talked about sex before]
+	if SarahCured is 6 and player is male: [never talked about sex before]
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck her";
 		now sortorder entry is 9;
 		now description entry is "Try to get into Sarah's pussy (for her first time as a husky)";
 	[]
-	if SarahCured > 7 and Player is male: [at least had the "I want to fuck you" talk with Sarah]
+	if SarahCured > 7 and player is male: [at least had the "I want to fuck you" talk with Sarah]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Sarah ride your dick (anal)";
 		now sortorder entry is 10;
 		now description entry is "Allow the husky to ride you - with your dick in her ass";
 	[]
-	if SarahCured > 7 and Player is male: [Sarah is okay with doggy style (anal)]
+	if SarahCured > 7 and player is male: [Sarah is okay with doggy style (anal)]
 		choose a blank row in table of fucking options;
 		now title entry is "Pound Sarah doggy style (anal)";
 		now sortorder entry is 11;
@@ -1191,47 +1191,14 @@ Section 4 - Library Encounter Events
 
 Section 4.1 - Shower Events
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Sarah_Shower_Thanks"	Sarah_Shower_Thanks	"[EventConditions_Sarah_Shower_Thanks]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Shower_Thanks:
-	if (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Shower_Thanks	"Sarah_Shower_Thanks"
-
-Sarah_Shower_Thanks is a situation.
-ResolveFunction of Sarah_Shower_Thanks is "[ResolveEvent Sarah_Shower_Thanks]".
-Sarea of Sarah_Shower_Thanks is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Shower_Thanks:
+after going down from Grey Abbey Library while (Sarah is in Bunker and SarahCured > 3 and SarahShower is 0 and library computer is powered):
 	if debugactive is 1:
 		say "     DEBUG: Sarah thanks the player for the showers working - SaraCured: [SarahCured][line break]";
 	project the Figure of Sarah_clothed_icon;
-	say "     As you enter the central area of the bunker, Sarah the husky is already waiting there for you, a big smile on her face. 'Hey there,' she says happily and walks up to you, then throws her arms around you and gives you a big hug. 'I wanted to thank you - a lot - for getting the power going down here. The showers are working again!' The last words are said in a happy squeal, after which she does her best to calm herself down again. 'Ooh, just to feel clean again and not so hot and sticky...' The young woman sighs with contentment and gives you another squeeze, then wanders back over to her own bed to sit down on it.";
+	say "     As you enter the bunker, Sarah the husky is already waiting there for you, a big smile on her face. 'Hey there,' she says happily and walks up to you, then throws her arms around you and gives you a big hug. 'I wanted to thank you - a lot - for getting the power going down here. The showers are working again!' The last words are said in a happy squeal, after which she does her best to calm herself down again. 'Ooh, just to feel clean again and not so hot and sticky...' The young woman sighs with contentment and gives you another squeeze, then wanders back over to her own bed to sit down on it.";
 	now SarahShower is 1;
-	now Sarah_Shower_Thanks is resolved;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"Sarah_Showering"	Sarah_Showering	"[EventConditions_Sarah_Showering]"	Bunker	2500	8	50
-
-to say EventConditions_Sarah_Showering:
-	if (Sarah is in Bunker and SarahCured > 3 and SarahShower > 0 and library computer is powered and (lastShowerUse - turns > 4)): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Showering	"Sarah_Showering"
-
-Sarah_Showering is a situation.
-ResolveFunction of Sarah_Showering is "[ResolveEvent Sarah_Showering]".
-Sarea of Sarah_Showering is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Showering:
+instead of going north from Bunker while (Sarah is in Bunker and SarahCured > 3 and SarahShower > 0 and library computer is powered and (lastShowerUse - turns > 4) and a random chance of 1 in 10 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Shower Scene with Sarah - SaraCured: [SarahCured][line break]";
 	say "     As you enter the communal shower-area, you see a small pile of clothing (a pair of jeans, a red shirt and no-frills black panties) and a towel sitting on the bench at the entrance. The spray of water is audible from the actual shower cabin through a door. Looks like someone is making use of the running water, now that you've turned the power back on...";
@@ -1249,76 +1216,38 @@ to say ResolveEvent Sarah_Showering:
 
 Section 4.2 - Carl
 
-Table of NavInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Carl_Encounter1"	Sarah_Carl_Encounter1	"[EventConditions_Sarah_Carl_Encounter1]"	Grey Abbey Library	2500	2	100
-
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Carl_Encounter1"	Sarah_Carl_Encounter1	"[EventConditions_Sarah_Carl_Encounter1]"	Grey Abbey Library	2500	2	100
-
-to say EventConditions_Sarah_Carl_Encounter1:
-	if (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Carl_Encounter1	"Sarah_Carl_Encounter1"
-
-Sarah_Carl_Encounter1 is a situation.
-ResolveFunction of Sarah_Carl_Encounter1 is "[ResolveEvent Sarah_Carl_Encounter1]".
-Sarea of Sarah_Carl_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Carl_Encounter1:
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction is 0 and SarahCured > 3) and Player is not CoA:
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
 	project the Figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & CARL MEET - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you get to the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
-	say "your arrival coincides with someone opening the door to the subterranean bunker below from the inside. A flash of white-furred paw-hands lets you guess it is Sarah even before you see the young woman fully, stepping into the open library in her jeans and t-shirt. She notices you in turn and gives a friendly smile and a little wave, then walks over to a nearby bookshelf and starts browsing. Looks like she got bored down in the bunker and needs something new to read. Closing the entrance door securely, you set down your pack and mentally go through what you want to do next - during which you glimpse Carl at the edge of your vision, jogging through the library as part of his exercise regime.";
+	say "     Coming into the library, your arrival coincides with someone opening the door to the subterranean bunker below from the inside. A flash of white-furred paw-hands lets you guess it is Sarah even before you see the young woman fully, stepping into the open library in her jeans and t-shirt. She notices you in turn and gives a friendly smile and a little wave, then walks over to a nearby bookshelf and starts browsing. Looks like she got bored down in the bunker and needs something new to read. Closing the entrance door securely, you set down your pack and mentally go through what you want to do next - during which you glimpse Carl at the edge of your vision, jogging through the library as part of his exercise regime.";
 	say "     A moment later, you hear the canine soldier say, 'Oh hey there. Nice to meet such a pretty - OOFFHH!' Following a choked whimper by the friendly husky and a loud thump, Sarah runs out between the bookshelves, panting breathlessly and in fright. 'There's a stranger back there, a husky man and he - he,' she falters a little at your baffled expression, then hurries after you as you go to check out the row she just came from. Carl is lying on the ground there, groaning and holding his crotch. 'Nggghhhh. You got... great aim... lady,' he gets out between clenched teeth, still in too much pain to do anything but lie in a curled ball.";
 	WaitLineBreak;
 	say "     'Uhm...' Sarah stammers, terribly embarrassed as you introduce them to one another. This was clearly the first time they met - due to a little oversight on your end of not actually telling either of them the other existed. Thus the transformed medical student... overreacted to seeing an unknown male husky up close, coming around the corner all of a sudden. She kneels down next to Carl and shyly places a paw on his arm, squeezing it as she says, 'I'm really sorry for hitting you - especially... down there.' Carl groans in reply but nods, showing that he accepts her apology. The anthro canine waves Sarah and yourself off as you ask if you can do anything to help after that - looks like he just wants to be alone in his pain for a while now.";
 	say "     Taking Sarah by the arm, you lead her away from the curled-up soldier, quietly giving her a short summary of Carl's story - being a member of the military and then getting betrayed and transformed by his former squad leader, fleeing and finally finding refuge with you. As you explain that he actually holds watch most of the time up by the windows on the upper floor, making sure that no hostile creature can move in on the library without being spotted, your husky companion grimaces in embarrassment at having hurt a good man who is protecting her. 'I'll have to apologize to him once Carl has had some time to... get over the pain,' she says in almost a whisper, then quickly grabs a more or less random book and hurries downstairs. Seems like she wants to make sure she doesn't run into Carl again too soon.";
 	now CarlSarahInteraction is 1;
 	now lastCarlSarahInteraction is turns;
-	now Sarah_Carl_Encounter1 is resolved;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Carl_Encounter2"	Sarah_Carl_Encounter2	"[EventConditions_Sarah_Carl_Encounter2]"	Grey Abbey 2F	2500	2	100
-
-to say EventConditions_Sarah_Carl_Encounter2:
-	if (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 2)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Carl_Encounter2	"Sarah_Carl_Encounter2"
-
-Sarah_Carl_Encounter2 is a situation.
-ResolveFunction of Sarah_Carl_Encounter2 is "[ResolveEvent Sarah_Carl_Encounter2]".
-Sarea of Sarah_Carl_Encounter2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Carl_Encounter2:
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 0 and CarlSarahInteraction < 3 and (lastCarlSarahInteraction - turns > 6)) and Player is not CoA:
+	move player to Grey Abbey 2F;
 	if CarlSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> CARL & SARAH SPEND TIME TOGETHER 1 - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCarlScene1]";
 	else if CarlSarahInteraction is 2:
 		if debugactive is 1:
-			say "     DEBUG -> CARL & SARAH SPEND TIME TOGETHER 2 - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
+			say "     DEBUG -> CARL & SARAH SPEND TIME TOGETHER 1 - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCarlScene2]";
-		now Sarah_Carl_Encounter2 is resolved;
-	now lastCarlSarahInteraction is turns;
 
 to say SarahCarlScene1:
 	project the Figure of Carl_face_icon;
 	say "     As you walk up the stairs to the upper floor of the library, your attention is drawn by a pair of wagging tails over near the street-side windows. Next to the little camp that Carl has made for himself here, the husky soldier and Sarah are standing at an open window, leaning on the windowsill as they have a friendly chat with one another. Of course, this doesn't mean Carl isn't also keeping an eye out for trespassers - he sweeps the street with his gaze regularly, in between trading comments with Sarah. The two of them seem to have gotten over their somewhat tumultuous first meeting and now are on friendly terms, chatting away.";
 	say "     Straining your ears a bit, you overhear some words that tell you they're talking about his time in the military boot camp and her studies at university. They look pretty content and happy to just talk to another transformed (yet sane) human, so you decide against walking up and joining the conversation. Best to just let them have this peaceful moment...";
 	now CarlSarahInteraction is 2; [talked]
+	now lastCarlSarahInteraction is turns;
 
 to say SarahCarlScene2:
 	project the Figure of Carl_face_icon;
@@ -1334,24 +1263,10 @@ to say SarahCarlScene2:
 		say "     Not wanting to disturb their play, you turn your attention to other things. Still, it is good to see that the people you saved are getting along nicely.";
 		SanBoost 5;
 	now CarlSarahInteraction is 3; [played poker]
+	now lastCarlSarahInteraction is turns;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Carl_Encounter3"	Sarah_Carl_Encounter3	"[EventConditions_Sarah_Carl_Encounter3]"	Grey Abbey 2F	2500	2	100
-
-to say EventConditions_Sarah_Carl_Encounter3:
-	if (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 2)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Carl_Encounter3	"Sarah_Carl_Encounter3"
-
-Sarah_Carl_Encounter3 is a situation.
-ResolveFunction of Sarah_Carl_Encounter3 is "[ResolveEvent Sarah_Carl_Encounter3]".
-Sarea of Sarah_Carl_Encounter3 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Carl_Encounter3:
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 0 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)) and Player is not CoA:
+	move player to Grey Abbey 2F;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH TALKS TO THE PLAYER ABOUT CARL (S/C SCENE 3) - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 	say "     Going up the stairs to the second floor of the library, you do notice Sarah and Carl hanging out on a nearby sofa. They're having a friendly conversation, leaning back relaxedly on the sofa. Then Sarah notices you and jumps to her feet, coming over to give her hero a hug in greeting. 'Hey there, Carl and I were just trading stories about the funniest things from when we were kids,' she tells you with a smile and nods over to Carl. The muscular soldier moves his arm as if to push himself up from the sofa, but then pauses almost imperceptibly, glancing down to the army jacket laying over his crotch. A heartbeat later, he clears his throat and instead of standing up waves at you, calling out in greeting.";
@@ -1393,25 +1308,12 @@ to say ResolveEvent Sarah_Carl_Encounter3:
 		say "     Sarah lets out a shocked breath and puts a hand in front of her muzzle, then says, 'Oh god! I never even thought of that?! The poor guy, it must be so hard on him to... sniff my scent all the time. And yet, he's been just a normal friend - no, a good friend! Pushing aside urges just like the ones I had isn't an easy matter. I - I'm a bit ashamed at thinking I'm the only one with problems and seeing him as someone to just get my rocks off. And his, of course, but... yeah.' Her tail droops a bit and Sarah mulls over the situation with Carl, nodding to you in thanks. 'I'll have to make sure I don't overtax his self-control then. Carl is a really nice guy to hang out with and I don't want to break him accidentally.'";
 		now CarlSarahSex is 100; [no sex between Carl and Sarah]
 	now lastCarlSarahInteraction is turns;
-	now Sarah_Carl_Encounter3 is resolved;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"Sarah_Carl_Oral_Repeat"	Sarah_Carl_Oral_Repeat	"[EventConditions_Sarah_Carl_Oral_Repeat]"	Grey Abbey 2F	2500	16	50
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6)):
+	move player to Grey Abbey 2F;
+	say "[SarahCarlOral2F]";
 
-to say EventConditions_Sarah_Carl_Oral_Repeat:
-	if (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex is 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 2)): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Carl_Oral_Repeat	"Sarah_Carl_Oral_Repeat"
-
-Sarah_Carl_Oral_Repeat is a situation.
-ResolveFunction of Sarah_Carl_Oral_Repeat is "[ResolveEvent Sarah_Carl_Oral_Repeat]".
-Sarea of Sarah_Carl_Oral_Repeat is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Carl_Oral_Repeat:
+to say SarahCarlOral2F:
 	if debugactive is 1:
 		say "     DEBUG -> SARAH + CARL ORAL - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
 	say "     As you are walking up the stairs to the second floor of the library, you hear an excited bark from above and hasten your steps, curious what you'll find there. On the upper level, there at first is no one apparent who could have made the sound - until you spot a gray and white tail sticking up behind the backrest of a sofa at the back, between some bookshelves. It clearly belongs to a husky and is wagging happily, so you know what you heard wasn't a bark of alarm - but rather joy. Groans and slurping noises make it obvious that someone is having a good time, and the camo pattern shorts lying on the ground next to the sofa tell you that one of them is Carl - which makes it more than likely that he's getting it on with Sarah again.";
@@ -1439,25 +1341,15 @@ to say ResolveEvent Sarah_Carl_Oral_Repeat:
 		now CarlSarahSex is 2;
 	now lastCarlSarahInteraction is turns;
 
+instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl is in Grey Abbey 2F and CarlSarahInteraction > 2 and CarlSarahSex > 1 and SarahCured > 4 and (lastCarlSarahInteraction - turns > 6) and a random chance of 1 in 4 succeeds) and Player is not CoA:
+	move player to Grey Abbey 2F;
+	if CarlSarahSex is 2:
+		say "[SarahCarlOral2F]";
+
 Section 4.3 - Colleen
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Colleen_Encounter1"	Sarah_Colleen_Encounter1	"[EventConditions_Sarah_Colleen_Encounter1]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Colleen_Encounter1:
-	if (Sarah is in Bunker and Colleen is in Bunker and ColleenSarahInteraction < 2 and SarahCured > 1 and (lastColleenSarahInteraction - turns > 6)): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Colleen_Encounter1	"Sarah_Colleen_Encounter1"
-
-Sarah_Colleen_Encounter1 is a situation.
-ResolveFunction of Sarah_Colleen_Encounter1 is "[ResolveEvent Sarah_Colleen_Encounter1]".
-Sarea of Sarah_Colleen_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Colleen_Encounter1:
+after going down from Grey Abbey Library while (Sarah is in Bunker and Colleen is in Bunker and ColleenSarahInteraction < 2 and SarahCured > 1 and (lastColleenSarahInteraction - turns > 6)):
+	move player to Bunker;
 	if ColleenSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> Colleen & SARAH SPEND TIME TOGETHER 1 - ColleenSarahInteraction: [ColleenSarahInteraction] <- DEBUG[line break]";
@@ -1466,40 +1358,26 @@ to say ResolveEvent Sarah_Colleen_Encounter1:
 		if debugactive is 1:
 			say "     DEBUG -> Colleen & SARAH SPEND TIME TOGETHER 2 - ColleenSarahInteraction: [ColleenSarahInteraction] <- DEBUG[line break]";
 		say "[SarahColleenScene2]";
-		now Sarah_Colleen_Encounter1 is resolved;
-	now lastColleenSarahInteraction is turns;
 
 to say SarahColleenScene1:
 	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Colleen one row over on another. The two women smile and laugh as they chat with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
 	now ColleenSarahInteraction is 1;
+	now lastColleenSarahInteraction is turns;
 
 to say SarahColleenScene2:
 	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Colleen one row over on another. The two women each have an open MRE on their laps, sharing a meal and chatting with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
 	now ColleenSarahInteraction is 2;
+	now lastColleenSarahInteraction is turns;
 
 Section 4.4 - Alexandra
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-2	"Sarah_Alexandra_Encounter1"	Sarah_Alexandra_Encounter1	"[EventConditions_Sarah_Alexandra_Encounter1]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Alexandra_Encounter1:
-	if (Sarah is in Bunker and Alexandra is in library and (HP of Alexandra > 0 and HP of Alexandra < 50) and AlexandraSarahInteraction is 0 and SarahCured > 1): [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Alexandra_Encounter1	"Sarah_Alexandra_Encounter1"
-
-Sarah_Alexandra_Encounter1 is a situation.
-ResolveFunction of Sarah_Alexandra_Encounter1 is "[ResolveEvent Sarah_Alexandra_Encounter1]".
-Sarea of Sarah_Alexandra_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Alexandra_Encounter1:
+after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and (HP of Alexandra > 0 and HP of Alexandra < 50) and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
+	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG -> Alexandra & SARAH MEET - AlexandraSarahInteraction: [AlexandraSarahInteraction] <- DEBUG[line break]";
 	project the Figure of Alexandra_clothed_icon;
-	say "     You're just about to step into the main room of the bunker when you hear someone call out, 'Hey! Ow! What are you doing?!' Alarmed, you take the last few steps down in a jump and burst through the door into the underground. The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'Thought I'd properly introduce myself, and find out what's what with you,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
+	say "     Walking down the stairwell to the bunker, you notice the sound of the lower bunker door falling shut. Someone must just have passed this way before you. You don't think much of it and just continue on your way in a normal tempo, which means you're almost at the door yourself when you hear someone call out, 'Hey! Ow! What are you doing?!' Alarmed, you take the last few steps down in a jump and burst through the door into the bunker.";
+	say "     The scene that awaits you is interesting, to say the least - it was Alexandra who came down here, and the former cop is standing just a short distance from the entrance, holding Sarah pinned against the concrete bunker wall with a paw-hand to her chest. 'Thought I'd properly introduce myself, and find out what's what with you,' the doberwoman says in a belligerent tone and sniffs at the anthro husky's body. 'Lady, let go of-' Sarah starts, only to be interrupted by a low growl from Alexandra, who draws her lips back from sharp canine teeth. 'Listen, you stupid mutt! I wanna make one thing clear to you - I'm Alexandra and this pack's alpha bitch! You'd better remember that, or we'll have a problem with each other.'";
 	WaitLineBreak;
 	say "     In a move that speaks of her having taken some self-defense classes in the past, Sarah suddenly gives a sideways shove to the doberwoman's elbow and ducks under Alexandra's follow-up grab, bringing at least a little distance between them. The medical student raises her paw-hands in a passable fighting pose, although the tremble in her voice as she speaks makes it clear that Sarah is far from used to physical confrontations. 'I don't know what you're on about, lady! We're not animals, fighting for dominance, and I'm in no pack! Least of all with a crazy bitch like you!'";
 	if SarahCured > 4: [Sarah had sex with the player]
@@ -1511,27 +1389,10 @@ to say ResolveEvent Sarah_Alexandra_Encounter1:
 	say "     'Oh, hey boss,' Alexandra calls out, her tail giving a little wag as she looks over to you. 'Just about done telling this slut what's what. Did you come down to pound her like the whore she is? I'll leave you to it then.' With that said, the doberwoman strolls up to you and leans in to lap your cheek in a show of devotion, then goes upstairs again. Sarah watches her leave and blows out her breath as the door closes behind Alexandra. 'Good god, that was intense. These damn nanites sure can mess with people. She's really internalized the whole dog thing - pack behavior and all. I - um, guess I should have tried more to de-escalate, but something about her behavior really raised my hackles...'";
 	say "     'So - you're Alexandra's... boss?' the young husky woman asks you, still rather disturbed about the confrontation. Clearing your throat, you do explain how you took in Alexandra after she succumbed to her infection (wisely leaving out that you were the one who pushed her that far). She pretty much declared herself the top bitch of your pack after that. Nodding thoughtfully, Sarah says, 'I'll do my best to keep my distance and not to trigger her. Thank god that you helped me before I was as far gone as that!' After giving you a hug, the young woman walks over to her bed and pulls out a notebook, adding more observations to her ongoing report about what the nanite infection can do.";
 	now AlexandraSarahInteraction is 1;
-	now Sarah_Alexandra_Encounter1 is resolved;
 
 Section 4.5 - Eric
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Eric_Encounter1"	Sarah_Eric_Encounter1	"[EventConditions_Sarah_Eric_Encounter1]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Eric_Encounter1:
-	if (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 2)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Eric_Encounter1	"Sarah_Eric_Encounter1"
-
-Sarah_Eric_Encounter1 is a situation.
-ResolveFunction of Sarah_Eric_Encounter1 is "[ResolveEvent Sarah_Eric_Encounter1]".
-Sarea of Sarah_Eric_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Eric_Encounter1:
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and HP of Eric < 90 and EricSarahInteraction < 3 and SarahCured > 1 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
 	if EricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1544,17 +1405,16 @@ to say ResolveEvent Sarah_Eric_Encounter1:
 		if debugactive is 1:
 			say "     DEBUG -> Eric & SARAH SPEND TIME TOGETHER 3 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahEricScene3]";
-		now Sarah_Eric_Encounter1 is resolved;
-	now lastEricSarahInteraction is turns;
 
 to say SarahEricScene1:
 	project the Figure of Eric_clothed_icon;
-	say "     As you enter the main room of the bunker, you see Eric sitting cross-legged on his bed, totally focused on a book on his lap - so much so that he doesn't even look up as you come in. And neither does he notice Sarah, who walks up to him on her slender paws moments later. Her tail gives a slow and friendly beat as she clears her throat and says, 'Hello there. Nice to meet another human down here... err, you know what I mean.' After the last words, she raises her paw-hand and looks down at it thoughtfully, almost as if she had forgotten that she can't quite count herself as human anymore. Dropping a bookmark between the pages and setting his novel aside, Eric rises from the bed with the grace of a natural gymnast and steps right up to Sarah, taking her paw to shake it in greeting.";
+	say "     As you enter the bunker, you see Eric sitting cross-legged on his bed, totally focused on a book on his lap - so much so that he doesn't even look up as you come in. And neither does he notice Sarah, who walks up to him on her slender paws moments later. Her tail gives a slow and friendly beat as she clears her throat and says, 'Hello there. Nice to meet another human down here... err, you know what I mean.' After the last words, she raises her paw-hand and looks down at it thoughtfully, almost as if she had forgotten that she can't quite count herself as human anymore. Dropping a bookmark between the pages and setting his novel aside, Eric rises from the bed with the grace of a natural gymnast and steps right up to Sarah, taking her paw to shake it in greeting.";
 	say "     'Hey, I'm Eric,' the college athlete greets Sarah with a shy smile. She is momentarily baffled at the nonchalant greeting and the fact that he didn't hesitate one moment to touch her. 'I - I'm Sarah. Aren't you concerned about... catching something? Fur, for example.' Eric shakes his head slowly and replies, 'I don't think that'll be a problem. This... thing that is going on doesn't seem to affect me. That much.' He pauses at that and blushes a little bit, then quickly adds, 'And I'm really happy that you seem like a normal person. Not trying to tear someone's clothes off and mount them, like some of my former classmates at college.'";
 	WaitLineBreak;
 	say "     The two of them look at each other for a few seconds, distracted by their own thoughts, then Sarah starts up the conversation again with a nod at Eric's t-shirt with the logo of his college. 'So... you're enrolled Tenvale, eh?' she asks, smiling at the slender athlete, and wags her tail. 'I went to college there too - 'Go Gorillas!' and all. Tell me, do they still do that thing on campus each year where...' Getting the ball rolling like that (and each of them distracted from their individual hangups), Eric and Sarah have a friendly conversation about college life and their studies.";
 	say "     You decide to give them some privacy to just chat, their thoughts for once far away from the troubles of the devastated city all around you. After a last look over your shoulder at the human and anthro husky sitting next to each other on a bed and talking, you turn your attention elsewhere.";
 	now EricSarahInteraction is 1;
+	now lastEricSarahInteraction is turns;
 
 to say SarahEricScene2:
 	project the Figure of Eric_clothed_icon;
@@ -1563,37 +1423,25 @@ to say SarahEricScene2:
 	LineBreak;
 	say "     Eric doesn't actually notice you standing at the door as they pass by, being too concentrated on recounting a story for Sarah, but the female husky gives you a friendly nod and wag of her tail. You decide not to step forward and draw attention to yourself, instead allowing for some undisturbed bonding time between the two refugees from the nanite apocalypse that you've brought into your bunker.";
 	now EricSarahInteraction is 2;
+	now lastEricSarahInteraction is turns;
 
 to say SarahEricScene3:
 	project the Figure of Eric_clothed_icon;
 	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, chatting about this and that. Between them, there is a small pile of oranges that both pick from and happily eat while they talk. Looks like one of them - or both together - went out to find some supplies and now they're enjoying the literal fruits of that labor with one another. It is nice to see that your rescuees from out in the chaos-ridden city get along so well. With a smile on your face, you wander over and say hello, earning you happy smiles and an excitedly wagging tail from Sarah. 'Hey there my hero,' the female husky calls out to you and tosses you an orange that you easily catch. As you exchange some words with them, you peel and munch on the orange fruit, finding it nice and juicy.";
 	PlayerEat 5;
 	now EricSarahInteraction is 3;
+	now lastEricSarahInteraction is turns;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Eric_Encounter2"	Sarah_Eric_Encounter2	"[EventConditions_Sarah_Eric_Encounter2]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Eric_Encounter2:
-	if (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Eric_Encounter2	"Sarah_Eric_Encounter2"
-
-Sarah_Eric_Encounter2 is a situation.
-ResolveFunction of Sarah_Eric_Encounter2 is "[ResolveEvent Sarah_Eric_Encounter2]".
-Sarea of Sarah_Eric_Encounter2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Eric_Encounter2:
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction is 0 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
 	if cboyEricSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> SARAH & ERIC TALK ABOUT TRANS THINGS 1 - EricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCboyEricScene0]";
 	else: [option for situation more events between them in the library]
 		say ""; [currently not used]
-	now lastEricSarahInteraction is turns;
 
 to say SarahCboyEricScene0:
 	project the Figure of Eric_clothed_icon;
@@ -1606,24 +1454,9 @@ to say SarahCboyEricScene0:
 	say "     'Wow, that is... I didn't even know that was possible!' the medical student says in a suddenly excited tone, with Eric answering glumly, 'What? That I'm a freak? Great!' He starts to tear up and look away, but Sarah puts a paw-hand on his cheek and turns his head to look him right in the eyes. 'No silly,' she says with a smile and a wag of her tail, 'You're at least partially immune. This could be big! There might be a cure somewhere in that. We really need to get you out of the city and to a doctor!' Gaping a little at the revelation, Eric opens his mouth a few times but nothing comes out, at least until he manages to say, 'You - you really mean that?'";
 	say "     This earns Eric a friendly lick from the anthro husky, with her leaning in to hold him tight. 'It'll be alright, Eric. You might just be the savior of all of us in this city.' Sarah holds on to her friend and keeps talking to him in a soft tone, quelling his fears and doubts about himself. After a minute or two, you decide that it'd be best not to disturb such an intimate conversation - or indeed let them know that you listened in until now - and quietly turn around, walking away without being seen by either of the two.";
 	now cboyEricSarahInteraction is 1; [Sarah knows about Eric and has talked with him about it]
+	now lastEricSarahInteraction is turns;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Eric_Encounter3"	Sarah_Eric_Encounter3	"[EventConditions_Sarah_Eric_Encounter3]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_Eric_Encounter3:
-	if (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Eric_Encounter3	"Sarah_Eric_Encounter3"
-
-Sarah_Eric_Encounter3 is a situation.
-ResolveFunction of Sarah_Eric_Encounter3 is "[ResolveEvent Sarah_Eric_Encounter3]".
-Sarea of Sarah_Eric_Encounter3 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Eric_Encounter3:
+after going down from Grey Abbey Library while (Sarah is in Bunker and Eric is in Bunker and EricSarahInteraction > 2 and cboyEricSarahInteraction > 0 and cboyEricSarahInteraction < 2 and HP of Eric > 9 and HP of Eric < 21 and SarahCured > 3 and (lastEricSarahInteraction - turns > 6)) and Player is not CoA:
 	if cboyEricSarahInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 1 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
@@ -1636,7 +1469,6 @@ to say ResolveEvent Sarah_Eric_Encounter3:
 		if debugactive is 1:
 			say "     DEBUG -> Trans Eric & SARAH SPEND TIME TOGETHER 3 - cboyEricSarahInteraction: [EricSarahInteraction] <- DEBUG[line break]";
 		say "[SarahCboyEricScene3]";
-	now lastEricSarahInteraction is turns;
 
 to say SarahCboyEricScene1:
 	say "     Coming into the bunker, you see Sarah and Eric hanging out together. They are sitting cross-legged on Eric's bed, with her talking about what she thinks is going on with the nanites. As she lays out theory after theory, Eric nods wide-eyed, clearly impressed by her medical knowledge and ideas. She spins a tale about some diseases and plagues being cured, hinting that there might be a similar way possible for the nanites, then ends on, '...and in most of those cases, finding someone who was infected but immune really brought research forward a lot.' As she says this and looks him into the eye, Eric blushes a little and starts to turn away his head - only to have her gently stroke his cheek and pull him back to looking right at her. 'There really is no need to be ashamed about what you are, Eric. We're friends and you trust me, right?'";
@@ -1667,6 +1499,7 @@ to say SarahCboyEricScene1:
 		LineBreak;
 		say "     Using the fact that they're distracted, you steal yourself away, avoiding making things even more difficult for Eric. Best to give them the privacy to get through Sarah's 'examination' alone.";
 	now cboyEricSarahInteraction is 2; [Sarah talked Eric into letting her examine him]
+	now lastEricSarahInteraction is turns;
 
 to say SarahCboyEricScene2:
 	say "";
@@ -1682,36 +1515,15 @@ One of them could be all "Yo bitch!" to Sarah, with her getting miffed at Alexan
 
 Section 4.6 - Fang
 
-Table of NavInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Fang_Encounter1"	Sarah_Fang_Encounter1	"[EventConditions_Sarah_Fang_Encounter1]"	Grey Abbey Library	2500	2	100
-
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Fang_Encounter1"	Sarah_Fang_Encounter1	"[EventConditions_Sarah_Fang_Encounter1]"	Grey Abbey Library	2500	2	100
-
-to say EventConditions_Sarah_Fang_Encounter1:
-	if (Sarah is in Bunker and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang < 5 and HP of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Fang_Encounter1	"Sarah_Fang_Encounter1"
-
-Sarah_Fang_Encounter1 is a situation.
-ResolveFunction of Sarah_Fang_Encounter1 is "[ResolveEvent Sarah_Fang_Encounter1]".
-Sarea of Sarah_Fang_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Fang_Encounter1:
+instead of navigating Grey Abbey Library while (Sarah is in Bunker and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang < 5 and HP of Fang > 1) and FangSarahInteraction is 0 and SarahCured > 3) and Player is not CoA:
+	say "[NavCheck Grey Abbey Library]";
+	if NavCheckReturn is false, stop the action;
+	move player to Grey Abbey Library;
 	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
 	if HP of Fang < 3: [Omega Fang]
-		say "you see your pet wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot, his long rope leash trailing behind him on the ground. While that in and of itself isn't too surprising (he is clever enough to loosen and tie the leash from its anchoring point with his at least part-anthro paws) you get curious what he's on about right now. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with some determination in his strides. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
+		say "     Entering the library, you see your pet wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot, his long rope leash trailing behind him on the ground. While that in and of itself isn't too surprising (he is clever enough to loosen and tie the leash from its anchoring point with his at least part-anthro paws) you get curious what he's on about right now. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with some determination in his strides. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
 		say "     Fang is upon her before you can do much more to register the situation, pushing his muzzle against the back of her jeans and sniffing excitedly. Letting out a bark of surprise at the sudden touch, Sarah turns around to look at Fang. Her first reaction is a smile and the tail behind her back starts to wag in a slow beat as the medical student says, 'Oh, hey boy. What are you doing here? Did your leash come undone?' She reaches out to pet Fang's head, earning her a lick as she strokes over the thick fur over his neck. 'Such a strong and good doggie,' she coos as she pets him some more and Fang leans into her touch. 'It is good to know that you're protecting us here. Keeping the beasts out and... hey!'";
 		WaitLineBreak;
 		say "     In her stroking of the gray wolf, Sarah finally noticed that the feral animal is sporting a full-on erection dangling between his legs. He barks at her in a confident, self-assured manner, as if to tell his new bitch that foreplay is over and she should get ready to be bred now... which clearly doesn't resonate well with the young woman. Her hand-paw stroking his furred side instantly moves to grab the wolf's neck, really digging into the loose fur of it to get a good grip. Despite this, Fang's gaze is still locked in on her t-shirt and the firm breasts stretching it out tightly - until Sarah closes her hand around his muzzle to pull it up and look right into his eyes.";
@@ -1721,7 +1533,7 @@ to say ResolveEvent Sarah_Fang_Encounter1:
 		LineBreak;
 		say "     Seeing that Sarah seems to have the situation with Fang well in hand, you stay in the spot from which you silently observed for a few moments more, then quietly walk away.";
 	else if HP of Fang > 2: [Alpha Fang]
-		say "you see your alpha wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot. Curious what the strong canine is up to, you decide to follow and check it out. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with a determined stride. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
+		say "     Entering the library, you see your alpha wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot. Curious what the strong canine is up to, you decide to follow and check it out. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with a determined stride. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
 		say "     Fang is upon her before you can do much more to register the situation, pouncing to hit her in the back with his paws and knock her over. With a lusty growl, he pushes his muzzle against the back of her jeans sniffs excitedly. Clearly, he's horny and wants to mount the bitch whose fertility he can smell so clearly. Letting out a bark of surprise at the sudden ambush, Sarah starts to turn around - only to be hampered by Fang biting at the material of her jeans, trying to hold her down and rip the pants off. The two of them struggle for a moment or two, both of them growling like dogs, then Sarah shouts, 'Get off me you stupid mutt!' The exclamation is underlined by a kick to Fang's side, which actually does get him off her, although he snaps at her leg and just narrowly misses.";
 		WaitLineBreak;
 		say "     Now turning around to sit with her back to the bookshelf, Sarah exchanges hostile stares and growls with Fang. She barks out, 'I am NOT your bitch, fleabag! Don't you think that I'll just bend over for you just because I'm a husky now!' The tension between them rises more and more as Fang ignores Sarah's words and just circles her to find the best angle of attack to subdue his resistant bitch. The wolf's pointy cock is hard and dangles below his crotch, ready to breed her full of his puppies once he's on top of Sarah. The next few seconds almost play out in slow-motion for you, watching silently from behind a nearby bookshelf - Fang pounces on the young woman, growling loudly. But this time, Sarah is ready for him - she swings an almost two-inch thick volume of 'Anatomy and Physiology' at the wolf as he jumps her, smacking him full in the head with the weighty tome.";
@@ -1730,25 +1542,8 @@ to say ResolveEvent Sarah_Fang_Encounter1:
 		say "     The stalemate continues for a few moments longer, then eventually Fang gives a frustrated growl and starts to back away a little from Sarah. 'That's right. Go away you furry bastard!' Sarah snarls at him, in reply to which Fang makes a beeline to the spot the young woman was originally browsing books at - to raise his leg and pee all over the lowest two shelves of medical books. After doing his business, he gives a last aggressive growl, then trots away.";
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
-	now Sarah_Fang_Encounter1 is resolved;
 
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Fang_Encounter2"	Sarah_Fang_Encounter2	"[EventConditions_Sarah_Fang_Encounter2]"	Courtyard	2500	2	100
-
-to say EventConditions_Sarah_Fang_Encounter2:
-	if (HP of Fang is 3 or HP of Fang is 4) and FangSarahInteraction is 1 and SarahCured > 3 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Fang_Encounter2	"Sarah_Fang_Encounter2"
-
-Sarah_Fang_Encounter2 is a situation.
-ResolveFunction of Sarah_Fang_Encounter2 is "[ResolveEvent Sarah_Fang_Encounter2]".
-Sarea of Sarah_Fang_Encounter2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Fang_Encounter2:
+instead of going to Courtyard while (HP of Fang is 3 or HP of Fang is 4) and FangSarahInteraction is 1 and SarahCured > 3 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [Alpha Fang gets his own back against Sane Sarah]
 	project the figure of Sarah_clothed_icon;
 	say "     As you enter the courtyard, you catch sight of Sarah sitting on the edge of the fountain with her back to you, softly humming to herself. Figuring that you might go and have a conversation with her, you begin to approach but someone barges past you as you take a step forward. Annoyed that someone would be so rude, you turn to give them a piece of your mind but stifle any retort as you discover that is Fang and he looks intent on sneaking up the husky, giving you a firm look to communicate that you should remain quiet. Despite the knowledge that this is unlikely to end well, and any desire that you have to warn Sarah of his approach, you submit to your Alpha's will and step back silently to allow him to proceed unhindered. With a grateful nod, the wolf resumes stalking forward, the female canine oblivious to his presence. You only hope that she'll understand and forgive you, or even better not know that you stood by and did nothing.";
 	say "     Maybe she caught his scent, heard his claws on the path, or merely sensed that something was wrong, but as Fang gets within a couple of meters of her, Sarah turns her head and sees the advancing wolf. Her eyes widen as she hurriedly begins to rise, but as she turns her foot-paws get tangled and she sprawls face-first onto the ground, leaving her exposed as the wolf closes the gap. Before she can recover, Fang is atop her, pressing a paw against her back while remaining clear of her fiercely kicking legs, learning from the last time the force that she can put behind them. 'Be still,' the Alpha snarls, putting more pressure on his paw to hold her down. 'Fuck you. Get off me you flea-ridden mutt. I will never submit to you,' Sarah spits back, wriggling desperately in a futile attempt to get free.";
@@ -1756,75 +1551,28 @@ to say ResolveEvent Sarah_Fang_Encounter2:
 	say "     Given Fang's larger size and the position of strength over her, no matter how she struggles, Sarah is unable to escape Fang's hold on her. Tiring of her wriggling and cursing, your Alpha crouches down and grasps the back of her neck hard enough to draw blood, but not enough to cause any further harm, marking her as his own. The husky falls silent and goes stiff, making you unsure as to whether this is due to shock, instinct, or fear. It would seem to be the latter as the medical student begins to cry, taking deep, terrified gulps of air as tears stream over her muzzle and trickle onto the ground. 'P-p-please let me go. I d-don't want to get p-p-p-pregnant. I don't want to be just another breeding bitch in the city, just a fast-cooking incubator for more and more babies. I don't w-w-want to lose who I am. PLEASE?' Sarah begs between sobs, almost shouting at the end before tears overwhelm her again.";
 	say "     To your surprise, Fang releases his grip on the scruff of her neck, briefly licking the few spots of blood from her fur before circling around in front of her and licking at her face to, salty tears being washed away by his tongue as she raises her head and looking at him with a little more humility than during their encounter in the library. 'I'm sorry.' You are shocked to hear an apology from your Alpha, and Sarah seems to be too, but before she can speak, Fang continues. 'I will not rape you. You are scared. Reason behind refusing me. I shall respect this.' While the husky seems unsure how to process this, her sniffling subsides and she relaxes a little against the larger wolf, likely due to a mixture of exhaustion and relief. The two of them lie together like this for several minutes before, considering Sarah to have recovered enough, Fang stands up and begins to leave.";
 	WaitLineBreak;
-	say " 	Strangely, the husky reaches out and attempts to grab Fang's waist as he departs, making him pause and turn back to her. 'Thank you. Despite your forcefulness and how you scared me, you seemed to care in your own way, and for that I am grateful. You may be less feral-minded than I had thought. While I am unlikely to ever willingly have sex with you, getting to know you so that you can earn my trust isn't beyond the realm of impossibility,' she hesitantly says as she stiffly rolls over and sits up. Fang lets out an acknowledging snort and returns back inside to the library. It may be a while before Sarah recovers from this, but considering your Alpha didn't forcefully violate her, there may yet be hope for the two of them to become something like friends, if Fang is willing to accept her willfulness and she, his more animalistic nature. With that, you sneak away.";
+	say " 	Strangely, the husky reaches out and attempts to grab Fang's waist as he departs, making him pause and turn back to her. 'Thank you. Despite your forcefulness and how you scared me, you seemed to care in your own way, and for that I am grateful. You may be less feral-minded than I had thought. While I am unlikely to ever willingly have sex with you, getting to know you so that you can earn my trust isn't beyond the realm of impossibility,' she hesitantly says as she stiffly rolls over and sits up. Fang lets out an acknowledging snort and returns back inside to the library. It may be a while before Sarah recovers from this, but considering your Alpha didn't forcefully violate her, there may yet be hope for the two of them to become something like friends, if Fang is willing to accept her wilfulness and she, his more animalistic nature. With that, you sneak away.";
 	move Player to Courtyard;
 	now FangSarahInteraction is 2;
 	now lastFangSarahInteraction is turns;
-	now Sarah_Fang_Encounter2 is resolved;
 
-
-Table of NavInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Fang_Encounter3"	Sarah_Fang_Encounter3	"[EventConditions_Sarah_Fang_Encounter3]"	Grey Abbey Library	2500	2	100
-
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_Fang_Encounter3"	Sarah_Fang_Encounter3	"[EventConditions_Sarah_Fang_Encounter3]"	Grey Abbey Library	2500	2	100
-
-to say EventConditions_Sarah_Fang_Encounter3:
-	if (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_Fang_Encounter3	"Sarah_Fang_Encounter3"
-
-Sarah_Fang_Encounter3 is a situation.
-ResolveFunction of Sarah_Fang_Encounter3 is "[ResolveEvent Sarah_Fang_Encounter3]".
-Sarea of Sarah_Fang_Encounter3 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_Fang_Encounter3:
-	project the figure of Sarah_clothed_icon;
-	if debugactive is 1:
-		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+instead of going to Grey Abbey Library while (HP of Fang is 3 or HP of Fang is 4) and Fang is in Grey Abbey Library and Fang is Male and Sarah is in Bunker and SarahSlut is 4 and FangSarahInteraction < 1 and lastfuck of Fang - turns > 7 and MaleList is not warded and MaleList is not banned and FemaleList is not warded and FemaleList is not banned and a random chance of 1 in 2 succeeds and Player is not CoA: [Alpha Fang and Slutty Sarah]
 	project the figure of Sarah_naked_icon;
-	say "you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
-	say "     Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";
+	say " 	Entering the library, you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
+	say " 	Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";
 	WaitLineBreak;
-	say "     As she attempts to roll over again to assume a more typical position, Fang firmly places a paw on her chest and halts her, the husky's eyes widening in worry that she has displeased her Alpha. This fear is soon dispelled when the larger wolf circles around until he is standing over her with his cock hovering just in front of her swollen spade, the tip dribbling precum over the lips and adding to the already copious lubrication around the entrance. Instead, she looks up at him and whines needily, keeping her hindquarters still so as not to hinder penetration but tossing her head around impatiently. She doesn't have to wait long before Fang thrusts down forcefully, her vulva spreading with ease around his girthy shaft as he spears into her. Neither of them in the mood for foreplay or going slow, the two canines engage in a very vigorous and lust-driven mating, Sarah yipping and moaning, the volume of which increases each time the wolf's knot slaps against her entrance with a very wet sounding smack.";
-	say "     Unsure whether it is due to the thick scent of sex that is filling the room or just the carnal sight in front of you, you are momentarily tempted to pleasure yourself as you watch but decide against it so as not to miss any of the passion of their coupling as well as wishing to avoid distracting either of the lusty canines, instead settling for watching hungrily as your Alpha claims another willing bitch for his pack. While Fang's thrusts may have been forceful before, his movements are becoming rougher and rougher, short snarls and growls bursting from his throat as he exerts himself, and you can only assume that he is approaching climax and determinedly trying to ram his swollen knot into the warmth of the husky's cunt. Sarah reacts to the extra vigor with unconstrained enthusiasm, a continuous euphoric whine issuing from her open mouth until, at last, her Alpha slams his groin flush with hers and releases a howl as he ejaculates into her womb.";
+	say " 	As she attempts to roll over again to assume a more typical position, Fang firmly places a paw on her chest and halts her, the husky's eyes widening in worry that she has displeased her Alpha. This fear is soon dispelled when the larger wolf circles around until he is standing over her with his cock hovering just in front of her swollen spade, the tip dribbling precum over the lips and adding to the already copious lubrication around the entrance. Instead, she looks up at him and whines needily, keeping her hindquarters still so as not to hinder penetration but tossing her head around impatiently. She doesn't have to wait long before Fang thrusts down forcefully, her vulva spreading with ease around his girthy shaft as he spears into her. Neither of them in the mood for foreplay or going slow, the two canines engage in a very vigorous and lust-driven mating, Sarah yipping and moaning, the volume of which increases each time the wolf's knot slaps against her entrance with a very wet sounding smack.";
+	say " 	Unsure whether it is due to the thick scent of sex that is filling the room or just the carnal sight in front of you, you are momentarily tempted to pleasure yourself as you watch but decide against it so as not to miss any of the passion of their coupling as well as wishing to avoid distracting either of the lusty canines, instead settling for watching hungrily as your Alpha claims another willing bitch for his pack. While Fang's thrusts may have been forceful before, his movements are becoming rougher and rougher, short snarls and growls bursting from his throat as he exerts himself, and you can only assume that he is approaching climax and determinedly trying to ram his swollen knot into the warmth of the husky's cunt. Sarah reacts to the extra vigor with unconstrained enthusiasm, a continuous euphoric whine issuing from her open mouth until, at last, her Alpha slams his groin flush with hers and releases a howl as he ejaculates into her womb.";
 	WaitLineBreak;
-	say "     Given the size of the wolf's cock, the tip must be tightly pressed against the slutty husky's cervix, the nanites playing their part to convert pain to additional nerve-tingling pleasure as jet after jet of hot, virile sperm is shot into her and causing her to orgasm too, the walls of her vagina aiding and encouraging an increasingly sizeable load of cum to fill her womb. Fang slowly settles atop his newest pack-mate, body pressing Sarah against the floor and smothering her in the potent scent of his thick fur, the scent of an Alpha, even as he marks her as his with his seed. From the way that her tongue lolls from the side of her mouth and the shine in her eyes, she is very pleased with herself for enticing such a virile male and being claimed as his, though you wouldn't put it past her to find other males too, but for now she directs her gratitude and affection towards the wolf atop her, licking at his muzzle and throat while the two of them wait for his knot to deflate and the inevitable flood of cum that will follow it. With a contented smile you leave them to savor this moment together and continue with your day.";
+	say " 	Given the size of the wolf's cock, the tip must be tightly pressed against the slutty husky's cervix, the nanites playing their part to convert pain to additional nerve-tingling pleasure as jet after jet of hot, virile sperm is shot into her and causing her to orgasm too, the walls of her vagina aiding and encouraging an increasingly sizeable load of cum to fill her womb. Fang slowly settles atop his newest pack-mate, body pressing Sarah against the floor and smothering her in the potent scent of his thick fur, the scent of an Alpha, even as he marks her as his with his seed. From the way that her tongue lolls from the side of her mouth and the shine in her eyes, she is very pleased with herself for enticing such a virile male and being claimed as his, though you wouldn't put it past her to find other males too, but for now she directs her gratitude and affection towards the wolf atop her, licking at his muzzle and throat while the two of them wait for his knot to deflate and the inevitable flood of cum that will follow it. With a contented smile you leave them to savor this moment together and continue with your day.";
 	move Player to Grey Abbey Library;
 	NPCSexAftermath Sarah receives "PussyFuck" from Fang;
 	now FangSarahInteraction is 1;
 	now lastFangSarahInteraction is turns;
-	now Sarah_Fang_Encounter3 is resolved;
 
 Section 4.7 - David
 
-
-Table of WalkInEvents (continued)
-Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"Sarah_David_Encounter1"	Sarah_David_Encounter1	"[EventConditions_Sarah_David_Encounter1]"	Bunker	2500	2	100
-
-to say EventConditions_Sarah_David_Encounter1:
-	if (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 3 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)) and Player is not CoA: [list of conditions here]
-		now CurrentWalkinEvent_ConditionsMet is true;
-
-Table of GameEventIDs (continued)
-Object	Name
-Sarah_David_Encounter1	"Sarah_David_Encounter1"
-
-Sarah_David_Encounter1 is a situation.
-ResolveFunction of Sarah_David_Encounter1 is "[ResolveEvent Sarah_David_Encounter1]".
-Sarea of Sarah_David_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
-
-to say ResolveEvent Sarah_David_Encounter1:
+after going down from Grey Abbey Library while (Sarah is in Bunker and David is in Bunker and DavidSarahInteraction < 1 and SarahCured > 1 and (lastDavidSarahInteraction - turns > 6)) and Player is not CoA:
 	if DavidSarahInteraction is 0:
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 1 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
@@ -1837,30 +1585,31 @@ to say ResolveEvent Sarah_David_Encounter1:
 		if debugactive is 1:
 			say "     DEBUG -> David & SARAH SPEND TIME TOGETHER 3 - DavidSarahInteraction: [DavidSarahInteraction] <- DEBUG[line break]";
 		say "[SarahDavidScene3]";
-		now Sarah_David_Encounter1 is resolved;
-	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene1:
 	project the Figure of David_clothed_icon;
-	say "     As you walk into the main room of the bunker, you come upon an interesting scene. Sarah is sitting cross-legged on her bed, reading a book, as the human soldier David walks up to her with a friendly smile on his face. Holding out a hand to her, he says, 'Hey there ma'am. Since I guess we're in the same boat - holed up down here and all that - I wanted to say introduce myself. David Jackson, private first class, US army.' Looking up from her book, Sarah gives him a smile in return and her tail starts wagging. She is already halfway to taking his hand before she suddenly hesitates, pulling her hand-paw back a little. 'Um... are you sure you want to do that? I mean - you're still human and I'm... a dog. Aren't you worried it'll rub off on you? These nanites are pretty easy to transmit from what I've seen.'";
+	say "     As you walk down the stairwell into the bunker, you come upon an interesting scene. Sarah is sitting cross-legged on her bed, reading a book, as the human soldier David walks up to her with a friendly smile on his face. Holding out a hand to her, he says, 'Hey there ma'am. Since I guess we're in the same boat - holed up down here and all that - I wanted to say introduce myself. David Jackson, private first class, US army.' Looking up from her book, Sarah gives him a smile in return and her tail starts wagging. She is already halfway to taking his hand before she suddenly hesitates, pulling her hand-paw back a little. 'Um... are you sure you want to do that? I mean - you're still human and I'm... a dog. Aren't you worried it'll rub off on you? These nanites are pretty easy to transmit from what I've seen.'";
 	say "     David gives a little shrug, then enthusiastically slides her hand into his and shakes Sarah's furred appendage. 'Well, it's only polite to treat you like any other person. My grandma always said you should be friendly when meeting someone - no matter what they look like. Of course she only meant our Latino neighbors, but I think one can apply that to anyone. As for the other thing... haven't had any problems so far, and I've been here a while. Guess eating all your greens does pay off in the end, eh?' The canine medical student is almost blown away by her new friend's very open demeanor, and soon they're sitting side by side on her bed together, happily chatting with one another.";
 	now DavidSarahInteraction is 1;
+	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene2:
 	project the Figure of David_clothed_icon;
-	say "     As you walk into the main room of the bunker, you pull open the door leading into its main chamber... and see David sprint past the opening all of a sudden. Stepping into the room, you look after him with a curious expression. Looks like the man has decided to jog a bit, down here in the bunker. The athletic soldier soon reaches the end of the room, slaps the wall lightly and turns around, then sprints back towards you. You hear a friendly, 'Hey there,' as he passes you without stopping, going on with his run till he arrives next to Sarah. The young husky female stands waiting for him, a stopwatch in hand and with a stethoscope around her neck. As you watch, she writes down David's time on a small notepad, then puts her hand on his neck to feel his pulse.";
+	say "     Coming down the stairs to the bunker, you pull open the door leading into its main chamber... and see David sprint past the opening all of a sudden. Stepping into the room, you look after him with a curious expression. Looks like the man has decided to jog a bit, down here in the bunker. The athletic soldier soon reaches the end of the room, slaps the wall lightly and turns around, then sprints back towards you. You hear a friendly, 'Hey there,' as he passes you without stopping, going on with his run till he arrives next to Sarah. The young husky female stands waiting for him, a stopwatch in hand and with a stethoscope around her neck. As you watch, she writes down David's time on a small notepad, then puts her hand on his neck to feel his pulse.";
 	say "     Casually strolling over to the two of them, you ask what's going on, and the somewhat sweaty soldier replies, 'Oh, I'm just helping the doc here with her project.' Sarah's tail wags happily as she hears him say that, but she does raise a finger to clarify, 'I'm not a doctor yet - but I'm getting there, especially if I can figure out why David here has such a high resistance to the nanite infection. Other people seem to transform with the slightest touch, but he's... well, human through and through. And that is after being out on the streets for days and weeks.' She gives her soldier friend a smile and pats his arm - and you notice her hand lingering just a little bit long there, feeling and squeezing his firm bicep.";
 	WaitLineBreak;
 	say "     'So - er... while I don't have all the equipment that I'd like to, I can check our soldier boy out the traditional way. Gathering information about his vitals and all that. From what I can tell so far, he's healthy as a horse.' David stands up a bit straighter and runs a hand through his hair, then says with a chuckle, 'Too bad I'm not hung like one. Wouldn't that be a sight, eh.' The three of you chuckle at his joke, then Sarah turns back to examining him - listening to his heartbeat and breathing, then making David flex and stretch while taking notes. After a little while, you walk away from them again, leaving the two to their research project.";
 	now DavidSarahInteraction is 2;
+	now lastDavidSarahInteraction is turns;
 
 to say SarahDavidScene3:
 	project the Figure of David_clothed_icon;
-	say "     As you walk into the main room of the bunker, you spot David and Sarah standing a bit off to the side, in a far corner of the room - with the soldier just in his underwear and standing at attention as Sarah examines him. She strokes gently over the claw-marks marring the left side of his chest and left thigh, her tail stiff in attention. 'How long ago did you say you got wounded here?' the medical student says, puzzlement audible in her voice. David replies and gives a short accounting of the events in the bar, with the captured demon breaking free and then you coming in and saving his ass. Eyebrows raised, Sarah looks at him as if she expects him to correct himself, then glances down at the scars again, tracing them with the tip of a finger.";
+	say "     Coming down the stairs to the bunker, you spot David and Sarah standing a bit off to the side, in a far corner of the room - with the soldier just in his underwear and standing at attention as Sarah examines him. She strokes gently over the claw-marks marring the left side of his chest and left thigh, her tail stiff in attention. 'How long ago did you say you got wounded here?' the medical student says, puzzlement audible in her voice. David replies and gives a short accounting of the events in the bar, with the captured demon breaking free and then you coming in and saving his ass. Eyebrows raised, Sarah looks at him as if she expects him to correct himself, then glances down at the scars again, tracing them with the tip of a finger.";
 	say "     'There is no way these should be healed this well. Or at all - these slashes here, right over your heart... they're life-threatening. I'm sorry to tell you this, but without medical attention - and I'm talking an ambulance here - you should have bled out in that bar,' the anthro husky tells her friend in a somber tone. David swallows visibly, putting a hand on the healed wounds on his chest - as if to make sure he's not imagining being healthy. 'Hey, calm down. It's alright,' Sarah tells him, lifting the man's head with a finger under his chin so he's looking at her, not himself. 'I've got a theory... You see, you might not actually be resistant or immune to the nanites. It could be that you're just lucky enough to actually have caught a strain that simply wants to... make you whole. You know, not mess with anything else, only heal. Fascinating.'";
 	WaitLineBreak;
 	say "     David keeps standing there for a long moment while Sarah gets a bit of a far-away expression, apparently thinking about the implications of her idea. Finally, he clears his throat and says, 'So then, doc. Can I get dressed again? Getting a bit drafty in just my skivvies.' His husky friend shakes her head as if to clear it from far too many ideas popping up right now, then focuses on David again. 'Oh, erm - sorry. Yeah of course. You can put on your stuff again. And thank you so much for letting me examine you. This might help research even more than I thought.'";
-	now DavidSarahInteraction is 3;
+	now DavidSarahInteraction is 2;
+	now lastDavidSarahInteraction is turns;
 
 Section 5 - Endings
 
