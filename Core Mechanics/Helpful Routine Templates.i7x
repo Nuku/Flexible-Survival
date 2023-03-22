@@ -26,7 +26,7 @@ to malebreedersex: [This is a variation of be above, for monsters who are strict
 		say "     Normally, you don't check female genitalia first so as to give everyone anal access, but in a strict 'breeder' build, you can get away with ignoring it.";
 		say "     We generally avoid strict breeders, but this is more due to a history of male-snubbing and not anything to do with the build itself.";
 		say "     You can add 'and player is impreg_able' if you only want the monster to attempt impregnation if it's possible.[impregchance]";
-	else if anallevel > 1 and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or player is mpreg_ok):
+	else if anallevel > 1 and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or Player is mpreg_ok):
 		say "     This anal scene is guaranteed if they have 'mpreg', but otherwise adheres to standard rolls.";
 		say "     If you're absolutely against m/m content, you can get away with cutting this, but it's generally ill-advised. Regardless, you MUST have the final scene option.[mimpregchance]";
 	else:

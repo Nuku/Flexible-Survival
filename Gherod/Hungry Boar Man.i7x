@@ -176,7 +176,7 @@ to say PhilipTalkTF:
 	say "     Having taken a liking for Philip's [']studly physique['], you wonder if it would be possible for you to share some similarities. In other words, you ask him if he can make you look more like him. It might be the first time you see the big pig jump out of his usual resting spot and move so fast towards you, eagerness visible in his body motions. 'Really?! You want some of this meat on you?' he asks, grabbing his gut and raising it before letting go, his whole fatness jiggling with the momentum. He then puts his big arm around you and gives [italic type]you[roman type] a generous rub all over your body. 'I'm sure you'd look really sexy as a sow... But there are options, depending on what you [']take['] from me...'";
 	say "     Surprisingly carefully, he explains the differences between two of the results you can obtain from him. 'I guess you'd get to be [bold type]more like me if you got some of my fur[roman type]... But if you really want to aim for that [bold type]sow look, maybe you should drink something more creamy[roman type]... Y'know.' he says, leaning back just enough for you to be able to see past his big gut, as he massages his own balls that seem full of what he's talking about. 'I know I'd prefer the latter, but since you've been feeding me well and keeping me safe, I'll let you choose.' he adds, and you can see his rather sizable boar cock twitching as it raises towards a near erection.";
 	WaitLineBreak;
-	if player is submissive:
+	if Player is submissive:
 		say "     [italic type]You really have a hard time resisting his advances, your mind being so close to automatically pick the cum option and just make you kneel in front of him, giving him the greatest blowjob you possibly could and swallow all of that pig cum in the end, letting that tasty creamy seed turn into the sexiest sow just for him and his pleasure... But fortunately, you manage to get a grip of yourself. Barely, though. And the thought still lingers in your mind... He would really like that, wouldn't he?[roman type][line break]";
 		SanLoss 5;
 		WaitLineBreak;
@@ -240,7 +240,7 @@ to say PhilipTalkPIG:
 			say "[pig_fratinitiation]";
 		else:
 			say "     You thank Philip for his readyness to introduce you to the fraternity, but you let him know that you won't go right now. 'Ah, I see. Maybe later, then?' he asks, ending with a snort.";
-	else if piginitiation is 3 and Philip is in large shed and player is not neuter:
+	else if piginitiation is 3 and Philip is in large shed and Player is not neuter:
 		say "     Deciding to bring up his old fraternity again now that he's fed and safe, you get a much better response from the big piggy. 'Those were some good times back with the guys at the mighty Phi Iota Gamma,' he says with a series of loud oinking at the end. 'Mmm... I miss the ole mudhole. We had some really good parties. I wonder how the place is doing these days...' he muses, rubbing his roly-poly belly.";
 		say "     Seeing your opportunity, you tell him that it seems to be doing really well, just having had a really wild party the other day. Plenty of beer, lots of horny sows, all still there and having a good time. You add that you'd wanted to check it out, but they'd said it was for frat brothers only.";
 		say "     He nods at this. 'Yeah, them's the rules,' he mutters, clearly already thinking of the prospect of beer and sows. 'Ain't nothing saying I can't go though. You can be my guest and we can get you initiated into the mighty Phi Iota Gamma.' He wraps his big arm around you and hugs you to his muddy body, grinning merrily and oinking up a storm as the requisite response.";
@@ -380,7 +380,7 @@ to pigfeed:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Feed Philip.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				ItemLoss food by 5;
 				say "[PhilipSpecialFeed]";
@@ -392,9 +392,9 @@ to pigfeed:
 
 to say PhilipSpecialFeed:
 	say "     Happy to deliver the good news to Philip, you let him know that you actually have plenty of food with you, and a lot to spare. 'Ooh... that's great... Now if you just came over here and let me take a look at what you've got...' he says, while lazily lying down in his muddy corner, staring at you as he gives his waiting gut a few rubs";
-	if pigfed is 3 and player is not naked:
-		say ". You walk towards him with all the food, but the pigman stops you, suddenly. 'If you're gonna come here all geared up, you better be ready to scrub the mud out of everything. I suggest you get naked...' he says, which almost seems like an order[if player is submissive], that you are glad to follow[else]. Whatever, he does make a good point[end if], so you remove everything that is covering your body before you proceed any further.";
-	else if pigfed > 3 and player is not naked:
+	if pigfed is 3 and Player is not naked:
+		say ". You walk towards him with all the food, but the pigman stops you, suddenly. 'If you're gonna come here all geared up, you better be ready to scrub the mud out of everything. I suggest you get naked...' he says, which almost seems like an order[if Player is submissive], that you are glad to follow[else]. Whatever, he does make a good point[end if], so you remove everything that is covering your body before you proceed any further.";
+	else if pigfed > 3 and Player is not naked:
 		say ". Knowing the rules, you undress before you start walking towards him with all the food.";
 	else:
 		say ". Naked as you are, you find no problem in just continuing to walk towards the muddy mess and him with all the food.";
@@ -732,7 +732,7 @@ to say sexwithphilip:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let Philip take charge.";
 	say "     ([link]N[as]n[end link]) - Back away.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		let piggymalefun be 8;
 		if Player is submissive, increase piggymalefun by 2;

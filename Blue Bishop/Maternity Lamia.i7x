@@ -39,7 +39,7 @@ to say losetolamia:
 	else:
 		say "     [if HP of Player > 0]Rather than risk you starting to struggle again[else]Not wanting to risk you getting away[end if], the white lamia coils her lower body around you, smooshing your face into her ample bosom. With your face buried in her boobs, your nose is filled with the softly alluring scent of her milk. Without even realizing it, you shift your lips to one of her many nipples and wrap them around it. You suckle softly as the maternal lamia coos softly about how you're a good [if Player is female]girl[else]boy[end if] and to drink up like a good baby.";
 		say "     Her milk flows readily, flowing across your tongue. It is warm, rich and creamy, the flavor so good that you want more. Nursing from her is soothing and you relax more fully, her snug coils around you feeling more like a hug to you than a prison. The wet nurse gently caresses your head as she rocks you gently as she hums a soothing tune.";
-		if Libido of Player > 33 and player is not neuter:
+		if Libido of Player > 33 and Player is not neuter:
 			if Player is male:
 				say "     You grow aroused as you nurse, a fact that doesn't go unnoticed by the multi-breasted beauty. Feeling your erection[smn] pressing firmly against her hugging tail, she shifts against [itthemm], making you throb all the harder. 'Mmm... such an eager boy,' she coos, separating her coils at your groin so she can reach down and take hold of your [cock size desc of Player] manhood. She continues to have you suckle from her, shifting your head to a fresh breast while she plays with your cock[smn]. Her practiced hand teases your [Cock of Player] penis[esmn] until finally you cum hard, spraying your white load even as her many breasts squirt streams of milk over you. Tired now that you've got a full belly of warm milk and are in the haze of your afterglow, you start to drift off for a nap. You're sleepily aware of the lamia singing a soft lullaby as she tucks you in before leaving you to digest your meal.";
 			else:
@@ -460,7 +460,7 @@ This is the Lamia Infection rule:
 			say "     Eventually taken in by the military and processed, you're brought through with relatively little difficult, in spite of your rather strange state.";
 			say "     Finding a job as an infected that doesn't involve the sex trade is particularly difficult, especially when you're a giant snake-person. Your strain compels you to work in a maternity ward, but social stigmas mean you'd never be hired for an uninfected ward, and the infected don't produced offspring in such a way that there's ever any need for one.";
 			say "     You eventually concede to a more scandalous job of merely 'playing' one for particularly deviant suitors, infected or otherwise";
-			if "Horny Bastard" is listed in feats of Player or player is kinky:
+			if "Horny Bastard" is listed in feats of Player or Player is kinky:
 				say ". It pays well, and you find yourself rather fond of these twisted games...";
 			else:
 				say ". As well as it pays, you feel the whole thing to be somewhat beneath your dignity...";

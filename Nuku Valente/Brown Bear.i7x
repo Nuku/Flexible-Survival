@@ -83,7 +83,7 @@ to say UrsineWins:
 		increase HP of Player by 5;
 		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		if Libido of Player < 0, now Libido of Player is 0;
-	else if a random chance of 2 in 3 succeeds and player is not neuter:
+	else if a random chance of 2 in 3 succeeds and Player is not neuter:
 		if Player is male and ( Cunt Count of Player is 0 or a random chance of 2 in 5 succeeds ):
 			say "     She licks her lips as her favorite survivor is once again at her mercy. 'Oh why did you came back?' The smell of her arouses you, and she spots your hardening maleness. 'Oh. I guess we all have needs, now. Let me help you with that.' With that, she kneels down and wraps her huge mouth around your almost painfully swollen cock. You stay motionless as you see her lethal teeth not inches from your straining member, but the fear is soon forgotten as her skillful lips and tongue work you to an orgasm that has you [one of]spurting until your balls ache[or]moaning in pleasure[or]fighting unsuccessfully to avoid cumming over and over[at random]. After an age of being pleasured until your straining cock relaxes, you lay back and begin to doze. While you rest, the honey-scented bear departs, saying in a voice thick with lust, 'I've got to attend to myself now, [one of]Hotshot[or]Honey[at random]. Come back when you're ready for more fun.' Hearing the moaning of the bear as she pleasures herself, you realize it's time to move.";
 			CreatureSexAftermath "Brown Bear Female" receives "OralCock" from "Player";

@@ -10,7 +10,7 @@ Section 1 - Creature Responses
 dronevict is a number that varies.
 
 to say beatthedrone:
-	if dronevict > 2 and Libido of Player > 33 and a random chance of dronevict in 5 succeeds and ( player is not neuter ):
+	if dronevict > 2 and Libido of Player > 33 and a random chance of dronevict in 5 succeeds and ( Player is not neuter ):
 		say "     Having knocked down the wasp girl, you make a grab for her before she can get away. Now that you've caught this cute little thing, you need to decide what you'll do with her. Shall you put her honeyed lips to work or just let her go?";
 		if Player consents:
 			if Player is male:

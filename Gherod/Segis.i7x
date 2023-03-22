@@ -47,7 +47,7 @@ to say ResolveEvent Strange Android Seeker:
 		say "     [bold type]What are you going to do?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Investigate.";
 		say "     ([link]N[as]n[end link]) - Drop it, for now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You think you might have a chance in discovering something if you tried to look for more clues and begin to consider what areas you should head to. Perhaps there is something to be found in another one of these alleys, or you could linger for long enough to hear or watch a similar event take place. Whoever has been doing this will eventually do it again, probably. With that in mind, you tread gingerly along the streets, hoping to make your time and persistence worth it. Nothing seems to be happening in the near vicinity, so you move to another area, setting your path towards a different direction and, again, trying to be discrete. This particular spot does not seem to have a lot of movement, which could be a good place, but that also means anyone could hear you coming if you are too noisy.";
 			say "     And so, you wait around for a while, always on the move, keeping your eyes and ears in maximum alert. Currently, you are passing through another alley with a few small entries into the back sections of the buildings, like small street backyards where there are trashcans and graffiti painted walls. As you continue to walk, you notice a few blue bubbly drops on the floor, which melt into a sticky mess if you squish them under your foot. You hear only a breeze blowing a little harder on your face as you look around, an eerie silence following afterwards and nothing else, but you do happen to spot a few more jiggly blue beads. A closer look reveals a kind of a trail leading to one of the backyards, to a door.";
@@ -62,13 +62,13 @@ to say ResolveEvent Strange Android Seeker:
 			LineBreak;
 			say "     You do not think you should hold any more thoughts about this, as there are other things you must turn your focus to. Regardless of what is happening here, you need to consider your priorities.";
 	else if Resolution of Strange Android Seeker is 2:
-		say "     With the matter of the unknown assaulter in Red Light District still pending, you occasionally find yourself looking back and glancing over your shoulder. This is starting to affect you, keeping you more on guard and deviating your attention from things you could be doing better. This is not just a roaming creature you can either fight your way out or lose your dignity to, but someone who knows what they are doing and with only one goal in mind that you have yet to determine. While you have only seen males victims, you cannot yet conclude that [if player is not male and Player is female]you would be safe[else]females would be safe[end if] from this perverted assaulter, who seems to know a great deal about how to get in places, fight and incapacitate someone. Definitely, it is no ordinary creature.";
+		say "     With the matter of the unknown assaulter in Red Light District still pending, you occasionally find yourself looking back and glancing over your shoulder. This is starting to affect you, keeping you more on guard and deviating your attention from things you could be doing better. This is not just a roaming creature you can either fight your way out or lose your dignity to, but someone who knows what they are doing and with only one goal in mind that you have yet to determine. While you have only seen males victims, you cannot yet conclude that [if Player is not male and Player is female]you would be safe[else]females would be safe[end if] from this perverted assaulter, who seems to know a great deal about how to get in places, fight and incapacitate someone. Definitely, it is no ordinary creature.";
 		say "     You could resume this investigation, but say... What if you actually find and fail to stop them? What could happen to you if you were to be another victim of this assaulter? And will you have wasted your only chance at capturing them, to stop this madness once and for all? But more importantly... Can you do it, if it comes to that? From the information you have gathered so far, this is a strong and intelligent individual.";
 		LineBreak;
 		say "     [bold type]Do you wish to proceed any further with your investigation? You better make sure that you are prepared for an eventual conflict, and you might need to use your aptitudes. [roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Resume your investigation.";
 		say "     ([link]N[as]n[end link]) - Drop it, for now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Having decided to continue, you take a deep breath and return to the area that you think this suspect roams more, hoping to find them in a position in which you can finally see something conclusive. It might not be an easy task, so you double check your equipment and utilities in case you have to use them. Noticing that everything seems to be in place, you are now ready to actively search for this assaulter or any more victims they may have made. This area extends towards the Crimson Street, from behind it, amidst residential blocks of humble characteristics, severely vandalized by now. You struggle to navigate this place somewhat due to how similar everything looks, but marking a few checkpoints does the trick.";
 			say "     Places without a lot of movement is what this pursuer seems to prefer, which signifies the area where you should be. Nevertheless, there may be a chance you will not find anything, so before you get your hopes up, you should consider failure to find anything else as a possible outcome and procure other paths that could be relevant. You do, eventually, make some backup plans and plan your route accordingly, leading yourself through several more alleys that should follow similar patterns as before. Tracing the assaulter's profile in your head, you know better where to look and think like them. It even makes you feel like a proper detective! But you are pretty sure this is just survival instincts doing the work.";
@@ -214,7 +214,7 @@ to say StrangeAndroidSeekerSuccess:
 	say "     [bold type]What will you do with the dragon android body?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Stash it safely.";
 	say "     ([link]N[as]n[end link]) - Destroy it.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     It might, indeed, prove useful, sometime. With this in mind, you carefully grab the android, which turns out to be quite heavy, and find some safe place to stash it in. You take note of this area and leave, now that you know where to get it back if the need shows itself. While you were transporting it, you seemed to have found nothing of use but several bottles of what seems to be... cum, of many different kinds. What would such a creature want with so much semen from so many different species? Perhaps you would not like to know. You collect all the samples, for now.";
 		ItemGain hellfire seed by 1;
@@ -245,13 +245,13 @@ to say StrangeAndroidSeekerSuccess:
 to say StrangeAndroidSeekerFail:
 	WaitLineBreak;
 	say "     You remain at its mercy, and the android surely likes this. With a quite uncharismatic approach, the machine extends its hand towards your crotch and begins to feel up you...";
-	if player is not male:
+	if Player is not male:
 		say "     It does not seem to like what it sees, as it retracts and backs away as soon as it realizes you are not properly equipped. It then turns tails and leaves, no longer interested in you. So... that was it, the assaulter is, in fact, not into dickless people, or... whatever.";
 		say "     You suppose you should just forget this embarrassing moment and leave this matter behind your back, forever. Hopefully. At least it will not chase you anymore.";
 		now Resolution of Strange Android Seeker is 99; [just leaves]
 	else: [is male]
 		say "     To prevent you struggling any further, it calls a needle from its wrist, grabs you by the forearm and swiftly presses it below your shoulder, on the side. It is a quite painless experience, and then it becomes much, much better, as your senses begin to trick you into overwhelming pleasure. Your own brain seems to feed you images of all your hottest fantasies combined, and it feels like they are happening for real, filling you with ecstasy. Your [cock of player] raises to attention at its fullest, almost too fast for comfort, and it desperately needs attention. Though, you are too weak to move, your arms do not respond, and you fall hostage to your own stupor, only moaning and mumbling words you are not even sure they exist.";
-		say "     Then, you feel that sweet relief of a hand around your dick, stroking it in a steady motion as all that bliss is intensified, further reinforced, reapplied and cycled through your body in ways you cannot describe, the only thing you can say about it being... you need more. That piece of meat is so hard you feel like you keep getting erect on top of its already rock solid state, and your cum factories swelling in antecipation, wanting to make you splooge right here and right now, but it takes time... Time that feels too long. You thrust into this hand that keeps on jerking you off, or at least you do, in your mind, since your body remains unresponsive. All you feel is that touch around your shaft, and you wish it was tighter, or that it rubbed you harder... You wanted to feel something rubbing at the tip of your cock, or something tightly wrapped around it as you penetrated some warm hole...";
+		say "     Then, you feel that sweet relief of a hand around your dick, stroking it in a steady motion as all that bliss is intensified, further reinforced, reapplied and cycled through your body in ways you cannot describe, the only thing you can say about it being... you need more. That piece of meat is so hard you feel like you keep getting erect on top of its already rock solid state, and your cum factories swelling in anticipation, wanting to make you splooge right here and right now, but it takes time... Time that feels too long. You thrust into this hand that keeps on jerking you off, or at least you do, in your mind, since your body remains unresponsive. All you feel is that touch around your shaft, and you wish it was tighter, or that it rubbed you harder... You wanted to feel something rubbing at the tip of your cock, or something tightly wrapped around it as you penetrated some warm hole...";
 		WaitLineBreak;
 		say "     Suddenly, you explode. Not you, but your load comes out, and you feel ecstatic, so much that you feel your entire body throbbing. This veil of lust keeps you buried deep into this catatonic state and you cannot escape from it, and you stop caring. All you feel is your own orgasm coming again... and again... A state bliss you do not want to end, in constant pleasure. Your mind begins to break, to shatter, and you become nothing more than a brainwashed cum shooter, taught only how to shoot your load. Over and over again. Non-stop... Forever.";
 		WaitLineBreak;
@@ -403,7 +403,7 @@ to ADAPressTheButton:
 	say "     [bold type]Shall you press the button?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No... Not yet, at least.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		ADASuccess;
 	else:
@@ -1070,7 +1070,7 @@ to say SegisPersonalityHimbo:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 	say "     ([link]N[as]n[end link]) - No, cancel.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     By confirming your decision, Segis automatically makes the switch. 'That's a fucking good pick, bud! I'm glad to let that ol' default mode back and be unapo-... [italic type]Unapologategic-ly[roman type] cool! Uh... That's said wrong? Hey, the smarts cost wasn't meant to make me that bad at talking...! Gotta note that down for revision. Look, these are all [italic type]experimenental[roman type]! ...Oh, I know what's going on! Character limits! Big words are a nope! I can handle that, yeah! Big Segis android is a brave android!'";
 		say "     Clearly noticing the difference in the android's demeanor, you are now certain that the change was effective.";
@@ -1182,7 +1182,7 @@ to say SegisCosmeticExternalGenitalia:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 			say "     ([link]N[as]n[end link]) - No, cancel.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				ItemLoss blue gel by 1;
 				ItemLoss silicone paste by 3;
@@ -1220,7 +1220,7 @@ to say SegisCosmeticExternalGenitalia:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 		say "     ([link]N[as]n[end link]) - No, cancel.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			ItemGain silicone paste by 1;
 			ItemGain junk scrap by 2;
@@ -1358,7 +1358,7 @@ to say SegisCosmeticLactation:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, confirm.";
 			say "     ([link]N[as]n[end link]) - No, cancel.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				ItemLoss gryphon milk by 1;
 				say "     Wanting Segis to have this additional functionality, you instruct him to undergo this change as you hand him the requested item. His eyes blink all over the bottle as he examines its contents, then nods";
@@ -1522,7 +1522,7 @@ to say SegisCosmeticDickSize12:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the shaft. 'Alright! Make sure you get every inch!' he tells you, and not wanting to mess this up, you follow his instructions by rubbing the entire thing with both your hands covered in the paste. The results are almost immediate, as his dick begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as not only the length, but the thickness as well, is added to the already sizable member. It really amazes you how realistic, warm and smooth Segis['] cock feels, as if it was almost like the real deal.";
 				say "     Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole foot-long for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty alright already! Now, if only we could get it even bigger... Heheh...'";
@@ -1558,7 +1558,7 @@ to say SegisCosmeticDickSize16:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the shaft. 'Alright! Make sure you get every inch!' he tells you, and not wanting to mess this up, you follow his instructions by rubbing the entire thing with both your hands covered in the paste. The results are almost immediate, as his dick begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as not only the length, but the thickness as well, is added to the already sizable member. It really amazes you how realistic, warm and smooth Segis['] cock feels, as if it was almost like the real deal.";
 				say "     Eventually, his cock grows truly huge, up to the sixteen inches that were in the description. Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? A whole fucking foot-long and a half for you to play with? I'm pretty sure some people out there have even bigger ones, but hey! This one's pretty massive! Sadly, doesn't seem I can get any bigger with my current setup... But wouldn't that be fun? Heheh...'";
@@ -1647,7 +1647,7 @@ to say SegisCosmeticBallSize4:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the sac underneath it. 'Alright! Make sure you get the whole thing! It's important to spread it across evenly...' he tells you, and not wanting to mess this up, you follow his instructions by rubbing his balls all over with both your hands covered in the paste. The results are almost immediate, as the mass begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as its whole volume increases significantly. It really amazes you how realistic, warm and smooth Segis['] balls feels, as if it was almost like an improved version of the real deal.";
 				say "     Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? Bet I could coat your whole face... I'm pretty sure some people out there can shoot much heavier loads, but hey! I'm a really big shooter now, too! You think we can grow it even more? Heheh...'";
@@ -1683,7 +1683,7 @@ to say SegisCosmeticBallSize5:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Apply the paste yourself.";
 			say "     ([link]N[as]n[end link]) - No, let him do it on his own and oversee the procedure.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Walking up to your android companion, you grab the paste and get on your knees in front of the already respectable black cock between his metallic thighs, ready to spread it across the sac underneath it. 'Alright! Make sure you get the whole thing! It's important to spread it across evenly...' he tells you, and not wanting to mess this up, you follow his instructions by rubbing his balls all over with both your hands covered in the paste. The results are almost immediate, as the mass begins to expand in your grasp by the second, growing little by little, pushing against your fingers and forcing you to open your hand more, as its whole volume increases... By a whole lot! It really amazes you how realistic, warm and smooth Segis['] balls feels, as if it was almost like an improved version of the real deal.";
 				say "     Once you look up, Segis['] eyes are blinking pink, and there is even a heart-shaped dot in the middle of it, an effect that is couple with an almost hazy smile. 'Uuh... Ah! Y-you have done it! That was... That was it! Very enjoyable, friend! Did I... look strange while you did this? I keep finding weird stuff in this module... I seem to actually enjoy being touched a lot more...! How about we test this thing out, eh? Bet I could coat your whole face... I'm pretty sure some people out there can shoot much heavier loads, but hey! I'm a really big shooter now, too! Like crazy big! Sadly, I don't think it can be any bigger... But this is great stuff!'";
@@ -2021,7 +2021,7 @@ to say ResolveEvent Looking For Junk In High Rise:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Scavenge for miscellaneous items.";
 	say "     ([link]N[as]n[end link]) - No, skip it.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Now seems to be a good time as any to acquire some potentially relevant materials for your mechanical shenanigans, or who knows, you could find someone to trade these for. Nevertheless, you shall do your best to look through all this rubble and toppled furniture in hopes to find anything salvageable...";
 		let randomnumber be a random number from 1 to 3; [adjust the latter number for the number of options]
@@ -2165,7 +2165,7 @@ to say SegisTalkUpgrades:
 		WaitLineBreak;
 		say "[SegisUpgradeMenu]";
 	else:
-		if player is not in Maintenance Storeroom:
+		if Player is not in Maintenance Storeroom:
 			say "     If you wish to upgrade Segis, you should head to the [bold type]Maintenance Storeroom[roman type] in the bunker under Grey Abbey Library.";
 		else:
 			say "     You decide to check Segis['] database for possible upgrades...";
@@ -2193,7 +2193,7 @@ to say ResolveEvent Dragon Android's Maintenance Address:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - Not yet.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[DAMAExplore]";
 		else:
@@ -2497,7 +2497,7 @@ Carry out SkipToSegis:
 	say "     Skip upgrade quests?";
 	say "     ([link]Y[as]y[end link]) - Yes, skip those.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		now Resolution of SegisToolQuest is 3; [Segis has a cock!]
 		now Dragon Android's Maintenance Address is resolved;
@@ -2507,7 +2507,7 @@ Carry out SkipToSegis:
 		say "     Would you like to have a shit ton of upgrade items as well? They are going to weigh a lot, so be careful!";
 		say "     ([link]Y[as]y[end link]) - Give me items!";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Here you go!";
 			ItemGain junk scrap by 100;
@@ -2521,7 +2521,7 @@ Carry out SkipToSegis:
 		say "     Do you want to unlock his body types instantly?";
 		say "     ([link]Y[as]y[end link]) - Body types, yes!";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     [bold type]The device you own linked to Segis beeps. It seems your android companion has discovered a new Body Type upgrade!";
 			TraitGain "Body Types Unlocked" for Segis; [always include this alongside a body type unlock, in case it's the first]

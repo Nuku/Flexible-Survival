@@ -209,7 +209,7 @@ to say ResolveEvent Xerxes_AbsentBirth:
 	if OffspringCount of Xerxes is 1:
 		say "     As you walk into the entrance area of the library, you find Xerxes waiting for you, laying on his side on one of the sofas with a view of the entrance. He immediately lets out a happy bark [if Lust of Xerxes > 3]of '[Master]!' [end if]and jumps up from his resting spot to rush over to you. And he's not alone! A second naked young man follows close to your pet's side, dashing forward on all fours as if mimicking his father. Besides the similar behavior, it is more than obvious that this is Xerxes's new son by his appearance, which is really quite similar to your companion. Given that the second human dog has rapidly grown to look just about the same age as his father, you'd have guessed they were brothers if you didn't know any better. Still, there are some signs that this is a still very young man at heart, as the newcomer almost bowls you over with his puppy-like eagerness, making happy sounds as he sniffs at you. Xerxes is only a little bit more controlled than his son, being so very happy to show you his offspring. You welcome your newest pet and give the both of them plenty of petting.";
 	else:
-		say "     As you walk into the entrance area of the library, you find Xerxes waiting for you, laying on his side on one of the sofas with a view of the entrance. He immediately lets out a happy bark [if Lust of Xerxes > 3]of '[Master]!' [end if]and jumps up from his resting spot to rush over to you. And he's not alone but has a new son close by his side! A second naked young man follows close to your pet's side, dashing forward on all fours as if mimicking his father. Besides the similar behavior, it is more than obvious that this is Xerxes's new son by his appearance, which is really quite similar to your companion. Given that the second human dog has rapidly grown to look just about the same age as his father, you'd have guessed they were brothers if you didn't know any better. Still, there are some signs that this is a still very young man at heart, as the newcomer almost bowls you over with his puppy-like eagerness, making happy sounds as he sniffs at you. Xerxes is only a little bit more controlled than his son, being so very happy to show you his offspring. You welcome your newest pet and give the both of them plenty of petting[if OffspringCount of Xerxes is 2], soon followed by Xerxes's second son[else], soon followed by Xerxes's other [OffspringCount of Xerxes - 1] sons[end if] joining the snuggle pile.";	
+		say "     As you walk into the entrance area of the library, you find Xerxes waiting for you, laying on his side on one of the sofas with a view of the entrance. He immediately lets out a happy bark [if Lust of Xerxes > 3]of '[Master]!' [end if]and jumps up from his resting spot to rush over to you. And he's not alone but has a new son close by his side! A second naked young man follows close to your pet's side, dashing forward on all fours as if mimicking his father. Besides the similar behavior, it is more than obvious that this is Xerxes's new son by his appearance, which is really quite similar to your companion. Given that the second human dog has rapidly grown to look just about the same age as his father, you'd have guessed they were brothers if you didn't know any better. Still, there are some signs that this is a still very young man at heart, as the newcomer almost bowls you over with his puppy-like eagerness, making happy sounds as he sniffs at you. Xerxes is only a little bit more controlled than his son, being so very happy to show you his offspring. You welcome your newest pet and give the both of them plenty of petting[if OffspringCount of Xerxes is 2], soon followed by Xerxes's second son[else], soon followed by Xerxes's other [OffspringCount of Xerxes - 1] sons[end if] joining the snuggle pile.";
 	remove "Absent_Birth" from Traits of Xerxes;
 
 Chapter 2 - Xerxes Sex Menu
@@ -220,7 +220,7 @@ Instead of fucking Xerxes:
 	else if lust of Xerxes is 3:
 		project Figure of Xerxes_awesome_hard_icon;
 		say "[AwesomeXerxesSex0]";
-	else if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and player is not neuter:
+	else if lust of Xerxes is 5 and a random chance of 3 in 5 succeeds and Player is not neuter:
 		project Figure of Xerxes_awesome_hard_icon;
 		say "[AwesomeXerxesSex1]";
 	else:
@@ -265,25 +265,25 @@ Instead of fucking Xerxes:
 			now sortorder entry is 6;
 			now description entry is "Fill the human dog's ass with your cock.";
 		[]
-		if (player is male and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (Player is male and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Xerxes & Fang";
 			now sortorder entry is 8;
 			now description entry is "Hot sex with Fang fucking Xerxes.";
 		[]
-		if (player is female and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
+		if (Player is female and Felinoid Companion is tamed and (HP of Xerxes is 11 or HP of Xerxes is 12)):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Klauz";
 			now sortorder entry is 9;
 			now description entry is "Hot sex with Klauz fucking Xerxes.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Xerxes is 10 or HP of Xerxes is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Xerxes & Fang";
 			now sortorder entry is 10;
@@ -801,7 +801,7 @@ to say ResolveEvent Xerxes_Klauz_Encounter1:
 	say "     ([link]Y[as]y[end link]) - Just let things play out between Klauz and Xerxes.";
 	say "     ([link]N[as]n[end link]) - Shoo the cat away from your human dog and tell him to avoid Klauz.";
 	if Player consents:
-		LineBreak;	
+		LineBreak;
 		say "     Still looking a bit confused, the human dog becomes more and more aroused with each touch of fur and sniff of the felinoid's enticing scent. Soon any doubts about getting this close to any cat are forgotten and Xerxes rubs up against Klauz, licking its muzzle. Giving a satisfied rumbling purr, the large cat moves to sniff Xerxes['] ass, then licks between the cheeks of his bubble butt with his wide tongue. Several licks later, the felinoid moves further up, licking the muscled human back of your dog and then his neck. Standing over the smaller human, his belly-fur touching Xerxes back, Klauz is now in the perfect position to fuck him. Lowering his hind legs a bit, the feline rubs his spined cock up and down the human-dog's crack until he soon finds Xerxes['] tight opening and plunges in. With a satisfied roar, he sinks all of his manhood inside, then starts fucking with powerful and deep thrusts. Moans, barks and growls of lust fill the library and you stay close to watch the show.";
 		say "     After quite a while of hot and heavy fucking, Xerxes suddenly gives a pleased yip and long strings of cum start to shoot from his cock onto the library's floor. The spasms of his anal muscles during his orgasm must have given the felinoid the final push he needed, as the large cat buries his hard cock all the way in Xerxes['] ass and holds still, filling him up with his seed. When he finishes cumming, the big cat pulls out and throws himself on the floor in front of a bookshelf to lounge in satisfaction. Your human-dog pet licks Klauz's cock clean, then joins him on the floor, snuggling up against his warm fur.";
 		NPCSexAftermath Xerxes receives "AssFuck" from Klauz;

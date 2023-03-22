@@ -200,7 +200,7 @@ to say losetosiamesecat:
 
 to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.";
-	if (Libido of Player > 29 or "Dominant" is listed in feats of Player) and player is not neuter:
+	if (Libido of Player > 29 or "Dominant" is listed in feats of Player) and Player is not neuter:
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
 		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
 		LineBreak;

@@ -96,7 +96,7 @@ instead of fucking the Blake:
 	else:
 		say "[BlakeWhoreSexMenu]";
 
-instead of going east from Smith Haven Mall Lot East while ((player is not male and HP of Blake is 99) or HP of Blake is 100):
+instead of going east from Smith Haven Mall Lot East while ((Player is not male and HP of Blake is 99) or HP of Blake is 100):
 	if HP of Blake is 99:
 		say "     Wait? Wasn't there something you need if you want to return that way? Yeah, you think you remember someone, a street rat called Blake, telling you that you may only return if you have a dick. Why you would just accept that as the absolute truth isn't really clear in your memory, but it must be true, mustn't it? You're remembering it after all.";
 	if HP of Blake is 100:

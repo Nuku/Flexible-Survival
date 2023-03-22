@@ -129,7 +129,7 @@ Instead of fucking Helen:
 		say "     Helen still seems a bit worn out from the last fun-time. Let her rest a bit more...";
 	else if lust of Helen is 3:
 		say "[AwesomerHelenSex0]";
-	else if lust of Helen is 5 and a random chance of 3 in 5 succeeds and player is not neuter:
+	else if lust of Helen is 5 and a random chance of 3 in 5 succeeds and Player is not neuter:
 		say "[AwesomerHelenSex1]";
 	else:
 		now sextablerun is 0;
@@ -158,25 +158,25 @@ Instead of fucking Helen:
 			now sortorder entry is 4;
 			now description entry is "Fill the human dog's pussy with your cock.";
 		[]
-		if (player is male and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (Player is male and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Klauz";
 			now sortorder entry is 5;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is male and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Male threesome with Helen & Fang";
 			now sortorder entry is 6;
 			now description entry is "Hot sex with Fang fucking Helen.";
 		[]
-		if (player is female and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
+		if (Player is female and Felinoid Companion is tamed and (HP of Helen is 11 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Klauz";
 			now sortorder entry is 7;
 			now description entry is "Hot sex with Klauz fucking Helen.";
 		[]
-		if (player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
+		if (Player is female and Fang is in the Grey Abbey Library and Fang is Male and (HP of Helen is 10 or HP of Helen is 12) ):
 			choose a blank row in table of fucking options;
 			now title entry is "Female threesome with Helen & Fang";
 			now sortorder entry is 8;
@@ -780,7 +780,7 @@ to say ResolveEvent Helen_Fang_Encounter1:
 	else:
 		say "     As you walk up to the front entrance of the library, ";
 	if (HP of Fang is 1 or HP of Fang is 2): [Omega Fang]
-		say "you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling. Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like the question of hierarchy among your pets just got solved."; 
+		say "you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling. Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Helen, who looks to the ground, then rolls over and bares her breasts and moist pussy. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Helen to lick his muzzle. Looks like the question of hierarchy among your pets just got solved.";
 		LineBreak;
 		say "     [bold type]Knowing that this won't stay nonsexual much longer, you...[roman type][line break]";
 		LineBreak;

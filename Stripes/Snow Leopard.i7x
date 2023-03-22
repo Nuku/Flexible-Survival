@@ -84,7 +84,7 @@ to say beatthesnowmeow:
 		now title entry is "Ride him";
 		now sortorder entry is 3;
 		now description entry is "get that cock of his in you";
-		if Player is not female and player is submissive:
+		if Player is not female and Player is submissive:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal doggy style";
 			now sortorder entry is 4;

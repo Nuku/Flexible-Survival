@@ -157,10 +157,10 @@ Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. 
 
 Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
 	if X is Player:
-		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]	
+		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]
 		no;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]	
+		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]
 		no;
 
 Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's ass occupied by something]
@@ -170,7 +170,7 @@ Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's 
 		if (gestation of child > 0 and pregtype is 2) or child is born, no;
 		yes;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]	
+		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]
 		yes;
 
 preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]
@@ -238,7 +238,7 @@ to pregprotocol:
 						say "Your breasts feel especially tender and you are surprised to find them swelling larger despite being [if Player is male]male[else]neuter[end if], now [breast size desc of Player] breasts.";
 					else:
 						say "Your breasts feel especially tender, swollen with your condition, now [breast size desc of Player], the mammary flesh stretched lightly.";
-			if gestation of child < 1 and ( Player is female or player is mpreg_ok ) and skipturnblocker is 0:
+			if gestation of child < 1 and ( Player is female or Player is mpreg_ok ) and skipturnblocker is 0:
 				if pregtype is 1 and Cunt Count of Player is 0:
 					now pregtype is 2;
 				say "[detailbirth]";

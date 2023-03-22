@@ -280,7 +280,7 @@ to say Medeaadjustments:
 		now Medeaub is true;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is female or player is mpreg_ok:
+	if Player is female or Player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Check for pregnancy";
 		now sortorder entry is 1;

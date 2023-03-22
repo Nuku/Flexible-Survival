@@ -35,7 +35,7 @@ to say losetolatexmistress:
 to say beatthelatexmistress:
 	let ltxmscene be 0;
 	say "     Your final blow knocks the latex mistress to her knees and causes her to drop her dark whip. She moans softly as you grab onto her by the shoulder and ";
-	if Libido of Player < 25 or ( player is neuter ):
+	if Libido of Player < 25 or ( Player is neuter ):
 		say "push her to the ground. With your foot pressed between this latex woman's shoulders, you growl at her to not mess with you in the future or you'll punish her more severely. You only let her rise once she moans that she's learned her lesson. When you release her, she grabs her latex whip, which was already starting to melt away, and runs off in search of easier prey to dominate.";
 	else:
 		say "consider your options. It might be fun to dominate the would-be dominatrix. Shall you ";

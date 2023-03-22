@@ -48,7 +48,7 @@ to say losetoeagle:
 to say beattheeagle:
 	if noeaglesex > 2:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds. You make no effort to stop it, same as you've done with the others of its kind recently.";
-	else if eagledefeatnum < 3 or ( player is neuter ) or noeaglesex > 2:
+	else if eagledefeatnum < 3 or ( Player is neuter ) or noeaglesex > 2:
 		say "     Defeated, the eagle shrieks angrily and soars off to nurse his wounds.";
 		increase eagledefeatnum by 1;
 	else:

@@ -170,7 +170,7 @@ to say DragonEggDesc:
 		say "     You get the impression that it won't be too much longer before the egg hatches, its light dulled and the shell having turned [DragonColour]. Four foot from tip to base, the egg frequently wobbles back and forth with the occasional cracking sound issuing from it suggesting its inhabitant is trying to break through the thick shell.";
 
 
-Section 1.1 - Customisation of Dragon
+Section 1.1 - Customization of Dragon
 
 instead of conversing the Dragon Egg:
 	say "[DragonEggHatchingProcess]";
@@ -1509,7 +1509,7 @@ to say Hope-BornDragonPenisModMenu:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] for No Further Modifications, [link]2[end link] for Knotted, [link]3[end link] for Tapered, [link]4[end link] for Prehensile, [link]5[end link] for Barbed, [link]6[end link] for Blunt, [link]7[end link] for Tentacle-lined, [link]8[end link] for Size Modification, or [link]9[end link] for Number Modification.";
-	else: [Initial customisation]
+	else: [Initial customization]
 		while calcnumber < 1 or calcnumber > 7:
 			say "Choice? (1-7)>[run paragraph on]";
 			get a number;
@@ -1524,7 +1524,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 2: [Knotted]
 		LineBreak;
 		if "KnottedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1536,7 +1536,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1550,7 +1550,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 3: [Tapered]
 		LineBreak;
 		if "TaperedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1566,7 +1566,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Blunt'. Please disable 'Blunt' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1580,7 +1580,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 4: [Prehensile]
 		LineBreak;
 		if "PrehensileCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1592,7 +1592,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1606,7 +1606,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 5: [Barbed]
 		LineBreak;
 		if "BarbedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1622,7 +1622,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tentacle-lined'. Please disable 'Tentacle-lined' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1636,7 +1636,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 6: [Blunt]
 		LineBreak;
 		if "BluntCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1652,7 +1652,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tapered'. Please disable 'Tapered' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1666,7 +1666,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 7: [Tentacle-lined]
 		LineBreak;
 		if "TentacledCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1682,7 +1682,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Barbed'. Please disable 'Barbed' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";

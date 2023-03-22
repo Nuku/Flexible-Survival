@@ -191,7 +191,7 @@ to say VRToTheUnknown:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Yes, enter the Void Realm.";
 	say "     ([link]N[as]n[end link]) - No, turn around and leave.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "[ToTheVoid]";
 	else:
@@ -425,22 +425,22 @@ to VRMindConditionCheck:
 	if humanity of Player > 75:
 		Linebreak;
 	else if humanity of Player > 50:
-		if player is kinky: [mind losses are way more sexual in nature]
+		if Player is kinky: [mind losses are way more sexual in nature]
 			say "     [one of]Your mind is starting to drift into the darkness, horrific visages of your deepest and darkest desires beginning to surge unexpectedly. There is some disturbing arousal building within you...[or]Darkness fills your thoughts as several traces of horrifying fiends pop in your mind, and you can only think of how many ways they could have to share some of their dark pleasure with you...[or]The void begins to play tricks in your perception, showing you a vision of too many different aspects of terror just barely grasped by your brain. Though all of them manage to, somehow, turn you on with their grand and inhuman attributes...[at random][line break]";
 		else: [there is only fear and despair]
 			say "     [one of]Your mind is starting to drift into the darkness, horrific visages of your deepest nightmares beginning to surge unexpectedly. They lash at you as if they wanted you gone forever...[or]Darkness fills your thoughts as several traces of horrifying fiends pop in your mind, and you can only perceive their ugliness and cursing whispers...[or]The void begins to play tricks in your perception, showing you a vision of too many different aspects of terror just barely grasped by your brain. They're all monstrous and menacing, making you truly fear this place the more you focus on them, so you try not to.[at random][line break]";
 	else if humanity of Player > 25:
-		if player is kinky: [mind losses are way more sexual in nature]
+		if Player is kinky: [mind losses are way more sexual in nature]
 			say "     [one of]Your mind begins to draw images of monstrous creatures with nightmarish features surrounding you in a demeaning manner, making you feel trapped and vulnerable. Arousal strikes you harshly as you're brought to think of all the possibilities...[or]The presence of the void demons is becoming more and more craved in your senses, and you're finding it increasingly difficult to resist the temptation of allowing them to consume you entirely in exchange for otherworldly pleasure.[or]An illusion appears before you. It is a nightmarish creature of the void with everything that could inflict fear on any mortal being, but in you, there is only arousal for all those forms of obscene sexual appendages. The more time you spend here, the harder it will be to shake these away...[at random][line break]";
 		else: [there is only fear and despair]
 			say "     [one of]Your mind begins to draw images of monstrous creatures with nightmarish features surrounding you in a demeaning manner, making you feel small and vulnerable. Fear strikes harshly as a chill crawls up your spine.[or]The presence of the void demons is becoming more and more craved in your senses, and you're finding it increasingly difficult to endure their curses. Your spirit is shattered and your soul closer to break apart.[or]An illusion appears before you. It is an obscene creature of the void with everything that could inflict fear on any mortal being. Every single form of pain suddenly reaches for you as the illusion shatters in a flash. The more time you spend here, the harder it will be to endure these...[at random][line break]";
 	else if humanity of Player > 10:
-		if player is kinky: [mind losses are way more sexual in nature]
+		if Player is kinky: [mind losses are way more sexual in nature]
 			say "     [one of]The voices are becoming louder. They call for you. They speak to you... They... flirt with you. Your body is ready to accept your fate, but there is still a brink of your sanity left, appealing you to fight it.[or]The noise in your mind is becoming unbearable. You can hardly think of anything but the most otherworldly and obscene sexual forms that only the void can offer, which is hard to resist! You've got to get out of here...[or]The words of the void are as enticing as a well in the middle of a dry, hot desert under a scorching sun.[at random][line break]";
 		else: [there is only fear and despair]
 			say "     [one of]The voices are becoming louder. They call for you. They speak to you... You try to push them away, but they cling and lash violently at what remains of your sanity.[or]The noise in your mind is becoming unbearable. You can hardly think of anything but the most terrible and horrifying shapes that could jump at you in any minute! You've got to get out of here...[or]The words of the void are as maddening and torturous as the sound of endless screams during a state of sleep deprivation.[at random][line break]";
 	else if humanity of Player > 0:
-		if player is kinky:
+		if Player is kinky:
 			say "     [one of]Your legs refuse to move...[or]You're absentmindedly caressing yourself...[or]Sudden ecstasy is becoming a problem...[or]Your body wants to betray you...[or]You're starting to feel an urge to offer yourself to this place...[or]There is only dark lust in your thoughts...[at random][line break]";
 		else:
 			say "     [one of]Panic assaults you...[or]You're shaking uncontrollably...[or]Your eyes are dry and your throat gasps for air...[or]Breathing feels pointless to you...[or]There is only emptiness in your mind...[or]Your hope is gone...[at random][line break]";
@@ -555,7 +555,7 @@ to VREvents: [Events that can happen]
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Face this abomination.";
 				say "     ([link]N[as]n[end link]) - Back to the Core Line.";
-				if player consents:
+				if Player consents:
 					say "     You ready yourself to face whatever is on the other side, keeping you from getting through. Slowly, you take a few steps forward until your body is making it across the veil, although your eyes are met with the most terrifying monster, with an obscene central mass that shapes itself into human genitalia, as dozens and dozens of tentacles flail around before trying to reach for you.";
 					if carried of ancient tome > 0 and TentacleInteractions > 0:
 						say "     [bold type]However...[roman type][line break]";
@@ -646,7 +646,7 @@ to say AbyssalEdgeEvent:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Yes, pull the sword.";
 	say "     ([link]N[as]n[end link]) - No. Let this place be forgotten (This decision is permanent).";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Well, this is an artifact, which might very well be a valuable treasure. Perhaps the most valuable that you will find in here, not to mention it looks like a powerful weapon. With your decision made, you step towards the pedestal, careful to not step on the puddle of dark liquid, and with one hand, you begin to pull the blade. It needs some strength to come off, but other than that, it seems to actually slide off as if it was rubbing against a slippery and soft surface. Slowly, you pull it more... and more... Until you feel the grasp of whatever it was stuck on release completely. With the sword in your hands, you pull it to you completely, admiring its shape and handiwork. It somehow has a flowing darkness around it...";
 		say "     You have acquired the [bold type]Abyssal Edge[roman type] weapon.";
@@ -717,7 +717,7 @@ to say VRGatewayToFreedom:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Allow the light to take you in.";
 	say "     ([link]N[as]n[end link]) - Head back, you don't trust this.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     With a couple more steps forward, you are washed in peace and warmth, slowly pulling you in until you're no longer in control of your body. Your surroundings shift once more, becoming a plain white before it all fades away too quickly...";
 		WaitLineBreak;
@@ -815,7 +815,7 @@ to say VRUnfortunatePrey:
 	say "     Indeed, instead of simply eating it, the snake seems to be playing with it for a while, slipping its long tongue all over the panicked prey's powerless body and feeling every inch for additional taste. Eventually, however, the poor snack disappears completely inside the creature as it is being continuously pulled inside. The gigantic serpentine body then starts to swell in order to accommodate the wiggling shape that is still trying to fight their way out. Then it simply lies down to take a long rest as its prey digests inside. You know it is just a matter of time until the acids begin to work in order to melt the unlucky passerby, who is so helplessly doomed to become nothing more than extra nutrients for the giant serpent.";
 	now VRVoidSerpentTracker is 0;
 	WaitLineBreak;
-	if player is kinky:
+	if Player is kinky:
 		say "     The way the serpent seemed to feed on someone who was walking by, taking its sweet time to taste and feel its prey before swallowing them down entirely, it just seemed to turn you on, somehow... You are not quite sure why, or maybe you are? Nonetheless, this place definitely does something to you, and you can't help but be thinking about it for a while...";
 		if demonologist is listed in companionList of Player and "Invoke Dream - Void Serpent I" is not listed in traits of Xaedihr:
 			say "     [italic type]'Really? That turned you on? Oh, please, do remind me to kick your ass into its mouth the second it appears to fight us, then let me know how it feels! Don't worry about gruesome and slow death as your body melts in digestive acid, I will summon your spirit or something.' Ah, your snarky and sarcastic [']friend['] wishing you the best, as expected from Xaedihr. 'No, I don't wish you death, I was just being an ass. Though if you want to safely experience that, I might... be able to reproduce something nice during your sleep. Just don't... go on a suicide streak, okay? No need for that.' Oh, is he actually worrying about you? You're not quite sure what to think of that either, but it seems he can actually do something new for you.[roman type][line break]";
@@ -849,7 +849,7 @@ to say VRCreepyVisage: [Oh no.]
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Keep going.";
 	say "     ([link]N[as]n[end link]) - Turn back.";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     You shall not be deterred, and with your determination follows the intent to keep going. One step into the darkness, then another, threading carefully through the pitch black path...";
 		say "     Then, a sound coming out of nowhere, like a menacing growl just barely audible. With it, comes a heartbeat... [italic type]Thud... thud... ... thud... thud...[roman type], slowly and steady, deep yet weakened, it thuds in your ears like a fragile pulsing. Only one thing comes to your mind as you glance around, looking for answers...";
@@ -860,7 +860,7 @@ to say VRCreepyVisage: [Oh no.]
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Continue forward.";
 		say "     ([link]N[as]n[end link]) - Go back... Now.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     You really, really should not...";
 			WaitLineBreak;
@@ -909,7 +909,7 @@ to say VRCreepyVisage: [Oh no.]
 
 to say VRTendrilPlants:
 	say "     [bold type]Tendril Plants[roman type][line break]";
-	if player is kinky: [player is deceived by an arousing illusion]
+	if Player is kinky: [player is deceived by an arousing illusion]
 		say "     Amidst your exploration outside the boundaries of the core line, you come across a not so strange, yet still quite peculiar visage of a dark purple forest. Its trees have purple leaves, and there is some red vegetation too, including giant mushrooms. Actually, as you keep walking, you find more and more strange shapes of plants and fungi, and they also get progressively more obscene. Mushrooms start to be found longer, and their heads shrink in width, flattening in one of the sides while popping forward. Then, the head seems to be split in two protuberances with a tiny hole in the middle, often having some sort of liquid leaking from it. As their stems begin to tilt to the sides, their bases widen and become dandling sacs with two squishy orbs inside. They are still mushrooms, you are sure, but they appear more and more like penises.";
 		say "     Glancing over the red foliages, you notice that these too begin to change. Most of them had white and beige flowers blooming as if it was a radiant spring season, but the more your walk forward, the shorter and wider their blossoms are, and their core begins to flatten from the sides with an opening forming in the center. Soon, that hole is found to be slightly more defined in the shape of an almond, with some slick tubes that resemble labia being its only protection from the outside. Future flowers have this shape redesigned into one that perfectly immitates a vulva, and further ahead, they glisten as if they were moist, oozing a very sweet aroma whenever you get closer to them.";
 		WaitLineBreak;
@@ -919,7 +919,7 @@ to say VRTendrilPlants:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Gladly inhale all of that sweet fragrance.";
 			say "     ([link]N[as]n[end link]) - Let it fill your lungs with a deep breath.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				say "     ... That you're simply compelled to breathe it in.";
 			else:
@@ -932,7 +932,7 @@ to say VRTendrilPlants:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Gladly inhale all of that sweet fragrance.";
 			say "     ([link]N[as]n[end link]) - Cover your nose and mouth immediately!";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				say "     ... That you're simply compelled to breathe it in.";
 				WaitLineBreak;
@@ -961,7 +961,7 @@ to VRTPKinkyLoss:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - This is enough for you to calm down.";
 		say "     ([link]N[as]n[end link]) - You still need to grab his foot-long dong in order to be fully satisfied.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You probably had an orgasm or two as Xaedihr held you so well, groping against your privates until the arousing scents began to subside, and you were back to seeing everything darken. Once you come back to your senses, you see your half-demon companion flushed and attempting to catch his breath. 'I will seriously kill you next time.' He doesn't really mean that, deep down he was just very worried about you. Although both legs and clothes seem to have gotten a little messy from the ordeal... Nevermind that fact, you are back to the core line safe and sound. For the time being.";
 			WaitLineBreak;
@@ -1042,7 +1042,7 @@ to say VRTheRealmKing:
 	say "     As you go past the veil, you take cautious steps through the darkness, which then seems to open into a shape similar to a ravine, with you between tall walls of rock with only a barely lit sky above. Your surroundings are, however, covered in steam, as if you were walking into a volcanic area. This is the only area of the Void that has any resemblance with Hell, and you cannot quite put your finger on why. Not that it matters, when survival is much more important in a place like this, but it doesn't cease to be intriguing. There is a strong sulfur smell, and the ground shakes every so often, making it hard to walk by. The air is also heavy and hot, making it hard to breathe, but not impossibly so.";
 	say "     Then, something startles you. It is not just something, but someone, or at least some creature, walking right above you with two massive pairs of legs, so four legs in total, making the ground shake with each step it takes. They are thick, shaped like a spider's, but not quite like one, since they are covered with chitin plates. Its upper torso is made of flesh, a lean form that would be quite attractive on a person, but looks intimidating in such a monstrous creature whose arms are also four and end up in hands with sharp claws. On top of its head, two bladed side-horns are sticking out, suggesting that this is, indeed, a demon. Contrary to most creatures of the Void, this one seems to share resemblances many with the hellspawns...";
 	WaitLineBreak;
-	say "     It pays no attention to you, but you can't help but feel intimidated by such a gigantic being. The demon walks as if it owned the place, and it probably does. Judging by the cluster of tendrils between its legs, wiggling around like size changeable living tentacles, and the gaping darkness in their core, you have an idea of how it preys on intruders. Imagining it is [if player is kinky]surprisingly intriguing[else]terrifying, to say the least[end if]...";
+	say "     It pays no attention to you, but you can't help but feel intimidated by such a gigantic being. The demon walks as if it owned the place, and it probably does. Judging by the cluster of tendrils between its legs, wiggling around like size changeable living tentacles, and the gaping darkness in their core, you have an idea of how it preys on intruders. Imagining it is [if Player is kinky]surprisingly intriguing[else]terrifying, to say the least[end if]...";
 	if "Strong Psyche" is listed in feats of Player:
 		SanLoss 2;
 	else if "Weak Psyche" is listed in feats of Player:
@@ -1146,7 +1146,7 @@ to say VRVoidFireflies:
 					say "Invalid choice. Type [link]1[end link] to choose male interactions, [link]2[end link] for female interactions or [link]3[end link] for both.";
 			if calcnumber is 1: [Male Void Fireflies]
 				Linebreak;
-				say "     And turning your glance over their crotches, you realize most of them are imitating male figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The luminous men also come closer to you, one of them climbing onto your lap as you feel something poke at your midriff, his about eight inches long boner that keeps throbbing at nearly every second. Actually, it is not just there, as some others follow all around you, jerking their cocks in high arousal as their distance from you grows shorter.";
+				say "     And turning your glance over their crotches, you realize most of them are imitating male figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The luminous men also come closer to you, one of them climbing onto your lap as you feel something poke at your midriff, his about eight inches long boner that keeps throbbing at nearly every second. Actually, it is not just there, as some others follow all around you, jerking their cocks in high arousal as their distance from you grows shorter.";
 				say "     Aware of your ";
 				if Player is male:
 					say "own [cock of player] dong raising to attention, the bright green man reaches for it with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
@@ -1168,7 +1168,7 @@ to say VRVoidFireflies:
 					WaitLineBreak;
 			else if calcnumber is 2: [Female Void Fireflies]
 				Linebreak;
-				say "     And turning your glance over their silhouettes and crotches, you realize most of them are imitating female figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The gorgeous, luminous women surround you with their slender shapes, fondling their breasts for your enjoyment as they approach you tenderly, with one of them climbing on top of you.";
+				say "     And turning your glance over their silhouettes and crotches, you realize most of them are imitating female figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The gorgeous, luminous women surround you with their slender shapes, fondling their breasts for your enjoyment as they approach you tenderly, with one of them climbing on top of you.";
 				say "     Aware of your";
 				if Player is male:
 					say "own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the womanly creature on top of you lets go of your mouth, she gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their areolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
@@ -1190,7 +1190,7 @@ to say VRVoidFireflies:
 					WaitLineBreak;
 			else if calcnumber is 3: [Both VFs]
 				Linebreak;
-				say "     It seems like there are shapes of all genders in here, some with feminine and curvy silhouettes, others with a more manly frame, all of them complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle.";
+				say "     It seems like there are shapes of all genders in here, some with feminine and curvy silhouettes, others with a more manly frame, all of them complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle.";
 				if Player is male:
 					say "     As one of the women climbs on top of you, with her slender shape as she fondles her breasts for your viewing pleasure, a group of handsome goo men forms a circle around your head, jerking their cocks in high arousal as their distance from you grows shorter. Aware of your own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, she gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
 					WaitLineBreak;
@@ -1215,7 +1215,7 @@ to say VRVoidFireflies:
 			Linebreak;
 			say "     Attempting to communicate doesn't necessarily mean talking, but you feel like they are some sort of creatures that have a mind of their own. While approaching them and the crystal, you try not to scare them away and let them come closer to you. Eventually, they begin to surround you, and somehow, you begin to feel... a lot better, as they almost seem to be singing for you. Once they had enough, the little fireflies begin to slowly retreat deeper into the cave, and the crystal's light fades away. You are not entirely sure of what just happened, but the spectacle of lights managed to improve your mental status.";
 			say "     Either way, there is nothing left for you here, so you proceed further ahead, eventually following on a path back to the core line.";
-			if Resolution of Luminous Harem is 0 and player is kinky:
+			if Resolution of Luminous Harem is 0 and Player is kinky:
 				now Resolution of Luminous Harem is 1;
 			SanBoost 15;
 		WaitLineBreak;
@@ -1304,7 +1304,7 @@ to VROddTreasurePathChoice:
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Clearly male in nature.";
 				say "     ([link]N[as]n[end link]) - With a strong female form.";
-				if player consents: [male]
+				if Player consents: [male]
 					Linebreak;
 					now Resolution of ElkHeadReaperGender is 10;
 					say "     An enormously tall and muscular, statuesque even, and manly looking creature, wearing a large elk's skull, with two moderate sized horns pointing towards each side, made into a helmet, as a dark ragged cloak coming from underneath it extends itself downwards, past his shoulders and reaching the ground right next to his bare feet. On his right hand, he carries a scythe, constantly dripping a black liquid from the tip of its curved blade. While looking like a visage of the grim reaper himself, you can't help but notice an additional feature that further emphasizes him as a male, right on the crotch. A large, thick and uncut human shaft, perpetually hard, throbbing every once in a while, as he looks down on you intimidatingly.";
@@ -1317,7 +1317,7 @@ to VROddTreasurePathChoice:
 				say "     Unexpectedly so, you find your hands free, as if the ropes that held them simply broke by magic. Maybe that explains how you found yourself tied up so quickly and from such a position, and besides, there are things you cannot understand in this realm, such as the existence of such horrifying creatures like this one, and what they want with you. 'Leave. If I find you again, I will destroy you.' Or sometimes, what they [italic type]don't[roman type] want with you. And with this warning, the Elk Head Reaper, as you will known them by, simply leaves you here, dragging that long scythe across the ground while hitting the rocky walls three times in a row with the pommel. You still don't know why they do that, but at least, you are safe... for the time being.";
 				say "     But before you go, there is something that catches your eye. It is a device with especially wicked perversions, of the kind that seems to effectively restrain and move around freely to adjust to any position. It almost looks like a spherical rack for people to be put in, but for now, you disregard that device. And in fact, you don't even have time to check any of the other morbid structures, as it seems the owner of this dungeon might be coming back soon, while you shouldn't be here. However, you take note of this, and leave through the dark tunnels, towards where the light once was.";
 				say "     This seems to have been the best call, as you are delivered across the veil and back to the core line.";
-				if player is kinky:
+				if Player is kinky:
 					say "     However... how bad would it be to be the Elk Head Reaper's slave for a day...? Perhaps if you reencountered this creature, there would be a chance you could... volunteer for punishment.";
 				if demonologist is listed in companionList of Player:
 					say "     [italic type]'Huh, I was getting worried. Where have you been?' asks Xaedihr, as he sees you returning to his side. 'We should be more careful, getting separated like this could be bad.'[roman type][line break]";
@@ -1336,7 +1336,7 @@ to VROddTreasurePathChoice:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Yes, go on ahead.";
 			say "     ([link]N[as]n[end link]) - No, stay where you are.";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				say "     After taking all your options into consideration, you decide to keep walking forward, into the ever darkening path ahead where you will meet the Elk Head Reaper. Everything still looks the same as before, with nothing new that's worth of notice. The sound from before stopped as well, now leaving a deafening silence in which the only thing you can hear is your own steps on the dirty ground.";
 				if demonologist is listed in companionList of Player:
@@ -1347,7 +1347,7 @@ to VROddTreasurePathChoice:
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Take a stealthy approach through the tunnels (Dexterity Roll).";
 				say "     ([link]N[as]n[end link]) - Confront the Elk Head Reaper.";
-				if player consents:
+				if Player consents:
 					Linebreak;
 					say "     This might mean that the Elk Head Reaper does not know of your presence either, so you are still able to use this possibility at your advantage. With that said, you thread gingerly, as that metallic sound seems to fade away in the dark distance...";
 					Linebreak;
@@ -1370,11 +1370,11 @@ to VROddTreasurePathChoice:
 						say "     'Do you accept your fate?'";
 						if demonologist is listed in companionList of Player:
 							WaitLineBreak;
-							say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
+							say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if Player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
 						Linebreak;
 						say "     ([link]Y[as]y[end link]) - Accept your fate.";
 						say "     ([link]N[as]n[end link]) - Fight!";
-						if player consents:
+						if Player consents:
 							Linebreak;
 							say "     You nod, accepting your terms with the Elk Head Reaper, and [EHRSubjectPro] offers no additional hostility. Instead, you are ordered to follow after [EHRObjectPro] alone, without any of your weapons or gear. 'They shall be delivered back to you once you are done attoning for your deeds, mortal.' [EHRSubjectPro] says, as you follow after [EHRSubjectPro] as obediently as you can...";
 							WaitLineBreak;
@@ -1392,11 +1392,11 @@ to VROddTreasurePathChoice:
 					say "     'Do you accept your fate?'";
 					if demonologist is listed in companionList of Player:
 						WaitLineBreak;
-						say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
+						say "     [italic type]You hear Xaedihr whispering behind you, the creature seemingly ignoring his presence. You don't know how, but he tells you something... 'I can help you fight [EHRObjectPro], but it's going to be tough... If you think you can't take [EHRObjectPro], just submit to [EHRPosAdj] will. Knowing [if Player is submissive]you, you might even enjoy it[else]things, [EHRSubjectPro] will simply take what [EHRSubjectPro] wants from you and leave you be[end if]...[roman type][line break]'";
 					Linebreak;
 					say "     ([link]Y[as]y[end link]) - Accept your fate.";
 					say "     ([link]N[as]n[end link]) - Fight!";
-					if player consents:
+					if Player consents:
 						Linebreak;
 						say "     You nod, accepting your terms with the Elk Head Reaper, and [EHRSubjectPro] offers no additional hostility. Instead, you are ordered to follow after [EHRObjectPro] alone, without any of your weapons or gear. 'They shall be delivered back to you once you are done attoning for your deeds, mortal.' [EHRSubjectPro] says, as you follow after [EHRSubjectPro] as obediently as you can...";
 						WaitLineBreak;
@@ -1458,11 +1458,11 @@ to OTElkHeadReaperFight:
 	Challenge "Elk Head Reaper";
 	if fightoutcome < 20: [player won]
 		Linebreak;
-		say "     With one last strike, after a long and intense battle against one of the most formidable opponents you have ever faced in your life, the elk head reaper kneels to the floor, defeated and finished. As you feel [EHRPosAdj] eyes, hidden behind the elk skull, locking gaze with yours, you also gain a surge of power flowing through you, an urge to show this creature who is in charge, who actually deserves to own the other [if player is submissive]despite your natural submissive tendencies[else if player is dominant], emphasized by your own natural dominant aura[end if]...";
+		say "     With one last strike, after a long and intense battle against one of the most formidable opponents you have ever faced in your life, the elk head reaper kneels to the floor, defeated and finished. As you feel [EHRPosAdj] eyes, hidden behind the elk skull, locking gaze with yours, you also gain a surge of power flowing through you, an urge to show this creature who is in charge, who actually deserves to own the other [if Player is submissive]despite your natural submissive tendencies[else if player is dominant], emphasized by your own natural dominant aura[end if]...";
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Dominate the loser.";
 		say "     ([link]N[as]n[end link]) - Ignore this and just proceed further ahead.";
-		if player consents:
+		if Player consents:
 			OTElkHeadReaperDominate;
 			WaitLineBreak;
 			VRObtainUnknownVoidRelicOne;
@@ -1519,7 +1519,7 @@ to OTElkHeadReaperSubmit:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - You will do anything he says.";
 		say "     ([link]N[as]n[end link]) - This is too much, run away!";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     A hint of satisfaction pours out of the reaper's mouth in the form of a 'Hmpf...' followed by a 'I like when mortals know their place.' Happy with your response, he lifts his foot off your face and puts it on the ground right next to your head. Then, he orders you to stand, keeping your head low, and before you can even blink, he walks towards you, grabbing you by the jaw and pushing you against the wall. Suddenly, you find yourself with his massive cock, bigger than your face, splatted across your cheek and throbbing as it ever was. His long and thick shaft feels warm, it is almost too fascinating... As for the rest of the scenery, you are effectively pinned against the wall, locked nearly between his astoundingly muscular legs.";
 			say "     He looks down at you, and you can even sense the grin it would have been painted in his face, were it not for the elk skull helmet. He says 'Open.' and you open - your mouth, that is - and within a second, you find it full with his dick, stretching your lips wide and nearly dislocating your jaw as he keeps pushing further. You have got no choice here but to take it as deep as he wants to push it, and obviously, you struggle with the size. Not that he cares much, since you are here to be [']punished[']. He simply pushes it in to his heart's content - if he actually has one - and you find yourself being facefucked by a reaper from the void, in his own dungeon, balls swinging heavily back and forth against your chin, cock going deep down your throat until your neck bulges and putting your deepthroating skills to a serious test.";
@@ -1555,7 +1555,7 @@ to OTElkHeadReaperSubmit:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - You will do anything she says.";
 		say "     ([link]N[as]n[end link]) - This is too much, run away!";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     A hint of satisfaction pours out of the reaper's mouth in the form of a 'Hmpf...' followed by a 'I like when mortals know their place.' Happy with your response, she lifts her foot off your face and puts it on the ground right next to your head. Then, she orders you to stand, keeping your head low, and before you can even blink, she walks towards you, grabbing you by the jaw and pushing you against the wall. Suddenly, you find yourself locked between her astoundingly muscular legs, helplessly under her control, as she slides a finger down to her womanhood, engorged and moist, mere inches away from your face.";
 			say "     She looks down at you, and you can even sense the grin it would have been painted in her face, were it not for the elk skull helmet. She says 'Open. Tongue out.' and you open - your mouth, that is - and within a second, you find it full with her vulva, stretching your lips wide and sticking your tongue out. 'Lick. Properly.' she demands, and you comply, slipping it inside her pussy and wiggling as good as you could. You have got no choice here but to take her cooch as deep as she wants to, and obviously, she makes sure you don't interrupt your job, since you are here to be [']punished[']. She simply grinds it against your face to her heart's content - if she actually has one - as your cunnilingus skills are put to a serious test.";
@@ -1608,7 +1608,7 @@ to VRObtainUnknownVoidRelicOne:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Take the relic.";
 		say "     ([link]N[as]n[end link]) - Leave it.";
-		if player consents:
+		if Player consents:
 			say "     You decided to take the relic with you. It is a bit heavy... You might want to drop it in a safe place, losing it would be unfortunate.";
 			ItemGain unknown void relic one by 1;
 			now Resolution of Odd Treasure is 2; [found the relic]
@@ -1629,7 +1629,7 @@ to say VRMirrors:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
 		say "     ([link]N[as]n[end link]) - Just return.";
-		if player consents: [forward]
+		if Player consents: [forward]
 			Linebreak;
 			say "     Since you are here, you figure there should be no harm in pursuing this curiosity a little further...";
 			say "     By simply starting to walk through the corridor with the mirrors, you make it across in less than a minute, arriving at the door on the other side. Grabbing the handle and turning it to the right, it creaks with an ominous, high pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
@@ -1638,7 +1638,7 @@ to say VRMirrors:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
 			say "     ([link]N[as]n[end link]) - Just return...";
-			if player consents: [forward]
+			if Player consents: [forward]
 				Linebreak;
 				say "     It is obvious that you are not done here, so you decide to continue on your way, going past this corridor all the same...";
 				say "     Once more, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, high pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";
@@ -1647,7 +1647,7 @@ to say VRMirrors:
 				Linebreak;
 				say "     ([link]Y[as]y[end link]) - Walk through the corridor.";
 				say "     ([link]N[as]n[end link]) - Just return!";
-				if player consents: [forward]
+				if Player consents: [forward]
 					Linebreak;
 					say "     So these just keep going...? There should be something important at the end of it, if there is an end to these things... With this thought in mind, you continue on your way, going past this corridor as you did with the previous ones.";
 					say "     Yet again, by simply starting to walk through this room with the mirrors, you make it across in less than a couple of minutes, arriving at the door on the other side. Grabbing the handle and turning it to the left, it creaks with an ominous, low pitched sound, followed by the door's movement. You open it, despite the noise, and walk into the next area. Your steps echo through the room...";

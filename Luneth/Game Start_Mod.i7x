@@ -832,30 +832,30 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 			else:
 				say "Invalid Entry";
 		if calcnumber is 1:
-			if OralVirgin of player is true:
-				now OralVirgin of player is false;
-			else if OralVirgin of player is false:
-				now OralVirgin of player is true;
+			if OralVirgin of Player is true:
+				now OralVirgin of Player is false;
+			else if OralVirgin of Player is false:
+				now OralVirgin of Player is true;
 		else if calcnumber is 2:
-			if Virgin of player is true:
-				now Virgin of player is false;
-			else if Virgin of player is false:
-				now Virgin of player is true;
+			if Virgin of Player is true:
+				now Virgin of Player is false;
+			else if Virgin of Player is false:
+				now Virgin of Player is true;
 		else if calcnumber is 3:
-			if PenileVirgin of player is true:
-				now PenileVirgin of player is false;
-			else if PenileVirgin of player is false:
-				now PenileVirgin of player is true;
+			if PenileVirgin of Player is true:
+				now PenileVirgin of Player is false;
+			else if PenileVirgin of Player is false:
+				now PenileVirgin of Player is true;
 		else if calcnumber is 4:
-			if AnalVirgin of player is true:
-				now AnalVirgin of player is false;
-			else if AnalVirgin of player is false:
-				now AnalVirgin of player is true;
+			if AnalVirgin of Player is true:
+				now AnalVirgin of Player is false;
+			else if AnalVirgin of Player is false:
+				now AnalVirgin of Player is true;
 		else:
 			now menuexit is 1;
-		if (OralVirgin of player is true and Virgin of player is true and PenileVirgin of player is true and AnalVirgin of player is true):
+		if (OralVirgin of Player is true and Virgin of Player is true and PenileVirgin of Player is true and AnalVirgin of Player is true):
 			now SexuallyExperienced of player is false;
-		else if (OralVirgin of player is false or Virgin of player is false or PenileVirgin of player is false or AnalVirgin of player is false):
+		else if (OralVirgin of Player is false or Virgin of Player is false or PenileVirgin of Player is false or AnalVirgin of Player is false):
 			now SexuallyExperienced of player is true;
 		now calcnumber is -1;
 
@@ -864,9 +864,9 @@ to say playervirginsay:
 		say "Virgin";
 	else:
 		if StartingGender is 1:
-			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experienced[else]Anal Virgin[end if], [if PenileVirgin of player is false]Penally Experienced[else]Penile Virgin[end if]";
+			say "[if OralVirgin of Player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of Player is false]Anally Experienced[else]Anal Virgin[end if], [if PenileVirgin of Player is false]Penally Experienced[else]Penile Virgin[end if]";
 		else:
-			say "[if OralVirgin of player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of player is false]Anally Experienced[else]Anal Virgin[end if], [if Virgin of player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
+			say "[if OralVirgin of Player is false]Orally Experienced[else]Oral Virgin[end if], [if AnalVirgin of Player is false]Anally Experienced[else]Anal Virgin[end if], [if Virgin of Player is false]Vaginally Experienced[else]Vaginal Virgin[end if]";
 
 to genderlockmenu:
 	now calcnumber is -1;

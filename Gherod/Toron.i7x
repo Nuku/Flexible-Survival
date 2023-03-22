@@ -9,7 +9,7 @@ Version 3 of Toron by Gherod begins here.
 postimport rule:
 	if "Connected Hellfire Corridor" is listed in traits of Toron:
 		connect Hellfire Corridor;
-	if player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
+	if Player is in Hellfire Corridor or player is in Hellfire Unknown or player is in Hellfire Dungeon or player is in Hellfire Cell One:
 		connect Hellfire Corridor;
 
 [***********************************************************]
@@ -222,7 +222,7 @@ to say ToronTalkDrinks:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, drink some Sparkling Water.";
 		say "     ([link]N[as]n[end link]) - No, you're fine as you are.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "[DrinkSparklingWater]";
 			wait for any key;
@@ -297,7 +297,7 @@ to say ToronTalkAE:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have what you need.";
 		say "     ([link]N[as]n[end link]) - You are not ready to do this, yet.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     Having enough of the stuff with you, it is time to restore this useless weapon into its glorious former shape. 'Very well, this shouldn't take long. Would you wait here?' he asks, as he takes the abyssal remnant and the pack of null essences with him to the back room.";
 			ItemLoss null essence by 25;
@@ -643,7 +643,7 @@ to say GiveToronOrcBrew:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Hand him some.";
 		say "     ([link]N[as]n[end link]) - Better not, for now.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     Might as well give this a try. You take the bottle of Orc Cum out and hand it to Toron, who gladly accepts your offer. 'Good! I needed this. Very well, I'll be able to create something new with this. If it's a success, I'll just... send someone to harvest the ingredients. Oh, don't look at me like that, I bet they would enjoy having some eager demons milking them for their cum... since this land is as strange as it is. Anyway, I'll bring these in, though I'll need some time until I can get something done. Come back later, perhaps I'll have news.' Taking both ingredients you have just provided him with, Toron takes them inside, returning to his duties shortly after.";
 			ItemLoss orc cum by 1;
@@ -741,7 +741,7 @@ to say HellfireClubMSTonic:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     You answer positively, letting Toron bring all the items over to the backroom. 'I won't be long.'";
 			WaitLineBreak;
@@ -843,8 +843,8 @@ to say ToronNightAssPlay:
 	NPCSexAftermath Toron receives "Other" from Player;
 
 to say ToronDayAssFuck:
-	say "     Upon having decided what to do with Toron during his freetime, you simply stand by your side of the counter and give him a suggestive look while he's polishing a glass, shifting your gaze towards his ass, which is bare naked right now. 'See something you like?' he asks, as one of his tentacles comes greet you on your side, wrapping itself around your wrist and pulling you to him. You follow his tendril, going around the counter to meet him, and you are quickly met with his rear bumping against your [if player is not naked]bulge[else]exposed shaft[end if]. The bartender follows up by placing down the glass and subtly arching his back, so you can feel him pressing his butt against your crotch, glancing at you over his shoulder. 'You wouldn't do it in front of the boss, would you?' he asks you with a grin, teasing you so much that your erection starts to almost hurt.";
-	say "     Taking hold of him, you turn him around and push him against the bar counter, pushing his back forward and forcing him to bend over in front of you, his dark, gorgeous bubble butt pointing in your direction. He appreciatesthe loud ass slap you give him as you get your hands on his glutes, feeling all the plumpness of his bubble cheeks under your palms before you start to spread them. Reaching closer, you [if player is not naked]whip out your [cock of player] dick[else]grab your [cock of player] dick[end if] and bring it over the space between his glutes, rubbing it across his perinium and over his donut hole. It's already feeling amazing against your shaft, and you can't wait to shove your cock inside him when you feel that moist hole winking hungrily at the sight of your manhood. Slowly, you being to press the tip against his orifice, only slightly as his entrance embraces your length as you thrust, burying it inside inch by inch as the slick walls of his insides pulse with desire.";
+	say "     Upon having decided what to do with Toron during his freetime, you simply stand by your side of the counter and give him a suggestive look while he's polishing a glass, shifting your gaze towards his ass, which is bare naked right now. 'See something you like?' he asks, as one of his tentacles comes greet you on your side, wrapping itself around your wrist and pulling you to him. You follow his tendril, going around the counter to meet him, and you are quickly met with his rear bumping against your [if Player is not naked]bulge[else]exposed shaft[end if]. The bartender follows up by placing down the glass and subtly arching his back, so you can feel him pressing his butt against your crotch, glancing at you over his shoulder. 'You wouldn't do it in front of the boss, would you?' he asks you with a grin, teasing you so much that your erection starts to almost hurt.";
+	say "     Taking hold of him, you turn him around and push him against the bar counter, pushing his back forward and forcing him to bend over in front of you, his dark, gorgeous bubble butt pointing in your direction. He appreciatesthe loud ass slap you give him as you get your hands on his glutes, feeling all the plumpness of his bubble cheeks under your palms before you start to spread them. Reaching closer, you [if Player is not naked]whip out your [cock of player] dick[else]grab your [cock of player] dick[end if] and bring it over the space between his glutes, rubbing it across his perinium and over his donut hole. It's already feeling amazing against your shaft, and you can't wait to shove your cock inside him when you feel that moist hole winking hungrily at the sight of your manhood. Slowly, you being to press the tip against his orifice, only slightly as his entrance embraces your length as you thrust, burying it inside inch by inch as the slick walls of his insides pulse with desire.";
 	WaitLineBreak;
 	say "     'Not so bad for a mortal...' he lets you know, chuckling as you invade his ass, pushing more and more of your meat inside. You can't help but wonder if it is really okay to enjoy fucking the bartender with his boss eyeing you both from a corner, though his gaze is of interest, rather than contempt. 'Put it all in... Enjoy my ass to its fullest... I know you want to.' he tells you, and you're happy to oblige, pushing in every inch until the last. No matter the size of your dick is, he takes it all, and the sensation is truly amazing. You really feel like he could take anything, all while making it feel so good and tight around your shaft. With just a little more pushing, your pelvis finally rests against his glutes, with only your balls remaining outside, and it almost feels like his ass is blowing your dick by how much it's clenching softly around your length. Leaning yourself over on top of him, you begin to fuck him even harder.";
 	say "     The demon lets out a moan in enthusiasm, his tentacles brushing against your body and erogenous zones to give you a boost in pleasure, and a burst of sexual adrenaline begins to fill you. With long and hard poundings, you begin to fuck Toron with eagerness, following up with more deep thrusts where you can feel your entire length simply losing itself in his dark confines, clenching and wiggling around your meatlog with an almost unbearably good sensation. Building up the rhythm, you pin him down fully on top of the counter, giving him no other choice than taking your cock as hard as you decide to fuck him, and you don't go easy on him. With all the action going on, you just feel like thrusting harder and deeper, pounding his ass like a battering ram, over and over and over...";

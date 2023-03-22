@@ -342,7 +342,7 @@ to say leosupplyscene:
 	else:		[water]
 		say "to his plush chair. You follow them, eager to show your thanks as well.";
 		say "     After Leonard's taken his seat, you and he lift the eager little feline into his lap. She mewls happily and grinds her cute ass down onto his stiffening cock, sharing kisses with both of you. ";
-		if scalevalue of Player >= 3 and ( player is not neuter):
+		if scalevalue of Player >= 3 and ( Player is not neuter):
 			say "Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
 			say "     [bold type]Which would you prefer?[roman type][line break]";
 			LineBreak;

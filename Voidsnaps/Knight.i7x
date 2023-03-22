@@ -380,7 +380,7 @@ to say Knight_Random_GetBJ:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Cum on his face. That beard looks like it deserves a coat of jizz.";
 	say "     ([link]N[as]n[end link]) - Bury yourself in his throat and cum!";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Ripping your cock from the knight's talented lips, you flop your saliva-slickened spire against his face, gritting your teeth as you grind your way through your orgasm. Every inch of his face, from his hair to his beard, drips with your seed. By the time you're sated, he can barely open his eyes, rubbing his manhood through his armor in a shameful display of whorish delight. As you dress, you watch the knight stroke his freed shaft with his armor still on. Somehow, the image is even more erotic, and you pause to admire the arc of his cum coating his armor, marking him with his submissiveness. Hopefully, cum doesn't cause rust- though you doubt that the knight minds, based on the cross-eyed, fucked-silly expression on his face. You leave him to pleasure himself, confident that he'll think twice about accosting you in the future. Unless, of course, he wants another faceful of seed.";
 	else:
@@ -391,7 +391,7 @@ to say Knight_Random_GetBJ:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes. He's made a mess of your crotch. He'd better clean it up!";
 		say "     ([link]N[as]n[end link]) - No, the poor knight has had enough for now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Gripping the knight's hair, you stuff his face behind your balls, holding him there until you feel his tongue start to lick, then trailing every inch of your orbs over his face, letting your cock rest between his eyes as he sucks each nut into his mouth, polishing it dutifully. By the time he's finished, your soft cock and sagging balls shine with spit, as clean as they'll get. As you dress, you watch the knight stroke his freed cock with his armor still on. Somehow, the image is even more erotic, and you pause to admire the arc of his cum coating his armor, marking him with his submissiveness. Hopefully, cum doesn't cause rust- though you doubt that the knight minds, based on the cross-eyed, fucked-silly expression on his face. You leave him to pleasure himself, confident that he'll think twice about accosting you in the future.";
 		else:

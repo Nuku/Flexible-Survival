@@ -89,7 +89,7 @@ to say beattheorca:
 		stop the action; [text taken care of at the source]
 	else:
 		project Figure of Orca_hard_icon;
-		if ( Libido of Player - humanity of Player > 15 ) and BodyName of Player is "Killer Whale" and player is not neuter:
+		if ( Libido of Player - humanity of Player > 15 ) and BodyName of Player is "Killer Whale" and Player is not neuter:
 			if Player is herm and anallevel > 1:
 				say "     Having beaten your foe, the heat of battle has gotten your blood pumping and your lustful orca instincts come to the fore.";
 				say "     [bold type]Being dual-gendered, does your male or female aspect take over to dominate this fallen male?[roman type][line break]";

@@ -169,7 +169,7 @@ To say KarishaHelp1:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, you will help the tall herm.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
-	if player consents:
+	if Player consents:
 		say "     Thank you. I will wait for your return.";
 		TraitGain "QuintusKarishaTask1" for Karisha;
 	else:
@@ -373,7 +373,7 @@ to say DekkanAssistance1:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, you will help the old priest.";
 	say "     ([link]N[as]n[end link]) - No, perhaps later.";
-	if player consents:
+	if Player consents:
 		say "     Thank you. I will wait for your return.";
 		TraitGain "QuintusDekkanTask1" for Dekkan;
 	else:

@@ -796,7 +796,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and Player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -1238,7 +1238,7 @@ instead of navigating Park Entrance while (XP of Diego is 98 or (XP of Diego > 2
 
 to say DiegoCollarWearingAftermath:
 	say "     Sauntering around you with [PosAdj of Diego] tail exuberantly wagging left and right, Diego strokes a fingertip along the outside of the band of leather around your neck. 'You see, that's a very special collar indeed. It's tradition to trick the wearer into putting it on, but other ways work too of course. But I won't let you guess any longer what it does now. Let me demonstrate: Bark for me!' Without a thought to do so, you find yourself barking on command, with some of them being a bit strangled-sounding as you try to talk, but nothing except more canine noises escape your throat. 'That's enough, quiet now,' Diego adds with a grin, instantly shutting you up. 'The collar makes the wearer obey, completely. Not anyone of course, only the one they know 'owns' it, and them. And thanks to your help my friend, that's me again!' Tracing [PosAdj of Diego] hand down your front, [SubjectPro of Diego] adds, 'This'll be so much fun! Oh, don't worry, I'll leave you be yourself mostly. But you'll help me when I need you, no questions asked! The tricks we'll be able to play, hah!'";
-	say "     'But first, there's something else you can do for me[if player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
+	say "     'But first, there's something else you can do for me[if Player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
 	if DiegoChanged > 0: [Diego got transformed away from male - let's fix that now]
 		say "Chuckling, the coyote pulls out a little vial from somewhere and adds, 'But before that, let's end the little bit of playing around we've been doing and set things as they should again!' With that, he downs the off-white liquid inside, grinning broadly as his previous male form is restored in but a moment or two. ";
 		SetMalePronouns for Diego;

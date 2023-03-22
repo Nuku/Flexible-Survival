@@ -27,7 +27,7 @@ to say losetoimpalaguy:
 		say "     [if HP of Player > 0]When you give in to the impala's advances, the successful male chuckles and pushes you down onto your knees[else]Worn out from your fight, you cannot resist as the impala man pushes you to your knees[end if]. 'I'm going to have a little fun with you, little [if Player is female]ewe[else]ram[end if],' he says lustily. He strokes his above-average cock against your cheek, the musky scent filling your nose and making [if Player is submissive]your submissive urges well up[else if Player is female]your pussy wet with its virility[else]your mouth water a little[end if][if HP of Player > 0] despite yourself[end if]. Feeling a little lightheaded, you part your lips as he brushes his dribbling glans across them. After a lick to sample his taste, your mouth welcomes it in.";
 		say "     The victorious stud chuckles and grabs your head, thrusting into your mouth as you do your best to lick and suck as he does. Each time he pulls back, he leaves just his tapered glans in your mouth, allowing you a moment to suck on it firmly while your tongue plays across it. His throbbing manhood drools richly musky pre into your mouth and his crotch fur is heavy with his scent as well. You're reduced to an eager, cocksucking slut as you lose yourself in the moment. And when his climax comes, you're fed a gooey load of impala cum that you swallow down with a thirst for more. But done with you for now, the impala stud pushes you back, leaving you to land on your ass. 'That's enough for now, little [if Player is female]ewe[else]ram[end if][if Player is impreg_ok]. Maybe next time I'll give you the breeding you deserve and put a fawn in your belly[else]. I might not be so generous next time you stray into my territory[end if].' And with that said, he drives you off with a firm swat on your ass.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Impala";
-	else if Player is impreg_able or (player is submissive and Cunt Count of Player is 0): [male and female, can be impregnated or submissive]
+	else if Player is impreg_able or (Player is submissive and Cunt Count of Player is 0): [male and female, can be impregnated or submissive]
 		say "     [if HP of Player > 0]Giving in to the impala's advances, the successful male grabs you in his slender arms[else]Exhausted from your fight, you nearly fall over, but the impala man rushes forward to catch you with his slender arms[end if]. 'You're mine now, little ewe...' he says lustily. The presence of the strong male triggers [run paragraph on]";
 		if Player is submissive and player is not impreg_able:
 			say "your submissive nature";
@@ -86,7 +86,7 @@ to say beatimpalagirl:
 
 to say beatimpalaguy:
 	say "The impala falls to the ground before you, defeated.";
-	if Libido of Player > 20 and player is not neuter: [non-genderless victory scenes]
+	if Libido of Player > 20 and Player is not neuter: [non-genderless victory scenes]
 		say "Your libido gets the better of you, and you consider showing the impala his place by [if Player is male]taking his tailhole[else]having him eat your pussy[end if]. Do you want to?";
 		if Player consents:
 			if Player is male: [male victory]
@@ -343,9 +343,9 @@ This is the Impala Infection rule:
 		trigger ending "Impala Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			say "     You succumb fully to your impala instincts, joining up with a herd of other impalas roaming the plains.";
-			if Player is not female and player is submissive:
+			if Player is not female and Player is submissive:
 				say "     Your submissive nature gets the better of you, and when the lead male moves to drive you out of his territory, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. He spends almost as much time with you as he does with the females, you come to love the feeling of his cock filling you.";
-			else if Player is not female and player is mpreg_ok:
+			else if Player is not female and Player is mpreg_ok:
 				say "     When the lead male of the herd moves to drive you out, you instead offer yourself up him. He's wary of you at first, but after he spends some time with you he realizes you're no more a threat to him than a doe. Driven by a strange scent emanating from your rear, he mounts you right there, filling your ass up with his seed. He's surprised when he finds out you're pregnant with his fawn, but happy that you can be a productive member of his herd. In time, you become his favorite doe, bearing him many strong breeder-males like yourself.";
 			else if Player is male:
 				say "You eventually fight your way to the lead male position, fathering many fawns with your plentiful harem of slender impala women.";

@@ -274,7 +274,7 @@ to say sexwithAnastasia:
 		now lastfuck of Anastasia is turns;
 		if HP of Anastasia is 5:
 			say "[Anastasiasex00]"; [first time]
-		else if (player is not neuter) and ( ( HP of Anastasia is 9 or HP of Anastasia is 10 ) and a random chance of 1 in 2 succeeds ) or ( HP of Anastasia > 10 and a random chance of 1 in 4 succeeds ):	[volcano]
+		else if (Player is not neuter) and ( ( HP of Anastasia is 9 or HP of Anastasia is 10 ) and a random chance of 1 in 2 succeeds ) or ( HP of Anastasia > 10 and a random chance of 1 in 4 succeeds ):	[volcano]
 			say "[Anastasiasex06a]"; [volcano - lead-in]
 			if Player is male and ( a random chance of 2 in 3 succeeds or HP of Anastasia is 9 ):
 				say "[Anastasiasex06b]"; [volcano - sex]

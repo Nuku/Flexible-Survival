@@ -387,7 +387,7 @@ This will be the first event of the game and serve as a somewhat prophetic momen
 
 Section 3 - Waking Up
 
-The player will wake up to the sound of their alarm and after some initial scene work the player will move into the bathroom. Once in the bathroom the player will proceed to take a shower before work, this will offer up a menu that will allow the player to set their 'body' up with choices such as weight(overall weight of player from skinny to fat), definition(level of muscle from none to jacked), sex organs(cock or pussy), chest(breasts or pecs), butt(size of player posterior), body hair(none to super furry).
+The player will wake up to the sound of their alarm and after some initial scene work the player will move into the bathroom. Once in the bathroom the player will proceed to take a shower before work, this will offer up a menu that will allow the player to set their 'body' up with choices such as weight(overall weight of player from skinny to fat), definition(level of muscle from none to jacked), sex organs(cock or pussy), chest(breasts or pecs), butt(Size of Player posterior), body hair(none to super furry).
 
 TODO: Look into initial options for pec/breast size and cock/clit size.
 

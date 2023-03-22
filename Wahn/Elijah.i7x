@@ -626,7 +626,7 @@ to say ResolveEvent Examination Room:
 		say "     You manage to move around the jaguar and make a run for it, heading back to the relative safety of the hospital entrance to rethink your next move.";
 	now Examination Room is resolved;
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 0 and Player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice say 'Ah, there you are' coming from right beside you. Turning, you see Elijah straighten up from where he was leaning against the wall next to the door. The dark angel in his tight black leather pants gives you an evaluating look, then continues with 'Come on, you can help me with something...' and starts up the stairs into the library. A shiver of arousal runs through you at being ordered around by the handsome man and you find yourself following him almost without thinking about it.";
@@ -705,7 +705,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 		say "     Shaking off the urge to just let the dark angel lead you to whatever he has planned, you plant your feet solidly on the ground and stop walking. It takes a moment until Elijah notices you're no longer behind him, then he turns and looks at you. 'Come on, keep going. I've got something to do for you,' he says, then adds, 'Get moving. NOW.', annoyance clearly in his voice and written all over his handsome face. Holding fast on the decision you made, you steel your will and shake your head. With an angry grunt, the fallen angel whirls around and walks to the exit. You can hear him muttering to himself '...not as subby as I thought, the little bitch. Now I have to catch a husky or someth-', then he's out the door and on the street, the closing door cutting off his further words.";
 		now thirst of Elijah is 100; [declined sub bondage sex with Elijah]
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 1 and Player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'About time you got back, slut. I've been waiting for you.' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel casually strolls over to you, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. Stepping up to you while you're still checking out his crotch, Elijah lightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master.' Letting a hand wander over your chest, groping and stroking you, he continues, 'And that even though you clearly want to please your betters. You like following my orders, don't you? Tell me!'";
@@ -779,7 +779,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 	now lastfuck of Elijah is turns;
 	now thirst of Elijah is 2;
 
-instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male and DemonBruteStatus is 0):
+instead of going down from the Grey Abbey Library while (Elijah is in the Bunker and HP of Elijah is 99 and thirst of Elijah is 2 and Player is submissive and CuckList is not banned and lastfuck of Elijah - turns > 6 and demon brute is tamed and Player is male and DemonBruteStatus is 0):
 	move player to Bunker;
 	project the figure of Elijah_evil_face_icon;
 	say "     As you enter the bunker, you suddenly hear a voice call out 'There you are, finally! It time to service me again, you little slut. Come here at once!' Looking around, you see that it's Elijah who spoke, who is just standing up from where he was lounging on one of the beds. Dressed only in his tight black leather pants, the dark angel waits for you impatiently with both hands on his hips, a superior smirk on his face as you stare at the rippling muscles of his upper body, then drop your gaze lower to see the bulge in his trousers. As you hurry over to him, all the while still checking out his crotch, Elijah tightly grips your chin and pulls your head up so he can look you in the eye with an evaluating gaze. 'I'm still amazed that a subby bitch like you hasn't been snatched up on the street to serve one or another master. Maybe I should just keep you here, naked and ready to take my cock. I'm getting tired of waiting for you to show up - getting blue-balled while you little whore roam the streets for guys who fuck.'";
@@ -1500,7 +1500,7 @@ to say ElijahSexMenu:
 		now description entry is "Elijah fucks your pussy while Candy fucks his ass";
 	[]
 	if (( ElijahChar-I is "3") or (ElijahChar-I is "4")) and Fang is booked and Fang is Male:
-		if ( HP of Fang is 3 or HP of Fang is 4 ) and player is submissive: [Alpha Fang + Submissive feat]
+		if ( HP of Fang is 3 or HP of Fang is 4 ) and Player is submissive: [Alpha Fang + Submissive feat]
 			choose a blank row in table of fucking options;
 			if Cunt Count of Player >= 2:
 				now title entry is "Get fucked by both Elijah and Fang at once";
@@ -1511,25 +1511,25 @@ to say ElijahSexMenu:
 				now sortorder entry is 12;
 				now description entry is "Elijah and Fang stuff your [if Player is female]cunt[else]ass[end if] at the same time";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and player is submissive):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and Player is submissive):
 		choose a blank row in table of fucking options;
 		now title entry is "Submit to bondage by Elijah";
 		now sortorder entry is 13;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and player is submissive):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and Player is submissive):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Elijah and Zephias the spidertaur";
 		now sortorder entry is 14;
 		now description entry is "Have another bit of fun time in Elijah's sex nest";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and Player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah > 0 and thirst of Elijah < 50 and Player is male and DemonBruteStatus < 2 and Player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Let Elijah dominate Brutus and you";
 		now sortorder entry is 15;
 		now description entry is "Get fucked by Brutus while Elijah rides his ass";
 	[]
-	if (HP of Elijah is 99 and thirst of Elijah is 50 and Player is male and DemonBruteStatus < 2 and player is submissive and demon brute is tamed):
+	if (HP of Elijah is 99 and thirst of Elijah is 50 and Player is male and DemonBruteStatus < 2 and Player is submissive and demon brute is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Make Brutus fuck Elijah";
 		now sortorder entry is 15;
@@ -1630,7 +1630,7 @@ to say ElijahSex3: [fucked by Elijah - ass or pussy]
 		say "     Arriving at the bed you push softly against his chest, making him lie down on it. Putting a line of feather-light kisses down his chest, you work your way to his proudly standing erection, just barely touching it with your lips and making Elijah quiver in need. Then, you pull off his boots and slide down the jeans over his long legs until he's fully naked, lying there ready for you to take.";
 		say "     Grasping his cock in one hand you start licking it, slowly pumping your hand up and down along its shaft, making it wet and slick with your saliva. With Elijah's moans getting louder with each run of your tongue over his dick and a first drop of precum forming on its head, you see it's time to get going.";
 		WaitLineBreak;
-		if the player is submissive and a random chance of 2 in 5 succeeds:
+		if the Player is submissive and a random chance of 2 in 5 succeeds:
 			if Player is female:
 				say "     As you're about to climb onto the bed with him, he grabs you roughly at the wrist and side, flipping you over so you land face down on his bunk. 'Ah ah ah, my horny friend. I'm taking the top this time,' he whispers in your ear as he grinds his cock against your ass. 'I'm going to enjoy giving you the hard pounding that I know you crave, you horny slut,' he adds, letting his hands wander across your rear and between your legs to tease at your wet folds. In the mood to fuck, he doesn't waste any time playing around with you and instead pushes a pair of fingers into your dripping pussy and pulls, forcing you to raise your ass end as an offering to the once-divine being that now treats you so roughly. And, excited by your submissive urges, you revel in it.";
 				say "     Chuckling, he gets his cock into position and thrusts into you hard and fast, causing you to moan loudly. You grind back against his rod as he gives your ass a hard swat. 'Mmm... such a slut,' he laughs before starting to thrust and pound away at you. Your hips quiver and your juices run down your legs as that divine cock pounds away at you. He doesn't put much effort into pleasing you, instead going for a good, hard pounding of your needy hole, and that's just fine with you. You grow increasingly excited just by having the confident angel using you for his own satisfaction. By the time he's finally through with you, you both have up come several times and your cunt is delightfully sore and dripping with angelic semen[if anallevel is 3], as is your asshole[end if].";

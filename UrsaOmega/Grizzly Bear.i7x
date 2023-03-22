@@ -50,7 +50,7 @@ to say GrizzlyLoseCV:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Comply.";
 	say "     ([link]N[as]n[end link]) - Resist (Strength Roll).";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		say "     Right now, you really don't stand a chance, nor are willing to try to resist him.";
 		SanLoss 10;
@@ -86,7 +86,7 @@ to say GrizzlyLoseCV:
 
 to GrizzlyLoseCV2:
 	WaitLineBreak;
-	say "     With enough given time, your body begins to shrink [if player is not naked]out of your clothes[end if]. In your perspective, the grizzly bear just becomes much, much larger than before compared to you. Several seconds pass, and you are nothing but a tiny little creature in front of an enormous giant bear, who looks very excited to be looking at you in such state. He then reaches for you with his big paws, picking you up and bringing you to his eye level. 'Ya look so cute, so small... Love having such a tiny little cub to play with...' You notice him grabbing his thick nine-inch bearhood, which at your current size manages to be longer, wider and heavier than your whole body, and give it some strokes as he eyes you from top to bottom.";
+	say "     With enough given time, your body begins to shrink [if Player is not naked]out of your clothes[end if]. In your perspective, the grizzly bear just becomes much, much larger than before compared to you. Several seconds pass, and you are nothing but a tiny little creature in front of an enormous giant bear, who looks very excited to be looking at you in such state. He then reaches for you with his big paws, picking you up and bringing you to his eye level. 'Ya look so cute, so small... Love having such a tiny little cub to play with...' You notice him grabbing his thick nine-inch bearhood, which at your current size manages to be longer, wider and heavier than your whole body, and give it some strokes as he eyes you from top to bottom.";
 	say "     'Looks like y'saw something ya like...' he teases you, letting you watch him stroke his cock playfully by rubbing it all over with his paw, slowly and gently, moving a finger over the tip and showing you a long strain of precum as he pulls away, spreading it all across his shaft. It glistens in its full erection, wet and slick, already throbbing with excitement. 'Wanna see it up close?' he asks, but instead of waiting for an answer, he simply brings you directly towards his cock, leaning your tiny body on top of it with your head turned towards the tip, then begins to jerk off slowly as he pushes your body across his shaft back and forth. During all the process, you feel his enormous organ throbbing against you, as if fond of your close presence.";
 	WaitLineBreak;
 	say "     Amidst all that rubbing between your body and the bear's warm cock, hard as a rock and pulsing an intoxicating warmth that leaves you dizzy, and you notice that he begins to focus most movement closer to the tip. 'Mmmh... I got ya a little surprise too, cub.' he says, as you feel yourself being pushed all the way to the tip of his bearhood, before he flips you around and has your feet facing his rod instead. It all seems like he is just wanting you to feel his throbbing dong from every angle, as that thick bear cock keeps oozing a glob of precum every so often, even when your feet are close enough to poke at the gleaming glans, coated in slippery juice. The bear lets out a huff, his meat hardening to its peak as he feels your smallness touching the head of his prick...";
@@ -94,7 +94,7 @@ to GrizzlyLoseCV2:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sounds pretty hot...";
 	say "     ([link]N[as]n[end link]) - What?! No! Try to break free!";
-	if player consents:
+	if Player consents:
 		Linebreak;
 		SanLoss 10;
 		increase GrizzlyLoseCVComply by 1;
@@ -118,7 +118,7 @@ to GrizzlyLoseCV2:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You've literally gone too deep, might as well end this now.";
 			say "     ([link]N[as]n[end link]) - Why bother? This actually feels great...";
-			if player consents:
+			if Player consents:
 				Linebreak;
 				say "     Enough anatomy knowledge allows you to move around within the constraining space of the bear's balls, adjusting your position for the intended effect, that is, providing enough internal stimulation in order to provoke his climax. With your strategy in mind, you direct your applied strength towards a pressure point that connects with the base of his bearhood through a nerve, and having detected his weak point, you proceed to pound it generously. Given the tremble you feel all around you as the beast moans in ecstasy, and as the space inside the orbs shrinks due to him holding them with his big paw, you know you are getting the desired result. He grunts and squirms in uncontrollable pleasure the more effort you put into your plan...";
 				WaitLineBreak;

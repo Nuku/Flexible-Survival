@@ -199,7 +199,7 @@ name	desc	weight	object
 "ancient gladius"	"A somewhat old-looking sword, only about 25 inches long, with a double edge on its blade and a cutting tip. It is, however, very sturdy and easy to wield, good to stab and slash any foe in close range."	4	ancient gladius
 
 ancient gladius is an armament. It is not temporary.
-It has a weapon "[one of]your roman blade[or]your ancient gladius[or]your steel blade[at random]".
+It has a weapon "[one of]your Roman blade[or]your ancient gladius[or]your steel blade[at random]".
 Weapon Damage of ancient gladius is 14.
 Weapon Type of ancient gladius is "Melee".
 Objsize of ancient gladius is 3.

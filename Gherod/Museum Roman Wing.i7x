@@ -119,16 +119,16 @@ understand "use roman wing paintings" as UseRWPaintings.
 understand "use roman wing display cases" as UseRWDisplayCases.
 
 check UseRWOrnateArmoire:
-	if player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 check UseRWRomanSoldierStatue:
-	if player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 check UseRWPaintings:
-	if player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 check UseRWDisplayCases:
-	if player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
+	if Player is not in Museum_Roman_Wing, say "You're not in the Museum Roman Wing at the moment." instead;
 
 carry out UseRWOrnateArmoire:
 	say "     As you approach this tall and ornate armoire, made of dark wood and embellished details, you quickly that one of the doors seems like it is not closing completely, giving you the realization that those must be unlocked. As for the drawers on the lower part of the furniture, there are a total of four of them, and you are not so sure they can all be opened, as they all have locks on them without a visible key.";
@@ -144,7 +144,7 @@ carry out UseRWOrnateArmoire:
 		say "     You could try inspecting either the doors or the drawers. With this in mind, [bold type]which one would you like to start with?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Open the doors in front of you.";
 		say "     ([link]N[as]n[end link]) - Check the drawers below.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[RWOrnateArmoireDoors]";
 		else:
@@ -214,7 +214,7 @@ carry out UseRWRomanSoldierStatue:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, dress up the statue.";
 			say "     ([link]N[as]n[end link]) - No, back away, for now.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "[RWRomanSoldierStatueAwakening]";
 			else:
@@ -233,18 +233,18 @@ to say RWRomanSoldierStatueAwakening:
 	say "     However, you still [bold type]feel something...[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - An unexplainable attraction towards the statue.";
 	say "     ([link]N[as]n[end link]) - Creeped out. You really just want to leave.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     It is such a handsome statue, each muscle sculptured in utmost detail, so anatomically perfect... Your gaze loses itself in its body as you admire its features, that masculine visage, so incredibly attractive... You reach out to him, once more, laying your hand on its forearm... The stone is warm, it almost feels like you are touching a person, smooth and lively... Then you realize you just happened to be repeating your steps from before, and end up looking at its face, once more. It is looking back at you, just like before. But, this time, you do not feel creeped out by it. Those lips call for yours, and before you think how absolutely ridiculous this would seem, you reach out for them and plant a kiss with your own.";
 		say "     Closing your eyes, you simply enjoy the warmth of the statue's mouth against yours. You are kissing a statue. A tall, masculine and handsome statue. A statue that should not be this hot - quite literally - and attractive, but a statue nonetheless. This is such a twisted thing to do, but looking at where you have been and the state of the world out there, is this really such an odd act? You do not care anymore, surely tons of people, creatures and whatnot have done way worse than this. You are simply admiring - and kissing - a man made of stone. That is it, nothing more and nothing less, and you intend to enjoy it while it lasts. The next seconds are spent in bliss as you continue to make out with this sculpture, its unmoving and oddly warm lips being enough to turn you on...";
 		WaitLineBreak;
-		say "     You [if player is not naked]begin to remove your clothes and[else]simply[end if] begin to rub your bare body against its frame, and even though its armor is cold against your skin, you feel the warmth of its presence touching you as you embrace it. Only if it was alive... the man could hug you back, rub those strong hands all over you as you shared tongues. Your mind is doing all the work, these feelings being so vivid that it nearly looks like the statue is actually moving and doing all that. It... really feels like you are being rubbed all over, and that its lips and tongue are moving to meet yours... You want more... You [italic type]need[roman type] more. Perhaps you could remove its armor and get it naked?";
+		say "     You [if Player is not naked]begin to remove your clothes and[else]simply[end if] begin to rub your bare body against its frame, and even though its armor is cold against your skin, you feel the warmth of its presence touching you as you embrace it. Only if it was alive... the man could hug you back, rub those strong hands all over you as you shared tongues. Your mind is doing all the work, these feelings being so vivid that it nearly looks like the statue is actually moving and doing all that. It... really feels like you are being rubbed all over, and that its lips and tongue are moving to meet yours... You want more... You [italic type]need[roman type] more. Perhaps you could remove its armor and get it naked?";
 		say "     It is then when you open your eyes, once more, and... Find yourself trapped within the statue's arms, which have somehow moved around you. Looking back at its face, you realize its mouth is frozen still, open and with its tongue in a position that suggested it was twirling around yours as you were kissing it. However, the statue is not moving, anymore. It really does not move an inch, and you watch it carefully from very up close. Just... What is happening?!";
 		LineBreak;
 		say "     Looking at this strange situation, [bold type]what should you do, next?[roman type][line break]";
 		say "     ([link]Y[as]y[end link]) - Close your eyes.";
 		say "     ([link]N[as]n[end link]) - This got very weird, now. Leave immediately.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Maybe you do need to close your eyes? Whenever you felt movement, you were not looking at it. Is this some sort of weeping angel thing? Well, you will know once you try it out, diving into visual darkness for yet another time...";
 			WaitLineBreak;
@@ -291,7 +291,7 @@ instead of going to Museum North Hub while (Resolution of LarsGenitals is 1 or R
 	say "     As you explore the northern hub of the museum, you recall a mental note on your quest to help Lars with gaining some form of manhood. Do you wish to do that right now?";
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     After giving it some thought, you have decided to go look for this mythological wing the roman soldier spoke about. Soon, you find out that this hub has plenty of them, and that the difficulty will be in finding one that would actually help you in this matter. Perhaps you do not need an entire division full of greek, roman or norse gods, or from some other era, even though they could contain something of interest. But looking inside is still somewhat entertaining, as all gods have some form of statues that are quite devoid of any clothing, true works of art. One of these rooms must at least have something, but none of them, so far, seem to hold anything out of the ordinary. Only quite a few handsome statues and trinkets associated with them.";
 		say "     So, you keep looking, going from one wing to the other, until there is something that catches your eye. It is quite a curious wing that you seriously doubt has anything [']mythological['] about it, but seems to be quite what you need. A wing full of [bold type]phallic[roman type] sculptures and objects. It somehow feels very odd that you found some place like this when you specifically needed something related, of all the things you could have found, instead. Now, your curiosity has truly been instigated, and you cannot leave without at the very least examining its contents up close. Taking your time to slide the grand door open, you finally step inside and glance around the... phalli-filled wing.";
@@ -353,7 +353,7 @@ to say LarsCompleted:
 	say "     Do you think you should help him get acquainted with his new acquisition? Or should you just leave him be, to explore on his own?";
 	say "     ([link]Y[as]y[end link]) - Give him a handjob.";
 	say "     ([link]N[as]n[end link]) - Leave him alone for a while.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Seeing that the roman soldier is having some trouble processing the newly added sensations, you decide to ask him if he would let you give him a hand. 'Uh... you want to? I'm... not going to refuse that...' he shyly states as he stops touching himself, letting go of his dick and waits for you, instead.";
 		WaitLineBreak;
@@ -368,7 +368,7 @@ to say LarsCorrupted:
 	say "     A few moments later, you hear an inhuman groan coming from behind you, followed by a sinister laugh. You cannot help but be worried at this, however, you wait, still. These sounds continue and the air around you begins to get chilly, but Lars has not still said anything. The roman soldier continues to moan in an increasingly deeper voice, and your heart begins to race. A sense of dread overtakes you as you feel movement coming from just a few steps on your back... 'You can look, now...' he says, but it is not him. His voice is too different, and as his hand appears on your shoulder, you notice a clear mismatch on the tone of his skin compared to what you remember of him, and somehow, that image seems to blur away in your mind.";
 	say "     Once your eyes meet Lars, you see what was once a roman soldier... Now something else, entirely. 'Don't you like this better?' he speaks, a mutating human-shaped creature with tentacles sprouting from its body, its skin and features becoming increasingly less familiar. Between his legs, you see the tentacle-shaped cock you brought him now alive, moving on its own and stretching outwards, thickening and dripping to lubricate itself. The monster grins as you look at him from head to toe, giving you the time to examine his body until you realize you have done something very wrong. 'A formidable host you have given me. A living statue who can last forever... This beats any body I could have taken, even yours...' The monster then laughs as his transformation reaches its completion.";
 	WaitLineBreak;
-	say "     'Have you ever heard of the Great Old Ones...? Know that you have made us stronger... Thus, perhaps I should personally thank you. Since you wanted your [']friend['] to have one of these so badly...' - his tentacle-shaped cock moves slowly towards you, along with multiple other tentacles just sprouting from his groin, - 'I'll let you have a taste of what they can do.' By the time he finishes his last sentence, the tentacle-dicks are creeping up your legs and crawling all over your body, the slick masses delivering a sticky liquid everywhere they go[if player is not naked], getting inside your clothes[end if] and squeeze themselves in most of your sensitive spots. The monster approaches you, taking you in for an embrace, letting you feel his scales as his cocks pry deeper into you...";
+	say "     'Have you ever heard of the Great Old Ones...? Know that you have made us stronger... Thus, perhaps I should personally thank you. Since you wanted your [']friend['] to have one of these so badly...' - his tentacle-shaped cock moves slowly towards you, along with multiple other tentacles just sprouting from his groin, - 'I'll let you have a taste of what they can do.' By the time he finishes his last sentence, the tentacle-dicks are creeping up your legs and crawling all over your body, the slick masses delivering a sticky liquid everywhere they go[if Player is not naked], getting inside your clothes[end if] and squeeze themselves in most of your sensitive spots. The monster approaches you, taking you in for an embrace, letting you feel his scales as his cocks pry deeper into you...";
 	say "     Your ass becomes filled with a fat tentacle that keeps on pushing inwards[if Player is female], as well as your pussy, which stretches to accommodate a second one[else if Player is male], as a second one wraps itself around your cock, its wet body jerking it slowly[end if]. The other many, many tentacles simply overtake the rest of your body, going for any area that makes you squirm as the creature holds you close to him. Even the lower half of his face is now filled with tentacles, and they are quick to wrap around your head, forcing you to give him a kiss. You feel your face sinking in this mass of tendrils as a tongue, equally long and nimble, fills your mouth, covered in thick and salty saliva.";
 	WaitLineBreak;
 	say "     As the creature continues to pump his organs into you, wiggling and crawling deeper inside your body, you feel extraordinary pleasure, albeit couple with the feeling of great peril. But that, soon, ceases to matter, as your strength begins to leave you. This bliss is the only thing that lasts as everything you once held control of begins to shut down into numbness, your head falling heavy and only held by the creature's powerful grasp. You feel yourself diving into a deep slumber as your body is violated repeatedly by this odd monster, eventually getting a fill of his warm juices as they are deposited in you, a great number of times during your dormant state, until finally, you black out completely.";
@@ -548,7 +548,7 @@ to say LarsSexHandjobFirst:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Lick the cum off his abs.";
 	say "     ([link]N[as]n[end link]) - Do nothing. You are sure he will find a way to clean this mess.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You let the soldier know that you can take care of at least some part of the mess as you kneel before him. His eyes widen, clueless regarding what you are about to do, and then, he sees your tongue sliding across every single abdominal muscle, outlining every bump, every ripple, precisely and steadily, taking in all the remains of your... practically lovemaking session, into your mouth. His hard abs feel just like what you would expect, rigid, against your tongue, and his cum, creamy, tasty, a little salty, even, delightfully coating your taste buds. Once you are done, you look up at him, licking your lips, having left him cleaned up and a little bit shiny from your saliva. His jaw has dropped.";
 		say "     'I...' he tries to speak, but words fail him. You can tell he was not expecting it, but he did not seem to dislike it, either. In fact, he is blushing and absolutely dumbfounded. Perhaps you should just leave him, for the time being. Once you stand up, his eyes follow you, and he finally talks. 'T-thank you. I... Still have to... Uhm, find a way to... clean the rest. I-I wouldn't ask you to do the same on the floor, of course... That'd be... Inappropriate...' He stutters through all his words, but you nod and smile to him. You cannot tell it just from this alone, but judging by his half-hard cock still not accepting that it has to go down, the roman soldier might actually be into what you just did...";

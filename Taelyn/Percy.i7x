@@ -138,7 +138,7 @@ to say PercyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Rumors"):
@@ -250,7 +250,7 @@ to say PercySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Take Percy's shaft in your pussy"):
@@ -288,14 +288,14 @@ instead of going east from Urban Forest while (HP of Percy < 1):
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Follow the strange creature.";
 	say "     ([link]N[as]n[end link]) - Leave it be for now.";
-	if player consents:[Follow]
+	if Player consents:[Follow]
 		LineBreak;
 		say "     Having piqued your interest, you come out from your hiding place and begin your pursuit, following the panicked little guy into what you now assume is his burrow. To your surprise, the tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
 		say "     [bold type]Knock on the door?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, knock on the door.";
 		say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door.";
-		if player consents:[Knock]
+		if Player consents:[Knock]
 			LineBreak;
 			say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 			say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that covers his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
@@ -328,7 +328,7 @@ instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes, knock on the door";
 	say "     ([link]N[as]n[end link]) - No, you don't know what's behind that door";
-	if player consents:[Knock]
+	if Player consents:[Knock]
 		LineBreak;
 		say "     With no other options available to you, you do the one sensible thing left and knock. 'One moment!' you hear from the other side, the voice seeming a little flustered. [if Perception of Player > 16]You can hear some shuffling and mumbling as it sounds as if he's quickly cleaning up before the tip tapping of his claws against the floor get closer to the door. There is a decently loud clunk sound as the door's lock is disengaged at last[else]Things go quiet for a moment, leaving you to wonder if this is such a good idea, until you finally hear the clunk of the lock being released[end if].";
 		say "     The door slowly swings open with a creak, revealing the scaly creature from before. Now that you are much closer than your previous encounter, you can see him in more detail. From the front, he has smooth, sand-colored skin that shows off his lean muscles despite his naturally stocky build. The scales that covers his back are a matte-steel color with a yellow-gold trim on the edges. His tail is long and broad, more on the flat side, but still clearly powerful since in his worry, it knocks over a coat rack beside him, sending it rolling across the room for a few feet. His eyes are a mossy-green, and his face bears a mixed expression of nervousness, embarrassment, and slight surprise at seeing you again.";
@@ -437,7 +437,7 @@ to say PercyCraftingMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A Makeshift-Spear"):
@@ -463,7 +463,7 @@ to say PercyCrafting1: [Con 1]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You hand Percy the materials who looks them over with experienced eye. 'Hmmm. This knife is old but well made, Likely military. Cold War maybe?' The Pangolin puts the two materials off the side before returning his focus to you. 'Anyways, this shouldn't take too long. I'll have to remove the blade and fasten it to the haft, then secure it with some binding. I should have it done in a [bold type]few hours[roman type].'";
 			LineBreak;
@@ -492,7 +492,7 @@ to say PercyCrafting2: [Con 2]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
-		if player consents:
+		if Player consents:
 			say "     'Alright, this shouldn't take too long. I should have it done in a [bold type]few hours[roman type].'";
 			now Strength of Percy is a random number from 3 to 5; [sets the needed time to a random value]
 			now Stamina of Percy is 2;
@@ -515,7 +515,7 @@ to say PercyCrafting3: [Con 2]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, craft the item.";
 		say "     ([link]N[as]n[end link]) - No, keep the materials.";
-		if player consents:
+		if Player consents:
 			say "     'Alright, this shouldn't take too long. I should have it done in a [bold type]day or so[roman type].'";
 			now Strength of Percy is a random number from 7 to 9; [sets the needed time to a random value]
 			now Stamina of Percy is 3;

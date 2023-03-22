@@ -253,7 +253,7 @@ to say Pet MuttSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Submit to breeding by [PetMuttName]";
 	[]
-	if player is not neuter:
+	if Player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock";
 		now sortorder entry is 2;
@@ -303,7 +303,7 @@ to say Pet MuttSexMenu:
 	clear the screen and hyperlink list;
 
 to say Pet MuttSex1: [breeding fuck on the player]
-	if player is purefemale:
+	if Player is purefemale:
 		say "     Giving [PetMuttName] a grin you lean down to ruffle his furry face. 'Who's a good boy?' You begin. 'Who's the best boy?' You ask, voice tittering with excitement. Your good boy barks twice, and raises his head proudly at your compliment. Your scruff and scritch his ears affectionately, then raise an eyebrow. 'Up for a little breeding?' You ask seductively, eyes flicking to the cock sheath underneath his form. He barks again, licking your cheek. Well, sounds like a yes to you! You grin to yourself and reach down to your dog's already growing length, stroking the growing mass and even extending further to fondle his furry balls. [PetMuttName] gives a low groan and start to pant heavily in anticipation. Turning around and stripping yourself of your gear, you go on your knees and arms. Presenting your ass for breeding, and giving it a shake for unneeded persuasion, 'C'mon big boy, I need a hard cock to breed me properly.' And, as eager as when you met him, [PetMuttName] leaps on your back and begins to hump at the flesh of your ass.";
 		say "     His now hard canine cock hot-dogs between your ass cheeks with his wild thrusts. Until, eventually he hits home and thrusts into your ready cunt. Licking your lips lustfully you thrust back against his furry hips, making sure he's hilted up to his swollen knot inside your soaking quim. Barking happily [PetMuttName] begins his rapid fucking of your pussy, mating you like a bitch of his own. You yelp when his thrusts hit a sensitive spot, and can't help but feel a submissive part of you tingle and spasm as the mutt breeds your cunt. You brace yourself on the hard asphalt below while you hump simultaneously into your dog, fingers scraping the ground and that pleasurable pressure plugging your sex like a lover's cork. Your own yelps start to sound like a bitch's bark, your own slobber trails down your face and drips below.";
 		WaitLineBreak;

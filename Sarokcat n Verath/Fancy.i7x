@@ -337,7 +337,7 @@ to say PonyQuest:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help Fancy.";
 		say "     ([link]N[as]n[end link]) - This is too much for you. No thanks.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[ContinuePonyQuest]";
 		else:
