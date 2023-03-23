@@ -6,8 +6,8 @@ Version 1 of Dryad by Hellerhound begins here.
 
 Section 1 - Cum Vial
 
-Table of Game Objects (continued)
-name	desc	weight	object
+[Table of Game Objects (continued)
+name	desc	weight	object]
 dryad cum is a grab object.
 dryad cum is cum.
 dryad cum is infectious.

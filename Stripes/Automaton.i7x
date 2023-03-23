@@ -288,10 +288,10 @@ automaton milk is milky.
 Purified of automaton milk is "distilled milk".
 automaton milk is infectious.
 Strain of automaton milk is "Automaton".
-Usedesc of automaton milk is "[automaton milk use]";
+Usedesc of automaton milk is "NOT CODED YET."[[automaton milk use]"];
 
 It is temporary.
-silver semen is cum.
+[silver semen is cum.]
 
 to say silversemenuse:
 	say "With a little shrug, you tilt your head back and slam down the silvery semen, letting the metallic contents flow down your throat.";
