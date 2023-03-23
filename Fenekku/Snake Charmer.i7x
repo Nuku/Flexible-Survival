@@ -1,8 +1,15 @@
-FenZoo by Fenekku begins here.
-
-Section 1 - Snake Charmer
+Snake Charmer by Fenekku begins here.
 
 [original by Kaleem mcintyre, rewritten and expanded by Fenekku]
+
+[ Resolution of Snake Charmer:					]
+[ 0: First encounter							]
+[ 1: Naga wishes to see the player again		]
+[ 2: Player didn't resist. Player was eaten		]
+[ 3: Player resisted Naga - Naga likes Player	]
+[ 4: Player accepted the Naga					]
+[ 100: Player doesn't want to see vore			]
+[ 101: Player rejected the Naga					]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -26,12 +33,6 @@ to say ResolveEvent Snake Charmer:
 		else if vorelevel is 2: [Normal vore]
 			say "     Your heart sinks as you realise what you're about to witness, wanting to turn away but too captivated to do so - perhaps affected by the naga's dance as the pelican is. You watch with morbid curiosity as the naga's mottled hands guide the pelican's head and shoulders into its double-hinged maw, the little bird making no move to resist as it's pulled into the dark, wet depths. The sheer strength of the muscles within the naga's throat are on full display as the white-feathered avian swiftly disappears within the serpentine snout. The last of the pelican you're able to see are its webbed feet before the naga's snout closes shut. The naga gives a final swallow before letting out a happy hiss, your eyes tracking the bulge in its throat as it travels downwards towards its likely final destination, becoming indistinguishable amongst the scales of that serpentine lower body.";
 			WaitLineBreak;
-			say "     The naga's eyes turning towards you are enough to break you from your trance, its gaze seductive and full of desire, though you believe more the latter. Turning your gaze away and breaking eye contact before you fall prey to the same tactic as the pelican, you swiftly move away from the area.";
-			now Resolution of Snake Charmer is 101;
-			now Snake Charmer is resolved;
-		if vorelevel is 3: [More vore]
-			say "     Your heart sinks as you realise what you're about to witness, wanting to turn away but too captivated to do so - perhaps affected by the naga's dance as the pelican is. You watch with morbid curiosity as the naga's mottled hands guide the pelican's head and shoulders into its double-hinged maw, the little bird making no move to resist as it's pulled into the dark, wet depths. The sheer strength of the muscles within the naga's throat are on full display as the white-feathered avian swiftly disappears within the serpentine snout. The last of the pelican you're able to see are its webbed feet before the naga's snout closes shut. The naga gives a final swallow before letting out a happy hiss, your eyes tracking the bulge in its throat as it travels downwards towards its likely final destination, becoming indistinguishable amongst the scales of that serpentine lower body.";
-			WaitLineBreak;
 			say "     The naga's eyes turning towards you are enough to break you from your trance, its gaze seductive and full of desire, though you believe more the latter. Despite what you'd just witnessed, your gaze remains locked with the naga's own, the serpentine predator's content smile developing into a full-blown grin. Curiously enough, however, instead of luring you into its scaled clutch as it likely had the pelican, the naga breaks the gaze of its own accord. Your eyes follow the naga as it slithers around a nearby enclosure, disappearing from sight. Despite it now being gone from view, its hypnotic eyes remain in your mind, encouraging you to seek it out again.";
 			now Resolution of Snake Charmer is 1;
 	else if Resolution of Snake Charmer is 1:
@@ -44,7 +45,7 @@ to say ResolveEvent Snake Charmer:
 		if Player consents:
 			say "     You approach the cage with a stuttering step, reaching for the door and grasping the cold metal bars. At this point, all you can think about is the naga's emerald eyes, and you feel there's no turning back. Pulling the door open, you hear the amused hissing of the naga as they watch you enter the cage. 'Little prey,' A dominant yet clearly masculine voice slips from his lips. 'So easily swayed,' the sound of scales on stone is the only indication you get that he is moving - all your focus is on his eyes. You don't even react as he starts slithering around you, trapped just as the pelican from before. His words sink into your mind alongside his eyes, holding you in place while he wraps your [bodytype of player] body in his coils, tightening around you and pressing your arms to your sides. 'No walking away this time,'"
 			LineBreak;
-			say "     Bringing his snout close to your face, he looks at you directly, so tantalizingly close. His breathe washes over you, hinting at the warmth within. 'I saw your eyes as you saw mine, little prey. You saw my desire, but I saw yours,' He was right, of course. You couldn't even think of him being wrong right now, your head slowly nodding. He hisses a laugh at your acceptance, flicking his tongue against your face, 'So deliciously sweet,' before pulling away. Your heart starts to pound in your chest as the naga's hands guide you out of your clothing, 'Can't have any extras ruining your taste.' Soon enough, you're naked within his coils. Nude and trapped, you watch that predatory mouth yawn open before you. The pink flesh of the inside of his mouth revealed to your entranced sight, the darkness within inviting, and you find yourself eager for him to take you. You don't have to wait long, as once that dual-hinged maw opens wide enough, he brings it down over your head."
+			say "     Bringing his snout close to your face, he looks at you directly, so tantalizingly close. His breathe washes over you, hinting at the warmth within. 'I saw your eyes as you saw mine, little prey. You saw my desire, but I saw yours,' He was right, of course. You couldn't even think of him being wrong right now, your head slowly nodding. He hisses a laugh at your acceptance, flicking his tongue against your face, 'So deliciously sweet,' before pulling away. Your heart starts to pound in your chest as [if player is not naked]the naga's hands guide you out of your clothing, 'Can't have any extras ruining your taste.' Soon enough, you're naked within his coils. Nude and trapped, [endif]you watch that predatory mouth yawn open before you. The pink flesh of the inside of his mouth revealed to your entranced sight, the darkness within inviting, and you find yourself eager for him to take you. You don't have to wait long, as once that dual-hinged maw opens wide enough, he brings it down over your head."
 			WaitLineBreak;
 			say "     The coils holding you in place slowly relax, pushing you upwards into waiting hands that tug and pull at you as much as the muscles within that undulating throat. Saliva covers your skin, lubricating you and easing your way into his mouth with every tug and pull. Serpentine as he is, his throat stretches wide to accomodate you as you slide into his mouth halfway, sinking deeper and deeper with every second that passes. Your body escapes his coils as he tilts his head back, hands gripping you and guiding you deeper, your head leading the charge down and inside. You were enveloped fully in darkness, and despite your heart hammering in your chest, you were calm. His emerald eyes still stuck with you as your lower body vanished from outside, keeping you placated."
 			wait for any key;
@@ -57,6 +58,20 @@ to say ResolveEvent Snake Charmer:
 			now Resolution of Snake Charmer is 3;
 	else if Resolution of Snake Charmer is 3:
 		say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Unfortunately, while that sense only seem to increase, nothing comes to satisfy. It would seem that for the moment, there'll be no resolution here, leaving you to move on.";
+		[say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Your instincts prove to be correct when the sound of scales sliding rapidly across the ground comes from behind you. Before you can react, your [bodytype of player] body is wrapped up in strong serpentine coils, trapping your arms against your side and preventing you from mounting any sort of resistance. 'No running away this time, little prey.' The slight hiss of the naga's voice speaks directly into your ear, 'Though perhaps that title isn't quite accurate'. Moving around in front of you, you're once again face-to-face with the hypnotic naga, closer than you'd ever been before. You try to avert your eyes, but those emerald orbs are once again taking most of your focus. 'You're the first I've met able to resist my gaze.' The serpent approaches, tongue flicking against your face, 'And as such, I believe you worthy to be my mate.'";
+		LineBreak;
+		say "     You feel the grip of the naga's coils tighten for a bit, becoming almost painfully tight, before suddenly relaxing. The naga moves his face a bit away from yours, giving you room to free your arms from his coils. As well as physical release, your mind also seems to be freed from the naga's hypnotic influence - for the moment, allowing you to think freely. It's clear the Naga finds your resistance attractive, enough to desire you as more than just prey. The question then becomes if you're willing to reciprocate that desire, or reject him. [bolt type]You're certain that you won't see him again if you reject him. [roman type]"
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Accept his advances, and everything that entails.";
+		say "     ([link]Y[as]y[end link]) - Reject his advances; you're not intersted.";
+		if Player consents:
+			say "     "
+			now Resolution of Snake Charmer is 4;
+		else:
+			say "     "
+			now Resolution of Snake Charmer is 101;
+		now Snake Charmer is resolved;]
 		[Third time's the charm, so to speak.]
 		[The naga directly wraps up the player, not to consume, but to talk.]
+		[This will lead into a repeating event for talking/mating with the Naga]
 		[For now, there is no resolution.]
