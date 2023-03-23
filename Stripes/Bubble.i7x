@@ -3,7 +3,31 @@ Version 1 of Bubble by Stripes begins here.
 [Version 1.3 - Code and writing cleanup. Added additional comments for clarity - Song]
 
 "Adds Bubble the Inflatable Vixen as an NPC to the Flexible Survival game."
-[To understand HP of Bubble values, see Section 9]
+
+[ HP of Bubble           ]
+[ 0 = not started        ]
+[ 1 = Bouncy Castle open ]
+[ 2 = Arrive at BC       ]
+[ 3 = released           ]
+[ 4 = brought home       ]
+[ 5 = talked             ]
+[ 6 = had sex            ]
+[ 7 = High Dive scene    ]
+[ 8 = Did UB on player   ]
+[                        ]
+[ 99 = too late @ BC     ]
+[ 100 = too late         ]
+
+[ Libido of Bubble        ]
+[ 0 = slender (deflated)  ]
+[ 1 = plump (inflated)    ]
+
+[ infvulpstate            ]
+[ 0 = unset (deflated)    ]
+[ 1 = deflated (set)      ]
+[ 2 = deflated (locked)   ]
+[ 3 = inflated (set)      ]
+[ 4 = inflated (locked)   ]
 
 Section 0 - Basic Structure
 
@@ -11,11 +35,46 @@ Table of GameCharacterIDs (continued)
 object	name
 Bubble	"Bubble"
 
-Bubble is a person.
+Bubble is a woman.
+ScaleValue of Bubble is 3. [human sized]
+SleepRhythm of Bubble is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Bubble is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Bubble is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Bubble is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Bubble is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Bubble is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Bubble is 8. [length in inches]
+Breast Size of Bubble is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Bubble is 2. [count of nipples]
+Asshole Depth of Bubble is 12. [inches deep for anal fucking]
+Asshole Tightness of Bubble is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Bubble is 0. [number of cocks]
+Cock Girth of Bubble is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Bubble is 0. [Length in Inches]
+Ball Count of Bubble is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Bubble is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Bubble is 1. [number of cunts]
+Cunt Depth of Bubble is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Bubble is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Bubble is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Bubble is false.
+PlayerRomanced of Bubble is false.
+PlayerFriended of Bubble is false.
+PlayerControlled of Bubble is false.
+PlayerFucked of Bubble is false.
+OralVirgin of Bubble is false.
+Virgin of Bubble is false.
+AnalVirgin of Bubble is true.
+PenileVirgin of Bubble is true.
+SexuallyExperienced of Bubble is true.
+TwistedCapacity of Bubble is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Bubble is false. [steriles can't knock people up]
+MainInfection of Bubble is "Inflatable Vulpine".
 Description of Bubble is "[bubbledesc]".
 Conversation of Bubble is { "Yay!" }.
-
-the scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
+The scent of Bubble is "Bubble smells of warm latex with a hint of vulpine arousal.".
 
 Section 1 - Description
 
@@ -79,7 +138,7 @@ to say bubblesex00:
 		now description entry is "stuff her [if Libido of Bubble is 0]bubble butt[else]inflated ass[end if]";
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 3;
 		now description entry is "have her suck you off";
 	if Player is female:
@@ -138,7 +197,7 @@ to say bubblesex00:
 					say "[bubblesex01]";
 				else if nam is "Anal":
 					say "[bubblesex02]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[bubblesex03]";
 				else if nam is "Get cunnilingus":
 					say "[bubblesex04]";
@@ -189,7 +248,7 @@ to say bubblesex02:
 	NPCSexAftermath Bubble receives "AssFuck" from Player;
 
 to say bubblesex03:
-	say "     Deciding you'd like a blow job, you gently lower Bubble to her knees and offer up your stiffening cock to her. Eyeing your [cock size desc of Player] penis with obvious hunger, she runs her tongue across her muzzle before plunging her mouth right over it[if Cock Length of Player > 24]. The inflatable vixen has no trouble with your [cock size desc of Player] manhood, her mouth and throat stretching easily to accommodate it all[end if]. Once she's got that black decal patch of her nose buried in your crotch, she starts sucking down on your meat like a horny vacuum. Her tongue slides slickly across your shaft, exciting you further. As she works to suck you off, you rub your hands over her latex head. Her decal eyes look up at you and she grins at the corners of her mouth. Between the smile and the way she's fingering her [if Libido of Bubble is 1]puffy-lipped [end if]pussy wildly, you can tell she's thoroughly enjoying herself.";
+	say "     Deciding you'd like a blowjob, you gently lower Bubble to her knees and offer up your stiffening cock to her. Eyeing your [cock size desc of Player] penis with obvious hunger, she runs her tongue across her muzzle before plunging her mouth right over it[if Cock Length of Player > 24]. The inflatable vixen has no trouble with your [cock size desc of Player] manhood, her mouth and throat stretching easily to accommodate it all[end if]. Once she's got that black decal patch of her nose buried in your crotch, she starts sucking down on your meat like a horny vacuum. Her tongue slides slickly across your shaft, exciting you further. As she works to suck you off, you rub your hands over her latex head. Her decal eyes look up at you and she grins at the corners of her mouth. Between the smile and the way she's fingering her [if Libido of Bubble is 1]puffy-lipped [end if]pussy wildly, you can tell she's thoroughly enjoying herself.";
 	say "     Proving herself to be part sexy vixen and part sex doll, that muzzle of hers feels great around your meat and drives you wild. From the way the [if Libido of Bubble is 0]slender[else]plump[end if] fox girl is going to town on you, it isn't long before you're cumming. You shoot blast after blast of your hot seed down the [if Libido of Bubble is 0]lithe[else]buxom[end if] inflatable's throat. She murrs happily at the taste and licks away the last few drops as you ease your spent shaft from her muzzle. She rubs her [if Libido of Bubble is 0]smooth[else]rounded[end if] tummy, enjoying the feel of your gooey cum running along her inner skin and slowly being absorbed.";
 	NPCSexAftermath Bubble receives "OralCock" from Player;
 
@@ -281,31 +340,6 @@ to say bubblesex12:
 
 
 Section 9 - Information
-
-[ HP of Bubble           ]
-[ 0 = not started        ]
-[ 1 = Bouncy Castle open ]
-[ 2 = Arrive at BC       ]
-[ 3 = released           ]
-[ 4 = brought home       ]
-[ 5 = talked             ]
-[ 6 = had sex            ]
-[ 7 = High Dive scene    ]
-[ 8 = Did UB on player   ]
-[                        ]
-[ 99 = too late @ BC     ]
-[ 100 = too late         ]
-
-[ Libido of Bubble        ]
-[ 0 = slender (deflated)  ]
-[ 1 = plump (inflated)    ]
-
-[ infvulpstate            ]
-[ 0 = unset (deflated)    ]
-[ 1 = deflated (set)      ]
-[ 2 = deflated (locked)   ]
-[ 3 = inflated (set)      ]
-[ 4 = inflated (locked)   ]
 
 [ word lists:
 

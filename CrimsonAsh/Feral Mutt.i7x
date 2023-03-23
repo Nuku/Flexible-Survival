@@ -207,11 +207,11 @@ to say FuckFeralMutt:
 
 to Pet MuttRecruitment:
 	WaitLineBreak;
-	say "     Striding away with a winning swagger you start back on your journey through this strange 'nano-pocalypse' you find yourself in. Hearing a light padding behind you, you quickly turn to see the [bold type][FeralMuttFurColor] [FeralMuttCurrentBreed][roman type] you just finished with. The male stray seems intent in following you, apparently having accepted you as his 'top dog' after you bested him both in battle and also carnally. As you stop to face the beast he halts as well, bowing his head and lolling his tongue out. You walk a few steps closer, cocking your head to the side at the dog curiously, he does the same, simply looking at you, a gleam of intelligence in his otherwise beastial look. You could probably just shoo the hound off, or give him a friendly pat, maybe he'd follow you home then?";
+	say "     Striding away with a winning swagger you start back on your journey through this strange 'nano-pocalypse' you find yourself in. Hearing a light padding behind you, you quickly turn to see the [bold type][FeralMuttFurColor] [FeralMuttCurrentBreed][roman type] you just finished with. The male stray seems intent in following you, apparently having accepted you as his 'top dog' after you bested him both in battle and also carnally. As you stop to face the beast he halts as well, bowing his head and lolling his tongue out. You walk a few steps closer, cocking your head to the side at the dog curiously, he does the same, simply looking at you, a gleam of intelligence in his otherwise bestial look. You could probably just shoo the hound off, or give him a friendly pat, maybe he'd follow you home then?";
 	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Pet him and take him home.";
-	say "     [link](2)[as]2[end link] - Pat him noncommittantly. You would have preferred a different breed...";
+	say "     [link](2)[as]2[end link] - Pat him noncommittedly. You would have preferred a different breed...";
 	say "     [link](3)[as]3[end link] - Shoo him off. You don't want a feral dog!";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
@@ -223,7 +223,7 @@ to Pet MuttRecruitment:
 			say "Invalid choice. Type [link]1[end link] to adopt the dog, [link]2[end link] to hold out for another one or [link]3[end link] to shoo him off.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and ask if he liked what you did with him earlier, quickly eyeing the mutt's groin and the sheath between his legs. Leaping up, the cute dog barks happily, jumping in a small circle and wagging his tail excitedly. Turning around you start to walk, a slight swagger in your step as you lead the animal towards the Grey Abbey Library. Predictiably, your new pet starts to follow, panting lightly, his eyes focused solely on you as the both of you arrive sometime later at your shelter. As you enter the building he stops outside, looking to you standing in the doorway. There is a moment of hesitation, with him cocking his head to the side, which reminds you that the dog has led an independent existence on the streets for some time now.";
+		say "     Reaching out you pat the dog's furry head, he nuzzles his ears into your palm and pants at your affections. You give him a smile and ask if he liked what you did with him earlier, quickly eyeing the mutt's groin and the sheath between his legs. Leaping up, the cute dog barks happily, jumping in a small circle and wagging his tail excitedly. Turning around you start to walk, a slight swagger in your step as you lead the animal towards the Grey Abbey Library. Predictably, your new pet starts to follow, panting lightly, his eyes focused solely on you as the both of you arrive sometime later at your shelter. As you enter the building he stops outside, looking to you standing in the doorway. There is a moment of hesitation, with him cocking his head to the side, which reminds you that the dog has led an independent existence on the streets for some time now.";
 		say "     You wait patiently, waving for him to come in, but while he wags his tail, the dog still remains standing where he is. And a moment later he starts to pad closer, but not towards you but an old metal bench at a bus stop just a few steps away. Settling under it and wagging his tail happily, the dog barks at you in a meaningful tone. Seems like he found a place to stay. Outside dog, you think to yourself with a smile as the mutt lays his head down under the shade of his little shelter, looking to you and awaiting an order from his new master. Well then... only one thing left do to:[line break]";
 		LineBreak;
 		say "[bold type]Please enter a name for your [FeralMuttFurColor] [FeralMuttCurrentBreed]: [roman type]";
@@ -334,7 +334,7 @@ When Play begins:
 	now Breast Size entry is 4; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
@@ -445,7 +445,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -513,7 +513,7 @@ When Play begins:
 	now Breast Size entry is 4; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 60; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
@@ -624,7 +624,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

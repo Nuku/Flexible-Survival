@@ -167,14 +167,14 @@ object	name
 Meredith	"Meredith"
 
 Meredith is a woman.
-ScaleValue of Meredith is 4. [horse sized]
+ScaleValue of Meredith is 4. [6' 10"]
 Body Weight of Meredith is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Meredith is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Meredith is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Meredith is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Meredith is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Meredith is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Meredith is 6. [length in inches]
+Tongue Length of Meredith is 5. [length in inches]
 Breast Size of Meredith is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Meredith is 2. [count of nipples]
 Asshole Depth of Meredith is 12. [inches deep for anal fucking]
@@ -185,7 +185,7 @@ Cock Length of Meredith is 0. [Length in Inches]
 Ball Count of Meredith is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Meredith is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Meredith is 1. [number of cunts]
-Cunt Depth of Meredith is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Meredith is 12. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Meredith is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Meredith is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -437,7 +437,7 @@ to say Meredithsexmenu:
 		now sortorder entry is 2;
 		now description entry is "Have a go at Mare's ass";]
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 3;
 		now description entry is "Have Mare suck you off";
 	choose a blank row in table of fucking options;
@@ -481,7 +481,7 @@ to say Meredithsexmenu:
 					say "[Meredithsex1]";
 				else if nam is "Anal":
 					say "[Meredithsex2]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[Meredithsex3]";
 				else if nam is "Eat her out":
 					say "[Meredithsex4]";

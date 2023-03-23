@@ -15,14 +15,14 @@ Callidora	"Cally"
 
 Callidora is a woman.
 understand "Cally" as Callidora.
-ScaleValue of Callidora is 3. [human sized]
+ScaleValue of Callidora is 3. [5' 10"]
 Body Weight of Callidora is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Callidora is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Callidora is 9. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Callidora is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Callidora is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Callidora is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Callidora is 6. [length in inches]
+Tongue Length of Callidora is 5. [length in inches]
 Breast Size of Callidora is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Callidora is 2. [count of nipples]
 Asshole Depth of Callidora is 8. [inches deep for anal fucking]
@@ -33,7 +33,7 @@ Cock Length of Callidora is 0. [length in inches]
 Ball Count of Callidora is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Callidora is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Callidora is 1. [number of cunts]
-Cunt Depth of Callidora is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Callidora is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Callidora is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Callidora is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -133,9 +133,18 @@ to say CallidoraTalk2: [Her past]
 Section 3 - Sex
 
 Instead of fucking Callidora:
-	say "     'Sorry, [if player is herm]hot stuff[else if player is male]sexy[else if player is female]beautiful[else]cutie[end if], but while I properly bond with APhrodite, I'm on enforced abstinence. Believe me, it hurts us more to refuse than it does you, but this is something that no-one wants to go wrong. Really.' (WIP)";
+	say "     'Sorry, [if player is herm]hot stuff[else if Player is male]sexy[else if Player is female]beautiful[else]cutie[end if], but while I properly bond with APhrodite, I'm on enforced abstinence. Believe me, it hurts us more to refuse than it does you, but this is something that no-one wants to go wrong. Really.' (WIP)";
 
 Section 4 - Events
+
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Birth of a Goddess"	Birth of a Goddess	"[EventConditions_BirthofaGoddess]"	Public Beach	2500	2	100
+
+to say EventConditions_BirthofaGoddess:
+	if daytimer is day:
+		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -146,16 +155,9 @@ ResolveFunction of Birth of a Goddess is "[ResolveEvent Birth of a Goddess]".
 The level of Birth of a Goddess is 0.
 Sarea of Birth of a Goddess is "Beach".
 
-instead of going to Public Beach while Birth of a Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
-	move player to Public Beach;
-	BirthofaGoddessEvent;
-
 to say ResolveEvent Birth of a Goddess:
-	BirthofaGoddessEvent;
-
-to BirthofaGoddessEvent:
 	say "     Splashing your feet around in the waves, you look around at the many other people that are enjoying their time at the beach. While you once might have seen parents with their children, now everyone looks like an adult, physical and mental development receiving a kick-start from the nanites. Nonetheless, the novelty of spending a day by the sea doesn't seem to have been diminished, the watchful eyes of the orca lifeguards largely protecting them from the likes of sea dragons and living pool-toys. To your left, a small family of wolves are sitting around a picnic basket laughing and eating sandwiches, likely with sand in them. Behind you, a group of what you assume to be students are trying to convince passersby, with mixed success, to join them in a game of volleyball with the stakes being that the winners get to have their way with the losers. Overall, it is an uplifting atmosphere, especially when compared to the dangers of some areas of the city.";
-	say "     'It's nice to see so many people enjoying the sun, isn't it?' someone comments from behind you and you look around to see whether this was specifically directed at you. You find a rather beautiful human woman gazing at you with a cheerful smile on her face, a white bikini hugging her pale curves tightly so that there is little left to the imagination while maintaining a image of tastefulness. 'Who can blame them though. With sun, sand, and sea what's there not to like. Most people behave a little better here too,' she continues with a giggle, brushing a stray strand of hair behind an ear. 'I'm overheating a bit so I'll talk to you after I've had a swim if you're still around. See you later, [if player is herm]hot stuff[else if player is male]sexy[else if player is female]beautiful[else]cutie[end if].' As she starts to leave, you point out that she didn't give you her name, causing her to turn back and start apologizing. 'Sorry sweet thing, it's been a while since I met someone that didn't recognize me. I'm Cally, or Callidora if I'm doing something professional,' mock rolling her eyes at the word 'professional'. Before you can stop her, she ensnares you in a tight hug, [if scalevalue of Player < 3]her firm C-cup breasts smooshing against you face[else if scalevalue of player is 3]her cheek touching yours and firm breasts smooshed against your chest[else]your groin dangerously near her face[end if] as she cuddles you a little too over-familiarly.";
+	say "     'It's nice to see so many people enjoying the sun, isn't it?' someone comments from behind you and you look around to see whether this was specifically directed at you. You find a rather beautiful human woman gazing at you with a cheerful smile on her face, a white bikini hugging her pale curves tightly so that there is little left to the imagination while maintaining a image of tastefulness. 'Who can blame them though. With sun, sand, and sea what's there not to like. Most people behave a little better here too,' she continues with a giggle, brushing a stray strand of hair behind an ear. 'I'm overheating a bit so I'll talk to you after I've had a swim if you're still around. See you later, [if player is herm]hot stuff[else if Player is male]sexy[else if Player is female]beautiful[else]cutie[end if].' As she starts to leave, you point out that she didn't give you her name, causing her to turn back and start apologizing. 'Sorry sweet thing, it's been a while since I met someone that didn't recognize me. I'm Cally, or Callidora if I'm doing something professional,' mock rolling her eyes at the word 'professional'. Before you can stop her, she ensnares you in a tight hug, [if scalevalue of Player < 3]her firm C-cup breasts smooshing against you face[else if scalevalue of Player is 3]her cheek touching yours and firm breasts smooshed against your chest[else]your groin dangerously near her face[end if] as she cuddles you a little too over-familiarly.";
 	say "     [bold type]How do you react to this strange woman hugging you?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Relax into the embrace.";
 	say "     [link](2)[as]2[end link] - Politely extract yourself from the hug.";
@@ -224,6 +226,15 @@ to BirthofaGoddessEvent:
 		now resolution of Birth of a Goddess is 3; [Expressed your disinterest. Strongly.]
 		now Birth of a Goddess is resolved;
 
+[Update for WalkinEvents table]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Sunbathing Goddess"	Sunbathing Goddess	"[EventConditions_SunbathingGoddess]"	Public Beach	2500	2	100
+
+to say EventConditions_SunbathingGoddess:
+	if Birth of a Goddess is resolved and daytimer is day:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Sunbathing Goddess	"Sunbathing Goddess"
@@ -234,23 +245,16 @@ Prereq1 of Sunbathing Goddess is Birth of a Goddess.
 Prereq1Resolution of Birth of a Goddess is { 1, 2 }.
 Sarea of Sunbathing Goddess is "Beach".
 
-instead of going to Public Beach while Birth of a Goddess is resolved and Sunbathing Goddess is unresolved and daytimer is day and a random chance of 1 in 3 succeeds:
-	move player to Public Beach;
-	SunbathingGoddessEvent;
-
 to say ResolveEvent Sunbathing Goddess:
-	SunbathingGoddessEvent;
-
-to SunbathingGoddessEvent:
 	say "     Wandering through the many beach-goers, you notice a crowd gathering further away from the cliffs. Curious as to what is causing this, you make your way over, weaving through sunscreen-soaked bodies until you manage to get a clear view of who everyone seems to be focused on. Lying on the sand in a yellow polka-dot bikini is Callidora, the vessel of Aphrodite seemingly having dozed off while sunbathing, her nap allowing onlookers a chance to ogle her body. 'There's no way those are real,' you hear someone mutter. 'Someone should probably wake her. We don't want her getting sunburnt,' someone more compassionate says, nonetheless not following their own suggestion. Eventually, with no-one doing anything other than staring (with a few almost drooling), an anthro African hunting dog, her fur patterned similar to tattoos, irritably sighs before elbowing her way to the front. 'Sex-obsessed bastards,' you hear her spit under her breath as she passes by you. Kneeling beside the slumbering woman, she gently shakes her by the shoulder.";
 	say "     'Cally, you've got half the city staring at your tits. You can tell them to piss off or do a strip show, but either way, you've slept for long enough, unless you're hoping to entice the sun into fucking you,' the canine grumbles, her crude speech in stark contrast to her delicate touch. With a sensuous moan, Callidora's eyes flicker open and she looks around at the crowd before returning her attention to the hunting dog. 'Thank you, Penthesileia, though you did interrupt a pleasant dream,' the bikini-clad woman mumbles, still waking up. Laughing, the canine replies, 'I apologize if I interrupted anything dirty, but as I said, everyone is watching so you would have had an audience if you enjoyed yourself too much.' 'Would that have been so bad?' Callidora replies with a smirk. Snorting, Penthesileia turns back to the crowd. 'Show's over you perverts, let the lady wake up before she has to deal with your shit.' Muttering indignantly, the mob disperses back to swimming, relaxing, and other pleasurable activities.";
 	WaitLineBreak;
-	say "     Soon you are the only person left watching the two of them, the canine briefly fixing you with a stern glare, before a hand on her shoulder diverts her attention. 'I know [ObjectPro of Player]. They're the one who was there when Aphrodite blessed me,' Cally says soothingly. '[if resolution of Birth of a Goddess is 1]Didn't [SubjectPro of Player] let you hug them without knowing you[else if resolution of Birth of a Goddess is 2]The one who was scared of a hug[end if]? It's your choice, but they look dangerous and Hannibal will be pissed if you are harmed,' Penthesileia warns her. 'Nonsense. Between the two of us, we wouldn't need [italic type]him [roman type]to step in,' Callidora replies dismissively before directing her attention fully towards you. 'Hello, [if player is herm]hot stuff[else if player is male]sexy[else if player is female]beautiful[else]cutie[end if], how has the city been treating you? Kept out of trouble, or have you left a string of illegitimate children in your wake?' The hunting dog rolls her eyes but shifts her weight to her back foot while she watches you.";
+	say "     Soon you are the only person left watching the two of them, the canine briefly fixing you with a stern glare, before a hand on her shoulder diverts her attention. 'I know [ObjectPro of Player]. They're the one who was there when Aphrodite blessed me,' Cally says soothingly. '[if resolution of Birth of a Goddess is 1]Didn't [SubjectPro of Player] let you hug them without knowing you[else if resolution of Birth of a Goddess is 2]The one who was scared of a hug[end if]? It's your choice, but they look dangerous and Hannibal will be pissed if you are harmed,' Penthesileia warns her. 'Nonsense. Between the two of us, we wouldn't need [italic type]him [roman type]to step in,' Callidora replies dismissively before directing her attention fully towards you. 'Hello, [if player is herm]hot stuff[else if Player is male]sexy[else if Player is female]beautiful[else]cutie[end if], how has the city been treating you? Kept out of trouble, or have you left a string of illegitimate children in your wake?' The hunting dog rolls her eyes but shifts her weight to her back foot while she watches you.";
 	say "     'Ah, but where are my manners? This delightful young woman is Penthesileia, once a bodyguard for a friend but now my own protector,' Cally explains before the woman in question interrupts. 'Fuck off. It's only you and him that call me Pen-this-ill-E-ah, I'm older than you and I've never been described as delightful, not even when I was five. Stop talking shit or I'll shove sand in your bikini,' she retorts, carefully enunciating the syllables of the strange name. 'You're only a few years older, but I get the point, Isabella. I remember the last time you did that. Bitch,' the vessel of Aphrodite mutters, earning a grin from her companion. You doubt that Callidora would be quite as amenable to this treatment if the two of them weren't friends, but it is still slightly disconcerting. 'How about we get an icecream while we talk. Circe was meant to be getting some sorbets that I am interested in trying. Don't worry, I'll pay,' Cally says, her offer extended to both you and Isabella. Tempting as that bribe may be, I need to get going. I agreed to train the pups when I get back to the den. They deserve the best after all,' the canine apologizes. She follows you as far as the top of the steps before vanishing into the city, leaving you follow Callidora to the ice cream vendor.";
 	WaitLineBreak;
 	if Player is Pure Male:
 		say "     'Mixing with pigs again, Cally?' [if HP of Cindy > 5]Circe [else if HP of Cindy > 1]Cindy, or apparently Circe, [end if] teases after giving you a quick glance. 'No need to be rude. Not all men are worthy of such judgment,' Callidora replies reproachfully. 'That may be, but they are few and far between, though I did meet one the other day who treated me with the proper reverence. Knew the old language too. He had a similar aura to you so hardly someone that I can compare common mortals to,' Circe concedes. ";
-	else if player is female: [Female and Herm]
+	else if Player is female: [Female and Herm]
 		say "     'Picking up beauties, Cally?' [if HP of Cindy > 5]Circe [else if HP of Cindy > 1]Cindy, or apparently Circe, [end if] asks, beaming at you both. 'You could say that, but I somehow doubt that you would have been as enthusiastic if I was accompanied by a man,' Callidora replies dryly. 'True, but the majority of men are pigs, even if they don't show it on the outside, though I will admit that I met one the other day who treated me with the proper reverence. Knew the old language too. He had a similar aura to you so hardly someone that I can compare common mortals to,' Circe shoots back. ";
 	else: [Neuters]
 		say "     'Goodness, a neuter. You do meet some interesting people, don't you Cally,' [if HP of Cindy > 5]Circe [else if HP of Cindy > 1]Cindy, or apparently Circe, [end if] says with astonishment after letting her eyes rest on you. 'They're a person not a curiosity, though I suppose that this is still a more tame response than if they had been a man,' Callidora reprimands her. 'I apologize for my present rudeness, but I stand by my stance on men. Most of them are pigs, even if they don't show it on the outside, though I will admit that I met one the other day who treated me with the proper reverence. Knew the old language too. He had a similar aura to you so hardly someone that I can compare common mortals to,' Circe concedes. ";
@@ -267,7 +271,7 @@ to SunbathingGoddessEvent:
 			say "     You tell her about your hunt for the Ceryneian Hind throughout the city. 'Circe mentioned that. I don't know how I missed it. Was that when I was judging the sandcastle competition? Must have been quite the change of pace from having to beat a mythical creature to a pulp,' Callidora teases. ";
 	else:
 		say "     You tell her a bit more about your recent daily activities, not sparing on the details as she gives you her undivided attention. 'How do you find enough time in the day to do all this? If you've been making deals with Kronos, I'm going to have to report you,' Callidora teases. ";
-	say "You haven't felt this relaxed in a while, but after a few more inconsequential topics of discussion, you accept that you've probably spent long enough idly chatting. 'Yes, I suppose you have other important places to be, people to meet, and I should get back to patrolling the beach for sea monsters and bullies. Be sure to visit me again though. I promise that I have time in between my unnecessary beauty regimen and idle matchmaking,' Cally replies when you hesitantly mention the time. Promising to do so, you watch her return the empty ice cream pots to Circe before approaching the stairs back down to the beach. 'See you later [if player is herm]hot stuff[else if player is male]sexy[else if player is female]beautiful[else]cutie[end if],' she calls before vanishing from view and leaving you to decide what to do next.";
+	say "You haven't felt this relaxed in a while, but after a few more inconsequential topics of discussion, you accept that you've probably spent long enough idly chatting. 'Yes, I suppose you have other important places to be, people to meet, and I should get back to patrolling the beach for sea monsters and bullies. Be sure to visit me again though. I promise that I have time in between my unnecessary beauty regimen and idle matchmaking,' Cally replies when you hesitantly mention the time. Promising to do so, you watch her return the empty ice cream pots to Circe before approaching the stairs back down to the beach. 'See you later [if player is herm]hot stuff[else if Player is male]sexy[else if Player is female]beautiful[else]cutie[end if],' she calls before vanishing from view and leaving you to decide what to do next.";
 	say "[bold type]Your sanity increases by 20![roman type][line break]";
 	SanBoost 20;
 	move Player to Boardwalk2;

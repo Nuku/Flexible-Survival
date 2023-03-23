@@ -419,7 +419,7 @@ Sarea of Gazelle Breeding Bitch is "Zoo".
 when play begins:
 	add Gazelle Breeding Bitch to BadSpots of FurryList;
 	add Gazelle Breeding Bitch to BadSpots of FemaleList;
-	add Gazelle Breeding Bitch to badspots of HermList;
+	add Gazelle Breeding Bitch to BadSpots of HermList;
 
 to say ResolveEvent Gazelle Breeding Bitch:
 	say "     While walking the zoo grounds you overhear what sounds to be a series of dog yips and yelps. Curiosity over the sounds wins out over caution, and you're soon peering around a corner, your gaze falling onto the familiar sight of a sexual encounter just about to start. About thirty feet distant, a little group of herm gazelle girls crowded around an anthro retriever. The canine bitch appears to be in heat, lying on the ground amidst a scattering of clothes that she seems to have clawed off her body. She is panting heavily, the dripping cunt between her legs matting the fur of her crotch and inner legs. This spectacle seems to have awakened strong urges in the usually fairly shy gazelles, their hard cocks explaining why fleeing herd animals went on the offensive here. There are four of the tawny-furred antelopes, and a second later, they start stroking over their own cocks and pussies as they stare at the naked canine.";
@@ -481,7 +481,7 @@ when play begins:
 	add Elven Mount to BadSpots of FurryList;
 	add Elven Mount to BadSpots of FemaleList;
 	add Elven Mount to BadSpots of MaleList;
-	add Elven Mount to badspots of FeralList;
+	add Elven Mount to BadSpots of FeralList;
 
 to say ResolveEvent Elven Mount:
 	say "     Wandering through the zoo and stepping onto one of the bigger thoroughfares through the zoo from a side passage, you suddenly you hear the dominant growl of a big cat somewhere from the side. Yet as you spin around to face your foe, things aren't quite what you expected. About thirty feet to your left, a seemingly intact enclosure for large predators harbors a feral cheetah perched in a dominant position over a woman. She's an elf from what you can see, with pointy ears and surrounded by seemingly hastily stripped off clothes that would fit a fantasy setting. Maybe she wandered into the zoo from somewhere else? Wherever she might have come from, she's currently under a clearly horny dominant cheetah. Though the position apparently wasn't forced upon her, as the woman's face is clearly showing pleasure... and embarrassment at being caught, as she stares back you through the chain fence surrounding the enclosure.";

@@ -101,9 +101,9 @@ ResolveFunction of Captive Rat is "[ResolveEvent Captive Rat]". The level of Cap
 Sarea of Captive Rat is "Mall".
 when play begins:
 	add Captive Rat to BadSpots of MaleList;
-	add Captive Rat to badspots of HermList;
+	add Captive Rat to BadSpots of HermList;
 	add Captive Rat to BadSpots of FurryList;
-	add Captive Rat to badspots of DemonList;
+	add Captive Rat to BadSpots of DemonList;
 
 
 to say ResolveEvent Captive Rat:

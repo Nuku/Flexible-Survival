@@ -3,6 +3,14 @@ Version 1 of Brooke by Stripes begins here.
 
 "Adds a primarily M/M Otter NPC named Brooke to the Flexible Survival game."
 
+[ HP of Brooke                      ]
+[ 0 = Nothing                       ]
+[ 1 = Talked w/him                  ]
+[ 2 = Received oral                 ]
+[ 3 = Fucked him                    ]
+[ 4 = Fucked him again              ]
+[ 5 = Fucked by him                 ]
+
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Brooke is in NPC Nexus:
 		move Brooke to Palomino;
@@ -13,7 +21,30 @@ Table of GameCharacterIDs (continued)
 object	name
 Brooke	"Brooke"
 
-Brooke is a man. Brooke is in The Palomino.
+Brooke is a man.
+Brooke is in The Palomino.
+ScaleValue of Brooke is 3. [human sized]
+SleepRhythm of Brooke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Brooke is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Brooke is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Brooke is 3. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Brooke is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Brooke is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Brooke is 6. [length in inches]
+Breast Size of Brooke is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Brooke is 2. [count of nipples]
+Asshole Depth of Brooke is 12. [inches deep for anal fucking]
+Asshole Tightness of Brooke is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Brooke is 1. [number of cocks]
+Cock Girth of Brooke is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Brooke is 6. [Length in Inches]
+Ball Count of Brooke is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Brooke is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Brooke is 0. [number of cunts]
+Cunt Depth of Brooke is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Brooke is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Brooke is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Brooke is false.
 PlayerRomanced of Brooke is false.
@@ -25,8 +56,12 @@ Virgin of Brooke is true.
 AnalVirgin of Brooke is false.
 PenileVirgin of Brooke is false.
 SexuallyExperienced of Brooke is true.
+TwistedCapacity of Brooke is true. [Twisted Characters can take any penetration, no matter the size] [Otter. :P]
+Sterile of Brooke is false. [steriles can't knock people up]
+MainInfection of Brooke is "Sea Otter".
 Description of Brooke is "[brookedesc]".
 Conversation of Brooke is { "Sneak off with me?" }.
+The scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 brookeandrewtalk is a truth state that varies. brookeandrewtalk is usually false.
 The icon of Brooke is Figure of Brooke_icon.
 brookeanal is a number that varies.
@@ -34,8 +69,6 @@ brookeanal is a number that varies.
 
 to say brookedesc:
 	say "     Among the people dancing at the club, this otter catches your eye. Perhaps it's his lovely, cream colored fur, or his pretty-boy face. It might be the way he moves his slender and flexible body to the music in a way all his own. Or maybe the colorful bracelets glowing in the blacklight. No, if you must be honest with yourself, it's totally that plump sheath, heavy balls and tight booty of his. For while he wears a tight black t-shirt, numerous bracelets and anklets, he's nude from the waist down. And from the way he's moving that rudder-like tail of his, he has no problem raising it and showing off his toned rear to the nearby guys.";
-
-the scent of Brooke is "Brooke carries a medley of musky male scents upon him.".
 
 
 Section 2 - Conversation
@@ -93,7 +126,7 @@ to say sexwithBrooke:
 		now description entry is "Stuff the otter's ass";
 		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 2;
 		now description entry is "Have him suck you off";
 		[]
@@ -124,7 +157,7 @@ to say sexwithBrooke:
 					now sextablerun is 1;
 					if nam is "Fuck him":
 						say "[brookesex01]";
-					else if nam is "Blow job":
+					else if nam is "Blowjob":
 						say "[brookesex02]";
 					else if nam is "Get fucked":
 						say "[brookesex03]";
@@ -141,11 +174,11 @@ to say sexwithBrooke:
 to say brookesex00:		[first time scene]
 	say "     Deciding to take the dancing otter up on his offer, you exit the dance floor with him. He ends up leading you into the washroom hallway and makes out with in the shadowy cul-de-sac at the end. While by no means private, it's a lot less public than out of the dance floor. And to guess from the strong scent of sex around you, you'd say this spot's been a popular choice. Catching quite a bit of otter in the mix of musky scents, you can guess you're by no means the first guy he's taken back here.";
 	say "     Putting his arms around you, the cream-colored otter gives you a big kiss. His slender body rubs against yours and you can feel the athletic body under that sleek fur. Your hands drift to his ass and give those firm cheeks a squeeze. He releases an excited chirp and grinds his swelling sheath against your hip. 'Let's see what we've got to play with,' he purrs, reaching for your manhood and stroking you to erection. Looking over your [cock size desc of Player] cock, he [if Cock Length of Player < 5]licks his lips at your dainty little rod[else if Cock Length of Player < 8]smiles appreciatively at the sight of your average-sized rod[else if Cock Length of Player < 15]licks his lips at the sight of your meaty rod[else if Cock Length of Player < 25]chirrs excitedly at the heft of your impressive rod[else]is wide-eyed and even drools a bit at the sight of your colossal rod[end if]. He drops to his knees and sets himself to task licking your glans before [if Cock Length of Player > 14]taking your enlarged cock into his muzzle with a lustful effort[else]taking your [Cock of Player] cock into his muzzle[end if].";
-	say "     [if Cock Length of Player > 14]After managing to get that muzzleful of cock he so greatly desires, [end if]Brooke works your shaft with his tongue and mouth. [if CockName of Player is not listed in infections of InternalCockList]Fondling your nuts[else]Caressing your thigh[end if], the otter displays his considerable experience in giving these back hall blow jobs. You're achingly hard and dribbling precum across his artful tongue. Aiming to get you riled up, it's not long before you're breathing heavily with arousal.";
+	say "     [if Cock Length of Player > 14]After managing to get that muzzleful of cock he so greatly desires, [end if]Brooke works your shaft with his tongue and mouth. [if CockName of Player is not listed in infections of InternalCockList]Fondling your nuts[else]Caressing your thigh[end if], the otter displays his considerable experience in giving these back hall blowjobs. You're achingly hard and dribbling precum across his artful tongue. Aiming to get you riled up, it's not long before you're breathing heavily with arousal.";
 	WaitLineBreak;
 	if anallevel > 1:
 		say "     And it's at this point the otter pulls his muzzle away, turns himself around and raises his tail. Veritably wild with arousal, you press him up against the wall and drive your slick cock between his cheeks. He spreads [if Cock Length of Player < 15]easily for you[else if Cock Length of Player < 25]slowly and steadily for you[end if], welcoming your [Cock of Player] penis into his gripping ass. 'Oh yeah, that's the stuff,' he churrs excitedly, pushing himself back onto your meat even as you mount him. With your hands on his shoulders, you start thrusting into the eager male, the slick sounds of sex drowned out by the club's music.";
-		say "     As you fuck the wriggling otter, the slap of your hips fall into synch with the thumping of the base. His rear grinds, squeezes and rocks over your thrusting pole delightfully. Already quite worked up by the blow job warm-up, you don't last for much longer. The otter, face pressed to the wall and hand around his cock, is masturbating himself wildly. Able to hear his moans and panting above the music, you can tell he's close as well. Reaching around, you fondle his hefty balls and drive deep into him, unleashing your [Cum Load Size of Player] load into the sexy male's bowels. Feeling your hot seed filling him is enough to push him over the top and he cums hard. Blasting his load across the wall, it adds to the sticky stain already there.";
+		say "     As you fuck the wriggling otter, the slap of your hips fall into synch with the thumping of the base. His rear grinds, squeezes and rocks over your thrusting pole delightfully. Already quite worked up by the blowjob warm-up, you don't last for much longer. The otter, face pressed to the wall and hand around his cock, is masturbating himself wildly. Able to hear his moans and panting above the music, you can tell he's close as well. Reaching around, you fondle his hefty balls and drive deep into him, unleashing your [Cum Load Size of Player] load into the sexy male's bowels. Feeling your hot seed filling him is enough to push him over the top and he cums hard. Blasting his load across the wall, it adds to the sticky stain already there.";
 		WaitLineBreak;
 		say "     When you're done, the otter sighs softly and curls his tail around your waist. The thick tail holds you gently, as if quietly asking for you to stay buried in him a little longer. Happy to oblige, you wrap your arms around him and he turns his head back to nuzzle you in return. 'Mmm... that was great. I still can't get over how much better anal is now that I'm a guy. Uh- a guy otter,' he adds quickly, blushing and looking away. The questioning look on your face is, however, undeniable, and you really cannot help it.";
 		say "     'Alright, yes... I used to be a girl, but please don't make this weird,' he says in a hushed plea. 'It's not like I was looking to become a guy or anything. You know how this crazy transformation thing is - it just turned out that way[if Player is herm]. I'm sure you know what that's like given your current state[end if]. But it's not like I mind. It's far better to be the sexiest guy on the dance floor than the frumpy girl with two left feet. And going from straight girl to gay otter boytoy means I can finally get all the hot dickings I've ever wanted and more,' he winks and giggles weakly, trying to throw off his earlier nervousness.";
@@ -176,8 +209,8 @@ to say brookesex01:		[Fuck him]
 	NPCSexAftermath Brooke receives "AssFuck" from Player;
 
 
-to say brookesex02:		[Blow job]
-	say "     Opting for a blow job, you take the otter's hand in yours and head into the shadowy hallway. You start by making out, kissing each other lustfully while your hands run over the other's body. You slip a hand under the otter's dark shirt to rub his smooth, creamy fur. Tweaking his nipples, you delight in the excited chirps he makes. His webbed paws make their way across your back and sides before eventually ending up at your crotch. Taking your [cock size desc of Player] cock in paw, he strokes you to erection before getting down on his knees.";
+to say brookesex02:		[Blowjob]
+	say "     Opting for a blowjob, you take the otter's hand in yours and head into the shadowy hallway. You start by making out, kissing each other lustfully while your hands run over the other's body. You slip a hand under the otter's dark shirt to rub his smooth, creamy fur. Tweaking his nipples, you delight in the excited chirps he makes. His webbed paws make their way across your back and sides before eventually ending up at your crotch. Taking your [cock size desc of Player] cock in paw, he strokes you to erection before getting down on his knees.";
 	say "     Nuzzling and licking at your shaft, he purrs happily, taking in the rich scent of your arousal. After sliding his tongue up and down it a few times[if CockName of Player is not listed in infections of InternalCockList] and even giving your balls a thorough licking[end if], he opens his muzzle wide and lets your [Cock of Player] cock slide into his hot, wet maw. You moan and rub your hands over his fuzzy head while he [if Cock Length of Player < 14]works your oversized cock down his throat[else]hungrily sucks your cock[end if]. His tongue plays across your shaft while he bobs his head to the music. The [one of]dance track playing sets an energetic pace that quickly has you panting and moaning[or]trance song playing sets a slowly building pace that allows you to savor his well-practiced tonguework[or]the electronica song playing having an alternating rhythm that builds you close to your peak before dialing back down every time you seem to be getting close[or]techno song playing drives the otter with its fast pace, urging you towards a quick orgasm[in random order]. By the time the song's wrapping up, you can't hold back any longer and pull the otter's face to your crotch. Cumming hard, you blast your hot seed down your sexy lover's throat. Once you're drained, Brooke bounces back to his feet, gives you a sticky kiss and bounds back onto the dance floor with increased energy.";
 	NPCSexAftermath Brooke receives "OralCock" from Player;
 
@@ -220,13 +253,5 @@ Section 8 - Infection Mechanic
 to brookeinfect:
 	setmonster "Sea Otter";
 	infect "Sea Otter";
-
-[ HP of Brooke                      ]
-[ 0 = Nothing                       ]
-[ 1 = Talked w/him                  ]
-[ 2 = Received oral                 ]
-[ 3 = Fucked him                    ]
-[ 4 = Fucked him again              ]
-[ 5 = Fucked by him                 ]
 
 Brooke ends here.

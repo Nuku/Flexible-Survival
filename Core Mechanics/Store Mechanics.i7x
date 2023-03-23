@@ -159,7 +159,7 @@ to say TPC male clothing selector: [Main male clothing Menu (level 1)]
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -208,7 +208,7 @@ to say browse_TPK_male_headwear: [Male clothing category submenu (level 2 under 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -249,7 +249,7 @@ to say TPK_Male_BikeHelmetMenu: [Male clothing category sub-submenu (level 3 und
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -272,7 +272,7 @@ to say DragonBikeHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -314,7 +314,7 @@ to say browse_TPK_male_jackets: [Male clothing category submenu (level 2 under t
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -360,7 +360,7 @@ to say TPK_Male_GreatcoatMenu: [Male clothing category sub-submenu (level 3 unde
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -385,7 +385,7 @@ to say BlackGreatcoatTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -406,7 +406,7 @@ to say GrayGreatcoatTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -448,7 +448,7 @@ to say browse_TPK_male_legwear: [Male clothing category submenu (level 2 under t
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -489,7 +489,7 @@ to say TPK_Male_CamoPantsMenu: [Male clothing category sub-submenu (level 3 unde
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -512,7 +512,7 @@ to say GreenCamoPantsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -564,7 +564,7 @@ to say browse_TPK_male_underwear: [Male clothing category submenu (level 2 under
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -609,7 +609,7 @@ to say TPK_Male_BriefsMenu: [Male clothing category sub-submenu (level 3 under t
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -632,7 +632,7 @@ to say WhiteBriefsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -672,7 +672,7 @@ to say TPK_Male_BoxerBriefsMenu: [Male clothing category sub-submenu (level 3 un
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -695,7 +695,7 @@ to say BlackBoxerBriefsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -735,7 +735,7 @@ to say TPK_Male_JockstrapsMenu: [Male clothing category sub-submenu (level 3 und
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -758,7 +758,7 @@ to say OrangeJockstrapTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -800,7 +800,7 @@ to say browse_TPK_male_shoes: [Male clothing category submenu (level 2 under the
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -841,7 +841,7 @@ to say browse_TPK_Male_CombatBootsMenu: [Male clothing category sub-submenu (lev
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -864,7 +864,7 @@ to say BlackCombatBootsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -941,7 +941,7 @@ to say TPC female clothing selector: [Main female clothing Menu (level 1)]
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -998,7 +998,7 @@ to say browse_TPK_female_headwear: [Female clothing category submenu (level 2 un
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1043,7 +1043,7 @@ to say browse_TPK_Female_BikeHelmetsMenu: [Female clothing category sub-submenu 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1066,7 +1066,7 @@ to say PrincessBikeHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1121,7 +1121,7 @@ to say browse_TPK_Female_LargeBowsMenu: [Female clothing category sub-submenu (l
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1150,7 +1150,7 @@ to say LargeWhiteBowTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1171,7 +1171,7 @@ to say LargeBlackBowTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1192,7 +1192,7 @@ to say LargePinkBowTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1213,7 +1213,7 @@ to say LargePolkaDotBowTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1253,7 +1253,7 @@ to say browse_TPK_Female_GlassesMenu: [Female clothing category sub-submenu (lev
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1276,7 +1276,7 @@ to say Rose-tintedGlassesTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1328,7 +1328,7 @@ to say browse_TPK_female_legwear: [Female clothing category submenu (level 2 und
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1373,7 +1373,7 @@ to say browse_TPK_Female_JoggingPantsMenu: [Female clothing category sub-submenu
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1396,7 +1396,7 @@ to say PinkJoggingPantsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1436,7 +1436,7 @@ to say browse_TPK_Female_ShortsMenu: [Female clothing category sub-submenu (leve
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1459,7 +1459,7 @@ to say FloweredBermudaShortsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1509,7 +1509,7 @@ to say browse_TPK_Female_SkirtsMenu: [Female clothing category sub-submenu (leve
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1555,7 +1555,7 @@ to say browse_TPK_Female_PencilSkirtsMenu: [Female clothing category sub-submenu
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1578,7 +1578,7 @@ to say Light-bluePencilSkirtTalk: [item selection (level 5)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1623,7 +1623,7 @@ to say browse_TPK_Female_MiniSkirtsMenu: [Female clothing category sub-submenu (
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1648,7 +1648,7 @@ to say BlackMiniSkirtTalk: [item selection (level 5)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1669,7 +1669,7 @@ to say PinkMiniSkirtTalk: [item selection (level 5)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1709,7 +1709,7 @@ to say browse_TPK_Female_GypsySkirtsMenu: [Female clothing category sub-submenu 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1732,7 +1732,7 @@ to say GypsyFloralSkirtTalk: [item selection (level 5)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1779,7 +1779,7 @@ to say browse_TPK_female_underwear: [Female clothing category submenu (level 2 u
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1822,7 +1822,7 @@ to say TPK_Female_BrasMenu: [Female clothing category sub-submenu (level 3 under
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1845,7 +1845,7 @@ to say SimpleBlackBraTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1885,7 +1885,7 @@ to say TPK_Female_PantiesMenu: [Female clothing category sub-submenu (level 3 un
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1908,7 +1908,7 @@ to say PinkPantiesTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -1955,7 +1955,7 @@ to say browse_TPK_female_shoes: [Female clothing category submenu (level 2 under
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -1998,7 +1998,7 @@ to say TPK_Female_PumpsMenu: [Female clothing category sub-submenu (level 3 unde
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2021,7 +2021,7 @@ to say Bright-redPumpsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2061,7 +2061,7 @@ to say TPK_Female_StilettosMenu: [Female clothing category sub-submenu (level 3 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2084,7 +2084,7 @@ to say BlackStilettoHeelsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2168,7 +2168,7 @@ to say RD costume clothing selector: [Main costume clothing Menu (level 1)]
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2217,7 +2217,7 @@ to say browse_RD_biker_section: [costume clothing category submenu (level 2 unde
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2273,7 +2273,7 @@ to say RD_Biker_HelmetsMenu: [Costume clothing category sub-submenu (level 3 und
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2302,7 +2302,7 @@ to say BlackMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2323,7 +2323,7 @@ to say FlamingMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 20:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2344,7 +2344,7 @@ to say SuccubusMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2365,7 +2365,7 @@ to say IncubusMotorcycleHelmetTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2407,7 +2407,7 @@ to say browse_RD_underwear_section: [costume clothing category submenu (level 2 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2448,7 +2448,7 @@ to say RD_BriefsMenu: [Costume clothing category sub-submenu (level 3 under the 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2471,7 +2471,7 @@ to say BlackMeshBriefsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 10:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2518,7 +2518,7 @@ to say browse_RD_wildwest_section: [costume clothing category submenu (level 2 u
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2561,7 +2561,7 @@ to say RD_CowboyHatsMenu: [Costume clothing category sub-submenu (level 3 under 
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2584,7 +2584,7 @@ to say Cow-printCowboyHatTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2624,7 +2624,7 @@ to say RD_CowboyBootsMenu: [Costume clothing category sub-submenu (level 3 under
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2647,7 +2647,7 @@ to say Cow-printCowgirlBootsTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;
@@ -2690,7 +2690,7 @@ to say browse_RD_BDSM_section: [costume clothing category submenu (level 2 under
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2731,7 +2731,7 @@ to say RD_MasksMenu: [Costume clothing category sub-submenu (level 3 under the c
 			choose row calcnumber in table of fucking options;
 			[
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 			]
 			let nam be title entry;
 			now sextablerun is 1;
@@ -2754,7 +2754,7 @@ to say LatexMouseMaskTalk: [item selection (level 4)]
 	say "     [bold type]Is this what you would like to purchase?[roman type][line break]";
 	say "     ([link]Y[as]y[end link]) - Yes!";
 	say "     ([link]N[as]n[end link]) - No!";
-	if player consents:
+	if Player consents:
 		if freecred < 30:
 			say "     You don't seem to have enough freecreds to buy that.";
 			LineBreak;

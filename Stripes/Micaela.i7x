@@ -41,7 +41,7 @@ ResolveFunction of Easter Eggs is "[ResolveEvent Easter Eggs]".
 Sarea of Easter Eggs is "Forest".
 when play begins:
 	add Easter Eggs to BadSpots of FurryList;
-	add Easter Eggs to badspots of HermList;
+	add Easter Eggs to BadSpots of HermList;
 
 to say ResolveEvent Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";
@@ -119,13 +119,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Micaela	"Micaela"
 
-Micaela is a person. Micaela is in Bunny House.
+Micaela is a person.
+Micaela is in Bunny House.
+ScaleValue of Micaela is 3. [human sized]
+SleepRhythm of Micaela is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Micaela is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Micaela is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Micaela is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Micaela is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Micaela is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Micaela is 6. [length in inches]
+Breast Size of Micaela is 7. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Micaela is 2. [count of nipples]
+Asshole Depth of Micaela is 10. [inches deep for anal fucking]
+Asshole Tightness of Micaela is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Micaela is 1. [number of cocks]
+Cock Girth of Micaela is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Micaela is 9. [Length in Inches]
+Ball Count of Micaela is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Micaela is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Micaela is 1. [number of cunts]
+Cunt Depth of Micaela is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Micaela is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Micaela is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Micaela is false.
+PlayerRomanced of Micaela is false.
+PlayerFriended of Micaela is false.
+PlayerControlled of Micaela is false.
+PlayerFucked of Micaela is false.
+OralVirgin of Micaela is false.
+Virgin of Micaela is false.
+AnalVirgin of Micaela is false.
+PenileVirgin of Micaela is false.
+SexuallyExperienced of Micaela is true.
+TwistedCapacity of Micaela is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Micaela is false. [steriles can't knock people up]
+MainInfection of Micaela is "Easter Bunny".
 Description of Micaela is "[micaeladesc]".
 Conversation of Micaela is { "Eggies!" }.
 the scent of the Micaela is "The colorful bunny smells of arousal, rabbits and candy.".
 micaela_bf is a number that varies.
 the icon of Micaela is Figure of Micaela_icon.
-
 
 to say micaeladesc:
 	if debugactive is 1:
@@ -250,7 +286,7 @@ to say micaela_sexmenu:
 		now description entry is "Let the bunny bang you";
 	[]
 	if HP of Micaela >= 6:
-		if ( FaceName of Player is not "Easter Bunny" and BodyName of Player is not "Easter Bunny" and SkinName of Player is not "Easter Bunny" and TailName of Player is not "Easter Bunny" and CockName of Player is not "Easter Bunny" ) or ( BodyName of Player is "Easter Bunny" and player is pure ) and player is not neuter:
+		if ( FaceName of Player is not "Easter Bunny" and BodyName of Player is not "Easter Bunny" and SkinName of Player is not "Easter Bunny" and TailName of Player is not "Easter Bunny" and CockName of Player is not "Easter Bunny" ) or ( BodyName of Player is "Easter Bunny" and player is pure ) and Player is not neuter:
 			choose a blank row in table of fucking options;
 			now title entry is "Bunny-fucking session";
 			now sortorder entry is 4;

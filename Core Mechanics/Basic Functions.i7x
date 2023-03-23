@@ -530,6 +530,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 		say "DEBUG -> NPCSexAftermath[line break]";
 		say "TakingChar: [Printed Name of TakingChar][line break]";
 		say "GivingChar: [Printed Name of GivingChar][line break]";
+	now LastSexualPartner of TakingChar is printed name of GivingChar;
+	now LastSexualPartner of GivingChar is printed name of TakingChar;
 	if GivingChar is Player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner for '[SexAct]'[line break]";
@@ -544,6 +546,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
 				add printed name of TakingChar to AnalVirginitiesTaken of Player;
 			increase AssFuckGiven of Player by 1;
+			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
+				say "[ImpregFunction of TakingChar]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of Player is true:
 				now PenileVirgin of Player is false;
@@ -553,13 +557,15 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
 			increase PussyFuckGiven of Player by 1;
-		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles - anything pussy penetrative that does not impregnate]
+			if GivingChar is not sterile and TakingChar is fpreg_able: [fpreg fertile]
+				say "[ImpregFunction of TakingChar]";
+		else if SexAct is "PussyDildoFuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything pussy penetrative that does not impregnate]
 			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s virginity![roman type][line break]";
 				add printed name of TakingChar to VirginitiesTaken of Player;
 			increase PussyFuckGiven of Player by 1;
-		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
+		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles, or even a cock that is pulled out before orgasm - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type]You have taken [TakingChar]'s anal virginity![roman type][line break]";
@@ -666,6 +672,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now AnalVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s anal virginity![roman type][line break]";
 				now FirstAnalPartner of TakingChar is printed name of GivingChar;
+			if GivingChar is not sterile and TakingChar is mpreg_able: [mpreg fertile]
+				say "[ImpregFunction of TakingChar]";
 		else if SexAct is "PussyFuck":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
@@ -675,6 +683,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
+			if GivingChar is not sterile and TakingChar is fpreg_able: [fpreg fertile]
+				say "[ImpregFunction of TakingChar]";
 		else if SexAct is "AssDildoFuck": [used for dildos, fingers, tentacles - anything ass penetrative that does not impregnate]
 			if AnalVirgin of TakingChar is true:
 				now AnalVirgin of TakingChar is false;
@@ -825,10 +835,12 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		if there is a name of GivingCharName in the Table of GameCharacterIDs:
 			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
 			now Lastfuck of GivingChar is turns;
+			now LastSexualPartner of GivingChar is TakingCharName;
 			now GivingCharIsNPC is 1;
 		if there is a name of TakingCharName in the Table of GameCharacterIDs:
 			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
 			now Lastfuck of TakingChar is turns;
+			now LastSexualPartner of TakingChar is GivingCharName;
 			now TakingCharIsNPC is 1;
 		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
 			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
@@ -850,11 +862,15 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 					now AnalVirgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their anal virginity to [GivingCharName in lower case]![roman type][line break]";
 					now FirstAnalPartner of TakingChar is GivingCharName;
+				if TakingChar is mpreg_able: [mpreg fertile]
+					say "[ImpregFunction of TakingChar]";
 			else if SexAct is "PussyFuck":
 				if Virgin of TakingChar is true:
 					now Virgin of TakingChar is false;
 					say "     [Bold Type][TakingCharName] has lost their virginity to [GivingCharName in lower case]![roman type][line break]";
 					now FirstVaginalPartner of TakingChar is GivingCharName;
+				if TakingChar is fpreg_able: [fpreg fertile]
+					say "[ImpregFunction of TakingChar]";
 			else if SexAct is "AssDildoFuck":
 				if AnalVirgin of TakingChar is true:
 					now AnalVirgin of TakingChar is false;

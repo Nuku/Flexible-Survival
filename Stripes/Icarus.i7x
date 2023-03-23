@@ -49,7 +49,6 @@ Icarus	"Icarus"
 
 Icarus is a person.
 Description of Icarus is "[Icarusdesc]".
-Conversation of Icarus is { "Wilder!" }.
 icarusscene1 is a truth state that varies. icarusscene1 is usually false.
 icarusscene2 is a truth state that varies. icarusscene2 is usually false.
 tti_scene is a number that varies.
@@ -60,9 +59,49 @@ icarus_cbt is a number that varies. icarus_cbt is usually 2.
 icarus_lastpred is a number that varies. icarus_lastpred is usually 1.
 icarusrim is a truth state that varies. icarusrim is usually false.
 
+Icarus is a man.
+ScaleValue of Icarus is 2. [small human sized]
+SleepRhythm of Icarus is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Icarus is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Icarus is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Icarus is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Icarus is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Icarus is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Icarus is 5. [length in inches]
+Breast Size of Icarus is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Icarus is 2. [count of nipples]
+Asshole Depth of Icarus is 8. [inches deep for anal fucking]
+Asshole Tightness of Icarus is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Icarus is 1. [number of cocks]
+Cock Girth of Icarus is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Icarus is 7. [Length in Inches]
+Ball Count of Icarus is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Icarus is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Icarus is 0. [number of cunts]
+Cunt Depth of Icarus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Icarus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Icarus is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Icarus is false.
+PlayerRomanced of Icarus is false.
+PlayerFriended of Icarus is false.
+PlayerControlled of Icarus is false.
+PlayerFucked of Icarus is false.
+OralVirgin of Icarus is true.
+Virgin of Icarus is true.
+AnalVirgin of Icarus is true.
+PenileVirgin of Icarus is false.
+SexuallyExperienced of Icarus is true.
+TwistedCapacity of Icarus is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Icarus is true. [steriles can't knock people up]
+MainInfection of Icarus is "Blue Chaffinch".
+Description of Icarus is "[Icarusdesc]".
+Conversation of Icarus is { "Wilder!" }.
+the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of Avianpredlist or FaceName of Player is listed in infections of Felinelist]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
+
 [See Blue Chaffinch file for collecting Icarus.]
 
-the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of Avianpredlist or FaceName of Player is listed in infections of Felinelist]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
 
 
 to say Icarusdesc:
@@ -205,7 +244,7 @@ to say icarussex_sub:
 			blank out the whole of table of fucking options;
 			if Player is male:
 				choose a blank row in table of fucking options;
-				now title entry is "Blow job";
+				now title entry is "Blowjob";
 				now sortorder entry is 2;
 				now description entry is "get him to suck you off";
 				choose a blank row in table of fucking options;
@@ -235,7 +274,7 @@ to say icarussex_sub:
 					if Player consents:
 						let nam be title entry;
 						now sextablerun is 1;
-						if nam is "Blow job":
+						if nam is "Blowjob":
 							if formcheck is 1:
 								say "[icarussex2_ap]";
 							else if formcheck is 2:
@@ -991,7 +1030,7 @@ to say icarussex6a_dom:		[Repeatable rough scene A]
 	say "     'Down on your knees, you slut,' he orders, shoving the back of your shoulder. You comply sheepishly, submitting to your passerine master. While out in the city you may behave differently, down here you are the bird's toy. The prospect is exciting, feeling like a release from the stress of your struggles.";
 	say "     He strides in front of you and slaps his penis across your [if formcheck is 1]beak[else]muzzle[end if]. 'Open up, you cock-sucker, and get to work.' Obediently, you open your mouth and take the little guy's cock into it. The blue bird grabs your head and thrusts mercilessly into your mouth. His stiff member pushes into your mouth and throat over and over again. His rough pace makes it difficult for you, but you do your best to lick and suck on his cock in an effort to please him. His talons dig into you as his excitement builds and, taking it to mean he's enjoying your cock-sucking, you continue in earnest despite the discomfort they bring. If anything, the pain is good because it's a sign of your master's pleasure, and hence your own.";
 	say "     When Icarus cums, he blows hard. His load blasts down your throat and wind pipe. Your eyes water and it takes effort to not immediately cough, but you manage to keep licking and swallowing. When he's finished and his talons relax, you pull away, coughing up the gooey mess.";
-	say "     'That's pathetic,' Icarus grumbles. 'You can't even give a proper blow job.' Staggered and on your knees, he quickly grabs you by the scruff and slams you forward into the old boiler. Stars fill your vision and the taste of blood is added to that of your master's seed in your mouth. You give a soft groan from the floor.";
+	say "     'That's pathetic,' Icarus grumbles. 'You can't even give a proper blowjob.' Staggered and on your knees, he quickly grabs you by the scruff and slams you forward into the old boiler. Stars fill your vision and the taste of blood is added to that of your master's seed in your mouth. You give a soft groan from the floor.";
 	if wslevel > 1 and a random chance of wslevel in 5 succeeds:
 		say "     Icarus looks down at you for a moment. Taking aim with his cock, he releases a hot spray of piss onto the back of your head and then down your back. The musky, acrid fluid makes your wounds sting as he provides another reminder that you're his to use as he sees fit. You feel pathetic and weak doing this, but find it strangely arousing to let the little bird abuse you so.";
 	else:

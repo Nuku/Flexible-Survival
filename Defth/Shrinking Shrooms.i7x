@@ -76,7 +76,7 @@ Sarea of Hungry Dog is "Outside".
 When play begins:
 	add Hungry dog to BadSpots of FurryList;
 	add Hungry dog to BadSpots of MaleList;
-	add Hungry dog to badspots of VoreList;
+	add Hungry dog to BadSpots of VoreList;
 
 to say ResolveEvent Hungry Dog:
 	if vorelevel > 2:
@@ -198,7 +198,7 @@ When play begins:
 	add Little trouble to BadSpots of FurryList;
 	add Little trouble to BadSpots of MaleList;
 	add Little trouble to BadSpots of FemaleList;
-	add Little trouble to badspots of VoreList;
+	add Little trouble to BadSpots of VoreList;
 
 to say ResolveEvent Little Trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
@@ -750,10 +750,10 @@ to say BHHScene1:
 		if Player consents:
 			Linebreak;
 			ItemLoss glowing mushroom by 1;
-			say "     Deciding to trust the equine guy, you let him know that you shall do as he requests, and ingest the glowing mushroom in front of him. 'Oh, good. Its effects should kick in soon.' The mischievous grin in the horseman's face are enough to unsettle you, but he never lied to you. Upon consuming the shroom, you see yourself shrinking before him, [if player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not cease until you are small as a mouse, standing as stall as his ankles, just above his hooves. Now, the horseman is looking over at you, unbuttoning his pants and freeing his massive endowment that comes swinging forward, growing rapidly to a full erection.";
+			say "     Deciding to trust the equine guy, you let him know that you shall do as he requests, and ingest the glowing mushroom in front of him. 'Oh, good. Its effects should kick in soon.' The mischievous grin in the horseman's face are enough to unsettle you, but he never lied to you. Upon consuming the shroom, you see yourself shrinking before him, [if Player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not cease until you are small as a mouse, standing as stall as his ankles, just above his hooves. Now, the horseman is looking over at you, unbuttoning his pants and freeing his massive endowment that comes swinging forward, growing rapidly to a full erection.";
 			say "     This is not a hung horseman. This is the [italic type]hungest[roman type] horseman you have ever seen, a dick so big that you have no idea how it could fit in those pants, and the more you think about it, the less sense it makes. And it is not just his member, he also has a very, [italic type]very[roman type] respectable pair of nuts hanging underneath, each testicle being almost the size of your current height! 'I like this area... Because nobody usually comes by to bother us. So I can show you my meat and balls and do whatever I want with you without anyone telling me to stop.' he says, giving his generous manhood and large testes some good rubs and strokes as he stands gigantic above you.";
 			WaitLineBreak;
-			say "     Something about this feels off, as he clearly is not telling you everything. Though he makes a move to grab you with one hand, lifting you up to the same level as his eyes, then takes a seat back on a bench nearby. He really is excited, his huge equine dong looking more like it belongs to an actual horse than on an anthropomorphic body like his, thick, throbbing and leaking as he admires your shrunken and naked form. With one finger, he rubs your body all over gently, especially over your chest and crotch, [if player is female]giving your pussy a little caress that just sends a shiver of pleasure up your whole being, [else if player is male]giving your [cock of player] dick a gentle flicker and thorough stroking, stopping only when you get rock hard under his touch, [end if]and it sends your lust to a peak. He does seem to know what he is doing...!";
+			say "     Something about this feels off, as he clearly is not telling you everything. Though he makes a move to grab you with one hand, lifting you up to the same level as his eyes, then takes a seat back on a bench nearby. He really is excited, his huge equine dong looking more like it belongs to an actual horse than on an anthropomorphic body like his, thick, throbbing and leaking as he admires your shrunken and naked form. With one finger, he rubs your body all over gently, especially over your chest and crotch, [if Player is female]giving your pussy a little caress that just sends a shiver of pleasure up your whole being, [else if Player is male]giving your [cock of player] dick a gentle flicker and thorough stroking, stopping only when you get rock hard under his touch, [end if]and it sends your lust to a peak. He does seem to know what he is doing...!";
 			say "     'You're quite a good looking little [guygal]...' he throws in the compliment as you perceive his face to be higher and higher, taking a moment to realize he is actually bringing you lower. You go down below past his chest, his midriff, and around the thick long shaft, bringing you against it and sliding you down to its base. The hot and throbbing meat pulses against you as you are used by the horseman to jerk his manhood, your body being rubbed against the entirety of his manhood's length and girth, and his motions eventually converge towards the tip. You realize he gets especially aroused every time part of you brushes against the slit, which oddly gapes slightly whenever you get close, which is visibly leaking thick droplets of precum.";
 			WaitLineBreak;
 			say "     He then makes you look at him in the eyes as he is holding you above his equine shaft, and you can definitely see his expression of pure lust as he keeps you just above the tip of his cock, making you feet touch the slit... And something odd takes place as you feel them warming up all of the sudden, as if something slick, pulsing and wet is wrapping itself around them, almost pulling you down...! With the grin on the horseman's face, it becomes evident that he had very clear plans for you. When you manage to glance below you, you realize that this hung equine man is feeding you to his hungry meatlog, slowly slurping your body deeper inside feet-first, and within the blink of an eye, your calves begin to disappear into the gaping leaking cumslit.";
@@ -782,8 +782,8 @@ to say BHHScene1:
 			now Ballsy Hung Horseman is resolved; [resolves the event, to never appear again]
 	else if Resolution of Ballsy Hung Horseman is 1: [not the first time]
 		ItemLoss glowing mushroom by 1;
-		say "     Reaching for your inventory, you show one of the strange glowing mushrooms to the horseman, and he smiles. 'Those are the ones, alright. Now get ready to feed my balls, they're aching and yearning for one certain little [guygal]...' The anticipation is further arousing the hung equine man, who is more than ready to set his massive member free, but he is waiting for you to do your part. Now, all you have to do is ingest the glowing mushroom, and experience the shrinkage once more, seeing yourself becoming smaller before him, [if player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not stop until you are small as a mouse, standing as stall as his ankles, just above his hooves.";
-		say "     Since you already have made yourselved acquainted with each other, he wastes no time. Making a move to grab you with one hand, he lifts you up to the same level as his eyes, then takes a seat back on a bench nearby. He really is excited, his huge equine dong looking more like it belongs to an actual horse than on an anthropomorphic body like his, thick, throbbing and leaking as he admires your shrunken and naked form. With one finger, he rubs your body all over gently, especially over your chest and crotch, [if player is female]giving your pussy a little caress that just sends a shiver of pleasure up your whole being, [else if player is male]giving your [cock of player] dick a gentle flicker and thorough stroking, stopping only when you get rock hard under his touch, [end if]and it sends your lust to a peak. He does seem to know what he is doing...!";
+		say "     Reaching for your inventory, you show one of the strange glowing mushrooms to the horseman, and he smiles. 'Those are the ones, alright. Now get ready to feed my balls, they're aching and yearning for one certain little [guygal]...' The anticipation is further arousing the hung equine man, who is more than ready to set his massive member free, but he is waiting for you to do your part. Now, all you have to do is ingest the glowing mushroom, and experience the shrinkage once more, seeing yourself becoming smaller before him, [if Player is not naked]slipping through your own clothes and gear, [end if]and as your size continues to decrease, his, in your perspective, just keeps on looking bigger. It does not stop until you are small as a mouse, standing as stall as his ankles, just above his hooves.";
+		say "     Since you already have made yourselved acquainted with each other, he wastes no time. Making a move to grab you with one hand, he lifts you up to the same level as his eyes, then takes a seat back on a bench nearby. He really is excited, his huge equine dong looking more like it belongs to an actual horse than on an anthropomorphic body like his, thick, throbbing and leaking as he admires your shrunken and naked form. With one finger, he rubs your body all over gently, especially over your chest and crotch, [if Player is female]giving your pussy a little caress that just sends a shiver of pleasure up your whole being, [else if Player is male]giving your [cock of player] dick a gentle flicker and thorough stroking, stopping only when you get rock hard under his touch, [end if]and it sends your lust to a peak. He does seem to know what he is doing...!";
 		WaitLineBreak;
 		say "     'I'm so glad you came back to me, little [guygal]... I get so hard at the mere thought of having you inside me, again.' he tells you, as you perceive his face to be higher and higher, taking a moment to realize he is actually bringing you lower. You go down below past his chest, his midriff, and around the thick long shaft, bringing you against it and sliding you down to its base. The hot and throbbing meat pulses against you as you are used by the horseman to jerk his manhood, your body being rubbed against the entirety of his manhood's length and girth, and his motions eventually converge towards the tip. You realize he gets especially aroused every time part of you brushes against the slit, which oddly gapes slightly whenever you get close, which is visibly leaking thick droplets of precum.";
 		WaitLineBreak;
@@ -797,7 +797,7 @@ to say BHHScene1:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Let him churn you.";
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
-		if player consents:
+		if Player consents:
 			say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Mmmh... Fuck yes... A pleasure to meet you, [mister]... My balls are temporarily sated, thanks to you.'";
 			if "Stubbornly Alive" is listed in Feats of Player:
 				WaitLineBreak;
@@ -845,7 +845,7 @@ to say BallsyHungHorsemanSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Your arm should be able to fit that urethra, propose him that";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to fuck his cock";
 		now sortorder entry is 3;
@@ -883,7 +883,7 @@ to say BallsyHungHorsemanSexMenu:
 
 to say BHHFistCock:
 	say "     Knowing that the horseman seems open to some other options, you ask him if, instead of going for a mushroom, he would be happy to try something else, perhaps using only your hands.";
-	if scalevalue of player >= 4:
+	if scalevalue of Player >= 4:
 		say "     He frowns at you, looking at your height and the size of your arms. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";
 	else:
 		say "     'Only your hands, you say? Hm... There's an interesting idea...' The horseman then proceeds to unzip his bulgy pants and unleash the oversized beast of a cock right before your eyes with a wide grin on his long muzzle. It hangs just by his knees, still soft, an equine dong so massive it would look more natural on an actual horse, accompanied by a heavy set of balls underneath the big meat, each about the size of apples. You even have trouble thinking how he could shove all of that inside such a tight pair of leather pants. 'How about this, you give my dick a good rub, get it nice and hard... and we'll see what happens. It'll depend on how good you are with them.'";
@@ -908,7 +908,7 @@ to say BHHFistCock:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Let him churn you.";
 		say "     ([link]N[as]n[end link]) - Try to keep awake.";
-		if player consents:
+		if Player consents:
 			say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Oh, I see you made your choice, [mister]... Don't worry, I'll enjoy every single spurt of this massive load you just gave me. I promise I'll think of you.' These are the last words you hear, followed by a laugh, before your existence fully dissipates into nothing but cum.";
 			if "Stubbornly Alive" is listed in Feats of Player:
 				WaitLineBreak;
@@ -944,13 +944,13 @@ to say BHHFistCock:
 
 to say BHHFuckCock:
 	say "     Knowing that the horseman seems open to some other options, you ask him if, instead of going for a mushroom, he would be happy to try something else, perhaps using only your hands, and you mention that if he is so hung, you could probably fit your own cock in his.";
-	if scalevalue of player >= 4:
+	if scalevalue of Player >= 4:
 		say "     He frowns at you, looking at your height and overall large frame. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";
-	else if cock length of player > 16:
+	else if Cock Length of Player > 16:
 		say "     He frowns at you, looking at the grand size of your [if player is naked]cock[else]bulge[end if]. 'With you, only with one of those mushrooms. You're too big for my likes.' The horseman then dismisses you as he focuses his attention on something else. You have no other choice but to leave him be, for now.";
 	else:
 		say "     His eyes widen at your suggestion, but then he gives you a smile. 'So, you wanna fuck my cock? That's what you just said?' he asks back, and you nod, confirming your intentions to the horseman. 'Holy fuck, you're one wicked pervert bastard... But, you know what, I like it.' The horseman then proceeds to unzip his bulgy pants and unleash the oversized beast of a cock right before your eyes with a wide grin on his long muzzle. It hangs just by his knees, still soft, an equine dong so massive it would look more natural on an actual horse, accompanied by a heavy set of balls underneath the big meat, each about the size of apples. You even have trouble thinking how he could shove all of that inside such a tight pair of leather pants. 'Come on, now! We can rub them together...'";
-		say "     You are definitely aroused by this, and your own cock reminds you of it. It does not take much thinking for you to just [if player is not naked]pull it out[else]grab it[end if] and place it right next to that huge equine dong, feeling its weight and throbbing warmth against your [cock of player] cock. 'It's so tiny in comparison to mine... Heh, I suppose you'll have no problem fitting it in this girthy flat head... I'm really sensitive there, though. You might actually satisfy me.' You get this feeling that he is mocking you, but all this truly feels pleasant as you both rub your cocks together. 'Ready whenever you are, cute stuff. Just put it in... All the way...'";
+		say "     You are definitely aroused by this, and your own cock reminds you of it. It does not take much thinking for you to just [if Player is not naked]pull it out[else]grab it[end if] and place it right next to that huge equine dong, feeling its weight and throbbing warmth against your [cock of player] cock. 'It's so tiny in comparison to mine... Heh, I suppose you'll have no problem fitting it in this girthy flat head... I'm really sensitive there, though. You might actually satisfy me.' You get this feeling that he is mocking you, but all this truly feels pleasant as you both rub your cocks together. 'Ready whenever you are, cute stuff. Just put it in... All the way...'";
 		WaitLineBreak;
 		say "     With lust being so great, you begin to slide your cock across his huge shaft and seek the slit that you yearn for, then press your tip against his. It just so happens to let your cock inside, that slit of his turning out to be surprisingly accommodating, and you continue to push in deeper, very eagerly. He likes your enthusiasm and encourages you to keep going. 'Yeaaah... You like that? Feels good on my end, too... Why don't you grab my cock and rub it while you fuck it? That'd make me fucking squirm...' You follow his suggestion and place your hands on each side of his girthy shaft, then use this to fuck his dong. Each thrust causes the horseman to take a deep breath and occasionally moan, his precum offering you quite a nice amount of lubrication.";
 		say "     It does seem to be actually offering too much, as it begins to leak out and run down your legs, but you continue to thrust into it, which causes more and more thick juice to ooze out. 'Oh, yeah, it's gonna get really messy... Hope you don't mind that...' You carry on pounding that dick like you were fucking a cock-hungry butthole, feeling its inner warm flesh almost sucking your meat back, throbbing all over it, which just feels fantastic. The shaft only gets harder and thicker on the outside, causing your fingers to part before you have to readjust them, but you do not pay much attention to this. The pleasure is so great that it is your only focus, all while you continue to fuck his gigantic meat...";
@@ -966,7 +966,7 @@ to say BHHFuckCock:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Offer yourself to the horseman's cock.";
 		say "     ([link]N[as]n[end link]) - Just leave.";
-		if player consents:
+		if Player consents:
 			say "     You find yourself wanting this, in fact. Looking at that huge cock yearning for you makes you feel wanted, in a rather weird way. Giving it some thought, you decide to walk towards the horseman, whose expression turns into pure bliss as he understands that you want to feed yourself to his massive dong. 'Yeah, why fight the urge? Of course you wanna feel this huge and warm cock sucking you in... slowly and nicely.'";
 			BBHFuckCockCV;
 		else:
@@ -974,7 +974,7 @@ to say BHHFuckCock:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Change your mind and offer yourself to the horseman's cock.";
 			say "     ([link]N[as]n[end link]) - Reaffirm your decision and proceed to walk away.";
-			if player consents:
+			if Player consents:
 				say "     The way he speaks sort of turns your mind around as you find yourself suddenly wanting this. Looking at that huge cock yearning for you makes you feel wanted, in a rather weird way. Giving it some thought, you decide to walk towards the horseman, whose expression turns into pure bliss as he understands that you want to feed yourself to his massive dong. 'I knew you'd come around. Why would you waste the chance to feel this huge and warm cock sucking you in... slowly and nicely...'";
 				BBHFuckCockCV;
 			else:
@@ -995,7 +995,7 @@ to BBHFuckCockCV:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Let him churn you.";
 	say "     ([link]N[as]n[end link]) - Try to keep awake.";
-	if player consents:
+	if Player consents:
 		say "     It feels amazing, in fact. You are thrown into an ecstasy you never knew possible, the best feeling you have ever experienced before you melt into the horseman's creamy cum, becoming nothing more than a mass of sperm lingering in his balls, awaiting its owner's next orgasm. 'Oh, I see you made your choice, [mister]... Don't worry, I'll enjoy every single spurt of this massive load you just gave me. I promise I'll think of you.' These are the last words you hear, followed by a laugh, before your existence fully dissipates into nothing but cum.";
 		if "Stubbornly Alive" is listed in Feats of Player:
 			WaitLineBreak;

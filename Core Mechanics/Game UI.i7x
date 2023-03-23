@@ -164,6 +164,7 @@ Chapter 3 - Automatic Actions
 After going:
 	try looking;
 	plot;
+	WalkInEvent_Check;
 
 To Plot:
 	let x be the location;
@@ -405,7 +406,7 @@ This is the self examine rule:
 				now cocktext is "have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [if Ball Count of Player is 1]a single[else if Ball Count of Player is 2][one of]a pair of[or]a set of[at random][else if Ball Count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internalBalls and ball count of Player > 1]internal balls. [else if Player is internalBalls]internal ball. [else][ball description of Player]. [end if]";
 	else: [old style]
 		follow the cock descr rule;
-		if player is male:
+		if Player is male:
 			if Cock Count of Player > 1:
 				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internalBalls]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] balls. ";
 			else:
@@ -421,7 +422,7 @@ This is the self examine rule:
 	else: [old style]
 		let cunttext be "";
 		follow the cunt descr rule;
-		if player is female:
+		if Player is female:
 			if Cunt Count of Player > 1:
 				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 			else:

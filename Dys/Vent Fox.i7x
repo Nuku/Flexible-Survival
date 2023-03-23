@@ -1,8 +1,9 @@
-Version 3 of Vent Fox by Dys begins here.
+Version 4 of Vent Fox by Dys begins here.
 [VERSION 2:                                                          ]
 [v2.0 Adds Dominant Vent scenes                                      ]
 [v2.1 He's an actual NPC now. No need to the quotes in the desc      ]
-[v3 Normal Rim and Extended Rim scenes added - Vinickus]
+[v3 Normal Rim and Extended Rim scenes added - Vinickus              ]
+[v4 Fixed choice points and added proper walk in table-Voidsnaps     ]
 
 "Adds a random encounter in the mall, and an NPC that can be interacted with."
 
@@ -57,7 +58,6 @@ a postimport rule: [bugfixing rules for players that import savegames]
 
 Section 0 - Variables
 
-VentFoxEncounterCount is a number that varies.
 VentFoxRelationship is a number that varies.
 VentFoxContentLevel is a number that varies.
 VentFoxLastFed is a number that varies. VentFoxLastFed is usually 1000.
@@ -67,45 +67,69 @@ VentOviAmount is a number that varies. VentOviAmount is usually 0.
 VentWSAmount is a number that varies. VentWSAmount is usually 0.
 VentFluidAmount is a number that varies. VentFluidAmount is usually 0.
 
-
 Section 1 - Event
 
-instead of going east from Mall Atrium while (VentFoxEncounterCount < 2 and a random chance of 1 in 3 succeeds): [33% chance of the player finding the vent fox.]
-	move player to Mall East Wing;
-	if debugactive is 1:
-		say "     DEBUG: Vent Fox: [VentFoxEncounterCount][line break]";
-	if VentFoxEncounterCount is 0: [first encounter with the derpy fox]
+Table of WalkinEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Vent_Noises"	Vent_Noises	"[EventConditions_Vent_Noises]"	Mall East Wing	2500	2	100
+
+to say EventConditions_Vent_Noises:
+	now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Vent_Noises	"Vent_Noises"
+
+Vent_Noises is a situation.
+ResolveFunction of Vent_Noises is "[ResolveEvent Vent_Noises]".
+The level of Vent_Noises is 0.
+Sarea of Vent_Noises is "Smith Haven".
+
+to say ResolveEvent Vent_Noises:
+	now player is in Mall East Wing;
+	if Resolution of Vent_Noises is 0: [first encounter with the derpy fox]
 		say "     As you make your way to the east wing, you hear a squeaking noise coming from one of the abandoned storefronts.";
+		LineBreak;
 		say "     [bold type]Do you want to investigate?[roman type][line break]";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Check out the source of the sounds.";
-		say "     ([link]N[as]n[end link]) - Continue past without looking.";
-		if Player consents:
-			now VentFoxEncounterCount is 1;
-			LineBreak;
-			say "     Opting to investigate the strange noises, you step through the doorway of the store. Looking around, most of it looks like it's been looted already, with shelves and displays being left barren. Towards the back of the shop, you can make out a vent. Looking closer, you see a red and white latex paw poking through the grating! The foreleg wiggles back and forth, its owner seeming to have gotten stuck. The squeaks you were hearing are louder now, and there's a definite distressed sound to them that makes you feel almost bad for the stuck feral. Looking at the ground directly in front of the vent, you see what looks like a bike tire inner tube. It's just a few feet away from the fox's paw, and it's clear he was attempting to get a snack for himself when he got stuck.";
-			say "     [bold type]Do you help the stuck feral out?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if Player consents:
-				now VentFoxRelationship is 1;
+		let Vent_Initial_Choices be a list of text;
+		add "Check out the source of the sounds." to Vent_Initial_Choices;
+		add "Continue past without looking. Maybe you can check it out later." to Vent_Initial_Choices;
+		add "Just ignore it. Who knows what strange creature it might be?" to Vent_Initial_Choices;
+		let Vent_Initial_Choice be what the player chooses from Vent_Initial_Choices;
+		if Vent_Initial_Choice is:
+			-- "Check out the source of the sounds.": [check it out]
 				LineBreak;
-				say "     Sighing, you step towards the vent before unfastening the latch that keeps it held in place. You pull the cover off, dragging the stuck fox out of the vent with it. He lets out a rather startled yelp and begins yanking harder on his arm. You mumble something under your breath, wishing it would stop squirming so you could help it, and almost as if it can understand you, it calms down. With it relaxed, you manage to slide the vent cover off of his paw. As soon as he's free, the rubber vulpine squeaks happily and darts back into the vent, disappearing from sight.";
-				say "     With that problem solved, you place the grate back over the duct and fasten it in place before making your way out of the store and into the East Wing, wondering if you'll ever see [']Vent['] again.";
-			else:
+				say "     Opting to investigate the strange noises, you step through the doorway of the store. Looking around, most of it looks like it's been looted already, with shelves and displays being left barren. Towards the back of the shop, you can make out a vent. Looking closer, you see a red and white latex paw poking through the grating! The foreleg wiggles back and forth, its owner seeming to have gotten stuck. The squeaks you were hearing are louder now, and there's a definite distressed sound to them that makes you feel almost bad for the stuck feral. Looking at the ground directly in front of the vent, you see what looks like a bike tire inner tube. It's just a few feet away from the fox's paw, and it's clear he was attempting to get a snack for himself when he got stuck.";
+				say "     [bold type]Do you help the stuck feral out?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yes.";
+				say "     ([link]N[as]n[end link]) - No.";
+				if Player consents:
+					now VentFoxRelationship is 1;
+					LineBreak;
+					say "     Sighing, you step towards the vent before unfastening the latch that keeps it held in place. You pull the cover off, dragging the stuck fox out of the vent with it. He lets out a rather startled yelp and begins yanking harder on his arm. You mumble something under your breath, wishing it would stop squirming so you could help it, and almost as if it can understand you, it calms down. With it relaxed, you manage to slide the vent cover off of his paw. As soon as he's free, the rubber vulpine squeaks happily and darts back into the vent, disappearing from sight.";
+					say "     With that problem solved, you place the grate back over the duct and fasten it in place before making your way out of the store and into the East Wing, wondering if you'll ever see [']Vent['] again.";
+					now Resolution of Vent_Noises is 1; [helped]
+				else:
+					say "     Deciding that it is not your responsibility to free the fox from the predicament he got himself into, you leave, continuing on to the East Wing. As you exit the store, you can hear a pitiful whine as the little creatures senses you deserting him. [bold type]You doubt you'll see it again.[roman type][line break]";
+					now ventcover is nowhere;
+					now Vent_Noises is resolved; [further content blocked]
+			-- "Continue past without looking. Maybe you can check it out later.": [postponed]
 				now VentFoxRelationship is 100;
-				now VentFoxEncounterCount is 3;
 				LineBreak;
 				say "     Deciding that it is not your responsibility to free the fox from the predicament he got himself into, you leave, continuing on to the East Wing. As you exit the store, you can hear a pitiful whine as the little creatures senses you deserting him.";
-		else:
-			LineBreak;
-			say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
-	else if VentFoxEncounterCount is 1: [second time]
+				now Vent_Noises is resolved;
+			-- "Just ignore it. Who knows what strange creature it might be?": [block further content]
+				LineBreak;
+				say "     Deciding it's probably best to just move along, you continue making your way to the East Wing.";
+				now ventcover is nowhere;
+				now Vent_Noises is resolved;
+	else if Resolution of Vent_Noises is 1: [second time]
 		say "     As you head to the East Wing, you hear squeaking coming from the same shop you'd found [']Vent['] in. Sighing, you decide to make your way to the store to help the silly latex vulpine. Stepping inside, you don't even bother looking around before you go to the vent. You unfasten the cover again, pulling it, and the fox towards you. This time, he doesn't seem startled or scared. As a matter of fact, he almost looks relieved. You gently free him from the grate, but this time, he doesn't dash back into the ductwork immediately. Instead, the little creature leans down to pick up the bike wheel tubing that is still laying there with his teeth, dragging it along. He turns to look at you before running back into the vents.";
 		say "     Not bothering to put the cover back in place, you continue heading to the East Wing, a small smile on your [FaceSpeciesName of Player in lower case] face. [bold type]Perhaps you could search around the mall to find how the fox got inside in the first place...[roman type][line break]";
-		now VentFoxEncounterCount is 2; [did the event twice]
 		now VentFoxRelationship is 2;
+		now Vent_Noises is resolved;
 
 Section 2 - Location
 
@@ -158,7 +182,7 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 			say "     You knock lightly on the vent cover, trying to draw the attention of whatever may be inside it. A few seconds of silence pass, and just as you're about to move on, you begin to hear a soft shuffling, drawing closer to you with each passing moment. A couple seconds later, the shuffling stops and a black, red, and white rubber vulpine sticks his head through the hole in the grating with a determined squeak. After seeing who his visitor is, the latex vulpine yips happily in greeting before his body flows into a liquid blob, dripping out of the vent and onto the ground. Why he couldn't have done that when he was stuck inside, you're really not sure. Once all of his mass is outside, he quickly reforms into his normal shape, staring at you patiently, as if asking you what you wanted to do.";
 			say "[VentFoxMenu]";
 	else:
-		say "     DEBUG: You shouldn't be able to see this! If you are, contact @Dys on the FS Discord, and give him the error code: VentFox:[VentFoxEncounterCount],[VentFoxRelationship]";
+		say "     DEBUG: You shouldn't be able to see this! If you are, report this error code: VentFox:[VentFoxRelationship]";
 
 Section 3 - NPC and Location
 
@@ -185,7 +209,7 @@ Cock Length of Vent is 7. [Length in Inches]
 Ball Count of Vent is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Vent is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Vent is 0. [number of cunts]
-Cunt Depth of Vent is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Vent is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Vent is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Vent is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -336,7 +360,7 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 			now sortorder entry is 6;
 			now description entry is "Have Vent use his more dexterous organ to thoroughly rim you";
 		[][
-		if anallevel > 2 and VentFoxContentLevel > 2 and player is kinky:
+		if anallevel > 2 and VentFoxContentLevel > 2 and Player is kinky:
 			choose a blank row from table of fucking options;
 			now title entry is "Get tongue-fucked by Vent";
 			now sortorder entry is 7;
@@ -634,9 +658,9 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			say "     [link](0)[as]0[end link] - Do nothing.";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
-				say "Choice? (0-[if LoganCommand is 2 and player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
+				say "Choice? (0-[if LoganCommand is 2 and Player is male]3[else if LoganCommand is 2]2[else]1[end if])>[run paragraph on]";
 				get a number;
-				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and player is male):
+				if (calcnumber is 2 and LoganCommand is 2) or (calcnumber is 3 and LoganCommand is 2 and Player is male):
 					break;
 				else if calcnumber is 1 or calcnumber is 0:
 					break;
@@ -1219,7 +1243,6 @@ Understand "learnvent" as LearnAboutVent.
 
 Carry out LearnAboutVent:
 	say "     Done.";
-	now VentFoxEncounterCount is 3;
 	now VentFoxRelationship is 3;
 
 MaxOutVentStats is an action applying to nothing.
@@ -1227,7 +1250,6 @@ Understand "maxvent" as MaxOutVentStats.
 
 Carry out MaxOutVentStats:
 	say "     Done.";
-	now VentFoxEncounterCount is 3;
 	now VentFoxContentLevel is 3;
 	now VentFoxRelationship is 3;
 	connect Maintenance Garage;
@@ -1236,7 +1258,6 @@ ShowVentStats is an action applying to nothing.
 Understand "ventstats" as ShowVentStats.
 
 Carry out ShowVentStats:
-	say "VentFoxEncounterCount: [VentFoxEncounterCount].";
 	say "VentFoxRelationship: [VentFoxRelationship].";
 	say "VentFoxContentLevel: [VentFoxContentLevel].";
 	say "VentFoxLastFed: [VentFoxLastFed].";

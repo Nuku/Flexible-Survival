@@ -130,7 +130,7 @@ to say FlintTalkJob:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Say yes, it is a subject of your interest.";
 		say "     ([link]N[as]n[end link]) - Say no, it doesn't particularly call your attention.";
-		if player consents:
+		if Player consents:
 			Linebreak;
 			say "     The cougar smiles at your response, feeling the excitement in both his expression and voice. 'That's great! Usually I worry about boring people with this stuff... But I'm glad we have that in common. So... whenever you find yourself at the Milking Shed during my shift, I could show you around.' he says, seeming happy for having you there. Perhaps you could pass by during the afternoon and catch him there. Surely he would appreciate your effort.";
 			if Loyalty of Flint is 0:
@@ -155,7 +155,7 @@ to say FlintTalkSex:
 		Linebreak;
 		say "     ([link]Y[as]y[end link]) - Carefully, as you don't want to harm him.";
 		say "     ([link]N[as]n[end link]) - Back away, for now.";
-		if player consents: [Actively help Flint overcome his fears]
+		if Player consents: [Actively help Flint overcome his fears]
 			Linebreak;
 			say "     Showing empathy for him, you tell him you completely understand his situation, but argue that maybe it would be best if he came to terms with what happened, as he for sure wouldn't be the only one going through similar things around here. 'I know what you mean, but... how? Every time I think about how that felt, I just...' he looks down to his by now solid erection, still covered underneath his jumpsuit, and stutters during the next few words. 'T-this happens...' You tell him it's okay, and that he is certainly strong enough to deal with this. There is enough to conclude that whatever transformation he had to go through, he already did, and any fears he is having are purely psychological, which is... good, within a certain perspective.";
 			say "     Besides that, his boner won't go away, which causes a somewhat awkward situation between you both. What occurs to you is saying that, in order for him to be able to surpass this, he must actually accept he enjoyed part of the intercourse with the manly cougar and let that fact rest on the back of his mind. 'You think it's okay to... think that way? That doesn't make me a slut... does it?' Again, you tell him it's fine to like to shake things up a bit, sometimes, and it doesn't mean he's a slut. But regarding that subject, you ask him about his preferences, as well, once you've got him to open up slightly.";
@@ -165,7 +165,7 @@ to say FlintTalkSex:
 			Linebreak;
 			say "     ([link]Y[as]y[end link]) - Go for it and kiss him.";
 			say "     ([link]N[as]n[end link]) - Better not.";
-			if player consents: [Going for the kiss leads to sex]
+			if Player consents: [Going for the kiss leads to sex]
 				Linebreak;
 				say "[FlintFirstSex]";
 			else: [Stopping it has the same effect as backing away, with slightly different text]
@@ -268,7 +268,7 @@ to say FlintGiveBlowjob:
 	Linebreak;
 	say "     ([link]Y[as]y[end link]) - Surprise him with a cum-filled kiss.";
 	say "     ([link]N[as]n[end link]) - Swallow his load.";
-	if player consents:
+	if Player consents:
 		say "     With a naughty look in your face, you slowly make your way towards his face, and given that he doesn't offer any resistance, you go for the kiss. He opens his mouth and gladly accepts the deposit you make of his own cum in his. Then, you both make out with each other, snowballing the spunk around and passing it from one to the other with your tongues. Eventually, both of you swallow down what's left, and chuckle at one another once you lift your head away.";
 	else:
 		say "     Locking your eyes on his, you have him observe you swallow his cum all at once, making sure you let him see it go down your throat. As the thick and warm fluids travel all their way to your stomach, Flint gives you an appreciative look, and you can swear his cock twitched just now, despite being half-hard and done for the session. You are sure that turned him on.";
@@ -283,29 +283,29 @@ Section 4 - Flint Routine
 an everyturn rule:
 	[if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 		move NPC to ROOM X;
-		if player is in ROOM X:
+		if Player is in ROOM X:
 			say "     NPC ARRIVES";]
 	if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn - Flint wakes up]
-		if player is in Barn Hayloft:
+		if Player is in Barn Hayloft:
 			say "     [if playermet of Flint is false]The cougar handyman who lives here[else]Flint[end if] is up and awake by now, getting ready for another working day. You hear occasional water running and splashing sounds from a nearby tank, as he seems to be taking care of his morning hygiene. It seems like the cougar likes to keep himself neat and clean, despite the fact he is living in a hayloft. You see him already dressed up in his usual navy blue jumpsuit, his choice of attire for work. He smiles to you once your eyes meet, and greets you verbally once you come at a closer distance. His mood is cheerful as it always seems.";
 		now sleeping of Flint is false;
 	else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - grabbing breakfast]
-		if player is in Barn Hayloft and Flint is in Barn Hayloft:
+		if Player is in Barn Hayloft and Flint is in Barn Hayloft:
 			say "     [if playermet of Flint is false]The anthro cougar excuses himself as he leaves the loft, walking past you with a polite smile[else]Flint waves at you as he leaves the loft. 'I'm gonna grab some food from the barn before running the maintenance shift. Join me there, if you want.' he says, while you see him move hastily past you, as if he was in a hurry[end if].";
 		else if player is in McDermott Barn:
 			say "     While in here, you see [if playermet of Flint is true]Flint, [end if]the anthro male cougar, and farm's handyman, having some breakfast before heading to work. He's sitting on a nearby chair, all by himself and seeming very focused on his current task, munching on some canned food that he got from the farm's reserves. Sometimes you can catch him staring into the void, as if deep in thought, before taking another bite. He's usually quiet and keeping to himself, even when someone bumps into him, and barely moves an inch if not to bring food to his mouth. Despite this, however, he doesn't seem like the kind of person who'd push people away, able to keep an apparent easygoing mood during most of the time.";
 		now Flint is in McDermott Barn;
 	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning - starts maintenance on milking shed]
-		if player is in McDermott Barn and Flint is in McDermott Barn:
+		if Player is in McDermott Barn and Flint is in McDermott Barn:
 			say "     [if playermet of Flint is true]Flint,[else]the anthro cougar in the blue jumpsuit[end if] who was eating by the corner of the room seems to have left the barn for now. If he's the handyman, that means he must be running maintenance, probably on the milking machines. Perhaps you'd find him there, in the main area of the Milking Shed.";
 		else if player is in Milking Shed Main:
 			say "     You see [if playermet of Flint is true]Flint[else]the handyman anthro cougar[end if] checking the milking machines, as if addressing their current state without getting too deep in his analysis. He actually mumbles some words, which while you can't quite hear what he is saying, you have enough to understand he might be slightly annoyed. It doesn't last long, however! Before you know it, the cougar is hard at work, fixing what needs to be fixed and even taking the time to polish some of the mechanical parts until they're shining clean. It is obvious that the feline likes to keep everything tidy and neat.";
 		now Flint is in Milking Shed Main;
 	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-		if player is in Milking Shed Main:
+		if Player is in Milking Shed Main:
 			say "     The handyman cougar is still working on the machines, making sure they are working properly and even doing some tinkering, probably to get them to work better and with more efficiency. While it's noon, the anthro feline prefers to grab a snack admist his work really quick, moving over to the window in order to take a break and appreciate the sight over the horizon. After his breaks, he's always back to work harder than before, focusing on his duty and sometimes ending up helping some users getting comfortable. He seems pretty careful with his approach, always polite and with a generous smile, but most importantly, very competent.";
 	else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon - returns from work]
-		if player is in Milking Shed Main and Flint is in Milking Shed Main:
+		if Player is in Milking Shed Main and Flint is in Milking Shed Main:
 			say "     [if playermet of Flint is true]Flint[else]the maintenance cougar[end if] is just finishing up his work on the machines. Then, he is seen grabbing his tools and stuff, then take his leave. The guy must be tired from working all day... Perhaps you'd find him at the hayloft, where he retires at the end of his shift.";
 		else if player is in Barn Hayloft and Flint is not in Barn Hayloft:
 			say "     [if playermet of Flint is true]Flint seems to have arrived from his workshift, walking past and greeting you with a smile[else]The anthro cougar and handyman of the farm seems to have arrived from his workshift, walking past you and greeting you with a polite nod[end if]. He looks really tired after working all day, given the fact he immediately goes take a seat on one of the piles of hay, arranged to look like a comfortable couch, and lean back. Finally, there he is, just relaxing with the straps of his jumpsuit taken off his shoulders and hanging freely on the sides.";
@@ -313,10 +313,10 @@ an everyturn rule:
 			say "     Inside, you see [if playermet of Flint is true]Flint[else]the handyman anthro cougar[end if] taking some time to relax after a full day of work. He took another dose of canned food to munch on while seeming lost in thoughts, sitting on a pile of hay that was arranged to serve the purposes of a comfortable couch. It is pretty quiet in here, and he must like the relative peace of this place, judging by how relaxed he looks. Sometimes he closes his eyes and nearly falls asleep.";
 		now Flint is in Barn Hayloft;
 	[else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-		if player is in ROOM Y:
+		if Player is in ROOM Y:
 			say "     NPC IS PRESENT AND DOES STUFF";]
 	else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night]
-		if player is in Barn Hayloft and sleeping of Flint is false:
+		if Player is in Barn Hayloft and sleeping of Flint is false:
 			say "     [if playermet of Flint is true]Flint[else]the handsome cougar[end if] heads to his hay bed after having taken his jumpsuit off, sleeping completely naked and only covered with a blanket. You best not disturb him, he's a hard worker and needs to have his rest...";
 		else if player is in Barn Hayloft:
 			say "     [if playermet of Flint is true]Flint[else]the handsome cougar[end if] seems to be sleeping at this time, in his hay bed. He left his jumpsuit on a short hanger he placed nearby, and has a blanked covering his now naked furred body.";

@@ -35,7 +35,7 @@ Cock Length of Help Book is 0. [Length in Inches]
 Ball Count of Help Book is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Help Book is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Help Book is 0. [number of cunts]
-Cunt Depth of Help Book is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Help Book is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Help Book is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Help Book is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -154,7 +154,7 @@ to say HelpBookTalk4: [Commands]
 	say "     Some useful commands that you can type in, even if you are using hyperlinks, are [bold type]hunt[roman type], [bold type]help[roman type], [bold type]use[roman type], and [bold type]undo[roman type]. [bold type]Hunt[roman type] allows you to look for a specific creature or event, though its success chance is affected by perception and some feats. [bold type]Help[roman type] brings up a menu for in case you need an explanation for various aspects of the game including some of the topics covered here. [bold type]Use[roman type] is often used for items and activating some objects. [bold type]Undo[roman type] allows you to undo an action and can be repeated to go back several turns, though this may be limited by the interpreter that you are using. Another source of help is the wiki, though it is outdated in some areas due to it being maintained by the public, rather than the Flexible Survival Staff.";
 
 to say HelpBookTalk5: [Remove Book]
-	say "     As you decide that you don't need the book any more, it crumbles to dust in your hands before blowing away on a non-existent wind. You get the impression that it is gone on to help the next person that needs it and won't be back again.";
+	say "     As you decide that you don't need the book any more, it crumbles to dust in your hands before blowing away on a nonexistent wind. You get the impression that it is gone on to help the next person that needs it and won't be back again.";
 	now Help Book is nowhere;
 	now HP of Help Book is 1;
 

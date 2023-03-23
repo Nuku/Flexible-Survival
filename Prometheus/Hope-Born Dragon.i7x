@@ -66,7 +66,7 @@ Version 1 of Hope-Born Dragon by Prometheus begins here.
 [Dragon-Large-Horns - Large Horns]
 
 [Horn Placement]
-[Dragon-Single-Horn - Single centralised horn]
+[Dragon-Single-Horn - Single centralized horn]
 [Dragon-Single-Pair-Horns - One horn either side]
 [Dragon-Double-Pair-Horns - Two horns either side]
 
@@ -133,7 +133,7 @@ Cock Length of Dragon Egg is 0. [10 Inches]
 Ball Count of Dragon Egg is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Dragon Egg is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Dragon Egg is 0. [number of cunts]
-Cunt Depth of Dragon Egg is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Dragon Egg is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Dragon Egg is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Dragon Egg is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -170,7 +170,7 @@ to say DragonEggDesc:
 		say "     You get the impression that it won't be too much longer before the egg hatches, its light dulled and the shell having turned [DragonColour]. Four foot from tip to base, the egg frequently wobbles back and forth with the occasional cracking sound issuing from it suggesting its inhabitant is trying to break through the thick shell.";
 
 
-Section 1.1 - Customisation of Dragon
+Section 1.1 - Customization of Dragon
 
 instead of conversing the Dragon Egg:
 	say "[DragonEggHatchingProcess]";
@@ -699,7 +699,7 @@ to say DragonEggHatchingProcess:
 			now Breast Size of Hope-Born Dragon is 0;
 		say "     With your decisions made, you find yourself back in the library, the egg sitting innocently in front of you.";
 		now hp of Hope-Born Dragon is 4;
-	else if hp of Hope-Born Dragon is 4: [Deciding Colour]
+	else if hp of Hope-Born Dragon is 4: [Deciding Color]
 		say "     You have grown accustomed to the egg being there, but accept that it won't be too much longer before it hatches, especially with how much you feel that you have already influenced the form of its occupant. Given this, it comes as little surprise when you feel it tugging at your consciousness as soon as you rest your hand against its alabaster-like shell. Acquiescing to its wishes, you allow your mind to be pulled within. Expecting the usual view of the dragon, you are instead met by a swarm of floating lights of many different colors. However, after a few moments, they coalesce into only fourteen, halting their movement and hovering almost expectantly in front of you. It is then that you realize that you are probably deciding on what color the dragon will be.";
 		Linebreak;
 		say "     [bold type]What color do you want the dragon to be?[roman type] (Color is purely cosmetic)[line break]";
@@ -947,9 +947,9 @@ Body Weight of Hope-Born Dragon is 6. [scale of 1-9 for body weight, grouped int
 Body Definition of Hope-Born Dragon is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Hope-Born Dragon is 5. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Hope-Born Dragon is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Hope-Born Dragon is 12. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Hope-Born Dragon is 5. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Hope-Born Dragon is 10. [length in inches]
+Tongue Length of Hope-Born Dragon is 12. [length in inches]
 Breast Size of Hope-Born Dragon is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Hope-Born Dragon is 0. [count of nipples]
 Asshole Depth of Hope-Born Dragon is 12. [inches deep for anal fucking]
@@ -960,7 +960,7 @@ Cock Length of Hope-Born Dragon is 0. [10 Inches]
 Ball Count of Hope-Born Dragon is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Hope-Born Dragon is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Hope-Born Dragon is 0. [number of cunts]
-Cunt Depth of Hope-Born Dragon is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Hope-Born Dragon is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Hope-Born Dragon is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Hope-Born Dragon is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1295,6 +1295,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Ball Size of Hope-Born Dragon is 2;
+				now Cunt Depth of Hope-Born Dragon is 6;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Ball Size of Hope-Born Dragon is 2;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 5;
+				now Tongue Length of Hope-Born Dragon is 5;
+				now Asshole Depth of Hope-Born Dragon is 6;
+				now Cunt Depth of Hope-Born Dragon is 6;
 		else if calcnumber is 2: [Size 2]
 			if ScaleValue of Hope-Born Dragon > 2:
 				LineBreak;
@@ -1307,6 +1323,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Ball Size of Hope-Born Dragon is 3;
+				now Cunt Depth of Hope-Born Dragon is 8;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Ball Size of Hope-Born Dragon is 3;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 8;
+				now Tongue Length of Hope-Born Dragon is 8;
+				now Asshole Depth of Hope-Born Dragon is 10;
+				now Cunt Depth of Hope-Born Dragon is 8;
 		else if calcnumber is 3: [Size 3]
 			if ScaleValue of Hope-Born Dragon > 3:
 				LineBreak;
@@ -1319,6 +1351,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 12;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Ball Size of Hope-Born Dragon is 5;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 12;
+				now Tongue Length of Hope-Born Dragon is 12;
+				now Asshole Depth of Hope-Born Dragon is 12;
+				now Cunt Depth of Hope-Born Dragon is 12;
 		else if calcnumber is 4: [Size 4]
 			if ScaleValue of Hope-Born Dragon > 4:
 				LineBreak;
@@ -1331,6 +1379,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 24;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Ball Size of Hope-Born Dragon is 5;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 20;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 24;
+				now Cunt Depth of Hope-Born Dragon is 24;
 		else if calcnumber is 5: [Size 5]
 			if ScaleValue of Hope-Born Dragon < 5:
 				LineBreak;
@@ -1339,6 +1403,22 @@ to say Hope-BornDragonSizeModMenu:
 			else:
 				LineBreak;
 				say "     [Hope-BornDragonName] remains unchanged. [SubjectPro of Hope-Born Dragon] is already this size.";
+			if "Dragon-Herm" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 30;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Ball Size of Hope-Born Dragon is 5;
+				now Cunt Depth of Hope-Born Dragon is 36;
+			else if "Dragon-Male" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 20;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Ball Size of Hope-Born Dragon is 6;
+			else if "Dragon-Female" is listed in Traits of Hope-Born Dragon:
+				now Mouth Length of Hope-Born Dragon is 30;
+				now Tongue Length of Hope-Born Dragon is 30;
+				now Asshole Depth of Hope-Born Dragon is 36;
+				now Cunt Depth of Hope-Born Dragon is 36;
 	else: [Not Anthro]
 		say "     [bold type]How large would you like [Hope-BornDragonName] to be?[roman type][line break]";
 		say "     [link](1)[as]1[end link] - About the size of a cat. (Size 1)";
@@ -1429,7 +1509,7 @@ to say Hope-BornDragonPenisModMenu:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] for No Further Modifications, [link]2[end link] for Knotted, [link]3[end link] for Tapered, [link]4[end link] for Prehensile, [link]5[end link] for Barbed, [link]6[end link] for Blunt, [link]7[end link] for Tentacle-lined, [link]8[end link] for Size Modification, or [link]9[end link] for Number Modification.";
-	else: [Initial customisation]
+	else: [Initial customization]
 		while calcnumber < 1 or calcnumber > 7:
 			say "Choice? (1-7)>[run paragraph on]";
 			get a number;
@@ -1444,7 +1524,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 2: [Knotted]
 		LineBreak;
 		if "KnottedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1456,7 +1536,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis knotted? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis knotted? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1470,7 +1550,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 3: [Tapered]
 		LineBreak;
 		if "TaperedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1486,7 +1566,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Blunt'. Please disable 'Blunt' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tapered? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tapered? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1500,7 +1580,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 4: [Prehensile]
 		LineBreak;
 		if "PrehensileCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1512,7 +1592,7 @@ to say Hope-BornDragonPenisModMenu:
 				LineBreak;
 				say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis prehensile? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1526,7 +1606,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 5: [Barbed]
 		LineBreak;
 		if "BarbedCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1542,7 +1622,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tentacle-lined'. Please disable 'Tentacle-lined' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis barbed? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis barbed? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1556,7 +1636,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 6: [Blunt]
 		LineBreak;
 		if "BluntCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1572,7 +1652,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Tapered'. Please disable 'Tapered' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis blunt? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis blunt? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1586,7 +1666,7 @@ to say Hope-BornDragonPenisModMenu:
 	else if calcnumber is 7: [Tentacle-lined]
 		LineBreak;
 		if "TentacledCock" is listed in traits of Hope-Born Dragon:
-			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis not tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -1602,7 +1682,7 @@ to say Hope-BornDragonPenisModMenu:
 			say "     Sorry. This option is incompatible with 'Barbed'. Please disable 'Barbed' before selecting this.";
 			say "[Hope-BornDragonPenisModMenu]";
 		else:
-			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customisation menu after your decision)[roman type][line break]";
+			say "     [bold type]Make the penis tentacle-lined? (You will be returned to the penis customization menu after your decision)[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";

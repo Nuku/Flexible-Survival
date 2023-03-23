@@ -2,6 +2,33 @@ Version 2 of Kristen by Stripes begins here.
 [ Version 2.5 - Friendly Kristen special sex + 3some w/Janice ]
 "Adds an Arctic Fox named Kristen to the Flexible Survival game."
 
+[	HP of Kristen           ]
+[ 0 = not encountered     ]
+[ 1 = not saved           ]
+[ 2 = saved               ]
+[ 3 = talked to her       ]
+[                         ]
+[ 10 = player gets item   ]
+[ 11 = item given         ]
+[ 12 = triggered          ]
+[ 13 = infected, step 1   ]
+[ 14 = infected, step 2   ]
+[ 15 = infected, step 3   ]
+[ 16 = fully tf'd         ]
+
+[     XP of Kirsten       ] [not currently active, but preparatory]
+[ 0 = no spray            ]
+[ 1 = got spray           ]
+[ 2 = using spray         ]
+
+[   Libido of Kristen     ]
+[  personality tracker    ]
+[ 0 = no change           ]
+[ 1 = sexed up as human   ]
+[ 2 = reassured           ]
+[ 3 = seduced             ]
+[ 4 = forced              ]
+
 Section 1 - Event
 
 Table of GameCharacterIDs (continued)
@@ -86,11 +113,11 @@ to say krishideoutscent:
 
 to say krishideoutdesc:
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]R: You should be able to get here! Get out!";
+		say "ERROR-Kristen-[HP of Kristen]R: You shouldn't be able to get here! Get out!";
 		move player to Grey Abbey Library;
 		now Kristen's Hideout is unknown;
 	else if HP of Kristen < 12:
-		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
+		say "     This second floor apartment is above a ruined coffee shop. It is fairly small, with a small living room, kitchen, bathroom, and bedroom. Despite the modest size, the accommodations are very well maintained and the furnishings seem quite expensive. The furniture is of high quality, is well padded and rests upon hardwood floors. The rooms are decorated with lovely vases and paintings as well as a full-length mirror right in the living room as well as the bathroom and bedroom. It's clear that this place belonged to someone who liked living in the lap of luxury. The place has been kept quite clean given the circumstances. The ladder Kristen uses to get in and out (and to let you in) rests along one wall and the blinds are kept shut.";
 	else if HP of Kristen is 12:
 		say "[kristentf_phase1]";
 		WaitLineBreak;
@@ -128,17 +155,53 @@ to say krishideoutdesc:
 
 Section 2 - Kristen
 
-Kristen is a woman. Kristen is in Kristen's Hideout.
+Kristen is a woman.
+Kristen is in Kristen's Hideout.
+ScaleValue of Kristen is 3. [human sized]
+SleepRhythm of Kristen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Kristen is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Kristen is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Kristen is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Kristen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Kristen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Kristen is 6. [length in inches]
+Breast Size of Kristen is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Kristen is 2. [count of nipples]
+Asshole Depth of Kristen is 8. [inches deep for anal fucking]
+Asshole Tightness of Kristen is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Kristen is 0. [number of cocks]
+Cock Girth of Kristen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Kristen is 0. [Length in Inches]
+Ball Count of Kristen is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Kristen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Kristen is 1. [number of cunts]
+Cunt Depth of Kristen is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Kristen is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Kristen is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Kristen is false.
+PlayerRomanced of Kristen is false.
+PlayerFriended of Kristen is false.
+PlayerControlled of Kristen is false.
+PlayerFucked of Kristen is false.
+OralVirgin of Kristen is false.
+Virgin of Kristen is false.
+AnalVirgin of Kristen is true.
+PenileVirgin of Kristen is true.
+SexuallyExperienced of Kristen is true.
+TwistedCapacity of Kristen is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Kristen is false. [steriles can't knock people up]
+MainInfection of Kristen is "Arctic fox".
 Description of Kristen is "[kristendesc]".
 Conversation of Kristen is { "Thanks." }.
+the scent of Kristen is "[kristenscent]".
 kristenmsg1 is a truth state that varies. kristenmsg1 is usually false.	[K mentioned J]
 kristenmsg2 is a truth state that varies. kristenmsg2 is usually false.	[general info]
 kristenmsg3 is a truth state that varies. kristenmsg3 is usually false.	[J mentioned K]
 kristenmsg4 is a truth state that varies. kristenmsg4 is usually false.	[K told about J]
 kristenmsg5 is a truth state that varies. kristenmsg5 is usually false.	[prompted for blouse?]
 kristentf3fuck is a truth state that varies. kristentf3fuck is usually false.	[fucked Kristen at tf stage 3]
-
-the scent of Kristen is "[kristenscent]".
 
 to say kristenscent:
 	if HP of Kristen < 2:
@@ -150,7 +213,7 @@ to say kristendesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]L: You should be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]L: You shouldn't be able to find me yet.";
 	else if HP of Kristen < 12:
 		say "     Still apparently unchanged, this Caucasian woman stands about five foot ten inches. She has a slender figure with just the right amount of sexy curves to give her feminine allure. She's wearing a white cotton shirt and black jeans. She has fair skin with only a light tan, partially from staying hidden indoors a lot lately as well as her frequent use of sunscreen. She's got shoulder-length dirty blonde hair which she wears in a ponytail. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 	else if HP of Kristen < 16:
@@ -165,7 +228,7 @@ Instead of conversing the Kristen:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Kristen], Libido: [Libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
 	if HP of Kristen < 2:
-		say "ERROR-Kristen-[HP of Kristen]T: You should be able to find me yet.";
+		say "ERROR-Kristen-[HP of Kristen]T: You shouldn't be able to find me yet.";
 	else if HP of Kristen is 2:
 		say "     'Welcome to my place. Well, it's not really my place. It belongs to my friend, but it doesn't look like she's coming back by this point.' After an awkward pause, she affects some excitement in her voice and forces a smile.";
 		say "     'I was on my way to come see her when things went nutso-bonkers. It was all happening too fast - the power outage, the electronics failure, the quake, people turning into monsters... Madness! I rushed here through that chaos, got inside with her spare key and hid here overnight. I could hear the rampage growing outside. There's a club a few buildings over and the people inside must've turned into something big and destructive. A lot of the buildings along this stretch are wrecked because of it. Even the staircase up here was taken out, trapping me inside.";
@@ -602,7 +665,7 @@ to say kristentfsexmenu:
 			now description entry is "Zake her for a ride in your lap";
 		[]
 		choose a blank row in table of fucking options;
-		now title entry is "Blow job";
+		now title entry is "Blowjob";
 		now sortorder entry is 5;
 		now description entry is "Use her muzzle";
 	[]
@@ -639,7 +702,7 @@ to say kristentfsexmenu:
 				now sextablerun is 1;
 				if nam is "Fuck her":
 					say "[kristentfsex01]";
-				else if nam is "Blow job":
+				else if nam is "Blowjob":
 					say "[kristentfsex02]";
 				else if nam is "Give cunnilingus":
 					say "[kristentfsex03]";
@@ -682,7 +745,7 @@ to say kristentfsex02:
 	else:
 		say "     Kristen takes your [Cock of Player] cock in hand, pausing to admire her favorite lover's tool before getting on her knees. She cannot restrain her eagerness with your [cock size desc of Player] manhood offered up before her, taking it into her warm muzzle right away. Her tongue slides along your shaft as she bobs her muzzle over your pulsing rod. You grip your fingers in her hair so you can thrust firmly int the slutty vixen's muzzle";
 	say "[if Player is female]. She even slips a few fingers into your juicy cunny, pushing into your feminine depths each time she sucks down hard[else if CockName of Player is not listed in infections of InternalCockList]. She rubs a paw over your ballsack, kneading and caressing your orbs, longing for their contents[end if].";
-	say "     After enjoying the blow job for several minutes, you feel yourself getting close[if a random chance of Libido of Kristen in 6 succeeds]. With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously. With a loud groan, you empty your [Cum Load Size of Player] load across the sexy vixen's face while her tongue hangs out to catch what she can. She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[else]. Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan. You empty your [Cum Load Size of Player] load into her muzzle for her to swallow down. Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
+	say "     After enjoying the blowjob for several minutes, you feel yourself getting close[if a random chance of Libido of Kristen in 6 succeeds]. With your balls churning with imminent release, you pull your cock from her muzzle and stroke it vigorously. With a loud groan, you empty your [Cum Load Size of Player] load across the sexy vixen's face while her tongue hangs out to catch what she can. She's left sticky but looking quite pleased, wiping up dollops of semen with a finger and then licking them up, all with a playful grin[else]. Groaning that you're about to blow, Kristen sucks down on you all the harder, moaning around your meat as you cum with a loud groan. You empty your [Cum Load Size of Player] load into her muzzle for her to swallow down. Releasing your spent shaft, she squeezes out the last few droplets, licking them from your glans with a playful grin[end if].";
 
 
 to say kristentfsex03:
@@ -708,7 +771,7 @@ to say kristentfsex06:
 	say "     Pulling Kristen into your arms, you hug her close, telling her you want to spend some time with your special vixen. She releases a pleased yip as you give her bottom a squeeze. Her tail flags up and she rubs her body eagerly against yours, her soft-furred bosom pressed [if Breast Size of Player > 0]against your own[else]to your chest[end if]. With loving affection in her eyes, she presses her muzzle to your lips and kisses you passionately.";
 	say "     'Oh, my wonderful mate. Here, have a seat so I might please you.' Moving to her knees between your bent legs, she nuzzles at your loins. Moaning as she scents your manhood, she places one paw on your [if CockName of Player is not listed in infections of InternalCockList]balls[else]hip[end if] even as the other moves between her legs. She starts with a few slow licks along your length before lavishing it with attention. She works her tongue agilely over every square centimeter of your [cock size desc of Player] shaft as she worships it lustfully while fingering her dripping cunny.";
 	say "     In time, the tonguework grows more heated and soon enough she's plunging her muzzle down over your erect penis. She licks and sucks at it, swallowing down your precum and searching for more. Her tongue rubs across your shaft and glans in her quest to pleasure you. Her muzzle is warm and wet, a delight around your [Cock of Player] rod[if CockName of Player is not listed in infections of InternalCockList] while she caresses your balls[end if].";
-	say "     As good as this blow job is, you don't want to miss out on the opportunity to mate with the amorous vixen. With some reluctance, you guide her head back and, after thanking her for her wonderful work, tell her to lay down across the divan so you might fuck her. She smiles happily and, pulling her fingers from her dripping snatch with a wet slurp, moves to lay back on the plush lounger. She smiles up at you, runs her paws over her sexy body and spreads her legs, wet fingers now holding her snatch open in lustful invitation. And while you need no further enticement at this point, the sight is still a beautiful and sexy one.";
+	say "     As good as this blowjob is, you don't want to miss out on the opportunity to mate with the amorous vixen. With some reluctance, you guide her head back and, after thanking her for her wonderful work, tell her to lay down across the divan so you might fuck her. She smiles happily and, pulling her fingers from her dripping snatch with a wet slurp, moves to lay back on the plush lounger. She smiles up at you, runs her paws over her sexy body and spreads her legs, wet fingers now holding her snatch open in lustful invitation. And while you need no further enticement at this point, the sight is still a beautiful and sexy one.";
 	say "     Moving overtop of your vulpine mate, you run your hands through her ivory fur. You lean in and kiss her even as you're sliding your [Cock of Player] cock into her wet and heated snatch[if Cock Length of Player < 8]with ease. Her cunny welcomes your pulsing rod into it, eager to have her mate inside her[else if Cock Length of Player < 16]steadily. Her dripping cunny stretches open, slick and ready to accommodate your pulsing rod inside it[else]slowly. Her cunny needs to stretch wide to accommodate your pulsing rod inside it, but is slick and ready thanks to her preparatory fingering[end if]. The vixen releases a deep moan of pleasure into the kiss as you thrust into her[if Cock Length of Player < 12]. Once fully hilted in her[else]. Once you've filled her with as much as she can take[end if], you ease your hips back and start thrusting, pumping your meat into the moaning fox woman while she hugs you tightly.";
 	say "     'Oh yes, baby. That feels so good. I love you so much. Mmm... fuck me, my studly mate,' she yips, grinding her hips into your thrusts. She pants heavily, already quite worked up from the fun earlier and you're also getting close to finishing. You do your best to hold out for the eager vixen while giving her the lustful pounding she desires. With one hand on her tit and the other supporting yourself, you fondle her breast and tease her nipple, loving the yips and whimpers of delight as you play with her piercing. This all soon proves to be too much for the lovely vulpine and she arches her back with a loud yiff of orgasmic release. Feeling her cunt squeezing and spasming around your shaft builds your excitement even higher and you fuck her all the more eagerly. With her orgasm waning, you reach your climax and shoot your hot seed into her, setting off a second climax in the female. The scents and sounds of sex are thick in the air as you pump [if Ball Size of Player < 24]every drop of your [Cum Load Size of Player] load into her[else]as much of your [Cum Load Size of Player] load as you can into her, the excess gushing out around your pulsing manhood[end if].";
 	say "     After your lustful mating is done, the two of you cuddle for some time. Janice, who's been watching with an eager grin and a paw between her thighs, joins the two of you for some snuggling and heavy petting once your special couples-time is over.";
@@ -740,36 +803,7 @@ to say kristenjanice3some00:
 	now lastfuck of Janice is turns;
 
 
-Section 8 - Variable Charts
-
-[	HP of Kristen           ]
-[ 0 = not encountered     ]
-[ 1 = not saved           ]
-[ 2 = saved               ]
-[ 3 = talked to her       ]
-[                         ]
-[ 10 = player gets item   ]
-[ 11 = item given         ]
-[ 12 = triggered          ]
-[ 13 = infected, step 1   ]
-[ 14 = infected, step 2   ]
-[ 15 = infected, step 3   ]
-[ 16 = fully tf'd         ]
-
-[     XP of Kirsten       ] [not currently active, but preparatory]
-[ 0 = no spray            ]
-[ 1 = got spray           ]
-[ 2 = using spray         ]
-
-[   Libido of Kristen     ]
-[  personality tracker    ]
-[ 0 = no change           ]
-[ 1 = sexed up as human   ]
-[ 2 = reassured           ]
-[ 3 = seduced             ]
-[ 4 = forced              ]
-
-Section 9 - Temporary Raw Notes
+Section 8 - Temporary Raw Notes
 
 
 [ lovers bench ]

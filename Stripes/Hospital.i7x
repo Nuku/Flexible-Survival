@@ -221,7 +221,7 @@ Sarea of Radiology is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
-	add Radiology to badspots of HermList;
+	add Radiology to BadSpots of HermList;
 	add Radiology to BadSpots of FurryList;
 
 to say ResolveEvent Radiology:
@@ -319,7 +319,7 @@ Sarea of Pathology is "Hospital".
 when play begins:
 	add Pathology to BadSpots of FemaleList;
 	add Pathology to BadSpots of MaleList;
-	add Pathology to badspots of HermList;
+	add Pathology to BadSpots of HermList;
 	add Pathology to BadSpots of FurryList;
 
 to say ResolveEvent Pathology:
@@ -379,7 +379,7 @@ Sarea of Records Room is "Hospital".
 when play begins:
 	add Radiology to BadSpots of FemaleList;
 	add Radiology to BadSpots of MaleList;
-	add Radiology to badspots of HermList;
+	add Radiology to BadSpots of HermList;
 	add Radiology to BadSpots of FurryList;
 
 to say ResolveEvent Records Room:
@@ -517,21 +517,55 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Mouse	"Doctor Mouse"
 
-Doctor Mouse is a person. Doctor Mouse is in Hidden Lab.
+Doctor Mouse is a man.
+Doctor Mouse is in Hidden Lab.
+ScaleValue of Doctor Mouse is 2. [human sized]
+SleepRhythm of Doctor Mouse is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Mouse is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Mouse is 4. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Mouse is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Mouse is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Mouse is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Mouse is 5. [length in inches]
+Breast Size of Doctor Mouse is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Mouse is 2. [count of nipples]
+Asshole Depth of Doctor Mouse is 6. [inches deep for anal fucking]
+Asshole Tightness of Doctor Mouse is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Mouse is 1. [number of cocks]
+Cock Girth of Doctor Mouse is 2. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Mouse is 6. [Length in Inches]
+Ball Count of Doctor Mouse is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Mouse is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Mouse is 0. [number of cunts]
+Cunt Depth of Doctor Mouse is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Mouse is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Mouse is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Mouse is false.
+PlayerRomanced of Doctor Mouse is false.
+PlayerFriended of Doctor Mouse is false.
+PlayerControlled of Doctor Mouse is false.
+PlayerFucked of Doctor Mouse is false.
+OralVirgin of Doctor Mouse is true.
+Virgin of Doctor Mouse is true.
+AnalVirgin of Doctor Mouse is true.
+PenileVirgin of Doctor Mouse is true.
+SexuallyExperienced of Doctor Mouse is false.
+TwistedCapacity of Doctor Mouse is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Mouse is true. [steriles can't knock people up]
+MainInfection of Doctor Mouse is "".
+Description of Doctor Mouse is "[DrMouseDesc]".
+Conversation of Doctor Mouse is { "Squeak!" }.
+The scent of Doctor Mouse is "The lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 lastDrMousefucked is a number that varies. lastDrMousefucked is usually 500.
 understand "Mouse" as Doctor Mouse.
 understand "Dr Mouse" as Doctor Mouse.
 DoctorMouseProgress is a number that varies.
 
-Description of Doctor Mouse is "[DrMouseDesc]".
-
 to say DrMouseDesc:
 	project Figure of DrMouse_clothed_icon;
 	say "     Dr. Mouse is a slender, white mouse with red eyes and a pink nose and ears. He's dressed in a white labcoat and doctor's attire, with a thin tail poking out behind his back. Most of the time he is busily working away in the lab, always scurrying about for equipment or checking on one of his many experiments.";
-
-Conversation of Doctor Mouse is { "Squeak!" }.
-
-the scent of Doctor Mouse is "The lab mouse looks at you sternly as you sniff him. He smells of mouse, chemicals and sleepless nights in the lab.".
 
 the linkaction of Doctor Mouse is "Possible Actions: [link]talk[as]talk Doctor Mouse[end link], [link]smell[as]smell Doctor Mouse[end link], [link]fuck[as]fuck Doctor Mouse[end link][if hospquest >= 14], [link]volunteer[end link][end if][line break]";
 
@@ -839,7 +873,7 @@ to say hospquestpt9:
 			LineBreak;
 			say "     With a nod to Dr. Mouse, he injects the raccoon, who releases one last whimper before growing quiet. After a few moments, he looks up at you, eyes filled with adoration, but little intelligence. He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
 			if Player is herm:
-				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He gives the briefest of shivers, so faint you barely notice it, before he nuzzles down to start licking your pussy as well. He makes sure to lick you all over before bringing his muzzle up and happily taking your cock into his mouth. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blow job. And though the fingers that have moved to your pussy fumble around a little, it is clear that he is eager to please his new master.";
+				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He gives the briefest of shivers, so faint you barely notice it, before he nuzzles down to start licking your pussy as well. He makes sure to lick you all over before bringing his muzzle up and happily taking your cock into his mouth. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blowjob. And though the fingers that have moved to your pussy fumble around a little, it is clear that he is eager to please his new master.";
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it while his fingers caress your pussy. His pink cock is quite hard, leaking pre onto the floor. Dr. Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle while your pussy soaks his paw in your juices. He swallows it all down and licks you clean like a good little pet, churring happily.";
 			else if Player is female:
@@ -847,7 +881,7 @@ to say hospquestpt9:
 				say "     His playful tongue teases your labia, lapping up your juices obediently. His pink cock is quite hard, leaking pre onto the floor. Dr. Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your pussy quivers and your hot juices flow, soaking his muzzle. He laps them up from you like a good little pet, churring happily.";
 			else if Player is male:
-				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He opens his muzzle and takes your cock in happily. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blow job and is eager to please his new master.";
+				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He opens his muzzle and takes your cock in happily. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blowjob and is eager to please his new master.";
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it. His pink cock is quite hard, leaking pre onto the floor. Dr. Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
 			now pink raccoon is tamed;
@@ -1724,7 +1758,7 @@ to say ec_activation:
 	setmonster "Enhanced Chimera";
 	choose row MonsterID from the Table of Random Critters;
 	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you. It's as if you can feel the excitement of the dormant infection inside you rushing into action. An aching warmth spreads across your body, making you tingle from head to food. Your head throbs and your vision goes blurry as the process goes on. You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time. It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
-	if the remainder after dividing ec_fullcount by 4 is 0 and player is male:
+	if the remainder after dividing ec_fullcount by 4 is 0 and Player is male:
 		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if Cock Count of Player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if Cock Length of Player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if Ball Size of Player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if Ball Size of Player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
 	else if the remainder after dividing ec_fullcount by 4 is 2:
 		say "     Placing your hands on your head this time, you can feel it transform several times. It is difficult to monitor its transformation as your hands are also changing even as you try to use them. The first change has your head shift to that of a proud stag with a solid square jaw. The start of a pointed horn on your nose and the nubs of your new antlers grow in shortly afterwards. Even as they're growing, your muzzle shifts, adding some sharper teeth to your ruminant dentition. Touching your ears, you feel them first shift to those of a deer before later becoming more pointed at the tip, having adding a bit of wolf to them. You can feel increased fur at the back of your head and neck, soon filling out into a blend of flowing hair and a leonine mane.";

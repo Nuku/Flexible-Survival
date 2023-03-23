@@ -40,6 +40,8 @@ A person has a number called SubVsDom. [range from -100 (sub) to 0 (vers) to +10
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a number called Armor.
 A person has a number called Capacity.
+A person has a number called ImpregTimer.
+A person has a number called OffspringCount.
 
 [ body numerical variables for all characters ]
 A person has a number called Body Weight. Body Weight is usually 5.
@@ -73,6 +75,8 @@ A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
 A person has a text called linkaction.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called ImpregFunction. ImpregFunction is usually "".[@Tag:NotSaved][just to have something valid in this, the variable should be overwritten for every NPC]
+A person has a text called LastSexualPartner.[@Tag:NotSaved]
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
 A person has a text called FirstOralPartner.
@@ -1305,7 +1309,7 @@ to say Gender Adjective of ( x - a person ):
 to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body Hair Adjective of Player] chest."]
 	if Body Hair Length of x is:
 		-- 0:
-			say "nonexistant";
+			say "nonexistent";
 		-- 1:
 			say "smooth";
 		-- 2:
@@ -1469,7 +1473,7 @@ to say Cock Girth Adjective of ( x - a person ):
 to say Ball Size Adjective of ( x - a person ):
 	if Ball Size of x is:
 		-- 0:
-			say "non-existant";
+			say "nonexistent";
 		-- 1:
 			say "[one of]acorn-sized[or]gumball-sized[at random]";
 		-- 2:
@@ -1597,7 +1601,7 @@ This is the cock descr rule:
 to say Balls:
 	say "[one of]balls[or]testicles[or]gonads[at random]";
 
-to say cum load size of ( x - a person ):
+to say Cum Load Size of ( x - a person ):
 	if Ball Size of x > 0:
 		if Ball Size of x is 1:
 			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";

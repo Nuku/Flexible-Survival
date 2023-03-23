@@ -50,13 +50,48 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Utah	"Doctor Utah"
 
-Doctor Utah is a person. Doctor Utah is in Paleontology Office.
+Doctor Utah is a person.
+Doctor Utah is in Paleontology Office.
+ScaleValue of Doctor Utah is 3. [human sized]
+SleepRhythm of Doctor Utah is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Utah is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Utah is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Utah is 5. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Utah is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Utah is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Utah is 6. [length in inches]
+Breast Size of Doctor Utah is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Utah is 2. [count of nipples]
+Asshole Depth of Doctor Utah is 8. [inches deep for anal fucking]
+Asshole Tightness of Doctor Utah is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Utah is 0. [number of cocks]
+Cock Girth of Doctor Utah is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Utah is 0. [Length in Inches]
+Ball Count of Doctor Utah is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Utah is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Utah is 0. [number of cunts]
+Cunt Depth of Doctor Utah is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Utah is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Utah is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Utah is false.
+PlayerRomanced of Doctor Utah is false.
+PlayerFriended of Doctor Utah is false.
+PlayerControlled of Doctor Utah is false.
+PlayerFucked of Doctor Utah is false.
+OralVirgin of Doctor Utah is true.
+Virgin of Doctor Utah is true.
+AnalVirgin of Doctor Utah is true.
+PenileVirgin of Doctor Utah is true.
+SexuallyExperienced of Doctor Utah is false.
+TwistedCapacity of Doctor Utah is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Utah is false. [steriles can't knock people up]
+MainInfection of Doctor Utah is "Wereraptor".
 Description of Doctor Utah is "[utahdesc]".
 Conversation of Doctor Utah is { "Hiss!" }.
-MainInfection of Doctor Utah is "Wereraptor".
-drutah_msg1 is a truth state that varies. drutah_msg1 is usually false.
-
 the scent of Doctor Utah is "[if daytimer is day]Dr. Utah smells faintly of hidden lust and power, revealing his wereraptor nature to you[else]Dr. Utah smells of wereraptor lust and power. It is quite exciting[end if].".
+drutah_msg1 is a truth state that varies. drutah_msg1 is usually false.
 
 to say utahdesc:
 	if UtahGender is 2:
@@ -86,7 +121,7 @@ Instead of conversing the Doctor Utah:
 		now Paleontology Office is unknown;
 		move player to College Campus;
 	else if UtahGender is 2 and a random chance of 1 in 3 succeeds:
-		say "     [if HP of Doctor Utah is 0 and player is male]'Maybe you've seen a sexy, strong wereraptor out there who might want to mount a sexy female and breed her,' she says coyly while running a taloned paw across your hip.[else if HP of Doctor Utah is 0]'I'm looking for a sexy, strong wereraptor to mount and breed a sexy female. Could you keep your eyes open for a way to satisfy that need?' she says coyly while running a taloned paw down your chest.[else if HP of Doctor Utah is 1][one of]'Mmm... it feels so good to have a few eggs growing in me,' she says with a soft moan of pleasure as she runs her taloned hands over herself.[or]'I never had the time for children before this. From the way this feels, I'm going to enjoy making up for that in spades now,' she moans as she fingers herself lightly.[or]'Feeling those growing eggs shifting around inside me feels so nice,' she hisses softly.[or]'When these eggs inside me finally hatch, there'll be more strong wereraptors around like us to spread our gifts.'[at random][else if HP of Doctor Utah is even][one of]'Mmm... I'm looking forward to having another clutch of eggs inside me soon,' she says as she runs her taloned hands over her flat tummy.[or]'I've put my eggs somewhere hidden. They'll be warm and safe until they hatch and the next generation of wereraptors can spread out from here.'[or]'Laying my eggs felt so good that I'm looking forward to doing it again soon,' she says with a paw gripping your hip.[at random][else][one of]'Mmm... it feels so good to have another clutch of eggs growing in me,' she says with a soft moan of pleasure as she runs her taloned hands over herself..[or]'I never had the time for children before this. From the way this all feels, I'm definitely going to try making up for that now,' she moans as she fingers herself lightly.[or]'Feeling those growing eggs shifting around inside me feels so nice,' she hisses softly.[or]'When my clutches finally hatch, there'll be more strong wereraptors around like us to spread our gifts.'[or]'I've put my eggs somewhere hidden. They'll be warm and safe until they hatch and the next generation of wereraptors can spread out from here.'[or]'Laying my eggs felt so good that I'm looking forward to doing it again soon,' she says with a paw between her legs to finger herself lightly at the memories.[at random][end if]";
+		say "     [if HP of Doctor Utah is 0 and Player is male]'Maybe you've seen a sexy, strong wereraptor out there who might want to mount a sexy female and breed her,' she says coyly while running a taloned paw across your hip.[else if HP of Doctor Utah is 0]'I'm looking for a sexy, strong wereraptor to mount and breed a sexy female. Could you keep your eyes open for a way to satisfy that need?' she says coyly while running a taloned paw down your chest.[else if HP of Doctor Utah is 1][one of]'Mmm... it feels so good to have a few eggs growing in me,' she says with a soft moan of pleasure as she runs her taloned hands over herself.[or]'I never had the time for children before this. From the way this feels, I'm going to enjoy making up for that in spades now,' she moans as she fingers herself lightly.[or]'Feeling those growing eggs shifting around inside me feels so nice,' she hisses softly.[or]'When these eggs inside me finally hatch, there'll be more strong wereraptors around like us to spread our gifts.'[at random][else if HP of Doctor Utah is even][one of]'Mmm... I'm looking forward to having another clutch of eggs inside me soon,' she says as she runs her taloned hands over her flat tummy.[or]'I've put my eggs somewhere hidden. They'll be warm and safe until they hatch and the next generation of wereraptors can spread out from here.'[or]'Laying my eggs felt so good that I'm looking forward to doing it again soon,' she says with a paw gripping your hip.[at random][else][one of]'Mmm... it feels so good to have another clutch of eggs growing in me,' she says with a soft moan of pleasure as she runs her taloned hands over herself..[or]'I never had the time for children before this. From the way this all feels, I'm definitely going to try making up for that now,' she moans as she fingers herself lightly.[or]'Feeling those growing eggs shifting around inside me feels so nice,' she hisses softly.[or]'When my clutches finally hatch, there'll be more strong wereraptors around like us to spread our gifts.'[or]'I've put my eggs somewhere hidden. They'll be warm and safe until they hatch and the next generation of wereraptors can spread out from here.'[or]'Laying my eggs felt so good that I'm looking forward to doing it again soon,' she says with a paw between her legs to finger herself lightly at the memories.[at random][end if]";
 	else if UtahGender is 1 and player is not impreg_ok and drutah_msg1 is false:
 		say "     'It is important that we prepare for our eventual [']rescue['] by building up a core group of strong wereraptors. While some of those converted may be suitable and should be ready for complete the rite, it would be better if the best of us could increase our numbers in a more... traditional manner,' he rumbles while brushing his body against yours, his stiff erection plainly visible. 'I can tell your [if Player is female]womb's[else]body's[end if] unsuitable to be bred, but there is another who may be able to assist you with that,' he adds, running a claw down your side in a sensual manner while nibbling at your neck. His touches get you quite turned on, making you more receptive to his offer to make you into a breeder.";
 		if HP of doctor medea < 2:

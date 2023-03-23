@@ -139,14 +139,14 @@ object	name
 Sylvia	"Sylvia"
 
 Sylvia is a woman.
-ScaleValue of Sylvia is 3. [human sized]
+ScaleValue of Sylvia is 3. [5' 9"]
 Body Weight of Sylvia is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Sylvia is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Sylvia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Sylvia is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Sylvia is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Sylvia is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Sylvia is 8. [length in inches]
+Tongue Length of Sylvia is 6. [length in inches]
 Breast Size of Sylvia is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Sylvia is 2. [count of nipples]
 Asshole Depth of Sylvia is 8. [inches deep for anal fucking]
@@ -157,7 +157,7 @@ Cock Length of Sylvia is 0. [length in inches]
 Ball Count of Sylvia is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Sylvia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Sylvia is 1. [number of cunts]
-Cunt Depth of Sylvia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Sylvia is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Sylvia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Sylvia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1021,7 +1021,7 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 	say "     ([link]N[as]n[end link]) - No. Let someone else take it. It doesn't feel right to you.";
 	if Player consents: [Do it.]
 		LineBreak;
-		if Player is knotted and player is pure and player is male: [Special. For canidae]
+		if Player is knotted and player is pure and Player is male: [Special. For canidae]
 			say "     The canine's desires speak to you on a lower level. Before you, a bitch is in need of mating and such an act is desirable for you as well. As you step towards her, shedding your clothes, the gleam in your eye causes her to shiver in anticipation. But as you reach her, Sylvia places a hand on your chest, 'I want to enjoy the buildup as well, so could we take this slowly?' While the animalistic instincts may be strong, your mind is stronger. You agree to take your time and ensure that she enjoys it. The young student beams at you and gazes appreciatively over the contours of your body and traces a finger over your torso. 'I've been looking forward to this,' she says sensually. 'You have such an aura of mystery that I'm sure attracts other people to you too,' the collie says, lightly grasping your knotted cock.";
 			say "     As she grips your member, you admire the collie's slim, toned body, your eyes spending extra seconds over her breasts and pussy. A small amount of fluid gathers on her outer lips, proof of her developing arousal. Your musings are cut short by Sylvia dropping to her knees and beginning to masturbate you, causing you to begin thrusting lightly against her fist, the stimulus that she provides being felt throughout your body. Thoughts of a long, amorous [if daytimer is day]day[else]night[end if] ahead of you fill your mind. You can feel the fur on the collie's paws as she caresses your balls and rubs your shaft, her eyes meeting your own with a needy expression. You are only too keen to oblige, pulling your length from her grasp before grabbing her head and plunging into her maw, hilting yourself on the first thrust.";
 			WaitLineBreak;

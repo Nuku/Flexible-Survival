@@ -61,7 +61,7 @@ to say TentacleSex:
 		say "     Looking over the instructions on how to summon the tentacle beast, you're thinking about giving it another try with the ancient creature. However, there are a few things to note about its behavior. As you have previously read about this horrifying mass of tendrils, it is unclear on when they will lay eggs on their victims, often seeming like a random action rather than anything predictable. This means that summoning the tentacles will be a gamble of either you get filled with their eggs or just raped by them for who knows how long. With this in mind, [bold type]are you sure you wish to offer yourself to the demonic tendrils, risking getting egg-filled by them?[roman type][line break]";
 		say "     [link](Y)[as]y[end link] - Sure, you're fine with this.";
 		say "     [link](N)[as]n[end link] - Just drop the idea for now.";
-		if player consents:
+		if Player consents:
 			say "     With your decision made, you then proceed to summon the tentacle beast, carefully following the tome's instructions. The outcome of this meeting is totally thrown to chance.";
 			WaitLineBreak;
 			if a random chance of 1 in 2 succeeds:

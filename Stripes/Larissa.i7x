@@ -8,8 +8,47 @@ Table of GameCharacterIDs (continued)
 object	name
 Larissa	"Larissa"
 
-Larissa is a woman. "[larissaview]". She is in Zephyr Lobby.
+Larissa is a woman. "[larissaview]". [Only covers her human form]
+Larissa is in Zephyr Lobby.
+ScaleValue of Larissa is 3. [human sized]
+SleepRhythm of Larissa is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Larissa is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Larissa is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Larissa is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Larissa is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Larissa is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Larissa is 6. [length in inches]
+Breast Size of Larissa is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Larissa is 2. [count of nipples]
+Asshole Depth of Larissa is 8. [inches deep for anal fucking]
+Asshole Tightness of Larissa is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Larissa is 0. [number of cocks]
+Cock Girth of Larissa is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Larissa is 0. [Length in Inches]
+Ball Count of Larissa is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Larissa is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Larissa is 1. [number of cunts]
+Cunt Depth of Larissa is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Larissa is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Larissa is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Larissa is false.
+PlayerRomanced of Larissa is false.
+PlayerFriended of Larissa is false.
+PlayerControlled of Larissa is false.
+PlayerFucked of Larissa is false.
+OralVirgin of Larissa is false.
+Virgin of Larissa is false.
+AnalVirgin of Larissa is true.
+PenileVirgin of Larissa is true.
+SexuallyExperienced of Larissa is true.
+TwistedCapacity of Larissa is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Larissa is true. [steriles can't knock people up]
+MainInfection of Larissa is "".
+Description of Larissa is "[larissadesc]".
 Conversation of Larissa is { "$$$$$$$$!" }.
+the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer. You do catch a faint hint of lilacs, probably a perfume.".
 
 To say Larissaballs:
 	if Ball Size of Larissa < 3:
@@ -37,10 +76,6 @@ to say larissaview:
 		say "Manning the counter is Larissa, now a [if Cock Count of Larissa > 0 and Cunt Count of Larissa > 0]herm[else if Cock Count of Larissa > 0]male[else if Cunt Count of Larissa > 0]female[else]neuter[end if] [LarissaForm] who seems pretty pleased with [possadj of Larissa] new look.";
 
 Larissa has a list of text called vials.
-
-Description of Larissa is "[larissadesc]".
-
-the scent of Larissa is "Larissa arches her brow as you sniff the air around her, reaching for something in a nearby drawer. You do catch a faint hint of lilacs, probably a perfume.".
 
 the linkaction of Larissa is "Possible Actions: [link]talk[as]talk Larissa[end link], [link]smell[as]smell Larissa[end link], [link]fuck[as]fuck Larissa[end link][if HP of Larissa >= 2], [link]TF[as]transform Larissa[end link][end if][line break]";
 
@@ -190,7 +225,7 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if ( ( player is male and Cunt Count of Larissa > 0 ) or ( player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist and LarissaBodycat is 2:
+	if ( ( Player is male and Cunt Count of Larissa > 0 ) or ( Player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist and LarissaBodycat is 2:
 		say "[Larissasex_taurfun]";
 	else if Player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:

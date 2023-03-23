@@ -468,7 +468,7 @@ Cock Length of Gabriel is 0. [length in inches]
 Ball Count of Gabriel is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Gabriel is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Gabriel is 0. [number of cunts]
-Cunt Depth of Gabriel is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Gabriel is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Gabriel is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Gabriel is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -545,7 +545,7 @@ to say GabrielTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Let your cum-slut in training chug some wolf cum";
 	[]
-	if (Libido of Gabriel > 0 and Libido of Gabriel < 99) and carried of demon seed > 0 and player is male:
+	if (Libido of Gabriel > 0 and Libido of Gabriel < 99) and carried of demon seed > 0 and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer him a bottle of demon seed to drink";
 		now sortorder entry is 6;
@@ -845,7 +845,7 @@ to say GabrielSex6:
 	say "     Meanwhile, catching his stride again after his climax, Elijah pulls out of Gabriel with little fanfare, even laughing out loud at the sight of his helpless bottom's gaping and creamy hole and the gasp he gives at the sudden emptiness. He slaps Gabriel on the bare buttocks one last time, leaving a reddened imprint of his hand, then turns away from the fucked-out and exhausted angel. Looking at you with a smile at how aroused the show of their coupling has made you, Elijah saunters over to his own bunk, totally unconcerned about his own nudity or the tail of cum-droplets he leaves as he goes along. 'Wouldn't mind if you brought the bitch over regularly,' he says with a sidelong glance at you, then throws himself on the bed to lounge around in lazy satisfaction.";
 	NPCSexAftermath Gabriel receives "AssFuck" from Elijah;
 
-instead of going down from Grey Abbey Library while (Libido of Gabriel > 4 and Gabriel is in Bunker and player is male and Lastfuck of Gabriel - turns > 8 and a random chance of 1 in 3 succeeds): [cumslut, in the bunker, male player, not fucked that day, 33% chance]
+instead of going down from Grey Abbey Library while (Libido of Gabriel > 4 and Gabriel is in Bunker and Player is male and Lastfuck of Gabriel - turns > 8 and a random chance of 1 in 3 succeeds): [cumslut, in the bunker, male player, not fucked that day, 33% chance]
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: Gabriel Cumslut WALKIN[line break]";

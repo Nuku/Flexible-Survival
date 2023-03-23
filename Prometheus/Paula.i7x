@@ -31,7 +31,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	say "     Agreeing to go along, you make sure you've got your pack and gear ready before heading out together. You and Alexandra chat a little on the trip, but are mostly quiet to help avoid drawing attention to yourselves. Thankfully, aside from a few easily dispatched troublemakers, the journey there is uneventful.";
 	move player to City Hospital;
 	AddNavPoint City Hospital;
-	say "     You and the doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
+	say "     You and the Doberman cop head into the dark and foreboding hospital. Wary and on edge, you travel the halls together, checking inside some patient rooms in the hopes of finding useful supplies. Things proceed slowly at first, coming across a few useful items from time to time, stockpiling them in the packs you've brought. Coming to an intersection, you spot a notice on an unblocked set of doors which states that the area beyond as being for staff only. Feeling that would be a more likely area to look for medical supplies, you signal for Alexandra to follow you down that way.";
 	say "     As you pass along the darkened halls, you hear some activity up ahead. You both freeze and listen, wary of danger.";
 	WaitLineBreak;
 	say "     '...coming to, dammit. Anesthesia!' a male voice barks authoritatively.";
@@ -108,14 +108,14 @@ object	name
 Paula	"Paula"
 
 Paula is a person.
-ScaleValue of Paula is 3. [human sized]
+ScaleValue of Paula is 3. [5']
 Body Weight of Paula is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Paula is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Paula is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Paula is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Paula is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Paula is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Paula is 8. [length in inches]
+Tongue Length of Paula is 6. [length in inches]
 Breast Size of Paula is 3. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Paula is 4. [count of nipples]
 Asshole Depth of Paula is 8. [inches deep for anal fucking]
@@ -126,7 +126,7 @@ Cock Length of Paula is 0.
 Ball Count of Paula is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Paula is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Paula is 1. [number of cunts]
-Cunt Depth of Paula is 10. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Paula is 10. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Paula is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Paula is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]

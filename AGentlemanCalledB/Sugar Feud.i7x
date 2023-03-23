@@ -15,7 +15,7 @@ Sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to BadSpots of FurryList;
 	add Sugar Shack to BadSpots of FemaleList;
-	add Sugar Shack to badspots of HumorousList;
+	add Sugar Shack to BadSpots of HumorousList;
 
 to say ResolveEvent Sugar Shack:
 	setmonster "Sugar Glider";

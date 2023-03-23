@@ -3,7 +3,10 @@ Sex and Infection Functions by Core Mechanics begins here.
 "Basic Functions for Sex, Sexual Changes and Infections of the Flexible Survival game"
 
 Definition: A person (called x) is sterile:
-	if "Sterile" is listed in feats of x, yes;
+	if X is Player:
+		if "Sterile" is listed in feats of x, yes;
+	else:
+		if "Sterile" is listed in traits of x, yes;
 	if Sterile of x is true, yes;
 	no;
 

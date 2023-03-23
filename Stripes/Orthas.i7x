@@ -21,11 +21,46 @@ object	name
 Orthas	"Orthas"
 
 Orthas is a person. "A dragon person, clearly female, is watching the area. She wears a handwritten name badge that reads 'Orthas'.".
+Orthas is in Trevor Labs Lobby.
+ScaleValue of Orthas is 4. [tall human sized]
+SleepRhythm of Orthas is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Orthas is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Orthas is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Orthas is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Orthas is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Orthas is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Orthas is 10. [length in inches]
+Breast Size of Orthas is 6. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Orthas is 2. [count of nipples]
+Asshole Depth of Orthas is 12. [inches deep for anal fucking]
+Asshole Tightness of Orthas is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Orthas is 0. [number of cocks]
+Cock Girth of Orthas is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Orthas is 0. [Length in Inches]
+Ball Count of Orthas is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Orthas is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Orthas is 1. [number of cunts]
+Cunt Depth of Orthas is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Orthas is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Orthas is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Orthas is false.
+PlayerRomanced of Orthas is false.
+PlayerFriended of Orthas is false.
+PlayerControlled of Orthas is false.
+PlayerFucked of Orthas is false.
+OralVirgin of Orthas is false.
+Virgin of Orthas is false.
+AnalVirgin of Orthas is false.
+PenileVirgin of Orthas is false.
+SexuallyExperienced of Orthas is true.
+TwistedCapacity of Orthas is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Orthas is false. [steriles can't knock people up]
+MainInfection of Orthas is "Dragon".
 Description of Orthas is "[OrthasNPCdesc]".
 Conversation of Orthas is { "Eggses!" }.
-Orthas is in Trevor Labs Lobby.
-
-the scent of Orthas is "Orthas smells like a strong, powerful dragoness[if HP of Orthas is 2 or HP of Orthas is 3]. She has a lingering scent of arousal hanging over her[else if HP of Orthas is 4]. She has a strong scent of arousal and egg-laying hanging over her[end if].".
+The scent of Orthas is "Orthas smells like a strong, powerful dragoness[if HP of Orthas is 2 or HP of Orthas is 3]. She has a lingering scent of arousal hanging over her[else if HP of Orthas is 4]. She has a strong scent of arousal and egg-laying hanging over her[end if].".
 
 the fuckscene of Orthas is "[Orthasfuck]".
 
@@ -270,7 +305,7 @@ to say Orthas_task2_done:
 	say "     She tosses the stuff back into the box and closes it up. 'Look, I didn't get much of a chance to prove myself as a parent or husband, but I know I can do it.' She wraps her tail around you, pulling and turning you into a hug from behind with her hands on your [if gestation of child > 0]pregnant [end if]belly and her wings around you. 'My old life ain't really worth remembering, but I don't want to forgot to do better this time around. Now, I can't promise to be around all the time - the doc's work's important and someone's got to protect him. But I figure someone like you'll understand that a bit better as sometimes there's things you've got to take care of too. Once we're out of this mess, I'll be around for you and the eggs when you need me.'";
 	WaitLineBreak;
 	if Player is male:
-		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of Player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [Cock of Player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blow job.";
+		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of Player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [Cock of Player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blowjob.";
 		say "     Once she's gotten you good and horny, she lays herself back across her security desk, wantonly spreading her legs. With a tantalizing grin, she fingers her dripping snatch before spreading her folds invitingly. 'Come on, lover,' she purrs sensually and you can hardly resist such an invitation. Tossing aside your gear and moving into position, you grab her legs and drive your throbbing cock into her cunny, causing the dragoness to cry out lustfully. You pound away at her, giving her the thorough breeding she desires.";
 		say "     The dragoness's strong inner muscles, capable of dealing with pushing out her eggs, squeeze and massage around your thrusting member, increasing the pleasure for both of you. The thought of dumping your load in her and there being an egg produced right away makes you feel like a virile stud, eager to knock up this fecund scaled beauty. Nuzzling her bosom, you lick and kiss her nipples, telling her how sexy she looks and how you're looking forward to putting an egg in her. To this she grins and licks your cheek with her draconic tongue, rumbling how she's looking forward to putting her egg in you.";
 		say "     Before you can respond to this, the squeezing and milking of her vaginal walls intensifies as her orgasm begins with a roar. Under the powerful stimulation her quivering cunny provides, you don't hold out much longer and are soon blasting your gooey seed into her womb. By the time you're done emptying your load into her, she's already sitting up and rolling you over onto your back. Pulling off your spent shaft, she lets her emerging ovipositor slap wetly against it with a lustful grin.";
@@ -297,8 +332,8 @@ to say Orthas_task2_done:
 				say "     Rubbing your rounded belly, you can feel the egg breaking back down into a gooey mix of semen and lubricating fluids that fill you with warm feeling of pleasure.";
 		else if calcnumber is 2:
 			say "     Orthas rumbles sexily as you guide her dripping ovipositor between your ass cheeks. She grinds against your back door, making sure to send several spurts of lubricating fluids onto and into that stretching ring. And once she's gotten you good and lubed up, she drives that cock-like member into you, pushing past your anus and into your warm bowels. Wrapping your legs around her waist, you goad her to fuck you, not that she needs any encouragement on that score. Her pulsating rod drives into you again and again as it leaks more slick lubrication to prepare you for what's to come. And seeing her belly swelling up, you know it's coming soon.";
-			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support. Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider. After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels. You climax again as you feel it finally settle into your [if the player is mpreg_ok]hidden womb[else]belly[end if] with a good splatter of the dragoness's fluids.";
-			if the player is mpreg_ok:
+			say "     Panting heavily as the egg starts to move, Orthas grabs your shoulders for support. Her ovipositor throbs deep inside you as you can feel the bulge of the egg start to force your back door open even wider. After some initial difficulty, your body adjusts and soon you're sharing the dragoness's pleasure as the firm ovoid makes its journey into your rectum and then into your bowels. You climax again as you feel it finally settle into your [if the Player is mpreg_ok]hidden womb[else]belly[end if] with a good splatter of the dragoness's fluids.";
+			if the Player is mpreg_ok:
 				if the gestation of the child > 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 					decrease gestation of child by a random number from 5 to 10;
@@ -698,7 +733,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

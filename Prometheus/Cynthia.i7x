@@ -31,14 +31,14 @@ object	name
 Cynthia	"Cynthia"
 
 Cynthia is a woman.
-ScaleValue of Cynthia is 3. [human sized]
+ScaleValue of Cynthia is 3. [6']
 Body Weight of Cynthia is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Cynthia is 6. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Cynthia is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Cynthia is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Cynthia is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Cynthia is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Cynthia is 6. [length in inches]
+Tongue Length of Cynthia is 5. [length in inches]
 Breast Size of Cynthia is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Cynthia is 2. [count of nipples]
 Asshole Depth of Cynthia is 8. [inches deep for anal fucking]
@@ -49,7 +49,7 @@ Cock Length of Cynthia is 0. [Length in Inches]
 Ball Count of Cynthia is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Cynthia is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Cynthia is 1. [number of cunts]
-Cunt Depth of Cynthia is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Cynthia is 8. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Cynthia is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Cynthia is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -152,7 +152,7 @@ to ArcheTechWarehouseEvent:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - There is no time like the present and your curiosity is piqued.";
 	say "     ([link]N[as]n[end link]) - Leave it until later, you have other things that you want to do here now.";
-	if player consents:
+	if Player consents:
 		say "     A small group of wolves enter the lobby just behind you, one of them barging past as he rushes by you, barely turning their head to shout an apology. 'Sorry about that,' one of the other wolves says as he approaches you at a more reasonable speed. 'Argos gets a bit focused on the task at hand, especially when the message is urgent. We found something near the docks that the Pack Leaders may be interested in. An undamaged building that doesn't look as though anyone has looted it yet. Those are rare enough, but this one has electronic security that doesn't fit in with the padlocks and bolts that you find on the other warehouses. Wait a minute. Haven't we met before? Ah yes. You were one of the two kidnapped by the mercenaries. I'm Orthos if you don't remember me. Where's Julian? Wasn't he your friend?' You quickly explain before the wolf can go onto his next thought that, yes, Julian is your friend but he lives at the college and that you tend to travel about quite a bit.";
 		say "     A call from above interrupts the conversation as Cynthia strolls down the stairs accompanied by Cadmea, Sirius, and Argos. This warehouse really must be important to have attracted this much notice from the Pack's leadership. 'Hey [if player is not defaultnamed][name of player], [else]there, [end if]fancy you being here,' Cynthia greets you. 'I haven't seen you from the rooftops for a while. How are you?' You reply that you've been worse, earning a short laugh from her. 'That's rather vague, I hope that the denizens of the city haven't violated you against your will too often. But I'm sure Orthos was telling you about the warehouse that they found and time is of the essence. I don't know how it has managed to avoid notice for so long, but Argos suspects that we aren't the only ones interested in it, as there were others around the area. If you have the time, would you like to accompany us to this warehouse? If it belongs to who I think it does, there could be some quite useful things inside. And even if it doesn't, how tightly it's sealed is curious anyway.'";
 		WaitLineBreak;

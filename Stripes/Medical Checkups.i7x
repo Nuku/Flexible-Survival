@@ -5,6 +5,33 @@ Version 5 of Medical Checkups by Stripes begins here.
 [ Version 5.2 - Added Black Wasp parasite removal - Kurainyx]
 [- Originally Authored By: Hellerhound -]
 
+[	HP of Doctor Medea	]
+[ Meeting & MPreg		]
+[ 0 = Not encountered	]
+[ 1 = Talked at door	]
+[ 2 = Offered MPreg		]
+[ 3 = Sent to Hospital	]
+[ 4 = Got supplies		]
+[ 5 = Minimal MPreg		]	[Requires Medeaget resolved for full]
+[ 6 = Completed MPreg	]
+
+[	Medeaget			]
+[ Basic equipment		]
+[ 0 = Not discussed		]
+[ 1 = Spoke w/her		]
+[ 2 = Found truck		]
+[ 3 = Gave med supplies	]
+
+[ lust of Doctor Medea  ]
+[ Heat manipulation		]
+[ 0 = Not discussed		]
+[ 1 = Discussed heats	]
+[ 2 = Supplies from vet	]
+[ 3 = Gave vet supplies	]
+
+[	Medeaub				]
+[ T/F = Discussed UB	]
+
 Section 1 - Pediatrics Lobby
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
@@ -49,24 +76,56 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Medea	"Doctor Medea"
 
-Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
+Doctor Medea is a woman. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
 Doctor Medea is in Doctor's Office.
-
-the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
-
+ScaleValue of Doctor Medea is 3. [human sized]
+SleepRhythm of Doctor Medea is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Medea is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Medea is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Medea is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Medea is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Medea is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Medea is 6. [length in inches]
+Breast Size of Doctor Medea is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Medea is 2. [count of nipples]
+Asshole Depth of Doctor Medea is 8. [inches deep for anal fucking]
+Asshole Tightness of Doctor Medea is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Medea is 0. [number of cocks]
+Cock Girth of Doctor Medea is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Medea is 0. [Length in Inches]
+Ball Count of Doctor Medea is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Medea is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Medea is 1. [number of cunts]
+Cunt Depth of Doctor Medea is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Medea is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Medea is 2. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Medea is false.
+PlayerRomanced of Doctor Medea is false.
+PlayerFriended of Doctor Medea is false.
+PlayerControlled of Doctor Medea is false.
+PlayerFucked of Doctor Medea is false.
+OralVirgin of Doctor Medea is false.
+Virgin of Doctor Medea is false.
+AnalVirgin of Doctor Medea is true.
+PenileVirgin of Doctor Medea is true.
+SexuallyExperienced of Doctor Medea is true.
+TwistedCapacity of Doctor Medea is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Medea is false. [steriles can't knock people up]
+MainInfection of Doctor Medea is "Lizard Girl".
+Description of Doctor Medea is "[MedeaDesc]".
+Conversation of Doctor Medea is { "Babies!" }.
+The scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
 Medeaget is a number that varies.
 Medeaub is a truth state that varies. Medeaub is usually false.
 ovipregMedeatalk is a truth state that varies. ovipregMedeatalk is usually false.
 Medeapanda is a truth state that varies. Medeapanda is usually false.
 Medeapill is a truth state that varies. Medeapill is usually false.
 
-Description of Doctor Medea is "[MedeaDesc]".
-
 to say MedeaDesc:
 	project the figure of Medea_face_icon;
 	say "     Doctor Medea is a relatively human lizard, with her scaly skin having shades of ochre and yellow. Two spiky ridges run along the sides of her head and down her back, starting at the eyes and vanishing beneath the collar of a professional-looking light green blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known]. She looks like she had a run-in with one of those lizards at the park[end if][if HP of doctor Medea >= 5 and lust of doctor Medea >= 3]. The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[else if Medeaget > 0]. There is now a darker line running down her skirt to where some whitish cum is dripping. It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].";
-
-Conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
 	project the figure of Medea_face_icon;
@@ -208,7 +267,7 @@ to say Medeaadjustments:
 			say "     'I still would like for you to try to obtain that specialized equipment I've described. Without it, I cannot complete the procedure. If you're still interested, you should try searching the City Hospital for those items.' Additionally, with the supplies you had brought back earlier, I have developed some special pills that you might be interested in.";
 		else:
 			say "     'In thanks for your help, I can provide you with several services. As before, I can determine if you're pregnant and provide some information on the fetus. I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like. Would you like me to do that? I could make you extra fertile or even sterile if you'd like.' While she seems rather eager about the first, she's clearly less enthused about the second.";
-	if Medeaub is false and Medeaget >= 3 and player is female and Resolution of Inner Predator is not listed in { 0, 99 }:
+	if Medeaub is false and Medeaget >= 3 and Player is female and Resolution of Inner Predator is not listed in { 0, 99 }:
 		if Resolution of Inner Predator is 1:
 			say "     As you're listening to her, you feel that dark hunger inside you well up. That heady scent of reptilian arousal starts to make your mouth water. Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you. 'Hmmm... this is most interesting. And you say that your body's become capable of ingesting prey nearly your own size whole? Most intriguing.'";
 			WaitLineBreak;
@@ -221,7 +280,7 @@ to say Medeaadjustments:
 		now Medeaub is true;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is female or player is mpreg_ok:
+	if Player is female or Player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Check for pregnancy";
 		now sortorder entry is 1;
@@ -913,33 +972,5 @@ to say cunt pill use:
 		increase Cunt Tightness of Player by a random number from 1 to 2;
 		Follow the cunt descr rule;
 		say "A tingling sensation floods your [if Cunt Count of Player > 1]cunts before they grow[else]cunt before it grows[end if] in size, ready to take in bigger loads to inseminate you.";
-
-
-[	HP of Doctor Medea	]
-[ Meeting & MPreg		]
-[ 0 = Not encountered	]
-[ 1 = Talked at door	]
-[ 2 = Offered MPreg		]
-[ 3 = Sent to Hospital	]
-[ 4 = Got supplies		]
-[ 5 = Minimal MPreg		]	[Requires Medeaget resolved for full]
-[ 6 = Completed MPreg	]
-
-[	Medeaget			]
-[ Basic equipment		]
-[ 0 = Not discussed		]
-[ 1 = Spoke w/her		]
-[ 2 = Found truck		]
-[ 3 = Gave med supplies	]
-
-[ lust of Doctor Medea  ]
-[ Heat manipulation		]
-[ 0 = Not discussed		]
-[ 1 = Discussed heats	]
-[ 2 = Supplies from vet	]
-[ 3 = Gave vet supplies	]
-
-[	Medeaub				]
-[ T/F = Discussed UB	]
 
 Medical Checkups ends here.

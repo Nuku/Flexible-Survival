@@ -113,14 +113,50 @@ Table of GameCharacterIDs (continued)
 object	name
 Frank	"Frank"
 
-Frank is a man. Frank is in Comic Shop.
+Frank is a man.
+Frank is in Comic Shop.
+ScaleValue of Frank is 3. [human sized]
+SleepRhythm of Frank is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Frank is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Frank is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Frank is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Frank is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Frank is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Frank is 7. [length in inches]
+Breast Size of Frank is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Frank is 2. [count of nipples]
+Asshole Depth of Frank is 10. [inches deep for anal fucking]
+Asshole Tightness of Frank is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Frank is 1. [number of cocks]
+Cock Girth of Frank is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Frank is 6. [Length in Inches]
+Ball Count of Frank is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Frank is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Frank is 0. [number of cunts]
+Cunt Depth of Frank is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Frank is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Frank is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Frank is false.
+PlayerRomanced of Frank is false.
+PlayerFriended of Frank is false.
+PlayerControlled of Frank is false.
+PlayerFucked of Frank is false.
+OralVirgin of Frank is true.
+Virgin of Frank is true.
+AnalVirgin of Frank is true.
+PenileVirgin of Frank is true.
+SexuallyExperienced of Frank is false.
+TwistedCapacity of Frank is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Frank is false. [steriles can't knock people up]
+MainInfection of Frank is "Skunk".
 Description of Frank is "[frankdesc]".
 Conversation of Frank is { "NERD!" }.
+The scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
 The icon of Frank is Figure of Frank_icon.
 franksex is a number that varies.
 frankmalesex is a number that varies.
-
-the scent of the Frank is "The large skunk fellow smells of musty comics, Cheetohs and male skunk.".
 
 to say frankdesc:
 	say "     Frank is a heavy-set skunk fellow. His encounter with the skunks seems to have slimmed him down a little, but he is still quite portly. His black and white fur is thick and soft. As he now has fur, he's forgone wearing clothes aside from a ballcap with the store logo on it.";
@@ -484,7 +520,7 @@ to say Frank_MM_fswitch_01:
 	say "     The big skunk grins and strokes his stiffening member at the prospect of more fun with you. With his paws going to your crotch, he's quickly on his knees and nuzzling at your throbbing cock[smn] to get things started. He teases you with some light licks here and there while taking in your scent[one of][if CockName of Player is listed in infections of InternalCockList]. Next, he buries his nose at the base of your shaft, getting you moaning as he licks and nips at that sensitive spot[else]. Next, he spends quite some time licking and sucking on your balls, getting you moaning as they pulse with readiness[end if][or]. Next, he runs his tongue up and down the underside of your [Cock of Player] cock[smn] until you're throbbing with need[or]. Next, he twirls his tongue over your glans, slathering it with his saliva until it's drooling precum for him to sample[in random order]. Quite worked up by this point, you caress his head and tell him to lay down so you can get at his cock as well.";
 	say "     Moving atop of the big, fluffy guy, you bury your face in his crotch and nuzzle his ebon shaft. You rub your [bodydesc of Player] body over his plump belly, enjoying the feel of his soft fur and soft tummy beneath you. As you start licking his manhood, precum runs down its dark flesh and his musky scent grows stronger. Soon licking isn't enough and you plunge your mouth down over his thick rod. Meanwhile Frank's been lightly stroking your shaft to keep you hard, but when you slide your warm lips over his shaft, he guides your [cock size desc of Player] shaft down into his muzzle.";
 	if anallevel is 3 and a random chance of 1 in 3 succeeds:
-		say "     Rocking yourself gently overtop of your mephit lover, you work your mouth and tongue over his black cock. It dribbles with tasty precum for you to lap up even as you gently thrust into Frank's muzzle, treating him with the same for him to lick up. There is a brief pause in the blow job you're receiving as Frank takes a moment to lick [if scalevalue of Player > 3]a trio[else]a pair[end if] of fingers which you soon feel prodding their way gently into your anus. This draws a moan of delight from you and you suck and lick with increased zeal to show the skunk how much you appreciate the added surprise. With the added stimulation, it isn't too much longer before you cum with another long, happy moan. Having your [Cum Load Size of Player] load pumped into his muzzle and down his throat sets the geeky skunk off, unloading his gooey seed across your tongue for you to swallow down. Once you're both drained of and fed on semen, you flop out side by side, the big skunk wrapping his arms around you and bundling you up in his fluffy tail in a tender and loving hug.";
+		say "     Rocking yourself gently overtop of your mephit lover, you work your mouth and tongue over his black cock. It dribbles with tasty precum for you to lap up even as you gently thrust into Frank's muzzle, treating him with the same for him to lick up. There is a brief pause in the blowjob you're receiving as Frank takes a moment to lick [if scalevalue of Player > 3]a trio[else]a pair[end if] of fingers which you soon feel prodding their way gently into your anus. This draws a moan of delight from you and you suck and lick with increased zeal to show the skunk how much you appreciate the added surprise. With the added stimulation, it isn't too much longer before you cum with another long, happy moan. Having your [Cum Load Size of Player] load pumped into his muzzle and down his throat sets the geeky skunk off, unloading his gooey seed across your tongue for you to swallow down. Once you're both drained of and fed on semen, you flop out side by side, the big skunk wrapping his arms around you and bundling you up in his fluffy tail in a tender and loving hug.";
 	else:
 		say "     Rocking yourself gently overtop of your mephit lover, you work your mouth and tongue over his black cock. It dribbles with tasty precum for you to lap up even as you gently thrust into Frank's muzzle, treating him with the same for him to lick up. Frank grabs your ass with his padded paws and kneads your rear, tugging your hips as you fuck his face. You quicken your pace, sucking and licking harder as you do, knowing the skunk must be getting close. With the added stimulation, it isn't too much longer before you cum with another long, happy moan. Having your [Cum Load Size of Player] load pumped into his muzzle and down his throat sets the geeky skunk off, unloading his gooey seed across your tongue for you to swallow down. Once you're both drained of and fed on semen, you flop out side by side, the big skunk wrapping his arms around you and bundling you up in his fluffy tail in a tender and loving hug.";
 

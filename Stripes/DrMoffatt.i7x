@@ -37,7 +37,7 @@ Another Doctor is a situation.
 ResolveFunction of Another Doctor is "[ResolveEvent Another Doctor]".
 Sarea of Another Doctor is "Hospital".
 when play begins:
-	add Another Doctor to badspots of HermList;
+	add Another Doctor to BadSpots of HermList;
 	add Another Doctor to BadSpots of FemaleList;
 	add Another Doctor to BadSpots of MaleList;
 	add Another Doctor to BadSpots of FurryList;
@@ -134,14 +134,49 @@ Table of GameCharacterIDs (continued)
 object	name
 Doctor Moffatt	"Doctor Moffatt"
 
-Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
-Description of Doctor Moffatt is "[drmoffattdesc]".
+Doctor Moffatt is a woman.
+Doctor Moffatt is in Psych Department.
+ScaleValue of Doctor Moffatt is 3. [human sized]
+SleepRhythm of Doctor Moffatt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Doctor Moffatt is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Doctor Moffatt is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Doctor Moffatt is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Doctor Moffatt is 7. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Doctor Moffatt is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Doctor Moffatt is 7. [length in inches]
+Breast Size of Doctor Moffatt is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Doctor Moffatt is 2. [count of nipples]
+Asshole Depth of Doctor Moffatt is 12. [inches deep for anal fucking]
+Asshole Tightness of Doctor Moffatt is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Doctor Moffatt is 1. [number of cocks]
+Cock Girth of Doctor Moffatt is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Doctor Moffatt is 24. [Length in Inches]
+Ball Count of Doctor Moffatt is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Doctor Moffatt is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Doctor Moffatt is 0. [number of cunts]
+Cunt Depth of Doctor Moffatt is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Doctor Moffatt is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Doctor Moffatt is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Doctor Moffatt is false.
+PlayerRomanced of Doctor Moffatt is false.
+PlayerFriended of Doctor Moffatt is false.
+PlayerControlled of Doctor Moffatt is false.
+PlayerFucked of Doctor Moffatt is false.
+OralVirgin of Doctor Moffatt is false.
+Virgin of Doctor Moffatt is false.
+AnalVirgin of Doctor Moffatt is false.
+PenileVirgin of Doctor Moffatt is false.
+SexuallyExperienced of Doctor Moffatt is true.
+TwistedCapacity of Doctor Moffatt is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Doctor Moffatt is false. [steriles can't knock people up]
 MainInfection of Doctor Moffatt is "Hyperskunk".
+Description of Doctor Moffatt is "[drmoffattdesc]".
 Conversation of Doctor Moffatt is { "..." }.
+the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
-
-the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 
 to say drmoffattdesc:
 	if level of Doctor Moffatt is 0:
@@ -530,13 +565,13 @@ to say sexwithDrMoffattSkunkPath:
 			else if HP of Doctor Moffatt is 9:		[oral]
 				say "     After she's gone through her questions, both you and Dr. Moffatt are quite aroused and eager to move on to the in-depth portion of your therapy. She slides off the desk in a sexy manner and strides over to you. 'Mmm... you've done quite a bit of talking this session. I think you should put your mouth to other use now,' she says with a grin, offering her dripping cock to you. You gulp a little as you look at the size of it, but are so worked up that you eagerly start licking it. 'Go on, doctor's orders,' she says, stroking her gloved paws over your head, guiding you forward. Your mouth and throat slowly stretch open to accommodate her massive erection. It goes in with ease like before, your body having been conditioned to accept it, even crave for it. It feels wonderful to have her throbbing, pulsing cock stuffed into your mouth and down your throat, filling you so much your flesh bulges to fit it.";
 				say "     You reach up to start playing with her massive balls, knowing from before just how much cream they hold and you'll soon be getting. You moan wetly around her throbbing member as you imagine it soon filling you, running your tongue along the pulsing gray shaft[one of]. 'Mmm... that's a good skunky. Take your medicine,' she purrs[or]. 'You look so sexy stuffed full of cock,' she rumbles in pleasure[or]. 'You're very good at this. You were always meant to suck skunk cock,' she moans[or]. 'I'm very pleased with your progress. Soon you'll be able to accept that you've always wanted to be a slutty, sexy skunk,' she moans[in random order] as she starts thrusting gently at first. Her pace does quicken as the excitement builds and your throat relaxes enough to allow for the rapid pounding you desire from her.";
-				if a random chance of 1 in 3 succeeds or ( player is neuter ):
-					say "     The sexy skunk's paws release your head, leaving you to continue to push your face forward into each thrust she makes. Her free paws slide up her own body to play with her breasts and nipples. While you have difficulty watching this, you can feel her warm milk squirting down onto your [bodydesc of Player] form. You are even rewarded with a taste as some runs down her fur and wets the base of her cock. This added prize makes you all the more eager to push forward to get the whole of her cock inside you with each thrust. The massive blow job and deep throating soon gets to be too much for the hyperskunk and she groans in pleasure, cumming hard. You can feel her oversized orbs churn with virile seed moments before each blast of mephit cum is pumped into you. The first few shots are enough to fill your stomach and there's so much more to come. Once she's drained, your belly is bulging like a cum-filled balloon. This leaves you feeling wonderfully full and content, loving the fact that you're so stuffed you can hardly move. You lick and suck on her cock for the last dregs of her cum, savoring the final mouthful before struggling to swallow it down and releasing her spent shaft.";
+				if a random chance of 1 in 3 succeeds or ( Player is neuter ):
+					say "     The sexy skunk's paws release your head, leaving you to continue to push your face forward into each thrust she makes. Her free paws slide up her own body to play with her breasts and nipples. While you have difficulty watching this, you can feel her warm milk squirting down onto your [bodydesc of Player] form. You are even rewarded with a taste as some runs down her fur and wets the base of her cock. This added prize makes you all the more eager to push forward to get the whole of her cock inside you with each thrust. The massive blowjob and deep throating soon gets to be too much for the hyperskunk and she groans in pleasure, cumming hard. You can feel her oversized orbs churn with virile seed moments before each blast of mephit cum is pumped into you. The first few shots are enough to fill your stomach and there's so much more to come. Once she's drained, your belly is bulging like a cum-filled balloon. This leaves you feeling wonderfully full and content, loving the fact that you're so stuffed you can hardly move. You lick and suck on her cock for the last dregs of her cum, savoring the final mouthful before struggling to swallow it down and releasing her spent shaft.";
 					NPCSexAftermath Player receives "OralCock" from Doctor Moffatt;
 				else:
 					say "     The sexy skunk holds your head steady as she pulls her hips back. You moan in disappointment as her cock pops free with a wet slurp. 'Lie back and I'll tend to your needs as well. I can't let my patient go without some relief, now can I?' she says with a grin. You eagerly lie back on the couch and she climbs atop you in a sixty-nine. Having already been stretched out, her cock goes in easily, letting her bury it in your mouth while she presses her muzzle between your legs to start licking [if Player is herm]at your cock and cunt[else if Player is male]along your cock[else]at your juicy cunt[end if]. With you beneath her, it's easy for the skunk to pound her giant shaft into your mouth hard and fast. All you can do is release soft, muffled moans of pleasure as she jams the meaty thing down your throat again and again while licking your crotch.";
 					if Cock Length of Player >= 24:
-						say "     'Mmm... your cock is coming along nicely. It's such a fine size for such a sexy skunk,' she moans before slowly sinking her muzzle down over it. Your [cock size desc of Player] shaft throbs, spurting precum into her mouth and down her throat as she stretches open to accommodate your big cock in return. Soon you're both stuffed with meat, giving blow jobs to your huge cocks and loving it[if Player is female]. The curvaceous doctor slides a paw under your balls to stroke and tease your pussy, fingering you even as she tries to suck you off[else]. The curvaceous doctor rolls your balls around in her paw, stroking your cum-filled orbs as she tries to suck you off[end if]. Clearly she's had quite a bit of practice of late and soon you can no longer hold back, cumming with a muffled moan around your own meaty mouthful. This is enough to set her off, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
+						say "     'Mmm... your cock is coming along nicely. It's such a fine size for such a sexy skunk,' she moans before slowly sinking her muzzle down over it. Your [cock size desc of Player] shaft throbs, spurting precum into her mouth and down her throat as she stretches open to accommodate your big cock in return. Soon you're both stuffed with meat, giving blowjobs to your huge cocks and loving it[if Player is female]. The curvaceous doctor slides a paw under your balls to stroke and tease your pussy, fingering you even as she tries to suck you off[else]. The curvaceous doctor rolls your balls around in her paw, stroking your cum-filled orbs as she tries to suck you off[end if]. Clearly she's had quite a bit of practice of late and soon you can no longer hold back, cumming with a muffled moan around your own meaty mouthful. This is enough to set her off, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
 						NPCSexAftermath Doctor Moffatt receives "OralCock" from Player;
 						NPCSexAftermath Player receives "OralCock" from Doctor Moffatt;
 					else if Player is male:

@@ -89,7 +89,7 @@ ResolveFunction of Captured Demon is "[ResolveEvent Captured Demon]".
 Sarea of Captured Demon is "Red".
 when play begins:
 	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
-	add Captured Demon to badspots of DemonList; [demon brute]
+	add Captured Demon to BadSpots of DemonList; [demon brute]
 
 to say ResolveEvent Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
@@ -317,7 +317,7 @@ Cock Length of David is 8. [length in inches]
 Ball Count of David is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of David is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of David is 0. [number of cunts]
-Cunt Depth of David is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of David is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of David is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of David is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -369,7 +369,7 @@ Instead of fucking David:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job.";
 		[]
-		if (lust of David > 0 and player is male):
+		if (lust of David > 0 and Player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;

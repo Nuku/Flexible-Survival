@@ -444,7 +444,7 @@ Cock Length of Jennifer is 0. [length in inches]
 Ball Count of Jennifer is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Jennifer is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Jennifer is 1. [number of cunts]
-Cunt Depth of Jennifer is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Jennifer is 12. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Jennifer is 3. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Jennifer is 3. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -534,7 +534,7 @@ to say JenniferTalkMenu:
 		now sortorder entry is 99;
 		now description entry is "Join the group of naked young women for some practice moves";
 	[]
-	if (HP of Septus < 7 or HP of Septus >= 50) and player is male and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and BodyName of Player is "Football Wolfman" and HP of Player > 0:
+	if (HP of Septus < 7 or HP of Septus >= 50) and Player is male and ( lust of Jennifer > 2 or Jenniferwolves > 1 ) and BodyName of Player is "Football Wolfman" and HP of Player > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Suggest you become team manager";
 		now sortorder entry is 100;
@@ -683,7 +683,7 @@ Instead of fucking the Jennifer:
 		else if lastfuck of Jennifer - turns < 4 and HP of Septus >= 50 and HP of Septus < 99: [cheer-leading player]
 			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'Oh, while we often do have some... fun times with each other in the squad, cheer-leading does take some hard work. Sorry, but I do have some training of my own to do. The girls are working on a new move and they'll need me there to help them get it right. I'm sure you understand - and you're welcome to join us.' Giving you a playful grope and another kiss, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. Maybe you really should join their training sometime and get to learn more moves with your pom-poms...";
 		else:
-			if HP of Septus < 7 and lust of Jennifer > 0 and the remainder after dividing lust of Jennifer by 3 is 0 and player is male:
+			if HP of Septus < 7 and lust of Jennifer > 0 and the remainder after dividing lust of Jennifer by 3 is 0 and Player is male:
 				say "     Heading off to grab Jennifer for some fun, you spot her finishing up with [one of]a pair of Players[or]one of the other players[or]another wolfman[or]a wolfman's cock in her mouth[or]sucking off a pair of wolves[at random]. Being horny, having to wait and watch is a little frustrating. You can't help but think it'd be nice to not have to share her around with the whole team and wonder how you might be able to manage that. This is only added to as she comes over to you still sticky with cum from the encounter. Not noticing the possessive look you're giving her, she smiles and heads over to you, eager as always for more.";
 			else if HP of Septus > 49:
 				say "     Heading off to grab Jennifer for some fun, you spot her finishing up with [one of]a pair of Players[or]one of the other players[or]a wolfman's cock in her mouth[or]sucking off a pair of wolves[at random]. You're tempted to simply join her take care of the handsome and strong players, but Jennifer finishes up, then comes over to you all still sticky with cum from the encounter. She smiles as she approaches, eager as always for more.";
@@ -960,7 +960,7 @@ Cock Length of Septus is 14. [length in inches]
 Ball Count of Septus is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Septus is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Septus is 0. [number of cunts]
-Cunt Depth of Septus is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Septus is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Septus is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Septus is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -1353,7 +1353,7 @@ to say CheerleaderTryout1:
 		if Player is not female and player is not mpreg_ok: [males+neuter, no mpreg]
 			say "     As you ask Jennifer if you can join their cheer-leading team, she looks you up and down, then gives a sigh and a shake of her head. 'Hmm... while you might possibly have the skill and ability to do the moves, there's... another requirement.' Looking over to the side, she gives a slight nod to a perky brunette doing stretches not too far away - all the while she's carrying a very obvious pregnant belly. 'You see, we're not just here to cheer, but also are the mothers of the team - and you can't be. Anyways, you've proven that you're a strong player or Septus wouldn't have invited you - so you're welcome as one of us, just not a cheerleader, OK?'";
 			say "     With that, Jennifer gives you a consoling pat on the arm, then walks over to join her pregnant teammate in her stretches. You're left standing there, watching the muscular wolfmen and very attractive cheerleaders follow their separate training regimens. Maybe you should just become one of the regular players, or alternatively look into... acquiring the missing ability you need to be a cheerleader.";
-		else if Player is not female and player is mpreg_ok and player is not mpreg_now: [males+neuter, mpreg ability, not pregnant]
+		else if Player is not female and Player is mpreg_ok and player is not mpreg_now: [males+neuter, mpreg ability, not pregnant]
 			say "     As you ask Jennifer if you can join their cheer-leading team, she looks you up and down, then gives a sigh and a shake of her head. 'Hmm... while you might possibly have the skill and ability to do the moves, there's... another requirement.' Looking over to the side, she gives a slight nod to a perky brunette doing stretches not too far away - all the while she's carrying a very obvious pregnant belly. 'You see, we're not just here to cheer, but also are the mothers of the team - and you can't be. Anyways-' You interrupt her right then and there and lean closer to tell her about your body's peculiar abilities in a whisper. Her eyes get wider and wider as you explain, and when you finish she says 'Really? Wow, that's... strange.' Then she adds with a chuckle 'Oh well, what isn't these days. And you'd surely give some variety for our boys. So sure, show what you can do.'";
 			say "[CheerleaderTryout2]";
 		else if Player is not female and player is mpreg_now: [males+neuter, mpreg ability, pregnant]

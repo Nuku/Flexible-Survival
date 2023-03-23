@@ -229,7 +229,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_baldeagle]";
 	else if Name entry is "Hawkman Male" and a random chance of 3 in 5 succeeds:
 		say "[vbp_hawkman]";
-	else if Name entry is "Blue Gryphon Herm" and player is not neuter and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Blue Gryphon Herm" and Player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_hermgryph]";
 	else if vorecount > 4 and Name entry is "Leopardman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_leopardman]";
@@ -237,7 +237,7 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[vbp_gazelle]";
 	else if Name entry is "Elk" and vorespecial1 is true and a random chance of 3 in 5 succeeds:
 		say "[vbp_elk]";
-	else if Name entry is "Messy Pig" and vorespecial1 is true and player is not neuter and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Messy Pig" and vorespecial1 is true and Player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_messypig]";
 	else if vorespecial1 is true and (the remainder after dividing vorecount by 3 is 0) and Name entry is not "Snake" and Name entry is not "Naga":
 		say "[one of][vorebyplayer04][or][vorebyplayer05][cycling]";
@@ -386,9 +386,9 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvbp_dolphin]";
 	else if Player is male and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer04]";
-	else if currentmonster is cocked and ( player is female or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
+	else if currentmonster is cocked and ( Player is female or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer05]";
-	else if hvorecount is odd and currentmonster is cocked and ( player is female or anallevel > 1 ):
+	else if hvorecount is odd and currentmonster is cocked and ( Player is female or anallevel > 1 ):
 		say "[hvorebyplayer02]";
 	else:
 		say "[hvorebyplayer03]";
@@ -507,7 +507,7 @@ to say hvbp_ewe:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or player is male ) and MaleList is not banned:
+	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or Player is male ) and MaleList is not banned:
 		setmonster "Ram";
 		choose row MonsterID from the Table of Random Critters;
 

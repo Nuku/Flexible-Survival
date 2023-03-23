@@ -161,7 +161,7 @@ to StrikeFromtheDeepEvent: [Colleen is attacked by a creature that has burrowed 
 			say "     ";
 			say "     ";]
 	else: [Pursue vengeance (Colleen will become Husky)]
-		say "     Trusting Sarah to be able to save Colleen, you take her up on her suggestion to pursue the mole with the primary purpose to deter it from returning, but also to ensure that there aren't any other threats that might interfere while the husky focuses on the medical procedure ahead or that might attack in future. As you approach the hole, you see the discarded flare-gun lying on the floor and Sarah calls out to you, 'I think that the flare-gun was single-use only, but I got it from what looked like a survival box in the corner. I think that I saw a flashlight in there too that you should probably take.' Agreeing with this, you hastily rummage through the box, noting some survival meals and emergency water treatment tablets that might be of use to others who stay at the library, before you find the rechargeable flashlight. Clicking it on, you give a reassuring nod to the husky and the soldier before you [if scalevalue of Player is 5]squeeze with considerable difficulty through the hole and [else if scalevalue of Player is 4]squeeze with some difficulty through the hole and [else if scalevalue of Player is 3]easily squeeze through the hole and [else if scalevalue of Player is 2]pick your way through the debris and [else if scalevalue of player is 1]clamber over the debris and [end if]descend down the tunnel.";
+		say "     Trusting Sarah to be able to save Colleen, you take her up on her suggestion to pursue the mole with the primary purpose to deter it from returning, but also to ensure that there aren't any other threats that might interfere while the husky focuses on the medical procedure ahead or that might attack in future. As you approach the hole, you see the discarded flare-gun lying on the floor and Sarah calls out to you, 'I think that the flare-gun was single-use only, but I got it from what looked like a survival box in the corner. I think that I saw a flashlight in there too that you should probably take.' Agreeing with this, you hastily rummage through the box, noting some survival meals and emergency water treatment tablets that might be of use to others who stay at the library, before you find the rechargeable flashlight. Clicking it on, you give a reassuring nod to the husky and the soldier before you [if scalevalue of Player is 5]squeeze with considerable difficulty through the hole and [else if scalevalue of Player is 4]squeeze with some difficulty through the hole and [else if scalevalue of Player is 3]easily squeeze through the hole and [else if scalevalue of Player is 2]pick your way through the debris and [else if scalevalue of Player is 1]clamber over the debris and [end if]descend down the tunnel.";
 		say "     You barely pause to consider the structural integrity of the passage, focused instead on catching up with the creature that created it and put Colleen in a critical condition. The tunnel slopes steeply downwards, making you wonder how deep beneath the city you are, until eventually you can see a slight glow up ahead. The cavern that you walk out into is vast and covered in what appears to be luminous fungus, tinging the air with blues and greens in an almost fantastical manner. As you gaze around in wonder, a snarl catches your attention in time to see a giant mole with the remains of scorch marks on its fur charge out of a tunnel of to the right, long claws digging into the ground as it charges at you, claws that recently harmed your friend. With grim determination, you ready yourself to fulfil Sarah's request to punish it and hopefully avoid being put in a similar condition to Colleen.";
 		challenge "Scorched Mole";
 		if fightoutcome < 20: [player won]
@@ -220,21 +220,21 @@ Colleen	"Colleen"
 
 Colleen is a woman.
 [Physical details as of game start]
-ScaleValue of Colleen is 3. [human sized]
+ScaleValue of Colleen is 3. [5' 6"]
 Body Weight of Colleen is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Colleen is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 Androginity of Colleen is 7. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 SleepRhythm of Colleen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Mouth Length of Colleen is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Colleen is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Colleen is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Colleen is 6. [length in inches]
+Tongue Length of Colleen is 5. [length in inches]
 Cock Count of Colleen is 0. [number of cocks]
 Cock Girth of Colleen is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Colleen is 0. [length in inches]
 Ball Size of Colleen is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Ball Count of Colleen is 0. [allowed numbers: 1 (uniball), 2 or 4]
 Cunt Count of Colleen is 1. [number of cunts]
-Cunt Depth of Colleen is 6. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Colleen is 6. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Colleen is 1. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Colleen is 1. [size 1-5, very small/small/average/large/very large]
 Asshole Depth of Colleen is 9. [inches deep for anal fucking]

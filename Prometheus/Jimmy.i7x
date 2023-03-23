@@ -92,14 +92,14 @@ object	name
 Jimmy	"Jimmy"
 
 Jimmy is a person.
-ScaleValue of Jimmy is 2. [small-human sized]
+ScaleValue of Jimmy is 2. [3' 6"]
 Body Weight of Jimmy is 4. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Jimmy is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Jimmy is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Jimmy is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Jimmy is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Jimmy is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Jimmy is 6. [length in inches]
+Tongue Length of Jimmy is 5. [length in inches]
 Breast Size of Jimmy is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Jimmy is 2. [count of nipples]
 Asshole Depth of Jimmy is 8. [inches deep for anal fucking]
@@ -110,7 +110,7 @@ Cock Length of Jimmy is 6. [6 Inches]
 Ball Count of Jimmy is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Jimmy is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Jimmy is 0. [number of cunts]
-Cunt Depth of Jimmy is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Jimmy is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Jimmy is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Jimmy is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -234,7 +234,7 @@ to say sexwithJimmy:
 	else if Player is neuter:
 		say "     There's not much point in playing with him given your lack of genitals.";
 	else:
-		if HP of Jimmy >= 5 and player is male and a random chance of anallevel in 7 succeeds:
+		if HP of Jimmy >= 5 and Player is male and a random chance of anallevel in 7 succeeds:
 			say "[Jimmysex02]";
 		else:
 			say "[Jimmysex01]";
@@ -265,7 +265,7 @@ to say Jimmysex02:
 Section 4 - Interactions with other Library Residents
 
 instead of going to Communal Shower while hunger of Jimmy is 1 and HP of Sturm is 1 and "JimmyShowerBlowjobAccepted" is not listed in traits of Sturm and "JimmyShowerBlowjobRefused" is not listed in traits of Sturm and Player is not CoA and a random chance of 1 in 3 succeeds:
-	say "     Entering the communal showers, you immediately hear the sound of splashing water and grumbling. 'I don't know why Mom expects us to wash with hot water. Nothing wrong with cold.' Peering around the corner of the dividing wall, you spy Sturm grudgingly standing beneath the spray of warm water, rubbing it through his fur and looking grouchy and bedraggled. Not wanting to embarrass him, you turn to sneak away again but come face to face[if scalevalue of player is 1], or rather face to crotch[else if scalevalue of player is 3], or rather chest to face[else if scalevalue of player is 4], or rather tummy to face[else if scalevalue of player is 5], or rather crotch to face[end if] with Jimmy, the corgi putting a finger to his lips to urge you to remain quiet. Gesturing with his head towards the sounds of yours and Blanche's son washing himself, he mouthes the words, 'May I?' suggesting that he has something in mind for the wolf and it doesn't take much imagination to guess what, especially with how much sex has become accepted in the city.";
+	say "     Entering the communal showers, you immediately hear the sound of splashing water and grumbling. 'I don't know why Mom expects us to wash with hot water. Nothing wrong with cold.' Peering around the corner of the dividing wall, you spy Sturm grudgingly standing beneath the spray of warm water, rubbing it through his fur and looking grouchy and bedraggled. Not wanting to embarrass him, you turn to sneak away again but come face to face[if scalevalue of Player is 1], or rather face to crotch[else if scalevalue of Player is 3], or rather chest to face[else if scalevalue of Player is 4], or rather tummy to face[else if scalevalue of Player is 5], or rather crotch to face[end if] with Jimmy, the corgi putting a finger to his lips to urge you to remain quiet. Gesturing with his head towards the sounds of yours and Blanche's son washing himself, he mouthes the words, 'May I?' suggesting that he has something in mind for the wolf and it doesn't take much imagination to guess what, especially with how much sex has become accepted in the city.";
 	say "     [bold type]Do you give Jimmy permission to make Sturm's shower more enjoyable?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Yes. Jimmy does so enjoy brightening other people's days.";
 	say "     [link](2)[as]2[end link] - Not yet. Tell Jimmy to hold off for now. Perhaps another time.";

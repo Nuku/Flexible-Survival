@@ -53,14 +53,14 @@ object	name
 Otto	"Otto"
 
 Otto is a man.
-ScaleValue of Otto is 3. [human sized]
+ScaleValue of Otto is 3. [5' 1"]
 Body Weight of Otto is 7. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Otto is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Otto is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Otto is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Length of Otto is 4. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 Mouth Circumference of Otto is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Otto is 6. [length in inches]
+Tongue Length of Otto is 4. [length in inches]
 Breast Size of Otto is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Otto is 2. [count of nipples]
 Asshole Depth of Otto is 6. [inches deep for anal fucking]
@@ -71,7 +71,7 @@ Cock Length of Otto is 6. [6 Inches]
 Ball Count of Otto is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Otto is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"] [Increase by 1 for Alpha, decrease by 1 for Omega]
 Cunt Count of Otto is 0. [number of cunts]
-Cunt Depth of Otto is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Otto is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Otto is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Otto is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -135,7 +135,7 @@ to say OttoTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask Dr. Fuchs whether he could spare you a medkit";
 	[]
-	[if HP of player is not maxHP of player:
+	[if HP of Player is not maxHP of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Medical Attention";
 		now sortorder entry is 2;

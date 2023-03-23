@@ -64,7 +64,7 @@ to say KoboldEyeMenu:
 		say "     Do you want to have red eyes?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now Eye Color of Player is "ruby";
 		else:
 			say "[KoboldEyeMenu]";
@@ -72,7 +72,7 @@ to say KoboldEyeMenu:
 		say "     Do you want to have blue eyes?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now Eye Color of Player is "sapphire";
 		else:
 			say "[KoboldEyeMenu]";
@@ -80,7 +80,7 @@ to say KoboldEyeMenu:
 		say "     Do you want to have green eyes?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now Eye Color of Player is "emerald";
 		else:
 			say "[KoboldEyeMenu]";
@@ -88,7 +88,7 @@ to say KoboldEyeMenu:
 		say "     Do you want to have yellow eyes?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now Eye Color of Player is "amber";
 		else:
 			say "[KoboldEyeMenu]";
@@ -96,7 +96,7 @@ to say KoboldEyeMenu:
 		say "     Do you want to have orange eyes?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now Eye Color of Player is "fiery";
 		else:
 			say "[KoboldEyeMenu]";
@@ -121,7 +121,7 @@ to say KoboldScaleMenu:
 		say "     You want to be Red Scaled?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now KoboldScaleColor is 1;
 		else:
 			say "[KoboldScaleMenu]";
@@ -129,7 +129,7 @@ to say KoboldScaleMenu:
 		say "     You want to be Blue Scaled?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now KoboldScaleColor is 2;
 		else:
 			say "[KoboldScaleMenu]";
@@ -137,7 +137,7 @@ to say KoboldScaleMenu:
 		say "     You want to be Green Scaled?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now KoboldScaleColor is 3;
 		else:
 			say "[KoboldScaleMenu]";
@@ -145,7 +145,7 @@ to say KoboldScaleMenu:
 		say "     You want to be Black Scaled?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now KoboldScaleColor is 4;
 		else:
 			say "[KoboldScaleMenu]";
@@ -153,7 +153,7 @@ to say KoboldScaleMenu:
 		say "     You want to be White Scaled?";
 		say "     ([link]Yes[as]y[end link])[line break]";
 		say "     ([link]No[as]n[end link])[line break]";
-		if player consents:
+		if Player consents:
 			now KoboldScaleColor is 5;
 		else:
 			say "[KoboldScaleMenu]";
@@ -194,7 +194,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "warrior";
 			if TaniClassMemory is 1:
 				now TaniRecommendation is 2;
@@ -210,7 +210,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "knight";
 			if TaniClassMemory is 2:
 				now TaniRecommendation is 2;
@@ -226,7 +226,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "rogue";
 			if TaniClassMemory is 3:
 				now TaniRecommendation is 2;
@@ -242,7 +242,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "bard";
 			if TaniClassMemory is 4:
 				now TaniRecommendation is 2;
@@ -258,7 +258,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "marksman";
 			if TaniClassMemory is 5:
 				now TaniRecommendation is 2;
@@ -274,7 +274,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "scout";
 			if TaniClassMemory is 6:
 				now TaniRecommendation is 2;
@@ -290,7 +290,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "tactician";
 			if TaniClassMemory is 7:
 				now TaniRecommendation is 2;
@@ -306,7 +306,7 @@ to say ClassMenu:[This is a one time use menu for this event only]
 		LineBreak;
 		say "     ([link]No[as]n[end link])";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			now PlayerClass is "companion";
 			if TaniClassMemory is 8:
 				now TaniRecommendation is 2;
@@ -343,7 +343,7 @@ to GildwingKoboldTest:
 	LineBreak;
 	say "     ([link]No[as]n[end link]) - Not Ready Yet";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		say "     'Haaaalt!' a kobold screams at you from on top of the wall as he and the other guard both point their crossbows at you. Suddenly, several of the bushes around you move, revealing a fairly large group of the lizards, all with bows and crossbows trained on you. 'Don't move. We don't wanna shoot ya['].'";
 		say "     'I do!' comes a voice from somewhere on your left.";
 		say "     'Okay, Keelyoo wants to shoot ya['], but the rest of us don't!' The kobolds stay focused on you for about a minute before two red kobolds climb their way up to the wall. You've seen one of them before; it's the popcorn-munching kobold from when you first fell into Avalon, who this time seems to be eating a bag of chips. The other wears leather and chainmail armor and holds in one hand a seemingly well-crafted spear.";
@@ -431,7 +431,7 @@ to say Tracking Test:
 	LineBreak;
 	say "     ([link]2[as]n[end link]) - Call Out";
 	LineBreak;
-	if player consents: [Track]
+	if Player consents: [Track]
 		say "You look carefully where you last saw him, recently disturbed leaves and bent grass helping tell you where he went. A broken twig on a bush and a scuff in the dirt help you narrow in on him until you find Tani waiting for you with a pleased expression. 'You managed to find Tani, huh? That's good, but there's still more to do.'";
 		increase PerClass by 1;
 		increase DexClass by 1;
@@ -453,7 +453,7 @@ to say Ambush Test:
 	LineBreak;
 	say "     ([link]2[as]n[end link]) - Report in";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		now inasituation is true;
 		say "     You watch the Squire succeeds in undoing his own belt, letting his trousers drop down to his ankles before he moves to undo his master's. While they are both distracted, you spring out of the shadows and into action. The Squire notices you first, moving to go after you, only to trip on his own pants and fall face-first onto the ground. The knight is a bit slower, having been distracted by the Squire's erection before turning to face you. 'Attacking during our training? Have at thee!' he yells as he charges.";
 		challenge "Knight";
@@ -463,7 +463,7 @@ to say Ambush Test:
 			say "     When you come to, your eyes are met with the light streaming in from between the leaves of the trees above, and as your sight slowly comes to focus, you are met with the smiling face of Tani, his toothy lizard grin accompanied by bright eyes. 'That was quite brave of you to throw yourself at them like that, but I guess you still need to get stronger. How about we head back and report in,' he says as he does his best to help you to stand up.";
 		else if fightoutcome is 30: [fled]
 			say "     As you turn your back to run, you hear the knight call out, 'Coward!', followed by a sudden sharp pain as your consciousness begins to fade and your vision goes blurry. You watch in a daze as multiple small arrows are fired from the bushes behind you and lodge themselves into your attacker. He staggers before collapsing to the ground, just before your vision wavers and everything goes black.";
-			now HP of player is 1;
+			now HP of Player is 1;
 			WaitLineBreak;
 			say "     When you come to, your eyes are met with the light streaming in from between the leaves of the trees above, and as your sight slowly comes to focus, you see the smiling face of Tani, his toothy lizard grin accompanied by bright eyes. 'That was quite brave of you to throw yourself at them like that, but I guess you still need to get stronger. How about we head back and report in,' he says as he does his best to help you to stand up.";
 		else if fightoutcome < 20: [player won]
@@ -475,7 +475,7 @@ to say Ambush Test:
 				say "     When you come to, your eyes are met with the light streaming in from between the leaves of the trees above, and as your sight slowly comes to focus, you are met with the smiling face of Tani, his toothy lizard grin accompanied by bright eyes. 'That was quite brave of you to throw yourself at them like that, but I guess you still need to get stronger. How about we head back and report in,' he says as he does his best to help you to stand up.";
 			else if fightoutcome is 30: [fled]
 				say "     As you turn your back to run, you hear the Squire call out, 'Coward!', followed by a sudden sharp pain as your consciousness begins to fade and your vision goes blurry. You watch in a daze as multiple small arrows are fired from the bushes behind you and lodge themselves into your attacker. He staggers before collapsing to the ground, just before your vision wavers and everything goes black.";
-				now HP of player is 1;
+				now HP of Player is 1;
 				WaitLineBreak;
 				say "     When you come to, your eyes are met with the light streaming in from between the leaves of the trees above, and as your sight slowly comes to focus, you are met with the smiling face of Tani, his toothy lizard grin accompanied by bright eyes. 'That was quite brave of you to throw yourself at them like that, but I guess you still need to get stronger. How about we head back and report in,' he says as he does his best to help you to stand up.";
 			else if fightoutcome < 20: [player won]
@@ -503,7 +503,7 @@ to say Class Question:
 			LineBreak;
 			say "     ([link]2[as]n[end link]) - For Others"; [Knight]
 			LineBreak;
-			if player consents:
+			if Player consents:
 				say "     'It's good to be alone sometimes, yes?' he says as he stares up at the leaves flowing gently in the breeze. 'There's no one else there to distract you from what you have to do.'";
 				now TaniClassMemory is 1;
 			else:
@@ -516,7 +516,7 @@ to say Class Question:
 			LineBreak;
 			say "     ([link]2[as]n[end link]) - Charm"; [Bard]
 			LineBreak;
-			if player consents:
+			if Player consents:
 				say "     'Sometimes it's better to just avoid it all, right?' he says as he looks off into the distance. 'There's enough trouble these days without stirring up more.'";
 				now TaniClassMemory is 3;
 			else:
@@ -529,7 +529,7 @@ to say Class Question:
 			LineBreak;
 			say "     ([link]2[as]n[end link]) - Report In"; [Scout]
 			LineBreak;
-			if player consents:
+			if Player consents:
 				say "     'Why waste the opportunity, right?' he says as his fingers tighten on his bow at the thought. 'Still, there's often reasons to follow the mission to the letter. Sometimes there are details that the higher ups can't risk you being caught with yet, yes?'";
 				now TaniClassMemory is 5;
 			else:
@@ -542,7 +542,7 @@ to say Class Question:
 			LineBreak;
 			say "     ([link]2[as]n[end link]) - Follower"; [Companion]
 			LineBreak;
-			if player consents:
+			if Player consents:
 				say "     'You don't like to leave your fate to others, huh? You'd rather be the one pulling the strings.' Tani gives you a little smile. 'Well, stick with the Gildwings and maybe you'll be giving me orders someday.'";
 				now TaniClassMemory is 7;
 			else:
@@ -578,7 +578,7 @@ to say DragonMeet:
 	LineBreak;
 	say "     ([link]No[as]n[end link]) - Decline For Now";
 	LineBreak;
-	if player consents:[Join Gildwings]
+	if Player consents:[Join Gildwings]
 		say "[GildwingClanAccept]";
 	else:[Don't Join Gildwings]
 		say "     The dragon nods, though there is disappointment in his eyes. 'As you wish. You will be escorted from the caves, but if you change your mind, tell the kobolds at the gate that you wish to speak with me.' With one more polite nod, he says, 'I still hold hope you will join our cause and wish you luck on your ventures,' before turning away from you. Before long, a male, green-scaled kobold with a spear enters the room and leads you out of the cave and in front of the gate again, which slowly close behind you with a creak.";
@@ -591,24 +591,24 @@ to say GildwingClanAccept:
 	LineBreak;
 	say "     ([link]No[as]n[end link]) - Stay As You Are";
 	LineBreak;
-	if player consents:[Become a Kobold]
+	if Player consents:[Become a Kobold]
 		say "     Gildwing smiles again as he sits proudly and holds a clawed [']hand['] upwards. It shakes somewhat as blood is pulled forth from it, flowing magically into a small crimson sphere which soon begins to glow a soft gold. 'By my blood and magic, we shall be bound together,' he says before the blood orb flies towards and into you. The moment it makes contact, the blood seeps into your body as if being sucked inside. 'Think of what sort of kobold you wish to be,' he says as you feel your whole body start to heat up. You can feel your veins pulse as the dragon blood flows through you. You close your eyes, trying your best to focus on the kind of kobold you wish to be.";
 		WaitLineBreak;
 		say "[KoboldEyeMenu]";
 		say "[KoboldScaleMenu]";
 		[Size]
-		if scalevalue of player > 2 or scalevalue of player < 2:
-			say "     [if scalevalue of player < 2]You are struck with dizziness as you suddenly start to expand, increasing in size until you reach around half the size of a human.[else if scalevalue of player > 2]You are struck with dizziness as the world seems to grow around you shrink closer to the ground, stopping at around half the size of a human.[else][end if]";
-			now scalevalue of player is 2;
+		if scalevalue of Player > 2 or scalevalue of Player < 2:
+			say "     [if scalevalue of Player < 2]You are struck with dizziness as you suddenly start to expand, increasing in size until you reach around half the size of a human.[else if scalevalue of Player > 2]You are struck with dizziness as the world seems to grow around you shrink closer to the ground, stopping at around half the size of a human.[else][end if]";
+			now scalevalue of Player is 2;
 			LineBreak;
 		[Skin]
 		say "     Your skin begins to itch horribly as [if KoboldScaleColor is 1]rose-red[else if KoboldScaleColor is 2]azure[else if KoboldScaleColor is 3]forest-green[else if KoboldScaleColor is 4]charcoal-black[else if KoboldScaleColor is 5]snowy-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales form to cover your whole body. They interlock and smooth out and leaving you with sleek, [if KoboldScaleColor is 1]red[else if KoboldScaleColor is 2]blue[else if KoboldScaleColor is 3]green[else if KoboldScaleColor is 4]black[else if KoboldScaleColor is 5]white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if], kobold scales.";
 		LineBreak;
 		[Chest]
-		if breast size of player > 0:
+		if breast Size of Player > 0:
 			say "     You feel a tightness in your chest as your breasts slowly shrink until they disappear completely, leaving you smooth-chested.";
-			now Breast Size of player is 0;
-			now Nipple Count of player is 0;
+			now Breast Size of Player is 0;
+			now Nipple Count of Player is 0;
 			LineBreak;
 		[Body]
 		say "     Your legs suddenly collapse underneath you, causing you to fall to your knees. Your legs and feet quiver as they bend and reconfigure into a more draconic digitigrade shape with a three-toed, raptor-like foot. Your hands clench involuntarily as your fingers merge in such a way that you are left with only four fingers instead of five, each tipped with a small claw. Feeling stable again, you push yourself to your feet and try to get used to your new stance.";
@@ -624,7 +624,7 @@ to say GildwingClanAccept:
 		say "     Your vision turns blurry and your head aches as it rearranges its shape. Pressure builds at the back of your skull as two small kobold horns grow, and by the time the headache clears and your vision returns, you are met with a small draconic snout with a mouth filled with pointy little teeth, making you look similar to a small dragon.";
 		LineBreak;
 		[Cock&Balls]
-		if player is male:
+		if Player is male:
 			say "     Your crotch feels warm as your arousal flares, causing your [if player is internalCock][Cock of Player] cock to stir within you, slowly pushing its way out from your vent, beginning to pulse as its shape changes to something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws back into your genital slit[else][Cock of Player] cock to harden and grow to its full length, beginning to pulse as its shape starts to change. Your balls pull up, and for a moment you are worried that you are losing them, but you can feel them traveling within you to become internal. At the same time, your dick becomes something more fitting for a small lizard. It becomes smooth; tapering down until thickening into a pseudo-knot bulge at the base. You feel a new depth push inward as a vent is formed to house your new reptilian length. As soon as the transformation is complete, the feeling starts to fade, and slowly your new kobold cock withdraws into your genital slit, leaving it impossible to tell your gender merely by looking at your groin[end if].";
 			WaitLineBreak;
 		[Womb]
@@ -683,7 +683,7 @@ to say GildwingClanAccept:
 	LineBreak;
 	say "     ([link]Check Other Options[as]n[end link])";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		if TaniClassMemory is:
 			-- 1:
 				now PlayerClass is "warrior";
@@ -735,13 +735,13 @@ to GildwingReturnEvent:
 	LineBreak;
 	say "     ([link]No[as]n[end link]) - Return to the Crossroads";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		say "     The guard says something to presumably another kobold behind the wall. A few minutes later, the gates slowly open and you are quickly lead back through the caverns and towards the dragon's chamber. Gildwing seems more ready for you this time; the gold dragon sitting patiently as you come into view. 'I greet you once more[if player is not defaultnamed], [name of player][else][end if]. Have you changed your mind? Have you come to join us?'";
 		say "     ([link]Yes[as]y[end link]) - Join the Gildwings";
 		LineBreak;
 		say "     ([link]No[as]n[end link]) - Decline For Now";
 		LineBreak;
-		if player consents:[Join Gildwings]
+		if Player consents:[Join Gildwings]
 			say "[GildwingClanAccept]";
 		else:
 			say "     The dragon looks slightly disappointed at your answer, but nods in understanding. 'The offer still stands, but I am afraid that we can not allow those unallied with us to roam our halls freely. Please, return once you have decided to join my children in their struggle.' With that, the kobold guard leads you back out in front of the gate to return to the crossroads.";
