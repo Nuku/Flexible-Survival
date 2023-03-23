@@ -188,6 +188,8 @@ to EventRestore:
 				now EventIdName is "Unused Tool";
 			if EventIdName is "Destroyed Records":
 				now EventIdName is "Burned Secrets";
+			if EventIdName is "Meeting Orthas":
+				now EventIdName is "Orthas_Meeting";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -354,6 +356,7 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
+			if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
 			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
