@@ -190,6 +190,10 @@ Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
 
+Include Milk Items by Core Mechanics.
+Include Cum Items by Core Mechanics.
+
+
 Book 3 - Loading the Main Game Content
 
 Part 1 - Locations

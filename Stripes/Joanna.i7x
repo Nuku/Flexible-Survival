@@ -1054,7 +1054,7 @@ to say ResolveEvent Dog Chase:
 		say "     As you're traveling along, you hear the repeated call of 'Squirrel! Squirrel!' coming from nearby. Curiously cautious, you approach the sound to find a small dog-man barking the word repeatedly, running around an isolated tree. From time to time, the Jack Russell terrier tries to scramble up, but he's mostly quadrupedal and his hands are mostly paws, preventing him from getting a grip. 'Squirrel!' he barks again, finally eliciting a response from the tree's occupant[if daytimer is day]. 'Shut up, you stupid mutt! I'm trying to sleep,' a female voice yells angrily[else]. 'Shut up, you dumb mutt. I told you, I'm not a squirrel,' a female voice yells angrily[end if]. Looking at the canopy more closely, you spot a slender, feminine creature lying casually among the branches. She has short brown fur, long brown hair and a very long tail. And she still has some clothes on, so she could even be a survivor given her lack of lustful reaction to the dog.";
 		say "     Deciding to risk it, you head closer, yelling at the terrier to get out of here. He turns and growls a little at you, but when the woman leaps from the tree wielding a large branch, the dog backs off, not wanting to fight two opponents. 'Damn it,' the woman grumbles as the dog runs off. 'Guy just wouldn't shut up. Too dumb to know I'm a kinkajou and not a squirrel,' she says, turning to smile at you. 'Thanks for helping out back there. I'm Joanna, by the way.'";
 		say "     Once the introductions are aside, you chat with her a bit[if daytimer is day]. 'I'm normally trying to rest during the day, but that dummy wouldn't let me sleep. Speaking of, I should really be getting some rest. I was up all night dancing at the club[else]. 'I was on my way to club for another night of dancing when I ran into that dummy. Speaking of, I should head on over while there's still a night to dance away[end if]. Yeah, there's still a club open to hang out at, called the Palomino. I'm usually there most nights. I hope to catch you there some time[if PALOMINO is known].' You tell her that you've been there before and that you'll have to swing by to see her some time[else].' She gives you some rough directions to the place, which include stuff like [']turn at this tree['] or [']run three rooftops over['], but you're pretty sure you'll be able to sort it out and find a more conventional route there[end if]. With that, she heads off, going from a car roof to an awning and then to the top of a building before moving out of sight.";
-		AddNavPoint PALOMINO;
+		AddNavPoint PALOMINO Dance Club;
 		now HP of Joanna is 90;
 		now joannadogsaved is true;
 		now Resolution of Dog Chase is 1; [saved Joanna]
@@ -1066,8 +1066,8 @@ to say ResolveEvent Dog Chase:
 an everyturn rule:
 	if HP of Joanna is 0 or HP of Joanna >= 90:
 		if daytimer is night: [non-plant Joanna is partying]
-			if Joanna is not in PALOMINO: [she's not in her party spot]
-				now Joanna is in PALOMINO; [let's move her there]
+			if Joanna is not in PALOMINO Dance Club: [she's not in her party spot]
+				now Joanna is in PALOMINO Dance Club; [let's move her there]
 		else: [during the day, she's out sleeping or scavenging]
 			now Joanna is nowhere; [off to the void]
 	else: [plant Joanna]

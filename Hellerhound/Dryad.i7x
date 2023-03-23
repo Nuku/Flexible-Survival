@@ -6,13 +6,15 @@ Version 1 of Dryad by Hellerhound begins here.
 
 Section 1 - Cum Vial
 
-[Table of Game Objects (continued)
-name	desc	weight	object]
+Table of Game Objects (continued)
+name	desc	weight	object
+"dryad cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Dryad Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dryad cum
+
 dryad cum is a grab object.
 dryad cum is cum.
 dryad cum is infectious.
 Purified of dryad cum is "distilled cum".
-Strain of dryad cum is "dryad".
+Strain of dryad cum is "Dryad".
 Usedesc of dryad cum is "[dryad cum use]";
 
 to say dryad cum use:
@@ -25,13 +27,13 @@ instead of sniffing dryad cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"dryad milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'dryad milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dryad milk
+"dryad milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dryad Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dryad milk
 
 dryad milk is a grab object.
 dryad milk is milky.
 Purified of dryad milk is "distilled milk".
 dryad milk is infectious.
-Strain of dryad milk is "dryad".
+Strain of dryad milk is "Dryad".
 Usedesc of dryad milk is "[dryad milk use]";
 
 to say dryad milk use:

@@ -261,7 +261,7 @@ instead of sniffing retriever cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"retriever milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'retriever milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever milk
+"retriever milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Retriever Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	retriever milk
 
 retriever milk is a grab object.
 retriever milk is milky.
@@ -464,7 +464,7 @@ Strain of retriever man-milk is "Retriever Male".
 Usedesc of retriever man-milk is "[retriever man-milk use]";
 
 to say retriever man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing retriever milk:

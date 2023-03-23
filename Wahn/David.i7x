@@ -1872,7 +1872,7 @@ to say DavidSex11: [Brutus & David Threesome (Brutus gets DP'd)]
 	NPCSexAftermath Brutus receives "AssFuck" from David;
 	NPCSexAftermath Brutus receives "AssFuck" from Player;
 
-instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and royal tiger is listed in companionList of Player):
+instead of going down from the Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction is 0 and royal tiger companion is listed in companionList of Player):
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: David meets Ryousei; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";
@@ -1887,7 +1887,7 @@ instead of going down from the Grey Abbey Library while (David is in Bunker and 
 	now RyouseiDavidInteraction is 1;
 	now lastRyouseiDavidInteraction is turns;
 
-after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and royal tiger is listed in companionList of Player and (lastRyouseiDavidInteraction - turns > 6)) and Player is not CoA:
+after going down from Grey Abbey Library while (David is in Bunker and RyouseiDavidInteraction < 2 and royal tiger companion is listed in companionList of Player and (lastRyouseiDavidInteraction - turns > 6)) and Player is not CoA:
 	if RyouseiDavidInteraction is 1:
 		if debugactive is 1:
 			say "     DEBUG: David & Ryousei Scene; RyouseiDavidInteraction: [RyouseiDavidInteraction][line break]";

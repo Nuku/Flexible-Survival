@@ -128,17 +128,18 @@ NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
 Table of GameCharacterIDs (continued)
 object	name
-dragoness	"dragoness"
+stuck dragoness	"dragoness"
+stuck dragoness	"stuck dragoness"
 
-dragoness is a person. dragoness is in Old Building.
-Description of dragoness is "[dragonessdesc]".
-Conversation of dragoness is { "Poot!" }.
+stuck dragoness is a person. stuck dragoness is in Old Building.
+Description of stuck dragoness is "[dragonessdesc]".
+Conversation of stuck dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
 
-instead of sniffing dragoness:
+instead of sniffing stuck dragoness:
 	say "The scent coming off this large, fecund dragoness and her huge pussy is very arousing.";
 
-Instead of conversing the Dragoness:
+Instead of conversing stuck dragoness:
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if NoIntroduction is 0:
 		say "     'Hello? Is someone back there?' the large dragoness calls out from the other side of the blocked doorway. 'Please tell me that you're not one of those mindless... sexy... beasts... here to violate me while I'm helplessly trapped here.' Her rear end wiggles, her tail arches up and her pussy drips all the more at her words, winking with need to be filled.";
@@ -448,7 +449,7 @@ Carry out dragonfreeing:
 		say "     You give the goo to [Christy]. She smears the goo in the places where her body is jammed against the doorframe, greasing herself up. 'Oh yeah, that feels nice!' [Christy] moans as she rubs the goo on herself. 'If only I could reach my pussy, then I could... Ah! Bad thoughts! Bad thoughts!' When she finishes, she braces her front legs on the walls on both sides of the doorframe and starts pushing against it. As she struggles, you drop your pack and head over to help her, grabbing one shoulder and pulling. At first nothing happens, but then her body violently pops free from the doorway like a cork from a bottle of champagne. The cracks in the concrete around the doorframe break further and parts of the wall around the door collapse, blocking the passageway as it caves in. [Christy], unable to control her forward momentum, accidentally bowls you over and you end up pinned beneath her.";
 		say "     'My hero! Huh, where did you go?' [Christy] asks, unaware that you're pinned beneath her. She shifts her bulk around as she tries to find you and then accidentally rubs her pussy against your face, sending waves of pleasure through her body. Overcome by all her pent up lust, [Christy] starts to grind her pussy back and forth against your head. 'Oh, God yes! No! I must control these urges... I must... oh, screw it! It feels too damn good!' [Christy] still doesn't seem to realize that it is your face that she is rubbing her pussy against. If you start protesting this treatment, [Christy] could snap out of it and stop... or you could just sit back, relax and enjoy this situation.";
 		increase score by 10;
-		now dragoness is nowhere;
+		now stuck dragoness is nowhere;
 		now HP of Christy is 2;
 		say "     [bold type]Do you want to yell at [Christy] to stop?[roman type][line break]";
 		LineBreak;

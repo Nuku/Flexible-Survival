@@ -97,7 +97,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'cheesecake milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	cheesecake milk
+"cheesecake milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Cheesecake Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	cheesecake milk
 
 cheesecake milk is a grab object.
 cheesecake milk is milky.
@@ -305,7 +305,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"gingerbread milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'gingerbread milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	gingerbread milk
+"gingerbread milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Gingerbread Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	gingerbread milk
 
 gingerbread milk is a grab object.
 gingerbread milk is milky.

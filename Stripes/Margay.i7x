@@ -160,7 +160,7 @@ When Play begins:
 	now loot entry is "margay milk";
 	now lootchance entry is 36; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is "margay milk";
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now CumItem entry is "margay cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]plump[or]tubby[or]fat[at random]";
@@ -336,16 +336,39 @@ Section 4 - Margay Milk
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"margay milk"	"Milk from a hefty feline."	1	margay milk
+"margay milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Margay Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	margay milk
 
-margay milk is a grab object. margay milk is infectious. margay milk is milky. Strain of margay milk is "Margay".
+margay milk is a grab object.
+margay milk is milky.
+margay milk is infectious.
+Strain of margay milk is "Margay".
+Usedesc of margay milk is "[margay milk use]".
 
-Usedesc of margay milk is "[drinkmargaymilk]";
+to say margay milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
 
-to say drinkmargaymilk:
-	say "     Feeling suddenly thirsty for the feline milk, you drink it down, releasing a soft purring soft as you do.";
-	PlayerDrink 6;
+instead of sniffing margay milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"margay cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Margay Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	margay cum
+
+margay cum is a grab object.
+margay cum is cum.
+margay cum is infectious.
+Strain of margay cum is "Margay".
+Usedesc of margay cum is "[margay cum use]".
+
+to say margay cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing margay cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Section 5 - Endings
 

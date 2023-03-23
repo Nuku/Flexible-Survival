@@ -375,7 +375,7 @@ Strain of alpha wolf cum is "Feral Wolf Bitch".
 Usedesc of alpha wolf cum is "[alpha wolf cum use]";
 
 to say alpha wolf cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -394,7 +394,7 @@ Strain of alpha wolf man-milk is "Alpha Wolf".
 Usedesc of alpha wolf man-milk is "[alpha wolf man-milk use]";
 
 to say alpha wolf man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing alpha wolf man-milk:

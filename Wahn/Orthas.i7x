@@ -53,7 +53,7 @@ Sarea of Orthas_Meeting is "Nowhere". [standard walkins that cannot be hunted fo
 to say ResolveEvent Orthas_Meeting:
 	project the Figure of Orthas_face_icon;
 	if debugactive is 1:
-		say "DEBUG -> First Encounter with Orthas, Resolution of Meeting Orthas: [Resolution of Meeting Orthas]";
+		say "DEBUG -> First Encounter with Orthas, Resolution of Meeting Orthas: [Resolution of Orthas_Meeting]";
 	say "     As you walk into the room, the towering figure of an anthro dragoness awaits you, strong arms crossed before her broad chest and ample breasts. She is wearing parts of a security guard's uniform whose fabric is straining under the muscled bulk her six and a half foot tall frame brings with it. Focusing on you with a watchful eye, the woman calls out to you. '[bold type]Stop right there![roman type] This building is under my protection. Who are you and what do you want? Don't try anything or you're gonna get your ass kicked!' You have little doubt that she can follow through with those threats, given her impressive stature, so you stop in your tracks and tell her your name, earning a curt nod in greeting. 'Oh, you can talk. Not a raving fuckbeast then, eh? Still, I asked what you want.'";
 	LineBreak;
 	say "     [bold type]What do you reply?[roman type][line break]";

@@ -56,7 +56,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Topless Lounge	"Topless Lounge"
 
-Topless Lounge is a room. Topless Lounge is southeast of Palomino.
+Topless Lounge is a room. Topless Lounge is southeast of PALOMINO Dance Club.
 Description of Topless Lounge is "     Moving through some rose-red curtains, you spot a small passage. At the end of the short hallway is an opening and a sign, reading 'Topless Lounge'. The room you enter isn't very big, pretty long but narrow. Red seats and couches around dark oval tables surround a raised stage with a dancing pole on it, some of the smaller tables even having their very own pole. Faint light radiates from candles that are stylishly placed on each of the round tables. There's not much going on here, most of the area empty. Even the small bar installed along the room is unattended, although it's still filled with some most exquisite bottles of various liquids. From behind, you can still hear the dull beat of the loud music in the main room as you move along."
 
 the scent of Topless Lounge is "     The thick air smells of alcohol and sugar from all the sweet, colorful drinks.".

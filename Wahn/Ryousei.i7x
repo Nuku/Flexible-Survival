@@ -62,7 +62,7 @@ to say ResolveEvent Ryousei_Meeting:
 Section 2 - Creature Responses
 
 to say RTiger wins:
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		say "     As you collapse at his feet, the muscled tiger looks down upon you with a sigh. 'A pity that you lost so easily, even though I held back quite a bit. I really thought you had more potential. Maybe it is just not your day today, hm? Let us try this again when you have had time to recuperate and... train a bit.' Ryousei folds his hands and gives a little bow to you, then calmly walks off along the forest path.";
 	else: [sparring with Ryo]
 		if HP of Player < 5: [beaten]
@@ -71,7 +71,7 @@ to say RTiger wins:
 			say "     As you pull back and tell him that you concede, Ryousei relaxes from his combat-ready stance and straightens himself. Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a small bow, not too deep but still showing respect. 'A good fight, my friend. I have missed sparring with my compatriots ever since coming to this world. It feels good to get a proper workout without having to battle for life and death.'";
 
 to say RTiger loses: [TODO: Add option for asshole players]
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		if RTWinCounter < 6:
 			increase RTWinCounter by 1;
 		if RTWinCounter is:
@@ -85,22 +85,22 @@ to say RTiger loses: [TODO: Add option for asshole players]
 				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 			-- 6:
 				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-				say "     (Ryousei the royal tiger is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Ryousei the royal tiger companion is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Royal Tiger":
 						now MonsterID is y;
 						now area entry is "Nowhere";
 						break;
-				now royal tiger is tamed;
-				add "Tamed" to Traits of royal tiger;
+				now royal tiger companion is tamed;
+				add "Tamed" to Traits of royal tiger companion;
 				move Ryousei to Grey Abbey Library;
 	else:
 		say "     As you wind yourself up for the next attack, the muscled tiger suddenly takes a step back from you. 'That will be enough for now. I concede to you, my friend. Well fought, it was a pleasure to spar with you.' Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a half-bow, showing the respect you earned for your prowess. He gives your shoulder a friendly tap and squeezes it, then adds with a smile, 'Ever since coming to this world, I have really been missing just being able to measure up against a companion, without it having to be a life or death fight. So thank you, for this.'";
 
 to say RTigerDesc:
 	project Figure of Ryousei_clothed_icon;
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
 	else:
 		say "     Smiling as he gets into a combat-ready posture, the muscular anthro tiger looks quite eager for some action. 'Let us measure our strength against one another then! Are you ready?' As soon as you nod, he wades into combat against you - claws sheathed though, as it is just a friendly clash.";
@@ -285,22 +285,23 @@ Section 4 - NPC/Pet
 
 Table of GameCharacterIDs (continued)
 object	name
-royal tiger	"royal tiger"
+royal tiger companion	"royal tiger"
+royal tiger companion	"royal tiger companion"
 
-royal tiger is a pet.
-NPCObject of royal tiger is Ryousei.
-understand "Ryousei" as royal tiger.
-understand "Ryo" as royal tiger.
-IDList of royal tiger is { "Ryousei", "ryousei", "ryo", "Ryo", "tiger", "tiger warrior", "tiger general", "royal tiger" }.
-printed name of royal tiger is "Ryousei".
-Description of royal tiger is "[RyouseiDesc]".
-Weapon Damage of royal tiger is 15.
-The level of royal tiger is 1.
-Dexterity of royal tiger is 15.
-The summondesc of royal tiger is "[SummonRyousei]".
-The dismissdesc of royal tiger is "[DismissRyousei]".
-The assault of royal tiger is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".
-the fuckscene of royal tiger is "[sexwithRyousei]".
+royal tiger companion is a pet.
+NPCObject of royal tiger companion is Ryousei.
+understand "Ryousei" as royal tiger companion.
+understand "Ryo" as royal tiger companion.
+IDList of royal tiger companion is { "Ryousei", "ryousei", "ryo", "Ryo", "tiger", "tiger warrior", "tiger general", "royal tiger", "royal tiger companion" }.
+printed name of royal tiger companion is "Ryousei".
+Description of royal tiger companion is "[RyouseiDesc]".
+Weapon Damage of royal tiger companion is 15.
+The level of royal tiger companion is 1.
+Dexterity of royal tiger companion is 15.
+The summondesc of royal tiger companion is "[SummonRyousei]".
+The dismissdesc of royal tiger companion is "[DismissRyousei]".
+The assault of royal tiger companion is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".
+the fuckscene of royal tiger companion is "[sexwithRyousei]".
 
 to say SummonRyousei:
 	project Figure of Ryousei_clothed_icon;
@@ -375,10 +376,10 @@ to say RyouseiDesc:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
-	if royal tiger is listed in companionList of Player:
+	if royal tiger companion is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
-instead of sniffing royal tiger:
+instead of sniffing royal tiger companion:
 	say "[RyouseiScent]";
 
 to say RyouseiScent:
@@ -387,18 +388,18 @@ to say RyouseiScent:
 instead of conversing the Ryousei:
 	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 		say "[RyouseiTalkMenu]";
-	else if royal tiger is listed in companionList of Player:
+	else if royal tiger companion is listed in companionList of Player:
 		say "[RyouseiTalkMenu]";
 	else:
 		say "     Ryousei isn't here.";
 
-instead of conversing royal tiger:
-	if royal tiger is not tamed:
+instead of conversing royal tiger companion:
+	if royal tiger companion is not tamed:
 		say "     Who?";
 	else:
 		if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 			say "[RyouseiTalkMenu]";
-		else if royal tiger is listed in companionList of Player:
+		else if royal tiger companion is listed in companionList of Player:
 			say "[RyouseiTalkMenu]";
 		else:
 			say "     Ryousei isn't here.";
@@ -837,7 +838,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"Ryousei_Xerxes_Encounter1"	Ryousei_Xerxes_Encounter1	"[EventConditions_Ryousei_Xerxes_Encounter1]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_Ryousei_Xerxes_Encounter1:
-	if (royal tiger is tamed and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA: [list of conditions here]
+	if (royal tiger companion is tamed and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -891,7 +892,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Ryousei_Hayato_Encounter1"	Ryousei_Hayato_Encounter1	"[EventConditions_Ryousei_Hayato_Encounter1]"	Grey Abbey 2F	2500	2	100
 
 to say EventConditions_Ryousei_Hayato_Encounter1:
-	if (royal tiger is tamed and Hayato is in Darkened Alcove and RyouseiHayato is 0): [list of conditions here]
+	if (royal tiger companion is tamed and Hayato is in Darkened Alcove and RyouseiHayato is 0): [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -921,7 +922,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"Ryousei_Rane_Encounter1"	Ryousei_Rane_Encounter1	"[EventConditions_Ryousei_Rane_Encounter1]"	Grey Abbey 2F	2500	2	100
 
 to say EventConditions_Ryousei_Rane_Encounter1:
-	if (royal tiger is tamed and Rane is in Sitting Area and RyouseiRane is 0) and Player is not CoA: [list of conditions here]
+	if (royal tiger companion is tamed and Rane is in Sitting Area and RyouseiRane is 0) and Player is not CoA: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -1189,7 +1190,7 @@ to say RyouseiTaiChi:
 		add "TaiChi_DoneForToday" to Traits of Ryousei; [filter for only one session a day]
 
 an everyturn rule:
-	if Royal Tiger is tamed:
+	if Royal Tiger companion is tamed:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 			if "TaiChi_DoneForToday" is listed in Traits of Ryousei: [filter for only one session a day]
 				remove "TaiChi_DoneForToday" from Traits of Ryousei;
@@ -1212,12 +1213,12 @@ to say RyouseiSparring:
 			choose row y in Table of Random Critters;
 			if Name entry is "Royal Tiger":
 				now MonsterID is y;
-				now lev entry is (13 + Level of Royal Tiger);
-				now wdam entry is (Weapon Damage of Royal Tiger);
+				now lev entry is (13 + Level of Royal Tiger companion);
+				now wdam entry is (Weapon Damage of Royal Tiger companion);
 				now HP entry is (95 + (Level of Royal Tiger * 10));
 				break;
 		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
-		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
+		if Royal Tiger companion is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
 			ForceCompanionDismiss "Ryousei";
 			challenge "Royal Tiger";
 			ForceCompanionJoin "Ryousei";
@@ -1225,12 +1226,12 @@ to say RyouseiSparring:
 			challenge "Royal Tiger";
 		if fightoutcome < 30: [won  or lost]
 			let needed be 0;
-			increase the XP of Royal Tiger by level of Player;
-			now needed is ( level of Royal Tiger ) times 10;
+			increase the XP of Royal Tiger companion by level of Player;
+			now needed is ( level of Royal Tiger companion ) times 10;
 			if "Good Teacher" is listed in feats of Player:
-				now needed is ( level of Royal Tiger ) times 6;
-			if XP of Royal Tiger >= needed and level of Royal Tiger < level of Player and humanity of Player > 0:
-				pet level up Royal Tiger;
+				now needed is ( level of Royal Tiger companion ) times 6;
+			if XP of Royal Tiger companion >= needed and level of Royal Tiger companion < level of Player and humanity of Player > 0:
+				pet level up Royal Tiger companion;
 
 Section 6 - Endings
 
@@ -1239,7 +1240,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Ryousei's Epilogue"	"Companion"	"Pet"	Ryousei's Epilogue rule	750	false
 
 This is the Ryousei's Epilogue rule:
-	if royal tiger is tamed: [player became companion of Ryo]
+	if royal tiger companion is tamed: [player became companion of Ryo]
 		trigger ending "Ryousei's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumb ending]
 			say "     Ryousei is sad to see his favorite companion in this world succumb to the mental effects of the nanite infection, but there is little he can do to bring you back to the old self he learned to know and like. The proud tiger stays close to you for a while afterwards, but your quickly building lust soon makes you look at him in a lewd and hungry way. Rather than taking the chance of hurting you if he has to fight off forceful advances, your friend chooses to go instead - leaving you behind with a sigh.";

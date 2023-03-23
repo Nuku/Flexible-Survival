@@ -372,7 +372,7 @@ Strain of hyena herm cum is "Hyena Herm".
 Usedesc of hyena herm cum is "[hyena herm cum use]";
 
 to say hyena herm cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
@@ -381,7 +381,7 @@ instead of sniffing hyena herm cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"hyena herm milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'hyena herm milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hyena herm milk
+"hyena herm milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Hyena Herm Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	hyena herm milk
 
 hyena herm milk is a grab object.
 hyena herm milk is milky.
@@ -391,7 +391,7 @@ Strain of hyena herm milk is "Hyena Herm".
 Usedesc of hyena herm milk is "[hyena herm milk use]";
 
 to say hyena herm milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing hyena herm milk:

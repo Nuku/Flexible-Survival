@@ -2561,7 +2561,6 @@
 |Stripes|Math Teacher|20140908213124/3146:Mon 8 September 2014 21:31|indexing|
 |Stripes|Dark Elf|20140908213124/3352:Mon 8 September 2014 21:31|indexing|
 |Stripes|Automaton|20140908213124/2494:Mon 8 September 2014 21:31|indexing|
-|Stripes|Automaton|silver semen|Grab Object|
 |Stripes|Automaton|autogender|value|
 |Stripes|Automaton|metalskin|value|
 |Stripes|Automaton|playermetalskin|value|
@@ -2903,8 +2902,8 @@
 |Verath|Lance|Lance|man|
 |Verath|Lance|Lancetalk|value|
 |Verath|Palomino|20140908213124/2743:Mon 8 September 2014 21:31|indexing|
-|Verath|Palomino|Palomino|room|
-|Verath|Palomino|Palomino Exit|door|
+|Verath|PALOMINO Dance Club|PALOMINO Dance Club|room|
+|Verath|PALOMINO Dance Club|Palomino Exit|door|
 |Verath|Tristian|20140908213124/6849:Mon 8 September 2014 21:31|indexing|
 |Verath|Tristian|Tristian|man|
 |Verath|Tristian|Tristbrother|situation|
@@ -3612,7 +3611,7 @@
 |Stripes|Honey|bee girl|Pet|
 |Stripes|Artemis|20140908213124/51075:Mon 8 September 2014 21:31|indexing|
 |Stripes|Artemis|Poor Kitty|situation|
-|Stripes|Artemis|rubber tigress|Pet|
+|Stripes|Artemis|rubber tigress companion|Pet|
 |Stripes|Artemis|cup stack|Grab Object|
 |Stripes|Artemis|templust|value|
 |Stripes|Artemis|tempthirst|value|

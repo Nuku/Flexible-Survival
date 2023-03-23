@@ -113,7 +113,7 @@ Stocks	Figure of emap_Stocks_icon
 Table of Zpc Location Reference (continued)
 location(room)	icon(figure name)
 Ammy's Flatlet	Figure of emap_Ammys_Flatlet_icon
-Palomino	Figure of emap_Palomino_icon
+PALOMINO Dance Club	Figure of emap_Palomino_icon
 Private Booths	Figure of emap_Private_Booths_icon
 Private Club Room	Figure of emap_Private_Club_Room_icon
 Topless Lounge	Figure of emap_Topless_Lounge_icon

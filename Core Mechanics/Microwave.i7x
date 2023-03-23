@@ -17,13 +17,23 @@ Check Purifying:
 	if Player is in Breakroom and findwires is not 2 and fixedgens is not 2, say "The power isn't on." instead;
 
 Carry out Purifying:
-	if purified of noun is empty:
+	if noun is cum:
+		say "After microwaving the [noun] on a low setting, you are left with distilled cum.";
+		ItemLoss noun by 1;
+		ItemGain distilled cum by 1;
+	else if noun is milky:
+		say "After microwaving the [noun] on a low setting, you are left with distilled milk.";
+		ItemLoss noun by 1;
+		ItemGain distilled milk by 1;
+		stop the action; [done]
+	else if purified of noun is empty:
 		say "You don't think that can get any more pure, at least not this way.";
-		stop the action;
-	let num be 0;
-	ItemLoss noun by 1;
-	say "After microwaving the [noun] on a low setting, you are left with [purified of the noun].";
-	ItemGain purified of the noun by 1;
+		stop the action; [cancelled]
+	else:
+		let num be 0;
+		ItemLoss noun by 1;
+		say "After microwaving the [noun] on a low setting, you are left with [purified of the noun].";
+		ItemGain purified of the noun by 1;
 
 Section 2 - New Items
 
@@ -41,8 +51,8 @@ Usedesc of distilled booze is "[DistilledBoozeUse]".
 to say DistilledCumUse:
 	say "Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
 	increase thirst of Player by 5;
-	grow cock by 3;
-	grow balls by 2;
+	grow cock by 1;
+	grow balls by 1;
 
 to say DistilledBoozeUse:
 	say "The liquid burns your throat as you swallow it down, but a very pleasant warmth spreads through your body as it hits your stomach, making you shudder as you grow more aroused and are hit by a small urge to giggle. Strong stuff, this.";

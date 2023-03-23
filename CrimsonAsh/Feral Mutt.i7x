@@ -487,7 +487,7 @@ Strain of feral mutt man-milk is "Feral Mutt".
 Usedesc of feral mutt man-milk is "[feral mutt man-milk use]";
 
 to say feral mutt man-milk use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the canine man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 15;
 
 instead of sniffing feral mutt man-milk:

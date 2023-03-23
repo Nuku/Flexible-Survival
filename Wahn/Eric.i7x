@@ -3650,7 +3650,7 @@ to say EricUrikLibraryFuckRepeat:
 
 [ Ryousei Interactions                 ]
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger is listed in companionList of Player) and Player is not CoA:
+after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger companion is listed in companionList of Player) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Ryousei [line break]";
 	try looking;
