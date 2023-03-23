@@ -1273,10 +1273,7 @@ to say ResolveEvent Sarah_Carl_Encounter1:
 	project the Figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & CARL MEET - CarlSarahInteraction: [CarlSarahInteraction] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you get to the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	say "your arrival coincides with someone opening the door to the subterranean bunker below from the inside. A flash of white-furred paw-hands lets you guess it is Sarah even before you see the young woman fully, stepping into the open library in her jeans and t-shirt. She notices you in turn and gives a friendly smile and a little wave, then walks over to a nearby bookshelf and starts browsing. Looks like she got bored down in the bunker and needs something new to read. Closing the entrance door securely, you set down your pack and mentally go through what you want to do next - during which you glimpse Carl at the edge of your vision, jogging through the library as part of his exercise regime.";
 	say "     A moment later, you hear the canine soldier say, 'Oh hey there. Nice to meet such a pretty - OOFFHH!' Following a choked whimper by the friendly husky and a loud thump, Sarah runs out between the bookshelves, panting breathlessly and in fright. 'There's a stranger back there, a husky man and he - he,' she falters a little at your baffled expression, then hurries after you as you go to check out the row she just came from. Carl is lying on the ground there, groaning and holding his crotch. 'Nggghhhh. You got... great aim... lady,' he gets out between clenched teeth, still in too much pain to do anything but lie in a curled ball.";
 	WaitLineBreak;
@@ -1706,10 +1703,7 @@ to say ResolveEvent Sarah_Fang_Encounter1:
 	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	if HP of Fang < 3: [Omega Fang]
 		say "you see your pet wolf Fang moving towards the back of the ground floor shelves in a moderately fast trot, his long rope leash trailing behind him on the ground. While that in and of itself isn't too surprising (he is clever enough to loosen and tie the leash from its anchoring point with his at least part-anthro paws) you get curious what he's on about right now. The straight-up way he is holding his tail does show that the gray wolf is at attention because of something and he is moving with some determination in his strides. Walking after the feral beast, you soon spot the target of his interest - the husky girl Sarah is back there, currently crouched down before a bookshelf and checking out some new stuff to read.";
 		say "     Fang is upon her before you can do much more to register the situation, pushing his muzzle against the back of her jeans and sniffing excitedly. Letting out a bark of surprise at the sudden touch, Sarah turns around to look at Fang. Her first reaction is a smile and the tail behind her back starts to wag in a slow beat as the medical student says, 'Oh, hey boy. What are you doing here? Did your leash come undone?' She reaches out to pet Fang's head, earning her a lick as she strokes over the thick fur over his neck. 'Such a strong and good doggie,' she coos as she pets him some more and Fang leans into her touch. 'It is good to know that you're protecting us here. Keeping the beasts out and... hey!'";
@@ -1787,10 +1781,7 @@ to say ResolveEvent Sarah_Fang_Encounter3:
 	project the figure of Sarah_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG -> SARAH & FANG MEET - FangSarahInteraction: [FangSarahInteraction], HP of Fang: [HP of Fang] <- DEBUG[line break]";
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	project the figure of Sarah_naked_icon;
 	say "you are comforted to see your Alpha in his usual position by the front door, protecting his pack and their home from any creature roaming the city that might take an interest in claiming the library for its own. You also notice Sarah peering around the corner of a bookshelf, the slutty husky outside of the bunker for once and gazing lustfully at the wolf stud by the entrance. You would smirk at her infatuation, but you understand the attraction that she has towards the majestic, dark-furred guardian as you too feel that way. While you consider whether or not to encourage her to make herself available to him, you realize that he will be fully aware of her living in the library and should he be interested in her, that he will take her as is his prerogative as Alpha. It is up to the two of them to make this happen.";
 	say "     Seemingly coming to a similar conclusion, or more likely having had her caution overwhelmed by horniness, Sarah creeps out from behind the shelf and approaches the wolf, copious fluids leaking from her canine spade, the engorged lips almost throbbing with need and splattering her scent onto the floor behind her. She barely spares you a glance as she passes by you, only halting when she is beside Fang where she rolls on to her back and nuzzles up against his side. With a final glance out the door to ensure that nothing is approaching, the Alpha turns his attention to the display of submission before him, leaning down to sniff at her throat and puffy vulva, his tongue slipping from his mouth to lick at it for a moment before continues to inhale the husky's scent. You can see his crimson shaft beginning to emerge beneath him, the soft skin of his shaft stretching as finally his knot slips free, already partially inflated despite the wolf not having yet begun mating. The effect that this has on Sarah is obvious, the excitement of having such an effect on the pack leader visible on her face as well as her body language.";

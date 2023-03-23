@@ -174,10 +174,7 @@ to say ResolveEvent Alexandra_Spike_Missing:
 			project the figure of Alexandra_clothed_preg_icon;
 	else:
 		project the figure of Alexandra_face_icon;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	say "you find Alexandra leaned against the edge of the front desk, pushing herself to a stand immediately as she hears the door open. The ex-cop seems tense and actually worried, but clearly not about yourself, as she slumps back once she realizes it is you. She puts her guard back up a second later, showing the typical bad-bitch expression, but you can't miss the fact that she's focused on the front door and appears to be waiting for someone. ";
 	if MaxHP of Spike is 2: [Fang is the dad for Spike]
 		say "Curiosity starts to build further in your mind as you catch sight of Fang sitting fairly close to the doberwoman, and similarly attentive to anyone entering. The wolf looks back and forth between you and Alexandra, then settles down again. ";

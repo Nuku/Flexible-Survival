@@ -31,25 +31,26 @@ the fuckscene of Orthas is "[Orthasfuck]".
 
 to say OrthasNPCdesc:
 	project the Figure of Orthas_face_icon;
-	say "     Orthas is a black-scaled dragoness with an overall hunanoid build that shows quite a few muscles while still being decidedly feminine. Her large F-cup breasts leave little doubt of that, making quite a distracting display with every breath she takes. She stands about six and a half feet tall and has a large set of wings folded aganst her back, completing the image of a strong woman that few would dare mess with. Behind her, a long reptilian tail sways slowly from left to right.";
-	say "     Being the guardian of the Trevor Labs building, most of Orthas's time is spent in its lobby, where she dutyfully guards the entrance and the stairs that lead up into the offices and labs.";
+	say "     Orthas is a black-scaled dragoness with an overall humanoid build that shows quite a few muscles while still being decidedly feminine. Her large F-cup breasts leave little doubt of that, making quite a distracting display with every breath she takes. She stands about six and a half feet tall and has a large set of wings folded against her back, completing the image of a strong woman that few would dare mess with. Behind her, a long reptilian tail sways slowly from left to right.";
+	say "     Being the guardian of the Trevor Labs building, most of Orthas's time is spent in its lobby, where she dutifully guards the entrance and the stairs that lead up into the offices and labs.";
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Orthas_Meeting"	Orthas_Meeting	"[EventConditions_Orthas_Meeting]"	Trevor Labs Lobby	2500	2	100
+
+to say EventConditions_Orthas_Meeting:
+	if Orthas is in Trevor Labs Lobby: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
 Object	Name
-Meeting Orthas	"Meeting Orthas"
+Orthas_Meeting	"Orthas_Meeting"
 
-Meeting Orthas is a situation.
-ResolveFunction of Meeting Orthas is "[ResolveEvent Meeting Orthas]".
-Sarea of Meeting Orthas is "Nowhere".
+Orthas_Meeting is a situation.
+ResolveFunction of Orthas_Meeting is "[ResolveEvent Orthas_Meeting]".
+Sarea of Orthas_Meeting is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
-instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0 and Orthas is in Trevor Labs Lobby):
-	move player to Trevor Labs Lobby;
-	MeetingOrthasEvent;
-
-to say ResolveEvent Meeting Orthas:
-	MeetingOrthasEvent;
-
-to MeetingOrthasEvent:
+to say ResolveEvent Orthas_Meeting:
 	project the Figure of Orthas_face_icon;
 	if debugactive is 1:
 		say "DEBUG -> First Encounter with Orthas, Resolution of Meeting Orthas: [Resolution of Meeting Orthas]";
@@ -70,18 +71,18 @@ to MeetingOrthasEvent:
 	if calcnumber is 1:
 		LineBreak;
 		say "     Orthas's cautious expression softens a little and she gives you a hint of a smile. 'Well, you've found them. In this building, there's me, Dr. Matt up in the lab, and some other employees hiding out in the deep basement levels. Haven't seen them in a while though, if I have to be honest, but that's not too surprising, given how often I have to fight off the creatures just waltzing in through the door.' She walks closer to you, then holds out her hand in greeting. As you don't immediately react to take it, the dragoness nods in understanding and adds, 'No worries about catching anything, by the way. The doc has told me that I'm not transmitting what made me like this.' Giving yourself a push, you shake her hand and feel its flexible, smooth scales against your skin. The two of you chat a little bit about what you've seen since the start of the outbreak, exchanging stories that would be unbelievable in any other situation. Eventually, Orthas says, 'You should go up and meet Dr. Matt too. I'm sure he'd be glad to see another sane person.'";
-		now Resolution of Meeting Orthas is 1; [said you are searching survivors]
+		now Resolution of Orthas_Meeting is 1; [said you are searching survivors]
 	else if calcnumber is 2:
 		LineBreak;
 		say "     Orthas's expression hardens a little and she shakes her head. 'Well, you're shit out of luck then. Apocalypse or no, everything in here is still company or employee property. Only staff like Dr. Matt, the guys in the deep basement and myself may access and use the stuff. We got to hold out till rescue somehow, so the loading dock and also the catering kitchen up on 3rd are off limits. I've got the keys, so you can save yourself the trip of trying to get in there.' She keeps your eyes locked to hers in a severe stare, long enough to make sure you know she's serious, then shrugs. 'But hey, other than that, it's good to meet another survivor. No hard feelings, alright?' With that said, the dragoness walks closer to you and holds out her hand in greeting.";
 		say "     As you don't immediately react to take it, the Orthas nods in understanding and adds, 'No worries about catching anything, by the way. The doc has told me that I'm not transmitting what made me like this.' Giving yourself a push, you shake her hand and feel its flexible, smooth scales against your skin. The two of you chat a little bit about what you've seen since the start of the outbreak, exchanging stories that would be unbelievable in any other situation. Eventually, Orthas says, 'You should go up and meet Dr. Matt too. I'm sure he'd be glad to see another sane person.'";
-		now Resolution of Meeting Orthas is 2; [said you want to scavenge]
+		now Resolution of Orthas_Meeting is 2; [said you want to scavenge]
 	else:
 		LineBreak;
 		say "     Letting out an annoyed grunt, Orthas looks at you with a frown. 'Well, you're shit out of luck then. I'm sane enough not to fuck around with any random horndog that stumbles in here. That's a quick way to become one of the fuckbeasts that are wandering the streets. No thank you!' Putting her hands on her hips, the statuesque dragoness looks at you, seemingly contemplating sending you away before shrugging to herself. 'Okay, listen. I'm sure you're a swell person, but sex with me is out of the question. Doesn't mean we can't have a nice chat instead though. Not many folks around these days who can hold a conversation, you know. So... no hard feelings, eh?' She walks closer to you, then holds out her hand in greeting.";
 		say "     As you don't immediately react to take it, the dragoness nods in understanding and adds, 'No worries about catching anything, by the way. The doc has told me that I'm not transmitting what made me like this.' Accepting her explanation, you shake the dragoness's hand and feel its flexible, smooth scales against your skin. The two of you chat a little bit about what you've seen since the start of the outbreak, exchanging stories that would be unbelievable in any other situation. Eventually, Orthas says, 'You should go up and meet Dr. Matt too. I'm sure he'd be glad to see another sane person. And no, he won't want to fuck you either.'";
-		now Resolution of Meeting Orthas is 3; [said you want sex]
-	now Meeting Orthas is resolved;
+		now Resolution of Orthas_Meeting is 3; [said you want sex]
+	now Orthas_Meeting is resolved;
 
 Section 1 - Conversation
 
