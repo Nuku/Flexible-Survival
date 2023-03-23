@@ -94,7 +94,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 with 1000 blank rows
 
-Table of WalkinEvents
+Table of WalkInEvents
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 with 1000 blank rows
@@ -109,11 +109,11 @@ with 1000 blank rows
 
 Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
+3	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-1	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
+3	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_ExampleEvent:
 	if 1 > 0: [list of conditions here]
@@ -212,6 +212,42 @@ to NavInEvent_Check (NavTarget - a room):
 	else:
 		if DebugLevel > 4:
 			say "     DEBUG: No NavInEvents found in [NavTarget].";
+
+
+to say LibraryEntry_NavOrWalk:
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you arrive at the library and step into the building, ";
+	else:
+		say "     As you walk up to the front entrance of the library, ";
+
+[--------------------------------------------------------------------------------]
+
+[Prepared code for copying to update old events:]
+
+[
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"ExampleEvent"	ExampleEvent	"[EventConditions_ExampleEvent]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_ExampleEvent:
+	if 1 > 0: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+ExampleEvent	"ExampleEvent"
+
+ExampleEvent is a situation.
+ResolveFunction of ExampleEvent is "[ResolveEvent ExampleEvent]".
+Sarea of ExampleEvent is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent ExampleEvent:
+
+]
 
 
 Situations ends here.

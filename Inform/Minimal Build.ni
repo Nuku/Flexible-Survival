@@ -231,7 +231,7 @@ Blake is a man.
 Zoe is a woman.
 Alexandra is a woman.
 Ronda is a woman.
-rubber tigress is a pet.
+rubber tigress companion is a pet.
 mouse girl is a pet.
 Carnivorous Plant is a pet.
 gshep is a pet.
@@ -419,7 +419,7 @@ Warehouse District is a room.
 Sitting Area is a room.
 Zoo Entrance is a room.
 Approaching the Capitol Building is a room.
-Palomino is a room.
+PALOMINO Dance Club is a room.
 emap is a number that varies. emap is usually 0.
 zpc_inzone is a truth state that varies. zpc_inzone is false.
 zpc_Zc is a number that varies.[true if players location is listed on table of Zpc Location reference]

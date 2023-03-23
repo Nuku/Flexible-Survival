@@ -96,7 +96,7 @@ when play begins:
 	add Predator's Club Night to BadSpots of MaleList;
 	add Predator's Club Night to BadSpots of FurryList;
 
-after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and The Palomino is known):
+after going to Atlantis City Entrance while (Predator's Club Night is active and PlayerFucked of Kurt is true and KurtRelationship is 3 and KurtEvent - turns > 2 and PALOMINO Dance Club is known):
 	ThirdKurtEvent;
 
 to say ResolveEvent Predator's Club Night:

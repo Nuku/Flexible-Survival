@@ -20,7 +20,7 @@ check resting:
 	if caffeinehigh of Player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
-	if location of Player is Palomino or location of Player is Private Booths:
+	if location of Player is PALOMINO Dance Club or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
 		stop the action;
 	if cot is owned:
@@ -41,7 +41,7 @@ check resting:
 	else:
 		say "You have nothing to rest on.";
 		stop the action;
-	if rubber tigress is not listed in companionList of Player:
+	if rubber tigress companion is not listed in companionList of Player:
 		if ( there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
 			now battleground is "Outside"; [standard setting]
 			if the earea of location of Player is not "void":
@@ -63,12 +63,12 @@ check resting:
 			say "You are thankfully able to complete your nap in peace.";
 
 carry out resting:
-	if rubber tigress is listed in companionList of Player:
+	if rubber tigress companion is listed in companionList of Player:
 		artemisnap;
 		if NoHealMode is true:
-			increase HP of Player by (level of rubber tigress) / 3; [grants additional rest]
+			increase HP of Player by (level of rubber tigress companion) / 3; [grants additional rest]
 		else:
-			increase HP of Player by (level of rubber tigress) / 2; [grants additional rest]
+			increase HP of Player by (level of rubber tigress companion) / 2; [grants additional rest]
 	Rest;
 	follow the turnpass rule;
 	follow the turnpass rule;

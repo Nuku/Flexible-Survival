@@ -5,9 +5,9 @@ Version 4 of Harold by Sarokcat begins here.
 
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Harold is in NPC Nexus:
-		move Harold to Palomino;
+		move Harold to PALOMINO Dance Club;
 	if Drink Bar is in NPC Nexus:
-		move Drink Bar to Palomino;
+		move Drink Bar to PALOMINO Dance Club;
 
 
 Section 1 - Harold
@@ -17,7 +17,7 @@ Haroldaroused is a number that varies.[not a needed number, but used to set diff
 lastrandomharold is a number that varies. lastrandomharold is usually 250.
 Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
-Harold is in Palomino.
+Harold is in PALOMINO Dance Club.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -312,7 +312,7 @@ Section 5 - Drink bar
 
 LastDrinkserved is a number that varies. LastDrinkserved is usually 250.
 Drinkserved is a number that varies. Drinkserved is usually 0.
-Drink bar is in Palomino.
+Drink bar is in PALOMINO Dance Club.
 
 Table of GameCharacterIDs (continued)
 object	name

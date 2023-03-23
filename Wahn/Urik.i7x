@@ -2034,10 +2034,7 @@ to say ResolveEvent Urik_LibraryTransfer:
 	if debugactive is 1:
 		say "     DEBUG: Urik Arrival[line break]";
 	Load_Urik_Clothed_Image;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	say "you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through an old magazine for motorcycle enthusiasts he must have found somewhere in the stacks. 'Hey boss,' he says upon noticing you, standing up and taking a few steps forward. 'Found the place alright, following your description. Claimed a couch on the upper floor, in that sitting area, if that's alright by you.' He nods towards the stairs leading up and you tell him it's fine. 'Gotta say, I was surprised just how different this area is than back at the lair. I mean, just walking a number of miles to get here, I saw critters that I had never seen before. Oh yeah, and some little hyena sluts on souped-up bikes trying to act like dudes, and as if they were the big cheese around here. There were three of them together, and still they didn't dare to try me, hah! Man, back in my day we'd have curb-stomped such a sorry excuse for a gang and sent [']em running back to mommy with a baggie of their teeth.'";
 	if (number of bunkered people + number of booked people > 2): [anyone there besides just Urik?]
 		if (number of bunkered people + number of booked people > 3):
@@ -2213,7 +2210,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 2	"Urik_LibraryDefense"	Urik_LibraryDefense	"[EventConditions_Urik_LibraryDefense]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_Urik_LibraryDefense:
-	if (lastUrikWalkInEvent - turns > 2) and Urik is in Sitting Area and Loyalty of Urik is 2: [list of conditions here]
+	if (lastUrikWalkInEvent - turns > 2) and Urik is collected and Loyalty of Urik is 2: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -2357,10 +2354,7 @@ to say ResolveEvent Urik_LootIntro:
 	if debugactive is 1:
 		say "     DEBUG: Urik Loot[line break]";
 	Load_Urik_Clothed_Image;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	say "a 'Hey [UrikPlayerAddress]!' shout from the side draws your attention to one of the reading nooks nearby. In it, you see Urik sitting on a sofa, hand raised to wave you over. As you proceed to stride towards him, you notice something in the orc's big hand. It's a good sixteen inches long, fairly thick and meaty, and the big man brings it up to his face to take a large bite out of it when you come to stand before him. Mumbling a little with his mouth full, Urik asks, 'Want some salami?' He grins broadly as you ask where he got that, and then reaches behind the sofa, lifting a shopping bag into view to offer it to you. Swallowing, the orc explains, 'I went to check out the neighborhood a little while you were out, [UrikPlayerAddress]. Good territory you got here. Might help that it didn't have any orcs so far, kicking in doors, hah! I bet there's a bunch more stuff to find too.'";
 	say "     Glancing in the bag he handed you, you see several more food items that have a long shelf life and surely are still good. Besides that, there's a bottle of soda in there too. You thank the orc for finding supplies, which Urik eats up with a broad grin. Dropping the salami onto his lap, he raises his arms demonstratively and alternately flexes one bicep, then the other, showing off a little. 'Wanna go out looting together sometime, [UrikPlayerAddress]? Would be fun.'";
 	ItemGain food by 3;
@@ -2393,11 +2387,7 @@ to say ResolveEvent Urik_BroOrSlut:
 	if debugactive is 1:
 		say "     DEBUG: Urik Decision Time - Bro or Slut[line break]";
 	project Figure of Urik_neutral_shorts_icon;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
-	say "you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through a thick book in his hands. Looks like some sort of technical manual. 'Hey [UrikPlayerAddress],' he says upon noticing you, standing up and taking a few steps forward. 'You know, having had a little time sitting here in the library now, I couldn't help but start thinking a bit. What's the plan with the move? Why send me here?' The orc looks at you with a neutral expression, but you pick up on a little bit of a hopeful undertone to his words. ";
+	say "[LibraryEntry_NavOrWalk]you immediately notice Urik, who's sitting on the edge of the front desk, casually flicking through a thick book in his hands. Looks like some sort of technical manual. 'Hey [UrikPlayerAddress],' he says upon noticing you, standing up and taking a few steps forward. 'You know, having had a little time sitting here in the library now, I couldn't help but start thinking a bit. What's the plan with the move? Why send me here?' The orc looks at you with a neutral expression, but you pick up on a little bit of a hopeful undertone to his words. ";
 	if "Marker_Accepted" is listed in Traits of Urik:
 		say "You having chosen to accept him marking your territory ";
 	else if "Marker_Discouraged" is listed in Traits of Urik:
@@ -2664,17 +2654,10 @@ to say ResolveEvent Urik_LootingOffer:
 	if debugactive is 1:
 		say "     DEBUG: Urik offers looting[line break]";
 	Load_Urik_Clothed_Image;
+	say "[LibraryEntry_NavOrWalk]";
 	if orc supersized breeder is not listed in companionList of Player:
-		if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-			say "     As you arrive at the library and step into the building, ";
-		else:
-			say "     As you walk up to the front entrance of the library, ";
 		say "you immediately see Urik, who's casually leaning against the corner of the front desk, waiting for you. 'Hey [UrikPlayerAddress]!' he calls out, coming to a stand and walking up to you. Offering a respectful fist-bump that you return, the orc clears his throat, 'Just so you know, I've been looking around a bit in the neighborhood. Found some places not too far away that could have great loot. So... how about we have a little trip?' With a hopeful expression, the orc wiggles his eyebrows at you, then steps back over to the desk, leaning over it to grab a large sports bag that he demonstratively holds up, showing you just how much room for loot is in it. Finally, he hangs it over one shoulder by a solid-looking strap, grinning as he ways, 'I'm ready anytime, just talk to me and say the word!'";
 	else if orc supersized breeder is listed in companionList of Player:
-		if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-			say "     As you arrive at the library and step into the building, ";
-		else:
-			say "     As you walk up to the front entrance of the library, ";
 		say "Urik reaches out and taps your shoulder. 'Hey [UrikPlayerAddress]. I wanted to talk to you about something,' he says, coming to a stand before you and meeting your gaze. 'Remember that I checked out the neighborhood a bit on the way here? Well, there actually were a few places nearby that looked like they might have great loot. So... how about we have a little trip? Didn't want to bring it up before, since the location is actually fairly close to here, and I needed to get something from here anyways.' With a hopeful expression, the orc wiggles his eyebrows at you, then walks over to the front desk, leaning over it to grab a large sports bag stashed behind. Demonstratively holding it up, the orc shows you just how much room for loot is in it, then hangs it over one shoulder by a solid-looking strap. 'I'm ready anytime, just talk to me and say the word!'";
 	now Loyalty of Urik is 10; [he offered looting trips]
 	now Perception of Urik is 1; [enabled the talk option]
@@ -2856,10 +2839,7 @@ to say ResolveEvent Urik_BeerRequest:
 	if debugactive is 1:
 		say "     DEBUG: Urik wants beer[line break]";
 	Load_Urik_Clothed_Image;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	if Urik is in Sitting Area:
 		say "you see Urik off to one side, sitting at one of the desks near the walls, where he is flipping through a motorcycle magazine. ";
 	else if orc supersized breeder is listed in companionList of Player:
@@ -2919,10 +2899,7 @@ to say ResolveEvent Urik_CandyEncounter1:
 	if debugactive is 1:
 		say "     DEBUG: Urik grabs Candy - CandyUrikInteraction: [CandyUrikInteraction], lastCandyUrikInteraction: [lastCandyUrikInteraction], current turn: [turns][line break]";
 	Load_Urik_Clothed_Image;
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	if PlayerRomanced of Urik is true:
 		say "you spot Candy lying stretched-out on his belly, occupying one of the sofas further back in the room. His upper body raised on the girly raccoon's elbows, he is intently reading a book - and at the same time has his lower legs raised, slowly rubbing them against one another. The skirt of his candy striper uniform has been pulled up at the back, revealing his pink lace-trimmed panties. Knowing the eager boy-slut, you don't believe for a second that his pose is anything but intentional. Apparently it had the intended effect too - as your orc warrior/breeder Urik is showing a very respectable bulge in his stretchy stripper-pants. 'Like what you see?' Candy asks him, glancing over his shoulder and giggling. The towering orc grunts in response, baring his tusks as he responds, 'Bah, I got someone real to be with. Though maybe if [SubjectPro of Player] wants, we'll pound you together later and use you as the breeder slut you are.' With that said, the orc turns a cold shoulder to the raccoon and just walks away.";
 		now CandyUrikInteraction is 101; [Urik gave Candy the cold shoulder]

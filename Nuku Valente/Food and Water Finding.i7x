@@ -139,7 +139,7 @@ to say ResolveEvent Potential Resources:
 		say " to sway.";
 		let petbonus be false;
 		let bonus be ( charisma of Player plus level of Player minus 10 ) divided by 2;
-		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger is listed in companionList of Player:
+		if equinoid warrior is listed in companionList of Player or felinoid companion is listed in companionList of Player or demon brute is listed in companionList of Player or royal tiger companion is listed in companionList of Player:
 			increase bonus by 2;
 			now petbonus is true;
 		if HardMode is true and bonus > 10, now bonus is 10;

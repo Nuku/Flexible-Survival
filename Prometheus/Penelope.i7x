@@ -207,7 +207,7 @@ instead of fucking Penelope:
 
 Section 4 - Events
 
-[instead of navigating Grey Abbey Library while ((royal tiger is not listed in companionList of Player) and (Penelope is booked or Penelope is bunkered) and Charisma of Blanche > 0 and "Ryousei - Potential Tutor" is not listed in traits of Penelope and a random chance of 1 in 2 succeeds):
+[instead of navigating Grey Abbey Library while ((royal tiger companion is not listed in companionList of Player) and (Penelope is booked or Penelope is bunkered) and Charisma of Blanche > 0 and "Ryousei - Potential Tutor" is not listed in traits of Penelope and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

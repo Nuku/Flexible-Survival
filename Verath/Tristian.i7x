@@ -4,7 +4,7 @@ Version 2 of Tristian by Verath begins here.
 
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Tristian is in NPC Nexus:
-		move Tristian to Palomino;
+		move Tristian to PALOMINO Dance Club;
 
 Section 1 - Tristian Basics
 
@@ -57,7 +57,7 @@ to say TristianDesc:
 	say "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.";
 
 Conversation of Tristian is { "Neigh!" }.
-Tristian is in The Palomino.
+Tristian is in PALOMINO Dance Club.
 The fuckscene of Tristian is "[sexwithtristian]".
 
 the scent of Tristian is "The stallion boy smells of leather and lust. The scent of gay sex with various other males clings to him.".
@@ -104,7 +104,7 @@ instead of conversing the Tristian:
 		palominoinfect;
 		palominoinfect;
 		now HP of Tristian is 11;
-		now Lance is in the Palomino;
+		now Lance is in PALOMINO Dance Club;
 		increase score by 25;
 		follow the turnpass rule;
 		now lastfuck of Tristian is turns - 8;

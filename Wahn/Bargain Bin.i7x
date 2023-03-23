@@ -357,7 +357,7 @@ carry out bargainhunting:
 			wait for any key;
 			let P be a random number between one and six;
 			if P is 1:
-				Move player to The PALOMINO;
+				Move player to PALOMINO Dance Club;
 			if P is 2:
 				Move player to Zoo Entrance;
 			If P is 3:

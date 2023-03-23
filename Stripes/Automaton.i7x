@@ -137,7 +137,7 @@ When Play begins:
 	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is true;
 	now libido entry is 0; [ Target libido the infection will rise towards. ]
-	now loot entry is "silver semen"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "automaton cum"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
@@ -281,33 +281,21 @@ instead of sniffing automaton cum:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"silver semen"	"Flowing, mercurial cum."	1	silver semen
+"automaton milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Automaton Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	automaton milk
 
 automaton milk is a grab object.
 automaton milk is milky.
 Purified of automaton milk is "distilled milk".
 automaton milk is infectious.
 Strain of automaton milk is "Automaton".
-Usedesc of automaton milk is "NOT CODED YET."[[automaton milk use]"];
+Usedesc of automaton milk is "[automaton milk use]";
 
-It is temporary.
-[silver semen is cum.]
+to say automaton milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the automaton milk run over your tongue and down your throat. Tastes rich and a little like metal. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
 
-to say silversemenuse:
-	say "With a little shrug, you tilt your head back and slam down the silvery semen, letting the metallic contents flow down your throat.";
-	[puts Automaton as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Automaton":
-			now MonsterID is y;
-			if "Male Preferred" is listed in feats of Player:
-				now sex entry is "Male";
-			else:
-				now sex entry is "Female";
-			break;
-	infect;
-
-the scent of silver semen is "The contents of the jar has a metallic smell to accompany the musky scent of semen.".
+instead of sniffing automaton milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 [
 Section 3 - Endings

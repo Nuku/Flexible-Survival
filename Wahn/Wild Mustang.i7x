@@ -356,20 +356,20 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 8;
-	now sex entry is "Female"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 100; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 14; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 18; [ Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Nowhere"; [ Case sensitive. If you go down to the woods today, you're in for a big surprise]
-	now Cock Count entry is 0; [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Count entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 18;
 	now Ball Size entry is 4; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now Nipple Count entry is 2; [ Number of nipples. ]
 	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1; [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Depth entry is 20;
-	now Cunt Tightness entry is 12;
+	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 1;
 	now SeductionImmune entry is false;
 	now libido entry is 30; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "food"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]

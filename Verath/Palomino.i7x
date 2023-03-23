@@ -8,21 +8,23 @@ Section 1 - The Palomino Club
 
 Table of GameRoomIDs (continued)
 Object	Name
-PALOMINO	"PALOMINO"
+PALOMINO Dance Club	"PALOMINO"
+PALOMINO Dance Club	"PALOMINO Club"
+PALOMINO Dance Club	"PALOMINO Dance Club"
 
-PALOMINO is a room. It is fasttravel.
-The earea of Palomino is "Outside".
+PALOMINO Dance Club is a room. It is fasttravel.
+The earea of PALOMINO Dance Club is "Outside".
 
-Description of The Palomino is "[palominodesc]".
+Description of PALOMINO Dance Club is "[palominodesc]".
 
 to say palominodesc:
 	say "     Ducking down a darkened alleyway, you find yourself standing in front of a door that has recently been painted dark red. The sound of a techno rhythm from inside is making the door vibrate. Looking above the door, you see a hand lettered sign that simply says 'The Palomino'. Going through the door, you find yourself in a short, ordinary-looking hallway, set slightly apart from the loud music and flashing lights spreading down the hallway from around the far corner.";
 	say "     Stepping around the corner of the hall, the room beyond is much bigger than you expected. It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners. There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built anthropomorphic stallion. Looking closer at the tapestry, you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass. There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.";
 	say "     A mirror ball sparkles and sends a shimmering wave of reflected colors over the foggy dance floor, where around thirty or so people are dancing to the beat of the music. At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
 
-The invent of Palomino is { "soda", "soda" }.
+The invent of PALOMINO Dance Club is { "soda", "soda" }.
 
-instead of sniffing Palomino:
+instead of sniffing PALOMINO Dance Club:
 	say "The infected dance club smells strongly of aroused males, sweat and sex. Lots of sex.";
 
 

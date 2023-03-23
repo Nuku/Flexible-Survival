@@ -28,8 +28,23 @@ a postimport rule:
 
 Section 1 - Meeting Event
 
-instead of going northwest from Park Trail while (level of Player > 10 and RTWinCounter is 0):
-	move player to Shinto Shrine;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_Meeting"	Ryousei_Meeting	"[EventConditions_Ryousei_Meeting]"	Shinto Shrine	2500	2	100
+
+to say EventConditions_Ryousei_Meeting:
+	if level of Player > 10 and RTWinCounter is 0: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Ryousei_Meeting	"Ryousei_Meeting"
+
+Ryousei_Meeting is a situation.
+ResolveFunction of Ryousei_Meeting is "[ResolveEvent Ryousei_Meeting]".
+Sarea of Ryousei_Meeting is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Ryousei_Meeting:
 	if debugactive is 1:
 		say "     DEBUG -> RYOUSEI SHRINE MEETING <- DEBUG [line break]";
 	project Figure of Ryousei_clothed_icon;
@@ -42,11 +57,12 @@ instead of going northwest from Park Trail while (level of Player > 10 and RTWin
 			now area entry is "Park";
 			break;
 	now RTWinCounter is 1;
+	now Ryousei_Meeting is resolved;
 
 Section 2 - Creature Responses
 
 to say RTiger wins:
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		say "     As you collapse at his feet, the muscled tiger looks down upon you with a sigh. 'A pity that you lost so easily, even though I held back quite a bit. I really thought you had more potential. Maybe it is just not your day today, hm? Let us try this again when you have had time to recuperate and... train a bit.' Ryousei folds his hands and gives a little bow to you, then calmly walks off along the forest path.";
 	else: [sparring with Ryo]
 		if HP of Player < 5: [beaten]
@@ -55,7 +71,7 @@ to say RTiger wins:
 			say "     As you pull back and tell him that you concede, Ryousei relaxes from his combat-ready stance and straightens himself. Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a small bow, not too deep but still showing respect. 'A good fight, my friend. I have missed sparring with my compatriots ever since coming to this world. It feels good to get a proper workout without having to battle for life and death.'";
 
 to say RTiger loses: [TODO: Add option for asshole players]
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		if RTWinCounter < 6:
 			increase RTWinCounter by 1;
 		if RTWinCounter is:
@@ -69,22 +85,22 @@ to say RTiger loses: [TODO: Add option for asshole players]
 				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'And again you have won our little sparring duel, my friend. I find myself impressed, truly. I knew from the start you would be a better opponent than those mindlessly ravishing beasts your world seems to be populated with - but now you have really proven yourself.' Smiling, he adds, 'The workout has made me hungry, so I am off to find something to eat, but... let us do this again sometime. I will be looking forward to the next time we meet.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
 			-- 6:
 				say "     Despite still looking like he could keep doing this all day, the muscled tiger suddenly takes a step back from you, interrupting the fight between you two. He puts the palms of his hands together and gives a little bow to you, then says, 'You know what... since I am having so much fun with you - how about we travel together for a while? With the prowess you have proven to me time and again, I am sure you are having grand adventures that I would love to take part in!' Smiling, he adds, 'I will leave you to think about it for a while - but if you accept, you can just use a little magic to reach me. Just focus your mind on my image, then intone 'Watashi wa anata ni yonde, Ryousei'. I will meet you as soon as I am able.' With that said, he walks off, leaving you alone on the forest path when he turns a corner just a moment later.";
-				say "     (Ryousei the royal tiger is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
+				say "     (Ryousei the royal tiger companion is now a possible ally! You can make him your active ally by typing [bold type][link]ally Ryousei[end link][roman type] or [bold type][link]ally tiger[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck Ryousei[end link][roman type]. You can see all the allies you have with the [bold type][link]allies[end link][roman type] command. Allies will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of an ally? Use [bold type][link]ally dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Royal Tiger":
 						now MonsterID is y;
 						now area entry is "Nowhere";
 						break;
-				now royal tiger is tamed;
-				add "Tamed" to Traits of royal tiger;
+				now royal tiger companion is tamed;
+				add "Tamed" to Traits of royal tiger companion;
 				move Ryousei to Grey Abbey Library;
 	else:
 		say "     As you wind yourself up for the next attack, the muscled tiger suddenly takes a step back from you. 'That will be enough for now. I concede to you, my friend. Well fought, it was a pleasure to spar with you.' Bringing his hand-paws together before his chest, he grasps his right fist with the left hand, the muscular tiger gives you a half-bow, showing the respect you earned for your prowess. He gives your shoulder a friendly tap and squeezes it, then adds with a smile, 'Ever since coming to this world, I have really been missing just being able to measure up against a companion, without it having to be a life or death fight. So thank you, for this.'";
 
 to say RTigerDesc:
 	project Figure of Ryousei_clothed_icon;
-	if Royal Tiger is not tamed: [normal fight]
+	if Royal Tiger companion is not tamed: [normal fight]
 		say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
 	else:
 		say "     Smiling as he gets into a combat-ready posture, the muscular anthro tiger looks quite eager for some action. 'Let us measure our strength against one another then! Are you ready?' As soon as you nod, he wades into combat against you - claws sheathed though, as it is just a friendly clash.";
@@ -269,22 +285,23 @@ Section 4 - NPC/Pet
 
 Table of GameCharacterIDs (continued)
 object	name
-royal tiger	"royal tiger"
+royal tiger companion	"royal tiger"
+royal tiger companion	"royal tiger companion"
 
-royal tiger is a pet.
-NPCObject of royal tiger is Ryousei.
-understand "Ryousei" as royal tiger.
-understand "Ryo" as royal tiger.
-IDList of royal tiger is { "Ryousei", "ryousei", "ryo", "Ryo", "tiger", "tiger warrior", "tiger general", "royal tiger" }.
-printed name of royal tiger is "Ryousei".
-Description of royal tiger is "[RyouseiDesc]".
-Weapon Damage of royal tiger is 15.
-The level of royal tiger is 1.
-Dexterity of royal tiger is 15.
-The summondesc of royal tiger is "[SummonRyousei]".
-The dismissdesc of royal tiger is "[DismissRyousei]".
-The assault of royal tiger is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".
-the fuckscene of royal tiger is "[sexwithRyousei]".
+royal tiger companion is a pet.
+NPCObject of royal tiger companion is Ryousei.
+understand "Ryousei" as royal tiger companion.
+understand "Ryo" as royal tiger companion.
+IDList of royal tiger companion is { "Ryousei", "ryousei", "ryo", "Ryo", "tiger", "tiger warrior", "tiger general", "royal tiger", "royal tiger companion" }.
+printed name of royal tiger companion is "Ryousei".
+Description of royal tiger companion is "[RyouseiDesc]".
+Weapon Damage of royal tiger companion is 15.
+The level of royal tiger companion is 1.
+Dexterity of royal tiger companion is 15.
+The summondesc of royal tiger companion is "[SummonRyousei]".
+The dismissdesc of royal tiger companion is "[DismissRyousei]".
+The assault of royal tiger companion is "[one of]Ryousei wades into the fight with sure strides, swiping his claws to hurt your enemy at a critical moment.[or]The royal tiger charges into combat, roaring at your opponent and making them back down a step.[or]A growled roar by Ryousei distracts your enemy a moment - long enough for you to score a quick hit![or]Snarling, your royal tiger companion slashes your enemy with his claws![at random]".
+the fuckscene of royal tiger companion is "[sexwithRyousei]".
 
 to say SummonRyousei:
 	project Figure of Ryousei_clothed_icon;
@@ -359,10 +376,10 @@ to say RyouseiDesc:
 		say "     Having made himself at home in the library, the large cat usually hangs out on the ground floor - doing Tai Chi exercises, browsing books or meditating while sitting cross-legged on a sofa. He never is far from the front door though, and you notice that he frequently glances over to it, ready to react in case someone - or something - might invade your refuge. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
 	else:
 		say "     Accompanying you on your adventures throughout the city, he is never far away, usually just a step behind and a little to the side - leaving you the lead as his local guide. As he notices your attention on himself, the tiger gives you a companionable nod and a wink. Seems like he's more than ready to chat - or do other things...";
-	if royal tiger is listed in companionList of Player:
+	if royal tiger companion is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
-instead of sniffing royal tiger:
+instead of sniffing royal tiger companion:
 	say "[RyouseiScent]";
 
 to say RyouseiScent:
@@ -371,18 +388,18 @@ to say RyouseiScent:
 instead of conversing the Ryousei:
 	if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 		say "[RyouseiTalkMenu]";
-	else if royal tiger is listed in companionList of Player:
+	else if royal tiger companion is listed in companionList of Player:
 		say "[RyouseiTalkMenu]";
 	else:
 		say "     Ryousei isn't here.";
 
-instead of conversing royal tiger:
-	if royal tiger is not tamed:
+instead of conversing royal tiger companion:
+	if royal tiger companion is not tamed:
 		say "     Who?";
 	else:
 		if Player is in Grey Abbey Library and Ryousei is in Grey Abbey Library:
 			say "[RyouseiTalkMenu]";
-		else if royal tiger is listed in companionList of Player:
+		else if royal tiger companion is listed in companionList of Player:
 			say "[RyouseiTalkMenu]";
 		else:
 			say "     Ryousei isn't here.";
@@ -812,32 +829,33 @@ to say RyouseiXerxesSex: [Ryousei, Xerxes & the player have fun]
 
 Section 5 - Events
 
-instead of navigating Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
-	say "[RyouseiMeetsXerxes]";
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_Xerxes_Encounter1"	Ryousei_Xerxes_Encounter1	"[EventConditions_Ryousei_Xerxes_Encounter1]"	Grey Abbey Library	2500	2	100
 
-instead of going outside from Grey Abbey Library while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
-	say "[RyouseiMeetsXerxes]";
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_Xerxes_Encounter1"	Ryousei_Xerxes_Encounter1	"[EventConditions_Ryousei_Xerxes_Encounter1]"	Grey Abbey Library	2500	2	100
 
-instead of going down from Grey Abbey 2F while (royal tiger is listed in companionList of Player and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA:
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: RYOUSEI / XERXES MEETING[line break]";
-	say "[RyouseiMeetsXerxes]";
+to say EventConditions_Ryousei_Xerxes_Encounter1:
+	if (royal tiger companion is tamed and Xerxes is in Grey Abbey Library and RyouseiXerxes is 0) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
 
-to say RyouseiMeetsXerxes:
+Table of GameEventIDs (continued)
+Object	Name
+Ryousei_Xerxes_Encounter1	"Ryousei_Xerxes_Encounter1"
+
+Ryousei_Xerxes_Encounter1 is a situation.
+ResolveFunction of Ryousei_Xerxes_Encounter1 is "[ResolveEvent Ryousei_Xerxes_Encounter1]".
+Sarea of Ryousei_Xerxes_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Ryousei_Xerxes_Encounter1:
 	if lust of Xerxes < 3:
 		project Figure of Xerxes_soft_icon;
 	else:
 		project Figure of Xerxes_awesome_soft_icon;
-	say "     As you walk into the library, Xerxes immediately rushes towards you on all fours and gives happy barks. Eager to greet his master, the naked human circles you with exuberant energy, then jumps up to brace himself with both hands on your shoulder and licks you in the face, happily [if lust of Xerxes > 2]yammering, 'Master's back! Master's back! Xerxes missed Master!' [else]barking to greet you. [end if]While you deal with the very excitable dog in the body of a nineteen-year-old, drop dead gorgeous man with black hair and a charming smile, you become aware that Ryousei is watching you with a raised eyebrow, standing not too far away. As you meet his eyes, the anthro tiger clears his throat and says, 'What an interesting... pet, you have there. I was under the impression that humans usually are more, well... civilized. What's his story?'";
+	say "[LibraryEntry_NavOrWalk]";
+	say "Xerxes immediately rushes towards you on all fours and gives happy barks. Eager to greet his master, the naked human circles you with exuberant energy, then jumps up to brace himself with both hands on your shoulder and licks you in the face, happily [if lust of Xerxes > 2]yammering, 'Master's back! Master's back! Xerxes missed Master!' [else]barking to greet you. [end if]While you deal with the very excitable dog in the body of a nineteen-year-old, drop dead gorgeous man with black hair and a charming smile, you become aware that Ryousei is watching you with a raised eyebrow, standing not too far away. As you meet his eyes, the anthro tiger clears his throat and says, 'What an interesting... pet, you have there. I was under the impression that humans usually are more, well... civilized. What's his story?'";
 	say "     Tousling your human dog's hair, you explain to Ryousei that Xerxes actually isn't a human. Or wasn't originally, at least - until the whole trouble with the nanites started and everything went to hell. By the time you proceed to explaining about Mike, the dog trainer turned anthro stag, Xerxes begins trotting over to Ryousei to check out your new friend. 'Ah - I see,' the tiger general tells you with a thoughtful nod, holding a clawed hand out for Xerxes to sniff. 'Now if you will forgive me my ignorance - what exactly is a dog? We do not have such beasts in my plane. Maybe... similar to an ahuizotl? Those are sometimes trained to infiltrate enemy lines and drown their men when they least expect it.'";
 	WaitLineBreak;
 	say "     You notice a certain tenseness in the proud tiger, stemming from having to admit he doesn't know something, combined with a bit of caution from suspecting a connection with those watery assassins he mentioned. Quickly, you proceed to explain some everyday facts about dogs - being four-legged animals with fur, the size ranges and that they're harmless - well, usually... as it depends on what they're trained for. Trusted companions for families, for hunting or guarding or sniffing things out for the police, some sadly even for fighting. Now much more relaxed about Xerxes, Ryousei looks down on the young man - smirking at the fact that the human dog is busily sniffing his crotch, really pressing his nose right into the material of the tiger's pants. 'So, what exactly IS your pet trained for then?' the otherworldly visitor asks, patting Xerxes softly on the head.";
@@ -867,11 +885,27 @@ to say RyouseiMeetsXerxes:
 		say "     Now that his untamed libido has been satisfied, the tiger once more proves his underlying compassion and decency as he just holds on to Xerxes, gently stroking the young man's chest and making both of their bodies vibrate with his purring. Ryousei licks Xerxes sweaty skin playfully at his neck and cheek, then stretches to bring his muzzle to Xerxes mouth as the young man turns his head, sharing a long and eager kiss. The two of them spend some pleasant moments just touching and making out, then Ryousei eventually gently pulls the human dog off his softening erection and lowers him to the ground. Coming to kneel before the anthro tiger, Xerxes gives him a hug around the midriff before scampering off to his bedding, curling up to take a post-coital nap. Meanwhile, Ryousei gives you a gracious smile and a little bow as he says, 'Thank you. Xerxes really is an exceptional pet,' then he starts cleaning himself up and gets dressed.";
 		NPCSexAftermath Xerxes receives "AssFuck" from Ryousei;
 	now RyouseiXerxes is 1;
+	now Ryousei_Xerxes_Encounter1 is resolved;
 
-instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Hayato is in Darkened Alcove and RyouseiHayato is 0):
-	move player to Grey Abbey Library;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Ryousei_Hayato_Encounter1"	Ryousei_Hayato_Encounter1	"[EventConditions_Ryousei_Hayato_Encounter1]"	Grey Abbey 2F	2500	2	100
+
+to say EventConditions_Ryousei_Hayato_Encounter1:
+	if (royal tiger companion is tamed and Hayato is in Darkened Alcove and RyouseiHayato is 0): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Ryousei_Hayato_Encounter1	"Ryousei_Hayato_Encounter1"
+
+Ryousei_Hayato_Encounter1 is a situation.
+ResolveFunction of Ryousei_Hayato_Encounter1 is "[ResolveEvent Ryousei_Hayato_Encounter1]".
+Sarea of Ryousei_Hayato_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Ryousei_Hayato_Encounter1:
 	if debugactive is 1:
-		say "     DEBUG: RYOUSAI / HAYATO MEETING[line break]";
+		say "     DEBUG: RYOUSEI / HAYATO MEETING[line break]";
 	project Figure of Ryousei_clothed_icon;
 	say "     As you angle your steps towards the stairs to the upper level of the library, your tiger companion suddenly tenses up. Stepping forward, he stretches out a clawed hand to hold you back, the fur on the back of his neck and tail bristling up. 'Wait. I feel a powerful presence quite near us - an Oni! We should challenge and kill it at once, before it starts eating people!' Before you can say anything, he starts sprinting up the stairs with unsheathed claws, leaving deep scratches in the handrail as he takes several steps at once in long jumps, ready for violence. Chasing after him, you reach the crest of the stairway a few seconds after the tiger, who is now standing in a combat-stance and seems to be taking in the tactical situation. The intensity of Ryousei's glare is almost frightening as he observes the little camp Hayato has made for himself - as well as Hayato himself, who is sitting on the ground, facing away from you and bent forward over something.";
 	say "     Feelings of aggression hang heavy in the air and Ryousei's sharp teeth show visibly in a silent snarl. He gives you a sidelong glance, never really taking his gaze off the red Oni, then hisses in a low tone, 'How could this be? A giant Red Oni has made his home here - and you let it happen? Do you not know how dangerous and barbarically violent these beasts are? I have stood knee-deep in gnawed bones in an Oni's lair, some of which belonged to my compatriots and friends.' That said, he is off again, letting out a hissed yowl as he closes in on Hayato. 'Turn around and face me, creature! I will have justice for your victims or die trying!'";
@@ -881,16 +915,27 @@ instead of going up from Grey Abbey Library while (royal tiger is listed in comp
 	WaitLineBreak;
 	say "     Smoothing down the ruffled fur over his neck, Ryousei steps up to Hayato and gives him a deep bow. 'My apologies. I clearly let the memories of past encounters of... actual oni... get the better of me. Now then - please do me the honor of telling me your tale. The least I can do is listen to it, no matter how long.' The royal tiger stands calmly in front of the red oni, both hands with their sheathed claws clasped in front of himself. 'Um - eh... yes of course,' Hayato replies a moment later, still a bit flustered. As he waves Ryousei to one of the thin sitting mats he laid out in his camp and the tiger sits down in a cross-legged pose, you leave the two of them to get acquainted.";
 	now RyouseiHayato is 1;
+	now Ryousei_Hayato_Encounter1 is resolved;
 
-instead of going up from Grey Abbey Library while (royal tiger is listed in companionList of Player and Rane is in Sitting Area and RyouseiRane is 0) and Player is not CoA:
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: RYOUSAI / RANE MEETING[line break]";
-	say "[RyouseiMeetsRane]";
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_Rane_Encounter1"	Ryousei_Rane_Encounter1	"[EventConditions_Ryousei_Rane_Encounter1]"	Grey Abbey 2F	2500	2	100
 
-to say RyouseiMeetsRane:
+to say EventConditions_Ryousei_Rane_Encounter1:
+	if (royal tiger companion is tamed and Rane is in Sitting Area and RyouseiRane is 0) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Ryousei_Rane_Encounter1	"Ryousei_Rane_Encounter1"
+
+Ryousei_Rane_Encounter1 is a situation.
+ResolveFunction of Ryousei_Rane_Encounter1 is "[ResolveEvent Ryousei_Rane_Encounter1]".
+Sarea of Ryousei_Rane_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Ryousei_Rane_Encounter1:
 	project Figure of Ryousei_clothed_icon;
-	say "     As you walk up the stairs with Ryousei in tow, you see the back of a head sticking out over the balcony railing of the upper library floor - easily identifiable as belonging to Rane by both the white hair as well as the two thin blue horns rising to sharp points. Reaching the end of the stairway, you see that the blue oni is sitting on the ground, leaning back relaxedly against the railing. He is resting his arm on one of a small pile of boxes and sacks he seems to have brought up here recently and gives you a friendly smile as he recognizes you. 'Hey hey,' the blue demon calls out cheerfully and you guide your steps his way - only to find yourself overtaken by your feline companion, who moves to stand straight in front of Rane.";
+	say "     As you move to the front section of the upper floor of the library, at the same time as Ryousei is doing so, you see the back of a head sticking out over the balcony railing of the upper library floor - easily identifiable as belonging to Rane by both the white hair as well as the two thin blue horns rising to sharp points. Reaching the end of the stairway, you see that the blue oni is sitting on the ground, leaning back relaxedly against the railing. He is resting his arm on one of a small pile of boxes and sacks he seems to have brought up here recently and gives you a friendly smile as he recognizes you. 'Hey hey,' the blue demon calls out cheerfully and you guide your steps his way - only to find yourself overtaken by your feline companion, who moves to stand straight in front of Rane.";
 	say "     'Konnichiwa wise one,' the anthro tiger says as he lays one of his hands upon the other and gives a little bow to the blue oni. 'It is good to see one of your people in this strange land, filled with beasts and peril as it is.' Rane's eyebrows rise a little at the tone of Ryousei's greeting and he looks the striped feline up and down. After casually letting his gaze linger on your companion's crotch for several seconds, the blue demon huffs out a little snort of amusement, then nods knowingly at Ryousei. 'Yeah, isn't it just the weirdest place, hm? Good thing that we've run into each other. But where are my manners - come on, sit down and let me offer you something to drink,' Rane adds next, waving your companion closer and pointing out a piece of free ground in front of himself.";
 	WaitLineBreak;
 	say "     'I gladly accept,' Ryousei replies in a warm tone, lowering himself into a cross-legged position while adding, 'I haven't had a proper tea-ceremony since before I came to this world.' The blue oni leans forward and gives Rane a companionable pat on the shoulder, making a comment about being in the land of lewd barbarians (at which point he winks at you). Then Rane looks to his side, picking one of the boxes there and pulling it up before levering the wooden lid off with the nails of strong fingers. 'Forget the tea - I got just the right stuff to drink together with a new friend,' he tells Ryousei with a grin, then pulls out a big-bellied clay bottle with sake. The tiger's tail freezes in its regular movements then twitches haltingly as your companion does a confused double-take of Rane, his brows drawing together. Yet before he can say or do anything, the oni has already set out several masu boxes... traditional containers to drink sake from. As Rane pours one, then another 'glass' of sake, he looks over to you and gives an inviting wave. 'Come sit with us, it's more fun to drink together!' he calls to you, then looks expectantly, the neck of the bottle poised above a still-empty sake box.";
@@ -939,6 +984,7 @@ to say RyouseiMeetsRane:
 		LineBreak;
 		say "[RyoSpoonsRane]";
 	now RyouseiRane is 1;
+	now Ryousei_Rane_Encounter1 is resolved;
 
 to say RaneSpoonsRyo:
 	project Figure of Ryousei_naked_icon;
@@ -1069,24 +1115,29 @@ to say RyoSpoonsRane:
 		say "     In response, Rane just gives the tiger a companionable slap on the shoulder, then says, 'Aw, don't worry about it buddy. I totally went with it too because I wanted to see what you'd do. No harm no foul, eh? I'll gladly have you as a drinking buddy.' The two of them smile at each other for a moment, with a bit of embarrassment on Ryousei's face while Rane nonchalantly checks out his body. Then the oni reaches out and runs his hand down tiger's muscled flank. 'Just so you know... sake or no sake, I'd be interested in getting together with you again. One thing this oni definitely isn't is monk-ish and celibate, if you get my drift.' With a wink at Ryousei, Rane then gets up and bends over to grab his loincloth - not at all accidentally flashing the tiger his dick and firmly muscled blue butt. He adds, 'It is a standing offer for such a sexy cat as yourself. But now, I am off to re-stock on sake. Something tells me I need more in the future.' Then the blue oni casually vaults over the railing and light-footedly bounces off the tops of one, two, three sturdy bookshelves before jumping onto the floor of the library. With a grin over his shoulder, he puts his loincloth back on, then vanishes through the main doors soon after.";
 		say "     After sorting out his appearance and donning his kimono again, Ryousei comes back over to your side a moment later. The tiger looks over to Rane's camp with a raised eyebrow, his tail twitching a bit through the air in an unruly fashion. 'Quite an unusual being,' he remarks, to which you smile and nod while he continues, '...but definitely interesting to know. I never knew a blue oni could be like that. I suppose everything truly is different in this realm...' There is a thoughtful shimmer in his eyes as Ryousei says this, and you notice that he casually tugs the front of his kimono a bit, having to adjust his crotch. Looks like he wouldn't be opposed to some action with the blue demon.";
 
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_TaiChi_Intro"	Ryousei_TaiChi_Intro	"[EventConditions_Ryousei_TaiChi_Intro]"	Grey Abbey Library	2500	2	100
 
-instead of navigating Grey Abbey Library while (Ryousei is in Grey Abbey Library and a random chance of 1 in 3 succeeds and "TaiChi_Seen" is not listed in Traits of Ryousei and "TaiChi_Joined" is not listed in Traits of Ryousei and "TaiChi_Ignored" is not listed in Traits of Ryousei):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
-	if debugactive is 1:
-		say "     DEBUG: Ryousei does Tai Chi - current turn: [turns][line break]";
-	say "     As you enter the library, [RyouseiDoesTaiChi]";
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Ryousei_TaiChi_Intro"	Ryousei_TaiChi_Intro	"[EventConditions_Ryousei_TaiChi_Intro]"	Grey Abbey Library	2500	2	100
 
-after going to Grey Abbey Library while (Ryousei is in Grey Abbey Library and a random chance of 1 in 3 succeeds and "TaiChi_Seen" is not listed in Traits of Ryousei and "TaiChi_Joined" is not listed in Traits of Ryousei and "TaiChi_Ignored" is not listed in Traits of Ryousei):
-	if debugactive is 1:
-		say "     DEBUG: Ryousei does Tai Chi - current turn: [turns][line break]";
-	try looking;
-	project the Figure of Ryousei_face_icon;
-	say "     Going to the front section of the library, [RyouseiDoesTaiChi]";
+to say EventConditions_Ryousei_TaiChi_Intro:
+	if (Ryousei is in Grey Abbey Library and "TaiChi_Seen" is not listed in Traits of Ryousei and "TaiChi_Joined" is not listed in Traits of Ryousei and "TaiChi_Ignored" is not listed in Traits of Ryousei): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
 
-to say RyouseiDoesTaiChi:
+Table of GameEventIDs (continued)
+Object	Name
+Ryousei_TaiChi_Intro	"Ryousei_TaiChi_Intro"
+
+Ryousei_TaiChi_Intro is a situation.
+ResolveFunction of Ryousei_TaiChi_Intro is "[ResolveEvent Ryousei_TaiChi_Intro]".
+Sarea of Ryousei_TaiChi_Intro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Ryousei_TaiChi_Intro:
 	project Figure of Ryousei_clothed_icon;
+	say "[LibraryEntry_NavOrWalk]";
 	say "you spot your anthro tiger companion Ryousei moving along between the bookshelves towards the back of the room, then leave through the back door. He is moving with a determined stride, and curiosity about where he is going draws you to follow after the feline. Hustling along to catch up, you catch the door before it swings fully shut and open it again, looking outside. Your otherworldly guest doesn't appear to have gone all that far, just to the nearest stretch of grass, next to the fountain. Bringing his hands together, he stands straight and bends his head with closed eyes for a second, then begins to move, slow but smoothly, taking a peculiar pose with one arm stretched down, the other slightly raised. Holding this for a few seconds, another pose follows easily, now with the tiger's hands furled in towards his body. Ah, now you recognize what this is - Ryousei is doing something that seems similar to Tai Chi! Looks pretty neat and relaxing, how he moves in the shine of the [if daytimer is day]sunlight[else]moonlight[end if].";
 	say "     [bold type]Do you want to do something?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Walk up and sit on the edge of the fountain. You can keep him some company.";
@@ -1120,6 +1171,7 @@ to say RyouseiDoesTaiChi:
 		say "     With a shrug, you close the door and walk back to the front of the library. You have better things to do than watching some glorified stretching exercises.";
 		add "TaiChi_Ignored" to Traits of Ryousei;
 	add "TaiChi_DoneForToday" to Traits of Ryousei; [filter for only one session a day]
+	now Ryousei_TaiChi_Intro is resolved;
 
 to say RyouseiTaiChi:
 	if "TaiChi_DoneForToday" is listed in Traits of Ryousei: [already had some today]
@@ -1138,7 +1190,7 @@ to say RyouseiTaiChi:
 		add "TaiChi_DoneForToday" to Traits of Ryousei; [filter for only one session a day]
 
 an everyturn rule:
-	if Royal Tiger is tamed:
+	if Royal Tiger companion is tamed:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 			if "TaiChi_DoneForToday" is listed in Traits of Ryousei: [filter for only one session a day]
 				remove "TaiChi_DoneForToday" from Traits of Ryousei;
@@ -1161,12 +1213,12 @@ to say RyouseiSparring:
 			choose row y in Table of Random Critters;
 			if Name entry is "Royal Tiger":
 				now MonsterID is y;
-				now lev entry is (13 + Level of Royal Tiger);
-				now wdam entry is (Weapon Damage of Royal Tiger);
+				now lev entry is (13 + Level of Royal Tiger companion);
+				now wdam entry is (Weapon Damage of Royal Tiger companion);
 				now HP entry is (95 + (Level of Royal Tiger * 10));
 				break;
 		say "Ryousei chuckles and nods eagerly. 'What a great idea. I'm ready if you are!'";
-		if Royal Tiger is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
+		if Royal Tiger companion is listed in CompanionList of Player: [temporary dismissal since he can't fight with you against himself]
 			ForceCompanionDismiss "Ryousei";
 			challenge "Royal Tiger";
 			ForceCompanionJoin "Ryousei";
@@ -1174,12 +1226,12 @@ to say RyouseiSparring:
 			challenge "Royal Tiger";
 		if fightoutcome < 30: [won  or lost]
 			let needed be 0;
-			increase the XP of Royal Tiger by level of Player;
-			now needed is ( level of Royal Tiger ) times 10;
+			increase the XP of Royal Tiger companion by level of Player;
+			now needed is ( level of Royal Tiger companion ) times 10;
 			if "Good Teacher" is listed in feats of Player:
-				now needed is ( level of Royal Tiger ) times 6;
-			if XP of Royal Tiger >= needed and level of Royal Tiger < level of Player and humanity of Player > 0:
-				pet level up Royal Tiger;
+				now needed is ( level of Royal Tiger companion ) times 6;
+			if XP of Royal Tiger companion >= needed and level of Royal Tiger companion < level of Player and humanity of Player > 0:
+				pet level up Royal Tiger companion;
 
 Section 6 - Endings
 
@@ -1188,7 +1240,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Ryousei's Epilogue"	"Companion"	"Pet"	Ryousei's Epilogue rule	750	false
 
 This is the Ryousei's Epilogue rule:
-	if royal tiger is tamed: [player became companion of Ryo]
+	if royal tiger companion is tamed: [player became companion of Ryo]
 		trigger ending "Ryousei's Epilogue"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10: [succumb ending]
 			say "     Ryousei is sad to see his favorite companion in this world succumb to the mental effects of the nanite infection, but there is little he can do to bring you back to the old self he learned to know and like. The proud tiger stays close to you for a while afterwards, but your quickly building lust soon makes you look at him in a lewd and hungry way. Rather than taking the chance of hurting you if he has to fight off forceful advances, your friend chooses to go instead - leaving you behind with a sigh.";

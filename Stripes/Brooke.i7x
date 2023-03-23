@@ -13,7 +13,7 @@ Version 1 of Brooke by Stripes begins here.
 
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Brooke is in NPC Nexus:
-		move Brooke to Palomino;
+		move Brooke to PALOMINO Dance Club;
 
 Section 1 - Brooke
 
@@ -22,7 +22,7 @@ object	name
 Brooke	"Brooke"
 
 Brooke is a man.
-Brooke is in The Palomino.
+Brooke is in PALOMINO Dance Club.
 ScaleValue of Brooke is 3. [human sized]
 SleepRhythm of Brooke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Body Weight of Brooke is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]

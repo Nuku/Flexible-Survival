@@ -1032,7 +1032,7 @@ diavoborg cum is a grab object. diavoborg cum is cum.
 Usedesc of diavoborg cum is "[diavoborg cum use]";
 
 to say diavoborg cum use:
-	say "Lifting the bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. It tastes rich, sweet and beast-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. You feel especially sated after drinking all of that, and it got you thinking about that big strong behemoth again...";
+	say "Lifting the bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. It tastes rich, sweet and beast-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'. You feel especially sated after drinking all of that, and it got you thinking about that big strong behemoth again...";
 	PlayerDrink 12;
 	PlayerEat 8;
 	LibidoBoost 20;
