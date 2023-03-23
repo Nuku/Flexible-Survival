@@ -108,8 +108,8 @@ When Play begins:
 	now libido entry is 80; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is "batcubus milk"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now MilkItem entry is "Batcubus Milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "Batcubus Cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]slender[or]elegant[cycling]";
@@ -236,12 +236,35 @@ instead of sniffing batcubus milk:
 say "You open the lid of the bottle and smell the milk. Seems fresh and drinkable, even though it isn't refrigerated. Must be a side effect of the nanites in it.";
 
 batcubus milk is a grab object.
+batcubus milk is milky.
+Purified of batcubus milk is "distilled milk".
+batcubus milk is infectious.
+Strain of batcubus milk is "Batcubus".
 Usedesc of batcubus milk is "[batcubus milk use]";
 
 to say batcubus milk use:
 	say "Taking the cap of the bottle of milk, you greedily drink down its contents, swallowing the tasty milk.";
 	PlayerDrink 6;
 	infect "Batcubus";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Batcubus cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Batcubus Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	batcubus cum
+
+batcubus cum is a grab object.
+batcubus cum is cum.
+Purified of batcubus cum is "distilled cum".
+batcubus cum is infectious.
+Strain of batcubus cum is "Batcubus".
+Usedesc of batcubus cum is "[batcubus cum use]";
+
+to say batcubus cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing batcubus cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
 
 Section 4 - Endings
 

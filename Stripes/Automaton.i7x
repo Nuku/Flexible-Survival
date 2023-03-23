@@ -260,13 +260,35 @@ to say autoskinchange:
 	now playermetalskin is metalskin;
 	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"automaton cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for mercury, if someone hadn't written 'Automaton Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	automaton cum
+
+automaton cum is a grab object.
+automaton cum is cum.
+automaton cum is infectious.
+Purified of automaton cum is "distilled cum".
+Strain of automaton cum is "Automaton".
+Usedesc of automaton cum is "[automaton cum use]";
+
+to say automaton cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes metallic. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing automaton cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda coppery.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "silver semen"	"Flowing, mercurial cum."	1	silver semen
 
-silver semen is a grab object.
-Usedesc of silver semen is "[silversemenuse]".
+automaton milk is a grab object.
+automaton milk is milky.
+Purified of automaton milk is "distilled milk".
+automaton milk is infectious.
+Strain of automaton milk is "Automaton".
+Usedesc of automaton milk is "[automaton milk use]";
 
 It is temporary.
 silver semen is cum.
