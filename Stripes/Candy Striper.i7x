@@ -490,7 +490,7 @@ to say coondesc:
 [Update for WalkinEvents table]
 Table of NavInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-3	"LibraryCandyMeeting"	LibraryCandyMeeting	"[EventConditions_LibraryCandyMeeting]"	Grey Abbey Library	2500	2	100
+2	"LibraryCandyMeeting"	LibraryCandyMeeting	"[EventConditions_LibraryCandyMeeting]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_LibraryCandyMeeting:
 	if coonstatus is 1:
