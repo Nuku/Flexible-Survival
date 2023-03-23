@@ -316,8 +316,8 @@ When Play begins:
 	now Cunt Tightness entry is 6; [ Width in inches of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 35; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now loot entry is "jaguar warrior fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
@@ -447,7 +447,7 @@ to say JagBodyTF:
 	else:
 		say "it shifts to a feline shape, surging with power as you gain the physique of a seasoned warrior, a sleek and agile jungle predator";
 
-Section 3 - Jaguar Headdress
+Section 3 - Jaguar Headdress and loot
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -485,6 +485,21 @@ An everyturn rule:
 		choose row MonsterID from the Table of Random Critters;
 		if "Male Preferred" is not listed in feats of Player:
 			now sex entry is "Female";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"jaguar warrior fur"	"A tuft of spotted fur that looks like it has been pulled out of the coat of a jaguar. It's nicely soft."	0	jaguar warrior fur
+
+jaguar warrior fur is a grab object.
+It is temporary.
+Usedesc of jaguar warrior fur is "[JaguarWarriorFurUse]";
+
+to say JaguarWarriorFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Jaguar Warrior";
+
+instead of sniffing jaguar warrior fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Section 4 - NPC
 
