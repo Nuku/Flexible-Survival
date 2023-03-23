@@ -1039,6 +1039,14 @@ instead of sniffing gilded staff:
 
 Usedesc of gilded staff is "[mdrakecontact]";
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"Wallstuck"	Wallstuck	"[EventConditions_Wallstuck]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Wallstuck:
+	if (mdasslevel > 3 and gilded staff is not owned):
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Table of GameEventIDs (continued)
 Object	Name
 Wallstuck	"Wallstuck"
@@ -1049,10 +1057,7 @@ The level of Wallstuck is 5.
 Sarea of Wallstuck is "Outside".
 
 [Drake Visit - gain gilded staff and leads to more content]
-instead of navigating Grey Abbey Library while (location of player is Red Light District and mdasslevel > 3 and gilded staff is not owned and a random chance of 1 in 2 succeeds):
-	say "[NavCheck Grey Abbey Library]";
-	if NavCheckReturn is false, stop the action;
-	move player to Grey Abbey Library;
+to say ResolveEvent Wallstuck:
 	say "     It all began as an otherwise normal day at the Grey Abbey Library. You had been minding your own business for the most part, taking a break from the hectic adventures of the city around you, and simply relaxing in your own body. Suddenly, however, this peace is disrupted when a loud crackling sound echoes from somewhere near the front entrance. Startled, you turn to face the entrance, your not-insignificant rear armament swinging wide enough to smack the side of a shelf and knock several items loose. You find more important things occupy your attention than cleaning up after your momentary distract, however, as you see the likely source of the unusual sound – the magic drake herself, at your own front door.";
 	say "     Seeing the one responsible for a specific part of your own transformation right here in the library, so far away from her usual haunts, is enough to make you speechless. Though you can't see it yourself, you suspect your own expression is similarly in a state of disbelief. The drake however is seemingly unbothered, or perhaps even somewhat pleased, by your reaction to her presence. Her relatively calm face shifts into a wide grin, rife with the smug aura you so associate with her, and she strides towards you. 'Oh, so this is where my familiar has been living, hmm? Not a bad little home, really, a fine place for my toy to stay when away from me.' Before you have time to truly process that, she reaches your position and throws a scaled arm around your shoulder, giving you a slight squeeze. 'Well, aren't you going to give me a tour?' Still slightly in a state of emotional disarray, and further distracted by the closeness of the overpowering figure, you nod dumbly, and start walking.";
 	WaitLineBreak;
@@ -1065,6 +1070,7 @@ instead of navigating Grey Abbey Library while (location of player is Red Light 
 	say "     'The next time you're ready to have a visit from your mistress, or even just wish to speak with me further, just use it.' She smirks at your still slightly bewildered expression. 'Something tells me you won't have any trouble understanding how it's used, isn't that right familiar?' With a loud chuckle, she steps away from you completely, and strolls purposefully back out of the library, leaving you still dazed and very aroused – something you're familiar with when it comes to the sorceress.";
 	CreatureSexAftermath "Player" receives "AssDildoFuck" from "Magic Drake";
 	ItemGain gilded staff by 1;
+	now Wallstuck is resolved;
 
 to say mdrakecontact:
 	if mdrakequest is 0: [first time scene]
