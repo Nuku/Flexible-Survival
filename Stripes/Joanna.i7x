@@ -437,11 +437,11 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 6 
 	move player to Flower Garden;
 	SFAwesomeTree;
 
-instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 and carried of awesome fruit > 0 and carried of awesomer fruit > 0 and carried of awesomest fruit > 0 and "Awesome Tree" is listed in vials of player): [Player is carrying all the necessary items for ALT path]
+instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 and carried of awesome fruit > 0 and carried of awesomer fruit > 0 and carried of awesomest fruit > 0 and there is a name of "Awesome Tree" in the Table of OwnedVials): [Player is carrying all the necessary items for ALT path]
 	say "[NavCheck Flower Garden]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
 	move player to Flower Garden;
-	deletevial "Awesome Tree";
+	VialLoss "Awesome Tree" by 1;
 	SFAwesomeTree;
 
 to SFAwesomeTree:
