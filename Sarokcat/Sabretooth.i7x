@@ -25,7 +25,7 @@ to say Sabretooth wins:
 
 To say Sabretooth loses:
 	project figure of Sabretooth_soft_icon;
-	say "The large prehistoric beast falls back from your forceful assault, slowly backing down the museum corridors as you watch it warily, until it turns and darts down a side passageway. You relax as the creature has obviously gone off somewhere to lick its wounds, and revel in your victory over one of the greatest large predators of the past.'";
+	say "The large prehistoric beast falls back from your forceful assault, slowly backing down the museum corridors as you watch it warily, until it turns and darts down a side passageway. You relax as the creature has obviously gone off somewhere to lick its wounds, and revel in your victory over one of the greatest large predators of the past.";
 
 to say Sabretooth Desc:
 	setmongender 3;
