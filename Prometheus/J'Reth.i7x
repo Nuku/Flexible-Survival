@@ -44,16 +44,15 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		change the Southeast exit of J'Reth's Room to Mall West Wing; [connecting the location to the travel room]
 
 to Count_J'RethVials:
-	now J'Reth_MVialsOwned is 0;
-	now J'Reth_HVialsOwned is 0;
-	now J'Reth_FVialsOwned is 0;
-	repeat with z running through vials of Player:
-		if z is "Draco-Mantis Male":
-			increase J'Reth_MVialsOwned by 1;
-		else if z is "Draco-Mantis Herm":
-			increase J'Reth_HVialsOwned by 1;
-		else if z is "Draco-Mantis Female":
-			increase J'Reth_FVialsOwned by 1;
+	if there is a Name of "Draco-Mantis Male" in the Table of OwnedVials:
+		choose a row with name of "Draco-Mantis Male" in the Table of OwnedVials;
+		now J'Reth_MVialsOwned is PlayerOwned entry;
+	if there is a Name of "Draco-Mantis Herm" in the Table of OwnedVials:
+		choose a row with name of "Draco-Mantis Herm" in the Table of OwnedVials;
+		now J'Reth_HVialsOwned is PlayerOwned entry;
+	if there is a Name of "Draco-Mantis Female" in the Table of OwnedVials:
+		choose a row with name of "Draco-Mantis Female" in the Table of OwnedVials;
+		now J'Reth_FVialsOwned is PlayerOwned entry;
 
 Section 1 - Room Declaration
 
@@ -168,37 +167,37 @@ to say J'RethTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Get a vial of draco-mantis nanites for personal use or as a backup in case gendershifting doesn't go as planned";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth < 3 and carried of Estrogen Pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth < 3 and carried of Estrogen Pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Estrogen Pill";
 		now sortorder entry is 7;
 		now description entry is "Give J'Reth an estrogen pill to gender-shift them towards being female";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth < 3 and carried of Glob of Goo > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth < 3 and carried of Glob of Goo > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Glob of Goo";
 		now sortorder entry is 8;
 		now description entry is "Give J'Reth a glob of goo to gender-shift them  towards being female";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth > 1 and carried of Testosterone pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth > 1 and carried of Testosterone pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Testosterone Pill";
 		now sortorder entry is 9;
 		now description entry is "Give J'Reth a testosterone pill to gender-shift them towards being male";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Fennec Semen > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Fennec Semen > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Fennec Semen";
 		now sortorder entry is 10;
 		now description entry is "Give J'Reth some Fennec Semen to gender-shift them towards being male";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth is 1 or thirst of J'Reth is 3 and carried of Estosterogen pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth is 1 or thirst of J'Reth is 3 and carried of Estosterogen pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Estosterogen Pill";
 		now sortorder entry is 11;
 		now description entry is "Give J'Reth a Estosterogen pill to gender-shift them towards being a hermaphrodite";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Gryphon Milk > 0 and (scenario is "Researcher" or nanite collector is equipped) and ("Draco-Mantis Male" is listed in vials of player or "Draco-Mantis Female" is listed in vials of player or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Gryphon Milk > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Gryphon Milk";
 		now sortorder entry is 12;
@@ -334,15 +333,12 @@ to say J'RethTalk5: [Prepare for Gender Shifting]
 to say J'RethTalk6: [Take nanites for personal use or as a backup]
 	say "     Bringing up the offer that J'Reth had made to you about allowing you to take a sample of [PosAdj of J'Reth] nanites, you ask the draco-mantis whether you would be able to extract some now. 'I don't see why not,' [SubjectPro of J'Reth] replies, 'I'm not exactly busy these days, and if I want to change my sex I'll want the vials as a backup anyway.' [SubjectProCap of J'Reth] sits on the edge of [PosAdj of J'Reth] bed and exposes [PosAdj of J'Reth] arm as you remove the nanite extractor from your backpack, wiping the needle with one of the seemingly limitless alcohol swabs that came with it. 'I don't know why I'm so calm about this, I'm not particularly fond of needles and I can't believe that it will be particularly easy to get through the chitin. Perhaps aim for a join so that you don't need to use as much force,' J'Reth suggests, eyeing the needle carefully as you approach. You sit down beside [ObjectPro of J'Reth] and briefly stroke [PosAdj of J'Reth] arm comfortingly before aligning the tip of the needle with a gap in [PosAdj of J'Reth] protective plates that cover [PosAdj of J'Reth] upper arm. Giving you a nod to continue, the draco-mantis closes [PosAdj of J'Reth] eyes and waits to feel the prick of the metal going into [PosAdj of J'Reth] arm.";
 	say "     The needle goes in with very little effort and you're not sure that J'Reth even felt it. Nanites is one thing, but if medical science has progressed to the point where injections can be done painlessly, then you really are impressed. You squeeze the trigger of the nanite extractor and watch as a vial begins to fill up with blood that is no doubt swimming in transformative nanomachines. You whisper to J'Reth that if [SubjectPro of J'Reth] is a good boy you might reward [PosAdj of J'Reth] later, earning a smirk in response. 'Needles aren't my fetish, but I wouldn't mind that another time, that is if that is what you are offering.' The vial now completely filled, you withdraw the needle again, a single bead of blood remaining behind to show where you stabbed the draco-mantis. J'Reth opens [PosAdj of J'Reth] eyes again and watches as you remove the vial from the extractor and load another one in, putting the full one in your case for later use. 'Is that it? Are you sure that I couldn't persuade you to stay and talk to me for a bit longer?' [SubjectPro of J'Reth] asks as you pack away your equipment and ready yourself to continue with your day.";
-	let VialName be "";
 	if thirst of J'Reth < 2: [male]
-		now VialName is "Draco-Mantis Male";
+		VialGain "Draco-Mantis Male" by 1;
 	else if thirst of J'Reth is 2: [herm]
-		now VialName is "Draco-Mantis Male";
+		VialGain "Draco-Mantis Herm" by 1;
 	else if thirst of J'Reth is 3: [female]
-		now VialName is "Draco-Mantis Female";
-	say "     [bold type]You gain a vial of [special-style-1][VialName][roman type] nanites.[roman type][line break]";
-	add Vialname to vials of Player;
+		VialGain "Draco-Mantis Female" by 1;
 
 to say J'RethTalk7: [Use Estrogen Pill]
 	if thirst of J'Reth is 0:
@@ -393,19 +389,19 @@ to say J'RethTalk8: [Use Glob of Goo]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if "Draco-Mantis Male" is listed in vials of player:
+		if there is a name of "Draco-Mantis Male" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Male";
 			now sortorder entry is 1;
 			now description entry is "The vial with the male version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Herm" is listed in vials of player:
+		if there is a name of "Draco-Mantis Herm" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Herm";
 			now sortorder entry is 2;
 			now description entry is "The vial with the herm version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Female" is listed in vials of player:
+		if there is a name of "Draco-Mantis Female" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Female";
 			now sortorder entry is 3;
@@ -427,11 +423,11 @@ to say J'RethTalk8: [Use Glob of Goo]
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Male"):
-						remove "Draco-Mantis Male" from vials of player;
+						VialLoss "Draco-Mantis Male" by 1;
 					else if (nam is "Herm"):
-						remove "Draco-Mantis Herm" from vials of player;
+						VialLoss "Draco-Mantis Herm" by 1;
 					else if (nam is "Female"):
-						remove "Draco-Mantis Female" from vials of player;
+						VialLoss "Draco-Mantis Female" by 1;
 					wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -488,22 +484,22 @@ to say J'RethTalk10: [Use Fennec Semen]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if "Draco-Mantis Male" is listed in vials of player:
+		if there is a name of "Draco-Mantis Male" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Male";
 			now sortorder entry is 1;
 			now description entry is "The vial with the male version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Herm" is listed in vials of player:
+		if there is a name of "Draco-Mantis Herm" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Herm";
 			now sortorder entry is 2;
 			now description entry is "The vial with the herm version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Female" is listed in vials of player:
+		if there is a name of "Draco-Mantis Female" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Female";
-			now sortorder entry is 1;
+			now sortorder entry is 3;
 			now description entry is "The vial with the female version of the Draco-Mantis infection";
 		[]
 		sort the table of fucking options in sortorder order;
@@ -522,11 +518,11 @@ to say J'RethTalk10: [Use Fennec Semen]
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Male"):
-						remove "Draco-Mantis Male" from vials of player;
+						VialLoss "Draco-Mantis Male" by 1;
 					else if (nam is "Herm"):
-						remove "Draco-Mantis Herm" from vials of player;
+						VialLoss "Draco-Mantis Herm" by 1;
 					else if (nam is "Female"):
-						remove "Draco-Mantis Female" from vials of player;
+						VialLoss "Draco-Mantis Female" by 1;
 					wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
@@ -593,22 +589,22 @@ to say J'RethTalk12: [Use Gryphon Milk]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if "Draco-Mantis Male" is listed in vials of player:
+		if there is a name of "Draco-Mantis Male" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Male";
 			now sortorder entry is 1;
 			now description entry is "The vial with the male version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Herm" is listed in vials of player:
+		if there is a name of "Draco-Mantis Herm" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Herm";
 			now sortorder entry is 2;
 			now description entry is "The vial with the herm version of the Draco-Mantis infection";
 		[]
-		if "Draco-Mantis Female" is listed in vials of player:
+		if there is a name of "Draco-Mantis Female" in the Table of OwnedVials:
 			choose a blank row in table of fucking options;
 			now title entry is "Female";
-			now sortorder entry is 1;
+			now sortorder entry is 3;
 			now description entry is "The vial with the female version of the Draco-Mantis infection";
 		[]
 		sort the table of fucking options in sortorder order;
@@ -627,11 +623,11 @@ to say J'RethTalk12: [Use Gryphon Milk]
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Male"):
-						remove "Draco-Mantis Male" from vials of player;
+						VialLoss "Draco-Mantis Male" by 1;
 					else if (nam is "Herm"):
-						remove "Draco-Mantis Herm" from vials of player;
+						VialLoss "Draco-Mantis Herm" by 1;
 					else if (nam is "Female"):
-						remove "Draco-Mantis Female" from vials of player;
+						VialLoss "Draco-Mantis Female" by 1;
 					wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";

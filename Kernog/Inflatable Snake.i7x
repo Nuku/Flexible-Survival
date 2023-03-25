@@ -47,7 +47,6 @@ to say losetoinflatablesnake:
 		inflatableSnakeVore;
 	else:
 		say "     Before releasing you, the inflatable snake suddenly bites your face. Or rather, it clumps down its fangless mouth against your face, and forces you to breath a pink gas for several seconds. You feel your body get hot, your head dizzy, and your sanity slipping as strange thoughts work together with the nanites to relieve you of your humanity.";
-		infect;
 
 [TODO: inflatableSnakeVore 's capture state]
 [Works as is:
@@ -99,8 +98,8 @@ to inflatableSnakeVore:
 				say "The nanites are hard a work to cope with your weakened state. In doing so, they start converting you into an inflatable snake.";
 			else:
 				say "The nanites keep their desperate and losing fight to keep you safe and sane, and by doing so infect you further with the inflatable snake straib.";
-				infect;
-				setBodyPartCounter;
+			infect "Inflatable Snake";
+			setBodyPartCounter;
 		now enduring is false;
 		if humanity of player < 1:
 			say "     As you lose the last remnants of your sanity, you also lose consciousness. You enter into a half-orgasmic, half-comatose transe, while your body slowly finishes turning into a duplicate inflatable snake, filling the original creature's entire body like a second skin.";
@@ -343,7 +342,7 @@ When Play begins:
 	now type entry is "[one of]reptilian[or]serpentine[or]snake-like[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true; [We manually manage the infections]
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger60"; [ Row used to designate any special combat features, "default" for standard combat. ]

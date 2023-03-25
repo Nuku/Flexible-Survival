@@ -157,7 +157,7 @@ an everyturn rule:
 		increase ImpregTimer of Xerxes by 1; [counting up towards 24]
 		if debugactive is 1:
 			say "     DEBUG: Xerxes's pregnancy advanced one turn. Current Turn: [ImpregTimer of Xerxes], Target Value: 24";
-		if ImpregTimer of Xerxes is 20 and skipturnblocker is 0: [birthing time]
+		if ImpregTimer of Xerxes is 20 and skipturnblocker is 0: [announcement that birthing time is coming closer]
 			if Xerxes is visible:
 				say "     From one moment to the next, the expression on Xerxes's face changes, and the human dog lets out a surprised whine, and he barks to draw your attention. Moving up to him, you crouch down and check on the young man, which includes laying a hand on his bulging belly. Ah! You can feel the child within moving, with a light kick or two noticeable under your fingers. [bold type]If the little one is getting this unruly, you don't think it'll be much longer before it is time for the birth. If you want to be present for the birth of Xerxes's child, you should most likely stay close to him in the next 12 hours or so.[roman type][line break]";
 			else:

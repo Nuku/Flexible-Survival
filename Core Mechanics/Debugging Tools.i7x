@@ -1143,6 +1143,16 @@ carry out itemcheat:
 			ItemGain x by 1;
 			break;
 
+[Allows the spawning of any vial in game.]
+vialcheat is an action applying to one topic.
+understand "zVial [text]" as vialcheat.
+
+check vialcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out vialcheat:
+	VialGain topic understood by 10;
+
 allitemcheat is an action applying to nothing.
 understand "zAllItems" as allitemcheat.
 
