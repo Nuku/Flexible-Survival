@@ -125,7 +125,7 @@ to say beatthecfg:
 			say "     ([link]N[as]n[end link]) - Get away.";
 			if Player consents:
 				LineBreak;
-				say "[beatthecfgirl2]";
+				say "[beatthecfguy2]";
 			else:
 				LineBreak;
 				say "     Thinking twice about it, you decide to take this opportunity to make your escape, leaving him to be enjoyed by the mechanical tods (or any of the other creatures) you've seen around the museum.";
