@@ -167,37 +167,37 @@ to say J'RethTalkMenu:
 		now sortorder entry is 6;
 		now description entry is "Get a vial of draco-mantis nanites for personal use or as a backup in case gendershifting doesn't go as planned";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth < 3 and carried of Estrogen Pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth < 3 and carried of Estrogen Pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Estrogen Pill";
 		now sortorder entry is 7;
 		now description entry is "Give J'Reth an estrogen pill to gender-shift them towards being female";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth < 3 and carried of Glob of Goo > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth < 3 and carried of Glob of Goo > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Glob of Goo";
 		now sortorder entry is 8;
 		now description entry is "Give J'Reth a glob of goo to gender-shift them  towards being female";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth > 1 and carried of Testosterone pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth > 1 and carried of Testosterone pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Testosterone Pill";
 		now sortorder entry is 9;
 		now description entry is "Give J'Reth a testosterone pill to gender-shift them towards being male";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Fennec Semen > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Fennec Semen > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Fennec Semen";
 		now sortorder entry is 10;
 		now description entry is "Give J'Reth some Fennec Semen to gender-shift them towards being male";
 	[]
-	if hunger of J'Reth > 0 and thirst of J'Reth is 1 or thirst of J'Reth is 3 and carried of Estosterogen pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth > 0 and thirst of J'Reth is 1 or thirst of J'Reth is 3 and carried of Estosterogen pill > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Estosterogen Pill";
 		now sortorder entry is 11;
 		now description entry is "Give J'Reth a Estosterogen pill to gender-shift them towards being a hermaphrodite";
 	[]
-	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Gryphon Milk > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or "Draco-Mantis Herm" is listed in feats of player):
+	if hunger of J'Reth is 2 and thirst of J'Reth > 1 and carried of Gryphon Milk > 0 and (scenario is "Researcher" or nanite collector is equipped) and (there is a name of "Draco-Mantis Male" in the Table of OwnedVials or there is a name of "Draco-Mantis Female" in the Table of OwnedVials or there is a name of "Draco-Mantis Herm" in the Table of OwnedVials):
 		choose a blank row in table of fucking options;
 		now title entry is "Give Gryphon Milk";
 		now sortorder entry is 12;
