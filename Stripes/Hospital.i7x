@@ -996,7 +996,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 			say "     'If you're telling me this, I can assume you're not going to go through with it. It has become clear that this Dr. Mouse is not interested in a cure at all, but only exploiting the nanites and their hosts. Enhancing the strains out there will only exacerbate the problem of controlling this chaos.' He holds up the needle. 'While there would be some irony in returning this to you and asking you use it on him instead, I don't think he will give you that opportunity. Provided he's not already made himself immune to it, for that matter. I will have to ask you to return to the hospital and deal with him personally.'";
 			if Susan is visible:
 				WaitLineBreak;
-				say "     Susan comes up to your side and holds your left in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
+				say "     Susan comes up to your side and holds your left hand in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
 			SanBoost 5;
 			increase score by 20;
 			now HP of Doctor Matt is 10;
@@ -1046,7 +1046,7 @@ to say hospbigfight2:
 	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
 	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
 	WaitLineBreak;
-	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow grow to replace the white coat over them and this spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
+	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
 	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
 	now hospfight is 2;
 	now inasituation is true;
