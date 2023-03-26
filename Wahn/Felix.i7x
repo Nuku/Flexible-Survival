@@ -866,7 +866,7 @@ to say AndreSexMenu:
 					say "[FelixSex5]";
 				if (nam is "Watch Felix fuck Andre"):
 					say "[FelixSex6]";
-					wait for any key;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the plains lizard, shaking your head slightly as he gives a questioning look.";
