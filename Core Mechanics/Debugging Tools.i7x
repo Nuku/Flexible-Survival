@@ -181,6 +181,7 @@ carry out turncountdisplay:
 PregStatus is an action applying to one topic.
 understand "zPreg Status [text]" as PregStatus.
 understand "zPregStatus [text]" as PregStatus.
+understand "zPregCheck [text]" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:

@@ -815,7 +815,7 @@ to say SpikeDesc:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
 everyturn rule:
-	if doberman companion is tamed and Spike is in Sitting Area:
+	if doberman companion is tamed and Spike is collected:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
 			if Player is in Sitting Area:
 				project the Figure of Spike_naked_soft_icon;
@@ -2008,8 +2008,23 @@ to say SpikeSleepSex5:
 
 Section 6 - NPC Interaction (Tehuantl)
 
-instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and doberman companion is tamed and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
-	move player to Grey Abbey 2F;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Tehuantl_Training1"	Spike_Tehuantl_Training1	"[EventConditions_Spike_Tehuantl_Training1]"	Grey Abbey 2F	2500	2	100
+
+to say EventConditions_Spike_Tehuantl_Training1:
+	if (LastTehuantlSpikeScene - turns > 6 and Tehuantl is collected and Spike is collected and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Tehuantl_Training1	"Spike_Tehuantl_Training1"
+
+Spike_Tehuantl_Training1 is a situation.
+ResolveFunction of Spike_Tehuantl_Training1 is "[ResolveEvent Spike_Tehuantl_Training1]".
+Sarea of Spike_Tehuantl_Training1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Tehuantl_Training1:
 	if debugactive is 1:
 		say "     DEBUG: Tehuantl/Spike Talk Walkin; Energy of Spike: [Energy of Spike][line break]";
 	if Energy of Spike is 0: [first time]
@@ -2108,15 +2123,31 @@ instead of going up from Grey Abbey Library while (LastTehuantlSpikeScene - turn
 			now Energy of Spike is 5; [shared jerking, player didn't watch]
 		else:[no BJ for Spike]
 			LineBreak;
-			say "     You decide that Spike's gotten enough of a workout for today and step closer, sharply calling Tehuantl's name. Whipping around instantly, the anthro cat gasps out the word 'Tlacahua,' falling back to his natural Nahuatl word for master in his surprise. He wilts a little as you look at him expectantly, glancing over to Spike and back at you, 'I was just instructing your [if MaxHP of Spike is 1]pup[else]young warrior[end if], and... gods! Let my desire to see him excel and reward him for his gains lead me astray, [Master]. Frivously wanting to indulge with him and not taking keeping guard on the street outside! Forgive me, I won't let this happen again!' With that, the muscular jaguar jumps up to his feet and rushes away hastily, wanting to take an overlook post at the windows. This leaves you and the dobie behind, with Spike letting himself drop flat on the exercise mat.";
+			say "     You decide that Spike's gotten enough of a workout for today and step closer, sharply calling Tehuantl's name. Whipping around instantly, the anthro cat gasps out the word 'Tlacahua,' falling back to his natural Nahuatl word for master in his surprise. He wilts a little as you look at him expectantly, glancing over to Spike and back at you, 'I was just instructing your [if MaxHP of Spike is 1]pup[else]young warrior[end if], and... gods! Let my desire to see him excel and reward him for his gains lead me astray, [Master]. Frivolously wanting to indulge with him and not taking keeping guard on the street outside! Forgive me, I won't let this happen again!' With that, the muscular jaguar jumps up to his feet and rushes away hastily, wanting to take an overlook post at the windows. This leaves you and the dobie behind, with Spike letting himself drop flat on the exercise mat.";
 			say "     'Uhm, hi [SpikePlayerAddress]. I was just, you know, training with him,' the young man pants out a moment later, moving his hands to cover his erection. Then come the words, 'He's only helping me a little, to be a better right-hand man for you. I... should go too. Freshen up a bit.' The last bit is said after he sniffs himself, no doubt remembering Tehuantl's attraction to the good, honest sweat he worked up. And true to his words, Spike quickly rolls the mat up and is hurrying away just moments later.";
 			LineBreak;
 			say "     After giving the two of them what amounts to a bucket of ice-water just as they started having fun, you don't think you'll have to worry about Tehuantl and Spike getting frisky again anytime soon...";
 			now Energy of Spike is 100; [stopped things cold]
+		now Spike_Tehuantl_Training1 is resolved;
 	now LastTehuantlSpikeScene is turns;
 
-instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F and Energy of Spike > 3 and Energy of Spike < 100 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
-	move player to Grey Abbey 2F;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Tehuantl_SexAdmission"	Spike_Tehuantl_SexAdmission	"[EventConditions_Spike_Tehuantl_SexAdmission]"	Grey Abbey 2F	2500	2	100
+
+to say EventConditions_Spike_Tehuantl_SexAdmission:
+	if (Tehuantl is collected and Spike is collected and Energy of Spike > 3 and Energy of Spike < 6 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Tehuantl_SexAdmission	"Spike_Tehuantl_SexAdmission"
+
+Spike_Tehuantl_SexAdmission is a situation.
+ResolveFunction of Spike_Tehuantl_SexAdmission is "[ResolveEvent Spike_Tehuantl_SexAdmission]".
+Sarea of Spike_Tehuantl_SexAdmission is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Tehuantl_SexAdmission:
 	say "     As you walk up the stairs of the library, you're greeted by the sight of Tehuantl standing at one of the windows, dutifully keeping watch. His gaze sweeps over the street outside, left and right, before he glances into the interior of the building a little while later and sees you. As your eyes meet, the jaguar's tail twitches and he starts walking over, clearly having something on his mind that he needs to talk to you about. Kneeling before you, he says, 'Tlacahua,' falling back to his natural Nahuatl word for master. 'I humbly beg your guidance. As you know, I have been instructing your [if MaxHP of Spike is 1]offspring[else]canine follower[end if], teaching him the arts of war. Part of that is bonding with your fellow warriors, but recently I fear I strayed beyond what I should. In the throes of lust, I dirtied his fur with my seed, then licked him clean. As his scent filled my nose I admit I felt the desire to serve him as I do you. Physically, not just as a warrior-slave.'";
 	LineBreak;
 	say "     [bold type]How do you react to the jaguar's admission?[roman type][line break]";
@@ -2144,29 +2175,58 @@ instead of going up from Grey Abbey Library while (Tehuantl is in Grey Abbey 2F 
 		LineBreak;
 		say "     Putting on a serious expression, you grab the jaguarman by the scruff of his neck and bend his head back, pointedly staring into his eyes. In no uncertain terms, you tell the spotted feline that he's [bold type]yours[roman type] and should quickly put any such thoughts out of his mind. After wrapping up your growled instructions, you shove the man back, almost sending him sprawling on the ground. 'Yes, [master]. I will keep my distance from now on,' Tehuantl replies as he catches himself, then slinks back to the window, taking up a guarding position once more.";
 		now Energy of Spike is 100; [stopped things cold]
+	now Spike_Tehuantl_SexAdmission is resolved;
 
 [
-after navigating Grey Abbey Library while (LastTehuantlSpikeScene - turns > 6 and Tehuantl is in Grey Abbey 2F and Spike is in Sitting Area and Energy of Spike > 0 and Energy of Spike < 4 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA:
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Tehuantl_Training2"	Spike_Tehuantl_Training2	"[EventConditions_Spike_Tehuantl_Training2]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Tehuantl_Training2"	Spike_Tehuantl_Training2	"[EventConditions_Spike_Tehuantl_Training2]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Spike_Tehuantl_Training2:
+	if (LastTehuantlSpikeScene - turns > 6 and Tehuantl is collected and Spike is collected and Energy of Spike > 5 and Energy of Spike < 100 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Tehuantl_Training2	"Spike_Tehuantl_Training2"
+
+Spike_Tehuantl_Training2 is a situation.
+ResolveFunction of Spike_Tehuantl_Training2 is "[ResolveEvent Spike_Tehuantl_Training2]".
+Sarea of Spike_Tehuantl_Training2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Tehuantl_Training2:
 	say "     You arrive at the library and climb the steps to the front door, then slip inside, happy to have made it back to your refuge. Yet almost as soon as the door swings shut behind you, fighting noises reach your ears, coming from somewhere upstairs. Concerned about the people you've brought here, you quickly rush up the stairs, almost stumbling once or twice as you jump over a few of them in your haste. What awaits you upstairs is a fight, but surely not what you expected it to be: One of the two opponents is Tehuantl, carrying nothing but his shield and using it to deflect blows rained onto him by Spike, and with a mop of all things. 'Faster! Try to switch up your moves, some low, some high!' the jaguar warrior calls out to the young dobie with a grin on his muzzle, then easily parries another swipe of the improvised weapon. ";
 ]
 
 Section 7 - NPC Interaction (Urik, controlled)
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerControlled of Urik is true and Stamina of Spike is 0) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Meeting1"	Spike_Urik_Controlled_Meeting1	"[EventConditions_Spike_Urik_Controlled_Meeting1]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Meeting1:
+	if (Urik is collected and Spike is collected and PlayerControlled of Urik is true and Stamina of Spike is 0) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Meeting1	"Spike_Urik_Controlled_Meeting1"
+
+Spike_Urik_Controlled_Meeting1 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Meeting1 is "[ResolveEvent Spike_Urik_Controlled_Meeting1]".
+Sarea of Spike_Urik_Controlled_Meeting1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Meeting1:
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
-	say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
-	say "[SpikeMeetsUrik_Control]";
-
-after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerControlled of Urik is true and Stamina of Spike is 0) and Player is not CoA:
-	if debugactive is 1:
-		say "     DEBUG: Spike MEETS URIK - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
-	say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Got a new pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
-	say "[SpikeMeetsUrik_Control]";
-
-to say SpikeMeetsUrik_Control:
+	if doberman companion is listed in companionList of Player:
+		say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Got a new pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
+	else:
+		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, you keep a dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
 	say "     'A little help, [SpikePlayerAddress]?' the Doberman shouts, seeing himself confronted with the towering orc snarling at him and cracking his knuckles in preparation of a beatdown. To prevent the situation from escalating any further, you put two fingers in your mouth and give them a sharp whistle that draws all attention to you. Clearing your throat, you introduce them to each other, explaining that Urik is an orc warrior you won for use as your personal breeder. Meanwhile, you accepted Spike as your companion to help you out during your travels through the city, which you stress to Urik means that he can't just grab and pound him. 'So, more than a fuckpuppy then, eh?' Urik huffs, clearly disappointed that he can't just establish dominance as he would have if Spike was another slave. Looking the anthro canine up and down, he snorts. 'He might be quick, but that won't help much if someone gets a grip on him. Hear that boy? You need some more strength in the arms!'";
 	WaitLineBreak;
 	say "     Proudly demonstrating what he means by flexing a bicep thicker than Spike's thigh, Urik grins down at the young dobie. 'This is what a proper man looks like! But if the boss is dead set on dragging you along, we'll have to bulk you up. You brave enough to try, puppy?' Looking at the orc, you notice him smirking a little as he goads Spike like this. 'Hey!' Spike replies, 'I'm plenty strong. Just not maybe quite as big as you. And I'm brave enough for anything!' Stepping up, Urik grins down at him, then holds out his bear-paw of a hand. 'Fine then, you're gonna join me for some strength training every day! Or are you gonna wimp out after all?'";
@@ -2182,11 +2242,27 @@ to say SpikeMeetsUrik_Control:
 		say "     Calling the orc's name in a sharp tone of voice, you tell Urik to cut it out and leave Spike in peace. 'Fine boss, if you say so,' the large green male grumbles under his breath and stomps off, though not without 'accidentally' bumping Spike with his shoulder, almost knocking him over. 'Bet you'd have been too weak a bitch anyways,' he not quite whispers to the Doberman before leaving. Watching him go, Spike shakes his head, 'Not a good day for him or what? That sure is one grumpy orc, [SpikePlayerAddress].' With a shrug, you explain that Urik still has to adapt to his new role in some ways. He's still quite used to just taking what he wants even though it's ingrained with him now to obey his master.";
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Meeting1 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 1 and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training1"	Spike_Urik_Controlled_Training1	"[EventConditions_Spike_Urik_Controlled_Training1]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training1:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 1) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training1	"Spike_Urik_Controlled_Training1"
+
+Spike_Urik_Controlled_Training1 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training1 is "[ResolveEvent Spike_Urik_Controlled_Training1]".
+Sarea of Spike_Urik_Controlled_Training1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training1:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Walking along the upper floor of the library, you see Urik standing over Spike lying on the ground, stretched out on a training mat wearing nothing but his jeans. He's got his big green feet planted to the left and right of the Doberman's head, bending a little forward to keep his hands on the set of weights that Spike is visibly struggling with. Given their relative positions, this means that the dobie can't help but stare up at Urik's crotch and ass, which the orc seems well aware of, crouching fairly low every time he assists with the lifting. Glancing at the weights, you see that they're of the self-made variety, consisting of a road-sign pole, with both ends punched through the centers of several manhole covers. The weighty piece of equipment is clearly sized for the massive orc and far too heavy for Spike, with Urik doing most of the lifting as your dobie companion tries to push upwards.";
 	say "     Of course, this doesn't stop the towering orc from goading his trainee with the words, 'Too much for you, little dog boy? Should I go and see if I can loot some baby weights somewhere?' A defiant growl rolls up from the depth of Spike's throat and he grunts, 'No! I can do this!' The orc lets out an amused snort at Spike's insistence, followed by the words, 'At least you have some spunk, boy! The will to keep going is what you need most! Now give me another twenty reps!' Swallowing the words of a reply as he gulps at the added challenge, Spike strains his muscles to push the pole up again and again, sweat matting his fur as he continues with the exercise Urik demands. By the time the orc's deep voice says, '..., nineteen, twenty!' your dobie companion is panting loudly, letting his rubbery arms drop down to the mat in exhaustion. He groans tiredly as Urik carries his weight to the side, setting it down in some deep grooves in the floor that must have been made by dropping the thing a bit too quickly.";
@@ -2211,11 +2287,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 		now Stamina of Spike is 100; [Player shut down Urik's plan]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training1 is resolved;
 
-after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 2 and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training2"	Spike_Urik_Controlled_Training2	"[EventConditions_Spike_Urik_Controlled_Training2]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training2:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and Stamina of Spike is 2) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training2	"Spike_Urik_Controlled_Training2"
+
+Spike_Urik_Controlled_Training2 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training2 is "[ResolveEvent Spike_Urik_Controlled_Training2]".
+Sarea of Spike_Urik_Controlled_Training2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training2:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Coming up the stairs to the upper floor of the library, you see a shirtless, sweaty Spike flashing past the upper end of the steps. He's closely followed by Urik whose longer legs and wider strides make it fairly easy for him to chase the dobie, all the while shouting things at his trainee. 'You'll wanna run faster boy when a horny dude runs after you. Unless you wanna be caught and bent over the railing, eh puppy?' Making a lunge and giving the young man's back a push with his large hand, Urik drives Spike to a sprint, following after him in yet another circuit of the upper library floor. When they soon come around from the other direction, Spike starts to slow down a little as he sees you, calling out the words, 'Hey, [SpikePlayerAddress]!' But before he can say anything more, Urik's close up behind him and shouts, 'DID I SAY STOP, PUPPY?' driving his trainee in front of himself.";
 	if Stamina of Spike is 2:
@@ -2247,8 +2339,25 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 	else if Stamina of Spike is 51:
 		say "     Quietly chuckling to yourself about how much Urik seems to enjoy the drill instructor role, you busy yourself with some other things, like having a look out the windows to ovserve the approaches to the library for example. While you do that, the two men continue running without pause, with Spike panting louder every time he passes. Eventually, the young man can't help but stumble to a stop, bracing his upper body with his arms on both thighs as he gasps for breath. Stepping up close to tower over him, Urik gruffly remarks, 'That's it? Already winded, boy? With this little stamina, you might just outrun a street dog. A three-legged one, with fleas!' Not really ready to give any sort of verbal reply, Spike shows the orc his middle finger, which makes Urik laugh. 'Fun aside, I'm impressed. Ya didn't whine or beg, just kept running. Good doggie!' He gives the dobie a 'friendly' slap on the back that's still hard enough to send the anthro dog stumbling forward, then chuckles as he moves away.";
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training2 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training3"	Spike_Urik_Controlled_Training3	"[EventConditions_Spike_Urik_Controlled_Training3]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training3:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 3 or Stamina of Spike is 50 or Stamina of Spike is 51)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training3	"Spike_Urik_Controlled_Training3"
+
+Spike_Urik_Controlled_Training3 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training3 is "[ResolveEvent Spike_Urik_Controlled_Training3]".
+Sarea of Spike_Urik_Controlled_Training3 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training3:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
 	try looking;
@@ -2288,11 +2397,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 		now Stamina of Spike is 52; [new weights for Spike, future trainings without shakes]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training3 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 4 or Stamina of Spike is 52) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training4"	Spike_Urik_Controlled_Training4	"[EventConditions_Spike_Urik_Controlled_Training4]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training4:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 4 or Stamina of Spike is 52)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training4	"Spike_Urik_Controlled_Training4"
+
+Spike_Urik_Controlled_Training4 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training4 is "[ResolveEvent Spike_Urik_Controlled_Training4]".
+Sarea of Spike_Urik_Controlled_Training4 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training4:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	if Stamina of Spike is 4: [training with shakes]
 		say "     Walking along the upper floor of the library, you glance around and see Spike and Urik standing together in the sitting area, talking to one another. Your Doberman companion is holding a bottle of Urik's special 'protein shake', taking another swig from it as you watch and apparently finishing off the bottle. As the young man puts down the empty container, his tail wagging behind his back, he touches Urik's arm and says, 'Thanks again for training me. I feel stronger already.' The orc chuckles at the words, reaching out to tousle the Doberman's green hair. 'You're still a twig of a guy, but it's good you're enthusiastic. Still got a long way to go, boy! And now, down you go and give me thirty push-ups for a start!' Stiffening at the command barked at him, Spike starts to step towards a training mat laid out nearby, only to be held back by Urik's large green hand on his chest. 'Better take that off, you don't wanna get it sweaty, eh?' the orc adds, tugging at the mesh shirt on his trainee's chest.";
@@ -2318,11 +2443,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 		now Stamina of Spike is 53; [training without shakes, shirtless pushups done]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training4 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 5) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training5"	Spike_Urik_Controlled_Training5	"[EventConditions_Spike_Urik_Controlled_Training5]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training5:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 5)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training5	"Spike_Urik_Controlled_Training5"
+
+Spike_Urik_Controlled_Training5 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training5 is "[ResolveEvent Spike_Urik_Controlled_Training5]".
+Sarea of Spike_Urik_Controlled_Training5 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training5:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike stand at the railing overlooking the lower floor, apparently deep in thought as he just stares ahead. Just as you start to contemplate if you should walk up and talk to him, a deep voice calls out, 'Hey, puppyboy!' It's Urik, and as Spike turns around to look at him, you notice a little wag of his tail. 'Hi Urik, what's up? Is it already time for our next training session?' The orc grins at him and nods. 'Yup, time to put you through your paces!' Urik adds, then throws a bottle of his 'protein shake' for Spike to catch. He waits for the young man to take a first swallow of the liquid, then brings forward his other hand, which had been balled to a loose fist by his side. 'After the problems you had last time, I got you this. Should fit, I'm sure,' the orc adds, opening his fingers to reveal a black piece of cloth with red borders.";
 	say "     'Huh?' Spike says in a somewhat surprised tone, setting down his bottle on the ground after recapping it. Then he reaches out to take Urik's gift from the green-skinned brute's hand and inspecting it. It's a piece of underwear, shiny and stretchy from the looks of it. 'Err, thanks. But... eh, did you find this on the street or something? Looks like the back half is missing.' Turning the garment around, Spike tugs at a pair of elastic bands as if to demonstrate what he means. 'Naw, that's how it's supposed to look. It's a sports thing, and this'll be good especially for you!' Urik replies with a smile and pats Spike's head. 'Hey! What's that supposed to mean?!' the young man replies somewhat annoyedly, patting away the large hand. 'Your tail, boy! With a jockstrap you don't have to tug yer undies down at the back to make room for it. Not wearing any right now because of the chafing at the tail, ain't that right?'";
@@ -2336,11 +2477,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times six] XP![roman type][line break]";
 	now Stamina of Spike is 6; [Spike got a jockstrap now]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training5 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 6 or Stamina of Spike is 53) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Storytime"	Spike_Urik_Controlled_Storytime	"[EventConditions_Spike_Urik_Controlled_Storytime]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Storytime:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 6 or Stamina of Spike is 53)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Storytime	"Spike_Urik_Controlled_Storytime"
+
+Spike_Urik_Controlled_Storytime is a situation.
+ResolveFunction of Spike_Urik_Controlled_Storytime is "[ResolveEvent Spike_Urik_Controlled_Storytime]".
+Sarea of Spike_Urik_Controlled_Storytime is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Storytime:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Story Time - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Urik and Spike sitting next to each other on the sofa further in the back. Seems they're just hanging out with each other right now, not doing any training for a change. Your Doberman companion is currently telling a story, gesturing wildly as he does so. '...so when we got to the alley, she wanted me to follow her into it. At first I did for a few steps, hell, that husky had offered me her pussy, but then I heard a noise from behind one of the dumpsters in there. When she noticed that I knew something was up, the bitch shouted, 'Get him, Bill!' and this dude jumped out from his hiding spot. Half human, half husky guy, with a long metal rod he was hefting like a spear!' Spike pauses for effect, miming a guy attacking him, then goes on to say, 'But I was too quick for the dude. Dodged his thrust and shoved his girlfriend at him and the two of them went down in a tangle. Gave me the time to high-tail it out of there.'";
 	say "     Urik chuckles at the story and comments, 'Yeah, you don't trust a streetwalking hooker further than you can spit. That's why you bring a buddy to double-team her. Those two you met were amateurs, but a woman and her pimp working together almost did my buddy Declan in once. Thought they could roll him, take everything he owned or whatever. That didn't work out so well, as me and a bunch of other soldiers were passing by on our way to a bar, and we gave em a good thrashing. But yeah, gotta watch out for yourself.' He nods to Spike, who was listening intently to his tale, then glances down at his forearm, making a fist and stroking over the tattoo covering his skin there. 'I miss Dec, he was a swell dude. Good tattoo artist too, he gave me these back in [']84,' Urik says, then pauses for a moment before he adds, 'Not even a year later, he got shot in the back by some little punk with a souped-up ride and inflated ego. Fuck, I'm still mad when thinking back to it. But the little murderous pissant got what was coming to him afterwards. Only wish we could have made it last longer.'";
@@ -2371,11 +2528,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     With a shrug, you tune the two of them out and turn your attention to other things.";
 	increase Stamina of Spike by 1; [either it's 7 or 54 now - storytime with Urik]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Storytime is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 7 or Stamina of Spike is 54) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training6"	Spike_Urik_Controlled_Training6	"[EventConditions_Spike_Urik_Controlled_Training6]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training6:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 7 or Stamina of Spike is 54)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training6	"Spike_Urik_Controlled_Training6"
+
+Spike_Urik_Controlled_Training6 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training6 is "[ResolveEvent Spike_Urik_Controlled_Training6]".
+Sarea of Spike_Urik_Controlled_Training6 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training6:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike stand in the sitting area, [if Stamina of Spike is 7]holding a half-full protein shake [else]holding a water bottle[end if] in his hand. Taking a deep swig of it, the young Doberman then walks over to Urik, who's busy unrolling two fitness mats in front of the back wall. 'So, what are we going to do today? More strength training?' Spike asks his green-skinned taskmaster, who snorts and shakes his head. 'Not quite, puppyboy. We're gonna do Yoga!' As the slender anthro canine looks at him, visibly perplexed, Urik lets out a deep laugh and lightly slaps him on the back. 'Didn't think I was the type, eh? Well, you gotta blame my nephew for it. The little shit kept going 'Uncle, it's good for you!' and he eventually talked me into trying it out. And it worked, gotta admit that.' Shrugging his very wide, muscled shoulders, the orc adds, 'Thank god I'm no longer an old fart with aching joints, but Yoga's still good stuff.'";
 	say "     'If you say so,' Spike comments, then raises one eyebrow and adds, 'Just to be sure, though - I'm not calling you Sensei or Master, or anything like that!' 'That's Karate, you little punk. And do I look like a little white-bearded man to you? Nah, just use my name, this isn't some mystic mountain martial arts training!' Stepping over to place his broad green feet on the end of an extra large exercise mat, Urik nods over to the second one beside his and says, 'Okay, take your place. And you wanna strip down, this stuff may look soft, but you'll get sweaty, that's for sure!' ";
@@ -2409,11 +2582,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training6 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 8 or Stamina of Spike is 55) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Controlled_Training7"	Spike_Urik_Controlled_Training7	"[EventConditions_Spike_Urik_Controlled_Training7]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Controlled_Training7:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerControlled of Urik is true and (Stamina of Spike is 8 or Stamina of Spike is 55)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Controlled_Training7	"Spike_Urik_Controlled_Training7"
+
+Spike_Urik_Controlled_Training7 is a situation.
+ResolveFunction of Spike_Urik_Controlled_Training7 is "[ResolveEvent Spike_Urik_Controlled_Training7]".
+Sarea of Spike_Urik_Controlled_Training7 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Controlled_Training7:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Stamina of Spike: [Stamina of Spike][line break]";
-	try looking;
 	project the Figure of Urik_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Urik standing against the railing overlooking the lower floor. The big orc is busy playing a little game with himself, which is bouncing tennis balls off the top of the shelves below, timed just right so they bounce across several of the tall stacks. While you're still forming possible comments in your head, like where he got a shopping bag full of tennis balls and if Urik will clean up afterwards, a voice calls out from the side and interrupts your train of thought. Glancing over, you see that it's Spike who shouted, 'Hey Urik!' and the young Doberman is now approaching on his lithe paws. 'What? Did you feel an irresistible urge to run after these?' the orc replies with a grin on his face, throwing one of the yellow balls in the air and catching it, then casually flinging the tennis ball over the railing to fall between the rows of bookshelves.";
 	say "     Spike finds himself following the ball with his gaze, indeed staring after it for a second before shaking off the impulse to get the tennis ball. Clearing his throat and looking up to meet Urik's eyes, he says, 'Err... no. It's just that I was thinking that it's about time for our training. I'm ready for another session! ";
@@ -2443,6 +2632,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	increase Stamina of Spike by 1; [8 on the shake path, 55 otherwise]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Controlled_Training7 is resolved;
 
 to say SpikeTalk11: [talk about Urik]
 	if Stamina of Spike is 1:
@@ -2532,28 +2722,37 @@ to say SpikeTalk11: [talk about Urik]
 
 Section 8 - NPC Interaction (Urik, befriended)
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Meeting1"	Spike_Urik_Friend_Meeting1	"[EventConditions_Spike_Urik_Friend_Meeting1]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Meeting1:
+	if (Urik is collected and Spike is collected and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Meeting1	"Spike_Urik_Friend_Meeting1"
+
+Spike_Urik_Friend_Meeting1 is a situation.
+ResolveFunction of Spike_Urik_Friend_Meeting1 is "[ResolveEvent Spike_Urik_Friend_Meeting1]".
+Sarea of Spike_Urik_Friend_Meeting1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Meeting1:
 	if debugactive is 1:
 		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
-	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
-		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, still keeping the dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah!' Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+	if doberman companion is listed in companionList of Player:
+		if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
+			say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Still keeping the dobie pet, eh? Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah! Urik comments, holding out a thick arm to block the way for your companion. Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+		else:
+			say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Still keeping the dobie pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
 	else:
-		say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, still keeping the dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
-	say "[SpikeMeetsUrik_Friend]";
-
-after going to Sitting Area while (Urik is in Sitting Area and doberman companion is listed in companionList of Player and PlayerFriended of Urik is true and Dexterity of Spike is 0 and Libido of Spike < 40) and Player is not CoA: [excludes forcefully broken in Spike]
-	if debugactive is 1:
-		say "     DEBUG: Spike MEETS URIK - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
-	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
-		say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Still keeping the dobie pet, eh? Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah! Urik comments, holding out a thick arm to block the way for your companion. Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
-	else:
-		say "     Walking along the upper floor of the library, you come up to Urik, who's standing at the railing overlooking the lower floor of the library, appearing a little bored. As you come near, the large orc stands up straight and nods to you. 'Hey boss,' he says, then glances past you and a smile starts to spread across his face. 'Still keeping the dobie pet, eh? Had a few dobies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the back of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!";
-	say "[SpikeMeetsUrik_Friend]";
-
-to say SpikeMeetsUrik_Friend:
+		if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to sex up anyone]
+			say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, still keeping the dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Ran into a few such puppies during my hunting trips in the city. Tight little fuckers, really twitching on your dick and they start wagging their short tails when they're well-filled up with cum, hah!' Ears drawing back in annoyance, Spike says, 'Hey! I'm not a sex toy, asshole!' He puts both of his hands on Urik's forearm and tries to push it out of the way, without much success. Instead, the orc grunts, 'Wanna start something, puppyboy?' and easily shoves Spike back a few steps with a swipe of his arm. Then the orc reaches out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
+		else:
+			say "     Walking along the upper floor of the library, you see Urik ahead of you, leaning against one of the walls and appearing a little bored. 'Hey boss,' he says, giving you a nod as he notices your presence. Just a short moment later, Spike appears from the back of the room where he's made his camp, attempting to walk past the orc. 'So, still keeping the dobie, eh?' Urik comments, holding out a thick arm to block the way for your companion. 'Had a few of such puppies during hunting trips in the city. Tight little fuckers, and they're cute when they wag their short tails as you thrust in! This one'll be a nice bedwarmer too - come on, let me break him in for you!' Before you can react, the orc warrior is already reaching out to grab Spike, only to find himself snatching at empty air, with the lithe dobie having ducked from his grasp and jumped to the side. With a kick at the side of the orc's knee, he makes the much larger male stumble and call out, 'Stupid little mutt! I'll show you how to behave!'";
 	say "     'A little help, [SpikePlayerAddress]?' the Doberman shouts, seeing himself confronted with the towering orc snarling at him and cracking his knuckles in preparation of a beatdown. To prevent the situation from escalating any further, you put two fingers in your mouth and give them a sharp whistle that draws all attention to you. Clearing your throat, you introduce them to each other, explaining that Urik is a strong orc warrior that joined you and that he will be living in the library from now on. 'Huh? But you've got me, why did you bring him in?!' Spike comments, still in a defensive position next to the green-skinned brute, and apparently also a bit competitive for your attention. Reaching out to pat his shoulder, you tell him to calm down, explaining that if you're going to take on the rest of the city. It's just that you need everyone you can get on your side. After a little pause, the young man takes a deep breath and replies, 'Fine, I guess.' He still doesn't seem completely onboard with having such a big brute as a neighbor.";
+	WaitLineBreak;
 	if "Selective Breeding" is listed in Traits of Urik: [player decides whom he can fuck]
 		say "     Turning to Urik, you give him a stern look and express your disappointment at him so easily forgetting that you'll be the one who decides if and whom he gets to fuck. So he has no right to try to molest anyone, least of all [if MaxHP of Spike is 1]your [italic type]son[roman type], [end if]or even just someone whom you've invited to be your companion! 'Yeah, right!' Spike barks at the orc from the side, with you having to wave him down to stop the canine from interfering. ";
 	else if "Molestation Detox" is listed in Traits of Urik: [gave Urik a time-out for forcing himself on others]
@@ -2565,7 +2764,6 @@ to say SpikeMeetsUrik_Friend:
 	else: [default, before Urik's behavior is set]
 		say "     Turning to Urik, you tell him in no uncertain terms that Spike is [if MaxHP of Spike is 1]your [italic type]son[roman type], and [end if]someone you've invited to be your companion for exploration of the city! Or course he can't just grab and pound him! ";
 	say "Eyes widening as he hears your words, Urik [if MaxHP of Spike is 1]bursts out with, 'Oh, shit! This is [italic type]your[roman type] boy? I'm sorry [UrikPlayerAddress]!' clearly admitting he was wrong. [else]pulls a face and begrudgingly says, 'I'm sorry [UrikPlayerAddress].' [end if]Holding his gaze for a few seconds to make your meaning settle in, you add that he needs to control himself better in the future, with Urik nodding to show that he heard you. The Doberman by your side lets out a huff through his nose as he sees Urik give in, with a bit of a smirk appearing on his muzzle.";
-	WaitLineBreak;
 	say "     For a second, you think the matter is dealt with now, but the orc goes on to looking the Spike up and down and snorts. 'He might be quick, but that won't help much if someone gets a grip on him. Hear that boy? You need some more strength in the arms!' Proudly demonstrating what he means by flexing a bicep thicker than Spike's thigh, Urik grins down at the young dobie. 'This is what a proper man looks like! Not a stick-figure like yourself!' Laughing as he points at Spike, Urik shakes his head, 'Think you'd be able to fight off a wyvern or anything actually dangerous, not that piddly little chickenshit street fighting? You'd be in a heap on the ground in a moment! What are you gonna do? Run back to mommy and hide?' 'Hey!' Spike replies, 'I'm plenty strong, you asshole!' Snorting as he goads further, Urik reaches out to pat Spike's head, with the canine batting away his hand angrily.";
 	say "     'If you don't want to stay a lapdog and be actually useful, we'll bulk you up. You brave enough to try, puppy?' His hackles raised in defiance, Spike barks back 'Sure I am! Bring it on, you bastard!' Stepping up, Urik grins down at him, then holds out his bear-paw of a hand. 'Fine then, you're gonna join me for some strength training every day! Or are you gonna wimp out after all?'";
 	LineBreak;
@@ -2592,11 +2790,27 @@ to say SpikeMeetsUrik_Friend:
 	if MaxHP of Spike is 1:
 		add "Spike_Player_Son" to Traits of Urik; [he knows]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Meeting1 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 1 and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training1"	Spike_Urik_Friend_Training1	"[EventConditions_Spike_Urik_Friend_Training1]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training1:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 1) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training1	"Spike_Urik_Friend_Training1"
+
+Spike_Urik_Friend_Training1 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training1 is "[ResolveEvent Spike_Urik_Friend_Training1]".
+Sarea of Spike_Urik_Friend_Training1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training1:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Walking along the upper floor of the library, you see Urik standing over Spike lying on the ground, stretched out on a training mat wearing nothing but his jeans. He's got his big green feet planted to the left and right of the Doberman's head, bending a little forward to keep his hands on the set of weights that Spike is visibly struggling with. Given their relative positions, this means that the dobie can't help but stare up at Urik's crotch and ass, which the orc seems well aware of, crouching fairly low every time he assists with the lifting. The dobie makes a smart-ass comment of, 'Man, can't you get some proper pants? Got half your ass hanging out back there!' ";
 	if "Private Breeder" is listed in Traits of Urik: [Urik's not supposed to touch anyone]
@@ -2612,11 +2826,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 2; [Spike got his first (normal energy) drink]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training1 is resolved;
 
-after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 2 and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training2"	Spike_Urik_Friend_Training2	"[EventConditions_Spike_Urik_Friend_Training2]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training2:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and Dexterity of Spike is 2) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training2	"Spike_Urik_Friend_Training2"
+
+Spike_Urik_Friend_Training2 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training2 is "[ResolveEvent Spike_Urik_Friend_Training2]".
+Sarea of Spike_Urik_Friend_Training2 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training2:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Coming up the stairs to the upper floor of the library, you see a shirtless, sweaty Spike flashing past the upper end of the steps. He's closely followed by Urik whose longer legs and wider strides make it fairly easy for him to chase the dobie, all the while shouting things at his trainee. 'You'll wanna run faster boy when a horny dude runs after you. Unless you wanna be caught and bent over the railing, eh puppy?' Making a lunge and giving the young man's back a push with his large hand, Urik drives Spike to a sprint, following after him in yet another circuit of the upper library floor. When they soon come around from the other direction, Spike starts to slow down a little as he sees you, calling out the words, 'Hey, [SpikePlayerAddress]!' But before he can say anything more, Urik's close up behind him and shouts, 'DID I SAY STOP, PUPPY?' driving his trainee in front of himself like a drill sergeant. He gives you a little wink to the side, showing that he saw you.";
 	say "     Quietly chuckling to yourself about how much Urik seems to enjoy the drill instructor role, you busy yourself with some other things, like having a look out the windows to observe the approaches to the library for example. While you do that, the two men continue running without pause, with Spike panting louder every time he passes. Eventually, the young man can't help but stumble to a stop, bracing his upper body with his arms on both thighs as he gasps for breath. Stepping up close to tower over him, Urik gruffly remarks, 'That's it? Already winded, boy? With this little stamina, you might just outrun a street dog. A three-legged one, with fleas!' Not really ready to give any sort of verbal reply, Spike shows the orc his middle finger, which makes Urik laugh. 'Fun aside, I'm impressed. Ya didn't whine or beg, just kept running. Good doggie! That deserves a reward. Here, have another energy drink!'";
@@ -2631,11 +2861,27 @@ after going up from Grey Abbey Library while (Urik is in Sitting Area and Spike 
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 3; [Spike got his second (normal) drink]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training2 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 3 or Dexterity of Spike is 50 or Dexterity of Spike is 51) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training3"	Spike_Urik_Friend_Training3	"[EventConditions_Spike_Urik_Friend_Training3]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training3:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 3 or Dexterity of Spike is 50 or Dexterity of Spike is 51)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training3	"Spike_Urik_Friend_Training3"
+
+Spike_Urik_Friend_Training3 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training3 is "[ResolveEvent Spike_Urik_Friend_Training3]".
+Sarea of Spike_Urik_Friend_Training3 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training3:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike sitting on a chair nearby, slowly paging through a magazine. For a second, you wonder what he's reading, until the question answers itself as he turns it ninety degrees and spreads out the centerfold. Must be a porn mag he looted somewhere. The dobie's tail is wagging behind his back and moves one hand down to his pants, either to adjust his bulge or to flat out unzip and start stroking. Sadly (for him) Spike's fun-time ends before it can begin, as Urik strides towards the anthro canine a moment later, carrying two weighty sports bags. The grinning orc drops his burden on the ground directly behind his trainee, creating a loud crash of clinking metal and creaking wood that you can literally feel through the floorboards.";
 	say "     Spike's completely surprised by the appearance of Urik and the accompanying noise, jumping out of his chair in shock and whirling around, with the magazine going flying out over the upper floor railing and vanishing from sight as it drops. 'What the fuck?!' the young man shouts in shock, gaping wide-eyed at Urik. The orc snorts in amusement, his nostrils flaring as he takes in the scent of pre-cum in the air around Spike. Urik gets a far-away look in his eyes for a second, then shakes out of it and crosses his arms in front of his wide, muscular chest. 'Heya slut-puppy, I got some presents for ya! Cool your jets and have a look. You should be thankful when I go out of my way and grab equipment just for you!' Spike is still fairly shaken up by the surprise, but does react to the prompting from the orc by crouching down and pulling open the zipper on one of the bags. He raises his eyebrows at what he finds, then reaches in to lift a metal disc with a hole in the middle from it. Looks like part of an adjustable weightlifting set. Urik must have decided that the self-made orc gear he has was just too much for the dobie.";
@@ -2653,11 +2899,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 4; [new weights for Spike]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training3 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 4 or Dexterity of Spike is 52) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training4"	Spike_Urik_Friend_Training4	"[EventConditions_Spike_Urik_Friend_Training4]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training4:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 4 or Dexterity of Spike is 52)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training4	"Spike_Urik_Friend_Training4"
+
+Spike_Urik_Friend_Training4 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training4 is "[ResolveEvent Spike_Urik_Friend_Training4]".
+Sarea of Spike_Urik_Friend_Training4 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training4:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike and Urik standing together in the sitting area, talking to one another. Your Doberman companion is holding a bottle of water, taking another swig from it as you watch and apparently finishing off the bottle. As the young man puts down the empty container, his tail wagging behind his back, he touches Urik's arm and says, 'Thanks again for training me. I feel stronger already.' The orc chuckles at the words, reaching out to tousle the Doberman's green hair. 'You're still a twig of a guy, but it's good you're enthusiastic. Still got a long way to go, boy! And now, down you go and give me thirty push-ups for a start!' Stiffening at the command barked at him, Spike starts to step towards a training mat laid out nearby, only to be held back by Urik's large green hand on his chest. 'Better take that off, you don't wanna get it sweaty, eh?' the orc adds, tugging at the mesh shirt on his trainee's chest.";
 	say "     'Oh, uhm... yeah,' Spike replies, pulling off the article of clothing and throwing it in the direction of his little camp between the shelves. Then he gets down on the training mat and begins to do push-ups. Urik joins him a few seconds later, crouching down and looking at Spike closely. 'Gotta straighten your back more, puppy-boy! And really get on tip-toe with those paws, then go down till your muzzle is right over the ground!' He observes the Doberman's efforts with a critical eye for a little while, even reaching out to push down on his naked back to make him go lower. 'That's a little better, but you still don't have quite the right form. Here, tense up a bit back here!' Urik goes on to say, smacking his hand lightly on Spike's ass";
@@ -2674,11 +2936,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 5; [training without shakes, shirtless pushups done]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training4 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 5) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training5"	Spike_Urik_Friend_Training5	"[EventConditions_Spike_Urik_Friend_Training5]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training5:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 5)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training5	"Spike_Urik_Friend_Training5"
+
+Spike_Urik_Friend_Training5 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training5 is "[ResolveEvent Spike_Urik_Friend_Training5]".
+Sarea of Spike_Urik_Friend_Training5 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training5:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike stand at the railing overlooking the lower floor, apparently deep in thought as he just stares ahead. Just as you start to contemplate if you should walk up and talk to him, a deep voice calls out, 'Hey, puppyboy!' It's Urik, and as Spike turns around to look at him, you notice a little wag of his tail. 'Hi Urik, what's up? Is it already time for our next training session?' The orc grins at him and nods. 'Yup, time to put you through your paces!' Urik adds, then throws a bottle of his energy drink for Spike to catch. He waits for the young man to take a first swallow of the liquid, then brings forward his other hand, which had been balled to a loose fist by his side. 'Skinny jeans aren't really the proper thing to do any sort of running in, I got you this. Should fit, I'm sure,' the orc adds, opening his fingers to reveal a black piece of cloth with red borders.";
 	say "     'Huh?' Spike says in a somewhat surprised tone, setting down his bottle on the ground after recapping it. Then he reaches out to take Urik's gift from the green-skinned brute's hand and inspecting it. It's a piece of underwear, shiny and stretchy from the looks of it. 'Err, thanks. But... eh, did you find this on the street or something? Looks like the back half is missing.' Turning the garment around, Spike tugs at a pair of elastic bands as if to demonstrate what he means. 'Naw, that's how it's supposed to look. It's a sports thing, and this'll be good especially for you!' Urik replies with a smile and pats Spike's head. 'Hey! What's that supposed to mean?!' the young man replies somewhat annoyedly, patting away the large hand. 'Your tail, boy! With a jockstrap you don't have to tug yer undies down at the back to make room for it. Not wearing any right now because of the chafing at the tail, ain't that right?'";
@@ -2708,11 +2986,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 6; [Spike got a jockstrap now]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training5 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 6) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Storytime"	Spike_Urik_Friend_Storytime	"[EventConditions_Spike_Urik_Friend_Storytime]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Storytime:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 6)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Storytime	"Spike_Urik_Friend_Storytime"
+
+Spike_Urik_Friend_Storytime is a situation.
+ResolveFunction of Spike_Urik_Friend_Storytime is "[ResolveEvent Spike_Urik_Friend_Storytime]".
+Sarea of Spike_Urik_Friend_Storytime is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Storytime:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Story Time - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_shirtless_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Urik and Spike sitting next to each other on the sofa further in the back. Seems they're just hanging out with each other right now, not doing any training for a change. Your Doberman companion is currently telling a story, gesturing wildly as he does so. '...so when we got to the alley, she wanted me to follow her into it. At first I did for a few steps, hell, that husky had offered me her pussy, but then I heard a noise from behind one of the dumpsters in there. When she noticed that I knew something was up, the bitch shouted, 'Get him, Bill!' and this dude jumped out from his hiding spot. Half human, half husky guy, with a long metal rod he was hefting like a spear!' Spike pauses for effect, miming a guy attacking him, then goes on to say, 'But I was too quick for the dude. Dodged his thrust and shoved his girlfriend at him and the two of them went down in a tangle. Gave me the time to high-tail it out of there.'";
 	say "     Urik chuckles at the story and comments, 'Yeah, you don't trust a streetwalking hooker further than you can spit. That's why you bring a buddy to double-team her. If they're into that with women, you know. Those two you met were amateurs, but a woman and her pimp working together almost did my buddy Declan in once. Thought they could roll him, take everything he owned or whatever. That didn't work out so well, as me and a bunch of other soldiers were passing by on our way to a bar, and we gave em a good thrashing. But yeah, gotta watch out for yourself.' He nods to Spike, who was listening intently to his tale, then glances down at his forearm, making a fist and stroking over the tattoo covering his skin there. 'I miss Dec, he was a swell dude. Good tattoo artist too, he gave me these back in [']84,' Urik says, then pauses for a moment before he adds, 'Not even a year later, he got shot in the back by some little punk with a souped-up ride and inflated ego. Fuck, I'm still mad when thinking back to it. But the little murderous pissant got what was coming to him afterwards. Only wish we could have made it last longer.'";
@@ -2741,11 +3035,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 		say "     With a shrug, you tune the two of them out and turn your attention to other things.";
 	now Dexterity of Spike is 7; [storytime with Urik done]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Storytime is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 7) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training6"	Spike_Urik_Friend_Training6	"[EventConditions_Spike_Urik_Friend_Training6]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training6:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 7)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training6	"Spike_Urik_Friend_Training6"
+
+Spike_Urik_Friend_Training6 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training6 is "[ResolveEvent Spike_Urik_Friend_Training6]".
+Sarea of Spike_Urik_Friend_Training6 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training6:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Spike_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Spike stand in the sitting area, holding a half-full energy drink in his hand. Taking a deep swig of it, the young Doberman then walks over to Urik, who's busy unrolling two fitness mats in front of the back wall. 'So, what are we going to do today? More strength training?' Spike asks his green-skinned taskmaster, who snorts and shakes his head. 'Not quite, puppyboy. We're gonna do Yoga!' As the slender anthro canine looks at him, visibly perplexed, Urik lets out a deep laugh and lightly slaps him on the back. 'Didn't think I was the type, eh? Well, you gotta blame my nephew Troy for it. The little shit kept going 'Uncle, it's good for you!' and he eventually talked me into trying it out. And it worked, gotta admit that.' Shrugging his very wide, muscled shoulders, the orc adds, 'Thank god I'm no longer an old fart with aching joints, but Yoga's still good stuff.'";
 	say "     'If you say so,' Spike comments, then raises one eyebrow and adds, 'Just to be sure, though - I'm not calling you Sensei or Master, or anything like that!' 'That's Karate, you little punk. And do I look like a little white-bearded man to you?' Putting on a challenging smirk on his muzzle, the dobie replies, 'Well, weren't you, old man? Half a century more white hair than I have!' Their eyes meet in a stare-down, with a silly grin growing on Spike's face before too long, then a chuckle bursting out of him. Urik raises an eyebrow at that, then snorts and adds while patting Spike's head, 'Got a point at that I guess, puppy-boy. Nah, just use my name, this isn't some mystic mountain martial arts training!' Stepping over to place his broad green feet on the end of an extra large exercise mat, Urik nods over to the second one beside his and says, 'Okay, take your place. And you wanna strip down, this stuff may look soft, but you'll get sweaty, that's for sure!' Finishing off his energy drink, Spike peels the tight mesh shirt off his body, throwing it in the direction of his man-cave to land in a wadded-up heap just a few steps short. As he then starts to walk past the large orc, Urik holds out his hand in front of the young man and clears his throat with a nod down to his hips.";
@@ -2797,11 +3107,27 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 8; [Urik and Spike did Yoga]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training6 is resolved;
 
-after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitting Area and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 8 or Dexterity of Spike is 55) and a random chance of 1 in 2 succeeds) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Spike_Urik_Friend_Training7"	Spike_Urik_Friend_Training7	"[EventConditions_Spike_Urik_Friend_Training7]"	Sitting Area	2500	2	100
+
+to say EventConditions_Spike_Urik_Friend_Training7:
+	if (Urik is collected and Spike is collected and SpikeEventCooldown - Turns > 4 and Spike is not asleep and PlayerFriended of Urik is true and (Dexterity of Spike is 8 or Dexterity of Spike is 55)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Spike_Urik_Friend_Training7	"Spike_Urik_Friend_Training7"
+
+Spike_Urik_Friend_Training7 is a situation.
+ResolveFunction of Spike_Urik_Friend_Training7 is "[ResolveEvent Spike_Urik_Friend_Training7]".
+Sarea of Spike_Urik_Friend_Training7 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Spike_Urik_Friend_Training7:
 	if debugactive is 1:
 		say "     DEBUG: Spike and Urik Train - Dexterity of Spike: [Dexterity of Spike][line break]";
-	try looking;
 	project the Figure of Urik_clothed_icon;
 	say "     Walking along the upper floor of the library, you glance around and see Urik standing against the railing overlooking the lower floor. The big orc is busy playing a little game with himself, which is bouncing tennis balls off the top of the shelves below, timed just right so they bounce across several of the tall stacks. While you're still forming possible comments in your head, like where he got a shopping bag full of tennis balls and if Urik will clean up afterwards, a voice calls out from the side and interrupts your train of thought. Glancing over, you see that it's Spike who shouted, 'Hey Urik!' and the young Doberman is now approaching on his lithe paws. 'What? Did you feel an irresistible urge to run after these?' the orc replies with a grin on his face, throwing one of the yellow balls in the air and catching it, then casually tossing it at Spike's chest, who catches it and gives the orc an eyeroll and smirk.";
 	say "     Spike raises the ball in his hand, shaking his head. 'Err... no. Out of the two of us, I think you're the one chasing balls all the time, old man! I'm just here for some more training!' A broad smile appears on Urik's face and he reaches out to tousle the young anthro's green hair, with Spike batting at his hand to get him to stop. 'Always nice to see such an eager puppy, hah! Looks like the training is working too! Your body's building mass now! Come on, let's get to it then!' Cheerfully, the orc gives Spike's arm a 'light' slap that has him stumbling sideways for a second, then walks towards the back of the sitting area and retrieves a plastic bottle from the top of a quite tall shelf. Having followed his trainer, Spike accepts the drink from Urik, immediately opening it and taking a deep swig of the lime-green fluid.";
@@ -2820,6 +3146,7 @@ after going to Sitting Area while (Urik is in Sitting Area and Spike is in Sitti
 	say "     [bold type]Spike has gained [level of doberman companion times four] XP![roman type][line break]";
 	now Dexterity of Spike is 9; [Urik and Spike did weightlifting]
 	now SpikeEventCooldown is turns;
+	now Spike_Urik_Friend_Training7 is resolved;
 
 to say SpikeTalk12: [talk about Urik]
 	if Dexterity of Spike is 1:

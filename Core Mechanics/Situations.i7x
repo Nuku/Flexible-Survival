@@ -249,5 +249,4 @@ to say ResolveEvent ExampleEvent:
 
 ]
 
-
 Situations ends here.

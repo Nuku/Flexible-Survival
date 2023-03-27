@@ -41,10 +41,10 @@ The data of the game is contained in a lot of variables and properties, many of 
 * `targetturns` | the turn number for game over - DO NOT ALTER!
 
 ### Basic Infection Variables:
-* `bodyname of player` | The infection name on the player's cock. Very useful for comparisons or, less desirably, as a descriptive element.
-* `facename of player` | The infection name on the player's cock. Very useful for comparisons or, less desirably, as a descriptive element.
-* `skinname of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
-* `tailname of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
+* `bodyname of player` | The infection name on the player's body. Very useful for comparisons or, less desirably, as a descriptive element.
+* `facename of player` | The infection name on the player's face. Very useful for comparisons or, less desirably, as a descriptive element.
+* `skinname of player` | The infection name on the player's skin. Useful for comparisons or, less desirably, as a descriptive element.
+* `tailname of player` | The infection name on the player's tail. Useful for comparisons or, less desirably, as a descriptive element.
 * `CockName of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
 
 * `body of player` | portion of the player's description dealing with their body. Generally not useful for scenes.
