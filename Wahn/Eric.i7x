@@ -217,14 +217,14 @@ to say lroomdesc:
 	else if (HP of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's locker-room of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
-after going down from the Grey Abbey Library while (Libido of Eric is 0 and BodyName of Player is "Furling"):
+after going down from the Grey Abbey Library while (Eric is collected and Libido of Eric is 0 and BodyName of Player is "Furling"):
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	project the Figure of Eric_TShirt_shocked_icon;
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
 	now Libido of Eric is 1;
 
-instead of navigating Sports Arena Lockerroom while (Libido of Eric is 0 and BodyName of Player is "Furling"):
+instead of navigating Sports Arena Lockerroom while (Eric is in Sports Arena Lockerroom and Libido of Eric is 0 and BodyName of Player is "Furling"):
 	say "[NavCheck Sports Arena Lockerroom]";
 	if NavCheckReturn is false, stop the action;
 	move player to Sports Arena Lockerroom;
