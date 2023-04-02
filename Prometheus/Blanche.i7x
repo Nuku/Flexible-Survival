@@ -126,7 +126,7 @@ to say ResolveEvent Wolfrape:
 			move player to Office Den;
 			AddNavPoint Office Den;
 			WaitLineBreak;
-			project the figure of Blanche2_icon;
+			project the figure of Blanche_naked_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you. As if suddenly realizing what she's done, she takes a step back, blushing at her ears. 'Oh, I'm sorry. It's this... infection thing. I'm sure you know what it does to you. My name is Blanche. I'm really thankful for your help.' She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase. She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands. 'Please take this. I'd give you more, really, but it's about all I can spare right now. You were really brave to try and help me against that monster. I don't like going out there much because there are so many of them. You could... if you need somewhere safe to hide that is... maybe stay here... with me.' She speaks softly, but with obvious longing in her voice. Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now HP of Blanche is 1;
@@ -164,6 +164,14 @@ instead of navigating Office Den while ("Blanche - OfficeEvent" is listed in tra
 	say "[ResolveEvent Blanche's Brood]";
 
 to say ResolveEvent Blanche's Brood:
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	if debugactive is 1:
 		say "     DEBUG: Blanche organizes scavenging trips[line break]";
 	say "     As you enter Blanche's den you are met once again by the Sturm's appraising gaze, the large white wolf giving you little more than a nod in greeting before returning his full attention to watching over the scorched city surrounding the nondescript building. Given that this is one of the harshest areas in the city, you can imagine the strain that he puts himself under to ensure that his mother and the rest of his family remain safe, though you know that the others occasionally take their turn at guard duty to allow him some time to rest or relax. The door opens before your hand can reach it and the naked frame of Blanche appears in the doorway, your proximity causing her to let out a pleased gasp. '[if Player is male]My two favorite men side by side[else if Player is female]My favorite woman comes to see me[else]My rescuer comes to see me[end if]!' the wolfess MILF exclaims, giving you a warm hug. 'Come inside. Yes, you too Sturm, we were just about to organize an excursion into the city for food, water, and building materials, and your joint expertise would come in handy.'";
@@ -191,6 +199,14 @@ instead of navigating Office Den while (daytimer is day and Best Wolf is not lis
 	say "[ResolveEvent Scavenging the Park]";
 
 to say ResolveEvent Scavenging the Park:
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	if debugactive is 1:
 		say "     DEBUG: Blanche organizes scavenging trips[line break]";
 	say "     Sturm glowers at you as you enter the den, causing a sinking feeling within you that one of your children would harbor such bitterness towards you. Noticing his expression, Blanche clips him around the ear with a frown. '[SubjectProCap of Player] hasn't done anything wrong. Why do you bear [ObjectPro of Player] such ill-will?' she softly growls. Looking suitably chastened, the large male wolf greets you. 'Father. We were just readying for our initial scavenging trip to the park. It must be fate that you would appear at the right time,' Sturm explains, unable to keep the sarcasm out of his voice at the end, earning a stern poke in the side from his mother. 'We would be delighted if you had the time to accompany us,' Blanche says brightly, though you notice that she keeps one eye on her eldest son to keep him in check. For all her faults, she seems to hold absolute authority over her family, the incident with the slavers withstanding.";
@@ -1320,6 +1336,14 @@ blanchetalk3 is a truth state that varies. blanchetalk3 is usually false.
 
 to say blanchedesc:
 	say "[blancheupdate]";
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	if Charisma of Blanche > 0: [At the library]
 		if HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had [if HP of Blanche is 8]her litter[else if HP of Blanche is 11]a couple of litters[else]several litters[end if], she's just as sexy and has become quite the MILF. Since moving to the library, she also seems much happier and less frightened, especially with her loyal pack to keep her company and protect her. The white-furred wolf usually joins in as Sturm teaches the younger pups how to hunt, gather supplies, and defend themselves.";
@@ -1367,7 +1391,7 @@ Instead of conversing the Blanche:
 		now HP of Blanche is 1;
 		now Wolfrape is resolved;
 		AddNavPoint Office Den;
-	else: [At the library]
+	else:
 		say "[BlancheTalkMenu]";
 
 
@@ -1387,6 +1411,15 @@ to say blanche_pups_intro:
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 
 to say BlancheTalkMenu:
+	LineBreak;
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	say "     What do you wish to talk about with the motherly white wolf?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -1662,6 +1695,14 @@ to say sexwithBlanche:
 
 
 to blanchesexmenu:
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if Player is male and Blanche is not gravid:
@@ -1958,6 +1999,14 @@ to say OfficeBlancheFamilyEvents:
 		say "     'Mmm. Sturm said the same thing, but as none of us are willing to kill anyone, there isn't much else we can do. We'd report them to the soldiers, but they threaten to shoot us if we get too close, even Claude, so I doubt that they'd care,' Casper replies dejectedly. 'No. It has to be us, and all we can do is give them a reason to avoid us.' You swear that you see movement out of the corner of your eye, but when you look properly, all you can see is Blanche gently snoring, perhaps having turned over in her sleep. Your children seem to have made their mind up on the matter, so you move on to discussing lighter things with Casper while you wait for Blanche to finish her snooze.";
 		TraitGain "Casper - OfficeEvent" for Casper;
 	else if "Blanche - OfficeEvent" is not listed in traits of Blanche:
+		if HP of Blanche < 5:
+			project the figure of Blanche_naked_icon;
+		else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+			project the figure of Blanche_preg1_icon;
+		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+			project the figure of Blanche_preg3_icon;
+		else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+			project the figure of Blanche_naked_icon;
 		say "     Entering the Office Den, you are surprised to find all of Blanche's children present. Everyone except Sturm and Bianca seem to be hastily packing bags with scruffy clothes, looking around at the slightest sound of a door. 'Hurry! Mom will be back soon,' Maeve hisses, highlighting the startling fact that Blanche is absent. It would seem that their plan for taking down the slavers has come to fruition. You can't say that you're entirely comfortable with them fighting slavers, but short of telling their mother, you doubt that there is much that you would be able to do to stop them, especially as there are ten of them. After one last check of provisions, they all head for the door, some looking more apprehensive than others. 'Remember, if we're not back by this time tomorrow, then something has gone wrong and we need rescue,' Ernest reminds Sturm, apparently the leader of the excursion, a position that you would have thought that the eldest son would have filled. Sturm grimly nods in reply.";
 		say "     With goodbyes having been said, the children gather behind Ernest as he opens the door... only to find Blanche standing on the other side, her arms folded and a dour expression marring her usually friendly countenance. 'Back inside. Now. We're going to have a little talk,' she says icily as she steps inside. Judging from the terror on your children's faces, they have never encountered this side of Blanche before, silently shuffling to stand by the opposite wall to await the repercussions of trying to go behind their mother's back. Blanche's expression briefly softens as she gives you a kiss on the cheek in passing before returning to a look that could petrify a gorgon as she paces back and forth in front of her offspring. 'What were you thinking? Not only were you about to do something extremely stupid, but you also seemed aware of how foolish you were being with how determined you were to keep this a secret from me,' she says, the quiet, steely tone demonstrating her displeasure far more than shouting would.";
 		WaitLineBreak;
@@ -1979,6 +2028,14 @@ to say OfficeBlancheFamilyEvents:
 Section 3.2 - Library Events
 
 instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Booked) and Player is not CoA:
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	say "     Entering the computer room, you immediately notice Blanche sitting on the floor against the wall with Fang lying across her lap, the white wolf leaning over top of the darker-furred lupine and hugging [ObjectPro of Fang] tightly as tears trickle down her face. 'I'm so glad to have found you again. After what my parents did to you...' Blanche sobs, squeezing Fang against her even tighter. 'Don't dwell on past. Together again,' your [if hp of Fang is 2]omega [else if hp of Fang is 3 or hp of Fang is 4 or HP of Fang is 6]alpha [else if hp of Fang is 5]beta [else]guard [end if]replies, pressing [ObjectPro of Fang]self firmly into the MILF's embrace. 'It's been years. I haven't done much with my life since then, but what did you do? I'm assuming that you haven't been a wolf all this time,' Blanche asks, a wet snort suggesting that she had tried to laugh but that a sob had occurred simultaneously. 'I have not,' Fang replies, remaining silent for a moment as [SubjectPro of Fang] eases [ObjectPro of Fang]self from the anthro wolf's grasp and licks her face to dry the tears.";
 	if Fang is Male: [Fang is Male]
 		say "     'Hospital first to save eye. Left scar but could have been worse,' Fang begins, pausing as Blanche runs a hand over his face, tracing the old wound with her fingers. 'Then court case. You know result. Wanted to see you, but you were gone. Not your fault.' The white wolf nods her head in commiseration, snuggling even closer to him. 'Finished school, went to college. Had a girlfriend.' He once again pauses, waiting for Blanche's reaction. 'I'm pleased for you. You had no way of knowing that we would see each other again. You were no longer mine...' she reassures him sadly. 'Joined army like my father. Found out girlfriend pregnant. Daughter born while away. Missed much of her life,' Fang laments, the pain of being absent from a child's life something that Blanche can only imagine, the white wolf sympathetically kissing him on the nose but otherwise remains quiet so as to allow him to continue.";
@@ -2017,6 +2074,14 @@ instead of going to Computer Lab while Charisma of Blanche is 2 and Blanche is i
 	now Charisma of Blanche is 3;
 
 instead of going to Computer Lab while Charisma of Blanche is 3 and (Blanche is Booked or Blanche is Bunkered) and Best Wolf is not listed in companionList of Player and Player is not CoA and a random chance of 1 in 2 succeeds: [Trip to the Mall]
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	say "     You come face to face with Blanche as you enter the makeshift den, surrounded by her substantial brood. 'Oh good. I was just about to send Lumi to find you. We were about to go on an expedition to the mall and I hoped that you might join us,' she greets you, giving you a kiss on the cheek. 'I asked [if Fang is Male]Wolf [else]Lupa [end if]to come with us too, but [SubjectPro of Fang] said that [SubjectPro of Fang] had to keep watch on the library. Sometimes I wonder how much becoming a literal wolf has affected [ObjectPro of Fang],' she pouts. 'I suppose you'll just have to suffer us without [ObjectPro of Fang],' Blanche teases before turning to do another headcount of her children. 'Usual instructions. Pair up and keep an eye on those behind you to make sure that they don't end up separated from the group. If someone is foolish enough to attack us, let Sturm, Penelope, Bernard, and Lumi take the front line.'";
 	say "     They seem quite accustomed to this, so after expressing their understanding, everyone files out of the library behind you and Blanche. 'I don't think any of them have been to the mall before, so this should be quite a treat. I also have a surprise for them when we get there,' Blanche whispers to you. The trip to the mall is uneventful and you soon arrive outside where some wolverine guards eye your approaching pack with suspicion to rival Sturm's. Fortunately, they seem to relax a little when the matriarch of your group cheerily waves to them and they don't impede you from entering the shopping complex. 'I will admit that I hadn't considered that such a large group might be problematic,' she confides to you before addressing her offspring again. 'You may all freely look around in your pairs, but I want us all to meet up in the food court in an hour for a surprise. Now go and explore without upsetting any of the guards or shop owners.' Moments later, you are left alone with Blanche, with even Sturm eager to sate his curiosity of this new place. 'Might I beg your company as I window-shop?' Blanche propositions you, to which you agree.";
 	WaitLineBreak;
@@ -2101,12 +2166,28 @@ the fuckscene of White Wolf Zero is "WIP".
 
 to say SummonBlanche:
 	if Blanche is visible: [summoning while standing next to her]
+		if HP of Blanche < 5:
+			project the figure of Blanche_naked_icon;
+		else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+			project the figure of Blanche_preg1_icon;
+		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+			project the figure of Blanche_preg3_icon;
+		else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+			project the figure of Blanche_naked_icon;
 		say "     Walking over to Blanche, you ask whether she would be interested in coming with you out into the city. 'I've been looking forward to this since we last spent time together. Lead the way darling.' You smile at such a sincere expression of affection from the wolfess, exchanging a quick kiss before you go.";
 	else: [regular summoning]
 		say "     Blanche for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
 
 to say DismissBlanche:
 	move Blanche to Grey Abbey Library;
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home.  ";
 		if White Wolf One is listed in companionlist of Player: [Sturm]
