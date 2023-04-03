@@ -4,7 +4,7 @@ Version 2 of Lumi by Prometheus begins here.
 
 [Blanche's fifth daughter. Wild]
 
-[   hp of Lumi - relationship variable with the player          ]
+[   HP of Lumi - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Lumi rushes over, making sure that there is a clear area before approaching you to give you a hug. When Penelope arrives, the two begin to spar.[roman type][line break]";
 			move Lumi to Bunker;
 	else if Charisma of Blanche > 0:
-		if hp of Lumi is 0:
-			now hp of Lumi is 1;
+		if HP of Lumi is 0:
+			now HP of Lumi is 1;
 			move Lumi to Computer Lab;
 
 Section 1 - NPC Declaration
@@ -114,7 +114,7 @@ The scent of Lumi is "     Lumi smells of the city, though as she more frequentl
 to say LumiDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Lumi] <- DEBUG[line break]";
-	if hp of Lumi is 1:
+	if HP of Lumi is 1:
 		say "     Lumi is an anthropomorphic female wolf with dense white fur covering her wiry frame, but as she spends the majority of her time on all fours, it is easy to mistake her for being feral. Her behavior is closest to that of a wolf compared to her brothers and sisters and some of her features reflect this too, her stooped posture when she is on two paws being the most noticeable difference, though the longer claws are difficult to miss. Given this, it is unsurprising that she forgoes clothing, especially as garments would likely only slow her down. Perhaps sensing your eyes on her, she rolls on her side, giving you an excellent view of the slight bumps of her A-cup breasts and the canine vulva beneath her gently wagging tail. She seems to be enjoying your attention.";
 		say "     Possibly the most capable scavenger among Blanche's children, Lumi enjoys searching for treasure, almost to the point of obsession. Though her family no doubt appreciates the result of this, it is also a source of frequent teasing from her siblings, though rarely to the point where Blanche needs to scold them. Her finds are especially prized by her brother, Casper, due to his own interests, the two of them bonding over what they can offer each other. Despite her more wild behavior, she is just as capable of intelligent thought as the rest of her family, though she seems a little more forthright and stubborn than the majority of them. Prone to playing roughly, she occasionally manages to best even Sturm in their tussles, her ever-shifting quadrupedal method of fighting difficult to adapt to or counter at times. She does not wield much authority among her siblings despite her proficiency at scavenging, nonetheless, she is loved no less by her family.";
 

@@ -21,7 +21,7 @@ Ensure that you test your work frequently. Nobody likes finishing a weeks-long w
 The data of the game is contained in a lot of variables and properties, many of which may be useful in the building of your scene or to increase the level of detail and personal connection to the player character. References to the player's form, size, genitals, etc... all help personalize the scenes and increase replay value. Some of these are more useful than others. I'll denote those descriptive elements I feel are particularly useful for scenes relating to them by using **[!]** in front of them. They can then be inserted into text by using `[cock of player]` or as part of conditional statements (more on this in part 2 of this document).
 
 ### Player Stats: numerical, rarely useful for scenes except for comparisons, but here for completeness
-* `hp of player` | current hp of player
+* `HP of player` | current HP of player
 * `maxhp of player` | player's maximum hp
 * `xp of player`
 * `level of player`
@@ -67,7 +67,7 @@ A person has a number called Cock Count. Cock Count is usually 0. [the number of
 A person has a number called Cock Girth. Cock Girth is usually 7. [thickness 1-5, thin/slender/average/thick/monstrous]
 A person has a number called Cock Length. Cock Length is usually 6. [length in inches]
 A person has a number called Ball Count. Ball Count is usually 2. [number of balls the player has]
-A person has a number called Ball Size. Ball Size is usually 3. [0-7: non-existent, acron, dove egg, chicken egg, goose egg, ostrich egg, basketball, beachball]
+A person has a number called Ball Size. Ball Size is usually 3. [0-7: non-existent, acorn, dove egg, chicken egg, goose egg, ostrich egg, basketball, beachball]
 A person has a number called Cunt Count. Cunt Count is usually 0. [the number of cunts the player has]
 A person has a number called Cunt Depth. Cunt Depth is usually 9. [depth in inches]
 A person has a number called Cunt Tightness. Cunt Tightness is usually 5. [1-5: tight, tight, receptive, open, gaping]
@@ -78,16 +78,16 @@ A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 
 * `Cock Count of player` | the number of cocks the player has
 * `Cock Length of player` | the length (in inches) of the player's cock
-* `cock width of player` | the size (comparatively) of the player's balls
+* `Ball Size of player` | the size (comparatively) of the player's balls
 * `Cunt Count of player` | the number of cunts the player has
-* `cunt length of player` | the depth (in inches) of the player's cunt
-* `cunt width of player` | the width (in inches) of the player's cunt
+* `Cunt Depth of player` | the depth (in inches) of the player's cunt
+* `Cunt Tightness of player` | the width (in inches) of the player's cunt
 * `breasts of player` | the number of breasts the player has (an even number)
 * `breast size of player` | the breast size (corresponding to cup size) of the player's breasts (1=A, 2=B, 3=C, etc...)
 character number breast size of player in cupsize | the player's breast size as the corresponding cup letter
 
 * [!] `cock size desc of player` | adjective describing the player's cock size (cock length)
-* [!] `cunt size desc of player` | adjective describing the player's cunt size (cunt length)
+* [!] `cunt size desc of player` | adjective describing the player's cunt size (Cunt Depth)
 * [!] `breast size desc of player` | adjective describing the player's breast size
 * [!] `ball size` | adjective + balls/testicles/gonads | describes the size of the player's balls. Note: no 'of player' on this one.
 * [!] `cum load size of player` | adjective describing the size of the player's load. Typical usage is: "your [cum load size of player] load".
@@ -109,8 +109,8 @@ For your own sanity, only include a few of these variations in any given scene a
 ### Genitals
 * `if Player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
 * `if Player is female` *or* `if Cunt Count of player > 0` | does the player have any cunts? (female/herm)
-* `if player is herm` *or* `if Cunt Count of player > 0 and Cock Count of player > 0` | does the player have both cock and cunt? (herm)
-* `if player is neuter` *or* `if Cunt Count of player is 0 and Cock Count of player is 0` | does the player have no cunt and no cock? (neuter)
+* `if Player is herm` *or* `if Cunt Count of player > 0 and Cock Count of player > 0` | does the player have both cock and cunt? (herm)
+* `if Player is neuter` *or* `if Cunt Count of player is 0 and Cock Count of player is 0` | does the player have no cunt and no cock? (neuter)
 * `if Cock Count of player is 1` | does the player have a single cock?
 * `if Cock Count of player > 1` | does the player have multiple cocks?
 * `if Cock Count of player > 2` | does the player have 3 or more cocks?
@@ -118,10 +118,10 @@ For your own sanity, only include a few of these variations in any given scene a
 * `if Cock Length of player < 10` | does the player have a cock that is under 10 inches?
 * `if Cock Length of player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)
 * `if Cock Length of player > 20` | does the player have a belly-stuffing big cock? (again, my value choice for this)
-* `if cock width of player > 5` | are the player's balls ranked above 5 in size?
-* `if cock width of player < 12` | are the player's balls ranked under 12 in size?
-* `if cock width of player > 40` | is the player's load belly-bloatingly large? (again, my value choice for this)
-* `if cock width of player > 20` | is the player's load belly-stuffingly large? (again, my value choice for this)
+* `if Ball Size of player > 5` | are the player's balls ranked above 5 in size?
+* `if Ball Size of player < 12` | are the player's balls ranked under 12 in size?
+* `if Ball Size of player > 40` | is the player's load belly-bloatingly large? (again, my value choice for this)
+* `if Ball Size of player > 20` | is the player's load belly-stuffingly large? (again, my value choice for this)
 The above cock comparisons can be done for the player's cunt values. The size comparisons should also be considered against a critter's cunt/cock size to just their fit.
 
 ### Infections
@@ -142,7 +142,7 @@ The current list options are: felinelist, caninelist, equinelist, vulpinelist, r
 ### Fighting and Fight Outcomes
 * `if weapon object of player is journal` | does the player fight barehanded?
 * `if weapon object of player is not journal` | does the player fight with a weapon?
-* `if hp of player > 0` | did the player submit/lose to lust before being KO'd? (when used within player loss scenes for critters)
+* `if HP of player > 0` | did the player submit/lose to lust before being KO'd? (when used within player loss scenes for critters)
 * `if monsterhp < ( hp entry / 2 )` | is the critter's hp under 50%? (must choose the current monster row beforehand)
 * `if lost is 1` | did the player lose their last fight? (usable only after combat's fully resolved and critter win/loss scene have played) WARNING: Does not account for fleeing.
 * `if fightoutcome >= 10 and fightoutcome <= 19` | did the player win their last fight?
@@ -229,13 +229,13 @@ Every NPC has these variables:
 * Libido (number)
 * Loyalty (number)
 * Humanity (number)
-* Cocks(number)
+* Cock Count (number)
 * Cock Length (number)
-* Cock Width (number)
-* Testes (number)
-* Cunts (number)
-* Cunt Length (number)
-* Cunt Width (number)
+* Ball Size (number)
+* Ball Count (number)
+* Cunt Count (number)
+* Cunt Depth (number)
+* Cunt Tightness (number)
 * Breasts (number)
 * Breast Size (number)
 * PlayerMet (truth state)
@@ -249,13 +249,13 @@ These should be filled out accurately for your NPC by you:
 ```
 ScaleValue(number)
 SleepRhythm(number)
-Cocks(number)
+Cock Count(number)
 Cock Length(number)
-Cock Width(number)
-Testes(number)
-Cunts(number)
-Cunt Length(number)
-Cunt Width(number)
+Ball Size(number)
+Ball Count(number)
+Cunt Count(number)
+Cunt Depth(number)
+Cunt Tightness(number)
 Breasts(number)
 Breast Size(number)
 ```
@@ -264,13 +264,13 @@ Just like so:
 Amy is a woman.
 ScaleValue of Amy is 3. [human sized]
 SleepRhythm(number) [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Amy is 0. [no cock]
+Cock Count of Amy is 0. [no cock]
 Cock Length of Amy is 0. [no cock length]
-Cock Width of Amy is 0. [no ball size]
-Testes of Amy is 0. [no balls]
-Cunts of Amy is 1. [1 pussy]
-Cunt Length of Amy is 8. [gets stretched a bit by an alpha husky]
-Cunt Width of Amy is 3. [gets stretched a bit by an alpha husky]
+Ball Size of Amy is 0. [no ball size]
+Ball Count of Amy is 0. [no balls]
+Cunt Count of Amy is 1. [1 pussy]
+Cunt Depth of Amy is 8. [gets stretched a bit by an alpha husky]
+Cunt Tightness of Amy is 3. [gets stretched a bit by an alpha husky]
 Breasts of Amy is 4. [4 nipples]
 Breast Size of Amy is 2. [B cup at the start]
 ```
@@ -279,7 +279,7 @@ An example:
 ```inform7
 if Cock Length of Player > Cunt Depth of Amy + 2: [some stretching allowed]
 	say "     The female husky wines a little as you bottom out inside her before your cock is all the way in. 'Not so deep please, you're too big.' [...]'";
-else if Cock Length of player < cunt length of Amy - 3: [a bit small, eh?]
+else if Cock Length of player < Cunt Depth of Amy - 3: [a bit small, eh?]
 	say "     The female husky gives a needy whine and asks, 'Are you, ehm... already in?'";
 else: [regular sex]
 	say "     ...";

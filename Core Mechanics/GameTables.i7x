@@ -91,7 +91,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 --	--	--	--	0	false
 
 Table of GameCharacters
-Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Depth(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cock Count(number)	Cock Length(number)	Ball Size(number)	Ball Count(number)	Cunt Count(number)	Cunt Depth(number)	Cunt Tightness(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
 with 1000 blank rows
 
 Table of GameCharacterVariables
