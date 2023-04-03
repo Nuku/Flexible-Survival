@@ -244,14 +244,14 @@ to say LarissaTFsex:		[Menu options to be added later as more scenes are compose
 		say "***Larissa neuter. No scene yet.";
 
 [ cock/cunt size scaling:
-Cock Length > ( ( Cunt Depth * 2) + Cunt Tightness + 2 )		:	over the limit
-Cock Length > ( Cunt Depth + Cunt Tightness + 2 )			:	large
-Cock Length	< ( ( Cunt Depth + Cunt Tightness + 1 ) / 3 )	:	small
+cock length > ( ( Cunt Depth * 2) + cunt width + 2 )		:	over the limit
+cock length > ( Cunt Depth + cunt width + 2 )			:	large
+cock length	< ( ( Cunt Depth + cunt width + 1 ) / 3 )	:	small
 
 cum output scaling:
-Ball Size >= ( scalevalue + 1 ) * 10				:	super-stuffed
-Ball Size >= ( scalevalue + 1 ) * 5				:	plumped
-Ball Size>= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
+cock width >= ( scalevalue + 1 ) * 10				:	super-stuffed
+cock width >= ( scalevalue + 1 ) * 5				:	plumped
+cock width >= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
 ]
 
 to say Larissasex_MF:

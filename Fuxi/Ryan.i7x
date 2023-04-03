@@ -352,7 +352,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Ryan's Ending"	"NPC"	""	Ryan's Ending rule	900	false
 
 This is the Ryan's Ending rule:
-	if HP of Ryan > 0:
+	if hp of Ryan > 0:
 		trigger ending "Fang's Epilogue";
 		if humanity of Player < 20:
 			say "     Succumbing to your infection, you wander for a while before you reach the bunker and pound into Ryan fucking him long and hard into multiple orgasms for hours. Your fennec mate was always careful to hold firm to his sanity, but in his current intense grief and lust, he can't bring himself to resist you. Crying softly, Ryan grabs your face and draws you into one last passionate kiss before he follows you into madness.";

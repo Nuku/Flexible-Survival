@@ -771,7 +771,7 @@ to say KyrverthLargePlayerAnal:
 	KyrverthSexInfect;
 
 to KyrverthSexInfect:
-	if Player is male or Player is herm:
+	if Player is male or player is herm:
 		infect "Horny Dragon";
 	else if Player is female:
 		infect "Slutty Dragoness";
@@ -1337,7 +1337,7 @@ It is temporary.
 
 to say goldensculptureuse:
 	now KyrverthUsedArtifact is true;
-	if Player is male or Player is herm: [Player has a cock]
+	if Player is male or player is herm: [Player has a cock]
 		say "     You pull the golden [one of]cock[or]dildo[or]penis[at random] out and inspect it. Just like last time you notice the [one of]exquisite[or]intricate[or]elaborate[or]striking[at random] detail that has been put into the creation of this [one of]exotic[or]weird[at random] [one of]cock[or]dildo[or]penis[at random]. One line stands out and seems a little deep, placed in the back, just under the top and heading down to the balls. You poke it with a finger and are surprised when the 'gold' moves as if it was rubber. Inside it looks as if the [one of]cock[or]dildo[at random] is hollow, and you think you know [bold type]exactly[roman type] what to do.";
 		if Cock Count of Player is 1: [SECTION TO ADDRESS COCK SIZE, BALL SIZE, AND NUMBER OF COCKS]
 			if Cock Length of Player <= 16: [fits]
@@ -1500,7 +1500,7 @@ This is the Kyrverth Jackal King rule:
 
 This is the Kyrverth Golden Dragon rule:
 	if ending "Kyrverth Golden Dragon" is triggered:
-		if Player is male or Player is herm:
+		if Player is male or player is herm:
 			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
 			LineBreak;
 			say "     For a while you drift around from place to place, finding it hard to hold a job other than the hardest of manual labor due to walking on all fours, but eventually you end up in the mountains of Japan. You copy some of the scientists, sell your shedded scales for money and use the money to build a sanctuary deep into the mountains - dedicated to infected people like yourself who have trouble fitting into normal society.";

@@ -268,7 +268,7 @@ to say alpha huskypack lost:
 		if Player is female:
 			say "     A wet, slippery, canine tongue delves up into your cunt, lapping at your [Cock of Player] sex as they tease at your clit with claw tips carefully. Your sex sings with forced pleasure as the dogs work diligently to bring you to delirious heights.";
 		say "     You shudder and spasm as climax hits you like a freight train, feeding hungry husky mouths with your fluids. They work you until you have no further to give and lower you back to the ground gently. The alpha stands over you, his tail wagging. 'Next time.'";
-		CreatureSexAftermath "Husky Alpha" receives "[if Player is male]OralCock[else if Player is female]OralPussy[else if Player is herm and a random chance of 1 in 2 succeeds]OralCock[else if Player is herm]OralPussy[end if]" from "Player";
+		CreatureSexAftermath "Husky Alpha" receives "[if Player is male]OralCock[else if Player is female]OralPussy[else if player is herm and a random chance of 1 in 2 succeeds]OralCock[else if player is herm]OralPussy[end if]" from "Player";
 
 
 to say alpha huskypack victory:
