@@ -4,7 +4,7 @@ Version 2 of Claude by Prometheus begins here.
 
 [Blanche's third son. Curious]
 
-[   HP of Claude - relationship variable with the player          ]
+[   hp of Claude - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Claude enters the computer room and snuggles in a blanket, keeping an eye on Erenest's activity as he dozes.[roman type][line break]";
 			move Claude to Computer Lab;
 	else if Charisma of Blanche > 0:
-		if HP of Claude is 0:
-			now HP of Claude is 1;
+		if hp of Claude is 0:
+			now hp of Claude is 1;
 			move Claude to Computer Lab;
 
 Section 1 - NPC Declaration

@@ -68,7 +68,7 @@ Section 2 - Latex Vixen Definition
 
 A latex vixen is a kind of monster. The body of a latex vixen is usually {Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene, Latex_Vixen_gene}. A latex vixen is monstrous. A latex vixen is fully infected. A latex vixen is usually unsuited. A latex vixen is female. A latex vixen is tailed. The monster gene of a latex vixen is Latex_Vixen_gene.
 
-Description of latex vixen is "This beast looks like a cross between a sexy woman, a fox, and a pool-toy, her rubber skin catching reflections of light almost as well as her bared teeth.".
+Description of latex vixen is "This beast looks like a cross between a sexy woman, a fox and a pool-toy, her rubber skin catching reflections of light almost as well as her bared teeth.".
 
 The hitdesc of latex vixen is "scratches YOU in the bodypart, leaving a red trail in the wake of HER claws!".
 

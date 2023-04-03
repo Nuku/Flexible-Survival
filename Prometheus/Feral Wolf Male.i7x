@@ -83,7 +83,7 @@ to say BeatFeralWolfMale:
 	increase FangCount by 40;
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
-	else if inasituation is false and FeralWolfMaleFight is not 3 and (HP of Fang is 0 or HP of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
+	else if inasituation is false and FeralWolfMaleFight is not 3 and (HP of Fang is 0 or hp of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( FangCount - 95 ) and (Player is not neuter ):	[3rd to 5th wolf]
 			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
@@ -148,10 +148,10 @@ to say BeatFeralWolfMale:
 			else:
 				LineBreak;
 				say "     Not wanting to risk bringing such a beast back to your safehouse, you strike the cowering cur again and continue on your way.";
-				if HP of Fang is 99:
+				if hp of Fang is 99:
 					now HP of Fang is 100; [Fang refused completely]
 				else:
-					now HP of Fang is 98; [Fang refused as Male]
+					now hp of Fang is 98; [Fang refused as Male]
 		else:
 			say "[FeralWolfVictorySex]";
 	else:

@@ -4,7 +4,7 @@ Version 2 of Ernest by Prometheus begins here.
 
 [Blanche's second son. Intelligent]
 
-[   HP of Ernest - relationship variable with the player          ]
+[   hp of Ernest - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Ernest immediately rushes towards where he has stashed his toolbox and mechanical scrap, barely greeting you as he hurries past.[roman type][line break]";
 			move Ernest to Computer Lab;
 	else if Charisma of Blanche > 0:
-		if HP of Ernest is 0:
-			now HP of Ernest is 1;
+		if hp of Ernest is 0:
+			now hp of Ernest is 1;
 			move Ernest to Computer Lab;
 
 Section 1 - NPC Declaration
@@ -114,7 +114,7 @@ The scent of Ernest is "     Ernest smells of paper and dust, his time in the ai
 to say ErnestDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Ernest] <- DEBUG[line break]";
-	if HP of Ernest is 1:
+	if hp of Ernest is 1:
 		say "     Ernest is an anthropomorphic male wolf with soft white fur across his body. Surprisingly lithe given his bookish disposition, he keeps his figure through a combination of activity during scavenging, carefully chosen exercise, and winning the genetic lottery. Seldom seen without a clipboard and some goggles perched on his head that he found somewhere, he is the most intellectually-gifted of Blanche's children, at least conventionally, a factor that occasionally causes him difficulty when trying to relate to others. Accustomed to this, his siblings don't take offence when he accidentally talks down to them regarding some theory that he has formed, though they do tend to excuse themselves from the conversation when it happens. Blanche by comparison seems able to hold a proper intellectual conversation with him, slightly surprisingly. Despite his more reserved personality, he unashamedly remains as naked as his brothers and sisters, his sheath and scrotum on full display.";
 		say "     Perceptive as usual, Ernest soon turns to meet your eye, an eyebrow raised in askance. He and his scavenging-partner, [if Claude is Male]Claude[else if Claude is Female]Claudia[end if], have a strained relationship at times, caused by the contrast between their personalities: aspiring scientist and naive socialite. They may disagree a lot of the time, but both are firm that they remain partners so you get the impression that they are fond of each other, even if they won't admit it to others or themselves. He frequently helps his mother with organizing scavenging routes among other duties, taking comfort in the structure and control that this provides. Blanche is also able to use these interactions to help him better connect with his brothers and sisters or help soothe any growing irritation towards [if Claude is Male]Claude[else if Claude is Female]Claudia[end if].";
 

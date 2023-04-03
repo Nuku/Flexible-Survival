@@ -64,8 +64,8 @@ to say CassielScent:
 to say CassielDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Cassiel: [HP of Cassiel], Dexterity: [Dexterity of Cassiel], LIBIDO: [Libido of Cassiel], LUST: [lust of Cassiel], Strength: [Strength of Cassiel], Stamina: [Stamina of Cassiel] <- DEBUG[line break]";
-	say "     Standing at a height of five feet, Cassiel is a chimera of species and though they range widely from reptile to mammal, they all somehow mix together well enough to give her an almost dignified look. The priestess has a slender build with a moderate bust that is covered by her loose-fitting white robes. Her face is human with a fair-skinned complexion and bright blue eyes. Instead of human ears soft and floppy golden rabbit ears sit atop her head covered by a mane of long hair of the same color.";
-	say "     From what you can see under her robes starting below the neck her skin is covered in almost glowing silvery scales. Her scaled arms end in taloned hands that are surprisingly dexterous despite their look. Peeking out behind her robes in a golden feline tail that sways back and forth on its own accord, as well as a set of angelic wings that hang from her back. To finish off the golden theme she stands upon a pair of fluffy golden rabbit feet.";
+	say "     Standing at a height of five feet, Cassiel is a chimera of species and though they range widely from reptile to mammal, they all somehow mix together well enough to give her an almost dignified look. The priestess has a slender build with a moderadte bust that is covered by her loose-fiiting white robes. Her face is human with a fair-skinned complection and bright blue eyes. Instead of human ears soft and floppy golden rabbit ears sit atop her head covered by a mane of long hair of the same color.";
+	say "     From what you can see under her robes starting below the neck her skin is covered in almost glowing silvery scales. Her scaled arms end in taloned hands that are surpisingly dextrous despite their look. Peeking out behind her robes in a golden feline tail that sways back and forth on its own accord, as well as a set of angelic wings that hang from her back. To finish off the golden theme she stands upon a pair of fluffy golden rabbit feet.";
 
 Section 2 - Talking with Cassiel
 
@@ -131,7 +131,7 @@ to say Cassiel_Small_Talk: [Small talk with Cassiel]
 		-- 4:
 			say "     'I've heard rumors that there was a demon of some sort living in a chapel nearby.' Cassiel's brow furrowed as her cheeks puffed up a bit in annoyance. 'I'd hate to think of what sinful acts they're doing inside such a holy place. If I weren't busy granting this place protection I'd certainly give them a piece of my mind...'";
 		-- 5:
-			say "     'Have you been to the restaurant on the boardwalk? I'm surprised they're still open despite everything that's happened. On occasion I find myself there when I get hungry, you have to try one of their cheeseburgers!  They are quite delicious.'";
+			say "     'Have you been to the resturant on the boardwalk? I'm surprised they're still open despite everything that's happened. On occassion I find myself there when I get hungry, you have to try one of their cheeseburgers!  They are quite delicious.'";
 	wait for any key;
 	say "[CassielTalkMenu]";
 

@@ -376,7 +376,7 @@ to say ShagShackSexMenu:
 		now sortorder entry is 11;
 		now description entry is "Get ready for some discipline by the hunk of a tiger";
 	[]
-	if Player is male and HP of Ryan < 1:
+	if Player is male and hp of Ryan < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Spend time with Ryan, a cute fennec fox (transgender content)";
 		now sortorder entry is 12;
@@ -957,7 +957,7 @@ to say ShagShackSex12: [Ryan, by Mizu; expanded by Fuxi]
 			WaitLineBreak;
 			say "     You wake up to Ryan presenting you with a simple breakfast of fruit and bread, with your room immaculately clean. 'I can't ever repay you properly, sir, but I hope to help you in any way I can,' Ryan says smiling cutely at you. Booping his cute nose in reply, you rub his head and assure Ryan that you'll keep him close by, before pulling him for a snuggle. You enjoy a relaxing meal with your loving vulpine, feeling a new sense of determination to survive the nanite plague and return to your mate no matter the dangers of the city.";
 			NPCSexAftermath Player receives "OralPussy" from Ryan;
-			now HP of Ryan is 1;
+			now hp of Ryan is 1;
 			move Ryan to Maintenance Storeroom;
 			move Player to Maintenance Storeroom;
 		else:
