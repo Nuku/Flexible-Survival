@@ -1,8 +1,8 @@
 Version 1 of Avatar of Hope by Prometheus begins here.
 
-[hp of Hope-Born Dragon]
-[hp of Isharielle? Iolanthe? (Angel)]
-[hp of Illiana? (Demon)]
+[HP of Hope-Born Dragon]
+[HP of Isharielle? Iolanthe? (Angel)]
+[HP of Illiana? (Demon)]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -28,7 +28,7 @@ to say ResolveEvent Strange Visitor:
 	say "     'So as not to take up any more of your valuable time, I shall be more succinct. I came here with a gift for you.' Sliding a hand into his coat, the strange visitor soon withdraws it again, holding an egg much too large to have been stored in any mundane way within the garment and places it on the floor in front of you. 'My past experiences with your world, as well as my host's thoughts, suggest that like people on many other planes, you may be interested in dragons,' he explains, a small smile evident in his voice. 'This egg is from the same clutch as many of the dragons of the ruling families of my world though I have kept it dormant for quite some time. When it hatches, it will need a parent-figure and I am trusting that you will fulfil that role. They will be rather impressionable as they grow but for the most part I'll let you learn that for yourself. It should grow up relatively quickly, but I suppose that won't be too much of a surprise given the rate at which children develop around here. If you have any problems, I'm sure they'll sort themselves out on their own, unless it is sufficiently severe that I'll have become aware anyway.'";
 	say "     Your visitor stands again, considering the conversation over. 'It is a comfortable home that you have made for yourself here, but I fear that I must nonetheless depart lest I earn you the hostility of the Aesir or any of the other divine beings who might take an interest in you. I can already sense a presence stirring below so hopefully he will calm again should I leave. Good luck with the dragon. They shouldn't grow [italic type]too [roman type] large.' Laughing, he walks away with you following after him until he is out the door again. Wondering what you have got yourself into, you return to the egg and pick it up in both hands, finding it surprisingly light given its size. Unsure where to put it, but aware that you can't exactly take it with you as you traverse the city just in case it gets cracked, you eventually decide to leave it by the table at the top of the stairs so that you can check up on it easily. You hope that you aren't going to have to need to do anything weird like masturbate on it to make it grow...";
 	move Dragon Egg to Grey Abbey 2F;
-	now hp of Hope-Born Dragon is 1;
+	now HP of Hope-Born Dragon is 1;
 	now Strange Visitor is resolved;
 
 Avatar of Hope ends here.

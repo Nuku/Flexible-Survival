@@ -219,18 +219,18 @@ to Coyotify: [Used for infection purposes.]
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-	else if Diegochanged is 0: [Male Diego]
+	else if DiegoChanged is 0: [Male Diego]
 		now sex entry is "Female";
-	else if Diegochanged is 1: [Herm Diego]
+	else if DiegoChanged is 1: [Herm Diego]
 		now sex entry is "Both";
-	else if Diegochanged is 2: [Female Diego]
+	else if DiegoChanged is 2: [Female Diego]
 		now sex entry is "Male";
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect;
 	now non-infectious entry is true;
-	if Diego is visible and (( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" )):
-		say "Diego gets a puzzled look on [if diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[else]she[end if] meant by that.";
+	if Diego is visible and (( DiegoChanged is 0 and sex entry is not "Female" ) or ( DiegoChanged is 2 and sex entry is "Female" )):
+		say "Diego gets a puzzled look on [if DiegoChanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if DiegoChanged is 0]he[else]she[end if] meant by that.";
 
 
 [

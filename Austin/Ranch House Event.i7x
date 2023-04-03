@@ -62,7 +62,7 @@ to say RanchHouse_Choice1: [Go inside the barn and see who is inside]
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link]  you free her and let her go with the others, [link]2[end link] take advantage of the situation, or [link]3[end link] leave the place not worring about how she is left.";
+			say "Invalid choice. Type [link]1[end link]  you free her and let her go with the others, [link]2[end link] take advantage of the situation, or [link]3[end link] leave the place not worrying about how she is left.";
 	if calcnumber is 1:
 		LineBreak;
 		say "     You decide to approach the mare in order to help her but only manage to frighten her as you get closer. Stopping for a second to let her know that you only want to help, she relaxes just a bit but is still cautious as you approach to shut down and remove the milking machine and her bindings. Once her bindings are loose she quickly gallops from the room, but not before looking back at you through the open door. She gives you a long stare before making her way to the direction where the rest of the creatures went.";

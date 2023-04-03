@@ -958,7 +958,7 @@ to say DoranAutoSexProtocol:
 	else if Player is female and Cunt Depth of Player > 4 and a random chance of 1 in 3 succeeds:
 		say "[DoranDom_Vaginal]"; [cunt sex scene]
 	else if (Cock Length of Player > 17 and a random chance of 1 in 3 succeeds) or (Cock Length of Player < 19 and a random chance of 1 in 2 succeeds): [Dominant Doran Handjob Scenes]
-		if (player is puremale) or (player is herm and a random chance of 1 in 2 succeeds):
+		if (player is puremale) or (Player is herm and a random chance of 1 in 2 succeeds):
 			say "[DoranDom_CockHandjob]"; [Cock-Focused Iteration]
 		else:
 			say "[DoranDom_CuntHandjob]"; [Cunt-Focused Iteration]

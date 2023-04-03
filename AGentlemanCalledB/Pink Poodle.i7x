@@ -335,8 +335,8 @@ When Play begins:
 	now heat duration entry is 10;
 	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
 	now description text entry is "";
-	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
+	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[pinkpoodleheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
