@@ -159,6 +159,10 @@ instead of conversing the Doctor Medea:
 		else:
 			say "     There are more supplies I need to be able to expand the range of services I can provide to my patients. With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin. Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
 			now hospquest is 21;
+	else if "Pregnancy Aid Search" is listed in Traits of Ryan:
+		say "     As you explain your's and Ryan's plight, Medea gives a thoughtful hum before responding, 'I think I might have something that can help wait here.' With that said, she hurries off deeper into her clinic before reappearing with a large white bottle of pills clutched in her scaly hands. 'These are called fertile pills, and they might be just the answer to your problem,' the lizard doctor states. 'Zephyr makes them, and they're a rather new drug. It would be best to use them only when pregnant, and I'd recommend spacing. Be careful not to take too many at once, as it can be dangerous and have potential side effects. Is that clear?' Nodding in confirmation, you take the fertile pills and leave the clinic with a happy skip in your step, fantasies of the many litters you'll be having with your mate and breeding those litters uplifting both your mood and lust";
+		TraitLoss "Pregnancy Aid Search" for Ryan;
+		TraitGain "Fertile Pill Bottle" for Ryan;
 	else if HP of Doctor Matt is 21 or hospquest is 21:
 		say "[Medeaadjustments]";
 	else if Player is female:
