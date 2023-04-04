@@ -342,7 +342,7 @@ to say WyattSexBlowjob:
 	if Player consents:
 		LineBreak;
 		say "     Thinking that spitting his cum out would be rude, you instead swallow it, the thick creamy liquid slowly making its way down your throat, leaving its typical aftertaste lingering at the back of your tongue.";
-		if Player is female and Breast Size of Player > 0:
+		if Player is female and breast Size of Player > 0:
 			say "     'Don't drink too much of it. I wouldn't want to have you lose that pretty face and become all burly and hairy... But I don't mind feeding you some more any time.' Wyatt then smiles as you head off to clean yourself up.";
 		else:
 			say "     'Glad we could find something pleasant for both. I suppose if you tend to do a good job consistently, you may have more of where it comes from.' Wyatt then smiles as you head off to clean yourself up.";
