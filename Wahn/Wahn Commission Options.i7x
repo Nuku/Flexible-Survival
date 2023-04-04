@@ -51,17 +51,35 @@ Brennan: [uninfected human survivor; trans-man]
 - More and varied sexual scenes
 - Foursomes with his wolves
 
+Cole/Coura: [mall rat guy/girl; 'cursed' with gender-switching by Nermine, and has to work in her store, being sexually available to the player]
+- Expanding on the sexual scenes available with Cole/Coura
+- Spinning on his/her story for the various resolutions of what happened with the magic doll
+- Dealing with the rat's friends trying to put sexual moves on Coura (player could step in and stop it, or sell access to her pussy, ...)
+
 Danny: [mall rat photo/video enthusiast]
 - More photo safaris of capturing neat pics (with the player or him being fucked/fucking)
 
 Fiona: [moody, breed-happy catgirl]
 - Actually knocking her up (with her throwing herself at people to be fucked that is the logical next step)
 
+Helen: [human dog; obtainable from Mike]
+- More interactions with Helen (playful or sexual) - for example throwing a tennis ball, etc.
+- NPC/Helen interactions in the library
+- Combat training as a new companion
+
 Monty: [human soldier; uninfected besides having an gained an extraordinary sensitive (and stretchable) asshole]
 - Continuing with introducing him to more sexual experimentation of things he can do with his ass
 - Further befriending of the man, potentially reaching the difficult goal of starting a relationship with the (nominally straight) guy
 - Partnering up with Monty to take care of Tiny (the Camp Bravo minotaur) in a pinch
 - Developing a questline to save Tiny in the endings (he'd be an embarrassment and the military would like him 'disappeared')
+
+Nermine: [jackaless sorceress; go-to NPC for magical support, tied into many quests]
+Expanding on making Nermine the player's bitch:
+- More sex scenes of various types between the Player and her (public, in the backroom, or using some of the no doubt available magical sex toys)
+- Further public sex scenes with various onlookers and/or participants (could bring the horny mall rat guys into play again)
+- Taking Nermine down a peg, maybe bringing the leather harness into play that the player can get for her - might just clip a leash to it and take her out for a stroll
+- Potentially making a little profit from Nermine yourself, with the option of letting others fuck her, for a price
+- Knocking the bitch up
 
 Romulus & Remus: [feral wolf companions of Brennan]
 - Wolf Sitting, taking them out on adventures after Brennan gets hurt somehow and needs some days to recover
@@ -83,3 +101,18 @@ Sylvanus: [anthro goat mascot of PAN, formerly a feral goat, pansexual]
 Urik: [orc warrior/breeder; older man and veteran]
 - Opening up lots of varied sexual positions with the big hunk
 - Setting up a plan to get him out of the city in the endings (disguise as rich businessman - so he's not locked up with all those 'hostile' orc criminals that the military has had so much trouble with)
+
+Vincent: [anthro fox (untransformed Val - see orcs); can be brought into the library if rescued]
+- Filling out his sex menu with a variety of available scenes
+- Interactions with other NPC in the library (especially orcs, like Urik)
+- Spinning on his interactions with orc cum (growing temptation/hunger, microdosing on orc cum, him getting off sniffing on an orc cum rag, ...)
+- Optional partial orc transformation (hybridization with the fox, not full conversion)
+- Mpreg after hybridization, or through orc pills as pure fox
+
+Xerxes: [human dog; obtainable from Mike]
+- More interactions with Xerxes (playful or sexual) - for example throwing a tennis ball, etc.
+- NPC/Xerxes interactions in the library
+- Combat training as a new companion 
+
+
+

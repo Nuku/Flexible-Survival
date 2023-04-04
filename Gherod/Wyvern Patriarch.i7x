@@ -74,7 +74,7 @@ to say Wyvern Patriarch Wins:
 		WaitLineBreak;
 		say "     This massive surge of cum hits you right on the face, the first gush being enough to blind you and make you choke for several moments before he thrusts forward, firing the rest of his massive load right into the mixture of precum and goop, then enveloping you in a huge mixture and mess of thick juices. As both substances seem to merge with one another, the whole thing comes down as just creamy liquid, making a puddle around you without actually submerging your body in the stuff. For like a whole minute, his spurts are so huge and heavy you can even hear more of his load falling onto the ground in loud splashes, all this happening while the wyvern just roars in ecstasy, having successfully humiliated you and being quite proud of that.";
 		WaitLineBreak;
-		if vorelevel is 3 and scalevalue of Player < 5: [CV scene]
+		if vorelevel is 3 and scalevalue of player < 5: [CV scene]
 			say "     But even after his orgasm, the massive wyvern does not seem satisfied, grunting about as he persistently continues to rub his cock on your body, his meat refusing to soften. He does not seem annoyed, however, only more increasingly horny, which begins to worry you. 'You know what... I'm not entirely satisfied yet. I don't think your punishment strikes me as complete. You enjoyed this too much.' He then looks down at you, mischief evident in his reptilian muzzle, and slides his manhood all the way down until its tip is facing your feet. You blink as you attempt to understand what he wants, and then, he thrusts forward to bring that mostly flat head over your soles.";
 			say "     Then, his slit begins to widen as he pokes your feet with it, pressing against them as you still struggle to free yourself from the messy trap he got you in. 'I've got just the thing for a mischievous imbecile like you... Just fitting.' Suddenly, one of your feet happen to slide into the gaping orifice, and then, his cock begins to throb, gushing out this slippery precum all over you, once more. Your other foot also sinks into his cock by the time you look back at it, and it is then that you realize the large wyvern's intention. You try to pull it out, but it is too late, as he still has complete hold of you. Another throb and your ankles are caught in it. 'There is no escaping me, fool! You belong to me!' The pull his cock has on you is so great that, with each additional throb, you feel yourself being dragged deeper inside it...!";
 			WaitLineBreak;
@@ -96,7 +96,7 @@ to say Wyvern Patriarch Loses:
 	else:
 		if fightoutcome is 11: [Wyvern Patriarch submitted by libido victory]
 			project figure of Wyvern_Patriarch_hard_icon;
-			say "     With your lewd display of skill, quite literally, the big wyvern's movements become more and more sluggish, as he seems increasingly distracted by what he sees. 'Who... Who fights like this?! S-showing off their... Their indecency! Instead of fighting properly!' By further teasing him, you manage to incite his confused wrath as he launches a volley of goop towards you, something he does not seem to do too frequently, but he does a terrible job at aiming. Most of it fails completely, with only a little bit of it sticking to your leg by pure chance. You do catch a glimpse of what seems to be his cock - and what a massive thing that is - protruding right from between his legs in an embarrassing, but grand, erection. It seems you did manage to turn him on...";
+			say "     With your lewd display of skill, quite literally, the big wyvern's movements become more and more sluggish, as he seems increasingly distracted by what he sees. 'Who... Who fights like this?! S-showing off their... Their indecency! Instead of fighting properly!' By further teasing him, you manage to incite his confused wrath as he launches a volley of goop towards you, something he does not seem to do too frequently, but he does a terrible job at aiming. Most of it fails completely, with only a little bit of it sticking to your leg by pure chance. You do catch a glimpse of what seems to be his cock - and what a massive thing that is - protruding right from between his legs in an embarassing, but grand, erection. It seems you did manage to turn him on...";
 			say "     'Grr! I... Why are you...?! T-this is impossible!' It would seem the large wyvern is stuck in an incredulous state as he observes you walking towards him. Something in his mind must be making him stay instead of attempting to flee, confused about how he came to be in such a situation, where he does not know if he has truly lost the fight or is just too distracted with fantasies previously unknown to him. One thing is certain, that massive cock of his stands proudly erect, throbbing and leaking, right before you, showing the effectiveness of your tactics.";
 			say "     Perhaps you should use this opportunity to have some fun with the wyvern?";
 			WaitLineBreak;
@@ -117,13 +117,13 @@ to say WyvernPatriarchLosesSexMenu:
 	now sortorder entry is 1;
 	now description entry is "That massive piece of meat surely is big enough to fit an arm or two...";
 	[]
-	if Player is male:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Get the wyvern to blow you";
 		now sortorder entry is 2;
 		now description entry is "Time to teach him a lesson and make him blow you";
 		[]
-		if Cock Length of Player >= 16:
+		if cock length of player >= 16:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck the wyvern's ass";
 			now sortorder entry is 3;
@@ -134,7 +134,7 @@ to say WyvernPatriarchLosesSexMenu:
 		now sortorder entry is 4;
 		now description entry is "You should be able to fit yours in his massive dong, go for it";
 	[]
-	if "Cock Vored Player" is listed in traits of Vuukzasqig and scalevalue of Player < 5:
+	if "Cock Vored Player" is listed in traits of Vuukzasqig and scalevalue of player < 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Offer yourself to the wyvern's cock";
 		now sortorder entry is 5;
@@ -175,7 +175,7 @@ to say WyvernPatriarchLosesSexMenu:
 	clear the screen and hyperlink list;
 
 to say WyvernPatriarchLosesCockSounding:
-	say "     A kinky idea comes to your mind as you perceive the size of that massive organ, and how easy it would be for you to reach it due to how debilitated the large wyvern is. You doubt he would attempt to resist you given the lusty state he has been put into, so you should be alright if you wanted to proceed with this. As you have just decided you will, you [if Player is not naked]first remove your clothing, as you think this is about to get very messy, and [end if]give the beast a glance towards his eyes, then back to his cock, as you begin to move closer. You think he gets the idea, as the shock in his gaze is evident. 'D-don't you dare continue with whatever you're planning! I'll crush you the next opportunity I have! I swear I will!' he continues to threat you, but those words are nothing but empty as you place your hands over the throbbing warm shaft. He offers no resistance.";
+	say "     A kinky idea comes to your mind as you perceive the size of that massive organ, and how easy it would be for you to reach it due to how debilitated the large wyvern is. You doubt he would attempt to resist you given the lusty state he has been put into, so you should be alright if you wanted to proceed with this. As you have just decided you will, you [if player is not naked]first remove your clothing, as you think this is about to get very messy, and [end if]give the beast a glance towards his eyes, then back to his cock, as you begin to move closer. You think he gets the idea, as the shock in his gaze is evident. 'D-don't you dare continue with whatever you're planning! I'll crush you the next opportunity I have! I swear I will!' he continues to threat you, but those words are nothing but empty as you place your hands over the throbbing warm shaft. He offers no resistance.";
 	say "     'Ungh... O-okay, maybe that... maybe that's not entirely bad. I... I'll allow you to touch it.' You were going to anyway, as this is your reward, but him allowing you to do so is a nice bonus, and an unsurprising one. The large drake is all talk, it seems, as once you begin stroking the large thing, he simply lowers his guard and observes, with interest, if one might add. As his slit-shaped pupils follow you, your arms get acquainted with their new friend, a massive wyvern cock, which is by now so hard you can feel its pulses in their entirety. With the palms of your hands, you rub the whole shaft, feeling its sheer size and mass, and slowly, you make way for the head, where it is most sensitive.";
 	WaitLineBreak;
 	say "     The wyvern growls in pleasure, but such is replaced by a startled exclamation once he feels you poking and pressing against the slit of his cock by pushing your fingers in. The receptive hole welcomes your touch, almost as if it was biologically designed for such things. 'What are you...?! Y-you degenerate...!' he complains, attempting to show his discontent, but his dick tells you otherwise. As it continues throbbing and oozing precum, you have everything you need to know he is thoroughly enjoying this despite his efforts at discouraging you. The beast does not even make an actual move to try to stop you as you put more of your fingers in. Then, you join your other hand, and with both, you begin pressing down even further, stretching that slit around them all the way to your wrists.";
@@ -185,7 +185,7 @@ to say WyvernPatriarchLosesCockSounding:
 	say "     He breathes heavily the closer he gets to the point of no return, and you do not intend to keep him waiting. You go all out, all the way until his cock begins to throb like crazy, precum gushing out at an accelerated pace, then followed by a roar and unintelligible mutterings. The wyvern cums, raining his huge load all over you, mountains of spunk simply colliding on your face and coating your entire body. Spurt after spurt lands on and past you, making a mess of your surroundings for what seems to be a full minute or so. You should know that large creatures can cum a lot, but still, his orgasm is an impressive show of how much one can truly hold in their balls. You are almost blinded by all the thick layers of cum that are covering your face, which you try to shove off by rubbing it across the wyvern's sensitive tip. And you then are able to see the wyvern smiling in bliss, his penis still hard and leaking its last drops.";
 	WaitLineBreak;
 	say "     However, your arms remain locked inside him. And by locked, you mean... you cannot take them out. He chuckles in mischief, as if he planned this all along. 'You think it would be so easy to mock me, puny thing? You're not the first to fall in this trap. And many have never returned from the confinements of my internal gonads. Such is the size of my wrath when I feel as disrespected as I do now.'";
-	if vorelevel is 3 and scalevalue of Player < 5: [CV scene]
+	if vorelevel is 3 and scalevalue of player < 5: [CV scene]
 		say "     And now, you have just realized the wyvern has turned the tables on you, his shaft not just locking your arms any longer, but pulling them in. You try to resist, as your first instinct demands, but it only further excites the wyvern, causing him to counterattack with a harder pull. Your face rams against the slit, which then opens up to swallow your head in one go. 'Oh, you shouldn't be so eager to enter my cock... I do like taking my time, enjoying your presence within my shaft, slowly descending towards its inevitable doom... Come on, don't try telling me this isn't what you wanted, you degenerate filth.' You would see him grin if you could still see, but the darkness consumes more and more of you as your body keeps on steadily sliding deeper into the wyvern's penis.";
 		say "     You kick and push against his meat to no avail, only to be sucked in even further ahead. Your torso follows after your neck and shoulders, keeping your arms stuck against your own body as they, too, go inside. It does not take long for your legs to come right after as the wyvern grows impatient. 'Fine, I'll take you entirely at once! You deserve proper punishment!' he declares, keen on fulfilling his word. With each throb, your body goes deeper and deeper, faster than what you would find comfortable - if you would, at all - and quickly swallowed whole by the cock, legs and feet being the last to disappear into his shaft. The rest of the trip is filled with undulating squeezing of your body, which feels oddly arousing, as you are carried towards the beast's internal balls.";
 		WaitLineBreak;
@@ -203,7 +203,7 @@ to say WyvernPatriarchLosesCockSounding:
 	CreatureSexAftermath "Wyvern Patriarch" receives "Other" from "Player";
 
 to say WyvernPatriarchLosesBlowjobPlayer:
-	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if Player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'No, you cannot possibly ask that of me! I w-would never-...' his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride.";
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'No, you cannot possibly ask that of me! I w-would never-...' his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride.";
 	say "     He hesitantly steps towards you, his great presence making the ground beneath you tremble, and leans his head over yours with his gaze fierce and judgemental. 'Fine, if this is your way to make amends, I shall appreciate the gift you are offering me. Not that this means I thoroughly enjoy the idea, but I am a polite and respectful wyvern. Therefore, it is not in my code of honor to refuse a gift so generously presented, and that is the only reason I will accept your request. None other!' After making such declarations, he half-angrily headbutts you so that you fall with your ass on the ground. While definitely a little painful to your butt, it is not the end of the world, though you barely have time to readjust yourself as the wyvern's head hovers above you.";
 	WaitLineBreak;
 	say "     Before you can react, his tongue comes descending upon your body and, with long and surprisingly tender licks, he caresses your entire body with that slick organ of his, decently wet and nimble. Its warm surface clashes with your outside body temperature, delivering a pleasant sensation as it rubs down on you through all the soft and sensitive spots. You feel the wyvern's damp breath brushing against you, causing your body's surface to glisten in moistness. With repeated circular motions around your torso, the wyvern continues to lick your body, sending many shivers of pleasure up and down your spine in ways you cannot even describe. It makes your penis throb with such solidity that your mindlessly lead your hands over to stroke it.";
@@ -216,20 +216,20 @@ to say WyvernPatriarchLosesBlowjobPlayer:
 	CreatureSexAftermath "Wyvern Patriarch" receives "OralCock" from "Player";
 
 to say WyvernPatriarchLosesFuckedByPlayer:
-	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if Player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, which is quite sizable and eyecatching, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'W-what did you...? I... I'm a... I-I don't do that! Y-you'd dare to treat me like a female?!'";
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, which is quite sizable and eyecatching, you make the suggestion, stepping towards the male wyvern with overflowing confidence. 'W-what did you...? I... I'm a... I-I don't do that! Y-you'd dare to treat me like a female?!'";
 	say "     You remark that this has nothing to do with his sex, and that it is totally fine to enjoy a good dick in their asses. Being a large male wyvern should not take that joy away from him, if he so wished to feel your manhood inside him. Judging by how his words come to a halt as he, once more, trails the motions of your manhood with his slitted pupils as you swing it around, you think your short speech had some effect. Besides, his very own equipment seems to show the excitement he dares not express through words and actions, such betraying the wyvern's pride. Now that he knows he cannot hide it from you, he rolls his eyes and grunts before finally opening his mouth to speak, 'I... suppose I could give it a try. Yes, it is definitely something of an experiment, nothing else. Y-you do have a... an interesting tool. I-I must learn from things like this if I must better my procedures with other female wyverns to expand my patriarchy!'";
 	WaitLineBreak;
 	say "     Hearing him speak, you only nod, then at some point, you start beckoning the wyvern to turn around and give you access to his rear. He is one big flying lizard, so you would have to climb over his legs and line up your cock with his hole while holding onto him. It will look as if you would effectively be mounting him, almost. Hesitantly, the wyvern shuts his mouth and proceeds to do as you say, lying down over the ground and do his best to let you get on top of him, even lifting his tail and swinging it out of your way. Now that your path is clear, you walk towards him and position yourself in a way you can finally bring your dick over the wyvern's hole. He lets out a grunt once he feels the tip of your meat brushing against his pucker, which looks surprisingly tight for a creature of his size.";
 	say "     The sight of a fully grown, mature and imposing male wyvern giving way for you to fuck him in the ass fills you with newfound excitement as you get a real grasp of the current situation, with you on top of such creature and ready to thrust into him. Without any further ado, you finally decide to give it to him, pushing your manhood against the wyvern's butthole and burying it all the way in. This causes the beast to growl deeply as his tail gets dropped across your shoulder, so you grab onto its base and resume thrusting, continuing to fuck the big wyvern with growing enthusiasm. His insides feel tight and pulsate around your shaft, providing you with great sensations that encourage you to keep the pace deep and steady, momentarily...";
 	WaitLineBreak;
-	say "     But eventually, you want to speed up and really give it all to the male wyvern, using his hole like you would use a fucktoy with all the horniness it demands. He definitely feels your determination, but does not stop you, instead seeming like he actually enjoys it, albeit too embarrassed to verbalize it. It feels so good to you, however, that you could not care less about his insecurities and simply proceed to thrust faster and harder, getting what pleasure you can get from this whole experience. His hole begins to relax and welcome more of your fucking, which you take as a hint to go even harder, as hard as you can. Losing yourself in the momentum, you carry on assfucking this wyvern until your body gives signs of nearing your edging point.";
+	say "     But eventually, you want to speed up and really give it all to the male wyvern, using his hole like you would use a fucktoy with all the horniness it demands. He definitely feels your determination, but does not stop you, instead seeming like he actually enjoys it, albeit too embarassed to verbalize it. It feels so good to you, however, that you could not care less about his insecurities and simply proceed to thrust faster and harder, getting what pleasure you can get from this whole experience. His hole begins to relax and welcome more of your fucking, which you take as a hint to go even harder, as hard as you can. Losing yourself in the momentum, you carry on assfucking this wyvern until your body gives signs of nearing your edging point.";
 	say "     Soon, it is as if a thunder struck you when you shoot your load into the wyvern, and at the same time, you hear him release a cry as he, too, creams over the entire ground underneath him. Spurt after spurt your loads leave through your bodies simultaneously, in a harmony that only makes you feel your climax stronger as it is reinforced by how hot the whole situation feels to you. Such intensity leads you to the necessity of catching your breath as soon as you are done, pulling your cock out of the wyvern and finally walking out to let him go. The beast refuses to look at you in the eye as he prepares to take flight with a grunt. 'Hmph. Not bad for a puny thing like you. But don't think you've just earned my respect! I was merely in... a mood of switching things around, that's all. I shall still have my way with you... One day!'";
 	WaitLineBreak;
 	say "     With no further words shared between you, he takes off, flying above you and away, leaving only a brusque wind to swat at your face.";
 	CreatureSexAftermath "Wyvern Patriarch" receives "AssFuck" from "Player";
 
 to say WyvernPatriarchLosesCockFuck:
-	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if Player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. His eyes widen as he seems almost... impressed with your audacity at making such request. 'What do you mean you wish to... T-that's quite a... An interesting proposal. Yes, you see... I am used to insertions in that particular place, and the tip is quite sensitive. You know what, I've deemed that this shall be a good way for you to redeem yourself and make it up to me.'";
+	say "     Given the extreme arousal state of the large wyvern, you think you may be able to get him to do certain things for you as long as you place your words well. First, you decide to get your [cock of player] cock in hand[if player is not naked], after fully exposing your body and remove any clothes on the way[else], ensuring your naked body is clearly visible[end if], and see if the wyvern's eyes follow your movements. Noticing the beast's rigid hard-on throbbing as he stares at your dong, you make the suggestion, stepping towards the male wyvern with overflowing confidence. His eyes widen as he seems almost... impressed with your audacity at making such request. 'What do you mean you wish to... T-that's quite a... An interesting proposal. Yes, you see... I am used to insertions in that particular place, and the tip is quite sensitive. You know what, I've deemed that this shall be a good way for you to redeem yourself and make it up to me.'";
 	say "     With such an easy persuasion attempt, you are left pretty reassured that the large wyvern is receptive to your intentions, and even more as he stands up higher to place his massive tool fully in display. 'Show me what you've got, then! You've made this happen, so I expect a proper solution.' You cannot lie about your own excitement to line up your cock into the wyvern's urethra and get started with this, so you walk towards him and do just that, slowly pressing against its head and into the small slit that easily stretches around your shaft. This makes the beast's smile wide as he feels your hands rub over his tool, which throbs excitedly and oozes so much precum that it comes running down your legs. It is not unwelcome, however, as it serves as natural lubricant for you to thrust deeper into his meat.";
 	WaitLineBreak;
 	say "     You not only fuck the wyvern's cock, but also make sure to give him proper worship with your touch, much to the male's pleasure. Holding his member in place, you begin to thrust in and out at a more steady pace, feeling your meat entering that warm, tight and wet place over and over as the pulsations further contribute to the bliss you feel around your manhood. 'You like it? Feels good, doesn't it? Should try other parts of your body sometime too...' he entices you, although you are so focused in the pleasure around your loins that you cannot even consider anything else right now. As you simply carry on fucking the wyvern's meat, pounding it harder and deeper, your surroundings quickly become a mess of precum all over.";
@@ -244,7 +244,7 @@ to say WyvernPatriarchLosesGetCockVored:
 	say "     'And what do you think you're doing, imbecile?! With that look on your face?! You're up to something wicked, aren't you?! Stay away! I won't let you have... whatever you're plotting in that little mind of yours!' the wyvern says this, however, the closer you get, the more his dick seems to like it. The flushed expression in the creature's scaly muzzle is yet another evidence that he may not actually mean what he is saying, all the more obvious that this situation is only adding to his arousal. Once his manhood is within your reach, a light pat is all it takes for it to begin oozing precum, causing the wyvern to let out a hesitant moan, further reinforced by your continuous caresses.";
 	WaitLineBreak;
 	say "     'D-damn you! Is this what we're doing?! Just teasing me like that?! At least give me some proper service!' You simply ignore his demands and continue to caress his enormous shaft, sliding your hand all the way across its circumference before you finally plant it at the tip, a very sensitive spot for the wyvern that definitely sends significant throbbing throughout the entire thing. The large creature whimpers with your affections when he is not acting angry at you, and when you decide he has had enough teasing, you move to the front of his meat. Now with both hands in reach of that gigantic thing, you gently begin to press your thumbs into the slit and slide them across its sides, causing precum to gush straight into your face and body.";
-	say "     Keeping this up earns you quite a bath of the stuff as the wyvern continues to drip more of it, squirming with those sweet sensations. 'T-this is vile...! W-why do you hate me so...?!' he says, amidst a sequence of moaning before he throws his head back, clearly overwhelmed with a pleasure he cannot comfortably endure, though cannot admit to you nor himself. Knowing what you are doing is resulting in what you intended, you carry on teasing that gaping slit as [if Player is not naked]you get started on removing your clothes to prepare yourself for the offering you wish to make to his massive tool, which is your whole naked body[else]your already naked body stands ready to make the offering you wish to make to his massive tool, which is your entire self[end if]. Once that is out of the way, you lean in for a kiss, making out with the slit as you lick at its borders, tasting the sweet globs of precum that continue to emerge.";
+	say "     Keeping this up earns you quite a bath of the stuff as the wyvern continues to drip more of it, squirming with those sweet sensations. 'T-this is vile...! W-why do you hate me so...?!' he says, amidst a sequence of moaning before he throws his head back, clearly overwhelmed with a pleasure he cannot comfortably endure, though cannot admit to you nor himself. Knowing what you are doing is resulting in what you intended, you carry on teasing that gaping slit as [if player is not naked]you get started on removing your clothes to prepare yourself for the offering you wish to make to his massive tool, which is your whole naked body[else]your already naked body stands ready to make the offering you wish to make to his massive tool, which is your entire self[end if]. Once that is out of the way, you lean in for a kiss, making out with the slit as you lick at its borders, tasting the sweet globs of precum that continue to emerge.";
 	WaitLineBreak;
 	say "     'D-do you intend to do what I'm thinking...? No, that should NOT be something YOU'd want to do willingly! No! I-it's not supposed to be fun for you! Only for me!' Now it stands obvious that your plan has been revealed to the wyvern, but this does nothing to deter you, nor does he take any action in that direction. Figuring you might want to make your entrance into his cock a little different than how it is usually done, you decide to pull away for brief moments and take a seat on the ground. Then, you lift your legs in order to, instead, use your feet to rub at the tip of the wyvern's prick, while slowly converging towards his slit once more. Now pressing your toes against it, you let them sink into the massive dick, which eagerly begins to take you in as soon as you start pushing.";
 	say "     'O-ooh... W-why... Would you want to do this?! You p-pervert!' Ignoring his words, you carry on pushing your feet deeper, and together, they enter his slit all the way up to your ankles. A huge amount of precum begins to follow as the wyvern's dong oozes it like a salivating beast yearning for its meal, and that is something you are happy to oblige. 'You know what, you... Nngh! If you want to be eaten that way, so be it! Go on, just keep... Mmmh... J-just keep-...oh it feels so good...' He can barely find the words to express his content as his pleasuer and lusts begin to overtake him. Soon, his cock pulsates so intensely out of sheer desire to consume you that you feel yourself being pulled in by your feet with each throb, such overwhelming force simply dragging you deeper and deeper into the engorged shaft.";
@@ -323,7 +323,7 @@ to say Wyvern Patriarch Desc:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Call for his attention (Charisma Roll).";
 			say "     ([link]N[as]n[end link]) - Just fight him, for now.";
-			if Player consents:
+			if player consents:
 				LineBreak;
 				say "     Here goes nothing! In order to even have a chance at tricking him, you have to grab his attention. With the best of your abilities, you wave and shout at him, trying to stop his attack before you initiate a seemingly inevitable combat...";
 				WaitLineBreak;
@@ -362,7 +362,7 @@ to say Wyvern Patriarch Desc:
 			else if WyvernPatriarchFightOutcome is 2: [player lost fighting]
 				say "     [one of]'You again?! Hasn't our last meeting been clarifying enough?! Must I BREAK you until you learn your place?! So be it. I will ensure you won't forget another time what it means to defy my authority! SUBMIT! Or I'll make you.'[or]'I see you, runt! You're going to get another beating that'll teach you not to mess with me nor my kin!'[or]'You dare showing your face again? Very well. I'll teach you another lesson, and will keep doing so until you're utterly broken!'[or]'Would you look at that, were you going anywhere? Plotting something, I bet! Or have you finally come to your senses and wish to submit to me?'[or]'Where do you think you're going, runt?! Without paying me due respect?! Allow me to rectify that.'[or]'Caught you again, wimp! Now... Let's see how I'll destroy you, this time. Perhaps it'll be enough to finally teach you your place! If not... I'll simply break your resolve until I hear you beg.'[at random]";
 			else if WyvernPatriarchFightOutcome is 3: [wyvern lost through lust]
-				say "     [one of]'Y-you! I... I will not let you corrupt me with your s-... urgh...! S-savage ways again! I... I'll teach you a lesson this time. You won't break me as easily as before, no no! This time, I'll stand strong, like a true and proud wyvern would!'[or]'It's... you. How... Quaint finding you here. It's almost as if you expected my arrival. So, what is it this time? You're going to flash your [if Player is male]dangling tool[else]bubbly buttocks[end if] again? Is that all you can do?! I warn you, I... I will not fall for that again. I've seen it all! It no longer impresses me!'[or]'No! Not you again! If you flash me again with your parts I'll... goop you to the ground and... Yes, you'll see what I'll do to you! I don't even need to tell you! Because, this time, you'll lose!'[or]'Oh for the love of... You?! Fine! Go on, strip and flash me and do all those lewd things you usually do. I just know you're going to do it again, so why expect anything else?! Deviants like you know only those dirty tactics. But I'm stronger today! You'll see...'[or]'So we meet again. Listen here... It's not too late, you know? You could just submit! It's much easier... And we can both enjoy each other quicker and sooner instead of forcing me to watch your exposed figure moving around and dancing and... N-not that I enjoy that! No, I didn't mean it that way-... Enough talking! PREPARE YOURSELF!'[at random]";
+				say "     [one of]'Y-you! I... I will not let you corrupt me with your s-... urgh...! S-savage ways again! I... I'll teach you a lesson this time. You won't break me as easily as before, no no! This time, I'll stand strong, like a true and proud wyvern would!'[or]'It's... you. How... Quaint finding you here. It's almost as if you expected my arrival. So, what is it this time? You're going to flash your [if player is male]dangling tool[else]bubbly buttocks[end if] again? Is that all you can do?! I warn you, I... I will not fall for that again. I've seen it all! It no longer impresses me!'[or]'No! Not you again! If you flash me again with your parts I'll... goop you to the ground and... Yes, you'll see what I'll do to you! I don't even need to tell you! Because, this time, you'll lose!'[or]'Oh for the love of... You?! Fine! Go on, strip and flash me and do all those lewd things you usually do. I just know you're going to do it again, so why expect anything else?! Deviants like you know only those dirty tactics. But I'm stronger today! You'll see...'[or]'So we meet again. Listen here... It's not too late, you know? You could just submit! It's much easier... And we can both enjoy each other quicker and sooner instead of forcing me to watch your exposed figure moving around and dancing and... N-not that I enjoy that! No, I didn't mean it that way-... Enough talking! PREPARE YOURSELF!'[at random]";
 			else if WyvernPatriarchFightOutcome is 4: [wyvern lost through fighting]
 				say "     [one of]'Hah! We meet once more. I doubt you can defeat me again, that last time was but a mere a strike of luck! You'll lose now, and your punishment will be more than deserved.'[or]'So, what is your tactic this time? Because if you intend to behave like an annoying fly, I'll swat you flat onto the ground. You'll stand no chance against me today!'[or]'I wish I could call you a valiant warrior and a worthy opponent, but one who wins by chance deserves no respect. I shall teach you what true might is!'[or]'What will it be today, runt?! Another duel? Very well... Prepare to be crushed. You won't win.'[at random]";
 			else: [a failsafe]
@@ -457,7 +457,7 @@ to WPAmbushFightAftermath:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go ahead and have a welcome threesome with both titanic beasts.";
 	say "     ([link]N[as]n[end link]) - Excuse yourself and say no, at least for now.";
-	if Player consents:
+	if player consents:
 		LineBreak;
 		say "     Thinking it might be a fun use of your time, you consider it again. It is definitely something entirely different, given the fact you will be sharing an intimate moment with two enormous creatures, but the thought of it starts becoming more and more enticing. Diavoborg himself also seems to be excited to try this out, and you can see that as his own member begins to poke out of his sheath, merely at the sight of you contemplating his offer. Your curiosity is evident, and intrigued as you are, you simply decide to accept. 'Heheh... Well, it's gonna be fun. Plus, it's our way to introduce him to his new home! And if I'm honest, I always wanted to fuck a wyvern... But they fly up so high all the time it's hard to catch them.'";
 		say "     'Right, uh, let's go see our wyvern buddy, yeah?' He beckons you to move ahead of him and waits until you do so, following right behind towards the newly dug up room. The path is not too wide for the behemoth himself, but it is likely that he will take some time to adjust it in the future. In spite of this, he can easily walk along with you into the rocky chamber where the Wyvern Patriarch is, sitting down in the center of it and certainly looking more awake than before. 'Finally! I was thinking I was going to be left in here forever without any sort of attendance!' the wyvern shouts... to your surprise. He is not quite as hazy as you thought he would be. You turn to Diavoborg, who looks as confused as you.";
@@ -498,7 +498,7 @@ Cock Length of Vuukzasqig is 48. [length in inches]
 Ball Count of Vuukzasqig is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Vuukzasqig is 6. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Vuukzasqig is 0. [number of cunts]
-Cunt Depth of Vuukzasqig is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Depth of Vuukzasqig is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 Cunt Tightness of Vuukzasqig is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Vuukzasqig is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
@@ -520,12 +520,31 @@ Conversation of Vuukzasqig is { "<This is nothing but a placeholder!>" }.
 The scent of Vuukzasqig is "     Vuukzasqig's scent is particularly faint, like most wyverns. You cannot discern much about him from sniffing him alone except that he is clearly a male.".
 
 to say VuukzasqigDesc:
-	project figure of Wyvern_Patriarch_soft_icon;
+	if "Ballsy" is listed in traits of Vuukzasqig:
+		project figure of Wyvern_Patriarch_soft_balls_icon;
+	else:
+		project figure of Wyvern_Patriarch_soft_icon;
 	say "     This massive wyvern towering above you, with a pair of intimidating wings, has the same characteristics as a normal one, except much larger, and is covered in both red and golden scales. From his head, two large horns extend towards the back of his long and girthy neck. Then, right at the tip of his wings, protrudes a huge and sharp foretalon on each. You can also discern his impossible weight, judging by his size, supported by a pair of extremely thick, powerful legs and huge clawed feet, all that could serve as natural weapons to cut and impale his foes with. This may be the only wyvern you have seen that is this muscular and powerful-looking, and is comparatively way larger than even a monster truck.";
 
 Section 3-1 - Vuukzasqig Talk
 
+[Ball TF situation for checks]
+
+Table of GameEventIDs (continued)
+Object	Name
+WPExtBallTF	"WPExtBallTF"
+
+WPExtBallTF is a situation.
+ResolveFunction of WPExtBallTF is "".
+Sarea of WPExtBallTF is "Nowhere".
+[]
+
 instead of conversing Vuukzasqig:
+	if "Ball Curiosity" is listed in traits of Vuukzasqig and Resolution of WPExtBallTF is 0:
+		say "     As you approach the wyvern to start a conversation, he perks up and initiates instead, albeit with some hesitation while addressing you. 'You. I've been meaning to talk to you about... Something.' You turn your attention to him and listen, as this could be interesting. 'Well, I've noticed that... Most creatures, but more specifically... Well, your friend. He has his magnificent-er... I-I mean, those wonderfully lar-... I MEAN-... His balls.' Took him a while to say it, but you nod and encourage him to continue. 'Yes, those. They're outside, out in the open, unlike my own gonads! And, for some reason, I cannot shake this thought that this is all oddly familiar, yet having no memory of sharing such a feature.' You inform him that it is normal to have testicles hanging out like Diavoborg's, and humans in particular have them like that. Perhaps Vuukzasqig was not an alien, after all...";
+		say "     'Well, I have a request that may take a hit on my very own dignity, but I must sate this curiosity. Might I ask you to allow me to observe them more closely? I... I fear I may not be able to ask this to that giant brute with a straight face. I can already see his insufferable smirk and mocking words towards me, and I just know he would be so glad to let me inspect them that it sickens me to the very core.' You let him know that you shall consider it next time you decide to [bold type]massage Diavoborg's balls[roman type], for instance. 'That would be appreciated. In fact, it is best that I examine them while he is... Entertained with someone else, so it is much less attention given to me. Yes, that would do. Simply, uh... Let me know.'";
+		now Resolution of WPExtBallTF is 1;
+		WaitLineBreak;
 	say "[VuukzasqigTalkMenu]";
 
 to say VuukzasqigTalkMenu:
@@ -544,6 +563,17 @@ to say VuukzasqigTalkMenu:
 	now sortorder entry is 2;
 	now description entry is "Inquire about his relationship with Diavol";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Sexual matters";
+	now sortorder entry is 3;
+	now description entry is "Might as well ask about his stance on enjoying a good time";
+	[]
+	if Resolution of WPExtBallTF > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Balls?";
+		now sortorder entry is 4;
+		now description entry is "Talk about balls";
+		[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -563,6 +593,10 @@ to say VuukzasqigTalkMenu:
 					say "[VuukzasqigTalkOrigins]";
 				else if (nam is "Diavoborg"):
 					say "[VuukzasqigTalkDiavol]";
+				else if (nam is "Sexual matters"):
+					say "[VuukzasqigTalkSex]";
+				else if (nam is "Balls?"):
+					say "[VuukzasqigTalkBalls]";
 				wait for any key;
 				say "[VuukzasqigTalkMenu]"; [looping back to keep talking with him]
 		else if calcnumber is 0:
@@ -578,19 +612,174 @@ to say VuukzasqigTalkOrigins:
 	say "     You tell him you could not possibly think of anything that would have such lasting consequences on their poor cocks... Or maybe you do, but it is best to not tell him. 'This certainly doesn't prove your innocence! You... You tricked me into being... Defiled by a... Beast! A... Really sexy b-... A PERVERT! That's what I wanted to say! All those muscles and attitude... And size... A-ALL an offense! Yes, an offense to my being! I feel offended! Worse... VIOLATED.' Judging by an emerging tip between his legs, you totally believe his claims. Truly, you do! In fact, all you do is look down at his member beginning to protrude, then back to his face. This prompts him to hide his crotch. 'T-this isn't me! This is your influence! My body's been corrupted and betrays my virtues!'";
 	WaitLineBreak;
 	say "     Anyway, before this conversation derails any further, as entertaining as it could be, you remind him you genuinely wanted to know about how he came to call himself the Wyvern Patriarch and how he happened to have become such a huge beast. He grunts at first, but then gives it some thought and sees your curiosity is true. 'If you must know so desperately... I... Well, I don't remember.' You tilt your head and, quite frankly, not believe him at first, so you attempt to pry and ask him again. 'I'm not trying to deceive you! I... Really don't remember.' You present him some theories, such as... Perhaps while he was a human, he was captured by wyverns and turned into one, or he was in contact with some mutating substance, or the nanites had an unforeseen effect on his organism like they did with Diavol...";
-	say "     He only shakes his head as nothing seems to trigger anything for him. 'I have no idea, I only remember being like this and caring for my children... The other wyverns. And, for some reason, I keep having this intrusive urge to... Engage in unsavory activities!' He means having sexual thoughts, you can assume. It is possible that the wyvern's mind was simply too long gone, but not quite entirely. He is quite intelligent and has not gone entirely feral, but very little of his humanity is left in him.";
+	say "     He only shakes his head as nothing seems to trigger anything for him. 'I have no idea, I only remember being like this and caring for my children... The other wyverns. And, for some reason, I keep having this intrusive urge to... Engage in unsavory activites!' He means having sexual thoughts, you can assume. It is possible that the wyvern's mind was simply too long gone, but not quite entirely. He is quite intelligent and has not gone entirely feral, but very little of his humanity is left in him."; 
 	say "     For now, you thank him for answering your questions, and he simply turns away from you.";
 
 to say VuukzasqigTalkDiavol:
 	say "     As he has been essentially sharing Diavoborg's home, you ask him how things are going with his new housemate. He rolls his eyes at your question and takes a long time to come up with an answer. 'How am I supposed to answer to that? That I'm thrilled you've got yourself a sizable partner to capture and enslave me? Then to be forced to live with him?!' Before you can look, he has one of his winged arms covering his crotch from your view. 'No one would be thrilled about living with such a sexy-... RUDE muscular and massive beast. He has no qualities! None! Nothing in him is good! None of this is pleasant!' By, perhaps, his manner of speech, you have trouble believing in his claims. In fact, you ask him if it is all as bad as he is describing. He hesitates to reply, shifting his eyes around, but eventually does say something, 'Well... I've had worse. There's potential... But I'll only believe when I see it.'";
 	say "     That is his final take on the matter. Not a very enlightening conversation, but you can definitely see there is room for improvement. Maybe in the future this will be different.";
 
+to say VuukzasqigTalkSex:
+	say "     It comes to your mind that, given the vastly different circumstances revolving around your (questionably) new massive friend, the subject of sex may have, perhaps, different conditions as well. It is blatantly obvious that Vuukzasqig is one really horny wyvern, even though he tries his absolute best to pretend he is not, and, with the treatment he has been receiving from Diavol, you think some dialogue on the matter is in order. There is definitely room for improving your relationship with him, and maybe he will not be so opposed to enjoy your company, allowing for some mutual pleasure. However, as soon as you open your mouth to call a conversation about said subject, he scoffs, 'You're merely informing me that you shall use me for YOUR own pleasures! This was your intent all along, wasn't it?! Just fucking say it.'";
+	say "     Well, that was not the best start, so you explain that you would rather have a more friendly talk on the matter, perhaps knowing a little about his tastes and preferences. He locks his eyes on you almost as if he was about to breathe goop on you. 'Now you want to know my preferences?! The audacity! I...-' he stops for a moment as you linger, showing him that he has your full attention, 'Well, I... I'd have preferred to not be in this situation. Being treaten like a prisoner, dosed in... Whatever that BRUTE injects in me with his large and skillful, beautiful tail... I-I w-would prefer to... I... Guess I could be convinced to allow you to touch me.' You tell him that is a great start, but what about that one certain red behemoth? Certainly he must find something about him attractive, and you do make a very obvious mention on his great size and strength...";
+	WaitLineBreak;
+	say "     'Grr... I suppose the brute has a few qualities. Although if this was your petty plan to play matchmaker with me, I'll eat you.' You tell him that nobody said that it was, but it could have been a nice idea, as he was such a lonely wyvern before. But, before he can reply back to that, you give him a smile and a nod as you thank him for his words. He grunts.";
+	if Libido of Vuukzasqig is 0:
+		now Libido of Vuukzasqig is 1;
+
+[External Balls TF talk]
+
+WPEXTBALLTFCOOLDOWN is a number that varies. WPEXTBALLTFCOOLDOWN is usually 20000. [@Tag:NotSaved]
+
+to say VuukzasqigTalkBalls:
+	if Resolution of WPExtBallTF is 1:
+		say "     Recalling his mention of curiosity over Diavol's testes, you feel inclined to ask him to elaborate more on the matter. Seeing as you have not granted him his favor, Vuukzasqig is still at a lack of words to explain his feelings towards the subject, 'I think I'll have more to say when I have a little bit more, uh... Knowledge on it! So far, they just seem like a familiar thing to me, like something I miss... I simply don't know why. It is as you say, perhaps it is connected to my forgotten past, but in any case, they are... Admittedly fascinating to look at.' He then turns his head around, avoiding eye contact, after having admitted he probably does like the behemoth's balls a lot. You nod and consider what to do next...";
+	else if Resolution of WPExtBallTF is 2:
+		say "     After that experience with the two large beasts, you figured you should ask Vuukzasqig how he is feeling on the matter of external gonads. As you forward him the question, he looks to the side, as if thinking, then replies, 'Evidently, they serve a purpose, but I'm unsure if it is a purpose worth pursuing, at least for now. I'd have to see something more convincing.' At this point, the wyvern remains unconvinced, but you could [bold type]try to persuade him[roman type] to get a set of his own... With your help, of course. Simply ensure you have the transformative items with you beforehand, which should be a [bold type]ball size augmenter[roman type] and a [bold type]blue gel[roman type]. For the first, try looking over Zephyr products, as they might have something that works.";
+		if vorelevel > 2:
+			say "     Alternatively, you could explore Diavoborg's idea. You certainly seem open to its possibility, but is it perhaps something you actually want to do? If you do, it might be an easy way to convince the wyvern. He can be pretty stubborn, as you know...";
+		if breeder serum is owned and blue gel is owned:
+			WaitLineBreak;
+			if WPEXTBALLTFCOOLDOWN - turns < 7:
+				say "     You still have the items on you, but your last attempt to persuade him has failed. Maybe you should give it some time before you try again.";
+			else:
+				say "     Seeing that you have a [bold type]breeder serum[roman type] and a [bold type]blue gel[roman type] on you, would you like to try to persuade Vuukzasqig to get external balls now? If you succeed, you might then have to rub him down with the mixture...";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Attempt to persuade the wyvern (Charisma Roll).";
+				say "     ([link]N[as]n[end link]) - Not now.";
+				if Player consents:
+					say "     Seeing that you may have a chance to convince him, you pull on the argument that it could be good for him to try having a set of hanging balls himself, as he mentioned this feeling of familiarity. It could even help with his memory! This requires some time of dialogue between the two of you, but you do your best...";
+					WaitLineBreak;
+					let bonus be (( charisma of player minus 10 ) divided by 2);
+					let diceroll be a random number from 1 to 20;
+					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]17[roman type] (Charisma Check):[line break]";
+					if diceroll + bonus >= 16: [success]
+						say "     It really takes a while, but after some time explaining how this could be something interesting for Vuukzasqig to try out, he eventually gives the idea some contemplation. 'Fine, and if it's a terrible idea, at least I earn silence!' He then sighs. 'Anyway... How would we go about this? I'm assuming you have a plan.' You do, in fact, show him the items you have acquired for this very purpose, and explain that you might need to rub down his parts. If he had any eyebrows, he would be raising one. 'Is this some kinky play of yours? Is that what's going on?' You explain the procedure, that applying this mixture locally may increase effectiveness, as just like Diavol, Vuukzasqig is a special wyvern and the infections have diminished effects on them... Or so you think, given what you have learned about the two until today.";
+						say "     'Very well... I trust you at least have a minor idea of what you're doing... But I still have it in me to cover you up in goop and devour you if I regret this,' he threatens, but you are confident this will work... Maybe.";
+						WaitLineBreak;
+						say "[VuukzasqigGetsBalls]";
+					else:
+						say "     But despite your best attempts, the wyvern remains unconvinced. You knew he was stubborn, but this is a whole new level. 'Even so, I do not see the point of imitating that brute. I have other parts to pin smaller creatures underneath! And there's no way to actually know if this will even help me. Have you seen any wyvern like that?! I'd look like a freak!' It turns out your attempt was indeed not as successful as you hoped. Perhaps you should leave him to dwell on the matter before trying to persuade him of this again.";
+						now WPEXTBALLTFCOOLDOWN is turns;
+				else:
+					say "     You decide against it and end the conversation here.";
+	else if Resolution of WPExtBallTF is 3: [Done CV demonstration, Vuukzasqig is open to the idea]
+		say "     After that experience with the two large beasts, you figured you should ask Vuukzasqig how he is feeling on the matter of external gonads. As you forward him the question, he looks expectantly at you. 'After what I've seen... I admit I'm deeply interested in experiencing something similar. It's quite an unusual sight...' he admits, almost shyly, though you tell him you understand it, as Diavoborg himself seems to really enjoy that factor too. 'It's almost deplorable how we have something so unique in common... But I suppose the brute isn't so bad, after all. I'm not dropping my guard near him just yet, however. But uhm...' He then looks around, hesitating with his words, but ends up continuing...";
+		say "     'So... Do you know any way for me to gain some of those? I'd very much like that. And, since you're such a depraved fanatic for transformative items and tend to hoard them so much, you might have some knowledge on that, correct?' Despite his absolutely and [italic type]clearly preposterous[roman type] assumptions, you tell him that yes, you might have an idea that works.";
+		if breeder serum is owned and blue gel is owned:
+			say "     Seeing that you have a [bold type]breeder serum[roman type] and a [bold type]blue gel[roman type] on you, would you like to try to get Vuukzasqig some external balls? You might have to rub him down with the mixture...";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Yes, do it.";
+			say "     ([link]N[as]n[end link]) - Not now.";
+			if Player consents:
+				say "     You tell him that you are ready to get started with it. 'Good! And I trust you at least have a minor idea of what you're doing...' You nod, a bit uncertainly, but it has to work, right?";
+				WaitLineBreak;
+				say "[VuukzasqigGetsBalls]";
+			else:
+				say "     For now, you decide against it and excuse yourself. 'I see. Well then, know that I am convinced to give it a try, should you happen to be in the mood for such.'";
+		else:
+			say "     Although, you seem to be missing the items that would allow you to try giving Vuukzasqig external balls, so all you can do is tell him that you will think on the matter and the acquisition of the required items. 'I see. Well then, know that I am convinced to give it a try, should you happen to be in possession of such... Strange items you speak of.'";
+			say "     You take a mental note on what you will need for this, if you wish to go forward with this. These items need to be a [bold type]ball size augmenter[roman type] and a [bold type]blue gel[roman type]. For the first, try looking over Zephyr products, as they might have something that works.";
+	else if Resolution of WPExtBallTF is 4:
+		say "     Now that Vuukzasqig has his set of external genitalia, you ask him how he is getting used to it. He gives you a smile as he replies, 'I'm loving it. In fact, this might have been one of your very few great ideas. Although, I find it much easier for it to get hard as it keeps on bouncing, but it helps my mood a lot. I also can't stop staring at them, such an appealing sight...' You tell him that, indeed, they are eye catching. 'If you ever want to worship them, let me know. I'd gladly put a willing slave to work,' he says in a cocky tone, and you begin to wonder if this was such a great idea, after all... But he seems happy, at least.";
+
+to say VuukzasqigGetsBalls:
+	say "     So, for starters, you bring out the two items you will be using in this, well, you should call it experiment, really. You have no idea if this is going to work, but it should at least do something fun. The wyvern's eyes are suspicious as he watches you mix the two into some random bowl you found lying around, and as you pour in the energy drink, you find that when it meets the blue gel, it effectively turns it into a paste. It becomes far more liquid than a balm would, but enough so that you can rub and smear it across a designated area. The mixture then attains this really strong cobalt blue color, and has a really pungent odor that immediately reminds you of a male locker room, and probably full with sweaty post-workout naked men. It is really, really strong, and the wyvern is already steering clear of it. 'It definitely does not have a very pleasant smell... I-I mean, it definitely makes me think of things, but it is very... Intrusive...'";
+	say "     Perhaps this is not meant to be smelled, and definitely not when you mix two powerful substances like these ones, but you are positive that this will at least do something. Once you have mixed it in properly and blended everything into a more consistent paste, you tell Vuukzasqig that it is ready, as you pick some with your hand and show him the viscous, slimy deep blue... Custom balm? You have no idea what to call it. 'So, am I simply to... Let you come rub that on my crotch?' he asks, and you nod, saying that unless he wants to do it himself which, given his body configuration, might prove unnecessarily complicated. 'Very... Well. I'll... Give you space.' He then stands high enough above the ground to allow you to walk underneath him and reach his slit, carrying the bowl with you under your arm.";
+	WaitLineBreak;
+	project figure of Wyvern_Patriarch_hard_icon;
+	say "     As you begin applying the mixture on the wyvern's parts, rubbing it around the slit and a bit underneath, at first it does not really seem to do anything. Moreso, it only looks like your rubbing is stimulating the wyvern to pop an erection as you so carefully smear the blue paste all over his crotch, as it is slowly absorbed into his scales. You know that, at the very least, it is being taken in, but other than that, you have doubts this will work the intended way. 'If it ends up not proving fruitful, at least it is... A nice feeling. Perhaps you could this every day for me, to make up for the humiliation you made me go through lately...' he says, reminding you of how absolutely insulted he has felt over the last days with you having brought him here, but in all honesty, he does not seem that bothered. And definitely not right now, as his cock continues to grow and throb at your caresses.";
+	say "     You want to stay clear of his dick, however, as applying this mixture on it might only increase its size even more, if that could even happen, and you do not think Vuukzasqig would enjoy that very much. It might even upset him, which is clearly not something you want, especially when you are right underneath him. So, you focus your attentions where you think a set of balls would be, right under the base of his shaft, and continue to apply more and more of the past around that area. 'It's... Really getting warm in there, I... Think something might be shifting-ghh... O-oh...' he tries to speak to you amidst a few moans, and hopeful that this might be your intended effect, you continue to rub him down vigorously, putting more and more of it into his scales and smearing them all over until it is absorbed.";
+	WaitLineBreak;
+	project figure of Wyvern_Patriarch_hard_balls_icon;
+	say "     'Nghh... Why does that feel so good...' What happens next is rather weird, but it is what you most desired from this. Right at your touch, the wyvern's scales begin to change shape, forming a sort of bump with the paste as it continuously grow, only to pop a set of soft, and also marvelously large, balls hanging down against your palm. 'That... That feels like nothing I've ever felt... I-is this what I've been missing?!' the wyvern exclaims as he looks down, seeing his changed bits as you apply the rest of the mixture. Other than making his balls just a tad bigger and fuller, it does not seem to do much else, but you can tell their size rival Diavoborg's easily. They are so large they could pin you down without the wyvern having to break a sweat. 'This is great... Ooh, the pleasure it gives me having you rub them like that... So that's how it really feels!'";
+	say "     Speaking of pinning you down, the wyvern seems to have the same idea as he lowers his sack upon you. Whatever was left in the bowl scatters on the ground as you drop it, and yourself, met only with the weight of the wyvern's new set of orbs on top of you as he grinds them across your body. 'It does feel great smothering prey with these, I have to admit. Now, would you fill your befitting role and massage them for me? Your mixture thingie has made me incredibly aroused, and I require a release. It is your fault, anyway.' It seems that, in your position, you have no choice but to give the wyvern what he wants, a ball massage using your entire body. You get him to moan immediately as soon as you begin to so generously and tenderly rub all across that marvelously large sac, new sensations for the wyvern that hit him at much more increased intensity.";
+	WaitLineBreak;
+	project figure of Wyvern_Patriarch_soft_balls_icon;
+	say "     It really does not take much for you to make the wyvern shoot his load, as seconds later he is doing so without a warning. You do not even think he knew it was going to happen so quickly, but he shoots quite a lot while roaring loudly, sending it flying across the room and hitting the rocky wall behind you and in front of him. 'GRR... T-this... This was... Ngh... I have to... Thank you for this.' The wyvern expressing gratitude?! You must be dreaming, you tell him. 'You have done me a great favor, so I must thank you for it. Is the notion of politeness lost in your vocabulary?!' You could pick up on him even further, but decide against it as to not ruin the pleasurable mood that was set in here.";
+	say "     The wyvern then lets go of you as he stands up, examining his bits once his cock softens. 'Huh. It doesn't go inside anymore. I suppose this is how it'll be... Not a bad look to it.' You tell him you are glad he likes it, because you doubt it would be easy to revert it. 'I don't wish to revert this, for now. It looks perfect on my frame, and I think displaying a large masculine endowment can prove useful to demand respect.' You will not argue with him and only nod, as you grab the bowl and clean up after this mess. As for the enormous cum puddle he made, you wish him good luck in getting rid of that. 'I could simply demand you to lick it clean, but I fear your frail body couldn't withstand this much quantity inside of it, and you are... Sometimes... Useful. So, I shall simply... Think of a way to remove the mess on my own.'";
+	WaitLineBreak;
+	say "     You have successfully given Vuukzasqig a set of external genitalia, and as such, you call this an accomplishment. With nothing else to add, you give one last look at the wyvern's changed appearance and prepare to be on your way.";
+	TraitGain "Ballsy" for Vuukzasqig;
+	now Resolution of WPExtBallTF is 4; [Done!]
+
+
 Section 3-2 - Vuukzasqig Sex
 
 instead of fucking Vuukzasqig:
-	say "     << Author's Note: Not possible at the moment, will be added in a future update! >>";
+	if Libido of Vuukzasqig is 0:
+		say "     While it is true that you had plenty of opportunities before to engage in sexual activities, perhaps it would be for the best if you breached the subject with dialogue beforehand. You have to, at the very least, ensure this is safe for you!";
+	else if lastfuck of Vuukzasqig - turns < 6:
+		say "     Given the short time that passed since your last sexual interaction with Vuukzasqig, it might be too early to suggest another go. How about you try that again later?";
+	else:
+		say "     You approach the large wyvern with the intent of proposing something fun. He eyes you cautiously, but does not stop you.";
+		if "Ballsy" is listed in traits of Vuukzasqig:
+			project figure of Wyvern_Patriarch_soft_balls_icon;
+		else:
+			project figure of Wyvern_Patriarch_soft_icon;
+		say "[VuukzasqigSexMenu]";
+
+to say VuukzasqigSexMenu:
+	WaitLineBreak;
+	say "     [bold type]What shall you do with Vuukzasqig?[roman type][line break]";
+	Linebreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Threesome with Diavoborg";
+	now sortorder entry is 2;
+	now description entry is "You feel like having fun with the two beasts at the same time. Propose a threesome";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Threesome with Diavoborg"):
+					say "[VuukzasqigSexIntroDiavoborgThreesome]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself as you have to take your leave. Diavoborg smiles to you, though he can't hide the disappointment in seeing you go.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say VuukzasqigSexIntroDiavoborgThreesome:
+	say "     Thinking about the possibility of sharing the fun amongst the two massive beasts, you tell the wyvern that you would really enjoy such a thing, and ask him if he would be willing to partake in a threesome. 'Oh, sure, call your friend...! It's not like I can't say no! I'm merely a prisoner in this blasted cave, after all...!' You argue that you did ask him first, but if he accepts it, then you shall call Diavoborg, who should be more than eager to come over. He only grunts, but the anticipation causes the wyvern's red tip to start protruding from between his legs. You know for a fact he wants it! So, you walk out of these chambers and look for the red behemoth, who is not particularly hard to find by any means, and tell him that he should come over for some fun with the two. 'Heh, I could never refuse such an offer... I'm right after you, bud,' he replies, eagerly following you back to the wyvern's resting place.";
+	WaitLineBreak;
+	TraitGain "Ball Curiosity" for Vuukzasqig;
+	say "     [bold type]You can most certainly have an input in how this scene is to develop. In which way should you steer it?[roman type][line break]";
+	let VuukDiavol_Threesome_Choices be a list of text;
+	add "Let Diavoborg take the lead. He will probably fuck the wyvern's ass." to VuukDiavol_Threesome_Choices;
+	[add "Suggest frotting with you in the middle." to VuukDiavol_Threesome_Choices;]
+	let VuukDiavol_Threesome_Choice be what the player chooses from VuukDiavol_Threesome_Choices;
+	if VuukDiavol_Threesome_Choice is:
+		-- "Let Diavoborg take the lead. He will probably fuck the wyvern's ass.":
+			say "     Perhaps you do not have to say anything at all...";
+			say "[VuukzasqigSexDiavoborgThreesome]";
+		[-- "Suggest frotting with you in the middle.":
+			say "     Once the two beasts are face to face and ready to get started, you voice your wants. Both the beasts look down at you, then at each other, and as if by telepathic agreement, you find yourself being gently pushed to the middle of them...";
+			say "[VuukzasqigSexDiavoborgFrotting]";]
+
 
 to say VuukzasqigSexDiavoborgThreesome:
+	if "Ballsy" is listed in traits of Vuukzasqig:
+		project figure of Wyvern_Patriarch_hard_balls_icon;
+	else:
+		project figure of Wyvern_Patriarch_hard_icon;
 	say "     Once the two beasts are face to face and ready to get started, you merely stand back and watch the scene develop. The behemoth always seems to prefer taking the active role as he pushes the wyvern back, then gets on top of him with both his cocks now proudly in display, throbbing harder by the second as they rub against one another. To you, they almost seem to compete for size as they harden at their own pace, the slick reptilian-like cock belonging to the wyvern being of the same thickness as Diavoborg's, but the latter still managing to have several extra inches in length. Nonetheless, they are two enormous meatlogs frotting together in such an eye-catching manner that you cannot help but stare directly at them, the trails of precum being so thick you feel you could bathe in them.";
 	say "     As the mood is set, the red behemoth looks over at you and beckons you to approach them, all while the two enormous beasts feel their tools throbbing against each other, each member yearning for attention. 'Now, here's a good spot for you to stay... ever had two as big as these at the same time?' he jokingly asks, knowing very well the chances are slim, but you amuse him with your evident interest as you walk closer to these gigantic cocks, getting between the wyvern's massive legs as he silently watches you with his maw slightly open, almost as if in a sort of lusty awe. Diavoborg then lifts his own meat and lets it hover above the wyvern's, and once you are close enough, he simply taps you on the back, with enough force to make you fall forward and on top of the reptilian shaft, to then sandwich you between the two.";
 	WaitLineBreak;
@@ -614,6 +803,13 @@ to say VuukzasqigSexDiavoborgThreesome:
 	NPCSexAftermath Player receives "OralCock" from Vuukzasqig;
 	NPCSexAftermath Vuukzasqig receives "AssFuck" from Diavoborg;
 
+[to say VuukzasqigSexDiavoborgFrotting:
+	if "Ballsy" is listed in traits of Vuukzasqig:
+		project figure of Wyvern_Patriarch_hard_balls_icon;
+	else:
+		project figure of Wyvern_Patriarch_hard_icon;
+	say "     ";]
+
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -623,7 +819,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Wyvern Patriarch"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	now Species Name entry is "Wyvern Patriarch"; [name of the overall species of the infection, used for children, ...]
 	add "Wyvern Patriarch" to infections of ReptileList;
 	add "Wyvern Patriarch" to infections of FurryList;
 	add "Wyvern Patriarch" to infections of FeralList;
@@ -632,30 +828,29 @@ When Play begins:
 	add "Wyvern Patriarch" to infections of BarbedCockList;
 	add "Wyvern Patriarch" to infections of SheathedCockList;
 	add "Wyvern Patriarch" to infections of InternalCockList;
-	add "Wyvern Patriarch" to infections of InternalBallsList;
 	add "Wyvern Patriarch" to infections of BipedalList;
 	add "Wyvern Patriarch" to infections of FlightList;
 	add "Wyvern Patriarch" to infections of TailList;
 	add "Wyvern Patriarch" to infections of OviImpregnatorList;
 	add "Wyvern Patriarch" to infections of FirebreathList;
 	add "Wyvern Patriarch" to infections of TailweaponList;
-	now Name entry is "Wyvern Patriarch";
-	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
-	now enemy Name entry is "Vuukzasqig"; [ Specific name of unique enemy. ]
-	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
+	now Name entry is "Wyvern Patriarch"; [Name of your new Monster]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is "Vuukzasqig"; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]grand wyvern[or]massive beast[at random] [one of]slashes at you with its vicious wing-talons[or]swipes at you with its impressive tail[or]bites at you with its fierce teeth[or]assaults you with a barrage of his goop[or]charges at you with his sharp duo of horns[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[Wyvern Patriarch Loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[Wyvern Patriarch Wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[Wyvern Patriarch Desc]"; [ Description of the creature when you encounter it.]
-	now face entry is "elongated, draconic in shape with a set of fierce teeth, and completely devoid of other features like ears or hair"; [ Face description, format as "Your face is [Face of Player]." ]
-	now body entry is "large and muscular. Feral in build, you find it difficult to stand on your hind legs for very long, relegated to supporting the remainder of your weight with your winged forelimbs"; [ Body Description, format as "Your Body is [Body of Player]." ]
+	now face entry is "elongated, draconic in shape with a set of fierce teeth, and completely devoid of other features like ears or hair"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "large and muscular. Feral in build, you find it difficult to stand on your hind legs for very long, relegated to supporting the remainder of your weight with your winged forelimbs"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "hard, substantively scaled and mute brown"; [ skin Description, format as "Your body is covered in (your text) skin."]
 	now tail entry is "You have a somewhat long and heavy tail, fierce, spiked adornments at its prehensile tip."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "feral, somewhat blunt-shaped"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "as you're forced to abide the audible sound of bones shifting in shape, head drawn out into a long, draconic muzzle with a sharp row of feral teeth"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
-	now body change entry is "you abide a fairly substantial infection, doubling over as you endure the change. Your torso becoming increasingly massive and feral, your hind legs becoming thick, muscular trunks, while your arms shift in shape into that of a set of thick, bat-like wings. You retain a number of fingers on each hand, allowing articulation, but you imagine this comes at the expense of not being able to fly"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
-	now skin change entry is "hard, almost chitinous scales grow from your person. A muted brown shade, they render your surface coarse and intimidating"; [ Skin change text, format as "Your skin feels funny as [skin change entry]." ]
-	now ass change entry is "a fairly long tail erupts from it. Heavy and fully prehensile, it takes you a moment to adjust to its ponderous weight"; [ Ass/tail change text, format as "Your ass feels funny as [ass change entry]." ]
+	now face change entry is "as you're forced to abide the audible sound of bones shifting in shape, head drawn out into a long, draconic muzzle with a sharp row of feral teeth";  [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you abide a fairly substantial infection, doubling over as you endure the change. Your torso becoming increasingly massive and feral, your hind legs becoming thick, muscular trunks, while your arms shift in shape into that of a set of thick, bat-like wings. You retain a number of fingers on each hand, allowing articulation, but you imagine this comes at the expense of not being able to fly"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "hard, almost chitinous scales grow from your person. A muted brown shade, they render your surface coarse and intimidating";  [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a fairly long tail erupts from it. Heavy and fully prehensile, it takes you a moment to adjust to its ponderous weight"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "burning heat encapsulates your member, pulled back into your body along with your balls. After some coaxing, you can conjure up your cock from its new home, now a blunted, feral looking thing"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 34;
 	now dex entry is 31;
@@ -681,16 +876,16 @@ When Play begins:
 	now libido entry is 50; [ As part of infection, the Player will be gradually moved towards this value; also used for the creature's seduce defense as a penalty ]
 	now loot entry is ""; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 60; [ Chance of loot dropping 0-100 ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now MilkItem entry is "";
+	now CumItem entry is "";
+	now TrophyFunction entry is "-";
 	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]bulky[or]draconic[or]winged[at random]";
 	now type entry is "[one of]wyvern[or]draconic[or]reptilian[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 1; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
@@ -702,7 +897,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -759,7 +954,7 @@ When Play begins:
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
@@ -786,7 +981,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
