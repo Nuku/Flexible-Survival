@@ -69,9 +69,9 @@ Romulus & Remus: [feral wolf companions of Brennan]
 
 River: [frat brother of PAN, swim team captain, gay powerbottom]
 - Befriending/romancing River (he's not a slut and doesn't just sleep around)
-- Transformation into a male nymph during his questline 
+- Transformation into a male nymph during his questline
 
-Spike: [male doberman; son of Alexandra and... one of many people, including the Player]
+Spike: [male Doberman; son of Alexandra and... one of many people, including the Player]
 - Further expansion on the various relationship options with him
 - Events with Spike in a role as important companion
 - Spike being kidnapped my nefarious enemies, needing rescue

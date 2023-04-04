@@ -40,7 +40,7 @@ to say beattheemberbreeder:
 	say "     The ember breeder moans with need, staggering as she tries in vain to continue the struggle. Torn between her lusts and exhaustion, her paws roam all over her body, playing with her breasts, cock and pussy as she stumbles to her knees. ";
 	if Player is male:
 		let diceroll be a random number between 40 and 125;
-		if CockName of Player is listed in infections of Caninelist and diceroll < Libido of Player:
+		if CockName of Player is listed in infections of CanineList and diceroll < Libido of Player:
 			say "Something about her needy display arouses you and you feel an uncontrollable urge to mate with this strange beast welling up in your canine loins. Before you can suppress it, you push her down onto all fours. She releases a series of pleasured chirps at this and raises her ass, offering up her juicy pussy. You drive your [cock size desc of Player] cock into her easily, making the vaguely canine creature squirm in delight";
 			if embervicsex is odd:
 				say "[emberbreedersex01]";

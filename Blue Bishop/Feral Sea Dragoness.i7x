@@ -966,8 +966,8 @@ When Play begins:
 	now heat duration entry is 3;
 	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
-	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
+	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
@@ -980,8 +980,8 @@ When Play begins:
 	now heat duration entry is 3;
 	now trigger text entry is "A groan of excitement fills you as quivers of unexpected delight and need run through your loins, your cunt quivering with need. You slide a hand between your legs and play with yourself, but find little relief for your growing urges as thoughts of the sea and its myriad, sexy creatures begin seeping into your mind. You can feel your dripping lips becoming full and engorged in a wanton display of your body's need to be bred. With this realization, it is clear that you've gone into heat.";
 	now description text entry is "";
-	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now heat start entry is "[fsdheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
+	now heat end entry is "[fsdheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[fsdinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;

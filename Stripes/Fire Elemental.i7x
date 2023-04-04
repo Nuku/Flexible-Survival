@@ -280,8 +280,8 @@ When Play begins:
 	now heat duration entry is 2;
 	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins. This heat builds, growing to an inferno of lust and desire[if Cunt Tightness of Player < 8 or Cunt Depth of Player < 12]. As this fire burns away at you, your pussy deepens, aching for something to fill it and stoke its fires[end if]. You are in heat with a primal, elemental need.";
 	now description text entry is "pulsing, elemental furnace of lust ";
-	now heat start entry is "[fireelheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[fireelheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now heat start entry is "[fireelheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
+	now heat end entry is "[fireelheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[defaultheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;

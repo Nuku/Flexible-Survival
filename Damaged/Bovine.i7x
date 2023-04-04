@@ -347,7 +347,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Bovine"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Bovine" to infections of Bovinelist;
+	add "Bovine" to infections of BovineList;
 	add "Bovine" to infections of FurryList;
 	add "Bovine" to infections of FeralList;
 	add "Bovine" to infections of NatureList;
