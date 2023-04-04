@@ -69,58 +69,51 @@ check vialselling:
 
 Carry out vialselling:
 	let basevalue be 0;
-	let t be the topic understood;
-	let target be text;
+	let NamedVial be the topic understood;
 	let found be 0;
-	let z be 1;
-	let q be a topic;
-	repeat with x running through vials of Player:
-		[now q is x;]
-		if t in lower case is x in lower case:
-			now target is x;
+	sort Table of OwnedVials in name order;
+	sort Table of LarissaVials in name order;
+	repeat with Y running from 1 to number of filled rows in Table of OwnedVials:
+		choose row Y in the Table of OwnedVials;	
+		if Name entry matches the text NamedVial, case insensitively:
 			now found is 1;
+			let InfectionName be Name entry;
+			say "Pulling out the sample vial, you offer to sell it to Larissa";
+			if there is a Name of InfectionName in the Table of LarissaVials: [row already exists]
+				if debug is at level 5:
+					say "DEBUG: Row [InfectionName] exists in LarissaVials.";
+				choose a row with name of InfectionName in the Table of LarissaVials;
+			else: [new row to be filled]
+				if debug is at level 5:
+					say "DEBUG: Row [InfectionName] does not exist in LarissaVials.";
+				Choose a blank row from Table of LarissaVials;
+				now Name entry is InfectionName;
+				now LarissaOwned entry is 0;
+			if LarissaOwned entry > 4:
+				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
+				stop the action;
+			choose a row with name of InfectionName in the Table of Random Critters;
+			now basevalue is ( ( lev entry * 7 ) / 4 );
+			choose a row with name of InfectionName in the Table of LarissaVials;
+			if LarissaOwned entry is 1:
+				now basevalue is ( basevalue * 2 ) / 3;
+			else if LarissaOwned entry > 1:
+				now basevalue is ( basevalue / ( LarissaOwned entry + 1 ) );
+			if basevalue < 1:
+				say ", but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [Name entry] creatures. Try hunting for bigger game.'";
+				continue the action;
+			if LarissaOwned entry is 0:
+				say " and she smiles, taking it from you. 'We were hoping to get one of these samples for our bureau's collection.' She credits you for [special-style-1][basevalue][roman type] freecred.";
+			else if LarissaOwned entry is 1:
+				say " and she smiles, taking it from you. 'Thanks for another sample. I can give you an okay price for that.' She credits you for [special-style-1][basevalue][roman type] freecred.";
+			else if LarissaOwned entry >= 2:
+				say " and she nods, taking it from you. 'We have a few of these already, so I can't pay you as much for more.' She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
+			increase freecred by basevalue;
+			VialLoss InfectionName by 1;
+			now LarissaOwned entry is LarissaOwned entry + 1;
 			break;
-		increase z by 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
-		continue the action;
-	say "Pulling out the sample vial, you offer to sell it to Larissa";
-	now found is 0;
-	repeat with x running through vials of Larissa:
-		if t in lower case is x in lower case:
-			increase found by 1;
-			if found > 4:
-				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
-				continue the action;
-	[locates target within the Table of Random Critters]
-	now MonsterID is 0;
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is target:
-			now MonsterID is y;
-			break;
-	if MonsterID is 0:
-		say ", but she shakes her head. 'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
-		continue the action;
-	choose row MonsterID in Table of Random Critters;
-	now basevalue is ( ( lev entry * 7 ) / 4 );
-	if found is 1:
-		now basevalue is ( basevalue * 2 ) / 3;
-	else if found > 1:
-		now basevalue is ( basevalue / ( found + 1 ) );
-	if basevalue < 1:
-		say ", but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [Name entry] creatures. Try hunting for bigger game.'";
-		continue the action;
-	if found is 0:
-		say " and she smiles, taking it from you. 'We were hoping to get one of these samples for our bureau's collection.' She credits you for [special-style-1][basevalue][roman type] freecred.";
-	else if found is 1:
-		say " and she smiles, taking it from you. 'Thanks for another sample. I can give you an okay price for that.' She credits you for [special-style-1][basevalue][roman type] freecred.";
-	else if found >= 2:
-		say " and she nods, taking it from you. 'We have a few of these already, so I can't pay you as much for more.' She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
-	increase freecred by basevalue;
-	remove entry z from vials of Player;
-	add Name entry to vials of Larissa;
-
 
 Section 4 - Purchasing from Zephyr
 

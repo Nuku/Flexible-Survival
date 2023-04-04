@@ -25,11 +25,11 @@ Version 2 of Diego by Wahn begins here.
 Section 1 - Diego
 
 CoyoteTricks is a number that varies.
-DiegoChanged is a number that varies.
-DiegoBitched is a number that varies.
-DiegoFucked is a number that varies.
+Diegochanged is a number that varies.
+Diegobitched is a number that varies.
+Diegofucked is a number that varies.
 DiegoButtSlut is a number that varies.
-LastDiegoTricked is a number that varies. [@Tag:NotSaved] LastDiegoTricked is usually 250.
+LastDiegotricked is a number that varies. [@Tag:NotSaved] LastDiegotricked is usually 250.
 Diego_PlayerSceneStartingGender is a text that varies. [@Tag:NotSaved]
 
 Table of GameCharacterIDs (continued)
@@ -83,10 +83,10 @@ when play begins:
 the linkaction of Diego is "[diegolinkaction]".
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if DiegoChanged is 2:
+	if Diegochanged is 2:
 		now the icon of Diego is Figure of DiegoFem_icon;
 		SetFemalePronouns for Diego;
-	else if DiegoChanged is 1:
+	else if Diegochanged is 1:
 		now the icon of Diego is Figure of pixel_icon;
 		SetFemalePronouns for Diego;
 	else:
@@ -98,17 +98,17 @@ to say diegolinkaction:
 	else:
 		say "Possible Actions: [link]talk[as]talk Diego[end link], [link]smell[as]smell Diego[end link], [link]fuck[as]fuck Diego[end link], [link]trick[as]trick Diego[end link][line break]";
 
-the scent of Diego is "Diego smells like a [if DiegoChanged is 0]male[else if DiegoChanged is 1]herm[else]female[end if] coyote.".
+the scent of Diego is "Diego smells like a [if Diegochanged is 0]male[else if Diegochanged is 1]herm[else]female[end if] coyote.".
 
 To say DiegoDesc:
 	if debugactive is 1:
-		say "DEBUG -> CoyoteTricks: [CoyoteTricks], LastDiegoTricked: [LastDiegoTricked], DiegoChanged: [DiegoChanged], DiegoBitched: [DiegoBitched], DiegoFucked: [DiegoFucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
+		say "DEBUG -> CoyoteTricks: [CoyoteTricks], LastDiegotricked: [LastDiegotricked], Diegochanged: [Diegochanged], Diegobitched: [Diegobitched], Diegofucked: [Diegofucked], DiegoButtSlut: [DiegoButtSlut] <- DEBUG[line break]";
 		say "DEBUG -> (Traits of Diego) [traits of Diego][line break]";
-	if DiegoChanged is 2:
+	if Diegochanged is 2:
 		say "     The former coyote man is now a pretty tan furred coyote bitch instead, and is eyeing you eagerly as [SubjectPro of Diego] leans up against the wall dividing the park from the rest of the city. You can see one of her paws slowly straying down to her furred pussy as you approach, a smile playing across her muzzle as [SubjectPro of Diego] rubs herself teasingly.";
-	if DiegoChanged is 1:
+	if Diegochanged is 1:
 		say "     The tan furred coyote herm is still here leaning up against the wall dividing the park from the rest of the city, and seems to be amused as you approach, one of her hands straying down to fondle both sets of her equipment as a smile tugs at her coyote muzzle.";
-	if DiegoChanged is 0:
+	if Diegochanged is 0:
 		say "     A tan-furred anthro coyote is leaning up against the wall dividing the park from the rest of the city, striking a relaxed, casual pose. It is quite obvious that he's a man - the guy doesn't wear any clothes on [PosAdj of Diego] wiry body, allowing open view of a pair of furry balls dangling between [PosAdj of Diego] legs, as well as a sheath just above. [SubjectProCap of Diego] eyes you curiously as you approach, one of [PosAdj of Diego] ears flicking in amusement as a small smile plays across [PosAdj of Diego] muzzle.";
 		if DiegoButtSlut > 0:
 			say "     You notice the anthro canine's tail twitching upwards a little, as if [SubjectPro of Diego] reflexively reacts to your presence by wanting to present [PosAdj of Diego] bare butt.";
@@ -146,13 +146,13 @@ to say DiegoTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Hand a bottle of clean water to Diego";
 	[]
-	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and DiegoChanged < 2 and diego's heirloom collar is not equipped: [Diego hasn't been opened for anal play and isn't fully feminine]
+	if carried of dog milk > 0 and CoyoteTricks > 4 and DiegoButtSlut is 0 and Diegochanged < 2 and diego's heirloom collar is not equipped: [Diego hasn't been opened for anal play and isn't fully feminine]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick Diego into drinking dog milk";
 		now sortorder entry is 4;
 		now description entry is "Arrange for Diego to chug your bottle of transforming canine milk";
 	[]
-	if carried of orc cum > 0 and CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut < 3 and diego's heirloom collar is not equipped: [Diego hasn't been transformed towards being female and isn't fully mpreg-able]
+	if carried of orc cum > 0 and CoyoteTricks > 4 and Diegochanged is 0 and DiegoButtSlut < 3 and diego's heirloom collar is not equipped: [Diego hasn't been transformed towards being female and isn't fully mpreg-able]
 		choose a blank row in table of fucking options;
 		now title entry is "Trick Diego into drinking orc cum";
 		now sortorder entry is 5;
@@ -217,10 +217,10 @@ to say DiegoTalkMenu:
 	clear the screen and hyperlink list;
 
 to say DiegoTalk1:
-	if DiegoChanged is 2: [female]
+	if Diegochanged is 2: [female]
 		project the figure of DiegoFem_face_icon;
 		say "     [one of]'I think I'm in heat!'[or]'God what I wouldn't give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I'm almost too horny to think about tricking anyone... almost.'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as [SubjectPro of Diego] rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' [SubjectPro of Diego] asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won't be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as [SubjectPro of Diego] rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn't that sound fun?'[or]'The skunk girls are all pets of the larger skunk-beasts. Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beast's pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I'm so glad this happened!'[or]'I wonder if any of those nice German shepherds in town would like to play with a coyote,' [SubjectPro of Diego] says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch. I can kind of envy her now,' [SubjectPro of Diego] says with a smile.[at random]";
-	else if DiegoChanged is 1: [herm]
+	else if Diegochanged is 1: [herm]
 		project the figure of DiegoFem_face_icon;
 		say "     [one of]'Damn fine trick you pulled there!'[or]'Thank God I still have my nice thick coyote cock' Diego says with a grin as [SubjectPro of Diego] rubs said cock suggestively.[or]'Hell I can't decide whether I should pull a trick on you, or thank you for this,' [SubjectPro of Diego] says as [SubjectPro of Diego] gestures at her changed body.[or]'You know, I hear there is an alpha wolf out there in the city looking for pack-members, maybe you should go see if [SubjectPro of Diego] has room for you?' [SubjectProCap of Diego] suggests with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways?' Diego says with a grin as [SubjectPro of Diego] licks her lips.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse was the one doing the riding eventually though if you know what I mean.'[or]'There was a deer around here recently at some point, [SubjectPro of Diego] looked kinda lonely if you know what I mean...'[or]'I wonder what's bigger...' Diego muses with a thoughtful expression on her muzzle, 'The horse cocks here in the park, or the zebra cocks in the zoo...'[or]'Careful around the cute chinchilla in the park, they are almost as tricky sometimes as I am.'[or]'I wonder how much those strange cock plants are going to keep spreading.'[or]'Cock and pussy, best of both worlds!'[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch,' [SubjectPro of Diego] says with a smile.[at random]";
 	else: [male]
@@ -232,7 +232,7 @@ to say DiegoTalk2:
 	try Diegotricking;
 
 to say DiegoTalk3: [hand over water]
-	if DiegoChanged > 0:
+	if Diegochanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;
@@ -244,7 +244,7 @@ to say DiegoTalk3: [hand over water]
 	extend game by 4;
 
 to say DiegoTalk4: [transform Diego towards being female]
-	if DiegoChanged is 1: [herm Diego]
+	if Diegochanged is 1: [herm Diego]
 		project the figure of DiegoFem_face_icon;
 		say "     'Hey, you have more of that wonderful milk!' Diego says with a grin on her new muzzle as [SubjectPro of Diego] sniffs the air, her coyote tail wagging behind the herm eagerly. 'Well the damage is already done, and that stuff tasted amazing, so one more drink couldn't hurt - right?' Diego says as [SubjectPro of Diego] looks at you hopefully, eyeing the bottle of milk you are holding out teasingly.";
 		say "     [bold type]Do you give Diego some more of the milk?[roman type][line break]";
@@ -258,13 +258,13 @@ to say DiegoTalk4: [transform Diego towards being female]
 			WaitLineBreak;
 			say "     Eventually Diego looks back at you with a satisfied grin on her face. 'Guess fool me twice, shame on me eh?' [SubjectPro of Diego] says, seeming not at all displeased as her paws begin to roam her new body again. 'I'd probably be annoyed, if this wasn't the best feeling ever...' the coyote bitch says with a smile on her muzzle as [SubjectPro of Diego] looks at you happily. 'I feel so damn horny and sexy like this, it's amazing. Hell I think I might even be in heat!' [SubjectPro of Diego] says eagerly, panting happily at the prospect while her paws begin to rub over her soft fur again, the trickster obviously forgetting you are there watching as [SubjectPro of Diego] begins to pleasure herself yet again.";
 			ItemLoss dog milk by 1;
-			now DiegoChanged is 2;
+			now Diegochanged is 2;
 			SetFemalePronouns for Diego;
 			now the icon of Diego is Figure of DiegoFem_icon;
 			LineBreak;
 		else:
 			say "     'Aw, still your probably right, best not to push my luck,' the coyote herm says as [SubjectPro of Diego] shoots your backpack a longing look as you put the milk away, before settling back up against the wall with a sigh.";
-	else if DiegoChanged is 0: [male Diego]
+	else if Diegochanged is 0: [male Diego]
 		project the figure of Diego_face_icon;
 		say "     Deciding to play a whole different sort of trick - on Diego, this time - you rummage around in your backpack until you find the milk from the canine you fought earlier. 'Hey something smells good there,' the tricky coyote says as you set down the bottle on the low wall surrounding the park, then proceed to flash it through [PosAdj of Diego] line of sight a few more times as you re-arrange the packing order of your supplies.";
 		say "     'Damn,' Diego says with a sad smile as [SubjectPro of Diego] looks at you with large coyote eyes. 'It's just so much work tricking the man. Very, very thirsty work, if you know what I mean,' the trickster says with a smile on [PosAdj of Diego] muzzle. 'Why not help a fellow out?' [SubjectPro of Diego] says hopefully as [SubjectPro of Diego] eyes the bottle of milk right on top of your still open backpack.";
@@ -279,7 +279,7 @@ to say DiegoTalk4: [transform Diego towards being female]
 			say "     One of his - or maybe rather [PosAdj of Diego] - hands rubbing along [PosAdj of Diego] stiff rod eagerly, while the other reaches underneath [PosAdj of Diego] cock to rub and stroke at her brand new female opening. The sight makes you grin as the lust-filled new coyote herm moans wantonly as [SubjectPro of Diego] plays with herself, your own body growing excited as [SubjectPro of Diego] brings herself to orgasm, her seed coating one hand, even as her wet juices spill out over the other as [SubjectPro of Diego] shudders in ecstasy. Panting from pleasure and exertion, Diego lowers her head and looks at you with a wry grin on her muzzle. 'Well damn, that was a nice trick there,' the coyote herm admits as her hands begin to wander over her changed body again. 'I guess you got me that time then, maybe I should give you a little reward for being such a good trickster?' the new herm says with a lewd wink as [SubjectPro of Diego] eyes your body eagerly.";
 			ItemLoss dog milk by 1;
 			now the icon of Diego is Figure of pixel_icon;
-			now DiegoChanged is 1;
+			now Diegochanged is 1;
 		else:
 			LineBreak;
 			say "     'Damn, what a tease,' Diego says sadly as you slip the milk back into your pack. 'I taught you too damn well it seems,' the coyote says with a sigh as [SubjectPro of Diego] watches the milk vanish back into your pouch.";
@@ -347,7 +347,7 @@ to say DiegoTalk5: [transform Diego towards being open for anal]
 			say "     'Damn - what a tease,' Diego remarks as you close up your pack and shift it back to hang over one shoulder. Licking [PosAdj of Diego] lips thirstily, [SubjectPro of Diego] flicks an ear in amusement as [SubjectPro of Diego] adds, 'I taught you too damn well it seems.'";
 
 to say DiegoTalk6: [hand over food]
-	if DiegoChanged > 0:
+	if Diegochanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;
@@ -371,14 +371,14 @@ Check Diegotricking:
 	If Diego is not visible, say "Who?" instead;
 
 carry out Diegotricking:
-	if DiegoChanged > 0:
+	if Diegochanged > 0:
 		project the figure of DiegoFem_face_icon;
 	else:
 		project the figure of Diego_face_icon;
-	if LastDiegoTricked - turns < 6:
-		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if DiegoChanged is 0]he shakes his[else]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
+	if LastDiegotricked - turns < 6:
+		say "     'Sorry bud, only so much time for tricking people in the day,' Diego says as [if Diegochanged is 0]he shakes his[else]she shakes her[end if] head sadly, 'Trick people too much and it just gets stale, so come back and try again later.'";
 		stop the action;
-	now LastDiegoTricked is turns;
+	now LastDiegotricked is turns;
 	say "     Diego gives an impish grin as you approach [ObjectPro of Diego] and say that you got an idea, then says, 'Oh? So you think a new little trickster like you can pull one out of their hat that beats my tricks? Let's see what you got!'";
 	LineBreak;
 	let bonus be (( Intelligence of Player minus 10 ) divided by 2);
@@ -390,7 +390,7 @@ carry out Diegotricking:
 		say "     As you lay out the plan you've come up with, Diego exclaims happily, 'Whoa amazing! Are you sure you aren't part coyote? I mean, damn that's one impressive trick!' The coyote shakes [PosAdj of Diego] head in admiration and pats the side of your arm in a friendly manner. 'That kinda trick will get some extra effort on my part. Can't wait to put it into action, hah! Should take those silly military types ages to get it all sorted out!' Letting [PosAdj of Diego] eyes roam over the city stretching out around you, the coyote grins broadly - no doubt imagining the chaos [SubjectPro of Diego]'ll create in short order. And that all thanks to your help.";
 		increase CoyoteTricks by 2;
 		extend game by 18;
-		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
+		if CoyoteTricks > 4 and Diegochanged is 0 and DiegoButtSlut is 0:
 			LineBreak;
 			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty hungry and thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink or eat from you now. Maybe give [ObjectPro of Diego] some food, water, or other liquids that could have fun effects on the guy. [roman type])[line break]";
@@ -403,7 +403,7 @@ carry out Diegotricking:
 		say "     As you lay out the plan you've come up with, Diego gives a happy grin and says, 'Dang that's a good one! Not quite up to my usual standards of course, but pretty damn good!' The coyote nods to you with [PosAdj of Diego] canine head, then lets [PosAdj of Diego] eyes roam over the city stretching out around you. 'I think I'll try your idea on some of the army scouts - might just earn ya a bit of time, and create fun for me.'";
 		extend game by 6;
 		increase CoyoteTricks by 1;
-		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
+		if CoyoteTricks > 4 and Diegochanged is 0 and DiegoButtSlut is 0:
 			LineBreak;
 			say "     Turning [PosAdj of Diego] attention back to you, the anthro canine licks [PosAdj of Diego] lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' [SubjectProCap of Diego] gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give [ObjectPro of Diego] some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
@@ -429,13 +429,13 @@ to say SexWithDiego:
 	else if diego's heirloom collar is equipped: [collared, submissive players]
 		say "[DiegoMasterSex]";
 	]
-	else if Player is male and DiegoChanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
+	else if Player is male and Diegochanged is 0 and DiegoButtSlut is 0: [male+herm player and regular male Diego]
 		if Player is female: [herms]
 			say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and lets [PosAdj of Diego] eyes wander over your form. 'Hmm you look pretty good there,' Diego says with some interest. 'Sadly though, I can already tell you have a trick hidden away next to your lovely treat,' the coyote says as [SubjectPro of Diego] gestures to your cock. 'Nice try there - but this coyote is just here for the ladies. Better luck next time, eh? Be sure to come back to me if you happen to become a full woman though.'";
 		else: [male]
 			say "     As you step up to Diego and start making lusty suggestions, the coyote leans back against the wall and crosses [PosAdj of Diego] arms while taking in your form. 'Heh, you want to play with a hot coyote stud like me?' Diego says with amusement, 'Hard to blame you for that I know, but I think I'll pass. You may be a good trickster, but figuring out the two guys arrangement isn't a trick I happen to be interested in. Why don't you go out and have some fun, then come back as a lovely female, eh?'";
 	else if lastfuck of Diego - turns < 6:
-		if DiegoChanged is 2: [FemDiego]
+		if Diegochanged is 2: [FemDiego]
 			say "     'Sorry there stud,' Your little coyote bitch pants as [SubjectPro of Diego] looks up at you with a happy expression on her muzzle, 'I still haven't recovered from last time yet, maybe you should try coming back just a little later?' Diego asks somewhat pleadingly.";
 			stop the action;
 		else: [herm Diego or regular]
@@ -446,7 +446,7 @@ to say SexWithDiego:
 
 to say DiegoSexMenu:
 	setmonster "Coyote";
-	if DiegoChanged > 0:
+	if Diegochanged > 0:
 		project the figure of DiegoFem_icon;
 	else:
 		project the figure of Diego_icon;
@@ -454,43 +454,43 @@ to say DiegoSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if DiegoChanged < 2 and 1 > 2: [disabled for now]
+	if Diegochanged < 2 and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Diego's cock";
 		now sortorder entry is 1;
-		now description entry is "Give [if DiegoChanged is 0]him[else]her[end if] a blow-job";
+		now description entry is "Give [if Diegochanged is 0]him[else]her[end if] a blow-job";
 	[]
-	if (Player is male and (DiegoChanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
+	if (Player is male and (Diegochanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;
-		now title entry is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]";
+		now title entry is "Face-fuck [if Diegochanged is 0]him[else]her[end if]";
 		now sortorder entry is 2;
 		now description entry is "Use the coyote's mouth";
 	[]
-	if (Player is female and DiegoChanged < 2):
+	if (Player is female and Diegochanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (vaginal)";
 		now sortorder entry is 3;
 		now description entry is "Let the coyote fuck you";
 	[]
-	if (DiegoChanged < 2):
+	if (Diegochanged < 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's dick (anal)";
 		now sortorder entry is 4;
 		now description entry is "Let the coyote fuck you";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (Player is male and Diegochanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Fuck against the wall";
 		now sortorder entry is 5;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (Player is male and Diegochanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - Doggy style";
 		now sortorder entry is 6;
 		now description entry is "Fill the coyote's pussy with your cock";
 	[]
-	if (Player is male and DiegoChanged > 0):
+	if (Player is male and Diegochanged > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Diego's pussy - From behind, against the wall";
 		now sortorder entry is 7;
@@ -531,7 +531,7 @@ to say DiegoSexMenu:
 				now sextablerun is 1;
 				if nam is "Suck Diego's cock":
 					say "[DiegoSex1]";
-				else if (nam is "Face-fuck [if DiegoChanged is 0]him[else]her[end if]"):
+				else if (nam is "Face-fuck [if Diegochanged is 0]him[else]her[end if]"):
 					say "[DiegoSex2]";
 				else if (nam is "Take Diego's dick (vaginal)"):
 					say "[DiegoSex3]";
@@ -559,9 +559,9 @@ to say DiegoSexMenu:
 	clear the screen and hyperlink list;
 
 to say DiegoSex1: [face-fuck Diego]
-	if DiegoChanged is 2: [femDiego]
+	if Diegochanged is 2: [femDiego]
 		say "     ";
-	else if DiegoChanged is 1: [hermDiego]
+	else if Diegochanged is 1: [hermDiego]
 		say "     ";
 	else if DiegoButtSlut > 2: [mpreg-able Diego]
 		say "     ";
@@ -573,24 +573,24 @@ to say DiegoSex1: [face-fuck Diego]
 	Coyotify;
 
 to say DiegoSex2: [BJ for Diego]
-	if DiegoChanged is 1: [herm]
+	if Diegochanged is 1: [herm]
 		say "     <WIP SCENE>";
-		if DiegoBitched < 1:
-			now DiegoBitched is 1;
+		if Diegobitched < 1:
+			now Diegobitched is 1;
 	else: [male Diego]
 		say "     <WIP SCENE>";
 	NPCSexAftermath Player receives "OralCock" from Diego;
 
 to say DiegoSex3: [player pussy fucked by Diego's dick]
-	if DiegoChanged is 1: [herm]
+	if Diegochanged is 1: [herm]
 		say "     'Hey glad you still want to come play with Diego even after that trick you pulled on me,' the coyote herm says with a grin as [SubjectPro of Diego] looks at your female body lustily. 'Well I have to admit that was a pretty good trick of yours,' [SubjectPro of Diego] adds, rubbing her new breasts with one hand while lowering the other to stroke her half-erect cock. 'Now I think I should pay you back with a nice little trick of my own,' [SubjectPro of Diego] says teasingly as [SubjectPro of Diego] draws closer to you, one of her furred hands reaching out to stroke along your chest as [SubjectPro of Diego] lowers her muzzle to whisper in your ear. 'A nice, thick, knotted, coyote trick, to put right in your eager body...' [SubjectPro of Diego] whispers teasingly, her words making you gasp even as [SubjectPro of Diego] wraps her arms around you and drags you both down onto the soft grass.";
 		say "     The coyote herm laughs at the look of arousal on your face, and when you open your mouth to say something [SubjectPro of Diego] locks her soft muzzle over your mouth, silencing you as her tongue darts around in your mouth teasingly. Thoughts of protest are soon the last thing on your mind as her soft hands roam your body, the coyote on top of you still knowing just how to tease and arouse a woman. Giving in to the pleasure, you are soon rubbing up against her soft-furred breasts, while her cock is brushing against your damp needy feminine opening. The teasing of the tricky coyote soon has you lifting your body up to meet her cock, trying to get the tricky herm to fill you up properly. You're panting eagerly as each teasing pass brings you closer to the wonderful pleasure you know is coming.";
 		WaitLineBreak;
 		say "     Finally you lift yourself up in just the right moment and her cock slips right inside you, making you gasp as the burning emptiness inside you is filled with Diego's coyote rod. [SubjectProCap of Diego] wastes no time with any more teasing once [SubjectPro of Diego] has her cock in your slick pussy, and Diego begins thrusting eagerly into your body, her eyes closed tight in pleasure as [SubjectPro of Diego] lets out short yipping noises with every thrust. The feel of her knot pressing up into your body is simply amazing. At first it was small, just some little bulges at the base of her rod, but now it is spreading you wider with each thrust at it seeks to lock the two of you together. You can tell as you stare up at Diego with lust clouded eyes that the coyote above you is panting with just as much lust as you are.";
 		say "     Soon her knot swells up fully while the coyote's shaft is lodged all the way inside you, making you groan as it ties the two of you together. As her thrusts speed up, your hands clench her fur tightly in rapidly building arousal. Then all too soon, [SubjectPro of Diego] begins to shoot her seed into your needy body. The feel of that wonderful canine cock spurting into you is more than you can stand, and you find yourself crying out as well as your body spasms around Diego's thick meat. The two of you collapse together on the grass, her cock still buried deep in your body as you both pant and try to recover from the intense experience.";
 		say "     Eventually her knot goes down far enough that [SubjectPro of Diego] can pull it out of you with a soft popping noise, leaving you feeling strangely empty, even though you are still nice and full of her wonderful coyote seed... The coyote herm slowly crawls back over to the wall, leaning her back against it as [SubjectPro of Diego] pants in exhaustion and pleasure, a teasing grin on her muzzle as [SubjectPro of Diego] winks at you. Without another word, you slowly haul yourself back up to your feet, and begin to retrieve your equipment, keeping a careful eye on the tricky coyote just in case.";
-		if DiegoBitched < 1:
-			now DiegoBitched is 1;
+		if Diegobitched < 1:
+			now Diegobitched is 1;
 	else: [male Diego]
 		say "     'Well after all that tricking and flirting, how could I say no?' Diego says with an amused grin, [PosAdj of Diego] paw-like hand reaching out and pulling you closer to him. 'What say we have a go right here then?' the coyote trickster adds with a grin as [SubjectPro of Diego] moves around you until [SubjectPro of Diego] is pressing your body up against the wall [SubjectPro of Diego] was leaning on. 'Hmm, I like what I see,' [SubjectPro of Diego] says with a grin as [PosAdj of Diego] hands roam down your body. You open your mouth to say something, only for the tricky coyote to take advantage of this fact - [PosAdj of Diego] long muzzle presses up against your face and [SubjectPro of Diego] pushes [PosAdj of Diego] tongue inside your mouth, tangling with your own in a pleasant little wrestling match. Meanwhile, the coyote's paw-hands settle on your ass, rubbing it softly.";
 		say "     'Now now,' Diego pants out as [SubjectPro of Diego] breaks the deep kiss, 'No more tricks for today, now it's time for you to get your treat.' The male coyote grins widely as [PosAdj of Diego] stiff cock rubs up against your crotch. Wasting no more time, [SubjectPro of Diego] lifts your ass lightly with both [PosAdj of Diego] paw-hands slid under your thighs, giving himself a better angle as [PosAdj of Diego] cock-tip probes at your hot passage. You find yourself moaning as your back is pressed up against the cool wall, your legs automatically wrapping around the hot coyote stud as [SubjectPro of Diego] sinks [PosAdj of Diego] thick rod into your needy body. 'God you feel so good!' Diego moans as [SubjectPro of Diego] begins to thrust into you in short powerful thrusts, each one pressing you into the wall as you find your hands gripping [PosAdj of Diego] shoulders tightly, encouraging the strong coyote to fuck you even harder.";
@@ -625,7 +625,7 @@ to say DiegoSex4: [player ass fucked]
 	Coyotify;
 
 to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
-	if DiegoChanged is 2: [full FemDiego]
+	if Diegochanged is 2: [full FemDiego]
 		say "     'I thought you would never ask!' the coyote female says with a grin on [PosAdj of Diego] muzzle, then adds in a teasing tone, 'After all, the best trickster definitely won.' Running [PosAdj of Diego] paw-hands over [PosAdj of Diego] changed body, [SubjectPro of Diego] smiles at you and wags [PosAdj of Diego] tail. 'And to the winner goes the prize...' Diego pants out eagerly, obviously becoming more and more excited by the second. 'Don't you think I would make a fine prize for such a good trickster?' [SubjectPro of Diego] says teasingly as you approach, spreading [PosAdj of Diego] legs slightly as [SubjectPro of Diego] leans back up against the wall behind her.";
 		say "     'Claim your prize then!' [SubjectPro of Diego] says in a half-moan as [SubjectPro of Diego] reaches out one of [PosAdj of Diego] paws to stroke your [Skin of Player] side. Grinning at the eager invitation, you waste no time in moving your body up against hers, pinning the coyote to the wall as [SubjectPro of Diego] moans eagerly in need. 'God yes, please fuck me, fuck me like a bitch in heat...' Diego moans, panting in lust as [PosAdj of Diego] arms wrap around you eagerly and [PosAdj of Diego] body rubs against yours.";
 		WaitLineBreak;
@@ -636,8 +636,8 @@ to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 		say "     Coming down from the pleasure of the intense mating, the two of you collapse against the wall in a tangle of limbs, [PosAdj of Diego] body still wrapped around yours as [SubjectPro of Diego] moans happily at being bred. 'Thank you so much,' Diego whispers into your ear, as [PosAdj of Diego] paw-like hands hold you close, 'Thank you for fucking me properly, and thank you for tricking me into becoming a bitch,' [SubjectPro of Diego] says as [SubjectPro of Diego] licks your cheek and rubs [PosAdj of Diego] muzzle against your neck.";
 		WaitLineBreak;
 		say "     'I never realized how much I would love being a bitch, being your bitch,' the coyote female says with a grin, as the two of you begin to untangle yourselves from each other. Standing up, you help your newly bred coyote bitch up as well, leaving [PosAdj of Diego] leaning up against the wall as [SubjectPro of Diego] recovers, and somehow you know [SubjectPro of Diego] will be right there waiting eagerly for you whenever you choose to return, willing and eager for you to take [PosAdj of Diego] like the prize bitch [SubjectPro of Diego] now is...";
-		if DiegoBitched < 2:
-			now DiegoBitched is 2;
+		if Diegobitched < 2:
+			now Diegobitched is 2;
 	else: [carry wall fuck with herm Diego]
 		say "     'Well you know, that is an interesting offer...' Diego says as the herm eyes your proudly erect cock thoughtfully. You can easily tell though, that while [SubjectPro of Diego] is trying to hide [PosAdj of Diego] excitement, your offer has immediately caused [PosAdj of Diego] new opening to grow damp. [SubjectProCap of Diego] even spreads [PosAdj of Diego] legs slightly as [SubjectPro of Diego] leans back up against the wall behind her. Also, [PosAdj of Diego] tail gives [PosAdj of Diego] away by lifting up eagerly behind her, making you grin as you press closer to [PosAdj of Diego] changed body. Reaching out, you stroke [PosAdj of Diego] soft fur teasingly. 'I guess we might as well, I mean, you did trick me fair and square now didn't you...' Diego says in a slightly nervous tone, [PosAdj of Diego] tongue starting to hang out of [PosAdj of Diego] muzzle as the scent of an aroused male speaks to [PosAdj of Diego] new instincts.";
 		say "     Already highly aroused by the feeling of [PosAdj of Diego] sensual body pressing up against yours and the strong scent of a bitch in heat, you need no further encouragement as you rub your [Cock of Player] rod up against Diego's crotch. [SubjectProCap of Diego] pants eagerly as your shaft slides along [PosAdj of Diego] own and you close your hand around both of them, jerking slowly up and down. 'Oh god yes,' the coyote herm moans eagerly, humping against your hand a little. After a moment of running your finger teasingly around the tip of [PosAdj of Diego] pointed cock, you push the hard rod up a little and feel for the trickster's balls with your other hand. Diego's family jewels are nice and full in their furry sack, and just under them the real prize you're going for is hidden - the wet snatch this anthro canine now calls [PosAdj of Diego] own, thanks to your little trick with the milk.";
@@ -645,15 +645,15 @@ to say DiegoSex5: [Diego's pussy fucked - lift her and fuck against the wall]
 		say "     After sliding a finger in between Diego's nether lips and finding [PosAdj of Diego] moist and ready, you immediately shift your erection down to line up with it. [SubjectProCap of Diego] groans in lust as your tip begins to probe the soft folds, [PosAdj of Diego] body eagerly spreading itself open before you as you shift your hips forward and sheath yourself inside her. 'Fuck YEAH,' the coyote bitch moans eagerly, shuddering at the feel of your rod inside [PosAdj of Diego] body. Clutching you tightly and panting out needy words, [SubjectPro of Diego] makes you grin with amusement as you begin to slowly thrust in and out.";
 		say "     The feel of your cock moving within [PosAdj of Diego] is almost too much for the relatively new herm, as [SubjectPro of Diego] groans and yips instinctively in pleasure, [PosAdj of Diego] furred legs reaching up to wrap around your body and hold you close. Diego's feminine parts feel wonderful around your cock as you press [PosAdj of Diego] up against the wall, moving in swift sharp thrusts within [PosAdj of Diego] warm passage as [SubjectPro of Diego] clings to your body. 'Take me, take me deep like a bitch,' you can hear Diego whispering softly over and over again as [SubjectPro of Diego] rests [PosAdj of Diego] head on your shoulder, [PosAdj of Diego] sighs of pleasure encouraging you to pump into [PosAdj of Diego] amazing body even harder. You can't help but greatly enjoy how easily the once tricky coyote is overcome by the needs of [PosAdj of Diego] new body.";
 		WaitLineBreak;
-		say "     The sensations of having a strong [if player is herm]herm[else]male[end if] pumping their rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] grinds [PosAdj of Diego] crotch against yours in order to push your rod deeper. With a broad grin on your face, you slide your arms up behind [PosAdj of Diego] soft-furred back, stroking [PosAdj of Diego] a little before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] legs wrapping even tighter around you as [PosAdj of Diego] body shudders in orgasm. The hard cock of the herm coyote, with a fully swollen knot and all, stands straight up between the two of you and erupts with cum-shot after cum-shot, splattering both of your chests and even your chin with the coyote's load.";
+		say "     The sensations of having a strong [if Player is herm]herm[else]male[end if] pumping their rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] grinds [PosAdj of Diego] crotch against yours in order to push your rod deeper. With a broad grin on your face, you slide your arms up behind [PosAdj of Diego] soft-furred back, stroking [PosAdj of Diego] a little before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] legs wrapping even tighter around you as [PosAdj of Diego] body shudders in orgasm. The hard cock of the herm coyote, with a fully swollen knot and all, stands straight up between the two of you and erupts with cum-shot after cum-shot, splattering both of your chests and even your chin with the coyote's load.";
 		say "     Meanwhile, Diego's inner muscles tremble and twitch around your erection, creating very pleasurable sensations that trigger your own orgasm mere moments later. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm. After your spurts of cum eventually taper off, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego slowly drops to [PosAdj of Diego] knees, leaning heavily against the wall to brace herself. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
-		if DiegoBitched < 1:
-			now DiegoBitched is 1;
+		if Diegobitched < 1:
+			now Diegobitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	Coyotify;
 
 to say DiegoSex6: [Diego's pussy fucked - doggy style]
-	if DiegoChanged is 2: [full FemDiego]
+	if Diegochanged is 2: [full FemDiego]
 		say "     'I thought you would never ask!' the coyote female says with a grin on [PosAdj of Diego] muzzle, then adds in a teasing tone, 'After all, the best trickster definitely won.' Running [PosAdj of Diego] paw-hands over [PosAdj of Diego] changed body, [SubjectPro of Diego] smiles at you and wags [PosAdj of Diego] tail. 'And to the winner goes the prize...' Diego pants out eagerly, obviously becoming more and more excited by the second. 'Don't you think I would make a fine prize for such a good trickster?' With that said, [SubjectPro of Diego] drops down to all fours on the ground before you, [PosAdj of Diego] newly changed body makes the stance seem both more natural on her, and very sexy.";
 		say "     As you approach, Diego turns [PosAdj of Diego] rear towards you and lifts [PosAdj of Diego] tail eagerly to give you a perfect view of [PosAdj of Diego] heat-swollen filled pussy. 'Why don't you claim your little coyote like a proper bitch?' [SubjectPro of Diego] pants out as [SubjectPro of Diego] glances at you over [PosAdj of Diego] shoulder, waving [PosAdj of Diego] ass slightly as [PosAdj of Diego] tail wags eagerly in anticipation. The sight of the formerly dominant coyote on all fours before you as [SubjectPro of Diego] gives in to [PosAdj of Diego] female instincts makes you smile, and your cock is already hard and ready as you reach out and begin to stroke [PosAdj of Diego] soft fur.";
 		WaitLineBreak;
@@ -664,23 +664,23 @@ to say DiegoSex6: [Diego's pussy fucked - doggy style]
 		say "     Without you inside her, Diego collapses to the ground, lying on the soft grass for a minute, before rolling over and sitting up still panting from the recent exertion. 'Thanks. God I needed that,' your bitch says with a smile on [PosAdj of Diego] muzzle as [SubjectPro of Diego] rubs [PosAdj of Diego] stomach with [PosAdj of Diego] paws. 'I never imagined anything could feel this good before...' [SubjectPro of Diego] says with a dreamy look on [PosAdj of Diego] muzzle, before blinking and looking at you. 'I think I'm your bitch now, it just feels... right somehow,' Diego says with a smile on [PosAdj of Diego] muzzle as [SubjectPro of Diego] hauls herself up on [PosAdj of Diego] still shaky legs, before reaching out to stroke your cheek with one of [PosAdj of Diego] paws lightly.";
 		WaitLineBreak;
 		say "     'Thank you for claiming me properly,' [SubjectPro of Diego] says as [SubjectPro of Diego] leans forward and gives you a soft lick on the cheek. 'It just feels right to do it doggy style - and with such a crafty trickster too,' the coyote bitch says with a soft grin, before staggering back over to the wall and leaning up against it for support. 'Anytime you want to play with your bitch again, you know where I am,' [SubjectPro of Diego] says with a wink. You gather your stuff together to set out into the city again, grinning at the change a few little tricks managed to bring about in your bitch.";
-		if DiegoBitched < 2:
-			now DiegoBitched is 2;
+		if Diegobitched < 2:
+			now Diegobitched is 2;
 	else:
 		say "     'Well you know, that is an interesting offer...' Diego says as the herm eyes your proudly erect cock thoughtfully. You can easily tell though, that while [SubjectPro of Diego] is trying to hide [PosAdj of Diego] excitement, your offer has immediately caused [PosAdj of Diego] new opening to grow damp. Also, [PosAdj of Diego] tail gives [PosAdj of Diego] away by lifting up eagerly behind her, making you grin as you press closer to [PosAdj of Diego] changed body. Reaching out, you stroke [PosAdj of Diego] soft fur teasingly. 'I guess we might as well, I mean, you did trick me fair and square now didn't you...' Diego says in a slightly nervous tone, [PosAdj of Diego] tongue starting to hang out of [PosAdj of Diego] muzzle as the scent of an aroused male speaks to [PosAdj of Diego] new instincts. With that said, the coyote herm slowly turns [PosAdj of Diego] back to you and drops down to all fours on the ground. [PosAdjCap of Diego] newly changed body makes the stance seem both more natural on her, and very sexy.";
 		say "     Diego lifts [PosAdj of Diego] tail in a soft invitation, giving you a clear view of [PosAdj of Diego] now wet and swollen coyote pussy, with [PosAdj of Diego] cock dangling erect underneath [PosAdj of Diego] body. You approach to give [PosAdj of Diego] new female parts some much-needed attention by your [Cock of Player] cock. Diego moans as your hands stroke through the soft coyote fur of [PosAdj of Diego] inner thighs, rubbing and teasing [PosAdj of Diego] until [SubjectPro of Diego] raises [PosAdj of Diego] ass up into the air even higher. The sight of the formerly dominant coyote on all fours before you as [SubjectPro of Diego] gives in to [PosAdj of Diego] female instincts makes you smile, and your cock is already fully hard and ready as you rub its tip against [PosAdj of Diego] new entrance. It is just so much fun to see how easily the once tricky coyote is overcome by the needs of [PosAdj of Diego] new body.";
 		WaitLineBreak;
 		say "     Diego pants eagerly as your tip begins to probe [PosAdj of Diego] soft folds, [PosAdj of Diego] body eagerly spreading itself open before you as you shift your hips forward and push your cock into her. [PosAdjCap of Diego] soft passage grips your rod like a velvet glove, the coyote underneath you gasping in pleasure as you push yourself into [PosAdj of Diego] body. Diego's inner muscles massage your cock needily even as you draw back and begin to thrust into [PosAdj of Diego] again. [SubjectProCap of Diego] moans and begins to yip as [PosAdj of Diego] new small breasts begin to bounce underneath [PosAdj of Diego] body in time to your thrusts, [PosAdj of Diego] tongue lolling out of [PosAdj of Diego] muzzle as [SubjectPro of Diego] gasps in time with your thrusting.";
-		say "     The sensations of having a strong male pumping [if player is herm]their[else]his[end if] rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] thrusts [PosAdj of Diego] hips back to meet you. You can't help but grin at the sight of the eager coyote underneath you, then reach one of your hands up to stroke along [PosAdj of Diego] soft-furred back, before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] body shuddering in orgasm - causing [PosAdj of Diego] trembling inner muscles to trigger your own. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm.";
+		say "     The sensations of having a strong male pumping [if Player is herm]their[else]his[end if] rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] thrusts [PosAdj of Diego] hips back to meet you. You can't help but grin at the sight of the eager coyote underneath you, then reach one of your hands up to stroke along [PosAdj of Diego] soft-furred back, before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] body shuddering in orgasm - causing [PosAdj of Diego] trembling inner muscles to trigger your own. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm.";
 		WaitLineBreak;
 		say "     Eventually, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego collapses on the ground, lying in the sticky patch [PosAdj of Diego] cock sprayed a heavy load over. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
-		if DiegoBitched < 1:
-			now DiegoBitched is 1;
+		if Diegobitched < 1:
+			now Diegobitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	Coyotify;
 
 to say DiegoSex7: [Diego's pussy fucked - take him/her against the wall]
-	if DiegoChanged is 2: [full FemDiego]
+	if Diegochanged is 2: [full FemDiego]
 		say "     'I thought you would never ask!' the coyote female says with a grin on [PosAdj of Diego] muzzle. 'It seems this trickster's been caught and it's time to punish her,' [SubjectPro of Diego] says in a playful tone as [SubjectPro of Diego] runs [PosAdj of Diego] paws up and down [PosAdj of Diego] changed body. She's obviously becoming more and more excited by the second as [SubjectPro of Diego] turns to face the wall and arches up [PosAdj of Diego] tail to show off [PosAdj of Diego] damp pussy. [SubjectProCap of Diego] rests [PosAdj of Diego] paws against the wall and spreads [PosAdj of Diego] legs as if she's getting arrested. 'You'd best check to make sure I'm not hiding any more tricks,' [SubjectPro of Diego] says with a teasing sway of [PosAdj of Diego] hips. Grinning at [PosAdj of Diego] eager invitation, you waste no time in moving your [bodydesc of Player] body up against hers, pressing [PosAdj of Diego] forward to lean harder against the wall as [SubjectPro of Diego] moans eagerly in need.";
 		say "     Grabbing [PosAdj of Diego] between the legs, you rub at [PosAdj of Diego] juicy muff and slip a pair of fingers into her, frigging [PosAdj of Diego] hot cunt quickly. 'God yes, please fuck me, fuck me like a bitch in heat...' Diego moans, panting in lust as [PosAdj of Diego] rear grinds back against you. Already highly aroused by the feeling of [PosAdj of Diego] soft-furred body pressing up against yours and the strong scent of a bitch in heat, you need no further encouragement as you rub your [Cock of Player] rod up against [PosAdj of Diego] crotch. Diego pants eagerly as your tip begins to probe [PosAdj of Diego] soft folds, [PosAdj of Diego] body eagerly spreading itself open before you as you shift your hips forward and push your cock into her.";
 		WaitLineBreak;
@@ -689,18 +689,18 @@ to say DiegoSex7: [Diego's pussy fucked - take him/her against the wall]
 		WaitLineBreak;
 		say "     Coming down from the pleasure of the intense mating, the coyote sags forward against the wall with you still pressed behind [PosAdj of Diego] and buried in [PosAdj of Diego] sticky cunt. [SubjectProCap of Diego] moans happily at being bred. 'Thank you so much,' Diego whispers softly as [PosAdj of Diego] hips continue to grind back against you softly, savoring the feeling of your hot load inside her. 'Thank you for fucking me properly, and thank you for tricking me into becoming a bitch,' [SubjectPro of Diego] says as [SubjectPro of Diego] licks your cheek and rubs [PosAdj of Diego] muzzle against your neck. 'I never realized how much I would love being a bitch. Being your bitch,' the coyote female adds with a grin as the two of you begin to untangle yourselves from each other.";
 		say "     Pulling back a little, you run your hands over Diego's rear and down to finger [PosAdj of Diego] fresh-creamed pussy, fingering the sexy coyote to get a few more lovely moans from her. Then you move your hand to [PosAdj of Diego] muzzle and have [PosAdj of Diego] lick your fingers clean. After that's done, you leave [PosAdj of Diego] there, leaning up against the wall as [SubjectPro of Diego] recovers. Somehow you know [SubjectPro of Diego] will be right there waiting eagerly for you whenever you choose to return, willing and eager for you to take [PosAdj of Diego] like the prize bitch [SubjectPro of Diego] now is...";
-		if DiegoBitched < 2:
-			now DiegoBitched is 2;
+		if Diegobitched < 2:
+			now Diegobitched is 2;
 	else:
 		say "     'Well you know, that is an interesting offer...' Diego says as the herm eyes your proudly erect cock thoughtfully. You can easily tell though, that while [SubjectPro of Diego] is trying to hide [PosAdj of Diego] excitement, your offer has immediately caused [PosAdj of Diego] new opening to grow damp. Also, [PosAdj of Diego] tail gives [PosAdj of Diego] away by lifting up eagerly behind her, making you grin as you press closer to [PosAdj of Diego] changed body. Reaching out, you stroke [PosAdj of Diego] soft fur teasingly. 'I guess we might as well, I mean, you did trick me fair and square now didn't you...' Diego says in a slightly nervous tone, [PosAdj of Diego] tongue starting to hang out of [PosAdj of Diego] muzzle as the scent of an aroused male speaks to [PosAdj of Diego] new instincts.";
 		say "     The coyote herm slowly turns [PosAdj of Diego] back to you, [PosAdj of Diego] tail lifting up in a soft invitation as [SubjectPro of Diego] leans forward and braces herself on the wall, legs spreading out instinctively as [SubjectPro of Diego] positions herself for you. [PosAdjCap of Diego] upturned tail gives you a clear view of [PosAdj of Diego] now wet and swollen coyote pussy, with [PosAdj of Diego] cock dangling erect underneath [PosAdj of Diego] body. You approach to give [PosAdj of Diego] new female parts some much-needed attention by your [Cock of Player] cock. Diego moans as your hands stroke through the soft coyote fur of [PosAdj of Diego] inner thighs, rubbing and teasing [PosAdj of Diego] until [SubjectPro of Diego] raises [PosAdj of Diego] ass up into the air even higher. [PosAdjCap of Diego] coyote head comes to rest up against the wall as you begin to rub the tip of your cock against [PosAdj of Diego] new entrance, enjoying how easily the once tricky coyote is overcome by the needs of [PosAdj of Diego] new body.";
 		WaitLineBreak;
 		say "     Diego pants eagerly as your tip begins to probe [PosAdj of Diego] soft folds, [PosAdj of Diego] body eagerly spreading itself open before you as you shift your hips forward and push your cock into her. [PosAdjCap of Diego] soft passage grips your rod like a velvet glove, the coyote underneath you gasping in pleasure as you push yourself into [PosAdj of Diego] body, [PosAdj of Diego] passage massaging your cock needily even as you draw back and begin to thrust into [PosAdj of Diego] again. Diego moans and begins to yip as [PosAdj of Diego] new small breasts begin to bounce underneath [PosAdj of Diego] body in time to your thrusts, [PosAdj of Diego] tongue lolling out of [PosAdj of Diego] muzzle as [SubjectPro of Diego] gasps in time with your thrusting.";
-		say "     The sensations of having a strong male pumping [if player is herm]their[else]his[end if] rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] thrusts [PosAdj of Diego] hips back to meet you. You can't help but grin at the sight of the eager coyote underneath you, then reach one of your hands up to stroke along [PosAdj of Diego] soft-furred back, before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] knees locking as [PosAdj of Diego] body shudders in orgasm - causing [PosAdj of Diego] trembling inner muscles to trigger your own. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm.";
+		say "     The sensations of having a strong male pumping [if Player is herm]their[else]his[end if] rod into her, washing over the coyote herm's lust-fogged mind, make [PosAdj of Diego] react instinctively as [SubjectPro of Diego] thrusts [PosAdj of Diego] hips back to meet you. You can't help but grin at the sight of the eager coyote underneath you, then reach one of your hands up to stroke along [PosAdj of Diego] soft-furred back, before gripping the scruff of [PosAdj of Diego] neck possessively. Moments of hard fucking later, Diego cries out, [PosAdj of Diego] knees locking as [PosAdj of Diego] body shudders in orgasm - causing [PosAdj of Diego] trembling inner muscles to trigger your own. You eagerly spill your seed into [PosAdj of Diego] waiting body, spurt after spurt of your cum filling the coyote herm.";
 		WaitLineBreak;
 		say "     Eventually, you relax your grip on [PosAdj of Diego] neck, slowly drawing your rod out of [PosAdj of Diego] dripping pussy, even as [PosAdj of Diego] body trembles with the aftershocks of [PosAdj of Diego] intense submissive experience. You can feel a grin tugging at your face, as without your support, Diego slowly drops to [PosAdj of Diego] knees, leaning heavily against the wall to brace herself. In doing so, [SubjectPro of Diego] is leaning right against the splatters of [PosAdj of Diego] own cum on the wall, leaving your freshly-fucked bitch a bit of a mess. You have a feeling that the lovely little coyote won't be forgetting this particular trick anytime soon...";
-		if DiegoBitched < 1:
-			now DiegoBitched is 1;
+		if Diegobitched < 1:
+			now Diegobitched is 1;
 	NPCSexAftermath Diego receives "PussyFuck" from Player;
 	Coyotify;
 
@@ -796,7 +796,7 @@ to say DiegoSex10: [Diego's ass fucked - against the wall, police style]
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and Player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and PlayerMet of Diego is true and Player is not dominant and NonconList is not banned and NonconList is not warded and Diegochanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;
@@ -1239,11 +1239,11 @@ instead of navigating Park Entrance while (XP of Diego is 98 or (XP of Diego > 2
 to say DiegoCollarWearingAftermath:
 	say "     Sauntering around you with [PosAdj of Diego] tail exuberantly wagging left and right, Diego strokes a fingertip along the outside of the band of leather around your neck. 'You see, that's a very special collar indeed. It's tradition to trick the wearer into putting it on, but other ways work too of course. But I won't let you guess any longer what it does now. Let me demonstrate: Bark for me!' Without a thought to do so, you find yourself barking on command, with some of them being a bit strangled-sounding as you try to talk, but nothing except more canine noises escape your throat. 'That's enough, quiet now,' Diego adds with a grin, instantly shutting you up. 'The collar makes the wearer obey, completely. Not anyone of course, only the one they know 'owns' it, and them. And thanks to your help my friend, that's me again!' Tracing [PosAdj of Diego] hand down your front, [SubjectPro of Diego] adds, 'This'll be so much fun! Oh, don't worry, I'll leave you be yourself mostly. But you'll help me when I need you, no questions asked! The tricks we'll be able to play, hah!'";
 	say "     'But first, there's something else you can do for me[if Player is not naked]! Strip!' Instantly obeying the command, you quickly peel all clothing and gear off your body, then come to stand naked in front of him. [else]! Let's have a look at you!' [end if]Diego lets [PosAdj of Diego] gaze wander over your body, smiling as [SubjectPro of Diego] moves forward to stroke you here and there. 'Oh yeah, you'll be a really fun sidekick to have!' ";
-	if DiegoChanged > 0: [Diego got transformed away from male - let's fix that now]
+	if Diegochanged > 0: [Diego got transformed away from male - let's fix that now]
 		say "Chuckling, the coyote pulls out a little vial from somewhere and adds, 'But before that, let's end the little bit of playing around we've been doing and set things as they should again!' With that, he downs the off-white liquid inside, grinning broadly as his previous male form is restored in but a moment or two. ";
 		SetMalePronouns for Diego;
-		now DiegoChanged is 0; [back to male]
-		now DiegoBitched is 0; [reset the fem sex variable]
+		now Diegochanged is 0; [back to male]
+		now Diegobitched is 0; [reset the fem sex variable]
 	if Player is male:
 		say "Then [PosAdj of Diego] hand moves down to cup your crotch, giving your manhood a testing squeeze. 'That'll have to go though, I'm afraid. I much prefer a nice bitch to figuring out what to do with two dicks in the mix! Now be a good puppy and make this thing vanish, will you?' A paw-hand pressing down lightly on your shoulder indicates that both of the things [SubjectPro of Diego] said were a command, and you sink down on all fours, presenting yourself in doggy-style position while a strange tingle starts to spread over your crotch. Kneeling behind you and resting a hand on your ass as [SubjectPro of Diego] leans down to watch the transformation, Diego chuckles amusedly.";
 		WaitLineBreak;
@@ -1510,7 +1510,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Diego's Runaway Bitch"	"BadEnd"	"Sex Slave"	Diego's Runaway Bitch rule	20	false
 
 This is the Player fucked Diego rule:
-	if DiegoBitched is 2: [player fucked FemDiego]
+	if Diegobitched is 2: [player fucked FemDiego]
 		trigger ending "Player fucked Diego";
 		if humanity of Player < 10:
 			if Player is male:
@@ -1530,14 +1530,14 @@ This is the Player fucked Diego rule:
 					-- 2:
 						say "     Rescued from the city with your mind intact, you meet Diego again in the military camp. The coyote bitch is happy and eager to see you there. [SubjectProCap of Diego] seems amused at the fact that you too have ended up changed into a proper female, and [SubjectPro of Diego] is more than happy to rub and tease your new body even as [SubjectPro of Diego] tells you how happy [SubjectPro of Diego] is with [PosAdj of Diego] own change. When the military finally release the two of you, Diego stays in close contact with you, often sending you teasing letters about how happily [PosAdj of Diego] belly is swelling from your mating in the city, and how much more fun [SubjectPro of Diego] is having as a proper bitch.";
 						say "     [PosAdjCap of Diego] happy acceptance of [PosAdj of Diego] new female status perks you up as you try to settle into your new life, and the pictures [SubjectPro of Diego] sends you of your little coyote pups can't help but make you smile. Although [PosAdj of Diego] latest teasing letter about finally finding a lovely coyote stud to play with, and the invitation to come join [PosAdj of Diego] sometime so [PosAdj of Diego] new stud can return the favor you did for [PosAdj of Diego] in the city and give you some pups in your own belly, is strangely attractive...";
-	else if DiegoBitched is 1 or DiegoChanged is 2 or DiegoChanged is 1: [player fucked HermDiego, or femDiego]
+	else if Diegobitched is 1 or Diegochanged is 2 or Diegochanged is 1: [player fucked HermDiego, or femDiego]
 		trigger ending "Player fucked Diego";
 		if humanity of Player < 10:
 			say "     Not long after you give in to your new instincts, Diego gives into hers as well, the powerful instincts of both a male and female coyote finally overcoming the trickster's resistance. Soon the new coyote herm is prowling the streets, setting traps and tricks for both infected and military alike, and eagerly enjoying the bodies of anyone [SubjectPro of Diego] can manage to trap. [PosAdjCap of Diego] very presence on the streets makes things more dangerous for many of its inhabitants, but somewhere in your new more instinct driven mind, you know that if you ever were to encounter the coyote again, you could have such fun turning the tricks on [PosAdj of Diego] once more...";
 		else:
 			say "     When the rescue comes, the coyote you tricked is still waiting at the park for the military to arrive, several of whom are less than pleased to see the trickster that was plaguing their advance waiting there so casually. A few hours later, in one of the advance camps around the city, Diego finds [PosAdj of Diego] new body put to great use by the military men - with them taking out their pent-up sexual frustration on her. Distracted in the heat of the moment by arousal and the need to pay Diego back for every taunting comment about how easy their buddies were to trick, the soldiers gang-bang the coyote all night long - totally forgetting that [SubjectPro of Diego] is still very much infectious.";
 			say "     The next morning a lovely new group of coyotes spreads out throughout the military camp, reveling in their canine bodies as they trick the rest of the soldiers into surrendering, as well as sabotaging most of the machines and weaponry. The advance into the city grinds into a halt not long after you are released back out into the world, and from what you hear, it is unlikely to start again anytime soon with many of these devious tricksters loose in and around the city...";
-	else if DiegoChanged is 0 and DiegoButtSlut is 0 and CoyoteTricks > 1: [not feminized, not OK with anal and gay sex]
+	else if Diegochanged is 0 and DiegoButtSlut is 0 and CoyoteTricks > 1: [not feminized, not OK with anal and gay sex]
 		trigger ending "Player fucked Diego"; [The player might not have had sex with Diego, but still the same scenario. No need for extra complexity I guess. (@Stadler#3007)]
 		if humanity of Player < 10:
 			say "[MaleDiegoSuccumbEnding]";

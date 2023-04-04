@@ -181,6 +181,7 @@ carry out turncountdisplay:
 PregStatus is an action applying to one topic.
 understand "zPreg Status [text]" as PregStatus.
 understand "zPregStatus [text]" as PregStatus.
+understand "zPregCheck [text]" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:
@@ -512,7 +513,7 @@ carry out TagListReadout:
 	sort Infections of ArachnidList;
 	sort Infections of AvianList;
 	sort Infections of AvianpredList;
-	sort Infections of Bovinelist;
+	sort Infections of BovineList;
 	sort Infections of CanineList;
 	sort Infections of CervineList;
 	sort Infections of CetaceanList;
@@ -585,7 +586,7 @@ carry out TagListReadout:
 	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
 	say "AvianList: [Infections of AvianList][line break][line break]";
 	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
-	say "Bovinelist: [Infections of Bovinelist][line break][line break]";
+	say "BovineList: [Infections of BovineList][line break][line break]";
 	say "CanineList: [Infections of CanineList][line break][line break]";
 	say "CervineList: [Infections of CervineList][line break][line break]";
 	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
@@ -1142,6 +1143,16 @@ carry out itemcheat:
 		if the printed name of x exactly matches the text topic understood, case insensitively:
 			ItemGain x by 1;
 			break;
+
+[Allows the spawning of any vial in game.]
+vialcheat is an action applying to one topic.
+understand "zVial [text]" as vialcheat.
+
+check vialcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out vialcheat:
+	VialGain topic understood by 10;
 
 allitemcheat is an action applying to nothing.
 understand "zAllItems" as allitemcheat.

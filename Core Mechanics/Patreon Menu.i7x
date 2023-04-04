@@ -35,7 +35,7 @@ carry out supersponsor:
 		say "[if ssbpg is true](8) Banana peel gun - Taken[else][link](8) Banana peel gun[as]8[end link] - Available[end if][line break]";
 		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
-		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if] (Sets sanity to 100 every turn.)[line break]";
 		say "[link](12) Claim all the pets![as]12[end link][line break]";
 		say "[link](13) Revel in being awesome[as]13[end link][line break]";
 		say "[link](14) Return to humanity[as]14[end link][line break]";

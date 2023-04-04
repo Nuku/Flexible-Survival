@@ -220,14 +220,8 @@ to say FelixDesc:
 		say "     Looking up to Felix face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Andre, almost everything around them forgotten.";
 
 instead of conversing the Felix:
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Felix-001B: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [removed from game]
-		say "ERROR-Felix-100A: He should be removed from the game.";
-	else:
-		say "     Felix smiles as you come closer and says, 'Hello, what's up?'";
-		wait for any key;
-		say "[FelixTalkMenu]";
+	say "     Felix smiles as you come closer and says, 'Hello, what's up?'";
+	say "[FelixTalkMenu]";
 
 to say FelixTalkMenu:
 	project the Figure of Felix_icon;
@@ -379,23 +373,12 @@ to say FelixTalk6:
 Section 3 - Fucking Felix
 
 Instead of fucking the Felix:
-	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Centaur Stallion":
-			now MonsterID is y;
-			break;
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Felix-001C: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [avoiding the player]
-		say "ERROR-Felix-100B: He should be removed from the game.";
+	if (lastfuck of Felix - turns < 6):
+		say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
+	else if (Libido of Felix < 6 or Libido of Felix > 90):
+		say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
 	else:
-		if (lastfuck of Felix - turns < 6):
-			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
-		else if (Libido of Felix < 6 or Libido of Felix > 90):
-			say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
-		else:
-			say "[FelixSexMenu]";
+		say "[FelixSexMenu]";
 
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
@@ -435,10 +418,6 @@ to say FelixSexMenu:
 	now sortorder entry is 6;
 	now description entry is "See the big lizard being fucked by his boyfriend";
 	[]
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -569,23 +548,12 @@ instead of sniffing Andre:
 	say "Andre has a pleasant animalistic smell. It's definitely male, with a kind of spicy undertone.";
 
 to say AndreDesc:
-	if (HP of Felix < 2): [starting state]
-		say "ERROR-Andre-001A: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100):
-		say "ERROR-Andre-100A: He should be removed from the game (together with Felix).";
-	else if HP of Felix is 2:
-		say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[else]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
-		say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
+	say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[else]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
+	say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
 
 instead of conversing the Andre:
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Andre-001B: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [removed from game]
-		say "ERROR-Andre-100A: He should be removed from the game, together with Felix.";
-	else:
-		say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says, 'Hey there, what's up?'";
-		wait for any key;
-		say "[AndreTalkMenu]";
+	say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says, 'Hey there, what's up?'";
+	say "[AndreTalkMenu]";
 
 to say AndreTalkMenu:
 	project the Figure of Andre_face_icon;
@@ -828,21 +796,10 @@ When Play begins:
 Section 5 - Fucking Andre
 
 Instead of fucking the Andre:
-	[puts Plains Lizard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Plains Lizard Male":
-			now MonsterID is y;
-			break;
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Andre-001C: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [avoiding the player]
-		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
+	if (lastfuck of Andre - turns < 6):
+		say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
 	else:
-		if (lastfuck of Andre - turns < 6):
-			say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
-		else:
-			say "[AndreSexMenu]";
+		say "[AndreSexMenu]";
 
 to say AndreSexMenu:
 	project the Figure of Andre_icon;

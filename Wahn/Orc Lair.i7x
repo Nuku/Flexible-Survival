@@ -39,7 +39,7 @@ when play begins:
 to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
 	if SlaveRaidEncounters is 0: [first time]
-		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, spilling the two of you onto the ground. Directly behind him, a very muscular man comes out of the alley - tall and green, dressed only in a loincloth and with a necklace of wooden beads and teeth, there's no doubt that he's an orc. A second after, two more orcs follow him, dressed in garments made from shredded police uniforms, close behind but still a step distant. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them grabs the fallen would-be escapee by the neck and lifts him off the ground, then smiles around his sharp tusks and nods towards you. [if OrcSlaverStatus is 0]'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence that our runner led us here,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [else if OrcSlaverStatus is 50]'This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his two friends to move towards you while he pulls a loop of rope from over his shoulder and fastens it around his captive. [end if]You barely have time to get up and take a combat stance before the other two orcs are upon you...";
+		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, bowling you over and landing on your chest. In close pursuit, a very muscular man storms out of the alley - tall and green, dressed only in a loincloth and with a necklace of wooden beads and teeth, there's no doubt that he's an orc. Two more orcs follow him, dressed in garments made from shredded police uniforms, close behind but still a step distant. From the relatively similar looks, they might be brothers. One of them grabs the would-be escapee by the neck and lifts him off the ground, then bares his sharp tusks in a smirk, nodding towards you. 'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to surround you, cutting off possible escape, while he pulls a loop of rope from over his shoulder and ties the fox up securely. You barely have time to get up and take a combat stance before the other two orcs are upon you...";
 		LineBreak;
 		now inasituation is true;
 		now OrcSpecialFightNumber is 4; [fighting Yatur]
@@ -51,7 +51,7 @@ to say ResolveEvent Orcish Slave Raid:
 		else if fightoutcome >= 30: [fled]
 			say "[RunFromOrcSlavers]";
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			say "     After a last hit on the orc, his muscled form collapses at your feet. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
+			say "     Landing a heavy blow on the orc, you send him flying to land heavily on his green ass. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
 			LineBreak;
 			now inasituation is true;
 			now OrcSpecialFightNumber is 6; [fighting Mul]
@@ -64,67 +64,9 @@ to say ResolveEvent Orcish Slave Raid:
 				say "[RunFromOrcSlavers]";
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				if BodyName of Player is "Orc Warrior" and player is pure and Player is male:
-					say "     Two down, one to go. Though as you step up to the third orc, he raises his hands consolingly. 'Wait a minute! Seems like we underestimated you and you're a real orc after all...' He pulls the bundled-up fox to his side, then says 'Look, how about you stop beating up my brothers and have some fun with this little bitch instead? Freshly caught - you'd be the first one to break him in.'";
-					LineBreak;
-					say "     [bold type]Do you accept and fuck the helpless captive right then and there, then allow them to take him away afterwards?[roman type][line break]";
-					if Player consents:
-						say "     Baring your tusks in a wide grin, you nod to the orc and step up to him, inspecting the anthro fox as he's unwrapped for you. He's a handsome guy with silky red fur and a lithe, shapely body - the sight of which makes your manhood fill out and get hard. Meanwhile, the two downed orcs get up, growling at you but nevertheless accepting the deal their brother made. They move a few steps up and down the street to lean against the walls there, making sure that there's no possibility of their quarry escaping again.";
-						say "     With the last ropes falling off the red fox, you can see the muscles in his legs tense. He casually looks over his shoulder and down the street, searching for a way to escape, though with the other orcs standing ready to cut him off, there's no chance that he could make it. His shoulders slump a bit as he admits that to himself, then he looks at you, gulping as he sees the hard length of your orcish cock. You step up to him and run a hand over his soft-furred body, then grip his shoulder in a light, but secure hold and push him to his knees.";
-						WaitLineBreak;
-						say "     Presented with your thick, green shaft, the fox at first gives it a hesitant lick, then starts to lap at it and your balls. Soon, a first bead of pre-cum forms at its tip, and as the slave licks that up, his eyes go wide at its pleasant taste. He immediately starts to concentrate on the tip of your cock, playing his tongue over it to get more. It doesn't take long till the intoxicating and addictive effects make him forget all about wanting to get away, instead starting to go down on you with actual eagerness, your manhood in his long muzzle as he gives you a blowjob.";
-						say "     Even though your little fox is clearly new to giving pleasure to men with his mouth, his enthusiasm makes up for quite a bit of that, and the urge to cum soon starts to rise inside you. You're tempted to just let him get you off like this and feed him a big load of orc cum that will seal his fate as a breeder... but no, you've got the right to take his virginity, so that is what you will do. Pulling your eager little fox off your shaft, you bodily pick him up, holding him tight against your chest with both hands on his firm buttcheeks. The cum-drunk slave wraps his legs around your hips as you do so, yipping in excitement as your hard cock rubs against his ass.";
-						WaitLineBreak;
-						say "     Bringing a hand up to the fox's mouth so he can suck on its fingers, you then use your wet index finger to gently poke and prod at his hole, carefully working it in to stretch his pucker. You finger him for quite a while to get him ready, gently at first, then faster and faster. Given how new he is to such sensations, it doesn't surprise you that the fox trembles in lust each time you rub his prostrate, going so far as to even suddenly cum from that, his pointed canine cock spraying cum all over your chest.";
-						say "     Well, that's certainly an unmistakable sign that he's ready for some anal fun. Eager to finally take the fox, you scoop up his cum from your chest and smear it on your cock to use as lube, then line your manhood up with his hole. Your foxy slave pants loudly as you rub the tip of your cock over his rear entrance, then gives a little gasp and wince as you push in, stretching his opening wide around your cock. It's good that you took your time preparing him, as even now it's a slow process to sink your manhood deeper into his tightly gripping passage...";
-						WaitLineBreak;
-						say "     Some time later, the last inch of your meaty cock finally sinks in all the way inside the fox and you can feel his furry butt against your balls. You give him what time he needs to get used to the invading member, just holding him tightly and reveling in the vice-like tightness of his asshole. Then, after a minute or two, your little fox moans 'Fuck me' and starts to rock against your chest, sliding himself up and down your shaft. The sensations of a submissive male fucking himself on your manhood finally causes your orcish nature to take over, effortlessly making you forget all restraint that you still had.";
-						say "     With a deep, lusty grunt, you pull him up and off your cock, then pound its whole length back inside him with one mighty thrust. And you just keep going like that, fucking the fox hard and deep, creating slapping noises as his ass hits your hips. This is how real men fuck - or rather real orcs - and you can just feel how right it is to pull out all the stops. The sensations of your thrusts make your breeder fucktoy moan and howl in lust, conscious thought pushed aside completely by your shaft deep inside him. Having already enjoyed a very nice blowjob from the fox, it doesn't take all that much longer till you reach the limits of your endurance and orgasm, burying your shaft deep in the slave's ass as you pump blast after blast of cum into him. Being filled with your orcish seed, the potent load being absorbed by his body and changing it, you just know that you just knocked up this male fox.";
-						WaitLineBreak;
-						say "     Your inner orc tells you that you should just keep the well-bred fox for yourself, as a start of a whole harem of men to fuck, though you realize that that's not an option as you contemplate it for a second. By now, the three other orcs are rested again, and you're also a bit tired from just having come, so a fight is far less certain. So with a sigh, you surrender the handsome fox back to the three slavers, then watch his limp, exhausted form being carried off over the leader's shoulder. His shapely ass and cum-dripping hole is the last you see of the fox before the orcs turn a corner and move out of sight.";
-						move Val to Slave Cell 1;
-						now ValPregnancy is 1;
-						now ValPregCounter is 48;
-						now thirst of Val is 2;
-						now SlaveRaidEncounters is 2;
-						now Resolution of Orcish Slave Raid is 4; [orc player fucked the fox and left the orcs to move on]
-					else:
-						say "     [bold type]Do you want to beat the third orc up too instead ([link]Y[as]y[end link]), or maybe demand ownership of the slave and let him go after the other orcs are gone ([link]N[as]n[end link])?[roman type][line break]";
-						if Player consents:
-							say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
-							LineBreak;
-							now inasituation is true;
-							now OrcSpecialFightNumber is 5; [fighting Koghh]
-							challenge "Orc Warrior";
-							if fightoutcome is 22:
-								say "[SubmitToOrcSlavers]";
-							else if fightoutcome >= 20 and fightoutcome <= 29: [lost]
-								say "[LoseToOrcSlavers]";
-							else if fightoutcome >= 30: [fled]
-								say "[RunFromOrcSlavers]";
-							else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-								now Resolution of Orcish Slave Raid is 5; [beat all orcs, orcs freed]
-								say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
-								LineBreak;
-								say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
-								if Player consents:
-									LineBreak;
-									choose a row with name of "Orc Warrior" in the Table of Random Critters;
-									now enemy type entry is 1; [unique orc, not for impregnation]
-									say "     [BeatenOrcSexMenu]";
-									now enemy type entry is 0; [reset to non-unique]
-								else:
-									LineBreak;
-									say "     You walk away after checking them over for loot.";
-							now SlaveRaidEncounters is 1;
-						else:
-							say "     Baring your tusks, you growl at him, demanding ownership of the slave - after all they wouldn't have caught him without him running into you. The orc slaver doesn't like to hear that at all and you can see his fist clenching, so you poke your foot against the bruised side of one of the fallen orcs, making him wince. That reminder of you already having won out against his two siblings makes the orc finally relent with a snarl, and he shoves the tied slave in your direction, to stumble and sprawl at your feet. Quickly leaning down to grab him, you throw the fox over your shoulder and walk away, leaving the three orcs behind.";
-							say "     After moving a comfortable number of city blocks away, you step into a side alley that's nicely out of view from any roaming creatures and set the bundled-up fox down. He looks wide-eyed at you, trembling at what might come next, only relaxing a tiny bit when you say that you want to free him. Undoing several knots, you loosen the ropes around him. The fox stands still as you continue to unwrap him - then suddenly he wiggles out of the last coils and jumps out of your reach. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
-							LineBreak;
-							say "     Oh well, that was a bit anticlimactic. But then, good deeds are their own reward and at least he thanked you. With a shrug, you get back to worrying about your own survival in the city.";
-							now Resolution of Orcish Slave Raid is 6; [beat 2 orcs, freed fox]
-							now SlaveRaidEncounters is 1;
+					say "[KoghhRaidOffer]";
 				else:
-					say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
+					say "     Two down, one to go. The third orc abandons his captive and comes at you with balled fists.";
 					LineBreak;
 					now inasituation is true;
 					now OrcSpecialFightNumber is 5; [fighting Koghh]
@@ -136,21 +78,11 @@ to say ResolveEvent Orcish Slave Raid:
 					else if fightoutcome >= 30: [fled]
 						say "[RunFromOrcSlavers]";
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox freed]
-						say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
-						LineBreak;
-						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
-						if Player consents:
-							LineBreak;
-							now enemy type entry is 1; [unique orc, not for impregnation]
-							say "     [BeatenOrcSexMenu]";
-							now enemy type entry is 0; [reset to non-unique]
-						else:
-							LineBreak;
-							say "     You walk away after checking them over for loot.";
-						now SlaveRaidEncounters is 1;
+						now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox gone]
+						say "     Phew. The last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you wonder where the fox ended up, then notice that he's a little distance away, having hopped along while still trying to wiggle out of the coils of rope the orcs wrapped around him. Deciding that this isn't the right location to deal with this, you quickly catch up with him, then [if Scalevalue of Player > 2]throw the fox over your shoulder[else]pull the fox tight against your side[end if] and leave before the orcs get a second wind. Before you're fully out of sight of the groaning pile of orcs, an angry shout rings out behind you, proving that it was a good idea to get moving. Even though they're unlikely to close the distance, you tightly grip the fox as you flee down the street, dodging past car wrecks and piles of garbage. After some further turns, taking one or two side alleys, you come to a stop inside the charred remains of a building. Interestingly, the fox had the presence of mind to keep working on the ropes even while you were fleeing with him, with the coils simply hanging loose now.";
+						say "[VincentPostRaid_Talk]";
 	else: [repeat encounters without the fox]
-		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those little weaklings? I wanna fuck!', followed by another voice answering 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone soon.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. [if OrcSlaverStatus is 3]And orcs you know at that - Mul, Yatur and Koghh, the orc slavers that you had a run-in with before[else]From the relatively similar looks, they might be brothers[end if]. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such big and muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
+		say "     Walking along a street between some warehouses, you suddenly hear deep voices talking to each other somewhere nearby. You overhear 'Where are all those weaklings? I wanna fuck!', followed by another voice answering, 'Don't shout, brother. You'll drive [']em off. I'm sure we'll find someone else.' And with that, a trio of very muscular men step out of an alley just ahead of you - tall and green as they are, dressed only in loincloths, there's no doubt that they're orcs. And orcs you know at that: Mul, Yatur and Koghh, the orc slavers that you had a run-in with before. One of them gives you an appraising look, then smiles around his sharp tusks. [if OrcSlaverStatus is 0]'See, told ya!' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 2]'Look, it's the little bitch that escaped from the lair. What nice coincidence,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 3]'Look, it's our runaway breeder. Come on little bitch, we'll bring you back home and give you what you really need,' he chuckles, prompting his siblings to rush at you. [else if OrcSlaverStatus is 50]'Oh, that bastard again. This time, you're going down. We'll make a breeder out of you yet,' he grunts, prompting his siblings to rush at you. [end if]They're quick for such muscular brutes, barely giving you time to taking on a combat stance before they're upon you...";
 		LineBreak;
 		now inasituation is true;
 		now OrcSpecialFightNumber is 4; [fighting Yatur]
@@ -162,7 +94,7 @@ to say ResolveEvent Orcish Slave Raid:
 		else if fightoutcome >= 30: [fled]
 			say "[RunFromOrcSlavers]";
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-			say "     After a last hit on the orc, his muscled form collapses at your feet. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
+			say "     Landing a heavy blow on the orc, you send him flying to land heavily on his green ass. But there's not even a moment to catch your breath as the second brute snarls and attacks you right away.";
 			LineBreak;
 			now inasituation is true;
 			now OrcSpecialFightNumber is 6; [fighting Mul]
@@ -174,7 +106,7 @@ to say ResolveEvent Orcish Slave Raid:
 			else if fightoutcome >= 30: [fled]
 				say "[RunFromOrcSlavers]";
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				say "     Two down, one to go. The third orc stops rushes in to help his brothers and comes at you with balled fists.";
+				say "     Two down, one to go. The third orc abandons his captive and comes at you with balled fists.";
 				LineBreak;
 				now inasituation is true;
 				now OrcSpecialFightNumber is 5; [fighting Koghh]
@@ -187,9 +119,10 @@ to say ResolveEvent Orcish Slave Raid:
 					say "[RunFromOrcSlavers]";
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					now battleground is "void";
-					say "     [bold type]Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
+					say "     [bold type]Phew. The last orc collapses on top of the other two with the meaty thump of flesh on flesh. Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
 					if Player consents:
 						LineBreak;
+						choose a row with name of "Orc Warrior" in the Table of Random Critters;
 						now enemy type entry is 1; [unique orc, not for impregnation]
 						say "     [BeatenOrcSexMenu]";
 						now enemy type entry is 0; [reset to non-unique]
@@ -197,6 +130,76 @@ to say ResolveEvent Orcish Slave Raid:
 						LineBreak;
 						say "     You walk away after checking them over for loot.";
 	now inasituation is false;
+
+to say KoghhRaidOffer:
+	say "     Two down, one to go. Though as you step up to the third orc, he raises his hands consolingly. 'Wait a minute! Seems like we underestimated you. You're a real orc after all...' He pulls the bundled-up fox to his side, then says 'Look, how about you stop beating up my brothers and have some fun with this little bitch instead? Freshly caught - you'd be the first one to break him in.'";
+	LineBreak;
+	say "     [bold type]What's your response?[roman type][line break]";
+	let Vincent_Raid_Orc_Choices be a list of text;
+	add "He's got a deal. You'll claim that ass, then let the three of them have the fox afterwards." to Vincent_Raid_Orc_Choices;
+	add "Beat your chest and insist that the fox belongs to you now! (You can let him go after they're gone, or not...)" to Vincent_Raid_Orc_Choices;
+	add "Just keep fighting. You'll grab the fox and leave after clobbering the last orc!" to Vincent_Raid_Orc_Choices;
+	let Vincent_Raid_Orc_Choice be what the player chooses from Vincent_Raid_Orc_Choices;
+	if Vincent_Raid_Orc_Choice is:
+		-- "He's got a deal. You'll claim that ass, then let the three of them have the fox afterwards.":
+			LineBreak;
+			say "     Baring your tusks in a wide grin, you nod to the orc and step up to him, inspecting the anthro fox as the coils of rope are loosened. He's a handsome guy with silky red fur and a lithe, shapely body, currently dressed in a sleeveless black band t-shirt and a pair of ragged jeans. The anticipation of breaking in the anthro makes your manhood stiffen posthaste. Meanwhile, the two downed orcs get up, growling at you but nevertheless accepting the deal their brother made. They move a few steps down the street to lean against the walls there, ensuring that there's no possibility of their quarry escaping again. With the last ropes falling off the red fox, you can see the muscles in his legs tense. He inconspicuously looks over his shoulder and down the street, searching for a way to escape, though with the other orcs standing ready to cut him off, there's no chance that he could make it.";
+			say "     His shoulders slump a bit as he admits that to himself, then he looks at you, gulping as he sees the hard length of your orcish cock. 'Listen, isn't there some way we could-' the fox starts to say, only to let out a shocked squeal as you step forward and grab the shirt covering his chest, pulling the front up and hooking it behind his neck. A dirty chuckle passes your lips as you run a hand over his soft-furred chest now revealed, then grip his shoulder tightly and push him to his knees. He doesn't struggle, well aware that he'd have no chance against someone who beat up more than one orc in a row, and he isn't begging either, instead seeming to resign himself to endure what you dish out. Presented with your thick, green shaft, the fox takes a deep breath, then starts with hesitant lick before lapping at your dickhead some more. Eyes glancing up warily, he seems relieved that you're accepting being serviced instead of just slamming your shaft into his muzzle.";
+			WaitLineBreak;
+			say "     Slender canine fingers dance over your shaft as he lifts it, running his long tongue over the underside and teasing your girth. You doubt this is the first time the captive fox's come face to face with a hard cock, and he has some pleasant little tricks up his sleeve. Ducking his head low, with your erection coming to lay across the top of his muzzle, he spends some time worshiping your balls too, first a few licks with the tip of his tongue, then opening his muzzle wide to take one of your balls into his mouth. He's very careful not to graze it with his canine teeth, even as he lets that very flexible tongue wash over your orb in a quite stimulating tongue-bath, then switches over to do the same to your other dangling cum-factory. You can't help but breathe a bit more heavily as the fox worships your sack, his pointed ears flicking to take in every sound, making him well-aware of the effects his talented tongue has on you.";
+			say "     After one more long lick over both of your balls, the captive anthro looks up at you again and quietly offers, 'Like it? How about you wouldn't have to share? Take me with you, don't leave me to those guys...' His eyes glance aside, wary that the other orcs might have heard, then back to you, filled with a mixture of calculation and hopefulness. This isn't exactly the time to discuss things in detail with him, but your slightly lust-fogged brain tells you that it'd be a nice thing to take this fox to your lair in the Grey Abbey Library, talented with his tongue as he is. Maybe better than just a quick bang. He'd be heavily in your debt, so that'd for sure result in having a live-in cocksucker hanging around to service you. But of course, another more rational part of your brain tells you that he's likely just thinking that getting away from one orc will be much easier than being boxed in by three. He might just run off if you give him the chance...";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Nah, you made a deal with the three orcs, and you can't wait to use his body...";
+			say "     ([link]N[as]n[end link]) - Grab the fox and run! Two of the orcs are still bruised up, so they should be no problem to get past.";
+			if Player consents: [continue to fuck Vincent]
+				LineBreak;
+				say "     Snorting at his attempt at making you double-cross the other orcs, you shake your head, then grab the base of your cock to guide its mushroom head to his muzzle. The glistening wetness of pre-cum that welled up during his ball service touches his tongue, and the soon to be sex-slave's eyes go wide at its pleasant, stimulating taste. His disappointment at the offer being rejected is wiped away by the inevitable desire to taste more of your pre, and that floppy tongue starts to lap again, playing over the tip of your cock eagerly. It doesn't take long till the intoxicating and addictive effects of the pre-cum welling up make him forget all about wanting to get away, with the fox instead starting to go down on you with joyous haste. Engulfing your manhood in his long muzzle, he bobs his head, his tongue rolling along the underside and serving as a soft buffer between his teeth and your sensitive flesh.";
+				say "     Forgetting about his plans of escape, his full attention is now diverted to enthusiastically gobbling up your cock, his saliva coating the green rod. Soon, the urge to cum starts to rise in your balls, with them drawing up a little. You're tempted to just let him get you off like this and feed him a big load of orc cum that will seal his fate as a breeder... but no, you've got the right to take his orc-cock virginity, so that is what you will do. Pulling your eager little fox off your shaft, you bodily pick him up, holding him tight against your chest with both hands on his firm buttcheeks. The cum-drunk slave wraps his legs around your hips as you do so, yipping in excitement as your hard cock rubs against his ass. Bringing a hand up to the fox's mouth so he can suck on its fingers, you then use your wet index finger to gently poke and prod at his hole, carefully working it in to stretch his pucker. He's not a virgin, you hazard a guess, but still fairly tight.";
+				WaitLineBreak;
+				say "     You finger the fox for a while to get him ready, gently at first, then faster and faster as impatience rises inside you. He trembles in lust each time you rub his prostate, deep in the grasp of orcish cum effects as he is, being pushed over the edge and climaxing just from your fingers, his pointed canine cock spraying cum all over your chest. Well, that's certainly an unmistakable sign that he's ready for some anal fun. Eager to finally take the fox, you scoop up his cum from your skin and smear it on your cock to use as lube, then line your manhood up with his hole. Your foxy slave pants loudly as you rub the tip of your cock over his rear entrance, then gasps and winces as you push in, stretching his opening wide around your cock. The mewling anthro should be thankful that you took your time preparing him, as even now it's a slow process to sink your manhood deeper into his tightly gripping passage...";
+				say "     Somehow managing to control yourself from ramming all the way into him at once, you sink inch by inch of meaty cock inside the fox, until you can finally feel his furry butt against your balls. As more pre-cum leaks from your cock and soaks his inner walls, the guy's eyes glaze over into an un-focused expression, and he pants and moans as if he was in heat. Someone's first time with an orc sure is an experience, you think to yourself as you give him a moment to get used to the invading member, just holding him tightly and reveling in the vice-like tightness of his asshole. Then, after a minute or two, your little fox whorishly moans 'Fuck me!' and starts to rock against your chest, sliding himself up and down your shaft. The sensations of a submissive male fucking himself on your manhood finally causes your orcish nature to take over, obliterating all restraint.";
+				WaitLineBreak;
+				say "     With a deep, lusty grunt, you pull him off your cock, then pound its whole length back inside him with one mighty thrust. Fucking the fox hard and deep, you slap your hips against his rump, sending echoes of your domination through the empty alley. This is how real men fuck - or rather real orcs - and you can just feel how right it is to pull out all the stops. The sensations of your thrusts make your breeder fucktoy moan and howl in lust, conscious thought pushed aside completely by your shaft deep inside him. Already wound up from the expert blowjob the fox gave you, it doesn't take all that much longer till you reach the limits of your endurance and orgasm, burying your shaft deep in the slave's ass as you pump blast after blast of cum into him. Now filled with your orcish seed, the potent load absorbed by his body changes it for your purposes, and you just know that you knocked up this male fox!";
+				say "     Your inner orc tells you that you should just keep the well-bred fox for yourself, as a start of a whole harem of men to fuck, though you realize it's not an option as you contemplate it for a second. By now, the three other orcs are rested again, and you're also a bit tired from just having come, so a fight is far less certain. So with a sigh, you surrender the handsome fox back to the three slavers, then watch his limp, exhausted form being carried off over the leader's shoulder. His shapely ass and cum-dripping hole is the last you see of the fox before the orcs turn a corner and move out of sight.";
+				move Val to Slave Cell 1;
+				now ValPregnancy is 1; [fuck Vincent, then leave him -> Player is Chris's Father]
+				now ValPregCounter is 48;
+				now thirst of Val is 2;
+				now SlaveRaidEncounters is 2;
+				now Resolution of Orcish Slave Raid is 4; [orc player fucked the fox and left the orcs to move on]
+				NPCSexAftermath Vincent receives "AssFuck" from Player;
+			else:
+				LineBreak;
+				say "     Deciding to accept the deal, you [if Scalevalue of Player > 2]throw the fox over your shoulder[else]pull the fox tight against your side[end if] and charge at the two orcs you previously defeated. Even though their bruises have faded, repaired by the countless nanites swarming through their bodies, they're clearly still exhausted from the fight - and what's more, the two of them were leaning against the walls, dicks in hand and stroking them while wanting to watch you ravage the fox. With the element of surprise on your side, you're past the first before the other can react, and that one you shoulder out of the way without stopping. Angry shouts echo through the streets as they try to chase you, only to be left eating your dust as you make a clean getaway, tightly gripping the fox as you storm over the asphalt, dodging past car wrecks and piles of garbage. After some further turns, taking one or two side alleys, you come to a stop inside the charred remains of a building.";
+				TraitGain "Raid_Deal_Orc_Player" for Vincent; [player was ready to fuck and abandon him, Vincent made a deal to get away from the orc brothers]
+				say "[VincentPostRaid_Talk]";
+				now SlaveRaidEncounters is 1;
+				now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox gone]
+		-- "Beat your chest and insist that the fox belongs to you now! (You can let him go after they're gone, or not...)":
+			LineBreak;
+			say "     Baring your tusks, you growl at the third orc, demanding ownership of the slave - after all they wouldn't have caught him at all without the fox barreling into you. The orc slaver doesn't like to hear that at all and you can see his fist clenching, so you poke your foot against the bruised side of one of the fallen orcs, making him wince. That reminder of the defeat of his two siblings makes the orc finally relent with a snarl, and he shoves the tied slave in your direction, to stumble and sprawl at your feet. Quickly leaning down to grab him, you[if Scalevalue of Player > 2]throw the fox over your shoulder[else]pull the fox tight against your side[end if] and leave before the orcs get a second wind. Before you're fully out of sight of the three orcs, angry shouts ring out behind you, proving that it was a good idea to get moving. Even though they're unlikely to catch up, you tightly grip the fox as you storm down the street, dodging past car wrecks and piles of garbage. After some further turns, taking one or two side alleys, you come to a stop inside the charred remains of a building. Interestingly, the fox had the presence of mind to work on the ropes even while you were fleeing with him, with the coils simply hanging loose now.";
+			TraitGain "Raid_SlaveClaim_by_Player" for Vincent; [player acted pretty orc-ish and claimed Vincent as a slave - for show, or not]
+			say "[VincentPostRaid_Talk]";
+			now Resolution of Orcish Slave Raid is 6; [beat 2 orcs, freed fox]
+			now SlaveRaidEncounters is 1;
+		-- "Just keep fighting. You'll grab the fox and leave after clobbering the last orc!":
+			LineBreak;
+			say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
+			LineBreak;
+			now inasituation is true;
+			now OrcSpecialFightNumber is 5; [fighting Koghh]
+			challenge "Orc Warrior";
+			if fightoutcome is 22:
+				say "[SubmitToOrcSlavers]";
+			else if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+				say "[LoseToOrcSlavers]";
+			else if fightoutcome >= 30: [fled]
+				say "[RunFromOrcSlavers]";
+			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+				now Resolution of Orcish Slave Raid is 5; [beat all orcs, fox gone]
+				say "     Phew. The last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you wonder where the fox ended up, then notice that he's a little distance away, having hopped along while still trying to wiggle out of the coils of rope the orcs wrapped around him. Deciding that this isn't the right location to deal with this, you quickly catch up with him, then [if Scalevalue of Player > 2]throw the fox over your shoulder[else]pull the fox tight against your side[end if] and leave before the orcs get a second wind. Before you're fully out of sight of the groaning pile of orcs, an angry shout rings out behind you, proving that it was a good idea to get moving. Even though they're unlikely to close the distance, you tightly grip the fox as you flee down the street, dodging past car wrecks and piles of garbage. After some further turns, taking one or two side alleys, you come to a stop inside the charred remains of a building. Interestingly, the fox had the presence of mind to keep working on the ropes even while you were fleeing with him, with the coils simply hanging loose now.";
+				say "[VincentPostRaid_Talk]";
+			now SlaveRaidEncounters is 1;
 
 to say RunFromOrcSlavers:
 	if SlaveRaidEncounters is 0: [first time]

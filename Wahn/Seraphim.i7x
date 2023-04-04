@@ -845,11 +845,26 @@ to say GabrielSex6:
 	say "     Meanwhile, catching his stride again after his climax, Elijah pulls out of Gabriel with little fanfare, even laughing out loud at the sight of his helpless bottom's gaping and creamy hole and the gasp he gives at the sudden emptiness. He slaps Gabriel on the bare buttocks one last time, leaving a reddened imprint of his hand, then turns away from the fucked-out and exhausted angel. Looking at you with a smile at how aroused the show of their coupling has made you, Elijah saunters over to his own bunk, totally unconcerned about his own nudity or the tail of cum-droplets he leaves as he goes along. 'Wouldn't mind if you brought the bitch over regularly,' he says with a sidelong glance at you, then throws himself on the bed to lounge around in lazy satisfaction.";
 	NPCSexAftermath Gabriel receives "AssFuck" from Elijah;
 
-instead of going down from Grey Abbey Library while (Libido of Gabriel > 4 and Gabriel is in Bunker and Player is male and Lastfuck of Gabriel - turns > 8 and a random chance of 1 in 3 succeeds): [cumslut, in the bunker, male player, not fucked that day, 33% chance]
-	move player to Bunker;
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+4	"Gabriel_Cumslut_Walkin"	Gabriel_Cumslut_Walkin	"[EventConditions_Gabriel_Cumslut_Walkin]"	Bunker	2500	2	50
+
+to say EventConditions_Gabriel_Cumslut_Walkin:
+	if (Libido of Gabriel > 4 and Gabriel is in Bunker and Player is male and Lastfuck of Gabriel - turns > 8): [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gabriel_Cumslut_Walkin	"Gabriel_Cumslut_Walkin"
+
+Gabriel_Cumslut_Walkin is a situation.
+ResolveFunction of Gabriel_Cumslut_Walkin is "[ResolveEvent Gabriel_Cumslut_Walkin]".
+Sarea of Gabriel_Cumslut_Walkin is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Gabriel_Cumslut_Walkin:
 	if debugactive is 1:
 		say "     DEBUG: Gabriel Cumslut WALKIN[line break]";
-	say "     As you come down the stairs into the bunker and enter the main room of your underground refuge, a very interesting sight awaits you. Roughly a dozen feet in front of the door, a pad made of folded blankets has been laid out on the floor, with your captive Seraphim pet kneeling on it. He is completely naked, providing a real feast for the eyes with his lithe, well-muscled body and the sizable cock that he is slowly stroking up and down. He's looking down at it right now, swiping up a glistening droplet of pre-cum with his index finger and bringing that up to lick off with a blissful expression. As he does so, he raises his gaze and catches sight of you, startling him to straighten up from the fairly relaxed position he was holding up till now. Eager to present himself, he pushes out his chest and stretches his pretty white wings to the sides, spreading their feathers wide.";
+	say "     As you step into the main room of the bunker, a very interesting sight awaits you. Roughly a dozen feet in front of the door, a pad made of folded blankets has been laid out on the floor, with your captive Seraphim pet kneeling on it. He is completely naked, providing a real feast for the eyes with his lithe, well-muscled body and the sizable cock that he is slowly stroking up and down. He's looking down at it right now, swiping up a glistening droplet of pre-cum with his index finger and bringing that up to lick off with a blissful expression. As he does so, he raises his gaze and catches sight of you, startling him to straighten up from the fairly relaxed position he was holding up till now. Eager to present himself, he pushes out his chest and stretches his pretty white wings to the sides, spreading their feathers wide.";
 	say "     '[Master], I've been waiting for you. I - I need to taste you, feel your cum sliding down my throat! Please, [master]!' comes his plea, delivered in a slightly breathy tone. He flexes his arms and chest a little to give you a nice show, followed by pinching his own nipples. A needy moan escapes Gabriel's mouth as his nipples harden and a little throb of pre leaks from his cum-slit to drip down onto the blanket. After all the work you've put into breaking and training him to be a good little slut, the sexy angel really gets off on submitting now. You can't help but feel a grin spreading over your face as you walk closer, every step followed by his eager gaze until you're standing right in front of him. Reaching out to stroke over your subby slut's chest, then brushing your fingers up along his collarbone and neck, you grab a handful of his long, soft hair and pull his head back to look into Gabriel's eyes.";
 	say "     [bold type]What do you want to do to Gabriel now?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Praise him for being a good little cum-slut and fill his mouth with your cock!";
@@ -1007,7 +1022,23 @@ to say FirstTimeGabrielSleepBJ:
 		say "     Grabbing a handful of his brown curls, you wrench the tamed angel back from your cock and give him a stern talking-to. With him soon being almost in tears, you declare that he will not be getting what he wanted because of his disobedience. Instead, you keep a tight grip on his hair and jerk off, quickly pushing yourself over the edge and blasting cum all over his glorious curls to give him a somewhat patchy appearance. With a dire warning that he may not remove the cum until it's well and truly dried, you send him scurrying away.";
 		now Libido of Gabriel is 12; [sleep sucking forbidden]
 
-after of going to Bunker while (David is bunkered and Gabriel is bunkered and Charisma of Gabriel is 0) and Player is not CoA:
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Gabriel_David_Meeting"	Gabriel_David_Meeting	"[EventConditions_Gabriel_David_Meeting]"	Bunker	2500	2	100
+
+to say EventConditions_Gabriel_David_Meeting:
+	if (David is collected and Gabriel is collected and Charisma of Gabriel is 0) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gabriel_David_Meeting	"Gabriel_David_Meeting"
+
+Gabriel_David_Meeting is a situation.
+ResolveFunction of Gabriel_David_Meeting is "[ResolveEvent Gabriel_David_Meeting]".
+Sarea of Gabriel_David_Meeting is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Gabriel_David_Meeting:
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Talk Walkin[line break]";
 	say "     As you enter the bunker, you see David and Gabriel stand not too far away, next to one of the side walls of the underground refuge. They're talking, with the male soldier's back turned your way and you overhear David say, 'Wait, you mean -?' 'Yes, I'm the [master]'s servant. Before, I was someone else, something else. [SubjectProCap of Player] fought and won against me, held me down and changed me. Now I belong to [ObjectPro of Player].' Gabriel pats the leather restraint cuffs resting around his wrists, then lowers his hands to rest just above his crotch as he bends his head. 'B-but that's slavery! No one can own other people!' David replies in a shocked tone, only to find the angel reaching out to cover his mouth with a gentle touch of his fingers. 'My kind was made to serve, to follow the grand plan to perfection. But how could I do so after having been changed? Impure thoughts in my head and the urges of this new flesh between my legs, they mark me as an abomination. I bear the mark of the [master], so now I serve [ObjectPro of Player].'";
@@ -1049,6 +1080,7 @@ after of going to Bunker while (David is bunkered and Gabriel is bunkered and Ch
 		say "     Watching the soldier go, you wave Gabriel over to yourself and take him to one of the side rooms for a private chat. The beautiful angel you've turned into your private sex toy obeys immediately, coming to stand in front of you at attention. Looking into those innocent eyes, you reach out to run a hand up and down his toned chest while you think about what you want to tell him about his future interactions with David.";
 		say "[GabrielDavidInteractionChoice]";
 		now Charisma of Gabriel is 50; [David and Gabriel kissed without player intervention]
+	now Gabriel_David_Meeting is resolved;
 
 to say GabrielDavidInteractionChoice:
 	LineBreak;
@@ -1099,14 +1131,28 @@ to say GabrielDavidInteractionStatus:
 		-- 99: [interaction forbidden]
 			say "Lowering his head in a show of submission, Gabriel says, 'I've been avoiding him, as you commanded. It isn't always easy, living here together and with him curious and trying to talk to me. But I can manage it and obey.'";
 
-after of going to Bunker while (David is bunkered and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [he needs to talk about Gabriel]
-	if debugactive is 1:
-		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
-	say "[DavidGabrielTalkAftermath]";
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Gabriel_David_TalkAftermath"	Gabriel_David_TalkAftermath	"[EventConditions_Gabriel_David_TalkAftermath1]"	Bunker	2500	2	100
+3	"Gabriel_David_TalkAftermath"	Gabriel_David_TalkAftermath	"[EventConditions_Gabriel_David_TalkAftermath2]"	Parade Ground	2500	2	100
 
-after of going to Parade Ground while (David is in Parade Ground and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [he needs to talk about Gabriel]
-	if debugactive is 1:
-		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
+to say EventConditions_Gabriel_David_TalkAftermath1:
+	if (David is collected and Gabriel is collected and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+to say EventConditions_Gabriel_David_TalkAftermath2:
+	if (David is in Parade Ground and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)) and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gabriel_David_TalkAftermath	"Gabriel_David_TalkAftermath"
+
+Gabriel_David_TalkAftermath is a situation.
+ResolveFunction of Gabriel_David_TalkAftermath is "[ResolveEvent Gabriel_David_TalkAftermath]".
+Sarea of Gabriel_David_TalkAftermath is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Gabriel_David_TalkAftermath:
 	say "[DavidGabrielTalkAftermath]";
 
 to say DavidGabrielTalkAftermath:
@@ -1142,6 +1188,7 @@ to say DavidGabrielTalkAftermath:
 		say "     Pressing your lips together and shaking your head, you let out an artfully delivered sigh and give David's arm a consoling squeeze. Then you lay it on thick: You don't really know what happened to Gabriel out in the wild streets, but you ran into him in the state he is now, sexually abused and still dripping with cum all over him. Bending over the unconscious man lying in the street, you checked on him, which is when he opened his eyes and focused on you with an unhinged expression on his face. Kinda like imprinting with animal babies, suddenly you were his master in Gabriel's mind and he kept begging for your orders. He didn't seem capable of surviving out in the streets on his own, so you took him in for his own good. Faking embarrassment, you admit that you even had to indulge his fantasies physically since Gabriel is just so obsessed about serving his [master].";
 		say "     David eats up your words, getting a bit pale as you paint a picture of Gabriel's mind shattering under his previous experiences. 'I - oh god, that is horrible! Do you think he can be cured somehow?' In a serious tone, you tell him that you really hope it'll be possible once all of you get out of here. Therapy can work wonders and all that. But for now, it's best to not complicate matters with Gabriel any further. He's stable in his assumed role as your servant, so everyone should treat him accordingly and not give him any undue stress by contradicting it. Doing an fairly good job in spinning this web of lies, you get David so far that he quietly nods and promises, 'Okay, if that's how it must go, I will do my best to play along.' He gulps as he says this, but then presses his lips together and puts a determined look on his face.";
 		say "[DavidGabrielTalkAftermath2]";
+	now Gabriel_David_TalkAftermath is resolved;
 
 to say DavidGabrielTalkAftermath2:
 	WaitLineBreak;
@@ -1189,9 +1236,23 @@ to say DavidGabrielTalkAftermath2:
 			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might be best if he kept things platonic from now on. Having a friend to rely on might be just what Gabriel needs. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
 			now Charisma of Gabriel is 71; [David will no longer participate in sex with Gabriel, might become a friend though]
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Gabriel_David_Cumslut1"	Gabriel_David_Cumslut1	"[EventConditions_Gabriel_David_Cumslut1]"	Bunker	2500	2	100
 
+to say EventConditions_Gabriel_David_Cumslut1:
+	if (David is collected and Gabriel is collected and (Charisma of Gabriel is 11 or Charisma of Gabriel is 31 or Charisma of Gabriel is 51 or Charisma of Gabriel is 71) and Libido of Gabriel > 9 and Stamina of Gabriel - turns > 7 and (Intelligence of Gabriel is 1 or Intelligence of Gabriel is 41)) and Player is not CoA: [Gabriel + David present, David and player talked after precious scene, Gabriel Cumslut Stage 2, not fed cum for a day, sex allowed]
+		now CurrentWalkinEvent_ConditionsMet is true;
 
-after of going to Bunker while (David is bunkered and Gabriel is bunkered and (Charisma of Gabriel is 11 or Charisma of Gabriel is 31 or Charisma of Gabriel is 51 or Charisma of Gabriel is 71) and Libido of Gabriel > 9 and Stamina of Gabriel - turns > 7 and (Intelligence of Gabriel is 1 or Intelligence of Gabriel is 41)) and Player is not CoA: [Gabriel + David present, David and player talked after precious scene, Gabriel Cumslut Stage 2, not fed cum for a day, sex allowed]
+Table of GameEventIDs (continued)
+Object	Name
+Gabriel_David_Cumslut1	"Gabriel_David_Cumslut1"
+
+Gabriel_David_Cumslut1 is a situation.
+ResolveFunction of Gabriel_David_Cumslut1 is "[ResolveEvent Gabriel_David_Cumslut1]".
+Sarea of Gabriel_David_Cumslut1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Gabriel_David_Cumslut1:
 	if debugactive is 1:
 		say "     DEBUG: David/Gabriel Cumslut Walkin[line break]";
 	say "     As you enter the main room of the bunker, you see the white-winged form of Gabriel stand over to the side, at the end of one of the numerous beds down here. He is bare-ass naked except for the collar and cuffs you put on him. Meanwhile, the bed is occupied by the sleeping form of David, obviously completely unaware yet of the attention your angelic pet is giving him. Then Gabriel leans forward and reaches out to take hold of the blanket covering the stretched-out soldier, gently lifting it and pulling it down over his form. He feasts his eyes on David's bare chest, putting a hand on it and slowly stroking over the light fuzz covering his pecs, then the treasure trail down towards the man's crotch. Still hesitating before he lays his fingers on the fabric of the somewhat oversized pair of boxer shorts the soldier must have scavenged somewhere, Gabriel becomes aware of you at that moment. He flinches and looks up with a guilty expression as he meets your eyes, the hand frozen in movement just above David's crotch.";
@@ -1351,6 +1412,6 @@ after of going to Bunker while (David is bunkered and Gabriel is bunkered and (C
 				now Intelligence of Gabriel is 49; [sex only path, rejected by David]
 			now Charisma of Gabriel is 72; [David fed Gabriel cum from cup, not open for sex]
 		now Stamina of Gabriel is turns; [last cum dose]
-
+	now Gabriel_David_Cumslut1 is resolved;
 
 Seraphim ends here.

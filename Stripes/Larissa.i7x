@@ -225,7 +225,7 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if ( ( Player is male and Cunt Count of Larissa > 0 ) or ( Player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist and LarissaBodycat is 2:
+	if ( ( Player is male and Cunt Count of Larissa > 0 ) or ( Player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList and LarissaBodycat is 2:
 		say "[Larissasex_taurfun]";
 	else if Player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
@@ -244,14 +244,14 @@ to say LarissaTFsex:		[Menu options to be added later as more scenes are compose
 		say "***Larissa neuter. No scene yet.";
 
 [ cock/cunt size scaling:
-cock length > ( ( Cunt Depth * 2) + cunt width + 2 )		:	over the limit
-cock length > ( Cunt Depth + cunt width + 2 )			:	large
-cock length	< ( ( Cunt Depth + cunt width + 1 ) / 3 )	:	small
+Cock Length > ( ( Cunt Depth * 2) + Cunt Tightness + 2 )		:	over the limit
+Cock Length > ( Cunt Depth + Cunt Tightness + 2 )			:	large
+Cock Length	< ( ( Cunt Depth + Cunt Tightness + 1 ) / 3 )	:	small
 
 cum output scaling:
-cock width >= ( scalevalue + 1 ) * 10				:	super-stuffed
-cock width >= ( scalevalue + 1 ) * 5				:	plumped
-cock width >= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
+Ball Size >= ( scalevalue + 1 ) * 10				:	super-stuffed
+Ball Size >= ( scalevalue + 1 ) * 5				:	plumped
+Ball Size >= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
 ]
 
 to say Larissasex_MF:
@@ -656,34 +656,35 @@ to say Larissaisnow-panda:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Panda" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Panda" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Panda" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Panda";
+				now LarissaForm is "panda";
+				now LarissaInfName is "Panda";
+				now LarissaHandForm is "paw";
+				now LarissaFootForm is "paw";
+				now LarissaSkin is "black and white fur";
+				now LarissaTail is "stubby tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "cute panda";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a plump and sexy panda";
+				now LarissaTFText is "becomes rounder, plumping out into a round, pudgy figure";
+				now LarissaGeneralLook is "[one of]sexy[or]cute[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Panda";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Panda";
-			now LarissaForm is "panda";
-			now LarissaInfName is "Panda";
-			now LarissaHandForm is "paw";
-			now LarissaFootForm is "paw";
-			now LarissaSkin is "black and white fur";
-			now LarissaTail is "stubby tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "cute panda";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a plump and sexy panda";
-			now LarissaTFText is "becomes rounder, plumping out into a round, pudgy figure";
-			now LarissaGeneralLook is "[one of]sexy[or]cute[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-alphahusky:
@@ -699,40 +700,41 @@ to say Larissaisnow-alphahusky:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Husky Alpha" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Husky Alpha" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Husky Alpha" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Husky Alpha";
+				now Nipple Count of Larissa is 0;
+				now Breast Size of Larissa is 0;
+				now Cunt Count of Larissa is 0;
+				now Cunt Depth of Larissa is 0;
+				now Cunt Tightness of Larissa is 0;
+				now LarissaBodyDesc is "[one of]altered[or]animalistic[at random]";
+				now LarissaForm is "husky";
+				now LarissaInfName is "Husky Alpha";
+				now LarissaHandForm is "paw";
+				now LarissaFootForm is "paw";
+				now LarissaSkin is "fluffy gray and white fur";
+				now LarissaTail is "curved tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "strong husky";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a strong and confident husky";
+				now LarissaTFText is "becomes fit and strong with an air of confidence";
+				now LarissaGeneralLook is "[one of]confident[or]sexy[or]cute[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Husky Alpha";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Husky Alpha";
-			now Nipple Count of Larissa is 0;
-			now Breast Size of Larissa is 0;
-			now Cunt Count of Larissa is 0;
-			now Cunt Depth of Larissa is 0;
-			now Cunt Tightness of Larissa is 0;
-			now LarissaBodyDesc is "[one of]altered[or]animalistic[at random]";
-			now LarissaForm is "husky";
-			now LarissaInfName is "Husky Alpha";
-			now LarissaHandForm is "paw";
-			now LarissaFootForm is "paw";
-			now LarissaSkin is "fluffy gray and white fur";
-			now LarissaTail is "curved tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "strong husky";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a strong and confident husky";
-			now LarissaTFText is "becomes fit and strong with an air of confidence";
-			now LarissaGeneralLook is "[one of]confident[or]sexy[or]cute[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-GSDmale:
@@ -748,39 +750,40 @@ to say Larissaisnow-GSDmale:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "German Shepherd Male" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "German Shepherd Male" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "German Shepherd Male" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "German Shepherd Male";
+				now Nipple Count of Larissa is 0;
+				now Breast Size of Larissa is 0;
+				now Cunt Count of Larissa is 0;
+				now Cunt Depth of Larissa is 0;
+				now Cunt Tightness of Larissa is 0;
+				now LarissaForm is "German Shepherd Male";
+				now LarissaInfName is "German Shepherd Male";
+				now LarissaHandForm is "paw";
+				now LarissaFootForm is "paw";
+				now LarissaSkin is "glossy black and tan fur";
+				now LarissaTail is "doggy tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "canine";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a humanoid dog";
+				now LarissaTFText is "becomes that of an anthropomorphic German shepherd";
+				now LarissaGeneralLook is "[one of]strong[or]sexy[or]attractive[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "German Shepherd Male";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "German Shepherd Male";
-			now Nipple Count of Larissa is 0;
-			now Breast Size of Larissa is 0;
-			now Cunt Count of Larissa is 0;
-			now Cunt Depth of Larissa is 0;
-			now Cunt Tightness of Larissa is 0;
-			now LarissaForm is "German Shepherd Male";
-			now LarissaInfName is "German Shepherd Male";
-			now LarissaHandForm is "paw";
-			now LarissaFootForm is "paw";
-			now LarissaSkin is "glossy black and tan fur";
-			now LarissaTail is "doggy tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "canine";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a humanoid dog";
-			now LarissaTFText is "becomes that of an anthropomorphic German shepherd";
-			now LarissaGeneralLook is "[one of]strong[or]sexy[or]attractive[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-tighooker:
@@ -796,34 +799,35 @@ to say Larissaisnow-tighooker:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Malayan Tiger Herm" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Malayan Tiger Herm" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Malayan Tiger Herm" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Malayan Tiger Herm";
+				now LarissaForm is "[if Cunt Count of Larissa > 0]tigress[else]tiger[end if]";
+				now LarissaInfName is "Malayan Tiger Herm";
+				now LarissaHandForm is "paw";
+				now LarissaFootForm is "paw";
+				now LarissaSkin is "white tiger fur";
+				now LarissaTail is "striped tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "feline";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a sultry [if Cunt Count of Larissa > 0]tigress[else]tiger[end if]";
+				now LarissaTFText is "becomes that of a sexy and alluring [if Cunt Count of Larissa > 0 and Cock Count of Larissa > 0]tigress herm[else if Cunt Count of Larissa > 0]tigress femme[else]tiger[end if]";
+				now LarissaGeneralLook is "[one of]beautiful[or]sexy[or]attractive[or]hot[or]slutty[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Malayan Tiger Herm";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Malayan Tiger Herm";
-			now LarissaForm is "[if Cunt Count of Larissa > 0]tigress[else]tiger[end if]";
-			now LarissaInfName is "Malayan Tiger Herm";
-			now LarissaHandForm is "paw";
-			now LarissaFootForm is "paw";
-			now LarissaSkin is "white tiger fur";
-			now LarissaTail is "striped tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "feline";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a sultry [if Cunt Count of Larissa > 0]tigress[else]tiger[end if]";
-			now LarissaTFText is "becomes that of a sexy and alluring [if Cunt Count of Larissa > 0 and Cock Count of Larissa > 0]tigress herm[else if Cunt Count of Larissa > 0]tigress femme[else]tiger[end if]";
-			now LarissaGeneralLook is "[one of]beautiful[or]sexy[or]attractive[or]hot[or]slutty[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-teddybear:
@@ -839,34 +843,35 @@ to say Larissaisnow-teddybear:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Teddy Bear" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Teddy Bear" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Teddy Bear" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Teddy Bear";
+				now LarissaForm is "teddy bear";
+				now LarissaInfName is "Teddy Bear";
+				now LarissaHandForm is "padded paw";
+				now LarissaFootForm is "padded paw";
+				now LarissaSkin is "plush brown fur";
+				now LarissaTail is "tail puff";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "plush bear";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a cute and cuddly teddy bear";
+				now LarissaTFText is "becomes plump with soft stuffing as she becomes a cute teddy bear";
+				now LarissaGeneralLook is "[one of]soft[or]huggable[or]cute[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Teddy Bear";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Teddy Bear";
-			now LarissaForm is "teddy bear";
-			now LarissaInfName is "Teddy Bear";
-			now LarissaHandForm is "padded paw";
-			now LarissaFootForm is "padded paw";
-			now LarissaSkin is "plush brown fur";
-			now LarissaTail is "tail puff";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "plush bear";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a cute and cuddly teddy bear";
-			now LarissaTFText is "becomes plump with soft stuffing as she becomes a cute teddy bear";
-			now LarissaGeneralLook is "[one of]soft[or]huggable[or]cute[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-latexmistress:
@@ -882,34 +887,35 @@ to say Larissaisnow-latexmistress:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Latex Mistress" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Latex Mistress" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Latex Mistress" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Latex Mistress";
+				now LarissaForm is "leather-clad human";
+				now LarissaInfName is "Latex Mistress";
+				now LarissaHandForm is "gloved hand";
+				now LarissaFootForm is "booted foot";
+				now LarissaSkin is "latex skin-suit";
+				now LarissaTail is "";
+				now LarissaTailed is false;
+				now LarissaWinged is false;
+				now LarissaFace is "masked";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a latex-bound [if Cunt Count of Larissa > 0]woman[else]man[end if]";
+				now LarissaTFText is "gets coated in a layer of black latex which forms over [possadj of Larissa] human body";
+				now LarissaGeneralLook is "[one of]impressive[or]sexy[or]tough[or]kinky[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Latex Mistress";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Latex Mistress";
-			now LarissaForm is "leather-clad human";
-			now LarissaInfName is "Latex Mistress";
-			now LarissaHandForm is "gloved hand";
-			now LarissaFootForm is "booted foot";
-			now LarissaSkin is "latex skin-suit";
-			now LarissaTail is "";
-			now LarissaTailed is false;
-			now LarissaWinged is false;
-			now LarissaFace is "masked";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a latex-bound [if Cunt Count of Larissa > 0]woman[else]man[end if]";
-			now LarissaTFText is "gets coated in a layer of black latex which forms over [possadj of Larissa] human body";
-			now LarissaGeneralLook is "[one of]impressive[or]sexy[or]tough[or]kinky[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-naga:
@@ -925,34 +931,35 @@ to say Larissaisnow-naga:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Naga" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Naga" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Naga" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Naga";
+				now LarissaForm is "snake-bodied naga";
+				now LarissaInfName is "Naga";
+				now LarissaHandForm is "hand";
+				now LarissaFootForm is "snake tail";
+				now LarissaSkin is "green and yellow scaled skin";
+				now LarissaTail is "coiled tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "serpent";
+				now LarissaMouth is "maw";
+				now LarissaBody is "a long and flexible naga";
+				now LarissaTFText is "gains a human upper body, but with [possadj of Larissa] lower half melded into a snake's tail";
+				now LarissaGeneralLook is "[one of]impressive[or]sexy[or]imposing[or]wild[at random]";
+				now LarissaBodycat is 3;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Naga";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Naga";
-			now LarissaForm is "snake-bodied naga";
-			now LarissaInfName is "Naga";
-			now LarissaHandForm is "hand";
-			now LarissaFootForm is "snake tail";
-			now LarissaSkin is "green and yellow scaled skin";
-			now LarissaTail is "coiled tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "serpent";
-			now LarissaMouth is "maw";
-			now LarissaBody is "a long and flexible naga";
-			now LarissaTFText is "gains a human upper body, but with [possadj of Larissa] lower half melded into a snake's tail";
-			now LarissaGeneralLook is "[one of]impressive[or]sexy[or]imposing[or]wild[at random]";
-			now LarissaBodycat is 3;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-mammoth:
@@ -968,34 +975,35 @@ to say Larissaisnow-mammoth:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Mammoth" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Mammoth" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Mammoth" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Mammoth";
+				now LarissaForm is "woolly mammoth";
+				now LarissaInfName is "Mammoth";
+				now LarissaHandForm is "meaty hand";
+				now LarissaFootForm is "heavy foot";
+				now LarissaSkin is "shaggy brown fur";
+				now LarissaTail is "short, thin tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "elephantine";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a burly mammoth";
+				now LarissaTFText is "becomes quite large and stocky, strong enough to carry [possadj of Larissa] swelling endowments";
+				now LarissaGeneralLook is "[one of]impressive[or]powerful[or]imposing[or]primitive[or]mighty[or]massive[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Mammoth";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Mammoth";
-			now LarissaForm is "woolly mammoth";
-			now LarissaInfName is "Mammoth";
-			now LarissaHandForm is "meaty hand";
-			now LarissaFootForm is "heavy foot";
-			now LarissaSkin is "shaggy brown fur";
-			now LarissaTail is "short, thin tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "elephantine";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a burly mammoth";
-			now LarissaTFText is "becomes quite large and stocky, strong enough to carry [possadj of Larissa] swelling endowments";
-			now LarissaGeneralLook is "[one of]impressive[or]powerful[or]imposing[or]primitive[or]mighty[or]massive[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-redkangaroo:
@@ -1011,37 +1019,38 @@ to say Larissaisnow-redkangaroo:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Red Kangaroo" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Red Kangaroo" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Red Kangaroo" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Red Kangaroo";
+				now LarissaForm is "kangaroo";
+				now LarissaInfName is "Red Kangaroo";
+				now LarissaHandForm is "small paw";
+				now LarissaFootForm is "elongated foot";
+				now LarissaSkin is "russet fur";
+				now LarissaTail is "thick, meaty tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "[']roo";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a wide-hipped kangaroo";
+				now LarissaTFText is "gains wide, muscled hips and legs along with a marsupial pouch";
+				now LarissaGeneralLook is "[one of]sexy[or]impressive[or]bouncy[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				now Cock Count of Larissa is 0;
+				now Cock Length of Larissa is 0;
+				now Ball Size of Larissa is 0;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Red Kangaroo";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Red Kangaroo";
-			now LarissaForm is "kangaroo";
-			now LarissaInfName is "Red Kangaroo";
-			now LarissaHandForm is "small paw";
-			now LarissaFootForm is "elongated foot";
-			now LarissaSkin is "russet fur";
-			now LarissaTail is "thick, meaty tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "[']roo";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a wide-hipped kangaroo";
-			now LarissaTFText is "gains wide, muscled hips and legs along with a marsupial pouch";
-			now LarissaGeneralLook is "[one of]sexy[or]impressive[or]bouncy[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			now Cock Count of Larissa is 0;
-			now Cock Length of Larissa is 0;
-			now Ball Size of Larissa is 0;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-panthertaur:
@@ -1057,34 +1066,35 @@ to say Larissaisnow-panthertaur:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Panther Taur" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Panther Taur" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Panther Taur" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Panther Taur";
+				now LarissaForm is "panther";
+				now LarissaInfName is "Panther Taur";
+				now LarissaHandForm is "clawed paw";
+				now LarissaFootForm is "padded paw";
+				now LarissaSkin is "midnight black fur";
+				now LarissaTail is "feline tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "feline";
+				now LarissaMouth is "muzzle";
+				now LarissaBody is "a tauric panther";
+				now LarissaTFText is "gains four feline paws to support [possadj of Larissa] tauric body and impressive endowments";
+				now LarissaGeneralLook is "[one of]alluring[or]imposing[or]powerful[or]graceful[or]sexy[at random]";
+				now LarissaBodycat is 2;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Panther Taur";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Panther Taur";
-			now LarissaForm is "panther";
-			now LarissaInfName is "Panther Taur";
-			now LarissaHandForm is "clawed paw";
-			now LarissaFootForm is "padded paw";
-			now LarissaSkin is "midnight black fur";
-			now LarissaTail is "feline tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "feline";
-			now LarissaMouth is "muzzle";
-			now LarissaBody is "a tauric panther";
-			now LarissaTFText is "gains four feline paws to support [possadj of Larissa] tauric body and impressive endowments";
-			now LarissaGeneralLook is "[one of]alluring[or]imposing[or]powerful[or]graceful[or]sexy[at random]";
-			now LarissaBodycat is 2;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-baldeagle:
@@ -1100,39 +1110,40 @@ to say Larissaisnow-baldeagle:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Bald Eagle" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Bald Eagle" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Bald Eagle" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Bald Eagle";
+				now LarissaForm is "eagle";
+				now LarissaInfName is "Bald Eagle";
+				now LarissaHandForm is "small talon";
+				now LarissaFootForm is "sharp talon";
+				now LarissaSkin is "brown feathers";
+				now LarissaTail is "feathered tail";
+				now LarissaTailed is true;
+				now LarissaWinged is true;
+				now LarissaFace is "avian";
+				now LarissaMouth is "beak";
+				now LarissaBody is "a humanoid eagle";
+				now LarissaTFText is "becomes partially avian with winged arms and taloned feat";
+				now LarissaGeneralLook is "[one of]powerful[or]impressive[or]noble[or]graceful[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				now Cunt Count of Larissa is 0;
+				now Cunt Depth of Larissa is 0;
+				now Cunt Tightness of Larissa is 0;
+				now Nipple Count of Larissa is 0;
+				now Breast Size of Larissa is 0;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Bald Eagle";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Bald Eagle";
-			now LarissaForm is "eagle";
-			now LarissaInfName is "Bald Eagle";
-			now LarissaHandForm is "small talon";
-			now LarissaFootForm is "sharp talon";
-			now LarissaSkin is "brown feathers";
-			now LarissaTail is "feathered tail";
-			now LarissaTailed is true;
-			now LarissaWinged is true;
-			now LarissaFace is "avian";
-			now LarissaMouth is "beak";
-			now LarissaBody is "a humanoid eagle";
-			now LarissaTFText is "becomes partially avian with winged arms and taloned feat";
-			now LarissaGeneralLook is "[one of]powerful[or]impressive[or]noble[or]graceful[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			now Cunt Count of Larissa is 0;
-			now Cunt Depth of Larissa is 0;
-			now Cunt Tightness of Larissa is 0;
-			now Nipple Count of Larissa is 0;
-			now Breast Size of Larissa is 0;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-darkelf:
@@ -1148,34 +1159,35 @@ to say Larissaisnow-darkelf:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Dark Elf" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Dark Elf" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Dark Elf" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Dark Elf";
+				now LarissaForm is "elf";
+				now LarissaInfName is "Dark Elf";
+				now LarissaHandForm is "nimble hand";
+				now LarissaFootForm is "petite foot";
+				now LarissaSkin is "black skin";
+				now LarissaTail is "";
+				now LarissaTailed is false;
+				now LarissaWinged is false;
+				now LarissaFace is "elfin";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a drow elf";
+				now LarissaTFText is "becomes human-like, but shorter, more slender and sexier";
+				now LarissaGeneralLook is "[one of]sexy[or]alluring[or]exotic[or]sultry[or]hot[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Dark Elf";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Dark Elf";
-			now LarissaForm is "elf";
-			now LarissaInfName is "Dark Elf";
-			now LarissaHandForm is "nimble hand";
-			now LarissaFootForm is "petite foot";
-			now LarissaSkin is "black skin";
-			now LarissaTail is "";
-			now LarissaTailed is false;
-			now LarissaWinged is false;
-			now LarissaFace is "elfin";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a drow elf";
-			now LarissaTFText is "becomes human-like, but shorter, more slender and sexier";
-			now LarissaGeneralLook is "[one of]sexy[or]alluring[or]exotic[or]sultry[or]hot[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-succubus:
@@ -1191,34 +1203,35 @@ to say Larissaisnow-succubus:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Succubus" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Succubus" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Succubus" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Succubus";
+				now LarissaForm is "succubus";
+				now LarissaInfName is "Succubus";
+				now LarissaHandForm is "long-nailed hand";
+				now LarissaFootForm is "dainty foot";
+				now LarissaSkin is "flawless skin";
+				now LarissaTail is "";
+				now LarissaTailed is false;
+				now LarissaWinged is true;
+				now LarissaFace is "horned human";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a tempting succubus";
+				now LarissaTFText is "grows a pair of bat-like wings as [subjpro of Larissa] becomes a sexier version of [possadj of Larissa] human self";
+				now LarissaGeneralLook is "[one of]tempting[or]sultry[or]naughty[or]sexy[at random]";
+				now LarissaBodycat is 0;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Succubus";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Succubus";
-			now LarissaForm is "succubus";
-			now LarissaInfName is "Succubus";
-			now LarissaHandForm is "long-nailed hand";
-			now LarissaFootForm is "dainty foot";
-			now LarissaSkin is "flawless skin";
-			now LarissaTail is "";
-			now LarissaTailed is false;
-			now LarissaWinged is true;
-			now LarissaFace is "horned human";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a tempting succubus";
-			now LarissaTFText is "grows a pair of bat-like wings as [subjpro of Larissa] becomes a sexier version of [possadj of Larissa] human self";
-			now LarissaGeneralLook is "[one of]tempting[or]sultry[or]naughty[or]sexy[at random]";
-			now LarissaBodycat is 0;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-googirl:
@@ -1234,34 +1247,35 @@ to say Larissaisnow-googirl:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Goo Girl" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Goo Girl" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Goo Girl" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Goo Girl";
+				now LarissaForm is "slime girl";
+				now LarissaInfName is "Goo Girl";
+				now LarissaHandForm is "flexible hand";
+				now LarissaFootForm is "column of goo";
+				now LarissaSkin is "translucent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
+				now LarissaTail is "";
+				now LarissaTailed is false;
+				now LarissaWinged is false;
+				now LarissaFace is "smiling girly";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a girl made of colorful goo";
+				now LarissaTFText is "loses her legs as they fuse into a shifting column of slime";
+				now LarissaGeneralLook is "[one of]gooey[or]cute[or]jiggly[or]pretty[or]sexy[at random]";
+				now LarissaBodycat is 3;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Goo Girl";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Goo Girl";
-			now LarissaForm is "slime girl";
-			now LarissaInfName is "Goo Girl";
-			now LarissaHandForm is "flexible hand";
-			now LarissaFootForm is "column of goo";
-			now LarissaSkin is "translucent [one of]green[or]red[or]blue[or]purple[sticky random] gel";
-			now LarissaTail is "";
-			now LarissaTailed is false;
-			now LarissaWinged is false;
-			now LarissaFace is "smiling girly";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a girl made of colorful goo";
-			now LarissaTFText is "loses her legs as they fuse into a shifting column of slime";
-			now LarissaGeneralLook is "[one of]gooey[or]cute[or]jiggly[or]pretty[or]sexy[at random]";
-			now LarissaBodycat is 3;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 to say Larissaisnow-centaurmare:
@@ -1277,34 +1291,35 @@ to say Larissaisnow-centaurmare:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Centaur Mare" is not listed in vials of Player:
-			say "You don't have one of those vials to offer [objpro of Larissa].";
-		else if freecred < LarissTFcost:
-			say "You don't have enough credits right now.";
+		if there is a name of "Centaur Mare" in the Table of OwnedVials:
+			if freecred < LarissTFcost:
+				say "You don't have enough credits right now.";
+			else:
+				VialLoss "Centaur Mare" by 1;
+				decrease freecred by LarissTFcost;
+				say "[Larissa pre-tf]";
+				LarissaData "Centaur Mare";
+				now LarissaForm is "centaur";
+				now LarissaInfName is "Centaur Mare";
+				now LarissaHandForm is "hand";
+				now LarissaFootForm is "hoof";
+				now LarissaSkin is "tan skin and a brown coat";
+				now LarissaTail is "equine tail";
+				now LarissaTailed is true;
+				now LarissaWinged is false;
+				now LarissaFace is "[one of]centaur[or]human-like[or]pointy-eared human[at random]";
+				now LarissaMouth is "mouth";
+				now LarissaBody is "a strong, female centaur";
+				now LarissaTFText is "has her lower body shift and stretch until she has an equine body below her waist";
+				now LarissaGeneralLook is "[one of]athletic[or]sexy[or]pretty[or]exotic[at random]";
+				now LarissaBodycat is 2;
+				now HP of Larissa is 4;
+				follow the Larissa breastdesc rule;
+				follow the Larissa cockdesc rule;
+				follow the Larissa cuntdesc rule;
+				say "[Larissa post-tf]";
 		else:
-			deletevial "Centaur Mare";
-			decrease freecred by LarissTFcost;
-			say "[Larissa pre-tf]";
-			LarissaData "Centaur Mare";
-			now LarissaForm is "centaur";
-			now LarissaInfName is "Centaur Mare";
-			now LarissaHandForm is "hand";
-			now LarissaFootForm is "hoof";
-			now LarissaSkin is "tan skin and a brown coat";
-			now LarissaTail is "equine tail";
-			now LarissaTailed is true;
-			now LarissaWinged is false;
-			now LarissaFace is "[one of]centaur[or]human-like[or]pointy-eared human[at random]";
-			now LarissaMouth is "mouth";
-			now LarissaBody is "a strong, female centaur";
-			now LarissaTFText is "has her lower body shift and stretch until she has an equine body below her waist";
-			now LarissaGeneralLook is "[one of]athletic[or]sexy[or]pretty[or]exotic[at random]";
-			now LarissaBodycat is 2;
-			now HP of Larissa is 4;
-			follow the Larissa breastdesc rule;
-			follow the Larissa cockdesc rule;
-			follow the Larissa cuntdesc rule;
-			say "[Larissa post-tf]";
+			say "You don't have one of those vials to offer [objpro of Larissa].";
 
 
 [	HP of Larissa	]

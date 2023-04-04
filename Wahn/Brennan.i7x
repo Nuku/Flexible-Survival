@@ -285,10 +285,10 @@ to say ResolveEvent Lone Survivor:
 		let bonus be (( dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
-		if diceroll + bonus >= 15:
+		if diceroll + bonus >= 15: [success]
 			say "     Doing your best with a bent piece of wire or two, you fiddle around with the lock for a few minutes before eventually popping it open with a satisfying click. Phew, so far so good! Beyond the door is indeed a used apartment - lived in, if empty of people right now. You set out to search it thoroughly.";
 			say "[Apartment2bLooting]";
-		else:
+		else: [fail]
 			say "     Nope, no chance to pick that lock. You shrug and resolve to just kick in the door instead.";
 			let bonus be (( strength of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;

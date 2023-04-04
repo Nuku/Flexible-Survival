@@ -173,7 +173,7 @@ to ItemLoss all (ItemObj - object):
 		if debug is at level 10:
 			say "DEBUG -> Trying to re-move [ItemObj] from player who doesn't have any.[line break]";
 	else: [found at least one item]
-		ItemLoss ItemObj by carried of ItemObj
+		ItemLoss ItemObj by carried of ItemObj;
 
 to ItemLoss all (ItemObj - object) silently:
 	if carried of ItemObj < 1:
@@ -1055,7 +1055,7 @@ to say StripCrotch:
 	else if WaistItem is not journal and CrotchItem is journal:
 		say "pulls down your [WaistItem] and bares your crotch";
 	else if WaistItem is not journal and CrotchItem is not journal:
-		say "pulls down your [Waistitem] and [CrotchItem], baring your crotch";
+		say "pulls down your [WaistItem] and [CrotchItem], baring your crotch";
 
 
 [
@@ -1121,7 +1121,7 @@ to say SelfDressCrotch:
 	else if WaistItem is not journal and CrotchItem is journal:
 		say "collect and put your [WaistItem] back on";
 	else if WaistItem is not journal and CrotchItem is not journal:
-		say "collect your [CrotchItem] and [Waistitem] to put them back on";
+		say "collect your [CrotchItem] and [WaistItem] to put them back on";
 
 [
 Adds the uppermost layer of bottom clothes, that the player wears, in the text

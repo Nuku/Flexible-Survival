@@ -702,6 +702,7 @@ Include Unicorn by Sarokcat.
 Include Valkyrie by Qazarar.
 Include Viking Man by Wahn.
 Include Viking Woman by Wahn.
+Include Vincent by Wahn.
 Include Vixen Kunoichi by Qazarar.
 Include Vixentaur by Stripes.
 Include Voodoo Gecko by Stripes.
