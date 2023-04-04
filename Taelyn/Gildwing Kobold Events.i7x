@@ -605,7 +605,7 @@ to say GildwingClanAccept:
 		say "     Your skin begins to itch horribly as [if KoboldScaleColor is 1]rose-red[else if KoboldScaleColor is 2]azure[else if KoboldScaleColor is 3]forest-green[else if KoboldScaleColor is 4]charcoal-black[else if KoboldScaleColor is 5]snowy-white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if] scales form to cover your whole body. They interlock and smooth out and leaving you with sleek, [if KoboldScaleColor is 1]red[else if KoboldScaleColor is 2]blue[else if KoboldScaleColor is 3]green[else if KoboldScaleColor is 4]black[else if KoboldScaleColor is 5]white[else](Error, value invalid. Please report this issue to the FS Discord Server with KoboldScaleColor: [KoboldScaleColor].)[end if], kobold scales.";
 		LineBreak;
 		[Chest]
-		if breast Size of Player > 0:
+		if Breast Size of Player > 0:
 			say "     You feel a tightness in your chest as your breasts slowly shrink until they disappear completely, leaving you smooth-chested.";
 			now Breast Size of Player is 0;
 			now Nipple Count of Player is 0;

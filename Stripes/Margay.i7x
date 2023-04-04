@@ -292,11 +292,11 @@ this is the margaydance rule:
 		let margaynum be 200 + ( lev entry * 2 ) + cha entry + ( monmindbonus * 3 );
 		if BodyName of Player is "Margay":
 			decrease playernum by 12;
-		else if BodyName of Player is listed in infections of Felinelist:
+		else if BodyName of Player is listed in infections of FelineList:
 			decrease playernum by 6;
 		if FaceName of Player is "Margay":
 			decrease playernum by 12;
-		else if FaceName of Player is listed in Infections of Felinelist:
+		else if FaceName of Player is listed in Infections of FelineList:
 			decrease playernum by 6;
 [		say "TEST: [playernum] vs [margaynum]:[line break]";]
 		now playernum is a random number between 1 and playernum;
@@ -313,11 +313,11 @@ this is the margaydance rule:
 				increase dam by a random number between 0 and xx;
 			if FaceName of Player is "Margay":
 				increase dam by a random number between 0 and xx;
-			if BodyName of Player is listed in infections of Felinelist:	[all felines more aroused]
+			if BodyName of Player is listed in infections of FelineList:	[all felines more aroused]
 				increase Libido of Player by a random number between 0 and 2;
-			if FaceName of Player is listed in Infections of Felinelist:
+			if FaceName of Player is listed in Infections of FelineList:
 				increase Libido of Player by a random number between 0 and 2;
-			say "[if BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
+			say "[if BodyName of Player is listed in infections of FelineList or FaceName of Player is listed in infections of FelineList]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
 			decrease HP of Player by dam;
 			follow the player injury rule;
 			say "You are [descr].";

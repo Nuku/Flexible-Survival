@@ -229,8 +229,8 @@ to Coyotify: [Used for infection purposes.]
 	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	infect;
 	now non-infectious entry is true;
-	if Diego is visible and (( diegochanged is 0 and sex entry is not "Female" ) or ( diegochanged is 2 and sex entry is "Female" )):
-		say "Diego gets a puzzled look on [if diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if diegochanged is 0]he[else]she[end if] meant by that.";
+	if Diego is visible and (( Diegochanged is 0 and sex entry is not "Female" ) or ( Diegochanged is 2 and sex entry is "Female" )):
+		say "Diego gets a puzzled look on [if Diegochanged is 0]his[else]her[end if] face then suddenly breaks out into a fit of laughter. 'Guess the trick really was on me.' You can't help but wonder what [if Diegochanged is 0]he[else]she[end if] meant by that.";
 
 
 [

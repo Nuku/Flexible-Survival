@@ -347,7 +347,7 @@ to say zigor_S2_03_MM:	[stage 3 - gangbang/orgy - Mx7]
 
 to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 	now zigseat is 0;
-	if BodyName of Player is listed in infections of taurlist:
+	if BodyName of Player is listed in infections of TaurList:
 		now zigseat is 1;
 	if zigorcycle is false:
 		say "     Taken down into Zigor's private playroom once again, you are led to an unusual [if zigseat is 1]bench designed for taurs[else]chair[end if], one that you don't see here during your normal visits. Built of strong metal and padded with leather, it has a series of levers on its side and some large gears and pistons obscured by the shadows beneath it. He motions with a crop for you to take a seat. Obediently, you sit in the raised [if zigseat is 1]bench[else]chair[end if], letting him strap down your wrists, ankles and waist with leather buckles.";

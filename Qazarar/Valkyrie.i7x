@@ -13,7 +13,7 @@ to say ValkyrieLoss:
 	else:
 		[say "[FindValkyrieScore]";]
 		if ValkyrieScore is 0: [Steed transforms player, no direct action]
-			say "     You fall to your knees, [if hp of Player > 0]submitting to the power of[else]defeated by[end if] the warrior and her steed, accepting anything they're willing to do to you. After several moments of nothing happening, however, you look up to see the pair staring down at you with disappointment, before the stallion speaks. 'This one will make an excellent offering, but they are not ready.' The valkyrie shakes her head, and you can see a devious gleam in her eyes. 'I suppose we'll just have to fix that, won't we?' She then reaches into a pouch on her belt and pulls out a small bottle, before popping the lid off and pouring it over you. 'Try coming back when you're more suitable, and then you can help relieve my wonderful battering ram of his tensions.' Following her declaration, her mount lets out a snort and trots away, leaving you alone.";
+			say "     You fall to your knees, [if HP of Player > 0]submitting to the power of[else]defeated by[end if] the warrior and her steed, accepting anything they're willing to do to you. After several moments of nothing happening, however, you look up to see the pair staring down at you with disappointment, before the stallion speaks. 'This one will make an excellent offering, but they are not ready.' The valkyrie shakes her head, and you can see a devious gleam in her eyes. 'I suppose we'll just have to fix that, won't we?' She then reaches into a pouch on her belt and pulls out a small bottle, before popping the lid off and pouring it over you. 'Try coming back when you're more suitable, and then you can help relieve my wonderful battering ram of his tensions.' Following her declaration, her mount lets out a snort and trots away, leaving you alone.";
 			infect "Valkyrie Boi";
 			increase ValkyrieScore by 1;
 		else if ((ValkyrieScore < 3) or (a random chance of 1 in 4 succeeds)): [player gives handjob]
@@ -28,12 +28,12 @@ to say ValkyrieLoss:
 			[else: [forced handjob]:
 				say "     A";]
 		[else if ((ValkyrieScore < 5) or (a random chance of 1 in 3 succeeds)): [player gives oral]
-			if hp of Player > 0: [submissive oral]
+			if HP of Player > 0: [submissive oral]
 				say "     A";
 			else: [forced oral in stocks]
 				say "     A";]
 		else if ((ValkyrieScore < 7) or (a random chance of 1 in 2 succeeds)): [player gets railed]
-			[if hp of Player > 0: [voluntarily put into stocks]
+			[if HP of Player > 0: [voluntarily put into stocks]
 				say "     A";]
 			[forced anal in stocks]
 			say "     Your defeat at the hands of the powerful pair brings you to your knees, barely able to move, and your thoughts trapped in a daze. Through the reverie you hear the resounding voice of the stallion that overpowered you as he discusses you with his rider. 'This one is so very close to what I'm looking for, the perfect toy. Just a few lessons left for them.' A murmured agreement from the valkyrie is the last clear thought you have before you're lifted off the ground and taken somewhere else, too confused and aroused to be fully aware of your surroundings. Eventually you are shaken to wakefulness to find that you are now leaning forward, suspended by a set of incredibly sturdy-looking wooden stocks. The area in front of you seems empty, but judging by the last thing you remember, you think you have a very clear idea of who is behind you, and what's about to happen.";
