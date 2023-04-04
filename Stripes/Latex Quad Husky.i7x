@@ -1,5 +1,5 @@
 Version 1 of Latex Quad Husky by Stripes begins here.
-[Version 1.1 - Adds LQH effects to Latexlist]
+[Version 1.1 - Adds LQH effects to LatexList]
 "Adds an event to transform the player into a Latex Quad Husky and alter the future husky infections a player receives."
 
 

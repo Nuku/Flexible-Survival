@@ -53,7 +53,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Ice Fox";
-	add "Ice Fox" to infections of Vulpinelist;
+	add "Ice Fox" to infections of VulpineList;
 	add "Ice Fox" to infections of FurryList;
 	add "Ice Fox" to infections of OtherworldlyList;
 	add "Ice Fox" to infections of HermList;

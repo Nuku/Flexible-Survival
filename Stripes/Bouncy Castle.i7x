@@ -618,7 +618,7 @@ to say bckingschamber:
 			say "     ([link]N[as]n[end link]) - Take a seat.";
 			if Player consents: [FLOT - DONE]
 				let bonus be ( humanity of Player - Libido of Player ) / 20; [+5 to -5 for humanity vs libido]
-				if SkinName of Player is listed in infections of Latexlist, decrease bonus by 1;
+				if SkinName of Player is listed in infections of LatexList, decrease bonus by 1;
 				decrease bonus by 4 - ( ( ( HP of Player * 100 ) / maxHP of Player ) / 25 ); [-4 to 0 for current HP]
 				let levbonus be level of Player / 3;
 				if levbonus > 5, now levbonus is 5;
@@ -651,7 +651,7 @@ to say bckingchair:
 	WaitLineBreak;
 	let playernum be a random number between 1 and strength of Player;
 	let chairnum be 15;
-	if SkinName of Player is listed in infections of Latexlist, increase chairnum by 2;
+	if SkinName of Player is listed in infections of LatexList, increase chairnum by 2;
 	if HardMode is true, increase chairnum by ( level of Player / 6 );
 	let chairnum be a random number between 1 and chairnum;
 	if Playernum >= chairnum:
@@ -672,7 +672,7 @@ to say bckingchair:
 			increase playernum by 10;
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 170;
-		if SkinName of Player is listed in infections of Latexlist, increase chairnum by 30;
+		if SkinName of Player is listed in infections of LatexList, increase chairnum by 30;
 		if HardMode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 		if Playernum >= chairnum:
@@ -690,7 +690,7 @@ to say bckingchair:
 			WaitLineBreak;
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
-			if SkinName of Player is listed in infections of Latexlist, increase chairnum by 3;
+			if SkinName of Player is listed in infections of LatexList, increase chairnum by 3;
 			if HardMode is true, increase chairnum by ( level of Player / 5 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
@@ -796,7 +796,7 @@ to say bcpptendril:
 	if bcseenpunchingpillars is true, increase playernum by 5;
 	let playernum be a random number between 1 and playernum;
 	let tendrilnum be 30;
-	if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
+	if SkinName of Player is listed in infections of LatexList, increase tendrilnum by 2;
 	if BodyName of Player is "Anime Babe", increase tendrilnum by 4;
 	if HardMode is true, increase tendrilnum by ( level of Player / 4 );
 	let tendrilnum be a random number between 1 and tendrilnum;
@@ -815,7 +815,7 @@ to say bcpptendril:
 			increase playernum by 10;
 		let playernum be a random number between 1 and playernum;
 		let tendrilnum be 170;
-		if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 15;
+		if SkinName of Player is listed in infections of LatexList, increase tendrilnum by 15;
 		if BodyName of Player is "Anime Babe", increase tendrilnum by 25;
 		if HardMode is true, increase tendrilnum by level of Player / 2;
 		let tendrilnum be a random number between 1 and tendrilnum;
@@ -842,7 +842,7 @@ to say bcpptendril:
 			WaitLineBreak;
 			let playernum be a random number between 1 and ( strength of Player + scalevalue of Player );
 			let tendrilnum be 18;
-			if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
+			if SkinName of Player is listed in infections of LatexList, increase tendrilnum by 2;
 			if BodyName of Player is "Anime Babe", increase tendrilnum by 3;
 			if HardMode is true, increase tendrilnum by ( level of Player / 6 );
 			let tendrilnum be a random number between 1 and tendrilnum;

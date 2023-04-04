@@ -624,12 +624,12 @@ Part 14 - Diego
 the vmusings of Diego is "[diegomusing]";
 
 to say diegomusing:
-	say "     Conjuring Velos from his confines, Diego is only briefly taken aback, but soon finds [if diegochanged > 0]she[else]he[end if] can't help but laugh a bit at the circumstances at play.";
+	say "     Conjuring Velos from his confines, Diego is only briefly taken aback, but soon finds [if Diegochanged > 0]she[else]he[end if] can't help but laugh a bit at the circumstances at play.";
 	say "     'Ha, that's quite the impressive trick!'";
 	say "     'That's nothing, you'd be surprised how many things my friend can fit in their pockets!'";
-	say "     'I'm talking to you, actually.' [if diegochanged > 0]She[else]He[end if] points to the serpent. 'How did you manage to get your friend to carry you around like this?'";
+	say "     'I'm talking to you, actually.' [if Diegochanged > 0]She[else]He[end if] points to the serpent. 'How did you manage to get your friend to carry you around like this?'";
 	say "     'Good sir! Frankly, I'm quite offended you would assume deception on my part.' He feigns insult, no doubt a little bit amused by the coyote's cordial composure.";
-	say "     'Well, it's either that or your host is a massive weirdo.' [if diegochanged > 0]She[else]He[end if] briefly grins directly at you before returning his focus to the center of attention here.";
+	say "     'Well, it's either that or your host is a massive weirdo.' [if Diegochanged > 0]She[else]He[end if] briefly grins directly at you before returning his focus to the center of attention here.";
 	say "     'Fair enough. I guess you could say I wasn't... explicit... in describing our arrangement.'";
 	say "     'And I bet that means you can't be removed?'";
 	say "     'More or less.'";

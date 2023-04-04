@@ -305,7 +305,7 @@ to say cheetahwomaninheat:
 				if there is no area entry, next;
 				if there is no Name entry, next;
 				if area entry is battleground:
-					if Name entry is listed in infections of Felinelist:
+					if Name entry is listed in infections of FelineList:
 						add X to cmonList;
 			let cheetahchance be 40 + ( perception of Player ) * 2;
 			if cheetahchance > 90, now cheetahchance is 90;
