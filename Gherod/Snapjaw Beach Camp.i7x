@@ -14,6 +14,7 @@ a postimport rule:
 Table of GameRoomIDs (continued)
 Object	Name
 Snapjaw_Beach_Camp	"Snapjaw_Beach_Camp"
+Snapjaw_Beach_Camp	"Snapjaw Beach Camp"
 
 Snapjaw_Beach_Camp is a room. It is a fasttravel. Snapjaw_Beach_Camp is private.
 Printed name of Snapjaw_Beach_Camp is "Snapjaw Beach Camp".
@@ -373,7 +374,7 @@ to say SnapjawDesc:
 SnapjawDoneTalking is a truth state that varies.[@Tag:NotSaved]
 
 [
-	
+
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
 3	"Snapjaw_Intro"	Snapjaw_Intro	"[EventConditions_Snapjaw_Intro]"	Snapjaw_Beach_South	2500	2	100
