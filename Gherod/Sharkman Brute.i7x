@@ -111,7 +111,7 @@ to say SharkmanBruteSexBlowjob:
 		NPCSexAftermath Player receives "OralCock" from Skyler;
 	else:
 		CreatureSexAftermath "Player" receives "OralCock" from "Sharkman Brute";
-		if Snapjaw Beach Camp is not known:
+		if Snapjaw_Beach_Camp is not known:
 			say "[SharkmanBruteSBCEvent]";
 
 to say Sharkman Brute Desc:
@@ -138,8 +138,8 @@ to say SharkmanBruteSBCEvent:
 		say "     As he says this, he pulls you to him, hugs you closely, and then... You are forced to dive with him into the water, causing a loud and messy splash everywhere. The scare made you gasp, which was a good thing, because you are being brought deeper and deeper into the water as the sharkman swims at an incredible speed! His grip is powerful and tight, but also very secure, as he just continues to swim into this underwater passage and beyond while you do your best at holding your breath. Despite the length he mentioned, there always seems to be a sort of blue-ish light illuminating this tunnel, and an oddly unnatural one at that. Midway, it gets harder to hold your breath, but the sharkman, being aware of this, brings your mouth to his, which sustains you until the end of the trip...";
 		say "     Being a sort of amphibious hybrid creature has its perks, and it all proves to be worth it once you finally arrive at your destination...";
 		WaitLineBreak;
-		move player to Snapjaw Beach Camp;
-		move Skyler to Snapjaw Beach Camp;
+		move player to Snapjaw_Beach_Camp;
+		move Skyler to Snapjaw_Beach_Camp;
 		say "     Eventually, you are allowed to take a deep breath of fresh air as the sharkman emerges from the water, much clearer in comparison... And saltier. You cannot even tell how long you have been swimming with him, or rather, being carried over by him, but you sure are glad to be safe. 'There! We've just arrived! You good?' he asks with a silly cheerful smile that, pretty honestly, kind of looks a bit terrifying from this up close with all those teeth, though there is a slight bit of dorky adorableness to it. Still, you cannot help but feel a tad annoyed at how he pushed you into the water like that, so you give him an earful on how that is wrong and reckless. 'Hey, I knew we'd get here safely! Trust me, one of the things I know best besides fucking is swimming! And you're fine, aren't you? That's what matters!'";
 		say "     You really have to roll your eyes, but at least you are fine, indeed. And this beach seems to be quite nice, once you take some time to glance over your surroundings. 'This is where I and my mates live. We used to be on the main beach way over there,' he points north as he says this, 'But things didn't work out with the shark women, as they had this odd focus on behaving like pirates... We just wanna have fun, you know? So we traveled here and set up a camp... And the rest, well, you know.' It seems the sharkmen here have been getting through just fine, though if this is a camp, this must mean they may have some sort of leader, perhaps, so you ask him about it. 'Leader... Hm, I guess I'd be the closest to that...'";
 		WaitLineBreak;
@@ -147,7 +147,7 @@ to say SharkmanBruteSBCEvent:
 		say "     You can only ask what odd effects were those, and after throwing a chuckle, he replies, 'Our bodies! We're fucking beasts since we've been eating stuff from there! We even had to enlarge our shacks, and I can't even use my campervan anymore... Though, it seems the growth stopped for me. Not all of us were affected, however, but almost everyone was. We used to be just, like, a few inches taller than when we were human, basically. Now it's more like a few feet. Not that I'm complaining about it, honestly it just feels amazing...' Speaking of which, you now worry that you will not be able to take that passage on your own... 'Ah, well... If you ask nicely, I can take you back and forth, so don't worry. Your traveling won't be hindered in any way.'";
 		WaitLineBreak;
 		say "     If that is the case, maybe you could explore this beach a little bit and let Skyler be on his way. You let him know that you shall take a look around. 'Sure thing! You can find me in this area, mostly. Just ask around if you can't see me. Oh, and I'll let the folks know you're a welcome guest.' With that said, the sharkman lets you walk around freely as he lets everyone know you are, indeed, always welcome to their beach.";
-		AddNavPoint Snapjaw Beach Camp;
+		AddNavPoint Snapjaw_Beach_Camp;
 		now PlayerMet of Skyler is true;
 		say "     << Author's Note: This area, including Skyler himself and the Sharkmen Brute tribe, are all still under early development. More content on them will be added in the future! >>";
 	else:

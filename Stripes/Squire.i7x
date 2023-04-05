@@ -37,7 +37,8 @@ to say squiredesc:
 	now squirefeature is a random number between 1 and 5;
 	if debugactive is 1:
 		say "DEBUG: knightcrestnum: [knightcrestnum], playercrestnum: [playercrestnum], kpstatus: [kpstatus], squirefeature: [squirefeature].";
-	say "     Before you is a handsome young man with [if squirefeature is 1]scruffy brown hair[else if squirefeature is 2]blond locks[else if squirefeature is 3]a pretty-boy face[else if squirefeature is 4]goofy grin[else]bright, blue eyes[end if] in medieval garb. He has a happy eagerness to his face that tells you he's no longer quite right in the head. He is wearing simple breeches and a string-tied shirt with a loose-fitting tabard overtop. The tabard has the colorful crest of [stateknightcrest] on it. In his hand, he holds a short sword marred by a few nicks.";
+	project Figure of Squire_neutral_shirt_pants_shoes_armed_icon;
+	say "     Before you is a handsome young man with a smooth, beardless face, short blond hair and pale blue eyes, dressed in medieval garb. He has a happy eagerness to his face that tells you he's no longer quite right in the head. He is wearing simple leather shoes tied with a string, blue breeches and a white string-tied shirt. A thin leather strip is tied around his waist, holding the sheath of a fairly short sword, while the blade itself is in his hands, looking well-polished, if having a few nicks.";
 	say "     Sizing you up, he raises his sword towards you.";
 	if kpstatus is 1:				[player is Knight]
 		say "     'A knight? You would challenge my master? I think not! I am his brave squire and shall defeat you myself,' he says boldly, only a slight quaver in his voice and a few moment's pause before attacking.";
@@ -76,6 +77,7 @@ Section 2 - Monster Victory
 to say losetosquire:
 	if inasituation is true:
 		stop the action; [text taken care of at the source]
+	project Figure of Squire_smile_hard_icon;
 	if kpstatus is 1:
 		if HP of Player > 0:
 			say "     When you submit to the bold squire, he gives a nervous laugh before growing boastful once the surprise has passed. 'Not much of a knight at all, are you? You would surrender to a lowly squire? Clearly I am more a knight than you,' he adds as he stands taller and sheathes his small sword. 'It looks like you need some more training, and I'm just the brave warrior to do it,' he says, grabbing you in a surprisingly strong grip. Tugging down his breeches, he reveals his stiff member. His seven incher stands proud, hard and ready, as he pushes aside your garb, ready to finally take his turn on top.";

@@ -338,9 +338,14 @@ to say RanferTalkMenu:
 		now description entry is "He has specific tastes, why not ask him about them";
 	[]
 		choose a blank row in table of fucking options;
-		now title entry is "Ask him for some fur";
+		now title entry is "Creatures of interest";
 		now sortorder entry is 4;
-		now description entry is "Should be okay to ask for a fluff of smilodon fur, right";
+		now description entry is "Ask Ranfer what sort of encounters he would like to face with you";
+	[]
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him for some fur";
+		now sortorder entry is 5;
+		now description entry is "Should be okay to ask for a fluff of smilodon fur, right";		
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -363,6 +368,8 @@ to say RanferTalkMenu:
 					say "[RanferTalkInstincts]";
 				else if (nam is "His sexual preferences"):
 					say "[RanferTalkSex]";
+				else if (nam is "Creatures of interest"):
+					say "[RanferTalkCreatures]";
 				else if (nam is "Ask him for some fur"):
 					say "[RanferTalkAskFur]";
 				wait for any key;
@@ -391,6 +398,11 @@ to say RanferTalkInstincts:
 
 to say RanferTalkSex:
 	say "     Clearly, Ranfer prefers being a dominant, but what else does he like, you ask him. 'Oh, I love a smaller bottom. Tiny and cute, someone I can carry around, hug and squeeze tightly while I fuck them deep and lovingly... I'm down for either gender, as well, no preference there... As long as they're small cute little fuckable things.' he goes on about, and you can see his loincloth raising slightly as he speaks. 'Though I really enjoy being worshipped and serviced, as well. Nothing better than a dedicated kitten appreciating this body... muscles... everything, from head to paws... And head to feet, when I was still human. I've been doing this since I was able to fuck, quite honestly.' Seems like Ranfer gets really excited at the mere thought of that. Perhaps you should offer that kind of fun, sometime.";
+
+to say RanferTalkCreatures: [Ranfer mentions what creatures he has sex scenes with]
+	say "     It is fairly obvious that Ranfer likes a good fight, and he did not offer to become your bodyguard without any personal interest attached. Besides really being into you and feeling protective towards you, he really enjoys a good fight. With that in mind, you ask him what sort of creatures he would like to meet with you. He does give it some thought before replying, 'Hm... Honestly, anything you want to fight is good enough for me. Preferably something we can safely fuck in the end, and knowing our chances, we might be able to find some eager candidates very easily. I could make a few suggestions, however...' Curiosity immediately settling in, you tell him you would like to hear his suggestions. He gives you a pat on top of your head and a gentle brush on your cheek, then pulls you to him with an arm over your shoulders.";
+	[Werewolf Brute]
+	say "     'So... There's these werewolves in a place called Avalon. The big ones. It's always good fun facing one of those, as they're not merely aggressive. Just horny, I suppose. I fought one before, they're pretty tough, but they're also really sexy... I'm sure you'd like to share one with me. Or rather... Maybe being shared among the two of us,' he says with a wink and a very suggestive smirk. 'There's some weird thing you have to do to get there, but I'm sure you can figure it out.'";
 
 to say RanferTalkAskFur:
 	now RanferDoneTalking is true;
