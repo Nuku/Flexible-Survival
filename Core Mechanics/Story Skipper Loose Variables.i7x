@@ -799,14 +799,14 @@ to NumberVariableSave:
 			now NumberVarValue entry is dentedbikecount;
 		-- "didsubmit":
 			now NumberVarValue entry is didsubmit;
-		-- "DiegoBitched":
-			now NumberVarValue entry is DiegoBitched;
+		-- "Diegobitched":
+			now NumberVarValue entry is Diegobitched;
 		-- "DiegoButtSlut":
 			now NumberVarValue entry is DiegoButtSlut;
-		-- "DiegoChanged":
-			now NumberVarValue entry is DiegoChanged;
-		-- "DiegoFucked":
-			now NumberVarValue entry is DiegoFucked;
+		-- "Diegochanged":
+			now NumberVarValue entry is Diegochanged;
+		-- "Diegofucked":
+			now NumberVarValue entry is Diegofucked;
 		-- "dinonest":
 			now NumberVarValue entry is dinonest;
 		-- "dnfightresult":
@@ -4458,14 +4458,14 @@ to VariableNumberLoad:
 					now dentedbikecount is numberVarValue entry;
 				-- "didsubmit":
 					now didsubmit is numberVarValue entry;
-				-- "DiegoBitched":
-					now DiegoBitched is numberVarValue entry;
+				-- "Diegobitched":
+					now Diegobitched is numberVarValue entry;
 				-- "DiegoButtSlut":
 					now DiegoButtSlut is numberVarValue entry;
-				-- "DiegoChanged":
-					now DiegoChanged is numberVarValue entry;
-				-- "DiegoFucked":
-					now DiegoFucked is numberVarValue entry;
+				-- "Diegochanged":
+					now Diegochanged is numberVarValue entry;
+				-- "Diegofucked":
+					now Diegofucked is numberVarValue entry;
 				-- "dinonest":
 					now dinonest is numberVarValue entry;
 				-- "dnfightresult":
