@@ -1,6 +1,6 @@
 Version 1 of Saber Kitty by Blaydrex begins here.
 [ Version 1.2 - Minor scene tweaks - Stripes ]
-[ Version 1.1.1 - Added to Felinelist - Stripes ]
+[ Version 1.1.1 - Added to FelineList - Stripes ]
 
 "Adds Saber Kitty to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]

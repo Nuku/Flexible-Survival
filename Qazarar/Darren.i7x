@@ -153,9 +153,9 @@ to say DarrenTalk3: [helping]
 		[say "[DarrenRebuilding]";]
 
 to say DarrenRebuilding: [assorted tasks to improve the hideaway and get closer to Darren]
-	if hp of Darren is 0: [basic scene, cleaning things up]
+	if HP of Darren is 0: [basic scene, cleaning things up]
 		say "     A";
-	else if hp of Darren < 5:
+	else if HP of Darren < 5:
 		say "     A";
 		[insert talk style table with different tasks]
 	else:

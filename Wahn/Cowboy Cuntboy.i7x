@@ -54,7 +54,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Gypsy Horse";
-	add "Gypsy Horse Transman" to infections of Equinelist;
+	add "Gypsy Horse Transman" to infections of EquineList;
 	add "Gypsy Horse Transman" to infections of NatureList;
 	add "Gypsy Horse Transman" to infections of TransList;
 	add "Gypsy Horse Transman" to infections of BluntCockList;

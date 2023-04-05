@@ -64,11 +64,11 @@ Instead of going south from the Abandoned Lot:
 				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' Giving you an apologetic look, he quickly closes the slat again right after that.";
 			else:
 				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [FaceSpeciesName of Player in lower case] face.";
-		else if scalevalue of Player is 1 or scalevalue of Player > 3 or BodyName of Player is listed in infections of Taurlist: [small or large player, or taurs]
+		else if scalevalue of Player is 1 or scalevalue of Player > 3 or BodyName of Player is listed in infections of TaurList: [small or large player, or taurs]
 			if StevenSwayed is 1: [gave Steven soda before]
-				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if BodyName of Player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[else if scalevalue of Player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[else]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
+				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if BodyName of Player is listed in infections of TaurList]those four feet of yours. You're going to have to at least be humanoid, okay[else if scalevalue of Player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[else]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
 			else:
-				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if BodyName of Player is listed in infections of Taurlist]tauric body[else]altered body and its [Body Size Adjective of Player] size[end if].";
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if BodyName of Player is listed in infections of TaurList]tauric body[else]altered body and its [Body Size Adjective of Player] size[end if].";
 		else:
 			say "'Hello! Who's there?' a man from behind the door says, looking out at you.";
 			if StevenSwayed is 1: [gave Steven soda before]
@@ -731,7 +731,7 @@ When play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Morgan Horse";
-	add "Morgan Horse Stallion" to infections of Equinelist;
+	add "Morgan Horse Stallion" to infections of EquineList;
 	add "Morgan Horse Stallion" to infections of NatureList;
 	add "Morgan Horse Stallion" to infections of MaleList;
 	add "Morgan Horse Stallion" to infections of BluntCockList;

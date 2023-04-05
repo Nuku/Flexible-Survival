@@ -367,7 +367,7 @@ To Say ratslutwelcome:
 	if Breast Size of Player > 0:
 		say "     Her slender fingers brush up across your [Skin of Player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing,' she whispers as she gazes into your eyes with her own vibrantly violet ones. 'Such a good little bitch,' she croons[if Nipple Count of Player > 0], trailing claws down over your nipples[end if] as she looks downwards.";
 	[Male scene, 50% chance if herm]
-	if (player is puremale) or ( player is herm and a random chance of 1 in 2 succeeds):
+	if (player is puremale) or ( Player is herm and a random chance of 1 in 2 succeeds):
 		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of Player] [Cock of Player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
 		if Cock Count of Player > 1:
 			say ". Her fine whiskers tickle at your extra man meat. She leans back and brushes across all of your painfully erect shafts, tickling from the base to the tips and back down again in slow appraisal";

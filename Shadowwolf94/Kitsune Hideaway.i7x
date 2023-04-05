@@ -152,17 +152,17 @@ to say KitsuneTalk2:
 Section 3 - Kitsune Comments
 
 to say KitsuneGenderComment: [Comments on player's gender]
-	if Player is herm and breast Size of Player is 0: [Male Herm]
+	if Player is herm and Breast Size of Player is 0: [Male Herm]
 		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I am however noticing a flat chest though, which I must say has its own appeal even though it means that there is less of you to caress. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if player is herm and breast Size of Player > 0: [Herm]
+	else if Player is herm and Breast Size of Player > 0: [Herm]
 		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I also like that you have breasts. Gives me more to caress and stroke while we speak of sweet nothings. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is male and breast Size of Player is 0: [Male]
+	else if Player is male and Breast Size of Player is 0: [Male]
 		say "     'Oh my. Such a handsome man you are. If you've always had these looks then I'm sure that you were greatly admired by women, and probably men too. Otherwise, the outbreak in the city has really been kind to you. It would be selfish of you not to want to grace as many people with your presence, some more closely than others. Myself included, I might add[if Player is mpreg_ok]. I'm also sensing that you have a little secret. Something that males don't normally have the ability to do[end if]. ";
-	else if Player is male and breast Size of Player > 0: [Dick Girl]
+	else if Player is male and Breast Size of Player > 0: [Dick Girl]
 		say "     'I don't know where to look. Your breast or your cock. They're both calling to me, and I don't know which I like more. I would be curious to know whether you have always been gifted so, or whether the ongoing catastrophe granted you such a pleasing body. All the fun of being able to penetrate someone while having them caress the curves of your chest. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is female and breast Size of Player is 0: [Cuntboy]
+	else if Player is female and Breast Size of Player is 0: [Cuntboy]
 		say "     'I hope that you've been making mischief with that flat chest and the slit between your legs. Trick people into thinking that you bear the gifts of manhood, then shock them when you reveal that treasure between your legs. Having a flat chest has its own appeal, but it does mean that there is less of you to run my hands over. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is female and breast Size of Player > 0: [Female]
+	else if Player is female and Breast Size of Player > 0: [Female]
 		say "     'Aren't you just a delight to sex-starved eyes, my dear. Have you had problems with men and women following you home and wanting to get to know you? I'm sure that the residents of the city have been noticing you too. I wouldn't mind being a little closer to you, running my hands over your breasts, then across your tummy before sneaking down towards your cleft for just a moment. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if] ";
 	else: [Neuter]
 		say "     Oh. Well, you're a bit boring. Why are you so determined to miss out on the fun that you would disfigure yourself? Or was this forced upon you? If so, I'm sure there must be some sort of drug that can fix you one way or another. Pills? Potions? The loving touch of an over-enthusiastic lover to heal you of your deformity? Please excuse my rudeness, but your lack of genitals causes a sense of unease in me. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
@@ -210,11 +210,11 @@ to say KitsuneGenitalComment: [Comments on player's genitals]
 		say "Do you think that perhaps you've gone too far? There shouldn't be any cock that you can't fit in your pussy. ";
 	else: [Monstrous vagina]
 		say "I think by this point it isn't so much about what cocks you can fit in your pussy, but rather whether you can fit a person in there. I hope you have good muscle control in your vaginal walls. ";
-	if breast Size of Player is 0: [Flat-chested]
+	if Breast Size of Player is 0: [Flat-chested]
 		say "Some might think that the absence of breasts detracts from your image. Not me. It has its own appeal and means that I can feel your heartbeat more easily.'";
-	else if breast Size of Player < 3: [A or B]
+	else if Breast Size of Player < 3: [A or B]
 		say "I think that your breasts are very pretty. They compliment your appearance and give enough for a discerning fox to have a pleasurable squeeze.'";
-	else if breast Size of Player < 5: [C or D]
+	else if Breast Size of Player < 5: [C or D]
 		say "Now those are some nice breasts if ever I saw some. Enough to give someone a comfy head rest while snuggling or snoozing, but small enough that your life can go on without much difficulty.'";
 	else: [E and upwards (Maybe DD. I don't know breast sizing)]
 		say "Those are quite considerably sized breasts. I think that you could almost use them as weapons, especially given the current state of the city.'";

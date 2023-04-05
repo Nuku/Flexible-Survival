@@ -4,7 +4,7 @@ Version 2 of Casper by Prometheus begins here.
 
 [Blanche's fifth son. Creative]
 
-[   hp of Casper - relationship variable with the player          ]
+[   HP of Casper - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -60,8 +60,8 @@ an everyturn rule:
 				say "     [bold type]A warm hug from Casper heralds his arrival, the wolf enjoying the moment to show his affection towards you.[roman type][line break]";
 			move Casper to Grey Abbey Library;
 	else if Charisma of Blanche > 0:
-		if hp of Casper is 0:
-			now hp of Casper is 1;
+		if HP of Casper is 0:
+			now HP of Casper is 1;
 			move Casper to Computer Lab;
 
 Section 1 - NPC Declaration
@@ -113,7 +113,7 @@ The scent of Casper is "     Casper smells of cotton and wool, despite his curre
 to say CasperDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Casper] <- DEBUG[line break]";
-	if hp of Casper is 1:
+	if HP of Casper is 1:
 		say "     Casper is an anthropomorphic male wolf with luxuriant white fur covering his toned body. Quiet and unassuming most of the time, if asked to talk about his tailoring or characters from his comics he becomes much more enthusiastic as he gets a chance to reveal his creativity and talent, gesturing freely and talking free of any shame or timidity. Somewhat effeminate in appearance, he is is as naked as his siblings bar a soft leather collar around his neck, demonstrating that he is undoubtedly male, his fuzzy sheath and balls bouncing around as he sways to some tune that he is humming.";
 		say "     Realizing that he has caught your attention, Casper falls quiet and looks momentarily embarrassed before recovering and meeting your eye, smiling bashfully. Unlike his brothers and sisters, when out in the city scavenging, he often gets distracted by materials that are seemingly less important such as fabrics, comics, and posters. Fortunately for him, his scavenging-partner, Lumi, is capable of helping him with this even while fulfiling their primary duty too, enjoying the challenge and bringing the two of them closer together. While his tailoring ability isn't much used by his siblings, you know that Blanche has requested his services a few times. However, you have yet to see any of the garments that he has made for her, though given her nakedness this is of little surprise. You remain curious however.";
 

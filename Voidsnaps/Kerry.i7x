@@ -4,7 +4,11 @@ Kerry by Voidsnaps begins here.
 
 [Version 1 of Kerry and Shaw Events.]
 
-Section 1 - NPC Declarations
+Section 1 - NPC Declarations and Post Import Rule
+
+a postimport rule: [bugfixing rules for players that import savegames]
+	if Resolution of Dangerous Load is 1: [Watched Kerry fuck Shaw.]
+		AddNavPoint Ruined Apartments;
 
 Table of GameCharacterIDs (continued)
 object	name
