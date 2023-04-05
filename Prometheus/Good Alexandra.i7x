@@ -340,7 +340,7 @@ to say alexandratalk_gg_menu:
 		now title entry is "Boop";
 		now sortorder entry is 8;
 		now description entry is "Boop Alexandra on the nose.";
-	[if HP of Alexandra is 71:
+	[if hp of Alexandra is 71:
 		choose a blank row in table of fucking options;
 		now title entry is "Fight the Overmind";
 		now sortorder entry is 9;
@@ -635,7 +635,7 @@ to say alexandra_nextstep:
 	WaitLineBreak;
 	say "     You and Alexandra sit in silence for a few moments to digest what she has just read and the weight of what waits ahead of you. 'We have to go there, don't we? We can't automatically assume that this [']IA['] was successful, can we?' the Doberman asks rhetorically, already knowing the answer. With a sigh, she spreads the blueprints out on the table and you lean over the top of them beside her to study them. Whoever IA was, they have provided comprehensive notes to help you understand what you are seeing. While the building does have elevators, using them will apparently alert the Overmind to your presence, giving it the chance to process your memories before it assimilates you as yet another drone. Luckily, there are stairwells at the north and southern sides of the building, though IA warns that they do not know how useable they will still be. The secondary data port is on the fourteenth floor and should provide sufficient access for the viruses on the [']Factory Settings['] and [']One Track Mind['] USBs to reprogram the Overmind. The primary data port is on the thirtieth floor and all three USBs will work there. Access above the thirtieth floor would likely be a death sentence due to the saturation of the Overmind's nanites.";
 	say "     'This isn't going to be easy,' Alexandra sighs, though the look of determination on her face suggests that despite the difficulty of the task ahead that her resolve to end the Overmind's threat is undiminished. [bold type]'Take some time to prepare as I doubt that we'll be able to leave once we enter the building.[roman type] Talk to me when you're ready and we'll take this bastard down.' She gives your shoulder a squeeze as she stands up before walking away, likely to make her own preparations for what will be a [']death or glory['] mission. With a grim expression, you contemplate what you need to do before you will be ready to end this active menace to society.";
-	now HP of Alexandra is 71; [Ready to fight Overmind]]
+	now hp of Alexandra is 71; [Ready to fight Overmind]]
 
 to say alexandratalk_gg_boop:
 	say "     As you are about to boop her, Alexandra's hand brabs you by the wrist. 'Think through your next action very carefully,' she warns you before letting go. Your mind made up, you tap her on the end of the snout. 'You are so immature,' she sighs before smiling and resting her head on your shoulder. 'It's nice though. Reminds me what we are struggling on for.'";
@@ -1934,10 +1934,10 @@ To impregGoodAlexandraChance with (x - text):
 			say "     ERROR - Already pregnant!";
 	let AlexandraPregChance be 4; [40% base chance]
 	let MaxPups be 3;
-	if HP of Cleo is 0:
+	if hp of Cleo is 0:
 		now MaxPups is 1; [there can be only one!]
 	if Sterile of Alexandra is false and Sterile of Player is false and hunger of Alexandra is 1 and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
-		if HP of Cleo is 0:
+		if hp of Cleo is 0:
 			now AlexandraGrowingPups is 1;
 		else:
 			now AlexandraGrowingPups is a random number between 2 and MaxPups;
@@ -1957,7 +1957,7 @@ To impregGoodAlexandraChance with (x - text):
 				now AlexandraPupDaddy	is 5;]
 	else:
 		if debugactive is 1:
-			if HP of Alexandra is 0:
+			if hp of Alexandra is 0:
 				say "     Impregnation fail! It would seem that a police station isn't a good place to give birth.";
 			else:
 				say "     Impregnation fail! A chance of [AlexandraPregChance] in 10 didn't succeed.";
@@ -1974,7 +1974,7 @@ an everyturn rule:
 				say "     DEBUG: Alexandra's pregnancy advanced one turn. Current Turn: [lust of Alexandra], Target Value: 24";
 			[if level of Alexandra is 1 or level of Alexandra is 2 and a random chance of 1 in 3 succeeds, increase lust of Alexandra by 1; [pregnancy speed boost from player/Fang feats]]
 			if lust of Alexandra >= 24 and skipturnblocker is 0: [birthing time]
-				if HP of Cleo is 0:
+				if hp of Cleo is 0:
 					if Alexandra is not visible:
 						now lust of Alexandra is 24;
 					else:
@@ -2050,7 +2050,7 @@ an everyturn rule:
 
 Section 12 - Birth of Cleo
 
-instead of navigating Grey Abbey Library while (HP of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
+instead of navigating Grey Abbey Library while (hp of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -2058,7 +2058,7 @@ instead of navigating Grey Abbey Library while (HP of Cleo is 0 and Alexandra is
 		say "     DEBUG: Birth of Cleo[line break]";
 	say "[CleoBirth]";
 
-instead of going to Grey Abbey Library while (HP of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
+instead of going to Grey Abbey Library while (hp of Cleo is 0 and Alexandra is in Grey Abbey Library and Lust of Alexandra > 23):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Birth of Cleo[line break]";

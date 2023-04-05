@@ -389,7 +389,7 @@ instead of conversing the Eric:
 			say "     ([link]Y[as]y[end link]) - Get up and fight the green, hulking, and gender-switched ex-girlfriend off before she rapes Eric!";
 			say "     ([link]N[as]n[end link]) - On second thought... might be hot to just stand back and watch?";
 			if Player consents: [save him]
-				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until he's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
+				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
 				if CheerleaderFirstEncounter is 0:
 					now CheerleaderFirstEncounter is 2;
 					challenge "Hulking Cheerleader";

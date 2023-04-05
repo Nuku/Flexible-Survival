@@ -116,7 +116,7 @@ When Play begins:
 	add "Catgirl" to infections of FurryList;
 	add "Catgirl" to infections of NatureList;
 	add "Catgirl" to infections of FemaleList;
-	add "Catgirl" to infections of BarbedCockList;
+	add "Catgirl" to infections of BarbedCocklist;
 	add "Catgirl" to infections of BipedalList;
 	add "Catgirl" to infections of FeralmindList;
 	add "Catgirl" to infections of TailList;
@@ -301,7 +301,7 @@ When Play begins:
 	add "Catboy" to infections of FurryList;
 	add "Catboy" to infections of NatureList;
 	add "Catboy" to infections of FemaleList;
-	add "Catboy" to infections of BarbedCockList;
+	add "Catboy" to infections of BarbedCocklist;
 	add "Catboy" to infections of BipedalList;
 	add "Catboy" to infections of FeralmindList;
 	add "Catboy" to infections of TailList;
@@ -458,13 +458,13 @@ to say FionaRepeatMeeting:
 	if HP of Fiona is 4:
 		now HP of Fiona is 5;
 
-instead of going up from Bunker while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang is 2 or HP of Fang is 3 or HP of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
+instead of going up from Bunker while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: FIONA FANG WALKIN [line break]";
 	say "[FionaFangSex]";
 
-instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (HP of Fang is 2 or HP of Fang is 3 or HP of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
+instead of navigating Grey Abbey Library while (HP of Fiona > 3 and Fang is in Grey Abbey Library and Fang is Male and (hp of Fang is 2 or hp of Fang is 3 or hp of Fang is 4) and a random chance of 1 in 4 succeeds and (LastFuck of Fiona - Turns) > 10):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

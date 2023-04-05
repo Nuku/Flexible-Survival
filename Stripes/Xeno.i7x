@@ -39,7 +39,7 @@ to say losetoxeno:
 to say beatthexeno:
 	choose row MonsterID from the Table of Random Critters;
 	say "     Victorious over the alien creature, you knock the hissing black creature to the ground. Its tail thrashes and green goo leaks from its phallic probe. ";
-	if CockName of Player is "Xeno Drone" and Player is herm:
+	if CockName of Player is "Xeno Drone" and player is herm:
 		say "Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to pull its into your wet, vaginal hole. Your ovipositor squeeze and sucks at the cock inside it, milking at the black creature until it cums again and again, draining its internal balls into you to feed and fertilize the Xeno eggs inside you.";
 		say "     Overcome with instinct, you keep the Xeno pinned down, hissing in pleasure as these eggs start to travel out of your ovipositor. You have what feels like climax after climax as you release these eggs into the alien creature below, stuffing its egg chamber with your offspring until its carapace is stretched and bloated with your many swollen eggs added to her own. With a twisted sense of pride and accomplishment, you release the creature's ovipositor cock and send it off to find somewhere else to deposit the many eggs it now bears inside it.";
 		infect;

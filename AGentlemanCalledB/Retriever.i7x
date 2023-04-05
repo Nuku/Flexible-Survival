@@ -39,7 +39,7 @@ to say beattheRetriever:
 				else:
 					say "Within moments you are on all fours in front of her taking several long licks of her already moist cunt, savoring her flavor for a moment before you change to a position that allows her to make use of that long canine tongue as well.";
 					say "Before long, her expert ministrations have you approaching climax, and eager to return the favor, you find yourself driving deeper and deeper into your lover's sopping cunt.";
-					say "Without warning she suddenly drives her muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
+					say "Without warning she suddenly drives muzzle into you, teasing your innermost folds with her tongue as your world explodes, soaking her muzzle and face.";
 					WaitLineBreak;
 					say "As you begin to recover from your intense climax you realize your lover hasn't had hers. Hoping to catch her off guard like she did to you make a surprise assault on her dripping slit while she is busy licking your juices from her muzzle. You drive your tongue as deep into her as you can reach. The retriever gives a sharp yelp as she climaxes, soaking your face in her juices.";
 					say "As she pants happily you slowly get up and collect your things, leaving her to recover on her own as you leave.";

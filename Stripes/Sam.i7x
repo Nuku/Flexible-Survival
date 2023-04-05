@@ -814,7 +814,7 @@ to say sexwithSam:
 		now HP of Sam is 13;
 		now lastfuck of Sam is turns;
 	else if HP of Sam is 13 or HP of Sam is 14 or HP of Sam is 15 or HP of Sam is 16:
-		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList: [taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 			say "[samdragontaurfuck]";
 		else if a random chance of 3 in 5 succeeds:
 			say "[samdragonfuck]";
@@ -834,7 +834,7 @@ to say sexwithSam:
 		if Player is male, now HP of Sam is 33;
 		now lastfuck of Sam is turns;
 	else if HP of Sam >= 33 and HP of Sam <= 36:
-		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList: [male/herm taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [male/herm taur]
 			say "[samvixentaurfuck]";
 		else if a random chance of 3 in 5 succeeds and Player is male:
 			say "[samvixenfuck]";
@@ -851,7 +851,7 @@ to say sexwithSam:
 		now lastfuck of Sam is turns;
 		now HP of Sam is 53;
 	else if HP of Sam is 53:
-		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList: [taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 			if Player is herm:
 				if a random chance of 1 in 2 succeeds:
 					say "[samDVtaurfuck_top]";
@@ -887,7 +887,7 @@ to say sexwithSam:
 			tripletaur_active;
 			now HP of Sam is 55;
 		else:
-			if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList: [taur]
+			if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 				say "[samDVtaurfuck_top]";
 			else if a random chance of 3 in 5 succeeds:
 				say "[samDVfuck_top]";
@@ -919,7 +919,7 @@ to say sexwithSam:
 			now sortorder entry is 4;
 			now description entry is "screw the sexy hybrid";
 		[]
-			if bodyname of Player is listed in infections of TaurList:
+			if bodyname of Player is listed in infections of Taurlist:
 				choose a blank row in table of fucking options;
 				now title entry is "Mount Sammie";
 				now sortorder entry is 6;
@@ -930,7 +930,7 @@ to say sexwithSam:
 		now sortorder entry is 5;
 		now description entry is "have the sexy hybrid screw you";
 		[]
-		if bodyname of Player is listed in infections of TaurList:
+		if bodyname of Player is listed in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Mounted by Sammie";
 			now sortorder entry is 7;
@@ -1271,7 +1271,7 @@ to say SamShroomOral:	[Oral Shrinking Shroom scene]
 	say "     The hand that you're riding on moves up against Sam's mouth as they loll out their tongue, and after you take a deep breath, you jump onto the living welcome carpet, the soft muscle cushioning your fall, even if it makes for a somewhat wet landing. Sam's tongue then retracts between their teeth, taking you along with it, and you have a brief moment to marvel at the cave of pink flesh all around you before the mouth closes, plunging you into a muggy, heated darkness. You don't have long to acclimate to your new surroundings before you feel Sam's tongue rise up, and you're knocked onto your back when you're mashed against the top of their mouth. The tongue gently grinds you against the ceiling, and although your front is being pressed into a hard, bony surface, it is offset by the soft muscle squishing beneath you, giving you a form of erotic full-body massage. You can't help but moan in pleasure from the flurry of sensations, and you can feel a growing need in your loins.";
 	say "     But before you can have your mounting arousal tended to, the rubbing stops as the tongue lowers back down, and you're panting from the overwhelming stimuli to your senses. However, you're given no rest as Sam drops you to the bottom of the mouth, and their tongue promptly pins you against the base of their bottom teeth to lavish you with an onslaught of licks. You're already drenched from the earlier grinding, but Sam seems to be making extra sure that you're thoroughly coated as they lick every one of your nooks and crannies. You're unable to stop the massive muscle, not that you want to. The warm, soft tongue gently drags across your entire body, leaving nothing but pleasure in its wake, and your arousal shoots past the point that you were brought to earlier.";
 	WaitLineBreak;
-	say "     Almost as if sensing your growing need, Sam moves to focus on your lower half, the tip of their tongue carefully caressing [if Player is herm]all of your genitals[else if Player is male]your cock[smn][else if Player is female]your cunt[sfn][else]your groin[end if]. You don't last long under the oral ministrations, and you cry out when you hit your climax[if Player is herm], Sam humming in approval as your sexual fluids spray all over their taste buds[else if Player is male], Sam humming in approval as you cum all over their taste buds[else if Player is female], Sam humming in approval as your juices spray all over their taste buds[end if]. You slump onto the tongue in exhaustion, and you don't resist when it maneuvers you on top of it and ferries you to the back of the mouth. A little light shines in when Sam opens up to take a deep breath, giving you a glimpse of the drop into the scientist's throat right before they tilt their head back, sending you hurtling down into the pink abyss.";
+	say "     Almost as if sensing your growing need, Sam moves to focus on your lower half, the tip of their tongue carefully caressing [if player is herm]all of your genitals[else if Player is male]your cock[smn][else if Player is female]your cunt[sfn][else]your groin[end if]. You don't last long under the oral ministrations, and you cry out when you hit your climax[if player is herm], Sam humming in approval as your sexual fluids spray all over their taste buds[else if Player is male], Sam humming in approval as you cum all over their taste buds[else if Player is female], Sam humming in approval as your juices spray all over their taste buds[end if]. You slump onto the tongue in exhaustion, and you don't resist when it maneuvers you on top of it and ferries you to the back of the mouth. A little light shines in when Sam opens up to take a deep breath, giving you a glimpse of the drop into the scientist's throat right before they tilt their head back, sending you hurtling down into the pink abyss.";
 	say "     The passage quickly narrows down into a long, narrow tube, supple flesh squeezing down on your hapless form and slowing your descent while Sam's sigh of satisfaction echoes around you. Plunged into darkness once again, you can only concentrate on the sounds of squelching flesh and the feel of the throat muscles pressing into you. The tight, compressing passage makes it impossible for you to do little more than squirm, and all you can do is abide the muscles dragging you deeper into the dark depths. As the slick walls press in, you find that you're still sensitive from your earlier climax, and it doesn't take much for the encompassing silken touches to bring you to yet another orgasm. After what felt like an eternity of being subjugated to the pulsating walls and the pleasure that they constantly wring out of you, your feet briefly touches a wall before you are squeezed through a ring of flesh and fall into an open space that can only be the taur's stomach.";
 	say "     There is plenty of room in the living cavern, but your exhaustion from Sam's ministrations and traveling through their innards, as well as the constantly shifting floor, makes it impossible for you to stand, let alone move about. 'I have to admit, you were delicious,' comes Sam's voice from all around you. 'I certainly enjoyed our little experiment, and from the look of things, you did too. I'll need you to stay inside of my stomach for a while to make sure I can get good samples, so just sit back and relax for now. I'll let you out when I'm ready.' Tired yet satisfied by your miniature ordeal, you crawl into a spot where you can rest against the pliant wall. The warm, humid air and the oddly calming sounds of your squelching surroundings only add to your weariness, and it doesn't take long for you to pass out.";
 	WaitLineBreak;

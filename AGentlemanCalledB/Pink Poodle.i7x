@@ -17,7 +17,7 @@ to say PinkPoodledesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	if BodyName of Player is listed in infections of CanineList or FaceName of Player is listed in infections of CanineList or SkinName of Player is listed in infections of CanineList or CockName of Player is listed in infections of CanineList or TailName of Player is listed in infections of CanineList:
+	if BodyName of Player is listed in infections of Caninelist or FaceName of Player is listed in infections of Caninelist or SkinName of Player is listed in infections of Caninelist or CockName of Player is listed in infections of Caninelist or TailName of Player is listed in infections of Caninelist:
 		now poodleapproved is 1;
 	else:
 		now poodleapproved is 0;
@@ -335,8 +335,8 @@ When Play begins:
 	now heat duration entry is 10;
 	now trigger text entry is "     A subtle warmth fills your body as a dampness builds between your legs. Nested between your thighs your canine spade begins to puff up and swell while shifting to a light pink, making your body's heat-fueled need for a canine companion clear.";
 	now description text entry is "";
-	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
-	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
+	now heat start entry is "[pinkpoodleheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[pinkpoodleheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[pinkpoodleheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
@@ -394,13 +394,13 @@ to say PoodleHeatSuccumb:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 		choose row X from the Table of Random Critters;
 		if there is no area entry, next;
-		if area entry is heatzone and Name entry is listed in infections of CanineList:
+		if area entry is heatzone and Name entry is listed in infections of Caninelist:
 			add X to hmonList;
 	if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear nearby (Outside by default) ]
 			choose row X from the Table of Random Critters;
 			if there is no area entry, next;
-			if area entry is "Outside" and Name entry is listed in infections of CanineList:
+			if area entry is "Outside" and Name entry is listed in infections of Caninelist:
 				add X to hmonList;
 	sort hmonlist in random order;
 	now MonsterID is entry 1 of hmonList;

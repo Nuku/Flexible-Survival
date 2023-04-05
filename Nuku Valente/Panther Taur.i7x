@@ -28,7 +28,7 @@ To say panthertaur tempt: [player wins]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if Player is male [and BodyName of Player is not in infections of TaurList]:
+		if Player is male [and BodyName of Player is not in infections of Taurlist]:
 			choose a blank row in table of fucking options;
 			now title entry is "Mount the taur";
 			now sortorder entry is 1;
@@ -39,19 +39,19 @@ To say panthertaur tempt: [player wins]
 		now sortorder entry is 2;
 		now description entry is "Suck a load from the herm's thick cock";
 		[]
-		if Player is female [and BodyName of Player is not in infections of TaurList]:
+		if Player is female [and BodyName of Player is not in infections of Taurlist]:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her cock";
 			now sortorder entry is 3;
 			now description entry is "Get that thick feline shaft in your cunt on your terms";
 		[
-		if Player is male and BodyName of Player is in infections of TaurList:
+		if Player is male and BodyName of Player is in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Mount the other taur";
 			now sortorder entry is 4;
 			now description entry is "Mount the herm taur and stuff her cunt";
 		][
-		if Player is female and BodyName of Player is in infections of TaurList:
+		if Player is female and BodyName of Player is in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Get mounted by the other taur";
 			now sortorder entry is 5;
