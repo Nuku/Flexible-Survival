@@ -2,7 +2,7 @@ Version 2 of Sturm by Prometheus begins here.
 [ By Prometheus and Lost Directions]
 [ Version 2 - Movement Schedule and Companion Function - By Prometheus and Lost Directions]
 
-[   HP of Sturm - relationship variable with the player          ]
+[   hp of Sturm - relationship variable with the player          ]
 [   0: not met                                                   ]
 [   1: At the library                                            ]
 [   2: Improved relations with Player                            ]
@@ -13,7 +13,7 @@ Version 2 of Sturm by Prometheus begins here.
 
 [Movement Schedule]
 an everyturn rule:
-	if HP of Sturm > 1 and Charisma of Blanche > 3:
+	if hp of Sturm > 1 and Charisma of Blanche > 3:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
 			if Player is in Bunker and Sturm is in Bunker:
 				say "     [bold type]Sturm departs upstairs, telling Blanche that he's heading to the Courtyard.[roman type][line break]";
@@ -112,10 +112,10 @@ The scent of Sturm is "     Sturm, smells of the city. Sweat, sexual fluid, and 
 to say SturmDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sturm] <- DEBUG[line break]";
-	if HP of Sturm is 0:
+	if hp of Sturm is 0:
 		say "     Sturm is an anthropomorphic male wolf with thick white fur covering his large, toned body. As the eldest male child of Blanche he is frequently on guard outside of her office den, scrutinizing all that approach and ready to see off any threats, something that he seems quite capable of given that his family is still here. He doesn't bother to wear clothes leaving his body bare for all to see, including his plump sheath and heavy balls between his legs. You briefly wonder to yourself how many creatures have felt his weight atop them before shaking your head to dismiss the thought. There's very little way of knowing anyway.";
 		say "     Perhaps feeling your eyes running over him, Sturm looks at you and gives a disdainful snort before turning back to watch for threats. Like all of his siblings, he is devoted to his mother and her safety above all else, but unlike the others, he looks at you disapprovingly at times and you wonder what you have done to cause such an emotion to be directed at you. Most of the times that he catches himself doing it, he makes the effort to appear a little more friendly, but you are sure that the issue continues to fester below the surface, whatever it may be.";
-	else if HP of Sturm is 1:
+	else if hp of Sturm is 1:
 		say "     Sturm is an anthropomorphic male wolf with thick white fur covering his large, toned body. As the eldest male child of Blanche he is frequently on guard around the library, scrutinizing all that approach and ready to see off any threats, something that he seems quite capable of given that he protected his family when they were at the office den. He doesn't bother to wear clothes leaving his body bare for all to see, including his plump sheath and heavy balls between his legs. You briefly wonder to yourself how many creatures have felt his weight atop them before shaking your head to dismiss the thought. There's very little way of knowing anyway.";
 		say "     Perhaps feeling your eyes running over him, Sturm looks at you and gives an amused snort before turning back to what he was doing. Like all of his siblings, he is devoted to his mother and her safety above all else, though he does seem to look at Bianca nearly as protectively. While he seemed to be semi-hostile towards you, he has improved since he and his family moved here, though you are unsure whether this is only at his mother's instruction or if he has decided to let go of whatever grudge he had with you. Either way, it is a relief to not have him glowering at you.";
 

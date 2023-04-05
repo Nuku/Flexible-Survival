@@ -1728,8 +1728,8 @@ When Play begins:
 	now heat duration entry is 400;
 	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices. A wave of growing lust threatens to engulf you as you go into heat. If this is anything like what [Christy] feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
 	now description text entry is "";
-	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
-	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
+	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[sldrheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
@@ -1742,8 +1742,8 @@ When Play begins:
 	now heat duration entry is 400;
 	now trigger text entry is "You release a moan that grows into a needy roar as your pussy flows with hot juices. A wave of growing lust threatens to engulf you as you go into heat. If this is anything like what [Christy] feels, you start to understand the wanton demands of her dragonic body. You long to have a nice big cock inside you to breed you full of dragon eggs.";
 	now description text entry is "";
-	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
-	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
+	now heat start entry is "[sldrheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
+	now heat end entry is "[sldrheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[sldrheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
@@ -1791,7 +1791,7 @@ to say sldrheat:
 				if there is no area entry, next;
 				if there is no Name entry, next;
 				if area entry is battleground:
-					if Name entry is listed in infections of ReptileList:
+					if Name entry is listed in infections of Reptilelist:
 						add X to cmonList;
 			if cmonlist is not empty:
 				now slutfucked is 0;

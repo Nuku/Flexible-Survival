@@ -454,7 +454,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Zebra";
-	add "Zebra Stallion" to infections of EquineList;
+	add "Zebra Stallion" to infections of Equinelist;
 	add "Zebra Stallion" to infections of FurryList;
 	add "Zebra Stallion" to infections of MaleList;
 	add "Zebra Stallion" to infections of BluntCockList;

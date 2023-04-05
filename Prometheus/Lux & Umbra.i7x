@@ -311,7 +311,7 @@ to say Lux&UmbraResidentOpinion:
 					say "[Lux&UmbraResidentOpinion]";
 			-- 2: [Carl]
 				if Resolution of Lux & Carl Sexual Interest is 1 and Resolution of Umbra & Carl Sexual Interest is 1:
-					say "     'Carl's hot,' Umbra states, earning a roll of his sister's eyes. 'I mean, I agree, but did you have to say it so bluntly?' she asks him with exasperation. Umbra merely shrugs and gives her a toothy grin. Lux sighs before continuing discussing the husky soldier with you. 'Carl may be attractive, with a toned body and large in all the right places, but it isn't just physical attraction, his vigilance rivals [if Fang is Male]Daddy's[else]Mummy's[end if]. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our [if Fang is Male]father [else]mother [end if]could probably learn from. Not that I have a problem with [if Fang is Male]Daddy[else]Mummy[end if]. If everyone was the same it would be dull[if HP of Fang is 5 or HP of Fang is 6], a belief that I believe that [SubjectPro of Fang] shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
+					say "     'Carl's hot,' Umbra states, earning a roll of his sister's eyes. 'I mean, I agree, but did you have to say it so bluntly?' she asks him with exasperation. Umbra meerly shrugs and gives her a toothy grin. Lux sighs before continuing discussing the husky soldier with you. 'Carl may be attractive, with a toned body and large in all the right places, but it isn't just physical attraction, his vigilance rivals [if Fang is Male]Daddy's[else]Mummy's[end if]. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our [if Fang is Male]father [else]mother [end if]could probably learn from. Not that I have a problem with [if Fang is Male]Daddy[else]Mummy[end if]. If everyone was the same it would be dull[if HP of Fang is 5 or HP of Fang is 6], a belief that I believe that [SubjectPro of Fang] shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
 				else if Resolution of Lux & Carl Sexual Interest is 1:
 					say "     'Carl and I have been getting to know each other a little better, [if Resolution of Umbra & Carl Sexual Interest is 2]but that's sort of a sore point for Umbra as Carl doesn't seem to be interested in him,' Lux informs you, her brother letting out a grouchy snort and nosing at your hand to get you to pat him[else]but I think that Umbra is jealous,' Lux informs you, her brother all but confirming the statement with a sour grumble before nosing at your hand to pet him[end if]. You idly do so as your daughter continues. 'If my brother will excuse me continuing to answer your question, Carl is quite the example of masculine desirability with a toned body and large in all the right places, but it isn't just physical attraction, his vigilance rivals [if Fang is Male]Daddy's[else]Mummy's[end if]. Carl's dedication is admirable as is how friendly and approachable he seems to be, a trait that our [if Fang is Male]father [else]mother [end if]could probably learn from. Not that I have a problem with [if Fang is Male]Daddy[else]Mummy[end if]. If everyone was the same it would be dull[if HP of Fang is 5 or HP of Fang is 6], a belief that I believe that [SubjectPro of Fang] shares too[end if].' 'I help,' Umbra firmly adds. 'Yes. Umbra likes to help Carl keep watch from time to time and I suppose I occasionally do too, but I'm not sure how much help we are. He greets us with a smile either way,' Lux elaborates. You ruffle the fur on their heads and thank them for their opinion as they wait to see whether there was anything else that you wanted.";
 				else if Resolution of Umbra & Carl Sexual Interest is 1:
@@ -352,9 +352,9 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 6: [Sven]
-				if HP of Sven > 3 and HP of Sven < 11: [Subby]
+				if hp of Sven > 3 and hp of Sven < 11: [Subby]
 					say "     ";
-				else if HP of Sven > 29 and HP of Sven < 50: [Confident]
+				else if hp of Sven > 29 and hp of Sven < 50: [Confident]
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -366,7 +366,7 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 8: [Sandra]
-				if HP of Sandra > 0: [At Library]
+				if hp of Sandra > 0: [At Library]
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -375,7 +375,7 @@ to say Lux&UmbraResidentOpinion:
 			-- 9: [Alexandra]
 				if hunger of Alexandra is 1: [Good Alexandra]
 					say "     ";
-				else if HP of Alexandra > 0 and HP of Alexandra < 50: [Bad Alexandra]
+				else if hp of Alexandra > 0 and hp of Alexandra < 50: [Bad Alexandra]
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -389,13 +389,13 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 11: [Xerxes]
-				if HP of Xerxes > 0:
+				if hp of Xerxes > 0:
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 12: [Helen]
-				if HP of Helen > 0:
+				if hp of Helen > 0:
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -407,19 +407,19 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 14: [Elijah]
-				if HP of Elijah is 3 or HP of Elijah is 4:
+				if hp of Elijah is 3 or hp of Elijah is 4:
 					say "     ";
-				else if HP of Elijah is 99:
+				else if hp of Elijah is 99:
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 15: [Eric]
-				if HP of Eric > 9 and HP of Eric < 16: [Cuntboy]
+				if hp of Eric > 9 and hp of Eric < 16: [Cuntboy]
 					say "     ";
-				else if HP of Eric > 20 and HP of Eric < 43: [Male]
+				else if hp of Eric > 20 and hp of Eric < 43: [Male]
 					say "     ";
-				else if HP of Eric is 99:
+				else if hp of Eric is 99:
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -443,9 +443,9 @@ to say Lux&UmbraResidentOpinion:
 					increase Lux&UmbraResidentOpinionCount by 1;
 					say "[Lux&UmbraResidentOpinion]";
 			-- 19: [Tehuantl]
-				if HP of Tehuantl > 9 and HP of Tehuantl < 50: [Female]
+				if hp of Tehuantl > 9 and hp of Tehuantl < 50: [Female]
 					say "     ";
-				else if HP of Tehuantl > 49 and HP of Tehuantl < 100: [Male]
+				else if hp of Tehuantl > 49 and hp of Tehuantl < 100: [Male]
 					say "     ";
 				else:
 					increase Lux&UmbraResidentOpinionCount by 1;
@@ -743,7 +743,7 @@ Lux & Umbra Sexual Interest is a situation.
 The level of Lux & Umbra Sexual Interest is 0.
 The sarea of Lux & Umbra Sexual Interest is "Nowhere".
 
-instead of going to Computer Lab while HP of Lux is 4 and HP of Umbra is 4 and Lux is in Computer Lab and Umbra is in Computer Lab and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Umbra Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Computer Lab while hp of Lux is 4 and hp of Umbra is 4 and Lux is in Computer Lab and Umbra is in Computer Lab and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Umbra Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&UmbraSexualInterestEvent;
 
 to Lux&UmbraSexualInterestEvent: [Lux and Umbra express interest in each other] [Early Morning-Noon] [May be subject to change/improvement]
@@ -774,7 +774,7 @@ Lux & Fang Sexual Interest is a situation.
 The level of Lux & Fang Sexual Interest is 0.
 The sarea of Lux & Fang Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1  and HP of Fang < 6) and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1  and HP of Fang < 6) and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&FangSexualInterestEvent;
 
 to Lux&FangSexualInterestEvent: [Lux and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
@@ -828,7 +828,7 @@ Umbra & Fang Sexual Interest is a situation.
 The level of Umbra & Fang Sexual Interest is 0.
 The sarea of Umbra & Fang Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1 and HP of Fang < 6) and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1 and HP of Fang < 6) and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&FangSexualInterestEvent;
 
 to Umbra&FangSexualInterestEvent: [Umbra and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
@@ -882,7 +882,7 @@ Lux & Player Sexual Interest is a situation.
 The level of Lux & Player Sexual Interest is 0.
 The sarea of Lux & Player Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&PlayerSexualInterestEvent;
 
 to Lux&PlayerSexualInterestEvent: [Lux expresses interest in the player] [Noon-Early Night]
@@ -912,7 +912,7 @@ Umbra & Player Sexual Interest is a situation.
 The level of Umbra & Player Sexual Interest is 0.
 The sarea of Umbra & Player Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&PlayerSexualInterestEvent;
 
 to Umbra&PlayerSexualInterestEvent: [Umbra expresses interest in the player] [Noon-Early Night]
@@ -942,7 +942,7 @@ Lux & Carl Sexual Interest is a situation.
 The level of Lux & Carl Sexual Interest is 0.
 The sarea of Lux & Carl Sexual Interest is "Nowhere".
 
-instead of going up from Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and HP of Carl is 10 and MaleList is not banned and FemaleList is not banned and Lux & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going up from Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and hp of Carl is 10 and MaleList is not banned and FemaleList is not banned and Lux & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&CarlSexualInterestEvent;
 
 to Lux&CarlSexualInterestEvent: [Lux and Carl express interest in each other] [Noon-Early Night]
@@ -981,7 +981,7 @@ Umbra & Carl Sexual Interest is a situation.
 The level of Umbra & Carl Sexual Interest is 0.
 The sarea of Umbra & Carl Sexual Interest is "Nowhere".
 
-instead of going up from Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and HP of Carl is 10 and MaleList is not banned and Umbra & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going up from Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and hp of Carl is 10 and MaleList is not banned and Umbra & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&CarlSexualInterestEvent;
 
 to Umbra&CarlSexualInterestEvent: [Umbra and Carl express interest in each other] [Noon-Early Night]
@@ -998,7 +998,7 @@ to Umbra&CarlSexualInterestEvent: [Umbra and Carl express interest in each other
 		increase thirst of Umbra by 1;
 	else:
 		LineBreak;
-		say "     From the look on your face, Carl can tell that you aren't going to be supportive of him starting a more intimate relationship with your son but patiently waits for you to justify your decision. Sighing as you think through what you want to say, you then explain that despite Umbra's maturity, he is still relatively young and may not have the experience to understand and properly express his attraction to others. Given the potential danger of the city and the importance of maintaining the safety of everyone in the library, should a relationship between them turn sour, it wouldn't only be them that suffered the consequences. Carl looks like he is ready to argue, but bites back whatever he was about to say, reluctantly accepting this rationalizing of the factors behind your decision. 'I'll try and control myself and ignore his teasing then. I hope Umbra finds someone that he can be happy with. The kid deserves it,' the husky eventually says before turning back to the window. Recognizing that the conversation is over, you return to the top of the stairs and decide what to do next.";
+		say "     From the look on your face, Carl can tell that you aren't going to be supportive of him starting a more intimate relationship with your son but patiently waits for you to justify your decision. Sighing as you think through what you want to say, you then explain that despite Umbra's maturity, he is still relatively young and may not have the experience to understand and properly express his attraction to others. Given the potential danger of the city and the importance of maintaining the safety of everyone in the library, should a relationship between them turn sour, it wouldn't only be them that suffered the consequences. Carl looks like he is ready to argue, but bites back whatever he was about to say, reluctantly accepting this rationalising of the factors behind your decision. 'I'll try and control myself and ignore his teasing then. I hope Umbra finds someone that he can be happy with. The kid deserves it,' the husky eventually says before turning back to the window. Recognizing that the conversation is over, you return to the top of the stairs and decide what to do next.";
 		now Resolution of Umbra & Carl Sexual Interest is 2;
 	move player to Grey Abbey 2F;
 	now Umbra & Carl Sexual Interest is resolved;
@@ -1011,7 +1011,7 @@ Lux & Amy Sexual Interest is a situation.
 The level of Lux & Amy Sexual Interest is 0.
 The sarea of Lux & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and Lux is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&AmySexualInterestEvent;
 
 to Lux&AmySexualInterestEvent: [Lux and Amy express interest in each other] [Noon-Early Night] [Tummy Rubs]
@@ -1041,7 +1041,7 @@ Umbra & Amy Sexual Interest is a situation.
 The level of Umbra & Amy Sexual Interest is 0.
 The sarea of Umbra & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and Umbra is in Grey Abbey Library and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&AmySexualInterestEvent;
 
 to Umbra&AmySexualInterestEvent: [Umbra and Amy express interest in each other] [Noon-Early Night] [Asks Amy to read him some adult literature as Lux is busy]
@@ -1074,17 +1074,17 @@ Prereq1Resolution of Lux & Umbra First Mating is { 1 }.
 The level of Lux & Umbra First Mating is 0.
 The sarea of Lux & Umbra First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux > 3 and HP of Umbra > 3 and (TimekeepingVar is 4 or TimekeepingVar is -4) and MaleList is not banned and FemaleList is not banned and (Resolution of Lux & Umbra Sexual Interest is 1 and Lux & Fang Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved) and Lux & Umbra First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux > 3 and hp of Umbra > 3 and (TimekeepingVar is 4 or TimekeepingVar is -4) and MaleList is not banned and FemaleList is not banned and (Resolution of Lux & Umbra Sexual Interest is 1 and Lux & Fang Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved) and Lux & Umbra First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&UmbraFirstMatingEvent;
 
 to Lux&UmbraFirstMatingEvent: [Lux is mounted and bred by Umbra] [Mid Afternoon] [Near Entrance to Library]
-	if HP of Lux is 5: [Lux has sexual experience]
+	if hp of Lux is 5: [Lux has sexual experience]
 		say "     [See Lost Directions Suggestion]";
 		say "     ";
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	else if HP of Umbra is 5: [Umbra has sexual experience]
+	else if hp of Umbra is 5: [Umbra has sexual experience]
 		say "     [See Lost Directions Suggestion]";
 		say "     ";
 		WaitLineBreak;
@@ -1099,11 +1099,11 @@ to Lux&UmbraFirstMatingEvent: [Lux is mounted and bred by Umbra] [Mid Afternoon]
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	if HP of Lux < 5:
-		now HP of Lux is 5;
+	if hp of Lux < 5:
+		now hp of Lux is 5;
 		now hunger of Lux is 1;
-	if HP of Umbra < 5:
-		now HP of Umbra is 5;
+	if hp of Umbra < 5:
+		now hp of Umbra is 5;
 		now hunger of Umbra is 1;
 	now Lux & Umbra First Mating is resolved;
 
@@ -1117,7 +1117,7 @@ Prereq1Resolution of Lux & Fang First Mating is { 1 }.
 The level of Lux & Fang First Mating is 0.
 The sarea of Lux & Fang First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not banned and FemaleList is not banned and Resolution of Lux & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Lux & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not banned and FemaleList is not banned and Resolution of Lux & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Lux & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&FangFirstMatingEvent;
 
 to say Lux&FangFirstMatingEvent: [Lux is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
@@ -1139,7 +1139,7 @@ to say Lux&FangFirstMatingEvent: [Lux is mounted and bred by Fang] [Midnight] [I
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	now HP of Lux is 5;
+	now hp of Lux is 5;
 	now hunger of Lux is 2;
 	now Lux & Fang First Mating is resolved;
 
@@ -1153,7 +1153,7 @@ Prereq1Resolution of Umbra & Fang First Mating is { 1 }.
 The level of Umbra & Fang First Mating is 0.
 The sarea of Umbra & Fang First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not banned and Resolution of Umbra & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved and Umbra & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 1 or TimekeepingVar is -7) and MaleList is not banned and Resolution of Umbra & Fang Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved and Umbra & Fang First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&FangFirstMatingEvent;
 
 to say Umbra&FangFirstMatingEvent: [Umbra is mounted and bred by Fang] [Midnight] [In courtyard beneath Full Moon]
@@ -1175,7 +1175,7 @@ to say Umbra&FangFirstMatingEvent: [Umbra is mounted and bred by Fang] [Midnight
 		WaitLineBreak;
 		say "     ";
 		say "     ";
-	now HP of Umbra is 5;
+	now hp of Umbra is 5;
 	now hunger of Umbra is 2;
 	now Umbra & Fang First Mating is resolved;
 
@@ -1189,7 +1189,7 @@ Prereq1Resolution of Lux & Player First Mating is { 1 }.
 The level of Lux & Player First Mating is 0.
 The sarea of Lux & Player First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and FemaleList is not banned and Resolution of Lux & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Fang Sexual Interest is resolved and Lux & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and FemaleList is not banned and Resolution of Lux & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Lux & Fang Sexual Interest is resolved and Lux & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Lux&PlayerFirstMatingEvent;
 
 to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Entrance to Library]
@@ -1219,7 +1219,7 @@ to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Evening] [Near Ent
 			WaitLineBreak;
 			say "     ";
 			say "     ";
-	now HP of Lux is 5;
+	now hp of Lux is 5;
 	now hunger of Lux is 3;
 	now Lux & Player First Mating is resolved;
 
@@ -1233,7 +1233,7 @@ Prereq1Resolution of Umbra & Player First Mating is { 1 }.
 The level of Umbra & Player First Mating is 0.
 The sarea of Umbra & Player First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (TimekeepingVar is 3 or TimekeepingVar is -5) and Player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved and a random chance of 1 in 2 succeeds:
 	Umbra&PlayerFirstMatingEvent;
 
 to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near Entrance to Library]
@@ -1277,7 +1277,7 @@ to say Umbra&PlayerFirstMatingEvent: [Umbra has sex with player] [Evening] [Near
 			WaitLineBreak;
 			say "     ";
 			say "     ";
-	now HP of Umbra is 5;
+	now hp of Umbra is 5;
 	now hunger of Umbra is 3;
 	now Umbra & Player First Mating is resolved;
 
@@ -1291,7 +1291,7 @@ Prereq1Resolution of Lux & Carl First Mating is { 1 }.
 The level of Lux & Carl First Mating is 0.
 The sarea of Lux & Carl First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and HP of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Carl Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and hp of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Carl Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy is not resolved) and a random chance of 1 in 2 succeeds:
 	Lux&CarlFirstMatingEvent;
 
 to say Lux&CarlFirstMatingEvent: [Lux is mounted and bred by Carl] [Pre Dawn] [Upstairs where Carl keeps watch]
@@ -1300,7 +1300,7 @@ to say Lux&CarlFirstMatingEvent: [Lux is mounted and bred by Carl] [Pre Dawn] [U
 	WaitLineBreak;
 	say "     ";
 	say "     ";
-	now HP of Lux is 5;
+	now hp of Lux is 5;
 	now hunger of Lux is 4;
 	now Lux & Carl First Mating is resolved;
 
@@ -1314,7 +1314,7 @@ Prereq1Resolution of Umbra & Carl First Mating is { 1 }.
 The level of Umbra & Carl First Mating is 0.
 The sarea of Umbra & Carl First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and HP of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Carl Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and hp of Carl is 10 and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Carl Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy is not resolved) and a random chance of 1 in 2 succeeds:
 	Umbra&CarlFirstMatingEvent;
 
 to say Umbra&CarlFirstMatingEvent: [Umbra is mounted and bred by Carl] [Pre Dawn] [Upstairs where Carl keeps watch]
@@ -1323,7 +1323,7 @@ to say Umbra&CarlFirstMatingEvent: [Umbra is mounted and bred by Carl] [Pre Dawn
 	WaitLineBreak;
 	say "     ";
 	say "     ";
-	now HP of Umbra is 5;
+	now hp of Umbra is 5;
 	now hunger of Umbra is 4;
 	now Umbra & Carl First Mating is resolved;
 
@@ -1337,7 +1337,7 @@ Prereq1Resolution of Lux & Amy First Mating is { 1 }.
 The level of Lux & Amy First Mating is 0.
 The sarea of Lux & Amy First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Amy Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Lux is 4 and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Lux & Amy Sexual Interest is 1 and (Lux & Carl First Mating is not resolved and Lux & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
 	Lux&AmyFirstMatingEvent;
 
 to say Lux&AmyFirstMatingEvent: [Amy is mounted and bred by Lux] [Pre Dawn] [Quiet (or not) corner of the library]
@@ -1346,7 +1346,7 @@ to say Lux&AmyFirstMatingEvent: [Amy is mounted and bred by Lux] [Pre Dawn] [Qui
 	WaitLineBreak;
 	say "     ";
 	say "     ";
-	now HP of Lux is 5;
+	now hp of Lux is 5;
 	now hunger of Lux is 4;
 	now Lux & Amy First Mating is resolved;
 
@@ -1360,7 +1360,7 @@ Prereq1Resolution of Umbra & Amy First Mating is { 1 }.
 The level of Umbra & Amy First Mating is 0.
 The sarea of Umbra & Amy First Mating is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Amy Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
+instead of going to Grey Abbey Library while hp of Umbra is 4 and (hp of Amy > 10 and hp of Amy < 13 and Amy is booked) and (TimekeepingVar is 0 or TimekeepingVar is -8) and MaleList is not banned and FemaleList is not banned and resolution of Umbra & Amy Sexual Interest is 1 and (Umbra & Carl First Mating is not resolved and Umbra & Amy First Mating is not resolved) and a random chance of 1 in 2 succeeds:
 	Umbra&AmyFirstMatingEvent;
 
 to say Umbra&AmyFirstMatingEvent: [Amy is mounted and bred by Umbra] [Pre Dawn] [Quiet (or not) corner of the library]
@@ -1369,7 +1369,7 @@ to say Umbra&AmyFirstMatingEvent: [Amy is mounted and bred by Umbra] [Pre Dawn] 
 	WaitLineBreak;
 	say "     ";
 	say "     ";
-	now HP of Umbra is 5;
+	now hp of Umbra is 5;
 	now hunger of Umbra is 4;
 	now Umbra & Amy First Mating is resolved;]
 

@@ -30,7 +30,7 @@ to say Feral Wolf Male attack:
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
 		if FeralWolfMaleDefeat is 0:
-			say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of CanineList]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
+			say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
 			say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of Player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
 			WaitLineBreak;
 			say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of Player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
@@ -65,7 +65,7 @@ to say Feral Wolf Male attack:
 				say "Offering you a dark growl as a parting remark, you tremble at what ill intent he might have in store for you should you meet him again.";
 				CreatureSexAftermath "Player" receives "AssFuck" from "Feral Wolf Male";
 			else:
-				say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of CanineList]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
+				say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if BodyName of Player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
 				say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of Player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
 				WaitLineBreak;
 				say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of Player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
@@ -83,7 +83,7 @@ to say BeatFeralWolfMale:
 	increase FangCount by 40;
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
-	else if inasituation is false and FeralWolfMaleFight is not 3 and (HP of Fang is 0 or HP of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
+	else if inasituation is false and FeralWolfMaleFight is not 3 and (HP of Fang is 0 or hp of Fang is 99):		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( FangCount - 95 ) and (Player is not neuter ):	[3rd to 5th wolf]
 			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
@@ -148,10 +148,10 @@ to say BeatFeralWolfMale:
 			else:
 				LineBreak;
 				say "     Not wanting to risk bringing such a beast back to your safehouse, you strike the cowering cur again and continue on your way.";
-				if HP of Fang is 99:
+				if hp of Fang is 99:
 					now HP of Fang is 100; [Fang refused completely]
 				else:
-					now HP of Fang is 98; [Fang refused as Male]
+					now hp of Fang is 98; [Fang refused as Male]
 		else:
 			say "[FeralWolfVictorySex]";
 	else:

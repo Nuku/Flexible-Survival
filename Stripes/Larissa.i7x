@@ -225,7 +225,7 @@ to say sexwithLarissa:
 
 
 to say LarissaTFsex:		[Menu options to be added later as more scenes are composed?]
-	if ( ( Player is male and Cunt Count of Larissa > 0 ) or ( Player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of TaurList and LarissaBodycat is 2:
+	if ( ( Player is male and Cunt Count of Larissa > 0 ) or ( Player is female and Cock Count of Larissa > 0 ) ) and a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist and LarissaBodycat is 2:
 		say "[Larissasex_taurfun]";
 	else if Player is herm and Larissa is herm:			[H/H]
 		if a random chance of 1 in 2 succeeds:
@@ -244,14 +244,14 @@ to say LarissaTFsex:		[Menu options to be added later as more scenes are compose
 		say "***Larissa neuter. No scene yet.";
 
 [ cock/cunt size scaling:
-Cock Length > ( ( Cunt Depth * 2) + Cunt Tightness + 2 )		:	over the limit
-Cock Length > ( Cunt Depth + Cunt Tightness + 2 )			:	large
-Cock Length	< ( ( Cunt Depth + Cunt Tightness + 1 ) / 3 )	:	small
+cock length > ( ( Cunt Depth * 2) + cunt width + 2 )		:	over the limit
+cock length > ( Cunt Depth + cunt width + 2 )			:	large
+cock length	< ( ( Cunt Depth + cunt width + 1 ) / 3 )	:	small
 
 cum output scaling:
-Ball Size >= ( scalevalue + 1 ) * 10				:	super-stuffed
-Ball Size >= ( scalevalue + 1 ) * 5				:	plumped
-Ball Size >= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
+cock width >= ( scalevalue + 1 ) * 10				:	super-stuffed
+cock width >= ( scalevalue + 1 ) * 5				:	plumped
+cock width >= ( ( scalevalue + 1 ) * 5 ) / 2			:	full
 ]
 
 to say Larissasex_MF:

@@ -59,7 +59,7 @@ to say latexfoxdefeat:
 		say "[one of]With one final lash, the latex fox begins to make a whining sound.[run paragraph on] It appears that the creature is deflating, flumping onto the ground as an inanimate pile of rubber.[run paragraph on] It's unclear if the thing is dead or simply pretending to be to make you leave[or]Striking the critter down, he yips loudly, bouncing off into the distance and away from you[at random]. With the matter attended to, you move on.";
 
 to latexfoxdefeatsex:
-	if ( Player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( Player is herm and a random chance of 1 in 2 succeeds ):
+	if ( Player is female and (Cock Count of Player is 0 or anallevel is 1)) or ( player is herm and a random chance of 1 in 2 succeeds ):
 		say "     The critter lays on the ground, his big red knotted cock looking painfully erect. Not wanting to waste such a perfect opportunity, you straddle the fox and slowly ease yourself down. His paws move to your hips, then up to your [bodytype of Player] body as you get into position.";
 		if Cunt Depth of Player < 6:
 			say "     As the tip of the fox's shaft reaches[if Cunt Count of Player > 1] one of[end if] your opening[sfn], you realize it is far too big for you to accommodate. Seeing your frustration, the fox lets out a long, hissing sigh and seems to shrink in size. You now easily take him right down to the knot.";

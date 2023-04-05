@@ -516,7 +516,7 @@ this is the fpony rule:
 	if a random chance of 2 in 5 succeeds:
 		decrease HP of Player by wdam entry / 2;
 		let libgrowth be wdam entry / 2;
-		if FaceName of Player is listed in infections of EquineList, increase libgrowth by 1;
+		if FaceName of Player is listed in infections of equinelist, increase libgrowth by 1;
 		if "Cold Fish" is listed in feats of Player, decrease libgrowth by a random number between 1 and 2;
 		if "Horny Bastard" is listed in feats of Player, increase libgrowth by a random number between 0 and 2;
 		if libgrowth > 10, now libgrowth is 10;

@@ -4,7 +4,7 @@ Version 2 of Maeve by Prometheus begins here.
 
 [Blanche's fourth daughter. Willful]
 
-[   HP of Maeve - relationship variable with the player          ]
+[   hp of Maeve - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -58,8 +58,8 @@ an everyturn rule:
 				say "     [bold type]With a hug goodbye, Maeve tells you not to have too much fun while she and Bernard are out scavenging.[roman type][line break]";
 			move Maeve to Nowhere;
 	else if Charisma of Blanche > 0:
-		if HP of Maeve is 0:
-			now HP of Maeve is 1;
+		if hp of Maeve is 0:
+			now hp of Maeve is 1;
 			move Maeve to Breakroom;
 
 Section 1 - NPC Declaration
@@ -111,7 +111,7 @@ The scent of Maeve is "     Maeve smells of a multitude of things, only a few of
 to say MaeveDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Maeve] <- DEBUG[line break]";
-	if HP of Maeve is 1:
+	if hp of Maeve is 1:
 		say "     Maeve is an anthropomorphic female wolf with silky white fur. Always coming up with hare-brained schemes, she is the type to attempt something without fully thinking through the execution or the possible outcomes, leaving her in awkward situations that require the her family, usually Bernard, to help her out of. She is not above using her usual nakedness to grab someones attention before lulling them into a sense of safety, false or otherwise, her C-cup breasts swaying hypnotically in time with her hips, the black lips of her vulva peeking out occasionally. While she has no training in proper hypnotism, you doubt that she would be above learning such arts to compliment her current grasp of magic tricks and misdirection.";
 		say "     You realize that you have been staring at Maeve for longer than you had intended and that she is looking back at you, a cheeky smirk on her face. Outwardly friendly and agreeable, it can be difficult at times to be sure that she isn't working some angle or buttering someone up for later fun. Despite her mischievous ways, she is well liked by her family, especially when she is hyping her next [']get rich quick['] scheme that any sensible person would be skeptical of, or performing magic tricks using sleight of hand. She is especially close to Bernard, the contrast between them only serving to further complement their respective capabilities when out scavenging.";
 

@@ -4,7 +4,7 @@ Version 2 of Bianca by Prometheus begins here.
 
 [Blanche's eldest daughter. Seductive]
 
-[   HP of Bianca - relationship variable with the player          ]
+[   hp of Bianca - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				move Sturm to Bunker;
 				move Bianca to Grey Abbey Garden;]
 	else if Charisma of Blanche > 0:
-		if HP of Bianca is 0:
-			now HP of Bianca is 1;
+		if hp of Bianca is 0:
+			now hp of Bianca is 1;
 			move Bianca to Computer Lab;
 
 Section 1 - NPC Declaration

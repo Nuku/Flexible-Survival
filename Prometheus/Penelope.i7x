@@ -4,7 +4,7 @@ Version 2 of Penelope by Prometheus begins here.
 
 [Blanche's second daughter. Resolute]
 
-[   HP of Penelope - relationship variable with the player          ]
+[   hp of Penelope - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Penelope gives you a warm hug before walking over to where Lumi has prepared an area for the two of them to practice fighting.[roman type][line break]";
 			move Penelope to Garden;
 	else if Charisma of Blanche > 0:
-		if HP of Penelope is 0:
-			now HP of Penelope is 1;
+		if hp of Penelope is 0:
+			now hp of Penelope is 1;
 			move Penelope to Computer Lab;
 
 Section 1 - NPC Declaration

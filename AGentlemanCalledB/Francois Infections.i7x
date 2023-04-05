@@ -3,19 +3,19 @@ Version 1 of Francois Infections by AGentlemanCalledB begins here.
 
 Section 1 - Creature Responses
 
-Cheesecakemode is a number that varies. [1 = slim, 0 = Rubenesque]
+Cheesecakemode is a number that varies. [1 = slim, 0 = rubenesque]
 
 to say CheesecakeBodyDesc:
 	if cheesecakemode is 1:
 		say "slim and [if Player is female]feminine[else]girlish[end if], with a tight, attractive figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
 	else:
-		say "hefty and Rubenesque with a luscious [if Player is female]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
+		say "hefty and rubenesque with a luscious [if Player is female]feminine[else]girlish[end if] figure. A gentle prodding reveals your flesh is soft and malleable, like cheesecake[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso, boosting your breasts up into full view while doing little to protect your decency[else if Player is cheesecakeskinned]. You have a delicious corset made of flaky pastry crust formed tightly around your torso[end if]";
 
 to say CheesecakeBodyTF:
 	if cheesecakemode is 1:
 		say "it becomes soft and malleable, just like cheesecake, shifting to a slender [if Player is female]feminine[else]girlish[end if] form[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
 	else:
-		say "it becomes soft and malleable, just like cheesecake. You can't help but moan slightly as your form shifts, becoming plump and curvaceous, leaving you hefty and Rubenesque[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
+		say "it becomes soft and malleable, just like cheesecake. You can't help but moan slightly as your form shifts, becoming plump and curvaceous, leaving you hefty and rubenesque[if Breast Size of Player > 0 and Nipple Count of Player > 0 and player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you, boosting your breasts up into full view[else if Player is cheesecakeskinned]. You feel a sudden tightness forming around your body as a tight corset made of flaky pastry forms around you[end if]";
 
 Definition: a person is Cheesecakeskinned:
 	if Player has a skin of "Cheesecake", yes;

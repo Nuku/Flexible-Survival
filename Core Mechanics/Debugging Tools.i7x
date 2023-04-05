@@ -513,7 +513,7 @@ carry out TagListReadout:
 	sort Infections of ArachnidList;
 	sort Infections of AvianList;
 	sort Infections of AvianpredList;
-	sort Infections of BovineList;
+	sort Infections of Bovinelist;
 	sort Infections of CanineList;
 	sort Infections of CervineList;
 	sort Infections of CetaceanList;
@@ -586,7 +586,7 @@ carry out TagListReadout:
 	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
 	say "AvianList: [Infections of AvianList][line break][line break]";
 	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
-	say "BovineList: [Infections of BovineList][line break][line break]";
+	say "Bovinelist: [Infections of Bovinelist][line break][line break]";
 	say "CanineList: [Infections of CanineList][line break][line break]";
 	say "CervineList: [Infections of CervineList][line break][line break]";
 	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
