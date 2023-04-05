@@ -458,8 +458,8 @@ When Play begins:
 	now heat duration entry is 4;
 	now trigger text entry is "A whimper of need escapes your lips as a rush of heat builds between your legs. Nested between your thighs your canine spade begins to puff up and swell, engorging and becoming looser for your desired mate. You leak pheromone-laden juices steadily as your body goes into heat. As these sensations grow, your need to be bred increases.";
 	now description text entry is "";
-	now heat start entry is "[collieheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
-	now heat end entry is "[collieheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
+	now heat start entry is "[collieheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt tightness]
+	now heat end entry is "[collieheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt tightness]
 	now inheat entry is "[collieinheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;

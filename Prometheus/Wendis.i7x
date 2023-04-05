@@ -4,7 +4,7 @@ Version 2 of Wendis by Prometheus begins here.
 
 [Blanche's third daughter. Joy]
 
-[   hp of Wendis - relationship variable with the player          ]
+[   HP of Wendis - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Wendis walks in and hugs you before wandering off with Casper, the two of them discussing body art and clothes.[roman type][line break]";
 			move Wendis to Grey Abbey Library;
 	else if Charisma of Blanche > 0:
-		if hp of Wendis is 0:
-			now hp of Wendis is 1;
+		if HP of Wendis is 0:
+			now HP of Wendis is 1;
 			move Wendis to Computer Lab;
 
 Section 1 - NPC Declaration
@@ -114,7 +114,7 @@ The scent of Wendis is "     Wendis smells of sweets, though where she found the
 to say WendisDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Wendis] <- DEBUG[line break]";
-	if hp of Wendis is 1:
+	if HP of Wendis is 1:
 		say "     Wendis is an anthropomorphic female wolf with soft and fluffy white fur covering her petite frame. Much smaller than her siblings, maybe only four foot tall at most, she frequently takes advantage of her appearance to tug on the heartstrings of the more friendly occupants of the city while out scavenging. Care-free and friendly, possibly to the point of naivety, she is usually cheerful, her tail wagging wildly behind her as she attempts to brighten her siblings['] day. Despite her height, she is no child, two B-cup breasts hidden beneath the lush fur of her chest and a delicate curve to her waist. Like the majority of her family, she eskews wearing clothes, meaning that occasionally you catch sight of her puffy vulva beneath her restless tail.";
 		say "     Noticing that she has caught your attention, Wendis rushes over to you and hugs you with all her might before leaping back and hopping from one hind-paw to the other with excitement, inadvertently jiggling her modest chest about as she moves. Often seen hanging around the neck of her older sister, Penelope, who seems to be her favorite person in the world, she spends a significant amount of her time boosting the morale of siblings who have had limited success in their scavenging runs or practicing her aim at throwing stones due to her physiological limitations. It would be hard to find anyone who dislikes her.";
 
@@ -204,7 +204,7 @@ to say WendisTalk3: [Companion]
 Section 3 - Sex
 
 instead of fucking Wendis:
-	say "     'That sounds fun, but I think that I'm still getting to know you. There are some really dirty books if you look in the right places and Bianca lets me look at her collection of pictures that she found while scavenging, perhaps she'd let you look too? We also occassionally play a game where we pose hypothetical lewd situations to each other and have to answer what we would do in them[if IncestList is not warded and IncestList is not banned]. Even Mommy joins in and then it's really fun[end if]. You could play it with us too if you want.' While Wendis has said no, it sounds like she is very open to the idea in future.";
+	say "     'That sounds fun, but I think that I'm still getting to know you. There are some really dirty books if you look in the right places and Bianca lets me look at her collection of pictures that she found while scavenging, perhaps she'd let you look too? We also occasionally play a game where we pose hypothetical lewd situations to each other and have to answer what we would do in them[if IncestList is not warded and IncestList is not banned]. Even Mommy joins in and then it's really fun[end if]. You could play it with us too if you want.' While Wendis has said no, it sounds like she is very open to the idea in future.";
 
 Section 4 - Events
 
