@@ -111,7 +111,7 @@ to say SharkmanBruteSexBlowjob:
 		NPCSexAftermath Player receives "OralCock" from Skyler;
 	else:
 		CreatureSexAftermath "Player" receives "OralCock" from "Sharkman Brute";
-		if Snapjaw Beach Camp is not known:
+		if Snapjaw_Beach_Camp is not known:
 			say "[SharkmanBruteSBCEvent]";
 
 to say Sharkman Brute Desc:
