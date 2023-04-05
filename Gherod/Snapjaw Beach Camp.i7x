@@ -34,6 +34,7 @@ instead of smelling Snapjaw_Beach_Camp:
 Table of GameRoomIDs (continued)
 Object	Name
 Snapjaw_Beach_South	"Snapjaw_Beach_South"
+Snapjaw_Beach_South	"Snapjaw Beach South"
 
 Snapjaw_Beach_South is a room.
 Printed name of Snapjaw_Beach_South is "Snapjaw Beach South".
@@ -52,6 +53,7 @@ instead of smelling Snapjaw_Beach_South:
 Table of GameRoomIDs (continued)
 Object	Name
 Snapjaw_Beach_North	"Snapjaw_Beach_North"
+Snapjaw_Beach_North	"Snapjaw Beach North"
 
 Snapjaw_Beach_North is a room.
 Snapjaw_Beach_North is north of Snapjaw_Beach_Camp. It is sleepsafe.
