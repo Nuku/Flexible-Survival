@@ -1411,7 +1411,7 @@ to say SonyaSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Have sex with your Viking wife, tying her with your knot";
 	[]
-	if Player is male and CockName of Player is listed in infections of FelineList:
+	if Player is male and CockName of Player is listed in infections of felinelist:
 		choose a blank row in table of fucking options;
 		now title entry is "Let her ride your feline shaft";
 		now sortorder entry is 3;

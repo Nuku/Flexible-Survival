@@ -54,7 +54,7 @@ to say losetojaguar:
 
 
 to say beatthejaguar:
-	if Libido of Player >= 30 or ( ( BodyName of Player is listed in infections of FelineList or FaceName of Player is listed in infections of FelineList ) and Libido of Player >= 15 ) or "Dominant" is listed in feats of Player:
+	if Libido of Player >= 30 or ( ( BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist ) and Libido of Player >= 15 ) or "Dominant" is listed in feats of Player:
 		say "     Looking over the powerful feline and the bulge in his crotch, you find yourself considering taking advantage of the situation to have some quick fun.";
 		if Player is male:
 			say "     You could either fuck him [link](1)[as]1[end link], get his cock inside you [link](2)[as]2[end link] or just leave[link](3)[as]3[end link].";

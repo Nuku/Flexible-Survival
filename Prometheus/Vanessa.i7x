@@ -297,7 +297,7 @@ to say Vanessasexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if Player is male:
-		if BodyName of Player is not listed in infections of TaurList:
+		if BodyName of Player is not listed in infections of taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck her";
 			now sortorder entry is 1;

@@ -1,6 +1,6 @@
 Version 1 of Hope-Born Dragon by Prometheus begins here.
 
-[HP of Hope-Born Dragon]
+[hp of Hope-Born Dragon]
 [ 1 - Egg - Not yet interacted with ]
 [ 2 - Egg - Sex Decided             ]
 [ 3 - Egg - Form Decided            ]
@@ -105,7 +105,7 @@ Version 1 of Hope-Born Dragon by Prometheus begins here.
 Hope-BornDragonName is a text that varies.
 
 a postimport rule: [bugfixing rules for players that import savegames]
-	if HP of Hope-Born Dragon > 5:
+	if hp of Hope-Born Dragon > 5:
 		move Dragon Egg to Nowhere;
 
 Section 1 - Dragon Egg
@@ -158,7 +158,7 @@ the scent of Dragon Egg is "The egg smells of dragons and adventure."
 to say DragonEggDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Hope-Born Dragon] <- DEBUG[line break]";
-	if HP of Hope-Born Dragon is 1: [Not yet interacted with]
+	if hp of Hope-Born Dragon is 1: [Not yet interacted with]
 		say "     Safely nestled on a cushion beneath a table, the egg is currently similar in size to that of an ostrich and somehow seems to exude light from its jet-black shell. Surprisingly light to pick up, you briefly worry that it might be fragile, but a feeling of calm flows through you and you decide that it would take a lot more than physical force to break it open.";
 	else if HP of Hope-Born Dragon is 2: [Sex Decided]
 		say "     The egg is now about twelve inches from base to tip, double the size that it used to be. The shell has lightened to a dark gray and if it didn't glow from time to time you might think that it was a very smooth stone. If it is going to continue to grow, you may need to find a new place to keep it.";
@@ -176,7 +176,7 @@ instead of conversing the Dragon Egg:
 	say "[DragonEggHatchingProcess]";
 
 to say DragonEggHatchingProcess:
-	if HP of Hope-Born Dragon is 1: [Deciding Sex]
+	if hp of Hope-Born Dragon is 1: [Deciding Sex]
 		say "     Brushing your fingers over the egg, you ponder the strange way in which you came into possession of it. To just be given a supposed dragon egg by a mysterious visitor still felt surreal, especially as you were sure that he was from another world. Nonetheless, the excitement of being in possession of a dragon egg vastly outweighs any sense of caution and you shake your head to dispel the last of your misgivings, instead turning your thoughts to what sort of dragon is likely to hatch. How large will it be? Will it be friendly? What will you feed it? These questions and more bounce around your mind as you continue to absent-mindedly stroke the smooth shell. Soon you get to the relatively minor question of whether you want it to be male or female, your imagination straying into perverse fantasies for when it becomes interested in the pleasures of the flesh. Eventually you come to a decision.";
 		Linebreak;
 		say "     [bold type]What sex do you hope that the dragon will be?[roman type][line break]";
@@ -248,8 +248,8 @@ to say DragonEggHatchingProcess:
 			LineBreak;
 			say "     The dragon shall use typically neutral pronouns.";
 			SetNeutralPronouns for Hope-Born Dragon;
-		now HP of Hope-Born Dragon is 2;
-	else if HP of Hope-Born Dragon is 2: [Deciding Form]
+		now hp of Hope-Born Dragon is 2;
+	else if hp of Hope-Born Dragon is 2: [Deciding Form]
 		say "     Laying your hand softly against the side of the egg, you whisper encouraging words, telling it how it is going to grow big and strong. Though the egg technically isn't your offspring, you feel a powerful sense of parental affection towards it. You only have a moment to consider why this might be before your vision goes blank and you find yourself floating in some sort of fluid and everything is dark. Despite the abruptness with which you seemed to disappear and reappear here, you feel strangely relaxed and safe. In front of you is a miniscule dragon, though its shape seems to be in flux, one moment covered in scales with four legs, the next it looks more like a feathered serpent with wings. Curious, you reach out towards the life before you, your touch stabilizing its form and allowing you to better look at it. Currently it has smooth scales and looks more suited to water than land, but on a hunch, you close your eyes and imagine it instead as a Wyvern, its wings attached to its forearms. Opening your eyes, you see that it has changed to match your thoughts, confirming your suspicions. You seem to have influence over the form that it takes.";
 		say "     Wondering just how malleable its appearance is at the moment, you visualize an Eastern-style dragon with a feathery head, furry body, and scaly tail, laughing as the dragonling mimics your new thoughts. However, when you progress to imagining it covered with massive spikes, it seems unwilling, or unable, to comply, merely tilting its head. With this knowledge, you decide what you wish the dragon to look like.";
 		Linebreak;
@@ -459,8 +459,8 @@ to say DragonEggHatchingProcess:
 			say "     If snakes can manage without legs, then a dragon should have no problems.";
 			TraitGain "Dragon-Legless" for Hope-Born Dragon;
 		say "     As the dragonling changes to match your imagination, you feel a tugging sensation at the back of your mind and you suddenly find yourself back in the library as if nothing had happened. After that experience, you're relatively sure that it was more of a communion of minds rather than a physical encounter. Nonetheless, you are confident that you just met the occupant of the egg.";
-		now HP of Hope-Born Dragon is 3;
-	else if HP of Hope-Born Dragon is 3: [Deciding Genitals and Horns]
+		now hp of Hope-Born Dragon is 3;
+	else if hp of Hope-Born Dragon is 3: [Deciding Genitals and Horns]
 		say "     Sensing that the egg's occupant wishes to commune with you again, you once again place your hand up against the side of it, marveling at how quickly it seems to be growing. No sooner do you touch it before you find yourself floating in dimness, the liquid void that you found yourself in last time slightly brighter. In front of you is the [ScaleyFeatheryFurryHead] head of the dragon, still developing but recognizable nonetheless. Unsure what is expected of you, you wait, admiring its visage and the way its horns grow and recede again, before realizing that this is probably what you are meant to be influencing.";
 		Linebreak;
 		say "     [bold type]Concentrating, you decide upon...[roman type][line break]";
@@ -698,8 +698,8 @@ to say DragonEggHatchingProcess:
 		else:
 			now Breast Size of Hope-Born Dragon is 0;
 		say "     With your decisions made, you find yourself back in the library, the egg sitting innocently in front of you.";
-		now HP of Hope-Born Dragon is 4;
-	else if HP of Hope-Born Dragon is 4: [Deciding Color]
+		now hp of Hope-Born Dragon is 4;
+	else if hp of Hope-Born Dragon is 4: [Deciding Color]
 		say "     You have grown accustomed to the egg being there, but accept that it won't be too much longer before it hatches, especially with how much you feel that you have already influenced the form of its occupant. Given this, it comes as little surprise when you feel it tugging at your consciousness as soon as you rest your hand against its alabaster-like shell. Acquiescing to its wishes, you allow your mind to be pulled within. Expecting the usual view of the dragon, you are instead met by a swarm of floating lights of many different colors. However, after a few moments, they coalesce into only fourteen, halting their movement and hovering almost expectantly in front of you. It is then that you realize that you are probably deciding on what color the dragon will be.";
 		Linebreak;
 		say "     [bold type]What color do you want the dragon to be?[roman type] (Color is purely cosmetic)[line break]";
@@ -782,8 +782,8 @@ to say DragonEggHatchingProcess:
 			say "     The dragon shall be a cheery yellow.";
 			TraitGain "Dragon-Colour-Yellow" for Hope-Born Dragon;
 		say "     By the time that you realize that you are back in your body, the egg's shell has shifted to match the color that you just chose, a strangely comforting response. You wonder if there will be anything more for you to do before it hatches...";
-		now HP of Hope-Born Dragon is 5;
-	else if HP of Hope-Born Dragon is 5: [Hatching]
+		now hp of Hope-Born Dragon is 5;
+	else if hp of Hope-Born Dragon is 5: [Hatching]
 		say "     Just as you lay your hand against the side of the egg, you feel it shift and begin to crack. 'There's something special about watching your children enter the world,' a calm voice says beside you before the stranger that gave you the egg crouches down beside you. As he reaches a hand towards the shell, his glove seems to melt away allowing his flesh to make direct contact with the [DragonColour] surface as he caresses it tenderly. When you question how he got there so quietly, he replies, 'I have a tendency to travel, so close proximity personal translocation is well within my capabilities.' Shrugging, you return your gaze to the hatching dragon egg, eager to finally meet the occupant. However, the stranger catches your attention again with a question. 'Have you thought about what you would like [PosAdj of Hope-Born Dragon] personality to be? Your actions will influence it as it interacts with the world around it, but everyone has to start somewhere. Usually the mother would be the one to do this, but you should be able to do it given your connection with [ObjectPro of Hope-Born Dragon] so far.'";
 		say "     'As [SubjectPro of Hope-Born Dragon] is about to hatch in a few moments, you don't exactly have much choice, so it will have to be something generic. Might I suggest one of three options? If you want [ObjectPro of Hope-Born Dragon] to be aloof, regal, and act as the superior of mundane species, then I would suggest having him become [bold type]Imperious[roman type]. [SubjectProCap of Hope-Born Dragon] will still mingle with lesser beings, but may view [ObjectPro of Hope-Born Dragon]self as their benevolent better. Otherwise, if you would prefer a more laid-back and adventurous dragon, then I would instead suggest influencing [ObjectPro of Hope-Born Dragon] to become [bold type]Care-free[roman type]. [SubjectProCap of Hope-Born Dragon] will likely be more approachable, but many feel that it is unbecoming of a dragon to act the equal of a mortal. Finally, if you really want to immerse [ObjectPro of Hope-Born Dragon] in the culture of the city, you might prefer them to exercise their more impassioned side. Being [bold type]Lusty[roman type] comes as naturally to a dragon as most other creatures, but [SubjectProCap of Hope-Born Dragon] would likely take the initiative to find partners, though of course [SubjectPro of Hope-Born Dragon] would gladly share them with you. Nonetheless, bear in mind that [PosAdj of Hope-Born Dragon] approach to life will be influenced by you and those around you, so don't think that [PosAdj of Hope-Born Dragon] personality is static. Now choose.'";
 		Linebreak;
@@ -929,7 +929,7 @@ to say DragonEggHatchingProcess:
 		else if "Dragon-Lusty" is listed in traits of Hope-Born Dragon:
 			say "sauntering ";
 		say "away to properly explore the library. You guess that you'll get to know [ObjectPro of Hope-Born Dragon] another time.";
-		now HP of Hope-Born Dragon is 6;
+		now hp of Hope-Born Dragon is 6;
 		move Hope-Born Dragon to Grey Abbey 2F;
 		move Dragon Egg to Nowhere;
 	else: [ERROR]
@@ -1497,11 +1497,11 @@ to say Hope-BornDragonPenisModMenu:
 	say "     [link](5)[as]5[end link] - Barbed. (Incompatible with Tentacle-lined)";
 	say "     [link](6)[as]6[end link] - Blunt. (Incompatible with Tapered)";
 	say "     [link](7)[as]7[end link] - Tentacle-lined. (Incompatible with Barbed)";
-	if HP of Hope-Born Dragon > 5:
+	if hp of Hope-Born Dragon > 5:
 		say "     [link](8)[as]8[end link] - Penis Size Modification.";
 		say "     [link](9)[as]9[end link] - Penis Number Modification.";
 	now calcnumber is 0;
-	if HP of Hope-Born Dragon > 5:
+	if hp of Hope-Born Dragon > 5:
 		while calcnumber < 1 or calcnumber > 9:
 			say "Choice? (1-9)>[run paragraph on]";
 			get a number;

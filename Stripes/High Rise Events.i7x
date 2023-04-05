@@ -399,14 +399,14 @@ to say vetsearch:
 		increase score by 1;
 
 
-to say doggycheck:		[See the Flags section of story.ni file for CanineList/FelineList]
+to say doggycheck:		[See the Flags section of story.ni file for Caninelist/Felinelist]
 	now doggyness is 0;
-	if BodyName of Player is listed in the infections of CanineList or FaceName of Player is listed in infections of CanineList:
+	if BodyName of Player is listed in the infections of Caninelist or FaceName of Player is listed in infections of Caninelist:
 		now doggyness is 1;
 
 to say kittycheck:
 	now kittyness is 0;
-	if BodyName of Player is listed in the infections of FelineList or FaceName of Player is listed in infections of FelineList:
+	if BodyName of Player is listed in the infections of Felinelist or FaceName of Player is listed in infections of Felinelist:
 		now kittyness is 1;
 
 

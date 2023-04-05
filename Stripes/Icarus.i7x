@@ -98,7 +98,7 @@ Sterile of Icarus is true. [steriles can't knock people up]
 MainInfection of Icarus is "Blue Chaffinch".
 Description of Icarus is "[Icarusdesc]".
 Conversation of Icarus is { "Wilder!" }.
-the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of Avianpredlist or FaceName of Player is listed in infections of FelineList]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
+the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of Avianpredlist or FaceName of Player is listed in infections of Felinelist]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
 
 [See Blue Chaffinch file for collecting Icarus.]
 
@@ -163,7 +163,7 @@ to say sexwithIcarus:
 		say "     Lacking any gender of your own, you feel there's little point in going to Icarus for sex.";
 	else if lastfuck of Icarus - turns < 6:
 		if HP of Icarus < 50:
-			say "     'Oh, I'm still worn out from the last time, but I [if ( BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist ) or ( BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList )]do so want to go again soon[else]hope you'll consider being the scary predator next time[end if].'";
+			say "     'Oh, I'm still worn out from the last time, but I [if ( BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist ) or ( BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of Felinelist )]do so want to go again soon[else]hope you'll consider being the scary predator next time[end if].'";
 		else:
 			say "     'It's nice to see you so eager to be my slut, but I think it's your turn to wait and go without for a little longer.'";
 	else if HP of Icarus < 50:
@@ -177,7 +177,7 @@ to say icarussex_sub:
 	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
-	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
+	else if BodyName of Player is listed in infections of Felinelist and FaceName of Player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
 	if HP of Icarus < 10:
@@ -316,7 +316,7 @@ to say icarussex_dom:
 	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
-	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
+	else if BodyName of Player is listed in infections of Felinelist and FaceName of Player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
 	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body. Seeing your wanton display, he gives a pleased chirp and flies down to join you. As he nears the ground, you can see his cock already starting to poke from his feathery crotch.";
@@ -978,7 +978,7 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
-	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
+	else if BodyName of Player is listed in infections of Felinelist and FaceName of Player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
 	say "     Noticing the dominant bird watching you with a sour mood, you put on a brief display to entice him. He glares at you and gives an aggressive call before gliding down. He knocks into you, [if scalevalue of Player < 3]bowling you over[else if scalevalue of Player is 3]knocking you down[else]making you stumble to your knees in surprise[end if]. Grabbing you by the scruff of the neck, he starts to drag you towards a service door - one you know leads down to the non-functional boiler room.";
@@ -1022,7 +1022,7 @@ to say icarussex6a_dom:		[Repeatable rough scene A]
 	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
-	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
+	else if BodyName of Player is listed in infections of Felinelist and FaceName of Player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
 	say "     When you put on an enticing display for your birdie master up in the rafters, he glares at you and comes winging down. He banks past you, giving you a talon scratch on the shoulder before landing. He gives your rear a hard smack with talon poking into your bottom. 'Get moving!' he snaps at you. 'I know what you've been up to, you slut.'";
@@ -1053,7 +1053,7 @@ to say icarussex6b_dom:		[Repeatable rough scene B]
 	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
-	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
+	else if BodyName of Player is listed in infections of Felinelist and FaceName of Player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
 	say "     Icarus gives a sharp cry before gliding down to meet you. He gives your ass a hard swat with one wing as he lands. Pointing with the other to the basement door, he orders you down there. Despite what you know is coming, you feel a rush of excitement at the prospect. Ceding so much power and control to him feels like a release after the tension of exploring the city. You lower your head and meekly head into the darkened room.";
