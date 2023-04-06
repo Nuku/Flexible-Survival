@@ -168,7 +168,7 @@ to say ResolveEvent Blanche's Brood:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -203,7 +203,7 @@ to say ResolveEvent Scavenging the Park:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -1286,7 +1286,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Blanche	"Blanche"
 
-Blanche is a woman. Blanche is in Office Den.
+Blanche is a woman.
+Blanche is in Office Den.
 ScaleValue of Blanche is 3. [6']
 Body Weight of Blanche is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Blanche is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1326,7 +1327,6 @@ Description of Blanche is "[blanchedesc]".
 Conversation of Blanche is { "Thanks." }.
 the fuckscene of Blanche is "[sexwithBlanche]".
 the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
-The icon of blanche is Figure of Blanche1_icon.
 
 Libido of Blanche is usually 255.
 lust of Blanche is usually 255.
@@ -1340,17 +1340,19 @@ to say blanchedesc:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
 	if Charisma of Blanche > 0: [At the library]
 		if HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had [if HP of Blanche is 8]her litter[else if HP of Blanche is 11]a couple of litters[else]several litters[end if], she's just as sexy and has become quite the MILF. Since moving to the library, she also seems much happier and less frightened, especially with her loyal pack to keep her company and protect her. The white-furred wolf usually joins in as Sturm teaches the younger pups how to hunt, gather supplies, and defend themselves.";
-		else if HP of Blanche is 9 or HP of Blanche is 10:
+		else if HP of Blanche is 9 or HP of Blanche is 12:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had her litter, [if HP of Blanche is 9]you can still tell she's got another on the way thanks to the swell in her tummy[else if HP of Blanche is 10]her belly is once again round and heavy with a rapidly-advancing pregnancy[end if]. Since moving to the library, she also seems much happier and less frightened, especially with her loyal pack to keep her company and protect her. The white-furred wolf usually joins in as Sturm trains the others how to hunt, gather supplies, and defend themselves.";
-		else:
+		else if HP of Blanche is 10 or HP of Blanche is 13:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While gained a little weight after having had a few litters, she's still quite hot and has become quite the MILF of a wolf. And with another litter [if HP of Blanche is 13]well [end if]on its way, as can be seen from the [if HP of Blanche is 13]large [end if]swell to her tummy, she couldn't be happier to add to the loyal pack keeping her company and protecting her. These days, the white-furred wolf usually joins in as Sturm trains the others how to hunt, gather supplies, and defend themselves.";
+		else:
+			say "     [bold type]Error. Report this to the Flexible Survival Discord Server.[roman type]";
 	else if HP of Blanche < 3:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She has a [if turns / 8 is even]pastel blue blouse[else]pink blouse[end if] draped over her shoulders which she hasn't bothered to button up.";
 	else if HP of Blanche < 5:
@@ -1364,11 +1366,12 @@ to say blanchedesc:
 		say "[blanche_pups_intro]";
 	else if HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had [if HP of Blanche is 7 or HP of Blanche is 8]her litter[else if HP of Blanche is 11]a couple of litters[else]several litters[end if], she's just as sexy and has become quite the MILF. She also seems much happier and less frightened now that she has her loyal pack to keep her company and protect her. The white-furred wolf usually lounges around while [if HP of Blanche is 7 or HP of Blanche is 8]directing the others as to[else]teaching the younger pups about[end if] hunting and supply gathering.";
-	else if HP of Blanche is 9 or HP of Blanche is 10:
+	else if HP of Blanche is 9 or HP of Blanche is 12:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had her litter, [if HP of Blanche is 9]you can still tell she's got another on the way thanks to the swell in her tummy[else if HP of Blanche is 10]her belly is once again round and heavy with a rapidly-advancing pregnancy[end if]. She seems quite happy these days, especially with another litter of pups on the way and with her loyal pack to keep her company and to protect her. The white-furred wolf usually lounges on her mattress while directing the others as to hunting and supply gathering.";
-	else:
+	else if HP of Blanche is 10 or HP of Blanche is 13:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While gained a little weight after having had a few litters, she's still quite hot and has become quite the MILF of a wolf. And with another litter [if HP of Blanche is 13]well [end if]on its way, as can be seen from the [if HP of Blanche is 13]large [end if]swell to her tummy, she couldn't be happier to add to the loyal pack keeping her company and protecting her. These days, the white-furred wolf usually lounges on her bed while teaching the younger pups about hunting and supply gathering.";
-
+	else:
+		say "     [bold type]Error. Report this to the Flexible Survival Discord Server.[roman type]";
 
 [Character Notes - Blanche:
 
@@ -1416,7 +1419,7 @@ to say BlancheTalkMenu:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -1699,7 +1702,7 @@ to blanchesexmenu:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -2003,7 +2006,7 @@ to say OfficeBlancheFamilyEvents:
 			project the figure of Blanche_naked_icon;
 		else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 			project the figure of Blanche_preg1_icon;
-		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 			project the figure of Blanche_preg3_icon;
 		else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 			project the figure of Blanche_naked_icon;
@@ -2032,7 +2035,7 @@ instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Boo
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -2078,7 +2081,7 @@ instead of going to Computer Lab while Charisma of Blanche is 3 and (Blanche is 
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
@@ -2170,7 +2173,7 @@ to say SummonBlanche:
 			project the figure of Blanche_naked_icon;
 		else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 			project the figure of Blanche_preg1_icon;
-		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+		else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 			project the figure of Blanche_preg3_icon;
 		else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 			project the figure of Blanche_naked_icon;
@@ -2184,7 +2187,7 @@ to say DismissBlanche:
 		project the figure of Blanche_naked_icon;
 	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
 		project the figure of Blanche_preg1_icon;
-	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 14:
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
 		project the figure of Blanche_preg3_icon;
 	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		project the figure of Blanche_naked_icon;
