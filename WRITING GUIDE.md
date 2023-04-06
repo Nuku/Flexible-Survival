@@ -18,7 +18,7 @@ Ensure that you test your work frequently. Nobody likes finishing a weeks-long w
 
 
 ## STATISTICS AND BODY DESCRIPTORS
-The data of the game is contained in a lot of variables and properties, many of which may be useful in the building of your scene or to increase the level of detail and personal connection to the player character. References to the player's form, size, genitals, etc... all help personalize the scenes and increase replay value. Some of these are more useful than others. I'll denote those descriptive elements I feel are particularly useful for scenes relating to them by using **[!]** in front of them. They can then be inserted into text by using `[cock of player]` or as part of conditional statements (more on this in part 2 of this document).
+The data of the game is contained in a lot of variables and properties, many of which may be useful in the building of your scene or to increase the level of detail and personal connection to the player character. References to the player's form, size, genitals, etc... all help personalize the scenes and increase replay value. Some of these are more useful than others. I'll denote those descriptive elements I feel are particularly useful for scenes relating to them by using **[!]** in front of them. They can then be inserted into text by using `[Cock of Player]` or as part of conditional statements (more on this in part 2 of this document).
 
 ### Player Stats: numerical, rarely useful for scenes except for comparisons, but here for completeness
 * `HP of player` | current HP of player
@@ -34,7 +34,7 @@ The data of the game is contained in a lot of variables and properties, many of 
 * `hunger of player`
 * `thirst of player`
 * `morale of player`
-* `libido of player`
+* `Libido of Player`
 * `humanity of player`
 * `score`
 * `turns` | current numerical turn (counts down) - DO NOT ALTER!
@@ -51,7 +51,7 @@ The data of the game is contained in a lot of variables and properties, many of 
 * `face of player` | portion of the player's description dealing with their face. Generally not useful for scenes.
 * `skin of player` | portion of the player's description dealing with their skin. Used occasionally for scenes, but often has differences in application that makes this messy.
 * `tail of player` | portion of the player's description dealing with their tail. Generally not useful for scenes.
-* [!] `cock of player` | one or two word description(s) of the player's cock. Recommended for use in scenes.
+* [!] `Cock of Player` | one or two word description(s) of the player's cock. Recommended for use in scenes.
 
 * [!] `scalevalue of player` | numerical value for player's rough size category (1 to 5)
 * `body size of player` | adjective describing the player's rough size category (tiny to huge)
@@ -76,21 +76,21 @@ A person has a number called Asshole Depth. Asshole Depth is usually 9.
 A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 ```
 
-* `Cock Count of player` | the number of cocks the player has
-* `Cock Length of player` | the length (in inches) of the player's cock
-* `Ball Size of player` | the size (comparatively) of the player's balls
-* `Cunt Count of player` | the number of cunts the player has
-* `Cunt Depth of player` | the depth (in inches) of the player's cunt
-* `Cunt Tightness of player` | the width (in inches) of the player's cunt
+* `Cock Count of Player` | the number of cocks the player has
+* `Cock Length of Player` | the length (in inches) of the player's cock
+* `Ball Size of Player` | the size (comparatively) of the player's balls
+* `Cunt Count of Player` | the number of cunts the player has
+* `Cunt Depth of Player` | the depth (in inches) of the player's cunt
+* `Cunt Tightness of Player` | the width (in inches) of the player's cunt
 * `breasts of player` | the number of breasts the player has (an even number)
 * `Breast Size of Player` | the breast size (corresponding to cup size) of the player's breasts (1=A, 2=B, 3=C, etc...)
-character number breast size of player in cupsize | the player's breast size as the corresponding cup letter
+character number Breast Size of Player in cupsize | the player's breast size as the corresponding cup letter
 
 * [!] `cock size desc of player` | adjective describing the player's cock size (cock length)
 * [!] `cunt size desc of player` | adjective describing the player's cunt size (cunt depth)
 * [!] `breast size desc of player` | adjective describing the player's breast size
 * [!] `ball size` | adjective + balls/testicles/gonads | describes the size of the player's balls. Note: no 'of player' on this one.
-* [!] `cum load size of player` | adjective describing the size of the player's load. Typical usage is: "your [cum load size of player] load".
+* [!] `Cum Load Size of Player` | adjective describing the size of the player's load. Typical usage is: "your [Cum Load Size of Player] load".
 
 ### Other/Environmental:
 * `monsterhp` | the monster's current hp
@@ -102,26 +102,26 @@ character number breast size of player in cupsize | the player's breast size as 
 
 
 ## ANNEX 2: STATUS OF PLAY AND ENVIRONMENTAL PROPERTIES
-These are used as part of conditional statements or clauses to alter scenes based on player/environmental properties. They can be coupled with otherwise if and otherwise for greater variation or 'and/or/not' can be used to make further variations and combinations. If they do not contain any quotation marks for exact text (`"`), then they can also be built into say statements by being enclosed in square brackets, such as `[if Cock Count of player > 0]` and closed with `[end if]`. In some cases, there are multiple ways to check the same info, in those cases, I've separated the options by an italicized or.
+These are used as part of conditional statements or clauses to alter scenes based on player/environmental properties. They can be coupled with otherwise if and otherwise for greater variation or 'and/or/not' can be used to make further variations and combinations. If they do not contain any quotation marks for exact text (`"`), then they can also be built into say statements by being enclosed in square brackets, such as `[if Cock Count of Player > 0]` and closed with `[end if]`. In some cases, there are multiple ways to check the same info, in those cases, I've separated the options by an italicized or.
 
 For your own sanity, only include a few of these variations in any given scene at most, as some will be more relevant than others to the events you're creating. Some writers have preferences to the aspects they like to highlight about the scene in this manner, so don't feel you have to use all the same ones as everyone else.
 
 ### Genitals
-* `if Player is male` *or* `if Cock Count of player > 0` | does the player have any cocks? (male/herm)
-* `if Player is female` *or* `if Cunt Count of player > 0` | does the player have any cunts? (female/herm)
-* `if Player is herm` *or* `if Cunt Count of player > 0 and Cock Count of player > 0` | does the player have both cock and cunt? (herm)
-* `if Player is neuter` *or* `if Cunt Count of player is 0 and Cock Count of player is 0` | does the player have no cunt and no cock? (neuter)
-* `if Cock Count of player is 1` | does the player have a single cock?
-* `if Cock Count of player > 1` | does the player have multiple cocks?
-* `if Cock Count of player > 2` | does the player have 3 or more cocks?
-* `if Cock Length of player > 6` | does the player have a cock that is 7 inches or more?
-* `if Cock Length of player < 10` | does the player have a cock that is under 10 inches?
-* `if Cock Length of player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)
-* `if Cock Length of player > 20` | does the player have a belly-stuffing big cock? (again, my value choice for this)
-* `if Ball Size of player > 5` | are the player's balls ranked above 5 in size?
-* `if Ball Size of player < 12` | are the player's balls ranked under 12 in size?
-* `if Ball Size of player > 40` | is the player's load belly-bloatingly large? (again, my value choice for this)
-* `if Ball Size of player > 20` | is the player's load belly-stuffingly large? (again, my value choice for this)
+* `if Player is male` *or* `if Cock Count of Player > 0` | does the player have any cocks? (male/herm)
+* `if Player is female` *or* `if Cunt Count of Player > 0` | does the player have any cunts? (female/herm)
+* `if Player is herm` *or* `if Cunt Count of Player > 0 and Cock Count of Player > 0` | does the player have both cock and cunt? (herm)
+* `if Player is neuter` *or* `if Cunt Count of Player is 0 and Cock Count of Player is 0` | does the player have no cunt and no cock? (neuter)
+* `if Cock Count of Player is 1` | does the player have a single cock?
+* `if Cock Count of Player > 1` | does the player have multiple cocks?
+* `if Cock Count of Player > 2` | does the player have 3 or more cocks?
+* `if Cock Length of Player > 6` | does the player have a cock that is 7 inches or more?
+* `if Cock Length of Player < 10` | does the player have a cock that is under 10 inches?
+* `if Cock Length of Player > 30` | does the player have a belly-bloating huge cock? (this is just my typical values used for an avg sized creature)
+* `if Cock Length of Player > 20` | does the player have a belly-stuffing big cock? (again, my value choice for this)
+* `if Ball Size of Player > 5` | are the player's balls ranked above 5 in size?
+* `if Ball Size of Player < 12` | are the player's balls ranked under 12 in size?
+* `if Ball Size of Player > 40` | is the player's load belly-bloatingly large? (again, my value choice for this)
+* `if Ball Size of Player > 20` | is the player's load belly-stuffingly large? (again, my value choice for this)
 The above cock comparisons can be done for the player's cunt values. The size comparisons should also be considered against a critter's cunt/cock size to just their fit.
 
 ### Infections
@@ -279,7 +279,7 @@ An example:
 ```inform7
 if Cock Length of Player > Cunt Depth of Amy + 2: [some stretching allowed]
 	say "     The female husky wines a little as you bottom out inside her before your cock is all the way in. 'Not so deep please, you're too big.' [...]'";
-else if Cock Length of player < Cunt Depth of Amy - 3: [a bit small, eh?]
+else if Cock Length of Player < Cunt Depth of Amy - 3: [a bit small, eh?]
 	say "     The female husky gives a needy whine and asks, 'Are you, ehm... already in?'";
 else: [regular sex]
 	say "     ...";
@@ -452,9 +452,9 @@ To be added later.
 ### Other checks
 * `if daytimer is day` | currently daytime hours
 * `if daytimer is night` | currently nighttime hours
-* `if libido of player > 40` | is the player's libido above 40?
+* `if Libido of Player > 40` | is the player's libido above 40?
 * `if humanity of player < 10` | is the player's humanity under 10?
-* `if libido of player > humanity of player` | is the player libido greater than their humanity?
+* `if Libido of Player > humanity of player` | is the player libido greater than their humanity?
 * `if score > 100` | is the current game score over 100?
 * `if morale of player > 0` | does the player have positive morale?
 * `if level of player > 5` | is the player level 6 or higher?
@@ -466,15 +466,15 @@ To be added later.
 
 ### Random chance
 * `if a random chance of 1 in 3 succeeds` | a 33% chance of occurring.
-* `if Cunt Count of player > 0 and a random chance of 1 in 2 succeeds` | if the player has a cunt, 50% chance of this scene playing out.
+* `if Cunt Count of Player > 0 and a random chance of 1 in 2 succeeds` | if the player has a cunt, 50% chance of this scene playing out.
 * `if a random number between 1 and 100 < 15` | another way to do random chance, this one is 14%
 * `if "More Anal" is listed in feats of player and a random chance of 3 in 5 succeeds` | there is a 60% chance of this scene playing out, but only if the player has More Anal.
-* `if Cunt Count of player is 0 or a random chance of 1 in 3 succeeds` | This will occur if the player has no cunt, otherwise it'll occur a third of the time.
-* `if a random chance of 1 in 2 succeeds or ( Cock Count of player > 0 and a random chance of 1 in 3 succeeds )` | this will occur one half of the time, with males/herms getting an additional 33% chance on top of that.
-* `if libido of player > a random number between 1 and 100` | random libido check (yes = gave in, no = resisted)
-* `if libido of player > a random number between 25 and 125` | random libido check w/a libido of 25 or less guaranteed to win (not give in) and random roll of 101-125 also always winning (yes = gave in, no = resisted)
- * `if ( 100 + humanity of player - libido of player ) > a random number between 1 and 150` | a random check pitting the player's humanity and libido against one another (yes = resisted, no=gave in)
-* `if a random number between 0 and humanity of player > a random number between 0 and libido of player` | another check pitting the player's humanity and libido against one another (yes=resisted, no=gave in)
+* `if Cunt Count of Player is 0 or a random chance of 1 in 3 succeeds` | This will occur if the player has no cunt, otherwise it'll occur a third of the time.
+* `if a random chance of 1 in 2 succeeds or ( Cock Count of Player > 0 and a random chance of 1 in 3 succeeds )` | this will occur one half of the time, with males/herms getting an additional 33% chance on top of that.
+* `if Libido of Player > a random number between 1 and 100` | random libido check (yes = gave in, no = resisted)
+* `if Libido of Player > a random number between 25 and 125` | random libido check w/a libido of 25 or less guaranteed to win (not give in) and random roll of 101-125 also always winning (yes = gave in, no = resisted)
+ * `if ( 100 + humanity of player - Libido of Player ) > a random number between 1 and 150` | a random check pitting the player's humanity and libido against one another (yes = resisted, no=gave in)
+* `if a random number between 0 and humanity of player > a random number between 0 and Libido of Player` | another check pitting the player's humanity and libido against one another (yes=resisted, no=gave in)
 
 ### Events and situations
 * An event is framed within a "situation". A situation has four main properties:
@@ -541,7 +541,7 @@ Object	Name
 
 SexAct Options: AssFuck, AssDildoFuck, PussyFuck, PussyDildoFuck, OralCock (= facefuck), OralPussy (= cunnilingus)
 * Takingchar is the one getting penetrated in ass/pussy/mouth
-* Givingchar is the one grinding theit dick/pussy/dildo into the other
+* Givingchar is the one grinding their dick/pussy/dildo into the other
 
 This function does several things:
 *  Checks Virginities for all participants, showing messages if someone loses theirs

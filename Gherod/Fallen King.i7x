@@ -382,7 +382,7 @@ to say DarkTyrantSexEmbrace:
 	NPCSexAftermath Player receives "AssFuck" from Fallen King;
 	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Fallen King;
-	increase Libido of player by 50;
+	increase Libido of Player by 50;
 	if "Strong Psyche" is listed in feats of Player:
 		SanLoss 10;
 	else if "Weak Psyche" is listed in feats of Player:
@@ -418,7 +418,7 @@ to say DarkTyrantSexCockWorship:
 	follow the turnpass rule;
 	say "     You wake up, very dizzy and soaked in black goo, which is... absolutely everywhere, dripping from the ceiling and making a pool in the room with at least a couple of inches of depth. Your movements are free, but all this dark goo feels so comforting and warm you struggle to tell yourself that you need to get up. In your mind, a dark voice whispers the words [']thank you['], and you look around to see if the Dark Tyrant is still around, but he is gone by now. Your legs are shaking and you can barely stand, but you manage to get out of the goo flooded room and back to the safety of the Club. To your dismay, you feel you still haven't been fully satisfied[if Player is male], as you realize you still have an erection standing solidly between your legs[end if], even after what you just went through.";
 	NPCSexAftermath Player receives "OralCock" from Fallen King;
-	increase Libido of player by 50;
+	increase Libido of Player by 50;
 	if "Strong Psyche" is listed in feats of Player:
 		SanLoss 10;
 	else if "Weak Psyche" is listed in feats of Player:

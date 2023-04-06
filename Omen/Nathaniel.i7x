@@ -117,7 +117,7 @@ to say ResolveEvent HikerBoysTape:
 	say "     'I knew you'd like my balls babe, and I'll be giving you everything in them. I hope you like it rough,' he says while simultaneously giving a hard thrust releasing a loud sound has hips meet a firm ass.";
 	say "     'Fuck yes big bro! Rape my hole! I've wanted you to use me for fucking years! Oh god yes...' The sound of skin meeting skin gets louder and more frequent, as the two set up a brutal pace that shows no sign of stopping.";
 	say "     This time its Nathan that lets out a long deep moan, 'Damn babe, already meeting my thrusts. I've gotta say, You. Are. One. Of. A. Kind.' He says in tandem with each thrust. Much to your displeasure, a warning sign for battery life comes up on the tape recording. The sounds of their sinful union and vulgar statements continue right up till the tape stops playing and you suspect well afterwards too. You're left horny and with many questions, perhaps you should explore the forest some more.";
-	increase libido of player by 30.
+	increase Libido of Player by 30.
 	now NathanielHP is 2;
 	now Looking for the Brothers is active;
 

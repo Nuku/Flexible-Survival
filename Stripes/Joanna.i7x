@@ -1132,9 +1132,9 @@ to say SmellingPlantDildo:
 	if Player consents:
 		LineBreak;
 		say "     The sight of it just turns you on so much that, almost by compulsion, you put your lips around the dildo and start sucking on it, the incredibly sweet thick juice landing in your tongue in an explosion of a nearly addicting flavor. It's so good that you have to force yourself to stop, and a tingle in your mouth reminds you that you were actually enjoying that immensely.";
-		increase libido of player by 10;
-		if libido of player > 100:
-			now libido of player is 100;
+		increase Libido of Player by 10;
+		if Libido of Player > 100:
+			now Libido of Player is 100;
 		decrease humanity of player by 5;
 		infect "Parasitic Plant";
 	else:
