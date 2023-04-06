@@ -645,11 +645,11 @@ Usedesc of lust potion is "[lust potion use]".
 
 to say lust potion use:
 	say "     You uncork the bottle and chug it, downing all of the liquid inside. There's a surprisingly chocolatey and nutty taste to it, reminding you of a consistency of chocolate milk. Soon though you're too distracted too think about that as you're feeling hot and aroused, your libido climbing rapidly.";
-	increase libido of player by 15;
-	increase libido of player by a random number between 1 and 9;
-	if "Horny Bastard" is listed in feats of player, increase libido of player by 3;
-	if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 15;
+	increase Libido of Player by a random number between 1 and 9;
+	if "Horny Bastard" is listed in feats of player, increase Libido of Player by 3;
+	if "Cold Fish" is listed in feats of player, decrease Libido of Player by 3;
+	if Libido of Player > 100, now Libido of Player is 100;
 	now heatdrive is 1;
 	drive heat;
 
