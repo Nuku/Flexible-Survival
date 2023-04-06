@@ -109,7 +109,7 @@ to boundstatename:
 
 
 		now enduring is false; [resets enduring so the player can choose to continue doing so in the menu]
-		[a situational scene goes here, describing the player's current predicament and bound state. this can vary using [one of]x[or]y[at random] embeded code, or author created variables that change based on options available to the player or other factors the author creates.]
+		[a situational scene goes here, describing the player's current predicament and bound state. this can vary using [one of]x[or]y[at random] embedded code, or author created variables that change based on options available to the player or other factors the author creates.]
 		[describe the player's options, below is an example but it can be edited to be anything]
 		say "     You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		[create the menu for the player]
@@ -117,7 +117,7 @@ to boundstatename:
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
-		[decide the outcome of the player losing all humanity, if desireable for the bound state.]
+		[decide the outcome of the player losing all humanity, if desirable for the bound state.]
 		if humanity of Player < 1:
 			now Trixieexit is 1;[allows the bound loop to exit when this current loop ends]
 			trigger ending "Sierrasaur's Sex Toy";

@@ -142,7 +142,7 @@ When Play begins:
 	add "Dolphin Herm" to infections of NatureList;
 	add "Dolphin Herm" to infections of HermList;
 	add "Dolphin Herm" to infections of TaperedCockList;
-	add "Dolphin Herm" to infections of PrehensileCocklist;
+	add "Dolphin Herm" to infections of PrehensileCockList;
 	add "Dolphin Herm" to infections of InternalCockList;
 	add "Dolphin Herm" to infections of BipedalList;
 	add "Dolphin Herm" to infections of SwimList;

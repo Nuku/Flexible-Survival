@@ -136,7 +136,7 @@ When Play begins:
 	add "Killer Whale" to infections of NatureList;
 	add "Killer Whale" to infections of MaleList;
 	add "Killer Whale" to infections of TaperedCockList;
-	add "Killer Whale" to infections of PrehensileCocklist;
+	add "Killer Whale" to infections of PrehensileCockList;
 	add "Killer Whale" to infections of InternalCockList;
 	add "Killer Whale" to infections of BipedalList;
 	add "Killer Whale" to infections of SwimList;

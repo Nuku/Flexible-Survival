@@ -97,7 +97,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Yinglet";
 	add "Yinglet" to infections of FurryList;
-	add "Yinglet" to infections of Magicallist;
+	add "Yinglet" to infections of MagicalList;
 	add "Yinglet" to infections of MythologicalList;
 	add "Yinglet" to infections of FemaleList;
 	add "Yinglet" to infections of BipedalList;

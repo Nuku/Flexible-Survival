@@ -57,7 +57,7 @@ When Play begins:
 	add "Anthro Shaft Beast" to infections of BarbedCockList;
 	add "Anthro Shaft Beast" to infections of BipedalList;
 	add "Anthro Shaft Beast" to infections of TailList;
-	add "Anthro Shaft Beast" to infections of TailWeaponList;
+	add "Anthro Shaft Beast" to infections of TailweaponList;
 	now Name entry is "Anthro Shaft Beast";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

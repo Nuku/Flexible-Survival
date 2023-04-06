@@ -20,7 +20,7 @@ When Play begins:
 	add "Scarab Beetle" to infections of MaleList;
 	add "Scarab Beetle" to infections of InternalCockList;
 	add "Scarab Beetle" to infections of OviImpregnatorList;
-	add "Scarab Beetle" to infections of Egglaylist;
+	add "Scarab Beetle" to infections of EgglayList;
 	add "Scarab Beetle" to infections of HexapedalList;
 	add "Scarab Beetle" to infections of FlightList;
 	now Name entry is "Scarab Beetle";

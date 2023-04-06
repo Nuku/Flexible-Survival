@@ -20,7 +20,7 @@ to say bluechaffinchdesc:
 	else:
 		now sex entry is "Female";
 	say "     The avian creature before you is a covered in bright blue plumage that is very even in color across most of his body. Only the ends of his wings and tail are a much darker midnight blue on the flight feathers, and his lower belly and the underside of his narrow tail are downy and white. He has a puffy looking body compared to his slender arms and legs thanks to his soft feathers. His head is rounded and shaped like that of a finch, though his beak is thicker, showing his infection to somehow be that of an exotic blue chaffinch. His eyes are like black beads with a touch of white feathers just above and below.";
-	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger. '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist] with a bit of trepidation in passerine's boasting, clearly concerned about your nature as a predatory bird[else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList] with a bit of trepidation in passerine's boasting, clearly concerned about your feline nature[end if].";
+	say "     Seeing you, he puffs out these feathers further and chirps angrily at you, trying to make himself look larger. '[one of]Come on, I can take you[or]Come and get some[or]You'll be singing a new tune once you're under me[at random],' the songbird says[if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList] with a bit of trepidation in passerine's boasting, clearly concerned about your nature as a predatory bird[else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList] with a bit of trepidation in passerine's boasting, clearly concerned about your feline nature[end if].";
 
 
 Section 2 - Player Loss
@@ -45,7 +45,7 @@ Part 1 - Basics
 
 to say beatthebluechaffinch:
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
 		now formcheck is 2;

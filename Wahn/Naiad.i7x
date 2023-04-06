@@ -149,7 +149,7 @@ When Play begins:
 	add "Naiad" to infections of MagicalList;
 	add "Naiad" to infections of FemaleList;
 	add "Naiad" to infections of BipedalList;
-	add "Naiad" to infections of Swimlist;
+	add "Naiad" to infections of SwimList;
 	add "Naiad" to infections of GillList;
 	now Name entry is "Naiad";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]

@@ -686,7 +686,7 @@ A person can be nocturnal. A person is usually not nocturnal.
 
 Definition: A person (called x) is nocturnal: [as in "can see in low light"]
 	if HeadName of x is listed in infections of AquaticList, yes;
-	if HeadName of x is listed in infections of AvianList, yes;
+	if HeadName of x is listed in infections of CetaceanList, yes;
 	if HeadName of x is listed in infections of CervineList, yes;
 	if HeadName of x is listed in infections of FelineList, yes;
 	if HeadName of x is listed in infections of InsectList, yes;

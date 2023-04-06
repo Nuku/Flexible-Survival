@@ -71,7 +71,7 @@ When Play begins:
 	add "Xeno Drone" to infections of FurryList;
 	add "Xeno Drone" to infections of OtherworldlyList;
 	add "Xeno Drone" to infections of HermList;
-	add "Xeno Drone" to infections of OvipositorList;
+	add "Xeno Drone" to infections of OviPositorList;
 	add "Xeno Drone" to infections of QuadrupedalList;
 	add "Xeno Drone" to infections of TailList;
 	add "Xeno Drone" to infections of OviImpregnatorList;

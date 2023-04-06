@@ -294,7 +294,7 @@ The Prereq2Resolution of Sloppy Seconds is { 1, 2 }.
 Sarea of Sloppy Seconds is "Red".
 
 when play begins: [TODO: potentially remove cuck flag if a choice point is added into the scene]
-	add Sloppy Seconds to Badspots of CuckList;
+	add Sloppy Seconds to BadSpots of CuckList;
 
 to say ResolveEvent Sloppy Seconds:
 	say "     Exploring the red light district, you are just strolling along a street and passing some unimpressive houses that likely have long been looted when a scuffle breaks out on the other side of the street. Looks like a herm hyena and a tigress hooker are having a disagreement about the price of her services. The noise soon draws the feline's pimp, who approaches in a combative manner. For a second it looks like the hyena will get fleeced by those two, but then she calls out loudly and two more of her kind step out of a nearby alley. This escalation heralds trouble, you're sure, and since you have better things to do than getting dragged into that, you take the easy way out by stepping into the building right before you through its leaned-to door. Sounds of a fight start just as you close the door behind you.";

@@ -106,7 +106,7 @@ to oldflagban (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is banned;
 		-- "Cockvore":
-			now CockvoreList is banned;
+			now CockVoreList is banned;
 		-- "Furry":
 			now FurryList is banned;
 		-- "Males":
@@ -139,7 +139,7 @@ to oldflagward (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now CockvoreList is warded;
+			now CockVoreList is warded;
 		-- "Furry":
 			now FurryList is warded;
 		-- "Males":
@@ -172,7 +172,7 @@ to oldflagunban (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not banned;
 		-- "Cockvore":
-			now CockvoreList is not banned;
+			now CockVoreList is not banned;
 		-- "Furry":
 			now FurryList is not banned;
 		-- "Males":
@@ -205,7 +205,7 @@ to oldflagunward (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now CockvoreList is not warded;
+			now CockVoreList is not warded;
 		-- "Furry":
 			now FurryList is not warded;
 		-- "Males":

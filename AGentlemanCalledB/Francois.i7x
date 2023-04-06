@@ -1076,14 +1076,14 @@ to say dragonmoelleuxuse:
 		let playerfireresist be 0;
 		if "Natural Armaments" is listed in feats of Player: [+10%]
 			increase dam by ( dam / 10 );
-		if BodyName of Player is listed in infections of Firebreathlist: [+12.5%]
+		if BodyName of Player is listed in infections of FirebreathList: [+12.5%]
 			increase dam by ( dam / 8 );
 			increase playerfireresist by 1;
-		if FaceName of Player is listed in infections of Firebreathlist: [+12.5%]
+		if FaceName of Player is listed in infections of FirebreathList: [+12.5%]
 			increase dam by ( dam / 8 );
 			increase playerfireresist by 1;
 		let playerdam be dam; [grabbing dam value before adjusting for target resistance]
-		if Name entry is listed in infections of Firebreathlist: [-20% against fire breathers]
+		if Name entry is listed in infections of FirebreathList: [-20% against fire breathers]
 			decrease dam by ( dam / 5 );
 		now dam is dam / 10; [division by 10 to normalize]
 		increase dam by ( stamina of Player - 10 ) / 2; [stamina boosted damage]

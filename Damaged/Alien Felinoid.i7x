@@ -121,7 +121,7 @@ When Play begins:
 	add "Felinoid" to infections of SheathedCockList;
 	add "Felinoid" to infections of QuadrupedalList;
 	add "Felinoid" to infections of TailList;
-	add "Felinoid" to infections of FeralMindList;
+	add "Felinoid" to infections of FeralmindList;
 	now Name entry is "Felinoid";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

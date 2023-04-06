@@ -244,14 +244,14 @@ carry out bfanditesting5:
 	say "[bold type]InsectList:[roman type] ([special-style-1][number of entries in infections of InsectList][roman type]) [infections of InsectList].";
 	say "[bold type]PlantList:[roman type] ([special-style-1][number of entries in infections of PlantList][roman type]) [infections of PlantList].";
 	say "[bold type]AvianList:[roman type] ([special-style-1][number of entries in infections of AvianList][roman type]) [infections of AvianList].";
-	say "[bold type]Avianpredlist:[roman type] ([special-style-1][number of entries in infections of Avianpredlist][roman type]) [infections of Avianpredlist].";
+	say "[bold type]AvianpredList:[roman type] ([special-style-1][number of entries in infections of AvianpredList][roman type]) [infections of AvianpredList].";
 	say "[bold type]TaurList:[roman type] ([special-style-1][number of entries in infections of TaurList][roman type]) [infections of TaurList].";
 	say "[bold type]RodentList:[roman type] ([special-style-1][number of entries in infections of RodentList][roman type]) [infections of RodentList].";
 	say "[bold type]KnottedCockList:[roman type] ([special-style-1][number of entries in infections of KnottedCockList][roman type]) [infections of KnottedCockList].";
 	say "[bold type]LatexList:[roman type] ([special-style-1][number of entries in infections of LatexList][roman type]) [infections of LatexList].";
 	say "[bold type]InternalCockList:[roman type] ([special-style-1][number of entries in infections of InternalCockList][roman type]) [infections of InternalCockList].";
 	say "[bold type]BarbedCockList:[roman type] ([special-style-1][number of entries in infections of BarbedCockList][roman type]) [infections of BarbedCockList].";
-	say "[bold type]Firebreathlist:[roman type] ([special-style-1][number of entries in infections of Firebreathlist][roman type]) [infections of Firebreathlist].";
+	say "[bold type]FirebreathList:[roman type] ([special-style-1][number of entries in infections of FirebreathList][roman type]) [infections of FirebreathList].";
 	say "[bold type]BluntCockList:[roman type] ([special-style-1][number of entries in infections of BluntCockList][roman type]) [infections of BluntCockList].";
 
 [------------------------------------------------------------]
