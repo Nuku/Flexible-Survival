@@ -98,7 +98,7 @@ Sterile of Icarus is false. [steriles can't knock people up]
 MainInfection of Icarus is "Blue Chaffinch".
 Description of Icarus is "[Icarusdesc]".
 Conversation of Icarus is { "Wilder!" }.
-the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of Avianpredlist or FaceName of Player is listed in infections of FelineList]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
+the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if FaceName of Player is listed in infections of AvianpredList or FaceName of Player is listed in infections of FelineList]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
 
 [See Blue Chaffinch file for collecting Icarus.]
 
@@ -161,7 +161,7 @@ to say sexwithIcarus:
 		say "     Lacking any gender of your own, you feel there's little point in going to Icarus for sex.";
 	else if lastfuck of Icarus - turns < 6:
 		if HP of Icarus < 50:
-			say "     'Oh, I'm still worn out from the last time, but I [if ( BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist ) or ( BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList )]do so want to go again soon[else]hope you'll consider being the scary predator next time[end if].'";
+			say "     'Oh, I'm still worn out from the last time, but I [if ( BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList ) or ( BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList )]do so want to go again soon[else]hope you'll consider being the scary predator next time[end if].'";
 		else:
 			say "     'It's nice to see you so eager to be my slut, but I think it's your turn to wait and go without for a little longer.'";
 	else if HP of Icarus < 50:
@@ -172,7 +172,7 @@ to say sexwithIcarus:
 
 to say icarussex_sub:
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
@@ -311,7 +311,7 @@ to say icarussex_sub:
 
 to say icarussex_dom:
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
@@ -973,7 +973,7 @@ to say icarussex6_dom:		[Used for both special preds - not open to regular]
 	setmonster "Blue Chaffinch";
 	choose row MonsterID from the Table of Random Critters;
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
@@ -1017,7 +1017,7 @@ to say icarussex6a_dom:		[Repeatable rough scene A]
 	setmonster "Blue Chaffinch";
 	choose row MonsterID from the Table of Random Critters;
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:
@@ -1048,7 +1048,7 @@ to say icarussex6b_dom:		[Repeatable rough scene B]
 	setmonster "Blue Chaffinch";
 	choose row MonsterID from the Table of Random Critters;
 	let formcheck be 0;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now formcheck is 1;
 		now icarus_lastpred is 1;
 	else if BodyName of Player is listed in infections of FelineList and FaceName of Player is listed in infections of FelineList:

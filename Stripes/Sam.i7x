@@ -919,7 +919,7 @@ to say sexwithSam:
 			now sortorder entry is 4;
 			now description entry is "screw the sexy hybrid";
 		[]
-			if bodyname of Player is listed in infections of TaurList:
+			if BodyName of Player is listed in infections of TaurList:
 				choose a blank row in table of fucking options;
 				now title entry is "Mount Sammie";
 				now sortorder entry is 6;
@@ -930,7 +930,7 @@ to say sexwithSam:
 		now sortorder entry is 5;
 		now description entry is "have the sexy hybrid screw you";
 		[]
-		if bodyname of Player is listed in infections of TaurList:
+		if BodyName of Player is listed in infections of TaurList:
 			choose a blank row in table of fucking options;
 			now title entry is "Mounted by Sammie";
 			now sortorder entry is 7;

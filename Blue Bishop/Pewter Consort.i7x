@@ -684,7 +684,7 @@ When Play begins:
 	add "Pewter Consort" to infections of QuadrupedalList;
 	add "Pewter Consort" to infections of TailList;
 	add "Pewter Consort" to infections of TailweaponList;
-	add "Pewter Consort" to infections of FeralMindList;
+	add "Pewter Consort" to infections of FeralmindList;
 	now Name entry is "Pewter Consort";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]

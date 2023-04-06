@@ -222,7 +222,7 @@ When Play begins:
 	add "Deep One" to the infections of MaleList;
 	add "Deep One" to the infections of BluntCockList;
 	add "Deep One" to the infections of GillList;
-	add "Deep One" to the infections of Swimlist;
+	add "Deep One" to the infections of SwimList;
 	add "Deep One" to the infections of BipedalList;
 	now Name entry is "Deep One";
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]

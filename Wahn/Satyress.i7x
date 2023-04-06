@@ -140,7 +140,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Satyr";
 	add "Satyress" to infections of FurryList;
-	add "Satyress" to infections of Magicallist;
+	add "Satyress" to infections of MagicalList;
 	add "Satyress" to infections of MythologicalList;
 	add "Satyress" to infections of FemaleList;
 	add "Satyress" to infections of BipedalList;

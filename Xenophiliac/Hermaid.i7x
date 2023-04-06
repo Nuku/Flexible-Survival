@@ -141,7 +141,7 @@ When Play begins:
 	add "Hermaid" to infections of HermList;
 	add "Hermaid" to infections of InternalCockList;
 	add "Hermaid" to infections of BipedalList;
-	add "Hermaid" to infections of Swimlist;
+	add "Hermaid" to infections of SwimList;
 	add "Hermaid" to infections of GillList;
 	add "Hermaid" to infections of TailList;
 	add "Hermaid" to infections of TailweaponList;

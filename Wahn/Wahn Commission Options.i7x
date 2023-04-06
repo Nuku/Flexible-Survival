@@ -112,7 +112,7 @@ Vincent: [anthro fox (untransformed Val - see orcs); can be brought into the lib
 Xerxes: [human dog; obtainable from Mike]
 - More interactions with Xerxes (playful or sexual) - for example throwing a tennis ball, etc.
 - NPC/Xerxes interactions in the library
-- Combat training as a new companion 
+- Combat training as a new companion
 
 
 

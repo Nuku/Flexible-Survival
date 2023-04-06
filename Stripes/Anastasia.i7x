@@ -539,7 +539,7 @@ to say Anastasiasex08:		[dommy fuck]
 
 
 [*** - flight scene?
-	[else if Player is male and HP of Anastasia >= 12 and BodyName of Player is listed in infections of Avianpredlist and a random chance of 3 in 7 succeeds:	[***]
+	[else if Player is male and HP of Anastasia >= 12 and BodyName of Player is listed in infections of AvianpredList and a random chance of 3 in 7 succeeds:	[***]
 		if HP of Anastasia is 12:
 			say "     I've been feeling stronger lately. I think I might have the strength for a short flight... a short [']mating['] flight,' she adds coyly, nuzzling her beak against your cheek. Giving your wings a rustle, you try to tell her that you've not quite gotten the hang of flying yes, but she won't hear it. 'In that case, I'll take care of the flying. It will not be a problem. Don't you trust me?' she trills teasingly. Given all the amazing things she's already shown herself capable of, what's one more?";]
 ]

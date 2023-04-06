@@ -41,10 +41,10 @@ The data of the game is contained in a lot of variables and properties, many of 
 * `targetturns` | the turn number for game over - DO NOT ALTER!
 
 ### Basic Infection Variables:
-* `bodyname of player` | The infection name on the player's body. Very useful for comparisons or, less desirably, as a descriptive element.
-* `facename of player` | The infection name on the player's face. Very useful for comparisons or, less desirably, as a descriptive element.
-* `skinname of player` | The infection name on the player's skin. Useful for comparisons or, less desirably, as a descriptive element.
-* `tailname of player` | The infection name on the player's tail. Useful for comparisons or, less desirably, as a descriptive element.
+* `BodyName of player` | The infection name on the player's body. Very useful for comparisons or, less desirably, as a descriptive element.
+* `FaceName of player` | The infection name on the player's face. Very useful for comparisons or, less desirably, as a descriptive element.
+* `SkinName of player` | The infection name on the player's skin. Useful for comparisons or, less desirably, as a descriptive element.
+* `TailName of player` | The infection name on the player's tail. Useful for comparisons or, less desirably, as a descriptive element.
 * `CockName of player` | The infection name on the player's cock. Useful for comparisons or, less desirably, as a descriptive element.
 
 * `body of player` | portion of the player's description dealing with their body. Generally not useful for scenes.
@@ -125,13 +125,13 @@ For your own sanity, only include a few of these variations in any given scene a
 The above cock comparisons can be done for the player's cunt values. The size comparisons should also be considered against a critter's cunt/cock size to just their fit.
 
 ### Infections
-* `if bodyname of player is "Rubber Tigress"` | does the player have the Rubber Tigress infection on their body? (case sensitive to name)
-* `if skinname of player is "Bird of Paradise"` | does the player have the Bird of Paradise infection on their skin? (case sensitive to name)
-* `if bodyname of player is "Alpha Husky"` *or* `facename of player is "Alpha Husky"` | are either of the player's head or body infected with the "Alpha Husky" strain?
+* `if BodyName of player is "Rubber Tigress"` | does the player have the Rubber Tigress infection on their body? (case sensitive to name)
+* `if SkinName of player is "Bird of Paradise"` | does the player have the Bird of Paradise infection on their skin? (case sensitive to name)
+* `if BodyName of player is "Alpha Husky"` *or* `FaceName of player is "Alpha Husky"` | are either of the player's head or body infected with the "Alpha Husky" strain?
 * `if player is pure` | does the player have the same infection on all body parts?
-* `if bodyname of player is "Feline" and player is pure` | is the player fully infected with the Feline strain?
-* `if bodyname of player is listed in infections of FelineList` | does the player have any of the feline infections on their body?
-* `if bodyname of player is not listed in infections of FelineList` | does the player not possess any feline infection on their body?
+* `if BodyName of player is "Feline" and player is pure` | is the player fully infected with the Feline strain?
+* `if BodyName of player is listed in infections of FelineList` | does the player have any of the feline infections on their body?
+* `if BodyName of player is not listed in infections of FelineList` | does the player not possess any feline infection on their body?
 The current list options are: FelineList, CanineList, EquineList, VulpineList, ReptileList, InsectList, PlantList, AvianList, TaurList, knotlist (cock), LatexList (skin)
 
 * `if scalevalue of player is 3` | is the player roughly human sized?

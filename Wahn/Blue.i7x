@@ -475,7 +475,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Blue Goo";
-	add "Blue Goo" to infections of Slimelist;
+	add "Blue Goo" to infections of SlimeList;
 	add "Blue Goo" to infections of ScienceList;
 	add "Blue Goo" to infections of TentacleCockList;
 	add "Blue Goo" to infections of BipedalList;

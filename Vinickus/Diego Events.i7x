@@ -140,7 +140,7 @@ ResolveFunction of Prankster's Delight is "[ResolveEvent Prankster's Delight]". 
 Sarea of Prankster's Delight is "Outside".
 when play begins:
 	add Prankster's Delight to BadSpots of FurryList;
-	add Prankster's Delight to Badspots of MaleList;
+	add Prankster's Delight to BadSpots of MaleList;
 
 to say ResolveEvent Prankster's Delight:
 	say "     It's just another walk through the desolate city. Chaos, moans, some scattered fires, nothing of interest comes about until you hear snickering off to the side. It appears to be coming from an alley up ahead, and as you get closer, you hear the snickering get louder and more familiar. However, just when you round the corner, the laughter stops, and nothing out of the ordinary catches your eye. Chalking it up to something best not messed with, you continue past the alley. Not ten minutes later there's a loud screech, and seconds after that you hear a cacophony of screaming metal and falling rubble. It takes a minute to pin down the exact street to run towards, but the shouts that soon start up help clue you in.";
@@ -214,7 +214,7 @@ ResolveFunction of College Flakes is "[ResolveEvent College Flakes]". The level 
 The sarea of College Flakes is "Outside".
 when play begins:
 	add College Flakes to BadSpots of FurryList;
-	add College Flakes to Badspots of MaleList;
+	add College Flakes to BadSpots of MaleList;
 	add College Flakes to BadSpots of FemaleList;
 
 to say ResolveEvent College Flakes:
@@ -295,7 +295,7 @@ Spartan Usurpation is a situation.
 ResolveFunction of Spartan Usurpation is "[ResolveEvent Spartan Usurpation]". Spartan Usurpation is inactive. The level of Spartan Usurpation is 7.
 The sarea of Spartan Usurpation is "Outside".
 when play begins:
-	add Spartan Usurpation to Badspots of MaleList;
+	add Spartan Usurpation to BadSpots of MaleList;
 
 to say ResolveEvent Spartan Usurpation:
 	say "     The city is never short of the sound of moans, rubble clattering from buildings, or fiery combat. However, the sounds of metal clanging off metal is quite unusual, it's a sound that makes you feel as if you were thrown near a medieval battlefield. You are still surrounded by the ruins of a modern city, so curiosity drives you to check out the ruckus, and even though you're quick to check it all out, you're all too aware of the potential dangers. Your feet move carefully, and your legs, while fast, swivel about to avoid knocking anything over in the alleys you've chosen to run along. There's no telling what you'll come upon, and unwanted attention would spoil any chance of discovery. So you move with dedicated speed, and silent swiftness, until you find yourself coming upon an open street. There's nowhere to hide along it, and so you rush back to the alley you just ran from, peaking around the corner as you peer upon the battle before you.";
@@ -448,8 +448,8 @@ One Fiery Trick is a situation.
 ResolveFunction of One Fiery Trick is "[ResolveEvent One Fiery Trick]". One Fiery Trick is inactive. The level of One Fiery Trick is 7.
 The sarea of One Fiery Trick is "Outside".
 when play begins:
-	add One Fiery Trick to Badspots of MaleList;
-	add One Fiery Trick to Badspots of DemonList;
+	add One Fiery Trick to BadSpots of MaleList;
+	add One Fiery Trick to BadSpots of DemonList;
 
 to say ResolveEvent One Fiery Trick:
 	say "     It is another day exploring the outskirts of a desolated city, seeing the same old abandonment caused by the apocalypse, in hopes of finding something of interest to you. You spend a good amount of time in this quest, finding nothing of use, but you come across a few isolated alleys of previously inhabited shacks. It is a small settlement, but remains completely empty and seems like it was already ransacked by scavengers. Either way, you decide to go on ahead and give it a look, since you do not really remember having passed by this particular area in the past. The scenario is what you would expect, just some grass and dirt on the way and silent shacks, the wood still creaking with the wind. It makes for a certainly spooky ambience.";

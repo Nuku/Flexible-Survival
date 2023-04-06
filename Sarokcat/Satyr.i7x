@@ -124,7 +124,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Satyr";
-	add "Satyr" to infections of Magicallist;
+	add "Satyr" to infections of MagicalList;
 	add "Satyr" to infections of MythologicalList;
 	add "Satyr" to infections of MaleList;
 	add "Satyr" to infections of BipedalList;

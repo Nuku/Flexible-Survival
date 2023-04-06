@@ -81,8 +81,8 @@ Conflict within the Plains is a situation.
 ResolveFunction of Conflict within the Plains is "[ResolveEvent Conflict within the Plains]". The level of Conflict within the Plains is 6.
 Sarea of Conflict within the Plains is "Plains".
 when play begins:
-	add Conflict within the Plains to Badspots of MaleList;
-	add Conflict within the Plains to Badspots of FurryList;
+	add Conflict within the Plains to BadSpots of MaleList;
+	add Conflict within the Plains to BadSpots of FurryList;
 
 to say ResolveEvent Conflict Within the Plains:
 	if HP of Seraphis is 0: [First interaction]
@@ -183,7 +183,7 @@ to say ResolveEvent Conflict Within the Plains:
 						LineBreak;
 						say "     Considering that he can't really move from where he's standing, it's not hard to stay away from him, and after a few hours, it begins to look like as though he's coming down from his lust high. More intelligence is visible within his eyes with each passing second, and as the third or fourth hour passes, you can see his cock is deflating a little. However, he's still very evidently horny, but at least a little more in control than before. 'Huh. You're a rather... unique individual. Most would have jumped at the chance for a fuck, especially nowadays.'";
 						say "     You tell him about what you've been through so far, leaving out anything too risky, and his face seems to lighten up a bit. 'Ah, so you avoided the brunt of the start. Lucky, ";
-						if bodyname of Player is "Human":
+						if BodyName of Player is "Human":
 							say "and you've even kept your own body.' His equine shaft jerks up a bit as he says that. ";
 						else:
 							say "well, for the most part, for you definitely lost your old body,' he remarks with some evident disappointment. ";
@@ -224,8 +224,8 @@ Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
 The Prereq1Resolution of Plant Ruins Encounters is { 1, 2 }. [dom, neutral]
 
 when play begins:
-	add Plant Ruins Encounters to Badspots of MaleList;
-	add Plant Ruins Encounters to Badspots of FurryList;
+	add Plant Ruins Encounters to BadSpots of MaleList;
+	add Plant Ruins Encounters to BadSpots of FurryList;
 
 to say ResolveEvent Plant Ruins Encounters:
 	[

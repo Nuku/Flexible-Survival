@@ -509,6 +509,7 @@ check TagListReadout:
 carry out TagListReadout:
 	say "All current lists:";
 	LineBreak;
+	sort Infections of AmphibianList;
 	sort Infections of AquaticList;
 	sort Infections of ArachnidList;
 	sort Infections of AvianList;
@@ -551,7 +552,7 @@ carry out TagListReadout:
 	sort Infections of InternalCockList;
 	sort Infections of KnottedCockList;
 	sort Infections of OviPositorList;
-	sort Infections of PrehensileCocklist;
+	sort Infections of PrehensileCockList;
 	sort Infections of SheathedCockList;
 	sort Infections of TaperedCockList;
 	sort Infections of TentacleCockList;
@@ -572,16 +573,17 @@ carry out TagListReadout:
 	sort Infections of AlwaysRutList;
 	sort Infections of GillList;
 	sort Infections of NotBreathingList;
-	sort Infections of Birthlist;
-	sort Infections of Egglaylist;
+	sort Infections of BirthList;
+	sort Infections of EgglayList;
 	sort Infections of MpregList;
 	sort Infections of OviImpregnatorList;
-	sort Infections of Sterilelist;
+	sort Infections of SterileList;
 	sort Infections of FeralmindList;
 	sort Infections of HivemindList;
 	sort Infections of PackmindList;
 	sort Infections of FirebreathList;
 	sort Infections of TailweaponList;
+	say "AmphibianList: [Infections of AmphibianList][line break][line break]";
 	say "AquaticList: [Infections of AquaticList][line break][line break]";
 	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
 	say "AvianList: [Infections of AvianList][line break][line break]";
@@ -624,7 +626,7 @@ carry out TagListReadout:
 	say "InternalCockList: [Infections of InternalCockList][line break][line break]";
 	say "KnottedCockList: [Infections of KnottedCockList][line break][line break]";
 	say "OviPositorList: [Infections of OviPositorList][line break][line break]";
-	say "PrehensileCocklist: [Infections of PrehensileCocklist][line break][line break]";
+	say "PrehensileCockList: [Infections of PrehensileCockList][line break][line break]";
 	say "SheathedCockList: [Infections of SheathedCockList][line break][line break]";
 	say "TaperedCockList: [Infections of TaperedCockList][line break][line break]";
 	say "TentacleCockList: [Infections of TentacleCockList][line break][line break]";
@@ -645,11 +647,11 @@ carry out TagListReadout:
 	say "AlwaysRutList: [Infections of AlwaysRutList][line break][line break]";
 	say "GillList: [Infections of GillList][line break][line break]";
 	say "NotBreathingList: [Infections of NotBreathingList][line break][line break]";
-	say "Birthlist: [Infections of Birthlist][line break][line break]";
-	say "Egglaylist: [Infections of Egglaylist][line break][line break]";
+	say "BirthList: [Infections of BirthList][line break][line break]";
+	say "EgglayList: [Infections of EgglayList][line break][line break]";
 	say "MpregList: [Infections of MpregList][line break][line break]";
 	say "OviImpregnatorList: [Infections of OviImpregnatorList][line break][line break]";
-	say "Sterilelist: [Infections of Sterilelist][line break][line break]";
+	say "SterileList: [Infections of SterileList][line break][line break]";
 	say "FeralmindList: [Infections of FeralmindList][line break][line break]";
 	say "HivemindList: [Infections of HivemindList][line break][line break]";
 	say "PackmindList: [Infections of PackmindList][line break][line break]";
