@@ -1549,7 +1549,7 @@ to OTElkHeadReaperSubmit:
 			trigger ending "Player has died";
 			end the story saying "You have perished in the Void, your soul taken by a reaper.";
 	else: [pussy worship]
-		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles like a true mythical amazonian woman, which look even more intimidating given how tall she is. You kneel, following her demands, and your head barely reaches her thick and strong thighs in height level. You're still fairly close to the wall, and the space between you shortens as she slowly walks towards you. 'Head on the floor.' she says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
+		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles like a true mythical Amazonian woman, which look even more intimidating given how tall she is. You kneel, following her demands, and your head barely reaches her thick and strong thighs in height level. You're still fairly close to the wall, and the space between you shortens as she slowly walks towards you. 'Head on the floor.' she says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
 		say "     She bashes the scythe with the pommel against the ground to her side with tremendous force, and then you feel what seems to be her bare foot pressing against your cheek to a point that it is almost painful, but not quite. The surface of her sole is interestingly soft, you would expect a much rougher skin, especially since she walks without any sort of foot protection. She rubs it across your face for a bit, then, her deep demonic voice booms out to you. 'You might keep your soul if your obedience is total.' The reaper presses her foot just a bit more, and it really is scratching the pain level now. Your face recoils in a reflex, but you keep still in order to not enrage your new mistress.";
 		say "     'You shall do anything I say... Anything I want... Anything you are told. No limits.' she says, and she awaits your consent. You better mind your words...";
 		Linebreak;
@@ -3217,7 +3217,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "The [one of]towering figure[or]cloaked giant[or]reaper[or][if Resolution of ElkHeadReaperGender is 10]musclebound dom[else]amazonian domme[end if][at random] [one of]swings [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at you with life-threatening speed[or]hits you with the pommel of [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe, which hurts a lot[or]whirls [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at your legs, shoving you back with a laceration[or]kicks you with great force, violently knocking you back[or][at random]!";
+	now attack entry is "The [one of]towering figure[or]cloaked giant[or]reaper[or][if Resolution of ElkHeadReaperGender is 10]musclebound dom[else]Amazonian domme[end if][at random] [one of]swings [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at you with life-threatening speed[or]hits you with the pommel of [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe, which hurts a lot[or]whirls [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at your legs, shoving you back with a laceration[or]kicks you with great force, violently knocking you back[or][at random]!";
 	now defeated entry is "[ElkHeadReaperLoses]";
 	now victory entry is "[ElkHeadReaperWins]";
 	now desc entry is "[ElkHeadReaperDesc]";
@@ -3260,7 +3260,7 @@ When Play begins:
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]towering[or]muscular[or]ripped[or]cloaked[at random]";
-	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]amazonian[end if][at random]";
+	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]Amazonian[end if][at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is true;

@@ -271,7 +271,7 @@ To Combat Menu:
 			repeat through table of basic combat:
 				increase combatopt by 1;
 				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link] ([description entry])[line break][run paragraph on]";
-			say "Your HP: [HP of Player]/[maxHP of Player]  Libido: [Libido of Player]/100[line break]";
+			say "Your HP: [HP of Player]/[MaxHP of Player]  Libido: [Libido of Player]/100[line break]";
 			say "[EnemyCapNameOrTitle] HP: [monsterHP]/[HP in row MonsterID of Table of Random Critters]  Libido: [monsterLibido - monsterLibidoPenalty]/100[line break]";
 			say ">[run paragraph on]";
 			let k be 0;
@@ -980,7 +980,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 	else if ducky swimring is equipped and duckyactive is true and a random chance of 1 in 8 succeeds:
 		say "Your [one of]inflatable ducky[or]ducky swim ring[or]white ducky[or]cute ducky[at random] ends up taking the hit for you, causing it to pop and deflate for the rest of the fight, but saving you from being hit this [one of]time[or]once[at random].";
 		now avoidance is 1;
-	if avoidance is 0 and level of Velos > 2 and ( ( HP of Player * 100 ) / maxHP of Player ) < 10 and velossaved is false:
+	if avoidance is 0 and level of Velos > 2 and ( ( HP of Player * 100 ) / MaxHP of Player ) < 10 and velossaved is false:
 		say "[one of]Velos, perhaps sensing that things aren't going well out there, makes a surprise exit, startling your foe for a moment before the serpent has to retreat.[or]When the serpent hidden within you emerges suddenly, the [EnemyNameOrTitle] is startled and stumbles back, losing their opportunity to strike.[or]With an exaggerated moaning, Velos rises from your depths, throwing off your opponent.[or]In an attempt to safeguard his friend and his home, Velos emerges. 'Boo.' Stunned by this new foe, the [EnemyNameOrTitle] is thrown off balance for a moment. By the time they recover and swing at Velos, he's already ducked back inside you.[or]Velos emerges from you, yelling angrily at you to stop all that knocking about while he's trying to sleep. Your foe, meanwhile, staggers back several steps from the brief appearance of the snake.[or]Velos, emerging like some serpentine horror from your body, makes moaning, otherworldly noises at your foe. This drives your opponent is back for a few moments['] reprieve.[cycling]";
 		increase HP of Player by 5;
 		now velossavedyes is true;
@@ -1341,7 +1341,7 @@ to win:
 			increase HP of Player by lev entry;
 		PlayerDrink 3;
 		PlayerEat 1;
-		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	[Trophies and Looting]
 	TrophyLootFunction;
 	[Postcombat Scene]
@@ -1550,7 +1550,7 @@ This is the monster libido rule:
 	rule succeeds;
 
 This is the player injury rule:
-	let per be ( HP of Player times 100 ) divided by maxHP of Player;
+	let per be ( HP of Player times 100 ) divided by MaxHP of Player;
 	if per <= 10:
 		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	else if per <= 40:
@@ -1646,9 +1646,9 @@ this is the bearhug rule:
 		say "[noarmorabsorbancy]"; [ignores armor]
 		decrease HP of Player by ( dam - absorb );
 		if absorb is 0:
-			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip! ([HP of Player]/[maxHP of Player] HP)[line break]";
+			say "You suffer [special-style-2][dam][roman type] damage from its crushing grip! ([HP of Player]/[MaxHP of Player] HP)[line break]";
 		else:
-			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip! ([HP of Player]/[maxHP of Player] HP)[line break]";
+			say "You suffer [special-style-2][dam - absorb] ([dam] - [absorb])[roman type] damage from its crushing grip! ([HP of Player]/[MaxHP of Player] HP)[line break]";
 		if HP of Player > 0:
 			WaitLineBreak;
 			let num1 be a random number between 0 and ( Strength of Player + level of Player );
@@ -1920,7 +1920,7 @@ this is the latexhug rule:
 		now damagein is dam;
 		say "[noarmorabsorbancy]"; [ignores armor]
 		decrease HP of Player by ( dam - absorb );
-		say "Despite your struggle, [one of]the latex continues to spread over your body[or]the latex squeezes tigher around you[at random], further immobilizing you. [special-style-2][dam][roman type] damage! ([HP of Player]/[maxHP of Player] HP)[line break]";
+		say "Despite your struggle, [one of]the latex continues to spread over your body[or]the latex squeezes tigher around you[at random], further immobilizing you. [special-style-2][dam][roman type] damage! ([HP of Player]/[MaxHP of Player] HP)[line break]";
 		if HP of Player > 0:
 			WaitLineBreak;
 			let num1 be a random number between 0 and ( Dexterity of Player + level of Player );

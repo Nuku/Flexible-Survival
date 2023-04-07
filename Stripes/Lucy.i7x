@@ -122,7 +122,7 @@ to say sexwithLucy:
 			now title entry is "Fuck Lucy";
 			now sortorder entry is 1;
 			now description entry is "Have sex with your sexy rat girlfriend.";
-			if BodyName of Player is "Skunkbeast Lord" and the player is pure:
+			if BodyName of Player is "Skunkbeast Lord" and the Player is pure:
 				choose a blank row in table of fucking options;
 				now title entry is "Skunkbeast fucking";
 				now sortorder entry is 2;

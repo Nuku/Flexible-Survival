@@ -1152,7 +1152,7 @@ to say WolfTeamManager:
 		else if charisma of Player < 20:
 			StatChange "Charisma" by 1;
 		else:
-			increase maxHP of Player by level of Player / 2;
+			increase MaxHP of Player by level of Player / 2;
 			say "Your maximum [bold type]HP[roman type] has been increased by [level of Player / 2].";
 		SanLoss 12;
 		if thirst of Jennifer is 0:[guaranteed preggers after orgy]

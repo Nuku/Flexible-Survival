@@ -837,7 +837,7 @@ to wrcurserampage:
 			decrease morale of Player by 5;
 			wrcurserecede;
 			now wrcursestatus is 3;
-			now HP of Player is ( HP of Player + HP of Player + maxHP of Player ) / 4;
+			now HP of Player is ( HP of Player + HP of Player + MaxHP of Player ) / 4;
 		else if humanity of Player <= 0:
 			end the story saying "Your wild rampage consumes you and you become nothing more than a wild creature that becomes a dangerous, bloodthirsty and lust-crazed beast each night.";
 	else:		[confined, manage to hold on]

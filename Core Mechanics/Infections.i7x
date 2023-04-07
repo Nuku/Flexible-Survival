@@ -465,12 +465,12 @@ To Infect:
 						say "Your constitution feels weaker as the infection spreads through you.";
 						decrease Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 1:
-					decrease maxHP of Player by level of Player plus 1;
+					decrease MaxHP of Player by level of Player plus 1;
 			if Stamina of Player < Sta entry:
 				say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
 				increase Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by level of Player plus 1;
+					increase MaxHP of Player by level of Player plus 1;
 	if x is xper:
 		if Perception of Player is not Per entry:
 			if Perception of Player > Per entry and a random chance of 1 in 10 succeeds:

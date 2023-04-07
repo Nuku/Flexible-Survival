@@ -645,7 +645,7 @@ to say MaleFangOmegaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Mount the big wolf to show him who's alpha";
 	[]
-	if BodyName of Player is "Skunkbeast Lord" and player is pure and Player is male:
+	if BodyName of Player is "Skunkbeast Lord" and Player is pure and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "SBL Fuck";
 		now sortorder entry is 6;
@@ -794,7 +794,7 @@ to say FemaleFangOmegaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Mount the big wolf to show her who's alpha";
 	[]
-	if BodyName of Player is "Skunkbeast Lord" and player is pure and Player is male:
+	if BodyName of Player is "Skunkbeast Lord" and Player is pure and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "SBL Fuck";
 		now sortorder entry is 6;
@@ -991,7 +991,7 @@ to say MaleFangAlphaOral:
 	NPCSexAftermath Player receives "OralCock" from Fang;
 
 to say MaleFangAlphaFucked:
-	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the Player is pure:
 		say "[MaleFangAlphaFuckedSBL]";
 	else:
 		if Player is impreg_able and hunger of Fang is 0:
@@ -1240,7 +1240,7 @@ to say FemaleFangAlphaOral:
 	NPCSexAftermath Player receives "Oralpussy" from Fang;
 
 to say FemaleFangAlphaFucked:
-	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the Player is pure:
 		say "[FemaleFangAlphaFuckedSBL]";
 	else:
 		say "     You snuggle up to your big alpha wolf and nuzzle under her as you enjoy a rare moment of respite from the dangers of the city, however Fang has something different in mind by the look she is giving you. Getting on your feet, you quickly strip, Fang helping you with paws and teeth all without harming your gear, once completely in the nude Fang gives an appraising look at your current form. Seemingly satisfied with what she sees, Fang gives you a stern look and flatly barks 'Sit!' the strong-yet-firm command causing you to unthinkingly react by sitting, Fang slightly smirks at your obedience filled submission, however that smirk isn't just the look of levity.";
@@ -1808,7 +1808,7 @@ to say MaleFangSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Mount the big wolf to show him who's alpha";
 	[]
-	if BodyName of Player is "Skunkbeast Lord" and player is pure and Player is male:
+	if BodyName of Player is "Skunkbeast Lord" and Player is pure and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "SBL Fuck";
 		now sortorder entry is 6;
@@ -1982,7 +1982,7 @@ to say FemaleFangSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Mount the big wolf to show her who's alpha";
 	[]
-	if BodyName of Player is "Skunkbeast Lord" and player is pure and Player is male:
+	if BodyName of Player is "Skunkbeast Lord" and Player is pure and Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "SBL Fuck";
 		now sortorder entry is 6;
@@ -2856,7 +2856,7 @@ instead of going to Grey Abbey Library while (( lastfuck of Fang - turns >= 16 a
 		say "     Unsure how he is going to receive it, you ask Fang whether he would be willing to be your alpha instead. He cocks his head for a moment, looking into your eyes while he considers. 'Interesting. I did not expect this. I would be leader instead?' he ponders before bumping up against you. 'I accept. I will be leader. Learned much while here. Will benefit me. Through this, bonds of the pack are strengthened. Like family.' You stifle a snort at this, considering Fang hasn't exactly got many members of his pack[if HP of Lux > 0] other than Lux and Umbra[end if], but you don't wish to insult your new alpha so soon after he has gained his position (or insult him at all for that matter). Despite this, he seems to notice, but takes it in good humor. 'Behave,' he gently growls. 'The pack will grow. All creatures have advantages. Diversity will be beneficial.' You take this to mean that he will accept non-canines too[if BodyName of player is listed in infections of CanineList], in interesting idea that you are curious to see how it turns out[else], an idea that doesn't particularly surprise you considering that you aren't canine yourself[end if].";
 		say "     Before you have a chance to leave, Fang fixes his amber eyes upon you, communicating that your conversation is not yet over. When you look at him, he stares back with a redoubled confidence, ears upright and unflinching with his gaze. 'To seal pact. We will mate. Mark you as mine and me as yours,' he says, the statement leaving no room for disagreement now that you have surrendered authority to him. You spy the beginning of an erection beneath his undercarriage and come to the conclusion that even if you had the choice that you wouldn't wish to avoid this chance at being the first to be mounted by the wolf now that he has reached the top of the hierarchy.";
 		WaitLineBreak;
-		if BodyName of player is listed in infections of CanineList and BodyName of player is listed in infections of QuadrupedalList and player is pure: [Feral Canine]
+		if BodyName of player is listed in infections of CanineList and BodyName of player is listed in infections of QuadrupedalList and Player is pure: [Feral Canine]
 			if Player is herm:
 				say "     'You are my wolf. My bitch. Feel my weight atop you. Claiming you as mine to protect. Protect against any and all. You and children,' Fang murmurs lovingly, licking the back of your neck as he admires his mate. A feeling of satisfaction fills you as you gaze towards the wolf standing over you. If this is how your alpha is going to treat you, perhaps you should have discussed it with him sooner, though he did say that the time allowed him to develop as a person. Flagging your tail to the side and spreading your legs apart as far as is comfortable, maybe a little more than that just to ensure your alpha can penetrate you easily, you wait for him to mount, shivering as you feel his hot breath tickle the sensitive flesh around your cunt. When his tongue slithers over it, you can't stop yourself from releasing a needy moan, especially as he goes as far as to push it into you. 'Who's a good puppy? My sexy bitch...' Fang praises you before leaping up to mount you not a moment too soon. You're not sure how much longer you could have lasted before begging him to plunge his wolf cock into you.";
 				WaitLineBreak;

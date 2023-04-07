@@ -200,15 +200,15 @@ to ItemLoss (ItemObj - a grab object) by (N - number) silence state is (Silence 
 to PlayerMaxHeal:
 	LineBreak;
 	say "     [bold type]Your hitpoints are completely restored![roman type][line break]";
-	now HP of Player is maxHP of Player;
+	now HP of Player is MaxHP of Player;
 
 to PlayerHealed (N - number):
 	if N is not 0:
 		LineBreak;
 		say "     [bold type]Your hitpoints increase by [N]![roman type][line break]";
 		increase HP of Player by N;
-		if HP of Player > maxHP of Player:
-			now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player:
+			now HP of Player is MaxHP of Player;
 
 to PlayerWounded (N - number): [wounded, not killed - this won't kill a player]
 	if N is not 0:
@@ -308,7 +308,7 @@ to FeatGain (Featname - text):
 		else if Featname is "More Time":
 			extend game by 24;
 		else if Featname is "Hardy":
-			increase maxHP of Player by 8;
+			increase MaxHP of Player by 8;
 			increase HP of Player by 8;
 		else if Featname is "Instinctive Combat":
 			say "     Having gained the [']Instinctive Combat['] feat, you now have access to the 'Auto Attack' command. These are the same as picking the same option over and over again during combat. No different results, just less typing for faster gameplay.[line break]Type [bold type][link]auto attack normal[end link][roman type] for the default method of combat (choose each action).[line break]Type [bold type][link]auto attack berserk[end link][roman type] to always attack in combat.[line break]Type [bold type][link]auto attack pass[end link][roman type] to always pass in combat.[line break]Type [bold type][link]auto attack coward[end link][roman type] to always flee in combat.[line break]Type [bold type][link]auto attack submit[end link][roman type] to always submit in combat.[line break]You may review these commands at any time by using the [link]help[end link] command.";
@@ -913,13 +913,13 @@ to StatChange (Statname - a text) by (Modifier - a number) silence state is (Sil
 				if Modifier > 0:
 					increase stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 0:
-						increase maxHP of Player by level of Player + 1;
+						increase MaxHP of Player by level of Player + 1;
 						increase HP of Player by level of Player + 1;
 				else:
 					decrease stamina of Player by 1;
 					if remainder after dividing stamina of Player by 2 is 1:
-						decrease maxHP of Player by level of Player + 1;
-						if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+						decrease MaxHP of Player by level of Player + 1;
+						if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		-- "charisma":
 			increase charisma of Player by Modifier;
 		-- "intelligence":

@@ -203,11 +203,11 @@ to say sexwithLeon:
 				say "     Between his bleating grunts as he pounds into you like the virile ram he is, he reinforces your own woolly thoughts with his words. 'Mmm... that's right, my needy ewe. Stop this defiance and just stay with your flock. It's where you belong. A weak male ewe like your needs a strong ram to protect and fuck him like a good girl. You nod eagerly and moan repeatedly that you're his needy ewe and for him to fuck you. Tightening his grip on you, he thrusts forward one last time with a loud bleat and cums hard. His balls unleash their heavy payload, sending thick ram semen into your bowels. You are filled with pleasure as he coats your insides with his fertile, dominant seed and cum yourself soon after. Your lesser seed spurts into the woolly pile beneath you, adding to the scents of the flock.";
 				NPCSexAftermath Player receives "AssFuck" from Leon;
 				decrease humanity of Player by 18;
-				if ( BodyName of Player is "Ram" or BodyName of Player is "Ewe" ) and the player is pure:
+				if ( BodyName of Player is "Ram" or BodyName of Player is "Ewe" ) and the Player is pure:
 					SanLoss 6;
 				if "Strong Psyche" is listed in feats of Player, SanBoost 3;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 3;
-				if ( BodyName of Player is "Ram" or BodyName of Player is "Ewe" ) and the player is pure and humanity of Player < 10:
+				if ( BodyName of Player is "Ram" or BodyName of Player is "Ewe" ) and the Player is pure and humanity of Player < 10:
 					now humanity of Player is 0;
 					say "     After pulling out, the chuckling ram goes to swipe his sticky cock across your woolly ass, but you bleat that you want more. The smile on his white muzzle grows and he instead moves around to let your muzzle at his shaft. You engulf his cum-slick pole in your mouth, licking and sucking on it eagerly in your desire to prove your need to be with your studly ram. You can tell he's pleased with his eagerness as he rubs a hoof-hand through your wool as he caresses your head.";
 					WaitLineBreak;

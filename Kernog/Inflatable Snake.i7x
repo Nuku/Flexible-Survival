@@ -92,7 +92,7 @@ to inflatableSnakeVore:
 			increaseSnakeDrugCap;
 			inflatableSnakeSanityOrgasm;
 			LibidoReset;
-			if BodyName of player is "Inflatable Snake" and player is pure:
+			if BodyName of player is "Inflatable Snake" and Player is pure:
 				say "You have been completely turned into a inflatable snake. You hazily wiggle your new inflatable serpentine body, while the chemicals of your 'progenitor' finish brainwashing you into a happy reptilian pool toy.";
 			else if inflatableSnakeBodyParts is 0:
 				say "The nanites are hard a work to cope with your weakened state. In doing so, they start converting you into an inflatable snake.";

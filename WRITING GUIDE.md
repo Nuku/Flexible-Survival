@@ -22,8 +22,8 @@ The data of the game is contained in a lot of variables and properties, many of 
 
 ### Player Stats: numerical, rarely useful for scenes except for comparisons, but here for completeness
 * `HP of player` | current HP of player
-* `maxhp of player` | player's maximum hp
-* `xp of player`
+* `MaxHP of player` | player's maximum hp
+* `XP of player`
 * `level of player`
 * `strength of player`
 * `dexterity of player`
@@ -128,8 +128,8 @@ The above cock comparisons can be done for the player's cunt values. The size co
 * `if BodyName of player is "Rubber Tigress"` | does the player have the Rubber Tigress infection on their body? (case sensitive to name)
 * `if SkinName of player is "Bird of Paradise"` | does the player have the Bird of Paradise infection on their skin? (case sensitive to name)
 * `if BodyName of player is "Alpha Husky"` *or* `FaceName of player is "Alpha Husky"` | are either of the player's head or body infected with the "Alpha Husky" strain?
-* `if player is pure` | does the player have the same infection on all body parts?
-* `if BodyName of player is "Feline" and player is pure` | is the player fully infected with the Feline strain?
+* `if Player is pure` | does the player have the same infection on all body parts?
+* `if BodyName of player is "Feline" and Player is pure` | is the player fully infected with the Feline strain?
 * `if BodyName of player is listed in infections of FelineList` | does the player have any of the feline infections on their body?
 * `if BodyName of player is not listed in infections of FelineList` | does the player not possess any feline infection on their body?
 The current list options are: FelineList, CanineList, EquineList, VulpineList, ReptileList, InsectList, PlantList, AvianList, TaurList, knotlist (cock), LatexList (skin)
@@ -137,7 +137,7 @@ The current list options are: FelineList, CanineList, EquineList, VulpineList, R
 * `if scalevalue of player is 3` | is the player roughly human sized?
 * `if scalevalue of player < 3` | is the player smaller than human average?
 * `if scalevalue of player > 3` | is the player above human average?
-* `if player is perminfected` | does the player have any of the permanent infections? (jackalman, Hellhound, etc...)
+* `if Player is perminfected` | does the player have any of the permanent infections? (jackalman, Hellhound, etc...)
 
 ### Fighting and Fight Outcomes
 * `if weapon object of player is journal` | does the player fight barehanded?
@@ -163,7 +163,7 @@ to say InfectionNameDesc:
 * `if "Male Preferred" is listed in feats of player` | does the player have the Male Preferred feat? (feat name is case sensitive)
 * `if "Male Preferred" is not listed in feats of player` | does the player not have the Male Preferred feat?
 * `if "MPreg" is listed in feats of player` | does the player have the MPreg feat
-* `if player is submissive` | shorthand for checking if the player has the Submissive feat
+* `if Player is submissive` | shorthand for checking if the player has the Submissive feat
 * `if player is fastlearning` | shorthand for checking if the player has the Fast Learner feat
 * `if anallevel is 3` *or* `if "More Anal" is listed in feats of player` | is the player set for More Anal?
 * `if anallevel is 1` *or* `if "Less Anal" is listed in feats of player` | is the player set for Less Anal?

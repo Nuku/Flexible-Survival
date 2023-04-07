@@ -511,7 +511,7 @@ to say ResolveEvent Pediatrics Troublemakers:
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Groaning on the floor you push up and get ready to fight again, not letting what just happened get to you. With a determined look, suddenly a mystical and powerful sensation runs through your body, you suddenly feel revitalized and healed a little for battle. You charge forward at the next one you can see, which is the bunny with guns, ready for a fight hoping you can win this one.";
 			increase HP of Player by 40;
-			if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+			if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 			increase Stamina of Horus by 1;
 		else if fightoutcome >= 30: [fled]
 			say "     Deciding that your enemies are far too difficult to face at the moment you back away and then quickly dart out of the alleyway. As you turn your head the three enemies are growing smaller and smaller until you can't see them anymore. Once you're out of sight, you realize that you'll need to go back eventually but for now you just lean up against a wall to catch your breath.";
@@ -532,7 +532,7 @@ to say ResolveEvent Pediatrics Troublemakers:
 				else:
 					say "     You feel a burst of mystical and powerful energy fill you before you reach your enemy, healing you in preparation for the fight ahead!";
 					increase HP of Player by 40;
-					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+					if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 			else if fightoutcome >= 30: [fled]
 				say "     Realizing that you can't finish off the leopard, you turn tail and run, disappearing into the alley and out the end you came in. Panting and breathing hard, you lean up against a building on the streets and think that you definitely will have to come back later when you can. After all, you have to hold up your end of the deal with Dr. Medea.";
 				if TroublemakerLost is false:

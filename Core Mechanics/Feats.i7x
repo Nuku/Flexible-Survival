@@ -357,7 +357,7 @@ This is the gainfeat rule:
 		else if nam is "More Time":
 			extend game by 24;
 		else if nam is "Hardy":
-			increase maxHP of Player by 8;
+			increase MaxHP of Player by 8;
 			increase HP of Player by 8;
 		else if nam is "City Map":
 			say "[BestowCityMapFeat]";

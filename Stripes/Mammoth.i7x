@@ -264,7 +264,7 @@ This is the Mammoth Infection rule:
 			say "     To add to the excitement, the sabertooths also take considerable interest in the large, lumbering mountains of mammoth meat. Following their instincts, the felines will stalk and attack the mammoths in packs. But instead of eating them, they instead use them for a more pleasurable source of food. The sexy smilodons will take turns nursing milk from those massive breasts while others rub and paw at a mammoth's cock and balls, getting them to cum a massive flood of cream for the kitties to lick up.";
 		else:
 			say "     You survive, but have been significantly changed by your experience in the city. Your mammoth form draws some interest from the scientists, apparently being a rarer infection - at least among the survivors. During your time there, you are subject to several tests before finally released back into the world.";
-			if the player is pure:
+			if the Player is pure:
 				say "     You get a job working at another museum, talking to patrons about life during the Ice Age. It's boring at times and punctuated by a lot of children eager to play with you and overly cautious parents keeping them back. But a lot of the time, you have a good time at work, especially when you get a moment to slip away with a visitor into a back area for some private fun. These are more common than you would have expected at first. It seems that word's spread about you from your other happy liaisons and repeat business for the museum goes up as well, making everyone happy.";
 			else:
 				let mammothskintemp be "";

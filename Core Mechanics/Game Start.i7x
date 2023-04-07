@@ -157,7 +157,7 @@ To regularstart: [normal start method]
 					if RestoreMode is true:
 						now RestoreMode is false;
 						try restoring the game;
-						if maxHP of Player is 0:
+						if MaxHP of Player is 0:
 							try restarting the game;
 			-- 0:
 				say "Confirm game start?";

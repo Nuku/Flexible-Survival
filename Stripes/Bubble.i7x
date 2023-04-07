@@ -172,7 +172,7 @@ to say bubblesex00:
 		now sortorder entry is 10;
 		now description entry is "change her figure by [if Libido of Bubble is 0]inflating[else]deflating[end if] her";
 		choose a blank row in table of fucking options;
-	if HP of Bubble >= 8 and BodyName of Player is "Inflatable Vulpine" and player is pure:
+	if HP of Bubble >= 8 and BodyName of Player is "Inflatable Vulpine" and Player is pure:
 		if infvulpstate <= 2:
 			now title entry is "Be inflated";
 		else:

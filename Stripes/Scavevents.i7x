@@ -740,7 +740,7 @@ to say ResolveEvent Shattered House:
 		if dice >= 16:
 			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
-			let dam be ( ( HP of Player + maxHP of Player ) ) / 7;
+			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
 			decrease HP of Player by dam;
 			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances comes tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			ItemGain food by 1;
@@ -755,7 +755,7 @@ to say ResolveEvent Shattered House:
 		if dice >= 14:
 			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
-			let dam be ( ( HP of Player + maxHP of Player ) ) / 7;
+			let dam be ( ( HP of Player + MaxHP of Player ) ) / 7;
 			decrease HP of Player by dam;
 			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:

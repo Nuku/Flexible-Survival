@@ -483,9 +483,9 @@ this is the leoninelust rule:		[continuous lustful weakening of Player]
 			if HP of Player <= 0 or Libido of Player >= 110:
 				say "! You mewl and stagger, about to give in to those urges as the feline comes in for a final strike.";
 				now fightoutcome is 20;
-			else if ( ( HP of Player * 100 ) / maxHP of Player ) < 25:
+			else if ( ( HP of Player * 100 ) / MaxHP of Player ) < 25:
 				say "! With your will to fight fading fast, you'd best end this soon.";
-			else if ( ( HP of Player * 100 ) / maxHP of Player ) < 50:
+			else if ( ( HP of Player * 100 ) / MaxHP of Player ) < 50:
 				say "! Your will to keep fighting is waning in the presence of this lion stud.";
 			else:
 				say "!";
@@ -600,7 +600,7 @@ This is the Feline Infection rule:
 			else if HP of Leonard >= 3 and HP of Leonard < 10:	[w/Leonard]
 				say "     Your feline instincts start to come to the fore as your human mind falls to pieces. You make your way back to the park, drawn by the scent of the other felines like yourself there, feeling a growing need within your loins. You are drawn back to a tunnel cave at the far side of the park, smelling your leonine lover. Leonard smiles and happily welcomes you back, telling you how pleased he is to see you as a proper feline playtoy like you were always meant to be. You can't help but agree with him, knowing him to be your alpha, your pride leader.";
 				say "     And speaking of his pride, when he takes you to his bed to mount you again, you find that he has several other cute lioness girls on the bed already stuffed full of his seed. After a lustful welcome by them all that leaves you bloated with lion seed, you and the other girls stagger out, heading off to hunt for more lovely furnishing and supplies for your lion master's home. Between trips out, you meet the rest of your pride mates, the handsome lion having gathered or created many lustful felines through his charms. And when the military comes through the area, he charms several more, tricking the soldiers into thinking his den is a safe place for them and many a lone soldier, separated from their unit ends up there only to become another lioness lover.";
-				if Player is puremale and BodyName of Player is "Feline" and player is pure:
+				if Player is puremale and BodyName of Player is "Feline" and Player is pure:
 					say "     Despite your girlish appearance, you remain male and hold a special place in the pride. He keeps an eye on you around the other girls, but is more than happy to stuff your tight, little bottom. After a few years, he takes to having you mount some of the girls while he fucks you. Over time, you grow and mature, becoming a big, strong male like him. Soon you're ready to lead a pride of your own, though you're always willing to bend over and offer your ass up to him, remaining his submissive little girly-boy at heart. Any pride leaders formed from his or yours are taught the same as well, submitting to Leonard as their leader, giving the aristocratic lion considerable power in the parklands.";
 			else if HP of Leonard >= 10 and HP of Leonard <= 14:	[succumbed during rivalry period]
 				if feline_pride_defeat is true:

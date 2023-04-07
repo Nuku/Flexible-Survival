@@ -63,8 +63,8 @@ to say Reindeer_wins:
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 2;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 2;
 	now Libido of Player is ( Libido of Player * 3 ) divided by 4;
-	increase HP of Player by ( maxHP of Player / 5 );
-	if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+	increase HP of Player by ( MaxHP of Player / 5 );
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 
 to say Reindeer_loses:
 	say "     'Oh, you Scrooge. Where's your holiday spirit?' he whines as your continued resistance frustrates him. Having had enough, the holiday reindeer finally flies off, heading elsewhere for someone to fill with a load of his special holiday cheer.";
@@ -266,7 +266,7 @@ to say nogging:
 	PlayerEat 3;
 	PlayerDrink 6;
 	increase HP of Player by ( Stamina of Player / 2 );
-	if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+	if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	increase morale of Player by a random number from 0 to 1;
 	increase morale of Player by a random number from 0 to 1;
 	decrease humanity of Player by a random number from 3 to 8;

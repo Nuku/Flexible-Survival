@@ -186,7 +186,7 @@ to say sexwithFrank:
 
 to say Frank_MM_sex00:
 	let specskunkstate be 0;
-	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the Player is pure:
 		now specskunkstate is 2; [Skunkbeast Lord]
 		if skrp is 1:
 			now specskunkstate is 3; [Skunkbeast Lord Taur]
@@ -361,7 +361,7 @@ to say Frank_MF_sex00:
 	increase franksex by 1;
 	now lastfuck of Frank is turns;
 	let specskunkstate be 0;
-	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the Player is pure:
 		now specskunkstate is 2; [Skunkbeast Lord]
 		if skrp is 1:
 			now specskunkstate is 3; [Skunkbeast Lord Taur]

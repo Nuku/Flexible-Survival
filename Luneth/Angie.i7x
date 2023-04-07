@@ -503,9 +503,9 @@ Instead of fucking the Angie:
 		say "     'Sorry, but I think I'll pass, that might just be a bit too much for my mind to take right now,' Angie says apologetically as you approach her about sex, although you can easily see your offer has definitely got her interested. She even begins to pant slightly and from the bulge in her short skirt, her cock is at least half-hard.";
 	else if lastfuck of Angie - turns < 6:
 		say "     'Sorry, I know you want to try that again just as much as I do,' Angie says with a soft purr of remembrance, 'But it seems like I still need a bit of time to recover before I can do anything like that again.' Giving you a hug to soothe your disappointment, she then goes back to what she was doing.";
-	else if BodyName of Player is "Panther Taur" and player is pure and AngieAroused is 50:
+	else if BodyName of Player is "Panther Taur" and Player is pure and AngieAroused is 50:
 		say "[AngiePTFun]";
-	else if BodyName of Player is "Rubber Tigress" and player is pure and AngieAroused is 50:
+	else if BodyName of Player is "Rubber Tigress" and Player is pure and AngieAroused is 50:
 		say "[AngieRTFun]";
 	else if Player is neuter:
 		say "     Seems like you're currently not quite equipped to have sex with anyone. Maybe try this again when you've got a cock or pussy...";

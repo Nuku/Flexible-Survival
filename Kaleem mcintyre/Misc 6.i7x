@@ -123,7 +123,7 @@ to say WingedHorse_BeDick:[You know this isn't the right thing to do... so why d
 
 to say WingedHorse_FlyWith: [Scene that plays out if the player chooses to attempt to join the Pegasus in flight]
 	say "     The white winged horse need not be the only one who's free. Before it passes too far from your reach, you crouch and spread your [bodySpeciesName of Player in lower case] wings. After a brief strain of build up, you launch into the air. While not exactly flight, it would be enough to join your fellow sky dweller for a while. The grounds decent slows, your first arc at its peak. You use your wings to control your fall, building yourself up for the next leap to the sky. Feet having barely touched the ground, this time you soar towards the heavens and your soon-to-be feathered friend. It finally takes notice as its personal world is pierced by an intruder.";
-	if BodyName of Player is "Pegasus" and Player is pure:[Body check to see if player is pure Pegasus, easier to not spook horse]
+	if BodyName of Player is "Pegasus" and Player is pure:[Body check to see if Player is pure Pegasus, easier to not spook horse]
 		let bonus be (( Charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]5[roman type] (Charisma Check):[line break]";

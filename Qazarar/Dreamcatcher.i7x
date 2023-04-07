@@ -97,7 +97,7 @@ to say dream a little dream: [calls an available dream event]
 			follow the turnpass rule;
 			follow the turnpass rule;
 			follow the player injury rule;
-			say "You are [descr]([HP of Player]/[maxHP of Player]).";
+			say "You are [descr]([HP of Player]/[MaxHP of Player]).";
 	else:
 		say "     You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
 

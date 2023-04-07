@@ -21,7 +21,7 @@ to say sierradesc:
 		now sex entry is "Male";
 	else:
 		now sex entry is "Both";
-	if BodyName of Player is "Sierrasaur" and player is pure: [purity check shorthand]
+	if BodyName of Player is "Sierrasaur" and Player is pure: [purity check shorthand]
 		now sierrapure is true;
 	else:
 		now sierrapure is false;
@@ -88,7 +88,7 @@ to sierrabind:
 	while Trixieexit is 0:
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
-		if BodyName of Player is "Sierrasaur" and player is pure:
+		if BodyName of Player is "Sierrasaur" and Player is pure:
 			now sierrapure is true;
 		else:
 			now sierrapure is false;
@@ -134,7 +134,7 @@ to sierrabind:
 					say "     [one of]You start a bit of a ruckus inside[or]You writhe about and push around[or]You quickly and forcibly make known your protest from within[at random] [one of]this fleshy prison[or]these firm confines[at random], forcing the beast to groan. [if struggleatt is 1]It seems less annoyed and more confused by your disapproval[else]It becomes increasingly difficult for the beast to keep you down. At this rate, it might not see you as worth the trouble[end if].[line break]";
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -145,7 +145,7 @@ to sierrabind:
 						decrease humanity of Player by 3 + psycheadjust;
 						WaitLineBreak;
 					else:
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -170,14 +170,14 @@ to sierrabind:
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						increase lustatt by 7 + (lustadjust * 2);
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
 						now bsextimer is 0;
 					else:
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -189,14 +189,14 @@ to sierrabind:
 					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
 							infect;
 						now bsextimer is 0;
 					else:
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -216,7 +216,7 @@ to sierrabind:
 					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -224,7 +224,7 @@ to sierrabind:
 						now bsextimer is 0;
 						SanBoost 3;
 					else:
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -238,7 +238,7 @@ to sierrabind:
 					LineBreak;
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -247,7 +247,7 @@ to sierrabind:
 						if BodyName of Player is "Sierrasaur" and "Strong Psyche" is not listed in feats of Player, decrease humanity of Player by 1;
 						decrease humanity of Player by 2 + psycheadjust;
 					else:
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:

@@ -195,7 +195,7 @@ to hardwarefortphase3:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
 				increase HP of Player by 20;
-				if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+				if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 				ItemGain medkit by 1;
 				hardwarefortphase4;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
@@ -203,7 +203,7 @@ to hardwarefortphase3:
 		infect "Horseman";
 		infect "Horseman";
 		increase HP of Player by 40;
-		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		ItemGain medkit by 1;
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]

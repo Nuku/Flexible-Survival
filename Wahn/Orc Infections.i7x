@@ -62,7 +62,7 @@ to say OrcVictorious:
 		addAlcPoints 2;
 		WaitLineBreak;
 		infect "Orc Breeder";
-		if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
+		if BodyName of Player is "Orc Breeder" and Player is pure and player is not mpreg_ok:
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum the orc filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 			FeatGain "MPreg";
@@ -139,7 +139,7 @@ to say OrcBeaten:
 			else:
 				say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
 				LineBreak;
-				if Player is male and BodyName of Player is "Orc Warrior" and player is pure:
+				if Player is male and BodyName of Player is "Orc Warrior" and Player is pure:
 					say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
 					if Player consents:
 						say "[MulAnal]";
@@ -188,7 +188,7 @@ to say BeatenOrcSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Impale yourself on the orc warrior's cock";
 	[]
-	if Player is male and BodyName of Player is "Orc Warrior" and player is pure:
+	if Player is male and BodyName of Player is "Orc Warrior" and Player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;

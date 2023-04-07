@@ -619,7 +619,7 @@ to say bckingschamber:
 			if Player consents: [FLOT - DONE]
 				let bonus be ( humanity of Player - Libido of Player ) / 20; [+5 to -5 for humanity vs libido]
 				if SkinName of Player is listed in infections of LatexList, decrease bonus by 1;
-				decrease bonus by 4 - ( ( ( HP of Player * 100 ) / maxHP of Player ) / 25 ); [-4 to 0 for current HP]
+				decrease bonus by 4 - ( ( ( HP of Player * 100 ) / MaxHP of Player ) / 25 ); [-4 to 0 for current HP]
 				let levbonus be level of Player / 3;
 				if levbonus > 5, now levbonus is 5;
 				increase bonus by levbonus;

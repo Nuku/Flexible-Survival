@@ -77,7 +77,7 @@ Instead of going to Monkey House while (Resolution of Monkey Duel is 0 and Monke
 		decrease Libido of Player by 10;
 		if Libido of Player < 0, now Libido of Player is 0;
 		SanBoost 20;
-		Increase maxHP of Player by 5;
+		Increase MaxHP of Player by 5;
 		Increase score by 5;
 		now Monkey Duel is active;
 	else:
@@ -98,7 +98,7 @@ instead of conversing Hanu:
 			decrease Libido of Player by 10;
 			if Libido of Player < 0, now Libido of Player is 0;
 			SanBoost 20;
-			Increase maxHP of Player by 5;
+			Increase MaxHP of Player by 5;
 			Increase score by 5;
 			now Monkey Duel is active;
 	else if Monkey Duel is unresolved:
