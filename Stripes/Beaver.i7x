@@ -328,7 +328,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 This is the Beaver Infection rule:
 	if Player has a body of "Beaver":
 		trigger ending "Beaver Infection"; [Here it states, that the ending has been played.]
-		if Player is male and player is pure:
+		if Player is male and Player is pure:
 			project the figure of Beaver2_icon;
 		if humanity of Player < 10:
 			say "     As you start to succumb to the beaver infection afflicting you, you start to become confused, things seeming out of place. You don't belong here. You're just visiting this place. Feeling that a beer would help you get a handle on all this, you walk a few klicks to get back to the bars around the red light district and start rummaging around for some proper beer, a mickie of rye or at least some pop that isn't made with corn syrup. After a few stops, you stumble across a group of beavers in one bar. It seems they've found some [']imported['] Canadian beer. After a few moments, you recognize them as your friends, your colony, who came with you to see the big game.";

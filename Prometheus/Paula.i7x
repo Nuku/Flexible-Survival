@@ -421,17 +421,17 @@ check paulahealing:
 	If Paula is not visible, say "[if HP of Paula < 3]You're on your own for that unless you go see Paula for assistance[else]Try using a medkit or another means of healing[end if]." instead;
 
 carry out paulahealing:
-	if ( 100 * HP of Player ) / maxHP of Player >= 90:
+	if ( 100 * HP of Player ) / MaxHP of Player >= 90:
 		say "     You're not really hurt enough to require using the shelter's limited medical supplies. You should probably just cope.";
 	else if lastPaulahealing - turns < 8:
 		say "     'We've got to ration our medical supplies. I know you're kind of a big [if hunger of Paula is 3]shot[else]help to Alexandra[end if], but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
-		let healed be ( maxHP of Player - HP of Player ) / 2;
+		let healed be ( MaxHP of Player - HP of Player ) / 2;
 		if "Rapid Healing" is listed in the feats of Player:
 			now healed is ( healed times 110 ) divided by 100;
 		if "Regeneration" is listed in the feats of Player:
 			now healed is ( healed times 110 ) divided by 100;
-		if ( healed + HP of Player ) > maxHP of Player, now healed is ( maxHP of Player - HP of Player );
+		if ( healed + HP of Player ) > MaxHP of Player, now healed is ( MaxHP of Player - HP of Player );
 		increase HP of Player by healed;
 		say "     'Alright, what seems to be the problem?' she asks. As you point out your injuries to her, she looks them over. 'You know, you'd not be in such rough shape if you chose to stick around here with us. It's not like you're doing any good gallivanting around out there,' she says cynically. 'Much better to just stay here and keep out of trouble,' she adds, groping you with a passing paw even as she grumbles teasingly. After her quick examination, she digs out the necessary supplies from her bag, all while making a show of waving her rear in the air. 'You're probably just out there to chase some tail. Typical.'";
 		say "     Despite her cynical edge and teasing mannerisms, she takes proper care of you, treating your wounds and ensuring you're properly patched up before letting you off the examination table with another sharp retort and a swat on your rear. You feel considerably better, having recovered [special-style-1][healed][roman type] HP.";

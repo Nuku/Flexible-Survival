@@ -185,7 +185,7 @@ to pewterbind:
 					say "     You deliberately endeavor to free yourself of their hold, [if struggleatt is 1]barely making any progress, as you're quickly pulled back within their slick depths[else]managing to make some headway before being pulled back, just a little bit more..[run paragraph on][end if].";
 					now tempnum is 0;
 					pewterdisengage;
-					if BodyName of Player is "Pewter Consort" and player is pure:
+					if BodyName of Player is "Pewter Consort" and Player is pure:
 						if a random chance of 1 in 8 succeeds:
 							infect;
 					else if a random chance of 1 in 5 succeeds:
@@ -204,7 +204,7 @@ to pewterbind:
 					LineBreak;
 					pewteroccupyroll;
 					if a random chance of 2 in 3 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and player is pure:
+					if BodyName of Player is "Pewter Consort" and Player is pure:
 						if a random chance of 1 in 8 succeeds:
 							infect;
 					else if a random chance of 1 in 5 succeeds:
@@ -214,7 +214,7 @@ to pewterbind:
 					say "     You choose to abide their hold, [one of]hissing and caressing you in approval[or]their continued affection arousing and influencing you further[or]absorbed in the frenzy of flesh and motion[at random].";
 					LineBreak;
 					pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and player is pure:
+					if BodyName of Player is "Pewter Consort" and Player is pure:
 						if a random chance of 1 in 8 succeeds:
 							infect;
 					else if a random chance of 1 in 5 succeeds:
@@ -228,7 +228,7 @@ to pewterbind:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					LineBreak;
 					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and player is pure:
+					if BodyName of Player is "Pewter Consort" and Player is pure:
 						if a random chance of 1 in 9 succeeds:
 							infect;
 					else if a random chance of 1 in 6 succeeds:
@@ -239,7 +239,7 @@ to pewterbind:
 					say "     You fight to maintain clarity against their influence, [one of]hissing and caressing you nonetheless[or]their continued affection briefly less effective at arousing you further[or]absorbed in the frenzy of flesh and motion regardless[at random].";
 					LineBreak;
 					if a random chance of 4 in 5 succeeds, pewteroccupyroll;
-					if BodyName of Player is "Pewter Consort" and player is pure:
+					if BodyName of Player is "Pewter Consort" and Player is pure:
 						if a random chance of 1 in 9 succeeds:
 							infect;
 					else if a random chance of 1 in 6 succeeds:

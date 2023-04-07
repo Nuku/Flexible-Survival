@@ -374,7 +374,7 @@ carry out bargainhunting:
 				LineBreak;
 				StatChange "Stamina" by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by level of Player plus 1;
+					increase MaxHP of Player by level of Player plus 1;
 				say "[bold type]You lose 10 HP![roman type][line break]";
 				decrease HP of Player by 10;
 				if HP of Player < 0:

@@ -59,7 +59,7 @@ to say ResolveEvent Shark Warrior:
 	project the Figure of TSW_icon;
 	say "     You can briefly spot an ochre humanoid on the creature's belly, wrestling with the angry monster. After a while of staring at the spot where both of them submerged into the water, a tiger shark surfaces. His naked body is pretty built and shows some scars along his hide, proof of his constant strife in this world. He's also adorned with a couple of trinkets; a selection of teeth, presumably some of the dragons['] he beat, are braided together into a ligature around his neck, and there's also a rope tied around his hips. The rope is equipped with a couple of small bags and has a bit of kelp hanging from it. He turns towards you in the banks, appraising the witness of his battle.";
 	WaitLineBreak;
-	if (BodyName of Player is "Feral Sea Dragon" and player is pure) or (BodyName of Player is "Feral Sea Dragoness" and player is pure):	[Check if the player is a pure feral sea dragon/ess]
+	if (BodyName of Player is "Feral Sea Dragon" and Player is pure) or (BodyName of Player is "Feral Sea Dragoness" and Player is pure):	[Check if the player is a pure feral sea dragon/ess]
 		say "     The shark stands on the shore for a bit, judging your form. 'Well, look at that. You dragons don't seem to understand your place in this world. It's in the sea, with me!' With that, the scarred one starts running towards you.";
 		now ts_warrior is true;
 		challenge "Tiger Shark Male"; [Fight the Tiger Shark variant]

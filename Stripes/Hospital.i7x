@@ -777,7 +777,7 @@ to say hospquestpt5:
 		say "     'I have been able to perform some research on the sample you brought back. While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature. This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results. And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.' He smiles as he takes a syringe from a refrigerated storage case. 'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there. And so, this is for you,' he says as he merrily injects you with it.";
 		increase stamina of Player by 2;
-		increase maxHP of Player by level of Player plus 1;
+		increase MaxHP of Player by level of Player plus 1;
 		say "     [bold type]Your stamina has been increased by 2.[roman type][line break]";
 		increase score by 10;
 		say "     'I do have another task for you, my helpful assistant,' the albino mouse continues. 'At the state fair across the city, there is a strange, rubber-like creature. While I have obtained samples from the latex foxes and wolves running around, I wish to see how this feline's unusual body composition differs from theirs. You should get three samples, as I know from experience working with the fox and wolf samples that it may require several to get any worthwhile data. Being felines, these creatures seem able to entice the orderlies into becoming their mates and the vixens are not strong enough to deal with them on their own. And when several vixens go together, these felines band together and repel them. I'm hoping, as a lone individual, you will be successful where they have not.'";
@@ -1467,7 +1467,7 @@ to say posttlscene:
 	StatChange "Strength" by 2;
 	StatChange "Dexterity" by 2;
 	StatChange "Stamina" by 2;
-	increase maxHP of Player by ( level of Player + 1 );
+	increase MaxHP of Player by ( level of Player + 1 );
 	increase HP of Player by (level of Player + 1);
 	now hospcountdown is turns;
 	now DoctorMouseProgress is turns;
@@ -1748,7 +1748,7 @@ understand "activator" as ec_activating.
 check ec_activating:
 	if hospquest < 19, say "I don't know what you're talking about." instead;
 	if Doctor Mouse is not visible, say "You need to go see Doctor Mouse about that." instead;
-	if BodyName of Player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
+	if BodyName of Player is "Enhanced Chimera" and Player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
 
 carry out ec_activating:
 	say "[ec_activation]";

@@ -269,7 +269,7 @@ to salabind:
 		if humanity of Player < 1:
 			LineBreak;
 			say "     Eventually you become so drained - both mentally and physically - that you wholly give in to your captor, ";
-			if BodyName of Player is "Salamander" and player is pure:
+			if BodyName of Player is "Salamander" and Player is pure:
 				say "compelled by your strain to obey her every whim";
 			else:
 				say "completely transforming into one of her kin, this new strain compelling you to obey her every whim";
@@ -306,7 +306,7 @@ to salabind:
 					if struggleatt < 2:
 						say "     You struggle against this tight and hot prison, causing it to groan and churn against you.";
 						increase lustatt by 7 + (lustadjust * 2);
-						if BodyName of Player is "Salamander" and player is pure:
+						if BodyName of Player is "Salamander" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -360,7 +360,7 @@ to salabind:
 							say ", [if struggleatt is 0]who's practically kissing you by this point[else if struggleatt is 1]who's quickly closing the distance between the two of you[else]who's gradually closing the distance between the two of you[end if].";
 					else:
 						say "     You make an effort to tolerate your twisted fate, [one of]fleshy[or]slick[at random] prison [one of]briefly tightening around[or]groaning against[at random] you.";
-						if BodyName of Player is "Salamander" and player is pure:
+						if BodyName of Player is "Salamander" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:

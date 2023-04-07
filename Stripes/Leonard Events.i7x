@@ -418,7 +418,7 @@ to say leopracticesession:
 		else if T is 2:
 			say "that some of your road weariness has lifted. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
 			increase HP of Player by ( HP of Player / 10 );
-			if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+			if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		else if T is 3:
 			say "aroused and eager to be with your loving mate. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
 			increase Libido of Player by 5;

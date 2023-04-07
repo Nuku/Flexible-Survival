@@ -881,7 +881,7 @@ carry out TestMode:
 	now charisma of Player is 30;
 	now perception of Player is 30;
 	now level of Player is 30;
-	now maxHP of Player is 300;
+	now MaxHP of Player is 300;
 	now HP of Player is 300;
 	now capacity of Player is 300;
 	ItemGain food by 15 silently;

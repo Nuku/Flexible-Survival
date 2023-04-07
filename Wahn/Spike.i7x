@@ -191,7 +191,7 @@ to say ResolveEvent Alexandra_Spike_Missing:
 	say "     [bold type]How do you react?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Hug her and say that things will be okay.";
 	say "     [link](2)[as]2[end link] - Immediately go outside and search for the boy.";
-	say "     [link](3)[as]3[end link] - Keep Alexandra [if MaxHp of Spike > 1 and MaxHp of Spike < 5]and her son's father [end if]company as all of you wait together.";
+	say "     [link](3)[as]3[end link] - Keep Alexandra [if MaxHP of Spike > 1 and MaxHP of Spike < 5]and her son's father [end if]company as all of you wait together.";
 	say "     [link](4)[as]4[end link] - Try to console her by saying that the son of a tough bitch like her should have no problems in this neighborhood.";
 	say "     [link](5)[as]5[end link] - Shrug and say that she can always have another kid.";
 	now calcnumber is 0;

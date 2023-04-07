@@ -140,7 +140,7 @@ instead of conversing the Penelope:
 		say "[PenelopeTalkMenu]";
 
 to say PenelopeTalkMenu:
-	say "     What do you wish to talk about with the amazonian white wolf?";
+	say "     What do you wish to talk about with the Amazonian white wolf?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]

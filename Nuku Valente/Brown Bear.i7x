@@ -81,7 +81,7 @@ to say UrsineWins:
 		increase morale of Player by 2;
 		decrease Libido of Player by 4;
 		increase HP of Player by 5;
-		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		if Libido of Player < 0, now Libido of Player is 0;
 	else if a random chance of 2 in 3 succeeds and Player is not neuter:
 		if Player is male and ( Cunt Count of Player is 0 or a random chance of 2 in 5 succeeds ):
@@ -96,7 +96,7 @@ to say UrsineWins:
 		increase morale of Player by 2;
 		decrease Libido of Player by 6;
 		increase HP of Player by 5;
-		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		if Libido of Player < 0, now Libido of Player is 0;
 	else:
 		say "     [if fightoutcome is 21]Falling prey to your lusts, the[else if fightoutcome is 22]Seeing you submit, the[else]The[end if] bear hugs you against her honey-scented body and presses you deep into her warm, dark fur. Through her hide you hear her say, 'Why must we always fight so?' You feel her nipples leaking honeyed milk, and you are compelled to suck on them in your daze. Incredibly sweet milk flows into your mouth and into your body, each delicious spurt leaving you more and more aroused. After coating your palate in her intoxicating flavor, you move from one dark nipple to the next, squeezing and suckling on it for more. You can hear the bear purring deeply as you indulge yourself, her claw-tipped fingers roaming over your back to show her appreciation. Your hand snakes down between the bear's huge thighs, and you rub across her drenched and dripping pussy to increase the flow of her milk. You can feel and taste her orgasm approaching, and with one last generous spurt, you both orgasm hard. Refreshed and satisfied after your meal, you give the bear a grateful hug before heading on your way again.";
@@ -106,7 +106,7 @@ to say UrsineWins:
 		increase morale of Player by 2;
 		decrease Libido of Player by 6;
 		increase HP of Player by 5;
-		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
+		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 		if Libido of Player < 0, now Libido of Player is 0;
 
 

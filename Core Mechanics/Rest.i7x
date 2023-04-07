@@ -73,10 +73,10 @@ carry out resting:
 	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
-	say "You are [descr]([HP of Player]/[maxHP of Player]).";
+	say "You are [descr]([HP of Player]/[MaxHP of Player]).";
 
 to Rest:
-	let num1 be maxHP of Player divided by 4;
+	let num1 be MaxHP of Player divided by 4;
 	let num2 be ( ( Stamina of Player * 3 ) / 2 ) + Level of Player;
 	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
 		if num1 >= num2, increase HP of Player by num1; [best value chosen]

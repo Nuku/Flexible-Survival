@@ -372,7 +372,7 @@ Level of Compulsion Over Non-alpha Huskies: 2 [low]
 
 Part 2 - Amazon AKA The Wild Bloodlust
 
-[Standing at a height of seven feet and filled with tight compact muscles the amazon delta is built to fight. By nature these deltas are incredibly dominant and it take either a powerful alpha to keep them in line or at the least a very manipulative one. The main special ability of this variant is its bloodlust, this can either be a hindrance for their alpha or used to their advantage. With the bloodlust they go insane desiring nothing more than combat, if the warning signs are showing she could be placed in an enemy location and blindly raze them, otherwise she could do the same to her own pack.]
+[Standing at a height of seven feet and filled with tight compact muscles the Amazon delta is built to fight. By nature these deltas are incredibly dominant and it take either a powerful alpha to keep them in line or at the least a very manipulative one. The main special ability of this variant is its bloodlust, this can either be a hindrance for their alpha or used to their advantage. With the bloodlust they go insane desiring nothing more than combat, if the warning signs are showing she could be placed in an enemy location and blindly raze them, otherwise she could do the same to her own pack.]
 
 [Average Amazon Delta
 
@@ -422,7 +422,7 @@ Level of Compulsion Over Non-alpha Huskies: 1-default [very low] 5-if they have 
 
 Part 4 - Cuntboi AKA The Loyal General
 
-[The cuntboi delta is an incredibly rare breed and incredibly sought after. The reason for this is because of the special abilities it possesses. Its loyalty is above any other delta and is not built around fear lust or control, but rather a real attachment to the alpha and the pack. This delta while nowhere near as aggressive as the amazon also enjoys fighting on the front line beside their alpha. Once a cuntboi delta has chosen a specific alpha to serve under the only way they can get pregnant is by that alpha or if the alpha is present, although that may have to do with his pheromones. Outside of battle these deltas also tend to break out into a motherly role with their pack, more so than the controlled deltas.]
+[The cuntboi delta is an incredibly rare breed and incredibly sought after. The reason for this is because of the special abilities it possesses. Its loyalty is above any other delta and is not built around fear lust or control, but rather a real attachment to the alpha and the pack. This delta while nowhere near as aggressive as the Amazon also enjoys fighting on the front line beside their alpha. Once a cuntboi delta has chosen a specific alpha to serve under the only way they can get pregnant is by that alpha or if the alpha is present, although that may have to do with his pheromones. Outside of battle these deltas also tend to break out into a motherly role with their pack, more so than the controlled deltas.]
 
 [Average Cuntboi Delta
 

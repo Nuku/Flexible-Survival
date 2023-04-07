@@ -88,7 +88,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Janas Bedroom	"Janas Bedroom"
 
-Janas Bedroom is a room. It is sleepsafe. The description of Janas Bedroom is "     You are greeted with the sight of a spartanly furnished room, with little more than a bed and nightstand as far as living accommodations are concerned. The exception, however, is the impressive array of lewd toys and bondage gear displayed proudly on the shelving of the nearest wall. There's even a pillory stashed into a corner, positioned perfectly to have someone strapped inside and be 'punished.'".
+Janas Bedroom is a room. It is sleepsafe. The description of Janas Bedroom is "     You are greeted with the sight of a Spartanly furnished room, with little more than a bed and nightstand as far as living accommodations are concerned. The exception, however, is the impressive array of lewd toys and bondage gear displayed proudly on the shelving of the nearest wall. There's even a pillory stashed into a corner, positioned perfectly to have someone strapped inside and be 'punished.'".
 
 to connect Janas Bedroom:
 	change the West exit of Janas Bedroom to Mares Quarters;

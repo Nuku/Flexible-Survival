@@ -163,7 +163,7 @@ to say sexwithGarrett:
 		say "[garrettsexmenu]";
 	else if ( player is puremale ) and HP of Garrett > 1:		[male players only]
 		let player_puregryph be false;
-		if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
+		if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and Player is pure:
 			now player_puregryph is true;
 		if Player_puregryph is true:
 			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
@@ -190,7 +190,7 @@ to say sexwithGarrett:
 
 to say garrettsexmenu:
 	let player_puregryph be false;
-	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
+	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and Player is pure:
 		now player_puregryph is true;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -262,7 +262,7 @@ Section 4 - Sex Scenees
 
 to say garrett_handjob_1:
 	let player_puregryph be false;
-	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
+	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and Player is pure:
 		now player_puregryph is true;
 	if HP of Garrett is 1:
 		say "     'That's great. This'll be so much more fun with a helping hand.' He enfolds one of his strong wings around you and pulls you in close. Guiding your hand to his crotch, it's placed on his growing erection. He must be at least a good eighteen inches when fully hard, making him much better hung than his herm counterparts. Tilting your head [if scalevalue of Player > 3]down[else if scalevalue of Player < 3]up[else]towards him[end if], he gives you a lustful kiss. With his cock in hand, you start stroking him, causing the buff male to moan softly in satisfaction. His taloned paws run over your [bodytype of Player] body, further urging you to continue.";
@@ -429,7 +429,7 @@ to say drinkgryphoncum:
 the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing scent of male gryphon semen.".
 
 to say garrettinfect:
-	if BodyName of Player is "Feral Gryphon" and player is pure and MaleList is not banned:
+	if BodyName of Player is "Feral Gryphon" and Player is pure and MaleList is not banned:
 		say "     Absorbing Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
 		infect "Feral Gryphon";
 	else:

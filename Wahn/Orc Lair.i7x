@@ -63,7 +63,7 @@ to say ResolveEvent Orcish Slave Raid:
 			else if fightoutcome >= 30: [fled]
 				say "[RunFromOrcSlavers]";
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				if BodyName of Player is "Orc Warrior" and player is pure and Player is male:
+				if BodyName of Player is "Orc Warrior" and Player is pure and Player is male:
 					say "[KoghhRaidOffer]";
 				else:
 					say "     Two down, one to go. The third orc abandons his captive and comes at you with balled fists.";
@@ -412,7 +412,7 @@ Main Hall is west of Dark Hallway 1.
 Description of Main Hall is "     This is the main hall of the orc lair, where the big brutes come to chug beer, hang out, fuck and fight. All the desks in what previously was the main working area of this police station have been pushed together to form a long table in the center of the room, which is laden with food and drink - whole kegs of beer and all kinds of other stuff. Mattresses and sofas brought in from somewhere else are strewn about the room - with some of them currently in use by the twenty-odd orcs present.".
 
 instead of going West from Dark Hallway 1:
-	if BodyName of Player is "Orc Warrior" and player is pure:
+	if BodyName of Player is "Orc Warrior" and Player is pure:
 		if BoghrimMet is 0:
 			say "[BoghrimSlaveDeal]";
 		else:
@@ -493,10 +493,10 @@ to say OrcLairBadEnd:
 	now humanity of Player is 1;
 	end the story saying "Surrounded by horny orcs, being a breeder slave is your life now...";
 
-instead of going West from Dark Hallway 2 while BodyName of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
+instead of going West from Dark Hallway 2 while BodyName of Player is "Orc Warrior" and Player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";
 
-instead of going North from Breeder Lockup A while BodyName of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
+instead of going North from Breeder Lockup A while BodyName of Player is "Orc Warrior" and Player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";
 
 Table of GameRoomIDs (continued)
@@ -1081,7 +1081,7 @@ An everyturn rule:
 					now OrcSlaverStatus is 3;
 	if BodyName of Player is not "Orc Warrior" and player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance and a random chance of 1 in 3 succeeds:
 		challenge "Orc Warrior"; [random orc]
-	else if BodyName of Player is "Orc Warrior" and player is pure and (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
+	else if BodyName of Player is "Orc Warrior" and Player is pure and (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		say "[BoghrimSlaveDeal]";
 	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		now inasituation is true;
@@ -1144,7 +1144,7 @@ to say OrcGangbang1:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
+	if BodyName of Player is "Orc Breeder" and Player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 		FeatGain "MPreg";
@@ -1197,7 +1197,7 @@ to say OrcGangbang2:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
+	if BodyName of Player is "Orc Breeder" and Player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex.";
 		FeatGain "MPreg";

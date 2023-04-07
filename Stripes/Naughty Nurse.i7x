@@ -422,9 +422,9 @@ to say healing booster use:
 	if NoHealMode is true:
 		now healed is ( healed * 125 ) / 100;
 	increase HP of Player by healed;
-	if HP of Player > maxHP of Player:
-		decrease healed by HP of Player minus maxHP of Player;
-		now HP of Player is maxHP of Player;
+	if HP of Player > MaxHP of Player:
+		decrease healed by HP of Player minus MaxHP of Player;
+		now HP of Player is MaxHP of Player;
 	say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
 
 Section 3 - Endings

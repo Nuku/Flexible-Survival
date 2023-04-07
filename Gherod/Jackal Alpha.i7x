@@ -26,9 +26,9 @@ Section 1.1 - Defeat Scenes
 to say Alpha Jackal Wins:
 	if inasituation is true:
 		say ""; [dealt with at the source]
-	else if vorelevel > 1 and JackalAlphaSubmitCount is 6 and BodyName of player is "Jackal Femboy" and player is pure: [bad end, player is fully assimilated into the jackal's cock]
+	else if vorelevel > 1 and JackalAlphaSubmitCount is 6 and BodyName of player is "Jackal Femboy" and Player is pure: [bad end, player is fully assimilated into the jackal's cock]
 		say "[AlphaJBadEnd]";
-	else if vorelevel > 1 and JackalAlphaSubmitCount >= 5 and a random chance of 1 in 2 succeeds and BodyName of player is "Jackal Femboy" and player is pure: [player is partially assimilated to the jackal's cock, corrupting their mind]
+	else if vorelevel > 1 and JackalAlphaSubmitCount >= 5 and a random chance of 1 in 2 succeeds and BodyName of player is "Jackal Femboy" and Player is pure: [player is partially assimilated to the jackal's cock, corrupting their mind]
 		say "[AlphaJWinsCV2]";
 		now JackalAlphaSubmitCount is 6; [prepared for bad end if another loss follows]
 	else if (JackalAlphaSubmitCount > 2 and a random chance of 1 in 2 succeeds) or JackalAlphaSubmitCount >= 5:

@@ -253,7 +253,7 @@ to say ElvenHunterDesc:
 			say "     He snarls 'Go back to the stinking pit you call home - demon', before gracefully pulling an arrow from the quiver on his back. With the comment, 'I'll show you why you shouldn't try to spread your infestation on elven hunting grounds,' he lets it fly, purposefully missing your head by less an inch.";
 		else if BodyName of Player is "Elf" or BodyName of Player is "Elven Hunter":
 			say "     He sighs, saying 'Are you masquerading as one of us? The human phantasies of becoming something better than they are somewhat sad.' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you're worthy of the shape you wear...'";
-		else if (BodyName of Player is "Human" or BodyName of Player is "Herm Human") and player is pure:
+		else if (BodyName of Player is "Human" or BodyName of Player is "Herm Human") and Player is pure:
 			say "     He sighs, saying 'A human - how droll. Still, some of you are rather inventive...' Gracefully pulling an arrow from the quiver on his back, he continues, 'Let's see if you might be worth hunting. Start running and be a bit of a challenge, will you?'";
 		else if ( BodyName of Player is listed in infections of ReptileList and SkinName of Player is listed in infections of ReptileList ):
 			say "     He sighs, saying to himself 'It's scaly and looks a bit like the big lizards of the past - but will it be a worthy heir to their legacy of cunning and strength? Only one way to find out...' Gracefully pulling an arrow from the quiver on his back, he addresses you, 'Start running and be a bit of a challenge, will you?'";

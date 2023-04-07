@@ -204,7 +204,7 @@ title	subtable	description	toggle
 This is the prerestore the game rule:
 	decrease the menu depth by 1;
 	try restoring the game;
-	if maxHP of Player is 0, try restarting the game;
+	if MaxHP of Player is 0, try restarting the game;
 
 Table of sex choice
 title	subtable	description	toggle
@@ -233,7 +233,7 @@ title	subtable	description	toggle
 ["Examine yourself"	--	--	Self examine rule]
 "Help"	Table of Help	"Get some help on this madness!"
 "Strength: [strength of Player], Dexterity: [dexterity of Player], Stamina: [stamina of Player], Charisma: [Charisma of Player], Intelligence: [intelligence of Player], Perception: [perception of Player]."	--	"Stats"	--
-"Health: [HP of Player]/[maxHP of Player], Libido: [Libido of Player], Morale: [morale of Player], Humanity: [Humanity of Player]"	--	"More stats"	--
+"Health: [HP of Player]/[MaxHP of Player], Libido: [Libido of Player], Morale: [morale of Player], Humanity: [Humanity of Player]"	--	"More stats"	--
 "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
 
 Table of Help

@@ -315,7 +315,7 @@ to say sexwithLeonard:
 		decrease Libido of Player by Libido of Player / 3;
 		SanLoss 8;
 		follow the turnpass rule;
-	else if BodyName of Player is "Feline" and player is pure and ( HP of Leonard is 3 or ( HP of Leonard > 3 and a random chance of 1 in 2 succeeds ) ):
+	else if BodyName of Player is "Feline" and Player is pure and ( HP of Leonard is 3 or ( HP of Leonard > 3 and a random chance of 1 in 2 succeeds ) ):
 		now lastfuck of Leonard is turns;
 		if HP of Leonard < 4, now HP of Leonard is 4;
 		say "[Leonardsex_purefeline]";

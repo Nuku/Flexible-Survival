@@ -308,7 +308,7 @@ This is the Teddy Bear Infection rule:
 	if Player has a body of "Teddy Bear":
 		trigger ending "Teddy Bear Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
-			if the player is pure:
+			if the Player is pure:
 				say "     Surrendering to your new instincts, you lie low when the rescue comes. Seeing an opportunity, you stow away in the back of one of the trucks, acting like nothing more than a large stuffed animal until you can eventually sneak away when no one is looking. You wander around several cities, appearing to be a lost toy or placing yourself in donation bins until someone takes you home and you can convert them into another plush animal like yourself. Eventually someone tracks you down on purpose by following the rumors. Pretending to still be a normal stuffed toy, you listen to him explain his plan before deciding to go along with it.";
 				say "     It turns out he is the owner of an [']adult['] shop that rents out several rather kinky dolls and plushies to people to use, you and he proceed into a lucrative partnership where he rents you out to an unsuspecting buyer, and when the time is right you convert the buyer into a new animal yourself, and you both return to the shop to be rented out again. It takes some planning but eventually you even manage to convert your shop partner as well, and soon you both have a large collection of other adult animal toys ready for any occasion.";
 			else:

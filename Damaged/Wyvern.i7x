@@ -1692,13 +1692,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1744,13 +1744,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1796,13 +1796,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1848,13 +1848,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1996,7 +1996,7 @@ to wyvernmatron:
 			say "     As you can imagine, the wyvern has little interest in adding more to an already fairly crowded nest, and instead is here to check up on [ghis] children. Now giving your situation [ghis] proper attention, [ghe] appears to feel that you haven't fully succumbed to your new circumstance, and screeches at [ghis] other children until they pull free of you. Though they still pin you down, you're now exposed and left at the mercy of larger beast, eager to have some fun with you...";
 			WaitLineBreak;
 			say "[WYVVIC]";
-			if BodyName of Player is "Wyvern" and player is pure:
+			if BodyName of Player is "Wyvern" and Player is pure:
 				if a random chance of 1 in 4 succeeds:
 					infect;
 			else if a random chance of 1 in 2 succeeds:

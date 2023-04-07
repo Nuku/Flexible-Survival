@@ -867,7 +867,7 @@ to fsdfvore:
 					if boundsegment is 1, increase boundmod by 2;
 					if boundsegment is 2:
 						say "     Perhaps too exhausted to continue, you concede to your fate, the sea dragoness immediately catching up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragoness's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, she pulls you into the air with her maw. Allowing gravity to aid her as she audibly gulps you down, powerful muscles plunging you down her slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
-						say "     Once again in the sea dragones's gullet. You've started all the way back from the beginning!";
+						say "     Once again in the sea dragoness's gullet. You've started all the way back from the beginning!";
 						now boundsegment is 1;
 						now boundcounter is 0;
 						now boundmod is 0;
