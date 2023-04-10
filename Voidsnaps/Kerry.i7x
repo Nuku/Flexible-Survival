@@ -9,6 +9,9 @@ Section 1 - NPC Declarations and Post Import Rule
 a postimport rule: [bugfixing rules for players that import savegames]
 	if Resolution of Dangerous Load is 1: [Watched Kerry fuck Shaw.]
 		AddNavPoint Ruined Apartments;
+	if Superior Breeding is resolved:
+		Change the North Exit of Ruined Apartments to Minotaur Grotto;
+		Change the South Exit of Minotaur Grotto to Ruined Apartments;
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -257,7 +260,6 @@ Superior Breeding	"Superior Breeding"
 
 Superior Breeding is a situation.
 ResolveFunction of Superior Breeding is "[ResolveEvent Superior Breeding]".
-The level of Superior Breeding is 5.
 Sarea of Superior Breeding is "Nowhere".
 Prereq1 of Superior Breeding is Dangerous Load.
 Prereq1Resolution of Superior Breeding is { 1 }.
@@ -295,7 +297,6 @@ Shaw's Predicament	"Shaw's Predicament"
 
 Shaw's Predicament is a situation.
 ResolveFunction of Shaw's Predicament is "[ResolveEvent Shaw's Predicament]".
-The level of Shaw's Predicament is 5.
 Sarea of Shaw's Predicament is "Nowhere".
 Prereq1 of Shaw's Predicament is Superior Breeding.
 Prereq1Resolution of Shaw's Predicament is { 1, 2 }.
