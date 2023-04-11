@@ -106,18 +106,18 @@ to say ResolveEvent Naga Mate:
 	else:
 		say "     'I understand.' The naga nods, starting to pull his coils out and away from you, 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
-to say NagaSex:
+to NagaSex:
 	say "     The naga calls on you to show him you are his mate. How will you do so?";
 	[Define a list of choices to display to the player]
 	let NagaSex_Choices be a list of text;
 	if player is female:
-		add "Snakes have two dicks, you have two holes for them";
+		add "Snakes have two dicks, you have two holes for them" to NagaSex_Choices;
 		[if Vagina Tightness of player is >=3:
-			add "Have him stuff your slit";]
+			add "Have him stuff your slit" to NagaSex_Choices;]
 	[if Asshole Tightness of player is >=3:
-		add "Have him stuff your ass";]
-	add "Show him with your mouth";
-	[add "Maybe he should show you this time? Put that tongue to work";]
+		add "Have him stuff your ass" to NagaSex_Choices;]
+	add "Show him with your mouth" to NagaSex_Choices;
+	[add "Maybe he should show you this time? Put that tongue to work" to NagaSex_Choices;]
 	let NagaSex_Choice be what the player chooses from NagaSex_Choices;
 	if NagaSex_Choice is:
 		-- "Snakes have two dicks, you have two holes for them":
