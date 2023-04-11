@@ -13,7 +13,7 @@ to say ValkyrieLoss:
 	else:
 		[say "[FindValkyrieScore]";]
 		if ValkyrieScore is 0: [Steed transforms player, no direct action]
-			say "     You fall to your knees, [if hp of Player > 0]submitting to the power of[else]defeated by[end if] the warrior and her steed, accepting anything they're willing to do to you. After several moments of nothing happening, however, you look up to see the pair staring down at you with disappointment, before the stallion speaks. 'This one will make an excellent offering, but they are not ready.' The valkyrie shakes her head, and you can see a devious gleam in her eyes. 'I suppose we'll just have to fix that, won't we?' She then reaches into a pouch on her belt and pulls out a small bottle, before popping the lid off and pouring it over you. 'Try coming back when you're more suitable, and then you can help relieve my wonderful battering ram of his tensions.' Following her declaration, her mount lets out a snort and trots away, leaving you alone.";
+			say "     You fall to your knees, [if HP of Player > 0]submitting to the power of[else]defeated by[end if] the warrior and her steed, accepting anything they're willing to do to you. After several moments of nothing happening, however, you look up to see the pair staring down at you with disappointment, before the stallion speaks. 'This one will make an excellent offering, but they are not ready.' The valkyrie shakes her head, and you can see a devious gleam in her eyes. 'I suppose we'll just have to fix that, won't we?' She then reaches into a pouch on her belt and pulls out a small bottle, before popping the lid off and pouring it over you. 'Try coming back when you're more suitable, and then you can help relieve my wonderful battering ram of his tensions.' Following her declaration, her mount lets out a snort and trots away, leaving you alone.";
 			infect "Valkyrie Boi";
 			increase ValkyrieScore by 1;
 		else if ((ValkyrieScore < 3) or (a random chance of 1 in 4 succeeds)): [player gives handjob]
@@ -28,12 +28,12 @@ to say ValkyrieLoss:
 			[else: [forced handjob]:
 				say "     A";]
 		[else if ((ValkyrieScore < 5) or (a random chance of 1 in 3 succeeds)): [player gives oral]
-			if hp of Player > 0: [submissive oral]
+			if HP of Player > 0: [submissive oral]
 				say "     A";
 			else: [forced oral in stocks]
 				say "     A";]
 		else if ((ValkyrieScore < 7) or (a random chance of 1 in 2 succeeds)): [player gets railed]
-			[if hp of Player > 0: [voluntarily put into stocks]
+			[if HP of Player > 0: [voluntarily put into stocks]
 				say "     A";]
 			[forced anal in stocks]
 			say "     Your defeat at the hands of the powerful pair brings you to your knees, barely able to move, and your thoughts trapped in a daze. Through the reverie you hear the resounding voice of the stallion that overpowered you as he discusses you with his rider. 'This one is so very close to what I'm looking for, the perfect toy. Just a few lessons left for them.' A murmured agreement from the valkyrie is the last clear thought you have before you're lifted off the ground and taken somewhere else, too confused and aroused to be fully aware of your surroundings. Eventually you are shaken to wakefulness to find that you are now leaning forward, suspended by a set of incredibly sturdy-looking wooden stocks. The area in front of you seems empty, but judging by the last thing you remember, you think you have a very clear idea of who is behind you, and what's about to happen.";
@@ -135,7 +135,7 @@ to say ValkyrieWin1:[handjob]
 to say ValkyrieWin2:[oral]
 	say "     As you finally defeat the valkyrie and her mighty steed, you can't help but rest your eyes on the particularly enticing masculine endowment that belongs to him. The exhausted equine has collapsed onto his side, with the equally defeated warrior leaning against his back. In this position, his throbbing horse member is clearly both visible and at attention, it's shape and sheer size making it impossible to ignore. The sight of it is enough to make your mouth water, wondering exactly how that shaft would taste if you were to use your mouth on it, and how full it would make you feel. You can only fantasize so much before it crystallizes into action, however, and so you you kneel down and gently move the steed so that he is fully on his back, legs splayed apart to grant you much easier access to his cock. He allows himself to be moved into the new position with little effort, and why wouldn't he? You're already going to give him exactly what he wants.";
 	say "     It takes several moments to work yourself up to starting properly, due to the sheer intimidating size of the member, but your curiosity eventually overcomes your nerves. You start with small experimental licks along the head, gently teasing the surface with your tongue. Even just this basic taste is a heady mix of sensations you can't get enough of, causing your mouth to water and enticing you to dive deeper into your victory. With that motivation drawing you in, you start to move on to trailing kisses down the shaft, enjoying every moment of the process. This path leads you down to where his package meets his equally sizable balls, and you take a moment to switch your attention to them. You lavish them with a similar oral treatment to what you gave the rest of his masculinity, earning an appreciative moan for your efforts.";
-	WaitLinebreak;
+	WaitLineBreak;
 	say "     You spend what feels like an eternity smothering yourself in his sack, working over every bit of the surface, until the stallion starts to plead with you. 'That's enough of that, isn't it time to move on to the main course?' His voice sounds confident, but there is an undertone of need to it that lets you know just how much he wants what you can offer. You would smile if your mouth wasn't so occupied, because despite all his power and virility, you're the one in control right now. You take your efforts at your own pace, which eventually do lead you back up towards the tip of his member, and you prepare to enjoy it even more thoroughly. The girth you're about to deal with is substantial, but you have an inkling that with this particular steed you'll be able to take it despite the prodigious size.";
 	say "     This time when you bring your mouth to the head, it's to take the entire package. You start the task by sucking at the tip, slowly and gently going further and further, pushing your oral skill to the limits. Very quickly you find your suspicions were correct, as you're able to continue until even the flared head is wholly inside you, something you're certain would normally be beyond you. The feeling of having something so large in your mouth is one that's difficult to describe, but undeniably both satisfying and exhilarating. You don't waste any time in pushing on further, determined to get as much of the meaty rod as you can buried in your throat. To make it easier, you close your eyes to shut out any distractions, so that you can focus purely on swallowing the cock in front of you.";
 	WaitLineBreak;
@@ -261,7 +261,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -280,7 +280,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -301,7 +301,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -312,7 +312,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -326,19 +326,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -181,6 +181,7 @@ carry out turncountdisplay:
 PregStatus is an action applying to one topic.
 understand "zPreg Status [text]" as PregStatus.
 understand "zPregStatus [text]" as PregStatus.
+understand "zPregCheck [text]" as PregStatus.
 
 check PregStatus:
 	if debugactive is 0:
@@ -508,11 +509,12 @@ check TagListReadout:
 carry out TagListReadout:
 	say "All current lists:";
 	LineBreak;
+	sort Infections of AmphibianList;
 	sort Infections of AquaticList;
 	sort Infections of ArachnidList;
 	sort Infections of AvianList;
 	sort Infections of AvianpredList;
-	sort Infections of Bovinelist;
+	sort Infections of BovineList;
 	sort Infections of CanineList;
 	sort Infections of CervineList;
 	sort Infections of CetaceanList;
@@ -550,7 +552,7 @@ carry out TagListReadout:
 	sort Infections of InternalCockList;
 	sort Infections of KnottedCockList;
 	sort Infections of OviPositorList;
-	sort Infections of PrehensileCocklist;
+	sort Infections of PrehensileCockList;
 	sort Infections of SheathedCockList;
 	sort Infections of TaperedCockList;
 	sort Infections of TentacleCockList;
@@ -571,21 +573,22 @@ carry out TagListReadout:
 	sort Infections of AlwaysRutList;
 	sort Infections of GillList;
 	sort Infections of NotBreathingList;
-	sort Infections of Birthlist;
-	sort Infections of Egglaylist;
+	sort Infections of BirthList;
+	sort Infections of EgglayList;
 	sort Infections of MpregList;
 	sort Infections of OviImpregnatorList;
-	sort Infections of Sterilelist;
+	sort Infections of SterileList;
 	sort Infections of FeralmindList;
 	sort Infections of HivemindList;
 	sort Infections of PackmindList;
 	sort Infections of FirebreathList;
 	sort Infections of TailweaponList;
+	say "AmphibianList: [Infections of AmphibianList][line break][line break]";
 	say "AquaticList: [Infections of AquaticList][line break][line break]";
 	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
 	say "AvianList: [Infections of AvianList][line break][line break]";
 	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
-	say "Bovinelist: [Infections of Bovinelist][line break][line break]";
+	say "BovineList: [Infections of BovineList][line break][line break]";
 	say "CanineList: [Infections of CanineList][line break][line break]";
 	say "CervineList: [Infections of CervineList][line break][line break]";
 	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
@@ -623,7 +626,7 @@ carry out TagListReadout:
 	say "InternalCockList: [Infections of InternalCockList][line break][line break]";
 	say "KnottedCockList: [Infections of KnottedCockList][line break][line break]";
 	say "OviPositorList: [Infections of OviPositorList][line break][line break]";
-	say "PrehensileCocklist: [Infections of PrehensileCocklist][line break][line break]";
+	say "PrehensileCockList: [Infections of PrehensileCockList][line break][line break]";
 	say "SheathedCockList: [Infections of SheathedCockList][line break][line break]";
 	say "TaperedCockList: [Infections of TaperedCockList][line break][line break]";
 	say "TentacleCockList: [Infections of TentacleCockList][line break][line break]";
@@ -644,11 +647,11 @@ carry out TagListReadout:
 	say "AlwaysRutList: [Infections of AlwaysRutList][line break][line break]";
 	say "GillList: [Infections of GillList][line break][line break]";
 	say "NotBreathingList: [Infections of NotBreathingList][line break][line break]";
-	say "Birthlist: [Infections of Birthlist][line break][line break]";
-	say "Egglaylist: [Infections of Egglaylist][line break][line break]";
+	say "BirthList: [Infections of BirthList][line break][line break]";
+	say "EgglayList: [Infections of EgglayList][line break][line break]";
 	say "MpregList: [Infections of MpregList][line break][line break]";
 	say "OviImpregnatorList: [Infections of OviImpregnatorList][line break][line break]";
-	say "Sterilelist: [Infections of Sterilelist][line break][line break]";
+	say "SterileList: [Infections of SterileList][line break][line break]";
 	say "FeralmindList: [Infections of FeralmindList][line break][line break]";
 	say "HivemindList: [Infections of HivemindList][line break][line break]";
 	say "PackmindList: [Infections of PackmindList][line break][line break]";
@@ -878,7 +881,7 @@ carry out TestMode:
 	now charisma of Player is 30;
 	now perception of Player is 30;
 	now level of Player is 30;
-	now maxHP of Player is 300;
+	now MaxHP of Player is 300;
 	now HP of Player is 300;
 	now capacity of Player is 300;
 	ItemGain food by 15 silently;
@@ -1142,6 +1145,16 @@ carry out itemcheat:
 		if the printed name of x exactly matches the text topic understood, case insensitively:
 			ItemGain x by 1;
 			break;
+
+[Allows the spawning of any vial in game.]
+vialcheat is an action applying to one topic.
+understand "zVial [text]" as vialcheat.
+
+check vialcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out vialcheat:
+	VialGain topic understood by 10;
 
 allitemcheat is an action applying to nothing.
 understand "zAllItems" as allitemcheat.

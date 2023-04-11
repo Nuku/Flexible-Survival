@@ -4,7 +4,7 @@ Version 2 of Penelope by Prometheus begins here.
 
 [Blanche's second daughter. Resolute]
 
-[   hp of Penelope - relationship variable with the player          ]
+[   HP of Penelope - relationship variable with the player          ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -61,8 +61,8 @@ an everyturn rule:
 				say "     [bold type]Penelope gives you a warm hug before walking over to where Lumi has prepared an area for the two of them to practice fighting.[roman type][line break]";
 			move Penelope to Garden;
 	else if Charisma of Blanche > 0:
-		if hp of Penelope is 0:
-			now hp of Penelope is 1;
+		if HP of Penelope is 0:
+			now HP of Penelope is 1;
 			move Penelope to Computer Lab;
 
 Section 1 - NPC Declaration
@@ -140,7 +140,7 @@ instead of conversing the Penelope:
 		say "[PenelopeTalkMenu]";
 
 to say PenelopeTalkMenu:
-	say "     What do you wish to talk about with the amazonian white wolf?";
+	say "     What do you wish to talk about with the Amazonian white wolf?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -207,7 +207,7 @@ instead of fucking Penelope:
 
 Section 4 - Events
 
-[instead of navigating Grey Abbey Library while ((royal tiger is not listed in companionList of Player) and (Penelope is booked or Penelope is bunkered) and Charisma of Blanche > 0 and "Ryousei - Potential Tutor" is not listed in traits of Penelope and a random chance of 1 in 2 succeeds):
+[instead of navigating Grey Abbey Library while ((royal tiger companion is not listed in companionList of Player) and (Penelope is booked or Penelope is bunkered) and Charisma of Blanche > 0 and "Ryousei - Potential Tutor" is not listed in traits of Penelope and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

@@ -56,7 +56,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Topless Lounge	"Topless Lounge"
 
-Topless Lounge is a room. Topless Lounge is southeast of Palomino.
+Topless Lounge is a room. Topless Lounge is southeast of PALOMINO Dance Club.
 Description of Topless Lounge is "     Moving through some rose-red curtains, you spot a small passage. At the end of the short hallway is an opening and a sign, reading 'Topless Lounge'. The room you enter isn't very big, pretty long but narrow. Red seats and couches around dark oval tables surround a raised stage with a dancing pole on it, some of the smaller tables even having their very own pole. Faint light radiates from candles that are stylishly placed on each of the round tables. There's not much going on here, most of the area empty. Even the small bar installed along the room is unattended, although it's still filled with some most exquisite bottles of various liquids. From behind, you can still hear the dull beat of the loud music in the main room as you move along."
 
 the scent of Topless Lounge is "     The thick air smells of alcohol and sugar from all the sweet, colorful drinks.".
@@ -66,7 +66,7 @@ Object	Name
 Ammy's Flatlet	"Ammy's Flatlet"
 
 Ammy's Flatlet is a room. [Ammy's Flatlet is south of Topless Lounge.]
-Description of Ammy's Flatlet is "     This small flatlet is pretty clean, at least compared to the rest of the Palomino. It looks like it was used as a storage room at first, but Ammy's living here now. A nice big bed in the middle of the room catches your attention the most. It looks comfortable and almost royal... well, at least compared to the usual ruins in the rest of this world. Dark red pillows and blankets on top of white sheets are complemented by a black metal frame.[line break]     There's a window with iron bars in a corner of the room through which one can look out at the streets above. There's also another door, probably leading outside, although it must have at least five different locks on it. The rest of the room is pretty spartan: a few dimmable lights, a small black counter next to the bed, a wardrobe, and an empty storage shelf visible along the concrete walls. The wooden floor creaks whenever you hear Ammy walking on it with her hooves.".
+Description of Ammy's Flatlet is "     This small flatlet is pretty clean, at least compared to the rest of the Palomino. It looks like it was used as a storage room at first, but Ammy's living here now. A nice big bed in the middle of the room catches your attention the most. It looks comfortable and almost royal... well, at least compared to the usual ruins in the rest of this world. Dark red pillows and blankets on top of white sheets are complemented by a black metal frame.[line break]     There's a window with iron bars in a corner of the room through which one can look out at the streets above. There's also another door, probably leading outside, although it must have at least five different locks on it. The rest of the room is pretty Spartan: a few dimmable lights, a small black counter next to the bed, a wardrobe, and an empty storage shelf visible along the concrete walls. The wooden floor creaks whenever you hear Ammy walking on it with her hooves.".
 
 the scent of Ammy's Flatlet is "     The small room surprisingly smells not like the rest of the club at all. Its smell reminds you of rose petals with a hint of sweets, even with the lack of air circulation the air seems pretty fresh.".
 

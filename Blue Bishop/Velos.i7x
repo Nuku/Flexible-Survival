@@ -624,12 +624,12 @@ Part 14 - Diego
 the vmusings of Diego is "[diegomusing]";
 
 to say diegomusing:
-	say "     Conjuring Velos from his confines, Diego is only briefly taken aback, but soon finds [if diegochanged > 0]she[else]he[end if] can't help but laugh a bit at the circumstances at play.";
+	say "     Conjuring Velos from his confines, Diego is only briefly taken aback, but soon finds [if Diegochanged > 0]she[else]he[end if] can't help but laugh a bit at the circumstances at play.";
 	say "     'Ha, that's quite the impressive trick!'";
 	say "     'That's nothing, you'd be surprised how many things my friend can fit in their pockets!'";
-	say "     'I'm talking to you, actually.' [if diegochanged > 0]She[else]He[end if] points to the serpent. 'How did you manage to get your friend to carry you around like this?'";
+	say "     'I'm talking to you, actually.' [if Diegochanged > 0]She[else]He[end if] points to the serpent. 'How did you manage to get your friend to carry you around like this?'";
 	say "     'Good sir! Frankly, I'm quite offended you would assume deception on my part.' He feigns insult, no doubt a little bit amused by the coyote's cordial composure.";
-	say "     'Well, it's either that or your host is a massive weirdo.' [if diegochanged > 0]She[else]He[end if] briefly grins directly at you before returning his focus to the center of attention here.";
+	say "     'Well, it's either that or your host is a massive weirdo.' [if Diegochanged > 0]She[else]He[end if] briefly grins directly at you before returning his focus to the center of attention here.";
 	say "     'Fair enough. I guess you could say I wasn't... explicit... in describing our arrangement.'";
 	say "     'And I bet that means you can't be removed?'";
 	say "     'More or less.'";
@@ -805,17 +805,17 @@ the vmusings of Nermine is "[nerminemusing]";
 
 to say nerminemusing:
 	say "     Calling Nermine over, you prod yourself until Velos concedes to your request. The jackal is obviously a little disturbed by the serpent, but isn't particularly surprised.";
-	say "     'I see many maladies in my time, few so strange.'";
+	say "     'The humble jackaless has seen many maladies in her time, few so strange.'";
 	say "     'Hey, rude! I know my appearance isn't the least bit flattering, but double check who you're calling a malady!'";
-	say "     'Stranger... I go in back, I might have book for this.' The snake grumbles a bit as the jackal leaves, looking around the strange shop.";
+	say "     'If the gracious visitor will allow, Nermine will go into the back, to see if she has a book for this.' The snake grumbles a bit as the jackaless leaves, looking around the strange shop.";
 	say "     'What tacky fare... Did that statue just wink at me back there? I'm really not sure we should be here.' He clams up when Nermine returns, this time with some dusty tome.";
-	say "     'Okay, let Nermine see if she can fix your problem.'";
-	say "     'Problem? Lady, I'm standing right here! Well, okay, admittedly our friend is standing for me...' She waves off the Velos's complaints, and begins to list off various strange afflictions, none of which seem to really match the circumstances you're currently subject to, Velos grumbling discontent made apparent throughout until she's at odds with finding anything else that might be remotely related before she's hit with a possible revelation.";
-	say "     '...Wait, maybe looking at this wrong way?'";
+	say "     'Okay, let Nermine see if she can fix her poor guest's infestation.'";
+	say "     'INFESTATION? Lady, I'm standing right here! Well, okay, admittedly our friend is standing for me...' She waves off the Velos's complaints, and begins to list off various strange afflictions, none of which seem to really match the circumstances you're currently subject to, Velos grumbling discontent made apparent throughout until she's at odds with finding anything else that might be remotely related before she's hit with a possible revelation.";
+	say "     'Ah, a thought comes to mind - maybe Nermine is looking at this wrong way?'";
 	say "     'You go about this whole matter like I'm some sort of curse you can wave a magic wand at and make disappear.'";
-	say "     'No... Maybe you not one who is cursed, yes? I think snake bigger victim here, probably.'";
+	say "     Shaking her head, the storekeeper focuses her gaze on Velos, seemingly regarding him as his own being for the first time. Then she glances back up torwards you. 'Maybe the gracious visitor is not the one who is cursed, yes? Nermine suspects that the snake is possibly the real victim, being forced to a shameful existence. She suspects it angered a powerful being to be left to such a fate.'";
 	say "     'This is beyond ridiculous. I think we're done here.' He, rather curtly, makes his exit, leaving you with Nermine, who briefly looks over her book a second time before giving you her attention once more.";
-	say "     'I cannot help you. If snake is cursed, curse is unique; beyond my knowledge.' Nermine returns to her own business, leaving you on your own once more.";
+	say "     'Sadly, Nermine cannot help in this case. If the pale snake is cursed, this curse is unique. Too dangerous to meddle with, lacking important knowledge.' Nermine returns to her own business, leaving you on your own once more.";
 	add 20 to velospostmusings;
 
 

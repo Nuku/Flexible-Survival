@@ -59,8 +59,8 @@ When Play begins:
 	now SeductionImmune entry is false;
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "red panda milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is "red panda cum";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
@@ -93,7 +93,7 @@ When Play begins:
 	now Head Adjective entry is "ailurus"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
 	now Head Color entry is "russet"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 0; [hair length in inches]
 	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is "russet"; [one word color descriptor]
@@ -112,7 +112,7 @@ When Play begins:
 	now Torso Change entry is "russet colored fur sprouts all over it, giving you a shiny coat of medium length fur"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is "covered in a coat of [Torso Color of Player] colored fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is "ailurus"; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is "copper"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -133,18 +133,18 @@ When Play begins:
 	now Arms Color entry is "russet"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is "they shift into the stubby legs of an athro red panda with medium length fur in a dark copper color, ending in a pair of paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro red panda, with short fur in [Legs Color of Player] covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is "that of an anthro red panda, with short fur in [Legs Color of Player] covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "dark brown and black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes fairly large and round, with dark russet fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered in medium length russet fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
+	now Ass Description entry is "ass, covered in medium length russet fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]."]
 	now Ass Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "russet"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is "a long ailurus tail sprouts from your tailbone, soon covered in bushy orange and black ringed fur"; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
-	now Tail Description entry is "long tail covered in bushy [Tail Color of Player] and black ringed fur"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is "long tail covered in bushy [Tail Color of Player] and black ringed fur"; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is "orange"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 6; [inches deep for anal fucking]
@@ -157,19 +157,19 @@ When Play begins:
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 8; [length in inches]
 	now Cock Change entry is "it takes on a reddish color and ailurus shape, sharp barbs sticking out backwards from the base"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip. There are nubby barbs along its length, as well as a sheath at the base to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip. There are nubby barbs along its length, as well as a sheath at the base to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Adjective entry is "ailurus"; [one word adjective: avian/canine/...]
 	now Cock Color entry is "red"; [one word color descriptor]
 	now Ball Count entry is 2;
 	now Ball Size entry is 3; [size of balls 1-7: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is "balls in a furry, snug sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is "balls in a furry, snug sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [length in inches]
 	now Cunt Tightness entry is 0;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a ailurus appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a red panda, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a red panda, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Adjective entry is "ailurus"; [one word adjective: avian/canine/...]
 	now Cunt Color entry is "black"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
@@ -181,16 +181,38 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "red panda cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Red Panda Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	red panda cum
 
-red panda cum is a grab object. red panda cum is cum.
-red panda cum is infectious. Strain of red panda cum is "Red Panda".
-Usedesc of red panda cum is "[Red Panda cum use]";
+red panda cum is a grab object.
+red panda cum is cum.
+red panda cum is infectious.
+Strain of red panda cum is "Red Panda".
+Usedesc of red panda cum is "[red panda cum use]".
 
-to say Red Panda cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+to say red panda cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 
 instead of sniffing red panda cum:
 	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"red panda milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Red Panda Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	red panda milk
+
+red panda milk is a grab object.
+red panda milk is milky.
+red panda milk is infectious.
+Strain of red panda milk is "Red Panda".
+Usedesc of red panda milk is "[red panda milk use]".
+
+to say red panda milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing red panda milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
 
 Red Panda Infection ends here.

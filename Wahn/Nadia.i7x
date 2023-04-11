@@ -378,7 +378,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock";
 	[]
-	if (Player is male and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
+	if (Player is male and BodyName of Player is listed in infections of AvianpredList and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -413,7 +413,7 @@ to say NadiaSexMenu:
 				else if (nam is "Eat Nadia out"):
 					say "[NadiaSex3]";
 				else if (nam is "Fuck her pussy"):
-					if (NadiaChar-I is "0" and BodyName of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
+					if (NadiaChar-I is "0" and BodyName of Player is listed in infections of AvianpredList and NadiaDescription > 3 and NadiaPregCounter1 is 0):
 						say "[NadiaSex5]";
 						now NadiaChar-I is "1";
 					else:

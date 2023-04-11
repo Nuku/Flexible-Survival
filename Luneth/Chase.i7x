@@ -527,7 +527,7 @@ to say RegularChaseTalkMenu:
 	now sortorder entry is 3;
 	now description entry is "Offer to help the tiger";
 	[]
-	if royal tiger is listed in companionList of Player and 1 > 2: [disabled for now]
+	if royal tiger companion is listed in companionList of Player and 1 > 2: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
 		now sortorder entry is 4;
@@ -967,7 +967,7 @@ to say DomChaseTalkMenu:
 		now sortorder entry is 3;
 		now description entry is "Find out more about his life before the infection";
 	[
-	if royal tiger is listed in companionList of Player: [disabled for now]
+	if royal tiger companion is listed in companionList of Player: [disabled for now]
 		choose a blank row in table of fucking options;
 		now title entry is "Chat with Ryousei and Chase";
 		now sortorder entry is 5;

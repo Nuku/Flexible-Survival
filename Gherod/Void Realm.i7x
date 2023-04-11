@@ -1000,14 +1000,14 @@ to VRTPKinkyLoss:
 			Linebreak;
 			say "     There is nothing sweeter than a gorgeous, large and plump pussy, which happens to be a beautiful flower, shaped like a womanhood and exhaling this scent that begins to slowly drive you crazy... You cannot help yourself with such an odd attraction, and it seems to really want you to have your way with it. When you go for a taste of that plump vaginal orifice, leaking what seems to be its nectar, it tastes strongly like womanly juice, triggering just the right buttons in you. Never have you been so turned on by breathing their scent over and over, all the while giving this floral vulva the best cunnilingus that you possibly could, almost feeling like you want to go in it. The feeling is overwhelming, and the dirtiest of thoughts suddenly come to assault your mind...";
 			if Player is male:
-				say "     You don't even think twice, grabbing your [cock of player] cock with one hand, which is fully hard and throbbing by now, and begin to rub it across its silky smooth petals, and the receptive orifice that just seems to be begging for it. The sensation is incredible, as if every sensitive spot around your penis was increased by a hundred times, on a whole another level that you have never experienced before. Might be your intoxicated body, but you cannot let go of this... You want to shove your dick inside, past those floral lips, inside that moist and leaking entrance... You go on and shove it all in, thrusting with all your might, as hard as you can, non-stop... You feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
+				say "     You don't even think twice, grabbing your [Cock of Player] cock with one hand, which is fully hard and throbbing by now, and begin to rub it across its silky smooth petals, and the receptive orifice that just seems to be begging for it. The sensation is incredible, as if every sensitive spot around your penis was increased by a hundred times, on a whole another level that you have never experienced before. Might be your intoxicated body, but you cannot let go of this... You want to shove your dick inside, past those floral lips, inside that moist and leaking entrance... You go on and shove it all in, thrusting with all your might, as hard as you can, non-stop... You feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
 			else:
 				say "     You don't even think twice, you want to rub [if Player is female]your sex[else]your crotch[end if], which is, figuratively, burning with desire, and you just happen to do so, all over its silky smooth petals, and its receptive orifice that just seems to be beckoning you to get closer with. The sensation is incredible, as if every sensitive spot around your loins was increased by a hundred times, on a whole another level that you have never experienced before. Might be your intoxicated body, but you cannot let go of this... You do not know what to make of it, but it feels addictive, and you cannot bring yourself to stop. In fact, you feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
 		else:
 			Linebreak;
 			say "     There is nothing sweeter than a big, thick and throbbing cock, which happens to be a wicked mushroom, so soft to the touch and leaking continuously, turned towards you so that you could feel all of its cavernous body with your hands... Maybe even your arms, or your whole body... At some point, you really just want to lick it all over and worship this phallic floral monster that keeps bathing you in a thick and sweet liquid so similar to a man's cum. It tastes strongly like one, except even sweeter and breathtaking, and you cannot bring yourself to stop. It triggers just the right buttons in you, and never you have been so turned on by a similar sensation. You want to give it the best blowjob possible, overwhelmed by otherworldly feelings, and the dirtiest of thoughts suddenly come to assault your mind...";
 			if Player is male:
-				say "     You don't even think twice, grabbing your [cock of player] cock with one hand, which is fully hard and throbbing by now, and begin to rub it across the mushroom's [']shaft['], an exciting frotting that leaves you wanting for more. Unknowingly, you begin to slowly drag your ass in and take the tip to poke at your pucker, right between your cheeks. It is a very big one, that mushroom you are caressing, and you are not sure you could ever take it in you, but it feels so good that you just want to let yourself go. In fact, the whole warmth and the pulses it makes is enough to send you into a lust frenzy, completely overtaken by the intoxicating scent that fills your nostrils with impossible ecstasy. You grind against it, over and over, as much as you can, non-stop... You feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
+				say "     You don't even think twice, grabbing your [Cock of Player] cock with one hand, which is fully hard and throbbing by now, and begin to rub it across the mushroom's [']shaft['], an exciting frotting that leaves you wanting for more. Unknowingly, you begin to slowly drag your ass in and take the tip to poke at your pucker, right between your cheeks. It is a very big one, that mushroom you are caressing, and you are not sure you could ever take it in you, but it feels so good that you just want to let yourself go. In fact, the whole warmth and the pulses it makes is enough to send you into a lust frenzy, completely overtaken by the intoxicating scent that fills your nostrils with impossible ecstasy. You grind against it, over and over, as much as you can, non-stop... You feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
 			else:
 				say "     You don't even think twice before you're rubbing [if Player is female]your sex[else]your crotch[end if], which is, figuratively, burning with desire, against that big fat mushroom cock that keeps throbbing at the sight of your arousal, or so you would like to think. It seems to beckon you to get closer, and the sensation is incredible. Unknowingly, you begin to slowly drag your butt in and take the tip to poke at your [if Player is female]pussy, right between your legs[else]pucker, right between your asscheeks[end if]. It is a very big one, that mushroom you are caressing, and you are not sure you could ever take it in you, but it feels so good that you just want to let yourself go. In fact, the whole warmth and the pulses it makes is enough to send you into a lust frenzy, completely overtaken by the intoxicating scent that fills your nostrils with impossible ecstasy. You grind against it, over and over, as much as you can, non-stop... You feel so full of energy, so pumped up, that you could go for hours without stopping once. Maybe even days... Or weeks...";
 		say "     Just... Just how long have you been here...?";
@@ -1149,7 +1149,7 @@ to say VRVoidFireflies:
 				say "     And turning your glance over their crotches, you realize most of them are imitating male figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The luminous men also come closer to you, one of them climbing onto your lap as you feel something poke at your midriff, his about eight inches long boner that keeps throbbing at nearly every second. Actually, it is not just there, as some others follow all around you, jerking their cocks in high arousal as their distance from you grows shorter.";
 				say "     Aware of your ";
 				if Player is male:
-					say "own [cock of player] dong raising to attention, the bright green man reaches for it with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
+					say "own [Cock of Player] dong raising to attention, the bright green man reaches for it with one of his hands behind his back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, he gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
 					WaitLineBreak;
 					say "     While you are distracted with the two glowing guys enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one on your lap, who decides to grab your by now very hard member and rub it across his bubbly cheeks, then slip it between them, making you shiver in pleasure. The smooth surface of his transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in that plump green ass. You don't have to move an inch, however, as the humanoid creature does all the work. He takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstasy.";
 					say "     With your mouth still busy with the gleaming cocks that come and go, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing ass, each movement visible through his transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in him, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more he keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the men who stand around your head bring their cocks into their hands to stroke as fast as they can...";
@@ -1171,7 +1171,7 @@ to say VRVoidFireflies:
 				say "     And turning your glance over their silhouettes and crotches, you realize most of them are imitating female figures, complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle. The gorgeous, luminous women surround you with their slender shapes, fondling their breasts for your enjoyment as they approach you tenderly, with one of them climbing on top of you.";
 				say "     Aware of your";
 				if Player is male:
-					say "own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the womanly creature on top of you lets go of your mouth, she gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their areolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
+					say "own [Cock of Player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel two supple pairs of tits craving for attention nearing your face from each side, and as the womanly creature on top of you lets go of your mouth, she gently directs it towards one of the breasts as the women smile in their earnest. Without a reason not to please the two green figures, you give one of their boobs a kiss as you grab the other, slowly running your tongue around their areolas, give them a good squeeze before you do the same to her friend's. After you are done teasing them, one of the luminous girls decides it would be phenomenal to climb on top of your head, and slowly descend her womanhood on you, effectively sitting on your face as you are given her pussy to lick for the next moments, a chance you definitely don't let go.";
 					WaitLineBreak;
 					say "     While you are distracted with the glowing woman enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. They cycle through, except the one on your lap, who decides to grab your by now very hard member and rub it across her bubbly cheeks, then slip it between them and towards her cooch, making you shiver in pleasure. The smooth surface of her transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in her begging cunt. You don't have to move an inch, however, as the humanoid creature does all the work. She takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstasy.";
 					say "     With your mouth still busy with the craving pussies that come and go, each taking a comfortable seat on your face as they arrive, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing pussy, each movement visible through her transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in her, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more she keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the women who stand around your head bring their hands to rub and finger against their womanhoods more intensely than before...";
@@ -1192,7 +1192,7 @@ to say VRVoidFireflies:
 				Linebreak;
 				say "     It seems like there are shapes of all genders in here, some with feminine and curvy silhouettes, others with a more manly frame, all of them complete with their appropriate equipment. They make a suggestive approach towards you, knowing about your interest for them, and with tender touches and movements, the formerly tiny sparkles [if Player is not naked]remove all of your gear[else]they feel your already naked body all over[end if] before leading your hands to their own smooth, translucid skins. It feels as you expect, very soft, almost as if you were touching a form of consistent solid liquid that holds tightly around the shape of bone and muscle.";
 				if Player is male:
-					say "     As one of the women climbs on top of you, with her slender shape as she fondles her breasts for your viewing pleasure, a group of handsome goo men forms a circle around your head, jerking their cocks in high arousal as their distance from you grows shorter. Aware of your own [cock of player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, she gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
+					say "     As one of the women climbs on top of you, with her slender shape as she fondles her breasts for your viewing pleasure, a group of handsome goo men forms a circle around your head, jerking their cocks in high arousal as their distance from you grows shorter. Aware of your own [Cock of Player] dong raising to attention, the bright green woman reaches for it with one of her hands behind her back, then leans forward to kiss you on the lips. At the same time, you feel another two manhoods craving for attention nearing your face from each side, and as the creature on top of you lets go of your mouth, she gently directs it towards one of the glowsticks as the men smile in their earnest. Without a reason not to please the two green figures, you give one of their dicks a kiss as you grab the other, slowly making your way across the shaft towards his goo balls, only to return where you came from and do the same to his mate's. After you are done teasing them, you figure it is time to actually let them enjoy your mouth to its fullest, letting their cocks slip past your lips and give them a blowjob, one at a time, their dicks exchanging places every once in a while.";
 					WaitLineBreak;
 					say "     While you are distracted with the two glowing guys enjoying your best oral skills, the remaining group forms a circle around you all, occasionally wanting to trade places with those in action. Given the mixed nature of the group, you also get to enjoy the occasional pussy wanting to have a round with your mouth, getting plenty of facesitting between the blowjobs you give, all tasting as good as they promise. They cycle through, except the woman on your lap, who decides to grab your by now very hard member and rub it across her bubbly cheeks, then slip it between them and towards her cooch, making you shiver in pleasure. The smooth surface of her transparent and incredibly soft gooey skin gives nothing but an increasingly great sensation as it rubs against your glans, and you can't help but want to shove it right in her begging cunt. You don't have to move an inch, however, as the humanoid creature does all the work. She takes a seat on your cock, slowly descending upon it as you feel that slimey tunnel stretching in order to fit it inside, so tight and good that it begins to [italic type]melt[roman type] your mind with ecstasy.";
 					say "     With your mouth still busy with the gleaming cocks and cunts that come and go, the former firefly continues to ride you as you lose track of time, making your manhood throb in and out of that sweet caressing pussy, each movement visible through her transparent skin from the outside. Their silent moans are only sparks in your ears like scintillating lights, especially from the one taking your manhood in her, stimulating you in all the right spots until you feel a surge of extreme pleasure building up in your gonads. The more she keeps jumping and humping on top of you, the better it feels, all until your breathing intensifies, and while the men and women who stand around your head bring their cocks and pussies into their own manual efforts...";
@@ -1549,7 +1549,7 @@ to OTElkHeadReaperSubmit:
 			trigger ending "Player has died";
 			end the story saying "You have perished in the Void, your soul taken by a reaper.";
 	else: [pussy worship]
-		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles like a true mythical amazonian woman, which look even more intimidating given how tall she is. You kneel, following her demands, and your head barely reaches her thick and strong thighs in height level. You're still fairly close to the wall, and the space between you shortens as she slowly walks towards you. 'Head on the floor.' she says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
+		say "     One thing you cannot deny, is that this disturbing humanoid creature is actually sporting an decently human-looking body. Well, decent is an understatement, the reaper is jacked, muscles like a true mythical Amazonian woman, which look even more intimidating given how tall she is. You kneel, following her demands, and your head barely reaches her thick and strong thighs in height level. You're still fairly close to the wall, and the space between you shortens as she slowly walks towards you. 'Head on the floor.' she says, giving you just enough space to bend over and lay your head on the dirty ground, cheek turned downwards as you are facing the tools adorned wall.";
 		say "     She bashes the scythe with the pommel against the ground to her side with tremendous force, and then you feel what seems to be her bare foot pressing against your cheek to a point that it is almost painful, but not quite. The surface of her sole is interestingly soft, you would expect a much rougher skin, especially since she walks without any sort of foot protection. She rubs it across your face for a bit, then, her deep demonic voice booms out to you. 'You might keep your soul if your obedience is total.' The reaper presses her foot just a bit more, and it really is scratching the pain level now. Your face recoils in a reflex, but you keep still in order to not enrage your new mistress.";
 		say "     'You shall do anything I say... Anything I want... Anything you are told. No limits.' she says, and she awaits your consent. You better mind your words...";
 		Linebreak;
@@ -2616,7 +2616,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -2635,7 +2635,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -2656,7 +2656,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -2667,7 +2667,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -2681,19 +2681,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -2784,7 +2784,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -2803,7 +2803,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -2824,7 +2824,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -2835,7 +2835,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -2849,19 +2849,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -2952,7 +2952,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -2971,7 +2971,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -2992,7 +2992,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -3003,7 +3003,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -3017,19 +3017,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -3120,7 +3120,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -3139,7 +3139,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -3160,7 +3160,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -3171,7 +3171,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -3185,19 +3185,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -3217,7 +3217,7 @@ When Play begins:
 	now enemy title entry is ""; [ Name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name. ]
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 1; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
-	now attack entry is "The [one of]towering figure[or]cloaked giant[or]reaper[or][if Resolution of ElkHeadReaperGender is 10]musclebound dom[else]amazonian domme[end if][at random] [one of]swings [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at you with life-threatening speed[or]hits you with the pommel of [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe, which hurts a lot[or]whirls [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at your legs, shoving you back with a laceration[or]kicks you with great force, violently knocking you back[or][at random]!";
+	now attack entry is "The [one of]towering figure[or]cloaked giant[or]reaper[or][if Resolution of ElkHeadReaperGender is 10]musclebound dom[else]Amazonian domme[end if][at random] [one of]swings [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at you with life-threatening speed[or]hits you with the pommel of [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe, which hurts a lot[or]whirls [if Resolution of ElkHeadReaperGender is 10]his[else]her[end if]scythe at your legs, shoving you back with a laceration[or]kicks you with great force, violently knocking you back[or][at random]!";
 	now defeated entry is "[ElkHeadReaperLoses]";
 	now victory entry is "[ElkHeadReaperWins]";
 	now desc entry is "[ElkHeadReaperDesc]";
@@ -3260,7 +3260,7 @@ When Play begins:
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]towering[or]muscular[or]ripped[or]cloaked[at random]";
-	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]amazonian[end if][at random]";
+	now type entry is "[one of][if Resolution of ElkHeadReaperGender is 10]musclebound[else]Amazonian[end if][at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -3288,7 +3288,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -3307,7 +3307,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -3328,7 +3328,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -3339,7 +3339,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -3353,19 +3353,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

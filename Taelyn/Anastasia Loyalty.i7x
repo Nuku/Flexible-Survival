@@ -109,9 +109,27 @@ after going to Half-Renovated Room while (Anastasia is in Half-Renovated Room an
 
 Section 3 - Anastasia Master/Slave Events
 
-after going to Grey Abbey Library while (Anastasia is booked and Loyalty of Anastasia is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Anastasia):
-	if debugactive is 1:
-		say "     DEBUG: Anastasia WALK-IN - HP of Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"AnastasiaLibraryBrag"	AnastasiaLibraryBrag	"[EventConditions_AnastasiaLibraryBrag]"	Grey Abbey Library	2500	2	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+1	"AnastasiaLibraryBrag"	AnastasiaLibraryBrag	"[EventConditions_AnastasiaLibraryBrag]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_AnastasiaLibraryBrag:
+	if (Anastasia is booked and Loyalty of Anastasia is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Anastasia):
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+AnastasiaLibraryBrag	"AnastasiaLibraryBrag"
+
+AnastasiaLibraryBrag is a situation.
+ResolveFunction of AnastasiaLibraryBrag is "[ResolveEvent AnastasiaLibraryBrag]".
+Sarea of AnastasiaLibraryBrag is "Nowhere".
+
+to say ResolveEvent AnastasiaLibraryBrag:
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and pounded her pussy right there in front of her brother, and pretty soon, the screams turned into moaning, and I shot my load into the bitch haha! Being the nice ruler that I am though, I wasn't about to let her brother feel left out, so while she was passed out, I bent him over my throne. Damn, that slut was a squealer! By the end of the day, I had both of them worshiping my cock like they were born for it.'";
 	say "     Anastasia is apparently sharing his past conquests with your allies, some seem amused while others seem a bit disgusted. You are about to turn and leave when something else catches your ear. 'It's the same way with my new [italic type][master][roman type]. [SubjectProCap of Player] may act like [SubjectPro of Player] is in charge, but when we are alone, it's a completely different story. I mean, I can't keep the li'l subby slut off of my cock!' While Anastasia sharing his past with the others and attempting to open up about himself isn't necessarily a bad thing, talking about you and what happens between the two of you is a completely different matter.";
 	LineBreak;
@@ -173,6 +191,7 @@ after going to Grey Abbey Library while (Anastasia is booked and Loyalty of Anas
 		LineBreak;
 		say "     Rolling your eyes, you turn and start to walk away. After all, who cares what a demonic slave has to say? As you make your way out, you can still hear his laughter roaring throughout the library. While what he is doing may be slightly frustrating, you have better things to do than dealing with him and his frat boy mentality.";
 	increase Loyalty of Anastasia by 1;
+	now AnastasiaLibraryBrag is resolved;
 
 [after going to Half-Renovated Room while (HP of Anastasia > 1 and Loyalty of Anastasia is 10):
 	if debugactive is 1:

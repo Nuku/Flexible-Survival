@@ -97,7 +97,7 @@ understand "jerkoff","jerk off","beatoff","beat off","whackoff","whack off","wan
 lastCockMilking is a number that varies. [@Tag:NotSaved] lastCockMilking is usually 500.
 
 check PlayerCockmilking:
-	if Cock count of Player is 0:
+	if Cock Count of Player is 0:
 		say "You don't appear to have a cock.";
 		stop the action;
 	if lastCockMilking - turns < 1:
@@ -115,9 +115,9 @@ Carry out PlayerCockmilking:
 	if there is a name of Searchstring in the Table of Random Critters:
 		choose a row with name of Searchstring in the Table of Random Critters;
 		if CumItem Entry is not "" and CumItem Entry is not " ":
-			say "You jerk off your [cock of player] cock, holding a plastic bottle to catch what semen you produce. After labeling it, you pack it away.";
+			say "You jerk off your [Cock of Player] cock, holding a plastic bottle to catch what semen you produce. After labeling it, you pack it away.";
 			ItemGain CumItem Entry by CumVolume;
 		else: [no cum item exists]
-			say "You jerk off your [cock of player] cock, spraying your seed onto the ground and providing some relief for your aching balls.";
+			say "You jerk off your [Cock of Player] cock, spraying your seed onto the ground and providing some relief for your aching balls.";
 
 Milking ends here.

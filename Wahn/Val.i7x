@@ -86,9 +86,9 @@ to say ValDesc:
 	say "     As Val notices your intense gaze upon him, he presents himself for your viewing pleasure, stretching and slowly turning to show off his well-rounded ass. He's certainly become a well-trained slave in the short time since his capture.";
 
 instead of conversing the Val:
-	if FaceName of Player is "Orc Warrior" and player is pure:
+	if FaceName of Player is "Orc Warrior" and Player is pure:
 		say "     Seeing an orc warrior approach, Val reflexively licks his lips and one of his hands moves down to rub his quickly hardening cock. He waits for you to speak.";
-	else if FaceName of Player is "Orc Breeder" and player is pure:
+	else if FaceName of Player is "Orc Breeder" and Player is pure:
 		say "     Seeing you approach, Val lets an appreciative gaze wander up and down your body, then asks 'Yes, brother?'";
 	else:
 		say "     Seeing a non-orc approach, Val looks a bit curious at you, then asks 'Yes?'";

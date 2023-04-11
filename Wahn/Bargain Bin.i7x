@@ -357,7 +357,7 @@ carry out bargainhunting:
 			wait for any key;
 			let P be a random number between one and six;
 			if P is 1:
-				Move player to The PALOMINO;
+				Move player to PALOMINO Dance Club;
 			if P is 2:
 				Move player to Zoo Entrance;
 			If P is 3:
@@ -374,7 +374,7 @@ carry out bargainhunting:
 				LineBreak;
 				StatChange "Stamina" by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by level of Player plus 1;
+					increase MaxHP of Player by level of Player plus 1;
 				say "[bold type]You lose 10 HP![roman type][line break]";
 				decrease HP of Player by 10;
 				if HP of Player < 0:

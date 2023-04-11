@@ -12,7 +12,7 @@ Sarea of Small Cave is "Forest".
 When play begins:
 	add Small Cave to BadSpots of FeralList;
 	add Small Cave to BadSpots of FurryList;
-	add Small Cave to BadSpots of CockvoreList;
+	add Small Cave to BadSpots of CockVoreList;
 	add Small Cave to BadSpots of VoreList;
 
 to say ResolveEvent Small Cave:

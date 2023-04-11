@@ -437,11 +437,11 @@ instead of navigating Flower Garden while (Resolution of Spreading Flowers is 6 
 	move player to Flower Garden;
 	SFAwesomeTree;
 
-instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 and carried of awesome fruit > 0 and carried of awesomer fruit > 0 and carried of awesomest fruit > 0 and "Awesome Tree" is listed in vials of player): [Player is carrying all the necessary items for ALT path]
+instead of navigating Flower Garden while (Resolution of Spreading Flowers is 7 and carried of awesome fruit > 0 and carried of awesomer fruit > 0 and carried of awesomest fruit > 0 and there is a name of "Awesome Tree" in the Table of OwnedVials): [Player is carrying all the necessary items for ALT path]
 	say "[NavCheck Flower Garden]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
 	move player to Flower Garden;
-	deletevial "Awesome Tree";
+	VialLoss "Awesome Tree" by 1;
 	SFAwesomeTree;
 
 to SFAwesomeTree:
@@ -1054,7 +1054,7 @@ to say ResolveEvent Dog Chase:
 		say "     As you're traveling along, you hear the repeated call of 'Squirrel! Squirrel!' coming from nearby. Curiously cautious, you approach the sound to find a small dog-man barking the word repeatedly, running around an isolated tree. From time to time, the Jack Russell terrier tries to scramble up, but he's mostly quadrupedal and his hands are mostly paws, preventing him from getting a grip. 'Squirrel!' he barks again, finally eliciting a response from the tree's occupant[if daytimer is day]. 'Shut up, you stupid mutt! I'm trying to sleep,' a female voice yells angrily[else]. 'Shut up, you dumb mutt. I told you, I'm not a squirrel,' a female voice yells angrily[end if]. Looking at the canopy more closely, you spot a slender, feminine creature lying casually among the branches. She has short brown fur, long brown hair and a very long tail. And she still has some clothes on, so she could even be a survivor given her lack of lustful reaction to the dog.";
 		say "     Deciding to risk it, you head closer, yelling at the terrier to get out of here. He turns and growls a little at you, but when the woman leaps from the tree wielding a large branch, the dog backs off, not wanting to fight two opponents. 'Damn it,' the woman grumbles as the dog runs off. 'Guy just wouldn't shut up. Too dumb to know I'm a kinkajou and not a squirrel,' she says, turning to smile at you. 'Thanks for helping out back there. I'm Joanna, by the way.'";
 		say "     Once the introductions are aside, you chat with her a bit[if daytimer is day]. 'I'm normally trying to rest during the day, but that dummy wouldn't let me sleep. Speaking of, I should really be getting some rest. I was up all night dancing at the club[else]. 'I was on my way to club for another night of dancing when I ran into that dummy. Speaking of, I should head on over while there's still a night to dance away[end if]. Yeah, there's still a club open to hang out at, called the Palomino. I'm usually there most nights. I hope to catch you there some time[if PALOMINO is known].' You tell her that you've been there before and that you'll have to swing by to see her some time[else].' She gives you some rough directions to the place, which include stuff like [']turn at this tree['] or [']run three rooftops over['], but you're pretty sure you'll be able to sort it out and find a more conventional route there[end if]. With that, she heads off, going from a car roof to an awning and then to the top of a building before moving out of sight.";
-		AddNavPoint PALOMINO;
+		AddNavPoint PALOMINO Dance Club;
 		now HP of Joanna is 90;
 		now joannadogsaved is true;
 		now Resolution of Dog Chase is 1; [saved Joanna]
@@ -1066,8 +1066,8 @@ to say ResolveEvent Dog Chase:
 an everyturn rule:
 	if HP of Joanna is 0 or HP of Joanna >= 90:
 		if daytimer is night: [non-plant Joanna is partying]
-			if Joanna is not in PALOMINO: [she's not in her party spot]
-				now Joanna is in PALOMINO; [let's move her there]
+			if Joanna is not in PALOMINO Dance Club: [she's not in her party spot]
+				now Joanna is in PALOMINO Dance Club; [let's move her there]
 		else: [during the day, she's out sleeping or scavenging]
 			now Joanna is nowhere; [off to the void]
 	else: [plant Joanna]
@@ -1132,9 +1132,9 @@ to say SmellingPlantDildo:
 	if Player consents:
 		LineBreak;
 		say "     The sight of it just turns you on so much that, almost by compulsion, you put your lips around the dildo and start sucking on it, the incredibly sweet thick juice landing in your tongue in an explosion of a nearly addicting flavor. It's so good that you have to force yourself to stop, and a tingle in your mouth reminds you that you were actually enjoying that immensely.";
-		increase libido of player by 10;
-		if libido of player > 100:
-			now libido of player is 100;
+		increase Libido of Player by 10;
+		if Libido of Player > 100:
+			now Libido of Player is 100;
 		decrease humanity of player by 5;
 		infect "Parasitic Plant";
 	else:
@@ -1155,7 +1155,7 @@ instead of using plant-like dildo:
 		say "[PlantDildoAssFuck]";
 
 to say PlantDildoPussyFuck:
-	say "     When you begin to handle the dildo some more, you see its white sap leaking through the tip more actively, sending an even more sweet smell to your nose. Sliding your fingers around the tip, you spread the slippery liquid all across the shaft, lubricating its surface and making it much smoother. In order to get started, you [if Player is not naked]take off your clothes and[else]you[end if] bring it closer to your womanhood. The toy wiggles in your hand, the part of it that is still organic coming to live with the promise of a good sexual feeding. You're eager to push it in, so you start shoving it inside your pussy, moist and wet by now, inch by inch as its entire length ondulates inside you, providing you extra pleasure. It slides in very easily and with no pain at all, despite it being of a considerable size.";
+	say "     When you begin to handle the dildo some more, you see its white sap leaking through the tip more actively, sending an even more sweet smell to your nose. Sliding your fingers around the tip, you spread the slippery liquid all across the shaft, lubricating its surface and making it much smoother. In order to get started, you [if Player is not naked]take off your clothes and[else]you[end if] bring it closer to your womanhood. The toy wiggles in your hand, the part of it that is still organic coming to live with the promise of a good sexual feeding. You're eager to push it in, so you start shoving it inside your pussy, moist and wet by now, inch by inch as its entire length undulates inside you, providing you extra pleasure. It slides in very easily and with no pain at all, despite it being of a considerable size.";
 	say "     With your legs spread, you simply grab the dildo by its broad base and let it do its own thing, only pulling and pushing softly once in a while to feel more of it inside you, rubbing against your nether lips with vigor. The sap it leaks in you is warm, augmenting the sensations as your vagina feels even more wet. Its wiggling movements easily reach all your spots, as it seems to get accustomed to its user, making your legs tremble with so much bliss. Starting to become lost in the lust, you begin to help the living dildo fuck yourself, shoving it all the way in, then pushing it back rhythmically. It manages to rip a few moans out of your mouth as you keep doing it, and all you keep thinking is how much you want this to last...";
 	WaitLineBreak;
 	say "     Though everything has to come to an end, as your orgasm begins to build up. After going at it for some more time, your body begins to shake as you come with a loud gasp [if Player is male]and start blasting heavy spurts of cum from your own cock - to land with little splats on the ground a little further away[else if Player is female]and an intense, heated wave of pleasure takes over your senses - your feminine juices running down between your legs and leaking onto the dildo [else]and tremble in lust[end if], with the dildo wiggling through the entire process, only making it feel so much better.";
@@ -1163,7 +1163,7 @@ to say PlantDildoPussyFuck:
 	infect "Parasitic Plant";
 
 to say PlantDildoAssFuck:
-	say "     When you begin to handle the dildo some more, you see its white sap leaking through the tip more actively, sending an even more sweet smell to your nose. Sliding your fingers around the tip, you spread the slippery liquid all across the shaft, lubricating its surface and making it much smoother. In order to get started, you [if Player is not naked]take off your clothes and[else]you[end if] bring it closer to your pucker. The toy wiggles in your hand, the part of it that is still organic coming to live with the promise of a good sexual feeding. You're eager to push it in, so you start shoving it inside your anus, moist and slick by now, inch by inch as its entire length ondulates inside you, providing you extra pleasure. It slides in very easily and with no pain at all, despite it being of a considerable size.";
+	say "     When you begin to handle the dildo some more, you see its white sap leaking through the tip more actively, sending an even more sweet smell to your nose. Sliding your fingers around the tip, you spread the slippery liquid all across the shaft, lubricating its surface and making it much smoother. In order to get started, you [if Player is not naked]take off your clothes and[else]you[end if] bring it closer to your pucker. The toy wiggles in your hand, the part of it that is still organic coming to live with the promise of a good sexual feeding. You're eager to push it in, so you start shoving it inside your anus, moist and slick by now, inch by inch as its entire length undulates inside you, providing you extra pleasure. It slides in very easily and with no pain at all, despite it being of a considerable size.";
 	say "     With your legs spread, you simply grab the dildo by its broad base and let it do its own thing, only pulling and pushing softly once in a while to feel more of it inside you, rubbing against your [if Player is male]prostate[else]insides with vigor. The sap it leaks in you is warm, augmenting the sensations as your flesh tunnel feels even more wet. Its wiggling movements easily reach all your spots, as it seems to get accustomed to its user, making your legs tremble with so much bliss. Starting to become lost in the lust, you begin to help the living dildo fuck yourself, shoving it all the way in, then pushing it back rhythmically. It manages to rip a few moans out of your mouth as you keep doing it, and all you keep thinking is how much you want this to last...";
 	WaitLineBreak;
 	say "     Though everything has to come to an end, as your orgasm begins to build up. After going at it for some more time, your body begins to shake as you come with a loud gasp [if Player is male]and start blasting heavy spurts of cum from your own cock - to land with little splats on the ground a little further away[else if Player is female]and an intense, heated wave of pleasure takes over your senses - your feminine juices running down between your legs and leaking onto the dildo [else]and tremble in lust[end if], with the dildo wiggling through the entire process, only making it feel so much better.";

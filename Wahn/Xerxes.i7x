@@ -157,7 +157,7 @@ an everyturn rule:
 		increase ImpregTimer of Xerxes by 1; [counting up towards 24]
 		if debugactive is 1:
 			say "     DEBUG: Xerxes's pregnancy advanced one turn. Current Turn: [ImpregTimer of Xerxes], Target Value: 24";
-		if ImpregTimer of Xerxes is 20 and skipturnblocker is 0: [birthing time]
+		if ImpregTimer of Xerxes is 20 and skipturnblocker is 0: [announcement that birthing time is coming closer]
 			if Xerxes is visible:
 				say "     From one moment to the next, the expression on Xerxes's face changes, and the human dog lets out a surprised whine, and he barks to draw your attention. Moving up to him, you crouch down and check on the young man, which includes laying a hand on his bulging belly. Ah! You can feel the child within moving, with a light kick or two noticeable under your fingers. [bold type]If the little one is getting this unruly, you don't think it'll be much longer before it is time for the birth. If you want to be present for the birth of Xerxes's child, you should most likely stay close to him in the next 12 hours or so.[roman type][line break]";
 			else:
@@ -790,10 +790,7 @@ ResolveFunction of Xerxes_Klauz_Encounter1 is "[ResolveEvent Xerxes_Klauz_Encoun
 Sarea of Xerxes_Klauz_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent Xerxes_Klauz_Encounter1:
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	say "you hear some rather confused barks and yips from somewhere back between the rows of bookshelves. Sounds like Xerxes. Going to have a look, you find your dog turned teenage human, standing on all fours in the midst of a loose reading group of chairs, his gaze following the movements of Klauz. The large feline weaves his way between the chairs with flowing movements, circling Xerxes and from time to time veering closer to rub the side of his head or furred body against Xerxes['] naked form.";
 	LineBreak;
 	say "     [bold type]Knowing the felinoid's wily ways, you can guess what he intends to do. How do you react?[roman type][line break]";
@@ -838,10 +835,7 @@ ResolveFunction of Xerxes_Fang_Encounter1 is "[ResolveEvent Xerxes_Fang_Encounte
 Sarea of Xerxes_Fang_Encounter1 is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent Xerxes_Fang_Encounter1:
-	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
-		say "     As you arrive at the library and step into the building, ";
-	else:
-		say "     As you walk up to the front entrance of the library, ";
+	say "[LibraryEntry_NavOrWalk]";
 	if ( HP of Fang is 1 or HP of Fang is 2 ): [Omega Fang]
 		say "you notice that Fang isn't at his spot next to the door. Wary of unannounced visitors, you look around for signs of a fight or any other indication of what happened. Nothing out of the ordinary in sight. Then you hear something from further back in the rows of bookshelves - growling. Readying yourself for a fight, you hurry over - to find Fang standing in a mildly threatening pose in front of Xerxes, who looks to the ground, then rolls over and bares his muscled chest and genitals. Your wolf gives a satisfied growl and goes to stand over the dog turned teenage human, allowing Xerxes to lick his muzzle. Looks like the question of hierarchy among your pets just got solved.";
 		LineBreak;

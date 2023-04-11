@@ -236,22 +236,22 @@ carry out bfanditesting5:
 	LineBreak;
 	say "[special-style-1]MARKERS:[roman type][line break]";
 	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of TailweaponList][roman type]) [infections of TailweaponList].";
-	say "[bold type]Felinelist:[roman type] ([special-style-1][number of entries in infections of Felinelist][roman type]) [infections of Felinelist].";
-	say "[bold type]Caninelist:[roman type] ([special-style-1][number of entries in infections of Caninelist][roman type]) [infections of Caninelist].";
-	say "[bold type]Equinelist:[roman type] ([special-style-1][number of entries in infections of Equinelist][roman type]) [infections of Equinelist].";
-	say "[bold type]Vulpinelist:[roman type] ([special-style-1][number of entries in infections of Vulpinelist][roman type]) [infections of Vulpinelist].";
-	say "[bold type]Reptilelist:[roman type] ([special-style-1][number of entries in infections of Reptilelist][roman type]) [infections of Reptilelist].";
-	say "[bold type]Insectlist:[roman type] ([special-style-1][number of entries in infections of Insectlist][roman type]) [infections of Insectlist].";
-	say "[bold type]Plantlist:[roman type] ([special-style-1][number of entries in infections of Plantlist][roman type]) [infections of Plantlist].";
-	say "[bold type]Avianlist:[roman type] ([special-style-1][number of entries in infections of Avianlist][roman type]) [infections of Avianlist].";
-	say "[bold type]Avianpredlist:[roman type] ([special-style-1][number of entries in infections of Avianpredlist][roman type]) [infections of Avianpredlist].";
-	say "[bold type]Taurlist:[roman type] ([special-style-1][number of entries in infections of Taurlist][roman type]) [infections of Taurlist].";
+	say "[bold type]FelineList:[roman type] ([special-style-1][number of entries in infections of FelineList][roman type]) [infections of FelineList].";
+	say "[bold type]CanineList:[roman type] ([special-style-1][number of entries in infections of CanineList][roman type]) [infections of CanineList].";
+	say "[bold type]EquineList:[roman type] ([special-style-1][number of entries in infections of EquineList][roman type]) [infections of EquineList].";
+	say "[bold type]VulpineList:[roman type] ([special-style-1][number of entries in infections of VulpineList][roman type]) [infections of VulpineList].";
+	say "[bold type]ReptileList:[roman type] ([special-style-1][number of entries in infections of ReptileList][roman type]) [infections of ReptileList].";
+	say "[bold type]InsectList:[roman type] ([special-style-1][number of entries in infections of InsectList][roman type]) [infections of InsectList].";
+	say "[bold type]PlantList:[roman type] ([special-style-1][number of entries in infections of PlantList][roman type]) [infections of PlantList].";
+	say "[bold type]AvianList:[roman type] ([special-style-1][number of entries in infections of AvianList][roman type]) [infections of AvianList].";
+	say "[bold type]AvianpredList:[roman type] ([special-style-1][number of entries in infections of AvianpredList][roman type]) [infections of AvianpredList].";
+	say "[bold type]TaurList:[roman type] ([special-style-1][number of entries in infections of TaurList][roman type]) [infections of TaurList].";
 	say "[bold type]RodentList:[roman type] ([special-style-1][number of entries in infections of RodentList][roman type]) [infections of RodentList].";
 	say "[bold type]KnottedCockList:[roman type] ([special-style-1][number of entries in infections of KnottedCockList][roman type]) [infections of KnottedCockList].";
-	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
+	say "[bold type]LatexList:[roman type] ([special-style-1][number of entries in infections of LatexList][roman type]) [infections of LatexList].";
 	say "[bold type]InternalCockList:[roman type] ([special-style-1][number of entries in infections of InternalCockList][roman type]) [infections of InternalCockList].";
-	say "[bold type]BarbedCocklist:[roman type] ([special-style-1][number of entries in infections of BarbedCocklist][roman type]) [infections of BarbedCocklist].";
-	say "[bold type]Firebreathlist:[roman type] ([special-style-1][number of entries in infections of Firebreathlist][roman type]) [infections of Firebreathlist].";
+	say "[bold type]BarbedCockList:[roman type] ([special-style-1][number of entries in infections of BarbedCockList][roman type]) [infections of BarbedCockList].";
+	say "[bold type]FirebreathList:[roman type] ([special-style-1][number of entries in infections of FirebreathList][roman type]) [infections of FirebreathList].";
 	say "[bold type]BluntCockList:[roman type] ([special-style-1][number of entries in infections of BluntCockList][roman type]) [infections of BluntCockList].";
 
 [------------------------------------------------------------]

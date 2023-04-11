@@ -8,54 +8,55 @@ Section 1 - Matriarch
 
 Table of GameCharacterIDs (continued)
 object	name
-Matriarch	"Matriarch"
+Hyena Matriarch	"Matriarch"
+Hyena Matriarch	"Hyena Matriarch"
 
-Matriarch is a woman.
-ScaleValue of Matriarch is 4. [human sized]
-SleepRhythm of Matriarch is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Body Weight of Matriarch is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-Body Definition of Matriarch is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+Hyena Matriarch is a woman.
+ScaleValue of Hyena Matriarch is 4. [human sized]
+SleepRhythm of Hyena Matriarch is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Body Weight of Hyena Matriarch is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Hyena Matriarch is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-Androginity of Matriarch is 6. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Matriarch is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Matriarch is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Matriarch is 8. [length in inches]
-Breast Size of Matriarch is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-Nipple Count of Matriarch is 2. [count of nipples]
-Asshole Depth of Matriarch is 12. [inches deep for anal fucking]
-Asshole Tightness of Matriarch is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-Cock Count of Matriarch is 1. [number of cocks]
-Cock Girth of Matriarch is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Matriarch is 12. [Length in Inches]
-Ball Count of Matriarch is 2. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Matriarch is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-Cunt Count of Matriarch is 1. [number of cunts]
-Cunt Depth of Matriarch is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Matriarch is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-Clit Size of Matriarch is 0. [size 1-5, very small/small/average/large/very large]
+Androginity of Hyena Matriarch is 6. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Hyena Matriarch is 8. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Hyena Matriarch is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Hyena Matriarch is 8. [length in inches]
+Breast Size of Hyena Matriarch is 4. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Hyena Matriarch is 2. [count of nipples]
+Asshole Depth of Hyena Matriarch is 12. [inches deep for anal fucking]
+Asshole Tightness of Hyena Matriarch is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Hyena Matriarch is 1. [number of cocks]
+Cock Girth of Hyena Matriarch is 4. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Hyena Matriarch is 12. [Length in Inches]
+Ball Count of Hyena Matriarch is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Hyena Matriarch is 3. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Hyena Matriarch is 1. [number of cunts]
+Cunt Depth of Hyena Matriarch is 12. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Hyena Matriarch is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Hyena Matriarch is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
-PlayerMet of Matriarch is false.
-PlayerRomanced of Matriarch is false.
-PlayerFriended of Matriarch is false.
-PlayerControlled of Matriarch is false.
-PlayerFucked of Matriarch is false.
-OralVirgin of Matriarch is false.
-Virgin of Matriarch is false.
-AnalVirgin of Matriarch is true.
-PenileVirgin of Matriarch is false.
-SexuallyExperienced of Matriarch is true.
-TwistedCapacity of Matriarch is false. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Matriarch is false. [steriles can't knock people up]
-MainInfection of Matriarch is "Hyena Herm".
-Description of Matriarch is "[matriarchdesc]".
-Conversation of Matriarch is { "Good girl!" }.
+PlayerMet of Hyena Matriarch is false.
+PlayerRomanced of Hyena Matriarch is false.
+PlayerFriended of Hyena Matriarch is false.
+PlayerControlled of Hyena Matriarch is false.
+PlayerFucked of Hyena Matriarch is false.
+OralVirgin of Hyena Matriarch is false.
+Virgin of Hyena Matriarch is false.
+AnalVirgin of Hyena Matriarch is true.
+PenileVirgin of Hyena Matriarch is false.
+SexuallyExperienced of Hyena Matriarch is true.
+TwistedCapacity of Hyena Matriarch is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Hyena Matriarch is false. [steriles can't knock people up]
+MainInfection of Hyena Matriarch is "Hyena Herm".
+Description of Hyena Matriarch is "[matriarchdesc]".
+Conversation of Hyena Matriarch is { "Good girl!" }.
 The scent of the Matriarch is "[matriarchscent]".
 
 to say matriarchscent:
 	say "The powerful scent of the matriarch makes you feel aroused and submissive.";
-	if lust of Matriarch - turns >= 8:
-		increase Libido of Player by 5 + HP of Matriarch;
-		now lust of Matriarch is turns;
+	if lust of Hyena Matriarch - turns >= 8:
+		increase Libido of Player by 5 + HP of Hyena Matriarch;
+		now lust of Hyena Matriarch is turns;
 
 to say matriarchdesc:
 	say "     The matriarch is the largest hyena you've seen. Her body is strong and powerful, with strong, masculine shoulders and wide, feminine hips. And this is all covered with thick muscles under a layer of coarse fur. Unlike many of the hyenas around, her fur is clean and brushed, probably by one of her many attendants. They flock around her, bringing her news from gang members throughout the city, relaying her orders back to them and generally waiting on her every whim. But she doesn't seem pampered or soft, having a tough look to her and has a willingness to get her hands dirty in a fight, as you've personally experienced. Strong, powerful and virile, your submissive body quivers at the sight of her, wanting to prostrate yourself before her - or better yet, bare your ass and bend over to be bred.";
@@ -82,12 +83,12 @@ to say sexwithMatriarch:
 		WaitLineBreak;
 		now lastfuck of Gang Members is turns + 8;
 		try fucking the gang members;
-	else if lastfuck of Matriarch - turns < 8:
+	else if lastfuck of Hyena Matriarch - turns < 8:
 		say "     The matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over. 'I've given you enough attention for now. Go [if grantbitch >= 3]beg your master to tend to your lusts. You are Grant's bitch, aren't you?' she rumbles with a smile[else]service the gang members. Unlike you, they've earned a reward,' she growls firmly down at you[end if]. 'For now, I have work to do.' And with that, she turns back to some of the attendants around her, barking orders. You whimper and slink away.";
 	else:
-		if HP of Matriarch is 0:
+		if HP of Hyena Matriarch is 0:
 			say "     'Mmm... back for more, are you?' she rumbles with a chuckle in her voice. Her dark cock twitches, growing larger as her arousal builds as she looks you over. She runs a paw over you, stroking your hyena body before groping your ass. 'Did you need something? Does that submissive body of yours call out for something?' she laughs, fondling you as her hard cock grinds against you, leaking precum onto you. The strong scent of it makes you feel aroused and needy, longing for her to take you again. With their matriarch preparing to have some fun, her attendants and followers step back, some taking the opportunity to start some fun of their own while her stoic guards keep watch.";
-		else if HP of Matriarch > 0:
+		else if HP of Hyena Matriarch > 0:
 			say "     '[one of]Are you looking to please your matriarch again?' she rumbles[or]Are you and that needy, submissive body of yours in need some attention?' she says with a chuckle in her voice[or]Do you need to be bred again, my good girl?,' she asks[or]Were you looking for another fucking, my needy girl?' she rumbles[purely at random]. Her dark cock twitches, growing larger as her arousal builds as she looks you over. She runs a paw over you, stroking your hyena body before groping your ass. '[one of]Maybe another ride on your matriarch's cock will satisfy that itch[or]I could use a quick break[or]I do so enjoy keeping my toys in their place[purely at random],' she rumbles with a grin, fondling you as her cock grinds against you, leaking precum onto you[one of]. Its strong scent makes you feel aroused and needy, longing for her to take you again[or]. You lick your lips as you eye her impressive breeding rod[or]. Your hips tremble as your body longs to have that black rod back inside you[or]. As you look it over, your need to have it thrusting into you gets even stronger[or]. As you watch a drop of pre run down its length, your submissive instincts make you whimper with a need to have it in you[purely at random][one of]. The guards and attendants step back, making room for their matriarch to enjoy the privilege of fucking her defeated rival again[or]. With their matriarch preparing to have some fun, the others move back, some taking the opportunity to have some fun of their own while her stoic guards keep watch[or]. Seeing their matriarch ready to take a break, the attendants turn to other matters - such as their own enjoyment of the show[or]. As their matriarch prepares to play with her [if a random chance of 1 in 2 succeeds]would-be usurper[else]fallen adversary[end if] again, several of the hyenas around pair off for some fun[purely at random].";
 		if vorelevel is 3 and HyenaMatVore is false:
 			say "     [HyenaMatVoreIntroAlt]";
@@ -122,7 +123,7 @@ to say HyenaMatSexScenes:
 		say "     Your matriarch runs a paw down between your legs, fingering your wet pussy, drawing a long and needful moan out of you. 'Mmm... nothing but a needy, proper bitch now, aren't you?' she rumbles with pleasure. Sliding a pair of fingers into you, your body trembles, wanting more. 'Doesn't that feel better? You were meant to be needy bitch, [one of]needing cock inside you, getting bred all the time[or]wanting to just be fucked. I could tell it the moment I mounted you[or]meant to carry pups for the gang[or]a slutty breeder[or]the gang's fucktoy[purely at random],' she rumbles to you. You nod eagerly, grinding your hot pussy down onto those fingers, wishing they were her penis. Lost to your growing lust, you can't help but agree with her words, your submissive instincts telling you that's what you want.";
 		WaitLineBreak;
 		let Z be a random number between 0 and 100;
-		increase Z by HP of matriarch * 20;
+		increase Z by HP of Hyena Matriarch * 20;
 		if Z < 55:			[no-sex variations]
 			let T be a random number between 1 and 3;
 			if T is 1:
@@ -135,7 +136,7 @@ to say HyenaMatSexScenes:
 				say "     The large hyena grins and gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face. 'Get licking, little bitch.'";
 				say "[hyenamatnosex3]";
 			SanLoss 5;
-			now lastfuck of Matriarch is turns;
+			now lastfuck of Hyena Matriarch is turns;
 		else if Z < 105:	[sex variations]
 			let T be a random number between 1 and 3;
 			if T is 1:
@@ -144,20 +145,20 @@ to say HyenaMatSexScenes:
 				say "[hyenamatsex2]";
 			else if T is 3:
 				say "[hyenamatsex3]";
-			if HP of Matriarch is 0, now HP of Matriarch is 1;
+			if HP of Hyena Matriarch is 0, now HP of Hyena Matriarch is 1;
 			SanLoss 10;
 			if Cunt Depth of Player < 10, increase Cunt Depth of Player by 1;
 			if Cunt Tightness of Player < 4, increase Cunt Tightness of Player by 1;
-			now lastfuck of Matriarch is turns;
+			now lastfuck of Hyena Matriarch is turns;
 		else:			[special sex variations]
 			let T be a random number between 1 and 2;
 			if T is 1:
 				say "[hyenamatspecial1]";
-				now lastfuck of Matriarch is turns + 2;
+				now lastfuck of Hyena Matriarch is turns + 2;
 			else if T is 2:
 				say "[hyenamatspecial2]";
-				now lastfuck of Matriarch is turns - 2;
-			if HP of Matriarch is 1, now HP of Matriarch is 2;
+				now lastfuck of Hyena Matriarch is turns - 2;
+			if HP of Hyena Matriarch is 1, now HP of Hyena Matriarch is 2;
 			SanLoss 12;
 	else:
 		if Player is male:		[MALE/HERM]
@@ -178,7 +179,7 @@ to say HyenaMatSexScenes:
 			WaitLineBreak;
 			say "[hyenamatnosex3]";
 		SanLoss 5;
-		now lastfuck of Matriarch is turns;
+		now lastfuck of Hyena Matriarch is turns;
 
 
 Section 3 - Sex Scenes

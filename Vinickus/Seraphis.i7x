@@ -81,8 +81,8 @@ Conflict within the Plains is a situation.
 ResolveFunction of Conflict within the Plains is "[ResolveEvent Conflict within the Plains]". The level of Conflict within the Plains is 6.
 Sarea of Conflict within the Plains is "Plains".
 when play begins:
-	add Conflict within the Plains to Badspots of MaleList;
-	add Conflict within the Plains to Badspots of FurryList;
+	add Conflict within the Plains to BadSpots of MaleList;
+	add Conflict within the Plains to BadSpots of FurryList;
 
 to say ResolveEvent Conflict Within the Plains:
 	if HP of Seraphis is 0: [First interaction]
@@ -183,7 +183,7 @@ to say ResolveEvent Conflict Within the Plains:
 						LineBreak;
 						say "     Considering that he can't really move from where he's standing, it's not hard to stay away from him, and after a few hours, it begins to look like as though he's coming down from his lust high. More intelligence is visible within his eyes with each passing second, and as the third or fourth hour passes, you can see his cock is deflating a little. However, he's still very evidently horny, but at least a little more in control than before. 'Huh. You're a rather... unique individual. Most would have jumped at the chance for a fuck, especially nowadays.'";
 						say "     You tell him about what you've been through so far, leaving out anything too risky, and his face seems to lighten up a bit. 'Ah, so you avoided the brunt of the start. Lucky, ";
-						if bodyname of Player is "Human":
+						if BodyName of Player is "Human":
 							say "and you've even kept your own body.' His equine shaft jerks up a bit as he says that. ";
 						else:
 							say "well, for the most part, for you definitely lost your old body,' he remarks with some evident disappointment. ";
@@ -224,8 +224,8 @@ Prereq1 of Plant Ruins Encounters is Conflict Within the Plains.
 The Prereq1Resolution of Plant Ruins Encounters is { 1, 2 }. [dom, neutral]
 
 when play begins:
-	add Plant Ruins Encounters to Badspots of MaleList;
-	add Plant Ruins Encounters to Badspots of FurryList;
+	add Plant Ruins Encounters to BadSpots of MaleList;
+	add Plant Ruins Encounters to BadSpots of FurryList;
 
 to say ResolveEvent Plant Ruins Encounters:
 	[
@@ -352,9 +352,9 @@ to say DominantSeraphisFirst:
 
 to say SubmissiveSeraphisFirst:
 	if anallevel < 2:
-		say "     You open up your clothes and let your [cock of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him. You gather up as much spit as you can in your mouth, and when there's enough of it, you spit it onto his ass, using your cock to smear it around and into his hole. You then angle his flank down towards your hips.";
+		say "     You open up your clothes and let your [Cock of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him. You gather up as much spit as you can in your mouth, and when there's enough of it, you spit it onto his ass, using your cock to smear it around and into his hole. You then angle his flank down towards your hips.";
 	else:
-		say "     You open up your clothes and let your [cock of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him, but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
+		say "     You open up your clothes and let your [Cock of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him, but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
 		say "     Your nose is quickly met with a strong, masculine musk, and as you poke your tongue out, the taste of sweat and the very same musk that you smelled, greets you. With a near mad vigor, you run your tongue over every nook and cranny of his ass, gracing the hole ever so slightly at random intervals, keeping the centaur on edge the entire time. It doesn't take long for his hole to start winking, his excitement growing with each swipe of your tongue, each huffed breath over his ass. Whinny after whinny starts filling your ears, panting gasps and moans following each one, and as you finally move over his twitching hole, you dart your tongue straight into him.";
 		WaitLineBreak;
 		say "     With your tongue wiggling about in his depths, you sloppily thrust it in and out, swiping it around the edges of the inner walls. While you keep up your pleasuring of the beast, you can't help but reach out with your free hand to grip at his ass, rubbing and squeezing his furred flank. You smile to yourself at the sheer noises the centaur makes, giving into the satisfaction of twisting another to your whims. Just as you think about that, you hear huffed utterances, 'Please...pl-please. Fuck. Fuck me.' Your smile grows even more, glee filling you as you give one more thrust of your tongue and one last suck on his hole. With that, you pull back, angling his flank down towards your hips. With the centaur's strong back legs lowered, his hips are easy to get into the right position.";

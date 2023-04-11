@@ -402,7 +402,7 @@ ResolveFunction of Surrounding Area is "[ResolveEvent Surrounding Area]".
 Sarea of Surrounding Area is "Hospital".
 
 to say ResolveEvent Surrounding Area:
-	say "     Deciding to take a some time to check out the neighborhood around the hospital, you proceed away from the large building and into the nearby residential area. As you cautiously move around the houses, a few things stand out right away. The doors to the homes are open or are broken into. A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well. But far more telling is the fact that it is far too quiet. The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time. Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here. It becomes increasingly disconcerting for you.";
+	say "     Deciding to take a some time to check out the neighborhood around the hospital, you proceed away from the large building and into the nearby residential area. As you cautiously move around the houses, a few things stand out right away. The doors to the homes are open or broken into. A closer examination shows splintered wood, ripped hinges and broken glass, often with heavy claw marks as well. But far more telling is the fact that it is far too quiet. The city certainly isn't as noisy as it used to be, but there's usually some sounds of activity from time to time. Be it some more peaceful mutants skulking around, weaker creatures fleeing from your approach or the noises of conflict and/or sex (for it's often hard to tell the two apart these days), there is usually some background sounds, but not here. It becomes increasingly disconcerting for you.";
 	say "     As you continue to scout the area out, you consider slipping into one of the homes. Just as you're about to step into the open and head for the open door, a trio of those jaguar orderlies come into view as they turn a corner. They seem to be on patrol in the area, looking around very intently. You slip further into the shadows and wait for them to pass before leaving the neighborhood. It seems the orderlies are still scouring the area for any survivors they can grab and you'd rather not risk being caught by them.";
 	now Surrounding Area is resolved;
 
@@ -777,7 +777,7 @@ to say hospquestpt5:
 		say "     'I have been able to perform some research on the sample you brought back. While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature. This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results. And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.' He smiles as he takes a syringe from a refrigerated storage case. 'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there. And so, this is for you,' he says as he merrily injects you with it.";
 		increase stamina of Player by 2;
-		increase maxHP of Player by level of Player plus 1;
+		increase MaxHP of Player by level of Player plus 1;
 		say "     [bold type]Your stamina has been increased by 2.[roman type][line break]";
 		increase score by 10;
 		say "     'I do have another task for you, my helpful assistant,' the albino mouse continues. 'At the state fair across the city, there is a strange, rubber-like creature. While I have obtained samples from the latex foxes and wolves running around, I wish to see how this feline's unusual body composition differs from theirs. You should get three samples, as I know from experience working with the fox and wolf samples that it may require several to get any worthwhile data. Being felines, these creatures seem able to entice the orderlies into becoming their mates and the vixens are not strong enough to deal with them on their own. And when several vixens go together, these felines band together and repel them. I'm hoping, as a lone individual, you will be successful where they have not.'";
@@ -996,7 +996,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 			say "     'If you're telling me this, I can assume you're not going to go through with it. It has become clear that this Dr. Mouse is not interested in a cure at all, but only exploiting the nanites and their hosts. Enhancing the strains out there will only exacerbate the problem of controlling this chaos.' He holds up the needle. 'While there would be some irony in returning this to you and asking you use it on him instead, I don't think he will give you that opportunity. Provided he's not already made himself immune to it, for that matter. I will have to ask you to return to the hospital and deal with him personally.'";
 			if Susan is visible:
 				WaitLineBreak;
-				say "     Susan comes up to your side and holds your left in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
+				say "     Susan comes up to your side and holds your left hand in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
 			SanBoost 5;
 			increase score by 20;
 			now HP of Doctor Matt is 10;
@@ -1046,7 +1046,7 @@ to say hospbigfight2:
 	say "     His muscles swell and he gains inches of height by the second. His growing body fills the lab coat so much it starts to strain to contain it until it finally fails. The buttons fly as he flexes his new, muscled body and tears the tattered remains from his shoulders.";
 	say "     His head becomes more feral and frightening, with sharp teeth, a mix of predatory canines and rodent incisors. The thick, leonine mane grows in as well as a trio or sharp horns, two on his brow and one at the end of his pointed muzzle. His hands, once cute paws, gain vicious claws and bony plates.";
 	WaitLineBreak;
-	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow grow to replace the white coat over them and this spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
+	say "     The mouse's maleness is not neglected either, gaining a large sheath and heavy balls. Thick, dark yellow fur grows to replace the white coat over them and spreads up over the monstrous mouse's chest as well. Clearly excited by the power of the changes, his cock grows hard and starts to emerge. It is thick and blood red, with a spaded tip and several firm ridges along its shaft. There's a faint swelling at the base, signs of a knot as well. Thick precum leaks down the monstrous prick.";
 	say "     He chuckles madly as he looks himself over, clearly pleased with the results. 'I am going to enjoy showing you how disappointed I am with you. In slow, agonizing detail,' he rumbles with a deep, threatening voice.";
 	now hospfight is 2;
 	now inasituation is true;
@@ -1467,7 +1467,7 @@ to say posttlscene:
 	StatChange "Strength" by 2;
 	StatChange "Dexterity" by 2;
 	StatChange "Stamina" by 2;
-	increase maxHP of Player by ( level of Player + 1 );
+	increase MaxHP of Player by ( level of Player + 1 );
 	increase HP of Player by (level of Player + 1);
 	now hospcountdown is turns;
 	now DoctorMouseProgress is turns;
@@ -1748,7 +1748,7 @@ understand "activator" as ec_activating.
 check ec_activating:
 	if hospquest < 19, say "I don't know what you're talking about." instead;
 	if Doctor Mouse is not visible, say "You need to go see Doctor Mouse about that." instead;
-	if BodyName of Player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
+	if BodyName of Player is "Enhanced Chimera" and Player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
 
 carry out ec_activating:
 	say "[ec_activation]";

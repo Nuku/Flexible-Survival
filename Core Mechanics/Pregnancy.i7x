@@ -856,7 +856,11 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: FPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: FPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -883,7 +887,11 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: MPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: MPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -909,7 +917,11 @@ to selfimpregchance:
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: SelfPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: SelfPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -923,6 +935,8 @@ to selfimpregchance:
 	now callovi is false;
 
 to selfimpregnate:
+	if DebugLevel > 4:
+		say "     DEBUG: Self-Impregnation.";
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
 	[if Player is not female and "MPreg" is listed in feats of Player and level of Velos is 1 and HP of Velos > 2:
@@ -988,6 +1002,8 @@ to say randomimpreg:		[Use when either would work]
 	randomimpreg;
 
 to randomimpreg:		[Use when either would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random F/M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1003,6 +1019,8 @@ to say randommimpreg:		[Use when only MPreg would work]
 	randommimpreg;
 
 to randommimpreg:		[Use when only MPreg would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1018,6 +1036,8 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 	randomfimpreg;
 
 to randomfimpreg:		[Use when only female pregnancy would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1033,6 +1053,8 @@ to say randomovi:		[random ovi-impregnation - use when either would work]
 	randomovi;
 
 to randomovi:		[random ovi-impregnation - use when either would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1048,6 +1070,8 @@ to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	randommovi;
 
 to randommovi:		[random ovi-impregnation - use when only MPreg would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1063,6 +1087,8 @@ to say randomfovi:		[random ovi-impregnation - use when only female pregnancy wo
 	randomfovi;
 
 to randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;

@@ -38,12 +38,12 @@ To level up:
 			StatChange "perception" by 1;
 	else:
 		increase ssstash by 1;
-	increase maxHP of Player by ( stamina of Player minus 10 ) divided by 2;
+	increase MaxHP of Player by ( stamina of Player minus 10 ) divided by 2;
 	[if the player reaches an even number, the StatChange function catches up their "missed" HP by adding level+1 extra]
-	increase maxHP of Player by 2; [static 2 point increase for each level up]
+	increase MaxHP of Player by 2; [static 2 point increase for each level up]
 	if "Hardy" is listed in Feats of Player:
-		increase maxHP of Player by 1;
-	now HP of Player is maxHP of Player; [free HP refill]
+		increase MaxHP of Player by 1;
+	now HP of Player is MaxHP of Player; [free HP refill]
 	if the remainder after dividing Level of Player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
 		funfeatget;
 	increase score by Level of Player times Level of Player;

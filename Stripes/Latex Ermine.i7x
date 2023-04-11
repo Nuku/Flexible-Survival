@@ -46,7 +46,7 @@ to say losetolatexermine:
 	else:
 		say "     Eventually, the temptation she represents become too much for you and you stop resisting. She pulls you into a kiss with a happy giggle, pressing her soft, smooth body against yours. ";
 	say "The latex female runs her hands over you, reaching back to grab your ass firmly and give it a squeeze while pushing her tongue into your mouth. You respond by sucking down on the slick intruder and groping her in return. Soon enough, you're rolling around on the ground together, fondling each other with growing lust.";
-	if BodyName of Player is "Latex Ermine" and player is pure and Player is not neuter:
+	if BodyName of Player is "Latex Ermine" and Player is pure and Player is not neuter:
 		if Player is male:
 			say "     Finding your latex mustelid body to be just what she's looking for, she eventually ends up stretched out on the ground beneath you with her legs spread and her fingers holding her wet folds open. With such a clear invitation, you grin and line up your [cock size desc of Player] [Cock of Player] cock with her pussy and thrust into her. You both release happy moans as her [if Cock Length of Player > 12]latex cunt is stretched wide around your large manhood[else]slick hole takes you easily[end if]. As you pump your [Cock of Player] penis into her, you are treated to the sexy sight of her [one of]playing with her plump breasts[or]sucking at one of her lovely nipples[or]slowly teasing her clit[at random]. The feel of her slick, squeezing, latex hole around your cock, made for fucking lovely ermines like her, is wonderful.";
 			say "     The pair of you go at it like the lustful mustelids that you are. Her slick, lubricating juices soak both your crotches as she cries out in orgasmic release. This makes her love tunnel quiver around your cock, driving you to plunge your [cock size desc of Player] shaft into her and unleash your [Cum Load Size of Player] load into her[if Ball Size of Player > 6]. Her cunt keeps a tight grip around your cock, ensuring that every last drop of your excessive output remains inside her rapidly swelling tummy. She moans and giggles happily, running her hands over her bulging belly as her latex skin stretches with ease to hold it all[else if Ball Size of Player > 5]. Her cunt forms a tight seal around your cock, keeping every last drop of your large output inside her. She moans and giggles happily as her latex tummy forms a rounded bulge from all the cum you're shooting into her[else]. Her pussy keeps a snug grip around your cock, not letting any of your seed escape from her needy body[end if]. When you're finally done mating the beautiful female, you share some more kisses and groping before finally each heading your own way.";
@@ -77,16 +77,16 @@ to say beatthelatexermine:
 			if Player is male:
 				if a random chance of 2 in 3 succeeds:
 					say "     In the mood for some fun after the fight, you pounce onto the ermine girl, pinning her to the ground. She giggles happily and squirms beneath you, rubbing her smooth, ivory skin against you. Between groping her lovely body, you push off your gear and get your cock into position. ";
-					if BodyName of Player is "Latex Ermine" and player is pure:
+					if BodyName of Player is "Latex Ermine" and Player is pure:
 						say "She welcomes your ermine cock into her eagerly, moaning in pleasure as you thrust into her.";
 					else:
 						say "She struggles briefly as you move in to mount her, but moans in pleasure and ceases her resistance when you penetrate her needy cunt.";
 					say "     Sinking your [cock size desc of Player] [Cock of Player] cock into the latex woman's stretchable hole, you grab her breasts and start playing with them as you fuck her[if Cock Length of Player > 12]. Her ivory pussy is stretched wide around your large manhood[end if]. You pinch and tease her [if erminecolor is 1]blue[else if erminecolor is 2]teal[else if erminecolor is 3]green[else if erminecolor is 4]red[else]pink[end if] nipples, enjoying the cute squeaks and moans she makes as you do. As you pump your [Cock of Player] penis into her, you are treated to the sexy sight of her [one of]slowly teasing her clit[or]sensually licking the colored tip of her thick tail as she hugs it tightly[or]sensually licking her fingers and then running them down her neck and shoulder before giving her nipples a tease as well[at random]. The feel of her slick, squeezing, latex hole around your cock";
-					if BodyName of Player is "Latex Ermine" and player is pure:
+					if BodyName of Player is "Latex Ermine" and Player is pure:
 						say ", made for fucking lovely ermines like her,";
 					say " is wonderful.";
 					say "     The two of you go at it for quite some time, groping and fondling one another as your excitement builds. Finally, her slick, lubricating juices soak both your crotches as she cries out in orgasmic release. As she cums, her latex tunnel quivers around your shaft, driving you to push yourself fully into her and unleash your [Cum Load Size of Player] load";
-					if BodyName of Player is "Latex Ermine" and player is pure:
+					if BodyName of Player is "Latex Ermine" and Player is pure:
 						say "[if Ball Size of Player > 6]. Her cunt keeps a tight seal around your cock, ensuring that every last drop of your excessive output remains inside her rapidly swelling tummy. She moans and giggles happily, running her hands over her bulging belly as her latex skin stretches with ease to hold it all[else if Ball Size of Player > 5]. Her cunt forms a tight seal around your cock, keeping every last drop of your large output inside her. She moans and giggles happily as her latex tummy forms a rounded bulge from all the cum you're shooting into her[else]. Her pussy keeps a snug grip around your cock, not letting any of your seed escape from her needy body[end if]. Having had your fun with the beautiful female, you share some more kisses and groping before finally letting her go.";
 					else:
 						say "[if Ball Size of Player > 6]. Her cunt relaxes its grip around your [cock size desc of Player] cock, letting your excessive output flow out around your pulsing shaft. In the end, both your lower bodies are drenched by the copious contents of your huge balls[else if Ball Size of Player > 5]. Her cunt relaxes its grip around your [cock size desc of Player] cock, letting your large output flow out around your pulsing shaft. In the end, both your groins are sticky with the considerable contents of your bloated balls[else]. Her cunt relaxes its grip around your [cock size desc of Player] cock, letting your sticky load flow out around your pulsing shaft and run down her thighs[end if]. Having had your fun with the latex female, you pull out and let her up. You can see the glistening streaks of your cum running down her ivory thighs as she giggles and heads off.";
@@ -197,7 +197,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -216,7 +216,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -237,7 +237,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -248,7 +248,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -262,19 +262,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -171,7 +171,7 @@ This is the turnpass rule:
 			if Stamina of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
 				increase Stamina of Player by 1;
 				if remainder after dividing stamina of Player by 2 is 0:
-					increase maxHP of Player by level of Player plus 1;
+					increase MaxHP of Player by level of Player plus 1;
 				increase hunger of Player by 6;
 				say "Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
 				now restoration is 1;

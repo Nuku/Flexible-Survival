@@ -756,7 +756,7 @@ else if Gryphoness is listed in companionList of Player: [Denise's assessment]
 
 Section 6 - Artemis
 
-else if rubber tigress is listed in companionList of Player: [Artemis's assessment]
+else if rubber tigress companion is listed in companionList of Player: [Artemis's assessment]
 	say "     Glancing over at Artemis, you ask her what she thinks about the current situation here.";
 
 Section 7 - Rachel
@@ -766,7 +766,7 @@ else if mouse girl is listed in companionList of Player: [Rachel's assessment]
 
 Section 8 - Ryousei
 
-else if royal tiger is listed in companionList of Player: [Ryousei's assessment]
+else if royal tiger companion is listed in companionList of Player: [Ryousei's assessment]
 	say "     Glancing over at Ryousei, you ask him what he thinks about the current situation here.";
 
 Section 9 - Korvin

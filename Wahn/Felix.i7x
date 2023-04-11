@@ -220,14 +220,8 @@ to say FelixDesc:
 		say "     Looking up to Felix face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Andre, almost everything around them forgotten.";
 
 instead of conversing the Felix:
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Felix-001B: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [removed from game]
-		say "ERROR-Felix-100A: He should be removed from the game.";
-	else:
-		say "     Felix smiles as you come closer and says, 'Hello, what's up?'";
-		wait for any key;
-		say "[FelixTalkMenu]";
+	say "     Felix smiles as you come closer and says, 'Hello, what's up?'";
+	say "[FelixTalkMenu]";
 
 to say FelixTalkMenu:
 	project the Figure of Felix_icon;
@@ -379,23 +373,12 @@ to say FelixTalk6:
 Section 3 - Fucking Felix
 
 Instead of fucking the Felix:
-	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Centaur Stallion":
-			now MonsterID is y;
-			break;
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Felix-001C: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [avoiding the player]
-		say "ERROR-Felix-100B: He should be removed from the game.";
+	if (lastfuck of Felix - turns < 6):
+		say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
+	else if (Libido of Felix < 6 or Libido of Felix > 90):
+		say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
 	else:
-		if (lastfuck of Felix - turns < 6):
-			say "     Felix says, 'Sorry I'm still worn out from last time. Give me some space, OK?'";
-		else if (Libido of Felix < 6 or Libido of Felix > 90):
-			say "     Felix says, 'Thanks for the offer - though I think I'll wait a bit more before doing any of that. I mean - you have my thanks for saving me, but... I want to be together with someone - not just have sex. Someone I care for.'";
-		else:
-			say "[FelixSexMenu]";
+		say "[FelixSexMenu]";
 
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
@@ -435,10 +418,6 @@ to say FelixSexMenu:
 	now sortorder entry is 6;
 	now description entry is "See the big lizard being fucked by his boyfriend";
 	[]
-	sort the table of fucking options in sortorder order;
-	change the current menu to table of fucking options;
-	carry out the displaying activity;
-	clear the screen;
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -569,23 +548,12 @@ instead of sniffing Andre:
 	say "Andre has a pleasant animalistic smell. It's definitely male, with a kind of spicy undertone.";
 
 to say AndreDesc:
-	if (HP of Felix < 2): [starting state]
-		say "ERROR-Andre-001A: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100):
-		say "ERROR-Andre-100A: He should be removed from the game (together with Felix).";
-	else if HP of Felix is 2:
-		say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[else]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
-		say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
+	say "     Andre is an about horse-sized lizard, strong and agile. He is quadrupedal and has a long and flexible tail and neck, with the latter ending in an elongated reptilian head with sharp teeth. On top of his head is a spined crest, giving him a dashing appearance. With his sand-colored scales glinting in the [if daytimer is day]sunlight[else]moonlight[end if], it looks like he was made to prowl these dry plains. You wonder if the nanites would adjust his coloring to a greener environment or other areas. Unobtrusively letting your eyes wander to his hind legs, you catch a glimpse of a small slit between his legs. He doesn't have any external balls or anything, but you remember that there's a quite impressive cock hidden inside that sheath.";
+	say "     Looking up to Andre face again before he notices you checking him out, you realize that you needn't have worried. He's busy exchanging longing looks with his new boyfriend Felix, almost everything around them forgotten.";
 
 instead of conversing the Andre:
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Andre-001B: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [removed from game]
-		say "ERROR-Andre-100A: He should be removed from the game, together with Felix.";
-	else:
-		say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says, 'Hey there, what's up?'";
-		wait for any key;
-		say "[AndreTalkMenu]";
+	say "     Andre gives you a tooth-filled (but friendly) smile as you come closer and says, 'Hey there, what's up?'";
+	say "[AndreTalkMenu]";
 
 to say AndreTalkMenu:
 	project the Figure of Andre_face_icon;
@@ -741,7 +709,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -760,7 +728,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -781,7 +749,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -792,7 +760,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -806,19 +774,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -828,21 +796,10 @@ When Play begins:
 Section 5 - Fucking Andre
 
 Instead of fucking the Andre:
-	[puts Plains Lizard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if Name entry is "Plains Lizard Male":
-			now MonsterID is y;
-			break;
-	if (HP of Felix is 0): [not yet met]
-		say "ERROR-Andre-001C: He should not be around yet anywhere where players can see him.";
-	else if (HP of Felix is 100): [avoiding the player]
-		say "ERROR-Andre-100B: He should be removed from the game, together with Felix.";
+	if (lastfuck of Andre - turns < 6):
+		say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
 	else:
-		if (lastfuck of Andre - turns < 6):
-			say "     Andre says, 'Phew, I need a break for a bit. Another time, OK?'";
-		else:
-			say "[AndreSexMenu]";
+		say "[AndreSexMenu]";
 
 to say AndreSexMenu:
 	project the Figure of Andre_icon;
@@ -909,7 +866,7 @@ to say AndreSexMenu:
 					say "[FelixSex5]";
 				if (nam is "Watch Felix fuck Andre"):
 					say "[FelixSex6]";
-					wait for any key;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the plains lizard, shaking your head slightly as he gives a questioning look.";

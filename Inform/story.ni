@@ -190,6 +190,10 @@ Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
 
+Include Milk Items by Core Mechanics.
+Include Cum Items by Core Mechanics.
+
+
 Book 3 - Loading the Main Game Content
 
 Part 1 - Locations
@@ -869,6 +873,7 @@ Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Katherine by Kirov.
 Include Kerr & Talov by Wahn.
+Include Kerry by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
@@ -979,6 +984,7 @@ Include Val by Wahn.
 Include Vanessa by Prometheus.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Vincent by Wahn.
 Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendis by Prometheus.
