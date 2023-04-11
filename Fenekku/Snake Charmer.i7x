@@ -21,6 +21,8 @@ Sarea of Snake Charmer is "Zoo".
 
 when play begins:
 	add Snake Charmer to BadSpots of VoreList;
+	add Snake Charmer to BadSpots of MaleList;
+	add Snake Charmer to BadSpots of MindcontrolList;
 
 to say ResolveEvent Snake Charmer:
 	if Resolution of Snake Charmer is 0:
@@ -57,21 +59,83 @@ to say ResolveEvent Snake Charmer:
 			say "     Shaking your head, you back away from the cage. Making the effort of breaking eyesight with the naga, you feel the emerald burn of his eyes as he watches you turn to leave. He hisses behind you, sounding annoyed but oddly... Impressed. You have this feeling of certainty, that you will see him again."
 			now Resolution of Snake Charmer is 3;
 	else if Resolution of Snake Charmer is 3:
-		say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Unfortunately, while that sense only seem to increase, nothing comes to satisfy. It would seem that for the moment, there'll be no resolution here, leaving you to move on.";
-		[say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Your instincts prove to be correct when the sound of scales sliding rapidly across the ground comes from behind you. Before you can react, your [bodytype of player] body is wrapped up in strong serpentine coils, trapping your arms against your side and preventing you from mounting any sort of resistance. 'No running away this time, little prey.' The slight hiss of the naga's voice speaks directly into your ear, 'Though perhaps that title isn't quite accurate'. Moving around in front of you, you're once again face-to-face with the hypnotic naga, closer than you'd ever been before. You try to avert your eyes, but those emerald orbs are once again taking most of your focus. 'You're the first I've met able to resist my gaze.' The serpent approaches, tongue flicking against your face, 'And as such, I believe you worthy to be my mate.'";
+		say "     Once again you find yourself wandering in the zoo, though this time with a creeping sense of anticipation. Your instincts prove to be correct when the sound of scales sliding rapidly across the ground comes from behind you. Before you can react, your [bodytype of player] body is wrapped up in strong serpentine coils, trapping your arms against your side and preventing you from mounting any sort of resistance. 'No running away this time, little prey.' The slight hiss of the naga's voice speaks directly into your ear, 'Though perhaps that title isn't quite accurate'. Moving around in front of you, you're once again face-to-face with the hypnotic naga, closer than you'd ever been before. You try to avert your eyes, but those emerald orbs are once again taking most of your focus. 'You're the first I've met able to resist my gaze.' The serpent approaches, tongue flicking against your face, 'And as such, I believe you worthy to be my mate.'";
 		LineBreak;
 		say "     You feel the grip of the naga's coils tighten for a bit, becoming almost painfully tight, before suddenly relaxing. The naga moves his face a bit away from yours, giving you room to free your arms from his coils. As well as physical release, your mind also seems to be freed from the naga's hypnotic influence - for the moment, allowing you to think freely. It's clear the Naga finds your resistance attractive, enough to desire you as more than just prey. The question then becomes if you're willing to reciprocate that desire, or reject him. [bolt type]You're certain that you won't see him again if you reject him. [roman type]"
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept his advances, and everything that entails.";
-		say "     ([link]Y[as]y[end link]) - Reject his advances; you're not intersted.";
+		say "     ([link]N[as]n[end link]) - Reject his advances; you're not intersted.";
 		if Player consents:
-			say "     "
+			say "     The naga's face develops into a smile, genuine yet somewhat predatory. It would seem the naga is pleased that you've accepted his advances. The naga approaches you once again, looking deep into your eyes, 'Then come, my mate, and show me your acceptance.";
+			LineBreak;
+			NagaSex;
 			now Resolution of Snake Charmer is 4;
 		else:
-			say "     "
+			say "     The naga's expression dips slightly at your denial. 'Truly?' His voice sounds hurt, but you nod, assuring him that you're unable - or unwilling - to return his affections. He is quiet for a moment, before nodding, 'Very well, I shall respect your decision'. The coils once relaxed around you start to withdraw as the naga pulls away from you, moving to a respectful distance. 'I will remember you as the first to resist my gaze, but nothing more. I will not seek you again.' With another nod, the naga turns and slithers away from you, slowly picking up speed and vanishing into the depths of the zoo.";
+			LineBreak;
+			say "     You only stay standing there for a moment more before remembering the situation you're in. The naga's gaze vanishes completely from your mind, enough that you can no longer even remember what his eyes look like. But, your decision made, you go your own way.";
+			WaitLineBreak;
 			now Resolution of Snake Charmer is 101;
-		now Snake Charmer is resolved;]
+		now Snake Charmer is resolved;
 		[Third time's the charm, so to speak.]
 		[The naga directly wraps up the player, not to consume, but to talk.]
 		[This will lead into a repeating event for talking/mating with the Naga]
 		[For now, there is no resolution.]
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+4	"Naga Mate"	Naga Mate	"[EventConditions_NagaMate]"	Zoo Giftshop	2500	8	50
+
+to say EventConditions_NagaMate:
+	now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Naga Mate	"Naga Mate"
+
+Naga Mate is a situation.
+Prereq1 of Naga Mate is Snake Charmer.
+Prereq1Resolution of Naga Mate is { 4 }.
+ResolveFunction of Naga Mate is "[ResolveEvent Naga Mate]".
+Sarea of Naga Mate is "Zoo".
+
+when play begins:
+	add Naga Mate to BadSpots of VoreList;
+	add Naga Mate to BadSpots of MaleList;
+	add Naga Mate to BadSpots of MindcontrolList;
+
+to say ResolveEvent Naga Mate:
+	say "     "
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - It's time to mate.";
+	say "     ([link]N[as]n[end link]) - Not right now.";
+
+to say NagaSex:
+	say "     The naga calls on you to show him you are his mate. How will you do so?";
+	[Define a list of choices to display to the player]
+	let NagaSex_Choices be a list of text;
+	if player is female:
+		add "Snakes have two dicks, you have two holes for them";
+		[if Vagina Tightness of player is >=3:
+			add "Have him stuff your slit";]
+	[if Asshole Tightness of player is >=3:
+		add "Have him stuff your ass";]
+	add "Show him with your mouth";
+	[add "Maybe he should show you this time? Put that tongue to work";]
+	let NagaSex_Choice be what the player chooses from NagaSex_Choices;
+	if NagaSex_Choice is:
+		-- "Snakes have two dicks, you have two holes for them":
+			LineBreak;
+			say "     The naga grins lecherously at the suggestion, bringing his hands to your hips as his dicks slowly emerge from the slit where his torso flows into coils, the scales there neatly parting to reveal the hidden treasure there. He speaks no words, his actions oddly romantic despite the situation. Reaching your hands out to those lengths, you gently rub at - and then grasp - one of the hemipenes, the firm length throbbing in your grip. The naga lets out a small hiss at your touch, seemingly a bit pent up as you move your other hand down, grasping and stroking at the other length. The naga's coils move a bit closer, holding you up as he moves a hand to your own crotch, reciprocating your touch with fingers sliding over your rear. Poking and prodding at your rear entrance with delving, scaled fingers before moving even further to touch against your lips, glistening with slight arousal, his touch causes you to let out a small gasp, before you refocus your attention on pleasing his lengths. Stroking and squeezing up and down the duo of dicks, any pre escaping sliding down the lengths helping with lubrication as you get him ready to fuck you silly.";
+			say "     His fingers rub at your lips for a moment, before one is spared to slide between and into you, your slit quivering around the intruding digit as it slides deeper and deeper, halfway then all the way right up to his knuckle. He swirls it around inside you for a moment before pulling it out and replacing it with another finger, getting both his fingers - and your pussy - slick with lubrication. You let your gaze wander upwards, a small moan escaping your mouth, seeing his lustful expression as he looks down upon you, his emerald orbs looking into yours with a sense of enjoyment and eagerness, though restrained for the moment.";
+			LineBreak;
+			say "     Pulling his fingers from your slit all at once, he instead moves to swirl them around your rear entrance, using your natural lubricant to lube up your anus, swirling around the hole before delving into it, one by one, each finger depositing more lube to prepare you for what was to come. Distracted by his fingers, you remove your hands from his shafts, squirming slightly in his coils. Seeing this, he lets out a small hiss of a laugh, 'I shall tease you no longer, my mate,' He says, affectionately, removing his fingers and once again placing his hands upon your hips. Leaning you back gently, guiding you to lay back upon his coils which move to hold you, the naga moves up atop you, his shafts sliding up along your legs to aim right at your now well-lubricated holes. You bring your hand down between your legs to help him as he gets into position, guiding one tip to poke at your slit, while the other pokes at your backdoor. Once done, you look him in the eyes and nod, signalling him to thrust upwards, burying both lengths halfway into your holes with a moan escaping your not-wholly-prepared maw."
+			say "     From there, it's as though the naga is taken by his pent-up lust, as before you're even fully accommodated to his size, his shafts start sliding out of your holes. Preparing yourself as best you can, you force your clenching holes to relax before he thrusts forward again, burying his lengths further inside you. A shuddering hiss escapes his maw as he starts to build into a rhythm, burying himself into you before pulling back, then burying himself even further within. He doesn't pull out all the way, nor does he hilt into you, his dicks too close together to be able to perform such a feat. Despite such, he doesn't lack in eagerness, nor speed as he starts picking up the pace, rocking you on his coils and making his scales rub against your back. It was only mildly uncomfortable, a kind of thing easily ignored by the pleasure radiating outwards from your canal and asshole, clenching and rippling over his lengths as moans escape your maw in harmony with his hisses of apparent pleasure.";
+			say "     His hips shudder along with his cocks as he grips you with his hands, his coils moving and shifting in rhythm with his thrusting, rocking you both back and forth akin to a bed. All too soon his thrusts become frantic, inconsistent, the lovemaking coming to a shuddering peak from your end first. Crying out into the air of the zoo, you orgasm around his hemipenes, milking him with both holes as you leak around him and onto his scales. The naga isn't too far behind, a few more thrusts before he slams as close to you as he can, shuddering all over as his dicks start unloading into you, spurt after spurt of cum filling your insides, even giving you a bit of pudge from the sheer amount he pumps into you."
+			LineBreak;
+			say "     You huff and pant, riding the waves of orgasm with a filling sense of contentment. The naga does the same, his muscles relaxing, letting you slide back downwards, your feet once again touching the ground as his hemi's slowly retreat into his genital slit.";
+			[Naga takes the player and leans them back, lining their dicks with both holes, then shoving them in and fucking the player. If the player has a dick, the naga adds some attention there, but the dick goes mostly ignored.]
+		-- "Show him with your mouth":
+			LineBreak;
+			say "     The player approaches the naga, encouraging their dicks out and taking them with their mouth, sucking and worshipping them.";
+	say "     The naga breathes a bit heavy after your lovemaking session, slowly uncoiling from around you to free you fully as he nods towards you, 'Thank you, my mate, and apologies for my... Rough nature. I have been without for too long'. You nod back, reassuring him as he smiles, 'I shall seek you out again, my mate. Until then, stay safe.' His words spoken, the naga gives a small wave before turning and starting to slither away, leaving you with a warm sense of satisfaction, and a good bit of fullness."
