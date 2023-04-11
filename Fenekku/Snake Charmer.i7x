@@ -96,10 +96,15 @@ ResolveFunction of Naga Mate is "[ResolveEvent Naga Mate]".
 Sarea of Naga Mate is "Zoo".
 
 to say ResolveEvent Naga Mate:
-	say "     "
+	say "     'Hello my mate' you hear a slightly hissing voice speak from behind you. Turning to look, you smile slightly as you see the naga approaching. 'It's been a short while'. You nod, responding that it has as he slithers up, letting his coils gather around you as he circles you, before soon settling in front of you. 'So, my mate, now that we're together once again. Shall we show each other that we are still mates?'";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - It's time to mate.";
 	say "     ([link]N[as]n[end link]) - Not right now.";
+	if Player consents:
+		say "     'Well, my mate. After our first session together, I'm curious as to what you have in mind this time,' Letting you decide once again, he eagerly waits.";
+		NagaSex;
+	else:
+		say "     'I understand.' The naga nods, starting to pull his coils out and away from you, 'The world is cruel at the moment. Dangerous. Stay safe, my mate.' With that said, he gently slithers past you, rubbing your shoulder as he passes before disappearing whence he came into the zoo.";
 
 to say NagaSex:
 	say "     The naga calls on you to show him you are his mate. How will you do so?";
