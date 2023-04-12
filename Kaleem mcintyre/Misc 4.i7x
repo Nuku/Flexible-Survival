@@ -73,20 +73,7 @@ to say ResolveEvent Girl Time:
 
 Section 4 - Snake Charmer
 
-Table of GameEventIDs (continued)
-Object	Name
-Snake Charmer	"Snake Charmer"
-
-Snake Charmer is a situation.
-ResolveFunction of Snake Charmer is "[ResolveEvent Snake Charmer]".
-Sarea of Snake Charmer is "Zoo".
-
-to say ResolveEvent Snake Charmer:
-	say "     While making your way through the zoo, you come upon a very attention-grabbing sight. At first, what you think is a man with a large snake curled around him actually turns out to be a giant naga-like creature hissing and flicking its tongue around wildly while bobbing his scaled head back and forth around the front of an entranced and unmutated pelican. The little bird seems not to mind that it is literally within the arms of danger as the naga hisses quietly at the avian before running its blunted nose along the neck of the white feathered creature held aloft into the serpent's mottled hands. Terror laces a cold trail down your spine as you watch what happens next as the snake-man pulls back from the bird and then opens its mouth wide, and then wider, before pulling the captivated bird towards it. You find yourself entrapped the same as the avian getting swallowed alive as you watch the bird slowly disappear down into the naga's throat. It only takes a few seconds for the reptile to be done, and before long the last of the bird's webbed feet are disappearing inside of the hungry serpent's maw. A happy hiss flows out from the naga's mouth as you watch the predator swallow the bulge of the bird down into his throat and, still in your slightly bewildered frame of mind, you can't help but continue to track the pelican as the feathery creature slowly vanishes into the bulge of the snake-man's body.";
-	WaitLineBreak;
-	say "     A quiet burp awakes you from your hypnotic trance just in time to see the serpent cover its mouth with a hand and then pat the lump that was the pelican settling firmly into its upper stomach. When the creature turns to look at you with a come-hither look your feet can't move fast enough to get out of there. Of all the ways you might be tempted to meet your fate in this corrupted city, being [italic type]snake food[roman type] isn't one of them.";
-	now Snake Charmer is resolved;
-
+[Moved to Fenzoo]
 
 Section 5 - Spiritual Love
 
