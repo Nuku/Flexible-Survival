@@ -45,6 +45,32 @@ Version 4 of Blanche by Prometheus begins here.
 BlancheNonBinaryMomDad is a text that varies.
 BlancheNonBinaryMommyDaddy is a text that varies.
 
+[Pregnancy Countdown]
+An everyturn rule:
+	if (Libido of Blanche > 24 and Libido of Blanche < 255):
+		if HP of Blanche is 6: [First Time Giving Birth]
+			increase HP of Blanche by 1;
+			increase Thirst of Blanche by 4; [+four pups in first litter]
+			now Libido of Blanche is 0;
+		else if HP of Blanche is 10: [Second Time Giving Birth]
+			increase HP of Blanche by 1;
+			increase Thirst of Blanche by 2; [+2 pups in second litter]
+			now Libido of Blanche is 0;
+		else if HP of Blanche is 13: [Third Time and Beyond Giving Birth]
+			if Thirst of Blanche < 10:
+				increase HP of Blanche by 1;
+				increase Thirst of Blanche by 4; [+4 pups in third litter]
+				now Libido of Blanche is 0;
+			else:
+				increase Thirst of Blanche by a random number between 2 and 4; [2-4 pups in litter]
+		increase score by a random number between 5 and 10;
+		now Libido of Blanche is 0;
+	else if Libido of Blanche is 12:
+		if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+			increase HP of Blanche by 1;
+	if Libido of Blanche > 0 and Libido of Blanche < 255:
+		increase Libido of Blanche by 1;
+
 [Movement Schedule]
 an everyturn rule:
 	if Charisma of Blanche > 3:
@@ -1869,6 +1895,8 @@ to say sexwithBlanche07:	[cowgirl position]
 		if Sterile of Player is false:
 			if HP of Blanche is 14:
 				now HP of Blanche is 12;
+			else:
+				increase HP of Blanche by 1;
 			now Libido of Blanche is turns;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
@@ -1876,12 +1904,12 @@ to say sexwithBlanche07:	[cowgirl position]
 to say CuddlewithBlanche: [Cuddling]
 	say "     Feeling like a comforting hug from a master of the art, you press yourself up against Blanche and embrace her. 'Oh my. Someone's been working themselves too hard,' she chuckles returning the affection. You feel her chest press up against yours, soft and warm, and your stress immediately begins to diminish in the arms of a loving mother. 'Don't forget to take time off when you need it. It isn't your responsibility to solve all the problems in the city,' the wolfess whispers in your ear as she snuggles up against you. She has a very pleasing scent that becomes even stronger when you nuzzle your face into the side of her neck. WHen you comment on it, Blanche smiles slyly. 'Bernard isn't the only one with pheromones. His are just a lot stronger and seem to have a different effect. Now shush, and let Mommy give [BlancheMommyDaddyTitle] a hug. You deserve it.' By the time that she eventually releases you, you feel reinvigorated and closer than ever to the white wolfess.";
 
-to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus]
+to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefullt Unneccessary Now]
 	if debugactive is 1:
 		say "DEBUG| Current turn number: [turns]  - Pre-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 		say "DEBUG| Updating Blanche now.";
-	if Libido of Blanche is not 255:
+	[if Libido of Blanche is not 255:
 		now tempnum is 0;
 		if HP of Blanche is 5 and Libido of Blanche - turns >= 12:
 			increase HP of Blanche by 1;
@@ -1922,7 +1950,7 @@ to say blancheupdate: [I have no idea what this is for. Possibly pregnancy count
 				now thirst of Blanche is 10;
 			else:
 				increase thirst of Blanche by a random number between 2 and 4;
-			now Libido of Blanche is 254;
+			now Libido of Blanche is 254;]
 	if debugactive is 1:
 		say "DEBUG| Post-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche]   /   Charisma: [Charisma of blanche][line break]";
