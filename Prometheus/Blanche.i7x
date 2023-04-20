@@ -45,6 +45,16 @@ Version 4 of Blanche by Prometheus begins here.
 BlancheNonBinaryMomDad is a text that varies.
 BlancheNonBinaryMommyDaddy is a text that varies.
 
+[Pregnancy Bug Fix]
+A postimport rule:
+	if Libido of Blanche < 0:
+		if Blanche is gravid:
+			now Libido of Blanche is 14;
+		else if Blanche is pregnant:
+			now Libido of Blanche is 2;
+		else:
+			now Libido of Blanche is 0;
+
 [Pregnancy Countdown]
 An everyturn rule:
 	if (Libido of Blanche > 24 and Libido of Blanche < 255):
@@ -957,13 +967,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Sturm - Large Wolf" for Nadia;
 			WaitBreakReactions;
 		if Onyx is booked or Onyx is bunkered:
-			if (xp of Onyx > 9 and xp of Onyx < 20): [Dom Stallion]
+			if (XP of Onyx > 9 and XP of Onyx < 20): [Dom Stallion]
 				say "     Onyx strides over to inspect the wolves more thoroughly, a cocky smirk spreading across his face as his eyes roam over Blanche's voluptuous form. 'Hey there, sexy. I'm Onyx. I look forward to getting to know you,' he remarks. The wolfess seems momentarily tongue-tied, her eyes fixed on the dominant horseman's stirring erection, just beginning to squeeze past the ineffective confines of his thong. The view is obstructed by Sturm stepping between them, his arms folded. 'What about me? Are you looking forward to getting to know me too?' he pointedly asks. 'Sure, but not quite as much as her. Wait, you aren't her mate or something, are you?' Onyx replies, sizing up the wolf. 'Not exactly. I'm her son,' comes the response. 'Well then, I'll probably refrain from involving you in a threesome,' the horseman teases. Seeing Sturm's hackles raise, Onyx takes a step back. 'Calm down, it was meant to be a joke. Besides, it's not like I'm some meathead just because I'm a stallion. It's her choice.' Blanche lays a calming hand on her son's shoulder, the tension bleeding from his body a moment later. With a sigh, Sturm apologies. 'Sorry. I don't have many good experiences with other people so I tend to be defensive. Perhaps I can try and make a better impression when I've properly settled in.' 'No worries. I'm sure your caution has been justified in the past,' the stallion replies, the two males shaking hands. Relieved that the situation has resolved itself without your intervention, you wait as the three of them talk for a short moment before Onyx leaves again, Blanche's eyes still following him.";
 				TraitGain "Onyx - Confident Hung Stud" for Blanche;
 				TraitGain "Onyx - Not Some Meathead" for Sturm;
 				TraitGain "Blanche - Sexy MILF" for Onyx;
 				TraitGain "Sturm - Justifiably Cautious" for Onyx;
-			else if (xp of Onyx > 19 and xp of Onyx < 30): [Sub Stallion]
+			else if (XP of Onyx > 19 and XP of Onyx < 30): [Sub Stallion]
 				say "     Onyx wanders over to inspect the wolves more thoroughly, surreptitiously licking his lips as his eyes roam over Blanche's voluptuous form. 'Hello, I'm Onyx. It's nice to meet you,' he says with an endearing smile. The wolfess seems momentarily tongue-tied, her eyes fixed on the submissive horseman's stirring erection, just beginning to squeeze past the ineffective confines of his thong. With an annoyed sigh at his mother's behavior, Sturm replies, 'It's a pleasure to meet you too. I'm Sturm and this is my mother, Blanche. Please excuse her staring.' He gently elbows her, startling her for a moment before she realizes what she was doing and blushes beneath her fur and begins to hurriedly apologize. 'Don't worry about it. I find it more than a little flattering that I can draw their eye like that. Look all you want,' Onyx laughs. You see Sturm trying to get a better look out of the corner of his eye, but Blanche seems to be self-conscious now, firmly keeping her eyes above the stallion's groin. After a few more words are exchanged, Onyx walks away again, flicking his tail around with the side-effect of revealing his hole to all three of you as you watch him leave. Once he rounds a corner, Sturm turns back to his mother and wordlessly folds his arms, Blanche suddenly finding the ceiling extraordinarily interesting.";
 				TraitGain "Onyx - Flirty Hung Stud" for Blanche;
 				TraitGain "Onyx - Flirty Show-off" for Sturm;
@@ -1837,7 +1847,7 @@ to say sexwithBlanche01: [Missionary]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1853,7 +1863,7 @@ to say sexwithBlanche02: [Doggystyle]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1897,14 +1907,14 @@ to say sexwithBlanche07:	[cowgirl position]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say CuddlewithBlanche: [Cuddling]
 	say "     Feeling like a comforting hug from a master of the art, you press yourself up against Blanche and embrace her. 'Oh my. Someone's been working themselves too hard,' she chuckles returning the affection. You feel her chest press up against yours, soft and warm, and your stress immediately begins to diminish in the arms of a loving mother. 'Don't forget to take time off when you need it. It isn't your responsibility to solve all the problems in the city,' the wolfess whispers in your ear as she snuggles up against you. She has a very pleasing scent that becomes even stronger when you nuzzle your face into the side of her neck. WHen you comment on it, Blanche smiles slyly. 'Bernard isn't the only one with pheromones. His are just a lot stronger and seem to have a different effect. Now shush, and let Mommy give [BlancheMommyDaddyTitle] a hug. You deserve it.' By the time that she eventually releases you, you feel reinvigorated and closer than ever to the white wolfess.";
 
-to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefullt Unneccessary Now]
+to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefully Unneccessary Now]
 	if debugactive is 1:
 		say "DEBUG| Current turn number: [turns]  - Pre-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
