@@ -389,6 +389,7 @@ Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
+Include Wasp Hive by Voidsnaps.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Xeno Nest by Kernog.

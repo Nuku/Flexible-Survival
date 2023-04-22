@@ -45,6 +45,16 @@ Version 4 of Blanche by Prometheus begins here.
 BlancheNonBinaryMomDad is a text that varies.
 BlancheNonBinaryMommyDaddy is a text that varies.
 
+[Pregnancy Bug Fix]
+A postimport rule:
+	if Libido of Blanche < 0:
+		if Blanche is gravid:
+			now Libido of Blanche is 14;
+		else if Blanche is pregnant:
+			now Libido of Blanche is 2;
+		else:
+			now Libido of Blanche is 0;
+
 [Pregnancy Countdown]
 An everyturn rule:
 	if (Libido of Blanche > 24 and Libido of Blanche < 255):
@@ -1837,7 +1847,7 @@ to say sexwithBlanche01: [Missionary]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1853,7 +1863,7 @@ to say sexwithBlanche02: [Doggystyle]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1897,14 +1907,14 @@ to say sexwithBlanche07:	[cowgirl position]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say CuddlewithBlanche: [Cuddling]
 	say "     Feeling like a comforting hug from a master of the art, you press yourself up against Blanche and embrace her. 'Oh my. Someone's been working themselves too hard,' she chuckles returning the affection. You feel her chest press up against yours, soft and warm, and your stress immediately begins to diminish in the arms of a loving mother. 'Don't forget to take time off when you need it. It isn't your responsibility to solve all the problems in the city,' the wolfess whispers in your ear as she snuggles up against you. She has a very pleasing scent that becomes even stronger when you nuzzle your face into the side of her neck. WHen you comment on it, Blanche smiles slyly. 'Bernard isn't the only one with pheromones. His are just a lot stronger and seem to have a different effect. Now shush, and let Mommy give [BlancheMommyDaddyTitle] a hug. You deserve it.' By the time that she eventually releases you, you feel reinvigorated and closer than ever to the white wolfess.";
 
-to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefullt Unneccessary Now]
+to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefully Unneccessary Now]
 	if debugactive is 1:
 		say "DEBUG| Current turn number: [turns]  - Pre-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
