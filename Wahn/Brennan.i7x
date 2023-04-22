@@ -699,10 +699,10 @@ to say ResolveEvent Fountain Discussion:
 to FountainDiscussionEvent:
 	project the figure of Spartan_icon;
 	say "     Your path over the campus brings you close to the fountain in the middle of the central green. Just as you arrive, you see the tail end of a human figure, flanked by two wolves, go into the college admin building to the north. It must have been Brennan, as that combination of beings is not something you have seen anywhere else, and 'regular' humans are becoming exceedingly rare these days, too. This of course means that your friend draws quite a bit of attention wherever he goes. Overhearing a trio of Spartans standing a little bit aside from the usual fountain crowd, you are therefore not too surprised by the topic of their conversation.";
-	say "     '...imagine him joining us as a new brother. Now that is a real man!' the first of them says in a voice full of admiration, and is answered by another of the young men. 'You think we should approach him when he comes back out? He might decline - then where would we be? A pity about Pericles['] edict of not testing someone's skill without provocation or... consent.' The first spartan replies, 'I'm not saying I'd publicly challenge that commandment, but... if one should run into that man somewhere else on campus, away from prying eyes... who will be able to tell he didn't petition to join us afterwards?'";
+	say "     '...imagine him joining us as a new brother. Now that is a real man!' the first of them says in a voice full of admiration, and is answered by another of the young men. 'You think we should approach him when he comes back out? He might decline - then where would we be? A pity about Pericles['] edict of not testing someone's skill without provocation or... consent.' The first Spartan replies, 'I'm not saying I'd publicly challenge that commandment, but... if one should run into that man somewhere else on campus, away from prying eyes... who will be able to tell he didn't petition to join us afterwards?'";
 	WaitLineBreak;
 	say "     The third of the group speaks up after listening to his friends until now, 'You know... if I met and bested that hunk - and his two beasts, not to forget about them - I would just take him as my personal slave. Imagine having such a man to warm your bed and serve.' Given that the Spartans in Tenvale college are not at all bothered by nudity and that you rarely see any wear pants or even underwear, the erections this line of talk makes grow are more than obvious. And you are far from the only one to notice. An incubus strolls over to the group almost straight away, offering them a good time in a very smooth and charming voice.";
-	say "     'You think you can take three spartan warriors at the same time?! I'd like to see you try!' comes the inevitable reply from the leader of their little group, and the demon gleefully leads them off to wherever his room or fuck-nest may be.";
+	say "     'You think you can take three Spartan warriors at the same time?! I'd like to see you try!' comes the inevitable reply from the leader of their little group, and the demon gleefully leads them off to wherever his room or fuck-nest may be.";
 	now Fountain Discussion is resolved;
 	now LastCampusWalkin is turns;
 
@@ -725,7 +725,7 @@ to say ResolveEvent Infernal Offer:
 to InfernalOfferEvent:
 	project the figure of Brennan_clothed_icon;
 	say "     You run into Brennan at the college fountain and spend a little time chatting. Clearly, the bearded man enjoys the somewhat more relaxed atmosphere of the campus a lot and can often be found here. Getting those immunity booster shots really helped him get out of his shell by taking away the worry about casual infection. Eventually, you're all caught up on all the current news and the two of you decide to go your separate ways. Just as you start to walk away, you are passed by a shirtless incubus, who 'accidentally' stumbles and lands right in Brennan's arms. Bare pecs pressed right against your human friend's front, the demon smiles charmingly at Brennan and says, 'Thanks for catching me, handsome. How about I pay you back with the best blowjob you'll ever have?' With that said, he quickly takes the human survivor's hands and slides them down to rest on his hellishly perfect buttocks.";
-	say "     'Yeah, I wish,' the human survivor says under his breath, then puts his hands on the incubus's shoulders and pushes him out of his comfort zone. 'Sorry, I don't just fuck around with any charming stranger that comes my way,' Brennan adds in a more normal voice, rejecting the sex-demon politely but firmly. With that said, he steps to the side and walks right past the baffled incubus. You see the demon whirl around and stare after his intended prey, his fist clenching in anger. A two-spartan patrol that strolls by in that very moment makes him re-think a physical confrontation and suppress the irritation though, and the incubus stalks off in a tiff. You can hear him mutter, 'You'll be mine in the end, asshole,' before he vanishes down the path.";
+	say "     'Yeah, I wish,' the human survivor says under his breath, then puts his hands on the incubus's shoulders and pushes him out of his comfort zone. 'Sorry, I don't just fuck around with any charming stranger that comes my way,' Brennan adds in a more normal voice, rejecting the sex-demon politely but firmly. With that said, he steps to the side and walks right past the baffled incubus. You see the demon whirl around and stare after his intended prey, his fist clenching in anger. A two-Spartan patrol that strolls by in that very moment makes him re-think a physical confrontation and suppress the irritation though, and the incubus stalks off in a tiff. You can hear him mutter, 'You'll be mine in the end, asshole,' before he vanishes down the path.";
 	now Infernal Offer is resolved;
 	now LastCampusWalkin is turns;
 
@@ -935,7 +935,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -954,7 +954,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -975,7 +975,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -986,7 +986,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -1000,19 +1000,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

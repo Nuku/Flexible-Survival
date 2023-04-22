@@ -118,7 +118,7 @@ The earea of Equinoid Camp is "Park".
 Description of Equinoid Camp is "[EquinoidCampDesc]".
 
 to say EquinoidCampDesc:
-	say "     You stand in a large and sprawling field of long, swaying grass. Spread out among the area are primitive wooden structures that provide enclosed spaces for rest and recreation. Although spartan in construction, these buildings seem more than sturdy enough to withstand the temperate California weather.";
+	say "     You stand in a large and sprawling field of long, swaying grass. Spread out among the area are primitive wooden structures that provide enclosed spaces for rest and recreation. Although Spartan in construction, these buildings seem more than sturdy enough to withstand the temperate California weather.";
 	say "     To the north is the communal recreation and bathing area. To the east are more elaborate tents that are presumably set aside for their tribal leaders. To the south is the gate where you entered, and to the west are a couple barns for storing supplies.";
 
 instead of sniffing Equinoid Camp:
@@ -140,7 +140,7 @@ instead of sniffing Nakoma's Tent:
 	say "Nakoma's tent smells of herbs, scented oil, fur and a hint of equine arousal.";
 
 Definition: a person is blequinoidbodied: [Determines if the player is fully black equinoid]
-	if BodyName of Player is "Black Equinoid" and player is pure, yes;
+	if BodyName of Player is "Black Equinoid" and Player is pure, yes;
 	no;
 
 Equinoid Camp ends here.

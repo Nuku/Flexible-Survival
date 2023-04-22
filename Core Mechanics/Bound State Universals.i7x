@@ -144,7 +144,7 @@ to boundstatename:
 
 					if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 						[sierrasex;
-						if BodyName of Player is "Sierrasaur" and player is pure:
+						if BodyName of Player is "Sierrasaur" and Player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:

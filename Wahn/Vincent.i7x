@@ -184,9 +184,9 @@ to say VincentDesc:
 	say "     As Vincent notices your intense gaze upon him, he gives you a two-finger salute, combined with a friendly smirk on his muzzle. The scrappy fox knows to give you an appropriate level of respect to the person who saved him from a future as an orc slave, and who's now giving him refuge.";
 
 instead of conversing the Vincent:
-	if FaceName of Player is "Orc Warrior" and player is pure:
+	if FaceName of Player is "Orc Warrior" and Player is pure:
 		say "     Seeing your orc warrior self approach, Vincent reflexively tenses up a little, but he quickly catches himself and shakes his head to dispel the memory of his capture at the hands of green-skinned brutes. With a slightly embarrassed expression, he blows out the breath he was holding, then puts on a friendly smile as he asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
-	else if FaceName of Player is "Orc Breeder" and player is pure:
+	else if FaceName of Player is "Orc Breeder" and Player is pure:
 		say "     Seeing you approach, Vincent lets an appreciative gaze wander up and down your body, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
 	else:
 		say "     Seeing you approach, Vincent gives you a friendly nod, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";

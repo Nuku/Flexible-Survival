@@ -151,7 +151,7 @@ to say ResolveEvent Gryphon's Plot:
 		now Gryphon's Plot is Resolved; [event will not come up again]
 	else if Resolution of Gryphon's Plot is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
-		if BodyName of Player is "Blue Gryphon Herm" and player is pure:
+		if BodyName of Player is "Blue Gryphon Herm" and Player is pure:
 			say "     Being a gryphon yourself, you can't help but feel like the guys might react badly to your presence. Still, do you want to approach them?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, who knows? You may be wrong with your assumption";

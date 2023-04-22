@@ -507,7 +507,7 @@ to say SnapjawTalkAppreciation:
 
 to say SnapjawTalkSex:
 	say "     Having brought up the subject of sex, you ask Snapjaw what his terms and preferences are, wanting to know more about what makes him tick.";
-	if player is female and breast size of player > 0:
+	if player is female and Breast Size of Player > 0:
 		say "     He looks at you from head to feet, and it is clear that he is trying to find words to reply to that. 'Yeah, uh... Sorry to bring it up to you like that, but I ain't into women. Nor feminine appearances and all that shit, just not my thing.' He then clears his throat as a pause before continuing, 'But, if for some reason you end up a dude... Heh, where do I start... There's a lotta stuff I like. From getting worshipped all over to fucking someone's brains out... And that's only the tip of the iceberg, guess you'd have to find out as you go... Though, you better know your place, I'm not taking any bullshit behavior from you. Nor anyone, for that matter. If it ain't working out for you then do me and yourself a favor and kindly piss off. It's already a fucking privilege for you to have the chance to worship me, and that's only because I tend to be so generous.'";
 		say "     You think the only way to have any sort of fun with Snapjaw is, putting it plainly, to be his bitch... And to be male, as he seems to be only into guys.";
 	else:
@@ -530,7 +530,7 @@ to say SnapjawTalkSuperstrength:
 instead of fucking Snapjaw:
 	if Libido of Snapjaw is 0:
 		say "     You really do not want to do that without talking to him first. This really seems like someone you do not want to be messing with so precariously.";
-	else if player is female and breast size of player > 0:
+	else if player is female and Breast Size of Player > 0:
 		say "     As you move in to propose an offer of pleasure to Snapjaw, he dismisses you immediately with a hand gesture. 'Fucking hell... I said I'm into dudes. Don't fucking bother me with that shit if you ain't one.' He seems rather annoyed for that, which suggests you probably should not insist.";
 	else if lastfuck of Snapjaw - turns < 4:
 		say "     As you move in to propose an offer of pleasure to Snapjaw, he dismisses you immediately with a hand gesture. 'Later, I said,' he says only that, ignoring all your advances right after.";

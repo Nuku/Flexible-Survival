@@ -76,7 +76,7 @@ to say ResolveEvent Starving Frog:
 	now hunger of Ranae is 1; [Met Ranae]
 	project Figure of Ranae_rags_icon;
 	say "     While wandering through the sewers, you hear the splashing of water and someone softly mumbling coming down from one of the passageways. Creeping down the tunnel, you round the corner and spot a frog woman digging through a flooded hole in the wall. She looks rather thin, and her skin is a dull green. 'Come on, come on...' she says to herself as she continues to search the hole. After a few moments, she withdraws her arms from the crevice with a weary sigh. 'Nothing...' The female amphibian moves to leave, but she freezes when she happens to turn in your direction and spots you. With a startled yelp, she hastily backpedals away from you.";
-	if BodyName of Player is "Human" and player is pure:
+	if BodyName of Player is "Human" and Player is pure:
 		say "     However, she soon stops her retreat when she gets a good look at you. 'W-wait, you're still human? Does this mean that you're not going to attack me?' ";
 	else:
 		say "     'Stay back!' she cries, her eyes wide with fear. ";

@@ -270,7 +270,7 @@ carry out Pierceplayer:
 			now piercestatus is 1;
 			now piercesave is 1;
 			StatChange "Charisma" by 4;
-			increase maxHP of Player by 30;
+			increase MaxHP of Player by 30;
 		else if matriarchdefeated is 1:
 			say "     'Oh hey you want a piercing?' Kara says with a smug smirk on her hyena-like face, 'Yeah I can see where a little failed slut like you would want a sexy little piercing to show the world just how submissive you are... Don't worry, I am sure I can find something to show your status around here...' the more dominant hyena says with a chuckle, her attitude making you blush slightly even as arousal runs through your body at her dominant tone and posture. You find yourself not able to resist in the least as she pushes you down into her working chair, before she begins digging through the cabinet next to you eagerly. After several minutes of searching, you hear Kara let out a yip of pleasure as she pulls out a thin series of chain links, and several small ring piercings and turns to you with a large grin across her muzzle...";
 			say "     The sight of all the cold metal about to pierce your skin makes you shudder nervously, unsure if this is really a good idea anymore, but you aren't given a chance to protest as Kara quickly and professionally attaches a nipple ring to each of your nipples, the cold metal rubbing up against your flesh feeling surprisingly good even as she threads the small chain between them so whenever one of them moves, all the other rings tug and tease at your other breasts. You moan slightly with lust even as she moves back to admire her work and attach a couple of small tinkling bells to your nipples as well. Kara stands back and admires her work with a lusty grin, even as you struggle with yourself trying not to cry out at the pleasure that shoots through your body when she tugs on the silver chain teasingly.";
@@ -308,7 +308,7 @@ carry out Pierceplayer:
 			if "Nipple Piercing" is listed in feats of Player:
 				Remove "Nipple Piercing" from feats of Player;
 			if "Matriarch Piercing" is listed in feats of Player:
-				decrease maxHP of Player by 30;
+				decrease MaxHP of Player by 30;
 				StatChange "Charisma" by -4;
 				Remove "Matriarch Piercing" from feats of Player;
 		else:

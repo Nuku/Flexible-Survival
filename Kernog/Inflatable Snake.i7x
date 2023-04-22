@@ -37,7 +37,7 @@ to say losetoinflatablesnake:
 		say "     A moan escapes your lips as you feel the snake's maw open wide and swallow [if Cock Count of Player > 1]all of your cocks[else]your cock[end if] in its stretchable maw. It effortlessly swallow your [cock size desc of player] shaft[smn] all the way down and you shudder, wondering how far its plastic jaws can stretch. You lift your head to check what is happening, only for the inflatable snake's tail to coil around your neck, pin your head down, then ram itself into your [FaceName of player] mouth. Your teeth sink harmlessly on the appendage without piercing it, while it hisses and inflates until it is thick enough to stretch your cheeks.";
 		say "     The inflatable snake plays with its surprisingly powerful throat muscles to suck and massage your [cock size desc of player] dick[smn] with terrifying efficiency. You moan loudly and thrash around, but the pool toy's iron grip and another inflation of its invading tail make short work of your resistance. The snake brings you at a steady rhythm to the edge of orgasm, then beyond. Your [cock size desc of Player] sex throbs and releases a [Cum Load Size of Player] load, quickly gulped down by the feral inflatable.";
 	else:
-		say "     You suddenly feel the snake's head press against [if Cunt Count of Player > 1]one of [end if]your [cunt size desc of player] puss[yfn]. [if Cunt Tightness of player < 5]You shudder as you doubt the creature will fit, but the inflatable surprises you by deflating until it is able to squeeze through, then reinflating to stretch you to your limit[else]The snake's head wiggles its way past your lower lips, then hisses and inflates to stretch you to your limit[end if]. A loud moan escapes your lips, quickly muffled when the inflatable snake's tail coils around your neck then rams into your [FaceName of player] mouth. Your teeth sink harmlessly on the appendage without piercing it, while it hisses and inflates until it is thick enough to stretch your cheeks.";
+		say "     You suddenly feel the snake's head press against [if Cunt Count of Player > 1]one of [end if]your [cunt size desc of player] puss[yfn]. [if Cunt Tightness of Player < 5]You shudder as you doubt the creature will fit, but the inflatable surprises you by deflating until it is able to squeeze through, then reinflating to stretch you to your limit[else]The snake's head wiggles its way past your lower lips, then hisses and inflates to stretch you to your limit[end if]. A loud moan escapes your lips, quickly muffled when the inflatable snake's tail coils around your neck then rams into your [FaceName of player] mouth. Your teeth sink harmlessly on the appendage without piercing it, while it hisses and inflates until it is thick enough to stretch your cheeks.";
 		say "     The inflatable snake pushes forward relentlessly, adapting its size to your [cunt size desc of player] vagina to avoid hurting you, while still making you feel as if it was stretching you wide. Its skin produces a tanning oil-like substance, but you are already so wet that this 'attention' is unnecessary. You can feel its blunt head hit your cervix again and again, and its powerful neck wiggle inside you. The snake brings you at a steady rhythm to the edge of orgasm, then beyond. Your vaginal muscles squeeze on the feral pool toy which wiggles and pushes even harder as a response[if Player is male], while your [cock size desc of Player] throbs and releases a [Cum Load Size of Player] load, quickly gulped down into the synthetic creature's stomach (or what passes as one)[end if].";
 	WaitLineBreak;
 	if vorelevel > 1:
@@ -82,7 +82,7 @@ to inflatableSnakeVore:
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		now lustatt is Libido of player;
+		now lustatt is Libido of Player;
 		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -92,7 +92,7 @@ to inflatableSnakeVore:
 			increaseSnakeDrugCap;
 			inflatableSnakeSanityOrgasm;
 			LibidoReset;
-			if BodyName of player is "Inflatable Snake" and player is pure:
+			if BodyName of player is "Inflatable Snake" and Player is pure:
 				say "You have been completely turned into a inflatable snake. You hazily wiggle your new inflatable serpentine body, while the chemicals of your 'progenitor' finish brainwashing you into a happy reptilian pool toy.";
 			else if inflatableSnakeBodyParts is 0:
 				say "The nanites are hard a work to cope with your weakened state. In doing so, they start converting you into an inflatable snake.";

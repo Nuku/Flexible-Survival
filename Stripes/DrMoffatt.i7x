@@ -543,7 +543,7 @@ to say sexwithDrMoffattSkunkPath:
 		else:
 			if BodyName of Player is not "Hyperskunk":
 				say "     She slides her fluffy tail across your [bodytype of Player] body. 'Hmmm... it seems you've gone and lost that sexy skunk body of yours while out having some fun. But don't worry, I'll be happy to help you with that once we're through with our session.' She runs her paw along your side before pushing you towards the couch.";
-			else if the player is pure:
+			else if the Player is pure:
 				say "     She smiles as she looks you over appreciatively. 'I must say - you're looking quite the sexy beast. You're certainly best suited to be a beautiful, voluptuous skunk,' she says with a sexy purr in her voice while running her paws over your chest. 'Let's get your session started so I can show you just how much I like the new look.'";
 			say "     As she motions you towards the couch, you hop onto it quickly, eager to start telling your sexy shrink about all the fun you've been getting up to out in the city";
 			if wrcurseMoffatt > 0 and a random chance of 1 in 4 succeeds:

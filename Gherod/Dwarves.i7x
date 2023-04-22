@@ -163,7 +163,7 @@ to CTunnel2Trap:
 	say "     His taunts continue as he makes you take his manhood down your throat, and eventually, he's grabbing you firmly to fuck your face. As his balls hit your chin, you hear the ropes around you squeak because of the movement, your entire body swinging back and forth as the dwarf takes your throat like a fuckhole. He's got a huge satisfied grin in his face, knowing he owns you for as long as he desires, [if Player is submissive]and you can't help but feel incredibly turned on by it as your submissive instincts kick in, only thinking about the many ways he could use you[else]and you have no choice but to endure everything that comes into his mind, whatever it may be, as you remain at his mercy[end if]... 'Darn, it feels good! I was needing this!' his deep voice rumbles in your ears while his cock throbs in your mouth and throat still, and after a couple few more thrusts, he pulls out slowly.";
 	WaitLineBreak;
 	say "     'That's enough mouth for now. You got me all nice and wet, now... Let's see what else you can offer me.' His strong hand caresses your body all over, exploring all his possibilities, though you just know he's going to stop right where he does before it actually happens, feeling your glutes up with both hands from behind you. The dwarf spreads your legs so he can get between them, [if Player is not naked]and you feel him taking off your lower gear to expose your ass[else]and you feel him giving the back of your bare thighs a nice squeeze[end if] before spreading your cheeks and sliding a finger above your pucker. 'You [if Player is female]do have a nice cunt, but I feel like having something tighter right now[else]have a really nice looking butt. Just what I needed[end if]. Hope you don't mind me using your asshole and breed it full of some good dwarven cum...' he teases you, chuckling as he presses his finger inside your anus, rubbing it around to prepare it for his thick meat.";
-	say "     'Since you didn't make a fuss and actually were a good [boygirl] for me so far, I'll give you a treat.' he informs you as, moments later, you feel a wet, warm and nimble something caressing your hole. His tongue, wiggling around your back entrance masterfully as it presses in further, soon accompanied by some lips as he makes out with your anus. In a momentary change of focus, [if Player is male]the dwarf gives your balls a nice brief tugging with his mouth, leaving your [cock of player] manhood throbbing even more[else if Player is female]gives your pussy a broad licking and a kiss, leaving you even hornier[else]gives your genderless crotch a big kiss, leaving you even hornier[end if], before turning his attention to your asshole once more. His bushy beard tickles between your glutes, which makes you move your ass against his face a little harder, a gesture he seems to appreciate as he shoves his tongue deeper in your pucker";
+	say "     'Since you didn't make a fuss and actually were a good [boygirl] for me so far, I'll give you a treat.' he informs you as, moments later, you feel a wet, warm and nimble something caressing your hole. His tongue, wiggling around your back entrance masterfully as it presses in further, soon accompanied by some lips as he makes out with your anus. In a momentary change of focus, [if Player is male]the dwarf gives your balls a nice brief tugging with his mouth, leaving your [Cock of Player] manhood throbbing even more[else if Player is female]gives your pussy a broad licking and a kiss, leaving you even hornier[else]gives your genderless crotch a big kiss, leaving you even hornier[end if], before turning his attention to your asshole once more. His bushy beard tickles between your glutes, which makes you move your ass against his face a little harder, a gesture he seems to appreciate as he shoves his tongue deeper in your pucker";
 	WaitLineBreak;
 	say "     While the stocky short man is tonguefucking your ass, he's also sliding his hands all over your legs, buttocks and sometimes your front genitalia, seemingly caring about your own pleasure as well, all the while he has full control over you. Your hole stretches around his tongue, which is going deep and back out repeatedly, giving you blissful sensations as he truly puts an effort into eating your ass out. With a hasty retreat, he pulls his tongue out and kisses your pucker goodbye, standing up with his cock in hand. 'Alright, that's enough for you. Better put that tasty ass to use elsewhere now, yeah?' he says as you're already feeling the warm tip of his prick kissing your anus, and it's not long until he starts pushing.";
 	say "     His considerable thickness starts filling you once he's past your anal orifice's first resistance, and slides in without much trouble thanks to the preparation he made sure you had. As you're hanging immobile, the dwarf is free to fuck your ass as much as the whim takes him, grabbing you by the hips to aid his thrusting motions, burying his cock as deep as he can inside you. There's almost no pain on your side, and eventually it all starts feeling too good. There's something in you urging you to let out an audible moan, [if Player is female]with his manhood pressuring against your pleasure spot[else]with his manhood hitting your prostate with vigor[end if]... 'You're liking it, aren't you? Like getting your holes used while you're all tied up, eh? Could have thought about this before, it's so much fun...!'";
@@ -1014,7 +1014,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -1033,7 +1033,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -1054,7 +1054,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -1065,7 +1065,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -1079,19 +1079,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -1219,7 +1219,7 @@ to say DwarfMaleTF:
 	now BodyName of Player is "Dwarf Male";
 	now Body of Player is "that of a short and burly man, musclebound and covered in hair. Your legs are fairly shorter than an average human's, making you stand half one's height";
 	now CockName of Player is "Dwarf Male";
-	now Cock of player is "human";
+	now Cock of Player is "human";
 
 Section 4-2 - Weapons
 

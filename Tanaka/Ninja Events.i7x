@@ -19,7 +19,7 @@ to say ResolveEvent Fallen Kunoichi:
 	say "     A ragged banner directs your eyes to a far corner of the room. Once pure white, it is now marked black with soot and smoke. The bloody marks of four fingers draw a winding curve downwards, pointing to something resting at the base of the banner. You step over more of the wreckage to get a better look at it. Lying on a raised platform there are the remains of a feline ninja impaled by a bo staff. It juts vertically from their chest like a sword in a stone. The dim light here illuminates its sleek wood, which shines in an ocean of static dust particles. Its tip is encased in gleaming metal. Beautiful, intricate designs meander down its length. The blood caked on its end has long dried and welded flesh and wood together. A white mask covers the ninja's face, cracked from the battle that killed them. It's painted red with swirling floral designs and streaks of blood. You imagine a peaceful look underneath it in spite of their grisly end. Somehow, you feel heavy.";
 	LineBreak;
 	say "     [bold type]What do you do?[roman type][line break]";
-	say "     [link](1)[as]1[end link] - Loot the staff in the ninja.";
+	say "     [link](1)[as]1[end link] - Loot the staff of the ninja.";
 	say "     [link](2)[as]2[end link] - Use the lack of monsters here to rest.";
 	say "     [link](3)[as]3[end link] - Give a moment of silence for the ninja.";
 	say "     [link](4)[as]4[end link] - Just leave.";

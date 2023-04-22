@@ -559,7 +559,7 @@ to say artemissex2:	[M-oral 1]
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
@@ -575,7 +575,7 @@ to say artemissex3:	[M-oral 2]
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
@@ -589,7 +589,7 @@ to say artemissex4:	[M-oral 3]
 			say ". After having been so well fed, she gives a sleepy yawn";
 		else:
 			say ". She turns to you and seems to smile as she opens her muzzle to show that she's swallowed it all down, but this turns into a sleepy yawn from your lazy tigress";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well";
@@ -600,7 +600,7 @@ to say artemissex5:	[F-oral 1]
 	say "     The rubber tigress nuzzles at your groin and mewls softly, licking her lips. Knowing what she's after, you find a spot to sit and spread your legs, giving her access to your juicy pussy. As her rough, rubbery tongue licks across your wet folds of your [cunt size desc of Player] snatch, you rub her head. Reaching back a little, you grip her neck and curl some of her rubbery hide around your fingers so you can pull firmly to your pussy. This rough treatment seems fine by the kitty, who's more than happy to get some sexual fun. She dives her tongue into you, working it inside you to lap up your juices as you cum a few times before finally letting her go.";
 	if lastArtemisglomp >= 8 or HP of rubber tigress companion < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a big yawn that stretches her rubbery muzzle wide";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea.";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";
@@ -614,7 +614,7 @@ to say artemissex6:	[F-oral 2]
 	say "     The rubber tigress nuzzles at your leg, sniffing softly along it as she makes her way to your crotch. She noses at it, licking her lips and mewling softly. With a grin, you rub her head and move onto all fours, waving your ass at her face. With your juicy cunt on display, Artemis mrowls lustfully and dives in, licking over [if anallevel is 3]your pucker a few times before shifting down to [end if]your wet folds and lapping up your female cum as you get off several times to your eager pet's licking tongue.";
 	if lastArtemisglomp >= 8 or HP of rubber tigress companion < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a long yawn as she stretches";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea.";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";
@@ -628,7 +628,7 @@ to say artemissex7:	[F-oral 3]
 	say "     Suddenly feeling quite hot and wet between your legs, you notice your kitty's sexy muzzle and decide to get a little relief. Propping one leg up, you spread your pussy and call open your other pussy to deal with it. She's more than eager to get some sexual fun and bounds over to you, pressing her muzzle to your snatch. She runs her tongue along your dripping folds and teases your clit with the rough, rubbery texture of her tongue, exciting you greatly. Soon enough she has you very cumming, your juices running over the kitty's muzzle. She laps up as much as he can get and keeps it up, getting you off a few more times before you're feeling satisfied for the moment.";
 	if lastArtemisglomp >= 8 or HP of rubber tigress companion < 6:
 		say "     After having gotten her tasty treat, your lazy tigress gives a wide yawn that gives a good view of her rubbery maw and throat all slick with your juices";
-		if HP of Player < ( maxHP of Player * 3 ):
+		if HP of Player < ( MaxHP of Player * 3 ):
 			say ". You end up yawning in response, and given how you're feeling, a nap might not be such a bad idea.";
 		else:
 			say ". As always seems to happen when someone yawns, you can't help but yawn as well.";

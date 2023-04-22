@@ -38,7 +38,7 @@ to say Spartan wins:
 		say "     With a shove, he pushes you to lie on the ground before him. 'Do you admit defeat before me and swear you'll submit to my commands?' the young Spartan asks you. Not ready to face another pounding like that, you lower your head in submission and nod. 'Good - this workout has made me horny. Present yourself. I want to see what I have won.'";
 		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0:[Spartans, but not herms and females]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - but you clearly need to train more if you ever hope to finish first in this test. For now. I'm clearly superior... and want to make use of my winning privileges. On your knees.'";
-		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Player is female):[amazons, and herm/female Spartans]
+		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Player is female):[Amazons, and herm/female Spartans]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'A woman as a soldier? Pah. Silly girl. On your knees - I'll show you your proper place.'";
 		else: [every other shape]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
@@ -272,7 +272,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -291,7 +291,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -312,7 +312,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -323,7 +323,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -337,19 +337,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -459,20 +459,20 @@ to HistoryLectureVisit:
 						LineBreak;
 						say "     Doing your best to please your current master, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. When he finally pulls out, you proudly stick out your tongue to show him his load, then demonstratively swallow it. 'There, that's that,' the professor says, then continues, 'Now leave us, these young men have a lot to learn about strategy and tactics.' He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot Manservant";
-						now Resolution of History Lecture is 3; [subby BJ with a spartan]
+						now Resolution of History Lecture is 3; [subby BJ with a Spartan]
 					else:[grudging blowjob]
 						say "     Not having much other choice, with all those Spartans in here, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out hesitantly, you earn a cuff on the head from him and only then put your mind to really sucking him off. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
 						LineBreak;
 						say "     Trying to get the professor off quickly to get this over with, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. Putting his hands on your head and holding you tightly, he looks down at you and says 'Stick your tongue out and show it to me. And don't you dare spit out my cum.' Grudgingly, when he lets go of your head, you show him your tongue, covered in his creamy load. He nods, then continues with 'Now swallow it.' and watches as you do so, demanding to see you open your mouth to prove it.";
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot Manservant";
-						now Resolution of History Lecture is 4; [gruding BJ with a spartan]
+						now Resolution of History Lecture is 4; [grudging BJ with a Spartan]
 				else:[forced blowjob]
 					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten,' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 					say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
 					infect "Helot Manservant";
 					infect "Helot Manservant";
-					now Resolution of History Lecture is 5; [forced BJ with a spartan]
+					now Resolution of History Lecture is 5; [forced BJ with a Spartan]
 				CreatureSexAftermath "Player" receives "OralCock" from "Spartan Warrior";
 		else:[leave]
 			say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
