@@ -5,10 +5,23 @@ Sascha by Voidsnaps begins here.
 [   1: friendly chat in first meeting                                           ]
 [   2: player offered sex in first meeting                                      ]
 [   3: Player & Sascha stroked each other (no climax) in second meeting         ]
+[   4: Player licked Sascha's Pussy                                             ]
+[   5: Player fucked Sascha's Pussy                                             ]
+[   6: Player fucked Sascha's Ass                                               ]
+[   7: Player fucked Sascha's thighs (too big)                                  ]
 [  50: Player rejected stroking in second meeting                               ]
+[  51: Platonic relationship.                                                   ]
 [ 100: Sascha ignored (end of content)                                          ]
 [ 101: Rape attempt; Sascha hostile (end of content)                            ]
 [ 102: rejected flirtations, gruffly (end of content)                           ]
+
+[ Resolution of Rough But Sweet                                                 ]
+[ 1: Player gets a blowjob in return for licking Sascha's pussy the first time. ]
+[ 2: Player gets ridden.                                                        ]
+[ 3: Reverse cowgirl anal.                                                      ]
+[ 4: Sascha has been practicing. Takes player's cock with difficulty.           ]
+[ 5: Platonic cuddling                                                          ]
+[ 6: Neuter fingering                                                           ]
 
 to say SaschaPAddress:
 	if SubjectPro of Player is "he": [those that get auto-sorted into male, or anyone who chose male pronouns]
@@ -16,7 +29,7 @@ to say SaschaPAddress:
 	else:
 		say "Sexy";
 
-Section 1 - Events
+Section 1 - Introduction Events
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -302,5 +315,118 @@ to say SaschaDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sascha] <- DEBUG[line break]";
 	say "...";
+
+Section 3 - Random Meetings
+
+Table of GameEventIDs (continued)
+Object	Name
+Rough But Sweet	"Rough But Sweet"
+
+Rough But Sweet is a situation.
+ResolveFunction of Rough But Sweet is "[ResolveEvent Rough But Sweet]".
+Sarea of Rough But Sweet is "Warehouse".
+Prereq1 of Rough But Sweet is Wild Kitty.
+The Prereq1Resolution of Wild Kitty is { 4, 5, 6, 7, 51 }
+
+to say ResolveEvent Rough But Sweet:
+	say "     'Psst!' As you walk through the warehouse district, you feel a piece of gravel bounce off your head. Looking up, you notice Sascha hanging upside down from a fire escape clutching something brown and leathery in one hand. Is that a loincloth? Before you can question the absurdity of the underwear-stealer's actions, he lets down a ladder for you, waiting as you climb and embracing you as soon as you step foot on solid ground. Possibly for the first time since you've met him, Sascha's mouth is devoid of candy, and he seems restless, shifting from foot to foot and acting twitchy. Is he in sugar withdrawal? Poor thing. Noticing your concern, Sascha giggles, stuffing the loincloth in his hand into one of his pockets. 'I'm fine. I've just got a bit of an oral fixation. Without something in my mouth, it's hard to focus. It's been this way since I stopped smoking when I was nineteen.' Resting his paws on your shoulders and slipping closer, he nuzzles under your chin. 'More importantly... Where have you been? I've been looking around for you, and you've been nowhere~ I missed you.'";
+	if Resolution of Wild Kitty is 51: [platonic relationship]
+		say "     Gathering the pretty kitty in your arms, you kiss his cheek and tell him you were thinking of him. You haven't been avoiding him; you've just been busy with other things. But now that you're together again, you don't mind spending quality time if he's free. 'Oh, I'm just doing an odd job. My candy supplier wasn't satisfied with porn mags this time. He asked for something a bit more powerful. I've heard the orcs have some strong musk, so I snuck in and stole some undies~.' Waving the orc loincloth triumphantly, Sascha grins, then tucks it back into his pants. 'Of course, they sent out a party to try to catch me, so I've had to stay here. I'm surprised you didn't-' Sascha's voice trails off as you hear a group of masculine voices from below. Pressing a finger to his lips to quiet you, he tugs at your arm, dragging you off the fire escape through a nearby open window. Once inside, he leads you to the door of an office-like room, then out onto a catwalk.";
+		WaitLineBreak;
+		say "     All around you is a gigantic warehouse with shelves the size of a large apartment, and your eyes widen as you let the cat drag you to the edge of the platform, following him down onto a collection of pallets. A small cave made of surprisingly sturdy boxes awaits you, and you slip into the cozy space alongside the cat, shooting him a questioning glance. What has he gotten himself into? Doesn't he know what could happen if something caught him? 'Oh, this is nothing. You know I'm a thrillseeker~' Sascha says as he straddles your lap, resting against your chest and letting his eyes flutter closed. 'This is a good place to stay when I try to escape something unreasonable, angry, or horny. Fifty feet off the ground, nice and warm, where nothing can reach me.' Squeezing your midsection, he uses your chest as a pillow, his purring vibrating through your body.";
+		say "     'Your concern is nice, though. Maybe next time you can protect me if you're that worried.' You lay there with the cat for quite a while, stroking his head fur and enjoying his purring presence. Eventually, you doze off, lulled into a sense of security by the warmth of his weight. When you awaken, you gently shake the dozing cat awake. You hate watching Sascha switch from peacefully sleeping on your chest to looking around in bleary confusion, but it's time to move on with your day. Kissing his cheek, you leave him to wake up the rest of the way, gingerly picking your way down the shelves and exiting the warehouse. As you shoulder your pack, you touch your chest, where you can still feel the cat's warmth. You should find him again later.";
+		now Resolution of Rough But Sweet is 5;
+		follow the turnpass rule;
+	else:
+		say "     Cupping Sascha's ass in both palms, you lean in, surprising the squirmy kitty with a long, deep kiss that rolls your tongue against his rough one. After your last meeting, you're not shy about touching him, slipping your hands past his waistband and seeking a firmer hold in the warmer space between his cheeks. The way he purrs as you molest him shows his desire for more, and you slip two fingers inside of him, delighting in the soft moan you wring from him. Seconds from pulling down the cat's pants to get at his sweet pussy, you hear shouting voices from below, breaking up your hot and heavy makeout session. Sascha bites his lower lip, looking up at you with needy eyes, and murmurs as he squirms off your fingers, his tail twitching and caressing your wrist. 'Fuck. My stupid supplier just HAD to have his fix of orc musk. We're finding somewhere to continue this where we won't be interrupted.'";
+		WaitLineBreak;
+		say "     Eagerly gripping your wrist, the cat drags you through a nearby window, stopping to press you against a wall and losing his clothes in the process. Before you can ask if his nudity is wise, the oversexed cat has tugged you from the office he left his clothes in onto a catwalk, then over the edge onto a pallet of boxes a few feet down, at least fifty feet off of the concrete below. Lured by the hypnotic sway of the cat's bare ass, you follow him into a gap in the boxes. A cozy cave awaits you, scented with Sascha's sweet musk, and before you can settle in, he's straddling you, clawing at your clothes, and guiding your hand back to his pussy.";
+		if player is pure female: [pussy licking]
+			say "     Sliding two fingers into the excited cat's cunt, you stir his innards, delighting in the deep moans you pull from his throat as you kiss over his neck. He rides your fingers with wild abandon, seemingly uncaring about how loud he is or how sloppy his pussy grows until, as your thumb rolls over his clit, he stiffens, mashing his lips against yours and shuddering through his orgasm. The poor thing must not have cum in days, judging by how long he sits there, clamping around your fingers and mewling against your lips, but eventually, he breaks the kiss, panting and purring. 'Your turn.' Sascha murmurs in your ear as his paws drag your shirt over your head. Trailing his tongue over your chest, he works his way lower[if Player is not barecrotch], tugging your pants off before you can decide whether it's wise to be naked in a place like this[end if]. Spreading your thighs with clawed fingers, he dives into your folds, his purring vibrating through your clit as his gentle tongue tests your sex, rolling between your lips with prickly prowess.";
+			WaitLineBreak;
+			say "     Sealing his mouth around your sex, Sascha slurps his tongue deep into your inner walls, lapping up your juices as they come and following the squirming of your hips. He's well practiced at what he's doing, and soon enough, his face drips in your honey, his tongue coaxing even more as he pulls back to lavish care on your clit. You cum so hard that you nearly black out, bucking your needy pussy against the talented cat's face, but he doesn't stop, his eyes flashing with something predatory yet playful. His tongue worships your clit at high speed, scrubbing the sensitive skin and drawing high-pitched begging from your sore throat. Still, it's not until a second and third orgasm feeds the cat more of your juices that he relents, pressing a soft kiss to your entrance and licking his lips. Basking in the glory of multiple orgasms, you settle in, fingering the cat while he returns the favor. Your tongues dance against each other, flavored by your orgasm, and by the time you finish, you've lost track of how many times you've creamed each other's fingers.";
+			say "     Eventually, rubbed raw and satisfied, you pull him against your chest, thanking him for the intense feelings radiating from your overused cunt, but he's already fallen asleep, nuzzling you with a dopey smile across his face. You lay there with the cat for quite a while, stroking his head fur and enjoying his purring presence. Eventually, you doze off, lulled into a sense of security by the warmth of his weight. When you awaken, you gently shake the dozing cat awake. You hate watching Sascha switch from peacefully sleeping on your bare chest to looking around in bleary confusion, but it's time to move on with your day. Kissing his fem-cum stained muzzle, you leave him to wake up the rest of the way as you gather your clothes and dress, gingerly picking your way down the shelves and exiting the warehouse. As you shoulder your pack, you touch your crotch, where you can still feel the cat's rough tongue ghosting across your sex. You should find him again later.";
+			NPCSexAftermath Sascha receives "OralPussy" from Player;
+		else if player is male:
+			if Resolution of Wild Kitty is 4: [blowjob]
+				say "     Hot and heavy kissing follows as Sascha's cunt spasms around your fingers, leaking sweet nectar as he grows closer to his orgasm. Unable to resist the call of that sweet pussy, you nuzzle your hastily freed cock up against his lower lips, grinding it against his clit and humping with wild abandon. Your needy kitty stiffens within moments, and before long, you feel your shaft dripping with his cream, the slightest push away from entering him. 'Your turn.' Sascha murmurs in your ear as his paws drag your shirt over your head. Trailing his tongue over your chest, he works his way lower[if player is not barecrotch], tugging your pants the rest of the way off before you can decide whether it's wise to be naked in a place like this[end if]. The first long lick over the underside of your cock takes your breath away, and you spread your legs for the purring cat, biting your lower lip as you watch that drooling feline tongue roll over sensitive flesh. Panting greedily, he grips the base, dragging his tongue over the tip to swipe up your pre. 'I told you I'd return the favor, didn't I? You don't know how good it felt when you ate me out...'";
+				WaitLineBreak;
+				say "     Sascha's mouth is just as talented as the rest of him, his teeth well hidden by soft, wet lips and his tongue rolling over your sensitive shaft with each bob of his head. There's a sense of urgency to his movements, and he barely gags as he slurps you to the base, gathering speed until foam forms at the tight ring of fingers around the final inch of your dick. You try to warn him when your orgasm is approaching, but he's too damn good, and all you can do is push your hips up, ready to blast his throat. A loud purr vibrates around your dick as Sascha stops just before the point of no return, resting and staring up at you with mischievous eyes. He settles into place as your orgasm backs off, then starts anew before you can go soft, working your cock until you feel you'll go mad. To the edge and back again, his face smeared with pre and drool and his hair dripping with sweat, he works you over, watching your face for signs of orgasm, finding ways to get you closer than you've ever been, then nursing at the pre his denial earns him, swallowing it [if Player is not internalBalls]as he kneads your poor, aching balls. [else]like a slimy treat. [end if][line break]";
+				say "     You lose track of how long he edges you, your cock growing so sensitive that a gentle kiss milks a fat pearl of pre from the bucking shaft. Sascha keeps you there for far too long, glossing his lips with your fluids until your pleading expression gets through to him. Finally, the sweet release comes as he throats your cock, his purring reaching a fever pitch while your first shot paints his tonsils. You hump wildly, slapping your [if Player is internalBalls]crotch [else]balls [end if]against his chin and sending streamers of cum overflowing down his chin. 'You taste good.' Sascha murmurs as he moves to lay on top of you, grinding your over-sensitive cock against his pussy. You can feel your tip buck against his entrance, and you think you could fuck him if you wanted to without the cat protesting. If anything, he seems to be encouraging it.";
+				now Resolution of Rough But Sweet is 1; [BJ received]
+				NPCSexAftermath Sascha receives "OralCock" from Player;
+				say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
+				say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
+				say "     [link](N)[as]n[end link] - No, you've had enough.";
+				if Player consents:
+					say "[SaschaSecondRound]";
+				else:
+					say "[SaschaSecondDenial]";
+			else if Resolution of Wild Kitty is 5: [vaginal]
+				say "[SaschaWarehouseCunt]";
+				say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
+				say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
+				say "     [link](N)[as]n[end link] - No, you've had enough.";
+				if Player consents:
+					say "[SaschaSecondRound]";
+				else:
+					say "[SaschaSecondDenial]";
+				now Resolution of Rough But Sweet is 2; [dicked Sascha's pussy]
+			else if Resolution of Wild Kitty is 6: [anal]
+				say "     Ignoring Sascha's wordless plea, you drag your finger over his pussy, gathering wetness, then pull him closer, slipping your finger into his backdoor. Driving it deep, you nip at his flicking ears, testing the tight entrance you fucked earlier [if Player is not barecrotch]as you shimmy out of your pants[end if]. He seems to get the idea soon enough, turning around and lifting his tail, then shuddering as his cheeks wreathe your cockhead. You're gentle at first, slipping past his pretty puffy pink entrance and letting your pre slicken the way, but he's so tight that you can barely resist, watching each inch of your cock disappear past his ring with greedy eyes. Testing his resilience, you buck your hips, slurping to the base and earning a mewl from the needy cat.";
+				WaitLineBreak;
+				say "     Taking that sound to mean he's good to go, you grip his hips and settle into a rough, deep rhythm, reveling in the intense heat and tightness as his unattended cunt drools down your shaft[if Player is internalBalls], coating your balls in slippery juices each time they slap against his greedy cunt[end if]. Soon enough, Sascha's meeting your thrusts with an eager gait, his tail swirling wildly from side to side as he impales himself on your cock. He's too far gone to even finger himself, instead bracing himself on his knees so he can take your dick even faster. He can't even speak, his open mouth only letting out wordless, high-pitched mewls and incoherent begging. Finally, you thrust to the root, painting Sascha's colon with your love and pulling him back to sit on your lap, using his frantically clenching innards to wring every bit of cum from your bucking cock. Dribbling wetness tells you that the kitty's joining your orgasm, and as your cock flops free, you feel it kiss against his needy ether lips, your cum mixing with his juices. You could stuff yourself inside and fill his other hole if you wanted to. The limp kitty seems too blissed out to protest.";
+				say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
+				say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
+				say "     [link](N)[as]n[end link] - No, you've had enough.";
+				if player consents:
+					say "[SaschaSecondRound]";
+				else:
+					say "[SaschaSecondDenial]";
+				now Resolution of Rough But Sweet is 3; [dicked Sascha's ass]
+				NPCSexAftermath Sascha receives "AssFuck" from Player;
+			else if Resolution of Wild Kitty is 7: [too big last time]
+				if Sascha is CuntFitsForPlayerCock: [dick fits now]
+					say "[SaschaWarehouseCunt]";
+					say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
+					say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
+					say "     [link](N)[as]n[end link] - No, you've had enough.";
+					if player consents:
+						say "[SaschaSecondRound]";
+					else:
+						say "[SaschaSecondDenial]";
+					now Resolution of Rough But Sweet is 2; [dicked Sascha's pussy]
+				else: [dick still doesn't fit]
+					say "     As you finger Sascha's pussy, you lower your pants and snuggle your cock between his thighs, maneuvering him into position for a thighfuck. You remember that you don't fit inside of him, and you'd prefer not to ruin the mood by trying, so instead, you roll your cock up against his lips, spreading them gently and teasing his clit with your tip. Surprisingly, Sascha maneuvers your cock against his drooling entrance, resting his paws on your shoulders and pressing his forehead against yours with a soft purr. 'Not this time. I've been practicing. You should fit now.' He murmurs as he applies gentle pressure to your huge shaft, hissing through his teeth as you pop past his entrance and bulge out his flat belly. Noticing the concern in your eyes, he shakes his head, wrapping his legs around your waist. 'Please. Fuck me, [SaschaPAddress].'";
+					say "     Those words, spoken with sincerity, stir you to action, sending your hips pushing up as your eyes follow the lewd bulge of your cock, bucking into the stretchy kitty's pussy with every thrust. He's crushingly tight, but he's right! Inch by inch, you're disappearing into him! It's practically a miracle, but with your size, you're just happy to find someone capable of taking you that doesn't have a screw loose. Gritting your teeth, you resist the urge to fuck the cat silly, dragging him into a tight hug as you excavate his innards, stretching him more than he's ever been. You lose the battle around the point when his pussy lips kiss the base of your cock, and you settle for fucking him hard and fast, panting and gripping his tail for leverage.";
+					WaitLineBreak;
+					say "     By now, Sascha's too far gone for conversation, instead mewling for more with every cunt-busting shove. You're happy to oblige, plunging your cock to the base and battering his cervix. You don't last long in his heavenly, tight cunt, blasting a creamy load that stretches the poor cat further, mixing with the dribbling fem-cum you feel sloppily coat your crotch. When you finally withdraw, Sascha's poor cunt is gaping and reddened, but his paws rub at his clit, and you can hear his purring filling the small space, dispelling any fears that you hurt him. It seems the only damage you've done is creating a size queen. Contemplating his drooling pussy, you wonder if you should try for a second round. After all, he's still stretched and seems ready for another go.";
+					say "      Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
+					say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
+					say "     [link](N)[as]n[end link] - No, you've had enough.";
+					if player consents:
+						say "[SaschaSecondRound]";
+					else:
+						say "[SaschaSecondDenial]";
+					now Resolution of Rough But Sweet is 4; [stomach bulge fuck]
+					NPCSexAftermath Sascha receives "PussyFuck" from Player;
+		else:[neuter]
+			say "     Sliding two fingers into the excited cat's cunt, you stir his innards, delighting in the deep moans you pull from his throat as you kiss over his neck. He rides your fingers with wild abandon, seemingly uncaring about how loud he is or how sloppy his pussy grows until, as your thumb rolls over his clit, he stiffens, mashing his lips against yours and shuddering through his orgasm. The poor thing must not have cum in days, judging by how long he sits there, clamping around your fingers and mewling against your lips, but eventually, he breaks the kiss, panting and purring. He's already fallen asleep by the time your fingers leave his cunt, nuzzling you with a dopey smile across his face. You lay there with the cat for quite a while, stroking his head fur and enjoying his purring presence. Eventually, you doze off, lulled into a sense of security by the warmth of his weight. When you awaken, you gently shake the dozing cat awake. You hate watching Sascha switch from peacefully sleeping on your bare chest to looking around in bleary confusion, but it's time to move on with your day. Kissing his fem-cum stained muzzle, you leave him to wake up the rest of the way as you gather your clothes and dress, gingerly picking your way down the shelves and exiting the warehouse. As you shoulder your pack, you touch your chest where you can still feel his warmth. You should find him again later.";
+			now Resolution of Rough But Sweet is 6;
+			NPCSexAftermath Sascha receives "Stroking" from Player;
+	now Rough But Sweet is resolved;
+
+to say SaschaWarehouseCunt: [vaginal sex with sascha in warehouse]
+	say "     You slip two fingers into Sascha's cunt, stirring his inner walls as he mewls and clings to you. He's so needy that it isn't long before you feel him growing close, his inner walls clamping in a telltale rhythm. Just before he can finish, you remove your fingers, silencing his protests with your tongue and shimmying out of your pants to thrust upward, piercing his sex with your hard cock. Sascha squirms, his tail sticking straight up and his claws digging into your chest as he bucks on your shaft, his pussy dripping down your length. He melts against you the moment he cums, his hips working in a slow rhythm that caresses your cock, begging for more, and when your kiss breaks, the only words that leave his lips are 'Please. More.'";
+	say "     You're happy to oblige, grabbing twin palms full of bubble butt and meeting the cat's gentle riding with hard, punishing thrusts. Sascha clings to you as your pace reaches a breakneck speed, and you can feel yourself growing closer by the second, but you're determined to finish him again, biting at the cat's neck hard enough to wring a gasp from his throat. You feel his juices rolling down your length again, and you buck upward, basting his cervix in thick, creamy love as his orgasm reaches its crescendo, nearly making the poor cat scream with sheer pleasure. 'Fuck. [SaschaPAddress].' Sascha whimpers as you slurp free from his depths, flopping your cock against his pussy. You prod against his entrance as he shivers and mewls, contemplating going again as he spreads his legs like a whore, practically begging you for more. After all, a pussy this wet and needy deserves a second round.";
+	NPCSexAftermath Sascha receives "PussyFuck" from Player;
+
+to say SaschaSecondRound: [Vaginal after anal, blowjob, or vaginal]
+	say "     Unable to resist the call of that sloppy cat cunt, you shove into Sascha's pussy, aided by the thick layer of cum coating your shaft. You're slower and more deliberate this time, pulling him down into a sloppy kiss as you pump upward, stirring his innards into a creamy mess and dragging your oversensitive cock through his innards, kissing your tip against his cervix. Taking hands full of that perfectly bubbly ass, you roll him into every push, delighting in his spasming walls and impossible slickness. You lose track of how long you pump yourself into the limp, purring kitty, rolling on top of him, and welcoming his legs around your waist as you press him into the cardboard below. Your kiss breaks when you pick up the pace, and you listen with a panting smile as the cat mewls his pleasure, his claws dragging over your back hard enough to cut you. Thankfully the nanites cover any damage, but the sharp pain drives you to new heights, sending you into a mating frenzy that ends with basting the farthest reaches of kitty cunt in your particular brand of seed.";
+	say "     When you come to your senses, you realize that Sascha's fallen asleep, still impaled on your cock. You don't have the heart to pull out while he looks so utterly satisfied, so you settle in, cuddling him close and letting your still drooling, slowly softening cock rest in his innermost depths. You're not sure how long you nap, but sloppy-sounding tongue work wakes you up, bringing a gentle sensation to your half-hard shaft. Blinking away sleep, you feel yourself stiffen as you watch an exotic display. Sascha's bent over at the waist, trailing his tongue over the lips of his pussy and cleaning leaking cum off of himself, capturing your dick in errant licks. As you slurp free from his depths, you guide your cock to his lips, hissing through clenched teeth as he takes you to the root without hesitation, cleaning every bit of combined juices from your shaft before pulling off of your renewed hardness to return to his cleaning. Resisting the urge to ruin the cat's work with another layer of cum to clean, you gather your gear, stopping to pet Sascha's head and ruffle his fluffy hair. Maybe you can spend more time with him next time. For now, you need to get going. You thank him for the fun and promise to find him again soon, then leave, your stomach tingling in afterglow.";
+	NPCSexAftermath Sascha receives "PussyFuck" from Player;
+
+to say SaschaSecondDenial:
+	say "     Pulling the cat closer, you decide against ruining the moment by fucking him silly. Instead, you lay your chin on top of his and close your eyes, petting down his back and basking in the warmth of the afterglow. Before long, the cat dozes off, and you're not far behind, ignoring the puddle beneath your ass. When you awaken, you gently shake Sascha awake. He's too cute sitting there looking at you with sleepy eyes, but you don't have time to stick around. Instead, you gather your gear, stopping to pet Sascha's head and ruffle his fluffy hair. Maybe you can spend more time with him next time. You thank him and promise to find him again soon, picking your way out of the warehouse while he shakes off his sleepiness.";
 
 Sascha ends here.
