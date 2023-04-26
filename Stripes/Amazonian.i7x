@@ -130,7 +130,7 @@ When Play begins:
 	now lootchance entry is 12; [ Chance of loot dropping 0-100 ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now TrophyFunction entry is "[GenerateTrophyList_Amazonian]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]strong[or]toned[or]feminine[at random]";
 	now type entry is "[one of]human[or]Amazonian[as decreasingly likely outcomes]";
@@ -246,7 +246,16 @@ When Play begins:
 
 
 
-Section 3 - Estosterogen Pill
+Section 3 - Loot table
+
+to say GenerateTrophyList_Amazonian:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "Amazonian hair" to CombatTrophyList;
+	if a random chance of (20 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "estosterogen pill" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -316,6 +325,21 @@ to say estosterogen pill use:
 			if Breast Size of Player > 26, now Breast Size of Player is 26;
 			follow the breast descr rule;
 			say "With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Amazonian hair"	"A few strands of brown hair, deceptively simple and harmless despite where it came from. The strands feel smooth but tough."	1	Amazonian hair
+
+Amazonian hair is a grab object.
+It is temporary.
+Usedesc of Amazonian hair is "[Amazonian hair use]".
+
+to say Amazonian hair use:
+	say "Holding the strands of hair between your fingers, you find yourself with a sudden inexplicable urge to gain the strength held within. Bringing the hairs up to your head, you intermingle the brown strands close to the base of your own. Almost immediately, the strands escape your fingers, disappearing and leaving you moving your hands away in confusion."
+	Infect "Amazonian";
+
+instead of sniffing Amazonian hair:
+	say "The strands tickle at your nostrils, and you get the distinct scent of feminine strength, it burns a bit, as if a warning."
 
 
 [
