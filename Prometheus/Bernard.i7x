@@ -5,7 +5,7 @@ Version 2 of Bernard by Prometheus begins here.
 
 [Blanche's fourth son. Steady]
 
-[   hp of Bernard - relationship variable with the player   ]
+[   HP of Bernard - relationship variable with the player   ]
 [   0 - At Office  ]
 [   1 - At Library ]
 
@@ -66,8 +66,8 @@ an everyturn rule:
 				say "     [bold type]Carefully stowing his cooker for later, Bernard moves towards the door, telling you that he and Maeve are going out scavenging.[roman type][line break]";
 			move Bernard to Nowhere;
 	else if Charisma of Blanche > 0:
-		if hp of Bernard is 0:
-			now hp of Bernard is 1;
+		if HP of Bernard is 0:
+			now HP of Bernard is 1;
 			move Bernard to Breakroom;
 
 An everyturn rule:
@@ -124,7 +124,7 @@ The scent of Bernard is "     Bernard smells of sweat and junk food, evidence of
 to say BernardDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Bernard] <- DEBUG[line break]";
-	if hp of Bernard is 1:
+	if HP of Bernard is 1:
 		say "     Bernard is an anthropomorphic male wolf with bushy white fur covering his large form. Thick from head to paw-tip, he is very fond of eating, evidenced by his protruding gut and remains of crumbs on his chin. Despite this, he is likely the most physically strong of Blanche's brood due to the amount of time that he spends working out and exerting himself while scavenging, resulting in an impressive balance between muscle and fat across is hulking frame. Were his siblings not quicker on their feet, you wonder how well they might do in their play fights were he to capture them in a grapple. They may not even want to leave were they to inhale the scent of his sweat for too long. Proud of his body and just as unashamed of it as the rest of his family, he rarely wears clothing, leaving his girthy sheath and fuzzy scrotum on display to any that may wish to admire it.";
 		say "     Some instinctual feeling of being watched makes Bernard turn towards you, the herculean wolf smiling and waving to you. While he may be physically blessed, his intellect and common sense are sometimes found lacking, especially when compared to the likes of Ernest. Fortunately, his sister Maeve looks out for him, at least when she isn't taking advantage of his trusting nature for her own ends, the two of them sharing a strong bond despite their differences. While he doesn't wield much authority personally, he is close with all of his siblings, his heart just as large as his muscles if not larger. Sometimes you wonder if he is a wolf or just a very muscular puppy.";
 

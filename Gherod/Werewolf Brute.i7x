@@ -122,6 +122,12 @@ to say WerewolfBruteLosesSexMenu:
 		now sortorder entry is 99;
 		now description entry is "Let its wicked perversion loose on the brute";
 	[]
+	if smilodon bodyguard is listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Get double-teamed by Ranfer and the werewolf brute";
+		now sortorder entry is 99;
+		now description entry is "Ranfer is with you and seems down for some fun with the werewolf. Do you feel like getting in the middle of them";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -145,6 +151,8 @@ to say WerewolfBruteLosesSexMenu:
 					say "[WerewolfBruteLosesXaedihr]";
 				else if (nam is "Unleash the darkness upon the werewolf brute"):
 					say "[WerewolfBruteLosesDarkTyrant]";
+				else if (nam is "Get double-teamed by Ranfer and the werewolf brute"):
+					say "[WerewolfBruteLosesRanfer]";
 				now WerewolfBruteSubmitCount is 0; [resetting Submit Count]
 				wait for any key;
 		else if calcnumber is 0:
@@ -203,7 +211,7 @@ to say WerewolfBruteLosesXaedihr:
 	else:
 		say ". That butt keeps on looking juicier by the second, his buttcheeks clenching and bouncing as he throatfucks the brute in such mesmerizing ways.";
 		WaitLineBreak;
-		say "     Then, the half-demon happens to glance over his shoulder and back at you, noticing where you eyes are [if Player is male]. 'Don't get any ideas, big [boygirl]. If you want this ass, it's only your tongue that may go in, if you're that desperate for it[else]. 'You like my ass that much? Damn, should've sat on your face, instead. But you can still put it right between my buns and give my hole a good licking, if you want[end if],' he says, with a smirk on his face that just further turns you on. Maybe you shall just do that, given how tasty it looks and how easy it would be for you to reach it, and you do not get an offer like this everytime...";
+		say "     Then, the half-demon happens to glance over his shoulder and back at you, noticing where you eyes are [if Player is male]. 'Don't get any ideas, big [boygirl]. If you want this ass, it's only your tongue that may go in, if you're that desperate for it[else]. 'You like my ass that much? Damn, should've sat on your face, instead. But you can still put it right between my buns and give my hole a good licking, if you want[end if],' he says, with a smirk on his face that just further turns you on. Maybe you shall just do that, given how tasty it looks and how easy it would be for you to reach it, and you do not get an offer like this every time...";
 	say "     With that cock still in your [if Player is female]pussy[else]ass[end if], you lean forward to place your head right between Xaedihr's asscheeks, leading your lips to his soft and smooth butthole as he pushes his rear against you, to make sure your mouth rubs against that pucker hard enough for his liking. To give yourself some additional support, you place both your hands on his buttocks, plump and filled with beefy muscle, even feeling your fingers sinking into his silky skin a little, and begin to eat that tasty and sweet ass like it was your daily meal. Your efforts cause you to wiggle your lower areas with the werewolf's cock throbbing in you, and eventually, you resume your squatting as you push your tongue into the sorcerer's ass. 'Fuck... This feels better than I... anticipated...'";
 	WaitLineBreak;
 	say "     You do not think a lot of time has passed until you hear your companion lose his control, moaning as a great wave of pleasure surges through him. You can feel the ring of his butthole surrounding your tongue quiver as he begins to shoot his abundant load right down the werewolf's throat, who had been sucking on Xaedihr's cock all this time. Followed by him, your [if Player is female]cunt[else]ass[end if] also earns its share of cum fill as the beast, without even having knotted inside you, just openly bursts inside you, its force enough to slowly push your rear away from his wild shooting prick, then getting cum to rain everywhere around you in a shower of lupine manjuice, coating both you and the sorcerer in multiple areas. You, too, end up [if Player is male]busting your nut with such force that you nearly fall to the side as your legs get weak[else]quivering in a climax of pleasure that nearly makes you fall to the side as your legs get weak[end if].";
@@ -242,6 +250,32 @@ to say WerewolfBruteLosesDarkTyrant:
 		CreatureSexAftermath "Player" receives "AssFuck" from "Werewolf Brute";
 	CreatureSexAftermath "Werewolf Brute" receives "Other" from "Fallen King";
 	NPCSexAftermath Player receives "Other" from Fallen King;
+
+to say WerewolfBruteLosesRanfer:
+	say "     You look over at Ranfer, having worked up a sweat fighting alongside you, but seemingly interested in seeing what your decision will be, now that you have the werewolf at your mercy. His eyes switch back at you, and as if he knew what was going in your head right now, he shows you a smirk. 'Seems like we've got a puppy to take care of, and a rather large one... I wonder if you'd like my help in handling this? Or maybe just make it even better for you...' Hearing this, the werewolf himself intrudes the conversation, 'That's a great idea, catboy! How about we team up and fuck [ObjectPro], heh? Pretty sure that's what you wanna do...' The smilodon is quick to reply, looking over at the lupine beast, then back at you in the end, 'I wouldn't dare doing anything [SubjectPro] doesn't want to do. But if that's [PosAdj] wish, it'd be my pleasure.'";
+	say "     With your intention already set on the table, you let Ranfer know you would very much like that, and he seems eager to get started. With one arm, he pulls you to him and gives you a tender kiss, your bodies now rubbing together, yours against his warm, furred and bulky figure, with the pretext of sliding his fuzzy muzzle over you ear and whisper, 'You be a good kitten, bend over for me while you play with the brute's cock. What do you say...?' His deep, soft tone rumbles gently through your ears as he gives you yet another affectionate kiss, and when you can, you nod and let him know that sounds indeed like a proper way to do it. 'Now, wouldn't I like being part of the fun already...' interjects the werewolf, sitting on the ground with a throbbing erection as he observes you making out with your big catman.";
+	WaitLineBreak;
+	say "     Without any further ado, and having decided on how you are going to get this done, you [if player is not naked]begin to remove your clothes and gear[else]let Ranfer feel up your naked body a little more[end if] before you two decide to approach the defeated werewolf. Your companion smirks as he places a paw-like hand over the back of your head and leads you downwards, prompting you to kneel between the brute's legs, and he does not stop pushing you down until your lips hit the impatient thick red shaft. 'Hah, I knew you had it in you, catboy... Making your friend blow me was the best decision you could make,' says the werewolf as you kiss his cock, while the smilodon proceeds to play with your butt some more, rubbing his thick fingers around your [if player is female]moist labia[else]hole[end if] in an almost teasing way.";
+	say "     Not paying attention to the werewolf's taunts, however, you put your best efforts at appreciating that throbbing, large and thick lupine meat with your mouth and hands, rubbing it in the areas you cannot reach with your lips, all while Ranfer fingers you delicately, slowly getting you to relax on his end as you pleasure the werewolf. You instinctively arch your back to give your companion a good amount of reach, which he appreciates by smacking your buttcheeks and squeezing them playfully[if player is male], and he even tugs on your cock with his free hand on occasion[end if]. Additionally, with the brute's dick in your mouth and stroking it over the shaft, you also happen to slide your hand under his big furred balls amidst your caresses. Feeling how full they are may even be a little intimidating.";
+	WaitLineBreak;
+	say "     'We should've gone straight into fucking... Why bother fighting when you're so good at sucking dick?' The werewolf taunts you once again, and having grown more confident in this situation, he brings his massive hands over your head and pushes you down on his cock, making you take a few additional inches in. Ranfer, seeing how your [if player is male]cock throbbed[else]quivered[end if] with that, only chuckles before he decides to go down on you, pressing his muzzle [if player is female]against your sex to lick at your pussy[else]between your asscheeks to lick at your needy pucker[end if]. His tongue wiggles deep into you with both boldness and skill, leaving you almost wanting to moan as you nearly choke on a mouthful of leaking werewolf cock.";
+	say "     'Got a really good bitch [boygirl] here, catboy. I'm sure [SubjectPro]'d be a success with the others...' Ranfer is just way too busy eating you out, grabbing you by the butt and hips and pulling you to him as he ravages your [if player is female]cunt[else]hole[end if] with his tongue. On the other end, you simply do your best at swallowing the brute's cock, which continuously throbs, leaking copious amounts of precum every time he lets you come back up to lick at his tip. Its taste is strong, a mix between salty and sweet, but clearly overtaking your taste buds and prompting you to lust after more and more of it. You continue to suck him at peak performance, much to the werewolf's pleasure, who is definitely grinning at the sight.";
+	WaitLineBreak;
+	say "     Done with the licking, Ranfer pulls his muzzle away and gives your butt another smack, before you begin to feel this other thick warm meat rubbing across your cheeks. It is when the smilodon's hands go around your hips that you know he is about to get serious. He spends some time teasing you with his cock, only rubbing it like that against you, his shaft brushing against your [if player is female]lower lips[else]yearning hole[end if], until he finally sets the tip against you and starts pushing. You cannot help but moan as your [if player is female]feminine[end if] entrance stretches around Ranfer's girth, which causes the werewolf to chuckle with amusement. 'You're about to be feeling really good, I bet... Now keep sucking.'";
+	say "     As the catman buries inch after inch inside you, so does the werewolf as he makes you swallow more and more of his cock, thrusting into your face as he tries to match his pace with your companion's. He is not gentle about it either, really wanting you to choke on his thick red shaft as the furred brute proceeds to facefuck you, drool and precum escaping the corners of your mouth as you try your best to contain the beast of a cock within. At some point, your jaw is numb and your lips continuously crash against the werewolf's swollen knot, all while Ranfer thrusts ballsdeep inside you, keeping a tight grip on your hips as he continuously drills your [if player is female]pussy[else]ass[end if], slowly picking up the pace as your body eases up around him.";
+	WaitLineBreak;
+	say "     Just like that, Ranfer fucks you for what seems to be several long minutes, the stamina of the two beasts being actually somewhat impressive as they use you from both ends. His full ballsac swings back and forth against your rear while you are still busy trying not to faint with the werewolf brute's massive dick, which proves to be a challenge on its own. By now, he has both hands on your head, giving you very little room to even squirm about, and really screws your mouth with powerful thrusts. From one point onwards, the two are almost in perfect synch, the big cat leaning over your back to get himself even deeper inside you as he pulls and pushes his whole cock back and forth, now holding the back of your neck together with the werewolf brute.";
+	say "     If it was not clear until now, both your companion and the lupine beast really go on their ways to dominate you, and as both reach a pretty intense rhythm, they grunt and pant throughout the action, which is when their movements begin to falter. 'I might have to cum soon, catboy... Your little bitch's really good at sucking dick...' says the werewolf as he looks at Ranfer, who has this happy smile on his face. 'I'm ready to fill [ObjectPro] up anytime. Just let it out, big guy...' replied Ranfer, who is adamant on holding himself before the werewolf blows in your mouth. Such does not take too long to happen, as briefly after hearing those words, he lets out a howl as his cock begins to throb intensely...";
+	WaitLineBreak;
+	say "     'I'm cumming...!' he warns, and good thing he did, as these big brutes cum like geysers and he is no exception. Quickly enough, your mouth and throat are completely flooded, and it has just been two gushes of the stuff. You are, of course, forced to swallow everything, and as he continues to pump more and more cum into you, your head is held in place to ensure you really do not miss a drop. Even Ranfer seems to enjoy the sight, helping the werewolf hold you, and judging by how much his cock is also pulsating inside you, thick and hard like a rock, this is something that excites him greatly. 'Fuuuck... That's fucking great...! I hope I run into you guys again...' the werewolf adds, squeezing the last drops of his load inside you before fully pulling out, your stomach feeling just a little swollen with all the beastly cum inside. Right afterwards, he simply takes his leave, only looking behind and over his shoulder a few times on his way out.";
+	say "     But Ranfer is still ballsdeep in your [if player is female]pussy[else]ass[end if], and he resumes the fucking with the intensity and vigor of a true beast, determined to blow his load in you. 'Alright, kitten... My turn.' Seconds pass until your companion also cums in you, every warm gush splashing and traveling deep inside you, [if player is male]and he does not leave your cock simply hanging while he does so, having slided a hand over it to stroke you until you, too, released your pent-up load on the ground beneath you[else]causing your body to soon quiver in an intense wave of pleasure as you reach your orgasm, prompting you to moan while your muscles shake with bliss[end if]. Ranfer carries on thrusting until every single drop of his load remains deposited within your [if player is female]womb[else]insides[end if], and only then he pulls out, giving your butt another playful smack.";
+	WaitLineBreak;
+	say "     'Mmh... That was great fun. Hope you enjoyed it too,' he says as he brings you to him for a snuggling kiss. His warm and fuzzy fur feels really comfortable against you, as do his shows of affection and caresses. Big furred arms take you for an embrace as you are tightly held by the large catman, who leans back to let you rest on top of him. 'There, take a break... You deserved it, kitten.' It would be really easy to doze off like this, in such warmth and comfort, atop Ranfer's big and muscular body, warm and soft, as he pets your head... You close your eyes and savor the moment as your body works out the enormous loads it received.";
+	CreatureSexAftermath "Player" receives "OralCock" from "Werewolf Brute";
+	if player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Ranfer;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Ranfer;
 
 to say Werewolf Brute Desc:
 	if inasituation is true:
@@ -393,7 +427,7 @@ When Play begins:
 	now Head Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
 	now Head Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 0; [hair length in inches]
 	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is "white"; [one word color descriptor]
@@ -412,7 +446,7 @@ When Play begins:
 	now Torso Change entry is "grey and white fur sprouts all over it, giving you a warm and shining coat"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is "covered in a warm coat of [Torso Color of Player] fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -433,18 +467,18 @@ When Play begins:
 	now Arms Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is "they shift into the digitigrade stance of an anthro husky with thick grey and white fur and paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro husky, with thick [Legs Color of Player] fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is "that of an anthro husky, with thick [Legs Color of Player] fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes well-rounded, with grey and white fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered thick grey and white fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
+	now Ass Description entry is "ass, covered thick grey and white fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]."]
 	now Ass Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is "a mid-length canine tail sprouts from your tailbone, soon covered in grey and white fur"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is "mid-length, [Tail Color of Player] tail"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is "mid-length, [Tail Color of Player] tail"; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 8; [inches deep for anal fucking]
@@ -457,19 +491,19 @@ When Play begins:
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 9; [length in inches]
 	now Cock Change entry is "it takes on a reddish color and canine shape, complete with a pointy tip, knot at the base and a sheath to protect it"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cock Color entry is "red"; [one word color descriptor]
 	now Ball Count entry is 2;
 	now Ball Size entry is 3; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a canine appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
@@ -502,7 +536,7 @@ Strain of werewolf brute cum is "Werewolf Brute".
 Usedesc of werewolf brute cum is "[werewolf brute cum use]";
 
 to say werewolf brute cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

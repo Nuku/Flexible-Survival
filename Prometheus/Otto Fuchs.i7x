@@ -135,7 +135,7 @@ to say OttoTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Ask Dr. Fuchs whether he could spare you a medkit";
 	[]
-	[if HP of Player is not maxHP of player:
+	[if HP of Player is not MaxHP of player:
 		choose a blank row in table of fucking options;
 		now title entry is "Medical Attention";
 		now sortorder entry is 2;

@@ -217,14 +217,14 @@ to say lroomdesc:
 	else if (HP of Eric is 100): [Eric never came back from Stacy's dorm]
 		say "     This is the men's locker-room of the sports arena in the Tenvale campus. Looks like someone has made camp here - you see an improvised bed out of lots and lots of towels and empty bottles and wrappers of energy drinks and bars. Not a bad defensive spot either - the few existing windows are high up on the walls and pushing one of the lockers in front of the door should keep out all but the most determined intruders.";
 
-after going down from the Grey Abbey Library while (Libido of Eric is 0 and BodyName of Player is "Furling"):
+after going down from the Grey Abbey Library while (Eric is collected and Libido of Eric is 0 and BodyName of Player is "Furling"):
 	if debugactive is 1:
 		say "     DEBUG: ERIC FURLING FRIGHT WALKIN [line break]";
 	project the Figure of Eric_TShirt_shocked_icon;
 	say "     As you enter the bunker and come into Eric's sight he gets pale, saying 'Aaah! It's one of - wait a minute, it's you isn't it? Don't frighten me like that - you look like one of my buddies at the college after they transformed.'";
 	now Libido of Eric is 1;
 
-instead of navigating Sports Arena Lockerroom while (Libido of Eric is 0 and BodyName of Player is "Furling"):
+instead of navigating Sports Arena Lockerroom while (Eric is in Sports Arena Lockerroom and Libido of Eric is 0 and BodyName of Player is "Furling"):
 	say "[NavCheck Sports Arena Lockerroom]";
 	if NavCheckReturn is false, stop the action;
 	move player to Sports Arena Lockerroom;
@@ -389,7 +389,7 @@ instead of conversing the Eric:
 			say "     ([link]Y[as]y[end link]) - Get up and fight the green, hulking, and gender-switched ex-girlfriend off before she rapes Eric!";
 			say "     ([link]N[as]n[end link]) - On second thought... might be hot to just stand back and watch?";
 			if Player consents: [save him]
-				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until she's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
+				say "     You wait a moment longer, watching Stacy as she fingers Eric's pussy, making him gasp and moan and open his legs wide as new instincts take over. She continues to rub and stroke him until he's pretty wet, putting her fingers in her mouth to taste his female juices. 'Yes, you're ready. Now I'll show you what it means to be a woman!' she says, stroking her cock and moving closer to Eric. Then, as she's completely distracted, holding up her long erection close to Eric's folds, you rush at her and attack.";
 				if CheerleaderFirstEncounter is 0:
 					now CheerleaderFirstEncounter is 2;
 					challenge "Hulking Cheerleader";
@@ -3650,7 +3650,7 @@ to say EricUrikLibraryFuckRepeat:
 
 [ Ryousei Interactions                 ]
 
-after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger is listed in companionList of Player) and Player is not CoA:
+after going down from the Grey Abbey Library while (Eric is in Bunker and HP of Eric < 99 and RyouseiEricInteraction < 1 and royal tiger companion is listed in companionList of Player) and Player is not CoA:
 	if debugactive is 1:
 		say "     DEBUG: Eric meets Ryousei [line break]";
 	try looking;
@@ -3822,7 +3822,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: Eric first Fang sex walkin, XP of Erica: [Xp of Erica], HP of Eric: [HP of Eric], lastfuck of Eric: [lastfuck of Eric] [line break]";
+		say "     DEBUG: Eric first Fang sex walkin, XP of Erica: [XP of Erica], HP of Eric: [HP of Eric], lastfuck of Eric: [lastfuck of Eric] [line break]";
 	if HP of Fang < 5:
 		project the Figure of Eric_TShirt_neutral_icon;
 		say "     As you enter the library, you see Eric walk in between two of the long shelves, intently scanning over the titles of the books. Now that you think of it, he's been spending quite a bit of his time up here lately, picking out books and reading. Well, it's something interesting to do at least. Just as you start turning away to leave him to his reading, you see Fang's furred shape silently stalk after Eric. Knowing that he's a wild and horny beast, you see where this might lead...";
@@ -3931,7 +3931,7 @@ instead of navigating Grey Abbey Library while (XP of Erica is 0 and Fang is in 
 		say "     Walking into the same space between the bookshelves that you saw your two companions go into, you spot Eric some distance ahead of you, crouched down in front of a shelf and still checking out books, totally oblivious to Fang's presence as well as yours. He is so engrossed in what he is doing that when the wolf snuffles at his ear, he lets out a shriek and falls on his side, looking back fearfully at the [']fearsome creature['] standing over him. To his credit, Fang looks embarrassed, and begins to apologize in his raspy voice. 'I didn't mean to startle you. Your scent is interesting. I let my curiosity stifle my manners. I'm sorry.' Eric looks surprised at hearing him speak. 'I've seen you guarding the library but I didn't know you could talk. Fang, right?' he replies as he adjusts to a more comfortable position, his earlier fear forgotten and wonder replacing it. 'Yes. I am Fang,' the wolf responds simply before sitting down beside the college student with the unintended side-effect of showing of his erection. It would appear that his intentions may not be too far off what you had guessed.";
 		WaitLineBreak;
 		say "     Luckily, Eric takes this in his stride. 'I suppose you're here to have sex with me then?' he asks, dragging his eyes away from the throbbing wolf-flesh. 'Yes. If that would be agreeable to you,' Fang answers. Eric looks torn for a moment, his shyness and lack of surety struggling with the nanites drive to reproduce. You aren't the only one to notice this internal conflict though, Fang watching him very intently before interrupting his decision. 'Be sure of what you want. Talk with those you trust. I shall ask you again another time. It was a pleasure to meet you properly.' Eric sits with his mouth open in surprise as the wolf stands up and trots off again between the shelves, astonished that Fang hadn't forced himself upon him or exerted pressure to convince him immediately. He looks after him with a hint of admiration before returning to his books. The situation having come to a peaceful conclusion, you turn and leave, confident that Eric will come and talk to you about this at some point.";
-		now xp of Erica is 5;
+		now XP of Erica is 5;
 		[Next step yet to be written]
 
 
@@ -4114,7 +4114,7 @@ This is the Eric's Epilogue rule:
 				say "     When you succumb to your infection, you make your way back to the bunker, and jump the Eric before he realizes anything is amiss. Rubbing up against his quickly hardening satyrcock, you take away his ability to resist and fuck him for hours, filling your pussy with load after load of his potent cum. You're relentless in riding him, stroking him to hardness even as he begs for a break. He might have loved it at first, but when you fall asleep in exhaustion later, he slowly inches away from you so you don't wake up, then flees out into the city.";
 		else:
 			say "     When the soldiers come through the city to rescue survivors, you're all taken to a containment facility for medical evaluation and quarantine. Eric receives special notice as he's proven immune to shifts in species, but susceptible to gender transformation. They keep him locked up for testing and prodding, and it's several weeks after you're released until you hear from him again. He meets you at a bar for a drink, thanking you again for saving him and taking him in during the time in the city. After having been stuck in the camp for so long, he's eager to get a drink and soon he's partying it up. What was going to be a quick drink turns into one after another as you start going from bar to bar.";
-			say "     At one particularly lively club, you lose track of your friend for a while, but are too drunk yourself to really worry about it. It's not until some time later that you spot him in a secluded, shadowy corner with a very hot chick, banging away at her quite vigorously. Catching sight of you, he grins and winks, flashing for you to give him another five. About twenty minutes later, he and his new girlfriend join you in a booth, snuggling and kissing as they fill you in. It seems she was in the city as well during the outbreak. Once a guy, she ran afoul of some voluptuous women at the museum and transformed into a sexy nymph like them. Had it not been for a timely interruption by a sudden and heated battle between some amazons and ninjas, she'd not have made her escape at all. Feeling a strong connection to one another and able to sympathize with the plights each other has been through, they make for a very happy couple.";
+			say "     At one particularly lively club, you lose track of your friend for a while, but are too drunk yourself to really worry about it. It's not until some time later that you spot him in a secluded, shadowy corner with a very hot chick, banging away at her quite vigorously. Catching sight of you, he grins and winks, flashing for you to give him another five. About twenty minutes later, he and his new girlfriend join you in a booth, snuggling and kissing as they fill you in. It seems she was in the city as well during the outbreak. Once a guy, she ran afoul of some voluptuous women at the museum and transformed into a sexy nymph like them. Had it not been for a timely interruption by a sudden and heated battle between some Amazons and ninjas, she'd not have made her escape at all. Feeling a strong connection to one another and able to sympathize with the plights each other has been through, they make for a very happy couple.";
 	else if Eric is in the bunker and HP of Eric is 32: [satyr Eric]
 		now EricsEpilogueShown is true;
 		if humanity of Player < 10:

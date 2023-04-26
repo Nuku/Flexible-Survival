@@ -430,7 +430,7 @@ To Birth:
 	if "Maternal" is listed in feats of Player:
 		increase morale of Player by 3;
 	[NOTE: add any and all exceptions from "They have your Eyes" HERE]
-	if "Human Carrier" is not listed in feats of Player and "Chase's Breeder" is not listed in feats of Player and "Chris's Breeder Slut" is not listed in feats of Player and "Fang's Mate" is not listed in feats of Player and "CheerBreeder" is not listed in feats of Player: [none of the exceptions apply, so we can overwrite]
+	if "Human Carrier" is not listed in feats of Player and "Chase's Breeder" is not listed in feats of Player and "Chris's Breeder Slut" is not listed in feats of Player and "Fang's Mate" is not listed in feats of Player and "CheerBreeder" is not listed in feats of Player and "Hive Breeder" is not listed in feats of Player: [none of the exceptions apply, so we can overwrite]
 		if "They Have Your Eyes" is listed in feats of Player: [overwriting randoms, unbirthed creatures and snakes]
 			SetInfectionsOf Child to infections of Player;
 	[Pureblood check]
@@ -563,6 +563,23 @@ To Birth:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if Player is booked or player is bunkered]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!'[end if] With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
 		increase Stamina of Chris by 1;
 		increase ChrisPlayerOffspring by 1;
+	else if "Hive Breeder" is listed in feats of Player: [Special Pregnancy from wasp warrors]
+		if Player is female and pregtype < 2:
+			if Nipple Count of Player > 0:
+				say "     Your child pushes free of the flexible shell enclosing it and you gather the strange larva into your arms so it may suckle at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk, growing from a featureless lump of pale flesh into something more wasp-like. ";
+			else:
+				say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring, bringing the featureless, pale larva through several stages of growth until it looks more wasp-like. ";
+		else if Nipple Count of Player > 0:
+			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of Player] breast, growing rapidly from a featureless lump of pale flesh into something more wasp-like as strange sensations sweep over your [bodytype of Player] body. ";
+		else:
+			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly from a featureless lump of pale flesh into something more wasp-like against you as strange sensations sweep over your body. ";
+		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
+		LineBreak;
+		if Player is inWaspHive:
+			say "     Stretching his wings, your offspring checks on you, entwining his antennae with yours before wandering off to take his place within the hive, [if thirst of Zant > 1]joining his brothers hard at work on repairing the walls and expanding the walls[else] wandering off to find a way to make himself useful within your hive[end if].";
+		else:
+			say "     Stretching his wings, your offspring entwines antennae with you as if thanking you for his birth, then buzzes off in the direction of the hive, his nude body glistening in the [if daytimer is day]sunlight[else]moonlight[end if], still smooth and devoid of any of the fuzz you've grown used to seeing on yourself.";
+		increase thirst of Zant by 1;
 	else if Fang is Male and "Fang's Mate" is listed in feats of Player: [Special Pregnancy from Fang]
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of Player: [Appeared in arms]
@@ -640,7 +657,7 @@ To Birth:
 		increase hunger of Player by 3;
 		increase thirst of Player by 3;
 	if IsFeral is false:
-		if ("Chase's Breeder" is not listed in feats of Player) and ("Fang's Mate" is not listed in feats of Player) and ("Chris's Breeder Slut" is not listed in feats of Player): [kids that run off to their fathers]
+		if ("Chase's Breeder" is not listed in feats of Player) and ("Fang's Mate" is not listed in feats of Player) and ("Chris's Breeder Slut" is not listed in feats of Player) and ("Hive Breeder" is not listed in feats of Player): [kids that run off to their fathers]
 			LineBreak;
 			say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 			get typed command as playerinput;
@@ -788,6 +805,16 @@ To impregnate with (x - text):
 				stop the action;
 		now gestation of Child is a random number from 24 to 48;
 		SetInfectionsOf Child to "Orc Warrior";
+	else if "Hive Breeder" is listed in feats of Player:
+		if "Selective Mother" is listed in feats of Player:
+			say "Do you wish to be impregnated with an Wasp Warrior child?";
+			if Player consents:
+				increase score by 0;
+			else:
+				say "You choose not to accept the seed.";
+				stop the action;
+		now gestation of Child is a random number from 24 to 48;
+		SetInfectionsOf Child to "Wasp Warrior";
 	else if "Human Carrier" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a human child?";
@@ -856,7 +883,11 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: FPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: FPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -883,7 +914,11 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: MPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: MPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -909,7 +944,11 @@ to selfimpregchance:
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if Player can UB, increase target by 1;
 		choose row MonsterID from the Table of Random Critters;
+		if DebugLevel > 4:
+			say "     DEBUG: SelfPreg Roll of 2 in [target].";
 		if a random chance of 2 in target succeeds:
+			if DebugLevel > 4:
+				say "     DEBUG: SelfPreg Successful.";
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
 			else:
@@ -923,6 +962,8 @@ to selfimpregchance:
 	now callovi is false;
 
 to selfimpregnate:
+	if DebugLevel > 4:
+		say "     DEBUG: Self-Impregnation.";
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
 	[if Player is not female and "MPreg" is listed in feats of Player and level of Velos is 1 and HP of Velos > 2:
@@ -988,6 +1029,8 @@ to say randomimpreg:		[Use when either would work]
 	randomimpreg;
 
 to randomimpreg:		[Use when either would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random F/M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1003,6 +1046,8 @@ to say randommimpreg:		[Use when only MPreg would work]
 	randommimpreg;
 
 to randommimpreg:		[Use when only MPreg would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1018,6 +1063,8 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 	randomfimpreg;
 
 to randomfimpreg:		[Use when only female pregnancy would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1033,6 +1080,8 @@ to say randomovi:		[random ovi-impregnation - use when either would work]
 	randomovi;
 
 to randomovi:		[random ovi-impregnation - use when either would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1048,6 +1097,8 @@ to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	randommovi;
 
 to randommovi:		[random ovi-impregnation - use when only MPreg would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi M Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;
@@ -1063,6 +1114,8 @@ to say randomfovi:		[random ovi-impregnation - use when only female pregnancy wo
 	randomfovi;
 
 to randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
+	if DebugLevel > 4:
+		say "     DEBUG: Random Ovi F Impregnation.";
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from Table of Random Critters;

@@ -310,6 +310,19 @@ Figure of Atticus_jeans_smile_arms_lowered_icon is the file "Atticus_jeans_smile
 Figure of Atticus_jeans_smile_arm_raised_icon is the file "Atticus_jeans_smile_arm raised.jpg".
 Figure of Atticus_jeans_frown_arms_crossed_icon is the file "Atticus_jeans_frown_arms crossed.jpg".
 Figure of Aurora_clothed_icon is the file "Aurora.png".
+Figure of Bastet_neutral_dress_seethrough_icon is the file "Bastet_neutral_dress_seethrough.jpg".
+Figure of Bastet_neutral_dress_seethrough_nojewelry_icon is the file "Bastet_neutral_dress_seethrough_nojewelry.jpg".
+Figure of Bastet_neutral_dress_solid_icon is the file "Bastet_neutral_dress_solid.jpg".
+Figure of Bastet_neutral_naked_icon is the file "Bastet_neutral_naked.jpg".
+Figure of Bastet_neutral_naked_jewelry_icon is the file "Bastet_neutral_naked_jewelry.jpg".
+Figure of Bastet_smile_dress_seethrough_icon is the file "Bastet_smile_dress_seethrough.jpg".
+Figure of Bastet_smile_dress_solid_icon is the file "Bastet_smile_dress_solid.jpg".
+Figure of Bastet_smile_naked_icon is the file "Bastet_smile_naked.jpg".
+Figure of Bastet_smile_naked_jewelry_icon is the file "Bastet_smile_naked_jewelry.jpg".
+Figure of Blanche_naked_icon is the file "Blanche_naked.jpg".
+Figure of Blanche_preg1_icon is the file "Blanche_preg1.jpg".
+Figure of Blanche_preg2_icon is the file "Blanche_preg2.jpg".
+Figure of Blanche_preg3_icon is the file "Blanche_preg3.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
@@ -613,6 +626,22 @@ Figure of Spike_face_icon is the file "Spike_face.jpg".
 Figure of Spike_hard_icon is the file "Spike_hard.jpg".
 Figure of Spike_naked_hard_icon is the file "Spike_naked_hard.jpg".
 Figure of Spike_naked_soft_icon is the file "Spike_naked_soft.jpg".
+Figure of Squire_neutral_pants_icon is the file "Squire_neutral_pants.jpg".
+Figure of Squire_neutral_pants_armed_icon is the file "Squire_neutral_pants_armed.jpg".
+Figure of Squire_neutral_pants_shoes_armed_icon is the file "Squire_neutral_pants_shoes_armed.jpg".
+Figure of Squire_neutral_shirt_pants_shoes_armed_icon is the file "Squire_neutral_shirt_pants_shoes_armed.jpg".
+Figure of Squire_neutral_undies_icon is the file "Squire_neutral_undies.jpg".
+Figure of Squire_neutral_soft_icon is the file "Squire_neutral_soft.jpg".
+Figure of Squire_neutral_hard_icon is the file "Squire_neutral_hard.jpg".
+Figure of Squire_smile_pants_icon is the file "Squire_smile_pants.jpg".
+Figure of Squire_smile_pants_armed_icon is the file "Squire_smile_pants_armed.jpg".
+Figure of Squire_smile_pants_shoes_armed_icon is the file "Squire_smile_pants_shoes_armed.jpg".
+Figure of Squire_smile_shirt_pants_shoes_armed_icon is the file "Squire_smile_shirt_pants_shoes_armed.jpg".
+Figure of Squire_smile_undies_icon is the file "Squire_smile_undies.jpg".
+Figure of Squire_smile_undies_seethrough_icon is the file "Squire_smile_undies_seethrough.jpg".
+Figure of Squire_smile_undies_shirt_seethrough_icon is the file "Squire_smile_undies_shirt_seethrough.jpg".
+Figure of Squire_smile_soft_icon is the file "Squire_smile_soft.jpg".
+Figure of Squire_smile_hard_icon is the file "Squire_smile_hard.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Susan_FHerm_clothed_icon is the file "Susan_FHerm_clothed.jpg".
@@ -1353,6 +1382,19 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Behemoth_soft"	Figure of Behemoth_soft_icon	"SteppeCrow"	g-white	"normal"
 "Behemoth_hard"	Figure of Behemoth_hard_icon	"SteppeCrow"	g-white	"normal"
 "Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-white	"normal"
+"Blanche_naked"	Figure of Blanche_naked_icon	"SteppeCrow"	g-White	"normal"
+"Blanche_preg1"	Figure of Blanche_preg1_icon	"SteppeCrow"	g-White	"normal"
+"Blanche_preg2"	Figure of Blanche_preg2_icon	"SteppeCrow"	g-White	"normal"
+"Blanche_preg3"	Figure of Blanche_preg3_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_neutral_dress_seethrough"	Figure of Bastet_neutral_dress_seethrough_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_neutral_dress_seethrough_nojewelry"	Figure of Bastet_neutral_dress_seethrough_nojewelry_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_neutral_dress_solid"	Figure of Bastet_neutral_dress_solid_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_neutral_naked"	Figure of Bastet_neutral_naked_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_neutral_naked_jewelry"	Figure of Bastet_neutral_naked_jewelry_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_smile_dress_seethrough"	Figure of Bastet_smile_dress_seethrough_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_smile_dress_solid_icon"	Figure of Bastet_smile_dress_solid_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_smile_naked_icon"	Figure of Bastet_smile_naked_icon	"SteppeCrow"	g-White	"normal"
+"Bastet_smile_naked_jewelry_icon"	Figure of Bastet_smile_naked_jewelry_icon	"SteppeCrow"	g-White	"normal"
 "Blanche1"	Figure of Blanche1_icon	"The_Negative"	g-white	"normal"
 "Blanche2"	Figure of Blanche2_icon	"Xenotropos"	g-white	"normal"
 "Blot"	Figure of Blot_icon	"Anymouse1968"	g-white	"normal"
@@ -1847,6 +1889,22 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Spike_naked_hard"	Figure of Spike_naked_hard_icon	"Lyttathebug"	g-black	"normal"
 "Spike_speedo"	Figure of Spike_naked_soft_icon	"Lyttathebug"	g-black	"normal"
 "Spike_naked_soft"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
+"Squire_neutral_pants_icon"	Figure of Squire_neutral_pants_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_pants_armed_icon"	Figure of Squire_neutral_pants_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_pants_shoes_armed_icon"	Figure of Squire_neutral_pants_shoes_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_shirt_pants_shoes_armed_icon"	Figure of Squire_neutral_shirt_pants_shoes_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_undies_icon"	Figure of Squire_neutral_undies_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_soft_icon"	Figure of Squire_neutral_soft_icon	"SteppeCrow"	g-White	"normal"
+"Squire_neutral_hard_icon"	Figure of Squire_neutral_hard_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_pants_icon"	Figure of Squire_smile_pants_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_pants_armed_icon"	Figure of Squire_smile_pants_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_pants_shoes_armed_icon"	Figure of Squire_smile_pants_shoes_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_shirt_pants_shoes_armed_icon"	Figure of Squire_smile_shirt_pants_shoes_armed_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_undies_icon"	Figure of Squire_smile_undies_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_undies_seethrough_icon"	Figure of Squire_smile_undies_seethrough_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_undies_shirt_seethrough_icon"	Figure of Squire_smile_undies_shirt_seethrough_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_soft_icon"	Figure of Squire_smile_soft_icon	"SteppeCrow"	g-White	"normal"
+"Squire_smile_hard_icon"	Figure of Squire_smile_hard_icon	"SteppeCrow"	g-White	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Sugar Glider"	Figure of SugarGlider_icon	"Xilrayne"	g-black	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
@@ -2632,6 +2690,7 @@ carry out artistcredits:
 	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Atticus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Aurora by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Blanche (standing & preg) by SteppeCrow @ https://www.furaffinity.net/user/steppecrow/[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";

@@ -111,7 +111,7 @@ to say SharkmanBruteSexBlowjob:
 		NPCSexAftermath Player receives "OralCock" from Skyler;
 	else:
 		CreatureSexAftermath "Player" receives "OralCock" from "Sharkman Brute";
-		if Snapjaw Beach Camp is not known:
+		if Snapjaw_Beach_Camp is not known:
 			say "[SharkmanBruteSBCEvent]";
 
 to say Sharkman Brute Desc:
@@ -138,8 +138,8 @@ to say SharkmanBruteSBCEvent:
 		say "     As he says this, he pulls you to him, hugs you closely, and then... You are forced to dive with him into the water, causing a loud and messy splash everywhere. The scare made you gasp, which was a good thing, because you are being brought deeper and deeper into the water as the sharkman swims at an incredible speed! His grip is powerful and tight, but also very secure, as he just continues to swim into this underwater passage and beyond while you do your best at holding your breath. Despite the length he mentioned, there always seems to be a sort of blue-ish light illuminating this tunnel, and an oddly unnatural one at that. Midway, it gets harder to hold your breath, but the sharkman, being aware of this, brings your mouth to his, which sustains you until the end of the trip...";
 		say "     Being a sort of amphibious hybrid creature has its perks, and it all proves to be worth it once you finally arrive at your destination...";
 		WaitLineBreak;
-		move player to Snapjaw Beach Camp;
-		move Skyler to Snapjaw Beach Camp;
+		move player to Snapjaw_Beach_Camp;
+		move Skyler to Snapjaw_Beach_Camp;
 		say "     Eventually, you are allowed to take a deep breath of fresh air as the sharkman emerges from the water, much clearer in comparison... And saltier. You cannot even tell how long you have been swimming with him, or rather, being carried over by him, but you sure are glad to be safe. 'There! We've just arrived! You good?' he asks with a silly cheerful smile that, pretty honestly, kind of looks a bit terrifying from this up close with all those teeth, though there is a slight bit of dorky adorableness to it. Still, you cannot help but feel a tad annoyed at how he pushed you into the water like that, so you give him an earful on how that is wrong and reckless. 'Hey, I knew we'd get here safely! Trust me, one of the things I know best besides fucking is swimming! And you're fine, aren't you? That's what matters!'";
 		say "     You really have to roll your eyes, but at least you are fine, indeed. And this beach seems to be quite nice, once you take some time to glance over your surroundings. 'This is where I and my mates live. We used to be on the main beach way over there,' he points north as he says this, 'But things didn't work out with the shark women, as they had this odd focus on behaving like pirates... We just wanna have fun, you know? So we traveled here and set up a camp... And the rest, well, you know.' It seems the sharkmen here have been getting through just fine, though if this is a camp, this must mean they may have some sort of leader, perhaps, so you ask him about it. 'Leader... Hm, I guess I'd be the closest to that...'";
 		WaitLineBreak;
@@ -147,7 +147,7 @@ to say SharkmanBruteSBCEvent:
 		say "     You can only ask what odd effects were those, and after throwing a chuckle, he replies, 'Our bodies! We're fucking beasts since we've been eating stuff from there! We even had to enlarge our shacks, and I can't even use my campervan anymore... Though, it seems the growth stopped for me. Not all of us were affected, however, but almost everyone was. We used to be just, like, a few inches taller than when we were human, basically. Now it's more like a few feet. Not that I'm complaining about it, honestly it just feels amazing...' Speaking of which, you now worry that you will not be able to take that passage on your own... 'Ah, well... If you ask nicely, I can take you back and forth, so don't worry. Your traveling won't be hindered in any way.'";
 		WaitLineBreak;
 		say "     If that is the case, maybe you could explore this beach a little bit and let Skyler be on his way. You let him know that you shall take a look around. 'Sure thing! You can find me in this area, mostly. Just ask around if you can't see me. Oh, and I'll let the folks know you're a welcome guest.' With that said, the sharkman lets you walk around freely as he lets everyone know you are, indeed, always welcome to their beach.";
-		AddNavPoint Snapjaw Beach Camp;
+		AddNavPoint Snapjaw_Beach_Camp;
 		now PlayerMet of Skyler is true;
 		say "     << Author's Note: This area, including Skyler himself and the Sharkmen Brute tribe, are all still under early development. More content on them will be added in the future! >>";
 	else:
@@ -249,7 +249,7 @@ When Play begins:
 	now Head Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
 	now Head Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 0; [hair length in inches]
 	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is "white"; [one word color descriptor]
@@ -268,7 +268,7 @@ When Play begins:
 	now Torso Change entry is "grey and white fur sprouts all over it, giving you a warm and shining coat"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is "covered in a warm coat of [Torso Color of Player] fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -289,18 +289,18 @@ When Play begins:
 	now Arms Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is "they shift into the digitigrade stance of an anthro husky with thick grey and white fur and paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro husky, with thick [Legs Color of Player] fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is "that of an anthro husky, with thick [Legs Color of Player] fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes well-rounded, with grey and white fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered thick grey and white fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
+	now Ass Description entry is "ass, covered thick grey and white fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]."]
 	now Ass Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is "a mid-length canine tail sprouts from your tailbone, soon covered in grey and white fur"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is "mid-length, [Tail Color of Player] tail"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is "mid-length, [Tail Color of Player] tail"; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is "grey and white"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 8; [inches deep for anal fucking]
@@ -313,19 +313,19 @@ When Play begins:
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 9; [length in inches]
 	now Cock Change entry is "it takes on a reddish color and canine shape, complete with a pointy tip, knot at the base and a sheath to protect it"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cock Color entry is "red"; [one word color descriptor]
 	now Ball Count entry is 2;
 	now Ball Size entry is 3; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a canine appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cunt Color entry is "pink"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
@@ -358,7 +358,7 @@ Strain of sharkman brute cum is "Sharkman Brute".
 Usedesc of sharkman brute cum is "[sharkman brute cum use]";
 
 to say sharkman brute cum use:
-	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy fluid cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
 	PlayerDrink 5;
 	SanLoss 5;
 

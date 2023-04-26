@@ -2,7 +2,7 @@ Version 1 of Stella by Stripes begins here.
 [ Version 1.2 - Spoony sex scene and oral 3some w/Jimmy ]
 [NOTE: It was the commissioner's specific request that this character top only. She's very "been there, done that" with her vagina and is instead all "I've got a stiffy!"]
 
-"Adds a dalmatian herm to Flexible Survival."
+"Adds a Dalmatian herm to Flexible Survival."
 
 [  HP of Stella                                                                ]
 [ overall status                                                               ]

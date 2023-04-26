@@ -194,7 +194,7 @@ To transform:
 		say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
 		StatChange "Stamina" by 1;
 		if remainder after dividing stamina of Player by 2 is 0:
-			increase maxHP of Player by level of Player plus 1;
+			increase MaxHP of Player by level of Player plus 1;
 	if Perception of Player < Per entry:
 		say "You feel your senses swelling with [Name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
 		increase Perception of Player by 1;

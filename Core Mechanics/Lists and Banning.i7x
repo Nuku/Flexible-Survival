@@ -14,7 +14,7 @@ AquaticList is a marker. [list of aquatic infections]
 ArachnidList is a marker. [list of arachnic infections - spidergirl, scorpions, spidertaur, ...]
 AvianList is a marker. [list of avian/bird infections - pigeon, ...]
 AvianpredList is a marker. [list of predatory avian/bird infections - hawk, ...]
-Bovinelist is a marker. [list of bovine infections - cows, sheep, antelopes, yaks, bison, buffalo, ...]
+BovineList is a marker. [list of bovine infections - cows, sheep, antelopes, yaks, bison, buffalo, ...]
 CanineList is a marker. [list of canine/lupine infections]
 CervineList is a marker. [list of cervine infections - Deer, Elk, Moose, Reindeer, ...]
 CetaceanList is a marker. [list of air-breathing aquatics - Dolphin, Whale, Porpoise, ...]
@@ -57,7 +57,7 @@ InternalCockList is a marker. [list of infections w/internal male genitals]
 InternalBallsList is a marker. [list of infections w/internal male genitals]
 KnottedCockList is a marker. [list of infections w/knotted cock - canine, ...]
 OviPositorList is a marker. [list of infections with ovipositor]
-PrehensileCocklist is a marker. [list of infections with movable cock]
+PrehensileCockList is a marker. [list of infections with movable cock]
 SheathedCockList is a marker. [list of infections with sheathed cocks]
 TaperedCockList is a marker. [list of infections with tapering cock - canine, orca, ...]
 TentacleCockList is a marker. [list of infections w/tentacle cock]
@@ -86,11 +86,11 @@ GillList is a marker. [can breathe underwater]
 NotBreathingList is a marker. [does not need to breathe]
 
 [Impregnation Lists]
-Birthlist is a marker. [infections that are doing live births]
-Egglaylist is a marker. [infections that are capable of laying eggs]
+BirthList is a marker. [infections that are doing live births]
+EgglayList is a marker. [infections that are capable of laying eggs]
 MpregList is a marker. [infections that are capable of Mpreg]
 OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
-Sterilelist is a marker. [infections that are sterile]
+SterileList is a marker. [infections that are sterile]
 
 [Mind Lists]
 FeralmindList is a marker. [list of feral infections]
@@ -210,7 +210,7 @@ to oldflagban (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is banned;
 		-- "Cockvore":
-			now CockvoreList is banned;
+			now CockVoreList is banned;
 		-- "Furry":
 			now FurryList is banned;
 		-- "Males":
@@ -243,7 +243,7 @@ to oldflagward (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now CockvoreList is warded;
+			now CockVoreList is warded;
 		-- "Furry":
 			now FurryList is warded;
 		-- "Males":
@@ -276,7 +276,7 @@ to oldflagunban (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not banned;
 		-- "Cockvore":
-			now CockvoreList is not banned;
+			now CockVoreList is not banned;
 		-- "Furry":
 			now FurryList is not banned;
 		-- "Males":
@@ -309,7 +309,7 @@ to oldflagunward (flagname - text):
 		-- "Body Horror":
 			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now CockvoreList is not warded;
+			now CockVoreList is not warded;
 		-- "Furry":
 			now FurryList is not warded;
 		-- "Males":

@@ -31,9 +31,10 @@ The File of BeastSave (owned by another project) is called "FSBeastSave".
 The File of BeastVariableSave (owned by another project) is called "FSBeastVariableSave".
 The File of NoteSave (owned by another project) is called "FSNoteSave".
 The File of StorageSave (owned by another project) is called "FSStorageSave".
+The File of VialData (owned by another project) is called "FSVialDataSave".
 
 PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
-PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"};
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "Rubber Tigress companion", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger companion", "doberman companion", "demonologist", "Carnivorous Plant", "orc supersized breeder", "Best Wolf", "submissive demonic prince", "White Wolf Zero", "White Wolf One", "White Wolf Two", "White Wolf Three", "White Wolf Four", "White Wolf Five", "White Wolf Six", "White Wolf Seven", "White Wolf Eight", "White Wolf Nine", "White Wolf Ten"};
 
 an everyturn rule:
 	if Player is in NPC Nexus:
@@ -188,6 +189,8 @@ to EventRestore:
 				now EventIdName is "Unused Tool";
 			if EventIdName is "Destroyed Records":
 				now EventIdName is "Burned Secrets";
+			if EventIdName is "Meeting Orthas":
+				now EventIdName is "Orthas_Meeting";
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -334,6 +337,7 @@ to PossessionSave:
 			now EquippedStatus entry is PossessionEquipped;
 			now CurseStatus entry is PossesssionCursed;
 	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
+	write File of VialData from the Table of OwnedVials;
 	blank out the whole of Table of GamePossessions; [empty after saving to file]
 	if debug is at level 10:
 		say "DEBUG -> File of PossessionSave written.[line break]";
@@ -354,6 +358,7 @@ to PossessionRestore:
 			choose row x in the Table of GamePossessions;
 			let PossessionIdName be Name entry;
 			[some small bugfixes due to items that got renamed]
+			if PossessionIdName is "earthen seed", now PossessionIdName is "sierrasaur cum";
 			if PossessionIdName is "sturdy jeans", now PossessionIdName is "dark-blue jeans";
 			if PossessionIdName is "tenvale gorillas football helmet", now PossessionIdName is "tenvale silverbacks football helmet";
 			if PossessionIdName is "tenvale gorillas baseball cap", now PossessionIdName is "tenvale silverbacks baseball cap";
@@ -378,6 +383,8 @@ to PossessionRestore:
 				say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects! Please report this message on the FS Discord!";
 	else:
 		say "No Possession Save File Found!";
+	if the File of VialData exists:
+		read File of VialData into the Table of OwnedVials;
 	blank out the whole of Table of GamePossessions; [empty out all old data]
 
 to CharacterSave:
@@ -997,11 +1004,6 @@ to PlayerSave:
 	now Short Breast Size Desc entry is Short Breast Size Desc of Player;
 	now bodydesc entry is bodydesc of Player;
 	now bodytype entry is bodytype of Player;
-	if the number of entries in Vials of Player is not 0:
-		repeat with y running from 1 to the number of entries in Vials of Player:
-			choose a blank row in the table of PlayerLists;
-			now ListName entry is "Vial";
-			now EntryText entry is entry y of vials of Player;
 	if the number of entries in Tapes of Player is not 0:
 		repeat with y running from 1 to the number of entries in Tapes of Player:
 			choose a blank row in the table of PlayerLists;
@@ -1213,7 +1215,7 @@ to PlayerRestore:
 			choose row y in the Table of PlayerLists;
 			if ListName entry is:
 				-- "Vial":
-					add EntryText entry to Vials of Player;
+					VialGain EntryText entry by 1 silently;
 				-- "Tape":
 					if EntryText entry is not listed in Tapes of Player:
 						add EntryText entry to Tapes of Player;

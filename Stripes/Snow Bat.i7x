@@ -52,14 +52,14 @@ to say losetosnowbat:
 				say "His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his cock drive into [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if].";
 			else:
 				say "Skipping ceremony, he thrusts his barbed rod into [if Cunt Count of Player > 1]one of your cunts[else]your cunt.";
-			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabided against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabided against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your depths.[impregchance]";
+			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabated against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabated against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your depths.[impregchance]";
 		else:
 			say "     His assault relents briefly, tongue tasting your bleeding wound as you feel his hardening cock pressed firmly against your [if scalevalue of Player > 3]back[else]ass[end if], illustrating his desire to have you sate another hunger. ";
 			if scalevalue of Player > 3:
 				say "His endeavor is clearly impeded by your disparate size, and he continues to feed himself for a while longer before he briefly relinquishes you, crawling down to treat you proper. You quickly feel his barbed rod flood the depths of your anal ring.";
 			else:
 				say "Skipping ceremony, he thrusts his cock into your anal ring.";
-			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabided against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabided against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your bowels.[mimpregchance]";
+			say "     [if Cock Count of Player > 1]Cocks growing hard from his wanton assault, they grind unabated against the ground. [else if Player is male]Cock growing hard from his wanton assault, it grinds unabated against the ground. [end if][if scalevalue of Player > 3]Panting with arousal, his hands tease what they can of the side of your [Body Size Adjective of Player] [bodydesc of Player] torso. His payment in blood having its toll on you, you [else]Panting with arousal, his hands tease your [bodydesc of Player] form. He continues to suck your blood from you, causing you to[end if] become increasingly lightheaded with his escalating fervor until he releases a loud, screeching moan, an audible illustration of his cum flooding your bowels.[mimpregchance]";
 		say "     Overwhelmed, [if Cock Count of Player > 1]your cocks fire off their load into the dirt, causing you to pass out[else if Player is male]your cock fires off its load into the dirt, causing you to pass out[else]you pass out[end if]; eventually, you awake. Now abandoned, exhausted, and thirsty, you gather yourself before slowly going back on your way.";
 	else:
 		say "     Having bested you, the snow bat grabs you roughly and pulls you into his arms. You squirm at his rough treatment, but he grips you all the tighter, folding his bat wings around you as well. Surrounded by his scent and hearing him purring softly, you can't help but moan a little as he nuzzles at your neck. He runs a long, slender and rough tongue along your throat before he sinks his teeth into it, making you moan again.";
@@ -80,12 +80,12 @@ to say beatthesnowbat:
 		if Player is male and anallevel > 1 and ( ( Player is female and a random chance of 1 in 3 succeeds ) or a random chance of anallevel in 5 succeeds ):
 			say "     Cock[smn] driven blatantly erect, you only need to shift your position briefly until you drive [if Cock Count of Player > 1]one of them[else]it[end if] into his vulnerable hole. His protests too impotent to contest your abuse, he can only suffer through each harsh thrust, leaving you free to use him as you see fit. Your feline cries in pleasure muffled by his beleaguered flesh, you find blissful relief as you begin pumping your [if Ball Size of Player > 5]expansive [end if]load into him, a lascivious recompense for your exacted payment, [if Cock Count of Player > 2]free cocks spilling their seed against his soft fur[else if Cock Count of Player > 1]free cock spilling its seed against his soft fur[else]forcing him to take the full brunt of your release[end if].";
 		else if Player is female and a random chance of 3 in 5 succeeds:
-			say "     Puss[yfn] transparently dripping with wanton desire, it takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust. Your cries in pleasure muffled by his beleaguered flesh, you find blissful release, your cunt tightening against his rod until it too is brought to deliver you its load. Doubly draining the snowbat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling it seed against him[else]you don't shy away from stealing his seed as well[end if].[impregchance]";
+			say "     Puss[yfn] transparently dripping with wanton desire, it takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust. Your cries in pleasure muffled by his beleaguered flesh, you find blissful release, your cunt tightening against his rod until it too is brought to deliver you its load. Doubly draining the snow bat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling it seed against him[else]you don't shy away from stealing his seed as well[end if].[impregchance]";
 		else if anallevel is 3 and (a random chance of 1 in 4 succeeds or ( Player is kinky and a random chance of 1 in 5 succeeds ) ):
 			if Player is neuter:
 				say "     Much in spite the feast, you hunger further, and you prepare to assail your victim in another manner, relinquishing yourself of your clothing.";
 			say "     [if Player is male]Cock[smn] driven blatantly erect[else if Player is female]Puss[yfn] transparently dripping with wanton desire[else]Your genital-devoid crotch exposed before him[end if], you would humiliate the creature in another fashion... It takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself through your anal ring with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust.";
-			say "     Weakened cries escaping his lips, you feel him unload into you multiple times, until you too are sated. Doubly draining the snowbat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling its seed against him[end if][if Player is herm] and [end if][if Cunt Count of Player > 1]your cunts leaving a stain of its own sexual fluids across his crotch[else if Player is female]your cunt leaving a stain of its own sexual fluids across his crotch[else]you don't shy away from stealing his seed as well[end if].[mimpregchance]";
+			say "     Weakened cries escaping his lips, you feel him unload into you multiple times, until you too are sated. Doubly draining the snow bat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling its seed against him[end if][if Player is herm] and [end if][if Cunt Count of Player > 1]your cunts leaving a stain of its own sexual fluids across his crotch[else if Player is female]your cunt leaving a stain of its own sexual fluids across his crotch[else]you don't shy away from stealing his seed as well[end if].[mimpregchance]";
 		else if Player is male:
 			say "     Grabbing your [cock size desc of Player] [Cock of Player] cock[smn], you straddle the bat-feline and stroke your meat vigorously. You shift to grinding yourself against his soft fur, enjoying the feel of it sliding across your shaft[smn][if Cunt Count of Player > 1]. You slide your cunts across him as well, but you're focused on jerking off, so you shift back to that after a few swipes across your juicy folds[else if Player is female]. You slide your cunt across him as well, but you're focused on draining your balls, so you shift back to that after a few swipes across your juicy folds[end if]. It is all the more exciting for the power you have over your fallen enemy, able to use him as an object of your pleasure after feasting from him. You keep this up, alternating between rubbing your shaft[smn] and grinding against his fluffy pelt until you feel your balls about to unleash. At that point, you grab his bat-like head and pump hard, splattering your seed across his face and into his mouth, giving a hissing chuckle as you return some of the liquid you've stolen from him.";
 		else if Player is female:
@@ -96,7 +96,7 @@ to say beatthesnowbat:
 		if skipx is 0:
 			say "     Your taste for delicious revenge sated, you free yourself of the victim, leaving him an exhausted heap and recover if he can before something else finds him. No doubt he'll think twice about crossing you again. You gather your things and depart[if nightcheck is 0][else] into the night[end if].";
 	else:
-		say "     [one of]With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to find easier prey.[or]Successfully fending off the snowbat, he emits a high-pitched hiss before he retreats back into the sky, perhaps to recover and find easier prey.[at random]";
+		say "     [one of]With your final blow, your enemy takes to the air again and releases a screeching mrowl of frustration, flying off to find easier prey.[or]Successfully fending off the snow bat, he emits a high-pitched hiss before he retreats back into the sky, perhaps to recover and find easier prey.[at random]";
 
 
 Section 2 - Creature Insertion
@@ -195,7 +195,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -214,7 +214,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -235,7 +235,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -246,7 +246,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -260,19 +260,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

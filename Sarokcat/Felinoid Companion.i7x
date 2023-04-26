@@ -297,7 +297,7 @@ to say sexwithfelinoidpet:
 		NPCSexAftermath Player receives "OralCock" from Klauz;
 		NPCSexAftermath Player receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from Klauz;
 		increase HP of Felinoid companion by 1;
-	else if BodyName of Player is "Felinoid" and player is pure and child is not born and gestation of Child is 0: [ player must not already be pregnant]
+	else if BodyName of Player is "Felinoid" and Player is pure and child is not born and gestation of Child is 0: [ player must not already be pregnant]
 		if Player is female:
 			say "     Klauz becomes increasingly agitated and begins to rub against your furry legs with loud purrs and insistent mewls. His broad snout pushes up between your thighs to lap at your tender places without so much as a request. The sway of his tail and the increasing length of his dick leaves little confusion to his desire.";
 			if Libido of Player > 50 or humanity of Player < 40:

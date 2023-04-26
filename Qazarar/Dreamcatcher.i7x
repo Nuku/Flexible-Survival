@@ -66,7 +66,7 @@ to say perchance to dream: [checks if you can sleep]
 	if caffeinehigh of Player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
-	if location of Player is Palomino or location of Player is Private Booths:
+	if location of Player is PALOMINO Dance Club or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
 		stop the action;
 	if cot is owned:
@@ -97,7 +97,7 @@ to say dream a little dream: [calls an available dream event]
 			follow the turnpass rule;
 			follow the turnpass rule;
 			follow the player injury rule;
-			say "You are [descr]([HP of Player]/[maxHP of Player]).";
+			say "You are [descr]([HP of Player]/[MaxHP of Player]).";
 	else:
 		say "     You toss and turn, but it seems the dreamcatcher is unable to help you rest.";
 

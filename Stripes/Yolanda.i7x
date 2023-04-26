@@ -547,7 +547,7 @@ to say yolandaspecial03f:
 to say yolanda+domicarus01:
 	setmonster "Blue Chaffinch";
 	let avpred be false;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now avpred is true;
 	let temppronoun be "him";
 	if Player is female:
@@ -563,7 +563,7 @@ to say yolanda+domicarus01:
 to say yolanda+domicarus02:
 	setmonster "Blue Chaffinch";
 	let avpred be false;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now avpred is true;
 	let temppronoun be "him";
 	if Player is female:
@@ -581,7 +581,7 @@ to say yolanda+domicarus02:
 to say yolanda+domicarus03:
 	setmonster "Blue Chaffinch";
 	let avpred be false;
-	if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+	if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 		now avpred is true;
 	say "     Asking if it would be alright for Icarus to come join you, Yolanda smiles at the corner of her beak. 'Oh, are my toys not enough for you? I will simply have to try harder,' she caws, laughing as she waves a black wing to the watching passerine. He flies over as the raven snatches some leather straps from her collection. She passes them to the blue bird when he lands next to you, who nods with a grin of his own.";
 	say "     Icarus grabs you by the wrists and shoves a joined pair of leather mitts over them. The laces are tightened and the straps secured, locking your hands inside them. Next comes a spreader bar for your legs, cuffed around each ankle. The final piece comes in the form of a ball gag that gets stuffed into your mouth and strapped behind your head. The mitts encasing your hands get attached to a cable going through a ring in the ceiling and the bar is attached to at the floor. The two birds raise you up slowly until you're suspended with your arms upright and your legs spread and immobilized.";
@@ -658,7 +658,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Garden View and
 	if Player consents:
 		move player to Darkened Alcove;
 		let avpred be false;
-		if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+		if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 			now avpred is true;
 			say "     'It seems your incessant chirping's caught the attention of another predator, you foolish songbird,' she says, giving him another hard nip and thrust. 'And after I went to all the trouble of hooding you and everything. I guess you're really in for it now, slut.' Icarus shivers with excitement beneath her as she gets all the rougher with him.";
 		else:
@@ -676,7 +676,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Garden View and
 an everyturn rule:
 	if Player is in Grey Abbey Library and ( Icarus is in Garden View and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and Player is not neuter and skipturnblocker is 0:
 		let avpred be false;
-		if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
+		if BodyName of Player is listed in infections of AvianpredList and FaceName of Player is listed in infections of AvianpredList:
 			now avpred is true;
 		say "     Hearing some soft rustling from the rafters, you glance up to see Icarus and Yolanda - who've been squabbling of late - conspiratorially close. From the cold, avian stares they're giving you, you can tell they're planning something for you. If dealing with the two of them at once seems like too much, you'd best leave now.";
 		say "     [bold type]Shall you stay and see what these dominant birds have in mind or shall you escape back into the bunker until they turn their attention elsewhere?[roman type][line break]";

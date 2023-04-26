@@ -45,6 +45,42 @@ Version 4 of Blanche by Prometheus begins here.
 BlancheNonBinaryMomDad is a text that varies.
 BlancheNonBinaryMommyDaddy is a text that varies.
 
+[Pregnancy Bug Fix]
+A postimport rule:
+	if Libido of Blanche < 0:
+		if Blanche is gravid:
+			now Libido of Blanche is 14;
+		else if Blanche is pregnant:
+			now Libido of Blanche is 2;
+		else:
+			now Libido of Blanche is 0;
+
+[Pregnancy Countdown]
+An everyturn rule:
+	if (Libido of Blanche > 24 and Libido of Blanche < 255):
+		if HP of Blanche is 6: [First Time Giving Birth]
+			increase HP of Blanche by 1;
+			increase Thirst of Blanche by 4; [+four pups in first litter]
+			now Libido of Blanche is 0;
+		else if HP of Blanche is 10: [Second Time Giving Birth]
+			increase HP of Blanche by 1;
+			increase Thirst of Blanche by 2; [+2 pups in second litter]
+			now Libido of Blanche is 0;
+		else if HP of Blanche is 13: [Third Time and Beyond Giving Birth]
+			if Thirst of Blanche < 10:
+				increase Thirst of Blanche by 4; [+4 pups in third litter]
+				now Libido of Blanche is 0;
+			else:
+				increase Thirst of Blanche by a random number between 2 and 4; [2-4 pups in litter]
+			increase HP of Blanche by 1;
+		increase score by a random number between 5 and 10;
+		now Libido of Blanche is 0;
+	else if Libido of Blanche is 12:
+		if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+			increase HP of Blanche by 1;
+	if Libido of Blanche > 0 and Libido of Blanche < 255:
+		increase Libido of Blanche by 1;
+
 [Movement Schedule]
 an everyturn rule:
 	if Charisma of Blanche > 3:
@@ -96,6 +132,16 @@ an everyturn rule:
 		if Blanche is not in Computer Lab:
 			move Blanche to Computer Lab;
 
+to ShowBlancheImage:
+	if HP of Blanche < 5:
+		project the figure of Blanche_naked_icon;
+	else if HP of Blanche is 5 or HP of Blanche is 9 or HP of Blanche is 12:
+		project the figure of Blanche_preg1_icon;
+	else if HP of Blanche is 6 or HP of Blanche is 10 or HP of Blanche is 13:
+		project the figure of Blanche_preg3_icon;
+	else if HP of Blanche is 7 or HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
+		project the figure of Blanche_naked_icon;
+
 Section 1 - Progression Events
 
 Table of GameEventIDs (continued)
@@ -126,7 +172,7 @@ to say ResolveEvent Wolfrape:
 			move player to Office Den;
 			AddNavPoint Office Den;
 			WaitLineBreak;
-			project the figure of Blanche2_icon;
+			project the figure of Blanche_naked_icon;
 			say "     Once safely concealed in the wolf's hidden den, she hugs you tightly and gives you a passionate kiss which surprises both of you. As if suddenly realizing what she's done, she takes a step back, blushing at her ears. 'Oh, I'm sorry. It's this... infection thing. I'm sure you know what it does to you. My name is Blanche. I'm really thankful for your help.' She brushes her fur nervously and, realizing that she's nude, grabs one of a few spare blouses she has folded on the bookcase. She slides it on, but doesn't bother to do it up after throwing you a quick glance.";
 			say "     She grabs a can of ravioli from the shelf as well, pressing it into your hands. 'Please take this. I'd give you more, really, but it's about all I can spare right now. You were really brave to try and help me against that monster. I don't like going out there much because there are so many of them. You could... if you need somewhere safe to hide that is... maybe stay here... with me.' She speaks softly, but with obvious longing in her voice. Perhaps she's lonely and simply wants companionship, though from the way she's looking at you, perhaps she wants more.";
 			now HP of Blanche is 1;
@@ -164,6 +210,7 @@ instead of navigating Office Den while ("Blanche - OfficeEvent" is listed in tra
 	say "[ResolveEvent Blanche's Brood]";
 
 to say ResolveEvent Blanche's Brood:
+	ShowBlancheImage;
 	if debugactive is 1:
 		say "     DEBUG: Blanche organizes scavenging trips[line break]";
 	say "     As you enter Blanche's den you are met once again by the Sturm's appraising gaze, the large white wolf giving you little more than a nod in greeting before returning his full attention to watching over the scorched city surrounding the nondescript building. Given that this is one of the harshest areas in the city, you can imagine the strain that he puts himself under to ensure that his mother and the rest of his family remain safe, though you know that the others occasionally take their turn at guard duty to allow him some time to rest or relax. The door opens before your hand can reach it and the naked frame of Blanche appears in the doorway, your proximity causing her to let out a pleased gasp. '[if Player is male]My two favorite men side by side[else if Player is female]My favorite woman comes to see me[else]My rescuer comes to see me[end if]!' the wolfess MILF exclaims, giving you a warm hug. 'Come inside. Yes, you too Sturm, we were just about to organize an excursion into the city for food, water, and building materials, and your joint expertise would come in handy.'";
@@ -191,6 +238,7 @@ instead of navigating Office Den while (daytimer is day and Best Wolf is not lis
 	say "[ResolveEvent Scavenging the Park]";
 
 to say ResolveEvent Scavenging the Park:
+	ShowBlancheImage;
 	if debugactive is 1:
 		say "     DEBUG: Blanche organizes scavenging trips[line break]";
 	say "     Sturm glowers at you as you enter the den, causing a sinking feeling within you that one of your children would harbor such bitterness towards you. Noticing his expression, Blanche clips him around the ear with a frown. '[SubjectProCap of Player] hasn't done anything wrong. Why do you bear [ObjectPro of Player] such ill-will?' she softly growls. Looking suitably chastened, the large male wolf greets you. 'Father. We were just readying for our initial scavenging trip to the park. It must be fate that you would appear at the right time,' Sturm explains, unable to keep the sarcasm out of his voice at the end, earning a stern poke in the side from his mother. 'We would be delighted if you had the time to accompany us,' Blanche says brightly, though you notice that she keeps one eye on her eldest son to keep him in check. For all her faults, she seems to hold absolute authority over her family, the incident with the slavers withstanding.";
@@ -233,20 +281,20 @@ to say ResolveEvent Scavenging the Park:
 	WaitLineBreak;
 	say "     Pushing the front doors open dramatically, you welcome Blanche and her children to the library with a flourish. You can see Sturm attempting to look unimpressed by the comparative grandeur but the wide-eyed expression as he stares around gives away his curiosity. 'I can see why you weren't worried about space,' Blanche comments, turning around on the spot at the bottom of the staircase and gazing upwards. 'I could have a hundred litters and there would still be room!' 'M-mom?' Sturm stutters, looking shocked at this outburst from his mother while Bianca and Wendis giggle. 'Relax sweetie. It was a joke,' Blanche reassures him, though her mouth twists mischievously at the corner. It would seem that she has found an effective way of teasing her son. 'In there looks cozy. If you don't mind, I'll improvise a den in the corner for my children and me to sleep in at night,' she informs you, gesturing at the door to the [bold type]computer lab[roman type]. Not really seeing a problem with this, you accept this suggestion, watching as the white wolf's children run of to ready a make-shift den, leaving you with just Blanche and Sturm for the remainder of your quick tour.";
 	if Fang is booked or Fang is bunkered:
-		say "     [if (TimekeepingVar is 6 or TimekeepingVar is -2) and hp of Lux > 3]As you turn away from the computer lab[else]As you pass by the door out to the garden[end if], Blanche abruptly stops and tilts her head upwards, her nose furiously quivering. 'That scent... where do I recognize it from?' she murmurs to herself, taking a few hesitant steps towards the doorway. You are mildly concerned as to whether someone has managed to sneak into the library, especially when Fang seems to be absent, but your fears are unfounded as [SubjectPro of Fang] bounds through the door, snout held high as [SubjectPro of Fang] sniffs the air as vigorously as the white wolf. 'Oh. You have another wolf?' Blanche says with a smile as she catches sight of [ObjectPro of Fang], taking a step towards [ObjectPro of Fang] before her son intercepts her with an arm and regards your [if hp of Fang is 3 or hp of Fang is 4 or HP of Fang is 6]alpha [else]guard-wolf [end if]warily. Suddenly, Blanche and Fang's eyes simultaneously widen and they lunge at each other, Sturm being knocked out of the way by his mother. '[if Fang is Male]WOLF[else if Fang is Female]LUPA[end if]!'";
-		if hp of Fang is 2: [Omega]
+		say "     [if (TimekeepingVar is 6 or TimekeepingVar is -2) and HP of Lux > 3]As you turn away from the computer lab[else]As you pass by the door out to the garden[end if], Blanche abruptly stops and tilts her head upwards, her nose furiously quivering. 'That scent... where do I recognize it from?' she murmurs to herself, taking a few hesitant steps towards the doorway. You are mildly concerned as to whether someone has managed to sneak into the library, especially when Fang seems to be absent, but your fears are unfounded as [SubjectPro of Fang] bounds through the door, snout held high as [SubjectPro of Fang] sniffs the air as vigorously as the white wolf. 'Oh. You have another wolf?' Blanche says with a smile as she catches sight of [ObjectPro of Fang], taking a step towards [ObjectPro of Fang] before her son intercepts her with an arm and regards your [if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]alpha [else]guard-wolf [end if]warily. Suddenly, Blanche and Fang's eyes simultaneously widen and they lunge at each other, Sturm being knocked out of the way by his mother. '[if Fang is Male]WOLF[else if Fang is Female]LUPA[end if]!'";
+		if HP of Fang is 2: [Omega]
 			say "     Leaping up so that [PosAdj of Player] paws are on the wolf MILF's shoulders, your omega begins to enthusiastically lick her face, tail beating at about a million wags per minute. Sturm looks on with utter confusion [if IncestList is not warded and IncestList is not banned]and perhaps a little envy [end if]at the emotional reunion before him. Due to your earlier conversation, you are a little more enlightened and so decide to allow your subordinate this moment of freedom, though you are unsure whether [SubjectPro of Fang] would listen to you at the moment even if you did tell [ObjectPro of Fang] to stop. By the time that [SubjectPro of Fang] drops to all fours again, the fur around Blanche's face is plastered to her skin, thick with saliva and happy tears. 'I didn't think that I would ever see you again. I'm so, so sorry for what happened and I'm not sure that I can ever make it right,' she sobs, kneeling down to press her face into the thick fluff of Fang's neck.";
 			WaitLineBreak;
 			say "     'In the past. Not your fault,' your omega rumbles. 'Much happened since. Words difficult. Talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'Huh. You seem smaller than most wolves I've seen,' Sturm comments, casting a critical eye over the quadrupedal wolf. 'I am omega in pack. Used to be bigger. Called Fang now,' Fang mutters, folding [PosAdj of Player] ears back appeasingly as [SubjectPro of Fang] looks at you. Blanche frowns for a moment, whether at her son's rudeness or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]words you are unsure, but she soon returns to smiling as ";
-		else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+		else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 			say "     Leaping up so that [PosAdj of Player] paws are on the wolf MILF's shoulders, your alpha begins to enthusiastically lick her face, tail beating at about a million wags per minute and acting in a manner that you are unaccustomed to seeing from [ObjectPro of Fang]. Sturm looks on with utter confusion [if IncestList is not warded and IncestList is not banned]and perhaps a little envy [end if]at the emotional reunion before him. Due to your earlier conversation, you are a little more enlightened and so gain extra satisfaction from the knowledge that you were able to do this for both Blanche and your Alpha. By the time that [SubjectPro of Fang] drops to all fours again, the fur around Blanche's face is plastered to her skin, thick with saliva and happy tears. 'I didn't think that I would ever see you again. I'm so, so sorry for what happened and I'm not sure that I can ever make it right,' she sobs, kneeling down to press her face into the thick fluff of Fang's neck, having the unintended effect of permeating her fur with his potent scent.";
 			WaitLineBreak;
 			say "     'In the past. Not your fault,' your Alpha rumbles. 'Much happened since. Words difficult. Talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'You're um... impressive',' Sturm comments, looking in awe at the size of the quadrupedal wolf. 'I am alpha in pack. Stronger than I used to be. Called Fang now,' Fang states proudly, glancing at you possessively. Blanche looks surprised for a moment, whether at her son's loss for words or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]statement you are unsure, but she soon returns to smiling as ";
-		else if hp of Fang is 5: [Beta]
+		else if HP of Fang is 5: [Beta]
 			say "     Leaping up so that [PosAdj of Player] paws are on the wolf MILF's shoulders, your companion begins to enthusiastically lick her face, tail beating at about a million wags per minute and acting in an extremely affectionate manner. Sturm looks on with utter confusion [if IncestList is not warded and IncestList is not banned]and perhaps a little envy [end if]at the emotional reunion before him. Due to your earlier conversation, you are a little more enlightened and so find the moment especially heart-warming given their history together. By the time that Fang drops to all fours again, the fur around Blanche's face is plastered to her skin, thick with saliva and happy tears. 'I didn't think that I would ever see you again. I'm so, so sorry for what happened and I'm not sure that I can ever make it right,' she sobs, kneeling down to press her face into the thick fluff of Fang's neck.";
 			WaitLineBreak;
 			say "     'In the past. Not your fault,' your beta rumbles. 'Much happened since. Words difficult. Talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'I feel some sort of connection to you, perhaps because you seem to care for my mother so much,' Sturm muses, casting a curious eye over the quadrupedal wolf. 'I am beta in pack. Protect those I love. Called Fang now,' Fang replies, wagging [PosAdj of Player] tail. Blanche looks puzzled for a moment, whether at her son's reaction or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]words you are unsure, but she soon returns to smiling as ";
-		else if hp of Fang is 6: [Gentle Alpha]
+		else if HP of Fang is 6: [Gentle Alpha]
 			say "     Leaping up so that [PosAdj of Player] paws are on the wolf MILF's shoulders, your alpha begins to enthusiastically lick her face, tail beating at about a million wags per minute and acting in an extremely affectionate manner. Sturm looks on with utter confusion [if IncestList is not warded and IncestList is not banned]and perhaps a little envy [end if]at the emotional reunion before him. Due to your earlier conversation, you are a little more enlightened and so find the moment especially heart-warming given their history together. By the time that Fang drops to all fours again, the fur around Blanche's face is plastered to her skin, thick with saliva and happy tears. 'I didn't think that I would ever see you again. I'm so, so sorry for what happened and I'm not sure that I can ever make it right,' she sobs, kneeling down to press her face into the thick fluff of Fang's neck, having the unintended effect of permeating her fur with his potent scent.";
 			WaitLineBreak;
 			say "     'In the past. Not your fault,' your alpha rumbles. 'Much has happened since. Speaking difficult for me. Will talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'I feel some sort of connection to you, perhaps because you seem to care for my mother so much,' Sturm muses, casting a curious eye over the quadrupedal wolf. I am leader and protector of pack. Stronger than I used to be. Called Fang now,' Fang states proudly, glancing at you affectionately. Blanche looks surprised for a moment, whether at her son's loss for words or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]statement you are unsure, but she soon returns to smiling as ";
@@ -254,8 +302,8 @@ to say ResolveEvent Scavenging the Park:
 			say "     Leaping up so that [PosAdj of Player] paws are on the wolf MILF's shoulders, your sentinel begins to enthusiastically lick her face, tail beating at about a million wags per minute. Sturm looks on with utter confusion [if IncestList is not warded and IncestList is not banned]and perhaps a little envy [end if]at the emotional reunion before him. Due to your earlier conversation, you are a little more enlightened and so decide to allow your guard this moment of freedom, though you see little reason why [SubjectPro of Fang] should be reigned in. By the time that [SubjectPro of Fang] drops to all fours again, the fur around Blanche's face is plastered to her skin, thick with saliva and happy tears. 'I didn't think that I would ever see you again. I'm so, so sorry for what happened and I'm not sure that I can ever make it right,' she sobs, kneeling down to press her face into the thick fluff of Fang's neck.";
 			WaitLineBreak;
 			say "     'In the past. Not your fault,' your guard-wolf rumbles. 'Much happened since. Words difficult. Talk more later.' Blanche straightens up and nods, wiping her eyes again before eagerly waving her son forward to introduce him and Fang to each other. 'This is Sturm, my son with [if Player is not defaultnamed][Name of Player][else]my saviour here[end if]. You probably saw the rest of my children earlier. And this is [if Fang is Male]Wolf, my boyfriend [else if Fang is Female]Lupa, my girlfriend [end if]from when I was in high school,' she gushes. 'Huh. You don't look that special,' Sturm comments, casting a critical eye over the quadrupedal wolf. 'I keep home safe. Protect my pack. Called Fang now,' Fang mutters, meeting Sturm's gaze. Blanche frowns for a moment, whether at her son's rudeness or her [if Fang is Male]ex-boyfriend's [else]ex-girlfriend's [end if]words you are unsure, but she soon returns to smiling as ";
-		if hp of Lux > 0:
-			if hp of Lux is 1: [Pup]
+		if HP of Lux > 0:
+			if HP of Lux is 1: [Pup]
 				say "two small fluffy blobs with legs crawl out from behind some shelves and struggle across the floor towards Fang[if FangDashRel > 0 and FangDashRel < 10], with Dash close behind[end if].";
 				say "     With a girlish squeal, Blanche drops to the floor beside them, giggling as they clamber over top of her, occasionally pulling at her ears and licking her all over. 'They're gorgeous. Are they yours?' she asks Fang while scritching the puppies['] pudgy tummies[if FangDashRel > 0 and FangDashRel < 10] and the fox's bushy tail[end if]. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm sits down beside his mother to pet the pups, detaching Lux from Blanche's ear and lifting her onto his lap to stroke her. 'I would say that I miss the days when you were this small, but you grew up after a few hours,' Blanche reminisces to her son, cupping the side of his face affectionately.";
 				WaitLineBreak;
@@ -271,22 +319,22 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Dash - Cute Fox" for Sturm;
 					TraitGain "Blanche - Cuddly Woman" for Dash;
 					TraitGain "Sturm - Food Provider" for Dash;
-				if hp of Fang is 2: [Omega]
+				if HP of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
 					TraitGain "Blanche - Memory of Past" for Fang;
 					TraitGain "Sturm - Blunt Talker" for Fang;
-				else if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+				else if HP of Fang is 3 or HP of Fang is 4: [Alpha]
 					TraitGain "Fang - Prime Mate" for Blanche;
 					TraitGain "Fang - Worthy Alpha" for Sturm;
 					TraitGain "Blanche - First Mate" for Fang;
 					TraitGain "Sturm - Prime Pack Member" for Fang;
-				else if hp of Fang is 5: [Beta]
+				else if HP of Fang is 5: [Beta]
 					TraitGain "Fang - Sweetheart Returned" for Blanche;
 					TraitGain "Fang - Father Figure" for Sturm;
 					TraitGain "Blanche - First Love" for Fang;
 					TraitGain "Sturm - Honorary Son" for Fang;
-				else if hp of Fang is 6: [Gentle Alpha]
+				else if HP of Fang is 6: [Gentle Alpha]
 					TraitGain "Fang - Alpha Sweetheart" for Blanche;
 					TraitGain "Fang - Worthy Leader" for Sturm;
 					TraitGain "Blanche - Blossomed Love" for Fang;
@@ -296,7 +344,7 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Fang - Ordinary Wolf" for Sturm;
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
-			else if hp of Lux is 2: [Child]
+			else if HP of Lux is 2: [Child]
 				say "two wolves about the size of Shetland sheepdogs scamper out from behind some shelves and patter towards Fang[if FangDashRel > 0 and FangDashRel < 10], closely followed by Dash[end if].";
 				say "     With a coo of delight, Blanche crouches down and offers them a hand to sniff as they regard her curiously from around their [if Fang is Male]father's [else if Fang is female]mother's [end if]legs. After [SubjectPro of Fang] gives them a nod, they quickly rush over to you, affectionately licking you while their tails wag wildly, before moving on to investigate the newcomers, sniffing around their ankles and basking in the attention that they get given. 'They're adorable. Are they yours?' Blanche asks Fang, kissing the pups as they leap up. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Um. Did you forget your Latin from school? Umbra is feminine...' the white-furred wolfess hesitantly comments, earning a blank stare. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves[if FangDashRel > 0 and FangDashRel < 10] and fox[end if], rubbing them under their chins and ruffling Umbra's ears.";
 				WaitLineBreak;
@@ -312,22 +360,22 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Dash - Cute Fox" for Sturm;
 					TraitGain "Blanche - Cuddly Woman" for Dash;
 					TraitGain "Sturm - Food Provider" for Dash;
-				if hp of Fang is 2: [Omega]
+				if HP of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
 					TraitGain "Blanche - Memory of Past" for Fang;
 					TraitGain "Sturm - Blunt Talker" for Fang;
-				else if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+				else if HP of Fang is 3 or HP of Fang is 4: [Alpha]
 					TraitGain "Fang - Prime Mate" for Blanche;
 					TraitGain "Fang - Worthy Alpha" for Sturm;
 					TraitGain "Blanche - First Mate" for Fang;
 					TraitGain "Sturm - Prime Pack Member" for Fang;
-				else if hp of Fang is 5: [Beta]
+				else if HP of Fang is 5: [Beta]
 					TraitGain "Fang - Sweetheart Returned" for Blanche;
 					TraitGain "Fang - Father Figure" for Sturm;
 					TraitGain "Blanche - First Love" for Fang;
 					TraitGain "Sturm - Honorary Son" for Fang;
-				else if hp of Fang is 6: [Gentle Alpha]
+				else if HP of Fang is 6: [Gentle Alpha]
 					TraitGain "Fang - Alpha Sweetheart" for Blanche;
 					TraitGain "Fang - Worthy Leader" for Sturm;
 					TraitGain "Blanche - Blossomed Love" for Fang;
@@ -337,7 +385,7 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Fang - Ordinary Wolf" for Sturm;
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
-			else if hp of Lux is 3: [Teen]
+			else if HP of Lux is 3: [Teen]
 				say "two wolves bound out from behind some shelves and towards Fang, the young dark-furred wolf of similar size to him while his paler-furred twin is smaller, slightly larger than a border collie[if FangDashRel > 0 and FangDashRel < 10]. Behind them, Dash determinedly keeps up, his legs moving rapidly[end if].";
 				say "     With a gasp of delight, Blanche kneels beside them and strokes their heads, giggling as they lick her face in return, taking the affection of a stranger within their stride. 'You're adorable. Are they yours?' Blanche first addresses the twins before directing the question towards Fang. 'Yes. Girl is Lux. Boy is Umbra. Mine and [if Player is not defaultnamed][Name of Player][']s[else][PosPro of Player][end if][if FangDashRel > 0 and FangDashRel < 10]. Fox is Dash. Adopted son[end if],' [SubjectPro of Fang] replies, gesturing at you. 'Hi,' Lux brightly chips in, her brother a little more shyly chiming in a moment later. 'Such beautiful names, and fitting, but did you forget your Latin from school? Umbra is meant to be feminine...' the white-furred wolfess hesitantly comments, the dark-furred wolf too busy washing his sister's ear to take offense. 'I remember. Word gender not important. Those are their names,' Fang responds, the simplicity of the statement leaving no room for dispute. Sturm kneels beside his mother to pet the wolves[if FangDashRel > 0 and FangDashRel < 10] and fox[end if], Lux licking his face and ensuring that he doesn't feel left out[if FangDashRel > 0 and FangDashRel < 10], though Dash leaping at his heels hardly leaves any chance of that[end if].";
 				WaitLineBreak;
@@ -353,22 +401,22 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Dash - Cute Fox" for Sturm;
 					TraitGain "Blanche - Cuddly Woman" for Dash;
 					TraitGain "Sturm - Food Provider" for Dash;
-				if hp of Fang is 2: [Omega]
+				if HP of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
 					TraitGain "Blanche - Memory of Past" for Fang;
 					TraitGain "Sturm - Blunt Talker" for Fang;
-				else if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+				else if HP of Fang is 3 or HP of Fang is 4: [Alpha]
 					TraitGain "Fang - Prime Mate" for Blanche;
 					TraitGain "Fang - Worthy Alpha" for Sturm;
 					TraitGain "Blanche - First Mate" for Fang;
 					TraitGain "Sturm - Prime Pack Member" for Fang;
-				else if hp of Fang is 5: [Beta]
+				else if HP of Fang is 5: [Beta]
 					TraitGain "Fang - Sweetheart Returned" for Blanche;
 					TraitGain "Fang - Father Figure" for Sturm;
 					TraitGain "Blanche - First Love" for Fang;
 					TraitGain "Sturm - Honorary Son" for Fang;
-				else if hp of Fang is 6: [Gentle Alpha]
+				else if HP of Fang is 6: [Gentle Alpha]
 					TraitGain "Fang - Alpha Sweetheart" for Blanche;
 					TraitGain "Fang - Worthy Leader" for Sturm;
 					TraitGain "Blanche - Blossomed Love" for Fang;
@@ -394,22 +442,22 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Dash - Cute Fox" for Sturm;
 					TraitGain "Blanche - Cuddly Woman" for Dash;
 					TraitGain "Sturm - Food Provider" for Dash;
-				if hp of Fang is 2: [Omega]
+				if HP of Fang is 2: [Omega]
 					TraitGain "Fang - Shadow of Self" for Blanche;
 					TraitGain "Fang - On the Small Side" for Sturm;
 					TraitGain "Blanche - Memory of Past" for Fang;
 					TraitGain "Sturm - Blunt Talker" for Fang;
-				else if hp of Fang is 3 or hp of Fang is 4: [Alpha]
+				else if HP of Fang is 3 or HP of Fang is 4: [Alpha]
 					TraitGain "Fang - Prime Mate" for Blanche;
 					TraitGain "Fang - Worthy Alpha" for Sturm;
 					TraitGain "Blanche - First Mate" for Fang;
 					TraitGain "Sturm - Prime Pack Member" for Fang;
-				else if hp of Fang is 5: [Beta]
+				else if HP of Fang is 5: [Beta]
 					TraitGain "Fang - Sweetheart Returned" for Blanche;
 					TraitGain "Fang - Father Figure" for Sturm;
 					TraitGain "Blanche - First Love" for Fang;
 					TraitGain "Sturm - Honorary Son" for Fang;
-				else if hp of Fang is 6: [Gentle Alpha]
+				else if HP of Fang is 6: [Gentle Alpha]
 					TraitGain "Fang - Alpha Sweetheart" for Blanche;
 					TraitGain "Fang - Worthy Leader" for Sturm;
 					TraitGain "Blanche - Blossomed Love" for Fang;
@@ -420,25 +468,25 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Blanche - Old Love" for Fang;
 					TraitGain "Sturm - Quick to Judge" for Fang;
 		else:
-			if hp of Fang is 2: [Omega]
+			if HP of Fang is 2: [Omega]
 				say "Fang nuzzles against Sturm's hand, enticing him into giving the wolf a quick pat. 'I'll talk to you more once we have finished being shown around. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]? We have a lot of catching up to do,' Blanche asks, receiving a nod in response before Fang resumes [PosAdj of Fang] patrol of the perimeter, leaving the three of you to continue the tour. '[SubjectProCap of Fang] seemed nice,' Sturm says, earning a smile from his mother. '[SubjectProCap of Fang] is,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Fang - Shadow of Self" for Blanche;
 				TraitGain "Fang - On the Small Side" for Sturm;
 				TraitGain "Blanche - Memory of Past" for Fang;
 				TraitGain "Sturm - Blunt Talker" for Fang;
-			else if (hp of Fang is 3 or hp of Fang is 4): [Alpha]
+			else if (HP of Fang is 3 or HP of Fang is 4): [Alpha]
 				say "     Sturm absent-mindedly runs a hand through the thick fur on Fang's neck, causing your Alpha to let out a satisfied groan. 'I'll talk to you more once we have finished being shown around. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]? We have a lot of catching up to do,' Blanche asks, receiving a nod in response before Fang resumes [PosAdj of Fang] patrol of the perimeter, leaving the three of you to continue the tour. '[SubjectProCap of Fang] seemed strong,' Sturm says, earning a smile from his mother. '[SubjectProCap of Fang] did, didn't [SubjectPro of Fang],' she replies before they look to you to see what you have planned next.";
 				TraitGain "Fang - Prime Mate" for Blanche;
 				TraitGain "Fang - Worthy Alpha" for Sturm;
 				TraitGain "Blanche - First Mate" for Fang;
 				TraitGain "Sturm - Prime Pack Member" for Fang;
-			else if hp of Fang is 5: [Beta]
+			else if HP of Fang is 5: [Beta]
 				say "     Fang licks Sturm's hand, making him jump, though without snatching his hand away. 'I'll talk to you more once we have finished being shown around. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]? We have a lot of catching up to do,' Blanche asks, receiving a nod in response before Fang resumes [PosAdj of Fang] patrol of the perimeter, leaving the three of you to continue the tour. '[SubjectProCap of Fang] seemed caring,' Sturm says, earning a smile from his mother. '[SubjectProCap of Fang] always was,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Fang - Sweetheart Returned" for Blanche;
 				TraitGain "Fang - Father Figure" for Sturm;
 				TraitGain "Blanche - First Love" for Fang;
 				TraitGain "Sturm - Honorary Son" for Fang;
-			else if hp of Fang is 6: [Gentle Alpha]
+			else if HP of Fang is 6: [Gentle Alpha]
 				say "     Fang licks Sturm's hand, making him jump, though without snatching his hand away. 'I'll talk to you more once we have finished being shown around. Ok [if Fang is Male]Wolf[else if Fang is Female]Lupa[end if]? We have a lot of catching up to do,' Blanche asks, receiving a nod in response before Fang resumes [PosAdj of Fang] patrol of the perimeter, leaving the three of you to continue the tour. '[SubjectProCap of Fang] seemed caring,' Sturm says, earning a smile from his mother. '[SubjectProCap of Fang] always was,' she replies before they look to you to see what you have planned next.";
 				TraitGain "Fang - Alpha Sweetheart" for Blanche;
 				TraitGain "Fang - Worthy Leader" for Sturm;
@@ -450,7 +498,7 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Fang - Ordinary Wolf" for Sturm;
 				TraitGain "Blanche - Old Love" for Fang;
 				TraitGain "Sturm - Quick to Judge" for Fang;
-	if (((Fang is not booked and Fang is not bunkered) and number of bunkered people + number of booked people > 1) or ((Fang is booked or Fang is bunkered) and hp of Lux is 0 and number of bunkered people + number of booked people > 2) or ((Fang is booked or Fang is bunkered) and hp of Lux > 0 and number of bunkered people + number of booked people > 4)): [anyone there besides just Blanche]
+	if (((Fang is not booked and Fang is not bunkered) and number of bunkered people + number of booked people > 1) or ((Fang is booked or Fang is bunkered) and HP of Lux is 0 and number of bunkered people + number of booked people > 2) or ((Fang is booked or Fang is bunkered) and HP of Lux > 0 and number of bunkered people + number of booked people > 4)): [anyone there besides just Blanche]
 		if (number of bunkered people + number of booked people > 3):
 			say "Before you can continue, you see some of the other people who have taken up residence here too and decide that it might be best to call everyone in the building together and explain what's going on with Blanche and her family now moving in. [bold type]After you call for them, they gradually appear, with the following reactions:[roman type][line break]";
 		else if (number of bunkered people + number of booked people is 3):
@@ -470,7 +518,7 @@ to say ResolveEvent Scavenging the Park:
 				TraitGain "Blanche - Soft Mom" for Alexandra;
 				TraitGain "Sturm - Hunky Male" for Alexandra;
 			WaitBreakReactions;
-		if hp of Cleo > 3:
+		if HP of Cleo > 3:
 			say "     Encouraged by her mother, Cleo reluctantly puts her book down and walks over to Blanche and Sturm to introduce herself. 'Hi. I'm Cleo. Did you lose your clothes?' your daughter asks, surreptitiously allowing her eyes to roam over their bodies nonetheless. Sturm chuckles a bit as his mother answers, 'No sweetie. I just haven't had much of an interest wearing clothes since this all began.' The Doberman looks a little confused at the wolf MILF's answer. 'That seems a little strange, but I suppose to each their own. You seem nice enough. If you'll excuse me, I would like to go back to my book,' she eventually replies. 'Without us introducing ourselves? I'm hurt,' Sturm teases, earning a sharp look from his mother. 'Sorry, I'm Blanche and this is my son, Sturm, who seems to have forgotten that not everyone is as comfortable meeting new people, especially naked ones, as him,' she apologizes, Cleo waving a paw dismissively. 'Nah. It's fine. Good intentions and all that.' It would seem that they will get along just fine.";
 			TraitGain "Cleo - Innocent Bookworm" for Blanche;
 			TraitGain "Cleo - Hidden Pearl" for Sturm;
@@ -613,7 +661,7 @@ to say ResolveEvent Scavenging the Park:
 					TraitGain "Sturm - Potential Slut" for Chris;
 			WaitBreakReactions;
 		if Colleen is booked or Colleen is bunkered:
-			if hp of Colleen is 1: [Sane Sarah, Fluffy Colleen]
+			if HP of Colleen is 1: [Sane Sarah, Fluffy Colleen]
 				say "     Colleen approaches calmly, giving the wolves a once-over before introducing herself. 'Corporal Varna, pleased to meet you, but you can call me Colleen, especially as I'm not sure of Command's stance on transformed personnel,' she greets them, sticking a paw out invitingly. Sturm gives it a shake but Blanche goes in for a hug immediately, the husky chuckling and returning it cheerfully. 'More of a hugger eh? That's alright. A hug is as good as a handshake. I'm usually in the bunker down the stairs over there if you want us to get to know each other. Just stay away from the hole in the wall.' With the introduction over, Colleen heads back towards her vigil of the tunnel underground. Waving before she vanishes through the door down to the bunker. 'She seems like an interesting character. I'm not quite sure whether [']get to know each other['] was an innuendo or not,' Blanche comments, Sturm grunting his agreement. You doubt that that was what she meant, but that isn't to say that she wouldn't be willing.";
 				TraitGain "Colleen - Friendly Husky Soldier" for Blanche;
 				TraitGain "Colleen - Pretty Husky Soldier" for Sturm;
@@ -915,13 +963,13 @@ to say ResolveEvent Scavenging the Park:
 			TraitGain "Sturm - Large Wolf" for Nadia;
 			WaitBreakReactions;
 		if Onyx is booked or Onyx is bunkered:
-			if (xp of Onyx > 9 and xp of Onyx < 20): [Dom Stallion]
+			if (XP of Onyx > 9 and XP of Onyx < 20): [Dom Stallion]
 				say "     Onyx strides over to inspect the wolves more thoroughly, a cocky smirk spreading across his face as his eyes roam over Blanche's voluptuous form. 'Hey there, sexy. I'm Onyx. I look forward to getting to know you,' he remarks. The wolfess seems momentarily tongue-tied, her eyes fixed on the dominant horseman's stirring erection, just beginning to squeeze past the ineffective confines of his thong. The view is obstructed by Sturm stepping between them, his arms folded. 'What about me? Are you looking forward to getting to know me too?' he pointedly asks. 'Sure, but not quite as much as her. Wait, you aren't her mate or something, are you?' Onyx replies, sizing up the wolf. 'Not exactly. I'm her son,' comes the response. 'Well then, I'll probably refrain from involving you in a threesome,' the horseman teases. Seeing Sturm's hackles raise, Onyx takes a step back. 'Calm down, it was meant to be a joke. Besides, it's not like I'm some meathead just because I'm a stallion. It's her choice.' Blanche lays a calming hand on her son's shoulder, the tension bleeding from his body a moment later. With a sigh, Sturm apologies. 'Sorry. I don't have many good experiences with other people so I tend to be defensive. Perhaps I can try and make a better impression when I've properly settled in.' 'No worries. I'm sure your caution has been justified in the past,' the stallion replies, the two males shaking hands. Relieved that the situation has resolved itself without your intervention, you wait as the three of them talk for a short moment before Onyx leaves again, Blanche's eyes still following him.";
 				TraitGain "Onyx - Confident Hung Stud" for Blanche;
 				TraitGain "Onyx - Not Some Meathead" for Sturm;
 				TraitGain "Blanche - Sexy MILF" for Onyx;
 				TraitGain "Sturm - Justifiably Cautious" for Onyx;
-			else if (xp of Onyx > 19 and xp of Onyx < 30): [Sub Stallion]
+			else if (XP of Onyx > 19 and XP of Onyx < 30): [Sub Stallion]
 				say "     Onyx wanders over to inspect the wolves more thoroughly, surreptitiously licking his lips as his eyes roam over Blanche's voluptuous form. 'Hello, I'm Onyx. It's nice to meet you,' he says with an endearing smile. The wolfess seems momentarily tongue-tied, her eyes fixed on the submissive horseman's stirring erection, just beginning to squeeze past the ineffective confines of his thong. With an annoyed sigh at his mother's behavior, Sturm replies, 'It's a pleasure to meet you too. I'm Sturm and this is my mother, Blanche. Please excuse her staring.' He gently elbows her, startling her for a moment before she realizes what she was doing and blushes beneath her fur and begins to hurriedly apologize. 'Don't worry about it. I find it more than a little flattering that I can draw their eye like that. Look all you want,' Onyx laughs. You see Sturm trying to get a better look out of the corner of his eye, but Blanche seems to be self-conscious now, firmly keeping her eyes above the stallion's groin. After a few more words are exchanged, Onyx walks away again, flicking his tail around with the side-effect of revealing his hole to all three of you as you watch him leave. Once he rounds a corner, Sturm turns back to his mother and wordlessly folds his arms, Blanche suddenly finding the ceiling extraordinarily interesting.";
 				TraitGain "Onyx - Flirty Hung Stud" for Blanche;
 				TraitGain "Onyx - Flirty Show-off" for Sturm;
@@ -1221,16 +1269,16 @@ to say ResolveEvent Scavenging the Park:
 	move Casper to Computer Lab;
 	now Office Den is unknown;
 	now Charisma of Blanche is 1;
-	now hp of Sturm is 1;
-	now hp of Bianca is 1;
-	now hp of Ernest is 1;
-	now hp of Claude is 1;
-	now hp of Penelope is 1;
-	now hp of Wendis is 1;
-	now hp of Bernard is 1;
-	now hp of Maeve is 1;
-	now hp of Lumi is 1;
-	now hp of Casper is 1;
+	now HP of Sturm is 1;
+	now HP of Bianca is 1;
+	now HP of Ernest is 1;
+	now HP of Claude is 1;
+	now HP of Penelope is 1;
+	now HP of Wendis is 1;
+	now HP of Bernard is 1;
+	now HP of Maeve is 1;
+	now HP of Lumi is 1;
+	now HP of Casper is 1;
 	now Scavenging the Park is resolved;
 
 
@@ -1270,7 +1318,8 @@ Table of GameCharacterIDs (continued)
 object	name
 Blanche	"Blanche"
 
-Blanche is a woman. Blanche is in Office Den.
+Blanche is a woman.
+Blanche is in Office Den.
 ScaleValue of Blanche is 3. [6']
 Body Weight of Blanche is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Blanche is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1310,7 +1359,6 @@ Description of Blanche is "[blanchedesc]".
 Conversation of Blanche is { "Thanks." }.
 the fuckscene of Blanche is "[sexwithBlanche]".
 the scent of Blanche is "[blancheupdate]She smells of wolf and half-hidden arousal."
-The icon of blanche is Figure of Blanche1_icon.
 
 Libido of Blanche is usually 255.
 lust of Blanche is usually 255.
@@ -1320,13 +1368,16 @@ blanchetalk3 is a truth state that varies. blanchetalk3 is usually false.
 
 to say blanchedesc:
 	say "[blancheupdate]";
+	ShowBlancheImage;
 	if Charisma of Blanche > 0: [At the library]
 		if HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had [if HP of Blanche is 8]her litter[else if HP of Blanche is 11]a couple of litters[else]several litters[end if], she's just as sexy and has become quite the MILF. Since moving to the library, she also seems much happier and less frightened, especially with her loyal pack to keep her company and protect her. The white-furred wolf usually joins in as Sturm teaches the younger pups how to hunt, gather supplies, and defend themselves.";
-		else if HP of Blanche is 9 or HP of Blanche is 10:
+		else if HP of Blanche is 9 or HP of Blanche is 12:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had her litter, [if HP of Blanche is 9]you can still tell she's got another on the way thanks to the swell in her tummy[else if HP of Blanche is 10]her belly is once again round and heavy with a rapidly-advancing pregnancy[end if]. Since moving to the library, she also seems much happier and less frightened, especially with her loyal pack to keep her company and protect her. The white-furred wolf usually joins in as Sturm trains the others how to hunt, gather supplies, and defend themselves.";
-		else:
+		else if HP of Blanche is 10 or HP of Blanche is 13:
 			say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While gained a little weight after having had a few litters, she's still quite hot and has become quite the MILF of a wolf. And with another litter [if HP of Blanche is 13]well [end if]on its way, as can be seen from the [if HP of Blanche is 13]large [end if]swell to her tummy, she couldn't be happier to add to the loyal pack keeping her company and protecting her. These days, the white-furred wolf usually joins in as Sturm trains the others how to hunt, gather supplies, and defend themselves.";
+		else:
+			say "     [bold type]Error. Report this to the Flexible Survival Discord Server.[roman type]";
 	else if HP of Blanche < 3:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She has a [if turns / 8 is even]pastel blue blouse[else]pink blouse[end if] draped over her shoulders which she hasn't bothered to button up.";
 	else if HP of Blanche < 5:
@@ -1340,11 +1391,12 @@ to say blanchedesc:
 		say "[blanche_pups_intro]";
 	else if HP of Blanche is 8 or HP of Blanche is 11 or HP of Blanche is 14:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had [if HP of Blanche is 7 or HP of Blanche is 8]her litter[else if HP of Blanche is 11]a couple of litters[else]several litters[end if], she's just as sexy and has become quite the MILF. She also seems much happier and less frightened now that she has her loyal pack to keep her company and protect her. The white-furred wolf usually lounges around while [if HP of Blanche is 7 or HP of Blanche is 8]directing the others as to[else]teaching the younger pups about[end if] hunting and supply gathering.";
-	else if HP of Blanche is 9 or HP of Blanche is 10:
+	else if HP of Blanche is 9 or HP of Blanche is 12:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While she has gotten a little fuller-figured after having had her litter, [if HP of Blanche is 9]you can still tell she's got another on the way thanks to the swell in her tummy[else if HP of Blanche is 10]her belly is once again round and heavy with a rapidly-advancing pregnancy[end if]. She seems quite happy these days, especially with another litter of pups on the way and with her loyal pack to keep her company and to protect her. The white-furred wolf usually lounges on her mattress while directing the others as to hunting and supply gathering.";
-	else:
+	else if HP of Blanche is 10 or HP of Blanche is 13:
 		say "     Blanche is an anthropomorphic female wolf with white fur. She has a shapely, womanly body with plump breasts and wide hips, giving her a sexy bottom beneath her fluffy tail. She doesn't bother to wear anything now, not caring to wear clothes anymore. While gained a little weight after having had a few litters, she's still quite hot and has become quite the MILF of a wolf. And with another litter [if HP of Blanche is 13]well [end if]on its way, as can be seen from the [if HP of Blanche is 13]large [end if]swell to her tummy, she couldn't be happier to add to the loyal pack keeping her company and protecting her. These days, the white-furred wolf usually lounges on her bed while teaching the younger pups about hunting and supply gathering.";
-
+	else:
+		say "     [bold type]Error. Report this to the Flexible Survival Discord Server.[roman type]";
 
 [Character Notes - Blanche:
 
@@ -1367,7 +1419,7 @@ Instead of conversing the Blanche:
 		now HP of Blanche is 1;
 		now Wolfrape is resolved;
 		AddNavPoint Office Den;
-	else: [At the library]
+	else:
 		say "[BlancheTalkMenu]";
 
 
@@ -1387,6 +1439,8 @@ to say blanche_pups_intro:
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 
 to say BlancheTalkMenu:
+	LineBreak;
+	ShowBlancheImage;
 	say "     What do you wish to talk about with the motherly white wolf?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -1662,6 +1716,7 @@ to say sexwithBlanche:
 
 
 to blanchesexmenu:
+	ShowBlancheImage;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	if Player is male and Blanche is not gravid:
@@ -1767,7 +1822,7 @@ to say sexwithBlanche01: [Missionary]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1775,7 +1830,7 @@ to say sexwithBlanche02: [Doggystyle]
 	say "     After some affectionate kisses and playful groping, Blanche moves onto all fours, presenting herself for you[if Blanche is gravid]. She places some pillows beneath herself to help support her gravid belly[end if]. Her wet pussy makes for a tantalizing sight as she raises her tail and wags it invitingly. Unable to resist such an offer, you place your hands on her round hips and slide your cock into her hot cunt. She releases a pleasured moan and grinds back onto you while her wet tunnel grips your meat[if Cock Length of Player >= 36]. Given your huge girth, the penetration is very slow at first, but motherhood has allowed her vagina to spread more easily. The white wolf howls with lustful enthusiasm as your enormous cock pushes deeper into her, making her feel so wonderfully full as it bulges her belly[else if Cock Length of Player >= 24]. Given your huge size, the penetration is slow at first, but motherhood has allowed her vagina to spread more easily. The white wolf howls with lustful enthusiasm as your enormous cock pushes deeper into her, making her feel so wonderfully full[else if Cock Length of Player >= 12]. Given your large size, the penetration starts slowly, but motherhood has allowed her vagina to spread more easily. The white wolf moans happily as your large cock pushes deep into her, stuffing her so wonderfully full[else]. The penetration is smooth and easy, motherhood having allowed her vagina to spread easily for you before gripping around you once you're in[end if].";
 	say "     You take a few preliminary thrusts into the [if Blanche is pregnant]pregnant female[else]wolfy MILF[end if] before adjusting your position to better pound her needy pussy. She gives another rumble of delight at this and moans for more. The wolf paws at her [if HP of Blanche > 11]silk [end if]sheets as you fuck her[if Blanche is pregnant]. In light of her pregnancy, you do hold back somewhat, though you do still pound her good and hard[else]. As you go at it, you find yourself pounding her harder and faster, wild urges driving you to breed this fecund female[end if]. Much to her delight as well. Her motherly breasts sway beneath her as she's rocked by your thrusting[if Blanche is gravid], slapping gently against her furred belly[end if].";
 	say "     As you fuck the lovely wolf, you run your hands over her sexy rear and through the soft fun on her sides and hips. After a while though, you move your hands to each side of her as you go to all fours and start fucking her doggy style. There's something primally satisfying about fucking the sexy wolf woman like this, rutting like horny beasts[if Blanche is not pregnant] in an effort to breed[end if]. Your cock slams into her over and over while her wet cunny clutches and squeezes around it. You grab one of her swaying tits and fondle it, rubbing her nipple with your thumb. She tilts her head back and licks your cheek before kissing you.";
-	say "     The two of you continue to rut like animals, panting and kissing one another. As you feel your climax approaching, you [if BodyName of Player is listed in infections of caninelist or FaceName of Player is listed in infections of caninelist]bite down onto the back of her neck and [end if]drive yourself fully into her. Your [Cock of Player] cock throbs and pulses as you fire shot after shot of gooey seed into her [if Blanche is not pregnant]waiting womb[else]quivering cunt[end if]. She howls in orgasmic release, adding her feminine juices to the slick mess squishing around your cock and leaking down both your thighs[if Blanche is not pregnant]. You breed her for all you're worth, eager to see her grow heavy with more of your pups[else]. Despite her already being pregnant, you pump as much semen as you can into her, further testament to your virility[end if]. Once you're spent and pull out, Blanche rolls over onto her side, panting heavily with a canine smile plastered across her muzzle. 'Oh, that's just what I needed. You're great.'";
+	say "     The two of you continue to rut like animals, panting and kissing one another. As you feel your climax approaching, you [if BodyName of Player is listed in infections of CanineList or FaceName of Player is listed in infections of CanineList]bite down onto the back of her neck and [end if]drive yourself fully into her. Your [Cock of Player] cock throbs and pulses as you fire shot after shot of gooey seed into her [if Blanche is not pregnant]waiting womb[else]quivering cunt[end if]. She howls in orgasmic release, adding her feminine juices to the slick mess squishing around your cock and leaking down both your thighs[if Blanche is not pregnant]. You breed her for all you're worth, eager to see her grow heavy with more of your pups[else]. Despite her already being pregnant, you pump as much semen as you can into her, further testament to your virility[end if]. Once you're spent and pull out, Blanche rolls over onto her side, panting heavily with a canine smile plastered across her muzzle. 'Oh, that's just what I needed. You're great.'";
 	if HP of Blanche is 4 or ( HP of Blanche > 7 and Blanche is not pregnant and a random chance of 2 in 3 succeeds ):
 		say "     Blanche remains resting on her [if HP of Blanche is 4]mat[else if HP of Blanche is 8]mattress[else]bed[end if] for a while, smiling happily as she caresses her belly. You think nothing of it at first, but after a while you realize that [if Ball Size of Player >= 5]the bulge from your semen's not fully disappeared[else]her tummy's showing a small bulge now[end if]. You've knocked up the white wolf[if HP of Blanche > 4] again[end if]!";
 		if Sterile of Player is false:
@@ -1783,7 +1838,7 @@ to say sexwithBlanche02: [Doggystyle]
 				now HP of Blanche is 12;
 			else:
 				increase HP of Blanche by 1;
-			now Libido of Blanche is turns;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
@@ -1825,19 +1880,21 @@ to say sexwithBlanche07:	[cowgirl position]
 		if Sterile of Player is false:
 			if HP of Blanche is 14:
 				now HP of Blanche is 12;
-			now Libido of Blanche is turns;
+			else:
+				increase HP of Blanche by 1;
+			now Libido of Blanche is 1;
 			now lust of Blanche is turns;
 	NPCSexAftermath Blanche receives "PussyFuck" from Player;
 
 to say CuddlewithBlanche: [Cuddling]
 	say "     Feeling like a comforting hug from a master of the art, you press yourself up against Blanche and embrace her. 'Oh my. Someone's been working themselves too hard,' she chuckles returning the affection. You feel her chest press up against yours, soft and warm, and your stress immediately begins to diminish in the arms of a loving mother. 'Don't forget to take time off when you need it. It isn't your responsibility to solve all the problems in the city,' the wolfess whispers in your ear as she snuggles up against you. She has a very pleasing scent that becomes even stronger when you nuzzle your face into the side of her neck. WHen you comment on it, Blanche smiles slyly. 'Bernard isn't the only one with pheromones. His are just a lot stronger and seem to have a different effect. Now shush, and let Mommy give [BlancheMommyDaddyTitle] a hug. You deserve it.' By the time that she eventually releases you, you feel reinvigorated and closer than ever to the white wolfess.";
 
-to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus]
+to say blancheupdate: [I have no idea what this is for. Possibly pregnancy countdown? - Prometheus] [Hopefully Unneccessary Now]
 	if debugactive is 1:
 		say "DEBUG| Current turn number: [turns]  - Pre-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche][line break]";
 		say "DEBUG| Updating Blanche now.";
-	if Libido of Blanche is not 255:
+	[if Libido of Blanche is not 255:
 		now tempnum is 0;
 		if HP of Blanche is 5 and Libido of Blanche - turns >= 12:
 			increase HP of Blanche by 1;
@@ -1878,7 +1935,7 @@ to say blancheupdate: [I have no idea what this is for. Possibly pregnancy count
 				now thirst of Blanche is 10;
 			else:
 				increase thirst of Blanche by a random number between 2 and 4;
-			now Libido of Blanche is 254;
+			now Libido of Blanche is 254;]
 	if debugactive is 1:
 		say "DEBUG| Post-update values:[line break]";
 		say "DEBUG| HP: [HP of blanche]   /   Lastfuck: [lastfuck of blanche]   /   Libido: [Libido of blanche]   /   Lust: [lust of blanche]   /   Thirst: [thirst of blanche]   /   Charisma: [Charisma of blanche][line break]";
@@ -1905,7 +1962,7 @@ instead of navigating Office Den while (Charisma of Blanche is 0 and HP of Blanc
 to say OfficeBlancheFamilyEvents:
 	if "Sturm - OfficeEvent" is not listed in traits of Sturm:
 		say "     Encountering Sturm guarding the door again, you are surprised when instead of letting you pass, he grabs you and pushes you against the wall, the shock momentarily robbing you of the ability to resist. 'Each time you return here, you put us all in danger,' the wolf growls, releasing your shoulder and pacing back and forth angrily. 'Anyone could be watching you and some of them might follow you and discover us. Mom and the others might be more forgiving of the risk that you pose, but make up your mind whether you want to stay and help care for us, or stop coming back. After letting Mom know of course. She'd probably want to go out looking for you if you suddenly stopped coming to see her.' He pauses berating you to scan the surrounding area again, ears pricked and nose quivering as his eyes slowly travel across the the hellscape. Content that there is no immediate danger, he turns back to you, but is promptly interrupted by the door to the building opening and two other wolves exit. It takes you a moment to recognize them as Bianca and Ernest, during which time they walk over to you and Sturm.";
-		say "     'I'm told that you're harrassing Mom's mate,' Ernest says tiredly, pinching the bridge of his nose as he does so. '[SubjectProCap of Player] endangers us no more than any of us returning from scavenging.' 'Really Bianca? You told on me to Brainy?' the large white wolf grumbles. 'Sorry. But I think, [italic type]we all think[roman type], that you're wrong about [ObjectPro of Player]. I didn't want to tell Mommy, so Ernest seemed the next best thing. And don't call him names. It's mean,' Bianca retorts. Sighing, Sturm turns to his brother. 'Sorry Ernest. Bianca's right. What can I do to make it up to you?' The smaller male wolf thinks for a moment before replying, 'I shall take being called Brainy as a compliment, but when you have the time, could you help me work out? It is an area that I am lacking in.' With a nod, Sturm agrees to this before turning back to you. 'Go in before Mommy comes out here too. And don't mention any of this to her. Please?' the large wolf almost pleads, looking a lot less intimidating after his scolding from his brother and sister. Not wanting to cause problems, you consent before going through the door.";
+		say "     'I'm told that you're harassing Mom's mate,' Ernest says tiredly, pinching the bridge of his nose as he does so. '[SubjectProCap of Player] endangers us no more than any of us returning from scavenging.' 'Really Bianca? You told on me to Brainy?' the large white wolf grumbles. 'Sorry. But I think, [italic type]we all think[roman type], that you're wrong about [ObjectPro of Player]. I didn't want to tell Mommy, so Ernest seemed the next best thing. And don't call him names. It's mean,' Bianca retorts. Sighing, Sturm turns to his brother. 'Sorry Ernest. Bianca's right. What can I do to make it up to you?' The smaller male wolf thinks for a moment before replying, 'I shall take being called Brainy as a compliment, but when you have the time, could you help me work out? It is an area that I am lacking in.' With a nod, Sturm agrees to this before turning back to you. 'Go in before Mommy comes out here too. And don't mention any of this to her. Please?' the large wolf almost pleads, looking a lot less intimidating after his scolding from his brother and sister. Not wanting to cause problems, you consent before going through the door.";
 		TraitGain "Sturm - OfficeEvent" for Sturm;
 	else if "Bianca - OfficeEvent" is not listed in traits of Bianca:
 		say "     A shout of greeting catches your attention as you approach Blanche's office den and you turn around to find Bianca, her eldest daughter, running toward you, her chest jiggling with each step. As she comes to a stop in front of you, she clutches her breasts and puffs, 'Thank goodness the nanites provide support. From what Mommy says, having large breasts was frequently uncomfortable when she was a human.' 'And you're telling [ObjectPro of Player] this, why?' Sturm grumbles, walking up behind her carrying what you assume to be both of their bags, filled with scavenged food, water, and what looks like an old portable military radio, albeit damaged. 'Just making conversation dear brother, and I doubt that Mommy will mind. She wasn't ashamed to tell me so I don't see why she would be concerned about me mentioning it to [BlancheMommyDaddyTitle] too,' Bianca replies. The male wolf merely rolls his eyes before patting her head and muttering that he will continue to carry her spoils so that she is free to talk to you.";
@@ -1923,8 +1980,8 @@ to say OfficeBlancheFamilyEvents:
 		say "     Ernest cuts him off. 'I know what I said, but it would have made Mom sad and I wouldn't have been able to stand that.' Ernest turns his head in order not to be seen and softly whispers, 'I'm sorry that I said such a horrible thing,' fighting back the tears that he doesn't want to be seen. Claude looks at Ernest's turned head in understanding, his tail wagging despite Ernest's curt words, replying, 'You're right that Mom would be sad if anything were to happen to any of us, so I will just have to forgive you.' Their sibling rivalry moment over, they remember where they are and both look venemously at the fallen orcs. As they take a step towards them, Sturm and Bianca exchange a look and put out an arm to stop their brothers. 'We don't have time to get revenge,' Sturm says gently, earning a scowl from Ernest. 'They could wake up again soon, and if they follow us, they may find Mommy.' Bianca joins in, understanding dawning on Claude's face. Wasting no further time, but grumbling nonetheless, the five of you disappear down the side of a building and take a convoluted route back to the Office Den, agreeing to let Sturm decide how best to tell Blanche about what had happened.";
 		TraitGain "Claude - OfficeEvent" for Claude;
 	else if "Penelope - OfficeEvent" is not listed in traits of Penelope:
-		say "     As you approach the Office Den, you find an unfamiliar wolf standing on guard outside. She is undoubtedly Blanche's daughter, covered in the signature white floof, but you don't recall having acquanted yourself with her, especially when she looks as tall as Sturm and twice as wide. You see her say something over her shoulder before another head pops up beside her own, a wide grin on its face. '[BlancheMommyDaddyTitle]!' it shouts before the wolf that the head belongs to scrabbles over her sister's shoulder, leaps to the ground, and runs over to you to leap in for a hug, nearly knocking you over. 'Careful with [ObjectPro of Player], Wendis. You know that Sturm wants to be the one to crush [PosAdj of Player] ribs,' the goliath lupine laughs as she more calmly approaches. 'Uh uh, Penelope. Mommy said that he wasn't allowed to and he does whatever she tells him to do,' the smaller wolf shoots back glibly. While at first you thought that she was just small compared to her sister, now that she is still, you realize that she is only four foot at most.";
-		say "     Before you get the chance to put your foot in your mouth and accidentally say something tactless, your vision is obscured by the white fluff of the big sister as she warmly embraces you with her sibling sandwiched between you. 'Hello, [BlancheMomDadTitle]. I'm Penelope and this is my little sister, Wendis,' she says, her lips mere inches from your ear. Releasing you, the titanic wolf steps back again, carefully guiding her sibling away from you too to give you some space. You take a moment to properly look at them. Penelope looks to be between seven and eight foot tall and is extraordinarily fluffy, exagerating her width, but when she hugged you, you could feel the muscle beneath the fur. She is built like a tank. Wendis by comparison looks more like a cuddly toy, small and exuberant. 'I can see that you want to ask why I'm so short. Don't worry, I don't mind,' Wendis says. 'When Mommy was pregnant, Penelope took most of the nutrients, enough for three and a half, meaning that I'm tiny and why there were only two of us in our litter.'";
+		say "     As you approach the Office Den, you find an unfamiliar wolf standing on guard outside. She is undoubtedly Blanche's daughter, covered in the signature white floof, but you don't recall having acquainted yourself with her, especially when she looks as tall as Sturm and twice as wide. You see her say something over her shoulder before another head pops up beside her own, a wide grin on its face. '[BlancheMommyDaddyTitle]!' it shouts before the wolf that the head belongs to scrabbles over her sister's shoulder, leaps to the ground, and runs over to you to leap in for a hug, nearly knocking you over. 'Careful with [ObjectPro of Player], Wendis. You know that Sturm wants to be the one to crush [PosAdj of Player] ribs,' the goliath lupine laughs as she more calmly approaches. 'Uh uh, Penelope. Mommy said that he wasn't allowed to and he does whatever she tells him to do,' the smaller wolf shoots back glibly. While at first you thought that she was just small compared to her sister, now that she is still, you realize that she is only four foot at most.";
+		say "     Before you get the chance to put your foot in your mouth and accidentally say something tactless, your vision is obscured by the white fluff of the big sister as she warmly embraces you with her sibling sandwiched between you. 'Hello, [BlancheMomDadTitle]. I'm Penelope and this is my little sister, Wendis,' she says, her lips mere inches from your ear. Releasing you, the titanic wolf steps back again, carefully guiding her sibling away from you too to give you some space. You take a moment to properly look at them. Penelope looks to be between seven and eight foot tall and is extraordinarily fluffy, exaggerating her width, but when she hugged you, you could feel the muscle beneath the fur. She is built like a tank. Wendis by comparison looks more like a cuddly toy, small and exuberant. 'I can see that you want to ask why I'm so short. Don't worry, I don't mind,' Wendis says. 'When Mommy was pregnant, Penelope took most of the nutrients, enough for three and a half, meaning that I'm tiny and why there were only two of us in our litter.'";
 		WaitLineBreak;
 		say "     Penelope sighs and looks despairingly at her younger, smaller, and cuter sister. 'You've been talking to Claude too much. Perhaps ask Ernest about it instead and you might get a more logical answer,' she chides her. 'I don't want logic, I want you to give me my height back! You took it didn't you, and don't want to share,' Wendis says in mock indignation, jumping up and down. 'As you can see, my sister is prone to an overactive imagination. That said, she is my scavenging-mate and the most precious thing in the world to me,' Penelope informs you, affectionately stroking her siblings head. Wendis snuggles up against her before she is lifted onto her big sister's shoulders. 'We shan't hold you up any longer. Mommy's just inside. Meanwhile we'll return to guard duty. Perhaps next time we can talk more,' Penelope apologizes before returning to her post and resumes scanning the city, Wendis waving to you as you walk past them and enter the den.";
 		TraitGain "Penelope - OfficeEvent" for Penelope;
@@ -1958,6 +2015,7 @@ to say OfficeBlancheFamilyEvents:
 		say "     'Mmm. Sturm said the same thing, but as none of us are willing to kill anyone, there isn't much else we can do. We'd report them to the soldiers, but they threaten to shoot us if we get too close, even Claude, so I doubt that they'd care,' Casper replies dejectedly. 'No. It has to be us, and all we can do is give them a reason to avoid us.' You swear that you see movement out of the corner of your eye, but when you look properly, all you can see is Blanche gently snoring, perhaps having turned over in her sleep. Your children seem to have made their mind up on the matter, so you move on to discussing lighter things with Casper while you wait for Blanche to finish her snooze.";
 		TraitGain "Casper - OfficeEvent" for Casper;
 	else if "Blanche - OfficeEvent" is not listed in traits of Blanche:
+		ShowBlancheImage;
 		say "     Entering the Office Den, you are surprised to find all of Blanche's children present. Everyone except Sturm and Bianca seem to be hastily packing bags with scruffy clothes, looking around at the slightest sound of a door. 'Hurry! Mom will be back soon,' Maeve hisses, highlighting the startling fact that Blanche is absent. It would seem that their plan for taking down the slavers has come to fruition. You can't say that you're entirely comfortable with them fighting slavers, but short of telling their mother, you doubt that there is much that you would be able to do to stop them, especially as there are ten of them. After one last check of provisions, they all head for the door, some looking more apprehensive than others. 'Remember, if we're not back by this time tomorrow, then something has gone wrong and we need rescue,' Ernest reminds Sturm, apparently the leader of the excursion, a position that you would have thought that the eldest son would have filled. Sturm grimly nods in reply.";
 		say "     With goodbyes having been said, the children gather behind Ernest as he opens the door... only to find Blanche standing on the other side, her arms folded and a dour expression marring her usually friendly countenance. 'Back inside. Now. We're going to have a little talk,' she says icily as she steps inside. Judging from the terror on your children's faces, they have never encountered this side of Blanche before, silently shuffling to stand by the opposite wall to await the repercussions of trying to go behind their mother's back. Blanche's expression briefly softens as she gives you a kiss on the cheek in passing before returning to a look that could petrify a gorgon as she paces back and forth in front of her offspring. 'What were you thinking? Not only were you about to do something extremely stupid, but you also seemed aware of how foolish you were being with how determined you were to keep this a secret from me,' she says, the quiet, steely tone demonstrating her displeasure far more than shouting would.";
 		WaitLineBreak;
@@ -1965,7 +2023,7 @@ to say OfficeBlancheFamilyEvents:
 		say "     'We didn't want you to worry,' Penelope eventually replies meekly. You are sure that Blanche is about to burst into tears, but after a deep breath she manages to limit herself to a few trickles down her face. 'Worrying about you is infinitely better than any of you having to tell me that one or more of your siblings has been hurt, enslaved, or... killed,' she replies, her children fidgeting as they begin to realize what they have put their mother through. Turning to you, Blanche resumes speaking. 'I don't blame you at all for keeping quiet about it. I'm sure that they swore you to secrecy, or perhaps, like me, you thought that they would see reason. Either way, their actions are their own, not yours, so you don't need to worry about me holding a grudge towards you. You get enough of that from Sturm already.' She snorts at her own joke, though not quite able to properly laugh at it.";
 		WaitLineBreak;
 		say "     'I won't ask you to explain your plan to me, I already know the gist of it, but allow me to explain to you just how flawed it seemed to be,' Blanche addresses her progeny. 'Sturm. I know that you and Bianca were going to stay behind to maintain a false sense of normality, but even if you had gone, how did you expect to be able to protect everyone? I know that you would have tried, but you're only one person and you are reliant on natural talent rather than experience and proper training. I know you've beaten orcs before, but I've also seen you return with blood and dirt on your fur. I know how protective you are of all of us, but you're not invincible.' Sturm looks sullenly downcast, staring at the floor in regretful contemplation, his fists clenched. 'Bianca. You obviously can't seduce everyone, but perhaps that was part of the reason you were staying behind. It won't be as fun for you if someone decides that they want to keep you, or if they would rather hurt you. I envy the passion and vigor that you have, but there are people who would stifle it without a second thought.' Chastened, Bianca huddles up next to her elder brother, Sturm instinctively pulling her against his chest.";
-		say "     You can tell that it breaks Blanche's heart to cause such pain to her children by reminding them how vulnerable they really are, but necessity leads her to continue regardless. Ernest. For someone as intelligent as you, your plan was lacking in many areas. You didn't know how many slavers there were, how well armed they might be, or have a proper contingency for when things went wrong. As Eisenhower said, [']Plans are useless but planning is indispensable[']. Life doesn't have the same rigity as academics, so you need to be more adaptable.' Ernest nods, taking the criticism surprisingly well. 'Claude. You know as well as I do that your talents are more suited to making friends than brawling. I won't tell you who you may or may not be friends with, but please trust me when I tell you that anyone who would enslave another person is not someone that you should be friends with. Cruelty tends to spread and it would break me to see someone as sweet as you become corrupted like that.' You hear Claude mumble an apology, unwilling to speak any louder given the atmosphere.";
+		say "     You can tell that it breaks Blanche's heart to cause such pain to her children by reminding them how vulnerable they really are, but necessity leads her to continue regardless. Ernest. For someone as intelligent as you, your plan was lacking in many areas. You didn't know how many slavers there were, how well armed they might be, or have a proper contingency for when things went wrong. As Eisenhower said, [']Plans are useless but planning is indispensable[']. Life doesn't have the same rigidity as academics, so you need to be more adaptable.' Ernest nods, taking the criticism surprisingly well. 'Claude. You know as well as I do that your talents are more suited to making friends than brawling. I won't tell you who you may or may not be friends with, but please trust me when I tell you that anyone who would enslave another person is not someone that you should be friends with. Cruelty tends to spread and it would break me to see someone as sweet as you become corrupted like that.' You hear Claude mumble an apology, unwilling to speak any louder given the atmosphere.";
 		WaitLineBreak;
 		say "     'Penelope.' The large, floofy wolf unflinchingly meets her mother's eye, waiting to hear how she might better herself. 'Despite your size, you are just as vulnerable to bullets as the rest of your siblings and it isn't just the military that has guns. Your resolve is also a double-edged sword; it allows you to suffer so that your family might be safe, especially Wendis, but you need to learn when it would be better to find another solution. Martyrdom isn't a desirable outcome.' Penelope allows her gaze to fall, the criticism hitting home. 'Wendis. The joy that you bring to my heart with your cheerfulness and relative innocence is something that I cherish, but, like Claude, you leave yourself open to those with ill intent. Though I encourage strong bonds and trust between you all, you are nearly entirely reliant on Penelope for your protection. The two of you should have more care than to put each other in danger like you would have today.' Wendis wipes her eyes and nods her understanding before Penelope picks her up and nestles her against her chest, briefly causing Blanche to smile again before she solemnly continues.";
 		say "     'Bernard. Much like Wendis, you are exceptionally trusting of others. Your heart is as large as you are, but there are those who would take advantage of your kindness. However, unlike Wendis, you have the capability to protect yourself without relying on others, though you should learn to conserve your energy. If you had attacked the slavers today, though you may have struck them with all your might, if things had gone wrong I doubt that you would have been able to escape them. Learn from your siblings. Just as you help them, they can help you.' Bernard's face is lined with thought as he thinks on his mother's advice. 'Maeve. I suspect that you helped Ernest come up with this plan as it has your usual flair to it. As well as your optimistic lack of foresight. Not everything in life can be quick and easy. Sometimes you need to put the effort in to keep everyone, yourself included, safe. While I'm sure that you wouldn't have intended for your family to have got hurt, you mistake expediency for efficiency and your determination to solve the problem your way would have ended poorly. Perhaps confide in me a little more and I can share my limited wisdom with you.' Maeve stares at the floor in shame, murmuring an apology.";
@@ -1979,7 +2037,8 @@ to say OfficeBlancheFamilyEvents:
 Section 3.2 - Library Events
 
 instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Booked) and Player is not CoA:
-	say "     Entering the computer room, you immediately notice Blanche sitting on the floor against the wall with Fang lying across her lap, the white wolf leaning over top of the darker-furred lupine and hugging [ObjectPro of Fang] tightly as tears trickle down her face. 'I'm so glad to have found you again. After what my parents did to you...' Blanche sobs, squeezing Fang against her even tighter. 'Don't dwell on past. Together again,' your [if hp of Fang is 2]omega [else if hp of Fang is 3 or hp of Fang is 4 or HP of Fang is 6]alpha [else if hp of Fang is 5]beta [else]guard [end if]replies, pressing [ObjectPro of Fang]self firmly into the MILF's embrace. 'It's been years. I haven't done much with my life since then, but what did you do? I'm assuming that you haven't been a wolf all this time,' Blanche asks, a wet snort suggesting that she had tried to laugh but that a sob had occurred simultaneously. 'I have not,' Fang replies, remaining silent for a moment as [SubjectPro of Fang] eases [ObjectPro of Fang]self from the anthro wolf's grasp and licks her face to dry the tears.";
+	ShowBlancheImage;
+	say "     Entering the computer room, you immediately notice Blanche sitting on the floor against the wall with Fang lying across her lap, the white wolf leaning over top of the darker-furred lupine and hugging [ObjectPro of Fang] tightly as tears trickle down her face. 'I'm so glad to have found you again. After what my parents did to you...' Blanche sobs, squeezing Fang against her even tighter. 'Don't dwell on past. Together again,' your [if HP of Fang is 2]omega [else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]alpha [else if HP of Fang is 5]beta [else]guard [end if]replies, pressing [ObjectPro of Fang]self firmly into the MILF's embrace. 'It's been years. I haven't done much with my life since then, but what did you do? I'm assuming that you haven't been a wolf all this time,' Blanche asks, a wet snort suggesting that she had tried to laugh but that a sob had occurred simultaneously. 'I have not,' Fang replies, remaining silent for a moment as [SubjectPro of Fang] eases [ObjectPro of Fang]self from the anthro wolf's grasp and licks her face to dry the tears.";
 	if Fang is Male: [Fang is Male]
 		say "     'Hospital first to save eye. Left scar but could have been worse,' Fang begins, pausing as Blanche runs a hand over his face, tracing the old wound with her fingers. 'Then court case. You know result. Wanted to see you, but you were gone. Not your fault.' The white wolf nods her head in commiseration, snuggling even closer to him. 'Finished school, went to college. Had a girlfriend.' He once again pauses, waiting for Blanche's reaction. 'I'm pleased for you. You had no way of knowing that we would see each other again. You were no longer mine...' she reassures him sadly. 'Joined army like my father. Found out girlfriend pregnant. Daughter born while away. Missed much of her life,' Fang laments, the pain of being absent from a child's life something that Blanche can only imagine, the white wolf sympathetically kissing him on the nose but otherwise remains quiet so as to allow him to continue.";
 		WaitLineBreak;
@@ -1994,7 +2053,7 @@ instead of going to Computer Lab while (Charisma of Blanche is 1 and Fang is Boo
 		say "     'What about Wolf? I know that you said that you fell out of touch with your family, but surely that didn't include him. The two of you were so close. What did he end up doing?' Blanche eventually asks, regretting it instantly when Fang looks as though she has struck her. 'Blamed himself for what happened. Not his fault. Blamed self too. Barely talked since then,' Fang begins before the white wolf shushes her. 'I'm more to blame than either of you. I asked him to finish inside me. I involved my parents. It was my parents that hurt you both. I'll give you the same advice that my therapist gave me, though I seem to have mostly ignored it myself. Accept what has happened and move forward with how to make up for it. Both towards yourself and others. I'm not sure that I will ever forgive my parents, but I've never blamed either you or Wolf for any of it. Neither should you. My time with you two was one of the best periods in my life. You're likely still as obstinate now as you used to be, but trust me on this. Neither of you were at fault. Did you ever actually tell Wolf that you didn't blame him, or did you just assume that he would know?' Blanche gently scolds her.";
 		say "     'Not obstinate. Strong-willed,' Fang replies, the beginning of a smile returning. The lupine MILF sighs and taps her on the nose. 'Answer the question.' 'No. Never told him. He went to college. Joined the army. Like Dad. Don't even know if he survived,' the dark-furred wolf responds, a tear forming in the corner of her eye at the thought. 'Of course he'll have survived, even without you to protect him. Promise me this though. When all this is over, the two of us, plus however many children I have by then, will find him and the three of us can connect again. Whether we are wolves still or not,' Blanche vehemently states. [if HP of Fang is 3 or HP of Fang is 4]It's strange seeing your Alpha be bossed around like this, but she nonetheless agrees, some measure of her past connection to Blanche overwhelming any concern of displaying dominance[else]Fang agrees without much hesitation, Blanche's determination seemingly the necessary push that she needs to properly address her feelings of guilt[end if]. 'He probably needs to hear that you don't blame him as much as you need for him to know. Don't let this ruin the bond that you once had,' the wolfess reminds her as she plays with her ears.";
 	WaitLineBreak;
-	say "     'Tell me about you. After you left,' Fang asks, adamant that [PosAdj of Fang] old love will tell [ObjectPro of Fang] despite her protestations that she hadn't done much. Tears renewed, Blanche begins. 'I had a miscarriage. The doctor said that it wasn't a surprise after what I had gone through.' Your [if hp of Fang is 2]omega [else if hp of Fang is 3 or hp of Fang is 4 or HP of Fang is 6]alpha [else if hp of Fang is 5]beta [else]guard-wolf [end if]interrupts to lick her cheek, his own eyes moist with pain at hearing this. 'After that, I went to live with an aunt in New York and finish high school. She and my uncle blamed me for it all and made sure that I knew it, but my cousins were a lot more supportive. I don't know whether I would have been able to manage without them. After that I went off to college and grad-school. Thinking about it, I probably studied the similar things to [if Fang is Male]Lupa[else]you[end if], specializing in entrepreneurship and project management, though I put in more than a little extra effort to do some non-related papers too to give myself a wider understanding of the world. I had a few people that I was friends with, but no boyfriend or girlfriend, and none of them kept in contact when we graduated. Too much time trying to learn, not enough time having fun with them, I guess.'";
+	say "     'Tell me about you. After you left,' Fang asks, adamant that [PosAdj of Fang] old love will tell [ObjectPro of Fang] despite her protestations that she hadn't done much. Tears renewed, Blanche begins. 'I had a miscarriage. The doctor said that it wasn't a surprise after what I had gone through.' Your [if HP of Fang is 2]omega [else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 6]alpha [else if HP of Fang is 5]beta [else]guard-wolf [end if]interrupts to lick her cheek, his own eyes moist with pain at hearing this. 'After that, I went to live with an aunt in New York and finish high school. She and my uncle blamed me for it all and made sure that I knew it, but my cousins were a lot more supportive. I don't know whether I would have been able to manage without them. After that I went off to college and grad-school. Thinking about it, I probably studied the similar things to [if Fang is Male]Lupa[else]you[end if], specializing in entrepreneurship and project management, though I put in more than a little extra effort to do some non-related papers too to give myself a wider understanding of the world. I had a few people that I was friends with, but no boyfriend or girlfriend, and none of them kept in contact when we graduated. Too much time trying to learn, not enough time having fun with them, I guess.'";
 	say "     'There were a few companies that expressed an interest in employing me, the sort of people that use lecturers as talent scouts. Pharmaceuticals, cosmetics, even a tech developer. I had difficulty deciding whose offer to accept until the owner of a chain of retail stores took me out to lunch to offer me a job. I thought that anyone who took the time to meet prospective employees personally would be decent to work for, especially when the salary offered was so high for a first job. I'd only been there about a month, learning the finer points of the business from a senior employee, when the CEO's son began making advances on me and I found myself transferred to being his personal assistant. Long story short, it didn't take long before he tried to grope me. I made an official complaint. Perhaps I was naive, but I was shocked when instead of disciplining him, I was instead accused of insubordination and fired. I should have hired a lawyer, but I was sure that I wouldn't win anyway and that I'd be employed again soon enough. In hindsight, I don't think that insubordination is valid grounds for being fired, but at the time I was too upset to think it through.'";
 	WaitLineBreak;
 	say "     Blanche pauses for a moment, catching her breath and snuggling with the wolf on her lap, before continuing her story. 'It turned out that it wasn't as easy as that. All the companies that had previously seemed eager to have me join them suddenly didn't want anything to do with me. I had some money of my own, but not doing anything just felt... wrong. I would have donated my organs to science before talking to my parents again, so in the end I decided that I needed a change of scenery. I came here and eventually was able to get a job at a company that was developing something to do with water filtration. I was merely an office drone, and so was vastly over-qualified, but it was something to do. Ultimately, it ended up being an alright decision. It wasn't the most thrilling of work and the boss didn't like me much, but I was never threatened with being fired and no one made any sexual advances on me. The best thing was that I my work colleagues were friendly and they would invite me out to coffee or to join them at the park.'";
@@ -2017,6 +2076,7 @@ instead of going to Computer Lab while Charisma of Blanche is 2 and Blanche is i
 	now Charisma of Blanche is 3;
 
 instead of going to Computer Lab while Charisma of Blanche is 3 and (Blanche is Booked or Blanche is Bunkered) and Best Wolf is not listed in companionList of Player and Player is not CoA and a random chance of 1 in 2 succeeds: [Trip to the Mall]
+	ShowBlancheImage;
 	say "     You come face to face with Blanche as you enter the makeshift den, surrounded by her substantial brood. 'Oh good. I was just about to send Lumi to find you. We were about to go on an expedition to the mall and I hoped that you might join us,' she greets you, giving you a kiss on the cheek. 'I asked [if Fang is Male]Wolf [else]Lupa [end if]to come with us too, but [SubjectPro of Fang] said that [SubjectPro of Fang] had to keep watch on the library. Sometimes I wonder how much becoming a literal wolf has affected [ObjectPro of Fang],' she pouts. 'I suppose you'll just have to suffer us without [ObjectPro of Fang],' Blanche teases before turning to do another headcount of her children. 'Usual instructions. Pair up and keep an eye on those behind you to make sure that they don't end up separated from the group. If someone is foolish enough to attack us, let Sturm, Penelope, Bernard, and Lumi take the front line.'";
 	say "     They seem quite accustomed to this, so after expressing their understanding, everyone files out of the library behind you and Blanche. 'I don't think any of them have been to the mall before, so this should be quite a treat. I also have a surprise for them when we get there,' Blanche whispers to you. The trip to the mall is uneventful and you soon arrive outside where some wolverine guards eye your approaching pack with suspicion to rival Sturm's. Fortunately, they seem to relax a little when the matriarch of your group cheerily waves to them and they don't impede you from entering the shopping complex. 'I will admit that I hadn't considered that such a large group might be problematic,' she confides to you before addressing her offspring again. 'You may all freely look around in your pairs, but I want us all to meet up in the food court in an hour for a surprise. Now go and explore without upsetting any of the guards or shop owners.' Moments later, you are left alone with Blanche, with even Sturm eager to sate his curiosity of this new place. 'Might I beg your company as I window-shop?' Blanche propositions you, to which you agree.";
 	WaitLineBreak;
@@ -2101,12 +2161,14 @@ the fuckscene of White Wolf Zero is "WIP".
 
 to say SummonBlanche:
 	if Blanche is visible: [summoning while standing next to her]
+		ShowBlancheImage;
 		say "     Walking over to Blanche, you ask whether she would be interested in coming with you out into the city. 'I've been looking forward to this since we last spent time together. Lead the way darling.' You smile at such a sincere expression of affection from the wolfess, exchanging a quick kiss before you go.";
 	else: [regular summoning]
 		say "     Blanche for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
 
 to say DismissBlanche:
 	move Blanche to Grey Abbey Library;
+	ShowBlancheImage;
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Blanche's attention and tell her that she should head back to the library for now. The wolfess pouts at you a little, but nods her acceptance nonetheless. 'Be careful, darling. Don't get into too much trouble while I'm not here to protect you,' she teases as she hugs you goodbye before dashing away. You know that she can handle herself, but you still feel guilty for not escorting her home.  ";
 		if White Wolf One is listed in companionlist of Player: [Sturm]

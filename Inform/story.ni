@@ -190,6 +190,10 @@ Include Vending Machine by Core Mechanics.
 Include Weapons by Core Mechanics.
 Include Zephyr Phone by Core Mechanics.
 
+Include Milk Items by Core Mechanics.
+Include Cum Items by Core Mechanics.
+
+
 Book 3 - Loading the Main Game Content
 
 Part 1 - Locations
@@ -370,6 +374,7 @@ Include Sex Ed by Prometheus.
 Include Shifting by Hellerhound.
 Include Shrinking Shrooms by Defth.
 Include Smith Haven Mall by Wahn.
+Include Snake Charmer by Fenekku.
 Include Soldier Events by Wahn.
 Include SpartanVikingCouple by Rikaeus.
 Include Special Forces Events by Vinickus.
@@ -384,6 +389,7 @@ Include Underground Events by Wahn.
 Include Walkinmall by Ssely.
 Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
+Include Wasp Hive by Voidsnaps.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
 Include Xeno Nest by Kernog.
@@ -868,6 +874,7 @@ Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
 Include Katherine by Kirov.
 Include Kerr & Talov by Wahn.
+Include Kerry by Voidsnaps.
 Include Krampus by Wahn.
 Include Kristen by Stripes.
 Include Kurt by Rikaeus.
@@ -978,6 +985,7 @@ Include Val by Wahn.
 Include Vanessa by Prometheus.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Vincent by Wahn.
 Include Voria by Kurainyx.
 Include Wally by Rikaeus.
 Include Wendis by Prometheus.

@@ -4,7 +4,7 @@ Version 2 of Tristian by Verath begins here.
 
 an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
 	if Tristian is in NPC Nexus:
-		move Tristian to Palomino;
+		move Tristian to PALOMINO Dance Club;
 
 Section 1 - Tristian Basics
 
@@ -57,7 +57,7 @@ to say TristianDesc:
 	say "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.";
 
 Conversation of Tristian is { "Neigh!" }.
-Tristian is in The Palomino.
+Tristian is in PALOMINO Dance Club.
 The fuckscene of Tristian is "[sexwithtristian]".
 
 the scent of Tristian is "The stallion boy smells of leather and lust. The scent of gay sex with various other males clings to him.".
@@ -104,7 +104,7 @@ instead of conversing the Tristian:
 		palominoinfect;
 		palominoinfect;
 		now HP of Tristian is 11;
-		now Lance is in the Palomino;
+		now Lance is in PALOMINO Dance Club;
 		increase score by 25;
 		follow the turnpass rule;
 		now lastfuck of Tristian is turns - 8;
@@ -187,12 +187,12 @@ to say sexwithtristian:
 				say "[randombodypart]"; [yields 'bodyselector']
 				while bodyselector is slutname:
 					say "[randombodypart]";
-				say "     Looking to have some fun with your sexy palomino stud, you head over to where he's sitting and drape your arms over his shoulders, hugging him and nuzzling at his neck. He scritches your ears and introduces you to the others he's chatting with, a [bodyselector] and a [slutname]. 'I was just commenting what a fine, slutty pony [if BodyName of Player is listed in infections of Equinelist]you're becoming[else]you're going to be[end if]. How about you,' he says, unzipping his pants and pulling out his throbbing equine rod, 'show them?' he says with a grin.";
+				say "     Looking to have some fun with your sexy palomino stud, you head over to where he's sitting and drape your arms over his shoulders, hugging him and nuzzling at his neck. He scritches your ears and introduces you to the others he's chatting with, a [bodyselector] and a [slutname]. 'I was just commenting what a fine, slutty pony [if BodyName of Player is listed in infections of EquineList]you're becoming[else]you're going to be[end if]. How about you,' he says, unzipping his pants and pulling out his throbbing equine rod, 'show them?' he says with a grin.";
 				say "     A shiver of excitement runs through you and, not wanting to disappoint your stallion stud, you wink to the others and lower yourself to your knees. With a hand rubbing his hefty balls and the other stroking along his equine manhood, you start licking up and down his shaft, enjoying the taste of him, heavy with his musky scent. After making a good show of your tonguework, you slide all the way up to his flared glans and swirl over it before opening your mouth wide and sinking down overtop of it. As proof of how well you're being trained, you push down eagerly and take his lengthy shaft fully into your mouth and down your throat, much to the surprise and delight of the pair watching.";
 				say "     Reminded of them, you glance over to see that the [slutname] has moved into the [bodyselector][']s lap, grabbing a quick fuck while they watch you blow your palomino stud's big cock. Noting that they're both rather well hung themselves, the added entertainment exciting you further. But you're not lusting for their meat, but instead you're longing for the next time you'll get to ride the equine cock you've currently got buried in your throat. Your hunger for his load only grows as you think about this and knead his balls with a muffled, wanton moan. Your lover grins and rubs your head, moaning that it won't be long now. As sure enough, a few more sucks later, you're treated to your hot, creamy reward with the other two popping off soon afterwards. You and the [slutname] make a sexy show of kissing and groping one another for your respective studs before cuddling up to them while conversation resumes on a new topic.";
 				NPCSexAftermath Player receives "OralCock" from Tristian;
 			else if HP of Tristian is 3 or a random chance of 2 in 5 succeeds:
-				say "     Eager to get it on with your sexy pony stud, you wrap your arms around him and give him a passionate kiss, grinding your body against his. The feel of you pressing against his leather-covered manhood quickly has him excited and he presses you against one of the walls, not wanting to wait any longer before taking you. Stripping you down, he pulls out his cock and grinds it against your ass while telling you what a fine, slutty pony [if BodyName of Player is listed in infections of Equinelist]you're becoming[else]you'll make[end if]. You groan as he sinks his equine shaft into your tight ass, pressing your chest against the wall as he fucks you in plain view of any who happen to see. The thought of the others watching sends shivers through you, wanting them to see your ass being claimed by your sexy stud.";
+				say "     Eager to get it on with your sexy pony stud, you wrap your arms around him and give him a passionate kiss, grinding your body against his. The feel of you pressing against his leather-covered manhood quickly has him excited and he presses you against one of the walls, not wanting to wait any longer before taking you. Stripping you down, he pulls out his cock and grinds it against your ass while telling you what a fine, slutty pony [if BodyName of Player is listed in infections of EquineList]you're becoming[else]you'll make[end if]. You groan as he sinks his equine shaft into your tight ass, pressing your chest against the wall as he fucks you in plain view of any who happen to see. The thought of the others watching sends shivers through you, wanting them to see your ass being claimed by your sexy stud.";
 				say "     While Tristian pounds away at you, drilling that throbbing rod of his into your needy hole, he puts a furry paw on your shaft and strokes it. Your [cock size desc of Player] [Cock of Player] dick drools precum as the stallion's rod presses and grinds against your prostate, sending fresh waves of ecstasy through you each time he plows into you particularly hard. The sensations and the musky scent of the palomino fucking you drive you to the heights of wanton lust. 'Well well... you like that don't you, my sexy little pony? Your big stud's cock feels so good for you, doesn't it? That's because it's got just what a slutty pony like you needs - a nice - hot - creamy - load - of stallion - spunk,' he grunts and pounds you hard with each word, finally ending by burying his pulsing meat deep inside you as he fills your bowels with his load.";
 				say "     The feel of your virile lover's semen flooding into you causes you to groan and cum as well. You spray your [Cum Load Size of Player] load onto the wall and floor between your feet as Tristian pumps your [cock size desc of Player] cock vigorously. Once you've both finished cumming, he pulls out, smears his flared, dribbling glans across your ass and gives your balls a squeeze. Letting you pull your top back on, he pulls you out onto the dance floor for a quick dance. This leaves your creamy bottom on display as his thick cum leaks out and runs down your leg. When the number's done, he takes you into the back and gets you cleaned up with his tongue[if anallevel is 3], even diving his tongue into your ass to chase after more[end if].";
 				NPCSexAftermath Player receives "AssFuck" from Tristian;

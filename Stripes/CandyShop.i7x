@@ -161,7 +161,7 @@ to say Sweet Tooth scene:
 			decrease thirst of Player by 6;
 		sfcaffeine; [activates effects of Sugar Ferret caffeine high]
 		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colorful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if Player is herm]. You fuck and are fucked several times over the course of the orgiastic event[else if Player is male]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colors and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.";
-		if Player is female or player is herm:
+		if Player is female or Player is herm:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Sugar Ferret";
 		if Player is male:
 			CreatureSexAftermath "Sugar Ferret" receives "PussyFuck" from "Player";
@@ -365,7 +365,7 @@ to sfcaffeine:
 	increase caffeinehigh of Player by a random number between 7 and 9;
 	increase intelligence of Player by 2;
 	increase stamina of Player by 4;
-	increase maxHP of Player by 2 + (2 * level of Player);
+	increase MaxHP of Player by 2 + (2 * level of Player);
 	increase HP of Player by level of Player;
 	decrease dexterity of Player by 2;
 	increase Libido of Player by 15;
@@ -389,9 +389,9 @@ to sfcaffeineboost:
 	increase morale of Player by 1;
 	let healed be level of Player;
 	increase HP of Player by level of Player;
-	if HP of Player > maxHP of Player:
-		decrease healed by HP of Player minus maxHP of Player;
-		now HP of Player is maxHP of Player;
+	if HP of Player > MaxHP of Player:
+		decrease healed by HP of Player minus MaxHP of Player;
+		now HP of Player is MaxHP of Player;
 	say "     Feeling the rush of more carbonated delight down your throat, you twitch as a rush of fresh energy fills you. Your ferret body twitches and you feel a burst of new endurance, pushing you to keep going without pause. Along with this comes the arousal of excitement and manic, ferrety impulses. Aside from helping to quench your thirst for sugary sweetness, you recover [special-style-1][healed][roman type] HP.";
 
 an everyturn rule:
@@ -405,9 +405,9 @@ an everyturn rule:
 			now caffeinehigh of Player is 0;
 			decrease intelligence of Player by 2;
 			decrease stamina of Player by 4;
-			decrease maxHP of Player by 2 + (2 * level of Player);
+			decrease MaxHP of Player by 2 + (2 * level of Player);
 			now HP of Player is HP of Player / 2;
-			if HP of Player > maxHP of Player / 2, now HP of Player is maxHP of Player / 2;
+			if HP of Player > MaxHP of Player / 2, now HP of Player is MaxHP of Player / 2;
 			increase dexterity of Player by 2;
 			decrease Libido of Player by 10;
 			if Libido of Player < 0, now Libido of Player is 0;

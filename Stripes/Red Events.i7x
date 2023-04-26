@@ -193,7 +193,7 @@ to FetishStoreExploration4:
 			now Resolution of Fetish Store is 5; [got the mask]
 			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
-		else if royal tiger is listed in companionList of Player: [Ryousei]
+		else if royal tiger companion is listed in companionList of Player: [Ryousei]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Ryousei and ask if there is a more effective way to get the headgear. Giving you a confident nod, the tiger tells you to turn around, which you reluctantly do. It is when he's out of your view that he reappears, just to where you turned, with the mask hanging from one finger and a huge grin on his face, solving your problem with utmost efficiency. Seems he just teleported over to the other side!";
 			now Resolution of Fetish Store is 5; [got the mask]
 			ItemGain gimp mask by 1;
@@ -263,7 +263,7 @@ to FetishStoreExploration4:
 			now Resolution of Fetish Store is 5; [got the mask]
 			ItemGain gimp mask by 1;
 			now Fetish Store is resolved;
-		else if rubber tigress is listed in companionList of Player: [Artemis]
+		else if rubber tigress companion is listed in companionList of Player: [Artemis]
 			say "     Looking at the fallen shelf and how it blocks the way to the leather mask you saw beyond, you turn to Artemis and order her to fetch the piece of headgear for you. You know that she's smart enough to understand so it's a simple task of explaining what you want before the tigress moves forward. Given her nature, it's easy for her to fit into almost any opening, easily making it to the other side. Soon, she comes back out of the cramped section beyond with the gimp mask held gently in her teeth, releasing it into your hand as you praise her for her service.";
 			now Resolution of Fetish Store is 5; [got the mask]
 			ItemGain gimp mask by 1;

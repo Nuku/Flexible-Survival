@@ -508,7 +508,7 @@ to say wyvgen_1: [Anal Pitching]
 
 to say wyvgen_2: [Oral Receiving Cock]
 	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
-	say "     Circling around to meet the wyvern at his front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cock size desc of Player] dick[smn] before [ghim]. At first inclined to nip impotently at [if Cock Count of Player > 1]one of them[else]it[end if], you're forced to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
+	say "     Circling around to meet the wyvern at [ghis]front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cock size desc of Player] dick[smn] before [ghim]. At first inclined to nip impotently at [if Cock Count of Player > 1]one of them[else]it[end if], you're forced to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
 	say "     Prehensile appendage slathering its affection on your tool, you can't help but thrust against the wyvern's snout, eventually forcing [ghim] to engulf it within the confines of [ghis] scaled maw[if Cock Count of Player > 2], its brothers grinding against [ghim] and[else if Cock Count of Player is 2], its brother grinding against [ghim] and[else],[end if] no doubt filling [ghis] senses with the taste and scent of your precum. Unable to resist [ghis] growing, wanton need, the beast grinds [ghim]self against the ground, [ghis] own arousal brought about by your lewd task.";
 	say "     Eventually, [ghis] fervor drives [ghim] to hilt your organ entirely within [ghis] greedy hole - a feat [if Cock Length of Player < 18]not particularly difficult given how large [ghe] is[else]no doubt putting some strain on [ghim], given how well-endowed you are[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to suck you dry. Perhaps you should pry yourself free at the last second and shame the beast? Otherwise, you'll properly reward [ghis] compliance.";
 	if Player consents:
@@ -521,7 +521,7 @@ to say wyvgen_2: [Oral Receiving Cock]
 
 to say wyvgen_3: [Oral Receiving Cunt]
 	say "[MeetTheWyvernPatriarchCount]"; [Counting actions until his presence is summoned as a new encounter - Wyvern Patriarch file]
-	say "     Circling around to meet the wyvern at his front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cunt size desc of Player] cunt[sfn] before [ghim], at first inclined to nip impotently at [if Cunt Count of Player > 1]one of them[else]it[end if], forcing you to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
+	say "     Circling around to meet the wyvern at [ghis]front, the defeated beast growls lowly at you. Not immediately compliant though [ghe] may be, it's clear [ghe]'s too spent to put up any fight for long. Carefully, you expose your eager, [cunt size desc of Player] cunt[sfn] before [ghim], at first inclined to nip impotently at [if Cunt Count of Player > 1]one of them[else]it[end if], forcing you to swat the monster down until [ghe]'s gentler, eventually meeting it with [ghis] coarse, saliva-slicked tongue.";
 	say "     Prehensile appendage slathering its affection on your feminine portal, you can't help but press against the wyvern's snout, eventually forcing [ghim] to worm the slick organ within the confines of your hole[if Player is male], hardening dick[smn] grinding against his snout and[else if Cunt Count of Player > 2], its unattended sisters oozing against the [ghis] lips and[else if Cunt Count of Player is 2], its unattended sister oozing against the [ghis] lips and[else],[end if] no doubt filling [ghis] senses with the taste and scent of your honey. Unable to resist [ghis] growing, wanton need, the beast grinds [ghim]self against the ground, [ghis] own arousal brought about by your lewd task.";
 	say "     Eventually, [ghis] fervor drives [ghim] to dig [ghis] tongue entirely within your greedy hole - an act [if Cunt Depth of Player < 15]quickly stretching you to your limits, given how large [ghe] is[else]your sizable hole can easily abide, in spite [ghis] large size[end if][if scalevalue of Player < 5] - pinning you against a wall[end if]. As you quickly approach your inevitable bliss, so too does your massive companion become more determined to taste your ecstasy.";
 	say "     In a few short seconds it's clear that you can hold back no longer, a cry forced out of you[if scalevalue of Player < 5] from against the wall[end if] before you are wracked in the throes of bliss, pussy tightening around the wyvern's writhing appendage, [if Player is male]your unattended cock[smn] staining the side of [ghis] muzzle as [ghe] loudly growls[else]loudly growling[end if] in tainted approval. Eventually, you manage to pull away from the monster, after [ghe] spent a moment idly licking your stretched and dripping hole.";
@@ -606,7 +606,7 @@ to say wyvmale_3: [Oral Giving Cock]
 		say "[wyvmale_3_cockgrowth]";
 	else:
 		say "     Taking a moment to catch your breath and clean yourself of the substantial mess this large wyvern has made, you set off and leave the exhausted and spent monster, satisfied with your work... Albeit a bit aroused yourself from all of it.";
-		increase libido of player by 3;
+		increase Libido of Player by 3;
 	CreatureSexAftermath "Player" receives "OralCock" from "Wyvern";
 
 to say wyvmale_3_cockgrowth:
@@ -621,10 +621,10 @@ to say wyvmale_3_cockgrowth:
 		say "     You totally have to do it. There is no way you are going to waste the chance, now that you have this wyvern still at your mercy and you just so happened to have this idea! Immediately plucking your item of choice from your personal belongings, you then open the small container and have a look at this thick bright red gel substance, with some of it having managed to stick to the top of the jar. When looking back at the wyvern's cock, you realize there is a lot to cover, so you will have to, most likely, use the whole thing. Then, an idea comes to mind as you look at the whole mess, and decide that you will be mixing the gel with the beast's cum in order to smear it all across his manhood. So, without any further ado, you put your plan into practice.";
 		say "     By sliding your hand into the jar, you bring a good chunk of its contents and begin your work, the creature's cum managing to dilute it and allow you to spread it more easily over that massive endowment. The wyvern grunts at this, possibly because he must be oversensitive after having hit his climax, and seems to wiggle around in discomfort, but soon, you feel his organ beginning to slowly engorge once more. It is nothing out of the ordinary, for now, so you continue, bringing some more gel and rub it all across the wyvern's dick. Eventually, the jar is emptied, and what is left to do is to just carry on spreading it until the entire chemical is fully absorbed into the cock. Strangely, the wyvern already seems greatly aroused by this... You doubt this is already a growth effect, as it takes time to react, but...";
 		WaitLineBreak;
-		say "     ... His cock is steadily growing, soon past its previous full erect size, and your eyes widen in a mixture of shock and lust. Your kinky nature gets the better of you and compels you to continue caressing the evergrowing meat before you, and it does not seem to stop gaining more and more mass... It feels a lot heavier, thicker and begins to drool like crazy, these thick drops of precum rapidly oozing out of its tip and sliding down across the shaft. You think it would stop here, but no, it goes on and on, surpassing [if scalevalue of Player < 5]you[else]even you[end if] in size by a lot, both girth and length, all while the wyvern just moans and roars in pure bliss. Soon, you are showered by several gushes of his precum as it gets shot out by sheer excitement.";
+		say "     ... His cock is steadily growing, soon past its previous full erect size, and your eyes widen in a mixture of shock and lust. Your kinky nature gets the better of you and compels you to continue caressing the ever-growing meat before you, and it does not seem to stop gaining more and more mass... It feels a lot heavier, thicker and begins to drool like crazy, these thick drops of precum rapidly oozing out of its tip and sliding down across the shaft. You think it would stop here, but no, it goes on and on, surpassing [if scalevalue of Player < 5]you[else]even you[end if] in size by a lot, both girth and length, all while the wyvern just moans and roars in pure bliss. Soon, you are showered by several gushes of his precum as it gets shot out by sheer excitement.";
 		say "     Though, his cock growing was not the only effect the gel gave the wyvern. Your heart nearly jumps off your chest as you realize the beast managed to flip you over and pin you down under him quicker than you could react. He grins with satisfaction as the tables have turned, and proceeds to smother you underneath his gigantic size, washing you in even more precum as you struggle against his newfound vigor. Unable to get away from under the really ridiculously gigantic manhood, he grinds it against you while fully enjoying the sensation your much punier body, by comparison, provides. With bestial lust, he only seems to care about pleasuring himself while you try not to drown in the copious amounts of thick precum that come down washing all over you.";
 		WaitLineBreak;
-		say "     Luckily, you are still able to withstand the sheer force of the wyvern's giant shaft without being utterly crushed by it, but you think it still found room to grow a few additional inches. It is so big that whenever the beast thrusts forward, your vision is completely obscured by it. Even as you push against it, his heavy cock battles your strength with ease and keeps you stuck between itself and the ground, only throbbing harder at every movement you make. Everytime you touch its warm body, it seems to pulsate as if yearning for more. Knowing that you will not make it out of here until the wyvern is fully satisfied, once more, you think that, perhaps, the best move would be to enjoy your predicament and make friends with this grown-up dick.";
+		say "     Luckily, you are still able to withstand the sheer force of the wyvern's giant shaft without being utterly crushed by it, but you think it still found room to grow a few additional inches. It is so big that whenever the beast thrusts forward, your vision is completely obscured by it. Even as you push against it, his heavy cock battles your strength with ease and keeps you stuck between itself and the ground, only throbbing harder at every movement you make. Every time you touch its warm body, it seems to pulsate as if yearning for more. Knowing that you will not make it out of here until the wyvern is fully satisfied, once more, you think that, perhaps, the best move would be to enjoy your predicament and make friends with this grown-up dick.";
 		say "     You give it a kiss and try to wrap your legs and arms around the very girthy shaft, giving it your best attempt at further pleasing the wyvern, and he keeps grinding it against you, steadily. Its size only leaves you able to stretch your limbs, barely even hugging the massive meat as you feel it rubbing against your entire body. But this does not last for much longer, as the spike of lust is enough to cause the wyvern to approach his second climax soon, after just some more time of grinding. With a fairly increased pace, the beast makes his last thrusts as his cock begins to throb dramatically, making your whole body shake along with it. Then, the wyvern pulls back enough to aim his dick's head at you...";
 		WaitLineBreak;
 		say "     This massive surge of cum hits you right on the face, the first gush being enough to blind you and make you choke for several moments before he thrusts forward, firing the rest of his massive load right past your head for like another minute. His spurts are so huge and heavy you can even hear the liquid falling onto the ground in loud splashes, all this happening while the wyvern just roars in ecstasy, overwhelmed by the sheer amount of pleasure he is getting from his significantly augmented cock.";
@@ -633,7 +633,7 @@ to say wyvmale_3_cockgrowth:
 			say "[wyvmale_3_cockvore]";
 		else:
 			say "     Satisfied with his revenge, the wyvern looks down at you in contempt and proceeds to take off, his giant dong flapping around before it recedes back to its scaled confinements... almost entirely. At least a quarter of it struggles to be concealed, but you are still given a sort of funny view as a now big dicked wyvern flies off into the distance, leaving you in a puddle of his jizz. Your lusts are not sated, however. They are even more lit after experiencing this craziness.";
-			increase libido of player by 10;
+			increase Libido of Player by 10;
 	else:
 		say "     You are kinky, but not enough to go forward with such a deviant idea, at least in this situation. So, you stick to just taking a moment to catch your breath and clean yourself of the substantial mess this large wyvern has made, then set off and leave the exhausted and spent monster, satisfied with the work you had already done... Albeit still a bit aroused yourself from all of it.";
 
@@ -815,7 +815,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -834,7 +834,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -855,7 +855,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -866,7 +866,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -880,19 +880,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -1692,13 +1692,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1744,13 +1744,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1796,13 +1796,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1848,13 +1848,13 @@ to wyvernkinlustcheck:
 				else:
 					say ". Taking only a few seconds to rest, the continued attendance of their companion[if wyvkinocc > 0]s[end if] is more than enough to drive them to continue getting off, going back to what they were once doing. Said companion[if wyvkinocc > 0]s[end if], meanwhile, [if wyvkinocc > 0]have[else]has[end if] no doubt become more aroused by seeing them climax.";
 				if enduring is true:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 6 succeeds:
 							infect;
 					else if a random chance of 1 in 4 succeeds:
 						infect;
 				else:
-					if BodyName of Player is "Wyvern" and player is pure:
+					if BodyName of Player is "Wyvern" and Player is pure:
 						if a random chance of 1 in 5 succeeds:
 							infect;
 					else if a random chance of 1 in 3 succeeds:
@@ -1996,7 +1996,7 @@ to wyvernmatron:
 			say "     As you can imagine, the wyvern has little interest in adding more to an already fairly crowded nest, and instead is here to check up on [ghis] children. Now giving your situation [ghis] proper attention, [ghe] appears to feel that you haven't fully succumbed to your new circumstance, and screeches at [ghis] other children until they pull free of you. Though they still pin you down, you're now exposed and left at the mercy of larger beast, eager to have some fun with you...";
 			WaitLineBreak;
 			say "[WYVVIC]";
-			if BodyName of Player is "Wyvern" and player is pure:
+			if BodyName of Player is "Wyvern" and Player is pure:
 				if a random chance of 1 in 4 succeeds:
 					infect;
 			else if a random chance of 1 in 2 succeeds:

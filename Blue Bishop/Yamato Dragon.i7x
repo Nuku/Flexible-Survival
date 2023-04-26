@@ -210,15 +210,15 @@ to say Yamato Dragon attack:
 			if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 3 succeeds or (anallevel is 3 and a random chance of 2 in 3 succeeds)):
 				say "     [if HP of Player < 1 and Player is not submissive]Making one final attempt to flee the dragon's wrath, you try to crawl off, which only really succeeds in amusing the creature and expose offer you a telling view of your exposed behind, talons gripping you as you're pulled back towards him[else]The dragon sniffs you over, inspecting you for a moment before pinning you to the ground and circling around until your behind is exposed before his prying gaze[end if]. Barely given a moment to relax, you feel the beast grind his underbelly against you; coarse, yellow scales of his male vent parting way to the touch of his growing cock as it presses firmly against your ass.";
 				if MYDAM is 0 and player is not twistcapped:
-					say "     [if scalevalue of Player > 4]Impressive in size as you are, the serpent is still quite larger than you, making you unsure of how he'll even be able to fit his massive dick inside you[else if scalevalue of Player is 4]Fairly large as you are, the serpent is substantially larger, making you unsure of how he'll even be able to fit his massive dick inside you[else]Given how massive the serpent is compared to you, his dick is absolutely terrifying! There's no way that thing will fit inside you without splitting you in half[end if]; regardless, he seems unphased by the potential limitations of this prospect, and you soon feel his organ's hardened tip press against your exposed anal ring.";
+					say "     [if scalevalue of Player > 4]Impressive in size as you are, the serpent is still quite larger than you, making you unsure of how he'll even be able to fit his massive dick inside you[else if scalevalue of Player is 4]Fairly large as you are, the serpent is substantially larger, making you unsure of how he'll even be able to fit his massive dick inside you[else]Given how massive the serpent is compared to you, his dick is absolutely terrifying! There's no way that thing will fit inside you without splitting you in half[end if]; regardless, he seems unfazed by the potential limitations of this prospect, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 					say "     Deep rumbles of tainted need escaping the dragon's lips, he sinks each successive inch at a relentless pace, even when it [if scalevalue of Player is 3]quickly[else]eventually[end if] reaches your perceived limitations, the overwhelming sensation of such an intense violation rising to seemingly impossible heights until you[if scalevalue of Player is 3], somehow,[end if] take his cock's head.";
 					say "     Pulling you back, against his rough frame, you're forced to watch yourself as he plunges ever-deeper, belly [if scalevalue of Player is 3]already[else]quickly[end if] bulging with his overwhelming intrusion. It is clear now that he commands some otherworldly power, allowing him to utterly break past your previous limitations, though this doesn't spare you from the sheer intensity of the sensation, making it a fight to merely stay conscious.";
 					if MYDGM is 0, now MYDGM is 1; [now familiar w/Yamato's impressive size]
 				else if MYDAM is 1 and player is not twistcapped:
-					say "     With an audible gulp[if HP of Player > 0 or Player is submissive], and even though you'd normally be a bit more complicit to these circumstances[end if], you can't help but feel ill-at-ease for what is about to transpire; regardless, he seems unphased by your present anxiety, and you soon feel his organ's hardened tip press against your exposed anal ring.";
+					say "     With an audible gulp[if HP of Player > 0 or Player is submissive], and even though you'd normally be a bit more complicit to these circumstances[end if], you can't help but feel ill-at-ease for what is about to transpire; regardless, he seems unfazed by your present anxiety, and you soon feel his organ's hardened tip press against your exposed anal ring.";
 					say "     Deep rumbles of tainted need escaping the dragon's lips, he sinks each successive inch at a relentless pace, the overwhelming sensation of such an intense violation rising to seemingly impossible heights until you take his cock's head. Pulling you back, against his rough frame, you're forced to watch yourself as he plunges ever-deeper, belly [if scalevalue of Player is 3]already[else]quickly[end if] bulging with his overwhelming intrusion. As tightly fitting as you remain, it appears that you're getting slightly better as the creature's undersized cocksleeve.";
 				else if MYDAM is 2 and player is not twistcapped:
-					say "     [if HP of Player > 0 or Player is submissive]By this you've grown to come to terms with this twisted fate, soon feeling that familiar organ's hardened tip press[else]You beg and plead to the beast, in vain, that he might spare you of this twisted fate who, seemingly unphased by the gesture, presses his now-familiar organ's hardened tip[end if] against your exposed anal ring.";
+					say "     [if HP of Player > 0 or Player is submissive]By this you've grown to come to terms with this twisted fate, soon feeling that familiar organ's hardened tip press[else]You beg and plead to the beast, in vain, that he might spare you of this twisted fate who, seemingly unfazed by the gesture, presses his now-familiar organ's hardened tip[end if] against your exposed anal ring.";
 					say "     Deep rumbles of tainted need escaping the dragon's lips, he sinks in each progressive inch with a foreboding diligence, the overwhelming sensation of such an intense violation rising at a seemingly endless pace until you abide his cock's head, now with substantial ease, given your overexposure. Pulling you back, against his rough frame, you're forced to watch yourself as he plunges ever-deeper, belly [if scalevalue of Player is 3]already[else]quickly[end if] bulging with his overwhelming intrusion.";
 				else if MYDAM is 3 or player is twistcapped:
 					say "     [if HP of Player > 0 or Player is submissive]Pressing firmly against this massive organ, you can't help but eagerly await becoming this beast's cock sleeve. Your eagerness richly rewarded when[else]Overexposed to this familiar organ by this point, it's difficult to fight your growing desire for twisted prospect of being this beast's cock sleeve, not that you're left to linger on your indecision before[end if] he abruptly plunges the entirety of his cock's head into your abiding hole.";
@@ -584,13 +584,13 @@ to say YamatM_1: [Anal Pitching]
 to say YamatM_2: [Oral Receiving Cock]
 	say "     Making your decision, the dragon looms closely over your [if scalevalue of Player < 5]significantly[else]slightly[end if] smaller, [bodytype of Player] form, carefully helping you to expose your assets before him until your [cock size desc of Player], partially aroused dick[smn] lay[smv] before his piercing gaze.";
 	say "     '[one of]Hm[or]Yes[or]Very well[at random], [one of]this should be simple[or]such a paltry task[or]I hope this will satisfy you[at random]...' Large, thick tongue escaping his lips as he speaks, the slick, flexible thing has no trouble wrapping around [if Cock Count of Player > 2]all of them at once[else if Cock Count of Player is 2]both of them at once[else]it[end if], practically buried under the writhing, deep red flesh.";
-	say "     His constant, unblinking gaze fixated on you, your [if scalevalue of Player < 4]entire body[else]torso[end if] is bathed in his steamy breath, lower half disappearing under his scaled snout as his lips hilt against your crotch[if Cock Length of Player > 19], utterly unphased by your size[end if]. As large as the serpent is, he seems extraordinarily dexterous with his tongue, able to squeeze and writhe against[if Cock Count of Player > 1] and between[end if] your rod[smn] with considerable ease.";
+	say "     His constant, unblinking gaze fixated on you, your [if scalevalue of Player < 4]entire body[else]torso[end if] is bathed in his steamy breath, lower half disappearing under his scaled snout as his lips hilt against your crotch[if Cock Length of Player > 19], utterly unfazed by your size[end if]. As large as the serpent is, he seems extraordinarily dexterous with his tongue, able to squeeze and writhe against[if Cock Count of Player > 1] and between[end if] your rod[smn] with considerable ease.";
 	say "     His skillful work filling the air with the wet sounds of his tongue's efforts, it doesn't need long before you're brought to your very limit! Shall you pull out at the last second and shame him? Otherwise, you'll reward the creature's diligence.";
 	if Player consents:
 		say "     His grip on you is fairly tight, practically pinning you to a tree, but you manage to order him off just before you cry out, aiming your now free, saliva-slicked dick[smn] at the dragon as you fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 5]utterly soaking[else]painting[end if] his snout with your thick cum. His brief confusion allows you to spend your entire load on him.";
 		say "     '[one of]Hmpf[or]Well[at random], [one of]I think you have had your fun[or]I hope you are sufficiently amused[or]I suppose whatever suits your need[at random]...' Thick tongue licking clean his snout, he's clearly trying to hide his embarrassment behind a terse expression. Once the both of you are clean, the serpent flies off into the distance, leaving you to go about your business once more.";
 	else:
-		say "     Practically pinning you to a tree with his snout, he appears fully prepared for when you finally cry out, methodical tongue squeezing you with every gout of your [Cum Load Size of Player] load[if Ball Size of Player > 5], seemingly unphased by its sheer volume[end if]. He makes every effort to prolong your orgasm as much as possible before finally pulling free.";
+		say "     Practically pinning you to a tree with his snout, he appears fully prepared for when you finally cry out, methodical tongue squeezing you with every gout of your [Cum Load Size of Player] load[if Ball Size of Player > 5], seemingly unfazed by its sheer volume[end if]. He makes every effort to prolong your orgasm as much as possible before finally pulling free.";
 		say "     '[one of]Hmm[or]There[or]It is done[at random], [one of]I am sure you are satisfied[or]there is nothing more I can do for you[or]and now I depart[at random].' Thick tongue licking and remaining trace of your bliss clean of you, the serpent eventually turns to fly off into the distance, leaving you to catch your breath and go about your business once more.";
 
 to say YamatM_3: [Oral Receiving Cunt]
@@ -1000,7 +1000,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -1019,7 +1019,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -1040,7 +1040,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -1051,7 +1051,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -1065,24 +1065,60 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 ]
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"yamato dragon cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Yamato Dragon Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	yamato dragon cum
+
+yamato dragon cum is a grab object.
+yamato dragon cum is cum.
+yamato dragon cum is infectious.
+Purified of yamato dragon cum is "distilled cum".
+Strain of yamato dragon cum is "Yamato Dragon".
+Usedesc of yamato dragon cum is "[yamato dragon cum use]";
+
+to say yamato dragon cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing yamato dragon cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"yamato dragon man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'yamato dragon Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	yamato dragon man-milk
+
+yamato dragon man-milk is a grab object.
+yamato dragon man-milk is milky.
+Purified of yamato dragon man-milk is "distilled milk".
+yamato dragon man-milk is infectious.
+Strain of yamato dragon man-milk is "Yamato Dragon".
+Usedesc of yamato dragon man-milk is "[yamato dragon man-milk use]";
+
+to say yamato dragon man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the draconic man-milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing yamato dragon man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
 
 Section 3 - Drop Objects
 

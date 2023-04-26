@@ -152,17 +152,17 @@ to say KitsuneTalk2:
 Section 3 - Kitsune Comments
 
 to say KitsuneGenderComment: [Comments on player's gender]
-	if Player is herm and breast Size of Player is 0: [Male Herm]
+	if Player is herm and Breast Size of Player is 0: [Male Herm]
 		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I am however noticing a flat chest though, which I must say has its own appeal even though it means that there is less of you to caress. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if player is herm and breast Size of Player > 0: [Herm]
+	else if Player is herm and Breast Size of Player > 0: [Herm]
 		say "     'I see that you bear the organs of both man and woman. I would be curious to know whether you were born as such, or inherited them from the ongoing catastrophe. One advantage that I hope that you have taken advantage of is the improved ability to penetrate while being penetrated. If you and your partners are flexible enough, you might even be able to have [italic type]all [roman type]of your holes filled at once. I also like that you have breasts. Gives me more to caress and stroke while we speak of sweet nothings. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is male and breast Size of Player is 0: [Male]
+	else if Player is male and Breast Size of Player is 0: [Male]
 		say "     'Oh my. Such a handsome man you are. If you've always had these looks then I'm sure that you were greatly admired by women, and probably men too. Otherwise, the outbreak in the city has really been kind to you. It would be selfish of you not to want to grace as many people with your presence, some more closely than others. Myself included, I might add[if Player is mpreg_ok]. I'm also sensing that you have a little secret. Something that males don't normally have the ability to do[end if]. ";
-	else if Player is male and breast Size of Player > 0: [Dick Girl]
+	else if Player is male and Breast Size of Player > 0: [Dick Girl]
 		say "     'I don't know where to look. Your breast or your cock. They're both calling to me, and I don't know which I like more. I would be curious to know whether you have always been gifted so, or whether the ongoing catastrophe granted you such a pleasing body. All the fun of being able to penetrate someone while having them caress the curves of your chest. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is female and breast Size of Player is 0: [Cuntboy]
+	else if Player is female and Breast Size of Player is 0: [Cuntboy]
 		say "     'I hope that you've been making mischief with that flat chest and the slit between your legs. Trick people into thinking that you bear the gifts of manhood, then shock them when you reveal that treasure between your legs. Having a flat chest has its own appeal, but it does mean that there is less of you to run my hands over. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
-	else if Player is female and breast Size of Player > 0: [Female]
+	else if Player is female and Breast Size of Player > 0: [Female]
 		say "     'Aren't you just a delight to sex-starved eyes, my dear. Have you had problems with men and women following you home and wanting to get to know you? I'm sure that the residents of the city have been noticing you too. I wouldn't mind being a little closer to you, running my hands over your breasts, then across your tummy before sneaking down towards your cleft for just a moment. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if] ";
 	else: [Neuter]
 		say "     Oh. Well, you're a bit boring. Why are you so determined to miss out on the fun that you would disfigure yourself? Or was this forced upon you? If so, I'm sure there must be some sort of drug that can fix you one way or another. Pills? Potions? The loving touch of an over-enthusiastic lover to heal you of your deformity? Please excuse my rudeness, but your lack of genitals causes a sense of unease in me. [if Player is mpreg_ok]I'm also sensing that you have a little secret. Something to do with an anal birthing chamber perhaps? [end if]";
@@ -198,29 +198,29 @@ to say KitsuneGenitalComment: [Comments on player's genitals]
 		say "I think that you have gotten carried away with growing your balls. Beyond being able to do a one man bukkake, there can't possibly be any advantage to having them that size, can there? ";
 	else: [Beach Ball Size]
 		say "Your balls look silly. I have no idea how you even walk. Do you perhaps bounce along on them before bathing in your own cum from the stimulation? ";
-	if cunt depth of Player is 0: [No vagina]
+	if Cunt Depth of Player is 0: [No vagina]
 		say "Unless I'm mistaken, you don't seem to have a pussy. Such a shame, I would have liked to pet it. ";
-	else if cunt depth of Player < 5: [Small vagina]
+	else if Cunt Depth of Player < 5: [Small vagina]
 		say "Your partners must love you, considering how tight I imagine you are, though I doubt they can go particularly deep. ";
-	else if cunt depth of Player < 8: [Average vagina]
+	else if Cunt Depth of Player < 8: [Average vagina]
 		say "I think that you should be able to fit most normal cocks in your pussy, though you might want to be careful with the extremely well-endowed. ";
-	else if cunt depth of Player < 15: [Large vagina]
+	else if Cunt Depth of Player < 15: [Large vagina]
 		say "Making sure you can take any cock you want in your pussy? Unless they are obscenely large, I think you've achieved your aim. ";
-	else if cunt depth of Player < 21: [Huge vagina]
+	else if Cunt Depth of Player < 21: [Huge vagina]
 		say "Do you think that perhaps you've gone too far? There shouldn't be any cock that you can't fit in your pussy. ";
 	else: [Monstrous vagina]
 		say "I think by this point it isn't so much about what cocks you can fit in your pussy, but rather whether you can fit a person in there. I hope you have good muscle control in your vaginal walls. ";
-	if breast Size of Player is 0: [Flat-chested]
+	if Breast Size of Player is 0: [Flat-chested]
 		say "Some might think that the absence of breasts detracts from your image. Not me. It has its own appeal and means that I can feel your heartbeat more easily.'";
-	else if breast Size of Player < 3: [A or B]
+	else if Breast Size of Player < 3: [A or B]
 		say "I think that your breasts are very pretty. They compliment your appearance and give enough for a discerning fox to have a pleasurable squeeze.'";
-	else if breast Size of Player < 5: [C or D]
+	else if Breast Size of Player < 5: [C or D]
 		say "Now those are some nice breasts if ever I saw some. Enough to give someone a comfy head rest while snuggling or snoozing, but small enough that your life can go on without much difficulty.'";
 	else: [E and upwards (Maybe DD. I don't know breast sizing)]
 		say "Those are quite considerably sized breasts. I think that you could almost use them as weapons, especially given the current state of the city.'";
 
 to say KitsuneSpeciesComment: [Comments on player's species]
-	if Player is not pure or Bodyname of Player is "Hybrid":
+	if Player is not pure or BodyName of Player is "Hybrid":
 		say "     'Couldn't just settle on one infection could you? Had to try multiple, and now you don't really count as anything in particular beyond being chimeric. I suppose that I shouldn't discount the possibility that this was forced upon you though. If it pleases you, I could make you into quite the attractive kitsune like myself. Fluffy fur, multiple tails, dashing figure... what's not to like? That was a rhetorical question, just in case you were going to answer. I like myself and that's the main thing, just like it is important that you are content with whatever form you take. ";
 	else if BodyName of Player is "Kitsune":
 		say "     'Now there's an attractive form. I must compliment you on your impeccable choice in appearance, and whomever it was that gave you such a fine figure deserves a reward. Such lush fur and beautiful coloration really brings out your eyes. If I were you, I would be careful to stay looking like this while adventuring around the city and perhaps convincing others to consider it as a look. Because to be honest, who wouldn't look good as a multi-tailed fox? However with such a form comes responsibilities such as mischief and trickery, though not of the malicious kind, we aren't monsters. Perhaps you can tell me about your activities when you have the time. Preferably in [italic type]great detail[roman type]. ";
@@ -286,9 +286,9 @@ to say KitsuneSpeciesComment: [Comments on player's species]
 		say "     'I see that you have a thing for bears. Is it a size thing, or do you have a fetish for really tight hugs? The feel of a larger body pressed up against your own, wrapping you in an embrace and allowing you to feel their warmth through their fur... Mmmmm, such a delightful image. Perhaps I could persuade you at some point to allow me this feeling, or perhaps you would prefer to be the one hugged? Why not both? I have all the time in the world, or at least as long as your soldiers don't move in. I get the impression that they aren't big on hugs at the moment. ";
 	else if BodyName of Player is listed in infections of VulpineList:
 		say "     'So close to the perfect form, but you missed out slightly, don't you think? Still, such lush fur and beautiful coloration really brings out your eyes, and you only need a few more tails to improve the look. If you ask nicely, I might help you in the final step to becoming a kitsune. All it would take would be a hand in collecting some of my essence, or possibly a mouth... But back to you. Even as a normal fox, there are certain expectations. Ignore the myth about foxes only enjoying being penetrated themselves. Your sexual preferences should be your own. Also, while you don't need to be as mischievous as that coyote in the park, at least try and commit some trickery. There is a reputation to maintain. ";
-	else if Bodyname of Player is listed in infections of BodyHorrorList:
+	else if BodyName of Player is listed in infections of BodyHorrorList:
 		say "     'Well then... would you look at you. I don't think I've seen anything as, shall we say, [']full of character['] for quite some time. I can't imagine that there are many denizens of the city who would willingly choose to look like that or find it attractive, but the majority is quite often wrong so you have my admiration for your confidence in going out looking like that. You really do look like the stuff of nightmares, though humans really do have an obsession with chaos, evil, and the Nightmare Realms so I suppose that I shouldn't be too surprised. Just promise that you won't let the corruption of the outside seep to deeply into your soul or you might find yourself hunted by more competent individuals that soldiers. ";
-	else if Bodyname of Player is listed in infections of OtherworldlyList:
+	else if BodyName of Player is listed in infections of OtherworldlyList:
 		say "     'Someone's enjoys their science fiction and isn't afraid for everyone to know it. Yes, I know what sci-fi is, this isn't the first time I've visited your world and I must say that it is entertaining at leats for a while before you have parasites ripping their way out of a host's body or ripping someone's spine out. I much prefer xenophilic relationships deepening as opposed to attempts at conquest but to each their own. At least with how this city is at the moment sex is much more prevalent. If you do require a host for your young at least find someone willing and impregnate them in a more conventional manner. Childbirth may be painful, but much less so when they don't cause permanent damage to the mother. ";
 	else: [Anything else]
 		say "     ERROR. If you are seeing this, then it means that you are of an infection that we haven't covered in the dialogue. Could you please report this to the bug channel of the Flexible Survival Discord server, and we will try to remedy this. Thank you.";
@@ -628,7 +628,7 @@ When Play begins:
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress."]
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
@@ -647,7 +647,7 @@ When Play begins:
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
 	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [Torso Adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
@@ -668,7 +668,7 @@ When Play begins:
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [Legs Description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
@@ -679,7 +679,7 @@ When Play begins:
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
@@ -693,19 +693,19 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [Cock Adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock Description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [Ball Description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [Cunt Description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

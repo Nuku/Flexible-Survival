@@ -367,6 +367,13 @@ Definition: A person (called x) is gimpy:
 
 Chapter 2 - Location Based
 
+A person can be collected. A person is usually not collected.
+
+Definition: A person (Called x) is collected:
+	If x is booked, yes;
+	if x is bunkered, yes;
+	no;
+
 A person can be booked. A person is usually not booked.
 
 Definition: A person (Called x) is booked:
@@ -666,7 +673,7 @@ Definition: A person (called x) is knotted:
 A person can be barbed. A person is usually not barbed.
 
 Definition: A person (called x) is barbed:
-	if CockName of Player is listed in infections of BarbedCocklist, yes;
+	if CockName of Player is listed in infections of BarbedCockList, yes;
 	no;
 
 A person can be blunt. A person is usually not blunt.
@@ -713,7 +720,7 @@ Definition: A person (called x) is keenscented: [can smell special information]
 A person can be HeadFurred. A person is usually not HeadFurred.
 
 Definition: A person (called x) is HeadFurred:
-	if HeadName of Player is listed in infections of Bovinelist, yes;
+	if HeadName of Player is listed in infections of BovineList, yes;
 	if HeadName of Player is listed in infections of CanineList, yes;
 	if HeadName of Player is listed in infections of CervineList, yes;
 	if HeadName of Player is listed in infections of EquineList, yes;
@@ -761,7 +768,7 @@ Definition: A person (called x) is HeadSkinned:
 A person can be TorsoFurred. A person is usually not TorsoFurred.
 
 Definition: A person (called x) is TorsoFurred:
-	if TorsoName of Player is listed in infections of Bovinelist, yes;
+	if TorsoName of Player is listed in infections of BovineList, yes;
 	if TorsoName of Player is listed in infections of CanineList, yes;
 	if TorsoName of Player is listed in infections of CervineList, yes;
 	if TorsoName of Player is listed in infections of EquineList, yes;
@@ -810,7 +817,7 @@ Definition: A person (called x) is TorsoSkinned:
 A person can be ArmsFurred. A person is usually not ArmsFurred.
 
 Definition: A person (called x) is ArmsFurred:
-	if ArmsName of Player is listed in infections of Bovinelist, yes;
+	if ArmsName of Player is listed in infections of BovineList, yes;
 	if ArmsName of Player is listed in infections of CanineList, yes;
 	if ArmsName of Player is listed in infections of CervineList, yes;
 	if ArmsName of Player is listed in infections of EquineList, yes;
@@ -858,7 +865,7 @@ Definition: A person (called x) is ArmsSkinned:
 A person can be LegsFurred. A person is usually not LegsFurred.
 
 Definition: A person (called x) is LegsFurred:
-	if LegsName of Player is listed in infections of Bovinelist, yes;
+	if LegsName of Player is listed in infections of BovineList, yes;
 	if LegsName of Player is listed in infections of CanineList, yes;
 	if LegsName of Player is listed in infections of CervineList, yes;
 	if LegsName of Player is listed in infections of EquineList, yes;
@@ -907,7 +914,7 @@ Definition: A person (called x) is LegsSkinned:
 A person can be AssFurred. A person is usually not AssFurred.
 
 Definition: A person (called x) is AssFurred:
-	if AssName of Player is listed in infections of Bovinelist, yes;
+	if AssName of Player is listed in infections of BovineList, yes;
 	if AssName of Player is listed in infections of CanineList, yes;
 	if AssName of Player is listed in infections of CervineList, yes;
 	if AssName of Player is listed in infections of EquineList, yes;
@@ -955,7 +962,7 @@ Definition: A person (called x) is AssSkinned:
 A person can be TailFurred. A person is usually not TailFurred.
 
 Definition: A person (called x) is TailFurred:
-	if TailName of Player is listed in infections of Bovinelist, yes;
+	if TailName of Player is listed in infections of BovineList, yes;
 	if TailName of Player is listed in infections of CanineList, yes;
 	if TailName of Player is listed in infections of CervineList, yes;
 	if TailName of Player is listed in infections of EquineList, yes;

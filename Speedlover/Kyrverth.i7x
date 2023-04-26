@@ -669,7 +669,7 @@ to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex scenes right now, maybe in a future update?";
 	if "Kinky" is listed in feats of Player and scalevalue of Player is 1:
 		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
-		decrease HP of Player by (maxHP of Player / 4);
+		decrease HP of Player by (MaxHP of Player / 4);
 		if HP of Player <= 0:
 			now HP of Player is 1;
 	KyrverthSexInfect;
@@ -705,7 +705,7 @@ to say KyrverthAnalSex: [For null and male players]
 
 to say KyrverthTinyPlayerAnal:
 	say "     <Kyrverth uses you like a masturbator>.";
-	now HP of Player is (HP of Player - (maxHP of Player / 4));
+	now HP of Player is (HP of Player - (MaxHP of Player / 4));
 	if HP of Player <= 0:
 		now HP of Player is 1;
 	KyrverthSexInfect;
@@ -771,7 +771,7 @@ to say KyrverthLargePlayerAnal:
 	KyrverthSexInfect;
 
 to KyrverthSexInfect:
-	if Player is male or player is herm:
+	if Player is male or Player is herm:
 		infect "Horny Dragon";
 	else if Player is female:
 		infect "Slutty Dragoness";
@@ -1337,7 +1337,7 @@ It is temporary.
 
 to say goldensculptureuse:
 	now KyrverthUsedArtifact is true;
-	if Player is male or player is herm: [Player has a cock]
+	if Player is male or Player is herm: [Player has a cock]
 		say "     You pull the golden [one of]cock[or]dildo[or]penis[at random] out and inspect it. Just like last time you notice the [one of]exquisite[or]intricate[or]elaborate[or]striking[at random] detail that has been put into the creation of this [one of]exotic[or]weird[at random] [one of]cock[or]dildo[or]penis[at random]. One line stands out and seems a little deep, placed in the back, just under the top and heading down to the balls. You poke it with a finger and are surprised when the 'gold' moves as if it was rubber. Inside it looks as if the [one of]cock[or]dildo[at random] is hollow, and you think you know [bold type]exactly[roman type] what to do.";
 		if Cock Count of Player is 1: [SECTION TO ADDRESS COCK SIZE, BALL SIZE, AND NUMBER OF COCKS]
 			if Cock Length of Player <= 16: [fits]
@@ -1500,7 +1500,7 @@ This is the Kyrverth Jackal King rule:
 
 This is the Kyrverth Golden Dragon rule:
 	if ending "Kyrverth Golden Dragon" is triggered:
-		if Player is male or player is herm:
+		if Player is male or Player is herm:
 			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
 			LineBreak;
 			say "     For a while you drift around from place to place, finding it hard to hold a job other than the hardest of manual labor due to walking on all fours, but eventually you end up in the mountains of Japan. You copy some of the scientists, sell your shedded scales for money and use the money to build a sanctuary deep into the mountains - dedicated to infected people like yourself who have trouble fitting into normal society.";
@@ -1524,7 +1524,7 @@ This is the Kyrverth Fighting Tiger rule:
 	if ending "Kyrverth Fighting Tiger" is triggered:
 		if the ending flag "Taur Player" is set: [Taur ending]
 			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
-		else if Player is Submissive: [sub ending]
+		else if Player is submissive: [sub ending]
 			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
 			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food, or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
 		else if Player is Dominant: [Dominant Ending]
