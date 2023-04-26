@@ -1004,7 +1004,7 @@ to say fsdheatstart:
 
 
 to say fsdheatend:
-	say "As your heat passes, your needy canine cunt becomes a little less prominent and swollen.";
+	say "As your heat passes, your needy draconic cunt becomes a little less prominent and swollen.";
 	[puts Feral Sea Dragon as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
