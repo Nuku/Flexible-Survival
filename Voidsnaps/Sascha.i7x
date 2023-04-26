@@ -322,7 +322,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Rough But Sweet	"Rough But Sweet"
 
-ough But Sweet is a situation.
+Rough But Sweet is a situation.
 ResolveFunction of Rough But Sweet is "[ResolveEvent Rough But Sweet]".
 Sarea of Rough But Sweet is "Warehouse".
 Prereq1 of Rough But Sweet is Wild Kitty.
