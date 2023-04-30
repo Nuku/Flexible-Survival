@@ -995,9 +995,11 @@ Include Wyatt by Gherod.
 Include Xerxes by Wahn.
 Include Yolanda by Stripes.
 Include Zdravko by Gherod.
+Include Zant by Voidsnaps.
 Include Zeke by Qazarar.
 Include Zephias by Wahn.
 Include Zigor by Stripes.
+Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
 
 Part 5 - Companions and Allies
