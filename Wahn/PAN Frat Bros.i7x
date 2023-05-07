@@ -5,121 +5,137 @@ PAN Frat Brothers
 
 Up to 22 frat brothers living in the PAN frat building (by room numbers)
 
-President, Right-Hand Man and 3 Pledges are out in the Grove
+President, Right-Hand Man and 3 Pledges are out in the Grove, 4 rooms are unclaimed
 
+1 - Frat President (Star Wrestler): Nicholas Alexander (absent - turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 23 (5th year)
+		Ancestry: Greek
+		Relations: Father, grandfather were members
+		Orientation: Bisexual (openly - had the respect from others to not be teased about it)
+		Cock: uncut; 7 inch (human), 14 (dryad) - others can gape at his cock, "look at that log of a dick!"
 
-1 - Frat President: Nicholas Alexander (turned into a male dryad in the Grove)
-			Age: 23 (5th year)
-			Ancestry: Greek
-			Relations: Father, grandfather were members
-			Orientation: Bisexual (openly - had the respect from others to not be teased about it)
-			Cock: uncut; 7 inch (human), 14 (dryad) - others can gape at his cock, "look at that log of a dick!"
-
-2 - Right-Hand Man: Thiago
-			Age: 22 (3rd year)
-			Ancestry: Brazilian
-			Relations:
-			Orientation: straight (human), bisexual (dryad) - finding himself drawn to Nicholas since their transformation; struggling with it a little
-			Cock: cut; 9 inch (human), 8+8 (dryad) - branching dick
+2 - Right-Hand Man: Thiago (absent - turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 22 (3rd year)
+		Ancestry: Brazilian
+		Relations:
+		Orientation: straight (human), bisexual (dryad) - finding himself drawn to Nicholas since their transformation; struggling with it a little
+		Cock: cut; 9 inch (human), 8+8 (dryad) - branching dick
 
 3 - Swim-Team Captain: River
-			Age: 22 (3rd year)
-			Ancestry: Nordic (tall, blond)
-			Background:
-				Best friend (as kids) almost drowned and River couldn't get him out of the water, someone else dragged them both out of the dangerous current in the sea they got in - that got him motivated to be the best in swimming and he really pushes himself, now being a star athlete in college
-			Relations:
-				Kai ("Sea") - their mother was really into nature so she named her sons River and Sea (just Kai was luckier to get a hawaiian sea)
-				Brook - sister
-			Orientation: mostly gay (powerbottom), publicly bi - can get it up for females to keep his image (imagines dudes, asked women to finger his ass/peg him)
-			Cock: cut; 10 inch (human), 11 inch (nymph)
-			Notes:
-				Protective over Sylvanus
+		Target Infection: Nymph (male)
+		Age: 22 (3rd year)
+		Ancestry: Nordic (tall, blond)
+		Background:
+			Best friend (as kids) almost drowned and River couldn't get him out of the water, someone else dragged them both out of the dangerous current in the sea they got in - that got him motivated to be the best in swimming and he really pushes himself, now being a star athlete in college
+		Relations:
+			Kai ("Sea") - their mother was really into nature so she named her sons River and Sea (just Kai was luckier to get a hawaiian sea)
+			Brook - sister
+		Orientation: mostly gay (powerbottom), publicly bi - can get it up for females to keep his image (imagines dudes, asked women to finger his ass/peg him)
+		Cock: cut; 10 inch (human), 11 inch (nymph)
+		Notes:
+			Protective over Sylvanus
 
 4 - Football Team Captain: Han
-			Age: 21 (3rd year)
-			Ancestry: Asian
-			Relations:
+		Target Infection: Cyclops
+		Age: 21 (3rd year)
+		Ancestry: Asian
+		Relations:
 			Grandfather immigrated from Asia, father was born in the US
 			Traditional upbringing
-			Orientation: Straight (human), Bi (cyclops) - somewhat freaked out over it (and having one eye), but he can't stay away from the guys
-			Cock Size: cut; 6 inch; 15 inch (cyclops)
-			Idea: He drinks with an orc breeder from the nerd frat (slut npc), the orc slips some bottled orc cum into the satyr wine, Han gets super horny
-						Choice: stand back and watch as the orc and Han vanish into his room; slip in and take Han by the arm to bring him to his room (he'll be "painfully hard" and at the same time discombobulated - asking for "help" from the player to get his dick taken care of - BJ or jerking him off)
+		Orientation: Straight (human), Bi (cyclops) - somewhat freaked out over it (and having one eye), but he can't stay away from the guys
+		Cock Size: cut; 6 inch; 15 inch (cyclops)
+		Idea: He drinks with an orc breeder from the nerd frat (slut npc), the orc slips some bottled orc cum into the satyr wine, Han gets super horny
+			Choice: stand back and watch as the orc and Han vanish into his room; slip in and take Han by the arm to bring him to his room (he'll be "painfully hard" and at the same time discombobulated - asking for "help" from the player to get his dick taken care of - BJ or jerking him off)
 
 5 - Rising Star: Richard
-			Age: 19 (1st year)
-			Ancestry: Greek/British
-			Relations:
-			Orientation: Bisexual (doesn't talk about it much)
-			Cock Size: cut; 8 inch (human); 10 inch (satyr)
-			Sports: Lacrosse Player
-			Background: Legacy (father + grandfather were members)
-									Got a sports scholarship to pay his own way
-			Notes:
-			Include a "yeah, approaching an infected was stupid" (referring to Sylvanus) in his training sessions with the expedition crew
-			Secret pregnancy fetish (from overhearing him as he was in rut)
+		Target Infection: Satyr
+		Age: 19 (1st year)
+		Ancestry: Greek/British
+		Relations:
+		Orientation: Bisexual (doesn't talk about it much)
+		Cock Size: cut; 8 inch (human); 10 inch (satyr)
+		Sports: Lacrosse Player
+		Background: Legacy (father + grandfather were members)
+					Got a sports scholarship to pay his own way
+		Notes:
+		Include a "yeah, approaching an infected was stupid" (referring to Sylvanus) in his training sessions with the expedition crew
+		Secret pregnancy fetish (from overhearing him as he was in rut)
 
-6 - Lost Pledge: Maddox
-			Age: 20
-			Relations: Irish
-			Orientation:
-			Cock Size:
+6 - Lost Pledge: Maddox (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Irish
+		Orientation: Straight
+		Cock: uncut; 5 inch (human), 8 (dryad)
 
-7 - Lost Pledge: Clay
-			Age: 20
-			Relations: Irish
-			Orientation:
-			Cock Size:
+7 - Lost Pledge: Clay (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Irish
+		Orientation: Straight
+		Cock: cut; 6 inch (human), 8 (dryad)
 
-8 - Lost Pledge Yisroel
-			Age: 20
-			Relations: Israeli
-			Orientation:
-			Cock Size: cut; 10 inch (human), none (dryad cuntboy)
+8 - Lost Pledge Yisroel (turned into a male dryad in the Grove)
+		Target Infection: Dryad
+		Age: 20 (pledge)
+		Ancestry: Israeli
+		Orientation: Straight
+		Cock Size: cut; 10 inch (human), none (dryad cuntboy)
 
 Subelements of the Frat Brothers Group NPC
 9 - Angelo Silva (latin lover, sleeps with any girl he can)
-			Age: 20
-			Ancestry: Portugese
-			Orientation: straight
-			Cock Size: cut; 7 inch (human); uncut; 8 inch (satyr - future transformation should be as part of his story, not random)
-			Background: Soccer Player (but its not his primary interest)
-									Really likes music, plays electric guitar
-									One of the nerd frat guys set up his phone-camera connection for him (with which he takes his porn vids)
-			Notes:
-			Secretly loves the taste of cum (eats his own regularly)
+		Target Infection: Human, actually (just to keep things fresh and have some variety)
+		Age: 20
+		Ancestry: Portuguese
+		Orientation: straight
+		Cock Size: cut; 7 inch (human); uncut; 8 inch (satyr - future transformation should be as part of his story, not random)
+		Background: Soccer Player (but its not his primary interest)
+					Really likes music, plays electric guitar
+					One of the nerd frat guys set up his phone-camera connection for him (with which he takes his porn vids)
+		Notes:
+		Secretly loves the taste of cum (eats his own regularly)
 
 10 - Big John (offensive guard football player, knows Roman)
-			Age: 20
-			Relations: English
-			Orientation:
-			Cock Size:
-			Info:
-			Uses somewhat corny/cringy words during sex - "babycakes" and whatnot"
+		Target Infection: Satyr
+		Age: 20
+		Relations: English
+		Orientation:
+		Cock Size:
+		Info:
+		Uses somewhat corny/cringy words during sex - "babycakes" and whatnot"
 
 11 - Little John (fireplug shaped wrestler)
-			Age: 20
-			Relations: English
-			Orientation:
-			Cock Size:
+		Target Infection: Satyr
+		Age: 20
+		Relations: English
+		Orientation:
+		Cock Size:
 
 12 - Nate (gymnast)
+		Target Infection: Satyr
+
 13 - Paul (wrestler)
+		Target Infection: Satyr
+
 14 - Eric
+		Target Infection: Satyr
+
 15 - Oliver (swims)
-16 -
-17 -
-18 -
-19 - free
-20 - free
-21 - free
-22 - free
+		Target Infection: Nymph (male)
+
+16 - TBD (char slot open)
+17 - TBD (char slot open)
+18 - TBD (char slot open)
+19 - free (pledge slot not filled)
+20 - free (pledge slot not filled)
+21 - free (pledge slot not filled)
+22 - free (pledge slot not filled)
 
 -----
 
 TODO: Add Walk-in event about nudist players (some other people were already nude, so they're not that concerned)
-
-
 
 ]
 

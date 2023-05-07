@@ -528,6 +528,7 @@ Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
+Include Gyrwolf Gryphon by Prometheus.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
@@ -741,6 +742,7 @@ Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Prometheus.
+Include Altus by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.

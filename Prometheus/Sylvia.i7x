@@ -120,6 +120,19 @@ an everyturn rule:
 
 SylviaSampleCounter is a number that varies. SylviaSampleCounter is usually 0.
 
+to ShowSylviaImage:
+	if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3):
+		if a random chance of 1 in 3 succeeds:
+			project Figure of Sylvia_clothed_tongue_icon;
+		else:
+			project Figure of Sylvia_clothed_icon;
+	else:
+		if a random chance of 1 in 3 succeeds:
+			project Figure of Sylvia_naked_tongue_icon;
+		else:
+			project Figure of Sylvia_naked_icon;
+
+
 Section 1 - Room Declaration
 
 Table of GameRoomIDs (continued)
@@ -187,10 +200,10 @@ SylviaTrapVar is a number that varies. SylviaTrapVar is usually 0.
 to say SylviaDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Sylvia] <- DEBUG[line break]";
-	else:
-		say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view[else]Her lack of clothing means that you can see her two C cup breasts, covered in white fur. You can also see her canine vulva, a small amount of moisture glistening at the bottom[end if].";
-		LineBreak;
-		say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie[else]Due to your help and time spent with her, she willingly will tend to some of your carnal needs[end if]. She looks back at you, striking a seductive pose, before sticking her tongue out lightheartedly.";
+	ShowSylviaImage;
+	say "     Sylvia is a young anthro border collie. Her hind legs, paws, chest, muzzle, and the tip of her fluffy tail are white, while the rest of her fur is black. She gazes at you with green eyes, an abnormality in dogs. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]The shirt she wears does little to hide her two C cup breasts, but keeps them from the eyes of passing creatures. She is wearing a royal blue skirt that hides her thighs from view[else]Her lack of clothing means that you can see her two C cup breasts, covered in white fur. You can also see her canine vulva, a small amount of moisture glistening at the bottom[end if].";
+	LineBreak;
+	say "     From the interactions you've had with her so far, Sylvia is a confident young lady, though your first encounter shows that she can be brought to despair. [if (HP of Sylvia < 4) or (hpM of Sylvia > 0) or (hpF of Sylvia < 3)]While she seems fairly sexually open, people that she is unfamiliar with must first earn her trust and respect before they can expect to be pleasured by the border collie[else]Due to your help and time spent with her, she willingly will tend to some of your carnal needs[end if]. She looks back at you, striking a seductive pose, before sticking her tongue out lightheartedly.";
 
 [Character Notes - Sylvia:
 
@@ -214,6 +227,7 @@ instead of conversing the Sylvia:
 
 to say SylviaTalkMenu:
 	say "[line break]";
+	ShowSylviaImage;
 	say "What do you wish to discuss with Sylvia?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -555,6 +569,7 @@ instead of fucking Sylvia:
 
 to say SylviaSexMenu:
 	say " [line break]";
+	ShowSylviaImage;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -678,6 +693,7 @@ to say ResolveEvent Despairing Biologist:
 	DespairingBiologistEvent;
 
 to DespairingBiologistEvent: [Meet Sylvia]
+	project Figure of Sylvia_clothed_icon;
 	say "     Walking through the college, you see the occupants still acting in ways that you might expect from students: lying on the grass laughing with friends, chatting to each other as they walk carrying stacks of books, and standing in groups complaining about one thing or another. Among these activities are some that fit more with the recent events: a pretty pantheress on her knees treating several colleagues to handjobs, moaning from behind a bench as two students relieve some stress, and an elephant dressed in a groundskeeper uniform cleaning sperm from the lawns. Smirking, you continue down the path, thoughts of how the futures of these many people changed with the nanite outbreak.";
 	say "     As you turn a corner, you hear an argument. 'I don't want to swap my degree. I like biology, but the city has changed. Just yesterday, I saw a lion being chased by a gazelle. Darwin doesn't cover that!' a female voice says exasperatedly. Looking over, you see a border collie girl talking to a male wolf, both wearing clothes unlike many of the other residents of the city. 'You don't have to change degrees. Think of all of the creatures running around the city, or even just the college. Did Darwin catalog minotaurs or dragons? You could be the leading authority!' her companion replies enthusiastically. The collie tilts her head. 'I suppose so. Could be fun collecting the data, and there are a lot of never before seen animals...' she reasons.";
 	WaitLineBreak;
@@ -747,6 +763,7 @@ instead of going northeast from Tenvale College Female Dorms while (Room 059 is 
 	Room059Event;
 
 to Room059Event: [First time to Sylvia's room]
+	project Figure of Sylvia_clothed_icon;
 	say "     Seeing the room number that Sylvia had given you, you approach the door. However, when you knock, the door slowly swings open, revealing the collie leaning back in an armchair reading a book. Her shirt is unbuttoned, but mostly covering her chest, only a glimpse of her breasts is visible. She notices you over the top of her book, placing it on a nearby desk. As the canine stands, she does up a few of the buttons on her shirt. 'That you came here at all suggests that you aren't as sex-driven as many of the city's occupants,' Sylvia exclaims, recognizing you instantly. Motioning you in, she closes the door before patting the edge of her bed. 'Please, sit,' the student says cheerfully, returning to her armchair and smiling at you. Grateful to have a chance to rest your legs, you comply, the mattress sinking slightly, placing you at similar face heights. 'I don't believe you have told me your name,' she says looking expectantly at you. [if Player is not defaultnamed]You introduce yourself as [name of Player], to which the collie smiles and waves her fingers cutely[else]You shake your head and state that your name isn't important. The collie looks at you cautiously, but decides to continue[end if].";
 	say "     'So, you want to get to know me more?' Sylvia remarks, stroking her tail absent-mindedly. 'I'm on exchange from Northern England, where my parents are. I have an older brother and a younger sister. I am studying zoology, but with the changes to the city, I plan to focus on the interactions of the infected with each other, especially groups.' You can see that she is really excited about this decision, contrasting with her breakdown to her friend. 'It will mean that I will have to go into the city at points, so I'm not sure whether to just try and sneak around, or get some help from the other students. Before I do that, I should be able to study the residents on campus.' Her hand creeps up her tail, sliding over her thigh before she notices that and consciously moves it away from her groin, draping it over the arm of the chair.";
 	WaitLineBreak;
@@ -796,6 +813,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 	else if hpF of Sylvia is 2:
 		say "[FemPrefUnnaturalHeatEvent]";
 	else:
+		project Figure of Sylvia_clothed_icon;
 		say "     Walking into the room, you notice that Sylvia isn't here. As you turn to leave, you notice a figure running full pelt toward you down the corridor. With a little more study, you realize that it is Sylvia, and you leap out of the way as she hurtles through the door before sliding to a halt in front of her desk, her skirt riding up to reveal an absence of undergarments. The lips of her canine cunt are puffy and engorged, with a thin trickle of liquid glistening. As she scrabbles through a drawer, you step from beside the bed and ask her what the rush is. At the sound of your voice she flinches slightly and turns her head, a needy expression that she seems to be fighting on her face.";
 		say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realizing that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
 		WaitLineBreak;
@@ -815,6 +833,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 			say "     ([link]N[as]n[end link]) - A threesome with them wasn't what you had in mind.";
 			if Player consents: [receive oral]
 				LineBreak;
+				project Figure of Sylvia_naked_icon;
 				if Player is male: [fellatio]
 					say "     You remove your clothes, allowing your [Cock of Player] penis to harden and rise. Meanwhile, Sylvia is now on all fours, the position seeming natural despite her usual bipedal stance. You and Julian simultaneously kneel down on either end of her, an uneasy eye contact developing as you gauge each other's cocks. Grabbing a bottle of lube from the clutter that has developed on the floor, the collie tosses it to the wolf. 'I would prefer anal, if you don't mind. I want it to be special when I lose my virginity,' Sylvia requests. Julian assents and begins slathering his exposed wolfhood before doing the same to the collie's exposed tailhole.";
 					say "     Eager to begin, you push your penis forward, jabbing Sylvia in the nose and smearing your pre over her lip and nostrils. She inhales deeply and shudders pleasurably, your musk enhancing her soaring libido. She licks her lips before leaning forward and engulfing your [Cock of Player] cock within the wet warmth of her mouth. While she may have refused your advances so far, you can tell that either she is a natural, or that she has had experience with other people, as she loops her tongue around and slathers your shaft with each bob of her head. Occasionally, she grazes her teeth over the soft tissue of your penis, the faux danger thrilling you, compelling you to accelerate your thrusts into her maw.";
@@ -859,6 +878,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				say "     ([link]N[as]n[end link]) - A threesome with them wasn't what you had in mind.";
 				if Player consents:
 					LineBreak;
+					project Figure of Sylvia_naked_icon;
 					if Player is male: [Give anal]
 						say "     You remove your clothes, allowing your [Cock of Player] penis to harden and rise. Meanwhile, Sylvia is now on all fours, the position seeming natural despite her usual bipedal stance. You and Julian simultaneously kneel down on either end of her, an uneasy eye contact developing between you as you gauge each other's cocks. Grabbing a bottle of lube from the clutter that has developed on the floor, the collie tosses it to you. 'I would prefer anal, if you don't mind. I want it to be special when I lose my virginity,' Sylvia requests. You assent and begin slathering your exposed member before doing the same to the collie's exposed tailhole.";
 						say "     Eager to begin, Julian pushes his penis forward, jabbing Sylvia in the nose and smearing his pre over her lip and nostrils. She inhales deeply and shudders pleasurably, his musk enhancing her soaring libido. She licks her lips before leaning forward and engulfing wolfhood within the wet warmth of her mouth. You can tell that while she may have refused your advances so far, that either she is a natural, or that she has had experience with other people, as she loops her tongue around and slathers his shaft with each bob of her head. Occasionally, she grazes her teeth over the soft tissue of his penis, the faux danger thrilling him, compelling him to accelerate his thrusts into her maw.";
@@ -902,6 +922,7 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				say "     ([link]N[as]n[end link]) - A threesome with them wasn't what you had in mind.";
 				if Player consents: [receive oral]
 					LineBreak;
+					project Figure of Sylvia_naked_icon;
 					if Player is male: [fellatio]
 						say "     You remove your clothes, allowing your [Cock of Player] penis to harden and rise. Meanwhile, Sylvia is now on all fours, the position seeming natural despite her usual bipedal stance. You and Julian simultaneously kneel down on either end of her, an uneasy eye contact developing as you gauge each other's cocks. Grabbing a bottle of lube from the clutter that has developed on the floor, the collie tosses it to the wolf. 'I would prefer anal, if you don't mind. I want it to be special when I lose my virginity,' Sylvia requests. Julian assents and begins slathering his exposed wolfhood before doing the same to the collie's exposed tailhole.";
 						say "     Eager to begin, you push your penis forward, jabbing Sylvia in the nose and smearing your pre over her lip and nostrils. She inhales deeply and shudders pleasurably, your musk enhancing her soaring libido. She licks her lips before leaning forward and engulfing your [Cock of Player] cock within the wet warmth of her mouth. While she may have refused your advances so far, you can tell that either she is a natural, or that she has had experience with other people, as she loops her tongue around and slathers your shaft with each bob of her head. Occasionally, she grazes her teeth over the soft tissue of your penis, the faux danger thrilling you, compelling you to accelerate your thrusts into her maw.";
@@ -958,6 +979,7 @@ to say ResolveEvent Beach Field Research:
 	BeachFieldResearchEvent;
 
 to BeachFieldResearchEvent: [Meet the group up close]
+	project Figure of Sylvia_clothed_tongue_icon;
 	say "     While walking through the sandy dunes, you watch the many beach-goers relaxing or running around laughing. The sea sparkles under the sun's rays, completing the picture-perfect scene. A voice shouts your name, and you turn to see Sylvia waving to you, seated on a picnic rug with her friends. They are all wearing swimwear and appear to be eating sandwiches. You walk towards them, weaving your way past people prone in deck chairs. The collie girl gestures for you to sit with them, and you notice that they have been writing things in notepads. 'Large groups seem to discourage hostile infected activity. Requires further study.' you see written in a notebook in front of Sylvia. It would seem that this is more than a recreational excursion. Julian smiles at you and offers you a ham sandwich. 'We're observing the wildlife in its natural habitat,' he whispers conspiratorially and winking. 'Learning the behavior of the different species could be important for future research,' Sylvia elaborates, snickering at the wolf's explanation.";
 	say "     The male cat sitting with them extends a paw. 'I don't believe we've met. I'm Evenlyn, and this is my sister, Evelyn.' You shake his paw and introduce yourself as [name of Player], smiling at them both. The other feline smiles and waves her fingers in greeting. 'We're here more for fun than being of much help scientifically,' he continues. 'Nonsense. The more people making observations of behavior, the better,' Sylvia protests, drawing the attention of a passing horse-morph. Eyeing up the collie, he saunters over, a substantial bulge visible in his shorts. 'If you're a scientist, then perhaps you could do some closer study of me, particularly the crotch region,' he drawls, fully expecting the young collie to swoon. [if hpF of Sylvia is not 3]To his delight, she turns to face him with a giggle and indicates for him to sit down opposite of her. With a grin, the horse pulls his shorts off, freeing his shaft. It slaps against his stomach before waving in the air in front of the canine's face as he sits down[else]I'm very sorry, but we're not interested. Perhaps someone else somewhere on the beach would be willing. The horse-morph begins to protest but Sylvia interrupts him, her voice now cold. 'I said no. If you carry on I'm going to make you regret it. Nothing permanent, but you'll be walking funny for a while.' He takes the hint and hastily walks away[end if].";
 	if hpF of Sylvia is not 3: [Not female preferred]
@@ -990,6 +1012,7 @@ instead of going northeast from Tenvale College Female Dorms while (HP of Sylvia
 	SylviaJobProp;
 
 to SylviaJobProp: [Opens up interactions between Sylvia and Pets/Companions]
+	project Figure of Sylvia_naked_tongue_icon;
 	say "     As you walk into Sylvia's room, you are greeted by the soft curves of her rear as she bends over, looking through a duffel bag. Letting out a polite cough, you casually lean against the wall, watching her. Without looking up, the collie calls, 'Please [name of Player], enjoy the view. I'm just looking for the syringes.' Straightening up, she turns to you with a smile, a sealed packet with a syringe inside grasped in her paw. 'I'm glad that you can still appreciate my backside, considering you probably see them all the time wandering around the city,' she teases. 'Though it did take you long enough to get here, so perhaps you don't have time to admire the scenery. As I've explained before, I wish to study interactions of the infected with each other, especially groups. As such, we believe that you may be in a position to help, considering that you roam around the city meeting all sorts of people in various states of mind.";
 	say "     'So, if you find any friendly residents of the city that would be willing to donate biological material, whatever they're comfortable with, could you tell me? Julian will be helping in this too, so we can all go together to collect the sample. The twins mainly requisition equipment and food, but they may join us sometimes.' As if on cue, Julian enters the room, nodding as he sees you. 'Explaining how they can help?' the wolf inquires. Sylvia nods before continuing, 'We can pay you in food or water if you would like, though sometimes, we may have something more interesting to give you if you're lucky. I think that sums it up. Now, if you could leave, Julian and I have some planning to do. Yes, I literally mean planning. If we were about to have sex, I'd invite you, but we have to decide which areas are safe enough to reconnoiter while still being of use to the study. Now go and find us some sexy beasts to study.' She bids you farewell with a wink.";
 	now HP of Sylvia is 6;
@@ -1014,6 +1037,7 @@ instead of going northeast from Tenvale College Female Dorms while (Sylvia's Rew
 	SylviasReward;
 
 to SylviasReward: [Sylvia willing to allow you to mate with her]
+	project Figure of Sylvia_naked_icon;
 	say "     As you walk into the collie's room, you see Sylvia standing in the middle of the room, head bowed, her crossed hands obscuring her sex. This change from her normal lively self, concerns you as you hastily close the door and rest a hand on her shoulder, asking her whether she is alright. She looks up at you shyly. 'Would you like to have sex with me?' she asks quietly. Her question surprises you despite how common sex is in the city. Usually, it is you asking, or someone just taking what carnal pleasures they want. 'When we first met, I said that you had to prove your interest in me was more than sexual attraction. You've continued to come and see me, and now you're helping with my study, so I thought that you deserve a reward, something to show how much I trust you.' Her hands move away from her sex, revealing her canine spade, your reward";
 	say "     [bold type]Do you wish to accept her offer and mate with the bitch properly?[roman type][line break]";
 	LineBreak;
@@ -1129,6 +1153,7 @@ to say ResolveEvent Bad Breakup:
 	BadBreakupEvent;
 
 to BadBreakupEvent: [Cheating Boyfriend]
+	project Figure of Sylvia_clothed_icon;
 	say "     As you enter the building, you are greeted by the distraught shouting of a couple having an argument in the foyer. There is an inconspicuous absence of people other than the sobbing fennec and her gorilla boyfriend. They don't seem to notice you arrive, and you hastily duck behind an ornamental bush and continue to watch. 'Why, Ethan? I thought that you loved me. Why would you do this to me?' the young woman asks through tears. 'You're the one breaking up with me, so this is hardly my fault,' the gorilla replies in exasperation, earning a glare from his soon to be ex-girlfriend. 'My fault? How is you sleeping around with seven or so other girls my fault? Do please explain,' she hisses. 'They let me do way kinkier shit to them than you would even consider. You're so bland now that the city has changed. It took you months before you would even try anal. They accepted as readily as if I was asking for a glass of water. You don't do what I want when I want it,' the primate fires back.";
 	say "     'The yoga instructor can bend in interesting ways. You can't. The athlete has stamina to match mine. You don't. Laura is prettier than you, and Megan doesn't mind sharing her friends with me. Do you see where I am going with this? You are boring. The only things that you're good at are computers and drawing, neither of which is exactly useful in the current situation, so consider yourself dumped. I have better woman to entertain myself with.' His speech is delivered with such dismissiveness that you can feel the pain from just watching the female student slide to the floor by the front desk, tears glistening on her fur. 'I helped you with your tests and took time to be with you. My friends warned me that you had a mean streak, but I didn't believe them. I suppose this serves me right then,' she whimpers.";
 	WaitLineBreak;
@@ -1159,6 +1184,7 @@ to say ResolveEvent Cheat's Retribution:
 	CheatsRetributionEvent;
 
 to CheatsRetributionEvent: [Ethan's Punishment]
+	project Figure of Sylvia_clothed_icon;
 	say "     While walking along the path, a tap on your shoulder makes you turn around. Behind you is Chloe, the fennec fox that you met in the female dorms breaking up with her boyfriend. She looks at you shyly, clasping her paws in front of her. 'Um, hi. I'm not sure if you remember me...' You quickly say that you do and ask how she is coping. 'I'm fine, thank you for asking. Sylvia has been keeping me company quite a lot recently, when she's not working on a way to punish my ex-boyfriend. She seems very protective of me. That's sort of the reason I'm here. She requests that you come and see her. I suspect that she's ready for whatever it is she has been planning.' You follow her as she walks towards the woman's dormitory, continuing chatting with you. 'I'm still not sure I want Ethan to [']face her vengeance['] or however she is phrasing it today, but a part of me wants him to be punished for making me feel so awful. Does that make me a bad person?'";
 	say "     She holds the door open for you as you enter the foyer of the dormitory and indicates for you to enter what looks like a conference room. Through the slightly ajar door, you can see Sylvia packing a few small cases into a backpack. You enter, and she looks up at you, giving a brief nervous smile. Julian and the twins, Evelyn and Evenlyn, are here too, sitting around a table. They give you a brief wave before returning to a hushed discussion. 'I still think that there must be a safer way of teaching him a lesson,' you hear the wolf say. 'I agree he deserves what he has coming, but Sylvia might face disciplinary action.' The collie looks saddened at this before replying, 'I accept that. The worst they can do is exclude me from the university, but this is necessary. I didn't get ethics approval for my research, I'm hardly likely to get it for this either,' she says as a joke.";
 	WaitLineBreak;
@@ -1208,6 +1234,7 @@ to say ResolveEvent Charming Picnic:
 	CharmingPicnicEvent;
 
 to CharmingPicnicEvent: [Picnic]
+	project Figure of Sylvia_clothed_icon;
 	say "     As you explore the college, with the occasional curious greeting from a passing student, you see a small group having a picnic on a clean piece of lawn. Getting closer, you see that it is Sylvia, Julian, and two felines whom you haven't seen before. They are sitting on a red tartan blanket, eating normal food and laughing. Where they found bread and cheese, you wouldn't have a clue. Though with what you've heard about the cats, you're pretty sure that you know who provided it. Not wanting to intrude on their gathering, you sit on a bench and watch from a distance, smiling at how friendships are able to be maintained or developed, even in such a dark time for the city. The feline twins are obviously very close, with them feeding each other morsels, as the border collie tells them of a trip into the city which ended with her having to explain to an elderly crocodile, fairly red faced, why she was hiding in his bathtub.";
 	say "     Julian sits next to her, eying some slices of ham, letting out chuckles as Sylvia continues her tale. All of them seem very fond of each other, casually touching each other as they pass food and express concern and support as they exchange stories. Julian tells them of his childhood, of walks through the snowy forests of Canada and watching wolves hunt through his father's binoculars. The twins then regale them with how they convinced some soldiers to eat some peaches, leaving before they noticed the effects. You smile, glad that people still take the time for such activities as picnics, that would have been viewed as mundane before the outbreak, but now are a reminder of what was and the hope for the future. As you leave, you turn your head and watch as Julian finally grabs the ham, devouring it in three bites.";
 	now Charming Picnic is resolved;
@@ -1232,6 +1259,7 @@ to say ResolveEvent Badminton One:
 	BadmintonOneEvent;
 
 to BadmintonOneEvent: [Game of badminton]
+	project Figure of Sylvia_clothed_icon;
 	say "     While walking down the path, you look over the lawn at the various students doing everyday activities such as studying, talking with friends, and jogging. In the middle, a net strung between two poles catches your eye, as well as the people playing what appears to be badminton. You recognize Sylvia and Julian, who seem to be playing against two near identical cats. Despite this being a casual game, a small gathering of people is spectating, noises of admiration and encouragement bubbling from them as they watch. The feline twins work in coordination with each other, never going for the shuttlecock at the same time nor getting in each other's way. The collie seems to be letting Julian take the lead, her skill meaning that she is capable of covering for any mistakes he makes while still keeping the game fairly even, allowing them all to have fun.";
 	say "     You approach the game, the crowd shuffling around to allow you a clear view. More than a few eyes are admiring the players more than the game, several bulges or damp patches showing through clothing. The game continues for quite a while longer, the rallies continuing for minutes as no one makes any effort to force their opponent to error. In fact, as they continue, the players begin acting theatrically, making some hits look dramatic or flipping their racquets. The cats intermittently somersault acrobatically while Sylvia twirls around and does trick shots, much to the applause of the spectators. The game is brought to a close when the wolf, out of canine instinct, catches the shuttlecock in his mouth, causing everyone to burst into laughter. A few people joke that if he likes cock that much, perhaps he should follow them to their rooms. Further amusement is brought about by Sylvia telling him to drop it, before patting him and saying what a good boy he is. The game finished, you continue through the college.";
 	now Badminton One is resolved;
@@ -1256,6 +1284,7 @@ to say ResolveEvent College Canine Lovers:
 	CollegeCanineLoversEvent;
 
 to CollegeCanineLoversEvent:
+	project Figure of Sylvia_clothed_icon;
 	say "     A sight off to your left attracts your attention as you walk along one of the many pathways around the college. Two people are standing face to face beneath the branches of a tree, and it doesn't take you long to recognize them as Sylvia and Julian, the two science students that you have met a few times. The sunlight almost trickles through the boughs and leaves above them to spill over their shoulders as they meet in embrace, the wolf's larger form making the collie look frail in comparison, though she looks to be hugging him pretty tightly. As they seperate, they intertwine their fingers together, white fur among black as they hold hands and begin to walk away, and a feeling of satisfaction influences you to follow them at a distance, unused to seeing mere hand-holding in the city much anymore. The two canines stroll along at a very sedate pace, arms slightly swaying back and forth between them in time with their steps.";
 	say "     Their destination appears to be an out-of-the-way fountain unsoiled by the fluids of feral creatures, its water softly gurgling as it bubbles discreetly in the center of the stone bowl. Sylvia and Julian sit down together on the lip and gaze into each other's eyes, paws clasped together between them as they lean in for an intimate kiss, one longer than etiquette would dictate, but not as long as the hedonistic making-out seen between lust-driven students at parties. They part with almost a sigh, the wolf brushing the collie girl's cheek tenderly before she leans in and lightly licks his nose. While you doubt that they would be too scandalized at you watching, you decide that you should give them some privacy from your partially unintentional voyeurism. As you leave, their lips meet again, cupping the side of the other's face, making you smile to yourself at how serene their affection is compared to the activities in the city.";
 	now College Canine Lovers is resolved;
@@ -1264,6 +1293,7 @@ to CollegeCanineLoversEvent:
 [Gender Preference Events]
 
 to say MalePrefUnnaturalHeatEvent: [MalePref Alternative]
+	project Figure of Sylvia_clothed_icon;
 	say "     Walking into the room, you notice that Sylvia isn't here. As you turn to leave, you notice a figure running full pelt toward you down the corridor. With a little more study, you realize that it is Sylvia, and leap out of the way as she hurtles through the door before sliding to a halt in front of her desk, her skirt riding up to reveal an absence of undergarments. You quickly avert your eyes, not wanting to make her feel embarrassed. As she scrabbles through a drawer, you step from beside the bed and ask her what the rush is. At the sound of your voice she flinches slightly and turns her head, a needy expression that she seems to be fighting, on her face.";
 	say "     'I was in the city collecting samples.' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realizing that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
 	WaitLineBreak;
@@ -1297,6 +1327,7 @@ to say MalePrefUnnaturalHeatEvent: [MalePref Alternative]
 	now hpM of Sylvia is 3; [helped with heat]
 
 to say FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
+	project Figure of Sylvia_clothed_icon;
 	say "     Walking into the room, you notice that Sylvia isn't here. As you turn to leave, you notice a figure running full pelt toward you down the corridor. With a little more study, you realize that it is Sylvia, and you leap out of the way as she hurtles through the door before sliding to a halt in front of her desk, her skirt riding up to reveal an absence of undergarments. The lips of her canine cunt are puffy and engorged, with a thin trickle of liquid glistening. As she scrabbles through a drawer, you step from beside the bed and ask her what the rush is. At the sound of your voice she flinches slightly and turns her head, a needy expression that she seems to be fighting on her face.";
 	say "     'I was in the city collecting samples,' Sylvia states, turning back to the clutter in the drawer. 'Things like fur, blood, semen, etcetera. I was wearing rubber gloves, but I stumbled while getting one sample and ripped one. It started trying to fuse to my hand, so I quickly pulled it off, but losing some skin with it. I must have squeaked because then I could hear creatures approaching. So, foolishly, I ran. Realizing that I would probably attract more pursuers if I continued trying to flee, I hid in an abandoned shop and waited for them to go past. I had completely forgotten that many animals hunt by scent as well as sight, so by the time I had remembered, they were outside, a husky pack of three bitches and one of those stupid alphas that think they're so great.";
 	WaitLineBreak;
@@ -1344,6 +1375,7 @@ to say ResolveEvent Sylvia's City Research One:
 	SylviasCityResearchOneEvent;
 
 to SylviasCityResearchOneEvent:
+	project Figure of Sylvia_clothed_icon;
 	say "     Passing by the rubble of a collapsed cafe, you espy a familiar border collie beyond the husk of a car. Her back is turned to you as she crouches down to scrape some residue of a wall into a vial, so she has yet to notice you. Deciding to watch silently for now to see how Sylvia goes about collecting samples in the city, you lean back against the wall and observe. Considering her usually light-hearted approach to life, she seems distinctly focused on her work, enough so that she hasn't noticed your presence, which would be of great concern to her friends given the dangers of being unaware of one's surroundings in the city. Beside her on the ground is a satchel and what looks like a tranquilizer pistol, but even with the self defense training that she told you about, with how oblivious she is, there are multiple ways that this could end up with her caught between a cock and a hard place.";
 	say "     As if you could foretell the future, you catch a flicker of movement from the corner of your eye causing you to look up to see who or what it is approaching. Four huskies, one alpha and three bitches, creep out from an alleyway, their eyes set on the vulnerable collie who remains absorbed in her work. With a lecherous smirk, the large husky male silently directs the females to fan out as they approach, leaving no clear avenue of escape for Sylvia should she realize the peril that she is in. Their prey surrounded, it won't be long before the huskies pounce and you realize that Sylvia might stand a better chance if you intervene rather than just watching the events unfold.";
 	say "     [bold type]Do you wish to reveal yourself and protect Sylvia? For some reason you get the impression that once the huskies move in you won't be able to intervene any more.[roman type][line break]";
