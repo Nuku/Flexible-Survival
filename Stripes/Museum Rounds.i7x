@@ -421,7 +421,7 @@ to say mrevent11:
 Chapter 12 - Intruder Alert
 
 to say mrevent12:
-	say "     You and Valerie pass through the halls of the museum on no discernable path while she discusses the exhibits. At first, the tour is fairly uneventful, but that changes when you come across an open window with messy prints leading in from it. Examining it more closely, you easily spot a spilled wine up and what is probably satyr sick in the bushes below. While this may have spared the carpets from a smelly mess, it left an avenue of entry for some outside creature. Thankfully, the signs seem fairly fresh, so you close the window and split up to search the nearby rooms for the intruder.";
+	say "     You and Valerie pass through the halls of the museum on no discernable path while she discusses the exhibits. At first, the tour is fairly uneventful, but that changes when you come across an open window with messy prints leading in from it. Examining it more closely, you easily spot a spilled wine cup and what is probably satyr sick in the bushes below. While this may have spared the carpets from a smelly mess, it left an avenue of entry for some outside creature. Thankfully, the signs seem fairly fresh, so you close the window and split up to search the nearby rooms for the intruder.";
 	say "     You come across them a few exhibits over as they look around the room. They don't seem to be searching for anything in particular, probably just sex as usual. You are about to get Valerie for backup when the creature notices you.";
 	now battleground is "Outside";
 	fight;

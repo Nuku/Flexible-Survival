@@ -35,6 +35,8 @@ An everyturn rule:
  Hunger of Ziix: Whether you declined to be king or became king. Walls off that path if it's at 100.
  99 - Became King. (Unlocks another scene to regain king infection.)
  100 - Brought up being the king and then decided against it.
+
+Thirst of Ziix: How much of a buttslut he is.
  ]
 
 Section 1 - Hive Rooms
@@ -108,118 +110,6 @@ to say DroneQuartersDesc:
 	say "     To the East of the thoroughfare, a winding path takes you to a room lined with bunk-bed-like alcoves that smell of honey and manly musk. It would be cozy if not for the destroyed chunks of hive littering the floor and scorch marks on the walls. Curiously, one corner seems intact, while the rest show signs of a struggle[if Zant is in Drone Quarters]. Zant lounges in this corner, stroking long strings of honey pre-cum from his perpetually half-hard cock and licking his fingers clean[end if].";
 
 
-
-Section 2 - Hive NPCs
-
-[Ziix is the hive's last warrior.]
-Table of GameCharacterIDs (continued)
-object	name
-Ziix	"Ziix"
-
-Ziix is a man.
-ScaleValue of Ziix is 3. [human sized]
-Body Weight of Ziix is 9. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-Body Definition of Ziix is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-Androginity of Ziix is 1. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Ziix is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Ziix is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Ziix is 8. [length in inches]
-Breast Size of Ziix is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-Nipple Count of Ziix is 2. [count of nipples]
-Asshole Depth of Ziix is 9. [inches deep for anal fucking]
-Asshole Tightness of Ziix is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-Cock Count of Ziix is 1. [number of cocks]
-Cock Girth of Ziix is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Ziix is 12. [length in inches]
-Ball Count of Ziix is 2. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Ziix is 4. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-Cunt Count of Ziix is 0. [number of cunts]
-Cunt Depth of Ziix is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Ziix is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-Clit Size of Ziix is 0. [size 1-5, very small/small/average/large/very large]
-[Basic Interaction states as of game start]
-PlayerMet of Ziix is false.
-PlayerRomanced of Ziix is false.
-PlayerFriended of Ziix is false.
-PlayerControlled of Ziix is false.
-PlayerFucked of Ziix is false.
-OralVirgin of Ziix is false.
-Virgin of Ziix is false.
-AnalVirgin of Ziix is false.
-PenileVirgin of Ziix is false.
-SexuallyExperienced of Ziix is true.
-TwistedCapacity of Ziix is true. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Ziix is true. [steriles can't knock people up]
-MainInfection of Ziix is "Wasp Warrior".
-Ziix is in Loyalty's End.
-Description of Ziix is "[ZiixDesc]".
-Conversation of Ziix is { "<This is nothing but a placeholder!>" }.
-The scent of Ziix is "[ZiixScent]".
-
-to say ZiixScent:
-	say "He smells like honey and musk. There's no mistaking that he's a warrior, judging by the undertone of hard-working sweat.";
-
-to say ZiixDesc:
-	if BodyName of player is "Wasp King" and player is pure:
-		say "A tall, nude wasp man with yellow and black chitin covering most of his body. His cock is usually flaccid and uncut, with a black shaft and a bright yellow head. He regards you with passing interest as you look him up and down, and you can swear he's flexing his muscles, thought he can't meet your eyes. [if PlayerFucked of Ziix is true]You swear you see his cock twitch. Is he thinking about your time together? [end if]The way he looks at you is reminiscent of an overprotective older brother, though he shows deference to your position as wasp royalty.";
-	else:
-		say "A tall, nude wasp man with yellow and black chitin covering most of his body. His cock is usually flaccid and uncut, with a black shaft and a bright yellow head. He regards you with passing interest as you look him up and down, and you can swear he's flexing his muscles, thought he can't meet your eyes. [if PlayerFucked of Ziix is true]You swear you see his cock twitch. Is he thinking about your time together? [end if]The way he looks at you is reminiscent of an overprotective older brother.";
-
-[Zant is the hive's last drone.]
-Table of GameCharacterIDs (continued)
-object	name
-Zant	"Zant"
-
-Zant is a man.
-ScaleValue of Zant is 3. [human sized]
-Body Weight of Zant is 5. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-Body Definition of Zant is 8. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-Androginity of Zant is 1. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-Mouth Length of Zant is 5. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Zant is 2. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
-Tongue Length of Zant is 5. [length in inches]
-Breast Size of Zant is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-Nipple Count of Zant is 2. [count of nipples]
-Asshole Depth of Zant is 9. [inches deep for anal fucking]
-Asshole Tightness of Zant is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-Cock Count of Zant is 1. [number of cocks]
-Cock Girth of Zant is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
-Cock Length of Zant is 10. [length in inches]
-Ball Count of Zant is 2. [allowed numbers: 1 (uniball), 2 or 4]
-Ball Size of Zant is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-Cunt Count of Zant is 0. [number of cunts]
-Cunt Depth of Zant is 0. [penetrable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Zant is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-Clit Size of Zant is 0. [size 1-5, very small/small/average/large/very large]
-[Basic Interaction states as of game start]
-PlayerMet of Zant is false.
-PlayerRomanced of Zant is false.
-PlayerFriended of Zant is false.
-PlayerControlled of Zant is false.
-PlayerFucked of Zant is false.
-OralVirgin of Zant is false.
-Virgin of Zant is false.
-AnalVirgin of Zant is false.
-PenileVirgin of Zant is false.
-SexuallyExperienced of Zant is true.
-TwistedCapacity of Zant is true. [Twisted Characters can take any penetration, no matter the size]
-Sterile of Zant is true. [steriles can't knock people up]
-MainInfection of Zant is "Wasp Drone". [Change later. Don't feel like making an infection for him.]
-Description of Zant is "[ZantDesc]".
-Conversation of Zant is { "<This is nothing but a placeholder!>" }.
-The scent of Zant is "[ZantScent]".
-Zant is in Drone Quarters.
-
-to say ZantScent:
-	say "He smells like honey, sweet and pleasant, with an undertone of masculinity. You could almost mistake it for cologne, if not for the intense heat it causes in your lower half. Best to avoid smelling him for long unless you want to lose control.";
-	LibidoBoost 5;
-
-to say ZantDesc:
-	say "Zant smirks you as you look him over, blatantly spreading his legs to show off his manhood and flexing his biceps. He jiggles just a little as he moves, and he's sure to turn around, wiggling a sturdy, thick rump at you as if to say 'Here you go, don't miss a spot if you're going to ogle me.' Annoying as his cockiness can be, you can't deny that you enoy the show.";
-	LibidoBoost 5;
-
 [Byz is your firstborn worker. Will be available in a future update.]
 [Table of GameCharacterIDs (continued)
 object	name
@@ -271,7 +161,7 @@ to say ByzScent:
 to say ByzDesc:
 	say "...";]
 
-Section 3 - Wasp infections
+Section 2 - Wasp infections
 
 [Godot versions:]
 [
@@ -674,7 +564,9 @@ when play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-Section 4 - Events
+Section 3 - Story Events
+
+[Hive Story Events will be placed here. Side content involving 1-2 of the hive members will be included within one of their files.]
 
 [Introduction Event]
 Table of GameEventIDs (continued)
@@ -869,250 +761,7 @@ to say ResolveEvent Broken But Alive:
 		now Resolution of Broken But Alive is 3; [horny bearhug]
 	now Broken But Alive is resolved;
 
-Section 5 - Ziix Sex Scenes
-
-instead of fucking Ziix:
-	if Broken But Alive is not resolved and Resolution of Last Stand is 1:
-		say "     He's still asleep despite your best efforts, but he seems none the worse for the wear. Maybe you should come back once he's finished his nap.";
-	else if Broken But Alive is not resolved and Resolution of Last Stand is 2:
-		say "     The wasp warrior looks like he doesn't have long. [italic type]Maybe you should search the hive for help![roman type][line break]";
-	else:
-		say "[ZiixSex_Menu]";
-
-instead of conversing Ziix:
-	if Resolution of Broken But Alive is not 1:
-		say "     Ziix leans against the wall in front of the egg chamber, standing at attention when you greet him[if Resolution of Broken But Alive is 2]. He stares at you with sparkling eyes, no doubt remembering how you protected him from his small bout of madness[else if Resolution of Broken But Alive is 3]. He looks away when you look at him, no doubt still embarrassed about his whorish behavior around his drone brother[end if]. Still, he does nothing to hide his naked body from you, even leaning toward you as though interested in your wandering eye. Though he doesn't have a lot to say, it seems he's willing to interact in other ways.";
-		say "[ZiixSex_Menu]";
-	else if Resolution of Last Stand is 2 and Broken But Alive is not resolved:
-		say "     While the nanites are trying their best, the wasp's wounds seem determined to stay open, oozing yellowish blood to the hive floor. He seems listless, slumping against the wall with a glazed, far-away expression and no strength left in his powerful-looking body. He doesn't respond to your presence and seems determined to die there. Perhaps an act of kindness would bring him to his senses? You've heard that wasps and bees like sugary drinks. It's also possible that he'd recover his will to live if you found another survivor.";
-		say "[ZiixSodaChoice]";
-	else if Resolution of Last Stand is 1 and Broken But Alive is not resolved:
-		say "     The wasp warrior looks like he doesn't have long. [italic type]Maybe you should search the hive for help![roman type][line break]";
-
-To say ZiixSex_Menu:
-	say "     [bold type]What do you want to ask Ziix to do?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if Broken But Alive is resolved:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to blow him";
-		now sortorder entry is 1;
-		now description entry is "The warrior looks like he needs to relax. Why don't you show him how";
-	[]
-	if Broken But Alive is resolved and hunger of Ziix < 99:
-		choose a blank row in table of fucking options;
-		now title entry is "Offer to become the hive's ruler";
-		now sortorder entry is 2;
-		now description entry is "Offer to become the Hive's ruler. Wouldn't it be nice to give them a way to multiply";
-	[]
-	if hunger of Ziix is 99 and BodyName of Player is not "Wasp King":
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to become king again";
-		now sortorder entry is 2;
-		now description entry is "You lost the title of the hive's king, but you'd like to return to your throne. Is he willing to let you come back";
-	[]
-	[if BodyName of Player is "Wasp King":
-		choose a blank row in table of fucking options;
-		now title entry is "Ask to fuck your loyal guard";
-		now sortorder entry is 3;
-		now description entry is "Ziix's muscular ass looks so tempting. Surely he wouldn't say no to his ruler?";]
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Blow him"):
-					say "[ZiixBlowjob]";
-				else if (nam is "Offer to become the hive's ruler"):
-					say "[ZiixZantRoyalty]";
-				else if (nam is "Ask to fuck your loyal guard"):
-					say "[ZiixAssFuck]";
-				else if (nam is "Ask to become king again"):
-					say "[KingRedo]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the warrior, deciding on a different course of action.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say ZiixSleepFuck:
-	if player is female:
-		say "     Hurriedly setting aside your gear, you bare yourself in front of the sleeping wasp-man, licking your lips as your arousal matches his, dribbling pussy juice onto his unconscious body. There's something so delightfully erotic about doing this with someone who's too out of it to protest, and you want to be sure you can finish before he wakes up, so you waste no time climbing onto his lap and lining yourself up. The drooling honey oozing from his manhood spreads over your needy cunt without trouble, and gentle pressure pops his cock past your needy lips, sending his sizable member deep enough to kiss your womb as you lower yourself, letting gravity do the work.";
-		say "     The sleeping wasp man barely reacts as you slide up and down his shaft, testing the stretch his sticky cock provides, but you can feel his shaft bounce every time you hilt him, spurting more of that honey-like pre against your cervix. You grow bolder by the second, slamming hard enough to slap your stinging pussy lips against those ebony balls, and lean in, inspecting the hunk's insectoid face as you take advantage of him. He's surprisingly handsome. Even if it weren't for his muscular body and nicely sized member, you'd find the masculine shape of his face attractive. Even the chitin overhanging his mouth like a pair of pseudo-mandibles provides an adorable silhouette, giving him the appearance of cute, blunted fangs. You can't resist that resting face, leaning in for a kiss that the man doesn't return before redoubling your efforts to get off.";
-		WaitLineBreak;
-		say "     Resting your hands on the wasp man's chest plate, you slap your ass against his balls in a heavy rhythm, moaning your enjoyment and dribbling down his balls with every hilt. He's so big that your insides ache, but you love every second of it, feeling your orgasm cresting closer with every wet sound you wring from your spread lower lips. Surprisingly, the warrior cums first, his face contorting and his hips bucking upward as your stomach swells slightly with his load of honey. His bucking cock and prodigious output sets you off within moments, setting your pussy spasming and coating the wasp man's junk in your fem-cum while your inner walls clamp rhythmically, milking him for every drop. For the first time since you sat on his cock, the warrior speaks, mumbling something that you can barely make out. Did he call you his King? Somehow the thought of ruling over a hive full of sexy wasp men appeals to you, though your honey-basted pussy makes you wonder if Queen is a better term. Maybe you should ask him about a change of leadership when he wakes up?";
-		NPCSexAftermath Player receives "PussyFuck" from Zant;
-	else if player is male:
-		say "     Hurriedly setting aside your gear, you bare yourself in front of the sleeping wasp-man, licking your lips as your arousal matches his, dribbling pre onto his unconscious body. There's something so delightfully erotic about doing this with someone who's too out of it to protest, and you want to be sure you can finish before he wakes up, so you waste no time climbing onto his lap and lining yourself up. The drooling honey oozing from his manhood spreads over your needy asshole without trouble, and gentle pressure pops his cock past your tight entrance, sending his sizable member deep into you as you lower yourself, letting gravity do the work.";
-		say "     The sleeping wasp man barely reacts as you slide up and down his shaft, testing the stretch his sticky cock provides, but you can feel his shaft bounce every time you hilt him, spurting more of that honey-like pre deep into your inner walls. You grow bolder by the second, slamming your ass hard enough to slap against those ebony balls, and lean in, inspecting the hunk's insectoid face as you take advantage of him. He's surprisingly handsome. Even if it weren't for his muscular body and nicely sized member, you'd find the masculine shape of his face attractive. Even the chitin overhanging his mouth like a pair of pseudo-mandibles provides an adorable silhouette, giving him the appearance of cute, blunted fangs. You can't resist that resting face, leaning in for a kiss that the man doesn't return before redoubling your efforts to get off.";
-		WaitLineBreak;
-		say "     Resting your hands on the wasp man's chest plate, you slap your ass against his balls in a heavy rhythm, moaning your enjoyment and leaking across his abs. He's so big that your prostate feels crushed, but you love every second of it, feeling your orgasm cresting closer with every wet sound you wring from your spread hole. Surprisingly, the warrior cums first, his face contorting and his hips bucking upward as your stomach swells slightly with his load of honey. His bucking cock and prodigious output sets you off within moments, sending your load spraying across his body while your inner walls spasm, milking him for every drop. For the first time since you sat on his cock, the warrior speaks, mumbling something that you can barely make out. Did he call you his King? Somehow the thought of ruling over a hive full of sexy wasp men appeals to you. Maybe you should ask him when he wakes up?";
-		NPCSexAftermath Player receives "AssFuck" from Ziix;
-
-to say ZiixExile:
-	say "     Are you sure you want to kick the warrior out of the hive?";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Yes. Fuck him. He attacked you!";
-	say "     ([link]N[as]n[end link]) - No. You can't do that to him. It's obvious that he cares. Maybe there's another way?";
-	if player consents:
-		LineBreak;
-		say "     Standing over the partially recovered wasp man, you kick at him until his eyes flutter open, then gesture toward the hive's entrance. You beat him, so you'd prefer that he leave so that you can return to your business. You can't trust someone like him, regardless of what you decide to do here. Still groggy, the wasp man follows your orders without complaint, though you can see the hurt written across his face. You bully him toward the hole in the hive and stand there with your arms crossed until he flies away, his expression changing mid-flight as he seemingly realizes what you've just done. Judging by the hatred on his face, you just made yourself an enemy...";
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Wasp Warrior":
-				now MonsterID is y;
-				now area entry is "Outside";
-				break;
-		now HP of Ziix is 100;
-		move Ziix to Nowhere;
-	else:
-		LineBreak;
-		say "     Shaking your head at the thought of kicking the warrior out, you leave him to rest. You'll figure out what to do with him later.";
-
-to say ZiixAssFuck:
-	say "     ";
-
-to say ZiixZantRelationship:
-	say "     ";
-
-to say ZiixBlowjob:
-	say "     Sauntering over to Ziix as he stands by the entrance to the egg chamber, you look him over, leaning into him and trailing your hands down his chitinous front, stopping just above his soft cock. Remarking that it looks like he's a bit pent up, you massage his hefty balls, smirking as his cock awakens and drools a glistening string of honey onto your wrist and fingers. You lift the sticky treat to your lips, lapping it off your digits and giving him a show as you savor the addictive sweetness and enjoy the spreading heat it sends through you. 'I-I-' Ziix tries to refute your words, but he trails off as he watches your tongue, looking away and nodding in defeat. 'Yes. I suppose I have been a bit lonely. Standing guard was much less dull with a pretty worker to keep me company.' Spreading his legs, he looks away, clearly offering his shaft to your wandering hands.";
-	say "     You remark that if he wants something, he should ask for it. After all, as you slip down to your knees, tossing your gear to the side so that nothing can hide your body from his gaze, it's clear that his body wants your touch even more than he admits. Nuzzling against his peeking cockhead, you swirl your tongue over the drooling golden pre, then nibble his foreskin, tugging it with your front teeth and suppressing a laugh at the cock's eager jump. 'I- Please.' At a loss for words, the wasp warrior is putty in your hands, bucking his hips to smear his cockhead over your lips and paint them in faintly gold fluids. 'Please suck my cock,' he says quietly, unable to meet your eyes. Rewarding Ziix's honesty with a deep kiss to his slick tip, you let him further into your mouth, listening to the quiet, grateful sounds from above as you meander toward his base. There's no rush, and he tastes so good that you don't want to send him to his finish too soon, so your efforts are slow and deliberate, exploring his cock to find every sensitive spot. Ziix's composure slips when you find the right spot, and he lets out a deep moan, his legs shaking and his hips pushing forward to test your throat. It seems your teasing is over, but you're more than happy to let him take the lead, using your tongue on his pistoning cock and feasting on the river of honey that taints every breath you take.";
-	WaitLineBreak;
-	say "     In due course, he makes a mess of your face, his balls slapping against your chin and churning with his impending orgasm, and his clawed fingers clamped around your head, holding you in place for every pounding thrust. His orgasm is titanic, filling your mouth to the brim and forcing you to swallow to stop yourself from drowning, but his steel-hard grip and the glazed, over-stimulated expression makes it clear that there's no other option. Dutifully, you chug his cum, massaging his balls with both hands and swirling your tongue over the underside of his throbbing dick until the flow slows to gentle drooling and his grip loosens, letting you pull back to breathe and survey the half-hard satisfied member in front of you. It's just so damn pretty. You can't resist kissing it and swiping your tongue over the piss slit, earning a grunt from the hunched, panting warrior. You spend quality time licking every inch of Ziix's manhood clean, paying particular attention to his balls. You only stop once he's soft, lurching to your feet and rubbing your stomach where his deposit has given you a rounded bulge. You thank him for the treat, kissing his cheek and disengaging to grab your gear as he tries to regain his composure.";
-	NPCSexAftermath Player receives "OralCock" from Ziix;
-
-Section 6 - Zant Sex Scenes and talk menu
-
-instead of conversing Zant:
-	say "[ZantTalkMenu]";
-
-instead of fucking Zant:
-	say "[ZantFuckMenu]";
-
-to say ZantTalkMenu:
-	say "     [bold type]What do you want to talk with Zant about?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	[if Resolution of Broken but Alive is not 1:
-		choose a blank row in table of fucking options;
-		now title entry is "Ask about Ziix";
-		now sortorder entry is 1;
-		now description entry is "Ask about Ziix. The two seem close.";] [to do: lore talk]
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask why Zant's musk is so alluring";
-	now sortorder entry is 1;
-	now description entry is "You can barely enter the same room as him without falling to your knees. Why does he smell so good";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Ask why Zant's musk is so alluring"):
-					say "[ZantMusk]";
-				else if (nam is "Ask about Ziix"):
-					say "[ZantZiixRelationship]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the perpetually horny drone, deciding on a different course of action.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say ZantFuckMenu:
-	say "     [bold type]What do you do with Zant?[roman type][line break]";
-	LineBreak;
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask Zant to fuck you";
-	now sortorder entry is 1;
-	now description entry is "That twitching wasp cock's caught your eye. Why shouldn't you demand a piece of the drone";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Ask Zant to fuck you"):
-					if Player is female:
-						say "[ZantPussyFuck]";
-					else if Player is male:
-						say "[ZantAssFuck]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You step back from the horny drone, deciding on a different course of action.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say ZantMusk:
-	say "     Clearing your throat, you try to catch Zan't attention, politely ignoring his incessant masturbation. Thankfully you don't have to watch him stroke himself for long. As he notices your presence, he releases his cock, letting it flop and mess up the floor beneath him as he sits in his 'bunk.' He licks his fingers as he contemplates your expression, then speaks, his voice muffled as he laps at his honey. 'Oh, welcome back. (You looking to suck my dick again? Or is my company just that interesting?')' Yawning and stretching as you speak, the lazy drone listens as you explain that you're curious about the strange, horny effect his scent brings with it. Why does he smell so good?";
-	say "     'Hmm? We're the peacekeepers of the hive. It's hard to fight or bicker when you're hard. A drone must do two things. Breed our king to keep the hive growing and settle disputes by putting ourselves between the culprits. Sometimes literally. Why do you think I'm this handsome?' Puffing out his chubby, fuzzy chest, Zant smiles at your wandering gaze, his clawed fingers scratching at his swinging balls idly. You can't deny that he's right. He's hot, in a 'friend's dad' sort of way. Sloppy enough that his masculinity seems effortless. Thanking Zant for his time, you leave his presence before his musk overwhelms you. It's interesting to know that even the 'breeders' of the hive have a purpose besides being a walking sack of cum.";
-
-to say ZantPussyFuck:
-	say "     Swallowing hard as you walk up to Zant, you fix your gaze on his perpetually half-hard cock, your mouth going dry as a drip of honey-pre rolls down the head to the ground below. Trying to appear as put-together as possible, you set aside your gear, then join him in his bunk, wordlessly spreading your legs in invitation. His musk is so strong that your pussy glistens already, and you doubt you'll need extra lubrication. Thankfully, the drone's always up for a fuck, and before you open your mouth to state what you want, he's already leaning over you, nuzzling his cock against your lower lips and bathing you in that irresistible scent. He's surprisingly gentle as he stuffs himself past your lower lips, and when your mouth opens, he silences your moans with his tongue, enveloping you in a passionate embrace.";
-	say "     Your eyes roll back as the experienced wasp rocks his hips, exploring your innermost depths and kissing his cockhead against your cervix. It's maddening how good he feels, and every breath you take only draws your pleasure out, melting the sensations radiating from your pussy into one continuous orgasm. You're not sure how long you lay there, accepting every slow pump, but your face settles into prominent pecs, and your nose huffs him like a drug until you feel warmth bloom deep inside you and the subtle swell of a stomach full of honey. As you lie there, wringing his cock for every drop, you feel yourself coming down from the hypnotic, musk-drunk state you'd settled into, and just as you're coming to your senses, you hear soft, husky words whisper next to your ear.";
-	WaitLineBreak;
-	say "     'You want a second round? Or was that enough dick?' Zant's voice says with a hint of a joking tone, breaking you out of your trance as his softened cock slurps from your pussy, basting the lips with a gush of honey-cum. He rolls over, lazily stroking himself, and offers you a seat on his shaft with a cocky grin. Shaking your head, you clear out the cobwebs and resist the urge to slap the crass wasp for ruining your strangely romantic tryst. After all, it's not his fault he's the way he is. Still, he's obscenely good at his job as a breeder, and you know you'll be coming back for a second helping, though maybe next time, you'll bring some duct tape...";
-	NPCSexAftermath Player receives "PussyFuck" from Zant;
-
-to say ZantAssFuck:
-	say "     Swallowing hard as you walk up to Zant, you fix your gaze on his perpetually half-hard cock, your mouth going dry as a drip of honey-pre rolls down the head to the ground below. Trying to appear as put-together as possible, you set aside your gear, then join him in his bunk, wordlessly rolling onto your stomach and spreading your legs in invitation. His musk is so strong that your cock is rock hard beneath you and your ass twitches with need. Thankfully, the drone's always up for a fuck, and before you open your mouth to state what you want, he's already leaning over you, nuzzling his cock against your hole and bathing you in that irresistible scent as he leans over your back, resting his weight on you. He's surprisingly gentle as he stuffs himself past your tight entrance, and when your mouth opens, he silences your moans with his tongue, enveloping you in a passionate embrace.";
-	say "     Your eyes roll back as the experienced wasp rocks his hips, exploring your innermost depths and kissing his cockhead against the deepest depths of your ass to deposit his sugary payload. It's maddening how good he feels, and every breath you take only draws your pleasure out, melting the sensations radiating from your prostate into one continuous orgasm. You're not sure how long you lay there, accepting every slow pump, but your face settles into your arms, and your nose huffs his cloying scent like a drug until you feel warmth bloom deep inside you and the subtle swell of a stomach full of honey. As you lie there, wringing his cock for every drop, you feel yourself coming down from the hypnotic, musk-drunk state you'd settled into, and just as you're coming to your senses, you hear soft, husky words whisper next to your ear.";
-	WaitLineBreak;
-	say "     'You want a second round? Or was that enough dick?' Zant's voice says with a hint of a joking tone, breaking you out of your trance as his somewhat softened cock slurps from your asshole, basting the gaped entrance and spread cheeks with a gush of honey-cum. He rolls over, lazily stroking himself, and offers you a seat on his shaft with a cocky grin. Shaking your head, you clear out the cobwebs and resist the urge to slap the crass wasp for ruining your strangely romantic tryst. After all, it's not his fault he's the way he is. Still, he's obscenely good at his job as a breeder, and you know you'll be coming back for a second helping, though maybe next time, you'll bring some duct tape...";
-	NPCSexAftermath Player receives "AssFuck" from Zant;
-
-to say ZantZiixRelationship:
-	say "     ";
-
-Section 7 - Becoming King
+Section 4 - Becoming King
 
 To say ZiixZantRoyalty:
 	say "     Approaching Ziix in his spot before the Egg chamber, you ask him about the hive's future. The place is missing structure, and with the world being the way it is, it seems like a good idea for someone to lead. Maybe that person should be you? Ziix seems taken aback by your offer, and his black eyes almost swim for a second as he mulls over his words. 'It feels like a bit of an insult to replace my king so soon after his demise, but I suppose you're right. Without a new source of brothers, it's only a matter of time before tragedy strikes, and what's left is in ruins. if that THING comes back...' Shaking his head, Ziix wipes his face on his arm, his face contorting as he remembers what happened before you saved him. 'You've proven yourself already, I suppose. I'm in no position to inherit the throne and Zant...' He doesn't need to say it. The carefree drone wouldn't ever get anything done, AND his ego would swell even further. 'if you're certain.'";
@@ -1166,34 +815,11 @@ To say ZiixZantRoyalty:
 			now hunger of Ziix is 100; [no more royalty choice.]
 
 to say KingRedo:
-	say "     <This has not been implemented yet. In the future this will be a reskin of the original king creation scene.>";
+	say "     <This has not been implemented yet. In the future this will be a reskin of the original king creation scene. For now, welcome back to Wasp King Royalty.>";
 	FeatGain "Wasp Royalty";
 	FeatGain "Hive Breeder";
 
-Section 8 - Ziix's Exile
-
-[Only if you kick him out of the hive. Possible addition to slut storage later?]
-
-to say Ziix Loses:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>"; [to do: add Ziix anal rape leading to slut storage]
-
-to say Ziix Wins:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>"; [unsure what to add here]
-
-to say Ziix Desc:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else:
-		say "<This content is not currently implemented>";
-
-Section 9 - Wasp King Debug
-
+Section 5 - Debug Codes
 
 RemoveWaspKing is an action applying to nothing.
 

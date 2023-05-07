@@ -240,7 +240,7 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 	now lastNadiaSpotted is turns;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA PREG WALKIN[line break]";
-	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
+	say "     Nadia's left her nest and come to the library's first floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
 	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realize what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
 	WaitLineBreak;
 	say "     'I'm sure mine's bigger than yours!' Amy says, before taking the tape from Nadia and returning the favor.";

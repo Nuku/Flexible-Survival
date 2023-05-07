@@ -564,7 +564,7 @@ When Play begins:
 	now face entry is "elongated, with a silver foxy muzzle. While it may appear to belong to a normal anthro at first glance, the fact that your eyes are colored in an almost otherworldly, piercing blue easily disproves that assumption. Deep and fathomless as they are, anyone meeting your gaze can say that there is an air of wisdom and mystery about you"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "now that of a creature who is one of both vulpine and human in genetic makeup. A lithe frame hides the dense muscles you have underneath your thick pelt of soft fur. On down your twin digitigrade legs hold you steadily as you balance yourself on your rough paw pads. Grace and poise seem to be the words that define you as the power inside of your veins almost sings with mystical energy"; [ Body Description, format as "Your Body is [Body of Player]." ]
 	now skin entry is "[one of]silver-furred[or]heavily pelted[or]kitsune-coated[or]supremely fluffy fox-furred[at random]"; [ skin Description, format as "Looking at yourself, your body is covered in (your text) skin"]
-	now tail entry is "A single fox tail sways behind you, swaying almost as if lonesome in want of others to be alongside of it. Thick and luxurious in texture, your tail does possess a sort of superior quality about itself that others would find themselves in awe of were they to look at you."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "[KitsuneTails]"; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]vulpine[or]canid[or]tapered[or]sheathed[or]thickly knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your eyes blink as you notice that your face has pushed out to form a narrow fox muzzle colored with moonlight silver fur. Cocking your head to the side you notice that you can hear the wind blowing around you and gape when you realize that your ears have pushed up on top of your head. Long and furry, the twitching folds flip up and down as you move them out of instinct, not to mention curiosity. Looking between your face you notice that you have a black dotted nose, a few whiskers on each side of your snout and finally that your tongue is now long and thick as you pop the organ out from your muzzle"; [ Face change text, format as "Your face feels funny as [face change entry]." ]
 	now body change entry is "you notice that the form you now support is one that is covered from neck down to toe in silver fur. Slightly confused as to what has happened to you, you find that your body now has taken on the form of a silver kitsune, the same as Kitsune himself. Tall and imposingly powerful, you feel as the your heart is beating somewhat slower as your senses seem to come alive in a newfound way as you can literally [italic type]feel[roman type] things that you never had before"; [ Body change text, format as "Your body feels funny as [body change entry]." ]
@@ -727,5 +727,29 @@ This is the Kitsune Infection rule:
 		else:
 			say "     By the time the military comes in to clean up the city, you and Kitsune have gotten close enough to each other than you decide not to part. The silver fox-man is amused with the human's attempts to study him, but only because he spends nine-tenths of the time confusing their machines on the who/how/what of what he is. In the end they scientist who had examined the two of you end up releasing you after Kitsune's strain finally makes them surrender to their own ignorance. Of course this matters little to you because once you and Kitsune have stepped out into the free world you both spend the next hundred or so years getting to know each other even better than before, while at the same time you receive lessons on how to be a proper kitsune from the other male. As the years roll by more and more tails slip out from your backside, beautifully fluffy as well as luxuriously soft, the flowing appendages become the key sight for others to know you by as the title Many-Tales soon follows you around like a restless spirit. One reason why others call you this is because of your numerous tails, which you almost never seem to conceal with your powers, and two because of the stories you tell others when asked by them to retell some of your past during your more idle hours. Kitsune spends a lot of time teasing you about this when you two are alone together, but you return his jibes by calling him Old Man whenever he does. This results in a lot of fights between you two, though most of them good natured one, but it also ends with a lot of passionate make up sex with your long time friend.";
 
+to say KitsuneTails:
+	if "Extra Tails" is listed in feats of Player:
+		say "Nine fox tails sway behind you, twisting and dancing almost as if each one has a mind of its own. Thick and luxurious in texture, your tails possess a sort of superior quality about them that draws the eye, giving you an otherworldly beauty.";
+	else:
+		say "A single fox tail sways behind you, its slow wave seeming almost lonesome, in want of others alongside it. Thick and luxurious in texture, your tail possesses a sort of superior quality about itself that imparts a bit of otherworldly beauty to your appearance.";
+
+[Debug code to add multiple tails. Feel free to remove if you expand the content to include a less hackneyed approach. -Voidsnaps]
+
+AddKitsuneTails is an action applying to nothing.
+understand "add tails" as AddKitsuneTails.
+understand "remove tails" as AddKitsuneTails.
+
+check AddKitsuneTails:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out AddKitsuneTails:
+	if "Extra Tails" is listed in feats of Player:
+		say "DEBUG: Extra tails removed.";
+		remove "Extra Tails" from feats of Player;
+	else:
+		say "DEBUG: Extra Tails added.";
+		add "Extra Tails" to feats of Player;
 
 Kitsune Hideaway ends here.
