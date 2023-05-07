@@ -1,9 +1,10 @@
 Version 7 of Fang by Prometheus begins here.
-[Originally by Stripes]
-[Version 5.3 - Fang (alpha & beta) SBL special scenes]
-[Version 5.4 - Variables added and moved from Stripes to Prometheus]
-[Version 6 - Rework of Fang to have Alpha, Beta, and Omega routes]
-[Version 7 - A female alternative Fang - Primarily written by Lost Directions]
+[ Originally by Stripes ]
+[ Version 5.3 - Fang (alpha & beta) SBL special scenes ]
+[ Version 5.4 - Variables added and moved from Stripes to Prometheus ]
+[ Version 6 - Rework of Fang to have Alpha, Beta, and Omega routes ]
+[ Version 7 - A female alternative Fang - Primarily written by Lost Directions ]
+[ Version 8 - Addition of Gentle Alpha Fang ]
 
 "Adds Fang the Feral Wolf to the Flexible Survival game"
 
@@ -14,6 +15,7 @@ Version 7 of Fang by Prometheus begins here.
 [ 3 - Locked as Alpha w/Sandra                   ]
 [ 4 - Locked as Alpha w/o Sandra                 ]
 [ 5 - Locked as Beta                             ]
+[ 6 - Locked as 'Gentle' Alpha Fang              ]
 [ 100 - Fang refused                             ]
 
 [ Libido of Fang (Sandra)                        ]
@@ -115,7 +117,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 			now Cock Count of Fang is 1;
 			now Cock Girth of Fang is 4;
 			now Cock Length of Fang is 12;
-			now Ball Count of Fang is 3;
+			now Ball Count of Fang is 2;
 			now Ball Size of Fang is 3;
 			now Cunt Count of Fang is 0;
 			now Cunt Depth of Fang is 0;

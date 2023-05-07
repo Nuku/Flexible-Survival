@@ -153,6 +153,7 @@ instead of fucking Karen:
 	say "[SexWithKaren]";
 
 to say KarenDesc:
+	project Figure of Karen_naked_icon;
 	if Karen is in Rex's Place:
 		say "     Looking over Karen, you recognize her as the same retriever bitch that you saw abducted by Rex some time ago, now wearing a thin pink collar with a heart-shaped tag that has her name engraved on it.";
 	else:
@@ -190,6 +191,7 @@ instead of conversing Retriever Girl:
 
 to say KarenTalkMenu:
 	LineBreak;
+	project Figure of Karen_naked_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -277,6 +279,7 @@ an everyturn rule:
 
 to say ResolveEvent Forgotten Past:
 	if HP of Karen is 7 and Retriever Girl is listed in companionList of Player:
+		project Figure of Karen_naked_icon;
 		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up. 'I know this place,' she says, lifting her nose to the air and taking a few sniffs. 'I can smell... me.' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still-sealed locker. 'This one, it's this one. This was my locker,' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
 		say "     A short while later you finally manage to [if intelligence of Player > strength of Player]open the lock with a makeshift shim[else]break the door off its hinges with a liberal application of brute force[end if]. Stepping aside, you let Karen open the door and peer inside. The locker is filled mostly with textbooks pertaining primarily to animal medicine. It seems she was studying for a veterinary degree at the campus. 'I was going to be a vet... and now here I am, a dog,' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker. While most of the locker's contents prove unhelpful, she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized-sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom,' she says, looking the timetable over. 'Maybe we could stop by there next?'";
 		say "     As you leave the row of lockers and head back towards safer grounds, you can't help but notice Karen's head held a little higher and an ever-so-slight spring in her step.";
