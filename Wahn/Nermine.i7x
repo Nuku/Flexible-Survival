@@ -619,6 +619,8 @@ understand "nermine test" as testnermine.
 carry out testnermine:
 	say "DEBUG: RareQuesting VARIABLE SET TO 13 - Nermine is now the player's jackaless bitch";
 	now RareQuesting is 13;
+	if Libido of Danny < 3:
+		now Libido of Danny is 3;
 
 to say SexWithNermine:
 	if lastfuck of Nermine - turns < 6:
@@ -936,21 +938,25 @@ to say NermineBondageBackroom_Intro:
 	if Nermine_BondageBackroom_Choice is:
 		-- "Strap your jackaless bitch in!":
 			LineBreak;
-			say "     Reaching right between her legs, you run your middle finger across the slightly parted nether lips of the beautiful woman, feeling the wetness of her eager arousal against your skin. Nermine isn't stupid, and she's been well aware of where your request would eventually lead all this time. Pride fills you at just how completely she's surrendered to your will, with her being more than a little horny at the prospect of serving as a playtoy for your enjoyment. 'The jackaless is ready to serve,' she says in a teasing tone, leaning forward to brush her nipples against your side and licking your cheek invitingly. With great pleasure do you guide her to stand against the cross, strapping in first her wrists, then the waist and finally running your hands down along her glorious, long legs to secure her ankles too. A small box of accessories sitting on the ground nearby yields a quite precious-looking ball-gag, that you happily fit to your bitch too.";
+			say "     Reaching right between her legs, you run your middle finger across the slightly parted nether lips of the beautiful woman, feeling the wetness of her eager arousal against your skin. Nermine isn't stupid, and she's been well aware of where your request would eventually lead all this time. Pride fills you at just how completely she's surrendered to your will, with her being more than a little horny at the prospect of serving as a playtoy for your enjoyment. 'The jackaless is ready to serve,' she says in a teasing tone, leaning forward to brush her nipples against your side and licking your cheek invitingly. With great pleasure do you guide her to stand against the cross, strapping in first her wrists, then the waist and finally running your hands down along her glorious, long legs to secure her ankles too. A small box of accessories sitting on the ground nearby yields a quite precious-looking muzzle ball-gag, that you happily fit to your bitch too.";
+			now Lust of Nermine is 50; [starting value]
 			say "[Nermine_BondageMenu]";
 		-- "Thank her and leave the room, for now.":
 			LineBreak;
 			say "     Giving the jackaless a sidelong glance and imagining how she'd look when strapped down against the piece of sexual furniture, you nod towards the entrance and mention that it might be time to get back to the store. 'Of course, [Master]. And should the sexy jackal want to experiment a little in here later, Nermine will be ready to serve,' she responds in a teasing tone, leaning forward to brush her nipples against your side and licking your cheek invitingly. Nermine isn't stupid, and she's been well aware of where your request can eventually lead all this time. Pride fills you at just how completely she's surrendered to your will, with her being more than a little horny at the prospect of serving as a playtoy for your enjoyment. But for now, you step out of the backroom with her, carrying the thoughts of tying Nermine up with you.";
+	TraitGain "Bondage Backroom Revealed" for Nermine;
 
 to say NermineBondageBackroom_Repeat:
 	say "     An eager smirk crosses Nermine's face as you explain that you want to take her to the backroom with the fun sexual equipment again. 'Of course, [Master]. Your little jackaless is ready to serve,' she responds in a teasing tone, leaning forward to brush her nipples against your side and licking your cheek invitingly. Setting out to walk over to the hidden entrance of her secondary storage room, Nermine swings her hips enticingly, drawing your eyes to her body and you to follow her close behind, soon stepping into the back room, with the secret door clicking back into place behind you. With great pleasure do you guide her to stand against the cross, strapping in first her wrists, then the waist and finally running your hands down along her glorious, long legs to secure her ankles too. A small box of accessories sitting on the ground nearby yields a quite precious-looking ball-gag, that you happily fit to your bitch too.";
+	now Lust of Nermine is 50; [starting value]
 	say "[Nermine_BondageMenu]";
 
 to say Nermine_BondageMenu:
-	say "     Nermine is securely tied down on the St. Andrew's cross in front of you, leaving her completely at your mercy. ";
-	if libido of Nermine >= 80: [really close now]
+	LineBreak;
+	say "     Nermine is securely tied down on the St. Andrew's cross in front of you, leaving her completely at your mercy. The shiny ball gag holding her muzzle open makes it impossible for her to speak, reducing the powerful sorceress to communicate only in needy little whines and other animalistic noises. ";
+	if Lust of Nermine >= 80: [really close now]
 		say "You can see a desperate gleam in her eyes from the strong desire to finally come, with the fur between her legs being matted from the female juices trickling slowly from her moist, intensely aroused slit. She's clearly quite close to orgasming, and you could push her over the edge with one one or two further acts of pleasuring her.";
-	else if libido of Nermine >= 50: [quite aroused]
+	else if Lust of Nermine >= 50: [quite aroused]
 		say "Her eyes look at you with undisguised desire, with her silently pleading to continue playing with her body. With a few more acts of pleasuring her, you could push her further along, to tease her or finally make her cum.";
 	else: [light arousal]
 		say "Her eyes are filled with an inviting gleam as they look at you, with the jackaless silently requesting that you do what you want with her. No doubt, she's anticipating more than just a little sexual stimulation from you. There's still plenty of room for playing with her, as she's only a little wet right now, just at the start of building arousal.";
@@ -958,18 +964,31 @@ to say Nermine_BondageMenu:
 	say "     [bold type]What do you want to do with your jackaless bitch?[roman type][line break]";
 	LineBreak;
 	let Nermine_Bondage_Choices be a list of text;
-	add "Worship her breasts and give her nipples a little suck and nibble." to Nermine_Bondage_Choices;
+	add "Worship her breasts and give those sexy teats of the bitch a little suck and nibble." to Nermine_Bondage_Choices;
+	[
 	add "Eat out her pussy!" to Nermine_Bondage_Choices;
 	if Player is male:
 		add "Fuck her, teasingly, making sure she doesn't get off yet." to Nermine_Bondage_Choices;
 		add "Fuck her, hard and deep until both of you come!" to Nermine_Bondage_Choices;
+	]
 	add "Relent and release her from bondage." to Nermine_Bondage_Choices;
 	let Nermine_Bondage_Choice be what the player chooses from Nermine_Bondage_Choices;
-	[--------------------------------------------------------]
 	if Nermine_Bondage_Choice is:
-		-- "Worship her breasts and give her nipples a little suck and nibble.":
+		-- "Worship her breasts and give those sexy teats of the bitch a little suck and nibble.":
 			LineBreak;
-			say "     ";
+			say "     Raising your hands, you bring them to the sides of your tied-up bitch's head, rubbing the base of her large ears with your fingers as you meet her lust-filled gaze. With a smile on your face, you then stroke down over her soft-furred skin, along her neck and upper shoulders, before reaching the softly rising mounds of her perfectly shaped breasts. Resting warmly in your cupping grasp, your jackaless's are almost irresistible to play with, to caress and squeeze their soft yet also firm fullness and trace your fingers over the short, silky fur covering them. Well, only almost covering the breasts, as Nermine's enticing nipples are exposed and bare of interfering fur, with the two quarter-sized nubs having skin as black as the rest of Nermine's body. They're hard and erect, betraying the woman's arousal at serving her [master] however you want her to.";
+			say "     Seeking out the anthro bitch's teats with your fingers, you pinch her lightly, then roll them between your fingers, creating a noticable reaction as she stiffens in her bindings, with the sounds of a breathy moan audible past the gag in her muzzle. She's clearly sensitive there, and can't help but be stimulated by the attention you're giving her, especially when you move on to leaning down your head and catching her left lipple between your lips. As you start to teasingly suckle and lap at her nipple, Nermine's midriff pulls against the leather strapping her to the cross as she instinctively tries to roll her hips and bring the wet and dripping gash of her spread pussy closer to you. Lowering a hand to trace it along her nether lips, you feel the proof of her arousal cling wetly to your fingertips, then bring your hand up to show her the strings of wetness you can pull between your digits, telling her that you love how responsive she is to your attention.";
+			WaitLineBreak;
+			increase Lust of Nermine by 30; [potentially reduce later]
+			if Lust of Nermine >= 80: [ready to come]
+				say "     Recognizing how close the bitch is to orgasming, you decide to just keep going, brushing your fingertips over her other nipple and rubbing its edges until it glistens with her own juices. With a grin on your face, you switch breasts, licking the wetness off and then catching the sensitive teat between your lips, suckling on it vigorously and pushing the bitch further and further towards the edge. It is a fun little game to go back and forth between pinching, sucking and lightly nibbling on her breasts, then smooshing them together and rubbing your face in the soft-furred canyon that creates, all the while listening to the pleasure-filled, animalistic noises your bitch makes as you manhandle her breasts.";
+				say "     She's starting to strain against the tie-downs at her wrists before much longer too, clearly more than ready to come. But then, you're the one in control here, not her, so you pull back a little, watching her naked, writhing form with the soaked crotch and taking in the desperate expression in her eyes. It is quite a bit of fun to watch this powerful sorceress being reduced to your mere plaything, and you prolong her struggle by stroking her just enough to keep the arousal going for a long while, teasing the moment out further and further. Then finally, you lean back in, sucking the left nipple of the needy bitch into your mouth while you slide one hand to the other breast, the other down to Nermine's crotch. Between rapidly flicking your tongue-tip over one teat, and pinching the other one, you barely have to touch her clit at all before the jackaless bucks and moans, wetness gushing from her pussy and further soaking the fur on the insides of her thighs.";
+				NPCSexAftermath Nermine receives "Stroking" from Player;
+			else:
+				say "     As much fun as playing with her like this is, you haven't pushed her so far yet that Nermine's climax is imminent, so you decide to take a step back and feast your eyes on the sexy woman. There are other things you could do with her, or just get back to playing with her breasts...";
+				LineBreak;
+				say "[Nermine_BondageMenu]"; [looping around]
+		[--------------------------------------------------------]
 		-- "Eat out her pussy!":
 			LineBreak;
 			say "     ";
@@ -981,7 +1000,7 @@ to say Nermine_BondageMenu:
 			say "     ";
 		-- "Relent and release her from bondage.":
 			LineBreak;
-			say "     ";
+			say "     Deciding that enough is enough for right now, you step closer to the tied-up jackaless and start to undo the buckles holding her strapped in against the St. Andrew's Cross. As the ball gag is removed from her muzzle, she lets out a panted breath, then focuses her gaze on you, asking, 'Did the obedient jackaless's [master] enjoy using the former noble's gear with her? Nermine is sure there are many further treasures to find and tried out in the bargain collections she obtained. She sure did not imagine she'd be the one any of this was used on, but the humble woman would do anything for her sexy jackal.' As you and her leave the backroom, you can't help but have a wide grin on your face...";
 
 to say NermineStoreFingering:
 	say "     Nermine grins eagerly as you gesture to the counter, leaning back against it as she runs her claws up her inner thigh teasingly. '[Master] wants to have [PosAdj of Player] pet on display just like she was slutty little merchandise?' Nermine moans teasingly as she leans back even further on the counter, spreading her legs slightly and giving you a good view of her damp heat-filled pussy as she lifts one of her legs up to rest on the counter. 'Nermine can't wait to have her [master] play with her and show the world what a good little pet she makes...' she moans as she lowers one of her hands down to part the nether-lips of her pussy and give you a better view.";

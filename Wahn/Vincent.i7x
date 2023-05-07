@@ -185,7 +185,7 @@ instead of sniffing Vincent:
 	say "     Vincent has a slightly animalistic scent of clean fur.";
 
 to say VincentDesc:
-	say "     Vincent is a an anthro fox with a wiry frame, wearing a black sleeveless t-shirt with some band's colorful logo printed on the front, as well as a somewhat ragged pair of jeans to cover his slender legs. Being clearly built more for speed than any great amount of strength, he must have found it a challenge to survive in a city turned feral, with all sorts of monstrous and brutish beings battling it out on the streets day by day. He has a sly look to him, with attentive eyes carefully observing his surroundings, but sometimes all the cunning in the world can't save you, as evidenced by the fact that you first met him as a captive of three orc brothers...";
+	say "     Vincent is a an anthro fox with a wiry frame, wearing a black sleeveless t-shirt with some band's black and white logo printed on the front, as well as a somewhat ragged pair of jeans to cover his slender legs. Being clearly built more for speed than any great amount of strength, he must have found it a challenge to survive in a city turned feral, with all sorts of monstrous and brutish beings battling it out on the streets day by day. He has a sly look to him, with attentive eyes carefully observing his surroundings, but sometimes all the cunning in the world can't save you, as evidenced by the fact that you first met him as a captive of three orc brothers...";
 	say "     As Vincent notices your intense gaze upon him, he gives you a two-finger salute, combined with a friendly smirk on his muzzle. The scrappy fox knows to give you an appropriate level of respect to the person who saved him from a future as an orc slave, and who's now giving him refuge.";
 
 instead of conversing the Vincent:
@@ -195,7 +195,6 @@ instead of conversing the Vincent:
 		say "     Seeing you approach, Vincent lets an appreciative gaze wander up and down your body, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
 	else:
 		say "     Seeing you approach, Vincent gives you a friendly nod, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
-	wait for any key;
 	say "[VincentTalkMenu]";
 
 to say VincentTalkMenu:
