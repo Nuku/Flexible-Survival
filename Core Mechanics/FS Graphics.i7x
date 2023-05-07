@@ -484,6 +484,8 @@ Figure of Karel_clothed_icon is the file "Karel_clothed.jpg".
 Figure of Karel_hard_icon is the file "Karel_hard.jpg".
 Figure of Karel_soft_icon is the file "Karel_soft.jpg".
 Figure of Karel_face_icon is the file "Karel_face.jpg".
+Figure of Karen_clothed_icon is the file "Karen_clothed.jpg".
+Figure of Karen_naked_icon is the file "Karen_naked.jpg".
 Figure of Katya_clothed_icon is the file "Katya.png".
 Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
@@ -651,6 +653,10 @@ Figure of Susan_MHerm_shorts_icon is the file "Susan_MHerm_shorts.jpg".
 Figure of Susan_MHerm_hard_icon is the file "Susan_MHerm_hard.jpg".
 Figure of Sven_naked_icon is the file "Sven_naked.jpg".
 Figure of Sven_tail_icon is the file "Sven_tail.jpg".
+Figure of Sylvia_clothed_icon is the file "Sylvia_clothed.jpg".
+Figure of Sylvia_clothed_tongue_icon is the file "Sylvia_clothed_tongue.jpg".
+Figure of Sylvia_naked_icon is the file "Sylvia_naked.jpg".
+Figure of Sylvia_naked_tongue_icon is the file "Sylvia_naked_tongue.jpg".
 Figure of Tanuki_Dad_hard_icon is the file "Tanuki_Dad_hard.jpg".
 Figure of Tanuki_Dad_soft_icon is the file "Tanuki_Dad_soft.jpg".
 Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
@@ -1759,6 +1765,8 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Nermine_clothed_face"	Figure of Nermine_clothed_face_icon	"Lytta"	g-black	"normal"
 "Nermine_naked"	Figure of Nermine_naked_icon	"Lytta"	g-black	"normal"
 "Nermine_naked_face"	Figure of Nermine_naked_face_icon	"Lytta"	g-black	"normal"
+"Karen clothed"	Figure of Karen_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Karen naked"	Figure of Karen_naked_icon	"SteppeCrow"	g-White	"normal"
 "Newt"	Figure of Newt_icon	"Anyare"	g-white	"normal"
 "Nightmare_hard"	Figure of Nightmare_hard_icon	"Vashaa"	g-White	"normal"
 "Nightmare_soft"	Figure of Nightmare_soft_icon	"Vashaa"	g-white	"normal"
@@ -1915,6 +1923,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Susan_MHerm_hard"	Figure of Susan_MHerm_hard_icon	"Vashaa"	g-white	"normal"
 "Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
 "Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
+"Sylvia clothed"	Figure of Sylvia_clothed_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia clothed + tongue"	Figure of Sylvia_clothed_tongue_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia naked"	Figure of Sylvia_naked_icon	"SteppeCrow"	g-White	"normal"
+"Sylvia naked + tongue"	Figure of Sylvia_naked_tongue_icon	"SteppeCrow"	g-White	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
 "Tanuki Dad_soft"	Figure of Tanuki_Dad_soft_icon	"SteppeCrow"	g-White	"normal"

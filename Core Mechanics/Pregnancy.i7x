@@ -134,11 +134,11 @@ Definition: A person (called X) is fem_vacant: [Disregarding fertility, is X's c
 Definition: A person (called X) is mpreg_ok: [Can X become pregnant in general. Male]
 	if X is Player:
 		if Player is sterile, no; [not fertile]
-		if "MPreg" is listed in feats of Player and ( level of Velos is not 1 or HP of Velos < 3 ), yes;
+		if ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and ( level of Velos is not 1 or HP of Velos < 3 ), yes;
 		no;
 	else:
 		if X is sterile, no;
-		if "MPreg" is listed in traits of X, yes; [mpreg capable]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X), yes; [mpreg capable]
 		no;
 
 Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. Male]
@@ -147,12 +147,12 @@ Definition: A person (called X) is mpreg_able: [Can X be impregnated RIGHT NOW. 
 		if gestation of child > 0 or child is born, no; [currently pregnant]
 		if mpreghijack is true, no; [Velos]
 		if insectlarva is true and larvaegg is 2, no; [parasites]
-		if "MPreg" is listed in feats of Player, yes; [mpreg capable]
+		if ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player), yes; [mpreg capable]
 		no;
 	else:
 		if X is sterile, no; [not fertile]
 		if ImpregTimer of X > 0, no; [currently pregnant]
-		if "MPreg" is listed in traits of X, yes; [mpreg capable]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X), yes; [mpreg capable]
 		no;
 
 Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
@@ -160,7 +160,7 @@ Definition: A person (called X) is mpreg_now: [Is X currently pregnant. Male]
 		if gestation of child > 0 and pregtype is 2, yes; [currently pregnant]
 		no;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, yes; [currently pregnant]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X) and ImpregTimer of X > 0, yes; [currently pregnant]
 		no;
 
 Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's ass occupied by something]
@@ -170,7 +170,7 @@ Definition: A person (called X) is male_vacant: [Disregarding fertility, is X's 
 		if (gestation of child > 0 and pregtype is 2) or child is born, no;
 		yes;
 	else:
-		if "MPreg" is listed in traits of X and ImpregTimer of X > 0, no; [currently pregnant]
+		if ("MPreg" is listed in traits of X or "Mpreg" is listed in traits of X) and ImpregTimer of X > 0, no; [currently pregnant]
 		yes;
 
 preghijack is a truth state that varies. preghijack is usually false. [General-purpose variable for detailing a hijacked pregnancy]
@@ -753,7 +753,7 @@ Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
 To impregnate with (x - text):
 	if child is born or gestation of child > 0 or "Sterile" is listed in feats of Player or larvaegg is 2 or ( Cunt Count of Player is 0 and player is not mpreg_ok ):
 		stop the action;
-	if Player is not female and "MPreg" is listed in feats of Player and ( level of Velos is 1 and HP of Velos > 2 ):
+	if Player is not female and ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
 	if there is a name of x in the Table of Random Critters:
 		choose a row with Name of x in the Table of Random Critters;
@@ -966,7 +966,7 @@ to selfimpregnate:
 		say "     DEBUG: Self-Impregnation.";
 	if Player is not mpreg_able and player is not fpreg_able:
 		stop the action;
-	[if Player is not female and "MPreg" is listed in feats of Player and level of Velos is 1 and HP of Velos > 2:
+	[if Player is not female and ("MPreg" is listed in feats of Player or "Mpreg" is listed in feats of Player) and level of Velos is 1 and HP of Velos > 2:
 		stop the action;]
 	if "Selective Mother" is listed in feats of Player:
 		say "Do you wish to be self-impregnated?";

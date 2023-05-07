@@ -1,6 +1,11 @@
 Version 1 of Vincent by Wahn begins here.
 
 
+a postimport rule: [bugfix for old imports]
+	if "Ruth & Keitao Story Told" is listed in Traits of Vincent and "Sexual Rent" is not listed in Traits of Vincent and "Sextalk Loyalty Bonus Given" is not listed in Traits of Vincent:
+		increase Loyalty of Vincent by 1; [bonus point for players who rejected sexual blackmail with Vincent before the Loyalty point for that was introduced]
+		TraitGain "Sextalk Loyalty Bonus Given" for Vincent; [to make sure the player only gets one point, retrofitted in the postimport rule, or in the scene as planned]
+
 
 Section 1 - Aftermath of the Orc Raid
 
@@ -71,7 +76,7 @@ to say VincentEscape:
 	TraitGain "Headbutted Player" for Vincent;
 
 to say VincentFirstOrcBJ:
-	say "     His nostrils flare as he takes in the musky scent of your pre-cum, then goes in to lap at the head of your green-skinned cock. The glistening wetness of pre-cum welling up from your cum-slit touches the fox's tongue, and his eyes go wide at its pleasant, stimulating taste. 'This tastes... pretty nice,' he says, not quite hiding the slight pause he needed to pick some less enthusiastic words than what first came to mind. Swallowing his first taste of orc and licking the side of his muzzle, the slender anthro is drawn in by the inevitable desire to taste more of your pre, and that floppy tongue starts to lap again, playing over the tip of your cock hungrily. Soon, he tries something else and closes his muzzle most of the way, just putting the lips at the very tip against your dickhead, and trying to suckle, which doesn't work too well, spilling some of your pre down his chin until he gives up in frustration.";
+	say "His nostrils flare as he takes in the musky scent of your pre-cum, then goes in to lap at the head of your green-skinned cock. The glistening wetness of pre-cum welling up from your cum-slit touches the fox's tongue, and his eyes go wide at its pleasant, stimulating taste. 'This tastes... pretty nice,' he says, not quite hiding the slight pause he needed to pick some less enthusiastic words than what first came to mind. Swallowing his first taste of orc and licking the side of his muzzle, the slender anthro is drawn in by the inevitable desire to taste more of your pre, and that floppy tongue starts to lap again, playing over the tip of your cock hungrily. Soon, he tries something else and closes his muzzle most of the way, just putting the lips at the very tip against your dickhead, and trying to suckle, which doesn't work too well, spilling some of your pre down his chin until he gives up in frustration.";
 	say "     Pulling off and shaking his head, the fox then falls back to providing a more regular blowjob for you. In joyous haste, Vincent opens wide and slides his whole muzzle over your erection, engulfing your manhood in his long muzzle. He bobs his head, his tongue rolling along the underside and serving as a soft buffer between his teeth and your sensitive flesh. Between the warm bed of his tongue below, the ribbed roof of his muzzle above, and the red fox's floppy tongue-tip half-wrapping around your shaft, Vincent delivers a quite enjoyable blow-job, bobbing up and down on your erect cock and eagerly slurping up what pre you leak into his open mouth. [if Cock Length of Player > 7]He goes as far as taking your erection down his throat too, inhaling it after taking a few deep breaths, then slowly letting the dickhead slide back up again before going for another round[else]He takes your whole length without any trouble, easily fitting your manhood in his muzzle[end if].";
 	WaitLineBreak;
 	say "     The anthro's sharp ears give him ample warning of your soon impending orgasm, at which point he first pushes himself all the way down on your cock, wet nose touching your pubic area. But then, he seems to think better of what he's doing, almost forcing himself to pull away, instead licking and slurping over its side, while massaging your balls with his hands. In short notice, this pushes your arousal over the edge, and you blast your load to paint white stripes over the ash-covered ground of the ruin you're in. You can hear Vincent's nose pull in a deep breath, huffing the scent of your cum, and before he can help himself, his tongue flicks out to lick up a stray drop that still clings to your mushroom head. Eyes going wide as just that little bit of your potent cum hits his system, he licks over your dickhead again several times, then glances down at the wet drabs soaking into the ash before shaking his head almost imperceptibly.";
@@ -184,9 +189,9 @@ to say VincentDesc:
 	say "     As Vincent notices your intense gaze upon him, he gives you a two-finger salute, combined with a friendly smirk on his muzzle. The scrappy fox knows to give you an appropriate level of respect to the person who saved him from a future as an orc slave, and who's now giving him refuge.";
 
 instead of conversing the Vincent:
-	if FaceName of Player is "Orc Warrior" and Player is pure:
+	if FaceName of Player is "Orc Warrior" and player is pure:
 		say "     Seeing your orc warrior self approach, Vincent reflexively tenses up a little, but he quickly catches himself and shakes his head to dispel the memory of his capture at the hands of green-skinned brutes. With a slightly embarrassed expression, he blows out the breath he was holding, then puts on a friendly smile as he asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
-	else if FaceName of Player is "Orc Breeder" and Player is pure:
+	else if FaceName of Player is "Orc Breeder" and player is pure:
 		say "     Seeing you approach, Vincent lets an appreciative gaze wander up and down your body, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
 	else:
 		say "     Seeing you approach, Vincent gives you a friendly nod, then asks, 'What's up[if Player is not defaultnamed], [Name of Player][end if]?'";
@@ -215,6 +220,18 @@ to say VincentTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Broach the topic of getting down and dirty with the fox";
 	[]
+	if (number of collected people > 3) and "Introduced" is not listed in Traits of Vincent:
+		choose a blank row in table of fucking options;
+		now title entry is "Introduce him to the other people in the building";
+		now sortorder entry is 3;
+		now description entry is "The fox has apparently avoided the others so far. Let's fix that";
+	[]
+	if Orc cum is owned:
+		choose a blank row in table of fucking options;
+		now title entry is "Offer him some orc cum to drink";
+		now sortorder entry is 4;
+		now description entry is "Offer Vincent a creamy refreshment";
+	[]	
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -239,6 +256,12 @@ to say VincentTalkMenu:
 				else if (nam is "Bring up sex between the two of you"):
 					say "[VincentSexTalk]";
 					now DoneTalking is true;
+				else if (nam is "Introduce him to the other people in the building"):
+					say "[Vincent_Introduction]";
+					now DoneTalking is true;
+				else if (nam is "Offer him some orc cum to drink"):
+					say "[Vincent_OrcCumOffer]";
+					now DoneTalking is true;
 				wait for any key;
 				if DoneTalking is false: [looping around for more talk options]
 					say "[VincentTalkMenu]";
@@ -255,33 +278,253 @@ to say Vincent_BackgroundTalk1: [ask about him]
 	say "     'Anyways I got the fuck out of that town as soon as I could, came to the coast to go to college. Dropped out in the third year, then got a job downtown as a clothing store attendant last Fall.' Rolling his eyes, Vincent grumbles, 'Manning the retail trenches during Black Friday is just the worst! I was slapped, twice, by rabid shoppers! Really made me wish I'd kept some of those venomous creepy crawlies from back home. To throw them at the bitches!' Baring his fangs, he seems to imagine someone running away screaming, then chuckles and turns his attention back to you. 'Anyways, a job's a job, so you learn to smile and bear it... long hours, rude customers, picking up all sorts of stuff they dump on the ground if they don't like it, all that jazz. So yeah, that's what I was doing when this whole thing started. Putting away some of the not quite current fashion trends. Had this vintage, really gaudy vest in my hands, trimmed with red fur. Didn't really think it was real as the label was claiming, but... well, moments later I started transforming into this. Guess I should be thankful that that designer actually went with a red animal, and didn't just color some rodent fuzz red.'";
 	WaitLineBreak;
 	say "     While slowly shaking his head, Vincent looks down at his hand and arm, then strokes a finger over the fur covering it. 'So thanks to my poor foxy compatriot, not that I ever knew him in life, I guess I'm a real life furry now. Never thought I'd get into that stuff, but then... life isn't actually so bad, as an animal person. Fur's pretty nice, and I dig the tail. Of course, life's still got its upsides and downsides. Less snooty bitches these days, more rampaging orcs. But you gotta do what you have to survive. Things were mostly going my way, until... you know. And then you saved my bacon, so that worked out alright too, eh?' Giving you a friendly smile, the fox winks appreciatively.";
+	if "Background Story Told" is not listed in Traits of Vincent:
+		say "     [bold type]You get the feeling that showing interest in Vincent's past has elevated you at least a little from being just a random acquaintance in his eyes. [roman type][line break]";
+		increase Loyalty of Vincent by 1;
+		TraitGain "Background Story Told" for Vincent;
 
 to say Vincent_BackgroundTalk2:
-	say "     The topic you bring up seems to leave a bit of a bad taste in Vincent's mouth, as he draws a grimace, then starts to talk after a little pause. 'Humanity was already a bunch of assholes before this shit went down, and most of what I've seen while living on the streets since didn't change my mind for the better. I mean, one can almost excuse all the feral critters, they don't know any better, but many of those who're still fairly human mentally are... utter gutter scum.' A scowl creeps over Vincent's features, not directed at you, but rather someone else. 'I mean - I was at work when I changed, and two coworkers also got hit, Ruth and Keitao. She turned into some sort of... marsupial or so? Furry, big boobs. And he became a snake-thing, but still with arms and legs. Dangerous one too - Mojave green pit viper! Didn't know then that he was showing his true self, the fork-tongued bastard!'";
-	say "     Blowing out his breath, Vincent continues bitterly, 'Damn, I'd had plenty of beers with them both, we went bowling the weekend before. Thought we were friends, all that jazz. So anyways, it was chaos, everyone was afraid, and we ran from the store together, trying to get away from the crowds of people going wild. You know, them either panicking and trampling each other or actually going animal, like us. It was a hell of a trip to get to Kei's place, for the three of us. Watching each other's backs until we got there. Crappy neighborhood, but these days you can be happy about having bars on all your windows. And then - then, after I'd just knocked out a damned big anthro armadillo, saving Kei from being mounted and fucked into submission - the fucker paused with his key in hand, in front of his place's door, and told Ruth she'd have to submit to be fucked by him, if she wanted to stay.'";
+	say "     The topic you bring up seems to leave a bit of a bad taste in Vincent's mouth, as he draws a grimace, then starts to talk after a little pause. 'Humanity was already a bunch of assholes before this shit went down, and most of what I've seen while living on the streets since didn't change my mind for the better. I mean, one can almost excuse all the feral critters, they don't know any better, but many of those who're still fairly human mentally are... utter gutter scum.' A scowl creeps over Vincent's features, not directed at you, but rather someone else. 'I mean - I was at work when I changed, and two coworkers also got hit, Ruth and Keitao. She turned into some sort of... marsupial? Furry, big boobs. And he became a snake-thing, but with arms and legs. Dangerous one too - Mojave green pit viper! Didn't know then that he was showing his true self, the fork-tongued bastard!'";
+	say "     Blowing out his breath, Vincent continues bitterly, 'Damn, I'd had plenty of beers with them both, we went bowling the weekend before. Thought we were friends, all that jazz. So anyways, it was chaos, everyone was afraid, and we ran from the store together, trying to get away from the crowds of people going wild. You know, either panicking and trampling each other or actually going animal, like us. It was a hell of a trip to get to Kei's place, on foot since everyone lost their car keys during transformation. Watching each other's backs until we got there. Crappy neighborhood, but these days you can be happy about having bars on all your windows. And then - then!' Vincent literally growls, 'After I'd just knocked out a damned big anthro armadillo, saving Kei from being mounted and fucked into submission - the fucker paused with his key in hand, in front of his place's door, and told Ruth she'd have to put out for him, if she wanted to stay.'";
 	WaitLineBreak;
-	say "     Growling under his breath, the fox adds, 'I think I must have stared at him as if he'd grown a second head, not just a forked tongue. The fucker laughed, right in my face, thanking me for getting him home. Then he waved a scaly hand to indicate the way we'd just come from, with all the screams, sounds of fucking and other noises. Asshole told Ruth, 'Better choose quick, babe. Think you'd make it too long out there, just the two of you?' Almost punched him, then and there, but he hissed at me and showed his venom fangs. Ruth was in tears as she gave in, then stepped into the place after Kei opened up, and a few seconds later, I was alone, on the outside. It was hell to make it through the next few days...' Quickly shaking his head to drive way the memories welling up in his mind, Vincent makes himself take a deep breath and stop balling his fists. His shoulders droop as he lets the anger go, staring at the ground for a second, then looking up at you again.";
+	say "     Growling under his breath, the fox adds, 'I think I must have stared at him as if he'd grown a second head, not just a forked tongue. The fucker laughed, right in my face! He thanked me for getting him home, then waved a scaly hand to indicate the way we'd just come from, with all the screams, sounds of rape and other noises. Asshole told Ruth, 'Better choose quick, babe. Think you'd make it too long out there, just the two of you?' Almost punched him, then and there, but he hissed at me and showed his dripping fangs. Ruth was in tears when she stepped into the place after Kei opened up, and one slammed door later, I was alone, on the outside. It was hell to make it through the next few days...' Quickly shaking his head to drive way the memories welling up in his mind, Vincent makes himself take a deep breath and unclenches his fists. His shoulders droop as he calms down, staring at the ground for a second, then looking up at you again.";
 	say "     'Sorry for such a downer of a story. I think I'll take a walk in the garden for a while. But yeah, see ya later.' That said, he leaves for now, needing a little time alone.";
 	TraitGain "Ruth & Keitao Story Told" for Vincent;
 
+to say Vincent_Introduction:
+	say "     Stepping up to Vincent, you put a hand on his shoulder and tell him that you want to introduce him to someone. He raises an eyebrow, then gives a little shrug and lets himself be led down to the entrance of the library readily enough. Quickly calling out for people in the building to gather, you ask them to welcome Vincent as a new guest in the Grey Abbey Library. The slender fox himself takes a step forward, clearing his throat and announcing, 'Hey there. I'm Vincent, just a normal guy, er - fox. I've put my camp down up near the back windows, if you wanna talk or something.'";
+	LineBreak;
+	if (Alexandra is collected) and HP of Alexandra < 50: [70/30]
+		say "     Alexandra saunters closer, giving Vincent a thoroughly unimpressed look. A rough chuckle bubbles up from her throat, and she comments, 'Got a shifty look about you, newbie. Always eyeing the possible exits from the corner of your gaze. So, what are you - thief, crook, maybe a hooker?' Momentarily taken aback by her words, Vincent shakes his head and replies, 'Neither. Just... a survivor.' ";
+		if "Sexual Rent" is listed in Traits of Vincent:
+			say "With a knowing look towards you, Alexandra snorts, 'So that's what we're calling it these days. Fine, as long as you remember that I'm the top bitch around here, besides the boss. You'd better respect me!' That said, the doberwoman then walks away.";
+		else:
+			say "Letting out a snort, Alexandra adds, 'Fine, as long as you remember that I'm the top bitch around here, besides the boss. You'd better respect me!' That said, the doberwoman then walks away.";
+		TraitGain "Alexandra - Tough Bitch" for Vincent;
+		TraitGain "Vincent - Newcomer" for Alexandra;
+		WaitBreakReactions;
+	if Amy is collected:
+		say "     Amy is shy as she approaches the slender fox, then holds out her hand for him to shake. 'Nice to meet you, I'm Amy!' she declares after getting over the first moment of hesitation, and Vincent exchanges some friendly words with her before she steps back to what she was doing before again.";
+		TraitGain "Amy - New Friend" for Vincent;
+		TraitGain "Vincent - New Friend" for Amy;
+		WaitBreakReactions;
+	if Brutus is collected:
+		if DBCaptureQuestVar is 5: [controlled]
+			[
+			if "Master's Bite" is listed in Traits of demon brute:
+				say "     <ask Luneth>";
+			else
+			]
+			if Resolution of Demonic Redemption is 7: [somewhat pacified]
+				say "     Brutus steps up to Vincent, who looks with alarm at the broad grin filled with dangerous teeth the looming demon shows to him. 'So, you brought a new fucktoy, eh master? Small one, I could just snap him in half with little effort,' he grunts, and you can see the fox's leg muscles tense as he readies himself for flight. Quickly stepping in before things go off the rails, you give Brutus a standing order to leave the man alone. With a dissatisfied grunt, the demon then walks off.";
+			else: [standard hateful captive]
+				say "     Brutus steps up to Vincent, who looks with alarm at the broad grin filled with dangerous teeth the looming demon shows to him. 'So, you brought a new fucktoy, eh master? Small one, I could just snap him in half with little effort,' he grunts, and you can see the fox's leg muscles tense as he readies himself for flight. One claw-bearing hand is halfway to Vincent's throat before you shout for Brutus to stop, freezing him mid-motion. Hastily explaining to the fox that this demon is completely under your control and he has nothing to worry about, you wave Brutus away, and he stomps off in frustration.";
+			TraitGain "Vincent - Seen him" for Brutus;
+			TraitGain "Brutus - Scary" for Vincent;
+		else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99: [cleansed]
+			say "     Brutus steps up to Vincent, who visibly shrinks back from the looming demon. The reaction makes your purple companion frown and look aside, followed by him ducking his head to come eye to eye with Vincent, on the same height. 'I'm sorry. You're right to fear us, but the [master] made me... better.' That said, Brutus turns to leave, only to be stopped when the fox calls out for him to wait, then holds out a hand for the demon to shake. 'Nice to meet you,' he says, working hard on keeping his voice steady as his hand is almost enveloped by Brutus's much larger one. This isn't exactly made easier as your demon companion smiles at the fox, revealing a terrifying number of sharp teeth. 'I'm called Brutus,' he adds, before making his exit, with a little bit of a hopeful expression on his face. As the demon is out of earshot, Vincent blows out a breath and comments, 'Guess one shouldn't go by first appearances, these days, eh?'";
+			TraitGain "Brutus - Scary but Friendly" for Vincent;
+			TraitGain "Vincent - New Friend" for Brutus;
+		WaitBreakReactions;
+	if Candy is collected:
+		say "     Candy saunters up to Vincent and looks the slender male up and down, then says in a flirty tone, 'Hey there good-looking. I'm Candy!' Vincent chuckles a little as the raccoon shakes his hand, his gaze wandering down to the pretty short skirt the crossdressing male is wearing. 'By the way, I love your tail! Wouldn't mind to give it a good feel sometime, if you're game for hanging out and having a good time..' A smirk spreads along the fox's muzzle, and Vincent responds with smile and a well-received, 'Maybe. We can have a chat later, eh?' Candy almost giggles in glee, then flounces off while giving you a wink.";
+		TraitGain "Candy - Very Flirty" for Vincent;
+		TraitGain "Vincent - New Target" for Candy;
+		WaitBreakReactions;
+	if Pink Raccoon is collected: [mindless Candy]
+		say "     Your pink raccoon pet comes up to Vincent, looking at him with lustful eyes and going right in to squeeze the fox's bulge. 'Hey!' Vincent calls out, pushing him away. 'Keep your fingers to yourself!' the man tells the mindless raccoon, and you quickly step in to grab your pet by the arm, pulling him back and then shooing him off. A quick explanation that the pink anthro can't really control himself is accepted by Vincent, but he does have a little bit of a suspicious expression on his face as he listens to your words.";
+		TraitGain "Dandy - Creepy Perv" for Vincent;
+		TraitGain "Vincent - New Target" for Candy;
+		WaitBreakReactions;
+	if Carl is collected:
+		if HP of Carl is 30: [beta carl]
+			say "     Carl walks up to Vincent, letting his gaze wander up and down over the fox as he approaches, taking in the clothes and tail of the slender male. 'New guy in the pack?' he asks you, indirectly broadcasting that he expects Vincent to be lower than him by not addressing him. As you simply nod, the husky soldier then finally acknowledges Vincent. 'Welcome, brother. I'm Carl.' The red fox takes in the interaction somewhat suspiciously, then says, 'Hi dude. Nice to meet ya, I guess - but just to let you know, I'm not too much into that whole pack bonding thing and all that. Perfectly happy on my own, you know.' Carl looks at him with a somewhat puzzled expression, then leaves after giving you a respectful nod.";
+			TraitGain "Carl - Dog Nut" for Vincent;
+		else:
+			say "     Carl walks up to Vincent, offering a hand for him to shake in greeting. 'Welcome, you can call me Carl. Always good to see more sane survivors making it here.' Accepting the handshake, the fox nods to Carl's camo gear and dog tags, and comments, 'Hm, I heard that the military had something that protects them from transforming... Guess the rumors were wrong then, eh? Sorry to see that you're in the same boat as myself. But hey, at least we got some of the good nanites, eh?' Carl stiffens a little as he hears Vincent's words and the reminder of just how he transformed, then pushes those thoughts aside and replies, 'Yeah, nothing is guaranteed these days. You just have to make the best out of what you're dealt with.' The two of them exchange some more words in a friendly tone, before Carl leaves to get back to his watch-post up at the streetside window.";
+			TraitGain "Carl - Soldier Buddy" for Vincent;
+		TraitGain "Vincent - New Friend" for Carl;
+		WaitBreakReactions;
+	if Colleen is collected:
+		if SarahSlut < 2: [not transformed, or only a little]
+			say "     Keeping her distance as she looks over to Vincent, taking in his slender frame and somewhat ragged clothing, Colleen calls out, 'Hey there! Nice to see that some people can keep their wits about them, even after they transform. Sorry that I'm not coming any closer, but I kinda prefer to stay human myself!' Looking back at her, Vincent gives a mix of a nod and shrug. 'Yeah, I get the point. Wouldn't have chosen to end up like this, if I was asked beforehand, but it's really not so bad. Maybe we can talk sometime, you know - with appropriate distance and all.' The soldier gives him a nod, then turns around and walks away.";
+			TraitGain "Vincent - Seen him" for Colleen;
+		else if ColleenAlpha is 0:
+			say "     Walking right up, Colleen looks at Vincent with her tail wagging behind her back. 'You brought someone new in, boss? Awesome!' The fox seems a little taken aback as she leans in to sniff him, but seems happy enough that she's at least friendly. The two of them talk a little while, before you wave your bitch off for now.";
+		[
+		else if ColleenAlpha > 0:
+			say "..."; [TODO: write this]
+		]
+		TraitGain "Vincent - New Survivor" for Colleen;
+		TraitGain "Colleen - Wary Soldier" for Vincent;
+		WaitBreakReactions;
+	if David is collected:
+		say "     Coming right up and offering his hand in an open, friendly way, David welcomes Vincent with the words, 'I'm Private David Jackson, but just call me David, will ya?' The fox accepts the greeting and responds, 'Nice to meet you. Man, I never imagined it'd be a rare thing to meet another human. Okay, I'm a fox now, but you know what I mean! Guess the rumors were true that the military is making progress in fighting the nanites? But then, what are you doing here?' David coughs, then says, 'It's a bit of a long story, but yeah... and the treatment is still very experimental. It'll be some time yet before any of us can expect rescue. But let's talk more about such things later, okay?' Excusing himself, the soldier leaves for now.";
+		TraitGain "Vincent - New Friend" for David;
+		TraitGain "David - New Friend" for Vincent;
+		WaitBreakReactions;
+	if Denise is collected:
+		say "     In a flutter of wings, Denise circles the two of you for a second, getting a good look, then lands a little distance off before approaching Vincent. 'Hi there,' she chirps in greeting, fluffing out her feathers a bit before folding the wings behind her back. 'Wow, that's neat! How long did it take for you to figure out how to fly?' the fox asks, and Denise replies, 'It all went pretty quick, really. I just kinda 'knew' suddenly, how to use the wings, as if I had always had them.' The two of them chat a little bit about flying, and music, before the gryphoness says her goodbyes and flies away for now.";
+		TraitGain "Vincent - New Friend" for Denise;
+		TraitGain "Denise - Awesome Wings" for Vincent;
+		WaitBreakReactions;
+	if (Elijah is collected) and HP of Elijah > 3:
+		if HP of Elijah is 99: [evil]
+			say "     Studying Vincent for a moment with a smirk on his face, Elijah asks, 'Bringing in some fresh meat, eh? I can't help but wonder how he earned the privilege of getting a place in here!' With a lewd grin, the winged man then mimes sucking motions and laughs. Pulling a face, Vincent replies in an annoyed tone, 'Of course, the ones looking like angels are always the worst! You can fuck right off, asshole! Stay away from me!' With an arrogant chuckle, the fallen angel turns around and wanders off. Yet before he vanishes between the bookshelves, he throws Vincent another look, coupled with a dark grin.";
+			TraitGain "Elijah - Asshole" for Vincent;
+		else: [good]
+			say "     Walking up to Vincent, Elijah gives the fox a friendly smile and welcomes him with open arms. 'Welcome, and may you find peace here.' Vincent stares at him with wide eyes for a second, then replies, 'You have seen what's going on out there in the city, right? I don't think peace is an option right now, you know!' Elijah's expression falls at that statement, and he blows out his breath. 'I know, yes. But we can make the best out of the situation and believe that things will improve.' Shrugging, Vincent replies, 'Never was that much into blind faith, I'm afraid.' 'As you prefer. But if you want to talk, about anything, know that I'll be there for you.' That said, the angel goes back to the door leading down into the bunker.";
+			TraitGain "Elijah - Church Nut" for Vincent;
+		TraitGain "Vincent - Rejection" for Elijah;
+		WaitBreakReactions;
+	if Eric is collected and Eric is not slutstored:
+		if HP of Eric > 0 and HP of Eric < 21:
+			say "     Walking up to Vincent, Eric gives a cautiously friendly smile half-raises his hand before hesitating. The anthro fox looks at him and says, 'Relax, I'm just a normal guy. No need to be on high alert around little old me.' Holding out his own hand in greeting, the two of them shake on it, and Eric visibly relaxes. 'Nice to meet you, I'm Eric. Always good to see more sane survivors. With everything going on, and all...' As he says this, the college student rubs his bandaged arm, then stops as he realizes what he's doing. 'I - uhm, I hope to talk to you later,' he adds quickly, giving Vincent a friendly smile before he steps back from meeting the newcomer.";
+			TraitGain "Vincent - New Friend" for Eric;
+			TraitGain "Eric - New Friend" for Vincent;
+		else if HP of Eric > 20 and HP of Eric < 50: [horsecock/satyrcock/orccock]
+			say "     Walking up to Vincent, Eric gives a friendly smile and shakes the anthro fox's paw-hand. 'Hi dude, I'm Eric. Love the shirt! I've got all of their CDs!' Eric says, indicating the band t-shirt Vincent is wearing. Then his expression drops a little, and he distractedly rubs his bandaged arm as he adds, 'Not that that's worth much. They could be on the moon and not be any easier to get to, with hordes of horny critters between here and the Tenvale campus. And not even on the college grounds is really safe.' Rolling his eyes, the anthro gives him an agreeing nod. 'Tell me about it! The things I've had to do just to make it in the streets, ... ah, but enough about that!' The two young men chat a little while longer, before Eric makes an exit with the words, 'Later, V.'";
+			TraitGain "Vincent - New Friend" for Eric;
+			TraitGain "Eric - New Friend" for Vincent;
+		else if HP of Eric is 99:
+			say "     After looking over with a moderately frightened look on his face, your little sex slave Eric ducks out of sight. You can't quite tell if he was looking at Vincent or yourself. Maybe both, as he could be expecting this new male to join you in demanding sex from him. 'Not very welcoming, that guy. No worries, I'll keep my distance too,' the fox comments, nodding over to where the cuntboy vanished.";
+			TraitGain "Vincent - New Threat" for Eric;
+			TraitGain "Eric - Avoid" for Vincent;
+		WaitBreakReactions;
+	if Fang is collected:
+		say "     Fang pads closer, sniffing the air and looking at Vincent, with [PosAdj of Fang] tail raised at attention. The anthro fox tenses a little, seemingly ready to run if needed, but keeps his standing position studying the canine while avoiding direct eye contact. Approaching, the feral wolf then pushes [PosAdj of Fang] muzzle right between Vincent's legs, sniffing his crotch, then soon his rear end after circling around. The newcomer endures the inspection for a moment, until Fang comes back to the front, looking up and giving a satisfied bark, tail starting to wag. At that point, Vincent reaches out slowly to stroke the wolf's side, which Fang accepts happily enough for a little while, before trotting away. 'Thank god I learned to read animals, more or less, when I was a scout. With all those ferals around, the streets are treacherous if you don't know if they just want to check you out, or jump and hump you.'";
+		TraitGain "Fang - Feral Wolf" for Fang;
+		TraitGain "Vincent - Newcomer Male" for Fang;
+		WaitBreakReactions;
+	if HP of Fiona > 4:
+		say "     Seemingly appearing from a dark corner in which she was hiding, Fiona stalks closer on all fours, then brushes up against Vincent's legs and purrs. He lets his gaze wander over the anthro female, not displeased at the show of her naked body and feminine curves. You make out a little twitch in his pants, indicating a modicum of arousal, but at the same time he keeps his hands to himself, not falling for the temptation of trying to touch her. The feline seems a little displeased at that, moving a few feet away from Vincent and then throwing herself onto the ground, rolling over to expose her belly and pussy to him. As there is no reaction beyond him simply looking to checking her out, Fiona's tail flicks left and right with jerky movements betraying her annoyance, after which the tease of a feline gets up and stalks into the shadows. 'One thing I learned long before all of this: Never stick your dick in crazy bitches, no matter how tempting, hah!'";
+		TraitGain "Fiona - Crazy Cat" for Vincent;
+		TraitGain "Vincent - Seen him" for Fiona;
+		WaitBreakReactions;
+	if Gabriel is collected:
+		say "     Curious about the anthro fox, Gabriel comes closer and says hello. At the same time, Vincent takes in the angel's naked body, collar and the wrist- and ankle-cuffs, his eyebrows rising as he sees the sexy presentation. 'Someone's quite... unreserved,' the fox can't help himself but comment, which results in the winged man looking down at himself, then submissively explaining, '[Master] showed me what I was made for, and that I should always be ready.' He stands there, not shying away from Vincent's eyes wandering over his body, until you give a little wave of your hand and shoo him away. As your sex pet is out of earshot, Vincent gives you a fairly wary glance and comments, 'I'll assume this is some kinky arrangement between the two of you, and that you're not planning on training everyone you meet up to act like that. Isn't that right?!' He accepts the innocent smile you give him, but you feel that the fox just sorted you into a higher category for his suspicions.";
+		TraitGain "Player - Suspicious" for Vincent;
+		TraitGain "Gabriel - Sex Pet" for Vincent;
+		TraitGain "Vincent - Master's Friend" for Gabriel;
+		WaitBreakReactions;
+	if Hayato is collected:
+		say "     As the towering shape of Hayato comes into view and the red oni takes a step towards the fox, Vincent shrinks back, his gaze flicking left and right to choose the best route of escape. He'd have started running if you hadn't asked him to wait, catching the man by his arm and telling him he's safe in the library. 'Are you kidding?! I've seen one of those things-' he responds, waving his free hand around to point at Hayato and then pausing, as the red-skinned man looks visibly distraught at the reaction to his appearance. 'My apologies! I - I should leave,' the oni says, then turns around. 'Wait!' Vincent calls after him just in time before Hayato ducks out of sight, making the oni look over his shoulder. 'I'm sorry. Guess I'll have to come to terms with that someone looking like you isn't just something from my nightmares, but can also be an okay person. I'll try, but it'll be hard.' Giving him a sad nod, Hayato waves and then steps behind a bookshelf.";
+		TraitGain "Hayato - Scary Giant" for Vincent;
+		TraitGain "Vincent - Source of Shame" for Hayato;
+		WaitBreakReactions;
+	if Helen is collected:
+		say "     Dashing towards Vincent on all fours, Helen goes in to sniff him, then licks his hand as he leans down to reach for her. 'Is she alright, in the head?' the anthro fox asks somewhat warily at her fairly nonhuman behavior, at which point you explain that Helen is a transformed normal dog [if Lust of Helen > 3]but you gave her something to help her become closer to fully human[end if], which Vincent takes in with raised eyebrows, looking at her in a new light. 'Crazy, what things can happen these days,' he comments about Helen, then pats her head slowly, like one would a dog. She accepts this quite happily, even leaning into his touch. [if Lust of Helen > 3]'New friend?' she suddenly asks, followed by a happy bark as Vincent replies, 'Why not, I like well-trained dogs.' [end if]Afterwards, Helen happily runs off.";
+		TraitGain "Helen - Human Shaped Dog" for Vincent;
+		TraitGain "Vincent - Master's Friend" for Helen;
+		WaitBreakReactions;
+	if Hobo is collected:
+		say "     Hobo rushes up to greet Spike with his tongue hanging out of the side of his mouth and a wagging tail behind his back. Leaning down, the anthro fox lets him sniff his hand, then proceeds to give the dog's ears a good scratch. 'Pretty friendly, aren't you?' Vincent comments as he pets the dog, with Hobo giving a friendly bark as if he understood and wanted to reply. 'And smart too! You're a very good boy!' the red fox says with a warm chuckle. Having received his pets, Hobo eventually trots off again, then lies down to doze in a comfortable spot.";
+		TraitGain "Hobo - Good Dog" for Vincent;
+		TraitGain "Vincent - Master's Friend" for Hobo;
+		WaitBreakReactions;
+	if Honey is collected:
+		say "     Honey buzzes through the air stopping just inches away from Vincent's face and inspecting him before saying in an avalanche of words, 'You look friendly! Wanna be friends? And you really are friendly, right?! I'm Honey!' With a chuckle under his breath, Vincent responds, 'Sure, I'm plenty friendly. Nice to meet you.' Honey squeals happily at making a new friend, then waves at Vincent and flies away, too wound up to hold a longer conversation right now.";
+		TraitGain "Hobo - Good Dog" for Vincent;
+		TraitGain "Vincent - Master's Friend" for Honey;
+		WaitBreakReactions;
+	if Korvin is collected:
+		if gsd_pet >= 20 and gsd_pet < 60:	[Subby Korvin]
+			say "     Leaning against the end of a bookshelf and keeping his distance, you see Korvin raising a hand as if to hide his pink collar, his gaze focused on Vincent. The German shepherd shows mixed expressions on his face, something between a confident sneer at the less muscular male, and shame at having become your subby pet. Clearing your throat and shooting him a look, Korvin sights and abandons the attempt at remaining to the sidelines, revealing his submissiveness to you fully. Vincent notices the girly collar right away, clashing with the muscular and scarred canine's look, and he only barely suppresses a chuckle at the sight. 'Hey there,' he greets Korvin, offering a hand and the two of them shake as they introduce themselves. 'Glad to see we got some strong men in the place, who can defend the building if things get tough,' the fox tells your canine pet, intentionally not looking at the collar as he strokes Korvin's ego. 'Yeah, totally!' the dog replies, his spirits rising at the friendly words. As the canine leaves a moment later, tail slightly wagging behind his back, you can see a faint smirk on Vincent's muzzle.";
+			TraitGain "Korvin - Influenceable" for Vincent;
+			TraitGain "Vincent - Nice Guy" for Korvin;
+		else: [no collar or black collar]
+			say "     Walking up to Vincent with a confident stride, Korvin puffs out his muscular chest a little and gives the fox a gruff nod. 'Newbie coming in, eh? Not much to you, is there?!' Clearly, the German shepherd isn't too impressed by Vincent's physique. Not quite rolling his eyes before putting on a more neutral expression, the fox studies Korvin for a second, then gives the anthro dog a slight smile. 'I've got other talents, believe me. And if something big and bad comes knocking on the front door, I'll know to come get you, right?' As he says this, the slender man leans in to Korvin and puts a hand on the dog's upper arm, giving it an admiring squeeze and stroking along Korvin's furred limb before pulling his hand back. 'Yeah, that's right!' Korvin responds, just eating up the praise. As the canine leaves a moment later, tail wagging behind his back, you can see a faint smirk on Vincent's muzzle. No wonder he wasn't afraid of the brash dog, with how easily he managed to wrap him around his finger.";
+			TraitGain "Korvin - Influenceable" for Vincent;
+			TraitGain "Vincent - Weakling" for Korvin;
+		WaitBreakReactions;
+	if Klauz is collected:
+		say "     Klauz stays sitting on a nearby sofa for a long while, casually licking a paw and stroking it over his head-fur while throwing a sidelong glance or two in the direction of the slender fox. Then eventually, he gets up and saunters closer, sniffing the air as he draws circles around Vincent, which ends up with him brushing up against the anthro's legs. As he rubs his fur against Vincent, busily spreading his scent all over the man, the felinoid purrs like an idling motor, drawing Vincent to lean down and pet him. As he does so, the fox's muzzle twitches when he catches a hint of the cat's scent, and he straightens his back quickly, getting his muzzle out of the musk cloud around the large feline. 'Sure is friendly, isn't he?' Vincent says with a little bit of a strain in his voice as he continues to pet Klauz, not letting it be obvious that he caught onto the felinoid's intentions. Klauz seems content to leave it at just that for now, enjoying the petting before letting out an amused churr and stalking away.";
+		TraitGain "Klauz - Danger" for Vincent;
+		TraitGain "Vincent - Target" for Klauz;
+		WaitBreakReactions;
+	if Nadia is collected:
+		say "     Nadia gives Vincent a friendly smile and comes right up to him, freely offering a hand as she introduces herself. 'It's always so neat to see people with wings. Just being able to fly must be amazing!' he gushes in admiration over her colorful wings, which makes Nadia giggle and respond happily. The fox and bird-woman make a little friendly small-talk, before the two of them say their goodbyes for now, saying they'll hang out later.";
+		TraitGain "Nadia - New Friend" for Vincent;
+		TraitGain "Vincent - New Friend" for Nadia;
+		WaitBreakReactions;
+	if Rane is collected:
+		say "     Sauntering up to the anthro fox with a smirk on his face, Rane stands back a little as he sees Vincent tense up when seeing his towering stature. Raising his hands on a calming gesture, the tall blue oni says, 'Relax, my dude. I'm peaceful, promise! Name's Rane. What brings a dashing fox like you to this place? Love shirt by the way. Good band!' Vincent is still a bit wary, but the personable and friendly approach of the blue oni finds fertile ground before much longer, and the two shake in greeting soon after, with the fox's hand almost completely enveloped by Rane's much larger one. The oni gives him a flirty wink as he says, 'See ya later, good-looking!' then strolls off.";
+		TraitGain "Rane - Flirty" for Vincent;
+		TraitGain "Vincent - Target" for Rane;
+		WaitBreakReactions;
+	if Ryousei is collected:
+		say "     Ryousei walks up to Vincent with measured steps, his gaze flicking down as if to check on how many tails the fox has behind his back. He seems almost relieved that there is only the one, then closes the last of the distance and gives the slender fox a cordial nod, respectful but fairly shallow. 'Welcome, young kitsune. How fitting to meet one of your kind in this place of learning,' the tiger says, raising a clawed hand to indicate the rows of books all around you. Then Ryousei adds, 'No doubt you already know how treacherous this world can be, so you will need all your cunning to outlast its dangers. Feel free to speak to me if you require assistance in a task that would benefit all of our group, but be aware that I have little patience for tricks or pranks.' Somewhat wide-eyed at the anthro cat's mannerisms and turns of phrase, Vincent blinks and nods to Ryousei, answering, 'Eeeh, yeah. Sure thing. I'll keep that in mind.' Smiling, the tiger nods to him and leaves. 'He's not from around here, is he?' Vincent asks you once the otherworldly cat is out of earshot, and you explain a little bit about Ryousei.";
+		TraitGain "Ryousei - Potential Sensei" for Vincent;
+		TraitGain "Vincent - Young Kitsune" for Ryousei;
+		WaitBreakReactions;
+	if (Sarah is collected) and SarahCured > 3:
+		say "     Sarah confidently strides up to Vincent and offers her hand in greeting. 'Welcome, I'm Sarah. It's good to see another sane person joining us here in the library. I'm sure if we hold together we'll make it out of this too! Oh, and I'm a medical student, so... if you need any help, let me know.' The anthro fox shakes her hand-paw, introducing himself in turn, and the two of them chat for a little while before saying their goodbyes for now.";
+		TraitGain "Sarah - Doc" for Vincent;
+		TraitGain "Vincent - New Friend" for Sarah;
+		WaitBreakReactions;
+	if Sven is collected:
+		if HP of Sven >= 30 and HP of Sven < 50:	[self-confident Sven]
+			say "     Coming up to the slender fox, Sven smiles at Vincent and says, 'Hallo! I hope we can be friends, despite the cat-dog thing, eh? Not that I think you're a dog, but... isn't a fox kinda similar? Anyways, nice to meet you, haha.' Bravely sticking out his hand in greeting, he shakes with Vincent, who chuckles at Sven's words. 'No worries, it's all fine. I'm still just a normal dude, despite the exterior packaging. Not gonna go wild on ya, just because you're a catguy.' Smiling, the snow leopard adds, 'By the way, I'm from Norway and an exchange student.' The two of them chat for a little while before Sven makes an exit, going back to what he was doing before.";
+			TraitGain "Sven - Young Guy" for Vincent;
+			TraitGain "Vincent - Young Guy" for Sven;
+		else if HP of Sven > 7 and HP of Sven < 11: [collared sex pet]
+			say "     Stepping out from behind a tall bookshelf, Sven saunters over towards Vincent and yourself, swinging his hips a little as he does so. 'Hallo foxy. I'm Sven,' he says in a flirtatious tone as he reaches Vincent, letting his gaze wander down to the slender man's bulge. 'Quite direct, aren't you?' Vincent comments, not disliking the snow leopard's attention, but with his attention being on Sven's collar, eyes flicking over to you, then back to the sign of your ownership over the exchange student. You casually wave Sven away for now, wanting to avoid possible questions. As your sex pet moves out of earshot, Vincent gives you a fairly wary glance and comments, 'I'll assume this is some kinky arrangement between the two of you, and that you're not planning on training everyone you meet up to act like that. Isn't that right?!' He accepts the innocent smile you give him, but you feel that the fox just sorted you into a higher category for his suspicions.";
+			TraitGain "Player - Suspicious" for Vincent;
+			TraitGain "Sven - Sex Pet" for Vincent;
+			TraitGain "Vincent - Flirt Target" for Sven;
+		else:
+			say "     Shily stepping out from behind a tall bookshelf, Sven keeps his extra long and thick tail raised before himself, partly hiding behind it. 'Hallo! Du er sot,' he says quietly, smiling at Vincent. The anthro fox looks somewhat nonplussed at the words, making Sven tremble in embarrassment at having forgotten to speak English. He seems almost ready to slink away in shame, only for Vincent to step up and hold out his hand in greeting. 'Hiho, I'm Vincent.' Accepting the offer and shaking hands, Sven replies, 'S-sorry for forgetting my English words. I'm Sven. I'm from Norway and an exchange student.' Vincent smiles at him, doing his best to calm the nervous cat down, and the two have little chat before Sven makes an exit, going back to what he was doing before.";
+			TraitGain "Sven - Shy Dude" for Vincent;
+			TraitGain "Vincent - Young Guy" for Sven;
+		WaitBreakReactions;
+	if Tehuantl is collected:
+		if Tehuantl is male:
+			say "     Tehuantl steps into view from between the bookshelves, bearing his shield and Aztec sword as he walks up to the slender fox. The jaguar warrior comes to stand before him, sizing up Vincent for a short moment before giving a slight shake of his head. Seems he's unimpressed with the young man's physique. 'A new camp follower, I see. You can call me Tehuantl. Know that I am the [master]'s warslave, and you will give me the appropriate respect.' Having said what he wanted, the anthro feline turns and strides away, leaving Vincent looking after him with a curious expression. 'What the fuck was that? Is he all there? Almost seems like he's a cosplayer who forgot anything except his role...' You quickly explain where and how you met Tehuantl, and that he genuinely believes to be an authentic Aztec warrior. 'Okay, I'll keep an eye out. Hope he won't go all loopy and demand weird stuff. I mean, he's hot alright, but one should never stick their dick in crazy, you know!'";
+			TraitGain "Tehuantl - Warrior Dude" for Vincent;
+			TraitGain "Vincent - Student" for Tehuantl;
+		else:
+			say "     Tehuantl steps into view from between the bookshelves, walking up to the anthro fox with her hips swaying side to side. She smiles at Vincent, holding her upper body in a pose that exposes her breasts quite nicely. 'Hello young man, you can call me Tehuantl,' the feline says in an enticing tone, and she is clearly amused as he can't help but glance at her tits, only catching himself to look back up to her face after a second or two. 'Hope you'll stay for a while and we'll see each other,' she says finally, stroking a finger along the side of his cheek before making her exit soon after.";
+			TraitGain "Tehuantl - Sexy Bitch" for Vincent;
+			TraitGain "Vincent - Flirting Target" for Tehuantl;
+		WaitBreakReactions;
+	if Urik is collected:
+		say "     As Urik comes into sight, Vincent's eyes go almost comically wide, and he immediately starts looking left and right for the nearest exit. 'What the fuck is an orc doing here?!' the anthro shouts at you, only to stare in disbelief as you tell him to calm down, then wave at Urik to come over. The muscle-packed green brute steps up to tower over Vincent, clearly well-amused by the other man's reaction to his mere presence. 'Bit scrawny for my taste, but he could be fun to chase down anyways,' is the orc's first comment, followed by a roaring laugh as Vincent shrinks back and bumps against you. 'Just kidding, dude! I don't mess around here in [UrikPlayerAddress]'s place, that's for sure!' Urik adds with a respectful nod to you. ";
+		if "Private Breeder" is not listed in Traits of Urik and "Selective Breeding" is not listed in Traits of Urik:
+			say "Placing a hand on his crotch, the orc winks at Vincent, then says, 'So it'll have to be all 'consentual-like' if you wanna get a taste of this bad boy. I'll be waiting, foxy.' ";
+		say "Gulping as he watches the huge orc turn around and stroll off, Vincent turns to you. 'Are you sure it's... safe, to have that guy in here? I mean, I know you took down the other guys, but he's a fucking tank!' As you confidently tell him that Urik'll be on his best behavior, the fox relaxes a little bit, but remains wary about being so close to an orc.";
+		TraitGain "Urik - Scary Orc" for Vincent;
+		TraitGain "Vincent - Beanpole" for Urik;
+		WaitBreakReactions;
+	if Xerxes is collected:
+		say "     Dashing towards Vincent on all fours, Xerxes goes in to sniff him, then licks his hand as he leans down to reach for him. 'Is he alright, in the head?' the anthro fox asks somewhat warily at his fairly nonhuman behavior, at which point you explain that Xerxes is a transformed normal dog [if Lust of Xerxes > 3]but you gave him something to help him become closer to fully human[end if], which Vincent takes in with raised eyebrows, looking at the other male in a new light. 'Crazy, what things can happen these days,' he comments about Xerxes, then pats his head slowly, like one would a dog. He accepts this quite happily, even leaning into his touch. [if Lust of Xerxes > 3]'New friend?' he suddenly asks, followed by a happy bark as Vincent replies, 'Why not, I like well-trained dogs.' [end if]Afterwards, Xerxes happily runs off.";
+		WaitBreakReactions;
+		TraitGain "Xerxes - Human Shaped Dog" for Vincent;
+		TraitGain "Vincent - Master's Friend" for Xerxes;
+		WaitBreakReactions;
+	now IntroReactionCounter is 0; [reset]
+	TraitGain "Introduced" for Vincent;
+
 to say VincentSexTalk:
-	say "     As you approach and bring up sex, Vincent snorts and a somewhat mocking chuckle bubbles up from his chest. 'I'd been wondering when the other shoe would drop. No one just invites random people into their place during the apocalypse. Let me guess: I better put out, or out the door I go? You just had to wait till I'd picked out a comfy sofa and know what I'd lose?' Crossing his arms in front of his chest, the anthro throws a glance at the piece of furniture he claimed as a bed, then lets out a sigh. Seems he's contemplating if he should reject the demand he's expecting from you, or go along with it. You can't help but wonder just when and where he got his rest before, if trading sex for a place to sleep isn't out of the question for him. Likely nowhere pleasant, and he'd always had to scramble when some creature or looter came along. A throat being cleared draws you out of your thoughts, and you focus back on the fox himself, standing before you with a serious expression, one eyebrow raised as he waits for you to say something.";
+	say "     As you approach and bring up sex, Vincent snorts and a somewhat mocking chuckle bubbles up from his chest. 'I'd been wondering when the other shoe would drop. No one just invites random people into their place during the apocalypse! Let me guess: I better put out, or out the door I go? You just had to wait till I'd picked out a comfy sofa and knew what I'd lose?!' Crossing his arms in front of his chest, the anthro throws a glance at the piece of furniture he claimed as a bed, then lets out a sigh. Seems he's contemplating if he should reject the demand he's expecting from you, or go along with it. You can't help but wonder just when and where he got his rest before, if trading sex for a place to sleep isn't out of the question for him. It was likely nowhere pleasant, and he'd always had to scramble when some creature or looter came along. 'Hrrumph.' The sound of Vincent clearing his throat draws you out of your thoughts, and you focus back on the fox himself, standing before you with a serious expression, one eyebrow raised as he waits for your answer.";
 	LineBreak;
 	say "     [bold type]Just what do you want to say to Victor?[roman type][line break]";
 	let Vincent_SexTalk_Choices be a list of text;
-	add "Fuck no, he's got you completely wrong! Sexual blackmail?! WTF? You just wanted to extend an offer of some relief..." to Vincent_SexTalk_Choices;
+	add "Fuck no, he's got you completely wrong! Sexual blackmail?! Hell no! You just wanted to extend an offer of some relief..." to Vincent_SexTalk_Choices;
 	add "You'd have said it in somewhat nicer words, but... a little 'appreciation' for you would endear him as a long-term guest." to Vincent_SexTalk_Choices;
 	add "He'd better forget the word 'No' even exists when you ask him to do something from now on. You'll have him any way you please, any time you want." to Vincent_SexTalk_Choices;
 	let Vincent_SexTalk_Choice be what the player chooses from Vincent_SexTalk_Choices;
 	if Vincent_SexTalk_Choice is:
-		-- "Fuck no, he's got you completely wrong! Sexual blackmail?! WTF? You just wanted to extend an offer of some relief...":
+		-- "Fuck no, he's got you completely wrong! Sexual blackmail?! Hell no! You just wanted to extend an offer of some relief...":
 			LineBreak;
-			say "     As you react strongly, and also somewhat angrily, to his accusation of wanting to exploit him, Vincent seems momentarily baffled, taking a step back and raising his hands in a pacifying gesture. 'Wow, calm down! I - uhm, I guess... I might have misjudged you? Sorry, but humanity was already a bunch of assholes before this shit went down, and most of what I've seen while living on the streets since didn't change my mind for the better. I mean, one can almost excuse all the feral critters, they don't know any better, but many of those who're still fairly human mentally are... utter gutter scum.' A scowl creeps over Vincent's features, not directed at you, but rather someone else. 'I mean - I was at work when I changed, and two coworkers also got hit, Ruth and Keitao. She turned into some sort of... marsupial or so? Furry, big boobs. And he became a snake-thing, but still with arms and legs. Dangerous one too - Mojave green pit viper! Didn't know then that he was showing his true self, the fork-tongued bastard!'";
-			say "     Blowing out his breath, Vincent continues bitterly, 'Damn, I'd had plenty of beers with them both, we went bowling the weekend before. Thought we were friends, all that jazz. So anyways, it was chaos, everyone was afraid, and we ran from the store together, trying to get away from the crowds of people going wild. You know, them either panicking and trampling each other or actually going animal, like us. It was a hell of a trip to get to Kei's place, for the three of us. Watching each other's backs until we got there. Crappy neighborhood, but these days you can be happy about having bars on all your windows. And then - then, after I'd just knocked out a damned big anthro armadillo, saving Kei from being mounted and fucked into submission - the fucker paused with his key in hand, in front of his place's door, and told Ruth she'd have to submit to be fucked by him, if she wanted to stay.'";
+			say "     As you angrily react to his accusation of wanting to exploit him, Vincent seems momentarily baffled, taking a step back and raising his hands in a pacifying gesture. 'Wow, calm down! I - uhm, I guess... I might have misjudged you? Sorry, but humanity was already a bunch of assholes before this shit went down, and most of what I've seen while living on the streets since didn't change my mind for the better. I mean, one can almost excuse all the feral critters, they don't know any better, but many of those who're still fairly human mentally are... utter gutter scum.' A scowl creeps over Vincent's features, not directed at you, but rather someone else. 'I mean - I was at work when I changed, and two coworkers also got hit, Ruth and Keitao. She turned into some sort of... marsupial? Furry, big boobs. And he became a snake-thing, but with arms and legs. Dangerous one too - Mojave green pit viper! Didn't know then that he was showing his true self, the fork-tongued bastard!'";
+			say "     Blowing out his breath, Vincent continues bitterly, 'Damn, I'd had plenty of beers with them both, we went bowling the weekend before. Thought we were friends, all that jazz. So anyways, it was chaos, everyone was afraid, and we ran from the store together, trying to get away from the crowds of people going wild. You know, either panicking and trampling each other or actually going animal, like us. It was a hell of a trip to get to Kei's place, on foot since everyone lost their car keys during transformation. Watching each other's backs until we got there. Crappy neighborhood, but these days you can be happy about having bars on all your windows. And then - then!' Vincent literally growls, 'After I'd just knocked out a damned big anthro armadillo, saving Kei from being mounted and fucked into submission - the fucker paused with his key in hand, in front of his place's door, and told Ruth she'd have to put out for him, if she wanted to stay.'";
 			WaitLineBreak;
-			say "     Growling under his breath, the fox adds, 'I think I must have stared at him as if he'd grown a second head, not just a forked tongue. The fucker laughed, right in my face, thanking me for getting him home. Then he waved a scaly hand to indicate the way we'd just come from, with all the screams, sounds of fucking and other noises. Asshole told Ruth, 'Better choose quick, babe. Think you'd make it too long out there, just the two of you?' Almost punched him, then and there, but he hissed at me and showed his venom fangs. Ruth was in tears as she gave in, then stepped into the place after Kei opened up, and a few seconds later, I was alone, on the outside. It was hell to make it through the next few days...' Quickly shaking his head to drive way the memories welling up in his mind, Vincent makes himself take a deep breath and stop balling his fists. His shoulders droop as he lets the anger go, staring at the ground for a second, then looking up at you again.";
-			say "     'Sorry for bringing up that fucked-up story. I just - I apologize for thinking you'd... you know. All of this hasn't exactly been easy for me, and I guess I fell into a certain frame of mind, concerning the world. Can't be disappointed at least, if you always expect the worst from people.' He looks aside, scratching the back of his neck in embarrassment. 'So, yeah. Bet you must think I'm a total ass, but... if you still wanted to do stuff, that'd be fine by me. Would be kinda refreshing just to do it because we felt like it, instead of as a transaction.' As you raise your eyebrows at those last words, Vincent shrugs unapologetically. 'Told ya, surviving's hard out there. I'm good with my tongue, so I always had something to trade, when I needed to. Better than going hungry, that's for sure.' He presses his lips together, then quickly adds, 'Anyways, I think I'll take a walk in the garden for a while. But yeah, see ya later.' That said, he leaves for now, needing a little time alone.";
+			say "     Growling under his breath, the fox adds, 'I think I must have stared at him as if he'd grown a second head, not just a forked tongue. The fucker laughed, right in my face! He thanked me for getting him home, then waved a scaly hand to indicate the way we'd just come from, with all the screams, sounds of rape and other noises. Asshole told Ruth, 'Better choose quick, babe. Think you'd make it too long out there, just the two of you?' Almost punched him, then and there, but he hissed at me and showed his dripping fangs. Ruth was in tears when she stepped into the place after Kei opened up, and one slammed door later, I was alone, on the outside. It was hell to make it through the next few days...' Quickly shaking his head to drive way the memories welling up in his mind, Vincent makes himself take a deep breath and unclenches his fists. His shoulders droop as he calms down, staring at the ground for a second, then looking up at you again.";
+			say "     'Sorry for bringing up that fucked-up story. I just - I apologize for thinking you'd... you know. All of this hasn't exactly been easy for me, and I guess I fell into a certain frame of mind. Can't be disappointed at least, if you always expect the worst from people.' He looks aside, scratching the back of his neck in embarrassment. 'So, yeah. Bet you must think I'm a total ass, but... if you still wanted to do stuff, that'd be fine by me. Would be kinda refreshing just to do it because we felt like it, instead of as a transaction.' As you raise your eyebrows at those last words, Vincent shrugs unapologetically. 'Told ya, surviving's hard out there. I'm good with my tongue, so I always had something to trade, when I needed to. Better than going hungry, that's for sure.' He presses his lips together, then quickly adds, 'Anyways, I think I'll take a walk in the garden for a while. But yeah, see ya later.' That said, he leaves for now, needing a little time alone.";
+			say "     [bold type]Pointedly rejecting Vincent's expectation of sexual blackmail has raised your status in his eyes a little. [roman type][line break]";
+			increase Loyalty of Vincent by 1;
 			TraitGain "Ruth & Keitao Story Told" for Vincent;
+			TraitGain "Sextalk Loyalty Bonus Given" for Vincent; [to make sure the player only gets one point, retrofitted in the postimport rule, or in the scene as planned]
 		-- "You'd have said it in somewhat nicer words, but... a little 'appreciation' for you would endear him as a long-term guest.":
 			LineBreak;
 			say "     'As I said, I expected as much. Nothing's free, except death, eh? But yeah, you're right - a safe place to get some shut-eye is worth a lot, these days. Laying down with one eye open is sure getting old fast, I can tell you that!' Scratching the underside of his muzzle, he thinks for a few seconds, then nods to you. 'Okay, fine. I'll play ball. But there have to be ground rules - just let me do my thing, and I'll give you what you need. Don't grab me or try to force anything, understand? I'll bite you if you try! Understood?' As you agree to his conditions, the fox pulls off his sleeveless shirt, throwing it to land on his sofa, then walking up to you and sinking into a crouch. Seems he's ready to pay his rent, right here and now!";
@@ -289,11 +532,58 @@ to say VincentSexTalk:
 			say "[VincentOral1]";
 		-- "He'd better forget the word 'No' even exists when you ask him to do something from now on. You'll have him any way you please, any time you want.":
 			LineBreak;
-			say "     The fox's lips pull up to reveal his sharp, predator teeth in a sneer, and Vincent growls, 'Fuck this place, then! And fuck you for making me almost think that you were of a decent sort!' That said, the slender anthro takes a quick dash to the side, jumping right over the railing of the upper floor and dropping down into the top of one of the tall bookshelves on the lower floor. The shelf sways a little from the impact, and a lot of books tumble to the ground as Vincent climbs down on one side, using the boards as an improvised ladder. Then he vanishes from your line of sight, running underneath where you're standing to reach the back door of the building. He'll likely slip away unseen somewhere at the back of the library grounds.";
+			say "     The fox's lips pull up to reveal his sharp, predatory teeth in a sneer, and Vincent growls, 'Fuck this place, then! And fuck you for making me almost think that you weren't an asshole!' That said, the slender anthro takes a quick dash to the side, jumping right over the railing of the upper floor and dropping down into the top of one of the tall bookshelves on the lower floor. The shelf sways a little from the impact, and various books tumble to the ground as Vincent climbs down on one side, using the boards as an improvised ladder. Then he vanishes from your line of sight, running underneath where you're standing to reach the back door of the building. You doubt you'll see him again.";
 			now Vincent is nowhere; [gone forever]
 	TraitGain "Sex Discussed" for Vincent; [fine with sex from now on, either because he talked things out with the player, or because he's paying his "rent"]
 
-Instead of fucking the Vincent:
+to say Vincent_OrcCumOffer:
+	if "Orc Cum Aware" is not listed in Traits of Vincent:
+		if Loyalty of Vincent < 2:
+			say "     Raising one eyebrow in a baffled expression as you make the offer, Vincent glances at the bottle in your hand, eyes going wide as he sees the label on it. Half-raising his hands in a defensive gesture, he then rapidly shakes his head. 'You serious? I mean, why the hell do you have a full bottle of the stuff, like it's your favorite milkshake or something like that?! I'm good, thank you. There's plenty of normal things to drink, you know!' He seems a bit weirded out by your choice of refreshments, and excuses himself to take a walk in the garden to get some fresh air.";
+		else: 
+			say "     Raising one eyebrow in a baffled expression as you make the offer, Vincent glances at the bottle in your hand, and the label on it. 'You serious? I mean, why the hell do you have a full bottle of the stuff, like it's your favorite milkshake or something like that?!' He pulls a bit of a grimace, looking at your face as you tell him it tastes pretty great. The fox's eyebrows draw together, doubt written large over his face, and he seems ready to reject your offer outright. But then, it seems like your efforts to build some trust with him have an effect, as he blows out his breath and says with a roll of his eyes, 'Fine, if you're so gung-ho about it, I'll have a taste. Just a little one.' Smiling, you uncap your bottle of orc cum, then pour a small amount of the thick liquid into the plastic cap and hold it out to Vincent. Dipping a fingertip into the cum, he brings it to his face and has a sniff, then shrugs and puts it between his lips.";
+			say "     As the white goop touches the fox's tongue, his eyes go wide at its pleasant, stimulating bouquet. 'This tastes... pretty nice,' he says, not quite hiding the slight pause he needed to pick some less enthusiastic words than what first came to mind. Swallowing his first taste of orc cum and wanting more, he plucks the bottle cap from your fingers, sticking his tongue into it and licking up every last drop of the creamy seed that you poured out. His gaze flicks to the open bottle in your hand, muzzle opening as if he's about to ask for another dose. Coming back to his senses, he pauses, blinking away the hungry expression that filled his eyes for a second. With a shake of his head, Vincent exclaims, 'Fucking hell, what is this stuff? Tastes amazing but... it's like a drug or something! Man, if I drank down that whole bottle, I think I might be zonked out and rolling drunkenly on the floor like an alcoholic on payday!'";
+			LineBreak;
+			say "     [bold type]Realizing that you offered him a potent drug as a 'drink', Vincent's eyebrows draw together in suspicion. What do you want to say or do now?[roman type][line break]";
+			let Vincent_OrcCumBottle_Choices be a list of text;
+			add "It's great stuff, and you love drinking it yourself! Then chug down the contents of the bottle." to Vincent_OrcCumBottle_Choices;
+			add "He should chill out a bit, and you just wanted to offer him some good stuff so he could ride out the high." to Vincent_OrcCumBottle_Choices;
+			add "Just force him to drink the cum! He'll be far mor pliable once you got him hooked on the stuff!" to Vincent_OrcCumBottle_Choices;
+			let Vincent_OrcCumBottle_Choice be what the player chooses from Vincent_OrcCumBottle_Choices;
+			if Vincent_OrcCumBottle_Choice is:
+				-- "It's great stuff, and you love drinking it yourself! Then chug down the contents of the bottle.":
+					LineBreak;
+					try using orc cum;
+					say "     As you chug down gulp after gulp of the rich, flavorful orc cum, a mellow feeling of warmth and pleasure fills you. With a drunken grin on your face, you tell Vincent that he really missed out on a treat, and can't help yourself, planting a spontaneous kiss on his lips. Pulling back in surprise, the fox licks off a bit of wetness you left behind, getting another little dose of orc cum into his system. His gaze is drawn to the now empty bottle, followed by him biting his lip. 'I - I think I'm good, but thanks for the offer. Why don't you just... keep your stash for your own use, okay?'";
+					TraitGain "Orc Cum Aware" for Vincent;
+					TraitGain "Player Orc Cum User" for Vincent;
+				-- "He should chill out a bit, and you just wanted to offer him some good stuff so he could ride out the high.":
+					LineBreak;
+					say "     Rolling his eyes, Vincent grumbles, 'If and when I use any drugs is MY choice, and I always want to know what the hell it is beforehand! Really not cool that you've tried springing this on me as a surprise! Keep that stuff to yourself in the future! I'm out of here to get some fresh air!' With a displeased grunt, the fox stalks off.";
+					say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
+					decrease Loyalty of Vincent by 1;
+					TraitGain "Orc Cum Aware" for Vincent;
+					TraitGain "Drugging Attempt" for Vincent;
+				-- "Just force him to drink the cum! He'll be far mor pliable once you got him hooked on the stuff!":
+					LineBreak;
+					say "     Raising the bottle, you make a grab for the fox, trying to hook your hand behind the back of his neck to keep him under control. Instead, Vincent whips his muzzle around to clamp a set of sharp, predatory teeth on your hand, then jumps back out of reach as you howl in pain. 'Fuck this place! I knew this was too good to be true! And fuck you for making me think that you weren't an asshole!' That said, the slender anthro takes a quick dash to the side, jumping right over the railing of the upper floor and dropping down into the top of one of the tall bookshelves on the lower floor. The shelf sways a little from the impact, and various books tumble to the ground as Vincent climbs down on one side, using the boards as an improvised ladder. Then he vanishes from your line of sight, running underneath where you're standing to reach the back door of the building. You doubt you'll see him again.";
+					now Vincent is nowhere; [gone forever]
+	else: [he knows what orc cum does and had a dose]
+		if "Drugging Attempt" is listed in Traits of Vincent: [see above]
+			say "     As you approach him again with orc cum, Vincent's expression hardens and he shows you his teeth. 'Back again with that shit? I told you no, and you're not exactly making a good impression, touting that bottle around like its free samples of heroin!' With a displeased grunt, the fox stalks off.";
+			say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
+			decrease Loyalty of Vincent by 1;
+		else if "Player Orc Cum User" is listed in Traits of Vincent: [see above]
+			[
+			if Loyalty of Vincent > 10: [TODO: adapt value as needed when the content is written]
+				say "Talk about actually consuming a whole bottle of orc cum";
+			else: [nope, he's not ready]
+			]
+			say "     Glancing at the bottle of orc cum, Vincent raises his eyebrows and hesitates, his tongue flicking out almost on its own accord to lick his lips. There's some hunger for the taste of orc cum in him. But then, he shakes his head, and says, 'Thanks, but... I don't usually have drug-parties with people I don't know that well. Why don't you keep your stash for your own use right, eh?'";
+		else: [he has blown a player who was an orc]
+			say "     Glancing at the bottle of orc cum, Vincent raises his eyebrows and hesitates, his tongue flicking out almost on its own accord to lick his lips. There's some hunger for the taste of orc cum in him. But then, he shakes his head, and says, 'Thanks, but I told you I don't want to overindulge in that stuff. You offering a whole bottle makes it too tempting to keep drinking more. So pack it away please. I'll go get some fresh air.' That said, he wanders off to go for a walk in the garden.";
+
+Instead of fucking Vincent:
 	if (lastfuck of Vincent - turns < 2):
 		say "     Vincent puts a hand on your chest to hold you back and says, 'Please, I need a break for a moment, okay?";
 	else if "Sex Discussed" is not listed in Traits of Vincent:
@@ -302,6 +592,7 @@ Instead of fucking the Vincent:
 		say "[VincentSexMenu]";
 
 to say VincentSexMenu:
+	say "     [bold type]What exactly do you want to do with the fox?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -310,6 +601,11 @@ to say VincentSexMenu:
 	now title entry is "Let him go down on you";
 	now sortorder entry is 1;
 	now description entry is "Enjoy the fox's talented tongue";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Give Vincent a blowjob";
+	now sortorder entry is 2;
+	now description entry is "Go down on the fox";
 	[
 	if Player is male:
 		choose a blank row in table of fucking options;
@@ -339,6 +635,8 @@ to say VincentSexMenu:
 				now sextablerun is 1;
 				if (nam is "Let him go down on you"):
 					say "[VincentOral1]";
+				else if (nam is "Give Vincent a blowjob"):
+					say "[VincentGetsBJ]";
 				else if (nam is "Fuck his ass"):
 					say "[VincentSex1]";
 				else if (nam is "Ride his cock"):
@@ -358,14 +656,15 @@ to say VincentOral1:
 		if (CockName of Player is "Orc Warrior" or CockName of Player is "Orc Breeder"):
 			if "Orc Cum Aware" is not listed in Traits of Vincent: [addiction risk]
 				say "[VincentFirstOrcBJ]";
-			else: [repeats]
-				say "     His nostrils flare as he takes in the musky scent of your pre-cum, licking the sides of his muzzle as the desire for tasting you again rises inside him. After a last moment of hesitation, he almost pounces for your green-skinned cock, lapping at the glistening wetness of pre-cum welling up from your cum-slit. 'Yeah, that's the stuff,' he says breathily, swallowing what he can lick up right away. That floppy is in almost constant motion, slurping over the tip of your cock hungrily. Soon, the slow leak of pre doesn't seem to be enough for him, and the fox pulls off, then starts giving you a proper blowjob. In joyous haste, Vincent opens wide and slides his whole muzzle over your erection, engulfing your manhood in his long muzzle. He bobs his head, tongue rolling along the underside of your hard rod and serving as a soft buffer between his teeth and your sensitive flesh.";
-				say "     Between the warm bed of his tongue below, the ribbed roof of his muzzle above, and the red fox's floppy tongue-tip half-wrapping around your shaft, Vincent delivers a quite enjoyable blow-job, bobbing up and down on your erect cock and eagerly slurping up what pre you leak into his open mouth. [if Cock Length of Player > 7]He goes as far as taking your erection down his throat too, inhaling it after taking a few deep breaths, then slowly letting the dickhead slide back up again before going for another round[else]He takes your whole length without any trouble, easily fitting your manhood in his muzzle[end if]. The anthro's sharp ears give him ample warning of your soon impending orgasm, and knowing the danger your much more potent cum holds, he must be intending to pull off, but that seems to have skipped Vincent's mind, as that wet nose stays pressed against your pubic area even as your balls start to pull up, readying an eruption of your potent seed.";
+				LineBreak;
+			else: [repeatable orc blowjob]
+				say "His nostrils flare as he takes in the musky scent of your pre-cum, licking the sides of his muzzle as the desire to taste you again rises inside him. After a last moment of hesitation, he almost pounces for your green-skinned cock, lapping at the glistening wetness of pre-cum welling up from your cum-slit. 'Yeah, that's the stuff,' he says breathily, swallowing what he can lick up right away. That floppy tongue is in almost constant motion, slurping over the tip of your cock hungrily. Soon, the slow leak of pre doesn't seem to be enough for him, and the fox pulls off, then starts giving you a proper blowjob. In joyous haste, Vincent opens wide and slides his whole muzzle over your erection, engulfing your manhood in his long muzzle. He bobs his head, tongue rolling along the underside of your hard rod and serving as a soft buffer between his teeth and your sensitive flesh.";
+				say "     Between the warm bed of his tongue below, the ribbed roof of his muzzle above, and the red fox's floppy tongue-tip half-wrapping around your shaft, Vincent delivers a quite enjoyable blow-job, bobbing up and down on your erect cock and eagerly slurping up what pre you leak into his open mouth. [if Cock Length of Player > 7]He goes as far as taking your erection down his throat too, inhaling it after taking a few deep breaths, then slowly letting the dickhead slide back up again before going for another round[else]He takes your whole length without any trouble, easily fitting your manhood in his muzzle[end if]. The anthro's sharp ears give him ample warning of your soon impending orgasm, and knowing the danger your potent cum holds, he must be intending to pull off, but that seems to have skipped Vincent's mind, as that wet nose stays pressed against your pubic area even as your balls start to pull up, readying an eruption of your orcish seed.";
 				WaitLineBreak;
-				say "     The temptation is strong to just let things play out, blast your cum down the throat of receptive male, but on the other hand... if he catches himself in time, or takes a little while to transform, Vincent would be furious. Better to keep to your deal, for now. Breathily, you announce that you're about to come, which seems to shake the fox out of his inactivity, and he almost forces himself to pull away, instead licking and slurping over the side of your throbbing prick. Just barely in time too, as you start to blast your load in high-arching spurts, landing on the hardwood floor with audible splats. You can hear Vincent's nose pull in a deep breath, huffing the scent of your cum, and his fingers grasp your legs tightly, almost as if to stop himself from placing his open mouth before your still erupting shaft. After the last ebbing spurts of cum paint the end of a several feet long, creamy trail on the floor, the fox allows himself to move finally, bringing his muzzle to your dickhead.";
-				say "     Washing his talented tongue over your dickhead, the slender vulpine cleans away the traces of your cum that remain, with his pupils growing larger as the potent mixture of pheromones, aphrodisiacs and other contents of your load cover his tongue. A content hum comes from his throat, followed by Vincent almost inhaling the front half of your shaft, closing his lips around it as best as he can and suckling hungrily. Seems like he wants to drain every last drop that might still be in your cum-tubes. Sensitive after your own orgasm, you actually have to pat his shoulder and tell the fox to take things easy, which leads to him glancing up at you with a slightly un-focused expression, then blinking his eyes back into focus before pulling off in a little bit of embarrassment. 'Sorry, I - it's good stuff, as you know.' You can't help but focus on the long streak of fresh cum on the floor just past where the fox is, and he follows your gaze.";
+				say "     The temptation is strong to just let things play out, to blast your cum down the throat of receptive male, but on the other hand... if he catches himself in time, or takes a little while to transform, Vincent would be furious. Better to keep to your deal, for now. Breathily, you announce that you're about to cum, which seems to shake the fox out of his inactivity, and he forces himself to pull away, instead licking and slurping over the side of your throbbing prick. Just barely in time to prevent a muzzleful, as you start to blast your load in high-arching spurts, sending sloppy strings arcing onto the hardwood floor with audible splats. You can hear Vincent's nose pull in a deep breath, huffing the scent of your cum, and his fingers grasp your legs tightly, almost as if to stop himself from placing his open mouth before your still erupting shaft. After the last ebbing spurts of cum paint the end of a several feet long, creamy trail on the floor, the fox allows himself to move finally, bringing his muzzle to your dickhead.";
+				say "     Washing his talented tongue over your dickhead, the slender vulpine cleans away the traces of your cum that remain, with his pupils growing larger as the potent mixture of pheromones, aphrodisiacs and other contents of your load cover his tongue. A content hum comes from his throat, followed by Vincent almost inhaling the front half of your shaft, closing his lips around it as best as he can and suckling hungrily. Seems like he wants to drain every last drop that might still be in your cum-tubes. Sensitive after your own orgasm, you actually have to pat his shoulder and tell the fox to take things easy, which leads to him glancing up at you with a slightly un-focused expression, then blinking his eyes back into focus before pulling off in a little bit of embarrassment. 'Sorry, I - it's good stuff, as you know. But I've got this under control, if I don't swallow too much...' You can't help but focus on the long streak of fresh cum on the floor just past where the fox is, and he follows your gaze, his eyes staring longingly as if he'll bend over and clean it with his tongue.";
 				WaitLineBreak;
-				say "     Vincent holds his breath for a second, seeing the rich bounty of your cum factories glistening in white-ish spatters on the smooth wooden floor, then shakes his head and quickly pulls a little hand-towel from his back pocket. Leaning down, he wipes the cum away with the absorbent fabric, removing the undignified temptation of lapping it up himself. 'Thanks for keeping up your end, with that warning. I'm fine with sucking you off, but I don't know what'd become of me if I went hog-wild gobbling up your load. A pleasant little buzz is awesome, but you don't wanna overdose on anything as strong as [italic type]that[roman type]!' Chuckling at the compliment for your virility, you agree with Vincent and give him a thumbs up for his oral services..";
+				say "     Vincent holds his breath for a second, seeing the rich bounty of your cum factories glistening in white-ish spatters on the smooth wooden floor, then shakes his head and quickly pulls a little hand-towel from his back pocket. Leaning down, he wipes the cum away with the absorbent fabric, removing the undignified temptation of lapping it up himself. 'Thanks for keeping up your end, with that warning. I'm fine with sucking you off, but I don't know what'd become of me if I went hog-wild gobbling up your load. A pleasant little buzz is awesome, but you don't wanna overdose on anything as strong as [italic type]that[roman type]!' Chuckling at the compliment, you agree with Vincent and give him a thumbs up for his oral services, puffing out your chest at the implied praise of your baby-batter factories.";
 		else: [normal BJ]
 			say "The corners of his mouth twitch upwards as he takes in your [Cock of Player] manhood, his tongue slipping out to lick the side of the fox's long muzzle. Taking hold of your shaft, he jerks it in a pleasant speed, seemingly knowing how to handle a man's pride and joy just right. As you harden and stand proudly erect soon enough, the fox takes a deep breath, then starts to lap at your dickhead, with his floppy canine tongue feeling quite nice as it glides over your sensitive glans.";
 			WaitLineBreak;
@@ -381,6 +680,30 @@ to say VincentOral1:
 	else:
 		say "His eyebrows rise a little as he takes in your absence of sexual organs, then shrugs and resolves to just lick your bare crotch instead. Flying blind, with no clear target to go for, he resolves to just keep teasing you with his tongue, also bringing his hands in to assist and massage your genital area. The stimulation feels pretty nice even without a cock or pussy, and after a little while, you start to tremble and shiver as waves of pleasure roll up and down your spine.";
 		NPCSexAftermath Player receives "Stroking" from Vincent;
+
+to say VincentGetsBJ: [Player goes down on him]
+	if "First BJ Received" is not listed in Traits of Vincent:
+		say "     Stepping up to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his triangular, flicking ear as you say in a breathy voice that you want to suck his cock. This has the anthro raising his eyebrows in a surprised expression for a second, before his grin is back, even broader than before. 'Guess I've been getting a bit too used to all those horny fuckers roaming the city in droves, just out for their own pleasure. More often than not, you're left hanging by one of those bastards! ";
+		if "Sexual Rent" is listed in Traits of Vincent:
+			say "I mean, I did get something out of it usually, like our little 'arrangement' for staying here, but it still can get annoying. I'm not that much of a sub, just simping for anyone to use like a fleshlight! So yeah... I appreciate you wanting to do this!' That said, Vincent moves his hands down to his crotch.";
+		else:
+			say "I mean, I did get something out of it usually, ya know... in trade, but it still can get annoying. I'm not that much of a sub, just simping for anyone to use like a fleshlight! So yeah... I appreciate it!' That said, Vincent flicks his tongue over your cheek before he moves his hands down to his crotch.";
+	else: [repeats]
+		say "     Stepping up to the red fox, you put a hand on Vincent's chest and then let it slide down over his band t-shirt and jeans, then give the young man's bulge an appreciative squeeze. 'Someone's being frisky,' he comments with a grin, pushing his hips forward against your hand. You hook your other hand behind his neck, thumb rubbing the sensitive base of his large ear as you say in a breathy voice that you want to suck his cock. 'Been hoping you'd say that!' Vincent responds, his grin spreading even wider than before. Then the anthro begins to run his hands along your sides, stroking and caressing your body. After a quick detour to squeeze your [if Breast Size of Player > 1]breasts[else]pecs[end if] and pinch your nipples, his fingers trail further down, rubbing over your pubic area before switching over to his crotch.";
+	say "     Eager fingers pop the button of Vincent's jeans through its hole, followed by the zipper being pulled open in a rapid flick. A quick glance reveals the fact that he's going commando as he shimmies the jeans past his hips, pushing them down to his thighs. The anthro fox's cock is overall human-shaped, with a moderately thick, uncut cock resting on the two orbs of his balls in a slightly dangly sack covered in cream-colored fur. Moving your hand to touch it, then cup the velvety fur of his balls, Vincent proves to be very much a grower, as his manhood rapidly fills out, rising from its previous dangling position to stand proud and erect at an upwards angle. Meeting his eyes and wiggling your eyebrows, you then sink down into a crouch, putting you face to 'face' with the fox's throbbing dick. So close that your warm breath washes over his hard shaft, you wrap your fingers around the hard length, feeling its firmness and girth in your grasp, softly pulsing with Vincent's heartbeat.";
+	WaitLineBreak;
+	say "     'Yeah, it's waiting for your mouth!' Vincent says in a voice betraying his barely restrained lust, and you can feel his hand being put down on your head, cradling it and giving a slight push towards his crotch. The pleasantly musky scent of his crotch becomes even stronger as a thick droplet of pre-cum wells up from the vulpine's cum-slit right in front of your eyes, and you quickly slide your lips over his glans to slurp up a first taste of Vincent. 'Mmmmhh! That feels great!' he grunts in pleasure, breath quickening as your tongue flicks teasingly over his cum-slit. Vincent's rock-hard shaft swells just a little further, dickhead now fully emerging from the foreskin, and you take it in eagerly, your lips in a tight ring around the rim of the mushroom head. Slender fingers stroke your head, in between pushing it lightly towards his crotch, and you follow the suggestion happily enough, starting to bob up and down on the juicy cock.";
+	say "     You work your way further and further down his throbbing length, taking another inch, or half an inch with every bob, your nose pushing into the furry bush above Vincent's cock and huffing the scent of his arousal with every breath. Steeling yourself, you take a deep lungful of the heady aroma, then relax your throat and gulp down all the rest of his erection, deep-throating the fox's. 'Fuuuckkk yeah, that's what I've been missing! You feel really amazing around my dick! Flex those muscles!' Vincent groans - half-pleading and half-demanding as his cock throbs hard, leaking even more pre-cum than before. Swallowing, you delight in the sounds of pleasure he makes as your inner muscles play over the schlong you've inhaled, then slowly pull back, letting it slide up your gullet and into your mouth. You keep up the suction around his cock, until it is just his head between your lips, then pull off with a loud pop, gasping for air.";
+	WaitLineBreak;
+	say "     'You're pretty good at this!' the fox huffs under his breath, grabbing his spit-shiny cock and guiding it back to your mouth, rubbing his slippery dickhead over your lower lip. Looking up to meet his eyes with a twinkle in your gaze, you lunge forward, sliding more than half his length between your lips in one go, then keep going until he's all the way back in your throat. Vincent's pubic fur tickles your nose as you bury it deep in his bush, reveling in the delightful thickness of his cock stretching out your throat. You keep going like this, gulping the drooling cock and squeezing it tight before withdrawing for a breath, then right back onto it for more deep-throating and huffing his scent, which drives your foxy partner wild in lust. Far too horny now to even speak intelligibly, he simply moans and pants in reaction to your oral service, with a rising tone of urgency in his voice and a high-pitched whine between breaths.";
+	say "     Wanting to give him a special push over the edge to orgasm, you bring up your hand and wipe off some of the saliva and pre-cum soaking your chin, then slide your arm between Vincent's legs, feeling your way up to his butt-crack. With your fingers so wet and slick, it's fairly easy to dip into him, with a tight, but experienced asshole welcoming you inside. Sinking in two fingers and feeling for his magic button, you time things perfectly so you can give his prostate an irresistible massage just as his dickhead slides back into position down your throat. With the double whammy of pleasure, the horny fox can't hold back for a second longer, and he lets out a climactic howl as his balls begin to pulse, sending forth spurt after thick spurt of creamy cum to shoot right down your gullet. 'Damn! Take it all!' Vincent manages to grunt out after the first few shots, still lost in the pleasure that your throat is giving him, wrapped tight around his throbbing erection.";
+	WaitLineBreak;
+	say "     Much as you'd have liked to keep him in your throat until his full orgasm had run its course, you feel the creeping fog of oxygen deprivation before long. Delaying as long as you can, with stars starting to dance in front of your eyes, you then finally pull back from Vincent's cock. It still throbs with more cum being blasted through the cum-tube, gushing onto your tongue as you pull off, and then all over your face as you gasp for air. As soon as you're able to, you catch his dick again with your open mouth, wrapping your lips around it to take the last ebbing cum-shots on your tongue. 'That was something else!' the fox says in a happily exhausted voice, smiling down at you. He brings a hand to your cheek, wiping up a streak of white cum clinging to it, then brings his finger to your mouth to push it between your lips and feed you a little bit more of his seed.";
+	if "First BJ Received" is not listed in Traits of Vincent:
+		say "     [bold type]Seeing the happy grin on the fox's face, and a bit of a special gleam in his eye, you can't help but think you earned a solid point of Vincent's favor. [roman type][line break]";
+		increase Loyalty of Vincent by 1;
+		TraitGain "First BJ Received" for Vincent;
+	NPCSexAftermath Player receives "OralCock" from Vincent;
 
 to say VincentSex1: [fucking him]
 	say "     ";
@@ -405,7 +728,6 @@ Player arrives at the library and sees Vincent talking to someone (making a deal
 Followup talk options with V:
 - Player would prefer nothing of this sort while V lives at the Library
 - You're fine with things, but he should be discreet (no further visibility to the player, but stuff goes on)
-- You're totally fine with it. Might be hot to watch too.
-]
+- You're totally fine with it. Might be hot to watch too.]
 
 Vincent ends here.
