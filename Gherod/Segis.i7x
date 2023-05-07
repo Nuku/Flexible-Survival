@@ -743,6 +743,12 @@ to say SegisSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Drop to your knees and provide him with some of your oral expertise";
 	[]
+	if "Lactating" is listed in traits of Segis:
+		choose a blank row in table of fucking options;
+		now title entry is "Drink some milk from his lactating chest";
+		now sortorder entry is 2;
+		now description entry is "Time to make use of that lactation function";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -760,6 +766,8 @@ to say SegisSexMenu:
 				now sextablerun is 1;
 				if (nam is "Give your dragon android a blowjob"):
 					say "[SegisSexBlowjob]";
+				else if (nam is "Drink some milk from his lactating chest"):
+					say "[SegisSexMilk]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -784,6 +792,43 @@ to say SegisSexBlowjob:
 	WaitLineBreak;
 	say "     That pretty much sounds like what an orgasm feels like, sort of, so you appease him and tell him he did great. 'Thank you, [sir]! I'm happy to see I've satisfied your urges! I believe my system will recharge in only a few minutes, and I must only replace my reserves so all of these functions can work as flawlessly as they just did! But I shall take care of that on my own. This was an enlightening experience! As it always is with you, [sir].' Politely, he bows, and you praise him for a job well done before you decide to clean yourself up from any android cum - you figured you could call it that - remains and ready yourself to get on with whatever you were going to do after this.";
 	NPCSexAftermath Player receives "OralCock" from Segis;
+
+to say SegisSexMilk:
+	if "Extra Milky" is listed in traits of Segis:
+		say "     You approach Segis, eyeing his full-looking chest with milk already dripping, the occasional droplet running down the masses of silicone as you lick your lips in anticipation. Before you even say anything, the android acknowledges your intention and lets you come to him, leaving his soft, needy pectorals and [SegisBodyType] physique in plain sight as his artificial nipples perk up.";
+	else:
+		say "     You approach Segis, eyeing his full-looking chest as you lick your lips in anticipation, given the thought of his milk in your mind. Before you even say anything, the android acknowledges your intention and lets you come to him, leaving his soft silicone pectorals and [SegisBodyType] physique in plain sight as his artificial nipples perk up.";
+	if "Personality Himbo" is listed in traits of Segis:
+		say "     'Someone's looking to drink from my man tits, eh? I've got a lot of milk just for you...' The dragon android then reaches over you, with the biggest smile, and slides one hand over the back of your head. He knows you want it, so he does not even ask, instead choosing to press your face against his chest, which feels really soft and smooth. 'Get sucking! I stored a lot in them just for you!' Segis['] mechanical arm is actually quite strong, so much that you find yourself effectively locked, head pressed against his pecs and lips squished around the nipples. As soon as your tongue touches them, a steady gush of milk comes out to greet you, warm, thick and just a tad sweetened.";
+		say "     'Feels really damn good to feed you!' Segis eagerly says as he puffs his chest out and lets you suckle on him. You think that, with his current personality module, that he somehow seems extremely eager to give you his milk, and if an AI can get this excited about something, he is the definition of it. Once stimulated, he begins to pump copious amounts of milk into your mouth, and both his arms curl around your head as he presses his synthetic pecs against your face. You even feel a slight throb across his entire chest every time some of his milk is released, seeming almost like he was flexing them like a real person. It is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this...";
+		WaitLineBreak;
+		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's excitement is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'Yeess! You're only getting out of here until these are empty, you hear?'";
+		if "Extra Milky" is listed in traits of Segis:
+			say "     You provide him with the pleasure and he gives you the milk... A lot of it. So much that it keeps on giving you mouthfuls to swallow. You have no idea how Segis can fit this much inside of him, but he can, and he is making sure everything gets pumped into your mouth. There is still a consistent, steady stream of it, which goes on for about a few long minutes before it gives signs of reaching its end. By then, you have a full belly with so much of that tasty milk in you, and you suck on his nipples until the very last few drops arrive at your tongue, swallowing it all before licking them clean. 'Mmh... Feeling much better now... Much lighter! These big pecs were so fucking full of milk! You gotta suck on me more, I'm always happy to feed you...!' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
+			PlayerEat 5;
+			PlayerDrink 15;
+		else:
+			say "     You provide him with the pleasure and he gives you the milk, which is still a considerable amount, given what looks like Segis can fit inside of him. He makes sure none of it gets wasted, however, as you continue on sucking on his nipples. There is still a consistent, steady stream of it, which goes on a minute before it gives signs of reaching its end. By then, you are satisfied, and that is left to do is to drink up the very last few drops that arrive at your tongue before licking him clean. 'Gave you a good meal? I sure hope I did! I'll be sure to make more so I'll give you a reason to keep on sucking on these...!' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
+			PlayerEat 3;
+			PlayerDrink 7;
+		WaitLineBreak;
+		say "     'I'll give it a bit more time until I've got them back to full, and then you're free to drink away again! And please do...! It's all for you, after all!' You thank him for this as you hug him back for a bit more time, before finally pulling away. Segis shows you a big smile as he puffs out his chest for you, reminding you that his milk-making chest will always be there for you, whenever you want.";
+	else: [default personality]
+		say "     'Greetings, [sir]. I presume you wish to extract some milk from me? I've got plenty in store just for you.' The dragon android then approaches you with his arms open, allowing you to come really close to him and embrace his figure. Now finally in reach, you lean in and press your face against his chest, which feels really soft and smooth, and get your lips around his artificial nipples, ready to get sucking. 'I hope it is to your liking. I've sweetened it slightly to improve your experience, and have taken care to ensure it suits your nutritious needs.' Since the android so promptly offers you his chest, you are quick to greet his nips with your tongue, and as soon as you do, a steady gush of milk comes out to greet you back. It is warm, thick and just a tad sweetened, as advertised.";
+		say "     'My receptors are in favor of this interaction. I feel... Pleased,' Segis['] informative tone may sometimes sound offputting, but it is clear that his software supports positive feelings. With the proper stimulation, he begins to pump copious amounts of milk into your mouth. Sometimes it is easy to forget that Segis is an android when you close your eyes and focus on fully enjoying this, as his movements seem so natural you would not be able to distinguish them from a real person, save the slight artificial feeling of the synthetic material covering the android's chest...";
+		WaitLineBreak;
+		say "     During this whole process, something else seems to have been brought to attention, as there is this hard and throbbing shaft poking against you from below. It seems the android's promptness to serve is not confined to his hypothetical psyche, but also physical. You figure that tugging on that [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft will only encourage the android to give you all he has got, and you are not wrong. As soon as you wrap your hand around his artificial cock, you definitely notice an increase in milk flow... And him just hugging you tighter. 'It seems you have activated it further by providing me with a handjob. This... Feels very pleasant. I recommend you continue!'";
+		if "Extra Milky" is listed in traits of Segis:
+			say "     You provide him with the pleasure and he gives you the milk... A lot of it. So much that it keeps on giving you mouthfuls to swallow. You have no idea how Segis can fit this much inside of him, but he can, and he is making sure everything gets pumped into your mouth. There is still a consistent, steady stream of it, which goes on for about a few long minutes before it gives signs of reaching its end. By then, you have a full belly with so much of that tasty milk in you, and you suck on his nipples until the very last few drops arrive at your tongue, swallowing it all before licking them clean. 'My reservoirs have finally emptied! With such a high rate of milk production, I estimate they shall be refilled in no time, however,' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
+			PlayerEat 5;
+			PlayerDrink 15;
+		else:
+			say "     You provide him with the pleasure and he gives you the milk, which is still a considerable amount, given what looks like Segis can fit inside of him. He makes sure none of it gets wasted, however, as you continue on sucking on his nipples. There is still a consistent, steady stream of it, which goes on a minute before it gives signs of reaching its end. By then, you are satisfied, and that is left to do is to drink up the very last few drops that arrive at your tongue before licking him clean. 'I hope you've had a satisfactory meal? I shall ensure a steady production for next time you wish to feed from my chest,' says Segis as he simply lets you rest your head atop his chest, patting you affectionately.";
+			PlayerEat 3;
+			PlayerDrink 7;
+		WaitLineBreak;
+		say "     'I estimate that my milk storage will be full once more in a matter of hours. Do please ensure to offer maintenance by extracting it, as it also provides a dietary advantage for yourself!' You thank him for this as you hug him back for a bit more time, before finally pulling away. Segis bows politely at you as he awaits further instructions.";
+	NPCSexAftermath Player receives "Other" from Segis;
 
 Section 3 - Segis as Companion
 
