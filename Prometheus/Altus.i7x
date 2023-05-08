@@ -186,7 +186,7 @@ to say AltusSex1:
 
 to say AltusSex2:
 	if player is Female:
-		say "     [bold type]Do you wish to intervene to save the gryphon?[roman type][line break]";
+		say "     [bold type]How would you like to be mounted?[roman type][line break]";
 		let Altus_Mounting_Decisions be a list of text;
 		add "Vaginally." to Altus_Mounting_Decisions;
 		add "Anally." to Altus_Mounting_Decisions;
