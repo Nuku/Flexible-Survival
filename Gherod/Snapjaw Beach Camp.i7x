@@ -9,6 +9,7 @@ Section 1 - Locations and Rooms
 a postimport rule:
 	if PlayerMet of Skyler is true:
 		move Skyler to Snapjaw_Beach_Camp;
+		AddNavPoint Snapjaw_Beach_Camp silently;
 
 
 Table of GameRoomIDs (continued)
