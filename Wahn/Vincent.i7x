@@ -417,7 +417,7 @@ to say Vincent_Introduction:
 		TraitGain "Vincent - Master's Friend" for Helen;
 		WaitBreakReactions;
 	if Hobo is collected:
-		say "     Hobo rushes up to greet Spike with his tongue hanging out of the side of his mouth and a wagging tail behind his back. Leaning down, the anthro fox lets him sniff his hand, then proceeds to give the dog's ears a good scratch. 'Pretty friendly, aren't you?' Vincent comments as he pets the dog, with Hobo giving a friendly bark as if he understood and wanted to reply. 'And smart too! You're a very good boy!' the red fox says with a warm chuckle. Having received his pets, Hobo eventually trots off again, then lies down to doze in a comfortable spot.";
+		say "     Hobo rushes up to greet Vincent with his tongue hanging out of the side of his mouth and a wagging tail behind his back. Leaning down, the anthro fox lets him sniff his hand, then proceeds to give the dog's ears a good scratch. 'Pretty friendly, aren't you?' Vincent comments as he pets the dog, with Hobo giving a friendly bark as if he understood and wanted to reply. 'And smart too! You're a very good boy!' the red fox says with a warm chuckle. Having received his pets, Hobo eventually trots off again, then lies down to doze in a comfortable spot.";
 		TraitGain "Hobo - Good Dog" for Vincent;
 		TraitGain "Vincent - Master's Friend" for Hobo;
 		WaitBreakReactions;
