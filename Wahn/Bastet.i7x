@@ -528,7 +528,7 @@ to say BastetTalk3: [take her out for food]
 	say "     [bold type]This could be an opportunity...[roman type][line break]";
 	LineBreak;
 	let Bastet_Foodcourt_Line_Choices be a list of text;
-	add "Nah, just stand back and let Bastet deal with him." to Bastet_Foodcourt_Line_Choices;
+	add "Nah, just stand back and let Bastet give the guy a tongue-lashing." to Bastet_Foodcourt_Line_Choices;
 	add "Properly introduce Bastet as a goddess. He seems impressed enough of her for it to work." to Bastet_Foodcourt_Line_Choices;
 	add "Pull down the top of Bastet's dress to show off those breasts." to Bastet_Foodcourt_Line_Choices;
 	let Bastet_Foodcourt_Line_Choice be what the player chooses from Bastet_Foodcourt_Line_Choices;
