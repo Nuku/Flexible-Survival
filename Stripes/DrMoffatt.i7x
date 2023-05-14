@@ -1,7 +1,7 @@
 Version 3 of DrMoffatt by Stripes begins here.
 [Version 2.2 - More Wereraptor responses]
 [Version 3.0 - Hypnosis path]
-"Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
+"Adds a Skunk Gynomorph NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 0 - Hypnosis variables
 
@@ -638,7 +638,7 @@ to say MoffatHypnosisFullSex:
 	say "     Panting heavily, the doctor sits down on her desk chair, and fetches some tissues to wipe herself. '[one of]I was quite skeptical when we began these hypnosis sessions, but in the end, I don't regret it one bit[or]I can't get enough of this, really. Maybe I should plan some [']therapy sessions['] with that weasel. What do your think?[stopping].'";
 
 to say MoffatHypnosisPartialSex:
-	say "     'Such a nice [boygirl],' the psychologist giggles. A sense of dread fills you, and you try to get off from the couch. 'Don't move, my sweet toy.' Despite your brain screaming to move, your muscles refuse to bulge. Doctor Moffatt circles around the couch while you look down, locked in place. Eventually, she stops near your face. ";
+	say "     'Such a nice [boygirl],' the psychologist giggles. A sense of dread fills you, and you try to get off from the couch. 'Don't move, my sweet toy.' Despite your brain screaming to move, your muscles refuse to budge. Doctor Moffatt circles around the couch while you look down, locked in place. Eventually, she stops near your face. ";
 	if a random chance of 1 in 2 succeeds:
 		say "She slaps her flaccid cock against your cheeks a couple of times, before pressing it against your lips. 'Suck.' You muster all your strength to not obey the command, despite the desire to wrap your lips around her thick glans growing by the second. 'Suck, my dear toy.' As soon as the keyword escaped her lips, your raise your head and start to bob your mouth up and down her shaft. It quickly hardens and thickens, until it stretches your lips and reaches down your throat; but you do not stop a single moment. You start gagging, but your body does not react and your lips keep sliding down to the base of Doctor Moffat's shaft, before going back to its crown, in a metronomic rhythm.";
 		say "     Moffatt purrs from your relentless efforts. She amuses herself by ordering you to go 'faster' and 'slower' from time to time, adding the keyword if you show hesitation. Eventually, she orders you to stop, and pulls her cock out of your mouth. Strands of saliva and pre crash on the ground. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
