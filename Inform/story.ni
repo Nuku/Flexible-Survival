@@ -777,6 +777,7 @@ Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
 Include Carl by Wahn.
 Include Casper by Prometheus.
+Include Cassian by Voidsnaps.
 Include Cassiel by Tin Can.
 Include Claude by Prometheus.
 Include Cherry by Gherod.
