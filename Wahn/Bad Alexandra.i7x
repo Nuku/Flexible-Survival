@@ -813,7 +813,7 @@ to say badAlexandraSex:
 		now sortorder entry is 9;
 		now description entry is "Fuck those lovely melons of hers";
 	[]
-	if Player is not neuter and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
+	if Player is not neuter and level of Alexandra is 2 and HP of Fang < 7 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
