@@ -183,6 +183,12 @@ to say DrMattTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Tell him you're both ready for the experiment";
 	[]
+	if "Permanent Hyper Discussed" is listed in Traits of Fang and Best Wolf is listed in companionList of Player:
+		choose a blank row in table of fucking options;
+		now title entry is "Discuss Hyper Vials";
+		now sortorder entry is 97;
+		now description entry is "Ask him whether he can help you with making Fang permanently hyper";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Nanite Infection";
 	now sortorder entry is 98;
@@ -224,6 +230,8 @@ to say DrMattTalkMenu:
 				else if (nam is "Beginning the experiment with Susan"):
 					say "[DrMattQuestTalk]";
 					now TalkDone is true;
+				else if (nam is "Discuss Hyper Vials"):
+					say "[DrMattHyperTalk]";
 				else if (nam is "The Nanite Infection"):
 					say "[DrMattTalk1]";
 				else if (nam is "How he ended up here"):
@@ -255,6 +263,77 @@ to say DrMattTalk2:
 to say DrMattTalk3:
 	say "     The suited man looks up at you as you bring up connecting with the world outside of the city, glancing at you through his glasses and nodding. 'Yes, I do still have contact with a colleague in the CDC, Dr. Sutton. As luck will have it, the Trevor Labs facility is part of the shielded communications network that connects a number of selected sites of bio-safety level 4 in case of emergencies. If only Greg and I could have convinced the authorities that they have to delay the planned surge of troops into the city!' He distractedly moves to stroke through his gray hair, only to have his gloved fingers bump against the Plexiglas screen of the helmet. Lowering his hand with an annoyed grunt, Dr. Matt makes a frustrated throwing-away gesture.";
 	say "     'They just won't listen! Sending more troops will only expand the ranks of the infected unless they're properly prepared. And for that, we need more research!' The man focuses on yourself with an intense expression that speaks of his desperate need for progress, and the frustration of a scientist at being rushed. He adds in a grumbling tone, 'The infighting out there is almost as bad as the beasts out on the streets here. Politicians screaming for something to be done yesterday, generals drawing in what local forces they can and preparing for a Hail-Mary push to 'overwhelm the beasts', with those who understand anything about the situation in the middle and ignored by both. Please, help me get some results so we can make them listen.'";
+
+to say DrMattHyperTalk:
+	if Thirst of Fang is 1:
+		if "Hyper Delayed" is listed in Traits of Fang:
+			say "     'I shall remind you that the possible side effects may include increased muscle mass, reduced higher brain function, and uncontrollable arousal. With that in mind, do you want to go ahead with the procedure?' Dr. Matt asks.";
+			say "     [bold type]Do you still wish to go ahead with the procedure to permanently hyper-fy Fang?[roman type][line break]";
+			let Fang_Hyperfy_Choices be a list of text;
+			add "Yes." to Fang_Hyperfy_Choices;
+			add "No. Not yet." to Fang_Hyperfy_Choices;
+			let Fang_Hyperfy_Choice be what the player chooses from Fang_Hyperfy_Choices;
+			if Fang_Hyperfy_Choice is:
+				-- "Yes.":
+					LineBreak;
+					say "     'As you wish, now if he will just hold still, I can inject the solution into the back of his neck,' Dr. Matt informs you both, Fang grudgingly complying. With one hand, the scientist parts the wolf's thick fur, and with the other smoothly jabs the needle into the exposed skin. It should take approximately twenty minutes before the transformation begins, but I would prefer it if you weren't in my lab when it happened.' Understanding Dr. Matt's concern and implied request to leave, you and Fang hastily make your way for the exit, Orthas looking more than a little relieved at your departure. You make it part way back to the library before you decide to find a sheltered spot to safely allow the change to take its course. With a rumble from deep within his chest, your alpha signals the imminent exhibition.";
+					say "     The ripple of his muscles bulging beneath his fur is simultaneously hypnotic and exhilarating, memories of how he held you down and took his pleasure in you causing a fuzzy hot feeling to grow in the back of your mind. Knowing what is coming next, you crouch to better watch as Fang's cock erupts from its sheath, shooting cum across the ground, feeling the effects of the serum though so far remaining disappointingly normal in size. It is only thanks to his rapidly expanding balls that he is able to produce so much, the ever-spreading lake of semen a testament to the productivity of his pendulous scrotum. You wonder how much they could produce before running fry, images of bathing in his cum filling to mind. So caught up in your fantasies, it is a shock when you find yourself coated in the wolf's essence, your alpha humping the air in mix between being overcome with lust and desire to paint you once more with his scent.";
+					WaitLineBreak;
+					say "     The thick, cloying scent of his cum threatens to overwhelm you as it seeps into your pores and trickles into your mouth, all the while flooding your senses and marking you as his once again. With excitement, you drink in the sight of the wolf's cock finally begins to swell both in length and girth, thick veins pulsing along the shaft as it expands inch by inch. You know just how large in can get, but it is no less satisfying to see it continue to grow until it finally reaches just over three feet in length and fatter than you can get your hand around, ensuring that it will require your full devotion to properly pleasure, his balls just as awe-inspiring as they continue to rise and fall in scrotum that you could bury your face in. You have to admit that you are tempted, but you refrain for the moment. Towering over his previous size, between this and the magnified pheromone-laced aroma of his musk, Fang is truly an alpha who exudes an aura of authority, power, and lust, and you immediately prostrate yourself as best as you can before him to await his will.";
+					say "     Gazing down at you for but a brief moment, Fang tips his head back and howls, declaring his superiority and challenging anyone nearby to face him if they dare! Part of you expects him to mount and claim you immediately, but he refrains leaving you to wallow in his cum while he remains prepared for any potential challengers. Eventually, with a chuff of disappointment, your alpha strides back out into the street, leaving you to stumble after him as he makes his way back to the library, the pungent odor of his essence clinging to his fur, though more strongly to you. You can only imagine how rough and dominating he is going to be from now on...";
+					now HP of Fang is 7; [Permanent Hyper Alpha Fang]
+					now Body Weight of Fang is 7;
+					now Body Definition of Fang is 8;
+					now Androginity of Fang is 1;
+					now Mouth Length of Fang is 18;
+					now Tongue Length of Fang is 18;
+					now Asshole Depth of Fang is 36;
+					now Cock Girth of Fang is 5;
+					now Cock Length of Fang is 38;
+					now Ball Size of Fang is 5;
+					TraitLoss "Hyper Delayed" for Fang;
+					TraitLoss "Permanent Hyper Discussed" for Fang;
+					move player to Grey Abbey Library;
+				-- "No. Not yet.":
+					LineBreak;
+					say "     'Fine. It isn't something that you should be doing without extensive consideration, though I do wish you wouldn't waste my time like this. Should you change your mind, it will be waiting for you. Now, was there anything else that you wanted while you were here?' Dr Matt asks, tucking the syringe into a safe place on his desk.";
+		else:
+			say "     'I'll start off by saying that technically you should probably return these vials to the company that produced them. However, given that the scientist that created them is among those unaccounted for in the city and the current circumstances, there isn't much that they can do about it, so just use them responsibly,' Dr. Matt informs you, returning the briefcase. 'For now though, I agreed to try and make the effects permanent in your... companion,' he continues, casting a cautious glance at Fang before producing a syringe with the same fluid as the vials. 'It would be remiss of me if I didn't warn you that this procedure is experimental and that I can't be sure of all the side effects. I think that I have a decent understanding of it from the notes as well as how the nanites will play into this, but there is always the possibility of error. Possible side effects may include increased muscle mass, reduced higher brain function, and uncontrollable arousal. Of course, the nanites can cause the same effects, but considering our past cooperation, I want you to be able to make your own decision from the available information.'";
+			say "     [bold type]Do you still wish to go ahead with the procedure to permanently hyper-fy Fang?[roman type][line break]";
+			let Fang_Hyperfy_Choices be a list of text;
+			add "Yes." to Fang_Hyperfy_Choices;
+			add "No. Not yet." to Fang_Hyperfy_Choices;
+			let Fang_Hyperfy_Choice be what the player chooses from Fang_Hyperfy_Choices;
+			if Fang_Hyperfy_Choice is:
+				-- "Yes.":
+					LineBreak;
+					say "     'As you wish, now if he will just hold still, I can inject the solution into the back of his neck,' Dr. Matt informs you both, Fang grudgingly complying. With one hand, the scientist parts the wolf's thick fur, and with the other smoothly jabs the needle into the exposed skin. It should take approximately twenty minutes before the transformation begins, but I would prefer it if you weren't in my lab when it happened.' Understanding Dr. Matt's concern and implied request to leave, you and Fang hastily make your way for the exit, Orthas looking more than a little relieved at your departure. You make it part way back to the library before you decide to find a sheltered spot to safely allow the change to take its course. With a rumble from deep within his chest, your alpha signals the imminent exhibition.";
+					say "     The ripple of his muscles bulging beneath his fur is simultaneously hypnotic and exhilarating, memories of how he held you down and took his pleasure in you causing a fuzzy hot feeling to grow in the back of your mind. Knowing what is coming next, you crouch to better watch as Fang's cock erupts from its sheath, shooting cum across the ground, feeling the effects of the serum though so far remaining disappointingly normal in size. It is only thanks to his rapidly expanding balls that he is able to produce so much, the ever-spreading lake of semen a testament to the productivity of his pendulous scrotum. You wonder how much they could produce before running fry, images of bathing in his cum filling to mind. So caught up in your fantasies, it is a shock when you find yourself coated in the wolf's essence, your alpha humping the air in mix between being overcome with lust and desire to paint you once more with his scent.";
+					WaitLineBreak;
+					say "     The thick, cloying scent of his cum threatens to overwhelm you as it seeps into your pores and trickles into your mouth, all the while flooding your senses and marking you as his once again. With excitement, you drink in the sight of the wolf's cock finally begins to swell both in length and girth, thick veins pulsing along the shaft as it expands inch by inch. You know just how large in can get, but it is no less satisfying to see it continue to grow until it finally reaches just over three feet in length and fatter than you can get your hand around, ensuring that it will require your full devotion to properly pleasure, his balls just as awe-inspiring as they continue to rise and fall in scrotum that you could bury your face in. You have to admit that you are tempted, but you refrain for the moment. Towering over his previous size, between this and the magnified pheromone-laced aroma of his musk, Fang is truly an alpha who exudes an aura of authority, power, and lust, and you immediately prostrate yourself as best as you can before him to await his will.";
+					say "     Gazing down at you for but a brief moment, Fang tips his head back and howls, declaring his superiority and challenging anyone nearby to face him if they dare! Part of you expects him to mount and claim you immediately, but he refrains leaving you to wallow in his cum while he remains prepared for any potential challengers. Eventually, with a chuff of disappointment, your alpha strides back out into the street, leaving you to stumble after him as he makes his way back to the library, the pungent odor of his essence clinging to his fur, though more strongly to you. You can only imagine how rough and dominating he is going to be from now on...";
+					now HP of Fang is 7; [Permanent Hyper Alpha Fang]
+					now Body Weight of Fang is 7;
+					now Body Definition of Fang is 8;
+					now Androginity of Fang is 1;
+					now Mouth Length of Fang is 18;
+					now Tongue Length of Fang is 18;
+					now Asshole Depth of Fang is 36;
+					now Cock Girth of Fang is 5;
+					now Cock Length of Fang is 38;
+					now Ball Size of Fang is 5;
+					TraitLoss "Permanent Hyper Discussed" for Fang;
+					move player to Grey Abbey Library;
+				-- "No. Not yet.":
+					LineBreak;
+					say "     'Fine. It isn't something that you should be doing without extensive consideration. Should you change your mind, it will be waiting for you. Now, was there anything else that you wanted while you were here?' Dr Matt asks, tucking the syringe into a safe place on his desk.";
+					TraitGain "Hyper Delayed" for Fang;
+	else if Thirst of Fang > 1:
+		say "     'I'm still working on it. Be patient,' Dr. Matt mildly scolds you.";
+	else:
+		say "     Conscious of Dr. Matt's more reserved approach to the sexual aspects of the nanites, you tentatively ease into asking him about the hyper serum. First you give the briefcase to him, apologizing for the state of the notes. He casts a cautious glance towards Fang before devoting his attention to the smeared and stained sheets of paper, perhaps reasoning that Orthas would have prevented the large wolf from entering if she thought him a threat. 'You realize that this isn't my research, don't you? It may take me some time to understand it enough to confidently tell you anything about it,' he warns you without taking his eyes off the notes. You assure him that you understand completely, but wondered if there might be a way to make the effects of the serum permanent. He sighs and goes to scratch the back of his head, but the hazmat suit gets in the way. 'I'll see what I can do. I trust that you don't have anything malicious planned? I will admit to some curiosity about further applications of the serum or its components outside of genital enlargement. Give me a three or [bold type]four days[roman type] and I'll see what I can do. Now, unless there is anything else...' he leaves the question hanging.";
+		now Thirst of Fang is 33;
+		[Countdown rule in Prometheus/Hyper Serum]
 
 Section 2 - Quests
 

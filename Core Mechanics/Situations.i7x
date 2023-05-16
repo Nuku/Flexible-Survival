@@ -15,8 +15,8 @@ A situation has a list of numbers called Prereq2Resolution. Prereq2Resolution is
 A situation has a situation called Prereq3. [prerequisite event that has to be done first before the current one can come up]
 A situation has a truth state called Prereq3ResolvedMandatory. Prereq3ResolvedMandatory of a situation is usually true. [does prerequisite event need to be resolved? used if the prerequisite is still open, but you still want to check against one of the intermediate resolution stages (see one line below)]
 A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is usually { 0 }. [specific resolution state that the prerequisite event must be in so the current can come up - fill like this { 0, 1, 2, ...}]
-A situation has an object called PrereqCompanion.
-A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any".
+A situation has an object called PrereqCompanion. [this needs to be the pet object of the specific companion - for example, Korvin has the companion object 'gshep', used like so: "PrereqCompanion of Dog Meets Dog is gshep."]
+A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any". [valid options are "Any", "Day" and "Night"]
 [TODO: Add PrereqNavpoint]
 A situation has a text called sarea. Sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0. [minimum level to encounter randomly]

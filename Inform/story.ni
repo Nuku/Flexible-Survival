@@ -528,6 +528,7 @@ Include Gray Squirrel by Stripes.
 Include Grizzly Bear by UrsaOmega.
 Include Gryphons Plot by Guest Writers.
 Include Gunbunny by Stripes.
+Include Gyrwolf Gryphon by Prometheus.
 Include Harpy by Nuku Valente.
 Include Hawkman by Sarokcat.
 Include Hellfire Demon by Gherod.
@@ -741,6 +742,7 @@ Include Allen by Wahn.
 Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Prometheus.
+Include Altus by Prometheus.
 Include Amaryllis by Song.
 Include Amy by Wahn.
 Include Andrew by Gherod.
@@ -775,6 +777,7 @@ Include Campus Gym by UrsaOmega.
 Include Callidora by Prometheus.
 Include Carl by Wahn.
 Include Casper by Prometheus.
+Include Cassian by Voidsnaps.
 Include Cassiel by Tin Can.
 Include Claude by Prometheus.
 Include Cherry by Gherod.
@@ -995,9 +998,11 @@ Include Wyatt by Gherod.
 Include Xerxes by Wahn.
 Include Yolanda by Stripes.
 Include Zdravko by Gherod.
+Include Zant by Voidsnaps.
 Include Zeke by Qazarar.
 Include Zephias by Wahn.
 Include Zigor by Stripes.
+Include Ziix by Voidsnaps.
 Include Zoe by Kernog.
 
 Part 5 - Companions and Allies

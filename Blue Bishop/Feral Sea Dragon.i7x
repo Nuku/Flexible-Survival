@@ -1183,7 +1183,7 @@ This is the Feral Sea Dragon Infection rule:
 						say ", male-looking";
 					say " toy. You're dragged off and forced to spend the rest of your years forced to remain within the confines of a cave, forced to attend your many mistress's every whim and desire.";
 					if Player is male:
-						say "     Your days and constantly filled with rough sex, passed around by each and every one, frequently exhausted by their insatiable need for offspring. The harem quickly swells in size, but your position at the bottom of the totem pole never changes[if MaleList is not banned and MaleList is not warded]. Even the males - which are generally not regarded highly - are allowed to constantly use you as their little cum dumpster[end if]...";
+						say "     Your days are constantly filled with rough sex, passed around by each and every one, frequently exhausted by their insatiable need for offspring. The harem quickly swells in size, but your position at the bottom of the totem pole never changes[if MaleList is not banned and MaleList is not warded]. Even the males - which are generally not regarded highly - are allowed to constantly use you as their little cum dumpster[end if]...";
 					else:
 						say "     Your inability to offer them offspring proves particularly trying on you, as you're forced even harder to attend to their insatiable lust";
 						if MaleList is not banned and MaleList is not warded:

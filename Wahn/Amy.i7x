@@ -240,7 +240,7 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 	now lastNadiaSpotted is turns;
 	if debugactive is 1:
 		say "     DEBUG: AMY/NADIA PREG WALKIN[line break]";
-	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
+	say "     Nadia's left her nest and come to the library's first floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
 	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realize what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
 	WaitLineBreak;
 	say "     'I'm sure mine's bigger than yours!' Amy says, before taking the tape from Nadia and returning the favor.";
@@ -639,7 +639,7 @@ to say AmyNPCSexTable:
 							else: [No sex with Amy]
 								say "     'You're kidding me. Not only am I not allowed to fuck the wolf, you won't fuck me either? Forget this, I'm going for a walk.' The husky storms off between the bookshelves, sensibly choosing to sulk in the library rather than going outside. Fang looks at you disappointedly, 'I'll talk to her and see whether I can cheer her up. Perhaps if you are unwilling or unable to properly satisfy someone you shouldn't deny them pleasures with others that they find. Alpha.' Fang bows to you and lopes off after Amy, leaving you to contemplate the encounter. While that could definitely have gone better, you place the blame on the two of them for considering having sex without your permission. If they had asked you could at least have nipped the problem in the bud. With a sigh, you return to the entrance of the library and decide what to do next.";
 								now XP of Amy is 97; [Beta Fang denied mating with Amy, player did not satisfy Amy]
-			else if (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and Player is male:
+			else if (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and HP of Fang < 7 and a random chance of 1 in 5 succeeds and Player is male:
 				say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Fang is padding into her direction on silent paws. He's moving a bit hesitantly, likely remembering your commands not to bother Amy again, but the fact that his canine shaft is dangling erect between his legs shows that he really is on the way to mount her. Looks like your pet wolf needs a reminder to follow his master's orders. As you walk towards the two of them, a wicked little idea suddenly comes to the forefront of your mind - maybe you should just show the wolf that Amy is his alpha's bitch and fuck her right before his eyes, just now. The sting of impotently watching as someone else takes what he desires will remind him of his place as a lowly pack-member.";
 				say "     [bold type]Do you want to fuck Amy while ordering Fang to watch?[roman type][line break]";
 				LineBreak;
@@ -1296,7 +1296,7 @@ to say AmySexMenu:
 		now sortorder entry is 7;
 		now description entry is "Have sex with both your felinoid companion and horny husky";
 	[]
-	if (Player is male and XP of Amy is 1 and Fang is in the Grey Abbey Library):
+	if (Player is male and XP of Amy is 1 and Fang is in the Grey Abbey Library and HP of Fang < 7):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Fang";
 		now sortorder entry is 8;
@@ -1487,7 +1487,7 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Seeing the other fuck someone he had counted as his to mount and breed doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
 			if XP of Amy is 99:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Seeing the other fuck someone he's been forbidden to mount doesn't make him happy. Not happy at all. The feline clutches Amy closer and growls deeply at Fang, sending the wolf slinking back to his post for the moment. Oh well, Klauz seems to be able to intimidate your wolf guard, so there probably won't be any issue, you tell yourself as you doze off...";
-		else if HP of Fang is 3 or HP of Fang is 4: [Alpha Fang]
+		else if HP of Fang is 3 or HP of Fang is 4 or HP of Fang is 7: [Alpha Fang]
 			if XP of Amy is 0:
 				say "     As you rest your head on a pillow for a post-coital nap, you dimly register Fang standing some distance away and giving Klauz and Amy a hostile stare. Looks like he's not happy that the big cat is getting pussy he hasn't had. Not happy at all. Oh well, the rivalry between them will likely work itself out sometime in the end, you tell yourself as you doze off...";
 			if XP of Amy is 1:
