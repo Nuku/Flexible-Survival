@@ -32,7 +32,7 @@ to say ResolveEvent Snake Charmer:
 			say "     Your heart sinks as you realise what you're about to witness, breaking your eyes away from the scene and assuring yourself there's nothing you can do. You quickly move away from the area, leaving the sounds of a content predator behind you.";
 			now Resolution of Snake Charmer is 100;
 			now Snake Charmer is resolved;
-		else if vorelevel is 2: [Normal vore]
+		else: [Normal or higher vore]
 			say "     Your heart sinks as you realise what you're about to witness, wanting to turn away but too captivated to do so - perhaps affected by the naga's dance as the pelican is. You watch with morbid curiosity as the naga's mottled hands guide the pelican's head and shoulders into its double-hinged maw, the little bird making no move to resist as it's pulled into the dark, wet depths. The sheer strength of the muscles within the naga's throat are on full display as the white-feathered avian swiftly disappears within the serpentine snout. The last of the pelican you're able to see are its webbed feet before the naga's snout closes shut. The naga gives a final swallow before letting out a happy hiss, your eyes tracking the bulge in its throat as it travels downwards towards its likely final destination, becoming indistinguishable amongst the scales of that serpentine lower body.";
 			WaitLineBreak;
 			say "     The naga's eyes turning towards you are enough to break you from your trance, its gaze seductive and full of desire, though you believe more the latter. Despite what you'd just witnessed, your gaze remains locked with the naga's own, the serpentine predator's content smile developing into a full-blown grin. Curiously enough, however, instead of luring you into its scaled clutch as it likely had the pelican, the naga breaks the gaze of its own accord. Your eyes follow the naga as it slithers around a nearby enclosure, disappearing from sight. Despite it now being gone from view, its hypnotic eyes remain in your mind, encouraging you to seek it out again.";
@@ -80,7 +80,7 @@ to say ResolveEvent Snake Charmer:
 
 Table of WalkInEvents (continued)
 Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
-4	"Naga Mate"	Naga Mate	"[EventConditions_NagaMate]"	Zoo Giftshop	2500	8	50
+4	"Naga Mate"	Naga Mate	"[EventConditions_NagaMate]"	Zoo Entryway	2500	8	50
 
 to say EventConditions_NagaMate:
 	now CurrentWalkinEvent_ConditionsMet is true;
