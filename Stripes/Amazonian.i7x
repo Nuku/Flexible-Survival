@@ -336,7 +336,7 @@ Usedesc of Amazonian hair is "[Amazonian hair use]".
 
 to say Amazonian hair use:
 	say "Holding the strands of hair between your fingers, you find yourself with a sudden inexplicable urge to gain the strength held within. Bringing the hairs up to your head, you intermingle the brown strands close to the base of your own. Almost immediately, the strands escape your fingers, disappearing and leaving you moving your hands away in confusion."
-	Infect "Amazonian";
+	infect "Amazonian";
 
 instead of sniffing Amazonian hair:
 	say "The strands tickle at your nostrils, and you get the distinct scent of feminine strength, it burns a bit, as if a warning."
