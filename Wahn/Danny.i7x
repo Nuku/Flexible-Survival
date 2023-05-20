@@ -340,19 +340,19 @@ to say DannySexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Danny's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job";
+	now description entry is "Give him a blowjob";
 	[
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	[]
 	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him eat you out";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	]
 	if Player is male:
 		choose a blank row in table of fucking options;

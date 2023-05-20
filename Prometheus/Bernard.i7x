@@ -41,7 +41,7 @@ an everyturn rule:
 			if Player is in Breakroom:
 				say "     [bold type]Carefully stowing his cooker for later, Bernard moves towards the door. He hugs you before he leaves, telling you that he is going to the computer room.[roman type][line break]";
 			else if Player is in Computer Lab:
-				say "     [bold type]Bernard enters the computer room, giving you a wide smile before moving over to join his family in cocconing themselves in blankets.[roman type][line break]";
+				say "     [bold type]Bernard enters the computer room, giving you a wide smile before moving over to join his family in cocooning themselves in blankets.[roman type][line break]";
 			move Bernard to Computer Lab;
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 			if Player is in Computer Lab:
@@ -145,7 +145,7 @@ Section 2 - Talking
 
 instead of conversing the Bernard:
 	if "First Talk" is not listed in Traits of Bernard:
-		say "     Hello [BlancheMommyDaddyTitle]! Bernard says as he engulfs you in the soft confines of his customary bear-hug, the scents of the seasonings he tends to use when cooking or baking wafting from his fur to tickle your nose. The fragrant smells causes you to nuzzle into his fur in an attempt to figure what exactly you are smelling. Bernard begins to laugh heartily from the tickilish sensation as he says 'I'm glad to know that mommy and my siblings aren't the only ones to enjoy my cooking hobby, though I'm sorry that I didn't manage to save anything from the meal earlier. Considering that you are always out you probably never get to eat properly cooked meals, next time for sure I will give you a taste of eating a home-cooked meal surrounded by family.'";
+		say "     Hello [BlancheMommyDaddyTitle]! Bernard says as he engulfs you in the soft confines of his customary bear-hug, the scents of the seasonings he tends to use when cooking or baking wafting from his fur to tickle your nose. The fragrant smells causes you to nuzzle into his fur in an attempt to figure what exactly you are smelling. Bernard begins to laugh heartily from the ticklish sensation as he says 'I'm glad to know that mommy and my siblings aren't the only ones to enjoy my cooking hobby, though I'm sorry that I didn't manage to save anything from the meal earlier. Considering that you are always out you probably never get to eat properly cooked meals, next time for sure I will give you a taste of eating a home-cooked meal surrounded by family.'";
 		TraitGain "First Talk" for Bernard;
 	else:
 		say "[BernardTalkMenu]";
@@ -221,7 +221,7 @@ to say BernardTalk1: [Small Talk]
 	say "     '[one of]Could you keep an eye out for any seasonings in the city? They really help with my cooking and I really enjoy collecting them for their aroma as well as their taste[or]I'm happy that Mommy and all my siblings seem to love my cooking ability. Though Mommy seems to like reminding me to exercise to keep up with my culinary crusade[or]I read in a book that somewhere in the world people greet each other with a kiss, though Bianca said that nowadays many greet each other with sex instead[or]Life never seems to be stuck in a rut with Maeve around, though some of her plans tend to be... incredibly adventurous[or]If you ever want to join me cooking or to exercise, I'd be more than happy to accommodate you. Though I hope you don't mind the smell[at random].'";
 
 to say BernardTalk2: [Boop]
-	say "     The way that Bernard looks as he revels in your incoming attention reminds you of a shiba inu, leading you to boop him on the nose and causing him to squint his eyes and stick out his tongue. Chuckling at how silly he is being, you begin to take your finger away, only to have Bernard engulf your finger using his muzzle with a playful [']nom['] before slowly suckling upon it. Looking at your finger, you raise an eyebrow at Bernard's antics. 'I heard from Bianca this is supposed to bring you closer together with that certain someone that does the nose poke,' he replies after releasing your finger. With a grin, you pat him on the head.";
+	say "     The way that Bernard looks as he revels in your incoming attention reminds you of a Shiba Inu, leading you to boop him on the nose and causing him to squint his eyes and stick out his tongue. Chuckling at how silly he is being, you begin to take your finger away, only to have Bernard engulf your finger using his muzzle with a playful [']nom['] before slowly suckling upon it. Looking at your finger, you raise an eyebrow at Bernard's antics. 'I heard from Bianca this is supposed to bring you closer together with that certain someone that does the nose poke,' he replies after releasing your finger. With a grin, you pat him on the head.";
 
 to say BernardTalk3: [Family Meal]
 	if TimekeepingVar is 7 or TimekeepingVar is -1: [Early Morning] [Bianca, Ernest, Penelope, Wendis, Bernard, Maeve]

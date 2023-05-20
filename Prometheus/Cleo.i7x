@@ -164,7 +164,7 @@ to say CleoTalk1:
 	WaitLineBreak;
 	say "     'I'm trying to become a little less introverted, as I said earlier, but the few people that I do talk to I'm very close to,' she begins, faltering when she sees you raise an eyebrow and chuckle. 'N-No. Nothing like that. No sex. Just friendship. You're as bad as Mom. I'm a good girl and I hoped that my parents would be good to, but maybe I was too hopeful. Anyway, ";
 	if "Lux & Umbra - Played with as Infant" is listed in traits of Cleo:
-		say "Lux and Umbra are fun to play with, though they are much faster than I am. I'm amazed by Lux's ability to walk on two legs and I can't imagine how much effort wnet into learning to do that. Umbra seems a better judge of character than her though. There's something about the way his eyes delve into your soul. I wonder if his Daddy taught him? ";
+		say "Lux and Umbra are fun to play with, though they are much faster than I am. I'm amazed by Lux's ability to walk on two legs and I can't imagine how much effort went into learning to do that. Umbra seems a better judge of character than her though. There's something about the way his eyes delve into your soul. I wonder if his Daddy taught him? ";
 	if "Paula - Medical Checkup as Child" is listed in traits of Cleo:
 		say "I still get checkups from Paula, though now Mom doesn't have to accompany me. Her bedside manner can be a bit abrasive at times, but she's a good listener and one of the few people that I've seen stand up to Mom. They seem to admire each other, so nothing serious came of their disagreement. ";
 	if "Amy - Styled Hair as Teen" is listed in traits of Cleo:

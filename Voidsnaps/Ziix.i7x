@@ -220,7 +220,7 @@ to say ZiixAssFuck:
 		Linebreak;
 		say "     As you stare at Ziix's nude body, a thought occurs. You've only seen the barest glance of his muscular ass. If you're going to be king of the hive, you should have unfettered access to your subjects. Closing the distance between yourself and your stalwart protector, you trail your fingertips over his smooth chitin, stopping at the softer section above his awakening cock. You tell him you'd like to have fun and ask him to place his hands on the wall. Ziix's expression changes as he realizes what you want. Antennae twitching, he clutches the wall behind him as if protecting his rear from your gaze by pressing it closer to the organic substance. Clearing his throat, he speaks in a shaky voice. 'W-Why would you want to use me in that way? I can't bear eggs, and surely, Zant has a body more suited-' Seemingly realizing who he's talking to, Ziix swallows, sagging against the wall. 'I shouldn't question you. I'm truly sorry.'";
 		WaitLineBreak;
-		say "     Following orders with the air of a man headed to the gallows, the warrior places his hands on the wall, spreading his legs and giving you the full view of muscular, well-developed glutes and a tight, untouched hole between them. The pretty onyx-black shade of his rump shines in the ambient light around it, and you can't help but admire how manly he looks, even in this position. Before Ziix loses his nerve, you place your hands on his beautiful rump, massaging the firm cheeks until the muscles beneath smooth skin twitch and dance. His hole twitches as you lean in, clenched so tight that you're sure he could turn coal into diamonds, and you realize that he must be an anal virgin. Maybe it would be a good idea to ease Ziix into it."; 
+		say "     Following orders with the air of a man headed to the gallows, the warrior places his hands on the wall, spreading his legs and giving you the full view of muscular, well-developed glutes and a tight, untouched hole between them. The pretty onyx-black shade of his rump shines in the ambient light around it, and you can't help but admire how manly he looks, even in this position. Before Ziix loses his nerve, you place your hands on his beautiful rump, massaging the firm cheeks until the muscles beneath smooth skin twitch and dance. His hole twitches as you lean in, clenched so tight that you're sure he could turn coal into diamonds, and you realize that he must be an anal virgin. Maybe it would be a good idea to ease Ziix into it.";
 		say "     [bold type]Do you want to use your tongue to loosen him up before you use your cock?[roman type][line break]";
 		LineBreak;
 		let ZiixRim_Choices be a list of text;
@@ -278,7 +278,7 @@ to say Ziix Desc:
 	else:
 		say "<This content is not currently implemented>";
 
-Section 4 - Ziix Slut Storage 
+Section 4 - Ziix Slut Storage
 
 [To do: Literally everything.]
 

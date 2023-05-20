@@ -196,9 +196,9 @@ to say garrettsexmenu:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Hand job";
+	now title entry is "Handjob";
 	now sortorder entry is 1;
-	now description entry is "Share a mutual hand-job with the male gryphon";
+	now description entry is "Share a mutual handjob with the male gryphon";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get fucked";
@@ -235,7 +235,7 @@ to say garrettsexmenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Hand job":
+				if nam is "Handjob":
 					if Player_puregryph is true:
 						say "[garrett_handjob_2]";
 					else:

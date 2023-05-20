@@ -539,7 +539,7 @@ carry out Francoisbaking:
 			ItemLoss crushed candies by 1;
 			ItemGain vin-coeur by 1;
 			now Francoisbaked is 1;
-		else if egg nog is owned and pixie dust is owned and blue gel is owned and 9 is listed in Francois_Undiscovered: [gingerbread - egg nog + pixie dust + Blue gel]
+		else if egg nog is owned and pixie dust is owned and blue gel is owned and 9 is listed in Francois_Undiscovered: [gingerbread - eggnog + pixie dust + Blue gel]
 			say "[gingerbreadGet]";
 			remove 9 from Francois_Undiscovered;
 			add 9 to Francois_Discovered;
@@ -707,16 +707,16 @@ to say FrancoisBakingMenu:
 						ItemGain vin-coeur by 1;
 					else:
 						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
-				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
+				else if title entry is "gingerbread": [gingerbread - eggnog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
-						say "     Francois takes the egg nog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
+						say "     Francois takes the eggnog, pixie dust and blue gel from you with a smile, collecting a few other things from behind the counter before heading to his kitchen. The warm, sweet smell of Francois['] craft fills the bakery as you wait, making your mouth water in anticipation. Eventually Francois returns with a tray full of small colorful gingerbread cookies. He offers you a couple before placing the rest into one of his displays.";
 						ItemLoss egg nog by 1;
 						ItemLoss pixie dust by 1;
 						ItemLoss blue gel by 1;
 						ItemGain gingerbread by 2;
 					else:
-						say "You do not have the required ingredients, egg nog, pixie dust and blue gel.";
+						say "You do not have the required ingredients: eggnog, pixie dust and blue gel.";
 				else if title entry is "cheesecake": [cheesecake - cheese + pixie dust + pink gel]
 					if cheese is owned and pixie dust is owned and pink gel is owned:
 						now sextablerun is 1;
@@ -792,7 +792,7 @@ to say FrancoisHint:
 			say "     I have seen incredible beasts flying above the rooftops. One of them left an egg just outside, but I didn't dare approach it.";
 		if T is 3:
 			say "     I used to get such wonderful fresh candy from the fair; they add a certain je ne sais quoi to several of my recipes.";
-	if entry 1 of Francois_Undiscovered is 9: [gingerbread - egg nog + pixie dust + blue gel]
+	if entry 1 of Francois_Undiscovered is 9: [gingerbread - eggnog + pixie dust + blue gel]
 		if T is 1:
 			say "     I could have swore I saw a reindeer fly past earlier. He is a little out of season, non?";
 		if T is 2:
@@ -904,7 +904,7 @@ to say vin-coeurGet:
 	say "     Feeling strangely heavy, you give Francois your thoughts on the new dish before pushing yourself away from the counter to stand. Francois['] bizarre expression as you stand catches you slightly off guard, and looking around you realize that rather than pushing yourself away from the counter, you've moved the entire counter away from yourself. You apologize and do your best to move the counter back into position before pondering this strange weight behind your muscles. Perhaps this unusual side effect might be useful in dealing with the creatures out in the city?";
 
 to say gingerbreadGet:
-	say "     After taking a quick shot of the egg nog, Francois scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the egg nog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as Francois works, making your mouth water in anticipations until he returns with a tray of small cookies. Francois places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)";
+	say "     After taking a quick shot of the eggnog, Francois scoops the pixie dust and blue gel with a sparkle in his eye. Obviously inspired somehow by the egg nog, he eagerly rushes off to his kitchen to get started. The warm scent of ginger and cinnamon fills the bakery as Francois works, making your mouth water in anticipations until he returns with a tray of small cookies. Francois places a couple of them on a dish in front of you with a smile. Would you like to test them now? (Y/N)";
 	if Player consents:
 		say "[gingerbread Use]";
 		say "'Oh là!' Francois exclaims as he watches your changes slow to and end. 'I hope you're not still hungry,' he says with a silly grin as he eyes your altered form.";

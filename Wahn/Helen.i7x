@@ -138,13 +138,13 @@ Instead of fucking Helen:
 		choose a blank row in table of fucking options;
 		now title entry is "Lick Helen's pussy";
 		now sortorder entry is 1;
-		now description entry is "Give her a blow-job.";
+		now description entry is "Give her a blowjob.";
 		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have her suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is not neuter and lust of Helen >= 4:
 			choose a blank row in table of fucking options;
@@ -277,7 +277,7 @@ to say HelenSex1: [player licks her]
 
 to say HelenSex2: [she sucks the player]
 	say "     You step beside the cot you put in here for her and whistle to call Helen. The dog with the buck-naked body of a young woman immediately rushes to you from where she was patrolling through the long rows of bookshelves in the library. She comes to stand beside you, happy to get her master's attention[if lust of Helen >= 4 and a random chance of 2 in 5 succeeds]. 'Master play?' she says with a wide grin[end if]. 'Good dog' you say as you crouch down beside her, patting her head and stroking her shoulders. Your hands stray lower and under her [if lust of Helen >= 7]tattooed [end if]body, cupping her shapely breasts and fondling them. Standing back up, you quickly strip off your clothes and hold your erect manhood up for Helen, who gives you a happy yip, then starts licking.";
-	say "     She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blow-job, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
+	say "     She runs her talented tongue along your shaft, then laps at your balls before returning to the tip of your cock and taking it in her mouth. As Helen starts giving you a pretty nice blowjob, you resolve to thank Mike the next time you see him for your expertly trained pet. Your human dog is very careful not to touch your best bit with her teeth and uses her tongue to caress your cock as she bobs up and down on it";
 	if lust of Helen < 4:
 		say ". With her eager sucking, it doesn't take much longer until the need to cum rises in your balls.";
 	else if lust of Helen < 7:

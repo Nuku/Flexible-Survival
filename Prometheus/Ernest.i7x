@@ -242,7 +242,7 @@ to say DismissErnest:
 	if Player is not in Grey Abbey Library: [regular dismiss]
 		say "     With a word, you get Ernest's attention and tell him that he should head back to the library for now. He looks pensive, deep in thought, before eventually letting his shoulders slump. 'I guess so. I'm sure that you have good reason to ask that of me,' he sighs. 'Just make sure that you tell me about anything interesting that you find when you get back, [BlancheMomDadTitle].' After giving you a quick hug, he turns to leave. You know that he can handle herself, but you still feel guilty as he trudges away. ";
 		if White Wolf Four is listed in companionlist of Player: [Claude]
-			say "'Are you sure that you wouldn't have prefered to send me back instead? I enjoy the company, but following you helps Ernest with his research,' Claude confides. ";
+			say "'Are you sure that you wouldn't have preferred to send me back instead? I enjoy the company, but following you helps Ernest with his research,' Claude confides. ";
 		else:
 			say "You would imagine that he and Claude will soon be squabbling when he gets back. ";
 		say "With that in mind, you continue your exploration.";

@@ -15,7 +15,7 @@ An everyturn rule:
 		turn player into "Wasp King" silently;
 
 [Resolution Variables:
- Last stand: 
+ Last stand:
  1 - Player exiled Ziix. Blocks off becoming royalty and expanding the hive.
  2 - Player Saved Ziix. Ziix will act grateful.
  3 - Player ignored Ziix. Zant saves him instead. Ziix will be embarassed.
@@ -23,7 +23,7 @@ An everyturn rule:
  Rude Awakening:
  1 - Player fucked Zant.
  2 - Player declined Zant.
- 
+
  Broken But Alive:
  1 - Ziix has been exiled. Content involving becoming king is walled off. Slut storage content possible?
  2 - Ziix and Zant reunited. Player saved Ziix so he's awake.
@@ -679,7 +679,7 @@ to say ZiixSodaChoice:
 					say "Shrugging, you walk away, letting the poor thing sleep it off.";
 				-- "Kick him out. How dare he attack you!":
 					say "[ZiixExile]";
-		else: 
+		else:
 			LineBreak;
 			say "     You decide against giving the half-conscious wasp soda. What if he chokes? However, you're sure that you need to do SOMETHING. Maybe one of his hivemates survived and can help you rouse the poor wretch.";
 			now Resolution of Last Stand is 2; [player didn't help the soldier wasp]
