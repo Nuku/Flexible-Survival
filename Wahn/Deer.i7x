@@ -1664,7 +1664,7 @@ This is the Susan's Epilogue rule:
 					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
 					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
-				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if Player is male] while you rut her from behind[end if].";
+				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the eggnog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if Player is male] while you rut her from behind[end if].";
 			if Susan is in Hidden Lab:
 				say "     Susan happily joins you when you move north, sharing your home. Dr. Mouse is a little upset about losing his assistant, but you find him a bit grinchy and always keep your dealings with him brief. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if Player is not male and "Sterile" is not listed in feats of Player:
@@ -1673,7 +1673,7 @@ This is the Susan's Epilogue rule:
 					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
 					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
-				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if Player is male] while you rut her from behind[end if].";
+				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the eggnog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if Player is male] while you rut her from behind[end if].";
 
 This is the Deer Infection rule:
 	if ending "Susan's Epilogue" is triggered:

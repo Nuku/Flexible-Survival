@@ -391,7 +391,7 @@ The player will wake up to the sound of their alarm and after some initial scene
 
 TODO: Look into initial options for pec/breast size and cock/clit size.
 
-After inspecting themselves in the shower the player will get out and make their way to the bathroom mirror, this will be used to decide the players race(white/black/asian/hispanic/middle eastern), complexion(light or dark), androgyny(hyper masculine to hyper feminine), pronouns(male/female/non-binary), lip size(thin/average/full), eye color(blue/green/brown/hazel/grey/lavender), hair color(black/brown/blonde/red), hair length(shaved/short/medium/long), hair style(pony tail/down/fohawk/gelled), facial hair(none/full beard/goatee/mustache).
+After inspecting themselves in the shower the player will get out and make their way to the bathroom mirror, this will be used to decide the players race(white/black/Asian/Hispanic/middle eastern), complexion(light or dark), androgyny(hyper masculine to hyper feminine), pronouns(male/female/non-binary), lip size(thin/average/full), eye color(blue/green/brown/hazel/grey/lavender), hair color(black/brown/blonde/red), hair length(shaved/short/medium/long), hair style(pony tail/down/fauxhawk/gelled), facial hair(none/full beard/goatee/mustache).
 
 TODO: Look into potential for other complexions such as albinism and melanism
 

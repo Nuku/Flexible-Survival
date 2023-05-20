@@ -413,7 +413,7 @@ carry out Diegotricking:
 			if Spartan Usurpation is inactive:
 				now Spartan Usurpation is active;
 	else:
-		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [SubjectProCap of Diego] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
+		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratorial way and adds, 'Now listen well - THIS is how a master trickster does things!' [SubjectProCap of Diego] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
 		SanLoss 10;
 
 Section 4 - Sex
@@ -458,7 +458,7 @@ to say DiegoSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Diego's cock";
 		now sortorder entry is 1;
-		now description entry is "Give [if Diegochanged is 0]him[else]her[end if] a blow-job";
+		now description entry is "Give [if Diegochanged is 0]him[else]her[end if] a blowjob";
 	[]
 	if (Player is male and (Diegochanged > 0 or DiegoButtSlut > 0) and 1 > 2): [disabled for now]
 		choose a blank row in table of fucking options;

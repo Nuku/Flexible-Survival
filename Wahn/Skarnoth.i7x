@@ -152,7 +152,7 @@ to say SkarnothSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Skarnoth's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job";
+	now description entry is "Give him a blowjob";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;

@@ -367,13 +367,13 @@ Instead of fucking David:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck David's cock";
 		now sortorder entry is 1;
-		now description entry is "Give him a blow-job.";
+		now description entry is "Give him a blowjob.";
 		[]
 		if (lust of David > 0 and Player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
-			now description entry is "Get a blow-job.";
+			now description entry is "Get a blowjob.";
 		[]
 		if Player is female:
 			choose a blank row in table of fucking options;
@@ -1819,7 +1819,7 @@ to say DavidSex1: [player sucks him]
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
 		else:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke his crotch, a bulge quickly forming in his pants. Not getting any relief except rushed masturbation in the weeks and months since the outbreak started, Private Jackson is like putty in your hands, his horny body telling him to go along with anything you want.";
-		say "     Kneeling down in front of him, you undo David's zipper and pull out his cock, making the man moan as you handle his erect manhood. Stroking up and down on his shaft, you have him rock-hard in no time, then move your head forward a bit and lick over the tip. Next you take his cock into your mouth, and start bobbing up and down on it, while David groans and murmurs things like 'So good...' and 'You're a lot better than...' You give the young soldier a long and amazing blow-job, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.'";
+		say "     Kneeling down in front of him, you undo David's zipper and pull out his cock, making the man moan as you handle his erect manhood. Stroking up and down on his shaft, you have him rock-hard in no time, then move your head forward a bit and lick over the tip. Next you take his cock into your mouth, and start bobbing up and down on it, while David groans and murmurs things like 'So good...' and 'You're a lot better than...' You give the young soldier a long and amazing blowjob, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.'";
 		WaitLineBreak;
 		say "     As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'Wow, you're better than... Oh!' with a guilty expression suddenly shadowing his face. 'I got a girlfriend - and now I've cheated on her having oral sex! What will she say when I get back home? I - you...' Pulling his mouth to yours for another quick kiss, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 	else:
@@ -1828,7 +1828,7 @@ to say DavidSex1: [player sucks him]
 		else:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch. ";
 		say "Kneeling down in front of him, you undo David's zipper and pull out his cock, making the man moan as you handle his erect manhood. Stroking up and down on his shaft, you have him rock-hard in no time, then move your head forward a bit and lick over the tip. Next you take his cock into your mouth, and start bobbing up and down on it, while David groans and murmurs things like 'So good...' and 'You're a lot better than...'";
-		say "     You give the young soldier a long and amazing blow-job, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.' ";
+		say "     You give the young soldier a long and amazing blowjob, keeping at it until he suddenly shouts 'I'm coming!' and starts to shoot strings of cum into your mouth. You wait till he stops twitching and the last spurt of semen leaves his cock, then stand up and start making out with him, smiling inwardly as you push some of his own cum in David's mouth with your tongue to give him a taste.' ";
 		if thirst of David is 10: [fuck buddy]
 			say "As he comes down from the rush of orgasm a while later and David's brain starts working again, he pants 'Wow, you're better than Ann. Best fuck-buddy ever. I'll miss you when I'm back with her.'";
 		else if thirst of David is 20: [boy/girlfriend]
@@ -1843,7 +1843,7 @@ to say DavidSex2: [he sucks the player]
 	else:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the fabric you feel his manhood already filling out, as his body reacts to you kiss and touch.";
 		say "     Pulling back from David, you quickly strip off your clothes and sit at the edge of one of the nearby bunk beds. Holding out your hard [Cock of Player] manhood, you wave him closer and tell the young soldier to suck you off. [if lust of David is 1 or lust of David is 51 or lust of David is 52]He just stands there for a moment, staring at your cock until you say 'Come on, you liked getting fucked with it, didn't you? Just give it a try...' then steps up and kneels between your legs[else]He smiles at you, licking his lips, then steps up and kneels between your legs[end if].";
-	say "     Taking hold of your cock, the young soldier holds it up and licks along the shaft before taking the tip in his mouth. You put your hands on his head and softly push it down on your cock, helping him to get into sucking on it. Soon you have him bobbing up and down on your manhood, with his lips tight around the shaft. [if lust of David is 1]Even though it's his first blow-job, he's pretty good at it, knowing how to handle a cock from being a man himself[else]He's very eager to please you, even trying to deep-throat you once or twice[end if].";
+	say "     Taking hold of your cock, the young soldier holds it up and licks along the shaft before taking the tip in his mouth. You put your hands on his head and softly push it down on your cock, helping him to get into sucking on it. Soon you have him bobbing up and down on your manhood, with his lips tight around the shaft. [if lust of David is 1]Even though it's his first blowjob, he's pretty good at it, knowing how to handle a cock from being a man himself[else]He's very eager to please you, even trying to deep-throat you once or twice[end if].";
 	say "     Before too much longer, you feel the need to cum rise in your balls and say 'I'm close, suck me harder.' [if lust of David is 0]You pull his head against your crotch as you start shooting, spurt after spurt of your seed filling his hot mouth[else]He pushes your cock into his mouth all the way as you orgasm, making you shoot directly down his throat and into his stomach[end if].";
 	WaitLineBreak;
 	if thirst of David is 10: [fuck buddy]

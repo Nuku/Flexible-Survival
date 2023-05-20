@@ -789,7 +789,7 @@ to say hospquestpt6:
 	if carried of Tiger patch >= 3:
 		ItemLoss Tiger patch by 3;
 		say "     Good work! I shall set to work on these right away. And while I work on that, I do have another project for you. I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
-		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
+		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several Smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out. There is a jackal shopkeeper who has set herself up in the mall. She has a package for me. The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
 		now nerminepackage is 1;
 		now Dinosaur Nest is active;
@@ -806,7 +806,7 @@ to say hospquestpt7:
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
-			say "     There appear to be several of these smilodons in the museum. Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
+			say "     There appear to be several of these Smilodons in the museum. Take care, Smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
 		if Chipped tooth is owned:
 			ItemLoss Chipped tooth by 1;
 			say "     The mouse looks at the large fang with a mix of awe and delight. He takes it carefully from you and places on a sample tray. Another successful mission completed.";

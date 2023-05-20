@@ -657,7 +657,7 @@ to say gsd_special_vsex_00:
 		now description entry is "Make the defeated cur eat you out";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Hand job";
+	now title entry is "Handjob";
 	now sortorder entry is 6;
 	now description entry is "Jerk him off to burn off some of his excess libido";
 	[]
@@ -686,7 +686,7 @@ to say gsd_special_vsex_00:
 					say "[gsd_special_vsex_03]";
 				else if nam is "Cunnilingus":
 					say "[gsd_special_vsex_04]";
-				else if nam is "Hand job":
+				else if nam is "Handjob":
 					say "[gsd_special_vsex_05]";
 		else if calcnumber is 0:
 			say "Drive him off: Shall you send the arrogant creature packing?";

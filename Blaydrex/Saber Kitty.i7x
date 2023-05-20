@@ -78,7 +78,7 @@ When Play begins:
 	now defeated entry is "[saber_loses]";
 	now victory entry is "[saber_wins]";
 	now desc entry is "[SaberKittyDesc]";
-	now face entry is "feline and beautiful female smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is [Face of Player]." ]
+	now face entry is "feline and beautiful female Smilodon, with two sexy fangs showing at all times"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "feminine, with curves to your body that are to die for and some sexy abs. Your arms have muscles that barely show, but show enough to show that you are indeed stronger than it would seem and end in clawed paws that still can grip things. Your legs have strong thighs for leaping and pouncing on your prey but are shapely and attractive as well as muscled and end in digitigrade feet";
 	now skin entry is "covered in a soft beige fur that turns white on the front of your torso and the inside of your ass cheeks";
 	now tail entry is "You have a short saber kitty tail that is covered in fur. It is adorable and seems to wag like a dog tail when you get too excited."; [ Tail description, write a whole Sentence or leave blank. ]
@@ -231,7 +231,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"smilodon cum"	"A small amount of smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
+"smilodon cum"	"A small amount of Smilodon cum you've gathered. You just collect everything, don't you?"	1	smilodon cum
 
 instead of sniffing smilodon cum:
 	say "The cum has a strong, somewhat nutty scent.";
@@ -241,7 +241,7 @@ smilodon cum is infectious. Strain of smilodon cum is "Saber Kitty".
 Usedesc of smilodon cum is "[smilodon cum use]";
 
 to say smilodon cum use:
-	say "Taking out the small bottle you keep your smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
+	say "Taking out the small bottle you keep your Smilodon cum in, you put it to your lips and chug down the creamy liquid. Tasty, and somehow you feel the need for more of it...";
 
 Section 3 - Endings
 
@@ -253,7 +253,7 @@ This is the Saber Kitty Infection rule:
 	if Player has a body of "Saber Kitty":
 		trigger ending "Saber Kitty Infection";
 		if humanity of Player < 10:
-			say "     You can't hold back the urges of your feline need anymore. You go in search for a powerful virile male, preferable another smilodon. Every male you come across you can't help but want to show the pleasures of being a sexy saber kitty, as well as females. Whenever you run across a fellow smilodon you can't help but submit and play around. Your belly is almost always full of an oncoming litter, otherwise you suffer a never ending heat.";
+			say "     You can't hold back the urges of your feline need anymore. You go in search for a powerful virile male, preferable another Smilodon. Every male you come across you can't help but want to show the pleasures of being a sexy saber kitty, as well as females. Whenever you run across a fellow Smilodon you can't help but submit and play around. Your belly is almost always full of an oncoming litter, otherwise you suffer a never ending heat.";
 		else:
 			say "     You manage to make it out of the city, but something isn't right. There is always a scratching feeling in the back of your mind. Each passing heat the scratching grows worse and worse. You spend your days trying to get by, living in this new society, but everything seems wrong. You need a male saber and need a pack. It doesn't take long before you find a sexy tiger and seduce him. You don't know how, but you manage to turn him into a Smilodon. This simple act causes you to lose to your infection. Your new mate spends the next day rutting you until you are sure to be with his litter. After that you and he begin to start raping anyone in sight, turning them into saber kitties like yourself, with only your mate as the only male. Within 24 hours the whole city is nothing but Smilodons. The city is then quarantined. You spend the rest of your days doing nothing but breeding, always having a litter growing in you or being in heat.";
 

@@ -6,7 +6,7 @@ Version 3 of Main Storyline by Wahn begins here.
 
 [
 Ideas:
-Add in more nanite lore - player being especially infectable; not infective to others
+Add in more nanite lore - player being especially infectible; not infective to others
 ]
 
 "Contains the content for Dr. Matt and the Main Quest Storyline."

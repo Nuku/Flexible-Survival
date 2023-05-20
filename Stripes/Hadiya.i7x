@@ -504,7 +504,7 @@ Section 10 - Character Notes
 [ Hadiya:
 - Hadiya's not particularly sociable, preferring her largely solitary life. Being a bit of a misanthrope, she prefers simply having some playmates who'll put up with her attitude and desires for rough, dominant sex.
 - Once at the library, Hadiya is not interested in taking over, being top dom or anything like that. The player is her bitch when they're together, but she doesn't care what he does or whether top/bottom with others. She will only be top with others (males/herms only) and will flat out refuse if they try to insist/force it.
-- She treats Gobby like her plaything and servant as an extension of the circumstances of their meeting and their sexual relationship than out of some desire to enslave or mistreat him. She's not particularly mean or malicious about it, making sure he gets 'rewarded' for his good service in return with the occasional blowjob, hand job or fucking. Aside from making him lug the amplifier (done as payback for her troubles), it's all in good fun.
+- She treats Gobby like her plaything and servant as an extension of the circumstances of their meeting and their sexual relationship than out of some desire to enslave or mistreat him. She's not particularly mean or malicious about it, making sure he gets 'rewarded' for his good service in return with the occasional blowjob, handjob, or fucking. Aside from making him lug the amplifier (done as payback for her troubles), it's all in good fun.
 - Hadiya's actually a pretty good guitar player, though she'll require power for her amp and a little time to get used to playing with her claws to be able to demonstrate it. She does prefer just thrashing away at it over playing musically though.
 ]
 

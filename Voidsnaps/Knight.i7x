@@ -102,7 +102,7 @@ to say stateknightcrest:
 	else if knightcrestnum is 8:
 		say "a buxom maiden clinging to a noble knight's leg";
 	else if knightcrestnum is 9:
-		say "twin maidens giving a well-hung knight a hand job";
+		say "twin maidens giving a well-hung knight a handjob";
 	else:
 		say "a chain-wrapped sword with handle nestled firmly in cleavage";
 
@@ -126,7 +126,7 @@ to say stateplayercrest:
 	else if Playercrestnum is 8:
 		say "a buxom maiden clinging to a noble knight's leg";
 	else if Playercrestnum is 9:
-		say "twin maidens giving a well-hung knight a hand job";
+		say "twin maidens giving a well-hung knight a handjob";
 	else:
 		say "a chain-wrapped sword with handle nestled firmly in cleavage";
 

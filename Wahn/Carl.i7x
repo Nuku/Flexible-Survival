@@ -562,13 +562,13 @@ to say CarlSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Suck Carl's cock";
 	now sortorder entry is 1;
-	now description entry is "Give him a blow-job";
+	now description entry is "Give him a blowjob";
 	[]
 	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
-		now description entry is "Get a blow-job";
+		now description entry is "Get a blowjob";
 	[
 	if Player is not neuter:
 		choose a blank row in table of fucking options;
@@ -799,18 +799,18 @@ to say CarlShowerMenu:
 			choose a blank row in table of fucking options;
 			now title entry is "Ask him for help in washing your front";
 			now sortorder entry is 3;
-			now description entry is "Get a blow-job from the canine soldier";
+			now description entry is "Get a blowjob from the canine soldier";
 		[]
 		if Player is male and HP of Carl is 30: [sub Carl]
 			choose a blank row in table of fucking options;
 			now title entry is "Command the subby husky to go down on your dick";
 			now sortorder entry is 3;
-			now description entry is "Get a blow-job from the canine soldier";
+			now description entry is "Get a blowjob from the canine soldier";
 		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Go down on Carl's dick";
 		now sortorder entry is 4;
-		now description entry is "Give the canine soldier a blow-job";
+		now description entry is "Give the canine soldier a blowjob";
 		[
 		if Player is female and HP of Carl is 10: [regular Carl]
 			choose a blank row in table of fucking options;

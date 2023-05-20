@@ -672,7 +672,7 @@ to say AdamAssFucked: [give Adam's tight ass a good fucking]
 		NPCSexAftermath Adam receives "AssFuck" from Player;
 	else:
 		LineBreak;
-		say "     You let Adam know that you're close and tell him you want to cum in his mouth, while carefully pulling out of his ass. Eager to follow your command, Adam turns around and kneels before you, taking hold of your hard cock. Smiling, he runs his tongue over the underside, then goes to work giving you a blow-job. It doesn't take long before he pushes you over the edge, gasping in lust as your load gushes into Adam's mouth. After he milks the last bit of cum out of your cock, Adam looks up at you and sticks out his tongue, showing you the ample load you shot. Pulling him up from the ground, you give him a deep kiss, tasting your own cum as your tongues explore each other's mouths.";
+		say "     You let Adam know that you're close and tell him you want to cum in his mouth, while carefully pulling out of his ass. Eager to follow your command, Adam turns around and kneels before you, taking hold of your hard cock. Smiling, he runs his tongue over the underside, then goes to work giving you a blowjob. It doesn't take long before he pushes you over the edge, gasping in lust as your load gushes into Adam's mouth. After he milks the last bit of cum out of your cock, Adam looks up at you and sticks out his tongue, showing you the ample load you shot. Pulling him up from the ground, you give him a deep kiss, tasting your own cum as your tongues explore each other's mouths.";
 		say "     Coming back up to breath, Adam moans 'That was amazing - you are amazing.' affectionately stroking your cheek.";
 		NPCSexAftermath Adam receives "AssFuck" from Player;
 		NPCSexAftermath Adam receives "OralCock" from Player;

@@ -111,7 +111,7 @@ Romulus & Remus: [feral wolf companions of Brennan]
 
 River: [frat brother of PAN, swim team captain, gay powerbottom]
 - Befriending/romancing River (he's not a slut and doesn't just sleep around)
-- Transformation into a male nymph during his questline 
+- Transformation into a male nymph during his questline
 
 Spike: [male doberman; son of Alexandra and... one of many people, including the Player]
 - Further expansion on the various relationship options with him
@@ -136,7 +136,7 @@ Vincent: [anthro fox (untransformed Val - see orcs); can be brought into the lib
 Xerxes: [human dog; obtainable from Mike]
 - More interactions with Xerxes (playful or sexual) - for example throwing a tennis ball, etc.
 - NPC/Xerxes interactions in the library
-- Combat training as a new companion 
+- Combat training as a new companion
 
 
 

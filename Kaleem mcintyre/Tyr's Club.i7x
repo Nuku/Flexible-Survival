@@ -199,7 +199,7 @@ to TyrSexMenu:
 	if Player is puremale:
 		if anallevel is 3:
 			choose a blank row in table of fucking options;
-			now title entry is "Lose: Anal play + hand job";
+			now title entry is "Lose: Anal play + handjob";
 			now sortorder entry is 16;
 			now description entry is "let him win and jerk you off";
 	if Player is neuter:
@@ -259,7 +259,7 @@ to TyrSexMenu:
 					say "[TyrWon_Cunnilingus]";
 				else if nam is "Lose: Training massage":
 					say "[TyrWon_Training]";
-				else if nam is "Lose: Anal play + hand job":
+				else if nam is "Lose: Anal play + handjob":
 					say "[TyrWon_AnalPlay]";
 				else if nam is "Lose: no sex":
 					say "[TyrWon_NoSex]";
