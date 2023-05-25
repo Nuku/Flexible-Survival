@@ -310,6 +310,7 @@ Include Forest Events by Defth.
 Include Forest Gang Bang by Defth.
 Include Gildwing Kobold Events by Taelyn.
 Include Greek Mythos by Prometheus.
+Include Haunted Mansion by Voidsnaps.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
@@ -652,7 +653,6 @@ Include Rubber Tigress by Sarokcat.
 Include Ruby by CrimsonAsh.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
-Include Sascha by Voidsnaps.
 Include Salamander by Stripes.
 Include Sand Man by Wahn.
 Include Satyr by Sarokcat.
@@ -927,6 +927,7 @@ Include Orc Female by Wahn.
 Include Orc Lair by Wahn.
 Include Orthas by Wahn.
 Include Otto Fuchs by Prometheus.
+Include Ozeg by Voidsnaps.
 Include Palomino by Verath.
 Include PAN Frat Bros by Wahn.
 Include Paula by Prometheus.
@@ -951,6 +952,7 @@ Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
+Include Sascha by Voidsnaps.
 Include Savina by Kurainyx.
 Include Segis by Gherod.
 Include Serafino by Rikaeus.
