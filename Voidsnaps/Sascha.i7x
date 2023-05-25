@@ -3,7 +3,7 @@ Sascha by Voidsnaps begins here.
 [ Resolution of Wild Kitty                                                      ]
 [   0: default value                                                            ]
 [   1: friendly chat in first meeting                                           ]
-[   2: player offered sex in first meeting                                      ]
+[   2: Player offered sex in first meeting                                      ]
 [   3: Player & Sascha stroked each other (no climax) in second meeting         ]
 [   4: Player licked Sascha's Pussy                                             ]
 [   5: Player fucked Sascha's Pussy                                             ]
@@ -19,7 +19,7 @@ Sascha by Voidsnaps begins here.
 [ 1: Player gets a blowjob in return for licking Sascha's pussy the first time. ]
 [ 2: Player gets ridden.                                                        ]
 [ 3: Reverse cowgirl anal.                                                      ]
-[ 4: Sascha has been practicing. Takes player's cock with difficulty.           ]
+[ 4: Sascha has been practicing. Takes Player's cock with difficulty.           ]
 [ 5: Platonic cuddling                                                          ]
 [ 6: Neuter fingering                                                           ]
 
@@ -55,7 +55,7 @@ to say ResolveEvent Wild Kitty:
 		if Player is male or Player is female: [neuters go home!]
 			add "Pretend to talk to him, slowly move closer and jump the cat to fuck him afterwards." to Sascha_Initial_Choices;
 		add "You got no time for small talk. Survival's busy work. Ignore him." to Sascha_Initial_Choices;
-		let Sascha_Initial_Choice be what the player chooses from Sascha_Initial_Choices;
+		let Sascha_Initial_Choice be what the Player chooses from Sascha_Initial_Choices;
 		if Sascha_Initial_Choice is:
 			-- "Sure, you can talk. It's nice to meet new people...": [friendly]
 				LineBreak;
@@ -87,7 +87,7 @@ to say ResolveEvent Wild Kitty:
 		add "Let him continue. It feels good, and you can't think of anywhere else you'd rather be." to Sascha_Choices;
 		add "Gently but firmly slide his hand away from your crotch. You just wanna hang out, that's all." to Sascha_Choices;
 		add "You wanted to get to know him, but this feels a bit... 'feral-lite'?! Get out of there!" to Sascha_Choices;
-		let Sascha_Choice be what the player chooses from Sascha_Choices;
+		let Sascha_Choice be what the Player chooses from Sascha_Choices;
 		if Sascha_Choice is:
 			-- "Let him continue. It feels good, and you can't think of anywhere else you'd rather be.": [a bit of fondling]
 				LineBreak;
@@ -119,7 +119,7 @@ to say ResolveEvent Wild Kitty:
 				say "     You can't help but stare as Sascha fingers himself, licking your lips as a glittering string of pussy juice drips down to the concrete below. The urge to taste him, barely suppressed, drives you to step closer, ready to please him, but a hand on your chest stops you in your tracks as padded fingertips keep you at arm's length. 'Not yet, [SaschaPAddress]. Our third date isn't over,' Sascha says flirtatiously, then unwraps another apple-flavored treat and slips it between his lips without pushing you away, his chest vibrating with a familiar purr. 'If you want to get in my pants - I left them at the place where we're going! You just have to get to them and prove that you're worthy!'";
 				now PlayerRomanced of Sascha is true; [flirted back, into him]
 				say "[SaschaFreerunning_Intro]";
-			else: [Sascha's disappointed and drops the player]
+			else: [Sascha's disappointed and drops the Player]
 				LineBreak;
 				say "     Shaking your head, you decline Sascha's advances. You don't have a problem with him, but aren't attracted to men like him. Hopefully, he understands. Sascha looks slightly disappointed as you affirm that you aren't interested in a physical relationship with someone like him, licking his fingers clean and ceasing his efforts to entice you. Placing a hand on his neck, he looks away, hurt written across his features. 'Oh. I suppose that's fair enough. I didn't think you'd mind after you let me-' Shaking his head, he steels himself, wiping his eyes. 'Okay, then. I suppose we don't need to see each other again.' As Sascha walks away, his tail hanging lifelessly, you notice that he doesn't take his acrobatic route, instead walking away with his hands in his pockets. [bold type]You surely won't see him again. [roman type][line break]";
 				now Resolution of Wild Kitty is 102; [rejected flirtations, gruffly (end of content)]
@@ -140,7 +140,7 @@ to say SaschaFreerunning_Intro:
 	if Player consents:
 		LineBreak;
 		say "[SaschaFreerunning_Main]";
-	else: [player rejection of Sascha's main interest]
+	else: [Player rejection of Sascha's main interest]
 		LineBreak;
 		say "     'All of this, just to get rejected. Isn't that ironic?' Sascha shakes his head sadly, his excitement melting at your words. 'I'm not looking for a relationship if we don't have anything in common, and well, I'm not going to slow down for you. If you at least try-' Sascha trails off, shaking his head. 'No, that's not fair. I don't want to force you to do something you're not ready to do. Take care of yourself.' Walking away with his head lowered and his tail between his legs, Sascha turns his head to shoot you one last longing look, then continues out of sight. [bold type]You surely won't see him again. [roman type][line break]";
 		now Resolution of Wild Kitty is 102; [rejected lifestyle, gruffly (end of content)]
@@ -197,7 +197,7 @@ to say SaschaFreerunning_Main:
 			LineBreak;
 			say "     Screw the more dangerous route. You trust your muscles much more than you trust that meager footing. Reaching up, you grip the scaffolding above you, raising yourself inch by inch as your forearms strain, your muscles screaming at you to stop. Unfortunately, your strength gives out halfway, and you dangle there helplessly before setting yourself back down, hoping Sascha didn't see your pathetic attempt. As a quick and stylish ascent is out for you now, you sigh and look for some other way. After turning around and walking to the very end of the scaffolding, you do spot a latch in the wooden ceiling, allowing it to be opened and someone to climb up using a narrow ladder. Pretty boring and unexceptional, but at least it'll allow you to continue. The next ladder isn't that far away, and soon you're up on the same level as Sascha.";
 	say "     The remainder of the path to the roof isn't as hazardous as the rest, and Sascha leads the way, tail twitching above his [if PlayerRomanced of Sascha is true]bare ass[else]shapely cloth-covered rump[end if]. Once you reach the landing, he enters the building through a hole in the side wall, quickly finding the some access stairs and running up, then throwing open a door and disappearing onto the flat roof. You can't help but share his excitement for the [if PlayerRomanced of Sascha is true]prize[else]view[end if] he promised you, and you hurry after him, shielding your eyes as you step out onto the windy top floor of the building. [if Daytimer is day]In the golden sunshine[else]In the pale moonlight[end if], what should just be a common, unsecured construction site takes on a whole different air - this is [italic type]your[roman type] roof now, the final goal of your shared adventure of trespassing, climbing and athletics with the black cat.";
-	if PlayerRomanced of Sascha is true: [player interested in sex]
+	if PlayerRomanced of Sascha is true: [Player interested in sex]
 		say "      Sascha's waiting for you, leaning over the edge of the building and pointing out into the distance. As you approach, he speaks in an excited voice. 'Isn't the view from here amazing?' Of course, you can't see anything else BUT the view, though it's very different from the one he's describing. Standing on tiptoes with his tail lifted, he's giving you a beautiful show of pretty pink lower lips glistening wet in the [if Daytimer is day]sun[else]moon[end if]light and a puffy hole beneath his flicking appendage. Both of them look like they've seen their fair share of action, and his pussy, in particular, winks as he speaks, begging for attention. Yes, the view is spectacular, and you tell him as you shamelessly [if Player is not barecrotch]remove your clothing[else]lower your hands to your crotch[end if] and [if Player is male]take hold of your erection[else if Player is female]roll your finger over your clit[else]stroke the sensitive skin of your pubic area[end if].";
 		say "     The slow wiggle of those hips calls to you, and you step closer, massaging soft cheeks and pulling them apart to inspect Sascha's light-pink holes, feeling your mouth moisten in desire. 'See something you like, [SaschaPAddress]?' Sascha coos, pressing backward and spreading his legs as if inviting you to sink a finger into those drooling folds. 'You've been such a good sport, following me up here. I appreciate having someone along who gives their best, even when it's difficult going. And now that you've worked up an appetite, how about some cooldown exercise?' Sascha braces himself against the only slightly raised rim of the roof's edge, slender hands gripping it with his claws sliding into view. Looks like he's expecting a wild ride - and is doing his best to entice you to provide that, as he lifts his tail and sways those sexy hips invitingly. You doubt he'll turn down anything you want to do to him.";
 		LineBreak;
@@ -208,7 +208,7 @@ to say SaschaFreerunning_Main:
 		if Player is male:
 			add "Sink your cock in between the silky folds of his pussy! He's been teasing you long enough!" to Sascha_RoofSex_Choices;
 			add "Surprise him by giving the pussycat a nice and deep anal fuck! He's been teasing you long enough!" to Sascha_RoofSex_Choices;
-		let Sascha_RoofSex_Choice be what the player chooses from Sascha_RoofSex_Choices;
+		let Sascha_RoofSex_Choice be what the Player chooses from Sascha_RoofSex_Choices;
 		if Sascha_RoofSex_Choice is:
 			-- "Eat your flirty pussycat's pussy! Use your tongue to make him whimper and gasp in pleasure!":
 				LineBreak;
@@ -219,7 +219,7 @@ to say SaschaFreerunning_Main:
 			-- "Surprise him by giving the pussycat a nice and deep anal fuck! He's been teasing you long enough!":
 				LineBreak;
 				say "[Sascha_Roof_Anal]";
-	else: [player just wants to be friendly]
+	else: [Player just wants to be friendly]
 		say "     Sascha's waiting for you, leaning over the edge of the building and pointing out into the distance. As you approach, he speaks in an excited voice. 'Isn't the view from here amazing?' You stand behind the cat, avoiding the dizzying view beneath him and slipping your arms around his waist - half because he was close to falling off, and half because you can't help but feel a connection with your new friend. He's right, the city skyline IS incredible, but you find it hard to focus on anything in the distance with this vibrantly alive and infectiously adventurous young man within arm's reach. The way he sags backward against you and his vibrating purr tell you that you're not the only one who's enjoying sharing this moment with one another, and you stand in comfortable silence as the [if Daytimer is day]sun paints golden[else]moon paints silver[end if] streaks across Sascha's soft black fur.";
 		say "     'Thank you for coming up here with me. I know you're not interested in sex, but that's not all there is to me, either.' Turning in your arms, the cat perches at the edge, his arms slipping around your waist and his fluffy hair tickling your chin. 'I'll find an easier way down for you. You must be exhausted.' He murmurs, his face buried in your neck. '...Once I'm ready to let go.' The two of you stay together in companionable closeness for a little while longer, before Sascha eventually loosens his embrace with a happy little sigh. He's true to his word, and as you return to the ground floor, he holds your hand, leaning against your arm and chatting about other places in the city he wants to take you to. Too soon, you reach the apartment block's entrance and say your goodbyes, with only the faint feeling of Sascha's kiss on your cheek to remind you of his presence and a green apple sucker he tucked into your hand.";
 		now Resolution of Wild Kitty is 51; [hanging out on the roof, complete with a hug]
@@ -343,7 +343,7 @@ to say ResolveEvent Rough But Sweet:
 		say "     Eagerly gripping your wrist, the cat drags you through a nearby window, stopping to press you against a wall and losing his clothes in the process. Before you can ask if his nudity is wise, the oversexed cat has tugged you from the office he left his clothes in onto a catwalk, then over the edge onto a pallet of boxes a few feet down, at least fifty feet off of the concrete below. Lured by the hypnotic sway of the cat's bare ass, you follow him into a gap in the boxes. A cozy cave awaits you, scented with Sascha's sweet musk, and before you can settle in, he's straddling you, clawing at your clothes, and guiding your hand back to his pussy.";
 		if Player is male:
 			if Resolution of Wild Kitty is 4: [blowjob]
-				say "     Hot and heavy kissing follows as Sascha's cunt spasms around your fingers, leaking sweet nectar as he grows closer to his orgasm. Unable to resist the call of that sweet pussy, you nuzzle your hastily freed cock up against his lower lips, grinding it against his clit and humping with wild abandon. Your needy kitty stiffens within moments, and before long, you feel your shaft dripping with his cream, the slightest push away from entering him. 'Your turn.' Sascha murmurs in your ear as his paws drag your shirt over your head. Trailing his tongue over your chest, he works his way lower[if player is not barecrotch], tugging your pants the rest of the way off before you can decide whether it's wise to be naked in a place like this[end if]. The first long lick over the underside of your cock takes your breath away, and you spread your legs for the purring cat, biting your lower lip as you watch that drooling feline tongue roll over sensitive flesh. Panting greedily, he grips the base, dragging his tongue over the tip to swipe up your pre. 'I told you I'd return the favor, didn't I? You don't know how good it felt when you ate me out...'";
+				say "     Hot and heavy kissing follows as Sascha's cunt spasms around your fingers, leaking sweet nectar as he grows closer to his orgasm. Unable to resist the call of that sweet pussy, you nuzzle your hastily freed cock up against his lower lips, grinding it against his clit and humping with wild abandon. Your needy kitty stiffens within moments, and before long, you feel your shaft dripping with his cream, the slightest push away from entering him. 'Your turn.' Sascha murmurs in your ear as his paws drag your shirt over your head. Trailing his tongue over your chest, he works his way lower[if Player is not barecrotch], tugging your pants the rest of the way off before you can decide whether it's wise to be naked in a place like this[end if]. The first long lick over the underside of your cock takes your breath away, and you spread your legs for the purring cat, biting your lower lip as you watch that drooling feline tongue roll over sensitive flesh. Panting greedily, he grips the base, dragging his tongue over the tip to swipe up your pre. 'I told you I'd return the favor, didn't I? You don't know how good it felt when you ate me out...'";
 				WaitLineBreak;
 				say "     Sascha's mouth is just as talented as the rest of him, his teeth well hidden by soft, wet lips and his tongue rolling over your sensitive shaft with each bob of his head. There's a sense of urgency to his movements, and he barely gags as he slurps you to the base, gathering speed until foam forms at the tight ring of fingers around the final inch of your dick. You try to warn him when your orgasm is approaching, but he's too damn good, and all you can do is push your hips up, ready to blast his throat. A loud purr vibrates around your dick as Sascha stops just before the point of no return, resting and staring up at you with mischievous eyes. He settles into place as your orgasm backs off, then starts anew before you can go soft, working your cock until you feel you'll go mad. To the edge and back again, his face smeared with pre and drool and his hair dripping with sweat, he works you over, watching your face for signs of orgasm, finding ways to get you closer than you've ever been, then nursing at the pre his denial earns him, swallowing it [if Player is not internalBalls]as he kneads your poor, aching balls. [else]like a slimy treat. [end if][line break]";
 				say "     You lose track of how long he edges you, your cock growing so sensitive that a gentle kiss milks a fat pearl of pre from the bucking shaft. Sascha keeps you there for far too long, glossing his lips with your fluids until your pleading expression gets through to him. Finally, the sweet release comes as he throats your cock, his purring reaching a fever pitch while your first shot paints his tonsils. You hump wildly, slapping your [if Player is internalBalls]crotch [else]balls [end if]against his chin and sending streamers of cum overflowing down his chin. 'You taste good.' Sascha murmurs as he moves to lay on top of you, grinding your over-sensitive cock against his pussy. You can feel your tip buck against his entrance, and you think you could fuck him if you wanted to without the cat protesting. If anything, he seems to be encouraging it.";
@@ -373,7 +373,7 @@ to say ResolveEvent Rough But Sweet:
 				say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
 				say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
 				say "     [link](N)[as]n[end link] - No, you've had enough.";
-				if player consents:
+				if Player consents:
 					say "[SaschaSecondRound]";
 				else:
 					say "[SaschaSecondDenial]";
@@ -385,7 +385,7 @@ to say ResolveEvent Rough But Sweet:
 					say "     [bold type]Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
 					say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
 					say "     [link](N)[as]n[end link] - No, you've had enough.";
-					if player consents:
+					if Player consents:
 						say "[SaschaSecondRound]";
 					else:
 						say "[SaschaSecondDenial]";
@@ -398,7 +398,7 @@ to say ResolveEvent Rough But Sweet:
 					say "      Do you want to go for another round? Sascha's practically begging for it.[roman type][line break]";
 					say "     [link](Y)[as]y[end link] - Fuck yeah. Sloppy Seconds.";
 					say "     [link](N)[as]n[end link] - No, you've had enough.";
-					if player consents:
+					if Player consents:
 						say "[SaschaSecondRound]";
 					else:
 						say "[SaschaSecondDenial]";
@@ -428,5 +428,144 @@ to say SaschaSecondRound: [Vaginal after anal, blowjob, or vaginal]
 
 to say SaschaSecondDenial:
 	say "     Pulling the cat closer, you decide against ruining the moment by fucking him silly. Instead, you lay your chin on top of his and close your eyes, petting down his back and basking in the warmth of the afterglow. Before long, the cat dozes off, and you're not far behind, ignoring the puddle beneath your ass. When you awaken, you gently shake Sascha awake. He's too cute sitting there looking at you with sleepy eyes, but you don't have time to stick around. Instead, you gather your gear, stopping to pet Sascha's head and ruffle his fluffy hair. Maybe you can spend more time with him next time. You thank him and promise to find him again soon, picking your way out of the warehouse while he shakes off his sleepiness.";
+
+Section 4 - Sascha Becomes an NPC- Talk and Fuck Menus
+
+Instead of conversing Sascha:
+	if Sascha is in Haunted House Entrance:
+		say "[SaschaOutsideTalk_Menu]";
+	else if Sascha is in Dungeon Dead End and "Finding Help" is listed in traits of Sascha:
+		say "[HornyHaunters]";
+	else if Sascha is in Dungeon Dead End:
+		say "[GhostHandsFuck]";
+	else:
+		say "[SaschaMansionTalk_Menu]";
+
+Instead of Fucking Sascha:
+	if Sascha is in Dungeon Dead End and "Finding Help" is listed in traits of Sascha: [ghost hand orgy]
+		say "[HornyHaunters]";
+	else:
+		say "[Sascha_Fuck_Menu]";
+
+to say Sascha_Fuck_Menu:
+	say "     [bold type]As Sascha tilts his head and stares up at you from the red couch, you ponder what you want to do with him.[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+[	if Player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Sascha for a blowjob";
+		now sortorder entry is 1;
+		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up to suck your dick";]
+	[if player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask Sascha to lick your pussy";
+		now sortorder entry is 2;
+		now description entry is "You're feeling horny and Sascha's mouth is looking better the longer you stare at it. See if he's up for eating your box"]
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Tease Sascha";
+	now sortorder entry is 3;
+	now description entry is "Sascha's made an art of teasing you. Why not return the favor";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Ask Sascha for a blowjob"):
+					say "[SaschaBlowjobMansion]";
+				else if (nam is "Tease Sascha"):
+					say "[SaschaTeaseMansion]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the kitty, deciding on a different course of action.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say Sascha_Talk_Menu:
+	say "     [bold type]What do you want to discuss with Sascha?[roman type][line break]";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask Sascha why he's still in this creepy old house";
+	now sortorder entry is 1;
+	now description entry is "Sascha's always been eccentric, but why is he staying in this ancient place";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask Sascha about Ozeg";
+	now sortorder entry is 1;
+	now description entry is "The demonic dragon sitting at Sascha's side seems to have taken to him, but what does Sascha think of Ozeg";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Ask Sascha why he's still in this creepy old house"):
+					say "[SaschaMansion]";
+				else if (nam is "Ask Sascha about Ozeg"):
+					say "[SaschaOzeg]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the kitty, deciding on a different course of action.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say SaschaBlowjobMansion:
+	say "     ";
+
+to say SaschaTeaseMansion:
+	say "     The more you watch Sascha parade around without pants, the more you want to get back at him for constantly teasing you. Almost every interaction with the cat leaves you wanting, and the mischievous cat relishes how he makes you feel, playing you like a fiddle to get what he wants. Perhaps it's time to play with him until he can't stand it? Trying to suppress an evil grin, you ask Sascha if he could follow you to another room. You've found something he might find interesting and wonder what he'll make of it. Pointing to one of the recently opened doors he's been working hard to explore, you beckon to him, then walk through, leading him away from the fireplace room.";
+	say "     'Something interesting? I don't know about that. All I've found lately is a bunch of expensive pens and old clothing.' Sascha follows you, still brazenly pantsless with both hands on the back of his head, without a care in the world. 'If I didn't have Ozeg to keep me company, I'd probably be bored, but at least he keeps me entertained when I'm not exploring-' Cut off mid-sentence as he walks in front of you, the surprised cat wiggles against your grip, mewling indignantly. 'Hey! That's a little rude. If you wanted to touch me, you could have just asked.' In answer, you grab the cat's paws, placing them above his head and holding them in one of yours as you press him against the wallpaper. Whispering in his twitching ear as you [if Player is male and Player is not barecrotch]free your manhood and slot yourself between Sascha's ass cheeks for a long slow grind[else if Player is male and Player is barecrotch]slot your bare cock between Sascha's ass cheeks for a long slow grind[else if Player is female]trail your fingers over his clit with your free hand[end if], you let him know that you're trying something different, catching his ear in your teeth and nipping it playfully.";
+	WaitLineBreak;
+	if Player is male:
+		say "     'Not fair. You know I can't resist.' Sascha pants as you press up against his backside, prodding against his rear entrance before continuing on a slow trip between his thighs and nestling the tip of your dick against his clit. He squirms, trying his best to spear himself on you, but quickly realizes what you're doing, letting out a frustrated mewl. 'Come on. Please don't make me beg. I'll let you do whatever you want.' Sawing your cock between those needy lips, you shake your head, meandering down from sensitive ears to Sascha's upturned neck and trailing your teeth over it to elicit a soft moan. You don't feel like doing what he wants right now, and from where you're standing, it looks like you're calling all the shots. Sascha's words melt into incoherence the more you touch him until he's pressing back against you, mewling softly as his pretty pink lower lips paint your cock in arousal. His tail has wrapped itself around your waist, and his cheek presses against the wall as he tries in vain to catch your cocktip and guide you in, but to no avail.";
+		say "     You could stop and leave him wanting or cream those soft, exercise-tightened buns and leave him with a souvenir. What do you want to do?";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Cum between his cheeks and leave him to finish himself off.";
+		say "     ([link]N[as]n[end link]) - Stop and leave him wanting.";
+		if player consents: [hotdog with cream]
+			say "     Grunting as you hump away, you grab Sascha's tail and slide between his athletically sculpted cheeks. Your tip prods against his pretty pink tailhole, but you slip right past it, using the furrow between his cheeks to stroke your cock. There's no reason to hold back, and since you know that your purpose is to tease and not to satisfy the kitty, you careen toward your finish, letting your dripping shaft paint his dusky fur. When you finish, you press your dick against Sascha's hole, letting him feel each rope of cum painting his sensitive back door and dribbling down over his lower lips. Giving his neck a nibble, you wipe your cock clean on one of his butt cheeks, then leave him there to enjoy the messy sensation, grinning as he spreads your cum over his sex and mewls in frustration, masturbating wildly. Maybe that'll teach him not to tease you so much, though judging by how intently he's frigging himself, he might be figuring out how to get you worked up again.";
+		else: [blueballed kitty]
+			say "     Teasing Sascha with long strokes that grind the top of your cock along his sex, you stop, then line yourself up as if about to penetrate him. Holding that position, you nip and kiss along his neck, rubbing his clit with slippery fingers until he's gasping for mercy, all but fucking himself on your cock. When he finally tenses, close to orgasm and melting against your touch, you pin his arms and pull your hips back, smacking his upturned ass with your cock. With an evil grin, you pull away after Sascha's orgasm slips through his fingers without washing over him. He looks so cute, sitting there with pussy juice dripping down his thighs and buttcheeks covered in your pre that you contemplate following up with a frantic fuck. You decide against it, leaving him with his needy pussy dribbling indignantly and ignoring your arousal even as your horny brain screams at you to breed him. It wouldn't be much of a tease if Sascha got what he wanted, now would it?";
+	else:
+		say "     Trailing slow circles over Sascha's clit, you press your body against his back, keeping his hands up and out of the way as you stroke him intently. Scrubbing his sex with your fingertips, you follow his attempts to escape the intense sensation, working him into a lather and listening to his begging mewls with grinning disinterest. You're not trying to get him off- Oh no- You're trying to get him all worked up. He's not going to cum until you finish with him. Again and again, you work him to the edge, only to stop when he's tense and needy. His pussy drips until it's become a veritable waterfall, and he's lost all sense of control, swiveling his hips in a vain attempt to get any friction on his lower lips and finish himself off. You slip your knee between his legs, keeping his thighs apart, and double your efforts, listening to his incoherent barely-words as though they were music. Soon enough, your fingers start to cramp, so you slow your efforts, working Sascha closer to an inevitable orgasm with gentle strokes until he's standing on tiptoes, wantonly shoving his ass back against an imaginary cock. When he reaches the plateau, you remove your touch, loosening your grip and placing a parting kiss on his cheek, then murmur in his ear that if he wants to cum, he needs to stop teasing you. Only good boys get to finish, after all. With that, you wipe your fingers on the limp kitty's ass and give his tail a parting tug. You doubt he's learned his lesson, but at least you got your revenge~.";
+	NPCSexAftermath Sascha receives "Stroking" from Player;
+
+to say SaschaOzeg:
+	say "     Sitting next to Sascha on the now clean and sweet scented luxury couch, you ask him how things are going with his new demon acquaintance. Is Sascha making the poor guy climb buildings and jump rooftops? 'He's a bit clumsy, so I haven't tried to get him into climbing. Probably a good thing, considering his size. Could break a lot with that big red butt.' Sascha says, sticking his tongue out at you. 'Besides, he's tall enough that I can use him as a boost to get where I want to go. He's enough of a help as a hunky ladder~.' Sascha looks over at Ozeg as the dragon man dusts a shelf, humming to himself as he works. 'Honestly, it's weird, but he works as a maid. Maybe I should find him a little bowtie to wear.' You shake your head as Ozeg bends down, contemplating his rounded scaly rump as its thick tail waves unintentionally, showing off Ozeg's back entrance. At least Sascha wants to put SOMETHING on the demon. You expected him to keep the submissive dragon fully nude.";
+
+to say SaschaMansion:
+	say "     Sitting next to Sascha, you ask him why he's decided to stay in this ancient mansion. Isn't he worried that something else, like the ghostly hands, might pop up and hold him hostage? You can't be around to help him every time. 'Who says I needed help? I was having fun~.' Sascha says, stretching his legs and winking. 'Honestly, though, this place isn't that bad. Clear sightlines and easy access to a bunch of my favorite places. The view isn't terrible, either.' Nodding toward Ozeg's scaly butt, Sascha watches his reptilian balls sway as he cleans, ogling the trusting dragon. 'Poor guy needs supervision so he doesn't end up in some third-rate alpha's harem. He's too agreeable.' In trademark Sascha fashion, the cat stretches, leaning against your shoulder and murmuring. 'And maybe I like the idea of needing to be saved. Maybe I'll get stuck in a washing machine or something~.'";
 
 Sascha ends here.
