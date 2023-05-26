@@ -712,7 +712,7 @@ to say DragonEggHatchingProcess:
 		say "     [link](7)[as]7[end link] - Gray.";
 		say "     [link](8)[as]8[end link] - Brown.";
 		say "     [link](9)[as]9[end link] - Red.";
-		say "     [link](10)[as]8[end link] - Blue.";
+		say "     [link](10)[as]10[end link] - Blue.";
 		say "     [link](11)[as]11[end link] - Green.";
 		say "     [link](12)[as]12[end link] - Pink.";
 		say "     [link](13)[as]13[end link] - Purple.";
