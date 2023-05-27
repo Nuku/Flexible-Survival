@@ -176,7 +176,7 @@ to say SaschaFreerunning_Main:
 	say "     ([link]N[as]n[end link]) - You're surely strong enough! You can pull yourself up!";
 	if Player consents:
 		LineBreak;
-		let bonus be (( Strength of Player minus 10 ) divided by 2);
+		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 		if diceroll + bonus >= 16:
@@ -326,7 +326,7 @@ Rough But Sweet is a situation.
 ResolveFunction of Rough But Sweet is "[ResolveEvent Rough But Sweet]".
 Sarea of Rough But Sweet is "Warehouse".
 Prereq1 of Rough But Sweet is Wild Kitty.
-The Prereq1Resolution of Rough But Sweet is { 4, 5, 6, 7, 51 }
+The Prereq1Resolution of Rough But Sweet is { 4, 5, 6, 7, 51 }.
 
 to say ResolveEvent Rough But Sweet:
 	say "     'Psst!' As you walk through the warehouse district, you feel a piece of gravel bounce off your head. Looking up, you notice Sascha hanging upside down from a fire escape clutching something brown and leathery in one hand. Is that a loincloth? Before you can question the absurdity of the underwear-stealer's actions, he lets down a ladder for you, waiting as you climb and embracing you as soon as you step foot on solid ground. Possibly for the first time since you've met him, Sascha's mouth is devoid of candy, and he seems restless, shifting from foot to foot and acting twitchy. Is he in sugar withdrawal? Poor thing. Noticing your concern, Sascha giggles, stuffing the loincloth in his hand into one of his pockets. 'I'm fine. I've just got a bit of an oral fixation. Without something in my mouth, it's hard to focus. It's been this way since I stopped smoking when I was nineteen.' Resting his paws on your shoulders and slipping closer, he nuzzles under your chin. 'More importantly... Where have you been? I've been looking around for you, and you've been nowhere~ I missed you.'";
