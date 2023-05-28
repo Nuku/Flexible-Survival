@@ -185,7 +185,7 @@ to say SaschaOutsideTalk_Menu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask Sascha what's so interesting about the mansion";
-	now sortorder entry is 1;
+	now sortorder entry is 2;
 	now description entry is "Ask Sascha about the mansion's backstory. What makes it so interesting that he wants to explore it";
 	[]
 	sort the table of fucking options in sortorder order;
