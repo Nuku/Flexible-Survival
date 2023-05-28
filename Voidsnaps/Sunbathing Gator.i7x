@@ -136,8 +136,7 @@ Sterile of Lazaros is false. [steriles can't knock people up]
 MainInfection of Lazaros is "Sewer Gator".
 Description of Lazaros is "[LazarosDesc]".
 Conversation of Lazaros is { "<This is nothing but a placeholder!>" }.
-The scent of Lazaros is "[LazarosScent]";
-Lazaros is in Lazaros's Camp.
+The scent of Lazaros is "[LazarosScent]".
 
 to say LazarosScent:
 	say "He smells like sweat and musk.";
