@@ -124,7 +124,7 @@ To say ZiixSex_Menu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Blow him"):
+				if (nam is "Ask to blow him"):
 					say "[ZiixBlowjob]";
 				else if (nam is "Offer to become the hive's ruler"):
 					say "[ZiixZantRoyalty]";
