@@ -1,5 +1,6 @@
 Version 1 of Automaton by Stripes begins here.
 [Version 1.1 - Added player loss oral w/male and randomized outcomes]
+[ Version 1.2 - Added Automaton gear loot item & trophy list - Fenekku]
 
 "Adds Automaton to Flexible Survival."
 
@@ -137,11 +138,11 @@ When Play begins:
 	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is true;
 	now libido entry is 0; [ Target libido the infection will rise towards. ]
-	now loot entry is "automaton cum"; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Automaton gear"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
-	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
+	now MilkItem entry is "automaton milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "automaton cum"; [ Item to be given to the player if they have this infection and jerk off. ]
+	now TrophyFunction entry is "[GenerateTrophyList_Automaton]"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]normal[or]unchanged[at random]";
 	now type entry is "[one of]human[or]humanoid[or]robotic[at random]";
@@ -259,6 +260,34 @@ When Play begins:
 to say autoskinchange:
 	now playermetalskin is metalskin;
 	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
+
+Section 3 - Loot
+
+to say GenerateTrophyList_Automaton:
+	[ Reminder: LootBonus can be +35 at maximum - 10 for Magpie Eyes, 15 for Mugger and 10 from Player Perception ]
+	if a random chance of (80 + LootBonus) in 100 succeeds: [common drop]
+		add "Automaton gear" to CombatTrophyList;
+	if a random chance of (50 + LootBonus) in 100 succeeds: [common drop]
+		add "automaton cum" to CombatTrophyList;
+	if a random chance of (30 + LootBonus) in 100 succeeds: [uncommon drop]
+		add "automaton milk" to CombatTrophyList;
+	if Debug is at level 10:
+		say "DEBUG: Trophy List: [CombatTrophyList].";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Automaton gear"	"A copper gear that looks like it has been pulled out of an automaton."	1	Automaton gear
+
+Automaton gear is a grab object.
+It is temporary.
+Usedesc of Automaton gear is "[Automaton gear use]".
+
+to say Automaton gear use:
+	say "Holding the automaton gear on a finger, you spin it idly with your other hand, curious as to how well it turns. Strangely, the gear disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	Infect "Automaton";
+
+instead of sniffing Automaton gear:
+	say "The gear has a coppery, metallic scent.";
 
 Table of Game Objects (continued)
 name	desc	weight	object
