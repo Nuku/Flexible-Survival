@@ -524,6 +524,34 @@ to say ResolveEvent Darius_Hare&Pug:
 	say "     'Get your stinking ass out of here, fucker! Hell, I can't even turn you into a bitch, ugly as you are! Bet you'd produce the most hideous pups imaginable! So, scram! Gonna give you a worse beating if I see you again. That's all you're fuckin['] worth!' Darius growls and barks at the other man, who whimpers in fear, after getting beat up and being told that only his looks prevented him from being taken as a breeding fucktoy by Darius. Still wheezing audibly though the limited airways of his flat nose, the thug gets up groggily, then limps away while throwing scared glances over his shoulder. After following the other guy with his eyes until he's sure the pug is gone, Darius fishes a plastic baggie with some square pills out of his pocket, then starts to walk after the hare. You can hear him say to himself, 'Gotta give him these as a freebie, so he chills the fuck out...'";
 	now Darius_Hare&Pug is resolved;
 
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Darius_Toybox_Pornstore"	Darius_Toybox_Pornstore	"[EventConditions_Darius_Toybox_Pornstore]"	Restrained Desire	2500	0	100
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Darius_Toybox_Pornstore"	Darius_Toybox_Pornstore	"[EventConditions_Darius_Toybox_Pornstore]"	Restrained Desire	2500	0	100
+
+to say EventConditions_Darius_Toybox_Pornstore:
+	if ("Blissed_Fingered" is listed in Traits of Darius or "Blissed_Hotdogged" is listed in Traits of Darius or "Blissed_Rimmed" is listed in Traits of Darius) and "Toybox Obtained" is not listed in Traits of Darius:
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Darius_Toybox_Pornstore	"Darius_Toybox_Pornstore"
+
+Darius_Toybox_Pornstore is a situation.
+Prereq1 of Darius_Toybox_Pornstore is Find Porn Store.
+Prereq1Resolution of Darius_Toybox_Pornstore is { 0, 1, 2, 3, 4 }.
+ResolveFunction of Darius_Toybox_Pornstore is "[ResolveEvent Darius_Toybox_Pornstore]".
+Sarea of Darius_Toybox_Pornstore is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Darius_Toybox_Pornstore:
+	say "     Entering the porn store, you're struck by the memory of the last time you spent some 'quality time' with Darius being drugged out and at your mercy. Imagination working in overdrive, you let your eyes roam over the expansive and very lewd inventory all around you, and idea after idea pops up in your mind how you could use this stuff. Lisa notices the thoughtful expression on your face and comes over to say, 'You're planning something big, I'd hazard a guess. What's on your mind?' Shaking off the images of Darius, ass up with a butt plug under his tail, you hesitate for a second, unsure if you should tell her, then give yourself a push and start explaining about Darius. As soon as she hears his name, Lisa rolls her eyes, muttering 'Ugh, that guy,' under her breath. A smile plays over her lips at the tale advances to what you've already done with the drug dealer while he was out.";
+	say "     'Hah, couldn't be happening to anyone more deserving. I met the dude a few times out on the streets, mostly ending up with him offering to make me into a 'proper woman' and being his bitch. Pfft!' Looking at you, she smiles and rubs her hands together. 'Give me a moment, I'll help you gather all that you'll need!' That said, the mouse-taur immediately starts to rifle through the shelves of the store, picking item after item to pile into a flat box, about the size of a shoe carton. It doesn't take all that long for her to complete the collectionof her suggested items. 'Here we go, one Dalmatian domination chare package. Give it to him good!' she tells you with a chuckle as she hands over the box. Armed with all the toys and lube you need, it only takes a little while after that to make your way back to Darius's place, pick an opportune moment to slip in through the broken door, and slide the box underneath the sofa. With all the dust gathered there, the dog clearly doesn't clean under the sofa, so it is almost impossible that he'll find your stuff. That task done, you then walk back to the porn store and give your co-consprator a thumbs up.";
+	TraitGain "Toybox Obtained" for Darius;
+	now Darius_Toybox_Pornstore is resolved;
+
 Section 3 - Conversation
 
 instead of conversing the Darius:
