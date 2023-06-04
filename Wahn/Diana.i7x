@@ -147,6 +147,7 @@ to say ResolveEvent Mall Optician:
 
 to say Diana_MallOptician_TalkMenu:
 	LineBreak;
+	let TalkDone be false;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -169,6 +170,11 @@ to say Diana_MallOptician_TalkMenu:
 	now title entry is "Hang out at the bookstore together";
 	now sortorder entry is 4;
 	now description entry is "Accompany Diana to the bookstore";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask when you can see her again";
+	now sortorder entry is 4;
+	now description entry is "Find out when you can meet up";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Crouch down in front of her and eat her out";
@@ -196,13 +202,18 @@ to say Diana_MallOptician_TalkMenu:
 					say "[DianaTalk2]";
 				else if (nam is "Ask about her friends"):
 					say "[DianaTalk3]";
-				else if (nam is "Hang out at the bookstore together"):
-					say "[DianaTalk4]";
 				else if (nam is "Ask when you can see her again"):
 					say "[Diana_RegularTalk4]";
+				else if (nam is "Hang out at the bookstore together"):
+					say "[DianaTalk4]";
+					now TalkDone is true;
 				else if (nam is "Crouch down in front of her and eat her out"):
 					say "[DianaOral1]";
-				wait for any key;
+					now TalkDone is true;
+				if TalkDone is false:
+					say "[Diana_MallOptician_TalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
@@ -218,18 +229,15 @@ to say Diana_MallOptician_TalkMenu:
 to say DianaTalk1: [Ask her about herself]
 	say "     'Okay sure, I can tell you a bit about myself,' Diana says with a smile and thinks for a second on how to begin, then shrugs and adds, 'My name is Diana Hunter, I'm eighteen and I live in the Brentwood neighborhood. Well, 'lived' is more accurate these days I guess. Last I saw, there is a forest growing there now.' She grimaces a bit at the thought of her home being gone for good, then pushes on to explain, 'Thank god my parents and brother weren't actually there when all of this started - they're on holiday in Greece right now. A trip I didn't want to go on. Perfect decision, eh?' Looking down at herself, the young woman draws in a breath, then lets it out slowly and nods to you. 'No worries, I'm not gonna go into a funk again about having been transformed. You were right about that. It really is a nice and interesting look, if one looks at it from the right perspective. Somewhat funny too, if I tell you what mom and dad named my brother - it's Apollo.'";
 	say "     Smiling at you expectantly, Diana says after a moment, 'You know, the Roman name for the god of art and beauty? Just like I am named for Diana, the huntress. Hah, Diana Hunter. I guess they were a bit too cute in their choice of names. One might count it as tempting fate, really. In the stories about the Olympians, people constantly got transformed left and right for pissing off the gods in even the slightest ways.' Her eyes get a far-away look for a moment as she imagines her parents seeing her like this, then she shrugs, 'If we make it through all of this, I guess I'll learn if they can deal with a daughter that might be straight from one of the myths.'";
-	say "[Diana_MallOptician_TalkMenu]"; [looping back into the menu to talk to her at the player's heart's content]
 
 to say DianaTalk2: [Ask what she is doing at the mall]
 	say "     'Oh, like so many others, I fled here to the mall when things started to get weird. By that time, the police wasn't even answering calls anymore and I'd seen a wyvern fly over the neighborhood. The Internet was still up back then and I read in a chat with classmates that the mall was supposed to be well-guarded, so me and the others decided to come here.' Diana draws a grimace, and the next words are said in a glum tone, 'I don't think any of them made it. Or maybe I just haven't found or even recognized any of them in the masses of refugees here.' You see in her eyes that she doesn't really believe it, even though she is trying to tell herself otherwise.";
-	say "[Diana_MallOptician_TalkMenu]"; [looping back into the menu to talk to her at the player's heart's content]
 
 to say DianaTalk3: [Ask about her friends]
 	say "     'Nana Simpson and the others, you mean? They are from the Brentwood Assisted Living Center. I've been volunteering there regularly since getting to know them during visits with my grandma. She... isn't with us anymore, but that didn't mean I was gonna stop going,' Diana says, full of civic spirit. Her expression darkens slightly as she goes on to say, 'When things became really bad in the city and my classmates and me chatted about fleeing to the mall, I couldn't just abandon them either. The center was on the way anyways.' You can tell from the overly quick way in which she said this that it really wasn't - she must have gone out of her way to gather these old people and shepherd them to the mall, which must have been a harrowing experience, given everything going on out on the streets. Diana is just trying to downplay and justify her selfless acts.";
 	say "     'When I got to the center, they were all alone. The caregivers had fled already, but thankfully nothing bad had happened yet. So I told everyone to give their pets as much food as possible because we couldn't take them along, then gathered them up and we started a trek to the mall. Quite a dicey trip - we got jumped twice. The first time was a whole pack of strange rubbery creatures,' Diana mimes her group moving down a street, with numerous creatures swarming all around them and finally pouncing from all sides. 'Strangely, they weren't even interested in us, but rather the motorized mobility aids some of the folks were using. They started eating the wheels! From then on, it was a trip on foot the rest of the way.'";
 	WaitLineBreak;
 	say "     'We almost got here without further incidents, but I guess I must have let down my guard when I saw the mall in the distance. Didn't look up often enough, and a gryphon swooped down on the group as we were crossing a street. He threw me down and grabbed me by the ankle, no doubt to spread my legs and rape me, but I got him in the face with this.' With that said, Diana pulls a red and yellow spray-can out of her pocket, just large enough to fit in her palm. She shakes it and listens to the sound, then adds, 'Not much left in this pepper-spray sadly, so I hope I won't have to use it again. Anyways, once the gryphon fled, we made it into the mall alright. As for the optician as our new place to stay - well, it's a spot that everyone knew, so the folks are unlikely to get lost.'";
-	say "[Diana_MallOptician_TalkMenu]"; [looping back into the menu to talk to her at the player's heart's content]
 
 to say DianaTalk4: [hang out at the bookstore]
 	say "     You accompany Diana to the East Wing of the Smith Haven Mall and go into Brookstone Books together The bookstore is a nice little oasis of peace in the midst of the bustling mall and the chaos-ridden city, allowing the two of you to browse and talk about books, your lives and the world in general. Overall, you have a fun and relaxing time together, making you feel more in touch with your humanity than before. When you come out of the bookstore again hours later, smiling and laughing, Diana gives you a tight hug, then waves goodbye and leaves for her current home.";
@@ -384,11 +392,6 @@ to say Diana_TalkMenu:
 	now title entry is "Ask what she is doing at the mall";
 	now sortorder entry is 2;
 	now description entry is "Find out what she is doing here";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask about her friends";
-	now sortorder entry is 3;
-	now description entry is "Find out how she ended up living with a bunch of senior citizens";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask about her friends";
@@ -575,7 +578,6 @@ to say Diana_SexMenu:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
-
 to say DianaFingering_FoodCourt:
 	say "     Sliding a little bit closer to Diana, you tell her in a teasing tone that you got another idea what you could do together. The young woman [if HP of Diana is 1]looks surprised, but quickly warms up to some further words and compliments as you go on to say that you meant what you said back in the dressing room about her being cute, exotic and attractive. [else]smiles knowingly, remembering the intimacy you shared before. [end if] Shifting your hand to rest on her thigh, Diana's eyes widen. 'You mean - right here? But, but we can't! Someone might -' the Siamese-gryphon hybrid says in an urgent whisper, glancing around and trying not to be too obvious about it. You don't let yourself be distracted and simply continue to move your hand over her leg, dipping under the edge of her knee-length skirt and then sliding up the inside of her leg. The short, blue fur of her leonine lower half is soft and warm under your fingers. Before long, you reach her crotch and give it a stroke through the silky fabric of her panties.";
 	say "     As you caress and pet her, Diana's alarm is replaced by excitement. 'I - mmmhh! Fine, but you have to promise to stop if anyone walks too close, alright? I don't want to get a reputation.' With a grin spreading over your face, you nod, then draw aside the material of her panties to feel for her pussy. 'Oh, that's nice,' she pants, doing her very best to stay quiet about it. The folds of her sex are soft and just a little moist to the touch, becoming more so by the second as you caress, then spread and push a finger inside them. Diana lets out a sighed mew, her fingers digging into the edge of the table as she controls herself. ";
@@ -608,6 +610,7 @@ to say DianaFingering_FoodCourt:
 			say "     With a contented sigh, Diana stretches herself and lays an arm around you for a hug. 'This was fun. A bit scandalous, but I kinda like that, if I think about it now.'";
 	if HP of Diana < 11:
 		now HP of Diana is 11; [public cunnilingus/fingering done]
+	NPCSexAftermath Diana receives "PussyDildoFuck" from Player;
 
 to say DianaFingering_Brookstone:
 	say "     Leaning in to Diana and stroking the side of her arm with a hand, you tell her in a teasing tone that you got another idea what you could do together. The young woman [if HP of Diana is 1]looks surprised, but quickly warms up to some further words and compliments as you go on to say that you meant what you said back in the dressing room about her being cute, exotic and attractive. [else]smiles knowingly, remembering the intimacy you shared before. [end if]Shifting your hand to rest on her thigh, Diana's eyes widen. 'You mean - right here? But, but we can't! Someone might -' the Siamese-gryphon hybrid says in an urgent whisper, glancing around and trying not to be too obvious about it. With a smirk on your face, you suggest taking things to the back row of the large bookstore, which has her fasping at the audacious idea. She opens her mouth, then closes it again, looking very cute as she bites her lip while thinking about what you suggested.";
@@ -643,6 +646,7 @@ to say DianaFingering_Brookstone:
 			say "     With a contented sigh, Diana stretches herself and lays an arm around you for a hug. 'This was fun. A bit scandalous, but I kinda like that, if I think about it now.'";
 	if HP of Diana < 11:
 		now HP of Diana is 11; [public cunnilingus/fingering done]
+	NPCSexAftermath Diana receives "PussyDildoFuck" from Player;
 
 to say DianaOral2: [Eat her out in public, not virgin]
 	say "     [if Diana is in Foodcourt]Stepping up close to where Diana is sitting, [else]Stepping up close to where Diana is standing, [end if]you lean in and bring your mouth close to one of her pointy, feline ears. As you whisper into it what you want to do, eagerness vibrating in your voice, the young woman's eyes widen, and she glances left and right, afraid someone overheard your lewd offer. At the same time, she clearly isn't averse to what you suggested, for her face shows an miscivious smile when she looks back to you. Licking her lips, she reaches out to you, touching your side and replying in a quietly excited tone, 'Let's do it!' [if Diana is in Foodcourt]Quickly finishing up and grabbing her stuff, Diana stands up from the booth and [else]Quickly putting a book she was holding back on the shelf, Diana [end if]follows you into the wide, people-packed hallways of the mall, holding your hand as you lead the way. It doesn't take long to spot an opportune spot for your intentions, and the two of you take a turn into one of the service passages forking off from the main hallway, this one just at the edge of the Christmas Village, where there's somewhat less traffic going back and forth.";

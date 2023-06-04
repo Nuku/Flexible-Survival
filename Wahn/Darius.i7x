@@ -561,6 +561,7 @@ instead of conversing the Darius:
 		say "[DariusTalkMenu]";
 
 to say DariusTalkMenu:
+	let TalkDone be false;
 	project the Figure of Darius_face_icon;
 	LineBreak;
 	say "     What do you want to talk about with Darius?";
@@ -572,10 +573,11 @@ to say DariusTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Make Darius tell you about his background";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Ask how he became a Dalmatian";
-	now sortorder entry is 2;
-	now description entry is "Find out how Darius transformed";
+	if Darius is in Darius's Crib:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask how he became a Dalmatian";
+		now sortorder entry is 2;
+		now description entry is "Find out how Darius transformed";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Talk about the red light district";
@@ -609,8 +611,10 @@ to say DariusTalkMenu:
 					say "[DariusTalk2]";
 				else if (nam is "Ask about what he sells"):
 					say "[DariusTalk3]";
-				wait for any key;
-				say "[DariusTalkMenu]";
+				if TalkDone is false:
+					say "[DariusTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the muscular Dalmatian, shaking your head slightly as he gives a questioning look.";
@@ -623,7 +627,7 @@ to say DariusTalk1: [himself]
 	say "     Darius shrugs as you ask him about himself. 'No big story to tell, really. I'm a black dude from the hood. Been doing fairly well before all this shit started. Solid customer base, right stuff to sell. Of course, half the fuckers vanished early in the outbreak, turned into who knows what, and the supply dried up. But there are new goods to have too, and some of it is some primo shit! You should have a look at my inventory sometime too.' Nodding to him, you chat a little longer, then turn your attention back to the matter of survival in this fallen city.";
 
 to say Darius_TransformationTalk:
-	say "     As you ask your question, Darius gives a shrug and says, 'Must have come from havin Ulysses around. I mean, it's kinda obvious...' That said, the drug dealer raises a hand to his muzzle and gives a sharp whistle, which brings a large Dalmatian dog trotting into the room from the adjoining apartment, entering through the break in the wall. Ulysses looks like a beast of an animal, very muscular and tall, and he pads over to his master, who scratches him behind the ears. 'He's a good boy. Wouldn't trade him for the world. And as for me being a dog too now - I gotta say, I really dig it!' Seeing the canine standing very relaxed and calm next to Darius, ";
+	say "     As you ask your question, Darius gives a shrug and says, 'Must have come from havin['] Ulysses around. I mean, it's kinda obvious...' That said, the drug dealer raises a hand to his muzzle and gives a sharp whistle, which brings a large Dalmatian dog trotting into the room from the adjoining apartment, entering through the break in the wall. Ulysses looks like a beast of an animal, very muscular and tall, and he pads over to his master, who scratches him behind the ears. 'He's a good boy. Wouldn't trade him for the world. And as for me being a dog too now - I gotta say, I really dig it!' Seeing the canine standing very relaxed and calm next to Darius, ";
 	if "Ulysses Introduced" is not listed in Traits of Darius: [first time]
 		say "you find yourself wanting to reach out and pet him too. ";
 		if "Buttslut revealed" is not listed in Traits of Darius:
@@ -881,6 +885,16 @@ to say BlissedDariusSexMenu:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
+	now title entry is "Gather some of his fur";
+	now sortorder entry is 20;
+	now description entry is "Harvest Dalmatian fur from Darius";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Fill up a bottle with Dalmatian cum";
+	now sortorder entry is 21;
+	now description entry is "Harvest Dalmatian cum from Darius";
+	[]
+	choose a blank row in table of fucking options;
 	now title entry is "Give him a BJ";
 	now sortorder entry is 1;
 	now description entry is "Suck Darius off";
@@ -920,19 +934,9 @@ to say BlissedDariusSexMenu:
 	]
 	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck him";
+		now title entry is "Fuck him (old version)";
 		now sortorder entry is 5;
 		now description entry is "Take the Dalmatian's ass";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Gather some of his fur";
-	now sortorder entry is 20;
-	now description entry is "Harvest Dalmatian fur from Darius";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fill up a bottle with Dalmatian cum";
-	now sortorder entry is 21;
-	now description entry is "Harvest Dalmatian cum from Darius";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -949,7 +953,11 @@ to say BlissedDariusSexMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Give him a BJ"):
+				if (nam is "Gather some of his fur"):
+					say "[BlissedDariusHarvest1]";
+				else if (nam is "Fill up a bottle with Dalmatian cum"):
+					say "[BlissedDariusHarvest2]";
+				else if (nam is "Give him a BJ"):
 					say "[BlissedDarius_BJ]";
 				else if (nam is "Finger the Dalmatian's ass"):
 					say "[BlissedDarBlissedDarius_Fingering]";
@@ -965,12 +973,8 @@ to say BlissedDariusSexMenu:
 				else if (nam is "Sink your asshole onto his dick"):
 					say "[BlissedDariusSex4]";
 				]
-				else if (nam is "Fuck him"):
+				else if (nam is "Fuck him (old version)"):
 					say "[BlissedDarius_Fucking]";
-				else if (nam is "Gather some of his fur"):
-					say "[BlissedDariusHarvest1]";
-				else if (nam is "Fill up a bottle with Dalmatian cum"):
-					say "[BlissedDariusHarvest2]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -1025,12 +1029,14 @@ to say BlissedDarius_AssEating: [rimming]
 	say "     To make sure things stay like that too, you stroll over towards the kitchen and snatch a roll of paper towels up, then return to your unconscious play-toy to clean him up. Wiping over his crack with a few of the absorbent sheets, you dab off the spots of cum that missed making it into his hole and which you're not wanting to suck out of his fur. With a grin, you bunch up the paper towels to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, with him being fairly heavy with muscle, but you manage to get him mostly dressed again and stretched out on the sofa, lying on his front. As you lift his hips a little to pull the jeans back into place at his front, you can feel wetness from his cock, leaking some little amount of cum onto the couch. You wonder for a moment if that might be something which could betray your activities, but then several other telltale stains on the cushions, making it clear that this is far from the first time someone had sex on the piece of furniture. All of your cleanup tasks now dealt with, you get dressed and take up your gear once more.";
 	LineBreak;
 	if Player is male:
-		if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius:
+		if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius and "Toybox Obtained" is not listed in Traits of Darius:
 			say "     Throwing Darius a glance over your shoulder, you can't help but wonder about getting him ready to be fucked by actual dicks. Given that he's a straight guy, more than ready for violence when not drugged, and you're doing this in secret, it'd really be best to gradually work up to it. You'll have to train his body to expect pleasure from his ass (as you did right now), and then slowly stretch that hole over time before you put a real cock in it. For the latter, you'll need some equipment - varied sizes of sex toys, and lube for sure. [bold type]Might be a good idea to check the nearby porn stores...[roman type][line break]";
 		else if "Dildo Trained (Big)" is listed in Traits of Darius:
 			say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've trained his asshole to accept dicks now, a bout of kinky rimming is a nice variety of pleasure to have with him.";
 		else if "Dildo Trained (Small)" is listed in Traits of Darius:
-			say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've working on training to accept real dicks too, a bout of kinky rimming is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and having another session with the drug dealer soon...";
+			say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've been working on training to accept real dicks too, a bout of kinky rimming is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and having another session with the drug dealer soon...";
+		else if "Toybox Obtained" is listed in Traits of Darius:
+			say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've gotten everything you need for training him to accept real dicks too, a bout of kinky rimming is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and getting started on a new level of fun with the drug dealer soon...";
 	TraitGain "Blissed_Rimmed" for Darius;
 	NPCSexAftermath Player receives "OralAss" from Darius;
 
@@ -1067,12 +1073,14 @@ to say BlissedDarBlissedDarius_Fingering:
 	say "     Giving Darius a wild and enthusiastic finger-bang, you get him moaning out loud in his drugged sleep, with the noises building up to a deep grunt as his anal muscles start rhythmically twitching. The tough-guy dog is cumming, hands-free! You grin to yourself about how you didn't even have to touch his thick cock, with your anal training being enough to get Darius off, simply by having your index finger rubbing Darius's most senstivie spot. Glancing past the anthro's hips you can see his red rocket of a doggie dick swing up and down, twitching with every spurt of cum that rockets up the semen tube and sprays onto the cushions of the sofa. You keep up your stimulation throughout his climax, counting each flexing of his anal muscles that accompanies a cumshot as a victory for your intended cause, driving home the point that his ass gives pleasure. And all that with Darius's conscious mind being none the wiser right now.";
 	say "     To make sure things stay like that too, you stroll over towards the kitchen and snatch a roll of paper towels up, then return to your unconscious play-toy to clean him up. Wiping over his crack with a few of the absorbent sheets, you dab off the wetness. With a grin, you bunch up the paper towels to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, with him being fairly heavy with muscle, but you manage to get him mostly dressed again and stretched out on the sofa, lying on his front. As you lift his hips a little to pull the jeans back into place at his front, you can feel wetness from his cock, leaking some little amount of cum onto the couch. You wonder for a moment if that might be something which could betray your activities, but then several other telltale stains on the cushions, making it clear that this is far from the first time someone had sex on the piece of furniture. All of your cleanup tasks now dealt with, you put your gear back in order and take a step towards the door leading outside.";
 	WaitLineBreak;
-	if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius:
+	if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius and "Toybox Obtained" is not listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you can't help but wonder about getting him ready to be fucked by actual dicks. Given that he's a straight guy, more than ready for violence when not drugged, and you're doing this in secret, it'd really be best to gradually work up to it. You'll have to train his body to expect pleasure from his ass (as you did right now), and then slowly stretch that hole over time before you put a real cock in it. For the latter, you'll need some equipment - varied sizes of sex toys, and lube for sure. [bold type]Might be a good idea to check the nearby porn stores...[roman type][line break]";
 	else if "Dildo Trained (Big)" is listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've trained his asshole to accept dicks now, a bout of relaxed fingering is a nice variety of pleasure to have with him.";
 	else if "Dildo Trained (Small)" is listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've working on training to accept real dicks too, a bout of relaxed finger is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and having another session with the drug dealer soon...";
+	else if "Toybox Obtained" is listed in Traits of Darius:
+		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've gotten everything you need for training him to accept real dicks too, a bout of relaxed finger is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and getting started on a new level of fun with the drug dealer soon...";
 	TraitGain "Blissed_Fingered" for Darius;
 	NPCSexAftermath Darius receives "Stroking" from Player;
 
@@ -1098,12 +1106,14 @@ to say BlissedDarBlissedDarius_Hotdogging:
 	say "     Keeping yourself pressed tightly against the Dalmatian's tailstar, the high of your orgasm is made even better by the twitches you feel against your dickhead, knowing that you pushed this straight guy over the edge! It costs you serious self-control not to just follow up and ram into him and let the rest of your load drain deep in your canine fucktoy. As much fun as that would be, it wouldn't do for your doggie to wake up with a sore hole later, so you keep things at simply filling him, not letting any drop escape and thus forcing your load deeper and deeper into Darius as your cock keeps spurting more into him. Only when you're fully done, with the last little spurts having ebbed off, do you pull back and inspect your handiwork. Such a pretty little hole, with just a hint of whiteness showing in the middle of it. Looks like you found one big advantage of doing things like this: Darius's hole didn't get stretched out, so it isn't gaping and leaking cum. Instead, you fired your load through the tiniest of openings, trapping your seed inside the dog, with Darius being none the wiser.";
 	say "     To make sure things stay like that too, you stroll over towards the kitchen and snatch a roll of paper towels up, then return to your unconscious play-toy to clean him up. Wiping over his crack with a few of the absorbent sheets, you dab off the miniscule amount of cum visible. Then you glance around to see the mess that Darius made of the backrest, cumming all over it, and give that a casual wipedown too. Not that this'll get the sofa clean, but then, given some telltale stains already on it, this doesn't seem to be the first time that someone had sex on the piece of furniture. With a grin, you bunch up the paper towels to discard them well away from Darius's apartment, then get to tugging and sliding his jeans back into place. It's fairly exhausting, with him being fairly heavy with muscle, but you manage to get him mostly dressed again, as well as stretched out on the sofa, lying on his front. Just for good measure, you arrange that his ass so it's still a little raised, giving your load plenty of time to soak his innards without leaking out. All of your cleanup tasks now dealt with, you get dressed and take up your gear once more.";
 	LineBreak;
-	if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius:
+	if "Dildo Trained (Small)" is not listed in Traits of Darius and "Dildo Trained (Big)" is not listed in Traits of Darius and "Toybox Obtained" is not listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you can't help but wonder about getting him ready to be fucked by actual dicks. Given that he's a straight guy, more than ready for violence when not drugged, and you're doing this in secret, it'd really be best to gradually work up to it. You'll have to train his body to expect pleasure from his ass (as you did right now), and then slowly stretch that hole over time before you put a real cock in it. For the latter, you'll need some equipment - varied sizes of sex toys, and lube for sure. [bold type]Might be a good idea to check the nearby porn stores...[roman type][line break]";
 	else if "Dildo Trained (Big)" is listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've trained his asshole to accept dicks now, a bout of kinky hotdogging is a nice variety of pleasure to have with him.";
 	else if "Dildo Trained (Small)" is listed in Traits of Darius:
 		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've working on training to accept real dicks too, a bout of kinky hotdogging is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and having another session with the drug dealer soon...";
+	else if "Toybox Obtained" is listed in Traits of Darius:
+		say "     Throwing Darius a glance over your shoulder, you grin broadly. This was fun! Even though you've gotten everything you need for training him to accept real dicks too, a bout of kinky hotdogging is a nice variety of pleasure to have with him. Though of course, that doesn't mean you're not looking forward to digging out the shoebox full of sex toys and lube you've hidden under the sofa and getting started on a new level of fun with the drug dealer soon...";
 	TraitGain "Blissed_Hotdogged" for Darius;
 	NPCSexAftermath Player receives "Stroking" from Darius;
 
@@ -1130,7 +1140,7 @@ to say BlissedDarius_Vibro: [for long term training and buttslittness]
 	NPCSexAftermath Darius receives "AssDildoFuck" from Player;
 
 to say BlissedDarius_Fucking:
-	say "     <Writer's Note: Darius is being expanded to allow for a more involved, gradual process of getting him to be a buttslut. As such, there are training scenes with sex toys intended to come before actual fucking, but those haven't been written yet. For now, you'll get the 'old' sex scene straight away, which does not contain any mentions of the training that is supposed to have happened before.>";
+	say "     [bold type]<Writer's Note: Darius is being expanded to allow for a more involved, gradual process of getting him to be a buttslut. As such, there are training scenes with sex toys intended to come before actual fucking, but those haven't been written yet. For now, you'll get the 'old' sex scene straight away, which does not contain any mentions of the training that is supposed to have happened before.>[roman type]";
 	LineBreak;
 	if AnalVirgin of Darius is true: [first time]
 		say "     Approaching the unconscious canine, your eyes wander over his muscular form leaning back against the backrest of the sofa. Darius's broad chest rises and falls in a slow and even rhythm, with the thuggish man's face looking more relaxed and peaceful now, no sign of the sneer or cruel grin usually on his features. The dog looks like he's simply in a deep sleep, with his left ear twitching a little bit from time to time. But of course, he's not going to wake up right now, no matter what you do to him. Sitting down next to him, you slide a hand down over his firm pecs and abs, feeling them and the softness of his fur. You savor the moment of having this hunk for yourself right now, docile and passed out. Teasing his nipples and pinching them lightly would likely make him punch you if he was awake, but now all that happens is that they get hard, and even more so as you lean in and playfully suck on first one, then the other. The short hair of his chest tickles against your chin as you play with the Dalmatian. After a little while of just enjoying Darius's chest, you turn your attention lower, where the sexy anthro's cock is barely hidden by a half-drawn zipper. It is an easy task to just pull it the rest of the way and tug the sides of his jeans aside, revealing the proudly erect red rocket of your drugged dog.";

@@ -1830,7 +1830,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sabretooth_soft"	Figure of Sabretooth_soft_icon	"Vashaa"	g-White	"normal"
 "Sabretooth_clothed"	Figure of Sabretooth_clothed_icon	"SteppeCrow"	g-white	"normal"
 "Sabretooth_naked"	Figure of Sabretooth_naked_icon	"SteppeCrow"	g-white	"normal"
-"Sascha_crouch"	Figure of Sascha_crouch_icon	"Sweet Firelis"	g-black	"normal"
+"Sascha_crouch"	Figure of Sascha_crouch_icon	"Sokan"	g-black	"normal"
 "Sascha_turtleneck"	Figure of Sascha_turtleneck_icon	"CastBound"	g-black	"normal"
 "Sascha_shirt"	Figure of Sascha_shirt_icon	"CastBound"	g-black	"normal"
 "Sascha_bottomless"	Figure of Sascha_bottomless_icon	"CastBound"	g-black	"normal"
@@ -2830,7 +2830,7 @@ carry out artistcredits:
 	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Ryousei (clothed) by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
-	say "     Sascha (crouch) by Sweet Firelis @ https://www.furaffinity.net/user/sweetfirelis/[line break]";
+	say "     Sascha (crouch) by Sokan/Sweet Firelis @ https://www.furaffinity.net/user/sweetfirelis/[line break]";
 	say "     Sascha (jogging) by CastBound @ https://www.furaffinity.net/user/castbound/[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
@@ -2920,7 +2920,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sweet Firelis", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "BeaverTyan", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "CastBound", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Conchi", "ConnyChiwa", "Cooper", "Corbee", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Gherod", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "Reaper3d", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "SteppeCrow", "Strype", "Sususmiles", "Sokan", "Ticl", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Visage48", "Wahn", "Watsup", "Wemd", "Wolfram Rolf", "Xenotropos, Yora"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
