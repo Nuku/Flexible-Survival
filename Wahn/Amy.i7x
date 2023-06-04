@@ -1048,6 +1048,7 @@ to say AmyNPCSexTable:
 			else:
 				say "     As you come out of the bunker, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 		-- "Alexandra": [Alexandra]
+			project Figure of Alexandra&Amy_icon;
 			if AlexandraAmySex is 0:[first interest of Alexandra in her]
 				say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, Alexandra walks into your line of sight - seems like the former policewoman is interested in Amy too. Being the tough dobie bitch that she is, the anthro woman walks up to the young husky with confident steps, then comes to stand just a few feet before her, appraisingly gazing down at the silently moaning female. After ogling Amy for a moment, the doberwoman says 'Quite a horny bitch, aren't you? I can see why the boss brought you in...'";
 				if AmyShyness is 1:
