@@ -171,7 +171,7 @@ Section 2 - Body Parts
 
 [old style body parts - to be phased out once all infections follow the expanded set]
 Player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]". [adjective for body type/appearance]
-Player has a text called bodytype. The bodytype is usually "Human". [broad adjective for species]
+Player has a text called bodytype. The bodytype is usually "human". [broad adjective for species]
 Player has a text called skin. Skin is usually "smooth".
 Player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
 Player has a text called face. Face is usually "charmingly human".

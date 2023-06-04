@@ -964,10 +964,11 @@ to say MaleFangAlphaSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Let your Alpha mount you";
 		[]
-		choose a blank row in table of fucking options;
-		now title entry is "Threesome with Sandra";
-		now sortorder entry is 3;
-		now description entry is "Invite the bunny-girl in on the action";
+		if Sandra is Collected:
+			choose a blank row in table of fucking options;
+			now title entry is "Threesome with Sandra";
+			now sortorder entry is 3;
+			now description entry is "Invite the bunny-girl in on the action";
 		[]
 		if HyperSerumTracker is 2 and Player is not neuter and Fang is in Courtyard:
 			choose a blank row in table of fucking options;
@@ -1366,7 +1367,7 @@ to say MaleFangBetaSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Mount the big wolf to show him who's alpha";
 	[]
-	if Libido of fang > 2 and lastfuck of Sandra - turns >= ( 9 - HP of Fang ) and Sandra is in the Bunker:
+	if Sandra is Collected:
 		choose a blank row in table of fucking options;
 		now title entry is "Fang and Sandra";
 		now sortorder entry is 6;
