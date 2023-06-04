@@ -379,6 +379,7 @@ instead of conversing Diana:
 
 to say Diana_TalkMenu:
 	LineBreak;
+	let TalkDone be false;
 	say "     Walking up to where Diana is [if Diana is in Foodcourt]sitting in her booth, you say hello and slide onto the bench beside her. [else]browsing the shelves, you say hello to her. [end if]The young woman greets you with a happy smile[if Libido of Diana > 0] and a coy look, biting her lip for a second[end if], then says 'Hi[if Player is not defaultnamed], [name of Player][else][end if]! What did you want to talk about?'";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -446,12 +447,17 @@ to say Diana_TalkMenu:
 					say "[Diana_RegularTalk4]";
 				else if (nam is "Ask about her being a sphinx now"):
 					say "[Diana_RegularTalk5]";
+					now TalkDone is true;
 				else if (nam is "Charm her and stealthily finger Diana's pussy"):
 					if Diana is in Foodcourt:
 						say "[DianaFingering_FoodCourt]";
 					else:
 						say "[DianaFingering_Brookstone]";
-				wait for any key;
+					now TalkDone is true;
+				if TalkDone is false:
+					say "[Diana_TalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You make a little small talk, then tell the young woman that you sadly don't have more time to hang out and say your goodbyes.";
@@ -464,11 +470,9 @@ to say Diana_RegularTalk1: [Ask her about herself]
 	say "     'Okay sure, I can tell you a bit about myself,' Diana says with a smile and thinks for a second on how to begin, then shrugs and adds, 'My name is Diana Hunter, I'm eighteen and I live in the Brentwood neighborhood. Well, 'lived' is more accurate these days I guess. Last I saw, there is a forest growing there now.' She grimaces a bit at the thought of her home being gone for good, then pushes on to explain, 'Thank god my parents and brother weren't actually there when all of this started - they're on holiday in Greece right now. A trip I didn't want to go on. Perfect decision, eh?' Looking down at herself, the young woman draws in a breath, then lets it out slowly and nods to you. 'No worries, I'm not gonna go into a funk again about having been transformed. You were right about that. It really is a nice and interesting look, if one looks at it from the right perspective. Somewhat funny too, if I tell you what mom and dad named my brother - it's Apollo.'";
 	say "     Smiling at you expectantly, Diana says after a moment, 'You know, the Roman name for the god of art and beauty? Just like I am named for Diana, the huntress. Hah, Diana Hunter. I guess they were a bit too cute in their choice of names. One might count it as tempting fate, really. In the stories about the Olympians, people constantly got transformed left and right for pissing off the gods in even the slightest ways.' Her eyes get a far-away look for a moment as she imagines her parents seeing her like this, then she shrugs, 'If we make it through all of this, I guess I'll learn if they can deal with a daughter that might be straight from one of the myths.'";
 	TraitGain "Family Background" for Diana;
-	say "[Diana_TalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
 
 to say Diana_RegularTalk2: [Ask what she is doing at the mall]
 	say "     'Oh, like so many others, I fled here to the mall when things started to get weird. By that time, the police wasn't even answering calls anymore and I'd seen a wyvern fly over the neighborhood. The Internet was still up back then and I read in a chat with classmates that the mall was supposed to be well-guarded, so me and the others decided to come here.' Diana draws a grimace, and the next words are said in a glum tone, 'I don't think any of them made it. Or maybe I just haven't found or even recognized any of them in the masses of refugees here.' You see in her eyes that she doesn't really believe it, even though she is trying to tell herself otherwise.";
-	say "[Diana_TalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
 
 to say Diana_RegularTalk3: [Ask about her friends]
 	say "     'Nana Simpson and the others, you mean? They are from the Brentwood Assisted Living Center. I've been volunteering there regularly since getting to know them during visits with my grandma. She...isn't with us anymore, but that didn't mean I was gonna stop going,' Diana says, full of civic spirit. Her expression darkens slightly as she goes on to say, 'When things became really bad in the city and my classmates and me chatted about fleeing to the mall, I couldn't just abandon them either. The center was on the way anyways.' You can tell from the overly quick way in which she said this that it really wasn't - she must have gone out of her way to gather these old people and shepherd them to the mall, which must have been a harrowing experience, given everything going on out on the streets. Diana is just trying to downplay and justify her selfless acts.";
@@ -476,11 +480,9 @@ to say Diana_RegularTalk3: [Ask about her friends]
 	WaitLineBreak;
 	say "     'We almost got here without further incidents, but I guess I must have let down my guard when I saw the mall in the distance. Didn't look up often enough, and a gryphon swooped down on the group as we were crossing a street. He threw me down and grabbed me by the ankle, no doubt to spread my legs and rape me, but I got him in the face with this.' With that said, Diana pulls a red and yellow spray-can out of her pocket, just large enough to fit in her palm. She shakes it and listens to the sound, then adds, 'Not much left in this pepper-spray sadly, so I hope I won't have to use it again. Anyways, once the gryphon fled, we made it into the mall alright. As for the optician as our new place to stay - well, it's a spot that everyone knew, so the folks are unlikely to get lost.'";
 	TraitGain "Mall Trek Tale" for Diana;
-	say "[Diana_TalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
 
 to say Diana_RegularTalk4: [day rhythm talk]
 	say "     A smile crosses Diana's face as you ask your question, with her being happy that you're wanting to hang out with her more than just right now. 'In the mornings I'm usually busy in the Optician's place, helping Nana and the others, getting them breakfast and so on - but after that, around noon, I hang out in the food court area. We could meet up then, have lunch together or just talk.' Eager for your company, she goes into detail for which food lines she usually goes to, and says that she's usually in the far corner of the food court to actually eat, and maybe read a book as that section is quieter than the active bustle closer to where the food is handed out. 'Oh, and after that, I usually go to the Brookstone Books store. More of a library these days, with Beverly just letting you pick up what you want and you bringing it back when you're done reading...'";
-	say "[Diana_TalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
 
 to say Diana_RegularTalk5: [sphinx talk]
 	say "     As you mention that she looks like a sphinx now, Diana gives a shrug and a smile, looking down over herself. 'It is an exotic look, isn't it? I really wonder what my parents will say when they see me again. Can't tell if they'll be horrified that I'm no longer human, or weirdly proud because I fit into their obsession with ancient myths. Funny how they're off looking at ruined temples and the remnants of ancient Greek art, and I stayed home but became the real thing anyways.' Letting out a snort, she adds, 'Can't say I feel too much different either. You know, having a mysterious air and glowering at people with my tits out, haha! Maybe I should get one of those snazzy headdresses and start asking people riddles. Though what would I do when they can't answer them? Eating people is a bit frowned upon, these days, haha,' She giggles, clearly just kidding, although with the sharp claws her new body is sporting, Diana would likely be a menace in a fight, if she commited to it.";
@@ -492,7 +494,6 @@ to say Diana_RegularTalk5: [sphinx talk]
 		LineBreak;
 		say "     With playful dismay, Diana throws her hands up and rolls her eyes at the unjustness of reality. 'Oh woe me, the mortal is too cunning to be caught by my best riddle! Guess I'll have to let them pass freely, this time!' She laughs amusedly, while at the same time unbostrusively sliding a hand down over her skirt. With a wink, she strokes the soft fur on the inside of her thighs, slightly parting her legs in an invitation. Throwing a quick glance at your surroundings, to make sure she's not being too obvious or in danger of being overheard, Diana then quietly adds, 'Not, uhm - right here and now, but... someone owned themselves a free pass between my legs of the Smith Haven Sphinx. Looking forward when you'll want to claim that...'";
 		TraitGain "Free Pass" for Diana;
-		say "[Diana_TalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
 	else:
 		LineBreak;
 		say "     A grin spreads widely over her face, and Diana lets out a playfully predatory laugh. 'AHA! No match for her riddling prowress, the mortal is at the mercy of the Smith Haven Sphinx!' she announces proudly, gigling as people nearby give the two of you curious looks. Beaming, Diana takes your hand in hers, then leads you away, first down one of the main hallways, then soon taking a turn into a narrow service corridor going off to the side. Soon reaching a red-painted door with the words 'Roof Access' stenciled on it, she pushes it open and leads you inside a stairwell, then up the first flight and halfway onto the second. There's no one in sight anywhere, with the roof apparently not being a spot that people like to visit. Happy enough with the amount of privacy you now have, Diana moves to a step one down from your own and crouches down, licking her lips enticingly.";
