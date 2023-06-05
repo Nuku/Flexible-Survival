@@ -2,6 +2,7 @@ Version 1 of Army Ant by Guest Writers begins here.
 [Original by Glitch]
 [ Version 1 - Transformations and descriptions - Glitch]
 [Version 1.1 - Moved to Guest Writers]
+[ Version 1.2 - Added Army Ant chitin infection item - Fenekku ]
 
 "Adds an army ant infection to Flexible Survival's Wandering Monsters table"
 
@@ -98,7 +99,7 @@ When Play begins:
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now SeductionImmune entry is false;
 	now libido entry is 5;
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now loot entry is "Army Ant chitin"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
 	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
@@ -217,7 +218,24 @@ When Play begins:
 ]
 
 
-Section 3 - Endings
+Section 3 - Loot
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"Army Ant chitin"	"A small piece of hard chitin that looks like it has been pulled off of an army ant. It's hard and unyielding."	1	Army Ant chitin
+
+Army Ant chitin is a grab object.
+It is temporary.
+Usedesc of Army Ant chitin is "[Army Ant chitin use]".
+
+to say Army Ant chitin use:
+	say "Holding the piece of chitin in your hand, you rub over it, marvelling in its strength. Strangely, the chitin disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	Infect "Army Ant";
+
+instead of sniffing Army Ant chitin:
+	say "The chitin smells of earth and strength.";
+
+Section 4 - Endings
 
 Table of GameEndings (continued)
 Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
