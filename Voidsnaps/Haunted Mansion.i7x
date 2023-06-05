@@ -124,7 +124,7 @@ ResolveFunction of Kitty Adventures is "[ResolveEvent Kitty Adventures]".
 Prereq1 of Kitty Adventures is Wild Kitty.
 Prereq1Resolution of Kitty Adventures is { 4, 5, 6, 7, 51 }. [either had sex (oral, vaginal, anal, thighfuck) or just befriended Sascha in the first event]
 Prereq2 of Kitty Adventures is Rough But Sweet.
-Prereq2Resolution of Rough But Sweet is { 1, 2, 3, 4, 5, 6 }.
+Prereq2Resolution of Kitty Adventures is { 1, 2, 3, 4, 5, 6 }.
 Sarea of Kitty Adventures is "Outside".
 
 to say ResolveEvent Kitty Adventures:
