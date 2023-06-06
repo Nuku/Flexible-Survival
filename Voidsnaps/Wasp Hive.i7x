@@ -33,6 +33,7 @@ An everyturn rule:
  Thirst of Zant: Number of wasps that the player has birthed as the Wasp King. Changes the hive's appearance and layout. Also unlocks Byz.
 
  Hunger of Ziix: Whether you declined to be king or became king. Walls off that path if it's at 100.
+ 81 - Convinced to stay in an apartment as your fucktoy.
  99 - Became King. (Unlocks another scene to regain king infection.)
  100 - Brought up being the king and then decided against it.
 
