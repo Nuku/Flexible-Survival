@@ -183,7 +183,7 @@ to say SaschaFreerunning_Main:
 		LineBreak;
 		let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
+		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 16:
 			LineBreak;
 			say "     Steeling yourself, you trace your route mentally before stepping backward and breaking into a run. You jump at the right moment, hopping across and bouncing off the metal beam, landing gracefully on the other side, and as you land, you hear an excited clap from above. Deciding to show off a bit, you take the remaining parts of the path at breakneck speed, reveling in the wind on your face and reaching the same level as Sascha in no time.";
