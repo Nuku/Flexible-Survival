@@ -282,8 +282,8 @@ Figure of Alpha_soft_icon is the file "Alpha_soft.jpg".
 Figure of Alpha_Fang_fem_icon is the file "Alpha_Fang_fem.jpg".
 Figure of Alpha_Fang_hard_icon is the file "Alpha_Fang_hard.jpg".
 Figure of Alpha_Fang_soft_icon is the file "Alpha_Fang_soft.jpg".
-Figure of Alpha_Fang_hyper_hard_icon is the file "Alpha_Fang_hard.jpg".
-Figure of Alpha_Fang_hyper_soft_icon is the file "Alpha_Fang_soft.jpg".
+Figure of Alpha_Fang_hyper_hard_icon is the file "Alpha_Fang_hyper_hard.jpg".
+Figure of Alpha_Fang_hyper_soft_icon is the file "Alpha_Fang_hyper_soft.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
 Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
