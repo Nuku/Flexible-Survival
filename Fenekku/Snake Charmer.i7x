@@ -43,7 +43,7 @@ to say ResolveEvent Snake Charmer:
 		say "     The door to the cage is right in front of you and you idly think that perhaps this situation had been orchestrated by the naga. You're unable to think on the matter as a tingling suggestion fills your thoughts. 'Open the cage'. [bold type]You get the feeling that opening the cage would be a good idea, but with those emerald eyes staring so deeply into yours, you can't really be sure if that is true or not.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Open the cage. You should open the cage.";
-		say "     ([link]Y[as]y[end link]) - Don't open the cage. Walk away before you do.";
+		say "     ([link]N[as]n[end link]) - Don't open the cage. Walk away before you do.";
 		if Player consents:
 			say "     You approach the cage with a stuttering step, reaching for the door and grasping the cold metal bars. At this point, all you can think about is the naga's emerald eyes, and you feel there's no turning back. Pulling the door open, you hear the amused hissing of the naga as they watch you enter the cage. 'Little prey,' A dominant yet clearly masculine voice slips from his lips. 'So easily swayed,' the sound of scales on stone is the only indication you get that he is moving - all your focus is on his eyes. You don't even react as he starts slithering around you, trapped just as the pelican from before. His words sink into your mind alongside his eyes, holding you in place while he wraps your [bodytype of player] body in his coils, tightening around you and pressing your arms to your sides. 'No walking away this time,'";
 			LineBreak;

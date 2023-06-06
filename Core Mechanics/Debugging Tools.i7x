@@ -1114,6 +1114,7 @@ carry out unresolvecheat:
 		choose row X from the Table of GameEventIDs;
 		if Name entry exactly matches the text topic understood, case insensitively:
 			now Object entry is unresolved;
+			now Resolution of Object entry is 0;
 			break;
 
 activatecheat is an action applying to one topic.

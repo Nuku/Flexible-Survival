@@ -60,17 +60,17 @@ When Play begins:
 	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now Cunt Depth entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [ Width of female sex the infection will try to give a player. ]
 	now SeductionImmune entry is false;
 	now libido entry is 55; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is ""; [ Item to be given to the player if they have this infection and jerk off. ]
+	now loot entry is "dalmatian male fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 60; [ Percentage chance of dropping loot, from 0-100. ]
+	now MilkItem entry is "dalmatian male man-milk"; [ Item to be given to the player if they have this infection and milk themselves. ]
+	now CumItem entry is "dalmatian male cum"; [ Item to be given to the player if they have this infection and jerk off. ]
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -78,7 +78,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now Cross-Infection entry is "Dalmatian Bitch"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -186,6 +186,57 @@ When Play begins:
 ]
 
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male fur"	"Some black and white fur that looks like it has been pulled out of the coat of a Dalmatian. It's not so much a tuft of it, but rather a small pile of fairly short hairs."	0	dalmatian male fur
+
+dalmatian male fur is a grab object.
+It is temporary.
+Usedesc of dalmatian male fur is "[DalmatianMaleFurUse]";
+
+to say DalmatianMaleFurUse:
+	say "Pouring the pile of fur into your cupped palm, you rub it with a fingertip. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Dalmatian Male";
+
+instead of sniffing dalmatian male fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male cum"	"A plastic water bottle containing a moderate amount of milky white fluid. Almost could be mistaken for some sort of buttermilk, if someone hadn't written 'Dalmatian Male Cum' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst, or you maybe just do it for fun. Who knows what else it might do to you though..."	1	dalmatian male cum
+
+dalmatian male cum is a grab object.
+dalmatian male cum is cum.
+dalmatian male cum is infectious.
+Strain of dalmatian male cum is "Dalmatian Bitch".
+Usedesc of dalmatian male cum is "[dalmatian male cum use]";
+
+to say dalmatian male cum use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the creamy cum run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 5;
+	SanLoss 5;
+
+instead of sniffing dalmatian male cum:
+	say "You open the lid for a moment and take a sniff. Doesn't smell too bad actually, just kinda nutty.";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"dalmatian male man-milk"	"A plastic water bottle filled with what is clearly milk. One could think it was a regular cow's milk, if someone hadn't written 'Dalmatian Male Man-Milk' across the label on the bottle. You [italic type]could[roman type] drink it to quench your thirst. Who knows what else it might do to you though..."	1	dalmatian male man-milk
+
+dalmatian male man-milk is a grab object.
+dalmatian male man-milk is milky.
+Purified of dalmatian male man-milk is "distilled milk".
+dalmatian male man-milk is infectious.
+Strain of dalmatian male man-milk is "Dalmatian Male".
+Usedesc of dalmatian male man-milk is "[dalmatian male man-milk use]";
+
+to say dalmatian male man-milk use:
+	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the milk run over your tongue and down your throat. Tastes rich and animal-like. Swishing it around in your mouth a little, you finish the bottle off, then stuff it back into your collection of 'empties'.";
+	PlayerDrink 15;
+
+instead of sniffing dalmatian male man-milk:
+	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -255,7 +306,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
+	now Cross-Infection entry is "Dalmatian Male"; [ Infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own strain. ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -771,7 +822,7 @@ When Play begins:
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
 	now MilkItem entry is ""; [ Item to be given to the player if they have this infection and milk themselves. ]
-	now CumItem entry is "dalmatian cum";
+	now CumItem entry is "";
 	now TrophyFunction entry is "-"; [ Function to generate a list of optional loot items, of which the player can choose one after victory. ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -905,6 +956,7 @@ to SetMonsterRandomDalOffspring:
 
 Section 3 - Items
 
+[
 Table of Game Objects (continued)
 name	desc	weight	object
 "dalmatian cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	dalmatian cum
@@ -948,7 +1000,7 @@ to say dalmatian fur use:
 			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
 	SanLoss 2;
 	infect "Dalmatian Male";
-
+]
 
 Section 4 - Endings
 
