@@ -99,7 +99,7 @@ object	name
 Lazaros	"Lazaros"
 
 Lazaros is a man.
-Lazaros is at Lazaros's Camp.
+Lazaros is in Lazaros's Camp.
 ScaleValue of Lazaros is 3. [human sized]
 Body Weight of Lazaros is 8. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 Body Definition of Lazaros is 7. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
