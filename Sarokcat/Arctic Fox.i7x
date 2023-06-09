@@ -10,11 +10,11 @@ to say Arctic fox attack:
 	if Player is female:
 		say "tease-.[line break]";
 		say ".'";
-		infect "Arctic fox";
+		infect "Arctic Fox";
 	else:
 		say ".[line break]";
 		say "ment...";
-		infect "Arctic fox";
+		infect "Arctic Fox";
 
 
 To say Arctic fox loss:
@@ -35,7 +35,7 @@ When Play begins:
 	add "Arctic Fox" to infections of NatureList;
 	add "Arctic Fox" to infections of MaleList;
 	add "Arctic Fox" to infections of BarbedCockList;
-	add "Arctic fox" to infections of KnottedCockList;
+	add "Arctic Fox" to infections of KnottedCockList;
 	add "Arctic Fox" to infections of SheathedCockList;
 	add "Arctic Fox" to infections of BipedalList;
 	add "Arctic Fox" to infections of TailList;
@@ -205,7 +205,7 @@ Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered
 "Arctic fox Infection"	"Infection"	""	Arctic fox Infection rule	1000	false
 
 This is the Arctic fox Infection rule:
-	if Player has a body of "Arctic fox":
+	if Player has a body of "Arctic Fox":
 		trigger ending "Arctic fox Infection"; [Here it states, that the ending has been played.]
 		if humanity of Player < 10:
 			if Player is male:

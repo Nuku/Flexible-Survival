@@ -271,6 +271,7 @@ Sarea of Dark Descent is "Nowhere".
 
 to say ResolveEvent Dark Descent:
 	say "     There's no sign of Sascha as you follow his path to a yawning doorway and down a dark, gloomy staircase. You contemplate calling his name, but an intense feeling of being watched makes you wonder if that's such a good idea. Even the walls feel like they're staring at you, looming out of the darkness at your side. Rather than the cozy, expensive vibe of the mansion's first floor, the basement has more of a dungeon feel, with a long, poorly lit hallway stretching in three directions. One is covered with a barred door, while the other two seem open. Perhaps you should explore both sides? Sascha could have gotten lost in the dark!";
+	move Sascha to Dungeon Dead End;
 	now Dark Descent is resolved;
 
 Table of WalkinEvents (continued)
