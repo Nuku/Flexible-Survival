@@ -73,7 +73,7 @@ to say ResolveEvent Girl Time:
 
 Section 4 - Snake Charmer
 
-[Moved to Fenzoo]
+[Moved to Snake Charmer, rewritten by Fenekku]
 
 Section 5 - Spiritual Love
 

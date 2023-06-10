@@ -11,6 +11,8 @@ Snake Charmer by Fenekku begins here.
 [ 100: Player doesn't want to see vore			]
 [ 101: Player rejected the Naga					]
 
+Section 1 - Events
+
 Table of GameEventIDs (continued)
 Object	Name
 Snake Charmer	"Snake Charmer"
@@ -50,11 +52,8 @@ to say ResolveEvent Snake Charmer:
 			say "     Bringing his snout close to your face, he looks at you directly, so tantalizingly close. His breathe washes over you, hinting at the warmth within. 'I saw your eyes as you saw mine, little prey. You saw my desire, but I saw yours,' He was right, of course. You couldn't even think of him being wrong right now, your head slowly nodding. He hisses a laugh at your acceptance, flicking his tongue against your face, 'So deliciously sweet,' before pulling away. Your heart starts to pound in your chest as [if player is not naked]the naga's hands guide you out of your clothing, 'Can't have any extras ruining your taste.' Soon enough, you're naked within his coils. Nude and trapped, [end if]you watch that predatory mouth yawn open before you. The pink flesh of the inside of his mouth revealed to your entranced sight, the darkness within inviting, and you find yourself eager for him to take you. You don't have to wait long, as once that dual-hinged maw opens wide enough, he brings it down over your head.";
 			WaitLineBreak;
 			say "     The coils holding you in place slowly relax, pushing you upwards into waiting hands that tug and pull at you as much as the muscles within that undulating throat. Saliva covers your skin, lubricating you and easing your way into his mouth with every tug and pull. Serpentine as he is, his throat stretches wide to accomodate you as you slide into his mouth halfway, sinking deeper and deeper with every second that passes. Your body escapes his coils as he tilts his head back, hands gripping you and guiding you deeper, your head leading the charge down and inside. You were enveloped fully in darkness, and despite your heart hammering in your chest, you were calm. His emerald eyes still stuck with you as your lower body vanished from outside, keeping you placated.";
-			wait for any key;
-			now battleground is "Void";
-			the Player was ended by "Naga";
-			trigger ending "Player was consumed by a hypnotic naga";
-			end the story saying "Held within the naga's stomach, the muscles slowly caress and undulate over you, softening your form more and more. You soon fall asleep, lulled by the movements and the naga's hypnotizing gaze, still sticking with you. You don't wake up again, as the naga's body digests you, breaking your body down and softening you into a nutrient-rich goo, feeding the naga for days to come.";
+			trigger ending "Snake Charmer Consumed";
+			end the story saying "You were consumed by a hypnotic naga.";
 		else:
 			say "     Shaking your head, you back away from the cage. Making the effort of breaking eyesight with the naga, you feel the emerald burn of his eyes as he watches you turn to leave. He hisses behind you, sounding annoyed but oddly... Impressed. You have this feeling of certainty, that you will see him again.";
 			now Resolution of Snake Charmer is 3;
@@ -140,5 +139,17 @@ to NagaSex:
 			LineBreak;
 			say "     After a good bit of pumping, his dicks soon start firing blanks, throbs slowing to a stop, allowing you to pull away from his crotch and smile up at him, moving back to give him room as he straightens up, his dicks slowly retreating into their home.";
 	say "     The naga breathes a bit heavy after your lovemaking session, slowly uncoiling from around you to free you fully as he nods towards you, 'Thank you, my mate, and apologies for my... Rough nature. I have been without for too long'. You nod back, reassuring him as he smiles, 'I shall seek you out again, my mate. Until then, stay safe.' His words spoken, the naga gives a small wave before turning and starting to slither away, leaving you with a warm sense of satisfaction, and a good bit of fullness.";
+
+Section 2 - Endings
+
+Table of GameEndings (continued)
+Name (text)	Type (text)	Subtype (text)	Ending (rule)	Priority (number)	Triggered (truth state)
+"Snake Charmer Consumed"	"BadEnd"	"Eaten"	Snake Charmer Consumed rule	1	false
+
+This is the Snake Charmer Consumed rule:
+	if ending "Snake Charmer Consumed" is triggered:
+		say "     Held within the naga's stomach, the muscles slowly caress and undulate over you, softening your form more and more. You soon fall asleep, lulled by the movements and the naga's hypnotizing gaze, still sticking with you. You don't wake up again, as the naga's body digests you, breaking your body down and softening you into a nutrient-rich goo, feeding the naga for days to come.";
+		the Player is dead;
+
 
 Snake Charmer ends here.
