@@ -444,6 +444,8 @@ Instead of conversing Sascha:
 		say "[SaschaOutsideTalk_Menu]";
 	else if Sascha is in Dungeon Dead End and "Finding Help" is listed in traits of Sascha:
 		say "[HornyHaunters]";
+	else if Sascha is in Dungeon Dead End and "Sacramental Wine" is listed in traits of Sascha:
+		say "[HornyHaunters]";
 	else if Sascha is in Dungeon Dead End:
 		say "[SaschaGhostHandsFuck]";
 	else:
@@ -451,6 +453,8 @@ Instead of conversing Sascha:
 
 Instead of Fucking Sascha:
 	if Sascha is in Dungeon Dead End and "Finding Help" is listed in traits of Sascha: [ghost hand orgy]
+		say "[HornyHaunters]";
+	else if Sascha is in Dungeon Dead End and "Sacramental Wine" is listed in traits of Sascha:
 		say "[HornyHaunters]";
 	else:
 		say "[Sascha_Fuck_Menu]";
