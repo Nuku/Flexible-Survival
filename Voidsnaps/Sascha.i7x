@@ -456,7 +456,7 @@ Instead of Fucking Sascha:
 		say "[HornyHaunters]";
 	else if Sascha is in Dungeon Dead End and "Sacramental Wine" is listed in traits of Sascha:
 		say "[HornyHaunters]";
-	else:
+	else if Sascha is in Haunted House Foyer:
 		say "[Sascha_Fuck_Menu]";
 
 to say Sascha_Fuck_Menu:
