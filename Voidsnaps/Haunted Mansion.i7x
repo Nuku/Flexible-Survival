@@ -212,7 +212,7 @@ to say SaschaOutsideTalk_Menu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the warrior, deciding on a different course of action.";
+			say "     You step back from the catboy, deciding on a different course of action.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -412,6 +412,7 @@ to say ResolveEvent Edge of Eternity:
 			say "[FreeOzeg]";
 	now Edge of Eternity is Resolved;
 	TraitLoss "Rusty Key" for Sascha;
+	TraitLoss "Sacramental Wine" for Sascha;
 
 
 to say FreeOzeg:
