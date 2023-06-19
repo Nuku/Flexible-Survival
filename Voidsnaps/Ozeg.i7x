@@ -1,5 +1,9 @@
 Ozeg by Voidsnaps begins here.
 
+a postimport rule:
+	if energy of Ozeg is 0:
+		now energy of Ozeg is 2500;
+
 Section 1 - Ozeg declaration and infection
 
 Table of GameCharacterIDs (continued)
@@ -39,12 +43,13 @@ Virgin of Ozeg is false.
 AnalVirgin of Ozeg is false.
 PenileVirgin of Ozeg is true.
 SexuallyExperienced of Ozeg is true.
+Energy of Ozeg is 2500.
 TwistedCapacity of Ozeg is false. [Twisted Characters can take any penetration, no matter the size]
 Sterile of Ozeg is true. [steriles can't knock people up]
 MainInfection of Ozeg is "Demonic Dragon".
 Description of Ozeg is "[OzegDesc]".
 Conversation of Ozeg is { "<This is nothing but a placeholder!>" }.
-The scent of Ozeg is "[OzegScent]";
+The scent of Ozeg is "[OzegScent]".
 
 to say OzegScent:
 	say "He smells strangely clean, but musk-heavy.";

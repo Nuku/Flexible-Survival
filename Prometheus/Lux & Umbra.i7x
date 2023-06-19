@@ -739,14 +739,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Lux & Umbra Sexual Interest	"Lux & Umbra Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Lux & Umbra Sexual Interest"	Lux & Umbra Sexual Interest	"[EventConditions_Lux&UmbraSexualInterest]"	Computer Lab	2500	2	100
+
+to say EventConditions_Lux&UmbraSexualInterest:
+	if HP of Lux > 3 and HP of Umbra > 3 and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Umbra Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Lux & Umbra Sexual Interest is a situation.
+ResolveFunction of Lux & Umbra Sexual Interest is "[ResolveEvent Lux & Umbra Sexual Interest]".
 The level of Lux & Umbra Sexual Interest is 0.
 The sarea of Lux & Umbra Sexual Interest is "Nowhere".
 
-instead of going to Computer Lab while HP of Lux is 4 and HP of Umbra is 4 and Lux is in Computer Lab and Umbra is in Computer Lab and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Umbra Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Lux&UmbraSexualInterestEvent;
-
-to Lux&UmbraSexualInterestEvent: [Lux and Umbra express interest in each other] [Early Morning-Noon] [May be subject to change/improvement]
+to say ResolveEvent Lux & Umbra Sexual Interest: [Lux and Umbra express interest in each other] [Early Morning-Noon] [May be subject to change/improvement]
 	say "     As you enter the computer lab, you are surprised to see Lux and Umbra talking to each other in hushed tones. While it is not unusual for them to be in here, they are usually asleep at this time, huddled together as they dream. Not wanting to interrupt whatever they are discussing but nonetheless curious, you sneak closer, your presence remaining unnoticed due to their concentration on each other, until you are behind a desk barely a meter from them. You have no idea how they are failing to catch your scent, but you are now able to hear what is being said. 'You probably think that I'm a freak. Attraction to family is considered disgusting if the books I read are to be believed, but I can't deny who I am. Maybe I won't be judged as much considering the state of the city, but I don't want to lose you as a brother just because I can't control my libido. If I have to-' Lux whispers before Umbra cuts her off.";
 	say "     'I love you too. You are pretty. You are smarter but make time for me. How could I not love you? But what will [if player is Female and Fang is Male]Mother and Father [else if player is Male and Fang is Female]Mother and Father [else if player is Male and Fang is Male]our fathers [else]our mothers [end if]think?' The two of them are momentarily quiet as they contemplate that. 'I don't think I could bear for [if Fang is Male]Daddy [else]Mummy [end if]to be hurt by this if we couldn't convince [ObjectPro of Fang], and [if Player is female]Mother [else]Father [end if]may be difficult to convince if [if Player is female]she [else]he [end if]doesn't approve...' your daughter sighs. 'We can't go behind their backs. It might break them,' your son adds before pausing, his nose twitching and his eyes widening. '[if Player is female]Mother's [else]Father's [end if]behind that desk.' Embarrassed at being caught, you crawl out and sit beside them and wait for them to complain about you eavesdropping. Instead, they stare at you and await your verdict on their forbidden love for each other.";
 	say "     [bold type]Do you wish to allow them to express their attraction to one another in future?[roman type][line break]";
@@ -770,14 +776,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Lux & Fang Sexual Interest	"Lux & Fang Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Lux & Fang Sexual Interest"	Lux & Fang Sexual Interest	"[EventConditions_Lux&FangSexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Lux&FangSexualInterest:
+	if HP of Lux > 3 and (HP of Fang > 1  and HP of Fang < 6) and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Fang Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Lux & Fang Sexual Interest is a situation.
+ResolveFunction of Lux & Fang Sexual Interest is "[ResolveEvent Lux & Fang Sexual Interest]".
 The level of Lux & Fang Sexual Interest is 0.
 The sarea of Lux & Fang Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1  and HP of Fang < 6) and MaleList is not banned and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Lux&FangSexualInterestEvent;
-
-to Lux&FangSexualInterestEvent: [Lux and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
+to say ResolveEvent Lux & Fang Sexual Interest: [Lux and Fang express interest in each other] [May be subject to change/improvement]
 	if HP of Fang is 2: [Omega]
 		say "     Looking around as you enter the library, you are concerned to see that Fang isn't in [PosAdj of Fang] usual position watching the door. Readying yourself for having to reprimand [ObjectPro of Fang] for this dereliction of duty, you briskly begin walking around the library until as you pass the open door to the courtyard, you hear Lux's familiar voice. Your need to find Fang less pressing than finding out who your daughter is conversing with, you stealthily approach until you can clearly see that she is talking to your missing guard, Fang, and pacing back and forth ceaselessly as she speaks with her [if Fang is Male]father[else]mother[end if]. '...but I didn't didn't need privacy to talk about such mundane topics such as your night. I have something a little more sensitive to discuss and I'm concerned that it might affect your fondness of me,' the pale-furred wolf worriedly says. 'Not likely. You haven't hurt your brother. If you prefer females, I will support you. Why are you scared?' Fang replies, the variety of [PosAdj of Fang] questions suggesting that [SubjectPro of Fang] has no idea what is troubling [PosAdj of Fang] daughter.";
 		say "     'Thank you for the support [if Fang is Male]Daddy[else]Mummy[end if]. While male or female makes little difference to me, that isn't what I was worried about,' Lux half laughs between deep breaths. 'You may think that I'm disgusting, but I'm attracted to you.' The two of them stand in silence for a few moments as the female wolf's words sink in until Fang breaks the silence. 'I know what I'm meant to do. You're my daughter. I don't want to take advantage of you. You're not meant to feel like this about me. I'm not meant to feel this way about you. But you do. And I do.' The two wolves look at each other differently with this revelation, nervousness struggling with excitement that they feel the same attraction towards each other. 'Your [if Player is female]mother [else]father [end if]mightn't like it. I made a mistake before. My freedom is limited by their will,' Fang rumbles, pressing [PosAdj of Fang] ears back at disappointing [PosAdj of Fang] daughter. It looks like you have a decision to make.";
@@ -824,14 +836,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Umbra & Fang Sexual Interest	"Umbra & Fang Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Umbra & Fang Sexual Interest"	Umbra & Fang Sexual Interest	"[EventConditions_Umbra&FangSexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Umbra&FangSexualInterest:
+	if HP of Umbra > 3 and (HP of Fang > 1 and HP of Fang < 6) and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Fang Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Umbra & Fang Sexual Interest is a situation.
+ResolveFunction of Umbra & Fang Sexual Interest is "[ResolveEvent Umbra & Fang Sexual Interest]".
 The level of Umbra & Fang Sexual Interest is 0.
 The sarea of Umbra & Fang Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and Fang is in Grey Abbey Library and (HP of Fang > 1 and HP of Fang < 6) and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Fang Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Umbra&FangSexualInterestEvent;
-
-to Umbra&FangSexualInterestEvent: [Umbra and Fang express interest in each other] [Noon-Early Night] [May be subject to change/improvement]
+to say ResolveEvent Umbra & Fang Sexual Interest: [Umbra and Fang express interest in each other] [May be subject to change/improvement]
 	if HP of Fang is 2: [Omega]
 		say "     Upon entering the library, you are concerned to find that Fang isn't in [PosAdj of Fang] usual position by the door. With a sigh of disappointment, you begin to search for the wolf, readying yourself to reprimand [ObjectPro of Fang] for this dereliction of duty. You briskly walk around the library until you catch sight of a tail disappearing out of the door to the courtyard. Assuming that it is Fang, you quickly follow after [ObjectPro of Fang] only to discover that [SubjectPro of Fang] is not alone. It would seem that your son, Umbra, has something that he wishes to discuss with his [if Fang is Male]father[else]mother[end if], and judging by the nervous pacing that he is doing, it may be something awkward so you decide to remain watching from a distance rather than interrupting now and making it more difficult for him. 'I need to tell you something. It might upset you,' Umbra hesitantly says, struggling to meet his [if Fang is Male]father[else]mother[end if]'s eyes despite his greater size. 'Not likely. You haven't hurt your sister. Females or males, I'll support you with either. What are you scared of?' Fang replies, the variety of [PosAdj of Fang] questions suggesting that [SubjectPro of Fang] has no idea what is troubling [PosAdj of Fang] son.";
 		say "     'I like both. That is not the problem,' Umbra bluntly replies, despite his lack of sexual experience. His [if Fang is Male]father[else]mother[end if] stands and waits for him to elaborate, patiently waving [PosAdj of Fang] tail back and forth in the hopes of appearing reassuring to [PosAdj of Fang] conflicted child. 'I am attracted to you. Despite us being family,' Umbra finally confesses, lowering his head in shame at how [SubjectPro of Fang] expects his [if Fang is Male]father[else]mother[end if] to react. The silence returns again as the younger wolf's revelation sinks in, until Fang speaks. 'You are my son. Do not feel ashamed of who you are. I have these feelings too. You are not alone.' The two wolves look at each other in a new light, surprised that such a taboo attraction is shared and unsure how to proceed next. 'Your [if Player is female]mother [else]father [end if]may disapprove. They may deny me this. I made mistakes in the past. By their will I am bound,' Fang rumbles, pressing [PosAdj of Fang] ears back at disappointing [PosAdj of Fang] son. It looks like you have a decision to make.";
@@ -878,14 +896,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Lux & Player Sexual Interest	"Lux & Player Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Lux & Player Sexual Interest"	Lux & Player Sexual Interest	"[EventConditions_Lux&PlayerSexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Lux&PlayerSexualInterest:
+	if HP of Lux > 3 and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Lux & Player Sexual Interest is a situation.
+ResolveFunction of Lux & Player Sexual Interest is "[ResolveEvent Lux & Player Sexual Interest]".
 The level of Lux & Player Sexual Interest is 0.
 The sarea of Lux & Player Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and FemaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Lux & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Lux&PlayerSexualInterestEvent;
-
-to Lux&PlayerSexualInterestEvent: [Lux expresses interest in the player] [Noon-Early Night]
+to say ResolveEvent Lux & Player Sexual Interest: [Lux expresses interest in the player]
 	say "     You are surprised to find Lux waiting for you as you enter the library, her pleasure at seeing you obvious from the way her tail begins to wag. 'Hello [if Player is female]Mother[else]Father[end if]. I hope that you aren't having too much trouble in the city. You could always spend more time with my brother and me. I know we'd both appreciate it,' she greets you, the last sentence delivered in an almost sensual manner. The surprise on your face must be plainly visible because your daughter suddenly looks embarrassed. 'I meant that to be subtle. Instead I seem to have shouted, [']Look at me I'm a deviant who loves her parents in ways that she shouldn't[']. I'm sorry. I seem to have made you uncomfortable. Had I not made my feelings known before?' You admit that you might recall such a thing, but you didn't know she was this serious about you.";
 	say "     'Why wouldn't I be?' she replies, looking you in the eye. 'Other than the social expectations, questions of morality, and fear of being rejected by my family, why wouldn't I have been serious when I told you that I was more than fond of you? I know the potential consequences of letting my feelings be known but it is important enough to me that I'm telling you anyway. So either I find out that you are willing to explore these feelings with me, or you don't and I'll attempt to work from there. I'm not going to avoid you just because you rebuff my advances, nor will it damage our bond, but I will definitely be happier if you reciprocate my attraction.' Part of you wonders what Fang will think of this, but almost as if predicting your thoughts, Lux adds, 'Don't worry about [if Fang is Male]Daddy[else]Mummy[end if]. I'll talk to [ObjectPro of Fang] about it too, and there is very little that [SubjectPro of Fang] wouldn't do to make my brother and me happy.' It would seem that she has had plenty of time to think this through and is now only waiting on your response.";
 	say "     [bold type]Do you wish to explore this sort of relationship with Lux?[roman type][line break]";
@@ -908,14 +932,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Umbra & Player Sexual Interest	"Umbra & Player Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Umbra & Player Sexual Interest"	Umbra & Player Sexual Interest	"[EventConditions_Umbra&PlayerSexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Umbra&PlayerSexualInterest:
+	if HP of Umbra > 3 and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Player Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Umbra & Player Sexual Interest is a situation.
+ResolveFunction of Umbra & Player Sexual Interest is "[ResolveEvent Umbra & Player Sexual Interest]".
 The level of Umbra & Player Sexual Interest is 0.
 The sarea of Umbra & Player Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and MaleList is not banned and "LuxUmbra Incest Enabled" is listed in traits of player and Umbra & Player Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Umbra&PlayerSexualInterestEvent;
-
-to Umbra&PlayerSexualInterestEvent: [Umbra expresses interest in the player] [Noon-Early Night]
+to say ResolveEvent Umbra & Player Sexual Interest: [Umbra expresses interest in the player]
 	say "     Finding Umbra waiting for you as soon as you enter the library, you give him a pat on the head before [if scalevalue of Player < 3]standing [else]crouching down [end if]in front of him to see if he had anything in mind to talk to you about. He seems to appreciate your attention, his tail wagging and letting out cheerful huffs as he presses his head against your palm. 'Hello [if Player is female]Mother[else]Father[end if]. You smell nice. Very unique scent. I like it. I miss you when you are not here. So does Lux. Spend more time with us,' he states as he begins to lick your hand. Ruffling the fur on top of his head, you reply that you miss him too while you are away. 'Then stay here. With Umbra. With Lux. With Fang. We all love you. As [if Player is female]mother[else]father[end if] as well as mate. All of us.' He notices your look of surprise at this revelation of attraction and backs away, tucking his tail between his legs and flattening his ears. 'Lux warned me of this. I have said too much. I have upset you.' Seeing that he is about to flee in response to your less than enthusiastic reaction, you quickly call him to explain further and ask why he hadn't told you before, an order which he haltingly complies with.";
 	say "     'Lux said she had told you. I've seen you in the city.[if Player is submissive] Letting others mount you. Pleasing them. Am I worth less than them? Is there another reason why you don't want to mate with me?[else if Player is dominant]Making others submit to you. Such dominance. I want to be like you. I want to be [italic type]with[roman type] you. Am I not worthy?[else]Pleasing others. Having them please you. You allow both and I admire you for it. I want to experience such feelings with you. Do I not deserve this?[end if]. Lux says we are not normal. Is she right? She said to follow my heart. She said not to feel shame for who I love. But accept that they may not feel same way. I asked [if Fang is Male]Father[else]Mother[end if] and [SubjectPro of Fang] gave same answer. To keep those we love close. Even we cannot love them as much as we want. I love you. I will love you even if you do not feel the same. Do you?' Despite his limited language, Umbra has obviously spent the time to think through his confession. Now the only question is do you feel the same?";
 	say "     [bold type]Do you wish to explore this sort of relationship with Umbra?[roman type][line break]";
@@ -938,14 +968,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Lux & Carl Sexual Interest	"Lux & Carl Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Lux & Carl Sexual Interest"	Lux & Carl Sexual Interest	"[EventConditions_Lux&CarlSexualInterest]"	Grey Abbey 2F	2500	2	100
+
+to say EventConditions_Lux&CarlSexualInterest:
+	if HP of Lux > 3 and HP of Carl is 10 and MaleList is not banned and FemaleList is not banned and Lux & Carl Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Lux & Carl Sexual Interest is a situation.
+ResolveFunction of Lux & Carl Sexual Interest is "[ResolveEvent Lux & Carl Sexual Interest]".
 The level of Lux & Carl Sexual Interest is 0.
 The sarea of Lux & Carl Sexual Interest is "Nowhere".
 
-instead of going up from Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and HP of Carl is 10 and MaleList is not banned and FemaleList is not banned and Lux & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Lux&CarlSexualInterestEvent;
-
-to Lux&CarlSexualInterestEvent: [Lux and Carl express interest in each other] [Noon-Early Night]
+to say ResolveEvent Lux & Carl Sexual Interest: [Lux and Carl express interest in each other]
 	say "     Reaching the top of the stairs, you are surprised to find Lux keeping Carl company as he keeps watch over the approach to the library. They currently have their back to you, both sitting on one of the couches that the husky has pulled around so that he can have some comfort while he's on duty. Carl doesn't seem too perturbed, idly stroking the wolf's side while looking out the window, occasionally even bringing a pair of binoculars to his face when something in the distance seems to catch his eye. Your daughter seems content with this at first but gradually becomes increasingly restless, nudging up against him and whining more frequently. 'I told you that this would be boring, didn't I? There's not much reason that you need to keep me company when you could be playing with your brother. I'm used to it anyway,' Carl chides her, not diverting his attention from outside.";
 	say "     'But I want to play with yooouuu. [if Fang is Male]Daddy[else]Mummy[end if]'s watching the door, so you can at least take a few minutes away from bird-watching to run around with me, Please?' Lux pleads, looking at the soldier with wide eyes. He lets out a sigh and shakes his head before replying, 'One, you're an adult, I would have thought you would've grown out of this by now. Two, in case you hadn't noticed I'm not four-legged like you so I would likely be at a disadvantage. Three, and this is the most important of all, you're sending mixed messages by asking me to play in an innocent manner while staring at my crotch. Your [if Fang is Male]father[else]mother[end if] would be ashamed.' You realize that you've zoned out and that Lux's focus has definitely shifted downwards. 'Why would [SubjectPro of Fang] be ashamed? I'm not giving myself to a stranger, I find you attractive, and I trust your decision to be your own. If you don't want to, I'll still keep you company. I'm not that selfish. Also, how dare you imply that I should grow out of playing. It's fun. Maybe you should connect more with your youthful side?' Lux retorts, forcing her eyes to meet his.";
 	WaitLineBreak;
@@ -977,14 +1013,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Umbra & Carl Sexual Interest	"Umbra & Carl Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Umbra & Carl Sexual Interest"	Umbra & Carl Sexual Interest	"[EventConditions_Umbra&CarlSexualInterest]"	Grey Abbey 2F	2500	2	100
+
+to say EventConditions_Umbra&CarlSexualInterest:
+	if HP of Umbra > 3 and HP of Carl is 10 and MaleList is not banned and Umbra & Carl Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Umbra & Carl Sexual Interest is a situation.
+ResolveFunction of Umbra & Carl Sexual Interest is "[ResolveEvent Umbra & Carl Sexual Interest]".
 The level of Umbra & Carl Sexual Interest is 0.
 The sarea of Umbra & Carl Sexual Interest is "Nowhere".
 
-instead of going up from Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and HP of Carl is 10 and MaleList is not banned and Umbra & Carl Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Umbra&CarlSexualInterestEvent;
-
-to Umbra&CarlSexualInterestEvent: [Umbra and Carl express interest in each other] [Noon-Early Night]
+to say ResolveEvent Umbra & Carl Sexual Interest: [Umbra and Carl express interest in each other]
 	say "     Climbing the stairs to the next floor, you find Carl and Umbra keeping watch over the city through one of the windows, though you are unsure how much help the wolf is providing. While the husky is scanning the surrounding area through some binoculars, he is sitting beside him on the couch and wildly wagging his tail. Despite this, Carl seems to appreciate the company, taking the occasional break to ruffle the fur on Umbra's head or stroke a paw through his thick fur. They both turn as you step up behind them, Carl giving you a nod while your son's tail waves even more rapidly as he leaps off to greet you, bumping up against your leg and licking your hand as you affectionately pat him. 'I'd be glad to have him beside me if I were in the city, but his help is limited up here when he can't use binoculars,' the husky comments, earning a reproachful look from the dark-furred wolf. 'Hey, don't look at me like that. I said limited, not nonexistent. You're good company and you demand less attention than your sister, especially with how often she asks me to play with her. I usually only get distracted by you when you stretch after getting up.'";
 	say "     The contented look on Umbra's face suggests that he is enjoying the praise as well as one-upping Lux. He noses Carl's paw until he begins to stroke the large wolf, scritching between his ears every now and then. You hear the husky mumble, 'Who's a good boy...' to himself, though you get the impression that there is something beyond affection from the way that his eyes stray across the wolf's form from nose to tail. Perhaps feeling you watching him, Carl snatches his hand back and looks embarrassed. 'Your sister is probably missing you, Umbra. You've helped me enough for today and if you're not careful she'll find someone else to play with,' he gruffly tells the wolf. You find it doubtful considering how close Lux and Umbra are, but your son gives a nod and leisurely slides off the couch before stretching in a manner that suggests that he is as interested in Carl as the husky is in him. As he extends his hind legs, his tail raises up behind him more than one might normally expect, revealing his virginal tail-star and full sheath and balls, his scrotum twitching slightly before his tail descends and obscures yours and Carl's view of 'the goods'. As your son disappears downstairs, you turn back to the husky, a silent communication passing between you that this needs to be discussed.";
 	say "     [bold type]It would seem that both Carl and Umbra are attracted to each other. Do you wish to allow them to further this relationship?[roman type][line break]";
@@ -1007,14 +1049,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Lux & Amy Sexual Interest	"Lux & Amy Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Lux & Amy Sexual Interest"	Lux & Amy Sexual Interest	"[EventConditions_Lux&AmySexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Lux&AmySexualInterest:
+	if HP of Lux > 3 and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Lux & Amy Sexual Interest is a situation.
+ResolveFunction of Lux & Amy Sexual Interest is "[ResolveEvent Lux & Amy Sexual Interest]".
 The level of Lux & Amy Sexual Interest is 0.
 The sarea of Lux & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Lux is 4 and Lux is in Grey Abbey Library and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and FemaleList is not banned and Lux & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Lux&AmySexualInterestEvent;
-
-to Lux&AmySexualInterestEvent: [Lux and Amy express interest in each other] [Noon-Early Night] [Tummy Rubs]
+to say ResolveEvent Lux & Amy Sexual Interest: [Lux and Amy express interest in each other] [Tummy Rubs]
 	say "     You enter the library and find only Fang and Umbra by the door. As you approach the two of them, Fang looks at you, 'Lux reading books. Do not disturb her. Difficult to get peace at times,' [SubjectPro of Fang] says, with a particularly pointed look at [PosAdj of Fang] son. You briefly give the two of them a pat, their tails waving on the floor contentedly at your display of affection, before walking between the shelves and deeper into the library. You should be able to check on your daughter without interrupting the tranquility that seems to currently exist in the library. However, as you are about to round a corner, you see that Amy is currently kneeling beside her on the ground, patting and stroking the pale-furred wolf as the two of them chat.'... doubt that I'm the only child, but I haven't been back to see my mother and I have no plans to do so,' the husky shares. 'It must be nice having a brother that you are so close with and can rely on.' Lux releases a happy whine and rolls on her side as Amy's fingers continue to work through her fur and massage the skin beneath.";
 	say "     'I don't have much comparison, but Umbra's always been there for me and I don't see that changing. He's the best,' the wolf replies, rolling on her back and peddling her legs in the air as the husky leans over the top of her and continues massaging her undercarriage. 'Ooooh... What it is to have thumbs. I don't remember the last time I had a tummy rub like this.' 'Tell you what, I'll give you and your brother tummy rubs like this everyday if you want. It's almost therapeutic and I'd love to get to know the two of you better,' Amy laughs. 'Pet a little lower and I'll let you get to know me better now,' Lux shoots back, causing the husky to redouble her chuckling. 'Someone's been reading the adult books again. If you had been serious, I might have taken you up on it.' 'What if I was being serious? I don't mind that you're female. I like you and you're fun to spend time with,' Lux haltingly replies, keen and nervous at the same time. Amy stops and looks deeply into her eyes. 'I won't deny that I'm not tempted, but are you sure? I wouldn't want to rush you into it.'";
 	say "     [bold type]The two of them seem to be growing closer. Do you wish to allow the two of them to explore this relationship further in future?[roman type][line break]";
@@ -1037,14 +1085,20 @@ Table of GameEventIDs (continued)
 Object	Name
 Umbra & Amy Sexual Interest	"Umbra & Amy Sexual Interest"
 
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+3	"Umbra & Amy Sexual Interest"	Umbra & Amy Sexual Interest	"[EventConditions_Umbra&AmySexualInterest]"	Grey Abbey Library	2500	2	100
+
+to say EventConditions_Umbra&AmySexualInterest:
+	if HP of Umbra > 3 and (HP of Amy > 10 and HP of Amy < 13 and Amy is Collected) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
 Umbra & Amy Sexual Interest is a situation.
+ResolveFunction of Umbra & Amy Sexual Interest is "[ResolveEvent Umbra & Amy Sexual Interest]".
 The level of Umbra & Amy Sexual Interest is 0.
 The sarea of Umbra & Amy Sexual Interest is "Nowhere".
 
-instead of going to Grey Abbey Library while HP of Umbra is 4 and Umbra is in Grey Abbey Library and (HP of Amy > 10 and HP of Amy < 13 and Amy is booked) and MaleList is not banned and FemaleList is not banned and Umbra & Amy Sexual Interest is not resolved and a random chance of 1 in 2 succeeds:
-	Umbra&AmySexualInterestEvent;
-
-to Umbra&AmySexualInterestEvent: [Umbra and Amy express interest in each other] [Noon-Early Night] [Asks Amy to read him some adult literature as Lux is busy]
+to say ResolveEvent Umbra & Amy Sexual Interest: [Umbra and Amy express interest in each other] [Asks Amy to read him some adult literature as Lux is busy]
 	say "     You meet Fang and Lux by the door as they are on their way out. 'I asked [if Fang is Male]Daddy[else]Mummy[end if] for some extra combat practice,' your daughter explains, butting your hand with her nose to encourage you to pat her. 'I'm worried that I rely too much on Umbra so I wanted to see what I am capable of while [if Fang is Male]Daddy[else]Mummy[end if] watches to make sure I'm not in too much danger.' Fang nods in confirmation before escorting the young wolf outside, presumably to find a lone husky or latex fox. Curious as to what the other wolf twin will be getting up to while he is separated from his sister, you wander through the library until you eventually come across him nudging Amy with a book in his mouth. 'Hello there Umbra. What can I do for you?' the husky cheerfully asks, running her hand through the thick fur on the back of the wolf's neck. 'Would you like me to read that to you? I would have thought that you would ask your sister.' Umbra allows Amy to take the book from his grip before answering. 'She's training. I should learn more too.'";
 	say "     '... um, this is rather smutty. Are you sure this is what you want me to read to you?' the husky asks with a smirk, an eyebrow raised. 'Yes. Lux suggested it. She said to only read it with someone I like,' he replies, sitting upright and waiting patiently. 'With someone you like, eh... Does that mean you like me?' Umbra doesn't shrink under her teasing gaze, merely nodding. 'Such a compliment from a big, strong wolf,' Amy flirts, kneeling beside him and running a paw down his chest until it drifts beneath him to lightly grasp his sheath. She barely holds it for a second before she notices you watching them, quickly letting go and beginning to stutter out an apology. 'I didn't mean to flirt with your son so blatantly in front of you, but with how handsome he is how could I resist?' Umbra just sits there panting, the tip of his shaft peeking from its sheath. It would seem that the feeling is mutual.";
 	say "     [bold type]The two of them seem interested in exploring this relationship. Do you wish to allow them to do so?[roman type][line break]";
@@ -1073,7 +1127,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"Lux & Umbra First Mating"	Lux & Umbra First Mating	"[EventConditions_Lux&UmbraFirstMating]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_Lux&UmbraFirstMating:
-	if HP of Lux > 3 and HP of Umbra > 3 and MaleList is not banned and FemaleList is not banned and (Resolution of Lux & Umbra Sexual Interest is 1 and Lux & Fang Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Umbra & Player Sexual Interest is resolved) and Lux & Umbra First Mating is not resolved: [list of conditions here]
+	if HP of Lux > 3 and HP of Umbra > 3 and MaleList is not banned and FemaleList is not banned and Resolution of Lux & Umbra Sexual Interest is 1 and Lux & Umbra First Mating is not resolved: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Lux & Umbra First Mating is a situation.
@@ -1236,7 +1290,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"Umbra & Player First Mating"	Umbra & Player First Mating	"[EventConditions_Umbra&PlayerFirstMating]"	Grey Abbey Library	2500	2	100
 
 to say EventConditions_Umbra&PlayerFirstMating:
-	if HP of Umbra > 3 and Player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Lux & Umbra Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Lux & Player Sexual Interest is resolved and Umbra & Fang Sexual Interest is resolved and Umbra & Player First Mating is not resolved: [list of conditions here]
+	if HP of Umbra > 3 and Player is not neuter and MaleList is not banned and Resolution of Umbra & Player Sexual Interest is 1 and Umbra & Player First Mating is not resolved: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Umbra & Player First Mating is a situation.
@@ -1293,7 +1347,7 @@ to say ResolveEvent Umbra & Player First Mating: [Umbra has sex with player] [Ev
 		else: [Non-wolf scene]
 			if Player is submissive: [Player is penetrated]
 				say "     'On all fours. I wish to pamper you,' Umbra commands, familiar enough with your submissive tendencies to know that he should take control. You immediately comply, [if player is not naked]stripping before [end if]looking towards your son as he nods his approval, sending a warm shiver through your body. You can see a lot of Fang in him as well as the differences, even beyond the lack of scars, but it reminds you of the path that you have taken to reach this point. [if Fang is Male]The heat of fur pressing against your back as the muscles beneath tensed and relaxed, the warm wetness that filled you, the feeling of two wolf pups straining to be released into the world[else]The heat of fur against your stomach as your muscles tensed and released, the rush of your seed being expelled into another, watching as two wolf pups strained to be released from their mother's womb to enter the world[end if], and finally watching the twins grow into the young adults that they are today, one watching as the other prepares to breed their father. Umbra circles around you, licking your exposed body, especially your face in his best attempt at a kiss.";
-				say "     You gently cup the side of his face and lock lips with him, sighing as his tongue writhes around in your mouth, inexperienced but enthusiastic. He reluctantly pulls away, barking, 'Eyes front. Focus on feel, not sight,' before padding behind you. You aren't left curious as to what he plans next for long, soon feeling fur brush against your stomach and air wafting against your bobbing cock, your arousal already swiftly growing. You flinch slightly when the wolf shoves his nose firmly beneath it into the [if CockName of Player is listed in infections of InternalCockList]sweat-glazed scrotum below[else]pungent gape of your genital slit[end if], inhaling your scent and more than likely getting your pre in his fur. A sudden rush of hot air against your shaft is rapidly followed by wetness as your son licks from [if CockName of Player is listed in infections of InternalCockList]your balls [else]the base [end if]all the way to the tip of your cock, collecting the generous helping of precum that oozes in response to his tender ministrations. He repeats this a few more times, varying the speed, as well as how he curls his tongue around the sides, treating you in an almost worshipful manner.";
+				say "     You gently cup the side of his face and lock lips with him, sighing as his tongue writhes around in your mouth, inexperienced but enthusiastic. He reluctantly pulls away, barking, 'Eyes front. Focus on feel, not sight,' before padding behind you. You aren't left curious as to what he plans next for long, soon feeling fur brush against your stomach and air wafting against your bobbing cock, your arousal already swiftly growing. You flinch slightly when the wolf shoves his nose firmly beneath it into the [if CockName of Player is listed in infections of InternalCockList]pungent gape of your genital slit[else]sweat-glazed scrotum below[end if], inhaling your scent and more than likely getting your pre in his fur. A sudden rush of hot air against your shaft is rapidly followed by wetness as your son licks from [if CockName of Player is listed in infections of InternalCockList]the base [else]your balls [end if]all the way to the tip of your cock, collecting the generous helping of precum that oozes in response to his tender ministrations. He repeats this a few more times, varying the speed, as well as how he curls his tongue around the sides, treating you in an almost worshipful manner.";
 				WaitLineBreak;
 				say "     Just as you are wondering if Umbra is going to continue until you climax, pre constantly dribbling from your tip to trickle across your son's muzzle, he pulls away, satisfied with his effort. He shuffles out from beneath you, walking past you face to show you that even while focusing on you, his cock has slid from its sheath to sway beneath him having become aroused by your scent, taste, and the joy of being intimate with you. You allow your eyes to follow him as he pads back towards your rear, catching an unimpeded view of his fuzzy sac as his tail hikes up behind him to tease you about just what he has in store for you. Anticipating feeling his weight on your back, you are instead surprised by his nose being pressed against your rump and his tongue gliding across the clenching entrance to your ass, causing you to gasp and the wolf to chuckle in response. 'Proper preparation makes it better. Plus I think I have a scent fetish. May be genetic,' he explains between passionate licks.";
 				say "     Even with his [if HP of Umbra is 5]relative [end if]sexual inexperience, Umbra seems to instinctively know where to direct his tongue, whether it is tickling across your buttock to build anticipation, circling your sphincter to make you shiver, or spearing it inside of you to curl and make you moan. Despite the otherwise dominant role that he seems to be fulfilling, his persistence and enthusiasm speak of someone both enamored with and trying to impress you, though perhaps part of it is also to demonstrate his talents and care to the audience just beyond your vision. Nonetheless, you encourage and praise Umbra, ensuring that he knows what has the greatest effect on you and that his affection is reciprocated. It cannot last though, and just like when he was licking your cock, he relents before you can get too close to orgasm, or perhaps for his own benefit given the way his penis is bouncing beneath him as he walks back in front of you, copious viscous fluid leaving a messy trail on the floor.";
@@ -1312,7 +1366,7 @@ to say ResolveEvent Umbra & Player First Mating: [Umbra has sex with player] [Ev
 				NPCSexAftermath Player receives "AssFuck" from Umbra;
 			else: [Umbra is penetrated]
 				say "     'Guide me. Tell me what you want from me,' Umbra says, tacitly surrendering control. He looks at you the same way that you have seen directed at Fang and his sister, with unflinching devotion, and you are sure that you could ask nearly anything of him and that he would comply. For now though, you take the time to look at him, to appreciate him for who he is while you decide what your first [if player is dominant]command [else]instruction [end if]will be. You can see a lot of Fang in him as well as the differences, even beyond the lack of scars, but it reminds you of the path that you have taken to reach this point. [if Fang is Male]The heat of fur pressing against your back as the muscles beneath tensed and relaxed, the warm wetness that filled you, the feeling of two wolf pups straining to be released into the world[else]The heat of fur against your stomach as your muscles tensed and released, the rush of your seed being expelled into another, watching as two wolf pups strained to be released from their mother's womb to enter the world[end if], and finally watching the twins grow into the young adults that they are today, one watching as the other prepares to be bred by their father.";
-				say "     Still making up your mind, you lean in for a kiss, sighing as Umbra's tongue writhes around in your mouth, inexperienced but enthusiastic. As you pull away, you decide that you should perhaps start slowly, [if player is not naked]stripping before [end if]presenting your cock and telling your son to demonstrate what he can do with his mouth beyond kissing. He immediately surges forward and shoves his nose firmly beneath your cock, into [if CockName of Player is listed in infections of InternalCockList]your sweat-glazed scrotum[else]the pungent gape of your genital slit[end if], inhaling your scent and receiving several streaks of your pre through his fur. A sudden rush of hot air against your shaft is rapidly followed by wetness as your son licks from [if CockName of Player is listed in infections of InternalCockList]your balls [else]the base [end if]all the way to the tip of your cock, collecting the generous helping of precum that oozes in response to his tender ministrations. He repeats this a few more times, varying the speed, as well as how he curls his tongue around the sides, treating you like his alpha.";
+				say "     Still making up your mind, you lean in for a kiss, sighing as Umbra's tongue writhes around in your mouth, inexperienced but enthusiastic. As you pull away, you decide that you should perhaps start slowly, [if player is not naked]stripping before [end if]presenting your cock and telling your son to demonstrate what he can do with his mouth beyond kissing. He immediately surges forward and shoves his nose firmly beneath your cock, into [if CockName of Player is listed in infections of InternalCockList]the pungent gape of your genital slityour sweat-glazed scrotum[else]your sweat-glazed scrotum[end if], inhaling your scent and receiving several streaks of your pre through his fur. A sudden rush of hot air against your shaft is rapidly followed by wetness as your son licks from [if CockName of Player is listed in infections of InternalCockList]the base [else]your balls [end if]all the way to the tip of your cock, collecting the generous helping of precum that oozes in response to his tender ministrations. He repeats this a few more times, varying the speed, as well as how he curls his tongue around the sides, treating you like his alpha.";
 				WaitLineBreak;
 				say "     Though he is pleasuring you effectively, you begin to feel that he should be receiving something out of this too, it being your first time together after all. You only have to consider this for a moment before a flash of crimson catches your eye. Umbra may be the one licking and sucking you, but his cock seems to have responded as if he's the one being orally worshiped, thick streams of pre splattering onto the floor from his turgid wolfhood. It would seem that your son derives immense pleasure from pleasing you. An idea forming in your mind, you [if player is Dominant]order [else]request [end if]Umbra to lie on his back, your shaft pulsing when he obeys with pause, his front paws curled over his chest and his tongue lolling out of the side of his mouth as he looks up at you with adoring puppy-like eyes, any image of innocence ruined by his splayed hind legs and bouncing wolf cock. Who could resist? Intent on sixty-nining with him, you tentatively allow him to take your weight, soon coming to the realization that he seems to be able to support you without discomfort. If anything, the display of power over him only excites him further.";
 				say "     Without further ado, you wait for your son to take you in his mouth again before grasping the base of his cock and reciprocating, swirling your tongue as you suck the tip of his . With one hand, you begin to caress his balls, fondling and lightly tugging at them, causing one of the wolf's hind legs to kick reflexively at the sensations that you send coursing through his body. Meanwhile, aware that you'll want you shaft nice and slick for what is to come, you begin to lightly thrust into his mouth, reveling in the way his [if Cock Length of Player < 8]tongue plays across your sensitive flesh[else]throat rhythmically clamps around your length[end if]. It is impossible for you to keep track of how many minutes pass by with how focused you become on him. The feel of your son's mouth around your cock and the churn of his balls beneath your palm as you grasp their fuzzy pouch; The sight of his tailhole clenching each time you take more of his shaft between your lips; The taste of his precum promising of his virility; And the strained whines mixing with wet sucking as Umbra struggles against his growing arousal, only made worse by the pleasure he takes in pleasing you.";
@@ -1368,9 +1422,9 @@ to say ResolveEvent Umbra & Player First Mating: [Umbra has sex with player] [Ev
 			say "     You are just beginning to doze off when you feel something shift and have a split-second to turn your head to watch as Umbra's shaft is suddenly unable to remain locked within you any longer. As his penis slips from your cunt, the crimson flesh glistening with pearlescent liquid, a healthy gush of semen follows behind, the pressure in your tummy abating little by little as your son's essence leaks from your gaping hole. You're not sure whether you are surprised or not when Umbra leans in and begins to lick his load from your pussy, his warm tongue against your sensitive flesh making you quiver, but also strangely comforting. Once no more cum dribbles out, he moves his attention to cleaning his cock, tasting a mixture of his own seed and your juices. A quick glance at Fang and Lux suggests that they have enjoyed their front-row seats of watching you be bred, [if Fang is Male]Fang sporting an erection while his daughter struggles to surreptitiously grind her spade against the floor[else]both struggling to surreptitiously grind their spades against the floor[end if].";
 			WaitLineBreak;
 			say "     The sound of Umbra's voice draws your attention back to him. 'Thank you. This bond that we share is most precious to me,' he says, licking his lips to swallow the last of the cum smeared there. 'But don't think that this means you can't love other people too. Just as long as you always love me, I shall do the same. Forever.' Your son snuggles up against you and rests his head on your shoulder. 'I know that you have places to be. But stay with us a moment. Know that your family loves you.' With a smile, you agree, your happiness only growing when Fang and Lux join the pile, lending their warmth, both literally and figuratively. Who would have thought that such affection could come so close on the heels of passionate coupling? As you relax into the fluff, you wonder who else may have witnessed you being vigorously bred by Umbra...";
-			NPCSexAftermath Umbra receives "OralPussy" from Player;
-			NPCSexAftermath Player receives "OralCock" from Umbra;
-			NPCSexAftermath Player receives "PussyFuck" from Umbra;
+		NPCSexAftermath Umbra receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralCock" from Umbra;
+		NPCSexAftermath Player receives "PussyFuck" from Umbra;
 	if HP of Umbra < 5:
 		now HP of Umbra is 5;
 		now hunger of Umbra is 3;

@@ -158,11 +158,13 @@ to say ResolveEvent Kitty Adventures:
 				move Player to Haunted House Entrance;
 				AddNavPoint Haunted House Entrance;
 				say "[SaschaMansionReady]";
+				now Kitty Adventures is Resolved;
 			-- "Sure, but you've kinda got plans for right now. Later would be better...":
 				LineBreak;
 				say "     Sascha is momentarily saddened that you can't just set out immediately, but his smile is back a moment later, 'Okay then, but don't let me wait too long, or I might be tempted to go in on my own!' He then gives you detailed instructions of how to get to the mansion, before giving his goodbyes and walking up to the wall of a nearby building, climbing up a rain-gutter drainage pipe in short notice. After watching him reach the roof, giving you a friendly wave before climbing onto it, you turn your attention back to your own survival in the city.";
 				AddNavPoint Haunted House Entrance;
 				now Sascha is in Haunted House Entrance;
+				now Kitty Adventures is Resolved;
 			-- "That doesn't quite match your idea of fun. You'll skip out on this adventure.":
 				LineBreak;
 				say "     You state that you don't like the idea of exploring such a creepy-looking place with Sascha. It's not your idea of fun to explore old, decrepit areas that could collapse on your head at any time. You try not to be too pushy about your opinion, but by the time you've finished speaking, Sascha's expression has changed from its usual mischievous smile. Instead, he wears something you can only describe as hurt. 'So you were just pretending to enjoy the same things I do to get in my pants, huh?' He says with a sigh. 'I'm used to that sort of thing. Every guy on a dating site saying he's 'into hiking,' everyone making plans then ditching me at the last moment for something else.' Wiping his eyes, he shakes his head, then turns toward the mansion's entrance and shrugs. 'It's fine. If you just wanted to fuck me, you should have said so. I would have [if player is male]sat on your dick [else if player is female]fucked you [end if]without all the lies. See you later, I guess.' As you watch Sascha's tail disappear through the doorway, the thought occurs to you that you should go after him. Still, though, the hollow tone he had tells you that you shouldn't. Maybe if you give him time to cool down, he'll return to you. Of course, with the city's condition, it's more likely that you could [bold type]never see him [roman type]again."; [Sad Sascha :(]
@@ -210,7 +212,7 @@ to say SaschaOutsideTalk_Menu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You step back from the warrior, deciding on a different course of action.";
+			say "     You step back from the catboy, deciding on a different course of action.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -229,7 +231,7 @@ to say Mansion_Backstory:
 
 Section 4 - Haunted House Events - Inside
 
-instead of going south from Haunted House Foyer while ("Exploration in Progress" is listed in Traits of Sascha):
+instead of going south from Haunted House Foyer while ("Exploration In Progress" is listed in Traits of Sascha):
 	say "     You can't leave Sascha alone in the basement! Go find him and you can leave together!";
 
 Table of WalkinEvents (continued)
@@ -269,6 +271,7 @@ Sarea of Dark Descent is "Nowhere".
 
 to say ResolveEvent Dark Descent:
 	say "     There's no sign of Sascha as you follow his path to a yawning doorway and down a dark, gloomy staircase. You contemplate calling his name, but an intense feeling of being watched makes you wonder if that's such a good idea. Even the walls feel like they're staring at you, looming out of the darkness at your side. Rather than the cozy, expensive vibe of the mansion's first floor, the basement has more of a dungeon feel, with a long, poorly lit hallway stretching in three directions. One is covered with a barred door, while the other two seem open. Perhaps you should explore both sides? Sascha could have gotten lost in the dark!";
+	move Sascha to Dungeon Dead End;
 	now Dark Descent is resolved;
 
 Table of WalkinEvents (continued)
@@ -327,6 +330,8 @@ to say HornyHaunters:
 		-- "Douse the candle and free Sascha!":
 			LineBreak;
 			say "     Returning to the moaning kitty, you step over him, ignoring his erotic gyrations and retrieving the bottle of sacramental wine from your bag. Popping the cork, you douse the otherworldly flame with it, cringing back at the distinctly unpleasant sulfur smell that emanates from the sizzling candlewick. The results are instantaneous- Sascha crumples to the ground, twitching as you release him from arcane bondage. 'Aw.' Sascha pants as you kneel to ask him if he's alright, turning his head and interrupting you before you can voice your concern. He licks his lips and grins, pushing himself up to his knees, and you can see his spare paw playing with his clit as he leans back against the wall, eyes half closed. 'You could have waited a while. That felt so good. I've never let anyone edge me that long before.'";
+			TraitGain "Sascha Freed" for Sascha;
+			move Sascha to Nowhere;
 			say "     After he works his needy sex over the edge in an exhibitionist finish blatantly aimed at teasing you, Sascha stands, leaving his torn clothes where the otherworldly orgy threw them and stretching with a yawn. 'Did you find the key to that door?' He asks, unaffected by his short-term imprisonment and even sounding refreshed. He rolls his eyes at your dumbfounded expression when you answer him and steps closer, hooking his arms around your shoulders. 'I'm fine, [SaschaPAddress]! Let's see what's going on! We still haven't found the source of that weird noise.' Realizing it's futile to argue with the nude cat, you sigh and nod, following his shapely butt as he parades back the way you came, holding one of your hands in one still-wet paw. Sometimes you wonder if you should be involved with someone with such an awful sense of self-preservation. Oh well, at least he's cute!";
 		-- "Step back from the scene, for now.":
 			LineBreak;
@@ -381,7 +386,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 1	"Edge of Eternity"	Edge of Eternity	"[EventConditions_Edge of Eternity]"	Barred Hallway	2500	2	100
 
 to say EventConditions_Edge of Eternity:
-	if "Rusty Key" is listed in Traits of Sascha:
+	if "Sascha Freed" is listed in Traits of Sascha and "Rusty Key" is listed in Traits of Sascha:
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)
@@ -406,10 +411,14 @@ to say ResolveEvent Edge of Eternity:
 			say "[FreeOzeg]";
 		-- "Free him.":
 			say "[FreeOzeg]";
+	now Edge of Eternity is Resolved;
+	TraitLoss "Rusty Key" for Sascha;
+	TraitLoss "Sacramental Wine" for Sascha;
+
 
 to say FreeOzeg:
 	say "     Walking around the pentagram, you put out each candle, watching the ghostly appendages disappear in groups, uncovering more of the panting creature's body until he's left in the center of the gloomy room. Suddenly unseen torches flare on nearby walls, and his eyes shoot open, focusing on Sascha with slitted golden pupils. In a flash, before you can react, he's lumbered to his feet, throwing himself on top of Sascha with a strange, bellowing sound. Quickly, you ready your equipment, steeling yourself for a fight to save your kitty friend, but your fears are unfounded as a croaking voice rings out, vibrating through the scaly, shivering hunk of masculinity. 'Master.' The newly freed demon says with wonder in his eyes, leaning over Sascha and dwarfing him under sweating musculature. He pants, and an expression that you'd expect to see on a loyal dog's face paints his reptilian features as he enfolds Sascha in a massive bearhug, his draconic cheeks rubbing against Sascha's naked chest. 'Master. I promise I will do whatever you like. Please don't put me back in there. I can't withstand another moment.' He pants, his eyes wild and half-crazed. 'I'll grant your wishes- I'll do anything.' The poor thing looks like he's about to cry as he frantically begs Sascha, and you look from his shivering, massive form, to Sascha's face, hoping he'll know what to do in this crazy situation. 'Can we keep him?' Sascha quips as he cradles the over-affectionate demon's face, a facetious grin on his face in response to your perplexed expression. You're struck with the sudden urge to leave before things get more silly than they already have, but it would probably be best not to leave the two alone... Sascha might take advantage of the demon.";
-	TraitLoss "Exploration in Progress" for Sascha;
+	TraitLoss "Exploration In Progress" for Sascha;
 	TraitLoss "Sacramental Wine" for Sascha;
 	move Ozeg to Haunted House Foyer;
 	move Sascha to Haunted House Foyer;
@@ -437,8 +446,27 @@ to say OzegRelief:
 		say "      Squirming like a schoolgirl with her first crush, the demonic dragon mumbles into his hand, his voice wavering. 'Torture didn't work, so he tried other methods. When his health declined, he left me to rot, and added more vigor to my punishment. Every second was so...' trailing off, Ozeg goes silent, his thighs rubbing together against his beercan cock in a way that doesn't tell you if he enjoyed what the house's owner did to him but makes quite a mess, further soiling the carpet below his bare ass with sticky goo. Nothing the dragon says seems to be a lie, and with his size, he doesn't have to play coy. He could hold Sascha hostage and get whatever he wanted from you. If he's willing to play nice, you suppose it wouldn't be a bad idea to keep him around. 'You can go ahead, [SaschaPAddress]. I think I'll give this big guy a night to remember.' Sascha says before you can ask him to leave the place with you. He's already throwing a leg over the unresisting dragon's shoulder and turning his head toward the cat's already well-fucked cunt. You can guess where this is going, so give them time to get acquainted, returning to the house's entrance and closing the door behind you.";
 		say "     [bold type]Sascha may find you if he needs you, or he might stay here.[roman type] Either way, you know the cat well enough that you don't worry about his safety.";
 		now Energy of Ozeg is turns;
+		TraitLoss "Sascha Freed" for Sascha;
+
 
 instead of going north from Haunted House Entrance while (Energy of Ozeg - turns < 10):
 	say "     You think of going inside the haunted house, but remembering the cummy mess that a demon that was pent up for decades made of the place, you decide to leave Sascha and his new buddy to clean things up a while longer. Maybe a day or two...";
+
+[Code to test the mansion more easily]
+SaschaMansionTest is an action applying to nothing.
+
+understand "ZMansionSkip" as SaschaMansionTest.
+
+check SaschaMansionTest:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out SaschaMansionTest:
+	say "     <You've now met Sascha, fucked his pussy, and met him again to do the same. This will allow you to access the mansion content more easily! Thank you in advance if you're seeing this because you're helping me test! You should be free to search for Kitty Adventures now.>";
+	now Resolution of Wild Kitty is 5;
+	now Wild Kitty is Resolved;
+	now Resolution of Rough But Sweet is 2;
+	now Rough But Sweet is Resolved;
 
 Haunted Mansion ends here.
