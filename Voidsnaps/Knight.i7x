@@ -236,6 +236,8 @@ to say knightwins_anal:
 	CreatureSexAftermath "Player" receives "OralCock" from "Knight";
 
 to say beattheknight:
+	if inasituation is true:
+		stop the action; [text taken care of at the source]
 	project Figure of Knight_clothed_icon;
 	say "     You are victorious over the knight, forcing him to yield. ";
 	if kpstatus is 1: [Player Knight]
