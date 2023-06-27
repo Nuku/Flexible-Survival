@@ -49,7 +49,7 @@ This is the sex change rule:
 	if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player < Ball Size entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
 		[Grows existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 4:
 			now Ball Size of Player is 4;
 		if prevcock < Ball Size of Player:		[did balls actually grow?]
@@ -58,7 +58,7 @@ This is the sex change rule:
 	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
 		[Shrinks existing balls, unless "Female Preferred" is selected]
 		let prevcock be Ball Size of Player;
-		decrease Ball Size of Player by 1;
+		BallsShrink Player by 1;
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 3:
@@ -95,7 +95,7 @@ This is the sex change rule:
 		let prevcock2 be Ball Size of Player;
 		decrease Cock Length of Player by 1;
 		decrease Cock Length of Player by Cock Length of Player divided by 3;
-		decrease Ball Size of Player by 1;
+		BallsShrink Player by 1;
 		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			if Cock Length of Player < 5, now Cock Length of Player is 5;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
@@ -236,11 +236,11 @@ to grow cock by (x - a number):
 to grow balls by (x - a number):
 	if "Female Preferred" is listed in feats of Player or Cock Count of Player is 0:
 		continue the action;
-	let prevcock be Ball Size of Player;
-	increase Ball Size of Player by a random number from 1 to x;
+	let prevballs be Ball Size of Player;
+	BallsGrow Player by x;
 	if "Modest Organs" is listed in feats of Player and Ball Size of Player > 5:
 		now Ball Size of Player is 5;
-	if prevcock < Ball Size of Player:		[did balls actually grow?]
+	if prevballs < Ball Size of Player:		[did balls actually grow?]
 		follow the cock descr rule;
 		say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [Ball Size Adjective of Player] balls!";
 
