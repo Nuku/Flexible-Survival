@@ -805,6 +805,7 @@ Include Desperate Bunny by Nuku Valente.
 Include Diana by Wahn.
 Include Diavoborg by Gherod.
 Include Diego by Wahn.
+Include Doctor Mouse by Voidsnaps.
 Include Dominick by Stripes.
 Include Doran by Blue Bishop.
 Include Drelgoth by Gherod.
