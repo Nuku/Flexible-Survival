@@ -172,7 +172,7 @@ to say Luxdesc:
 		say "     Lux looks like a small ball of pale-gray fur, not being particularly mobile. She is most often next to her [if Fang is Male]father[else]mother[end if], Fang, who is making sure that [PosPro of Fang] newborn daughter is safe even while protecting the library. Occasionally, you may see her open her eyes, the irises a dark-gray as they absorb her surroundings. Her rare cries for attention bring a smile to your face.";
 	else if HP of Lux is 2: [ Child ]
 		say "     Lux has grown since you last saw her, now about the size of a shetland sheepdog and her lush fur a pale-gray. She is surprisingly fearless for her size, rushing around after her brother, Umbra, as he explores the library more thoroughly, though Fang prevents them from leaving the building. She meets your gaze, and you can see an intelligence in her dark-gray eyes. You have seen her practice a few unstable steps on her hind legs, though she doesn't keep her balance for very long. Her vocalizations sound like attempts at words, though not recognizable to you unfortunately.";
-	else if HP of Lux is3: [ Teen ]
+	else if HP of Lux is 3: [ Teen ]
 		say "     Lux is now slightly larger than a border collie, her pale-gray fur helping her blend in among the shadows between the bookshelves. Fang seems to think her and her brother are old enough to explore the area just outside of the library, simultaneously keeping an eye on [PosPro of Fang] pups while standing vigil. She looks at you curiously with her dark-gray eyes as you inspect her, tilting her head in an adorable fashion. You have seen her walking on her hind legs when she doesn't think many people are watching, perhaps shy about her attempts. Her ability to talk is limited to single words at a time, easily recognizable if a bit simple.";
 	else if HP of Lux > 3: [ Young Adult ]
 		if Lux is in Grey Abbey Library:
@@ -206,8 +206,8 @@ Instead of conversing the Lux:
 		say "     You express a desire to talk to her, and she eagerly sits in front of you. '[if Player is female]Mother[else]Father[end if],' she barks, pleased to show off her developing language skills. You tell her about the wider city, watching as her eyes widen as she imagines all of the creatures and occurrences that you tell her about. Having told her enough stories for now, you turn to leave, the young wolf still contemplating your tales.";
 	else if HP of Lux > 3: [ Young Adult ]
 		say "     You approach your daughter, who stops grooming herself to focus her attention on you. 'Hello [if Player is female]Mother[else]Father[end if], did you have something in particular that you wanted to discuss with me?' she queries, her tail wagging wildly.";
-			WaitLineBreak;
-			say "[LuxTalkMenu]";
+	WaitLineBreak;
+	say "[LuxTalkMenu]";
 
 to say LuxTalkMenu:
 	say "[line break]";
