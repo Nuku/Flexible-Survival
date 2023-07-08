@@ -789,7 +789,7 @@ to say hospquestpt6:
 	if carried of Tiger patch >= 3:
 		ItemLoss Tiger patch by 3;
 		say "     Good work! I shall set to work on these right away. And while I work on that, I do have another project for you. I have a pair of situations where my orderlies have upset the locals too much to complete their task and I need someone independent of the hospital to go in and complete the job.";
-		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several Smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
+		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out. There is a jackal shopkeeper who has set herself up in the mall. She has a package for me. The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
 		now nerminepackage is 1;
 		now Dinosaur Nest is active;
@@ -806,7 +806,7 @@ to say hospquestpt7:
 			now triclamped is 1;
 	if sabtoothed is 0:
 		if Chipped tooth is not owned:
-			say "     There appear to be several of these Smilodons in the museum. Take care, Smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
+			say "     There appear to be several of these smilodons in the museum. Take care, smilodons, popularly known as sabretooth tigers, were the apex predators in their time and are larger than any current feline. Any creatures based on them with nanite enhancement would be... quite powerful.";
 		if Chipped tooth is owned:
 			ItemLoss Chipped tooth by 1;
 			say "     The mouse looks at the large fang with a mix of awe and delight. He takes it carefully from you and places on a sample tray. Another successful mission completed.";
@@ -1229,44 +1229,6 @@ to say drmousesex:
 		say "     The mouse's large paws fondling your breasts brings you back to focusing on him. His gloved paws tease your nipples and he laughs happily, aroused with his power over you. His monstrous cock is quite stimulating and you can feel your excitement growing as his heavy balls slap against your thighs with each thrust the mutated mouse makes. That spaded tip presses at your cervix, trying to spread it open while the ridges along his shaft feel so delightful against your vaginal walls.";
 		say "     'Mmm... I am almost tempted to keep you as a little fucktoy. I'd breed you full of cute little mice over and over again. I bet you'd like that, you slut,' he teases, tweaking your nipples. 'But I can't afford any distractions right now. I'll just have to stuff you full of hot mouse cum and dump you like the trash you are.' And with that, he slams hard into you, unleashing a torrent of thick mouse cum from his oversized balls. His spaded glans, pressed against your cervix, forces it to spread open, allowing the bulk of his mutated load to flow up into your womb in an attempt to breed you.[impregchance][impregchance]";
 	say "     Panting, the mad doctor withdraws his spent shaft and hops down with a grin. He raises his arms to the crowd, who manage some dignified clapping despite the major orgy that's broken out across most of the audience section.";
-
-
-to say hospvictory:
-	say "     The monstrous Dr. Mouse has been dazed by your final blow and has collapsed against a worktable at the far end of the room. He's overturned the nearby water dish and broken the chemical toilet. As the pair of mismatched chimera poke their heads around behind it, having hidden during the fight, you realize just where he's landed.";
-	say "     They scramble over to him, moaning softly with sexual need. Their hard cocks and dripping pussies leak their fluids onto him. One presses its breast to his lips and the addled doctor soon nurses from it, making the chimera coo happily. The other grabs the doctor's cock and sinks itself down onto it, spurting cum onto his chest as it does.";
-	WaitLineBreak;
-	if HP of Doctor Matt is 100:
-		say "     Feeling that the doctor is in good hands, you quickly look around the room, gathering any notes and samples you can find from the doctor's work area into one big pile. Worried that someone may notice the commotion and come up to investigate, you don't take any time to look at the stuff. You toss the contents from the doctor's storage case onto the heap. After tearing open his notebook and breaking his laptop, you add them to it.";
-		say "     Reluctant to set a fire that could spread and take out the whole hospital, you instead pour a variety of chemicals onto the accumulated research. Thankfully there are several strong acids used for testing which do an effective job of destroying the material. Having seen what this twisted work has created, you don't want to leave someone else finding it and restarting it, nor do you know anyone you could trust with it. That done, you turn back to check in on the mad doctor and his mismatched lovers.";
-	else:
-		say "     Feeling that the doctor is in good hands, you quickly look around the room, grabbing what notes and samples you can from the doctor's work area. Worried that someone may notice the commotion and come up to investigate, you rush to find as much as you can carry. You take several interesting vials and concoctions from the storage case, carefully stowing them in some padding. The doctor's laptop and research notebook go in there as well.";
-		say "     Having gathered what you could and breaking or spilling chemicals onto the other stuff to keep anyone from following Dr. Mouse's research, you turn back to see take another look at the mad doctor and his mismatched lovers.";
-	WaitLineBreak;
-	say "     The chimeras have continued to feed and fuck him, resulting in a seemingly random array of changes to his body starting to arise. His head has lost its mouse-like qualities entirely and becomes leonine. While his right arm becomes that of some kind of lizard, his left one bifurcates into a pair of smaller limbs, one an avian wing and the other a monkey's arm. One leg gains a horse's hoof while the other has a goat's. His tail becomes long and serpentine, covered in red scales.";
-	say "     When breasts start to form on what was once the mouse's chest, the chimera riding him pulls off his cock, which is now wholly canine in form, and drives its cock into the new pussy under his balls. That is enough to stir Dr. Mouse to wakefulness, but what little intelligence there is in those eyes is fading rapidly as the infection takes over fully. The new herm moans lustfully and wraps her mismatched legs around the chimera's waist, yowling with mindless need.";
-	say "     The second hybrid pulls its breast from their captive's muzzle and replaces it with its cock instead. The ex-mouse takes it into its mouth eagerly, licking and sucking with need. As the new hybrid continues to be mated by the fractured creatures of its own creation, there is nothing but lust in those vacant eyes as she succumbs fully.";
-	WaitLineBreak;
-	say "     Satisfied that the mouse is no longer a threat, you step over to the worktable and break off the anchor points for the chains. The trio, too engrossed in sex, don't react more than looking up at you and mewling enticingly for you to join them. Now freed, you are satisfied that the two unfortunate creatures will not be trapped to starve, and that they and their new companion can instead join the others like them in the hospital, where the doctor will never be heard from again.";
-	say "     Your task done, you decide to linger no longer and quickly go down the stairs. Acting as if nothing is amiss, you walk past the jaguar guarding the stairwell and exit the hospital.";
-	WaitLineBreak;
-	now the player is in City Hospital;
-	if hospquest is 10:		[Refused upon offer]
-		say "     Outside, you find the pink raccoon waiting for you fretfully on the steps. Seeing you come out alive and well, he dashes into your arms and hugs you tightly. Not wanting to cause a scene, you whisper to him to be quiet and come with you. He takes your hand in his, prancing happily beside you.";
-		if pink raccoon is tamed:
-			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital. The pink coon cuddles up to you, vacant eyes looking up at you with admiration, somehow knowing that you've dealt with the mouse that filled him with such fear. You pet his ears and he churrs softly[if HP of Doctor Matt is not 100]. You know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-		else:
-			say "     You go down a side street with him and duck into a vacant building to collect your thoughts safely away from the hospital. The pink coon cuddles up to you, thanking you again for helping to get him out of there. While he doesn't say anything about it, he looks at you with considerable admiration, somehow knowing that you've dealt with the mouse that filled him with such fear. As he starts to fret about where he can now go, you decide, on impulse to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	else:
-		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly. You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later. As you walk off down a side street, you [if HP of Doctor Matt is not 100]know that you need to go see Dr. Matt right away, wanting to turn over the research material to him before doing anything else[else]wonder what to do next now that you are without scientific help[end if].";
-	wait for any key;
-	now HP of Doctor Mouse is 2;
-	now Locked stairwell is locked;
-	now hospquest is 13;
-	if mattcollection is 0: [player did not finish bringing Dr. Matt all the samples before kicking off the fight with Dr. Mouse]
-		now mattcollection is 2; [incomplete sample handin, no further samples available]
-	increase the score by 50;
-	if HP of Doctor Matt is not 100:
-		now player is in Primary Lab;
 
 to say tlabsbigfight:
 	say "     You silently step up behind Dr. Matt and stab the needle into him. He cries out for Orthas and jabs a finger into an emergency button, sounding an alarm as well. Trying to free himself from your grip, he struggles to reach the anti-infection microwave device he has on his desk. As you fight to hold him, his now useless environment suit starts to come off.";
