@@ -500,6 +500,10 @@ to say SegisDesc:
 	if dragon android is listed in companionList of Player:
 		say "     [bold type]He is currently following you as your battle companion.[roman type][line break]";
 
+[IMPORTANT NOTES]
+[Use Cock Length of Segis for Cock size; 9-12-16]
+[Strength of Segis for body type, 0- default, 1- muscular]
+
 Section 2-1 - Segis TALK
 
 SegisDoneTalking is a truth state that varies.[@Tag:NotSaved]
@@ -743,6 +747,16 @@ to say SegisSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Drop to your knees and provide him with some of your oral expertise";
 	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Ask him to fuck you";
+	now sortorder entry is 2;
+	now description entry is "Suggest that you bend over and have him take you";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Masturbate eachother";
+	now sortorder entry is 3;
+	now description entry is "Use your hands to please the android and have him do the same to you";
+	[]
 	if "Lactating" is listed in traits of Segis:
 		choose a blank row in table of fucking options;
 		now title entry is "Drink some milk from his lactating chest";
@@ -766,6 +780,10 @@ to say SegisSexMenu:
 				now sextablerun is 1;
 				if (nam is "Give your dragon android a blowjob"):
 					say "[SegisSexBlowjob]";
+				else if (nam is "Ask him to fuck you"):
+					say "[SegisSexFuck]";
+				else if (nam is "Masturbate eachother"):
+					say "[SegisSexMasturbate]";
 				else if (nam is "Drink some milk from his lactating chest"):
 					say "[SegisSexMilk]";
 				wait for any key;
@@ -792,6 +810,45 @@ to say SegisSexBlowjob:
 	WaitLineBreak;
 	say "     That pretty much sounds like what an orgasm feels like, sort of, so you appease him and tell him he did great. 'Thank you, [sir]! I'm happy to see I've satisfied your urges! I believe my system will recharge in only a few minutes, and I must only replace my reserves so all of these functions can work as flawlessly as they just did! But I shall take care of that on my own. This was an enlightening experience! As it always is with you, [sir].' Politely, he bows, and you praise him for a job well done before you decide to clean yourself up from any android cum - you figured you could call it that - remains and ready yourself to get on with whatever you were going to do after this.";
 	NPCSexAftermath Player receives "OralCock" from Segis;
+
+to say SegisSexFuck:
+	if "Fucked The Player" is not listed in traits of Segis:
+		say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'It would be my pleasure to breed you, [sir]! I have several recollections of data on that subject, though I am afraid I cannot impregnate you due to my artificial nature. Is this a detriment to our interaction?' To be fair, that usually is not in one's mind when they propose for recreational sex, but since Segis brought up that question, you wonder the possibilities and inquire him on that. 'Androids cannot impregnate others by default, and the semen I fabricate is a mere simulation of the real deal.'";
+		say "     You then ask him if there would be a way for him to impregnate someone, just out of curiosity. 'There are certainly ways, but you would not have an android baby. That would be illogical, even, since you probably know how androids are made. Not through intercourse,' he replies, and you continue by asking how. 'If you didn't already know, you can modify the flavor of my semen. By default, however, I get rid of any unnecessary components, also for safety, since we can be dealing with infectious substances. I would merely have to disable this step and I could potentially impregnate you with the same sampled species['] seed that you provided me to change the flavor. This would, however, render my cum infectious, so it is as your own risk.'";
+		WaitLineBreak;
+		say "     Well, perhaps you can speak about this later, as for now, you are really interested in something else. Segis seems as eager as ever to provide you a great deal of pleasure, which is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
+		TraitGain "Fucked The Player" for Segis;
+	else:
+		say "     As you consider your options, you take hold of the robotic draconic penis in Segis['] crotch and give it a nice squeeze, then tell him about your intentions. He seems quite interested in your proposal, and the way his artificial cock throbs is the confirmation you would need to assume such. 'It would be my pleasure to breed you, [sir]!' The android's seeming eagerness is all you need to kickstart your gears as you wonder how this powerful robot is going to take you...";
+	WaitLineBreak;
+	say "     But first, you keep hold of his [if Cock Length of Segis is 16]big and thick[else if Cock Length of Segis is 12]large[else]good-sized[end if] black shaft while giving it a couple of steady strokes, gently yet firmly, as you ensure your android is fully hard and ready for the task at hand. You know he enjoys this due to his configurations, and so, you really do not mind providing him with pleasure until that rod of his feels lubricated enough, which is possible thanks to the constant leaking of precum-like liquid oozing out from his tip. After a good while, it starts to feel much more slippery, giving you enough confidence that it can easily slide into you.";
+	say "     'I should be ready, [sir]. Perhaps you would like for me to initiate?' You nod, giving Segis permission to take the lead in this, and the android eagerly follows, gently placing his hands over your hips to push you to turn around. You, of course, let him, giving the android a good view of your rear side as you bend over in front of him,";
+	if player is not naked:
+		say " allowing him to begin removing your clothes and gear that obstruct access to your [if player is female]sex[else]ass[end if]";
+	else:
+		say " which is already bare and exposed for his examination";
+	say ". Then, he begins to caress your [if player is female]parts[else]glutes[end if], sliding one hand between your thighs and making it follow upwards until, eventually, one of his fingers come in contact with your [if player is female]folds[else]pucker[end if]. His touch is gentle, but also firm and surprisingly skillful, knowing exactly what to do in order to tease and relax you.";
+	WaitLineBreak;
+	say "     'I hope this is to your liking,' he asks in his usual almost formal way, and you let him know he is doing just fine. How could you not, with that robotic finger sliding inside you so smoothly, its girth pressing against your [if player is female]vagina[else]ass[end if] from within, opening it up just a little, and enough to make you yearn for more. Glancing over your shoulder, you see Segis focused on working your [if player is female]wet folds[else]hole[end if], and once he realizes you are looking back at him, his cerulean eyes flash in your direction as he puts his whole body forward, his [if Cock Length of Segis is 16]heavy and throbbing[else if Cock Length of Segis is 12]big[else]pulsating[end if] cock now pressing against your entrance. Despite being artificial, it feels warm, just like the real deal, and it is in details like these that you just know Segis is very well informed on what he is doing.";
+	say "     All the android needs to do is to push it in, only slightly, to cause a surge of bliss to run over your body, as that lubricated shaft enters you, pushing against your [if player is female]vaginal walls[else]anal walls[end if] so nicely and smoothly, all due preparation finally bearing its fruit. With his hands taking hold of your hips, the draconic android thrusts into you, slowly at first, making sure you feel every inch of his cock in you in due time, a feeling that causes yearn in your southern regions to a point it urges you to let out a moan. Verbal appreciation like this is a confirmation that Segis is doing well in pleasuring you, and so, he continues, adjusting his position so that he can go deeper and faster in you as he starts to pick up the pace.";
+	WaitLineBreak;
+	say "     Once you start getting used to him, Segis puts more of his weight on top of you, that powerful android body of his now pinning you down as he really goes at it, fucking you in the [if player is female]pussy[else]ass[end if] with so much vigor and intensity one would think he used to do this since his time of creation. He then gets his arms and hands around your neck and chest, [if breast size of player > 0]fondling your hanging breasts gently[else]rubbing your pectorals[end if] and caressing your nipples, a pleasant sensation resulting in a surge of bliss all over your body, which combined with the continuous thrusting into your [if player is female]g-spot[else]prostate[end if], so masterfully well-done, steadily drives you towards the edge.";
+	if player is male: [has cock]
+		say "    Not wanting to leave you unsatisfied on the front, however, Segis later slides a hand over your crotch, his fingers slowly tracing down your waist as he progressively slows down, to keep you in a comfortable rhythm, until his knuckles bump into your hard [cock of player] cock. 'I'm keen on offering you a full service, [sir]. After all, I'm here to please you,' he says as he wraps his fingers around your shaft, and as he begins to stroke it, so does his thrusting once more, resuming its previous pacing as his hand goes back and forth on your dick, another still caressing your [if player is female]tits[else]chest[end if], and your lust becomes so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
+	else: [has no cock]
+		say "     Not wanting to leave you unsatisfied on the front, however, Segis lifts you up against him, almost carrying you as he keeps on fucking you, getting you on your knees in front of him as your legs bend backwards around his. You feel each thrust even deeper than before in this position, but the way your weight is distributed allows the android to safely take hold of your [if player is female]tits[else]chest[end if] and go wild with caresses. His face rubs against yours from the backside, and all the combined sensations, with his throbbing warm rod inside your [if player is female]pussy[else]ass[end if], your lust starts to become so overbearing that you can only moan under his affection, feeling yourself giving into the impending climax, which draws nearer and nearer...";
+	WaitLineBreak;
+	say "     'I'm ready to fill you up, [sir]... But I shall wait for you,' he informs, and you can tell his focus is entirely put in making you hit your orgasm. The way his hands move, the way he swings his hips around while inside you, cock rubbing against your [if player is female]vaginal walls, then ramming into your sensitive spots[else]fleshy tunnel, then ramming into your prostate[end if]... All these sensations combined really are enough to do it for you. He keeps going at it for a few more seconds, feeling your climax rising, and without stopping, he makes you cross the point of no return. Your body squirms and quivers with the intensity of the pleasure you are feeling as you [if player is male]shoot your cum forward, each spurt flying forward with surprising force, and [end if]moan loudly.";
+	say "     'It seems to be time...' The android takes this as the right time for him to also release his load, and with only a couple of informative words, his cock perfectly simulates an ejaculation that, with each throb, shoots a considerable amount of semen-like liquid inside you. He holds you still until you take it to the end, too, all while your orgasm persists. Segis is adamant on keeping pumping more of that stuff into you for as long as you continue moaning and squirming in his embrace, only loosening up once it begins to wane down...";
+	WaitLineBreak;
+	say "     He lets you rest in his mechanical arms as you catch your breath, with his cock still inside you, still throbbing, almost throwing you into a daze. 'I hope you've enjoyed this as much as I did, [sir]. I'm always down to offer you pleasure if my batteries allow!' On that note, he lets go off you once you are ready, and thank him for the service provided, feeling pleased and relaxed after such a good time with your android.";
+	if player is female:
+		NPCSexAftermath Player receives "PussyFuck" from Segis;
+	else:
+		NPCSexAftermath Player receives "AssFuck" from Segis;
+
+to say SegisSexMasturbate:
+	say "     ";
 
 to say SegisSexMilk:
 	if "Extra Milky" is listed in traits of Segis:
@@ -892,6 +949,10 @@ an everyturn rule:
 a postimport rule:
 	if "Has Cock Upgrade" is listed in traits of Segis and Cock Length of Segis < 9:
 		now Cock Length of Segis is 9;
+	if "Muscular Body Type" is listed in traits of Segis:
+		now Strength of Segis is 1;
+	else: [update this for more body types or they'll be overwritten on import]
+		now Strength of Segis is 0; [default body type]
 
 [SEGIS TRAITS ASSOCIATED WITH UPGRADES
 
@@ -1818,6 +1879,7 @@ to say SegisCosmeticBodyTypeM:
 		TraitGain "Personality Himbo" for Segis;
 		increase weapon damage of dragon android by 2;
 		decrease dexterity of dragon android by 1;
+		now Strength of Segis is 1; [muscular body type, 0 for default]
 		wait for any key;
 
 [to say SegisCosmeticBodyTypeL:
