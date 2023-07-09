@@ -51,6 +51,10 @@ to say VixenHermNurseGetAnal:
 to say LoseToVixenNurse:
 	choose row MonsterID from the Table of Random Critters;
 	if vixgender is 0:
+		project Figure of VixenNurse_fem_clothed_icon;
+	else:
+		project Figure of VixenNurse_herm_clothed_icon;	
+	if vixgender is 0:
 		if Player is herm:
 			if a random chance of 1 in 2 succeeds:
 				say "[VixenFemNurseMaleScene]";
@@ -99,6 +103,10 @@ to say LoseToVixenNurse:
 	now lev entry is 4;
 
 to say BeatTheVixenNurse:
+	if vixgender is 0:
+		project Figure of VixenNurse_fem_clothed_icon;
+	else:
+		project Figure of VixenNurse_herm_clothed_icon;
 	choose row MonsterID from the Table of Random Critters;
 	say "The vixen nurse stops fighting and you move in to catch her, it seems you have a slutty vixen nurse on your hands [bold type]What would you like to do?[roman type][line break]";
 	now sextablerun is 0;
@@ -182,6 +190,7 @@ to say VixenNurseDesc:
 			now vixgender is 1; [now a herm]
 	if vixgender is 0:
 		setmongender 4; [creature is female]
+		project Figure of VixenNurse_fem_clothed_icon;
 		say "     You find yourself face to face with a sensually curved vixen in a tight, little nurse's outfit. She has a short cut, white apron with a black top under it. There's even a traditional, white nurse's cap with a red cross on it on the vixen's head. She has lustrous, gray fur, indicating that her infection originated from a silver fox. Glancing down those long, slender legs you see they end in digitigrade paws. To her ample chest, she holds a large clipboard. You can still see the bumps that the perky nipples on her four breasts make in the fabric, unblocked by the clipboard. She looks you over quickly and tut-tuts, saying '[one of]It looks like one patient's gotten out of bed[or]Bend over, sweetie. It's time to take your temperature[or]You look like you need a little TLC[or]Please return to the waiting area. The doctor will see you shortly. Until then, let me take care of you[at random].' She raises her clipboard, seemingly intent on clubbing you with it.";
 		if HardMode is true and level of Player > 4, let debit be level of Player - 4;
 		now HP entry is 36 + ( debit * 4 );
@@ -191,6 +200,7 @@ to say VixenNurseDesc:
 		now dex entry is 14 + ( lev entry / 5 );
 	else:
 		setmongender 5; [creature is herm]
+		project Figure of VixenNurse_herm_clothed_icon;
 		say "     You find yourself face to face with one of those sensually curved vixen in the tight, little nurse's outfit. She has lustrous, gray fur, indicating that her infection originated from a silver fox. She has a traditional, white nurse's cap with a red cross on it on the vixen's head. She is wearing a short cut, white apron with a black top under it.";
 		say "     And there your eyes stop, finding that something is amiss with this naughty nurse. Her tight dress has a rather sizable bulge in it and it is growing larger as you watch. It's a trap! Grinning, she rubs the firm lump and says, '[one of]It looks like one patient's gotten out of bed. I'll tuck you in good and tight[or]Bend over, sweetie. Mmm... I want to take your temperature[or]You look like you need a dose of my medicine[or]Let me give you a thorough examination, my pretty patient[at random].' She rubs her four breasts and moans lustfully before charging at you.";
 		if HardMode is true and level of Player > 7, now debit is level of Player - 7;

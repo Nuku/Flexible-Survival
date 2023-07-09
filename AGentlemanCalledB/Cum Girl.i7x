@@ -28,7 +28,7 @@ to say losetoCumGirl:
 				increase Cock Length of Player by a random number from 1 to 2;
 				now CGFC is 1;
 			if Ball Size of Player < 7:
-				increase Ball Size of Player by 1;
+				BallsGrow Player by 1;
 				now CGFB is 1;
 		Follow the cock descr rule;
 		if CGFC is 1:

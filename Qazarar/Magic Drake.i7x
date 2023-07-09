@@ -115,8 +115,7 @@ to say losetomagicdrake:
 					increase Libido of Player by 5;
 				else if Player is male and Ball Size of Player < Ball Size entry and "Female Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
 					say "     While cumming, the draconic sorceress reaches around to [if CockName of Player is listed in infections of InternalCockList]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testicles to grow further. When she's done both her climax and her spell, she [if scalevalue of Player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
-					increase Ball Size of Player by 1;
-					now Ball Size of Player is ( ( Ball Size of Player * 3 ) + Ball Size entry ) / 4;
+					BallsGrow Player by 1;
 					decrease humanity of Player by 1;
 					increase Libido of Player by 5;
 				else if Breast Size of Player < Breast Size entry and "Flat Chested" is not listed in feats of Player:
@@ -541,14 +540,12 @@ to say beatthemagicdrake:
 									decrease Libido of Player by 3;
 									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your green cock[smn]. This causes [itthemm] to shrink down, losing [if Cock Length of Player > 2]a couple of inches[else]an inch[end if]. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a larger-than-normal mess of fresh seed onto the ground[if Cock Length of Player is 1]. As your tiny prick[smn] didn't go away completely, you doubt you'll be able to shrink yourself down any further this way[end if]. The angry dragoness growls impotently as your sexy penis[esmn] shrink[smv], leaving [itthemm] feeling a little more manageable for you to deal with.";
 								else if mdstaffaction is 7:		[ball growth]
-									increase Ball Size of Player by 1;
+									BallsGrow Player by 1;
 									follow the cock descr rule;
 									increase Libido of Player by 5;
-									if the remainder after dividing the Ball Size of Player by 3 is 0, increase Ball Size of Player by 1;
 									say "     The magic does end up working though, seeping into you with a pleasant tingle that suffuses your transformed testicles. They swell up a little larger, growing until they become a [Ball Size Adjective of Player] pair of draconic balls. You try to keep going, but the pleasure of this sends you over the edge, moaning loudly. The remaining magical energy gets funneled into your climax and you splatter a considerably larger-than-normal mess of fresh seed onto the ground. Despite being upset with you for using her magic yourself, the sorceress certainly seems pleased with the outcome, at least.";
 								else if mdstaffaction is 8:		[ball reduction]
-									decrease Ball Size of Player by 1;
-									if the remainder after dividing the Ball Size of Player by 3 is 0, decrease Ball Size of Player by 1;
+									BallsShrink Player by 1;
 									if Ball Size of Player < 1, now Ball Size of Player is 1;
 									follow the cock descr rule;
 									decrease Libido of Player by 3;
@@ -594,12 +591,10 @@ to say mdrake_pvictory_03:
 			now CockName of Player is "Magic Drake";
 			now CockSpeciesName of Player is "Magic Drake";
 			now Cock of Player is cock entry;
-			if Ball Size of Player < 36:
-				increase Ball Size of Player by ( 50 - Ball Size of Player ) / 10;
+			BallsGrow Player by 2;
 			follow the sex change rule;
 		else:
-			if Ball Size of Player < 36:
-				increase Ball Size of Player by ( 50 - Ball Size of Player ) / 10;
+			BallsGrow Player by 2;
 	else:
 		say "     Eventually this perverse penetration becomes too much and you drive your cock fully into the dragoness's, cumming with a lustful groan. You blast shot after shot of your [Cum Load Size of Player] load down into her urethra[if Ball Size of Player > 4], feeding your some of your load all the way down into her balls[end if] as she moans and squirms beneath you. Once you're spent, you pull out and watch as her spasming penis twitches and slaps against her belly while some of your cum leaks back out. She moans and rubs it with a desperate need to release, soon cumming with a roar that splatters a mix of your semen and hers across herself and the ground beyond. She flops back onto the ground, your kinky abuse of her mighty manhood leaving her momentarily dazed.";
 

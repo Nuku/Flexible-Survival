@@ -193,7 +193,7 @@ this is the rattymilk rule:
 	if "Female Preferred" is listed in feats of Player:
 		say ". You can feel a tingling in your groin that starts to flare up, but is then resisted until it subsides.";
 	else if Ball Size of Player > 0 and Ball Size of Player < 4:
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		if Ball Size of Player > 4, now Ball Size of Player is 4;
 		say ". Your balls sing with pleasure as they grow heavier as the milk sends them into overproduction and your balls feel like they have become [Ball Size Adjective of Player]!";
 	else if Ball Size of Player >= 4:
@@ -201,10 +201,10 @@ this is the rattymilk rule:
 		increase Libido of Player by 2;
 	else:
 		say ". You squirm in shock as you feel a new set of balls erupt from your body and a [Cock of Player] cock forming to go with them!";
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		if Player is not male, now Cock Count of Player is 1;
 		if Cock Length of Player is 0, now Cock Length of Player is a random number from 2 to 4;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		say "Your balls feel like they have become [Ball Size Adjective of Player]!";
 	increase Libido of Player by a random number between 3 and 8;
 	if BodyName of Player is "Slut Rat", increase Libido of Player by 2;
@@ -300,13 +300,13 @@ To say slut rat growth:
 	else if Player is not male:
 		now Cock Count of Player is 1;
 		increase Cock Length of Player by a random number from 2 to 4;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		say "Your new balls feel like they have become [Ball Size Adjective of Player] [Balls] and you gain a small [Cock of Player] cock to go with them!";
 	else if Ball Size of Player >= 4:
 		say "Your balls throb with pleasure as their sperm production goes into overdrive and you start dribbling sperm-rich precum from your pulsing erection.";
 		increase Libido of Player by 2;
 	else:
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		if Ball Size of Player > 4, now Ball Size of Player is 4;
 		say "Your balls feel like they have become [Ball Size Adjective of Player]!";
 
@@ -444,7 +444,7 @@ To ratslutchug:
 		WaitLineBreak;
 		say "     Desperate for breath, you break the seal of your lips for a gasp. The bottle snaps back to its usual dimensions and a solid object pops out of it, blocking your throat. You collapse to your knees, choking almost silently as you try to dislodge it. You can feel the rats as either side of you, rubbing their curvaceous forms along you and petting as they whisper soft enticements, telling you to swallow, not spit. With a painful gulp, the sphere descends into your belly heavily.";
 		increase Cock Length of Player by 8;
-		increase Ball Size of Player by 8;
+		BallsGrow Player by 3;
 		increase Slutratsub by 1;
 		if slutratsub > 10, now slutratsub is 10;
 		increase Slutratcor by 1;
@@ -458,7 +458,7 @@ To ratslutchug:
 	else:
 		say "     You seal your lips on the bottle, but make no special effort to chug down that thick, powerfully sweet, stuff. At first, the gunk doesn't move at all, being so thick, but the rats are quite happy to give it a squeeze, forcing a great dollop of the honey like texture. You force yourself to swallow it and the rats pull the bottle back, looking at you expectantly. All the rats are staring at you at this point. Your potential nervousness at this fades as a new sensation distracts you from down below. Your [Cock of Player] cock[smn] begin[smv] to grow, slowly, inching forward as little crawly feelings run up and down your altering equipment.";
 		increase Cock Length of Player by 4;
-		increase Ball Size of Player by 4;
+		BallsGrow Player by 2;
 		follow the cock descr rule;
 		SanLoss 10;
 		say "     Those strange crawling sensations run from the tip of your [Cock of Player] cock[smn] down to your swelling [Ball Size Adjective of Player] [Balls]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [Cock of Player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";

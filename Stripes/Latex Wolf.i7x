@@ -45,7 +45,8 @@ To say RegularLatexWolfWins:
 			CreatureSexAftermath "Player" receives "PussyFuck" from "Latex Wolf";
 		if Player is male and Anallevel > 1:
 			CreatureSexAftermath "Player" receives "AssFuck" from "Latex Wolf";
-		if Player is male and Ball Size of Player < 6, increase Ball Size of Player by 1;
+		if Player is male and Ball Size of Player < 6:
+			BallsGrow Player by 1;
 		decrease humanity of Player by a random number between 2 and 4;
 		infect "Latex Wolf";
 	else:

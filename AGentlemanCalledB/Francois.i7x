@@ -972,7 +972,7 @@ to say bleuettonne Use:
 		Follow the cock descr rule;
 		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
 	else:
-		increase Ball Size of Player by a random number from 1 to 2;
+		BallsGrow Player by 1;
 		Follow the cock descr rule;
 		say " as you savor the mingling chocolate and fruit flavors a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as your [one of]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] and grow larger, your skin becoming taut with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]";
 	decrease hunger of Player by 5;

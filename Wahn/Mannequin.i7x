@@ -305,11 +305,11 @@ to say nullpowderuse:
 				say "     At this point, the powder will have no effect on you. It seems you'll need to remove your cock[smn] or develop internal genitalia if you want to make them disappear.";
 			else:
 				if Ball Size of Player > 5:
-					decrease Ball Size of Player by 3;
+					BallsShrink Player by 3;
 				else if Ball Size of Player > 4:
-					decrease Ball Size of Player by 2;
+					BallsShrink Player by 2;
 				else:
-					decrease Ball Size of Player by 1;
+					BallsShrink Player by 1;
 				follow the cock descr rule;
 				say "     You apply the powder to [if Player is internalBalls]where your sack might be[else]your sack[end if]. After a while, they[if Player is internalBalls] seem to[end if] shrink down to the point where you[if Player is internalBalls], presumably,[end if] have [Ball Size Adjective of Player] [Balls].";
 			now Trixieexit is 1;

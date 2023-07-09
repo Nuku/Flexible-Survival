@@ -68,31 +68,19 @@ to say Yamato Dragon attack:
 				if "Microwaved" is listed in feats of Player:
 					say "WARNING: Ball size change detected! Allow?";
 					if Player consents:
-						if Ball Size of Player < 20:
-							if "Horny Bastard" is listed in feats of Player:
-								increase Ball Size of Player by 4;
-							else:
-								increase Ball Size of Player by 2;
+						if "Horny Bastard" is listed in feats of Player:
+							BallsGrow Player by 4;
 						else:
-							if "Horny Bastard" is listed in feats of Player:
-								increase Ball Size of Player by 2;
-							else:
-								increase Ball Size of Player by 1;
+							BallsGrow Player by 2;
 						follow the cock descr rule;
 						say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 					else:
 						say "     It looks like you recover to their original size after treating it.";
 				else:
-					if Ball Size of Player < 20:
-						if "Horny Bastard" is listed in feats of Player:
-							increase Ball Size of Player by 4;
-						else:
-							increase Ball Size of Player by 2;
+					if "Horny Bastard" is listed in feats of Player:
+						BallsGrow Player by 4;
 					else:
-						if "Horny Bastard" is listed in feats of Player:
-							increase Ball Size of Player by 2;
-						else:
-							increase Ball Size of Player by 1;
+						BallsGrow Player by 2;
 					follow the cock descr rule;
 					say "You can [if Player is internalBalls]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grows larger, [if Player is internalBalls]body straining to abide this[else]your skin becoming taut with the[end if] expansion, leaving you with [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls]!";
 		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":

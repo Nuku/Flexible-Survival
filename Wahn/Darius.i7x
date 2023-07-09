@@ -260,7 +260,7 @@ to say DariusScent:
 		say "     Leaning forward to get a sniff of Darius, you move your nose close to his slowly rising and falling chest. Being able to take him in freely in his passed-out state, you sniff his masculine aroma, with the slight scent of his sweat made oh so very tempting by pheromones that tell you that this is a top dog.";
 
 to say DariusDesc:
-	project the Figure of Darius_face_icon;
+	project the Figure of Darius_clothed_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Darius] <- DEBUG[line break]";
 	if Stamina of Darius < 3: [non-drugged]
@@ -384,6 +384,7 @@ Sarea of Darius_Dogwalk_First is "Nowhere". [standard walkins that cannot be hun
 to say ResolveEvent Darius_Dogwalk_First:
 	if debugactive is 1:
 		say "     DEBUG: Darius taking his dog for a walk (first time).[line break]";
+	project the Figure of Darius_clothed_icon;
 	say "     Walking up to the door of Darius's apartment, you see it opening ahead of you and the Dalmatian standing in the doorway, leash in hand. Behind him, ";
 	if "Ulysses Introduced" is not listed in Traits of Darius:
 		say "there's a big and fairly large dog with the leash clipped to his red collar, wagging his tail and eager to get out for a walk. ";
@@ -446,6 +447,7 @@ Sarea of Darius_Dogwalk_Repeat is "Nowhere". [standard walkins that cannot be hu
 to say ResolveEvent Darius_Dogwalk_Repeat:
 	if debugactive is 1:
 		say "     DEBUG: Darius taking his dog for a walk (repeat).[line break]";
+	project the Figure of Darius_clothed_icon;
 	say "     Walking up to the door of Darius's apartment, you see it opening ahead of you and the Dalmatian standing in the doorway, leash in hand. Behind him, Ulysses waits with his tail raised high and wagging, eager to get out for a walk. Glancing over his shoulder, Darius calls out, 'Gonna be out for a little while, thanks for keeping an eye on things Tyke! And don't finish off all my beer while you do, hah!' and a deep voice from within the apartment calls out, 'Sure thing, man!' With a satisfied smile, the canine drug dealer then steps out into the hallway with you, swinging the door shut behind his dog. 'If you're here to buy some stuff, I gotta disappoint ya. Shop's closed while I take Ulysses for a walk,' Darius says matter of factly as he redirects his attention to you. Meanwhile, the four-legged dog at his side sits down, patiently waiting for his master, and gets a casual pet on the head from Darius.";
 	say "     Seeing Ulysses be very relaxed and calm next to Darius, you find yourself wanting to reach out and pet him too. ";
 	if "Buttslut revealed" is not listed in Traits of Darius:
@@ -478,6 +480,7 @@ to say ResolveEvent Darius_StreetDealing:
 	if debugactive is 1:
 		say "     DEBUG: Darius is dealing on the streets.[line break]";
 	say "     As you arrive in the street crossing that marks the entrance of the Red Light District, your gaze falls on Darius, the drug-dealer Dalmatian, who's ";
+	project the Figure of Darius_clothed_icon;
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is:
 		-- 1:
@@ -512,6 +515,7 @@ ResolveFunction of Darius_Hare&Pug is "[ResolveEvent Darius_Hare&Pug]".
 Sarea of Darius_Hare&Pug is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
 
 to say ResolveEvent Darius_Hare&Pug:
+	project the Figure of Darius_clothed_icon;
 	if debugactive is 1:
 		say "     DEBUG: Darius is dealing on the streets.[line break]";
 	say "     As you arrive in the street crossing that marks the entrance of the Red Light District, your gaze falls on Darius, the drug-dealer Dalmatian, who's just casually leaning against a building wall, close to the corner, surveying the street with both arms crossed in front of his broad, muscular chest. Then suddenly, you hear someone shout, 'No! Leave me alone!', followed by something that's more of a bark than words, and running footsteps. An eye-blink later, someone comes running around the corner in full flight, dodging onto the middle of the street to avoid a car wreck at the side of the road. The guy's a hare, judging by his enormous ears and a very tall, spindly body, plus a rather 'twitchy' air about his person. Fast on his feet too, though very stressed out, so unfortunately he makes a mistake in turning towards the east, which you know is a dead end street where his speed won't help him.";
@@ -734,6 +738,7 @@ to say DariusSexMenu:
 	clear the screen and hyperlink list;
 
 to say DariusStreetBJ:
+	project the Figure of Darius_hard_icon;
 	if Player is female: [female + herm]
 		say "     As you walk up to Darius and offer sex, the Dalmatian chuckles heartily and grins at you. 'Wanna do it right out here in the street, eh? Such a slut!' Bringing one hand on the front of his jeans, the Dalmatian gropes his crotch suggestively and looks up and down along the street. Then goes one step further and unzips himself, revealing his furry sheath and the cock-head already poking out of it. 'I'm getting hard from just thinking of the fun we'll have! Better be ready to worship me properly!' With that said, the big man wraps his fingers around the base of his cock, stroking it a little until it is fully hard, standing proudly erect and pointing at you. 'You like this, don't you,' the anthro canine says more as a statement than a question, then steps up before you can even think of replying, sliding his arm around your chest to pull you into a demanding kiss. His tongue explores your mouth while he keeps you tightly pressed against his chest and grinds his erection lightly against your thigh.";
 		say "     'Wanna get started on it, sweetcheeks?' Darius adds after a little while, nodding down to the throbbing shaft between the two of you, its pointed tip already dripping beads of pre-cum. You follow his suggestion, guided down to your knees by a hand on your shoulder. Seen at eye-level, the drug dealer's prick is quite a weighty piece of man-meat, and the full orbs of his balls tempt you into cupping them, followed by some gentle fondling. 'Yeaahhh! That's nice, but I want more!' the large male grunts urgently, pushing your head towards his cock. Darius's muzzle opens for a grunt as you then slip your lips over the tip of his cock and start sucking, together with pumps along his length by your hand. He is leaking pre like a faucet, covering your tongue in his manly, somewhat nutty taste and making it clear that Darius enjoys himself quite a bit.";
@@ -790,6 +795,7 @@ to say DariusStreetBJ:
 	NPCSexAftermath Player receives "OralCock" from Darius;
 
 to say DariusSex1: [oral]
+	project the Figure of Darius_hard_icon;
 	if Player is female: [female + herm]
 		say "     As you step up to the large canine and offer to suck him off, Darius lets out a hearty chuckle. 'Wanna wrap your lips around this thick piece of meat, babe? I'm always happy to give a girl what she needs!' Bringing one hand on the front of his jeans, the Dalmatian gropes his crotch suggestively, then adds an air-thrust of his hips in your direction. 'I'm getting hard from just thinking of the fun we'll have! Better be ready to worship me properly!' With that said, the big man undoes his belt-buckle in well-practiced haste, followed by the zipper and him shoving his jeans down. As he kicks the garment off, your eyes are inevitably drawn to the red shaft rapidly pushing out of his sheath, as well as the weighty balls swinging below, furry with the typical white and black Dalmatian pattern.";
 		say "     'You like it, don't you,' the anthro canine says more as a statement than a question, his fingers closing around the shaft to wag it in your direction. Grinning broadly, Darius steps up before you can even think of replying, sliding his arm around your chest to pull you into a demanding kiss. His tongue explores your mouth while he keeps you tightly pressed against his chest and grinds his erection lightly against your thigh. 'Wanna get started on it, sweetcheeks?' Darius adds after a little while, nodding down to the throbbing shaft between the two of you, its pointed tip already dripping beads of pre-cum. You follow his suggestion, guided down to your knees by a hand on your shoulder. Seen at eye-level, the drug dealer's prick is quite a weighty piece of man-meat, and the full orbs of his balls tempt you into cupping them, followed by some gentle fondling.";
@@ -815,6 +821,7 @@ to say DariusSex1: [oral]
 
 to say DariusSex2: [ask to be fucked]
 	SetMonsterRandomDalOffspring;
+	project the Figure of Darius_hard_icon;
 	if Player is female: [female + herm]
 		say "     As you step up to the large canine and offer to let him fuck you, Darius lets out a hearty chuckle. 'So you wanna feel my hard shaft all the way up there babe? I'm always happy to give a girl what she needs!' Bringing one hand on the front of his jeans, the Dalmatian gropes his crotch suggestively, then adds an air-thrust of his hips in your direction. 'I'm getting hard from just thinking of the fun we'll have! Better be ready to milk my cock me properly!' With that said, the big man undoes his belt-buckle in well-practiced haste, followed by the zipper and him shoving his jeans down. As he kicks the garment off, your eyes are inevitably drawn to the red shaft rapidly pushing out of his sheath, as well as the weighty balls swinging below, furry with the typical white and black Dalmatian pattern.";
 		say "     'You like it, don't you,' the anthro canine says more as a statement than a question, his fingers closing around the shaft to wag it in your direction. Grinning broadly, Darius lets himself fall back on his sofa, coming to sit in a broad-legged fashion that allows open access to his erection. 'Why don't you come here and give it a good lick, sweetcheeks?' the muscular canine calls out to you, nodding down to the throbbing shaft with its pointed tip already dripping beads of pre-cum. You quickly pull off what equipment and clothes you have, dropping it all on your way over to the waiting male. As you get on your knees and see it at eye level, the drug dealer's prick stands straight and erect waiting for you, and you can't help but want to touch it. Fingers wandering over the weighty piece of man-meat and the furry orbs of his balls, you cup and fondle the large man eagerly.";
@@ -879,6 +886,7 @@ to say DariusSex3: [ask to fuck him]
 
 
 to say BlissedDariusSexMenu:
+	project the Figure of Darius_hard_icon;
 	LineBreak;
 	now sextablerun is 0;
 	say "     [bold type]What do you want to do with the unconscious hunk?[roman type][line break]";
