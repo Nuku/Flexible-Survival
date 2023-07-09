@@ -946,7 +946,7 @@ Include Rane by Wahn.
 Include Reece by Luneth.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Wahn.
-Include RodAndRonda by Stripes.
+Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.
 Include Sally by Stripes.
