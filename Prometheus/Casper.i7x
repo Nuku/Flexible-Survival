@@ -235,6 +235,7 @@ to say SummonCasper:
 		say "     Walking over to Casper, you ask whether he would be interested in coming with you out into the city. 'And so, the hero and his trusty sidekick, that's you, begin yet another adventure into the wastes of the city,' Casper declares, before moving in for a hug. 'Yes, [BlancheMommyDaddyTitle]. Obviously I would be interested.' You can't help but smile at his antics and return the hug.";
 	else: [regular summoning]
 		say "     Casper for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissCasper:
 	move Casper to Grey Abbey Library;

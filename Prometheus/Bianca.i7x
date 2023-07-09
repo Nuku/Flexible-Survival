@@ -242,6 +242,7 @@ to say SummonBianca:
 		say "     Walking over to Bianca, you ask whether she would be interested in coming with you out into the city. Your daughter snuggles against, frantically wagging her tail. 'I'd love to, [BlancheMommyDaddyTitle]. I always enjoy watching you doing what you're good at.' You laugh at the implication behind this, sure that your daughter knew exactly what she was saying.";
 	else: [regular summoning]
 		say "     Bianca for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissBianca:
 	move Bianca to Grey Abbey Library;

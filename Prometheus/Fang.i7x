@@ -551,6 +551,7 @@ to say SummonFang:
 			say "     Walking over to where Fang is currently lying, you ask Fang whether [SubjectPro of Fang] would be interested in coming with you out into the city. [SubjectProCap of Fang] looks up at you affectionately, [PosAdj of Fang] tail thumping against the floor, before smoothly regaining [PosAdj of Fang] feet and pressing [PosAdj of Fang] mouth to your ear. 'Mine to protect,' [SubjectPro of Fang] whispers affectionately, agreeing to follow you for as long as you need [ObjectPro of Fang]. You feel pride that you will get to fight and explore side by side with your alpha.";
 	else: [regular summoning]
 		say "     Fang for all [PosAdj of Fang] many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see [ObjectPro of Fang].";
+		now SummonFailure is true;
 
 to say DismissFang:
 	move Fang to Grey Abbey Library;

@@ -282,6 +282,7 @@ to say SummonSturm:
 		say "     Walking over to Sturm, you ask whether he would be interested in coming with you out into the city. He smiles widely and nods, darting in for a quick hug, his tail wagging wildly. 'Thank you, [BlancheMomDadTitle]. Really. I'd love to.' You privately chuckle at how such an innocent question can transform the usually stern wolf into a puppy.";
 	else: [regular summoning]
 		say "     Sturm for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissSturm:
 	move Sturm to Grey Abbey Library;

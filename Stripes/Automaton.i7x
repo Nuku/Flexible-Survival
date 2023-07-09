@@ -94,7 +94,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Automaton"; [ Name of the overall species of the infection, used so a "male x" and "female x" have "pureblood X" children. ]
-	add "Automaton" to infections of FurryList;
+	add "Automaton" to infections of FemaleList;
 	add "Automaton" to infections of MachineList;
 	add "Automaton" to infections of MaleList;
 	add "Automaton" to infections of BipedalList;
