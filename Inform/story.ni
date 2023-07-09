@@ -876,7 +876,7 @@ Include Juergen by Wahn.
 Include Julian by Prometheus.
 Include Kai by Luneth.
 Include Kara by Sarokcat.
-Include Karen by AGentlemanCalledB.
+Include Karen by Prometheus.
 Include Katherine by Kirov.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
@@ -944,7 +944,7 @@ Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include Reece by Luneth.
-Include RexxyEvent by AGentlemanCalledB.
+Include RexxyEvent by Prometheus.
 Include Richard by Wahn.
 Include RodAndRonda by Wahn.
 Include Roman by Kernog.
