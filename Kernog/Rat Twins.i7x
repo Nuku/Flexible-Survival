@@ -79,7 +79,8 @@ Conversation of Erin is { "<Placeholder>" }.
 
 to say ErinDesc:
 	project the figure of Erin_face_icon;
-	say "     Erin is one half of the pair of adventuring rats whom you saved from the pirate sharks. He looks fairly young, eighteen if you had to guess, and shares a lean and energetic build with his sister. His youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at his sister whenever their eyes meet. Like his false twin, his fur is mostly snow white, like his hair, with dark gray patches here and there. He wears a pair of army pants but no top, giving him a bad boy look. The backside of his pants have been cut open with scissors, to let his hairless tail wiggle freely behind him. Noticing that you look at him, Erin leans on a table and winks at you while he takes the pose";
+	say "     Erin is one half of the pair of adventuring rats whom you saved from the pirate sharks. He looks fairly young, eighteen if you had to guess, and shares a lean and energetic build with his sister. His youthful face seems always alert for some mischief, azure eyes scanning the surroundings and throwing longing looks at his sister whenever their eyes meet. Like his false twin, his fur is mostly snow white, like his hair, with dark gray patches here and there. He wears a pair of army pants but no top, giving him a bad boy look. The backside of his pants have been cut open with scissors, to let his hairless tail wiggle freely behind him. Noticing that you look at him, Erin leans on a table and winks at you while he takes the pose.";
+
 instead of sniffing Erin:
 	say "     Erin's fur retains the salty smell coming from the ocean. The rat looks at you quizzically. 'Why are you sniffing like this? Am I smelling?' he asks, a concerned look on his face.";
 

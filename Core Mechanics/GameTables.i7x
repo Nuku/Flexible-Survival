@@ -1218,7 +1218,6 @@ Name(text)	Type(text)
 "restoration"	"number"
 "riddlesphinx"	"number"
 "Riddlewin"	"number"
-"rodhosp"	"number"
 "RomanceBooksFound"	"number"
 "rondafight"	"number"
 "rondahosp"	"number"

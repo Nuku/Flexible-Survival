@@ -87,30 +87,7 @@ Section 5 - Hyena Gang
 
 [Moved to new Hyena Gang file]
 
-Section 6 - Locked utility room
 
-Table of GameEventIDs (continued)
-Object	Name
-Locked Utility Room	"Locked utility room"
-Locked Utility Room	"Locked Utility Room"
-
-Locked Utility Room is a situation.
-ResolveFunction of Locked Utility Room is "[ResolveEvent Locked Utility Room]".
-Sarea of Locked utility room is "Mall".
-when play begins:
-	add Locked Utility Room to BadSpots of MaleList;
-	add Locked Utility Room to BadSpots of DemonList;
-
-to say ResolveEvent Locked Utility Room:
-	if Resolution of Locked Utility Room is 0: [first encounter]
-		say "     While exploring underneath the mall, you come across a locked utility room. Hoping for the best, you search for some means of prying the door open, only to notice the sticky white stuff leaking out from underneath the door. Deciding discretion is the better part of survival, you move quickly on your way.";
-		now Resolution of Locked Utility Room is 1; [first encounter done]
-	else if Resolution of Locked Utility Room is 1: [second encounter]
-		say "     Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity, you begin to backtrack to see where the large trail came from. To your surprise, the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open. Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.";
-		say "     In the center of the room is a large black pentagram, surrounded by occult symbols. Part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time. The intense, musky odor trapped in the room is starting to make your eyes water and your body heat up in response. Deciding it would be a good idea to leave before you end up doing something you might regret, you quickly grab a couple items lying around and duck back outside.";
-		ItemGain demon seed by 2;
-		now Resolution of Locked Utility Room is 2; [locked utility room done]
-		now Locked Utility Room is resolved;
 
 
 Section 7 - Transformed Seals

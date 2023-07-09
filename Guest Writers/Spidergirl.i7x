@@ -44,7 +44,7 @@ to say spidergirl_male:
 		[ since penis was small, increase it ]
 		increase Cock Length of Player by 1;
 		if a random chance of 1 in 2 succeeds:
-			increase Ball Size of Player by 1;
+			BallsGrow Player by 1;
 
 to say spidergirl_female:
 	if Cunt Tightness of Player >= 5: [ if Player's vagina is large enough, oviposition ]

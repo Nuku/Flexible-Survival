@@ -8,11 +8,11 @@ Use slow route-finding.
 [ The following adjust Informs compiler settings so that it allocates enough space. If these values are incorrect, inform will fail to compile.]
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
-Use MAX_PROP_TABLE_SIZE of 51000000.
+Use MAX_PROP_TABLE_SIZE of 6000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1700.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 370000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 500000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 5000.
@@ -606,7 +606,7 @@ Include Mutant Centaur by Hellerhound.
 Include Mutated Islanders by Kernog.
 Include Naga by Nuku Valente.
 Include Naiad by Wahn.
-Include Naughty Nurse by Stripes.
+Include Naughty Nurse by Fuxi.
 Include Nekomimi Boy by Prometheus.
 Include Nemean Lion by Prometheus.
 Include Nerdy Mouse by Wahn.
@@ -876,7 +876,7 @@ Include Juergen by Wahn.
 Include Julian by Prometheus.
 Include Kai by Luneth.
 Include Kara by Sarokcat.
-Include Karen by AGentlemanCalledB.
+Include Karen by Prometheus.
 Include Katherine by Kirov.
 Include Kerr & Talov by Wahn.
 Include Kerry by Voidsnaps.
@@ -944,9 +944,9 @@ Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include Reece by Luneth.
-Include RexxyEvent by AGentlemanCalledB.
+Include RexxyEvent by Prometheus.
 Include Richard by Wahn.
-Include RodAndRonda by Stripes.
+Include RodAndRonda by Wahn.
 Include Roman by Kernog.
 Include Ryan by Fuxi.
 Include Sally by Stripes.

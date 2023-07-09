@@ -261,9 +261,10 @@ to say VincentTalkMenu:
 				else if (nam is "Offer him some orc cum to drink"):
 					say "[Vincent_OrcCumOffer]";
 					now DoneTalking is true;
-				wait for any key;
 				if DoneTalking is false: [looping around for more talk options]
 					say "[VincentTalkMenu]";
+				else:
+					wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the slender fox, shaking your head slightly as he gives a questioning look.";
@@ -728,5 +729,144 @@ Followup talk options with V:
 - Player would prefer nothing of this sort while V lives at the Library
 - You're fine with things, but he should be discreet (no further visibility to the player, but stuff goes on)
 - You're totally fine with it. Might be hot to watch too.]
+
+
+Table of NavInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Vincent_WeedTrade_Intro"	Vincent_WeedTrade_Intro	"[EventConditions_Vincent_WeedTrade_Intro]"	Grey Abbey Library	2500	2	40
+
+Table of WalkInEvents (continued)
+Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTurns	EncounterPercentage
+2	"Vincent_WeedTrade_Intro"	Vincent_WeedTrade_Intro	"[EventConditions_Vincent_WeedTrade_Intro]"	Grey Abbey Library	2500	2	40
+
+to say EventConditions_Vincent_WeedTrade_Intro:
+	if ("Introduced" is listed in Traits of Vincent) and Vincent is collected and Player is not CoA: [list of conditions here]
+		now CurrentWalkinEvent_ConditionsMet is true;
+
+Table of GameEventIDs (continued)
+Object	Name
+Vincent_WeedTrade_Intro	"Vincent_WeedTrade_Intro"
+
+Vincent_WeedTrade_Intro is a situation.
+ResolveFunction of Vincent_WeedTrade_Intro is "[ResolveEvent Vincent_WeedTrade_Intro]".
+Sarea of Vincent_WeedTrade_Intro is "Nowhere". [standard walkins that cannot be hunted for are Nowhere, but walkin events can also be made huntable as an alternate access way]
+
+to say ResolveEvent Vincent_WeedTrade_Intro:
+	if debugactive is 1:
+		say "     DEBUG: Vincent trades for some weed[line break]";
+	if CurrentWalkinEvent_NavArrival is true: [Player nav'd in]
+		say "     As you turn the corner into 7th street and keep walking towards the library, you vaguely register that there's someone standing at the mouth of an alley, a little distance ahead on the other side of the street. Curiosity makes you glance over to have a better look: ";
+	else:
+		say "     As you walk into the entrance area of the library, you catch movement from the corner of your eyes, seen through one of the windows beside the door. There's someone stepping up to the mouth of the alley a little bit down the street. Since you don't have a great vantage point from here, and the windows don't open, so curiosity drives you to step outside for a moment, to have a better look: ";
+	say "The person has his back turned to you, but it's not at all hard to recognize him as Vincent the fox - that gloriously fluffy red tail sticking out just above his slightly ragged jeans gave him away immediately. And he's not alone either, but talking to a hard-to-identify figure standing in the shadow of the alley. You can't even tell their species or gender; they're wearing an enormous black hoody that covers them from head to mid-thigh, and beneath that a severely oversized pair of jeans with legs so wide that you can't even see whatever is hiding underneath. The amount of fabric hanging in wrinkles on that being could likely cover Vincent twice over, and the only thing you really can tell is that they're a little shorter than the fox.";
+	say "     Watching what is going on over there from a distance, you see the alley-person rummage around in the hoodie's front pocket and pull out a small transparent plastic bag. They hold it up so the fox can see what's inside: several elongated white shapes, joints if you had to guess. The hood dips a little as the dealer nods to Vincent and says something, but the fox pats his pockets as if to show they're empty, then raising his hands in a half-shrug. You can see the glint of Vincent's white fangs as he leans in closer wearing a broad grin, saying something. Licking the side of his muzzle, the fox then pats the other person's chest and points into the depth of the alley. The hooded figure turns a little, glancing that way, then turns back to Vincent. Given that your resident fox doesn't have any object of value with him, it's not hard to guess what he's putting on offer.";
+	LineBreak;
+	say "     [bold type]Looks like the two of them are about to reach some sort of deal. How do you react to this?[roman type][line break]";
+	LineBreak;	let Vincent_Deal_Choices be a list of text;
+	add "Walk up and loudly call out to Vincent. You got an issue with what he's doing..." to Vincent_Deal_Choices;
+	add "Hang back and wait for them to go into the alley, then follow quietly and watch what'll go down." to Vincent_Deal_Choices;
+	add "Shrug off curiosity of what'll happen in the alley. Just wait until Vincent comes out and have a quiet word." to Vincent_Deal_Choices;
+	add "Not your circus, not your monkeys. Leave Vincent to whatever he's doing and go into the library." to Vincent_Deal_Choices;
+	let Vincent_Deal_Choice be what the player chooses from Vincent_Deal_Choices;
+	if Vincent_Deal_Choice is:
+		-- "Walk up and loudly call out to Vincent. You got an issue with what he's doing...": [interrupt]
+			LineBreak;
+			say "[Vincent_WeedTrade_Interrupt]";
+		-- "Hang back and wait for them to go into the alley, then follow quietly and watch what'll go down.": [watch]
+			LineBreak;
+			say "[Vincent_WeedTrade_BJ]";
+			say "[Vincent_WeedTrade_Talk]";
+		-- "Shrug off curiosity of what'll happen in the alley. Just wait until Vincent comes out and have a quiet word.": [talk]
+			LineBreak;
+			say "     Shrugging and thinking to yourself that the fox will do what he wants, you stroll closer to the alley and then lean against the wall of a building to wait. After maybe ten to fifteen minutes, Vincent comes strolling onto the street, wiping the side of his muzzle with the back of a hand, at which point you call out to him. ";
+			say "[Vincent_WeedTrade_Talk]";
+		-- "Not your circus, not your monkeys. Leave Vincent to whatever he's doing and go into the library.": [ignore]
+			LineBreak;
+			say "     Shrugging to yourself, you turn around and walk up to the library entrance. As you're moving along, some inner voce in your head lays out some thoughts for you doing the right thing: So what if Vincent's doing deals with whoever that was, in an alley, for drugs? It's not like weed is that strong or dangerous, and you're not the fox's nursemaid. He's a big boy and can take care of himself...";
+			say "     As expected, it takes maybe another fifteen minutes or so before Vincent steps into the library himself, giving you a cheerful nod as he notices your attention. His left hand moves to quite casually hook a thumb into a pants pocket, fingers lightly patting the spot where there's an almost imperceptible bulge from what is in the pocket beneath. Then the fox strolls past you, making a beeline to the stairs leading up to his camp near the back windows.";
+			now Resolution of Vincent_WeedTrade_Intro is 100; [no interest]
+	now Vincent_WeedTrade_Intro is resolved;
+
+to say Vincent_WeedTrade_Interrupt:
+	say "     Striding forward quickly with no attempt at hiding your approach, you call out loudly to the fox and cause an immediate reaction: While Vincent glances over his shoulder to see who's interrupting his deal so suddenly, the dealer in the alley throws you a wary look, features still hidden in the shadows of their hoody. Then the person backs off, turns around and starts to sprint towards the back end of the alley, moving surprisingly quickly in their oversized and cumbersome outfit. Looking after his fleeing contact, Vincent tenses his body and legs for a second but then quickly abandonds the thought of following them. Instead, he throws up his arms in annoyance, giving you an eye-roll as he turns to you. 'What'd you do that for!? You must have seen I as in the middle of something!' he growls at you in frustration, then looks down the alley and adds, 'Fuck! And here I thought I was lucky to find someone close by.' His expression is marked by displeasure as he turns back to you.";
+	LineBreak;
+	say "     [bold type]What do you want to say now?[roman type][line break]";
+	LineBreak;
+	let Vincent_WeedTrade_Interrupt_Choices be a list of text;
+	add "You only wanted to look out for him. Sketchy people in alleys aren't exactly safe to talk to..." to Vincent_WeedTrade_Interrupt_Choices;
+	add "You don't like to have drug deals happen near the library. That'd bring bad people here..." to Vincent_WeedTrade_Interrupt_Choices;
+	add "Looked like he was going to trade his body to that dealer. Not on your watch!" to Vincent_WeedTrade_Interrupt_Choices;
+	let Vincent_WeedTrade_Interrupt_Choice be what the player chooses from Vincent_WeedTrade_Interrupt_Choices;
+	if Vincent_WeedTrade_Interrupt_Choice is:
+		-- "You only wanted to look out for him. Sketchy people in alleys aren't exactly safe to talk to...":
+			LineBreak;
+			say "     For a second, Vincent simply stares at you, eyebrows rising in disbelief. 'Are you fucking serious?' comes next, almost as a shout, followed by the scruffy fox taking a deep breath and letting it out in a hiss. 'Damn, did you take a few too many hits to the head when fighting the orcs or something? You do remember what's going on in the city, right? We're fucking past the 'people in alleys are scary' stage - if someone wants to fuck you up, they do it right in the middle of the street! With a running start and hollering at the top of their lungs as they jump you!' To illustrate his point, he sweeps an arm to indicate the street around you - with all the car wrecks, ripped clothing and dried cum puddles in sight. 'If I'm just standing somewhere, calmly talking to a trader that I had to ask a over dozen locals to find, you should keep your distance. Who knows if he'll be back now! Aaargh!' Rolling his eyes again, the fox then stalks off to the library, and you follow a little distance behind him.";
+		-- "You don't like to have drug deals happen near the library. That'd bring bad people here...":
+			LineBreak;
+			say "     For a second, Vincent simply stares at you, eyebrows rising in disbelief. 'Are you fucking serious?' comes next, almost as a shout, followed by the scruffy fox taking a deep breath and letting it out in a hiss. 'Clutch your pearls harder, asshole! The whole city is a free-for-all of fighting, fucking and looting, and I bet you've been doing plenty of ALL of those. But oh dear, we can't have any drug dealing around here, can we?! Never mind it's fucking difficult to even find a dealer who still is mostly sane and not a drooling fuck-monster, and a certain fox could really have used a little something to take the edge off the awesome certainty that we're all so very fucked by this situation! Aaargh!' Growling at you, the fox stalks off to the library, and you follow a little distance behind him.";
+		-- "Looked like he was going to trade his body to that dealer. Not on your watch!":
+			LineBreak;
+			say "     For a second, Vincent simply stares at you, eyebrows rising in disbelief. 'Are you fucking serious?' comes next, almost as a shout, followed by the scruffy fox taking a deep breath and letting it out in a hiss. 'The whole city is basically rape-fest 3000, with constant boning for anyone who can't watch out for themselves! I know the fucking place is called the 'Grey Abbey', but I didn't know I was entering a convent! What makes you think you have any right to determine what I do or do not do with someone else?!' As you open your mouth, he raises a hand and throws some more words at you: 'I don't want to hear it! Do you know how fucking difficult it is to even find a dealer who still is mostly sane and not a drooling fuck-monster? I could really have used a little something to take the edge off the awesome certainty that we're all so very fucked by this situation! Aaargh!' Growling at you, the fox then stalks off to the library, and you follow a little distance behind him.";
+	say "     [bold type]Clearly, Vincent trusts you less now. [roman type][line break]";
+	decrease Loyalty of Vincent by 1;
+	now Resolution of Vincent_WeedTrade_Intro is 100; [interrupted, no more deals (at least where the player sees them)]
+
+to say Vincent_WeedTrade_BJ:
+	say "     Ducking behind a wrecked car, you wait patiently for Vincent and the dealer to finish their back and forth. Then, after a quick sweep of his gaze over the street as though checking for danger, Vincent and the other person move deeper into the alley. As soon as they're behind the corner, you stand up and follow quickly but silently, only slowing down when you reach the entrance of the alley. Inching forward, you carefully glance around the corner so you don't give yourself away but still have a nice view of what's going on. Thankfully, Vincent and his acquaintance didn't move all that far, and they're against the wall so you have a nice side-on view of both of them. As it turns out, what's beneath the hoody is an anthro sable, brown-furred and with a very long, slinky body similar to a weasel. Having pushed back the hood, and holding up a literal double-armful of hoody to expose his thighs, crotch and flat chest, the sable appears to be a male.";
+	say "     Your guess is quickly confirmed, as Vincent sinks into a crouch and tugs the oversized pants of the dealer down, revealing his already hardening cock and a pair of furry balls. 'Better be as good as you promised, if you want that bag of joints!' the sable says in a deep voice. Idly wondering if that's his real voice, or just something he puts on for show, like the whole outfit, you listen to Vincent's reply of 'Oh, you can be sure of that! I'll blow you away, my friend!' The fox strokes a hand over the fur covering the dealer's long, long middle section, then wraps his fingers around his hard shaft. Amusement plays over Vincent's muzzle as he hears a moan pass the sable's lips when he starts to jerk the guy. Lapping at the dickhead with the tip of his tongue, Vincent teases the drug dealer mercilessly, able to act freely as the guy has both his arms full, before he eventually opens his muzzle to slide it over the full length of the sable's erection.";
+	WaitLineBreak;
+	say "     Slurping and sucking, bobbing his head towards the other man's crotch, your resident red fox seems determined to fully deliver on his promise. This is more than just a casual blowjob to get the guy off as quick as possible; Vincent throws in quite a bit of effort and special moves. One moment, he's inhaling the whole cock and deep throating it, then pulls off and worships the balls one by one, before slowly running his tongue over the dickhead and going back down on the sable. The skillful service has the drug dealer panting and moaning loudly in no time at all, and he exclaims, 'Fuckk yeah! Man, do that again with your tongue! Damn, and I thought my ex was good! You got her beat by a mile! Nnngghh! Fuck!' Snorting around the dick in his mouth at the over the top praise, Vincent works the sable's cock and fills the alley with slurping noises, accompanied with the quickening breaths of the dealer.";
+	say "     'Close!' the standing man grunts out before much longer, which Vincent takes as his signal to really pull out the stops. He pushes his head forward, really grinding his nose into the sable's pubes while also swallowing and letting the muscles of his throat play over the hard, throbbing shaft inside it. 'God! I'm cumming!' the dealer bellows and his whole body visibly twitches as the first throes of orgasm rock through it, cum blasting right down Vincent's throat in rich, thick spurts. Doing his best to last throughout the whole climax, Vincent keeps his acquaintance's erection in his muzzle as long as he can, but eventually he can't help but need some air. Even so, the fox doesn't fully pull off, only sliding back till the dickhead is cradled against his tongue, barely sheathed between his lips, panting around it while it still spurts more cum over his tongue. After getting much-needed oxygen, he closes his lips right away, sucking the last drops out of the sable's schlong.";
+	WaitLineBreak;
+	say "     The sucking sounds continue a little while longer, before you can hear the sable say, 'Okay, okay - stop! Getting pretty sensitive now!' As if to underline his words, the guy lets go of his hoody, which gives Vincent a face-full of fabric as it pours down like an avalanche. As he withdraws his head from under the garment, the fox grins up at the sable, then stands up again. 'Good enough for you?' he asks provocatively, then laughs as the dealer spontaneously answers, 'Fuck yeah!' That said, the sable reaches into his pouch and withdraws the bag of joints again, handing it over to Vincent who quickly stashes them in his pockets. Seemingly realizing that he was a little bit too open in showing all that enthusiasm for oral sex, the dealer quickly adds, 'Wouldn't mind getting some more of your muzzle-jobs, though I can't keep giving away my product like this. But you'll get a special rate, eh?' 'Fair enough,' Vincent replies, and they exchange some meeting places and signals for the future.";
+	say "     Stepping back from your observation, you move maybe ten feet from the entrance of the alley and lean against a wall to wait for Vincent. After just a minute or so, he comes strolling onto the street, wiping the side of his muzzle with the back of a hand, at which point you call out to him. ";
+	TraitGain "WeedTrade_BJ Watched" for Vincent;
+
+to say Vincent_WeedTrade_Talk:
+	say "'Oh hey[if Player is not defaultnamed], [Name of Player][end if]. What's up?' Vincent responds, quickly downplaying his surprise at seeing you here. His eyes flick to the side to glance at the alley for a second, and you can almost see the gears turning in his head as he wonders how much you saw. Clearing his throat, the fox then says, 'I was just... trading a little. For information, you know. Always good to know what you can about an area. About who's still sane, and what the dangers are, eh?' Seems he just decided to dish up a little white lie.";
+	LineBreak;
+	say "     [bold type]What do you respond?[roman type][line break]";
+	LineBreak;
+	let Vincent_Deal_Choices be a list of text;
+	add "Trading for information. Sure, sounds legit..." to Vincent_Deal_Choices;
+	add "You know what he really traded for, and wanted to say that you'd be game if he's willing to share a bit..." to Vincent_Deal_Choices;
+	add "You know what he really traded for. Not your thing personally, but he can do what he likes..." to Vincent_Deal_Choices;
+	if "WeedTrade_BJ Watched" is listed in Traits of Vincent:
+		add "You saw what he did really, and think it was pretty hot. Nice show to watch..." to Vincent_Deal_Choices;
+		add "You saw what he traded for (and wouldn't mind some yourself), and liked watching him give the guy a blowjob." to Vincent_Deal_Choices;
+	add "You know that he traded sex. It's his decision to do so, but you don't really want to see that..." to Vincent_Deal_Choices;
+	let Vincent_Deal_Choice be what the player chooses from Vincent_Deal_Choices;
+	if Vincent_Deal_Choice is:
+		-- "Trading for information. Sure, sounds legit...":
+			LineBreak;
+			say "     Acknowledging what Vincent said, you comment that it's always good to know what's really going on. As you say this, you meet his gaze and give the fox a meaningful nod, to keep him guessing at how much you saw. With nothing more to be said, the two of you return to the library.";
+			now Resolution of Vincent_WeedTrade_Intro is 99; [didn't acknowledge anything about the weed trading, Vincent will be stealthier]
+		-- "You know what he really traded for, and wanted to say that you'd be game if he's willing to share a bit...":
+			LineBreak;
+			say "     Giving Vincent a pointed glance, you say that you've got a good guess at what he's got in his pockets right now. The fox tenses up a little bit, unsure if that means you'll have some sort of issue, but you quickly quell his worries with a smile while touching his shoulder in camraderie. As the two of you start walking back to the library, you casually make a comment that you could also use something to take the edge off, so if he's ever in the mood for some company while smoking, he might think of you. With a little chuckle, the fox nods and lightly pats his pants pocket. 'I'll be sure to remember that,' he says with a smile on his muzzle, just before stepping back into the building.";
+			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
+			increase Loyalty of Vincent by 1;
+			now Resolution of Vincent_WeedTrade_Intro is 1; [Player okay with weed, wants to share]
+		-- "You know what he really traded for. Not your thing personally, but he can do what he likes...":
+			LineBreak;
+			say "     Giving Vincent a pointed glance, you say that you've got a good guess at what he's got in his pockets right now. The fox tenses up a little bit, unsure if that means you'll have some sort of issue over things, but you quickly quell his worries with a neutral shrug. Clearing your throat, you then casually comment that what he's doing his his business, but that you yourself are not really favorably aligned to drugs. 'Ah, I see. I'll be more... discreet, from now on,' the fox replies, somewhat relieved that there won't be an issue over this between you. With nothing more to be said, you both make your way back to the library.";
+			now Resolution of Vincent_WeedTrade_Intro is 98; [Player okay with weed, but doesn't want to see it]
+		-- "You saw what he did really, and think it was pretty hot. Nice show to watch...":
+			LineBreak;
+			say "     A smirk plays over your lips as you look at Vincent, then add that you saw what he did in the alley. 'Oh?' he replies, tensing up a little bit as he's unsure what you'll make of this. 'It was just some business. I'm not a nympho or something like that!' the fox adds somewhat defensively, then pats the side of his muzzle. 'I'm good at it, especially now since I got this thing. Trading a BJ or two kept me from going hungry more than once, and I don't really mind if the guy's at least halfway presentable, you know?' This is the point at which you reach out to reach out to give Vincent's shoulder a squeeze and tell him to relax. You're not holding this against him, but it was kinda hot to observe. Relief is written large on his face as he gives you a grin, followed by the words, 'Ah, so you like to watch? I'll keep that in mind!' With a wink and a light fist-bump against your shoulder, the slender man then gets going to the library and you follow close behind.";
+			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
+			increase Loyalty of Vincent by 1;
+			now Resolution of Vincent_WeedTrade_Intro is 2; [Player okay with sexual trades, wants to watch]
+		-- "You saw what he traded for (and wouldn't mind some yourself), and liked watching him give the guy a blowjob.":
+			LineBreak;
+			say "     A smirk plays over your lips as you look at Vincent, then add that you saw what he did in the alley, and what for. 'Oh?' he replies, tensing up a little bit as he's unsure what you'll make of this. 'It was just some business. I'm not a nympho or something like that!' the fox adds somewhat defensively, then pats the side of his muzzle. 'I'm good at it, especially now since I got this thing. Trading a BJ or two kept me from going hungry more than once, and I don't really mind if the guy's at least halfway presentable, you know?' This is the point at which you reach out to reach out to give Vincent's shoulder a squeeze and tell him to relax. You're not holding this against him, but it was kinda hot to observe. Relief is written large on his face as he gives you a grin, followed by the words, 'Ah, so you like to watch? I'll keep that in mind!' With a wink and a light fist-bump against your shoulder, the slender man then starts to walk back to the library.";
+			say "     As the two of you move down the street, you casually make a comment that you could also use something to take the edge off, so if he's ever in the mood for some company while smoking, he might think of you. With a little chuckle, the fox nods and lightly pats his pants pocket. 'I'll be sure to remember that,' he says with a smile on his muzzle, just before stepping back into the building.";
+			say "     [bold type]After establishing a bit of a connection with Vincent through common interests, he trusts you a little more. [roman type][line break]";
+			increase Loyalty of Vincent by 1;
+			now Resolution of Vincent_WeedTrade_Intro is 3; [Player okay with sexual trades AND weed, wants to watch/smoke]
+		-- "You know that he traded sex. It's his decision to do so, but you don't really want to see that...":
+			LineBreak;
+			say "     Giving Vincent a pointed glance, you say that you're aware of what sort of transaction he performed with that person in the alley. The fox tenses up a little bit, unsure if that means you'll have some sort of issue over things, but you quickly quell his worries with a neutral shrug. Clearing your throat, you casually comment that what he's doing his his business, but that you yourself are not keen on seeing such things happen in front of you. 'Oh. Well then, I'll be more... discreet, from now on,' the fox replies, somewhat relieved that there won't be an issue over this between you. With nothing more to be said, you both make your way back to the library.";
+			now Resolution of Vincent_WeedTrade_Intro is 97; [Player okay with weed, but doesn't want to see it]
 
 Vincent ends here.

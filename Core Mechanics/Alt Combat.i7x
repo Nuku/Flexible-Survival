@@ -1260,11 +1260,11 @@ to win:
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
 			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
-	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and enemy type entry is 0:
+	if Carnivorous Plant is listed in companionList of Player and hunger of Voria > 7 and Name entry is not listed in infections of VoreExclusion and inasituation is false and enemy type entry is 0:
 		now ok is 0;
 		VoriaPostCombat; [Carnivorous Plant vore scene. Scenes in Voria file]
 		now fightoutcome is 15; [Voria vored foe]
-	else if voreprompted is true and ubprompted is true: [both vore and ub are possible]
+	else if voreprompted is true and ubprompted is true and inasituation is false: [both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0: [player has full choice]
 			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [EnemyNameOrTitle]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
@@ -1334,7 +1334,7 @@ to win:
 			ubbyplayer; [See Alt Vore file]
 			now fightoutcome is 14; [player ub'ed foe]
 	[Vampirism]
-	if ok is 1 and vampiric is true:
+	if ok is 1 and vampiric is true and inasituation is false:
 		if NoHealMode is true:
 			increase HP of Player by ( 2 * lev entry ) / 3;
 		else:
@@ -1343,15 +1343,16 @@ to win:
 		PlayerEat 1;
 		if HP of Player > MaxHP of Player, now HP of Player is MaxHP of Player;
 	[Trophies and Looting]
-	TrophyLootFunction;
+	if inasituation is false:
+		TrophyLootFunction;
 	[Postcombat Scene]
-	if ok is 1 and "Control Freak" is listed in feats of Player:
+	if ok is 1 and "Control Freak" is listed in feats of Player and inasituation is false:
 		say "Do you want to perform after combat scene?";
 		if Player consents:
 			now ok is 1;
 		else:
 			now ok is 0;
-	if ok is 1:
+	if ok is 1 and inasituation is false:
 		say "[defeated entry]";
 		[
 		if fightoutcome is 10:
@@ -1411,7 +1412,8 @@ To lose:
 	follow the breast descr rule;
 	now lastfightround is turns;
 	now lost is 1;
-	say "[victory entry][line break]";
+	if inasituation is false:
+		say "[victory entry][line break]";
 	if the story has not ended:
 		if scenario is "Researcher" and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
 			say "";

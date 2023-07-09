@@ -276,7 +276,7 @@ before using a grab object (called x):
 to say estosterogen pill use:
 	if Player is herm:		[HERM]
 		increase Cock Length of Player by 2;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
 		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. ";
@@ -295,7 +295,7 @@ to say estosterogen pill use:
 		say "As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of Player] [Cock of Player] cock with its own set of balls[if CockName of Player is listed in infections of InternalCockList] forming inside you[end if]. ";
 	else if Player is male:				[MALE]
 		increase Cock Length of Player by 2;
-		increase Ball Size of Player by 1;
+		BallsGrow Player by 1;
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;

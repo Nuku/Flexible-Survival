@@ -695,7 +695,17 @@ Definition: A person (called x) is nocturnal: [as in "can see in low light"]
 	if HeadName of x is listed in infections of PiscineList, yes;
 	if HeadName of x is listed in infections of RodentList, yes;
 	if HeadName of x is listed in infections of VulpineList, yes;
-	no;
+	if Facename of x is listed in infections of AquaticList, yes;
+	if Facename of x is listed in infections of CetaceanList, yes;
+	if Facename of x is listed in infections of CervineList, yes;
+	if Facename of x is listed in infections of FelineList, yes;
+	if Facename of x is listed in infections of InsectList, yes;
+	if Facename of x is listed in infections of MachineList, yes;
+	if Facename of x is listed in infections of MustelidList, yes;
+	if Facename of x is listed in infections of PiscineList, yes;
+	if Facename of x is listed in infections of RodentList, yes;
+	if Facename of x is listed in infections of VulpineList, yes;
+		no;
 
 A person can be keeneyed. A person is usually not keeneyed.
 
@@ -703,6 +713,9 @@ Definition: A person (called x) is keeneyed: [sharpness of view - distance, etc.
 	if HeadName of x is listed in infections of AvianList, yes;
 	if HeadName of x is listed in infections of AvianpredList, yes;
 	if HeadName of x is listed in infections of MachineList, yes;
+	if FaceName of x is listed in infections of AvianList, yes;
+	if FaceName of x is listed in infections of AvianpredList, yes;
+	if FaceName of x is listed in infections of MachineList, yes;
 	no;
 
 A person can be keenscented. A person is usually not keenscented.
@@ -715,6 +728,13 @@ Definition: A person (called x) is keenscented: [can smell special information]
 	if HeadName of x is listed in infections of RodentList, yes;
 	if HeadName of x is listed in infections of UrsineList, yes;
 	if HeadName of x is listed in infections of VulpineList, yes;
+	if FaceName of x is listed in infections of CanineList, yes;
+	if FaceName of x is listed in infections of FelineList, yes;
+	if FaceName of x is listed in infections of MustelidList, yes;
+	if FaceName of x is listed in infections of PorcineList, yes;
+	if FaceName of x is listed in infections of RodentList, yes;
+	if FaceName of x is listed in infections of UrsineList, yes;
+	if FaceName of x is listed in infections of VulpineList, yes;
 	no;
 
 A person can be HeadFurred. A person is usually not HeadFurred.

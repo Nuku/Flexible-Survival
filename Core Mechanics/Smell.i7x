@@ -88,7 +88,7 @@ the scent of Doctor Matt is "[if HP of Doctor Matt is not 100]Safely encapsulate
 
 the scent of Grey Abbey library is "The smell of books permeates the air in the library. Smelling outside the doors, you can smell the scents of the city. You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 
-the scent of Bunker is "The air in the bunker smells a little stale from being sealed so long, but is quite breathable[if philip is in the bunker]. The strong scent of Philip's improvised sty lingers in the air as well[end if].".
+the scent of Bunker is "The air in the bunker smells a little stale from being sealed so long, but is quite breathable.".
 
 [instead of sniffing Smith Haven Mall Lot:
 	say "The parking lot smells of the smashed cars and the sticky remains left when their drivers were infected.";]
@@ -100,11 +100,11 @@ the scent of Mall Atrium is "The air smells of fake plants and excessive perfume
 
 the scent of Outside Trevor Labs is "The air out here smells no different than the rest of the city.";
 
-the scent of Trevor Labs Lobby is "The air is better in here, [if HP of Orthas > 2]with Orthas's aroused scent in the room[else]without the excess scents of sex and arousal of the city[end if].".
+the scent of Trevor Labs Lobby is "The air is better in here, without the excess scents of sex and arousal of the city.".
 
 the scent of 2F Trevor Labs is "The air smells pretty clear up here. It doesn't seem that roaming creatures have been getting in here.".
 
-the scent of Primary Lab is "The lab smells of Dr. Matt's experiments[if Susan is in Primary Lab] and of Susan's musky doe arousal[end if].".
+the scent of Primary Lab is "The lab smells of Dr. Matt's experiments.".
 
 the scent of Park Entrance is "The park entrance smells of trees and flowers and a myriad of lustful creatures.".
 

@@ -37,11 +37,13 @@ number	effect
 27	quit rule
 
 This is the quit rule:
-	if current menu is the table of basic combat:
+	[
+	if current menu is the table of sex choice or current menu is the table of basic combat:
 		rule fails;
 	else:
-		decrease the menu depth by 1;
-		rule succeeds.
+	]
+	decrease the menu depth by 1;
+	rule succeeds.
 
 This is the move down rule:
 	if current menu selection < the number of filled rows in the current menu, increase current menu selection by 1;

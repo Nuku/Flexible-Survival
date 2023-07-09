@@ -2195,6 +2195,7 @@ to say SummonBlanche:
 		say "     Walking over to Blanche, you ask whether she would be interested in coming with you out into the city. 'I've been looking forward to this since we last spent time together. Lead the way darling.' You smile at such a sincere expression of affection from the wolfess, exchanging a quick kiss before you go.";
 	else: [regular summoning]
 		say "     Blanche for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissBlanche:
 	move Blanche to Grey Abbey Library;

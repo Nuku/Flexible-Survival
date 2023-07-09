@@ -281,6 +281,7 @@ to say SummonClaude:
 		say "     Walking over to Claude, you ask whether he would be interested in coming with you out into the city. He pumps a fist in the air before rushing over to give you a hug. 'Thanks, [BlancheMomDadTitle]. No one will be able to complain about me making new friends if I'm with you.' You don't know about that, but you'll at least be there to protect him.";
 	else: [regular summoning]
 		say "     Claude for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissClaude:
 	move Claude to Grey Abbey Library;

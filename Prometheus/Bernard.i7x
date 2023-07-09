@@ -294,6 +294,7 @@ to say SummonBernard:
 		say "     Walking over to Bernard, you ask whether he would be interested in coming with you out into the city. He stares at you for a moment before smothering you in his arms. 'I'd love that, [BlancheMommyDaddyTitle]. Exercise is so much better when you do it with someone you love. And we might find food!' You chuckle and reassure him that you feel the same.";
 	else: [regular summoning]
 		say "     Bernard for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissBernard:
 	move Bernard to Grey Abbey Library;

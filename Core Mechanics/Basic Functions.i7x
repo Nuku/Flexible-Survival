@@ -322,6 +322,20 @@ to FeatGain (Featname - text):
 	else if debugactive is 1:
 		say "ERROR: Trying to add '[Featname]', which the player already has.";
 
+to BallsGrow (TargetChar - a person) by (IncreaseNum - a number):
+	increase Ball Size of TargetChar by IncreaseNum;
+	if Ball Size of TargetChar < 0:
+		now Ball Size of TargetChar is 0;
+	if Ball Size of TargetChar > 7:
+		now Ball Size of TargetChar is 7;
+
+to BallsShrink (TargetChar - a person) by (DecreaseNum - a number):
+	decrease Ball Size of TargetChar by DecreaseNum;
+	if Ball Size of TargetChar < 0:
+		now Ball Size of TargetChar is 0;
+	if Ball Size of TargetChar > 7:
+		now Ball Size of TargetChar is 7;
+
 to TraitGain (TraitName - a text) for (TraitChar - a person):
 	if TraitName is not listed in Traits of TraitChar: [no duplicates]
 		add TraitName to Traits of TraitChar;

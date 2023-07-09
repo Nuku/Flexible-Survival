@@ -241,6 +241,7 @@ to say SummonWendis:
 		say "     Walking over to Wendis, you ask whether she would be interested in coming with you out into the city. Delighted, she jumps up into your arms for a cuddle, licking your face and being generally enthusiastic. 'Thank you, [BlancheMommyDaddyTitle]. Where are we going? Are we going somewhere fun? What are we doing?' You ruffle the fur on her head and tell her that she'll just have to wait and see. 'Will I get to be tossed?'";
 	else: [regular summoning]
 		say "     Wendis for all her many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see her.";
+		now SummonFailure is true;
 
 to say DismissWendis:
 	move Wendis to Grey Abbey Library;

@@ -322,7 +322,7 @@ to say sexwithsnow01:	[Vaginal on Snow]
 		increase Cock Length of Player by 2;
 		follow cock descr rule;
 		say "     As pleasure radiates from your groin, she looks up into your eyes, smiling around your [descr] shaft as it swells slowly against her lustful attentions, pressing all the more firmly against you. With a wet pop, she draws free, flicking tongue over the tip one last time. 'See, already getting better,' she says encouragingly as she strokes in long lazy motions over your excited flesh, other hand moving to rub at your [Skin of Player] balls, caressing the [Ball Size Adjective of Player] orbs gently as they begin to tingle and grow as well. The pleasure of it is too much, and you explode in thick strands of fertile spunk, painting Snow across her snout. She yelps out a laugh before sealing her lips around that bulging opening, swallowing the rest down eagerly before letting your satisfied member settle down. With a final nuzzle, she rises up, 'You get used to that bad boy, and we can continue later.'";
-		increase Ball Size of Player by 2;
+		BallsGrow Player by 2;
 		now CockName of Player is "Hyper Squirrel";
 		now Cock of Player is "bright pink";
 	else:

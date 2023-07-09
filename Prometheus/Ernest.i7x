@@ -236,6 +236,7 @@ to say SummonErnest:
 		say "     Walking over to Ernest, you ask whether he would be interested in coming with you out into the city. He nods before silently mouthing words while counting on his fingers, likely making sure that he hasn't forgotten anything, moving in for a hug when he has finished. 'Thanks, [BlancheMomDadTitle]. This should really help my research.' You know that he enjoys the time with you just as much, if not more, than his pursuit of science.";
 	else: [regular summoning]
 		say "     Ernest for all his many qualities doesn't possess the ability to hear you when you aren't in earshot. Perhaps you should try again when you can see him.";
+		now SummonFailure is true;
 
 to say DismissErnest:
 	move Ernest to Grey Abbey Library;

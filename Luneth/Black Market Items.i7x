@@ -43,7 +43,7 @@ to say breeder serum use:
 	if Player is male:
 		say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight bitter taste to it, but you forget that as it quickly gets to work. Soon, you're feeling hot and aroused, your libido climbing rapidly. ";
 		if Ball Size of Player < 7:
-			increase Ball Size of Player by 1;
+			BallsGrow Player by 1;
 			say "You groan as your testicles increase in size, leaving you with [Ball Size Adjective of Player] balls.";
 		else:
 			say "You groan as your testicles pulse and throb, but don't get any bigger. Seems you've reached your maximum.";
@@ -125,11 +125,11 @@ to say trap serum use:
 	say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight sweet taste to it, but you forget that as it quickly gets to work. Soon, you're feeling hot and aroused, your libido climbing rapidly. ";
 	if Player is male:
 		if Ball Size of Player > 2:
-			decrease Ball Size of Player by 2;
+			BallsShrink Player by 2;
 			Follow the cock descr rule;
 			say "You groan as your testicles decrease in size, leaving you with [Ball Size Adjective of Player] balls.";
 		else if Ball Size of Player is 2:
-			decrease Ball Size of Player by 1;
+			BallsShrink Player by 1;
 			Follow the cock descr rule;
 			say "You groan as your testicles decrease in size, leaving you with [Ball Size Adjective of Player] balls.";
 		else:

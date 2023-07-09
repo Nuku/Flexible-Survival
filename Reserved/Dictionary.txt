@@ -1034,8 +1034,6 @@
 |Stripes|Hospital|lavalamplick|value|
 |Stripes|Hospital|lbfight|value|
 |Stripes|Hospital|longboatfind|value|
-|Stripes|Hospital|rondahosp|value|
-|Stripes|Hospital|rodhosp|value|
 |Stripes|Hospital|progress|property|
 |Stripes|Equinoid Camp|20140908213124/4492:Mon 8 September 2014 21:31|indexing|
 |Stripes|Equinoid Camp|Equinoid Camp|room|

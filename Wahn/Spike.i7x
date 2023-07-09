@@ -1017,10 +1017,10 @@ to say SpikeTalk7: [transformation]
 	now Intelligence of Spike is 1;
 
 to say SpikeTalk8: [fur request]
-	if Energy of Spike - turns > 4:
+	if Charisma of Spike - turns > 4:
 		say "     As you ask Spike if he could give you some of his hair, the young Doberman nods happily enough and raises one hand, feeling around a bit at the back of his neck before pinching his thumb and forefinger around a tuft of hair and giving a sharp tug. 'Ouch, that stings!' he exclaims and rubs the spot with his other hand, then moves to pull a rubber band out of his pocket. 'I thought you might want something like this, so I grabbed some supplies,' your companion explains, as always seeming quite eager to please and gain your approval. Within moments, he holds out his tied-together tuft for you to take.";
 		ItemGain doberman male fur by 1;
-		now Energy of Spike is turns;
+		now Charisma of Spike is turns;
 	else:
 		say "     As you ask Spike for more fur, he winces a little and rubs the back of his head. 'I'll give you more, but how about giving it some time to re-grow first? Wanna make sure it does, and I won't have a bald spot or something!' Blowing out your breath, you shrug and nod to him. You'll just have to chat him up another time.";
 
@@ -2013,7 +2013,7 @@ Priority	Name	EventObject	EventConditions	EventRoom	LastEncounterTurn	CoolDownTu
 3	"Spike_Tehuantl_Training1"	Spike_Tehuantl_Training1	"[EventConditions_Spike_Tehuantl_Training1]"	Grey Abbey 2F	2500	2	100
 
 to say EventConditions_Spike_Tehuantl_Training1:
-	if (LastTehuantlSpikeScene - turns > 6 and Tehuantl is collected and Spike is collected and Energy of Spike < 2 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA: [list of conditions here]
+	if (LastTehuantlSpikeScene - turns > 6 and Tehuantl is collected and Spike is collected and Energy of Spike < 4 and HP of Tehuantl > 49 and HP of Tehuantl < 100) and Player is not CoA: [list of conditions here]
 		now CurrentWalkinEvent_ConditionsMet is true;
 
 Table of GameEventIDs (continued)

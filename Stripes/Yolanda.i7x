@@ -457,8 +457,7 @@ to say yolandasex04_B:
 	say "     Eventually Yolanda relents and pops the snaps on the cockring. A long groan issues from your throat as your long-awaited orgasm can occur freely. Your backed up balls send blast after blast of thick seed into the depths of the false cunny[if Ball Size of Player > 4], filling it to overflowing[end if]. Your orgasm is even better for the enforced delay, your head spinning from the strength of it. And by the time it comes to an end, you're left dazed, but awash in warm ecstasy all over.";
 	say "     You're only half aware at first when the raven tilts your head up. 'Good boy. Now it's time for your tasty treat,' she trills while pouring the gooey contents of the fake vagina into your mouth. Before you realize what's going on, you're already swallowing it down, made to eat your own cum for the avian's amusement. This final humiliation over, she lowers you back down and releases you from your bonds, though it takes a while after all this before you're ready to get up and do anything.";
 	if Ball Size of Player < 7:
-		increase Ball Size of Player by 1;
-		if Ball Size of Player > 7, now Ball Size of Player is 7;
+		BallsGrow Player by 1;
 		if "Modest Organs" is listed in feats of Player and Ball Size of Player > 5:
 			now Ball Size of Player is 5;
 

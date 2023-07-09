@@ -2343,14 +2343,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is riddlesphinx;
 		-- "Riddlewin":
 			now NumberVarValue entry is Riddlewin;
-		-- "rodhosp":
-			now NumberVarValue entry is rodhosp;
 		-- "RomanceBooksFound":
 			now NumberVarValue entry is RomanceBooksFound;
 		-- "rondafight":
 			now NumberVarValue entry is rondafight;
-		-- "rondahosp":
-			now NumberVarValue entry is rondahosp;
 		-- "rsc":
 			now NumberVarValue entry is rsc;
 		-- "RTWinCounter":
@@ -6006,14 +6002,10 @@ to VariableNumberLoad:
 					now riddlesphinx is numberVarValue entry;
 				-- "Riddlewin":
 					now Riddlewin is numberVarValue entry;
-				-- "rodhosp":
-					now rodhosp is numberVarValue entry;
 				-- "RomanceBooksFound":
 					now RomanceBooksFound is numberVarValue entry;
 				-- "rondafight":
 					now rondafight is numberVarValue entry;
-				-- "rondahosp":
-					now rondahosp is numberVarValue entry;
 				-- "rsc":
 					now rsc is numberVarValue entry;
 				-- "RTWinCounter":
