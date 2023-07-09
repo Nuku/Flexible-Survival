@@ -1252,7 +1252,7 @@ Prereq1Resolution of Lux & Player First Mating is { 1 }.
 The level of Lux & Player First Mating is 0.
 The sarea of Lux & Player First Mating is "Nowhere".
 
-to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Near Entrance to Library]
+to say ResolveEvent Lux & Player First Mating: [Lux has sex with player] [Near Entrance to Library]
 	say "     While walking, something fluffy comes up beneath your hand, a quick look down revealing that it is Lux. The pale-furred wolf noses your palm to encourage you to pat her, a request that you fulfill, running your fingers through her luxuriant fur while she sighs contentedly. 'Do you remember our discussion a while ago,' your daughter asks. Though you have an inkling of where this conversation is going, you slyly tell her that she will have to remind you which discussion that would be. 'Oh you beast! You just want to hear me say it don't you?' she whines before taking a breath. 'The one where I asked for us to be closer. [if Player is Male]For you to pin me to the ground and fill me with pups[else]For you to eat my cookie while I devour your pussy[end if]!' Lux almost shouts, dipping her ears when she realizes how loud she just was. You tease your daughter that you don't remember such details being mentioned. 'I may have elaborated a bit,' she sulkily replies.";
 	say "     Brightening up, she continues, 'Anyway, I prepared a little nook [if Umbra & Player First Mating is resolved]just like Umbra did. He [else]for us to get intimate with one another. Umbra [end if]and [if Fang is Male]Daddy [else]Mommy [end if]should be waiting there for us. You know, to make it fun for the whole family, though they won't be joining in. You get me... All. To. Your. Self.' Lux punctuates the last few words while weaving around your legs, excitement plain to see. You are taken to a private corner of the library where cushions have been arranged on the floor and Fang and Umbra are lying nearby, their tails thumping against the floor in greeting but they do not get up, leaving you entirely for your daughter. 'You are one of the people closest to my heart, will you do me the honor of making love to me here?' Lux asks, her voice quavering slightly as the fear of rejection apparently still haunts the corner of her mind. With a kiss to her lips, you tell her that you hope that she enjoys herself as much as you are sure to.";
 	if Player is male: [Male or Herm]
@@ -1321,8 +1321,9 @@ to say Lux&PlayerFirstMatingEvent: [Lux has sex with player] [Near Entrance to L
 			say "     'So... did you enjoy my cookie? I certainly wouldn't mind playing with your pussy again,' Lux croons, drawing your attention back to her. Booping her on the nose with a  finger, you playfully reprimand her for being foul-mouthed, though you do tease her that you enjoy some of the other things that her mouth did. 'I like what you did too. Our bond is very special to me. As long as I still hold a special place in your heart, I don't mind if you desire other people too. They can be a part of our [if HP of Fang is 5 or HP of Fang is 6]extended family[else]pack[end if]! I don't want this moment to end, but I know that you'll eventually have to go again. Just a few moments more, please?' With a smile, you agree, your happiness only growing when Fang and Umbra join the pile, lending their warmth, both literally and figuratively. Who would have thought that such affection could come so close on the heels of such passion? As you relax into the fluff, you wonder who else may have witnessed you and Lux in such a moment of intimacy...";
 		NPCSexAftermath Player receives "OralPussy" from Lux;
 		NPCSexAftermath Lux receives "OralPussy" from Player;
-	now HP of Lux is 5;
-	now hunger of Lux is 3;
+	if HP of Lux > 3:
+		now HP of Lux is 5;
+		now hunger of Lux is 3;
 	now Lux & Player First Mating is resolved;
 
 

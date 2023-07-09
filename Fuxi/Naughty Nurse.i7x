@@ -87,14 +87,14 @@ to say VixenNursePlayWithHer:
 	say "     A soft pressure pushing you deeper into the fox's cleavage causes you to reluctantly flutter your eyes open to find the beautiful lady smiling gently while holding you against her breasts; any past aggression is forgotten as she feeds you while she does your hands begin to wander over her body squeezing her bubbly ass and ample hips before running to her waist as you try to memorize every curve of the fluffy woman's body. It seems you're touching, paired with your feeding, has awakened a different type of hunger in the both of you as she begins to masturbate. The sound of her self-pleasure paired with the sudden arousal her milk seems to have roused in you driving you to grind yourself against the curvaceous caretaker, unwilling to stop your hand from exploring her body or stop drinking to take of yourself. Your mutual climax is a slow and peaceful affair, a gradual and satisfying climb. You pop off first, quivering and shaking against her body as orgasm rolls through you, forcing you, at last, to stop eating, and the vixen nurse follows soon, her juices soaking the both of you and running down her thighs. You both enjoy the afterglow for a long while cuddled up cozily on the couch, but knowing your survival depends on being active and alert at all times, you force yourself to leave.";
 	decrease Libido of Player by 5;
 
-[to say VixenHermNurseRideHer:
+to say VixenHermNurseRideHer:
 	say "     A";
 
 to say VixenHermNurseGetFucked:
 	say "     A";
 
 to say VixenHermNurseGetAnal:
-	say "     A";]
+	say "     A";
 
 to say LoseToVixenNurse:
 	if vixgender is 0:
@@ -221,7 +221,8 @@ to say BeatTheVixenNurse:
 						say "[VixenNursePlayWithHer]";
 					-- "Ride her cock":
 						say "[VixenHermNurseRideHer]";
-					-- otherwise: say "Sex menu failed!";
+					-- otherwise:
+						say "Sex menu failed!";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;

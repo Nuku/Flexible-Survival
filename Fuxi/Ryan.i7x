@@ -345,7 +345,7 @@ to say RyanSexMenu:
 		now sortorder entry is 7;
 		now description entry is "Drown in fennec floof";
 	[]
-	if Player is Male and and "Brood Bred" is listed in Traits of Ryan and (IncestList is not warded and IncestList is not banned):
+	if Player is Male and "Brood Bred" is listed in Traits of Ryan and (IncestList is not warded and IncestList is not banned):
 		choose a blank row in table of fucking options;
 		now title entry is "Fennec Gangbang";
 		now sortorder entry is 8;
@@ -596,7 +596,7 @@ This is the Ryan's Ending rule:
 	if hp of Ryan > 0:
 		trigger ending "Ryan's Ending";
 		if humanity of Player < 20:
-			if Hunger of Ryan < 5
+			if Hunger of Ryan < 5:
 				say "     Succumbing to your infection, you wander for a while before you reach the bunker and pound into Ryan fucking him long and hard into multiple orgasms for hours. Your fennec mate was always careful to hold firm to his sanity, but in his current intense grief and lust, he can't bring himself to resist you. Crying softly, Ryan grabs your face and draws you into one last passionate kiss before he follows you into madness[if Hunger of Ryan is 1]. Your child with Ryan is too weak to resist you, and so falls alongside both his parents. In your new life, you're always accompanied by a large assortment of devoted fennecs that work hard to sate your every need, and you're constantly breeding more of them. Despite your lunacy, you still partially recognize them as your mate and children and fiercely protect them from anybody or anything that dares to threaten them[else if Hunger of Ryan > 1]. Your children with Ryan are far too weak to resist you and so fall alongside both their parents. In your new life, you're always accompanied by a large assortment of devoted fennecs that work hard to sate your every need, and you're constantly breeding more of them. Despite your lunacy, you still partially recognize them as your mate and children and fiercely protect them from anybody or anything that dares to threaten them[end if].";
 			else:
 				say "     Succumbing to your infection, you wander for a while before you reach the bunker and pounce on Ryan. It seems at first to be a simple and easy task as Ryan, driven deeply into grief, doesn't have the will to fight back against you and, even in your maddened state, can't bring himself to hurt you but your children with him however are not so keen to give in to your debauched desires they swarm you. Although they may not be the most powerful, they have strength in numbers, lots of sharp teeth, and sharp claws that prove more than enough to drive you off. Even in your lunacy, part of you recognizes the young fennecs as your children, and just as Ryan couldn't bring himself to hurt you; you can't quite bring yourself to hurt them, and so with an ear-piercing screech, you flee, leaving your once lover and his children to make their own way in the world. Throughout your time in the city, you find yourself longing for family, for the love you can't remember yearning for something more and haunted by dreams of a past long forgotten and promises broken.";
