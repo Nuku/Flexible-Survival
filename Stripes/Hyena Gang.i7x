@@ -88,9 +88,6 @@ object	name
 Gang members	"Gang members"
 
 Gang members is a man.
-
-
-Gang members is a man.
 Gang members is in Hyena hideout.
 ScaleValue of Gang members is 3. [human sized]
 SleepRhythm of Gang members is 0. [0 - awake at all times, 1 - day active, 2 - night active]
