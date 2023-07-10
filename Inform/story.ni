@@ -793,6 +793,7 @@ Include Coura by Wahn.
 Include Cynthia by Prometheus.
 Include Daisy by Sarokcat n Verath.
 Include Damien by Gherod.
+Include Daphne by Fuxi.
 Include Danny by Wahn.
 Include Darius by Wahn.
 Include Darren by Qazarar.
