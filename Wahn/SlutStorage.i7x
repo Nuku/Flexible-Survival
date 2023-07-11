@@ -374,7 +374,7 @@ to say Mortimer_MaleSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Joshiro" is listed in StoredSluts_Male:
+	if there is a name of "Joshiro" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Joshiro";
 		now sortorder entry is 1;
@@ -412,7 +412,7 @@ to say Mortimer_OtherSlutsMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if "Snow" is listed in StoredSluts_Other:
+	if there is a name of "Snow" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Snow";
 		now sortorder entry is 1;
@@ -421,8 +421,14 @@ to say Mortimer_OtherSlutsMenu:
 	if there is a name of "Eric" in the Table of StoredSluts:
 		choose a blank row in table of fucking options;
 		now title entry is "Eric";
-		now sortorder entry is 1;
+		now sortorder entry is 2;
 		now description entry is "Visit the cuntboy to have some fun";
+	[]
+	if there is a name of "Doctor Mouse" in the Table of StoredSluts:
+		choose a blank row in table of fucking options;
+		now title entry is "Doctor Mouse";
+		now sortorder entry is 3;
+		now description entry is "Visit the hulking mouse to have some fun";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -443,6 +449,8 @@ to say Mortimer_OtherSlutsMenu:
 					say "[StoredSlut_Snow]";
 				else if nam is "Eric":
 					say "[Eric_StorageVisit]";
+				else if nam is "Doctor Mouse":
+					say "[Mouse_StorageVisit]";
 				TraitGain "SlutUsed" for Mortimer;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -567,7 +575,7 @@ Book 3 - Sex and Advancement
 			This is basically for a character having realized that they have been captured and are being held against their will.
 
 			Examples:
-				"Fuck you, get away from me! I'll bite!"
+				The man giggles a bit, 'Oh master you came back to fuck me, thank you! I don't care what you do to me, just please fuck me like slut!'
 
 			Part 2 - Dub-con
 			This is based around a character still wanting to free, however they have also begun to enjoy the feeling that the player is awakening within their body.
