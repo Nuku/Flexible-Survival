@@ -1478,19 +1478,20 @@ to say ResolveEvent Dinosaur Nest:
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
 	now dinonest is 1;
-	now dnfightresult is 0; [default 0 = flee]
+	now inasituation is true;
 	challenge "Triceratops";
 	now dinonest is 0;
-	if dnfightresult is 0:		[flee]
+	if fightoutcome > 30: [flee] 
 		say "     Unable to deal with her at this time, you have fled the scene and will have to come back again later to search.";
-	if dnfightresult is 2:		[lose]
+	else if fightoutcome > 19 and fightoutcome < 30: [lose]
 		say "     Having bested you, you can only wait and recover before trying to search her nest again later.";
-	if dnfightresult is 1:		[win]
+	else if fightoutcome < 20: [win]
 		say "     Having bested the triceratops woman, you can finish searching her nest in the hopes of finding something to satisfy the mouse doctor. You dig around in her collection of old stuff, but don't see anything for some time. Eventually, you instead smell something and soon track the scent to a lava lamp. Unplugged, the glass lamp is off its stand and is coated in a wet sheen of fluids. Guessing the strange creature has been using it for some improvised fun, you wrap it in a paisley shirt and pack it away.";
 		say "     Lava lamp collected.";
 		ItemGain lava lamp by 1;
 		increase score by 10;
 		now Dinosaur Nest is resolved;
+	now inasituation is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1571,15 +1572,25 @@ to say ResolveEvent Viking Longboat:
 		now longboatfind is 1;
 	else:
 		say "     You make your way back to the Medieval History wing of the museum and approach the longboat again. The moment you put one foot over the rope barrier, the security guard is growling and charging at you with menace in his eyes.";
-	now lbfight is 1;
+	now inasituation is true;
 	now wolvfightresult is 0; [default 0 = flee]
 	challenge "Wolverine Guard";
-	now lbfight is 0;
-	if wolvfightresult is 0:		[flee]
+	if fightoutcome > 30:		[flee]
 		say "     Unable to deal with the maddened wolverine, you have fled the scene and will have to come back again later to get the gemstones.";
-	if wolvfightresult is 2:		[lose]
+	else if fightoutcome  > 19 and fightoutcome < 30:		[lose]
+		if Player is female:
+			if a random chance of 2 in 3 succeeds:
+				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
+				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
+				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over. He quickly mounts you, driving his large, brown cock deep inside you. He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
+				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear. He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
+			else:
+				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+		else:
+			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
+			if HP of Player > 0, now HP of Player is HP of Player / 2;
 		say "     Having been bested, you can only stagger off and recover before trying to get on the boat again later.";
-	if wolvfightresult is 1:		[win]
+	else if fightoutcome < 20:		[win]
 		say "     Having bested the wolverine guard, you leave it passed out and quickly put the ladder alongside the huge ship. You climb up and head to the masthead across the old, creaking ship. The wood is incredibly old and you grit your teeth with every soft step you make, worried you'll break through the deck and fall.";
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
 		let bonus be ( dexterity of Player minus 10 ) divided by 2;
@@ -1597,6 +1608,7 @@ to say ResolveEvent Viking Longboat:
 			increase score by 10;
 		now nerminepackage is 3;
 		now Viking Longboat is resolved;
+	now inasituation is false;
 
 [spear moved to Core Mechanics/Weapons.i7x]
 
