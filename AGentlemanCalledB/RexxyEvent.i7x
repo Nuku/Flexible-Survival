@@ -1,5 +1,7 @@
-Version 3 of RexxyEvent by AGentlemanCalledB begins here.
+Version 4 of RexxyEvent by Prometheus begins here.
+[Originally by AGentlemanCalledB]
 [Version 3 - Overhaul of code for saving and future content.]
+[Version 4 - Non-submission path for rescuing Karen]
 
 "Adds a Adds an Alpha Retriever NPC and associated scenarios to the Flexible Survival game"
 
@@ -22,6 +24,12 @@ Version 3 of RexxyEvent by AGentlemanCalledB begins here.
 [ 3 = Spoke to Francois, got cookies ]
 [ 4 = Trigger Fight against Rex ]
 [ 5 = Defeated Rex, default Pet Karen Value ]
+
+a postimport rule:
+	if Perception of Rex is 2 and HP of Karen is 3:
+		now Perception of Rex is 3;
+		now HP of Karen is 0;
+
 
 Section 1 - Event
 
@@ -47,6 +55,7 @@ to say ResolveEvent Forced Adoption:
 		say "     Once you are certain the pair is gone you get up from your hiding place and walk over to where they were standing. As you glance around you spot the object the retriever girls was so obsessed with, an unusual sex toy shaped like a canine cock on one end with a bone-shaped handle on the other. Against your better judgment, you feel compelled to pick the strange toy up, examining it more closely momentarily before slipping it into your bag and heading on your way, even as faint thoughts of doggie sex begin to creep into your mind.";
 		ItemGain Dog Bone by 1;
 		now HP of Rex is 1;
+		now Missing Person Flier is active;
 	else if HP of Rex is 4:
 		if Dog Bone is owned:
 			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever.";
@@ -59,6 +68,10 @@ to say ResolveEvent Forced Adoption:
 			now HP of Rex is 5;
 			now Resolution of Forced Adoption is 1; [met Rex]
 			now Forced Adoption is resolved;
+			if Missing Person Flier is active:
+				now Missing Person Flier is inactive;
+			if Lair of the Pooch is active:
+				now Lair of the Pooch is inactive;
 		else:
 			say "     Once again, you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to your beloved doggie sex toy, feeling an overwhelming urge to return to where you left it and play with it again.";
 			increase bonelust by 1;
@@ -89,7 +102,9 @@ Dog Bone is infectious. Strain of Dog Bone is "Retriever Female". It is not temp
 the scent of Dog Bone is "The bone-shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
 
 To say DogBoneUse:
-	if HP of Rex is 1:
+	if Perception of Rex > 1:
+		say "     You really don't think that that is a good idea. You need all of your wits about you if you're going to rescue Karen.";
+	else if HP of Rex is 1:
 		say "[DogBoneScene1]";
 		infect "Retriever Female";
 		decrease humanity of Player by 3;
@@ -111,6 +126,10 @@ To say DogBoneUse:
 		SanLoss 6;
 		now HP of Rex is 4;
 		now bonelust is 1;
+		if Missing Person Flier is active:
+			now Missing Person Flier is inactive;
+		if Lair of the Pooch is active:
+			now Lair of the Pooch is inactive;
 	else if HP of Rex is 4:
 		if Player is female:
 			say "[DogBoneScene4f]";
@@ -121,7 +140,7 @@ To say DogBoneUse:
 		decrease humanity of Player by 4;
 
 An everyturn rule:
-	if HP of Rex > 3 and HP of Rex < 50:
+	if (HP of Rex > 3 and HP of Rex < 50) and Perception of Rex < 2:
 		if bonelust > 10:
 			say "     The instincts caused by the retriever infection and the burning need caused by the canine sex toy dominate your mind almost completely. You struggle to maintain some small part of yourself as the thoughts of the retriever bitch you're becoming begin to be indistinguishable from your own. You need to find some way to sate this burning need now, else you will surely lose yourself completely to these desires.";
 			increase bonelust by 1;
@@ -642,5 +661,128 @@ to say RexPetScene4:
 to say RexPetScene5:
 	say "     You yip in surprise as you suddenly have a cold, wet feeling [if Player is female]between your thigh[else]at your as[end if]s and you quickly turn around to find Rex on all fours behind you with an almost guilty look in his eyes. 'Sorry, I guess old habits die hard eh?' he says, taking another deep sniff of your groin before getting up leaving. You stand there somewhat shocked for a short while, confused by the conflicting feelings of violation and arousal before you shake your head clear and move on.";
 
+
+Section 8 - Saving Karen without Submission to Rex
+
+[
+Current direction of rescuing Karen:
+- Find a missing person flier with picture of Karen (Can't have succumbed to the Bone yet)
+- Approach Rex's home but realise that you don't want to break in with him there.
+- Return when Rex isn't there and talk to Karen. She tells you about Francois' bakery.
+- Get Francois to make dog treats to distract Rex
+- Attempt rescue of Karen, fight Rex.
+- Depending on outcome, take Karen back to library.
+]
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing Person Flier	"Missing Person Flier"
+
+Missing Person Flier is a situation.
+ResolveFunction of Missing Person Flier is "[ResolveEvent Missing Person Flier]".
+Missing Person Flier is inactive. [Disabled until initial event]
+Sarea of Missing Person Flier is "High".
+
+to say ResolveEvent Missing Person Flier:
+	if Dog Bone is owned:
+		say "     A voice calls out to you as you wander the streets, 'Hey! Um, could I talk to you for a minute?' Musing that this is the politest mugging you've encountered, you turn to find a round-faced anthro hamster looking at you, a stack of paper clutched under one arm. You stare at him for moment before raising an eyebrow when he doesn't continue speaking, startling him when you cough. 'Sorry. Most people so far have made lewd remarks about how much I can fit in my mouth. That, or just jumped me immediately. I sort of zoned out waiting,' he apologizes. 'I swear my butt must be more roomy than my cheeks by now...' Another cough and a gesture for him to explain himself properly saves you from having to hear more intimate details about his experiences with others in the city. 'Right. Sorry. Have you seen this woman?' he asks, passing you a flier. 'The pictures a little bit blurry, but hopefully you should still be able to recognize if you've seen her.'";
+		say "     MISSING! Karen Thompson, the flier reads with a picture of a smiling female anthro golden retriever. 'She's a student at the college, and a few of us who are in the same classes have been worried since she stopped turning up to class,' the hamster explains, looking at you hopefully. He nods resignedly when you say that you don't think that you have seen her, but that you'll keep an eye out just in case. 'Yeah, that's what most people say. A few made comments about wanting her for themselves, but I really can't afford to dwell on that. If she's out there, someone must have seen her. I think that she lives somewhere around here, but I don't know the address and the college isn't allowed to give out private information like that. Anyway, I'll carry on looking for her and handing out fliers. Take care,' the hamster calls before scurrying away, keeping to the edge of buildings as he vanishes from sight.";
+		WaitLineBreak;
+		say "     With a sigh, you crouch down to put the missing person poster in your backpack, not sure how much effort you'll out into finding her when there is no certainty that she even looks like a retriever any more. Not paying attention, you hear something fall onto the ground and look down to see the weird canine sextoy, an intrusive feeling developing at the back of your mind as you pick it up to stow it in your bag again. Suddenly, you realize that it was a golden retriever girl who lost the dildo in the first place! Tossing everything back in, you sling the backpack over your shoulder again, get your bearings, and hurry off in search of where you may have seen the missing dog woman.";
+		say "     It takes you a while to find, but you are relatively sure that you'll be able to locate the [bold type]lair of the pooch[roman type] when you're ready, as long as you don't succumb to the temptation of the Bone...";
+		now Missing Person Flier is resolved;
+	else:
+		say "     You feel like something is missing. Perhaps if you had that canine novelty dildo with you...";
+
+Table of GameEventIDs (continued)
+Object	Name
+Lair of the Pooch	"Lair of the Pooch"
+
+Lair of the Pooch is a situation.
+ResolveFunction of Lair of the Pooch is "[ResolveEvent Lair of the Pooch]".
+Prereq1 of Lair of the Pooch is Missing Person Flier.
+Sarea of Lair of the Pooch is "High".
+
+to say ResolveEvent Lair of the Pooch:
+	if Dog Bone is owned:
+		if Perception of Rex < 1:
+			say "     You stand by the alley where the golden retriever girl was taken, wondering how exactly you're going to find her. Deciding that you may as well start by looking down the alleyway, you quickly discover that it branches out behind all the houses, many with back doors exiting on to it, leaving many different paths that they could have taken. Disappointed that it couldn't be that easy, you trudge back out to the street failing to notice the person walking along the pavement until the last second, staggering back to avoid colliding into them. ";
+			if Player is Female:
+				say "'Careful, sexy. I'd rather knock you up than knock you down,' the large anthro male retriever chuckles as he puts an arm out to help you steady yourself. You feel his eyes rove across your body, lingering appreciatively on your chest and crotch. ";
+				if Player is pure and BodyName of Player is "Retriever Female":
+					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. We could see about putting some puppies in you,' he suggests lechorously. ";
+				else:
+					say "'Wanna come home with me? You could meet my pet and then we can work on making you prettier and more obedient. You might not want to leave afterwards though,' he laughs. ";
+			else:
+				say "'Watch it, unless you want to be taught to respect your betters,' the large anthro male retriever grumbles as you recover your balance. He lets his eyes rove over your body, not hiding his disappointment as they glide over your chest and crotch. ";
+				if Player is pure and BodyName of Player is "Retriever Female":
+					say "'You remind me of my current pet. You should come by my house. My bitch gets lonely and I think you'd make a good playmate for her. Might need to break your ass in first though, as I don't have a use for your cock,' he suggests lechorously. ";
+				else:
+					say "'With a few changes, I could make you just like my other pet. If you follow me home, we could work on making you prettier and more obedient. You might not want to leave afterwards though,' he laughs. ";
+			say "You realize that this is the same dog that the retriever girl ran into and he obviously lives nearby! Not comfortable with how he phrased his invitation, you refuse as politely as you can to avoid a confrontation ant the attention that this might attract.";
+			say "     'Fine, suit yourself. I'm not unreasonable. It's an open invitation. I smell something about you that might mean that you'll change your mind,' he replies before sauntering up to the front of the house beside you, unlocking the door, and letting himself in. As he closes it behind himself, you see the flap of the doggy door swaying. You may have found where Karen, or whoever it is that he is keeping as a pet, has been since she went missing, but judging from the male anthro's behavior, short of submitting to him, you're not going to be able to just ask to meet her. You doubt that violence is the answer either, especially when you can't be sure that his [']pet['] is there against her will. No, subterfuge seems the best next step and you're going to have to wait for him to be out of the house so that you can at worst, scope out the inside of his home, or possibly meet with the retriever girl and get her perspective on the whole matter. With that in mind, you turn away and walk down the street a bit so that no one suspects your nefarious scheme.";
+			now Perception of Rex is 1;
+		else if Perception of Rex is 1:
+			say "     As you pass by the house where the Golden Retriever lives, you hear the door rattle and rapidly flatten yourself against the wall in the alleyway to avoid being seen while being able to watch the entrance to the house. '-back in a couple of hours. We're low on food and I can't feed you on cum without eating something myself. Don't get too lonely without your master!' the male canine calls back into the house before closing and locking the door, twirling the key in his fingers. As he strolls past your hiding spot, you hear him muttering, 'She really is more suited to being a pet than I ever was.' Fortunately, he seems too preoccupied by his own thoughts to see, hear, or smell you as he passes by. After a few minutes of not being able to hear his claws clicking on the pavement, you decide that it is safe enough to return to the street, glancing around just to be sure. When you have reassured yourself that he isn't coming back, you hurry over to the front door.";
+			say "     Without thinking you attempt to turn the knob, but of course find it locked, rattling it in frustration. You doubt that you'll find any open windows to sneak in through, and breaking down the door seems like it would only attract attention from any nearby creatures and the male retriever may still be within earshot. However, a voice calls out from inside. 'Master, is that you? Did you forget your key? Come around and I'll open the back door for you.' Seeing your opportunity, you hurry down the alley by the house and wait to be let in by the unsuspecting occupant. The sound of several bolts being drawn back is soon followed by the door opening and you immediately step through, being greeted by a happy female anthro golden retriever. 'You aren't Rex! Who are you?' she squeaks, frantically backing away, her excitement at her master's return giving way to fear at having let a stranger into her home.";
+			WaitLineBreak;
+			say "     'Get away from me! My master will be back soon and he's big and strong,' she warns you. 'And he'll punish me...' she adds in a small voice, mostly to herself. Seeing the effect that you're having on her, you hold your hands up in a conciliatory gesture promising that you only wanted to ask her a few questions and perhaps talk for a bit. She eyes you warily, but her fur goes down a little and she doesn't look to be panicking quite as much. 'Ok. But then you leave. Oh God, he'll be able to smell you...' You tell her that you saw when she she was taken by Rex and dropped her dildo. Is she here against her will? 'Yes! I mean no! My master is good to me and he looks after me and I don't think I could manage without him,' she responds, glancing nervously over your shoulder at the open door. Frowning, you decide to take a different approach, mentioning that you were approached by someone looking for a young woman named Karen, asking whether she knows her. 'I'm Karen, though master prefers to call me things like puppy, slut, or sexy bitch. I'm a good girl! Who was looking for me? They should stop before Rex finds out. It will make him angry. Angrier than he's going to be when he finds out I let you in.'";
+			say "     She's shaking again, flinching when you reach a hand to stroke her head, though she relaxes against your touch when you continue to be gentle. You reassure her that you only want to talk for a few minutes more, then you'll leave. 'No, don't go. Stay with me. I get so lonely when Master is away,' she pleads, backing away and looking at you with wide eyes. As you shake your head, she begins to cry. 'If you don't stay, Rex, I mean Master, will punish me! I won't be allowed to orgasm for days,' she sobs. 'He'll call me a bad dog!' Seeing that you aren't going to be able to persuade Karen to come with you this time with how it has spiralled beyond your control, you try to placate her by asking if there is anything else that you can do that might soothe Rex's ire.";
+			WaitLineBreak;
+			say "     Drying her tears and taking a few deep breaths, Karen pauses to think. 'He didn't always used to be master. He used to just be a normal dog. My pet...' she reveals. 'My memory is all fuzzy. I can't remember who I was, but I think that I used to take him to a French bakery that specialized in pet treats. Good enough for anyone to eat. I wish I could have even just one of those cookies...' The retriever begins to drool, her thoughts firmly on food. She certainly hasn't forgotten about [italic type]that[roman type]. Cautious that Rex might return early, you urge her to tell you more. 'It wasn't too far from here. Rex and I used to go past it when I took him for a walk. Oh, he hasn't taken me for a walk for aaagggeeesss.' You click your fingers before she can get distracted by this thought. 'He used to know when we were going there and would get all excited. He could probably smell the food. I should really suggest that he take me there, if it is still around, that is.'";
+			say "     A plan forming in your mind, you give Karen another pat and thank her for talking to you, promising to find the bakery and bring her some dog treats to placate Rex, and perhaps for her to enjoy too. 'Oh, thank you. That would be very kind,' she replies, licking your cheek, wagging her tail, and looking much more cheerful than when your conversation began. 'Much kinder than Master,' you hear her mumble to herself. Though she seems eager for you to leave, shooing you back outside, she nonetheless waves you goodbye as you walk away before firmly closing the door and sliding the bolts across. Now you just need to find the bakery that she was talking about...";
+			now Perception of Rex is 2;
+			now bonelust is 0;
+		else if Perception of Rex is 2:
+			say "     You should really work on finding the bakery that Karen told you about.";
+		else if Perception of Rex is 3:
+			if Dog Treats is owned:
+				say "     You once again find yourself in front of Rex's, or should that be Karen's, door. The bag of dog treats clutched in your hand. Taking a deep breath, you rap your knuckles against the wood. For a moment you are brought back to better times as the two canine occupants immediately start to bark and you hear the scrabble of their claws against the floor before they stop, likely realizing what they are doing. Upon opening the door, Rex initially scowls at you, but then the tantalizing scent of the treats reaches his nose. 'Is that for me? A peace offering for first refusing my offer and then breaking into my fucking home,' he grumbles, his eyes fixed on the bag of goodies. You fake an apology and express a desire to make up for your mistakes. Perhaps you and Karen could get familiar with each other under his supervision? With how desperate she was for you to leave last time and how devoted she seemed to be to him, you don't feel that you could properly make a decision whether you wished to be Rex's pet just like her.";
+				say "     Between the food and the flattery, Rex becomes more welcoming, stepping to the side to allow you to enter his home and get off the street. As you thank the male retriever, you see Karen peering at you around a corner, on all fours and wearing a collar. Following your eye line, Rex chuckles. 'I think that she's learnt her lesson. She'll be much more careful not to talk to strangers in future.' You clench your fist around the bag of treats. The comment might sound innocent enough, but you are sure that he did more than scold her. Oblivious to your displeasure, the male canine guides you into the living room, talking all the while. 'Put them on the table there and I'll get us some bowls. Yes, even you my lovely stray. I don't know how you knew that they were my favorite, but I can spare you a few. I am a kind master after all.'";
+				WaitLineBreak;
+				say "     With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into three doggy bowls, pushing one towards Karen, who barks happily in response before digging in. Next he offers one to you, which you politely refuse, not wanting to take the risk. With a smirk and a shrug, Rex tips your share into his own bowl before he begins eating. With the two retrievers seemingly distracted by your gift, you realize that you didn't plan how exactly you were going to get Karen out. You should have drugged the biscuits or something! Your contemplation is cut short by a low growl behind you. 'Oh I played nice, but don't think a few treats are going to make things good between us! You want to take my pet away from me. She's mine! No-one else's!' Rex snarls. 'I don't know what you said to her, but she actually asked me to let her go!' Karen cowers in the corner, to scared to even finish the treats in her bowl. 'I think that I'm going to have to teach you not to fuck with another dog's bitch,' the retriever yells before circling around you. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
+				now HP of Karen is 4;
+				now inasituation is true;
+				challenge "Retriever Male";
+				now inasituation is false;
+				if fightoutcome is 30:
+					say "     You jump back and foolishly try and make a break for it. Unfortunately your earlier assessment was quite correct and as you try to weave past Rex he steps back to block your escape, catching you by the throat as you collide with him. Before you have a chance to react, he lifts you into the air and throws you to the ground, knocking the wind out of you and your will to fight along with it.";
+					now fightoutcome is 20;
+				if fightoutcome >= 10 and fightoutcome <= 19:
+					say "     Looking down at Rex's vulnerable form, any desire to further harm or humiliate him is interrupted by Karen pressing herself up against your side. 'He doesn't look nearly as strong lying on his back like that,' she comments. 'I can already feel my mind clearing a bit.' The attractive female canine smiles at you and gives you a very heartfelt hug. 'Thank you for coming back for me, even when I wasn't the most friendly last time. I think... I think that I should leave this place, at least for now. Would you mind if I came with you? I promise that I wouldn't be a bother,' she almost pleads, making the most of her soulful brown eyes. Her excitement when you nod distracts you long enough for Rex to spring to his feet. Off balance, you prepare to have to defend yourself once again, but are surprised when instead of attacking you, the male retriever charges towards the door without looking back.";
+					say "     'Leave him to scamper away with his tail between his legs,' Karen suggests. 'He's no threat to you any more.' Shrugging, you acquiesce and turn back to her. 'Let me collect a few of my belongings, then we can be off. Wait here. It'll only take me a minute.' You look around the room as Karen pulls things out of draws and stuffs them in a small bag, taking in the various books on the shelves, her choice in decorations, and the amount of dog fur on the couch. Spotting a photo frame, you're just about to take a closer look when  Karen returns and hugs you tightly from behind, her ample assets pressing against you. She licks your cheek lightly before whispering her thanks in your ear. 'My mind is so much clearer since he left, I feel a little like myself again,' she repeats what she said earlier, releasing you from her warm hug. 'If you hadn't come along, I... I don't even want to think about how I might have ended up...'";
+					WaitLineBreak;
+					say "     She squeezes past you and picks up the photo that you were just looking at before returning over to you. 'This was us. Before the city became frightening and I began to transform,' she explains, pointing to an attractive blonde woman and her large Golden Retriever. 'I don't know why any of it all happened. So much of it is a blur. One day I could play frisbee in the park with Rexxy, then at some point I found myself being collared instead of him. I don't know that I would ever be able to look at him the same way again, but I hope that I'll get my old Rex back when this whole mess is sorted out, even with all the things he did to me.' Reaching out to wipe away the tear welling in her eye, you do your best to comfort the poor girl. Leaning into your hand, a smile creeps across Karen's face. 'Thank you,' she says again quietly. 'I think we should go now. I've got everything I need for now, other than my memory. But hopefully that will come back with enough time.'";
+					say "     One last thing on your mind, you rummage through your backpack until you find the dildo that started you on your path to rescue Karen. Sure that it is hers, you offer it back to the female retriever. SHe blushes a little upon seeing it, though you aren't sure how much is to do with the potent pheromones wafting from it. Tentatively taking it from you, Karen looks at it, turning it around in her hand-paw. 'It might be better if I left it left here so that it isn't around tempting me to return to this life,' she muses, before tossing it on her bed. With nothing else for you here, you take Karen by the paw and escort her back to the library, fortunately without incident.";
+					now Retriever Girl is tamed;
+					add "Tamed" to Traits of Retriever Girl;
+					move Karen to Breakroom;
+					say "     (Karen is now a possible ally!! You can make her your active ally by typing [bold type][link]ally Karen[end link][roman type].)[line break]";
+					ItemLoss all Dog Treats;
+					now Libido of Karen is turns;
+					now Perception of Rex is 4;
+					now HP of Karen is 5;
+					now Rex's Place is unknown;
+					move Player to Breakroom;
+					now Lair of the Pooch is resolved;
+				else if fightoutcome >= 20 and fightoutcome <= 29:
+					say "     After roughly knocking you to the floor, Rex pads over to a nearby cupboard and starts digging in it, still growling under his breath as he pulls a thin blue collar out of the cupboard. 'I can see that if we don't get you properly [']trained['] you're going to continue being a problem.' Rex kneels down beside you, reaching around your head to fasten the collar around your neck, before taking hold of it and standing up. He unceremoniously begins dragging your limp body towards the back room by your new accessory, throwing you face first onto the bed with your legs hanging over the side and your rear presented for him.";
+					say "     Grabbing you roughly by the hips, Rex positions you just as he wants before driving his entire length into your unprepared [if Player is female]cunt[else]ass[end if] in one sharp motion, causing you to yelp in pain. With his swelling knot pressed against your [if Player is female]pussy lips[else]cheeks[end if], Rex takes a firm grip of your shoulders, pressing your face down into the bed as he begins fucking you. Despite your efforts to maintain control, your eager body soon begins responding to the dominant canine, and as waves of pleasure begin to cloud your mind, you find your grip slipping.";
+					say "     As Rex's pace quickens, you start to become a more active participant in the rough fucking you're receiving, pushing your hips back to meet his thrusts as best you can even as your mind screams out to resist. You feel his thick knot pressing deeper and deeper against your [if Player is female]cunt[else]asshole[end if], and your body longs to have it within you, but just as it is about to tie you together, Rex stops, leaning down overtop you with a low chuckle.";
+					say "     'Beg for it,' he whispers in your ear. 'Beg like a proper little bitch, a good little pet.' He slowly begins shifting the swollen knot that your body so wantonly desires, teasing and tormenting you simultaneously until you're crying out in submission, pleading to have the large canine tie with you. Finally, with one final push, Rex drives the knot into your body, shattering your world with intense climax as his hot seed blasts deep into your body.";
+					say "     Before you've even had a chance to fully recover, Rex begins his rhythmic pounding again, sending fresh waves of delight through your eager body, further clouding your mind in the lustful haze, fucking away the last remnants of your humanity with each powerful thrust. As your master continues his relentless pounding, you begin to lose focus on anything but the wonderful cock and delightful knot tying you to him. Everything begins to fade and time slips away as your training continues until you finally black out after what feel like a wonderful eternity.";
+					NPCSexAftermath Player receives "[if Player is female]PussyFuck[else]AssFuck[end if]" from Rex;
+					say "[fullRetrieverTF]";
+					wait for any key;
+					now HP of Rex is 49;
+					now humanity of Player is 0;
+					end the story saying "Your mind is lost to the retriever infection, submitting to life as Rex's newest happy sexpet.";
+					wait for any key;
+					follow the turnpass rule;
+					stop the action;
+			else:
+				say "     You should have the Dog Treats with you before trying to rescue Karen. If you don't need them for Rex, she'll surely enjoy eating them.";
+	else:
+		say "     You feel like something is missing. Perhaps if you had that canine novelty dildo with you...";
 
 RexxyEvent ends here.
