@@ -217,7 +217,7 @@ to EventRestore:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 				]
 			else:
-				if EventIDName is not "Let's Party": [override for deleted event]
+				if EventIDName is not "Let's Party" and EventIDName is not "Captive Rat" and EventIDName is not "Locked Utility Room": [override for deleted event]
 					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs! Please report this message on the FS Discord!";
 	else:
 		say "No Event Save File Found!";
