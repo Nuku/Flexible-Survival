@@ -39,6 +39,13 @@ An everyturn rule:
 		if debugactive is 1:
 			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Taur Ceryneian infection blocking it!>";
 		stop the action;
+	if "Body Shop Guarantee - Face" is listed in Feats of Player or "Body Shop Guarantee - Body" is listed in Feats of Player or "Body Shop Guarantee - Skin" is listed in Feats of Player or "Body Shop Guarantee - Tail" is listed in Feats of Player or "Body Shop Guarantee - Crotch" is listed in Feats of Player:
+		say "     Moreau's guarantee seems to have been broken! Your entire body is now a Wasp King's!";
+		FeatLoss "Body Shop Guarantee - Face";
+		FeatLoss "Body Shop Guarantee - Body";
+		FeatLoss "Body Shop Guarantee - Skin";
+		FeatLoss "Body Shop Guarantee - Tail";
+		FeatLoss "Body Shop Guarantee - Crotch";
 	else if "Wasp Royalty" is listed in feats of Player:
 		turn player into "Wasp King" silently;
 
