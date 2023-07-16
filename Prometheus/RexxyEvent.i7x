@@ -25,6 +25,12 @@ Version 4 of RexxyEvent by Prometheus begins here.
 [ 4 = Trigger Fight against Rex ]
 [ 5 = Defeated Rex, default Pet Karen Value ]
 
+a postimport rule:
+	if Perception of Rex is 2 and HP of Karen is 3:
+		now Perception of Rex is 3;
+		now HP of Karen is 0;
+
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)

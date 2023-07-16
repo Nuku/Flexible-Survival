@@ -279,6 +279,6 @@ carry out DrMouseReset:
 	else if "HardDommed" is listed in traits of DrMouse:
 		say "     <Dr. Mouse will now switch paths! One path is gentle dom, one is rough dom!>";
 		TraitGain "GentleDommed" for DrMouse;
-		TraitLoss "GentleDommed" for DrMouse;
+		TraitLoss "HardDommed" for DrMouse;
 
 Doctor Mouse ends here.
