@@ -11,7 +11,35 @@ Definition: A person (Called x) is inWaspHive:
 	no;
 
 An everyturn rule:
-	if "Wasp Royalty" is listed in feats of Player:
+	if Nightmaretf > 0: [Nightmare]
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Nightmare infection blocking it!>";
+		stop the action;
+	if wrcursestatus >= 7 and wrcursestatus < 100: [Were-raptor]
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Wereraptor infection blocking it!>";
+		stop the action;
+	if (JackalManTF > 0 and JackalManTF < 5) or (JackalBoyTF > 0): [Jackalman Transformation]
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Jackalman infection blocking it!>";
+		stop the action;
+	if isHellhound is true: [Hellhound]
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Hellhound infection blocking it!>";
+		stop the action;
+	if "Ceryneian Blessed - Anthro" is listed in feats of Player:
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Anthro Ceryneian infection blocking it!>";
+		stop the action;
+	if "Ceryneian Blessed - Feral" is listed in feats of Player:
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Feral Ceryneian infection blocking it!>";
+		stop the action;
+	if "Ceryneian Blessed - Taur" is listed in feats of Player:
+		if debugactive is 1:
+			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Taur Ceryneian infection blocking it!>";
+		stop the action;
+	else if "Wasp Royalty" is listed in feats of Player:
 		turn player into "Wasp King" silently;
 
 [Resolution Variables:
