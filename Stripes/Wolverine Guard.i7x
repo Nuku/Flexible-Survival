@@ -58,19 +58,7 @@ to say wolverinelocation:							[sets random location for the wolverine]
 
 to say losetowolverine:
 	now wolvfightresult is 2;
-	if lbfight is 1:						[Viking Longboat - Hospital Quest]
-		if Player is female:
-			if a random chance of 2 in 3 succeeds:
-				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
-				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
-				say "     Satisfied that he won't be interrupted, he quickly tears off your remaining clothes and presses his nose against your wet pussy, licking at it before rolling you over. He quickly mounts you, driving his large, brown cock deep inside you. He pants and growls as he pounds into you hard and fast, driving his thick meat in over and over again until he finally releases a hot blast of seed deep inside you.[impregchance]";
-				say "     As he cum inside you, he grows more gentle, nuzzling you and snuffling at your ear. He gives your neck and shoulder a few nips before dismounting and firmly sending you on your way, forcing you to leave that section of the museum and to head back to the main foyer.";
-			else:
-				say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
-		else:
-			say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the Medieval History wing of the museum.";
-			if HP of Player > 0, now HP of Player is HP of Player / 2;
-	else if libfight is 1:				[Central Library]
+	if libfight is 1:				[Central Library]
 		say "     The obsessed wolverine knocks you firmly to the ground, leaving you unable to keep fighting.";
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";

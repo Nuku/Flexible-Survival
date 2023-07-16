@@ -106,13 +106,29 @@ instead of fucking Mul:
 
 instead of going East from Dark Hallway 1 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
 	now inasituation is true;
-	now OrcSpecialFightNumber is 1; [meeting Mul]
+	project Figure of Mul_clothed_icon;
+	if MulAnalAcceptance > 4:
+		say "     A large and muscular orc comes along - it's your 'special friend' Mul, who bares his tusks and snarls as he sees you. You may have broken him in to actually like being fucked, but that doesn't mean he isn't still the proud green-skinned brute that you know and love, with his mind set on dominating you and others. Thick brows drawing together, the orc gives you a penetrating stare and makes a first step towards you - only to press his lips together and swallow what he wanted to say as an orc [one of]stumbles out of the main hall to the west, mumbling about taking a leak[or]struts into the lair through its side entrance, carrying a bound soldier over his shoulder[or]passes you in the hallway, barely giving a glimpse[or]sticks his head into the hallway and shouts, 'Where are you, you little slut? Time to suck my dick, breeder!' He grumbles as there is no reply and only Mul and yourself are in sight[at random]. Even through this is just a side entrance, there seems to be quite a bit of activity going on right now...";
+		WaitLineBreak;
+		say "     The crack of Mul's knuckles draws your attention back to the big orc. 'Let's take this outside,' he gruffly tells you, giving a nod towards the exit. Since a one on one fight with the orc has less of a probability of an orc gangbang, and more... options, if you should win, you agree. With a quick nod you let the orc precede you, then follow him out of the orc lair and into the empty streets. There's definitely something to be said about the ability of the orcs to calm the usually so crazy streets of the city - anyone not fled or dragged off to be a slave is thoroughly intimidated, so you make your way along several blocks without anyone or anything coming into sight. Eventually, Mul steps into what looks like a mechanic's shop, filled with a motor-less car and tools scattered over the somewhat cum-streaked floor.";
+		say "     Looking around, the brutish orc gives a satisfied grunt, then turns to you. 'Let's see who's the boss now. I'm gonna show you what a real orc can do!' And with that, he balls his fists and attacks.";
+	else:
+		say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";	
 	challenge "Orc Warrior";
+	now inasituation is false;
 
 instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
 	now inasituation is true;
-	now OrcSpecialFightNumber is 1; [meeting Mul]
+	if MulAnalAcceptance > 4:
+		say "     A large and muscular orc comes along - it's your 'special friend' Mul, who bares his tusks and snarls as he sees you. You may have broken him in to actually like being fucked, but that doesn't mean he isn't still the proud green-skinned brute that you know and love, with his mind set on dominating you and others. Thick brows drawing together, the orc gives you a penetrating stare and makes a first step towards you - only to press his lips together and swallow what he wanted to say as an orc [one of]stumbles out of the main hall to the west, mumbling about taking a leak[or]struts into the lair through its side entrance, carrying a bound soldier over his shoulder[or]passes you in the hallway, barely giving a glimpse[or]sticks his head into the hallway and shouts, 'Where are you, you little slut? Time to suck my dick, breeder!' He grumbles as there is no reply and only Mul and yourself are in sight[at random]. Even through this is just a side entrance, there seems to be quite a bit of activity going on right now...";
+		WaitLineBreak;
+		say "     The crack of Mul's knuckles draws your attention back to the big orc. 'Let's take this outside,' he gruffly tells you, giving a nod towards the exit. Since a one on one fight with the orc has less of a probability of an orc gangbang, and more... options, if you should win, you agree. With a quick nod you let the orc precede you, then follow him out of the orc lair and into the empty streets. There's definitely something to be said about the ability of the orcs to calm the usually so crazy streets of the city - anyone not fled or dragged off to be a slave is thoroughly intimidated, so you make your way along several blocks without anyone or anything coming into sight. Eventually, Mul steps into what looks like a mechanic's shop, filled with a motor-less car and tools scattered over the somewhat cum-streaked floor.";
+		say "     Looking around, the brutish orc gives a satisfied grunt, then turns to you. 'Let's see who's the boss now. I'm gonna show you what a real orc can do!' And with that, he balls his fists and attacks.";
+	else:
+		say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";	
+	project Figure of Mul_clothed_icon;
 	challenge "Orc Warrior";
+	now inasituation is false;
 
 Section 2 - Locker Room Sex
 

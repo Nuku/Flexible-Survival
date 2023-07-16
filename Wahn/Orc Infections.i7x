@@ -281,43 +281,11 @@ to say BeatenOrcSex4: [fuck him]
 
 to say OrcDesc:
 	setmongender 3;
-	if inasituation is false:
-		project the figure of Orcwarrior_random_icon;
-		if Player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
-			say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is,' he says in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
-		else:
-			say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
-	else: [in an event]
-		if OrcSpecialFightNumber is 1: [fighting Mul]
-			if graphics is true:
-				project the figure of Mul_clothed_icon;
-			if MulAnalAcceptance > 4:
-				say "     A large and muscular orc comes along - it's your 'special friend' Mul, who bares his tusks and snarls as he sees you. You may have broken him in to actually like being fucked, but that doesn't mean he isn't still the proud green-skinned brute that you know and love, with his mind set on dominating you and others. Thick brows drawing together, the orc gives you a penetrating stare and makes a first step towards you - only to press his lips together and swallow what he wanted to say as an orc [one of]stumbles out of the main hall to the west, mumbling about taking a leak[or]struts into the lair through its side entrance, carrying a bound soldier over his shoulder[or]passes you in the hallway, barely giving a glimpse[or]sticks his head into the hallway and shouts, 'Where are you, you little slut? Time to suck my dick, breeder!' He grumbles as there is no reply and only Mul and yourself are in sight[at random]. Even through this is just a side entrance, there seems to be quite a bit of activity going on right now...";
-				WaitLineBreak;
-				say "     The crack of Mul's knuckles draws your attention back to the big orc. 'Let's take this outside,' he gruffly tells you, giving a nod towards the exit. Since a one on one fight with the orc has less of a probability of an orc gangbang, and more... options, if you should win, you agree. With a quick nod you let the orc precede you, then follow him out of the orc lair and into the empty streets. There's definitely something to be said about the ability of the orcs to calm the usually so crazy streets of the city - anyone not fled or dragged off to be a slave is thoroughly intimidated, so you make your way along several blocks without anyone or anything coming into sight. Eventually, Mul steps into what looks like a mechanic's shop, filled with a motor-less car and tools scattered over the somewhat cum-streaked floor.";
-				say "     Looking around, the brutish orc gives a satisfied grunt, then turns to you. 'Let's see who's the boss now. I'm gonna show you what a real orc can do!' And with that, he balls his fists and attacks.";
-			else:
-				say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";
-		else if OrcSpecialFightNumber is 2:
-			if graphics is true:
-				project the figure of Orcwarrior_random_icon;
-			say "     Glarbuk towers even over the other green-skinned orc warriors, having at least half a foot extra on top of their already impressive stature. His bicep is at least as thick as a normal human's thigh and he has hands large enough to fully enclose a human head - and crush it like an egg. At the moment, the powerful male's eyes are focusing on you, and his drawn-together eyebrows and annoyed expression tell you that you're in for a beating. Maybe you shouldn't have smashed the beer stein over his head...";
-		else if OrcSpecialFightNumber is 3:
-			if graphics is true:
-				project the figure of Orcwarrior_random_icon;
-			say ""; [taken care of in Orc Lair.i7x]
-		else if OrcSpecialFightNumber is 4: [fighting Yatur in the meeting event]
-			if graphics is true:
-				project the figure of Yatur_clothed_icon;
-			say ""; [taken care of in Orc Lair.i7x]
-		else if OrcSpecialFightNumber is 5: [fighting Koghh in the meeting event]
-			if graphics is true:
-				project the figure of Koghh_clothed_icon;
-			say ""; [taken care of in Orc Lair.i7x]
-		else if OrcSpecialFightNumber is 6: [fighting Mul in the meeting event]
-			if graphics is true:
-				project the figure of Mul_clothed_icon;
-			say ""; [taken care of in Orc Lair.i7x]
+	project the figure of Orcwarrior_random_icon;
+	if Player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance:
+		say "     A large and muscular orc comes along, grinning broadly as he sees you. 'You must be that new slave Mul and his brothers are boasting about - and out of your cell too.' The thick shaft between his legs twitches against the ragged loincloth that barely covers it as his eyes wander over your body. 'I'll put you back where you belong - after I fuck you, that is,' he says in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
+	else:
+		say "     A large, muscular creature crosses your path. It's an orc, no doubt about it - sporting the powerful build, green skin and brutish facial features that are described in any number of fantasy stories, this one is nevertheless quite real. As is the thick shaft between his legs, barely covered by a ragged loincloth, which grows and twitches a bit as the orc looks at you. He gives you a possessive grin around his protruding tusks, then adds 'Hello little piggy.' in a deep voice and slams a large balled fist into the palm of his other hand. 'Wanna struggle or wimp out? You're mine either way.'";
 
 Section 2 - Creature Insertion
 

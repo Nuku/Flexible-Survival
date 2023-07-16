@@ -271,6 +271,7 @@ This is the turnpass rule:
 	else if ( turns minus targetturns ) < 20 and a random chance of 1 in 3 succeeds and skipturnblocker is 0 and playon is 0:
 		say "[one of]You see an airplane soar overhead at jet speeds.[or]A peek from a roof shows what looks like some kind of vehicle approaching the city.[or]You have an unending sense of anticipation.[or]It's all coming to a close soon, just hang in there![at random]";
 	follow the everyturn rules;
+	now inasituation is false; [cleaning up possible open ended flags]
 	rule succeeds;
 
 Part 2 - Time Functions

@@ -140,6 +140,10 @@ to decide if debug is at level ( n - number ): [or higher]
 	if debuglevel < n, decide no;
 	decide yes;
 
+an everyturn rule:
+	if Debuglevel > 8:
+		say "DEBUG: inasituation state: [inasituation]";
+
 
 Chapter 2 - Information Readouts
 

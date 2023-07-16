@@ -165,6 +165,7 @@ After going:
 	try looking;
 	plot;
 	WalkInEvent_Check;
+	now inasituation is false; [cleaning up possible open ended flags]
 
 To Plot:
 	let x be the location;
