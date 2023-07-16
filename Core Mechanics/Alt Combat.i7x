@@ -208,12 +208,13 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 			project icon entry;
 			break;
 	choose row MonsterID from Table of Random Critters;
-	if enemy type entry is 0: [non-unique enemies]
-		say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
-	else if enemy type entry is 1: [unique enemies whose name is not known]
-		say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
-	else if enemy type entry is 2: [unique enemies whose name is known]
-		say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
+	if inasituation is false:
+		if enemy type entry is 0: [non-unique enemies]
+			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
+		else if enemy type entry is 1: [unique enemies whose name is not known]
+			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
+		else if enemy type entry is 2: [unique enemies whose name is known]
+			say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
 
 Part 3 - Combat
 
