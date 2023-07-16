@@ -201,20 +201,20 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now fightoutcome is 100;
 	let nam be Name entry;
 	let found be 0;
-	follow the ngraphics_blank rule;
-	repeat through the table of game art:
-		if title entry is nam:
-			now found is 1;
-			project icon entry;
-			break;
 	choose row MonsterID from Table of Random Critters;
 	if inasituation is false:
+		follow the ngraphics_blank rule;
 		if enemy type entry is 0: [non-unique enemies]
 			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
 		else if enemy type entry is 1: [unique enemies whose name is not known]
 			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
 		else if enemy type entry is 2: [unique enemies whose name is known]
 			say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
+	repeat through the table of game art:
+		if title entry is nam:
+			now found is 1;
+			project icon entry;
+			break;
 
 Part 3 - Combat
 
@@ -766,7 +766,7 @@ This is the flee rule:
 		let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus - defense bonus;
 		if "Gas Cloud" is listed in feats of Player and gascloud is 0 and peppereyes is 0:
-			if TailName of Player is "Skunk" or TailName of Player is "Skunkbeast Lord" or TailName of Player is "Skunk Taur" or TailName of Player is "Hyperskunk":
+			if TailName of Player is "Skunk Female" or TailName of Player is "Skunk Male" or TailName of Player is "Skunkbeast Lord" or TailName of Player is "Skunk Taur" or TailName of Player is "Hyperskunk":
 				say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 				increase gascloud by 5;
 			else if TailName of Player is "Squid":

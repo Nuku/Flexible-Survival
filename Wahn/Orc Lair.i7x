@@ -40,7 +40,7 @@ to say ResolveEvent Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
 	if SlaveRaidEncounters is 0: [first time]
 		say "     Walking along a street between some warehouses, you suddenly hear claws scratching on asphalt and shouting voices from an alley ahead. Just a few seconds later, a panicky looking anthro fox guy comes dashing into view, head turned to look over his shoulder - which means he isn't looking where he's going and collides with you at full speed, bowling you over and landing on your chest. In close pursuit, a very muscular man storms out of the alley - tall and green, dressed only in a loincloth and with a necklace of wooden beads and teeth, there's no doubt that he's an orc. Two more orcs follow him, dressed in garments made from shredded police uniforms, close behind but still a step distant. From the relatively similar looks, they might be brothers. One of them grabs the would-be escapee by the neck and lifts him off the ground, then bares his sharp tusks in a smirk, nodding towards you. 'Look, our little runner got us an extra treat,' he chuckles, prompting his two friends to surround you, cutting off possible escape, while he pulls a loop of rope from over his shoulder and ties the fox up securely. You barely have time to get up and take a combat stance before the other two orcs are upon you...";
-		LineBreak;
+		WaitLineBreak;
 		now inasituation is true;
 		project the figure of Yatur_clothed_icon;
 		challenge "Orc Warrior";

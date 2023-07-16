@@ -572,7 +572,7 @@ Figure of Nermine_naked_icon is the file "Nermine_naked.jpg".
 Figure of Nermine_naked_face_icon is the file "Nermine_naked_face.jpg".
 Figure of Newt_icon is the file "Newt_ig.jpg".
 Figure of Micaela_icon is the file "micaela_ig.jpg".
-Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_naked.jpg".
+Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_clothed.jpg".
 Figure of Orc_Brothers_naked_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
@@ -1805,7 +1805,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orc Brothers_clothed"	Figure of Orc_Brothers_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Orc Brothers_naked"	Figure of Orc_Brothers_naked_icon	"Kupo Klein"	g-white	"normal"
 "Orc Female"	Figure of Katya_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
-"Orc Warrior"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
+"Orc Warrior_random"	Figure of OrcWarrior_random_icon	"Gene Lightfoot"	g-white	"normal"
 "Orthas_face"	Figure of Orthas_face_icon	"SineAlas"	g-white	"normal"
 "PantherTaur_clothed"	Figure of PantherTaur_clothed_icon	"SteppeCrow"	g-white	"normal"
 "PantherTaur_hard"	Figure of PantherTaur_hard_icon	"SteppeCrow"	g-white	"normal"
@@ -2016,7 +2016,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Valerie"	Figure of Valerie_icon	"Sususmiles"	g-white	"normal"
 "Violet_face"	Figure of Violet_face_icon	"SineAlas"	g-black	"normal"
 "Vixentaur"	Figure of Vixentaur_icon	"Anymouse1968"	g-white	"normal"
-"Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"
+["Vixen Nurse"	Figure of VixenNurse_icon	"KV1NN4"	g-white	"normal"]
 "Vixen Nurse Herm"	Figure of VixenNurse_herm_clothed_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm naked"	Figure of VixenNurse_herm_naked_icon	"Moirah"	g-white	"normal"
 "Vixen Nurse Herm"	Figure of VixenNurse_fem_clothed_icon	"Moirah"	g-white	"normal"
