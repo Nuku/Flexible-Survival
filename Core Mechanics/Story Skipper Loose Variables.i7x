@@ -2345,8 +2345,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Riddlewin;
 		-- "RomanceBooksFound":
 			now NumberVarValue entry is RomanceBooksFound;
-		-- "rondafight":
-			now NumberVarValue entry is rondafight;
 		-- "rsc":
 			now NumberVarValue entry is rsc;
 		-- "RTWinCounter":
@@ -6004,8 +6002,6 @@ to VariableNumberLoad:
 					now Riddlewin is numberVarValue entry;
 				-- "RomanceBooksFound":
 					now RomanceBooksFound is numberVarValue entry;
-				-- "rondafight":
-					now rondafight is numberVarValue entry;
 				-- "rsc":
 					now rsc is numberVarValue entry;
 				-- "RTWinCounter":
