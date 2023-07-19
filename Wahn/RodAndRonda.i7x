@@ -612,8 +612,6 @@ to say ResolveEvent Art Collector:
 
 Chapter 3 - The Rescue Attempt
 
-Rondafight is a number that varies.
-
 to say RondaRescue:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -709,32 +707,33 @@ to say helpingRonda:
 to say helpingrod:
 	say "     You start to tell her that's Rod's waiting for her to come back to the Mall. As you try to explain that you've found a way to change her back, she shakes her head at that and grinds her hard cock against you harder. 'Change? Why would I want to change? We're the sexiest beasts on the planet. Mmm... enough talking. Let's fuck, sweet stuff,' she rumbles, grinding her hard cock against you. You'll have to fight her before you can get her to take it.";
 	LineBreak;
-	now Rondafight is 3;
+	say "     Despite your hopes of saving her, you find yourself facing off against the slut rat Ronda. She is a tall and intimidating wall of fur and leather, appearing female at first glance. But you know better, sporting a bulging package under her tight, leather outfit. She has a lustful look in her eyes, having decided she'd rather repay you for the chocolates with sex than listening to what you have to say. You try to calm her down and get her to focus, but that moment of remembrance is fading. In her confusion, she seems to think you're just looking to scrap to see who's on top, as the slut rats sometimes do. Being the first of the slut rats, she is a little bigger and tougher than the others.";
+	SlutRatRondaUpgrade;
 	now inasituation is true;
 	challenge "Slut Rat";
 	now inasituation is false;
-	if Rondafight is 3:
-		say "     As you make an attempt to flee from the slut rat, your hand gets knocked by hers, sending the vial tumbling to the ground and breaking. Its contents spill out onto the dirty floor, ending any hope of saving her. Ronda follows you briefly before heading back to the main group, what brief moment of clarity she had is gone forever. Having successfully gotten away from her, all you can do is make your way back up to the mall food court.";
-		move player to Mall Foodcourt;
-		say "     Back up in the mall, you head over to Rod and give him the bad news that Ronda was too far gone to be saved. Heartbroken, the depressed rat slumps off somewhere to be alone for a while.";
-		now HP of Ronda is 99;
-		now Rondafight is 0;
-	else if Rondafight is 2:
+	SlutRatStatReset;
+	if fightoutcome >= 20 and fightoutcome <= 29: [lost]
+		say "     Victorious, Ronda pushes you down onto one of the crates and climbs atop you roughly. You moan as she grinds her cock against your backside. 'See! Told you I was sexiest beast around. And the only change going on around here is that I'm going to make you into my sexy bitch for the next half hour,' she rumbles, pressing her thick rod deep into you. Your moans at being penetrated stifle any attempt to tell her about the potion and soon enough, with the large rat pumping her cock into your [if Player is female]pussy[else]ass[end if], you forget about it as well. As she starts pounding you harder, you drop it to get a better grip on the crate. True to her word, Ronda pounds you long and hard for the next half hour, swapping positions a few times, making sure she's blasted thick rat cum into you from both end and splattering it all over your face[if Player is not neuter], making you cum several times as well from her enthusiastic fucking[end if]. During the course of this wild session, any last vestiges of Ronda's previous life fade away completely, buried forever under her new slut rat persona.[impregchance]";
+		SanLoss 10;
+		increase Libido of Player by 20;
+		if Libido of Player > 80, now Libido of Player is 80;
+		infect "Slut Rat";
 		say "     After being beaten by Ronda and in the ensuing wild romp, the small vial is knocked aside and shatters, spilling its contents onto the dirty floor, ending any hope of saving her. Once she's sated herself, she heads back to the main group, what brief moment of clarity she had is gone forever. After you recover, you make your way back up to the food court.";
 		move player to Mall Foodcourt;
 		say "     Back up in the mall, you head over to Rod and give him the bad news that Ronda was too far gone to be saved. Heartbroken, the depressed rat slumps off somewhere to be alone for a while.";
 		now HP of Ronda is 99;
-		now Rondafight is 0;
-	else if Rondafight is 1:
-		now Rondafight is 0;
+	else if fightoutcome >= 30: [fled]
+		say "     As you make an attempt to flee from the slut rat, your hand gets knocked by hers, sending the vial tumbling to the ground and breaking. Its contents spill out onto the dirty floor, ending any hope of saving her. Ronda follows you briefly before heading back to the main group, what brief moment of clarity she had is gone forever. Having successfully gotten away from her, all you can do is make your way back up to the mall food court.";
+		move player to Mall Foodcourt;
+		say "     Back up in the mall, you head over to Rod and give him the bad news that Ronda was too far gone to be saved. Heartbroken, the depressed rat slumps off somewhere to be alone for a while.";
+		now HP of Ronda is 99;
+	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		now HP of Ronda is 10;
 		move Ronda to Mall Atrium;
 		increase score by 50;
-		say "     Eventually forced to swallow, Ronda releases a muffled gasp as you keep your hand over her mouth and she starts to thrash. She almost manages to push you off, the renewed strength from her fear only held in check by her lack of control of her changing body. As the potion takes effect, Ronda begins to shrink down a little and the harsher features of her slut rat face diminish, starting to look more like her old self.";
-		say "     As clarity and recognition return to her eyes, she stops struggling and looks around, taking in her surroundings as if for the first time. You whisper firmly that you're rescuing her from some dangerous creatures and she's got to be quiet as they're still around here. Cautiously, you take your hands from her and thankfully she doesn't scream.";
-		WaitLineBreak;
-		say "     'What's going on? Last thing I remember, I was hanging out with the girls and then... it all gets hazy. There's just vague images of rats and sex. Where's Rod? Is he okay?' It seems she's thankfully forgotten how she ended up this way in the first place. You quickly tell her that Rod sent you to rescue her. 'Oh, my dear, sweet Rod,' she says lovingly holding her paws at her chest.";
-		say "     And that's when she notices her large, and now ill-fitting, leather outfit. You quickly put your hand over her mouth again, silencing her cry of surprise. You tell her that you'll explain on the way back and grab a sheet from the pile of junk to bundle herself in. She nods and clutches it tightly to herself. You notice that her changes are still slowly progressing, with her fur now something between her previous white and spotted pelt and the dark tones of the slut rats.";
+		say "     You manage to knock Ronda down long enough to jump on top of her. It takes some effort to resist fucking her then and there, your ratty blood all worked up, but you rein it in. You tell the sexy rat to open wide, which she does, thinking she's going to get a meaty treat. You instead quickly dump the serum down her throat and put your hand over her mouth to keep her from spitting it up.  Eventually forced to swallow, Ronda releases a muffled gasp as you keep your hand over her mouth and she starts to thrash. She almost manages to push you off, the renewed strength from her fear only held in check by her lack of control of her changing body. As the potion takes effect, Ronda begins to shrink down a little and the harsher features of her slut rat face diminish, starting to look more like her old self. As clarity and recognition return to her eyes, she stops struggling and looks around, taking in her surroundings as if for the first time. You whisper firmly that you're rescuing her from some dangerous creatures and she's got to be quiet as they're still around here. Cautiously, you take your hands from her and thankfully she doesn't scream.";
+		say "     'What's going on? Last thing I remember, I was hanging out with the girls and then... it all gets hazy. There's just vague images of rats and sex. Where's Rod? Is he okay?' It seems she's thankfully forgotten how she ended up this way in the first place. You quickly tell her that Rod sent you to rescue her. 'Oh, my dear, sweet Rod,' she says lovingly holding her paws at her chest. And that's when she notices her large, and now ill-fitting, leather outfit. You quickly put your hand over her mouth again, silencing her cry of surprise. You tell her that you'll explain on the way back and grab a sheet from the pile of junk to bundle herself in. She nods and clutches it tightly to herself. You notice that her changes are still slowly progressing, with her fur now something between her previous white and spotted pelt and the dark tones of the slut rats.";
 		WaitLineBreak;
 		say "     You head over to the archway leading out of the entrance and make sure the coast is clear before motioning for her to follow you. Moving quickly and quietly, you lead Ronda back out of the sewers by the safest route you know. In the dark tunnels, it's hard to tell but the changes eventually seem to subside, with her only a little bigger than before, but otherwise looking the same. On the way, you give her a marginally edited version of the situation with the slut rats, leaving out your involvement in the whole fiasco. She tells you she only has a few, vague memories of her time as a slut rat and readily accepts your version of events.";
 		move player to Mall Foodcourt;

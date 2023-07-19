@@ -1219,7 +1219,6 @@ Name(text)	Type(text)
 "riddlesphinx"	"number"
 "Riddlewin"	"number"
 "RomanceBooksFound"	"number"
-"rondafight"	"number"
 "rondahosp"	"number"
 "rsc"	"number"
 "RTWinCounter"	"number"

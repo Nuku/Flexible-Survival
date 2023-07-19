@@ -18,24 +18,25 @@ to say hyenamat_challenge: [challenging the matriarch to become the new matriarc
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		Challenge "Hyena Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
+			say "[Hyena Matriarch Desc]";
 			Challenge "Hyena Matriarch";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
-				increase score by 0; [do nothing extra]
+				say "[matriarch loses]";
 			else if fightoutcome >= 20 and fightoutcome <= 29:	[lose to matriarch]
-				increase score by 0; [do nothing extra]
+				say "[matriarch wins]";
 		else if fightoutcome >= 20 and fightoutcome <= 29:		[lose to guard #2]
 			say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
-			say "[matriarch attack]";
+			say "[matriarch wins]";
 			hyenaify; [second infect to match matriarch fight loss]
 			decrease morale of Player by 5;
 	else if fightoutcome >= 20 and fightoutcome <= 29:			[lose to guard #1]
 		say "     Beaten by the matriarch's guard, you are mockingly dragged in front of the matriarch. She strikes you several times while the other hyenas hold you before you are tossed to the ground at her feet.";
-		say "[matriarch attack]";
+		say "[matriarch wins]";
 		hyenaify; [second infect to match matriarch fight loss]
 		decrease morale of Player by 5;
 	if fightoutcome >= 30:									[flee any fight]
 		say "     Your attempt to flee results in the mocking laugh of the rest of the gang. Several of them grab onto you and you're dragged back in front of the matriarch, who strikes your several times while the other hyenas hold you. You are then tossed to the ground at her feet.";
-		say "[matriarch attack]";
+		say "[matriarch wins]";
 		hyenaify; [second infect to match matriarch fight loss]
 		decrease morale of Player by 10;
 		now HP of Player is 1;
@@ -57,7 +58,7 @@ to say hyenamat_victorytf: [victory transformation into hyena matriarch]
 	follow the sex change rule;
 	if Libido of Player < libido entry, now Libido of Player is libido entry;
 
-to say matriarch attack:
+to say matriarch wins:
 	project Figure of Hyena_Matriarch_hard_icon;
 	[puts Herm Hyena as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -108,7 +109,7 @@ to say matriarch attack:
 			else:
 				say "     You aren't sure how long you lie there like that, your body pressed into the floor underneath hers, while an ever growing orgy of hyenas surrounds you, celebrating your submission. She eventually draws herself up, causing you to whimper as she leaves you alone, only to perk up as she leans down to whisper in your ear. 'Next time you'll have the proper equipment to take me fully, won't you?' she says in her raspy voice, causing your mind to race at the thought of being taken properly, like a good little breeding slut, with her warm seed filling you up with her hyena cubs again and again. Your mind calms down though as she pets you almost fondly on the head, her approval of your submissiveness speaking to that permanent new part of you she has burned into your core as you feel the joy of pleasing your master welling up from within. Straightening up, the matriarch leaves you lying there helpless in the middle of the forming orgy, ready and waiting for anyone to use as they please, as she moves back to her own den. As you lie there you can't help but wonder if challenging her was really a smart idea... or maybe you think, as you feel the hands of he other hyenas begin to stroke and grope you, it was really the best idea ever...";
 
-To say matriarch loss:
+To say matriarch loses:
 	project Figure of Hyena_Matriarch_hard_icon;
 	say "     Successfully defeating the reigning hyena matriarch, all the other hyena members of the hyena gang look on in awed silence as the former matriarch is forced to prostrate herself before you.";
 	say "     Taking advantage of the invitation her prostrated form with its upraised ass provides you, you slowly move around behind her, reveling in your victory. Your cock stiffens as you hear her defeated whimper and the cackling laughter of the hyena's surrounding you both, something about the situation speaking directly to your primal hyena instincts. Your mouth contorts into a feral grin as your hands dig into the coarse fur of her ass, before you sheathe your [Cock of Player] cock into her in one swift thrust, causing her to cry out in pain and pleasure underneath you. Her warm folds wrap your cock with delicious bliss flavored with the feel of victory and the joy of forcing her submission, causing you to moan in delight as you thrust into her.";
@@ -146,8 +147,8 @@ When Play begins:
 	now enemy Name entry is ""; [ Specific name of unique enemy. ]
 	now enemy type entry is 0; [ 0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters. ]
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]";
-	now defeated entry is "[matriarch loss]";
-	now victory entry is "[matriarch attack]";
+	now defeated entry is "[matriarch loses]";
+	now victory entry is "[matriarch wins]";
 	now desc entry is "[Hyena Matriarch Desc]"; [ Description of the creature when you encounter it.]
 	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as "Your face is [Face of Player]." ]
 	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as "Your Body is [Body of Player]." ]

@@ -73,6 +73,32 @@ carry out ZTeleport:
 		if printed name of x exactly matches the text topic understood, case insensitively:
 			now Player is in x;
 
+
+ZAnalyzeEvent is an action applying to one topic.
+understand "ZAnalyzeEvent [text]" as ZAnalyzeEvent.
+
+check ZAnalyzeEvent:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out ZAnalyzeEvent:
+	say "DEBUG -> Analyzing reasons why event '[topic understood]' might not be available.";
+	repeat with z running through unresolved situations:
+		if printed name of z matches the text topic understood, case insensitively:
+			say "DEBUG -> Situation found: [printed name of z] by matching with [topic understood].[line break]";
+			if z is not close:
+				say "DEBUG -> Found: [Found]; In another area to current position![line break]";
+			if z is resolved:
+				say "DEBUG -> Event already resolved.[line break]";
+			if z is inactive:
+				say "DEBUG -> Event banned / inactive.[line break]";
+			if level of Player < level of z:
+				say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
+			if z is not PrereqComplete:
+				say "DEBUG -> Prerequisites not fulfilled.[line break]";
+				PrereqAnalyze z;
+
 ZCall is an action applying to one topic.
 understand "ZCall [text]" as ZCall.
 
@@ -499,7 +525,6 @@ to PrereqAnalyze (X - situation):
 			say "[Resolution of Prereq3 of X] not listed in [Prereq3Resolution of X][line break]";
 		else:
 			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
-
 
 TagListReadout is an action applying to one topic.
 

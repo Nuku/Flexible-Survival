@@ -2816,7 +2816,6 @@
 |Stripes|Rodandronda|lizard juice|Grab Object|
 |Stripes|Rodandronda|Art Collector|situation|
 |Stripes|Rodandronda|artattempt|value|
-|Stripes|Rodandronda|rondafight|value|
 |Stripes|Lucy|20140908213124/7827:Mon 8 September 2014 21:31|indexing|
 |Stripes|Lucy|Lucy|woman|
 |Stripes|Lucy|Memories of the Mall|situation|
