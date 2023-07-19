@@ -62,7 +62,7 @@ to say ResolveEvent Spartan Intimidation:
 			now Resolution of Spartan Intimidation is 3;
 			CreatureSexAftermath "Daphne" receives "OralCock" from "Spartan Warrior";
 			CreatureSexAftermath "Daphne" receives "PussyFuck" from "Spartan Warrior";
-		now Spartan Intimidation is resolved;
+	now Spartan Intimidation is resolved;
 
 
 Section 2  -  Campus Pool Area
