@@ -70,16 +70,24 @@ to say DrMouseSlutStorage:
 		Choose a blank row from Table of StoredSluts;
 		now name entry is "Doctor Mouse";
 		now PaymentType entry is 2;
+		now WhoredOut entry is false;
 		now Resistant entry is true;
+		now Constraints entry is true;
 		now Sluttyness entry is 1; [resistant]
+		now ProgressPercentage entry is 0;
+		now SexCount entry is 0;
 	else:
 		say "     Shaking your head, you state that you're not okay with Mortimer milking his payment out of your new toy. After all, he belongs to you! With that out of the way, you chat with the slimy caretaker, deciding how the hybrid should be stored, mulling over a few decisions before settling on heavy-duty chains and a ceiling fixture to bind him properly. 'Excellent! Leave him in our hands, and we'll have him ready for you in a few hours, tops! You can bring your payment by when you visit him next.' Mortimer surrounds Doctor Mouse with clones and forces him into a nearby unit as one of them flashes you a thumbs up. With nothing else to see until he's settled in, you ready yourself to leave.";
 		now energy of DrMouse is turns;
 		Choose a blank row from Table of StoredSluts;
 		now name entry is "Doctor Mouse";
 		now PaymentType entry is 1;
+		now WhoredOut entry is false;
 		now Resistant entry is true;
+		now Constraints entry is true;
 		now Sluttyness entry is 1; [resistant]
+		now ProgressPercentage entry is 0;
+		now SexCount entry is 0;
 		say "     Now that you think about it, you should also set some ground rules on how you pay for Dr. Mouse's confinement. Do you want Mortimer to milk Doctor Mouse at all? Before you leave, you should tell him your preference!";
 		say "     [link](Y)[as]y[end link] - Allow Mortimer to milk Doctor Mouse weekly.";
 		say "     [link](N)[as]n[end link] - Pay normally.";
@@ -174,7 +182,7 @@ to say Mouse_StorageVisit:
 					NPCSexAftermath DrMouse receives "Stroking" from Player;
 					say "     You milk your captive hunk for several minutes before his cock slips back into its plush sheath, and you gently clean him off with a towel you find nearby, then redress him, patting him on the ass in a comforting gesture. Promising to return, you caress his bulge one last time, then dress, ignoring your arousal in a show of goodwill. It'll take time to earn your new toy's trust, and for now, the thrill of watching his eyes roam over your partially nude body as his expression flits between confusion and softening hatred, tinged with guilty arousal, gives you hope that you'll break him yet. Perhaps you should try to [italic type]push things further next time. [roman type]For now, however, you have other things to do, so you lock up the storage unit, blowing your hunky fucktoy a kiss that he scoffs at, muttering something about 'Blasted psychological manipulation tactics.' just loud enough for you to hear. He'll be in good hands until your return.";
 					now Sluttyness entry is 2;
-					increase SexCount entry by 1;
+					now SexCount entry is 1;
 				-- "Punish him for his evil deeds. Use him as you see fit.": [Spank him and make him beg to cum]
 					say "     Screw the soft approach. You won, fair and square, and the mouse's inability to resist following you to the storage site proves Dr. Mouse is your property. So what if he's not willing to admit it? You'll MAKE him admit it! Setting your jaw, you meet the hybrid's defiance with a derisive snort. Taunting him as you circle behind him and tug his tail upward, you tell him that you don't think of yourself as the hero of this story nor of him as the villain. He's just a slut that needs punishment, and you just happen to be willing to provide it. 'Punishment? Hah. Your asinine efforts to intimidate are laughably transparent-' Doctor Mouse starts, trailing off into a yelp as your hand comes down on his exposed ass cheek, setting the muscular man-meat jiggling and causing his rodent tail to curl around your other appendage, trying to escape your grasp. 'Your show of barbarism will not-' He tries to say, interrupted again by the rough crack of your palm over his wriggling rump."; 
 					say "     Smirking, you taunt the flustered hybrid, pulling on his tail until his legs spread and his ass is upturned, showing off a fearfully twitching pink hole between yellow-furred cheeks. Casually, you remark that he's being a bad boy, trailing your fingers over the stinging flesh your rough treatment left and delighting in his shivering reaction. He should admit that he wants to be touched- maybe you'll relent and let him have a treat! 'Animalistic brute. I shall not fall for your manipulation-' You punish the mouse again for speaking out of turn, raining another set of blows onto his upturned rump with each attempt to sass you, the resounding clap of your hand on furred cheeks echoing around the concrete space. He bites his lip by the time his ass pulses bright red, his cheeks blushing under their fur, and his tail falling limp in your fist.";
@@ -186,6 +194,7 @@ to say Mouse_StorageVisit:
 					TraitGain "HardDommed" for DrMouse;
 					now Sluttyness entry is 2;
 					NPCSexAftermath DrMouse receives "Stroking" from Player;
+					now SexCount entry is 1;
 		else if sluttyness entry is 2: [Used once. Repeatable for phase 1.]
 			if "HardDommed" is listed in Traits of DrMouse:
 				say "     After a short walk, Mortimer brings you to the storage unit that houses Doctor Mouse. You thank him for caring for your slut in your absence, then open the door, greeting the freshly cleaned, still-bound man with a hearty hello. You don't hide your intentions this time, setting aside your gear and disrobing before him, then closing the distance between you, tweaking his pecs, groping and massaging the heaving muscle as you ask whether he missed you. 'Your absence was pleasant.' Doctor Mouse huffs, trying his best to ignore the soft sensations you're forcing on him, even though his cock stands at attention, dribbling its desire. At least his dick knows how to show its affection for its master!";
@@ -279,6 +288,24 @@ carry out DrMouseReset:
 	else if "HardDommed" is listed in traits of DrMouse:
 		say "     <Dr. Mouse will now switch paths! One path is gentle dom, one is rough dom!>";
 		TraitGain "GentleDommed" for DrMouse;
-		TraitLoss "HardDommed" for DrMouse;
+		TraitLoss "GentleDommed" for DrMouse;
+
+DrMouseSluttery is an action applying to nothing.
+
+understand "zMouseSluttery" as DrMouseSluttery.
+
+check DrMouseSluttery:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DrMouseSluttery:
+		Choose a blank row from Table of StoredSluts;
+		now name entry is "Doctor Mouse";
+		now PaymentType entry is 2;
+		now Resistant entry is true;
+		now Sluttyness entry is 1; [resistant]
+		now Doctor Mouse is nowhere;
+		add "Doctor Mouse" to StoredSluts_Other;
 
 Doctor Mouse ends here.

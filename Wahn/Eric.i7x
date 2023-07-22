@@ -489,7 +489,7 @@ to say StacyFight_Victory:
 				now Resistant entry is false;
 				now Sluttyness entry is 1;
 				now WhoredOut entry is false;
-				now Sexcount entry is 1;
+				now SexCount entry is 1;
 				say "     [bold type]After thinking about it a second, you pick...[roman type][line break]";
 				say "     ([link]Y[as]y[end link]) - Making regular payments.";
 				say "     ([link]N[as]n[end link]) - The milking option.";
