@@ -14,54 +14,10 @@ VictoryOverDaBull is a number that varies. [Defeating the feral bull three times
 BullMaster is a number that varies. [You showed the feral bull who's boss. What kind of milk did you make him drink?]
 
 to say bovine desc:
-	let debit be 0;
-	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
-	choose row MonsterID from the Table of Random Critters;
-	if a random number from 1 to 10 > 3:	[Anthro Cow]
-		setmongender 4; [creature is female]
+	if Bovine_type is 1:	[Anthro Cow]
 		say "[cow desc]";
-		now Bovine_type is 1;
-		now wdam entry is 5 + ( debit / 4 ); [Amount of Damage cow Does when attacking.]
-		now lootchance entry is 20;
-	[else if BullMaster is 1:		[Anthro Bull - You fed the feral bull orc cum]
-		setmongender 3; [creature is male]
-		say "[anthro bull desc]";
-		now Bovine_type is 3;
-		now wdam entry is 22;
-		now lootchance entry is 20;
-	else if BullMaster is 2; [Anthro Bull - You fed the feral bull gryphon milk]
-		setmongender 5; [creature is a full herm]
-		say "[anthro bull desc]";
-		now Bovine_type is 3;
-		now wdam entry is 22;
-		now lootchance entry is 20;
-	else if BullMaster is 3; [Anthro Bull - You fed the feral bull cow milk]
-		setmongender 6; [creature is a trans female]
-		say "[anthro bull desc]";
-		now Bovine_type is 3;
-		now wdam entry is 22;
-		now lootchance entry is 20;
-	else if BullMaster is 4; [Anthro Bull - You fed the feral bull dog milk]
-		setmongender 7; [creature is a male herm]
-		say "[anthro bull desc]";
-		now Bovine_type is 3;
-		now wdam entry is 22;
-		now lootchance entry is 20;
-	else if BullMaster is 5; [Anthro Bull - You splashed cow milk across the feral bull's crotch]
-		setmongender 8; [creature is a trans male]
-		say "[anthro bull desc]";
-		now Bovine_type is 3;
-		now wdam entry is 22;
-		now lootchance entry is 20;]
 	else:						[Feral Bull]
-		setmongender 3; [creature is male]
 		say "[feral bull desc]";
-		now Bovine_type is 2;
-		if CowBully is 0:
-			now wdam entry is 0; [Passive bull is 0, even in hard mode]
-		else:
-			now wdam entry is 28 + ( ( 2 * debit ) / 5 ); [Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
-		now lootchance entry is 20;
 
 to say losetobovine:
 	if Bovine_type is 1:
@@ -336,6 +292,58 @@ to say feral bull attack:
 		if monsterHP < ( ( HP entry * 7 ) / 10 ):		[ < 56 for regular play ]
 			increase monsterHP by 9 + ( HP entry / 5 ); [ +25 HP for regular play ]
 		say "You notice that the big animal is almost completely ignoring your attacks as they fail to pierce his tough hide.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Bovine"	"[PrepCombat_Bovine]"
+
+to say PrepCombat_Bovine:
+	let debit be 0;
+	if HardMode is true and level of Player > 6, let debit be level of Player - 6;
+	choose row MonsterID from the Table of Random Critters;
+	if a random number from 1 to 10 > 3:	[Anthro Cow]
+		setmongender 4; [creature is female]
+		now Bovine_type is 1;
+		now wdam entry is 5 + ( debit / 4 ); [Amount of Damage cow Does when attacking.]
+		now lootchance entry is 20;
+	[else if BullMaster is 1:		[Anthro Bull - You fed the feral bull orc cum]
+		setmongender 3; [creature is male]
+		say "[anthro bull desc]";
+		now Bovine_type is 3;
+		now wdam entry is 22;
+		now lootchance entry is 20;
+	else if BullMaster is 2; [Anthro Bull - You fed the feral bull gryphon milk]
+		setmongender 5; [creature is a full herm]
+		say "[anthro bull desc]";
+		now Bovine_type is 3;
+		now wdam entry is 22;
+		now lootchance entry is 20;
+	else if BullMaster is 3; [Anthro Bull - You fed the feral bull cow milk]
+		setmongender 6; [creature is a trans female]
+		say "[anthro bull desc]";
+		now Bovine_type is 3;
+		now wdam entry is 22;
+		now lootchance entry is 20;
+	else if BullMaster is 4; [Anthro Bull - You fed the feral bull dog milk]
+		setmongender 7; [creature is a male herm]
+		say "[anthro bull desc]";
+		now Bovine_type is 3;
+		now wdam entry is 22;
+		now lootchance entry is 20;
+	else if BullMaster is 5; [Anthro Bull - You splashed cow milk across the feral bull's crotch]
+		setmongender 8; [creature is a trans male]
+		say "[anthro bull desc]";
+		now Bovine_type is 3;
+		now wdam entry is 22;
+		now lootchance entry is 20;]
+	else:						[Feral Bull]
+		setmongender 3; [creature is male]
+		now Bovine_type is 2;
+		if CowBully is 0:
+			now wdam entry is 0; [Passive bull is 0, even in hard mode]
+		else:
+			now wdam entry is 28 + ( ( 2 * debit ) / 5 ); [Check for if the player has beaten up a cow (female bovine), if they have, it's time to roll out the punishment]
+		now lootchance entry is 20;
 
 Section 2 - Creature Insertion
 

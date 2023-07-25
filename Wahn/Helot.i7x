@@ -21,9 +21,7 @@ to say StealthHelotTransformation:
 	now tail of Player is "You have a tight, firmly muscled butt.";
 
 to say Helot wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else if HP of Player > 0: [player submits]
+	if HP of Player > 0: [player submits]
 		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0: [Spartans, but not herms and females]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all. Are you afraid to fight me, Spartan boy - or do you just long for a real man to take your ass? Not that it matters now...' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get it, little Spartan,' he says tauntingly, holding out his erection and grinning widely as you crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
@@ -96,77 +94,73 @@ to say Helot fucks:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
 to say Helot loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
-			say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-		else if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
-			say "     Breathing hard, the somewhat bruised young Helot grimaces, then drops both arms to his sides and looks down. 'I'm sorry... master. I shouldn't have tried fighting you.' His hands move to undo the knots of his loincloth, letting it fall to the ground. Now the lean, muscled man stands submissively before you. 'I'm ready for your punishment. Do with me what you will.'";
-		else if BodyName of Player is "Amazon" and FaceName of Player is "Amazon": [Someone in a costume he recognizes]
-			say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I was wrong about you.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as repayment? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-		else if BodyName of Player is "Cerberus" and FaceName of Player is "Cerberus": [guardian of the underworld (Hades)]
-			say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - I - I was kidding. Who could get past you, the guardian of the underworld? Please don't eat me.' He hurriedly undoes the knots of his loincloth, then suggestively shows you his naked body. 'You can do... other things with me.'";
-		else: [Humans and humanoid people in modern clothing, all beastly shapes]
-			say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-		if Player is male: [male+herm]
-			LineBreak;
-			say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave [link](5)[as]5[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 5:
-				say "Choice? (1-5)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
-			if calcnumber is 1: [mount his cock]
-				say "[Helot ride]";
-			else if calcnumber is 2: [fuck him in the ass]
-				say "[Helot fucked]";
-			else if calcnumber is 3: [get sucked off]
-				say "[Helot oral]";
-			else if calcnumber is 4: [give him a blowjob]
-				say "[Helot blown]";
-			else: [leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
-		else if Player is female: [female]
-			LineBreak;
-			say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 4:
-				say "Choice? (1-4)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
-			if calcnumber is 1: [mount his cock]
-				say "[Helot ride]";
-			else if calcnumber is 2: [get licked]
-				say "[Helot oral]";
-			else if calcnumber is 3: [give him a blowjob]
-				say "[Helot blown]";
-			else: [leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
-		else: [neuter]
-			LineBreak;
-			say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
-			now calcnumber is 0;
-			while calcnumber < 1 or calcnumber > 3:
-				say "Choice? (1-3)>[run paragraph on]";
-				get a number;
-				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-					break;
-				else:
-					say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
-			if calcnumber is 1: [mount his cock]
-				say "[Helot ride]";
-			else if calcnumber is 2: [give him a blowjob]
-				say "[Helot blown]";
-			else: [leave]
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
-
+	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
+		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
+	else if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
+		say "     Breathing hard, the somewhat bruised young Helot grimaces, then drops both arms to his sides and looks down. 'I'm sorry... master. I shouldn't have tried fighting you.' His hands move to undo the knots of his loincloth, letting it fall to the ground. Now the lean, muscled man stands submissively before you. 'I'm ready for your punishment. Do with me what you will.'";
+	else if BodyName of Player is "Amazon" and FaceName of Player is "Amazon": [Someone in a costume he recognizes]
+		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I was wrong about you.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as repayment? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
+	else if BodyName of Player is "Cerberus" and FaceName of Player is "Cerberus": [guardian of the underworld (Hades)]
+		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - I - I was kidding. Who could get past you, the guardian of the underworld? Please don't eat me.' He hurriedly undoes the knots of his loincloth, then suggestively shows you his naked body. 'You can do... other things with me.'";
+	else: [Humans and humanoid people in modern clothing, all beastly shapes]
+		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but...' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as reparation? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
+	if Player is male: [male+herm]
+		LineBreak;
+		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], fuck him [link](2)[as]2[end link], have him blow your cock [link](3)[as]3[end link], suck him off [link](4)[as]4[end link] or just leave [link](5)[as]5[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 5:
+			say "Choice? (1-5)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4 or calcnumber is 5:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to fuck him, [link]3[end link] to get sucked, [link]4[end link] to blow him or [link]5[end link] to leave.";
+		if calcnumber is 1: [mount his cock]
+			say "[Helot ride]";
+		else if calcnumber is 2: [fuck him in the ass]
+			say "[Helot fucked]";
+		else if calcnumber is 3: [get sucked off]
+			say "[Helot oral]";
+		else if calcnumber is 4: [give him a blowjob]
+			say "[Helot blown]";
+		else: [leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
+	else if Player is female: [female]
+		LineBreak;
+		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], let him lick your pussy [link](2)[as]2[end link], suck him off [link](3)[as]3[end link] or just leave[link](4)[as]4[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 4:
+			say "Choice? (1-4)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] get licked, [link]3[end link] to blow him or [link]4[end link] to leave.";
+		if calcnumber is 1: [mount his cock]
+			say "[Helot ride]";
+		else if calcnumber is 2: [get licked]
+			say "[Helot oral]";
+		else if calcnumber is 3: [give him a blowjob]
+			say "[Helot blown]";
+		else: [leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
+	else: [neuter]
+		LineBreak;
+		say "     Looking over the handsome Helot, you could either mount his cock with you on top [link](1)[as]1[end link], suck him off [link](2)[as]2[end link] or just leave[link](4)[as]4[end link].";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to ride his cock, [link]2[end link] to blow him or [link]3[end link] to leave.";
+		if calcnumber is 1: [mount his cock]
+			say "[Helot ride]";
+		else if calcnumber is 2: [give him a blowjob]
+			say "[Helot blown]";
+		else: [leave]
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised Helot behind.";
 
 to say Helot ride:
 	say "     Spreading the dropped loincloth a bit on the ground with your foot so he at least has something under his ass, you tell the young man to lie down. He obeys your commands quickly and without hesitation, looking pretty good with his toned body stretched out and the long hard cock standing erect, waiting for your pleasure.";
@@ -216,7 +210,6 @@ to say Helot blown:
 	CreatureSexAftermath "Player" receives "OralCock" from "Helot Manservant";
 
 to say HelotDesc:
-	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
 	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant": [no honor among slaves]
 		say "     'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
@@ -230,6 +223,13 @@ to say HelotDesc:
 		say "     'Are you an inhabitant of this city? How can you live in this cursed place?' Before you can answer, you hear his stomach growling loudly. 'Bah, enough talk - I'm hungry... and horny.' With that, he rushes at you.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Helot Manservant"	"[PrepCombat_Helot Manservant]"
+
+to say PrepCombat_Helot Manservant:
+	setmongender 3;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -614,9 +614,7 @@ to say ResolveEvent Helot Captive:
 	if calcnumber is 1: [rescue]
 		LineBreak;
 		say "     You can't just let him have his way with the captured man! If you rush at the Spartan and manage to bring him down, you might just be able to save him. Calculating your route to draw the least attention possible, you carefully make your way to their spot, and you arrive just in time as the warrior goes to grab his captive victim, only to let him away in place as he's startled by your presence. 'What's the meaning of this?!' he shouts in a demanding tone, turning around to face you with his dandling erection bouncing sideways. 'I'll have to subdue you as well for this intrusion, peasant!' Without any further ado, he charges at you, and looks like it's time for a fight!";
-		now inasituation is true;
 		Challenge "Spartan Warrior";
-		now inasituation is false;
 		if fightoutcome < 20: [won]
 			now resolution of Captive Helot is 2;
 			say "     Now, there is a helot in here... On the ground, tied up, vulnerable, and with a hard-on between his legs, looking at you with puppy eyes. His mouth is covered as well, and his hands are tied on his back. The way he's spreading his legs and showing off his throbbing meat may seem like he's begging you for some other kind of [']release[']. The Spartan may come back soon with reinforcements, and it's too late to save this man, but you could show him some mercy very quickly, if you're willing to put your hands to work.";

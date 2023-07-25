@@ -4,8 +4,6 @@ Version 1 of Ebonflame Drake by Blue Bishop begins here.
 "Adds an Ebonflame Drake to Flexible Survival."
 [Inspired by the Ash Drakenoid]
 
-blanchefight is a truth state that varies. blanchefight is usually false.
-
 Section 1 - Creature Responses
 
 to say ebdrakevic:
@@ -25,12 +23,8 @@ to say ebdrakevic:
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to pry your hole wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
 		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed - breed - fuck, FUCK[or]Cum - CUM, fuck[or]I-...I must - FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.";
-		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
-		if blanchefight is true:
-			say "...";
-		else:
-			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
-			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord. You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
+		say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
 		CreatureSexAftermath "Player" receives "AssFuck" from "Ebonflame Drake";
 	else if Player is female and a random chance of 2 in 3 succeeds:
 		say "     Her plans become clear when you feel the tip one of her talons caress along the crevice of your sore behind, teasing you before the razor sharp thing forces its way through[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]. She cackles as you tremble against her digit so casually shaming you.";
@@ -38,12 +32,8 @@ to say ebdrakevic:
 		say "     The rod must be as hard as steel, since she has no problem shifting her weight all over the place, as if trying to stretch your[if Cunt Depth of Player < 10] already strained[end if] pussy wider. You'd think she's hardly interested in fucking you if not for occasionally being wracked by the searing pain of her molten precum. You're dizzied by how intense the sensation is, until you eventually get somewhat numb to it.";
 		say "     Gradually, the monster's sadistic revels melt away to leave her rising, primal needs, thrusting her terrible organ through your bowels with a wild, increasingly blind fervor. Howling terribly, the shrill dragon sharp talons rake along your back, slicked by sweat and soon her tongue's similarly searing saliva, as though the monster has regressed into a rabid, even more monstrous state.";
 		say "     '[one of]Breed - breed - fuck, FUCK[or]Cum - CUM, fuck[or]I-...I must - FUCK[at random]!' Barely coherent by this point, you're afraid she's going to pound you completely into the ground before finally letting out a shrill, deafening howl, still fucking you wildly as the monster's cock gushes what feels like gallons of her burning seed. You're lost in an exhausted haze of tainted agony, but she doesn't relent, and instead seems to get -angry- at you as her lust dies down, wildly fucking you even as she's spent.";
-		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord";
-		if blanchefight is true:
-			say "...";
-		else:
-			say ". You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
-			say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
+		say "     The dragoness eventually seems to give up. Heavy gouts of smoke puffing with each heavy pant from the creature, she otherwise seems barely exhausted by her rampage, sounding more amused by your wholly abused form. Wrenching herself free at last, she cackles, shoving you along with a foot and taunting you until you finally find the strength to crawl away on your own accord. You're half afraid she'll continue assaulting you, but it seems she finally gets bored and goes off to harass something else.";
+		say "     Thankfully, as you finally find a place to catch your breath, the ordeal doesn't leave you with any lasting damage, but you imagine you're going to have some trouble walking for a couple hours...";
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Ebonflame Drake";
 	else:
 		say "     The dragoness circles around your[if scalevalue of Player > 3] larger,[end if] [bodytype of Player] form, she wraps [if scalevalue of Player > 3]both[else]one[end if] of her scaled hands around your neck, pulling your head forward until you're forced to stare down her glowing eyes.";
@@ -53,10 +43,7 @@ to say ebdrakevic:
 		say "     '[one of]Satisfy my need[or]Pay the tribute[or]Suck me off[at random], [one of]whelp[or]fool[or]plaything[at random], [one of]and maybe I'll let you off[or]and perhaps you'll live to see another day[or]or I'll be sure to prolong your suffering[at random]!' Guided by her forceful grip, the pointed tip of her draconic dick as plunged between your lips, taste flooded with the intense sensation of her molten, glowing seed. Forced to bob against the organ, its barbs do nothing but make your efforts more difficult, though she's dead set on making sure you don't slow down.";
 		say "     As things progress, you become increasingly concerned about the monster's imminent bliss, the dragoness becoming increasingly feral and desperate for release with each passing second, until she's practically clawing at you to give it to her.";
 		say "     '[one of]F-faster - fuck[or]I'm - going to burn a hole straight through you[or]If you don't make me cum r-right now, you can't even imagine - [at random]!' You're instinctively worried about when she finally climaxes, but your desperate attempts to pull away fail with her plunging you back on the burning rod. Your struggle is ultimately in vain as she finally lets out a deafening, shrill howl, pinning your lips firm against her crotch as she sputters thick, successive gouts of her fiery load down your throat.";
-		if blanchefight is true:
-			say "     You feel like you briefly black out from the intense sensation. You quickly regain consciousness, however, as the cackling monster kicks at you, having left you slumped on the ground...";
-		else:
-			say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
+		say "     You feel like you briefly black out from the intense sensation. When you regain you thoughts, it seems she had push you off of her and left you abandoned, a faint memory of her mocking laughter and the intense pain of being full with her molten seed all she's left you with. Once the discomfort subsides and your head clears, you're able to scramble off someplace safe.";
 		CreatureSexAftermath "Player" receives "OralCock" from "Ebonflame Drake";
 
 to say ebdrakedef:
@@ -64,19 +51,19 @@ to say ebdrakedef:
 	say "     '[one of]Nng[or]Hmpf[or]Damnit[or]Asshole[at random], [one of]this is merely a setback[or]you only delay the inevitable[or]we will inherit our birthright[or]your world will be ours[or]we will have our vengeance[or]I am only one of an infinite many[at random]!' Before you can get any closer, she climbs back to her feet and takes flight, billowing up a gust of ash and dirt in her wake as she retreats into the sky. Once the dust settles and she's no longer visible you catch your breath before going about your business once more.";
 
 to say ebdrakedesc:
+	say "     In the ash-filled haze, you see [if scalevalue of Player < 4]a towering[else]an imposing[end if], dragon-humanoid in the distance. [one of]You're barely given a chance to react before it notices you as well[or]Already the subject of its pursuit[stopping], it turns to amble towards you slowly. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the occasional strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock.";
+	say "     '[one of]Whelp[or]Mortal[or]Pitiful creature[at random]! [one of]Submit to the will of the Matriarch[or]You are not prepared[or]There is no escape[or]You will be my plaything[at random]!' Her pace begins to pick up, until the reptile is practically charging you down, forcing you to ready yourself for combat!";
+
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Ebonflame Drake"	"[PrepCombat_Ebonflame Drake]"
+
+to say PrepCombat_Ebonflame Drake:
 	setmongender 5; [creature is herm]
 	choose row MonsterID from the Table of Random Critters;
 	now firebreathcount is 0;
 	now firebreathready is false;
-	if blanchefight is true:
-		say "     In the ash-filled haze, the imposing, dragon-humanoid figure glares angrily at you, no doubt smoldering over your surprise attack. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the ample strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock.";
-		say "     'You have the gall to try and steal what is already mine? Well then... Perhaps you wish to take her place!' She immediately comes to life, charging at you with a shrill howl, forcing you to ready yourself for combat!";
-		let temp1 be HP entry / 8;
-		if temp1 > weapon damage of Player, decrease monsterHP by weapon damage of Player;
-		if temp1 <= weapon damage of Player, decrease monsterHP by temp1;
-	else:
-		say "     In the ash-filled haze, you see [if scalevalue of Player < 4]a towering[else]an imposing[end if], dragon-humanoid in the distance. [one of]You're barely given a chance to react before it notices you as well[or]Already the subject of its pursuit[stopping], it turns to amble towards you slowly. Covered in an impenetrably dark shade of purple scales, she's almost naught but a silhouette against the[if daytimer is night] night's[end if] surroundings, save for her fiery eyes and the occasional strings of the hermaphrodite's glowing, molten precum oozing from her terrifying, barbed cock.";
-		say "     '[one of]Whelp[or]Mortal[or]Pitiful creature[at random]! [one of]Submit to the will of the Matriarch[or]You are not prepared[or]There is no escape[or]You will be my plaything[at random]!' Her pace begins to pick up, until the reptile is practically charging you down, forcing you to ready yourself for combat!";
 
 Section 2 - Creature Insertion
 

@@ -34,10 +34,6 @@ DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
 Section 1 - Fighting and Capturing the Brute
 
 to say demonbrutedesc:
-	setmongender 3;
-	follow the monster combat mode rule; [select the combat mode for first-strike]
-	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 10; [reset likelihood of alt attack]
 	if DBCaptureQuestVar is 5:
 		say "The large demon stretches its body, ropes of muscles rippling under dark purple skin and the spade-tipped tail whipping through the air. Then it turns its head towards you, red eyes glowing with hatred. With a roar, it rushes forward with outstretched claws.";
 	else:
@@ -48,9 +44,7 @@ a postimport rule: [bugfixing rules for players that import savegames]
 		now the icon of demon brute is Figure of BrutusGood_icon;
 
 to say demon brute wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else if DBCaptureQuestVar is 4: [as part of the Brutus quest]
+	if DBCaptureQuestVar is 4: [as part of the Brutus quest]
 		say "[DemonBruteVictoryFuck]";
 	else if a random chance of 3 in 6 succeeds: [50% chance]
 		say "[DemonBruteVictoryFuck]";
@@ -200,9 +194,7 @@ to say DemonBruteFaceFuck:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Demon Brute";
 
 to say demon brute loses:
-	if inasituation is true:
-		say ""; [dealt with at the event source]
-	else if DBCaptureQuestVar is 0:
+	if DBCaptureQuestVar is 0:
 		say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to vanish into a fine purple mist, and is blown away by the wind.";
 		increase DBCaptureQuestVar by 1;
 	else if DBCaptureQuestVar is 1:
@@ -210,7 +202,7 @@ to say demon brute loses:
 		increase DBCaptureQuestVar by 1;
 	else if DBCaptureQuestVar is 2:
 		say "     As the demon crashes to the ground with a rather loud thud, you're prepared for what happens next. You might not be able to catch one of these fuckers, but you can - and do - give him a good hard kick between the legs. This time, your demonic opponent vanishes with a whimper, the purple smoke he turns into a bit paler than before.";
-		if a random chance of 1 in 3 succeeds and inasituation is false:
+		if a random chance of 1 in 3 succeeds:
 			LineBreak;
 			say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. Might be useful for something, so you pick it up.";
 			ItemGain demon tooth by 1;
@@ -218,7 +210,7 @@ to say demon brute loses:
 		say "     With a rather loud thud, the demon brute collapses to the ground, defeated. It proceeds to turn into a fine purple mist - but instead of dispersing in the air as before, it swirls around as one tight mass. The cloud of mist wavers as if it's fighting against some pull, then is drawn towards the pentagram in an elongated stream. Whirling around in an ever-tightening spiral, the purple mist finally is absorbed by the now blackened demon tooth in the brazier. As the last bit of it vanishes, the fire and surrounding candles are blown out by a sudden wind, silence falling over the room only disturbed by quiet ticking sounds of the slowly cooling brazier.";
 		now DBCaptureQuestVar is 5;
 	else if demon brute is listed in companionList of Player:
-		if inasituation is true or a random chance of 2 in 7 succeeds:
+		if a random chance of 2 in 7 succeeds:
 			say "     With a rather loud thud, the demon brute collapses to the ground, defeated. Brutus lunges forward to grab it, but your demonic [if DBCaptureQuestVar is 5]slave[else]companion[end if] is moments too late - the last wisps of the purple cloud slipping through his clawed fingers. A deep chuckle can be heard as a sudden wind blows the mist away and the demon escapes.";
 			if a random chance of 3 in 5 succeeds:
 				say "     All that is left behind is one of the demon's fangs, knocked out during the fight. Seeing it, Brutus growls in frustration and crushes it to dust under his heel.";
@@ -226,7 +218,7 @@ to say demon brute loses:
 			say "[Brutus_DBCapture]";
 	else if DBCaptureQuestVar > 2:
 		say "     As the demon crashes to the ground with a rather loud thud, you're prepared for what happens next. You might not be able to catch this one, but you can - and do - give him a good hard kick between the legs. This time, your demonic opponent vanishes with a whimper, the purple smoke he turns into a bit paler than before.";
-		if a random chance of 1 in 3 succeeds and inasituation is false:
+		if a random chance of 1 in 3 succeeds:
 			if DBCaptureQuestVar is 3:
 				say "After the creature is gone, you notice something on the ground. Looks like... a tooth. Pretty long fang, rather. You must have knocked one of the demon's teeth out during your fight. You already gave one to Nermine and she said that you won't need another, so you leave it where it is...";
 			else if DBCaptureQuestVar is 5:
@@ -1802,6 +1794,16 @@ to say CarlTalk_DB:
 		now resolution of Demonic Redemption is 99;
 
 Section 4 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Demon Brute"	"[PrepCombat_Demon Brute]"
+
+to say PrepCombat_Demon Brute:
+	setmongender 3;
+	follow the monster combat mode rule; [select the combat mode for first-strike]
+	choose row monstercom from the table of critter combat;
+	now alt1chance entry is 10; [reset likelihood of alt attack]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

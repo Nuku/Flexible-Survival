@@ -130,11 +130,17 @@ to say Naiadsex4: [MF oral]
 	CreatureSexAftermath "Naiad" receives "OralCock" from "Player";
 
 to say Naiad Desc:
-	setmongender 4;
 	say "     A strikingly beautiful woman crosses your path, her body completely naked and with small drops of water glistening all over her perfect skin. Pulling aside long blond hair to fall over her shoulder, she gives you a smile and somewhat hungry look. 'Come swim with me, it'll be unforgettable for you.'";
 	say "     Something tells you that she won't take no for an answer...";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Naiad"	"[PrepCombat_Naiad]"
+
+to say PrepCombat_Naiad:
+	setmongender 4;
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

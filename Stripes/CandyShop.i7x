@@ -13,7 +13,6 @@ CandyShop	"CandyShop"
 CandyShop is a situation.
 ResolveFunction of CandyShop is "[ResolveEvent CandyShop]". The level of CandyShop is 9.
 Sarea of CandyShop is "Fair".
-sugarferretfight is a number that varies.
 
 when play begins:
 	add CandyShop to BadSpots of FemaleList;
@@ -43,15 +42,17 @@ to say ResolveEvent CandyShop:
 		else:
 			say "     Shaking your head, you tell him that you don't have any pop. 'Oh, pop?' another of the ferrets pipes up. 'I've still got some,' he says, taking a bottle out from the cabinet behind him. 'Ooo! Cola!' the first ferret says, snatching the bottle from his friend's hands before poinging away, attracting the attention of the others. 'PopPopPop!' 'Hey gimme!' 'Cola!' 'Come on, share!' 'Caffeine!' The others quickly take notice and start demanding of their friend as they bouncing up and down excitedly. Struggling a little, the maize ferret frantically grabs the cap in his teeth and twists it open to the cheers of his brethren. After taking a big swig, the bottle is snatched away and is soon getting passed around, everyone demanding a drink.";
 			say "     At first, their antics over the cola are amusing, but you notice things getting more rambunctious as the ferrets start pushing and shoving to get another drink. Their fur gets ruffled and scraggly and their colors grow richer, becoming vibrant reds, yellows, greens, blues and their eyes turn a bright, fiery red. Sheaths swell and cocks start to poke free. Pussies grow wet and dripping. You start backing away towards the door when one of them notices you, turning to look at you with a demonic, pointy-toothed grin. While several of the ferrets in here have already paired off into groups for lustful sex, the others turn their attention on you. They poing towards you in a manner which would be cute if it weren't for the sinister, lustful looks and their fanged grins.";
-		now sugarferretfight is 3;
+		say "     Once cute and cuddly little ferrets, the pastel mustelids have become vibrantly colored. Their cute paws-like hands have gained large, sharp claws and their too-wide grins are filled with pointed teeth. They look at you with sinister intent in their bright, red eyes as they move in to surround you.";			
 		challenge "Sugar Ferret";
-		if sugarferretfight is 3:
-			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
-		else if sugarferretfight is 1:
-			say "     Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
+		if fightoutcome < 20: [player won]
+			say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. Once the last of them is dealt with, you have a brief moment to take in what's happening. Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
 			ItemGain chips by 2;
 			increase score by 10;
-		else:
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			if fightoutcome is 21 or fightoutcome is 22:
+				say "     Unwilling to keep fighting, you give yourself over to the manic ferrets. Cheering, they bounce onto you, grabbing your limbs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
+			else:
+				say "     As your strength wanes, you are tackled by several of the ferrets at once. They grab onto your arms, legs and body, pulling you down by sheer numbers. Even as you're going down, you're groped and fondled by the over-excited ferrets.";
 			say "     Pinned down by a swarm of pointy-toothed ferrets overcome by a rush of manic energy, you find yourself being groped and fondled by numerous little paws. As your lust builds, a pair of blue paws grab your head, guiding it to the crimson cock of another ferret. The taste of his pre is very sweet, exciting you further. You can feel hard cocks and wet pussies grinding against you[if Player is male]. Paws grab your erect penis and balls, stroking and fondling them[end if][if Player is female]. Furry fingers are stuffed into your pussy, thankfully careful with those sharp claws of theirs[end if]. You are teased and fondled until you the ferret cock stuffed in your mouth throbs and pulses its sticky load down your throat. You are then pushed over and another of the males mounts you, driving his cock into your [if Player is female]pussy[else]ass[end if], fucking you wildly. After a quick, but frantic romp, his load is sprayed deep inside you as well. After that, things get hazy, being made to lick pussies, suck cocks and have sex with the ferrets, who seem to have unending energy. Eventually, they tire of you and you're tossed out to make room for another big romp on a pile of candy.";
 			if Player is female:
 				CreatureSexAftermath "Player" receives "PussyFuck" from "Sugar Ferret";
@@ -75,6 +76,8 @@ to say ResolveEvent CandyShop:
 				now tail of Player is tail entry;
 			now Libido of Player is ( Libido of Player + 50 ) / 2;
 			SanLoss 5;
+		else if fightoutcome is 30: [fled]
+			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
 		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
 		AddNavPoint Sweet Tooth;
 		increase ferretvisit by 1;
@@ -105,11 +108,7 @@ to say Sweet Tooth scene:
 			say "     Swinging by the shops on the fairgrounds, you take a peek in the CandyShop. You can see the ferrets inside are still manic with excess energy. You decide it'd be best to not enter right now.";
 	else if ferretvisit is 1:
 		[puts Sugar Ferret as lead monster for impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Sugar Ferret":
-				now MonsterID is y;
-				break;
+		choose row with name of "Sugar Ferret" in Table of Random Critters;
 		if "Female Preferred" is listed in feats of Player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:
@@ -119,7 +118,6 @@ to say Sweet Tooth scene:
 		now area entry is "Fair";
 		now non-infectious entry is false;
 		now resbypass entry is true;
-		now sugarferretfight is 0;
 		if BodyName of Player is "Sugar Glider" or FaceName of Player is "Sugar Glider":
 			say "     Returning to the CandyShop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before, spots you looking in and quickly dashes outside. Poinging atop you, he runs his paws over your marsupial form. 'And now you come back to us as one of those candy assed thieves. Did you at least bring us some pop this time?' Before you can respond, you're pulled inside by him and a few of his brethren. 'Come on, let's have a little fun and do a little trading, you sugary scoundrel.'";
 			say "     As they pull you inside in some strange mix of welcoming you and capturing you, the yellow one continues talking. 'We should have done some proper trading to go along with the sweet fun we had, but we got a little over-excited. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy.'";
@@ -170,11 +168,7 @@ to say Sweet Tooth scene:
 		if HumorousList is not banned, now Caught Glider is active;
 	else:
 		[puts Sugar Ferret as lead monster for impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if Name entry is "Sugar Ferret":
-				now MonsterID is y;
-				break;
+		setmonster "Sugar Ferret";
 		if "Female Preferred" is listed in feats of Player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of Player:

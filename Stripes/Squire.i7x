@@ -75,8 +75,6 @@ to say stateknightcrest_new:
 Section 2 - Monster Victory
 
 to say losetosquire:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	project Figure of Squire_smile_hard_icon;
 	if kpstatus is 1:
 		if HP of Player > 0:
@@ -263,8 +261,6 @@ to say squirewins_anal_n:
 Section 3 - Player Victory
 
 to say beatthesquire:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	say "     Sending his sword skittering away and knocking him to his knees, you are victorious over the squire. He scrambles backwards and back to his feet. ";
 	if kpstatus is 1:
 		say "'You are indeed a brave and powerful knight. Perhaps you should face off against my master in honorable combat. He would surely best even you,' he proclaims as he recovers his sword and departs quickly.";

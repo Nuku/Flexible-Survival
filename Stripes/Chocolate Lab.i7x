@@ -22,7 +22,7 @@ to say losetolab:
 	if SkinName of Player is "Chocolate Lab", increase labnum by 1;
 	if TailName of Player is "Chocolate Lab", increase labnum by 1;
 	if CockName of Player is "Chocolate Lab", increase labnum by 1;
-	if inasituation is false and BodyName of Player is "Chocolate Lab" and a random chance of ( ( labnum * 10 ) + ( labhost * 15 ) ) in 100 succeeds:
+	if BodyName of Player is "Chocolate Lab" and a random chance of ( ( labnum * 10 ) + ( labhost * 15 ) ) in 100 succeeds:
 		if labhost is 2:
 			if a random chance of 1 in 5 succeeds:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside you, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your mind, however, does not give way as easily. Focusing entirely on what remains of yourself, you manage to block out most of the dogs['] influence, locking the war for your mind in a stalemate.";
@@ -68,7 +68,6 @@ to say losetolab:
 			now labhost is 1;
 			now labtimerA is 21;
 	else:
-		now choclabfight is 2; [lost]
 		if Player is herm:	[herm]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[smn] with a soft, wet pussy[if Cock Count of Player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.";
 		else if Player is female:	[female]
@@ -88,7 +87,6 @@ to say losetolab:
 
 
 to say beatthelab:
-	now choclabfight is 1; [victory]
 	say "     You manage to fend off the strange canine, exhausting it to the point that it has trouble maintaining enough physical consistency to keep fighting. It whimpers softly, looking up at you with large, puppydog eyes of dark chocolate as it flows onto its back, exposing itself to you. It has a brown, canine cock that dribbles enticingly fragrant white chocolate and a wet, dripping pussy that looks deliciously ready to be filled. Along its body are three rows of breasts, each with hard, chocolate-brown nipples. It whimpers again, offering itself to you.";
 	if hunger of Player > 24:
 		say "     That rich, chocolaty scent becomes too much for you. You are so hungry and your stomach grumbles with the need to fill yourself with the doggy's cream. You stuff that hard cock into your mouth, finding it delicious. You lick and suck the leaking shaft while your hands play with its six leaking tits. They dribble white chocolate cream, much like what you're soon rewarded with in great quantity from the dog. You gulp it all down to satisfy your hunger a little. You lick your lips as you pull your head back, smiling down at the generous canine that's filled your tummy. It seems to smile back up at you. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";

@@ -335,10 +335,7 @@ To Say slutratdenscene:
 		now inasituation is true;
 		Challenge "Slut Rat";
 		now inasituation is false;
-		If lost is 1:
-			move player to Mall FoodCourt;
-			continue the action;
-		else:
+		if fightoutcome < 20: [player won]
 			increase SlutRatDenVisitTimes by 1;
 			say "     The defeated rat withdraws into the den, scurrying beneath one of the pillows with a sullen expression. Her sisters laugh at the sight, and one of them rises to her feet in a hop, breasts wobbling enticingly as she approaches you, 'What a good bitch you are,' she croons, 'You just want some love, not fighting, am I right?'";
 			say "Agree?";
@@ -348,6 +345,12 @@ To Say slutratdenscene:
 				say "[ratslutwelcome]";
 			else:
 				say "     She seems surprised when you refuse the offer. Despite it, she reaches to set her naked pink hands on your cheeks and draw you forward for a kiss, 'That will be fine then. Maybe you're not here to be our bitch after all.' Her tongue flicks over your face and she draws you to a pillow before flopping on it herself and leaving you standing. 'Fine then, tough guy, you can do what you want, welcome to our den.' The other rats give a brief round of applause before the celebration turns more intimate between a few pairs of them, coupling together in excited squeals that don't seem to include you for the moment.";
+			continue the action;
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			move player to Mall FoodCourt;
+			continue the action;
+		else if fightoutcome is 30: [fled]
+			move player to Mall FoodCourt;
 			continue the action;
 	else if SlutRatDenPoolTable is 2:
 		increase SlutRatDenVisitTimes by 1;
@@ -643,25 +646,23 @@ to say ratstopoolhall:
 to say poolhallattack:
 	now inasituation is true;
 	say "     Traveling through the sewers and subways, you and a band of the strongest rats emerge near the pool hall. With such a large force, you encounter no trouble along the way, everything fleeing from the rat patrol. You take a moment to coordinate with the other rats and then charge in en masse, taking the pumas by surprise. The rats spread out, fights breaking out everywhere as one of the cougars charges to take you down.";
-	now cougarfight is 3;
-	challenge "Cougar";
-	if cougarfight is 1:
-		say "     With the first cougar down behind you, you look around the room and move to intercept on moving to double-team one of your rat sisters.";
-		now cougarfight is 3;
-		challenge "Cougar";
-		if cougarfight is 1:
+	let CougarFightCounter be 0;
+	now fightoutcome is 0; [reset]
+	while fightoutcome < 20 and CougarFightCounter < 4: [runs for 2 times or until the player loses or flees]
+		if CougarFightCounter is 1:
+			say "     With the first cougar down behind you, you look around the room and move to intercept on moving to double-team one of your rat sisters.";
+		else if CougarFightCounter is 2:
 			say "     With another feline down, you have a moment to look around the room. Things are starting to go in the rats['] favor, but there are more to deal with. Picking another kitty, you charge in.";
-			now cougarfight is 3;
-			challenge "Cougar";
-			if cougarfight is 1:
-				say "     After another successful fight, you look up just in time to see another group of the kitties, drawn by the noise, emerging from the back. They growl loudly and charge, turning the tide of battle for a moment. You leap over a pool table and charge at the one leading the counter-attack.";
-				now cougarfight is 3;
-				challenge "Cougar";
-				if cougarfight is 1:
-					say "[poolhallvictoryorgy]";
-	if cougarfight is 2:
+		else if CougarFightCounter is 3:
+			say "     After another successful fight, you look up just in time to see another group of the kitties, drawn by the noise, emerging from the back. They growl loudly and charge, turning the tide of battle for a moment. You leap over a pool table and charge at the one leading the counter-attack.";
+		challenge "Cougar";
+		increase CougarFightCounter by 1;
+	LineBreak;
+	if fightoutcome < 20: [player won]
+		say "[poolhallvictoryorgy]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "[poolhalldefeat]";
-	if cougarfight is 3:
+	else if fightoutcome is 30: [fled]
 		say "[poolhallflee]";
 	now inasituation is false;
 
@@ -675,6 +676,7 @@ to say poolhallvictoryorgy:
 		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and gray fur's starting to spread across her muff, you move atop the feline and sink your [if Player is male]cocks into her pussy and tailhole[else]cock into her pussy[end if]. Leaning over her, you nibble and licks at her ears, tugging at them lightly until they take on a rounder, rat-like shape. While you merrily fuck your victim, Eight-ball moves in behind you and rubs her own throbbing cock against your ass. Wiggling your bottom, you steady yourself for the rat and she drive her throbbing rathood into your [if Player is female]dripping snatch[else]tight hole[end if]. With the added rat behind you, you drive all the harder into the puma. As her short muzzle elongates into a lovely, rat-like muzzle, Skeeball is there to pull out the pool ball and replace it with her cock. Getting stuffed from both ends, the cougar changes faster and faster, well on her way to becoming a lovely and lustful new rat sister. With a final thrust, you push deep into her and unleash your hot load into her, filling her womb[if Cock Count of Player > 1], and ass[end if] with your semen.[impregchance]";
 	else:
 		say "     After Skeeball's licked the kitty until she's mewling with need around her stuffed muzzle and gray fur's starting to spread across her muff, you pat the slutty rat and tell her it's time to fuck that hole. Skeeball, normally the bitch, jumps at the opportunity and sinks her cock slowly into the herm's cunt. Eight-ball, not to be left out, moves in around behind the other rat. 'Here, let me help you with that,' she says, sinking her cock into her partner's cunt. With the stronger rat behind her, Skeeball pounds hard and fast into the cougar. You climb up onto the table and, removing the pool ball from her changing muzzle, guide her rat-like face to your snatch, having her lick your pussy while the rats take her. You rub her changing ears, stroking and rubbing them into a lovely rat ears while her tongue dives into you again and again. With such an exciting set of partners, you end up cumming hard, soaking her muzzle and leaving a wet patch on the green felt of the table.";
+	WaitLineBreak;
 	say "     The rat orgy goes on for quite a while, with a celebration that finishes off the liquor at the bar during the orgy of sex. You swap around with lots of the rats, taking turns enjoying the transforming felines, helping them to become lovely, slutty rats. This new bitches are made to carry one of the large pool tables down into the sewers and bring it all the way back to the rat den. Space is made and the new table is set up, much to the delight of the other rats. After another bout of celebratory sex, you are left sexually satisfied and covered in rat cum and juices after having been filled every which way possible.";
 	infect "Slut Rat";
 	infect "Slut Rat";

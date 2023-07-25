@@ -520,6 +520,18 @@ to say beatOrthas:
 	say "     You manage to knock the dragoness senseless and look over her and the transforming Dr. Matt.";
 
 to say Orthasdesc:
+	say "[line break]     Orthas, the black dragon, steps forward to battle you. She stands about six and a half feet tall and has a very athletic body. Her bat-like wings are each about three feet long and folded onto her back at the moment. And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all. Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
+	if Susan is in Primary Lab:
+		say "     The dragoness is still rather woozy after the blow given to her by the doe. While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
+
+
+Section 6 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Dragon"	"[PrepCombat_Dragon]"
+
+to say PrepCombat_Dragon:
 	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
 	if HardMode is true and level of Player > 12, let debit be level of Player - 12;
@@ -528,15 +540,10 @@ to say Orthasdesc:
 	now monsterHP is 150 + ( debit * 6 );
 	now wdam entry is 10;
 	if HardMode is true, now wdam entry is 12 + ( ( 2 * debit ) / 5 );
-	say "[line break]     Orthas, the black dragon, steps forward to battle you. She stands about six and a half feet tall and has a very athletic body. Her bat-like wings are each about three feet long and folded onto her back at the moment. And while she may have large, F-cup breasts, they don't seem to affect her balance or ability to fight at all. Her eyes blaze with anger and thick smoke curls up from her nostrils as she moves to deal with you for your betrayal.";
 	if Susan is in Primary Lab:
-		say "     The dragoness is still rather woozy after the blow given to her by the doe. While it doesn't look like she'll be able to help you further with the fight, she has made the dragoness a little easier to deal with.";
 		decrease monsterHP by 25 + debit;
 		decrease wdam entry by square root of ( wdam entry - 8 ); [drops by 1 at regular, by 2 if wdam is 12, by 3 if 17...]
 		decrease lev entry by 1;
-
-
-Section 6 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

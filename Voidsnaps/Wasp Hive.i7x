@@ -39,13 +39,6 @@ An everyturn rule:
 		if debugactive is 1:
 			say "     <The wasp king infection can't proceed with other permanent infections! Sorry. In this case, it's the Taur Ceryneian infection blocking it!>";
 		stop the action;
-	if "Body Shop Guarantee - Face" is listed in Feats of Player or "Body Shop Guarantee - Body" is listed in Feats of Player or "Body Shop Guarantee - Skin" is listed in Feats of Player or "Body Shop Guarantee - Tail" is listed in Feats of Player or "Body Shop Guarantee - Crotch" is listed in Feats of Player:
-		say "     Moreau's guarantee seems to have been broken! Your entire body is now a Wasp King's!";
-		FeatLoss "Body Shop Guarantee - Face";
-		FeatLoss "Body Shop Guarantee - Body";
-		FeatLoss "Body Shop Guarantee - Skin";
-		FeatLoss "Body Shop Guarantee - Tail";
-		FeatLoss "Body Shop Guarantee - Crotch";
 	else if "Wasp Royalty" is listed in feats of Player:
 		turn player into "Wasp King" silently;
 
@@ -664,7 +657,7 @@ to say ResolveEvent Last Stand:
 			if fightoutcome < 20: [player won]
 				say "     Standing over the defeated wasp, you gesture at the burn marks and state that you couldn't be the one that destroyed his home. For one thing, you're far too small to be the culprit! The dragon was HUGE. You're just a scavenger and thought there might be something left to help your struggles. Despite his insectoid face's lack of human emotion, you can tell he's in pain, and his breathing is labored. He doesn't respond, instead breathing heavily and staring off into space, as if he's given up on survival. You recall that sugar water attracts bees and wasps. Maybe something sugary would help the warrior recover?";
 				say "[ZiixSodaChoice]";
-			else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			else if fightoutcome < 19 and fightoutcome < 30: [lost]
 				say "     Thankfully, the wasp warrior collapses after he defeats you. Falling backward and panting with exertion, you gesture at the burn marks and breathlessly state that you couldn't be the one that destroyed his home. For one thing, you're far too small to be the culprit! The dragon was HUGE. You're just a scavenger and thought there might be something left to help your struggles. Despite his insectoid face's lack of human emotion, you can tell he's in pain, and his breathing is labored. He doesn't respond, instead breathing heavily and staring off into space, as if he's given up on survival. You recall that sugar water attracts bees and wasps. Maybe something sugary would help the warrior recover?";
 				say "[ZiixSodaChoice]";
 			else if fightoutcome > 30: [fled]
@@ -679,7 +672,7 @@ to say ResolveEvent Last Stand:
 		if fightoutcome < 20: [player won]
 			say "     Standing over the defeated wasp, you gesture at the burn marks and state that you couldn't be the one that destroyed his home. For one thing, you're far too small to be the culprit! The dragon was HUGE. You're just a scavenger and thought there might be something left to help your struggles. Despite his insectoid face's lack of human emotion, you can tell he's in pain, and his breathing is labored. He doesn't respond, instead breathing heavily and staring off into space, as if he's given up on survival. You recall that sugar water attracts bees and wasps. Maybe something sugary would help the warrior recover?";
 			say "[ZiixSodaChoice]";
-		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		else if fightoutcome < 19 and fightoutcome < 30: [lost]
 			say "     Thankfully, the wasp warrior collapses after he defeats you. Falling backward and panting with exertion, you gesture at the burn marks and breathlessly state that you couldn't be the one that destroyed his home. For one thing, you're far too small to be the culprit! The dragon was HUGE. You're just a scavenger and thought there might be something left to help your struggles. Despite his insectoid face's lack of human emotion, you can tell he's in pain, and his breathing is labored. He doesn't respond, instead breathing heavily and staring off into space, as if he's given up on survival. You recall that sugar water attracts bees and wasps. Maybe something sugary would help the warrior recover?";
 			say "[ZiixSodaChoice]";
 		else if fightoutcome > 30: [fled]

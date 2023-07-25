@@ -8,7 +8,7 @@ Version 1 of Siren by Stripes begins here.
 "Adds Siren to Flexible Survival."
 
 charcounter is a number that varies.
-sirenfight is a number that varies.
+sirenfight is a number that varies. [counts how many times the player fought a siren - used for resistance to the siren song]
 
 
 Section 1 - Creature Responses

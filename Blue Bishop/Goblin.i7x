@@ -10,7 +10,6 @@ gobgender is a number that varies.
 gobdem is a truth state that varies. gobdem is usually false.
 
 to say losetogoblin:
-	now goblinfight is 2;
 	if gobgender is 1:
 		say "[losetogob_f]";
 	else if gobgender is 2:
@@ -259,7 +258,6 @@ to say losetogob_m:
 		CreatureSexAftermath "Player" receives "OralCock" from "Goblin";
 
 to say beatthegoblin:
-	now goblinfight is 1;
 	now calcnumber is -1;
 	if Player is not neuter:
 		say "     Driven back by your final blow, the goblin lands doubled over on the dirt. Now that [if gobgender is 1]she[else]he[end if] is at your mercy, you find yourself [if Libido of Player < 33]somewhat[else if Libido of Player < 67]rather[else]very[end if] excited after the fight. Tempted to give a little of what you would have gotten if the tables were turned, you consider some options. Shall you ";
@@ -513,15 +511,36 @@ to say mgob_vicsex4:	[m-gob urethral sex]
 to say gob_nosex:		[let goblin go]
 	say "     Taking a deep breath, you resist the urge to descend to [if gobgender is 1]her[else]his[end if] level and instead growl menacingly at the fallen creature. [if gobgender is 1]She[else]He[end if] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk. Even if you could squeeze through there, you don't feel there's much point in pursuing [if gobgender is 1]her[else]him[end if] in there.";
 
+to say goblindesc:
+	if gobgender is 1:
+		setmongender 4; [creature is female]
+		say "     You encounter what appears to be a female goblin. Face and ears long and pointed in structure, her skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. Her attire is a crude mish-mash of scraps cobbled from her surroundings, [one of]a pair of goggles on her head[or]a magnifying monocle over one eye[or]an earring strung with a wing nut[or]a leather belt over her shoulder with a pouch on it[at random], tools and metal machinery in her possession, illustrating her tinkering mind. Becoming aware of your presence, she slowly moves to approach.";
+		say "     '";
+		if gobdem is true:
+			say "[one of]Ha, you mine - MINE[or]No, no, bad, mine[or]Agh, you, bad - PUNISH[at random]";
+		else:
+			say "[one of]Eh, watch where you're going, this here is my turf[or]Oh, I'm going to have some fun with you[or]Looks like someone needs a lesson in not sticking their nose where it doesn't belong[at random]";
+		say "!' The creature's deviously grin exposing its sharp teeth, it's clear she has something else entirely in store for you.";
+	else if gobgender is 2:
+		setmongender 3; [creature is male]
+		say "     You encounter what appears to be a male goblin. Face and ears long and pointed in structure, his skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. His attire is a crude mish-mash of scraps cobbled from his surroundings, [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a leather belt over his shoulder with a pouch on it[at random], tools and metal machinery in his possession - an illustration of his tinkering mind. Becoming aware of your presence, he slowly moves to approach.";
+		say "     '";
+		if gobdem is true:
+			say "[one of]Ha, you mine - MINE[or]No, no, bad, mine[or]Agh, you, bad - PUNISH[at random]";
+		else:
+			say "[one of]Eh, watch where you're going, this here is my turf[or]Oh, I'm going to have some fun with you[or]Looks like someone needs a lesson in not sticking their nose where it doesn't belong[at random]";
+		say "!' The creature's deviously grin exposing its sharp teeth, it's clear he has something else entirely in store for you.";
 
-[
-to say beatthegoblin:
-	now goblinfight is 1;
-	say "     Driving back the little goblin with your blow, you advance to finish [if gobgender is 1]her[else]him[end if] off. [if gobgender is 1]She[else]He[end if] scrambles away fearfully and makes a run for it, diving through a tight tunnel in one of the mounds of junk. Even if you could squeeze through there, you don't feel it would be worth it to try and decide to let [if gobgender is 1]her[else]him[end if] go.";
+[ original desc:
+	say "     Before you is a small goblin of a person. His body has been reduced to barely four feet tall and has misshapen proportions. His face has a long, pointed nose and chin, and large, pointy ears. His skin is a leathery green and brown color. His limbs are thin and spindly and his fingers are long and nimble. He wears a crude loincloth and has [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a satchel of small tools[at random]. He cackles as his yellow eyes lock on you, baring his mouthful of sharp teeth.";
 ]
 
-to say goblindesc:
-	choose row MonsterID from the Table of Random Critters;
+Table of CombatPrep(extended)
+name(text)	PrepFunction(text)
+"Goblin"	"[PrepCombat_Goblin]"
+
+to say PrepCombat_Goblin:
+	choose row with name of "Goblin" from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of Player:
@@ -555,28 +574,6 @@ to say goblindesc:
 		now gobdem is true;
 	else:
 		now gobdem is false;
-	if gobgender is 1:
-		setmongender 4; [creature is female]
-		say "     You encounter what appears to be a female goblin. Face and ears long and pointed in structure, her skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. Her attire is a crude mish-mash of scraps cobbled from her surroundings, [one of]a pair of goggles on her head[or]a magnifying monocle over one eye[or]an earring strung with a wing nut[or]a leather belt over her shoulder with a pouch on it[at random], tools and metal machinery in her possession, illustrating her tinkering mind. Becoming aware of your presence, she slowly moves to approach.";
-		say "     '";
-		if gobdem is true:
-			say "[one of]Ha, you mine - MINE[or]No, no, bad, mine[or]Agh, you, bad - PUNISH[at random]";
-		else:
-			say "[one of]Eh, watch where you're going, this here is my turf[or]Oh, I'm going to have some fun with you[or]Looks like someone needs a lesson in not sticking their nose where it doesn't belong[at random]";
-		say "!' The creature's deviously grin exposing its sharp teeth, it's clear she has something else entirely in store for you.";
-	else if gobgender is 2:
-		setmongender 3; [creature is male]
-		say "     You encounter what appears to be a male goblin. Face and ears long and pointed in structure, his skin is leathery brown and green. Nary an inch over four feet in height, the nimble creature's limbs are thin and spindly. His attire is a crude mish-mash of scraps cobbled from his surroundings, [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a leather belt over his shoulder with a pouch on it[at random], tools and metal machinery in his possession - an illustration of his tinkering mind. Becoming aware of your presence, he slowly moves to approach.";
-		say "     '";
-		if gobdem is true:
-			say "[one of]Ha, you mine - MINE[or]No, no, bad, mine[or]Agh, you, bad - PUNISH[at random]";
-		else:
-			say "[one of]Eh, watch where you're going, this here is my turf[or]Oh, I'm going to have some fun with you[or]Looks like someone needs a lesson in not sticking their nose where it doesn't belong[at random]";
-		say "!' The creature's deviously grin exposing its sharp teeth, it's clear he has something else entirely in store for you.";
-
-[ original desc:
-	say "     Before you is a small goblin of a person. His body has been reduced to barely four feet tall and has misshapen proportions. His face has a long, pointed nose and chin, and large, pointy ears. His skin is a leathery green and brown color. His limbs are thin and spindly and his fingers are long and nimble. He wears a crude loincloth and has [one of]a pair of goggles on his head[or]a magnifying monocle over one eye[or]a boy's baseball cap on his head[or]a satchel of small tools[at random]. He cackles as his yellow eyes lock on you, baring his mouthful of sharp teeth.";
-]
 
 Section 2 - Creature Insertion
 

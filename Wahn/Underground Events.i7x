@@ -457,7 +457,14 @@ to say ResolveEvent Holding Cell Four:[repeatable event]
 		setmonster "Thought Eater";
 		choose row MonsterID from the Table of Random Critters;
 		now area entry is "Sealed";
+		say "[Thought_Eater_Desc]";
 		challenge "Thought Eater";
+		if fightoutcome < 20: [player won]
+			say "[Thought_Eater_Loses]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[Thought_Eater_Wins]";
+		else if fightoutcome is 30: [fled]
+			say "     Taking your arms under your legs, you run as fast as you can, shaking the monster.";
 		increase CellFourVisits by 1;
 		now Resolution of Holding Cell Four is 3;
 	else:

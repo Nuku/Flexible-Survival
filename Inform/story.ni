@@ -365,7 +365,6 @@ Include Random Events by Guest Writers.
 Include Rane Events by Wahn.
 Include Recordings by Wahn.
 Include Red Events by Stripes.
-Include Reservoir by Kaleem Mcintyre.
 Include Rubber Sneakers by Kernog.
 Include Satyr Frat by Wahn.
 Include Save the Dame by Kaleem Mcintyre.
@@ -425,7 +424,6 @@ Include Behemoth by Kaleem mcintyre.
 Include Bird of Paradise by Stripes.
 Include Black Equinoid by Song.
 Include Black Wolf by Stripes.
-Include Blob by Kaleem Mcintyre.
 Include Blue Chaffinch by Stripes.
 Include Latex Bobcat by Stripes.
 Include Bottlenose Toy by Stripes.

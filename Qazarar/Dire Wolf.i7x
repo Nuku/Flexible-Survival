@@ -5,9 +5,7 @@ Section 1 - Creature Responses
 DireWolfOral is a number that varies.
 
 to say DireWolfLoss:
-	if inasituation is true: [special event]
-		say ""; [dealt with in the file where the event is described]
-	else if Direwolf Dom is tamed:
+	if Direwolf Dom is tamed:
 		say "[DirewolfSuperLoss]";
 	else if Charisma of Direwolf Dom > 15: [temporary variable control]
 		say "[DireWolfNormalLoss]"; ['tame' the direwolf pet here, link to normal loss until implemented]
@@ -47,17 +45,7 @@ to say DireWolfSuperLoss: [pack bitch loss scenes]
 	say "     A";
 
 to say DireWolfVictory:
-	if inasituation is true:
-		say ""; [dealt with in the file where the event is described]
-	else:
-		say "[DireWolfVictorySex]";
-
-to say DireWolfVictorySex:
-	if inasituation is true: [dealt with in the event]
-		say "";
-		stop the action;
-	if inasituation is false: [standard text]
-		say "     You watch the dire wolf crash to the ground in defeat, slumped over on his side. You can see that the massive creature is still very hard, his cocks dripping with pre. You realize that this dire wolf is completely at your mercy.";
+	say "     You watch the dire wolf crash to the ground in defeat, slumped over on his side. You can see that the massive creature is still very hard, his cocks dripping with pre. You realize that this dire wolf is completely at your mercy.";
 	say "     [bold type]You could easily have your way with him if you want.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Have fun with the dire wolf.";
@@ -95,10 +83,7 @@ to say DommedByDirewolf: [scenes for getting dominated personally by your direwo
 
 to say DireWolfDesc:
 	setmongender 3;
-	if inasituation is false: [regular text]
-		say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
-	else:
-		say ""; [dealt with at the source]
+	say "     A feral-looking wolf on four feet, easily a full head taller than you, with great muscles under dense black fur. He has dark red eyes and white, sharp, canine teeth. His legs are thick and powerful, and his frame far bulkier and more powerful than any normal wolf. Visible between his rear legs are a pair of [one of]oversized canine shafts[or]massive wolf cocks[or]huge lupine members[at random]. When he sees you, his lips peel in a snarl, exposing those deadly teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], charging at you with feral rage in his eyes.";
 
 Section 2 - Creature Insertion
 

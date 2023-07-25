@@ -11,11 +11,6 @@ messypigaltorgasm is a truth state that varies. messypigaltorgasm is usually fal
 Section 1 - Creature Responses
 
 to say messypigdesc:
-	setmongender 4; [creature is female]
-	now messypigaltorgasm is false;
-	follow the monster combat mode rule; [select the combat mode for first-strike]
-	choose row monstercom from the table of critter combat;
-	now alt1chance entry is 12; [reset likelihood of alt attack]
 	say "     You hear a strange snorting sound, and looking around, you see a bizarre creature. It rests on all fours, but its body seems human enough to stand on two legs. It appears to be a large, pinkish humanoid. She's quite fat and has a large pig snout for a face. Floppy pig ears also adorn her head and peak through her oddly human hair. Six breasts in two rows line her underside, and over her large bottom, there is a cute and curly pig's tail. Her hands end in cloven hooves, as do her feet. She spots you and looks up at you with hungry eyes! Uh oh!";
 
 to say messypigattack:[Fight loss scenes]
@@ -60,6 +55,17 @@ to say beatthepig:[Victory Scene]
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Messy Pig"	"[PrepCombat_Messy Pig]"
+
+to say PrepCombat_Messy Pig:
+	setmongender 4; [creature is female]
+	now messypigaltorgasm is false;
+	follow the monster combat mode rule; [select the combat mode for first-strike]
+	choose row monstercom from the table of critter combat;
+	now alt1chance entry is 12; [reset likelihood of alt attack]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

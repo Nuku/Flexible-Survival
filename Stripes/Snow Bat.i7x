@@ -5,7 +5,6 @@ Version 2 of Snow Bat by Stripes begins here.
 Section 1 - Creature Responses
 
 nightcheck is a number that varies.
-snowbatfight is a number that varies.
 
 to say snowbatdesc:
 	setmongender 3; [creature is male]
@@ -34,7 +33,6 @@ to say daynightcheck:
 
 
 to say losetosnowbat:
-	now snowbatfight is 2; [lost]
 	if scalevalue of Player > 0 and ( Player is female or anallevel is 3 or Player is mpreg_ok ) and daytimer is night and a random chance of 2 in 5 succeeds:
 		say "     As you [if HP of Player > 0]submit[else]fall[end if] to the snow bat, he quickly grabs and pulls you into the sky[if HP of Player > 0]. You show no protest, lest the twisted feline release its hold upon you[else]. You briefly struggle, but you quickly refrain as the earth below you grows ever distant[end if]. There, suspended in the twilight, he would have his way with you, pulling you tightly into his arms. Sharing his irreverent affection with you, he caressing your neck with his fanged muzzle, his coarse tongue teasing your [bodytype of Player] surface before he sinks his teeth into you.";
 		if Player is female:
@@ -71,7 +69,6 @@ to say losetosnowbat:
 
 
 to say beatthesnowbat:
-	now snowbatfight is 1; [victory]
 	let skipx be 0;
 	let resistance be ( 100 + humanity of Player ) - ( Libido of Player + ( thirst of Player * 2 ) );
 	if BodyName of Player is "Snow Bat" and FaceName of Player is "Snow Bat" and a random number between 1 and 200 >= resistance:

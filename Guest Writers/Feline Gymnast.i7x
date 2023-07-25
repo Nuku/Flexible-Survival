@@ -17,7 +17,6 @@ Version 1 of Feline Gymnast by Guest Writers begins here.
 Section 1 - Creature Responses
 
 to say felinegymnastdesc:
-	setmongender 5; [creature is herm]
 	say "     Walking along, you notice a young woman doing some rather extreme stretches using a nearby bench. Her back is facing you at the moment, but you can still make out very distinct features. She is covered head to toe in luxurious blue fur, complete with cat-like ears on the top of her head. She is wearing some sort of very tight fitting leotard, complete with a hole torn for her long tail to poke out of. As you approach, her ears perk up, and she whips around to face you. With her front now facing you, you can see the rest of her face. While still human in shape, it is covered in the same rich blue fur as the rest of her body. Two piercing green eyes follow your gaze downwards as your eyes move down the rest of her body. Two small breasts barely show themselves, even with the tight uniform. Your eyes move further down her sleek body until you notice an odd bulge at the crotch of her leotard... Just below that, you can make out the start of a cameltoe before your staring is interrupted.";
 	say "     'If you're going to stare so much, would you like me to put on a show? Just take a seat over there...' she teases, walking towards you.";
 
@@ -226,6 +225,13 @@ to say felinewinignore:
 	say "     You decide to leave well enough alone.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feline Gymnast"	"[PrepCombat_Feline Gymnast]"
+
+to say PrepCombat_Feline Gymnast:
+	setmongender 5; [creature is herm]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

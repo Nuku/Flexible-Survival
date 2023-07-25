@@ -13,7 +13,6 @@ when play begins:
 	add { "Rabbit" } to infections of FurryList;
 
 to say rabpackdesc:
-	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from the Table of Random Critters;
 	say "A little humanoid rabbit appears in front of you! Less than three feet tall and completely naked, it looks like a young human, except for the ears and the short coat of fur covering [one of]his body. He[or]her body. She[at random] is smelling something from you, and you back away quickly.";
 	if "One Pair" is listed in feats of Player:
@@ -68,11 +67,17 @@ to say rabpackc:
 		else:
 			say "At the same time you feel someone gently licking your feminine folds. It's not invasive, but constant and agonizingly slow, just like everything else they are doing to you...";
 
-
 to say rabpackbeaten:
 	say "You finally manage to incapacitate most of them. You go away while those still conscious are dragging their comrades to safety.";
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Rabbit"	"[PrepCombat_Rabbit]"
+
+to say PrepCombat_Rabbit:
+	setmongender 19; [creatures are mixed/variable]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

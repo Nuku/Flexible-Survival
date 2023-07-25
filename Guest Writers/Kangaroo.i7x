@@ -14,8 +14,6 @@ kangaroodefeat is a number that varies.
 rkrcheck is a truth state that varies. rkrcheck is usually false.
 
 to say redroodesc:
-	setmongender 4; [creature is female]
-	follow the monster combat mode rule; [select the combat mode for first-strike]
 	say "     A flash of rusty red fur catches your eyes. Turning to look, you're met with something out of some perverted fantasy or nightmare. Standing around six-foot-five-inches tall is a red kangaroo. Her hardened turquoise eyes stare out at you from behind half lens glasses. This [']roo is dressed for taking [']assets['] hostility, wearing a tight blazer with an even tighter white blouse under it, concealing her tits while making them appear bigger than they are. A short skirt reaches from her hips down to mid thigh, giving glances of what's underneath as she moves. A thick tail sways behind her, looking to be used as a third leg. Rusty red fur covers her back and the top of her tail, fading to a creamy beige on her belly, and there are freckles of red along her sides. [one of]'What do we have here?' [or]'Eeeee! A new plaything for me!' [or]'You're going to give me exactly what I need.' [at random]Her stance changes as she prepares for battle, lightly brushing her nose in a boxing gesture.[rookickreset]";
 
 to say kangaroo wins:[Loss scenes]
@@ -106,6 +104,14 @@ To say kangaroo loses:
 
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Red Kangaroo"	"[PrepCombat_Red Kangaroo]"
+
+to say PrepCombat_Red Kangaroo:
+	setmongender 4; [creature is female]
+	follow the monster combat mode rule; [select the combat mode for first-strike]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

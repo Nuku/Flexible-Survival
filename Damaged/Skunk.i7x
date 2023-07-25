@@ -7,18 +7,9 @@ Section 1 - Creature Responses
 
 skunkready is a number that varies.
 Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if it's a 2 it's a skunkbeast...]
-skunkfight is a number that varies.
 
 to say skunk_male_desc:
-	choose row MonsterID from the Table of Random Critters;
-	let debit be 0;
-	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
-	setmongender 3; [creature is male]
 	say "This skunkbeast would easily pass for a normal animal, if it weren't for two things. One, the creature is the size of a small horse, and two, it's sporting the biggest erection you've ever seen as it waddles around on all fours. Which is a bit less than comforting, with the way it looks into your eyes.";
-	now Skunk_type is 2;
-	now HP entry is 64 + ( debit * 5 ); [- How many HP has the monster got? -]
-	now monsterHP is 64 + ( debit * 5 );
-	now wdam entry is 10 + ( ( 4 * debit ) / 11 ); [-Amount of Damage monster Does when attacking.-]
 
 to say skunk_female_desc:
 	choose row MonsterID from the Table of Random Critters;
@@ -83,7 +74,6 @@ to say skunk bodyshift:
 		say "your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have";
 
 to say skunk_female_vict:
-	now skunkfight is 2;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if Player is male and skunkready > 2:
@@ -95,7 +85,6 @@ to say skunk_female_vict:
 	increase skunkready by 1;
 
 to say skunk_female_defeat:
-	now skunkfight is 1;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if a random number from 1 to 100 > 2:
@@ -146,6 +135,19 @@ to say sblsex4:		[cunnilingus]
 	say "     The skunk runs her paws back towards your hind legs and runs her fingers across your pussy, making it quiver and drip musky fluids. There are a few tentative licks before her muzzle is buried in your muff and her tongue is lavishing attention upon your hot cunt. You [if skrp is 1]and your extra head [end if]moan in pleasure, telling the sexy girl what a fine job she's doing for her mistress. Her tongue darts all over and even into your pussy as far as it can reach. There's the occasional nibble from those sharp teeth that send shivers along your spine while her fingers tease and pinch your clit. She eats you out through several climaxes until you're fully satisfied.";
 	CreatureSexAftermath "Skunk Female" receives "OralPussy" from "Player";
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Skunk Male"	"[PrepCombat_Skunk Male]"
+
+to say PrepCombat_Skunk Male:
+	choose row MonsterID from the Table of Random Critters;
+	let debit be 0;
+	if HardMode is true and level of Player > 5, let debit be level of Player - 5;
+	setmongender 3; [creature is male]
+	now Skunk_type is 2;
+	now HP entry is 64 + ( debit * 5 ); [- How many HP has the monster got? -]
+	now monsterHP is 64 + ( debit * 5 );
+	now wdam entry is 10 + ( ( 4 * debit ) / 11 ); [-Amount of Damage monster Does when attacking.-]
 
 Section 2 - Creature Insertion
 

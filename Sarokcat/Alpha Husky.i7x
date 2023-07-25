@@ -37,9 +37,7 @@ MtFHuskyAlphaActive is a truth state that varies.[@Tag:NotSaved]
 to say Alpha Husky Desc:
 	setmongender 3;
 	project the Figure of HuskyAlpha_soft_icon;
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if Player is male and Player is not female and Resolution of MtFHuskyAlpha is 0 and a random chance of 4 in 10 succeeds: [fully male, not herm, 1st time]
+	if Player is male and Player is not female and Resolution of MtFHuskyAlpha is 0 and a random chance of 4 in 10 succeeds: [fully male, not herm, 1st time]
 		now MtFHuskyAlphaActive is true;
 		say "[HuskyAlphaMtFdesc1]";
 	else if Resolution of MtFHuskyAlpha > 0 and Resolution of MtFHuskyAlpha < 99 and a random chance of 4 in 10 succeeds: [fully male, not herm, subsequent times]
@@ -53,9 +51,7 @@ to say Alpha Husky Desc:
 		say "     You blink in surprise as a large, handsome anthro husky male appears in front of you, his slim canine muzzle drawn back in an amused grin as he looks you over. Returning the examination, you see that he has a handsome coat of lovely fur and a nice, perky tail wagging behind him, as he obviously enjoys what he is looking at. The beast is obviously one of the rare male alphas that take care of and probably made the many slutty husky bitches around the city. [one of]'You look like you will make a fine bitch for me...' [or]'Let's see if you know how to submit to an alpha,' [or]'Another soon-to-be husky bitch for me, I see!' [or]'Hello, my lovely little bitch. Time to get fucked!' [or]'You look like you need a pack to belong to. Let me help you with that...' [or]'It doesn't look like you have embraced your inner slut yet. Here, let me help you with that...' [or]'C'mere, Bitch!' [or]'Let's see now, do you want to do it the hard way, or the doggy style way...' [or]'I can't wait to get my paws on you!' [or]'Time to show you what an alpha can do!' [at random]the horny husky says as he rubs his paws together. His thick, erect canine cock bobs with excitement, and the knot at the base is already starting to swell with anticipation as he strides forward eagerly!";
 
 to say Alpha Husky attack:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if Resolution of MtFHuskyAlpha is 0 and MtFHuskyAlphaActive is true:
+	if Resolution of MtFHuskyAlpha is 0 and MtFHuskyAlphaActive is true:
 		now MtFHuskyAlphaActive is false;
 		project the Figure of HuskyAlpha_hard_icon;
 		say "[HuskyAlphaMtF1]";
@@ -340,9 +336,7 @@ to say alpha husky bitch:
 To say Alpha Husky loss:
 	if MtFHuskyAlphaActive is true:
 		now MtFHuskyAlphaActive is false; [to deactivate this variant before going into anything]
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if SarahSlut > 3:
+	if SarahSlut > 3:
 		project the Figure of HuskyAlpha_hard_icon;
 		say "     'You're tougher than I thought,' the alpha says as he looks at you speculatively, his nose working as he sniffs around you for a second, before a grin crosses his muzzle. 'And it looks like you already have tamed a bitch or two yourself,' he says with a chuckle, obviously scenting your lusty husky pet's heat-filled odor still clinging to your body. 'If you want, I suppose I could give you a few pointers on being a proper alpha to them, one pack leader to another,' the canine says with a wink, his offer sounding surprisingly helpful as you think of how much fun it would be to be a proper alpha for your little pets back in the bunker...";
 		say "[bold type]Do you take him up on his offer?[roman type][line break]";

@@ -32,27 +32,24 @@ Section 1 - Monster Description
 
 to say gsbDescription:
 	setmongender 4; [creature is female]
-	if inasituation is true:
-		say "";
+	if HP of Katherine > 0 and a random chance of 1 in 3 succeeds:
+		now gsbKatherine is true;
 	else:
-		if HP of Katherine > 0 and a random chance of 1 in 3 succeeds:
-			now gsbKatherine is true;
+		now gsbKatherine is false;
+		if HP of Katherine is 0 and a random chance of 1 in 3 succeeds:
+			now HP of Katherine is 1;
+	if gsbKatherine is true:
+		[ The player is encountering Katherine ]
+		project Figure of Katherine_icon;
+		if Energy of Katherine < 3:
+			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters.[roman type] From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
+		else if Energy of Katherine < 5:
+			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. '[one of]You again? This ought to be a fun challenge,[or]Don't think I'll go easy on you this time! I'm tougher than I look,[or]You're going down this time. Then maybe we can have some fun my way afterwards,[or]You won't get me again! I've been training,[at random]' she says. [bold type]Clearly she's run into you before,[roman type] and she's not very happy about losing the fight. She takes a fighting stance and gives you a bring-it-on wave with her hand, eager to prove herself this time around.";
 		else:
-			now gsbKatherine is false;
-			if HP of Katherine is 0 and a random chance of 1 in 3 succeeds:
-				now HP of Katherine is 1;
-		if gsbKatherine is true:
-			[ The player is encountering Katherine ]
-			project Figure of Katherine_icon;
-			if Energy of Katherine < 3:
-				say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Well, look who we have here. Trespassing on my turf again?' she says, [bold type]clearly recognizing you from past encounters.[roman type] From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
-			else if Energy of Katherine < 5:
-				say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. '[one of]You again? This ought to be a fun challenge,[or]Don't think I'll go easy on you this time! I'm tougher than I look,[or]You're going down this time. Then maybe we can have some fun my way afterwards,[or]You won't get me again! I've been training,[at random]' she says. [bold type]Clearly she's run into you before,[roman type] and she's not very happy about losing the fight. She takes a fighting stance and gives you a bring-it-on wave with her hand, eager to prove herself this time around.";
-			else:
-				say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Ooh, hey there [if Player is male]stud[else]sexy[end if]. How about a friendly spar so you can prove to me you're really an Alpha[if Player is male] male[else if Player is female] bitch[else][end if],' she says teasingly. [bold type]You recognize this particular bitch from past encounters,[roman type] and after beating her so many times, she clearly recognizes you as her Alpha, though she still wants you to prove it once again.";
-		else:
-			[ The player is encountering a random gsb ]
-			say "     Walking along the street, you hear the soft patter of pawsteps behind you. Expecting to find a creature as you turn, you are instead faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her [one of]A[or]B[at random] cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
+			say "     Walking along the street, you hear a familiar patter of pawsteps behind you. You turn and are not surprised when you're faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her B cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. 'Ooh, hey there [if Player is male]stud[else]sexy[end if]. How about a friendly spar so you can prove to me you're really an Alpha[if Player is male] male[else if Player is female] bitch[else][end if],' she says teasingly. [bold type]You recognize this particular bitch from past encounters,[roman type] and after beating her so many times, she clearly recognizes you as her Alpha, though she still wants you to prove it once again.";
+	else:
+		[ The player is encountering a random gsb ]
+		say "     Walking along the street, you hear the soft patter of pawsteps behind you. Expecting to find a creature as you turn, you are instead faced with the sight of an anthro canine sporting the distinctive coat pattern of a German shepherd. From the lack of clothes, it's quite apparent she's female. Your eyes are drawn to her [one of]A[or]B[at random] cup breasts and the sway of her hips as she walks, but her feminine curves are complemented by an athletic build and tough demeanor. From the way she carries herself, it's clear she's seen her fair share of scuffles and won, and the stance she takes as you finish taking her in tells you she intends to add one more to the list.";
 
 to say gsbAttack:
 	say "[one of]The shepherd takes a swing at you, raking your skin with her claws.[or]She kicks out with her long legs, connecting with a resounding thump. You can really feel the power behind those thick thighs of hers![or]The dog pounces at you, nearly taking you down to the floor before you can escape her grasp and stand back up.[at random]";
@@ -62,87 +59,81 @@ Section 2 - Monster Victory Scenes
 to say gsbVictory:          [Scene for when the GSB defeats the player]
 	if gsbKatherine is true:
 		now Energy of Katherine is 0;
-	if inasituation is true:
-		say "";
+	if Player is male:
+		now gsbBuffer is 0;
+		say "[gsbDom]";
+		CreatureSexAftermath "German Shepherd Bitch" receives "PussyFuck" from "Player";
+	else if Player is female:
+		[Placeholder scene]
+		say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your female parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
 	else:
-		if Player is male:
-			now gsbBuffer is 0;
-			say "[gsbDom]";
-			CreatureSexAftermath "German Shepherd Bitch" receives "PussyFuck" from "Player";
-		else if Player is female:
-			[Placeholder scene]
-			say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your female parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
-		else:
-			[Placeholder scene]
-			say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your neuter parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
+		[Placeholder scene]
+		say "     The German shepherd bitch knocks you to the floor. She rifles through your stuff for anything of value before stripping you naked. She sees your neuter parts and decides she's not interested. Then she turns to depart, leaving you to recover on your own.";
 
 Section 3 - Monster Defeat Scenes
 
 to say gsbDefeat:           [Scene for when the player defeats the GSB]
 	if gsbKatherine is true:
 		increase Energy of Katherine by 1;
-	if inasituation is true:
-		say "";
-	else:
-		say "     The German shepherd bitch stumbles from your final blow, clearly struggling to keep her balance. She drops to one knee to avoid falling flat on her ass, breathing heavily as she does so. You keep yourself at the ready as she struggles to stand back up, the tough bitch clearly eager to stay in the fight. But her body betrays her, and she collapses down onto all fours before you, head hanging in defeat.";
-		if gsbKatherine is true and Energy of Katherine > 4:
-			say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, expecting you to claim her as your own. 'Please,' she begs in a needy voice. 'I need an Alpha to fuck me!'";
-		else if gsbKatherine is true and Energy of Katherine > 2:
-			say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, but says nothing more. Perhaps she's starting to enjoy your victories over her.";
-		say "     The fight with the bitch has gotten you a bit excited. If you wanted to have some fun, you could easily take this opportunity to use her for your own desires. [bold type]Do you take advantage of the fallen shepherd?[roman type][line break]";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		if Player is male:
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck Her";
-			now sortorder entry is 1;
-			now description entry is "Show the bitch a good time by fucking her pussy";
-			[]
-			if gsbKatherine is true and Energy of Katherine > 6 and HP of Katherine < 2:
-				choose a blank row in table of fucking options;
-				now title entry is "Recruit Her";
-				now sortorder entry is 2;
-				now description entry is "Make her YOUR bitch";
-				[]
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Receive Oral";
-			now sortorder entry is 3;
-			now description entry is "Put the bitch's mouth to work on your pussy";
-		[]
+	say "     The German shepherd bitch stumbles from your final blow, clearly struggling to keep her balance. She drops to one knee to avoid falling flat on her ass, breathing heavily as she does so. You keep yourself at the ready as she struggles to stand back up, the tough bitch clearly eager to stay in the fight. But her body betrays her, and she collapses down onto all fours before you, head hanging in defeat.";
+	if gsbKatherine is true and Energy of Katherine > 4:
+		say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, expecting you to claim her as your own. 'Please,' she begs in a needy voice. 'I need an Alpha to fuck me!'";
+	else if gsbKatherine is true and Energy of Katherine > 2:
+		say "     The bitch looks back up at you from the ground, panting heavily in excitement. She's clearly turned on by being beaten by such a strong opponent. She gives you an imploring look as she whines in need, but says nothing more. Perhaps she's starting to enjoy your victories over her.";
+	say "     The fight with the bitch has gotten you a bit excited. If you wanted to have some fun, you could easily take this opportunity to use her for your own desires. [bold type]Do you take advantage of the fallen shepherd?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Eat Her Out";
-		now sortorder entry is 9;
-		now description entry is "Make up for the fight by licking her pussy";
+		now title entry is "Fuck Her";
+		now sortorder entry is 1;
+		now description entry is "Show the bitch a good time by fucking her pussy";
 		[]
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Let her go[as]0[end link][line break]";
-		now calcnumber is -1;
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if nam is "Fuck Her":
-						say "[gsbDefeatSex1]";
-					else if nam is "Recruit Her":
-						say "[gsbRecruitSex1]";
-					else if nam is "Receive Oral":
-						say "[gsbDefeatSex2]";
-					else if nam is "Eat Her Out":
-						say "[gsbDefeatSex3]";
-					wait for any key;
-			else if calcnumber is 0:
-				say "     Deciding you're not in the mood, you wave the German shepherd off and move on, leaving her to recover from the fight.";
+		if gsbKatherine is true and Energy of Katherine > 6 and HP of Katherine < 2:
+			choose a blank row in table of fucking options;
+			now title entry is "Recruit Her";
+			now sortorder entry is 2;
+			now description entry is "Make her YOUR bitch";
+			[]
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Receive Oral";
+		now sortorder entry is 3;
+		now description entry is "Put the bitch's mouth to work on your pussy";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Eat Her Out";
+	now sortorder entry is 9;
+	now description entry is "Make up for the fight by licking her pussy";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Let her go[as]0[end link][line break]";
+	now calcnumber is -1;
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-		clear the screen and hyperlink list;
+				if nam is "Fuck Her":
+					say "[gsbDefeatSex1]";
+				else if nam is "Recruit Her":
+					say "[gsbRecruitSex1]";
+				else if nam is "Receive Oral":
+					say "[gsbDefeatSex2]";
+				else if nam is "Eat Her Out":
+					say "[gsbDefeatSex3]";
+				wait for any key;
+		else if calcnumber is 0:
+			say "     Deciding you're not in the mood, you wave the German shepherd off and move on, leaving her to recover from the fight.";
+			now sextablerun is 1;
+	clear the screen and hyperlink list;
 
 to say gsbDefeatSex1:			[pussy fuck]
 	if gsbKatherine is true:

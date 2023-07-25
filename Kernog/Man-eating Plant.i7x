@@ -5,17 +5,11 @@ Version 1 of Man-eating Plant by Kernog begins here.
 Section 1 - Creature Responses
 
 to say beattheplant:
-	if inasituation is false:
-		say "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.";
-	else:
-		say ""; [dealt with in the event]
+	say "     As you give one last blow to the flower, you watch it ted progressively, a sappy substance escaping from the wounds.";
 
 
 to say ManEatingPlantDesc:
-	if inasituation is false:
-		say "     You attempt to walk around the big trees on your path, when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard, as you decide what to do with the mutated vegetal.";
-	else: [event]
-		say ""; [dealt with at the event source]
+	say "     You attempt to walk around the big trees on your path, when movement in the corner of your vision alerts you. Rooted into the bark of one of the trees, a large plant opens its petals, showing a multi-color inner pattern, going deep inside the tree. Vines begin to flail dangerously around you, trying to snatch you. You stay on your guard, as you decide what to do with the mutated vegetal.";
 
 Section 2 - Creature Insertion
 

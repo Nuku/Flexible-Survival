@@ -48,8 +48,6 @@ to RandomizeFeralMutt:
 		now FeralMuttDetailedLook is "a large snarling [FeralMuttFurColor] [FeralMuttCurrentBreed]";
 
 to say FeralMuttDesc:
-	setmongender 3;
-	RandomizeFeralMutt;
 	say "     From behind, you hear the telltale growl of an animal. Whirling around, you spot a large feral dog, growling and approaching predatorily towards you. The mutt seems to be a mixed breed, most closely resembling [FeralMuttDetailedLook]. As he approaches, you spot the red rocket that is his cock already half-poking out of his furry sheath, before it then slides into full view as the dog winds himself up to fuck you. Seconds later, the mutt leaps forward, barking and planning to take what he wants!";
 
 to say LoseToFeralDog:
@@ -281,6 +279,14 @@ to Pet MuttRecruitment:
 		say "     You sneer, putting a hand on your hip and with your other you wave it aggressively, barking at the dog to get out of your sight. Even stepping closer with a stomp, growling cruelly at the mutt. That does it, he whines and quickly shuffles back when you stomp forward before the fleeing, disappearing behind some nearby cover and padding off in retreat. You doubt you'll see that mongrel again or get any other similar offers of submission.";
 		now Loyalty of Pet Mutt is 99; [player doesn't want him]
 
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Feral Mutt"	"[PrepCombat_Feral Mutt]"
+
+to say PrepCombat_Feral Mutt:
+	setmongender 3;
+	RandomizeFeralMutt;
+
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -492,6 +498,13 @@ to say feral mutt man-milk use:
 
 instead of sniffing feral mutt man-milk:
 	say "You open the lid for a moment and take a sniff. Smells kinda like any other milk, really.";
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Mutt Pack"	"[PrepCombat_Mutt Pack]"
+
+to say PrepCombat_Mutt Pack:
+	say "";
 
 Section 3 - Mutt Pack
 
@@ -779,6 +792,12 @@ to say ResolveEvent Mutt Pack Attack:
 		LineBreak;
 		say "     Hell no, you're not laying down like a bitch! You ready yourself for a fight.";
 		challenge "Mutt Pack";
+		if fightoutcome < 20: [player won]
+			say "[BeatTheMuttPack]";
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
+			say "[LoseToMuttPack]";
+		else if fightoutcome is 30: [fled]
+			say "     You run away in wild flight, literally chased by wild dogs. It takes a fair while till you manage to shake them, but thankfully make your escape eventually.";
 		now Resolution of Mutt Pack Attack is 2; [fought them]
 
 to say PackDominanceScenes:

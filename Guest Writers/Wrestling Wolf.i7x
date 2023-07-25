@@ -113,8 +113,6 @@ to say beatthewrwolf:
 
 
 to say wrwolfdesc:
-	project Figure of WrestlingWolf_clothed_icon;
-	setmongender 3; [creature is male]
 	if wrwolfseen is false:
 		say "     Your wandering across the campus is interrupted as you hear a loud voice call out. Looking over, you spot a large, muscled wolf in a wrestling outfit. He's set up an impromptu ring beside the building you just passed. 'Ahh! My alma mater! It's good to be back,' he says. 'I should be able to have a few good matches here,' he says, looking around. You try to sneak away, but he spots you. 'You should do fine for a warm-up match.'";
 		now wrwolfseen is true;
@@ -123,6 +121,14 @@ to say wrwolfdesc:
 	now wwheal is 0;
 
 Section 2 - Creature Insertion
+
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Wrestling Wolf"	"[PrepCombat_Wrestling Wolf]"
+
+to say PrepCombat_Wrestling Wolf:
+	project Figure of WrestlingWolf_clothed_icon;
+	setmongender 3; [creature is male]
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
