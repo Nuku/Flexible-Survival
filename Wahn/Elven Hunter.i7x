@@ -42,8 +42,6 @@ to say GenerateTrophyList_ElvenHunter:
 Section 1 - Creature Responses
 
 to say Hunter wins:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
 	project the Figure of ElvenHunter_icon;
 	if HP of Player > 0: [player surrendered]
 		if Charisma of Castien > 0: [player won over him before]
@@ -87,34 +85,31 @@ to say Hunter wins:
 				say "     [bold type]Seems you've redeemed yourself from losing in combat by giving the elf resistance. He almost sounded impressed and eager at the end. Still, without actually beating him, you don't think you'll get any further plus points in his book at this point.[roman type][line break]";
 
 To say Hunter loses:
-	if inasituation is true:
-		stop the action; [text taken care of at the source]
+	project the Figure of ElvenHunter_icon;
+	if BodyName of Player is listed in infections of DemonList:
+		say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues, 'But I'm not here to vanquish vile beasts, just to survey a new and hopefully interesting hunting ground. But know this, creature - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate your filthy stain from existence wherever it is encountered here.' With that said, the elf murmurs a tongue-twister of arcane syllables under is breath and suddenly vanishes from sight. Faint, almost imperceptible sounds of footfalls tell you that he became invisible to extricate himself from your fight.";
 	else:
-		project the Figure of ElvenHunter_icon;
-		if BodyName of Player is listed in infections of DemonList:
-			say "     Stepping back, the elf gives you a hateful stare. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. 'You're stronger than expected, demon. Did you find some way to taint this world's essence with your infernal power?' Wrinkling his nose, he spits at your feet and continues, 'But I'm not here to vanquish vile beasts, just to survey a new and hopefully interesting hunting ground. But know this, creature - once our king is informed of your presence, I've no doubt all hunting parties will have orders to exterminate your filthy stain from existence wherever it is encountered here.' With that said, the elf murmurs a tongue-twister of arcane syllables under is breath and suddenly vanishes from sight. Faint, almost imperceptible sounds of footfalls tell you that he became invisible to extricate himself from your fight.";
+		say "     'Well done,' the elf says with a smile on his lips. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. ";
+		if PlayerMet of Castien is false:
+			say "'You should know that you have fought against Castien, scout of the Wild Hunt. Would you give me your name, in turn?' Wary about this sudden turnaround from combat to polite conversation, you tell him what to call you. '[if Player is not defaultnamed][name of Player]. That fits you well, I think. [end if]Well met.' ";
+			choose a row with name of "Elven Male" in the Table of Random Critters;
+			now enemy type entry is 2; [player knows his name]
+			now PlayerMet of Castien is true;
 		else:
-			say "     'Well done,' the elf says with a smile on his lips. Even after all your blows, he still looks more than ready to continue the fight, although there is a sheen of sweat on his brow. He casually wipes that away, as if to show that he's got enough of toying with you, and clears his throat. ";
-			if PlayerMet of Castien is false:
-				say "'You should know that you have fought against Castien, scout of the Wild Hunt. Would you give me your name, in turn?' Wary about this sudden turnaround from combat to polite conversation, you tell him what to call you. '[if Player is not defaultnamed][name of Player]. That fits you well, I think. [end if]Well met.' ";
-				choose a row with name of "Elven Male" in the Table of Random Critters;
-				now enemy type entry is 2; [player knows his name]
-				now PlayerMet of Castien is true;
-			else:
-				say "'Here we are again[if Player is not defaultnamed], [name of Player]. [end if]Thank you for proving that some creatures of this world are a worthy challenge.' ";
-			say "That said, the elf gives you a nod of recognition, then looks you up and down. ";
-			if BodySpeciesName of Player is "Elf" and FaceSpeciesName of Player is "Elf" and SkinSpeciesName of Player is "Elf":
-				say "'Though maybe you long to be of another world, by your appearance? You almost do have the appearance of a real elf, though of course the difference is apparent by your aura. Still Auberon might deign to take on a local guide, and for your service you could become a true elf, not just a lookalike. Watch out for us if you hear the horns and present yourself, I might just put in a good word for you.' ";
-			else if ( BodyName of Player is listed in infections of ReptileList and SkinName of Player is listed in infections of ReptileList ):
-				say "'Maybe you are a fitting heir to the big lizards we hunted on this world in the past. I've many fond memories of hunting the dinosaurs, good to see the reappearance of something similar in cunning and strength. The Wild Hunt will be honored to take you on once we ride.' ";
-			else:
-				say "'The Wild Hunt will be honored to take you on once we ride. Always good to have some novel prey with unpredictable behavior.' ";
-			say "Castien wiggles his eyebrows and winks at you, then adds, 'But for now, why don't we get to your reward for besting me?' His hands reach for his belt after doing so.";
-			say "     [bold type]You seem to have impressed the elf, gaining you a point in his favor.[roman type][line break]";
-			increase Charisma of Castien by 1;
-			LineBreak;
-			say "     [bold type]How exactly do you react to his offer of recreational sex?[roman type][line break]";
-			say "[ElvenHunterVictoryMenu]";
+			say "'Here we are again[if Player is not defaultnamed], [name of Player]. [end if]Thank you for proving that some creatures of this world are a worthy challenge.' ";
+		say "That said, the elf gives you a nod of recognition, then looks you up and down. ";
+		if BodySpeciesName of Player is "Elf" and FaceSpeciesName of Player is "Elf" and SkinSpeciesName of Player is "Elf":
+			say "'Though maybe you long to be of another world, by your appearance? You almost do have the appearance of a real elf, though of course the difference is apparent by your aura. Still Auberon might deign to take on a local guide, and for your service you could become a true elf, not just a lookalike. Watch out for us if you hear the horns and present yourself, I might just put in a good word for you.' ";
+		else if ( BodyName of Player is listed in infections of ReptileList and SkinName of Player is listed in infections of ReptileList ):
+			say "'Maybe you are a fitting heir to the big lizards we hunted on this world in the past. I've many fond memories of hunting the dinosaurs, good to see the reappearance of something similar in cunning and strength. The Wild Hunt will be honored to take you on once we ride.' ";
+		else:
+			say "'The Wild Hunt will be honored to take you on once we ride. Always good to have some novel prey with unpredictable behavior.' ";
+		say "Castien wiggles his eyebrows and winks at you, then adds, 'But for now, why don't we get to your reward for besting me?' His hands reach for his belt after doing so.";
+		say "     [bold type]You seem to have impressed the elf, gaining you a point in his favor.[roman type][line break]";
+		increase Charisma of Castien by 1;
+		LineBreak;
+		say "     [bold type]How exactly do you react to his offer of recreational sex?[roman type][line break]";
+		say "[ElvenHunterVictoryMenu]";
 
 to say ElvenHunterVictoryMenu:
 	project the figure of ElvenHunter_hard_icon;

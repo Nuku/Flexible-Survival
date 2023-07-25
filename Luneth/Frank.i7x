@@ -62,7 +62,7 @@ to say ResolveEvent Mephitness:
 			say "     Yelling for their attention, you charge the skunks. The one at the back turns to face you while the others tackle their fallen prey. He yells and screams, trying to push them back and get back up while they try to kiss and fondle him.";
 			let SkunkFightCounter be 0;
 			now fightoutcome is 0; [reset]
-			while fightoutcome < 20 and SkunkFightCounter < 2: [runs for 2 times or until the player loses or flees]
+			while fightoutcome < 20 and SkunkFightCounter < 3: [runs for 3 times or until the player loses or flees]
 				if SkunkFightCounter is 1:
 					say "     With the first of them finished, you move in on the other two. They notice you coming, and after some shoving between the pair, one gets up and heads to deal with you while the other keeps at their prey. He's become much more skunk-like now, with black and white fur starting to grow in over his body as the femme starts bobbing her muzzle over his stiff cock. His struggles have stopped and he's moaning in pleasure. You pull your eyes away from the erotic sight and focus on the one coming at you.";
 				else if SkunkFightCounter is 2:
@@ -92,7 +92,6 @@ to say ResolveEvent Mephitness:
 		ItemGain soda by 2;
 		increase score by 15;
 		now Resolution of Mephitness is 5; [Ignored Frank, Stole bag]
-	now skunkfight is 0;
 	now Mephitness is resolved;
 
 Table of GameRoomIDs (continued)

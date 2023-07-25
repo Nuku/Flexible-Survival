@@ -9,22 +9,13 @@ Version 3 of Coyote by Wahn begins here.
 Section 1 - Creature Responses
 
 to say Coyote Wins:
-	if inasituation is true: [to use a general coyote enemy in a scene]
-		say ""; [dealt with at the event source]
-	else: [empty, as this is not a roaming monster]
-		say "Error: Please report how you saw this on the FS Discord or Forum.";
+	say "Error: Please report how you saw this on the FS Discord or Forum.";
 
 to say Coyote Loses:
-	if inasituation is true: [to use a general coyote enemy in a scene]
-		say ""; [dealt with at the event source]
-	else: [empty, as this is not a roaming monster]
-		say "Error: Please report how you saw this on the FS Discord or Forum.";
+	say "Error: Please report how you saw this on the FS Discord or Forum.";
 
 to say CoyoteDesc:
-	if inasituation is true: [to use a general coyote enemy in a scene]
-		say ""; [dealt with at the event source]
-	else: [empty, as this is not a roaming monster]
-		say "There is really no need for a description.";
+	say "There is really no need for a description.";
 
 
 Section 2 - Creature Insertion

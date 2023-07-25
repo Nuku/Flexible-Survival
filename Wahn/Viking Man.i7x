@@ -8,45 +8,39 @@ Section 1 - Creature Responses
 Section 2 - Creature Insertion
 
 to say VikingManLoses:
-	if inasituation is true:
-		say ""; [dealt with in the event]
-	else:
-		say "WIP Viking Man Loss";
+	say "WIP Viking Man Loss";
 
 to say VikingManWins:
-	if inasituation is true:
-		say ""; [dealt with in the event]
-	else:
-		if HP of Player > 0: [player submits]
-			if the player is not facially human or the player is not bodily human or the player is not skintone human: [non-human player = a monster]
-				if charisma of Player > 15: [handsome enough for some sexy time]
-					say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you're at least of use for some pleasure.' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
-					say "[VikingManWinSex]";
-				else: [ugly people just get robbed]
-					say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
-					say "[VikingManLooting]";
-			else: [human form player]
-				if charisma of Player > 15: [handsome enough for some sexy time]
-					say "     'Hmph - you're just another of those weaklings that run around like frightened chickens when they're raided. Where are the mighty warriors sung about in the tales of strange new lands like this?' With a scoff, he shoves you to the ground. 'Let's see if you're at least of use for some pleasure.' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
-					say "[VikingManWinSex]";
-				else: [ugly people just get robbed]
-					say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
-					say "[VikingManLooting]";
-		else: [player loses]
-			if the player is not facially human or the player is not bodily human or the player is not skintone human: [non-human player = a monster]
-				if charisma of Player > 15: [handsome enough for some sexy time]
-					say "     Leaving you dazed with his last blow, he gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Still, there was at least some fight in you. I wonder if you can please a man too, creature...' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
-					say "[VikingManWinSex]";
-				else: [ugly people just get robbed]
-					say "     Leaving you dazed with her last blow, he gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
-					say "[VikingManLooting]";
-			else: [human form player]
-				if charisma of Player > 15: [handsome enough for some sexy time]
-					say "     Leaving you dazed with his last blow, he gives you a shove and you fall on your ass. 'I win. Not a big surprise, but at least you fought back a bit.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'You've shown some courage and just might be worth taking as a serf. Let's see how you measure up providing pleasure to me...' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
-					say "[VikingManWinSex]";
-				else: [ugly people just get robbed]
-					say "     Leaving you dazed with her last blow, he gives you a shove and you fall on your ass. 'I win. Not a big surprise, but at least you fought back a bit.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
-					say "[VikingManLooting]";
+	if HP of Player > 0: [player submits]
+		if the player is not facially human or the player is not bodily human or the player is not skintone human: [non-human player = a monster]
+			if charisma of Player > 15: [handsome enough for some sexy time]
+				say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you're at least of use for some pleasure.' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
+				say "[VikingManWinSex]";
+			else: [ugly people just get robbed]
+				say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
+				say "[VikingManLooting]";
+		else: [human form player]
+			if charisma of Player > 15: [handsome enough for some sexy time]
+				say "     'Hmph - you're just another of those weaklings that run around like frightened chickens when they're raided. Where are the mighty warriors sung about in the tales of strange new lands like this?' With a scoff, he shoves you to the ground. 'Let's see if you're at least of use for some pleasure.' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
+				say "[VikingManWinSex]";
+			else: [ugly people just get robbed]
+				say "     'What, you surrender so easily you outlander beast? The tales told of powerful creatures in the world, not mewling weaklings.' With a scoff, he shoves you to the ground. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
+				say "[VikingManLooting]";
+	else: [player loses]
+		if the player is not facially human or the player is not bodily human or the player is not skintone human: [non-human player = a monster]
+			if charisma of Player > 15: [handsome enough for some sexy time]
+				say "     Leaving you dazed with his last blow, he gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Still, there was at least some fight in you. I wonder if you can please a man too, creature...' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
+				say "[VikingManWinSex]";
+			else: [ugly people just get robbed]
+				say "     Leaving you dazed with her last blow, he gives you a shove and you fall on your ass. 'A bit weak for a monster, aren't you? Oh well, maybe you're just a stunted one.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
+				say "[VikingManLooting]";
+		else: [human form player]
+			if charisma of Player > 15: [handsome enough for some sexy time]
+				say "     Leaving you dazed with his last blow, he gives you a shove and you fall on your ass. 'I win. Not a big surprise, but at least you fought back a bit.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'You've shown some courage and just might be worth taking as a serf. Let's see how you measure up providing pleasure to me...' With that, he puts down his weapon and starts undressing, soon revealing a tough and strong body in unashamed nakedness.";
+				say "[VikingManWinSex]";
+			else: [ugly people just get robbed]
+				say "     Leaving you dazed with her last blow, he gives you a shove and you fall on your ass. 'I win. Not a big surprise, but at least you fought back a bit.' Looking down on your prone form, he lets his gaze wander over you appraisingly. 'Let's see if you've at least got something worth taking.' With that, he starts poking around in your stuff.";
+				say "[VikingManLooting]";
 
 to say VikingManLooting:
 	if carried of food >= 1:

@@ -707,18 +707,12 @@ to say ResolveEvent Nightmare Showdown:
 Section C - Code for Destabilizing Mutant and Its Boss Form
 
 to say Destabilizing Mutant Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mutant Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mutant Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 
@@ -890,18 +884,12 @@ When Play begins:
 [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say Destabilizing Mass Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mass Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Destabilizing Mass Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 Table of Random Critters (continued)

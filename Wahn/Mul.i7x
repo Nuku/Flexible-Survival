@@ -104,6 +104,49 @@ instead of fucking Mul:
 			LineBreak;
 			say "[MulLockerroomSexMenu]";
 
+to say Mul_loses_fight:
+	if MulAnalAcceptance > 4:
+		say "     After your last hit, the orc warrior staggers backwards, his eyes unfocused - bumping into the body of the motor-less car in the garage with you. Wiping a spot of green blood from his split lip, Mul says in a groggy murmur, 'Hey, that's not how it's supposed to go...' As you step closer with a grin on your face, he tries to stand straight - only to lose his balance and fall back against the car once more. 'I'll get you - just... need... to... catch... my... breath,' he growls, still a little defiant even though he's clearly out for the count.";
+		LineBreak;
+		say "     What now?";
+		say "     ([link]Y[as]y[end link]) - Savor your victory - bend the orc over the car hood and make him spread those cheeks.";
+		say "     ([link]N[as]n[end link]) - Leave him there, trying to shore up his pride at having lost yet another fight.";
+		if Player consents:
+			say "     Hah, let him talk. Actions are what counts - like your own just now, as you grab the orc by his thick arm and pull him around to stand with his ass towards you. Before he can do anything more than start to grunt, 'You bastar-,' you've shoved his chest forwards, making him slump forward on the car hood - bumping his head with a *thunk*. Not that should have any negative effects, orcs are tough after all. Busying your hands, you quickly undo the knots holding Mul's loincloth, pulling it away and letting the skimpy piece of fabric drop to the ground - revealing the orc's firm and muscled buttocks, the sweet crack between them and his cock and balls, dangling between the orc's strong legs.";
+			if Player is male:
+				say "     The sight of the vanquished orc has your cock hard and ready in mere moments, and you lose little time in wrenching off your clothes to line up with his well-trained hole. In the mood for a hard, no nonsense fuck, you thrust deep right away, sinking your shaft into the strong male's tight hole and making him roar at the sudden anal invasion. Thanks to already breaking him in very well, Mul's pucker readily expands to allow more and more of your shaft in, while at the same time still being nice and snug around your member. The big brute's hole feels fantastic to be in, and the fact that you're dominating the very orc that wanted to take you as a slave makes fucking him all the sweeter.";
+				say "     Being used to getting fucked by now - and unable to stop himself from getting of on it, Mul's anal muscles flex and twitch as you pound into him hard. Part of it is just him reacting to you hitting the prostate, but there are also some moments in which the orc's hole almost seems to jerk you off inside him. Apparently, your muscled green playmate has accepted this role so much now that he is experimenting with new techniques to make wild anal sex feel even better for you both. You can't help but give a very satisfied laugh at the situation - you, balls deep inside a mighty orc warrior and pounding into him hard so that he has to brace himself with both arms... against a car in an open garage, in sight of anyone who might walk by to check out the loud moans echoing out of your little fighting arena now being turned into a fuck-pad.";
+				WaitLineBreak;
+				say "     Grunts and slapping noises of your hips against Mul's ass fill the garage, coming in a rapid pace as you fuck Mul deeply without restraint. He's an orc after all - strong and tough, your bottom-boy can take whatever you can dish out. And you're quite certain that he even likes the rough treatment... having reached around him to take hold of Mul's own thick shaft, you can feel it twitch and pulse each time you give him an especially deep thrust. In a wild and exhilarating ride, you soon drive the big man closer and closer to the edge, his grunts and moans coming quicker and becoming slightly higher pitched.";
+				say "     Forgetting his stubborn pride completely in the heat of sex, the orc even shouts, 'Yeah, take me! Faster! Pound my ass! Ngh - Nnngh! More! NnnnngggghhhHH!' With that last drawn-out roar, Mul starts to cum, his shaft rhythmically pulsing in your hand as stream after stream of cum blasts through it and splatters the side of the car. With each spurt of the orc's seed, all the muscles in Mul's body twitch and tense - including those inside his ass, around your shaft. This results in you joining your brutish partner in orgasm just moments later, gripping him tightly around the hips as your balls start to unload everything they got. Your seed gets pumped into Mul in weighty bursts, filling him up with creamy cum.";
+				WaitLineBreak;
+				say "     After depositing the last few spurts of your orgasm into Mul, you pull out of him with a slurp and leave the large orc to slump on the car's hood. Standing back, you take in your handiwork - one mighty orc warrior slouched against a cum-splattered car, with your seed dripping out of his hole and him still panting like a needy bitch. You can't help but laugh as he rests his shoulder and head on the cool metal car hood, just to have free hands that immediately start to finger his stretched hole.";
+				say "     The very self-satisfied smile on your lips stays with you the whole time as you get dressed, then leave the freshly-bred orc to stick fingers up his rear and lick your cup off them afterwards. Eventually, he'll start a walk of shame back to the orc lair - in all likelihood making up some fancy story about this or that creature he fucked while outside, to tell his brothers and other orc buddies...";
+				NPCSexAftermath Mul receives "AssFuck" from Player;
+			else:
+				say "     The sight of the vanquished orc has your arousal soaring in mere moments, and you lose little time in getting your hand between his buttcheeks, rubbing up and down. There is a satisfyingly needy moan from the big orc as you slip a finger into his hungry hole, feeling his warm tightness and tickling the orc's insides. Meanwhile, you other hand moves to cup his balls, rubbing them gently, then hefts the thick cock of your orcish butt-slut. Stroking him slowly while you finger him, a glistening drop of pre forms at his cockhead, to be swiped up by you and massaged into his back door, pushing the big brute further into lust with its aphrodisiac effects.";
+				say "     Working Mul's asshole and dosing him with his own orc cum, you get more and more of the tasty liquid to leak out of his cock, allowing you to scoop up a nice amount with your fingers and lean forward to present them to the moaning and grunting orc. There is no hesitation at all as he takes in the first sniff of your offering, then pulls your hand to his mouth to hungrily suck off the semen from it. Thanks to already breaking him in very well, Mul's pucker readily expands to allow two, three, then four fingers as you get back to fondling his back door. The big brute's hole feels fantastic to be in, and the fact that you're dominating the very orc that wanted to take you as a slave makes finger-fucking him all the sweeter.";
+				WaitLineBreak;
+				say "     Being used to getting fucked by now - and unable to stop himself from getting of on it, Mul's anal muscles flex and twitch around your probing digits. Part of it is just him reacting to you hitting the prostate, but there are also some moments in which the orc's hole almost seems to pull your fingers into him. Apparently, your muscled green playmate has accepted this role so much now that he is experimenting with new techniques to make anal sex feel even better - and he clearly wants more. You can't help but give a very satisfied laugh at the situation - you, with not quite your whole hand inside a mighty orc warrior's ass and him gasping like a needy bitch as he braces himself... against a car in an open garage, in sight of anyone who might walk by to check out the loud moans echoing out of your little fighting arena now being turned into a fuck-pad.";
+				say "     Forgetting his stubborn pride completely in the heat being fingered, the orc even shouts, 'Yeah, take me! Faster! Stroke that spot again! Ngh - Nnngh! More! NnnnngggghhhHH!' With that last drawn-out roar, Mul starts to cum, his shaft rhythmically pulsing in your other hand as stream after stream of cum blasts through it and splatters the side of the car. With each spurt of the orc's seed, all the muscles in Mul's body twitch and tense - including those inside his ass, around your fingers. An interesting sensation, feeling every tremble and spurt like this.";
+				WaitLineBreak;
+				say "     After Mul's orgasm winds down, you pull your hand out of his well-lubed ass with a slurp and hold it out for the orc to lick clean. When he's soon done, you stand back and take in your handiwork - one mighty orc warrior slouched against a cum-splattered car, with his hole still gaping a little in its well-stretched state. You can't help but laugh as he crouches down just a moment later and starts to lick his own cum off the side of the car. The very self-satisfied smile on your lips stays with you the whole time as you get dressed, then leave the freshly-milked orc to slurp up any cum he can get. Eventually, he'll start a walk of shame back to the orc lair - in all likelihood making up some fancy story about this or that creature he fucked while outside, to tell his brothers and other orc buddies...";
+				NPCSexAftermath Mul receives "AssDildoFuck" from Player;
+		else:
+			say "     Laughing into Mul's face, you tell him to take a good long look at himself. So much for the mighty orc warrior, beaten up by one such as you. The taunt is all it takes for the orc to lunge at you, snarling - only to stumble as you easily side-step him. Once in movement, his muscled mass is hard to stop - and Mul's try to grab you turns into a flat-out fall on his face. There is a loud thunk as his head hits the ground, knocking the orc unconscious. Judging by the low groaning coming from the orc, he's okay - or will be in a bit when his wounds heal. With a last look at his stretched-out form, you leave Mul behind and stroll back to the orc lair.";
+	else:
+		say "     After your last hit, the orc warrior staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. As just leaving him here for anyone to stumble over him doesn't seem to be a good idea, you drag the orc over into the nearby Observation Room, out of sight from other passing orcs. Once you've got him in the room, your eyes can't help but wander down to his crotch where the Mul's loincloth has fallen aside, revealing the thick piece of man-meat between his legs.";
+		LineBreak;
+		if Player is male and BodyName of Player is "Orc Warrior" and Player is pure:
+			say "     The urge to fuck Mul and show him what a REAL orc warrior is like rises inside you quickly. Do you do so ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
+			if Player consents:
+				say "[MulAnal]";
+			else:
+				say "     Shaking off the urge to pound into him hard, you check the orc for loot, then leave the room.";
+		else:
+			say "     Shaking off the funny feeling you get at the thought that he was ready to fuck you with that massive pole, you check the orc for loot, then leave the room.";
+		now lastfuck of Mul is turns;
+
 instead of going East from Dark Hallway 1 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
 	now inasituation is true;
 	project Figure of Mul_clothed_icon;
@@ -114,7 +157,20 @@ instead of going East from Dark Hallway 1 while a random chance of 1 in 3 succee
 		say "     Looking around, the brutish orc gives a satisfied grunt, then turns to you. 'Let's see who's the boss now. I'm gonna show you what a real orc can do!' And with that, he balls his fists and attacks.";
 	else:
 		say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";	
+	now CreatureArtworkOverride is true;
 	challenge "Orc Warrior";
+	if fightoutcome < 20: [player won]
+		say "[Mul_loses_fight]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		if MulAnalAcceptance > 4:
+			say "[MulBottomAnalRide]";
+		else if MulAnalAcceptance > 1 and Player is male and a random chance of 1 in 2 succeeds:
+			say "[MulAnalRide]";
+		else:
+			say "[MulFuck2]";
+		move Player to Slave Cell 2;
+	else if fightoutcome is 30: [fled]
+		say "     As you run away, you hear Mul bellowing for you to stop, chasing after you to catch you again. Thankfully, you do manage to get away from him.";
 	now inasituation is false;
 
 instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succeeds and lastfuck of Mul - turns > 7:
@@ -126,8 +182,20 @@ instead of going East from Dark Hallway 2 while a random chance of 1 in 3 succee
 		say "     Looking around, the brutish orc gives a satisfied grunt, then turns to you. 'Let's see who's the boss now. I'm gonna show you what a real orc can do!' And with that, he balls his fists and attacks.";
 	else:
 		say "     A large and muscular orc comes along - it's Mul, one of the three orc brothers that brought you here. 'Trying to escape, slave? Looks like I'll have to show you why that is a bad idea...' he snarls, cracking his knuckles. 'You BELONG to us - that's something you'll understand soon enough.' With that, he rushes at you, battle-lust - and regular lust - in his eyes.";	
-	project Figure of Mul_clothed_icon;
+	now CreatureArtworkOverride is true;
 	challenge "Orc Warrior";
+	if fightoutcome < 20: [player won]
+		say "[Mul_loses_fight]";
+	else if fightoutcome > 19 and fightoutcome < 30: [lost]
+		if MulAnalAcceptance > 4:
+			say "[MulBottomAnalRide]";
+		else if MulAnalAcceptance > 1 and Player is male and a random chance of 1 in 2 succeeds:
+			say "[MulAnalRide]";
+		else:
+			say "[MulFuck2]";
+		move Player to Slave Cell 2;
+	else if fightoutcome is 30: [fled]
+		say "     As you run away, you hear Mul bellowing for you to stop, chasing after you to catch you again. Thankfully, you do manage to get away from him.";
 	now inasituation is false;
 
 Section 2 - Locker Room Sex

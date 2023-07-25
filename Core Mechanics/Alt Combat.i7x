@@ -10,6 +10,7 @@ Dam is a number that varies.
 monstercom is a number that varies.		[ This represents the row on the table of Critter Combat to be used in this fight. ]
 altattackmade is a number that varies.	[ This tracks whether an alternate attack what chosen. ]
 combat abort is a number that varies.	[ 0 = combat continues / 1 = combat will be aborted. ]
+CreatureArtworkOverride is a truth state that varies. [@Tag:NotSaved]
 ktspeciesbonus is a number that varies.	[ Applies a species bonus while using the 'Know Thyself' feat. ]
 ktcockmatch is a truth state that varies.
 ktcockmatch is usually false.          [ Checks for matching player cock while using the 'Know Thyself' feat. ]
@@ -201,20 +202,24 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	now fightoutcome is 100;
 	let nam be Name entry;
 	let found be 0;
+	if there is a name of nam in the Table of CombatPrep:
+		choose row with name of nam in the Table of CombatPrep;
+		say "[PrepFunction entry]";
 	choose row MonsterID from Table of Random Critters;
-	if inasituation is false:
-		follow the ngraphics_blank rule;
+	if CreatureArtworkOverride is false:
+		follow the ngraphics_blank rule; [clear previous picture]
+		repeat through the table of game art: [display picture from the artwork table, if available]
+			if title entry is nam:
+				now found is 1;
+				project icon entry;
+				break;
+	if inasituation is false: [regular creature pre and postcombat, might include artwork being shown]
 		if enemy type entry is 0: [non-unique enemies]
 			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
 		else if enemy type entry is 1: [unique enemies whose name is not known]
 			say "[bold type]You run into a [EnemyNameOrTitle].[roman type][line break][desc entry][line break]";
 		else if enemy type entry is 2: [unique enemies whose name is known]
 			say "[bold type]You run into [enemy Name entry].[roman type][line break][desc entry][line break]";
-	repeat through the table of game art:
-		if title entry is nam:
-			now found is 1;
-			project icon entry;
-			break;
 
 Part 3 - Combat
 

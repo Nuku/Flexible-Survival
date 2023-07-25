@@ -28,6 +28,10 @@ When Play begins:
 	add "Anthro Dragoness" to infections of OviImpregnatorList;
 	add "Anthro Dragoness" to infections of TailweaponList;
 
+Table of CombatPrep
+name(text)	PrepFunction(text)
+with 1 blank rows
+
 Part 3 - Table of New Infection Parts (+Expansion of the Initial Infection above)
 
 Table of New Infection Parts
@@ -47,7 +51,7 @@ Part 5 - Slut Storage
 [PaymentType 1 = Player has to pay 1 bottle/week]
 
 Table of StoredSluts
-Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	Sexcount(number)
+Name(text)	PaymentType(number)	WhoredOut(truth state)	Resistant(truth state)	Constraints(truth state)	Sluttyness(number)	ProgressPercentage(number)	SexCount(number)
 with 1000 blank rows
 
 [
@@ -411,7 +415,6 @@ Name(text)	Type(text)
 "CorbinPregnancy"	"number"
 "corrvicchange1"	"number"
 "corrvicchange2"	"number"
-"cougarfight"	"number"
 "CouraFriendDevelopments"	"number"
 "CouraVirginity"	"number"
 "CowBully"	"number"
@@ -555,11 +558,6 @@ Name(text)	Type(text)
 "FeralBirths"	"number"
 "FeralMuttDominance"	"number"
 "FeralMuttFurColorNumber"	"number"
-"FeralWolfMaleDefeat"	"number"
-"FeralWolfBitchDefeat"	"number"
-"FeralWolfMaleFight"	"number"
-"FeralWolfBitchFight"	"number"
-"FeralWolfSpecialFightNumber"	"number"
 "ferretvisit"	"number"
 "fertiletime"	"number"
 "ffrivalry"	"number"
@@ -627,7 +625,6 @@ Name(text)	Type(text)
 "givingupton"	"number"
 "GloryFate"	"number"
 "gobgender"	"number"
-"goblinfight"	"number"
 "GooColossusProgress"	"number"
 "GordonApprehended"	"number"
 "GordonFurSuspicion"	"number"
@@ -663,7 +660,6 @@ Name(text)	Type(text)
 "Haroldtalk"	"number"
 "Harpyconsent"	"number"
 "Harpydefeat"	"number"
-"harpyfight"	"number"
 "hasgills"	"number"
 "HasParts"	"number"
 "hawkmanbeaten"	"number"
@@ -698,7 +694,6 @@ Name(text)	Type(text)
 "Homarusearch"	"number"
 "Homarusearching"	"number"
 "Homarutalk"	"number"
-"horsefight"	"number"
 "hospbattlelost"	"number"
 "hospcountdown"	"number"
 "hospfight"	"number"
@@ -1119,7 +1114,6 @@ Name(text)	Type(text)
 "OrcFemSpecialFightNumber"	"number"
 "OrcSlaverCaptureTime"	"number"
 "OrcSlaverStatus"	"number"
-"OrcSpecialFightNumber"	"number"
 "Otterconsent"	"number"
 "Otterdefeat"	"number"
 "OttoForm"	"number"
@@ -1127,7 +1121,6 @@ Name(text)	Type(text)
 "partner1Choice"	"number"
 "partner2Choice"	"number"
 "patrooms"	"number"
-"peachtreefight"	"number"
 "peacockcontrol"	"number"
 "Peacocked"	"number"
 "pepped"	"number"
@@ -1212,7 +1205,6 @@ Name(text)	Type(text)
 "Recoveredhardware"	"number"
 "RegChaseHelp"	"number"
 "Researchbypass"	"number"
-"Resevquest"	"number"
 "ResidentialVisits"	"number"
 "restaurantpig"	"number"
 "restoration"	"number"
@@ -1270,7 +1262,6 @@ Name(text)	Type(text)
 "skrp"	"number"
 "Skunk_type"	"number"
 "skunkbeaststatus"	"number"
-"skunkfight"	"number"
 "skunkfucked"	"number"
 "skunkmulticock"	"number"
 "skunkready"	"number"
@@ -1408,7 +1399,6 @@ Name(text)	Type(text)
 "ValPregCounter"	"number"
 "ValPregnancy"	"number"
 "Valtalk"	"number"
-"veggiegardenfight"	"number"
 "VentDomSize"	"number"
 "VentFluidAmount"	"number"
 "VentFoxContentLevel"	"number"
@@ -1450,7 +1440,6 @@ Name(text)	Type(text)
 "wassterilef"	"number"
 "watercount"	"number"
 "waterneed"	"number"
-"waterworks"	"number"
 "weaselcount"	"number"
 "WellRestedTimer"	"number"
 "werewolfcostumenosex"	"number"
@@ -1691,7 +1680,6 @@ Name(text)	Type(text)
 "blanchetalk2"	"truth state"
 "blanchetalk3"	"truth state"
 "BlindMode"	"truth state"
-"bloblost"	"truth state"
 "bopseen"	"truth state"
 "BorisArtemistalk"	"truth state"
 "boundrecover"	"truth state"
@@ -1927,7 +1915,6 @@ Name(text)	Type(text)
 "velossavedtalk"	"truth state"
 "velossavedyes"	"truth state"
 "vgeckoboost"	"truth state"
-"violinspritefight"	"truth state"
 "vorespecial1"	"truth state"
 "weakwilled"	"truth state"
 "WerewolfWatching"	"truth state"

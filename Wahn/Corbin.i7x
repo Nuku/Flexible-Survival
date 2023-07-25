@@ -293,7 +293,6 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 			NPCSexAftermath Corbin receives "PussyFuck" from Farmhand Horsemen;
 			now HP of Corbin is 90;
 		else: [fight]
-			now horsefight is 2;
 			LineBreak;
 			say "     Getting a grip on the shoulder of the farmhand preparing to fuck Corbin, you pull him back, much to the annoyance of the muscled equine. Enraged at you cock-blocking him, he comes at you with balled fists.";
 			LineBreak;
@@ -305,9 +304,11 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 				else if GroupFightCounter is 2:
 					say "     That's a second one of the group of horsemen out of the fight. But still, another equine farmhand steps right up, hands raised in a boxing pose.";
 				now inasituation is true;
+				say "     'Fuck off,' the farmhand growls and swings a punch at you.";
 				challenge "Horseman";
 				increase GroupFightCounter by 1;
 			if fightoutcome > 19 and fightoutcome < 30: [lost]
+				say "     The muscled equine farmhand knocks you to the ground with a punch to the stomach, looking down on you in disdain as you cough and try to catch your breath. 'Just stay out of things that don't concern you,' he growls, then turns away from you and joins the crowd around Corbin.";
 				say "[LoseInBarracksfight]";
 			else if fightoutcome is 30: [fled]
 				say "[RunFromBarracksfight]";
@@ -316,7 +317,6 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 				say "     The confrontation over, the gathered horsemen help up their bruised buddies and go back to what they were doing before. That just leaves you and a pretty relieved-looking Corbin standing in the bunks area. He hugs you close, then says 'Thank you. That'll show them I'm not just a slut to be used.' He kisses you, then lets his hand wander down to your crotch, giving it a squeeze as he adds 'Not that I'm opposed to regular rolls in the hay - with the right person and on my schedule, not theirs.' With a suggestive wink, the cowboy cuntboy saunters over to his bed and lies back on it, grabbing a magazine to read.";
 				now HP of Corbin is 5;
 			now inasituation is false;
-			now horsefight is 0;
 
 instead of going southwest from Central Farm Square while (CorbinPregnancy is 4 and daytimer is day):
 	project the Figure of Corbin_face_icon;

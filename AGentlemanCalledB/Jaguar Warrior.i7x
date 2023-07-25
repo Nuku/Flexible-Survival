@@ -258,6 +258,15 @@ to say TameTehuantl:
 	now area entry is "Nowhere";
 	now Energy of Tehuantl is turns;
 
+	
+Table of CombatPrep (continued)
+name(text)	PrepFunction(text)
+"Jaguar Warrior"	"[PrepCombat_Jaguar Warrior]"
+
+to say PrepCombat_Jaguar Warrior:
+	setmongender 3; [creature is male]
+	project the Figure of Tehuantl_Male_clothed_icon;
+
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)

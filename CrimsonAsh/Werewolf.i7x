@@ -147,10 +147,7 @@ to say LoseToWerewolf:
 
 to say WerewolfDesc:
 	setmongender 4;
-	if inasituation is true:
-		say ""; [dealt with elsewhere]
-	else:
-		say ""; [currently unused, only event encounters with her]
+	say ""; [currently unused, only event encounters with her]
 
 Section 3 - Creature Insertion
 

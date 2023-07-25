@@ -6,18 +6,12 @@ Version 1 of Robed Cultist by Wahn begins here.
 Section 1 - Creature Responses
 
 to say Robed Cultist Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Robed Cultist Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Robed Cultist Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 Section 2 - Creature Insertion
@@ -194,18 +188,12 @@ When Play begins:
 
 
 to say Deep One Wins:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Deep One Loses:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 to say Deep One Desc:
-	if inasituation is true:
-		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
 Table of Random Critters (continued)

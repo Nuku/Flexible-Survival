@@ -25,22 +25,13 @@ Section 0 - Flags
 Section 1 - Creature Responses
 
 to say DemonFoxDefeat:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
+	say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxVictory:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
+	say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 to say DemonFoxDesc:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
+	say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Voidsnaps know on the FS Discord.";
 
 Section 2 - Creature Insertion
 

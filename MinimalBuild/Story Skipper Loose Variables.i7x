@@ -743,8 +743,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is corrvicchange1;
 		-- "corrvicchange2":
 			now NumberVarValue entry is corrvicchange2;
-		-- "cougarfight":
-			now NumberVarValue entry is cougarfight;
 		-- "CouraFriendDevelopments":
 			now NumberVarValue entry is CouraFriendDevelopments;
 		-- "CouraVirginity":
@@ -1019,12 +1017,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is FeralMuttDominance;
 		-- "FeralMuttFurColorNumber":
 			now NumberVarValue entry is FeralMuttFurColorNumber;
-		-- "FeralWolfBitchDefeat":
-			now NumberVarValue entry is FeralWolfBitchDefeat;
-		-- "FeralWolfMaleDefeat":
-			now NumberVarValue entry is FeralWolfMaleDefeat;
-		-- "FeralWolfSpecialFightNumber":
-			now NumberVarValue entry is FeralWolfSpecialFightNumber;
 		-- "ferretvisit":
 			now NumberVarValue entry is ferretvisit;
 		-- "fertiletime":
@@ -1159,8 +1151,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GloryFate;
 		-- "gobgender":
 			now NumberVarValue entry is gobgender;
-		-- "goblinfight":
-			now NumberVarValue entry is goblinfight;
 		-- "GooColossusProgress":
 			now NumberVarValue entry is GooColossusProgress;
 		-- "GordonApprehended":
@@ -1229,8 +1219,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Harpyconsent;
 		-- "Harpydefeat":
 			now NumberVarValue entry is Harpydefeat;
-		-- "harpyfight":
-			now NumberVarValue entry is harpyfight;
 		-- "hasgills":
 			now NumberVarValue entry is hasgills;
 		-- "HasParts":
@@ -1299,8 +1287,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Homarusearching;
 		-- "Homarutalk":
 			now NumberVarValue entry is Homarutalk;
-		-- "horsefight":
-			now NumberVarValue entry is horsefight;
 		-- "hospbattlelost":
 			now NumberVarValue entry is hospbattlelost;
 		-- "hospcountdown":
@@ -2123,8 +2109,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is OrcSlaverCaptureTime;
 		-- "OrcSlaverStatus":
 			now NumberVarValue entry is OrcSlaverStatus;
-		-- "OrcSpecialFightNumber":
-			now NumberVarValue entry is OrcSpecialFightNumber;
 		-- "Otterconsent":
 			now NumberVarValue entry is Otterconsent;
 		-- "Otterdefeat":
@@ -2139,8 +2123,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is partner2Choice;
 		-- "patrooms":
 			now NumberVarValue entry is patrooms;
-		-- "peachtreefight":
-			now NumberVarValue entry is peachtreefight;
 		-- "peacockcontrol":
 			now NumberVarValue entry is peacockcontrol;
 		-- "Peacocked":
@@ -2273,8 +2255,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is RegChaseHelp;
 		-- "Researchbypass":
 			now NumberVarValue entry is Researchbypass;
-		-- "Resevquest":
-			now NumberVarValue entry is Resevquest;
 		-- "ResidentialVisits":
 			now NumberVarValue entry is ResidentialVisits;
 		-- "restaurantpig":
@@ -2393,8 +2373,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is Skunk_type;
 		-- "skunkbeaststatus":
 			now NumberVarValue entry is skunkbeaststatus;
-		-- "skunkfight":
-			now NumberVarValue entry is skunkfight;
 		-- "skunkfucked":
 			now NumberVarValue entry is skunkfucked;
 		-- "skunkmulticock":
@@ -2662,8 +2640,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is ValPregnancy;
 		-- "Valtalk":
 			now NumberVarValue entry is Valtalk;
-		-- "veggiegardenfight":
-			now NumberVarValue entry is veggiegardenfight;
 		-- "VentDomSize":
 			now NumberVarValue entry is VentDomSize;
 		-- "VentFluidAmount":
@@ -2748,8 +2724,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is watercount;
 		-- "waterneed":
 			now NumberVarValue entry is waterneed;
-		-- "waterworks":
-			now NumberVarValue entry is waterworks;
 		-- "weaselcount":
 			now NumberVarValue entry is weaselcount;
 		-- "WellRestedTimer":
@@ -2766,10 +2740,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is WhoringExperience;
 		-- "WineFound":
 			now NumberVarValue entry is WineFound;
-		-- "FeralWolfMaleFight":
-			now NumberVarValue entry is FeralWolfMaleFight;
-		-- "FeralWolfBitchFight":
-			now NumberVarValue entry is FeralWolfBitchFight;
 		-- "wolfhermdefeat":
 			now NumberVarValue entry is wolfhermdefeat;
 		-- "wolfhermvictory":
@@ -3005,8 +2975,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is BlindMode;
 		-- "blindmode": [previous spelling with other capitalization]
 			now TruthVarValue entry is BlindMode;
-		-- "bloblost":
-			now TruthVarValue entry is bloblost;
 		-- "bopseen":
 			now TruthVarValue entry is bopseen;
 		-- "BorisArtemistalk":
@@ -3451,8 +3419,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is vampiric;
 		-- "vgeckoboost":
 			now TruthVarValue entry is vgeckoboost;
-		-- "violinspritefight":
-			now TruthVarValue entry is violinspritefight;
 		-- "vorespecial1":
 			now TruthVarValue entry is vorespecial1;
 		-- "weakwilled":
@@ -4283,8 +4249,6 @@ to VariableNumberLoad:
 					now corrvicchange1 is numberVarValue entry;
 				-- "corrvicchange2":
 					now corrvicchange2 is numberVarValue entry;
-				-- "cougarfight":
-					now cougarfight is numberVarValue entry;
 				-- "CouraFriendDevelopments":
 					now CouraFriendDevelopments is numberVarValue entry;
 				-- "CouraVirginity":
@@ -4567,12 +4531,6 @@ to VariableNumberLoad:
 					now FeralMuttDominance is numberVarValue entry;
 				-- "FeralMuttFurColorNumber":
 					now FeralMuttFurColorNumber is numberVarValue entry;
-				-- "FeralWolfMaleDefeat":
-					now FeralWolfMaleDefeat is numberVarValue entry;
-				-- "FeralWolfBitchDefeat":
-					now FeralWolfBitchDefeat is numberVarValue entry;
-				-- "FeralWolfSpecialFightNumber":
-					now FeralWolfSpecialFightNumber is numberVarValue entry;
 				-- "ferretvisit":
 					now ferretvisit is numberVarValue entry;
 				-- "fertiletime":
@@ -4707,8 +4665,6 @@ to VariableNumberLoad:
 					now GloryFate is numberVarValue entry;
 				-- "gobgender":
 					now gobgender is numberVarValue entry;
-				-- "goblinfight":
-					now goblinfight is numberVarValue entry;
 				-- "GooColossusProgress":
 					now GooColossusProgress is numberVarValue entry;
 				-- "GordonApprehended":
@@ -4779,8 +4735,6 @@ to VariableNumberLoad:
 					now Harpyconsent is numberVarValue entry;
 				-- "Harpydefeat":
 					now Harpydefeat is numberVarValue entry;
-				-- "harpyfight":
-					now harpyfight is numberVarValue entry;
 				-- "hasgills":
 					now hasgills is numberVarValue entry;
 				-- "HasParts":
@@ -4849,8 +4803,6 @@ to VariableNumberLoad:
 					now Homarusearching is numberVarValue entry;
 				-- "Homarutalk":
 					now Homarutalk is numberVarValue entry;
-				-- "horsefight":
-					now horsefight is numberVarValue entry;
 				-- "hospbattlelost":
 					now hospbattlelost is numberVarValue entry;
 				-- "hospcountdown":
@@ -5677,8 +5629,6 @@ to VariableNumberLoad:
 					now OrcSlaverCaptureTime is numberVarValue entry;
 				-- "OrcSlaverStatus":
 					now OrcSlaverStatus is numberVarValue entry;
-				-- "OrcSpecialFightNumber":
-					now OrcSpecialFightNumber is numberVarValue entry;
 				-- "Otterconsent":
 					now Otterconsent is numberVarValue entry;
 				-- "Otterdefeat":
@@ -5693,8 +5643,6 @@ to VariableNumberLoad:
 					now partner2Choice is numberVarValue entry;
 				-- "patrooms":
 					now patrooms is numberVarValue entry;
-				-- "peachtreefight":
-					now peachtreefight is numberVarValue entry;
 				-- "peacockcontrol":
 					now peacockcontrol is numberVarValue entry;
 				-- "Peacocked":
@@ -5949,8 +5897,6 @@ to VariableNumberLoad:
 					now Skunk_type is numberVarValue entry;
 				-- "skunkbeaststatus":
 					now skunkbeaststatus is numberVarValue entry;
-				-- "skunkfight":
-					now skunkfight is numberVarValue entry;
 				-- "skunkfucked":
 					now skunkfucked is numberVarValue entry;
 				-- "skunkmulticock":
@@ -6219,8 +6165,6 @@ to VariableNumberLoad:
 					now ValPregnancy is numberVarValue entry;
 				-- "Valtalk":
 					now Valtalk is numberVarValue entry;
-				-- "veggiegardenfight":
-					now veggiegardenfight is numberVarValue entry;
 				-- "VentDomSize":
 					now VentDomSize is numberVarValue entry;
 				-- "VentFluidAmount":
@@ -6327,10 +6271,6 @@ to VariableNumberLoad:
 					now WhoringExperience is numberVarValue entry;
 				-- "WineFound":
 					now WineFound is numberVarValue entry;
-				-- "FeralWolfMaleFight":
-					now FeralWolfMaleFight is numberVarValue entry;
-				-- "FeralWolfBitchFight":
-					now FeralWolfBitchFight is numberVarValue entry;
 				-- "wolfhermdefeat":
 					now wolfhermdefeat is numberVarValue entry;
 				-- "wolfhermvictory":
@@ -6579,8 +6519,6 @@ to VariableTruthLoad:
 					now BlindMode is TruthVarValue entry;
 				-- "blindmode":
 					now BlindMode is TruthVarValue entry;
-				-- "bloblost":
-					now bloblost is TruthVarValue entry;
 				-- "bopseen":
 					now bopseen is TruthVarValue entry;
 				-- "BorisArtemistalk":
@@ -7035,8 +6973,6 @@ to VariableTruthLoad:
 					now vampiric is TruthVarValue entry;
 				-- "vgeckoboost":
 					now vgeckoboost is TruthVarValue entry;
-				-- "violinspritefight":
-					now violinspritefight is TruthVarValue entry;
 				-- "vorespecial1":
 					now vorespecial1 is TruthVarValue entry;
 				-- "weakwilled":

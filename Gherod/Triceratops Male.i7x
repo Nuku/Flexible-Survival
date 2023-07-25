@@ -18,29 +18,26 @@ to say GenerateTrophyList_Triceratops_Male:
 Section 1 - Creature Responses
 
 to say Triceratops Male Wins:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else:
-		if HP of Player > 0: [player submitted]
-			if scalevalue of Player < 3:
-				say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'Heh, I don't judge you. A shorty like you would never be a match for me... But you still get the loser's reward! Hehe...' he says, walking towards you with clear mischief in his eyes.";
-			else:
-				say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'What's this?! A weakling like you dares to waste my time like this? Get up and fight! Heh... Unless...' he shouts, walking towards you with clear mischief in his eyes.";
+	if HP of Player > 0: [player submitted]
+		if scalevalue of Player < 3:
+			say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'Heh, I don't judge you. A shorty like you would never be a match for me... But you still get the loser's reward! Hehe...' he says, walking towards you with clear mischief in his eyes.";
 		else:
-			if scalevalue of Player < 3:
-				say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! What a puny little thing! Did you really expect to beat me looking that small? Time to teach you a lesson, wimp!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";
+			say "     Seeing this big male triceratops has made you feel weak and unable to fight back, so you decide to sink to your knees and submit. He just laughs at you, mocking your apparent feebleness. 'What's this?! A weakling like you dares to waste my time like this? Get up and fight! Heh... Unless...' he shouts, walking towards you with clear mischief in his eyes.";
+	else:
+		if scalevalue of Player < 3:
+			say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! What a puny little thing! Did you really expect to beat me looking that small? Time to teach you a lesson, wimp!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";
+		else:
+			say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! Can't take any more? Is that all you've got?! Come on, fight!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
+	if randomnumber is:
+		-- 1: [sit on face]
+			say "[TriceratopsMaleLossFacesit]";
+		-- 2: [sit on dick, else sit on face]
+			if Player is male:
+				say "[TriceratopsMaleLossAssFuck]";
 			else:
-				say "     Too weak to keep fighting, you lose your strength and collapse on the floor, hurting all over as the sturdy triceratops laughs at you. 'Hah! Can't take any more? Is that all you've got?! Come on, fight!' he shouts, walking angrily towards you. Due to the beating you took, there is nothing you can do to stop what is coming next...";
-		WaitLineBreak;
-		let randomnumber be a random number from 1 to 2; [adjust the latter number for the number of options]
-		if randomnumber is:
-			-- 1: [sit on face]
 				say "[TriceratopsMaleLossFacesit]";
-			-- 2: [sit on dick, else sit on face]
-				if Player is male:
-					say "[TriceratopsMaleLossAssFuck]";
-				else:
-					say "[TriceratopsMaleLossFacesit]";
 
 to say TriceratopsMaleLossFacesit:
 	say "     Giving you no chance to escape, you see the large male turning around in front of you, then above you, looking over his shoulder with a smirk as his ample rear overshadows you. He grabs his beefy buttcheeks and spreads them open, to show you his donut hole that immediately starts winking at you. It gives you this feeling that it gets used a lot due to how stretchy it looks. 'See this big and tasty asshole right here? Wimps get to taste it. Open up and get that tongue out!' he commands, and as soon as those words leave his mouth, the ass is coming down on you. The last thing you see is a large darkened shape before everything falls into pitch blackness as your face ends up placed right between the triceratop's buttcheeks.";
@@ -61,16 +58,13 @@ to say TriceratopsMaleLossAssFuck:
 	CreatureSexAftermath "Triceratops Male" receives "AssFuck" from "Player";
 
 to say Triceratops Male Loses:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
+	if fightoutcome is 11: [submitted by libido victory]
+		say "     Having teased the sturdy male in such powerful ways, he drops the fight and begins to rub himself, especially his butt, as his cock raises to a full erection right in front of you. 'Fuck, why are you so... hot?! Come on closer, we gotta fuck! I'm so fucking horny...'";
 	else:
-		if fightoutcome is 11: [submitted by libido victory]
-			say "     Having teased the sturdy male in such powerful ways, he drops the fight and begins to rub himself, especially his butt, as his cock raises to a full erection right in front of you. 'Fuck, why are you so... hot?! Come on closer, we gotta fuck! I'm so fucking horny...'";
-		else:
-			say "     With proper battling, you manage to defeat the male triceratops, who looks too bruised to be able to carry on fighting. 'Damn... you're stronger than you look. That's fucking hot... Wanna fuck?' he asks, having gotten an erection by the end of your encounter.";
-		LineBreak;
-		say "     [bold type]What do you want to do with him, if anything?[roman type][line break]";
-		say "[TriceratopsMaleVictorySexMenu]";
+		say "     With proper battling, you manage to defeat the male triceratops, who looks too bruised to be able to carry on fighting. 'Damn... you're stronger than you look. That's fucking hot... Wanna fuck?' he asks, having gotten an erection by the end of your encounter.";
+	LineBreak;
+	say "     [bold type]What do you want to do with him, if anything?[roman type][line break]";
+	say "[TriceratopsMaleVictorySexMenu]";
 
 to say TriceratopsMaleVictorySexMenu:
 	now sextablerun is 0;
@@ -116,11 +110,8 @@ to say TriceratopsMaleVictoryFingering:
 	CreatureSexAftermath "Triceratops Male" receives "DildoAssFuck" from "Player";
 
 to say Triceratops Male Desc:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else:
-		say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a triceratops, to be precise. His pudgy and sturdy figure is covered in hard light orange scales, some of them even providing natural armor, which must explain why this strong male wears only some dog tags around his neck and nothing more, leaving his mostly human-looking junk hanging freely down below. He could have been a soldier or simply someone who scavenged some unfortunate human's equipment, but you cannot know for sure. Judging by his stance, the saurian male is probably looking for a fight, and he is happy to see you for that very reason. 'Finally! I can hit something, now. Do your worst, come at me!'";
-		say "     He then bumps his chest before starting to walk towards you, awaiting your first move.";
+	say "     In front of you stands a tall anthropomorphic dinosaur man, with the head of a triceratops, to be precise. His pudgy and sturdy figure is covered in hard light orange scales, some of them even providing natural armor, which must explain why this strong male wears only some dog tags around his neck and nothing more, leaving his mostly human-looking junk hanging freely down below. He could have been a soldier or simply someone who scavenged some unfortunate human's equipment, but you cannot know for sure. Judging by his stance, the saurian male is probably looking for a fight, and he is happy to see you for that very reason. 'Finally! I can hit something, now. Do your worst, come at me!'";
+	say "     He then bumps his chest before starting to walk towards you, awaiting your first move.";
 
 Section 2 - Creature Insertion
 

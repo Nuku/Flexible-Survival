@@ -6,16 +6,12 @@ Section 1 - Creature Responses
 
 [ Slime falls upon you while you explore the island. Big cube of translucent material, which reminds you of the goo girl]
 to say slimeCubeDesc:
-	if inasituation is false:
-		say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
-	else:
-		say ""; [dealt with in the event]
+	say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
+
 
 to say beatSlimeCube:
-	if inasituation is false:
-		say "     Mortally wounded, the slime loses its coherency, and dissolves into a pile of smelly goop.";
-	else: [event]
-		say ""; [dealt with at the event source]
+	say "     Mortally wounded, the slime loses its coherency, and dissolves into a pile of smelly goop.";
+
 
 Section 2 - Creature Insertion
 

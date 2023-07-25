@@ -2131,10 +2131,7 @@ to say ElkHeadReaperDesc:
 Section 2-6 - Fight Conclusions and Win/Loss Scenes
 
 to say VoidSerpentWins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say VRVoidSerpentWins:
 	VoidSerpentVore1;
@@ -2152,16 +2149,10 @@ to VoidSerpentVore1:
 	say "     It all begins, eventually, but you are too numb with ecstasy caused by its venom to feel any pain whatsoever. For you, it is just a tingle, followed by a sudden loss of all sensitivity over a part of your body. Your conscience begins to fade away, together with your self, over hours and hours of imprisonment as you are slowly processed by the serpent's organism, soon to join and be part of it in form of nutrients for the creature, with several orgasms along the way.";
 
 to say VoidSerpentLoses: [no text here, it's in fightoutcome]
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say DarkTyrantWins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say VRDarkTyrantWins:
 	say "     The enormous mass of black goo holds you in his huge hand, smiling with his terrifying razor sharp teeth as he handles you like an action doll. His raging boner hasn't dropped any softer for even a second, and his excitement for having captured you is evident. You are quickly soaked in the slime, even feeling how his coat of goo craves your body, sticking to your skin and leaving a slick trail whenever he moves his fingers away. Left helpless and unable to offer any resistance against a much bigger and stronger creature than you, you have no choice but to let him have his way with you. Whatever gear you had on was completely dissolved or taken away by his goo, and you remain naked in his grasp.";
@@ -2188,16 +2179,10 @@ to say VRDarkTyrantWins:
 	end the story saying "You have perished in the Void, consumed and assimilated by the Dark Tyrant.";
 
 to say DarkTyrantLoses: [no text here, it's in fightoutcome]
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say PeculiarSummonerWins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say VRPeculiarSummonerWins:
 	say "     'Now, stay put, and allow me to do some research.' they say, as the giant rocky hand's grasp tightens around you. Any gear that you had on you is abruptly removed by tendril extensions surging beneath the hand's wrist, tearing and shredding through everything in order to leave you completely exposed and clear of any obstacles. Naked as you are, the cloaked figure walks up to you, and still without showing their face or body, they look at you as if examining certain details of you. 'Interesting. Biologically human, no doubt. Exposure to a type of nano-technology seems to be prevalent. Is it a common thing for people in your world?' they speak, with that questionable voice that tends to sound more like the way you want it to sound, as it was guided by your mind in some way, or changed to meet your preferences...";
@@ -2215,16 +2200,10 @@ to say VRPeculiarSummonerWins:
 	end the story saying "You have been removed from your body, which was then taken over.";
 
 to say PeculiarSummonerLoses: [no text here, it's in fightoutcome]
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say TentacleAbominationWins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say VRTentacleAbominationWins:
 	TentacleAbominationVore1;
@@ -2261,16 +2240,10 @@ to TentacleAbominationVore1:
 		say "     You feel like there is something going on between both these entities, but you cannot point out what, exactly.";
 
 to say TentacleAbominationLoses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say ElkHeadReaperWins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to say VRElkHeadReaperWins:
 	say "     The reaper has taken victory over you, and [EHRSubjectPro] intends to claim your soul as [EHRPosAdj] code demands. As you lie defeated and helpless, you feel a cold sharp blade slashing through your body. Surprisingly, it does not hurt, nor cuts you in half, but you feel something leaving you. Your hands and feet... arms and legs... then, your whole self... everything becomes dormant, out of your control, cold and dropped... as you simply stand there without any strength left. The last thing you see is the reaper taking your soul, your eyes soon to be enclosed by darkness as your former physical shell collapses on the floor, lifeless.";
@@ -2282,10 +2255,7 @@ to say VRElkHeadReaperWins:
 	end the story saying "You have perished in the Void, your soul taken by a reaper.";
 
 to say ElkHeadReaperLoses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "Nothing written yet.";
+	say "Nothing written yet.";
 
 to VRVoidSerpentFightConclusion:
 	if fightoutcome < 20: [player won]

@@ -205,7 +205,6 @@ to say ResolveEvent Ominous Hole:
 	say "     As you wander through the park, you notice another survivor in the distance. Quickly waving, you begin to run towards each other. Suddenly, the other survivor seems to disappear into thin air mid-step, causing you to duck and look around. When nothing else happens, you cautiously approach the area you last saw the other person, only to find that there seems to be a large hole dug there that's surrounded by a small mound of dirt, as if made by some burrowing creature of almost human size. You would investigate further, but the loud moans and other noises coming from the hole tell you more than you probably wanted to know about what's happening, as well as the fact that you won't be seeing that person again... as a person, anyways.";
 	now Ominous Hole is resolved;
 
-
 Section 14 - squatters den
 
 Table of GameEventIDs (continued)

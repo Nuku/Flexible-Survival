@@ -13,7 +13,6 @@ Goblin Trap	"Goblin Trap"
 Goblin Trap is a situation.
 ResolveFunction of Goblin Trap is "[ResolveEvent Goblin Trap]". The level of Goblin Trap is 2.
 Sarea of Goblin Trap is "Junkyard".
-goblinfight is a number that varies.
 when play begins:
 	if (MaleList is banned or MaleList is warded) and (FemaleList is banned or FemaleList is warded):
 		add Goblin Trap to BadSpots of MaleList;
@@ -66,18 +65,17 @@ to say ResolveEvent Goblin Trap:
 		if calcnumber is 1: [Passed dex check, player notices trap, ambushes the goblin]
 			say "     Deciding to take advantage of the goblin being distracted by keeping watch on its trap, you carefully sneak up to the back of the car where the goblin is hiding. ";
 			LineBreak;
-			now goblinfight is 3;
 			challenge "Goblin";
-			if goblinfight is 1: [Passed dex check, player notices trap, ambushes the goblin, wins]
+			if fightoutcome < 20: [player won]
 				say "     Having beaten the goblin, you take a minute to catch your breath before going back to the trapped car and taking the bag of food and water. You also take the time to examine the trap so you'll hopefully be able to recognize more of its type in the future.";
 				say "[Goblin Trap Finish]";
 				increase score by 1;
 				ItemGain food by 1;
 				ItemGain water bottle by 1;
-			else if goblinfight is 2: [Passed dex check, player notices trap, ambushes the goblin, loses]
+			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Even though you had the advantage due to your ambush, you still ended up used by the goblin after losing in battle. The goblin grabs the food and water from the car, presumably bait for future traps, before running away leaving you to recover on your own. After a few minutes of doing such, you rise to your feet and examine the trap so you'll hopefully be able to recognize more of its type in the future.";
 				say "[Goblin Trap Finish]";
-			else: [Passed dex check, player notices trap, ambushes the goblin, flees]
+			else if fightoutcome is 30: [fled]
 				say "     Deciding you've had enough of this, you dodge the goblin's charge before running off into the maze-like junkyard. The goblin tries giving chase but ends up cursing about his prize getting away as you lose him. After you run far enough to feel safe, you take a minute to catch your breath, and to try and remember as much as you can about the trap so you can recognize more of its type in the future.";
 				say "[Goblin Trap Finish]";
 		else if calcnumber is 2: [Passed dex check, player notices trap, caught in trap on purpose]
@@ -105,18 +103,17 @@ to say Goblin Trap Escape: [Player tries escaping]
 	if strength of player > 13: [Player tries escaping, is strong enough to do so]
 		say "feel the netting start breaking one strand at a time, right as you give the final push to break the rest the goblin slaps you on the rear again only to flail backwards and land on their rear when it sees you breaking free. The goblin rushes back to it's feet, yelling out 'Stupid meanie! You broke my net!', before charging you with an attack!";
 		decrease HP of Player by 12; [Breaking out damaged the player a bit]
-		now goblinfight is 3;
 		challenge "Goblin";
-		if goblinfight is 1: [Player tries escaping, is strong enough to do so, fights the goblin and wins]
+		if fightoutcome < 20: [player won]
 			say "     Having beaten the goblin, you take a minute to catch your breath before going back to the trapped car and taking the bag of food and water. You also take the time to examine the trap so you'll hopefully be able to recognize more of its type in the future.";
 			increase score by 1;
 			ItemGain food by 1;
 			ItemGain water bottle by 1;
 			say "[Goblin Trap Finish]";
-		else if goblinfight is 2: [Player tries escaping, is strong enough to do so, fights the goblin and loses]
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Even though you managed to escape the goblin's trap, you still ended up being used by it after losing in battle. The goblin grabs the food and water from the car, presumably bait for future traps, before it runs away leaving you to recover on your own. After a few minutes of doing such, you rise to your feet, and examine the trap so you'll hopefully be able to recognize more of its type in the future.";
 			say "[Goblin Trap Finish]";
-		else: [Player tries escaping, is strong enough to do so, fights the goblin and flees]
+		else if fightoutcome is 30: [fled]
 			say "     Deciding you've had enough of this, you dodge the goblin's charge before running off into the maze-like junkyard. The goblin tries giving chase but ends up cursing about his prize getting away as you lose him. After you run far enough to feel safe, you take a minute to catch your breath, and to try and remember as much as you can about the trap so you can recognize more of its type in the future.";
 			say "[Goblin Trap Finish]";
 	else: [Player tries escaping, is not strong enough to do so]
@@ -296,39 +293,40 @@ to say ResolveEvent Raiding Party:
 	if Player consents:
 		LineBreak;
 		say "     Without anywhere worthwhile to hide and watch, you stay in the middle of the path and try to look intimidating. A few seconds later, some goblins come into view dragging something as they laugh cruelly to one another. The trio stops as they notice you just as their burden comes into view. Trapped in a net behind them is a tigress woman dressed in a skimpy outfit with mussed hair. She is largely insensate right now, probably struck by one of the goblins when she started making noise. With you barring their path, the goblin charges to defend their prize.";
-		now goblinfight is 3;
-		challenge "Goblin";
-		if goblinfight is 1:
-			say "     With one goblin defeated and retreated into cover, the second goblin prods his remaining companion with a strange device made from junk, sending him in to attack you.";
+		let GoblinFightCounter be 0;
+		now fightoutcome is 0; [reset]
+		while fightoutcome < 20 and GoblinFightCounter < 3: [runs for 3 times or until the player loses or flees]
+			if GoblinFightCounter is 1:
+				say "     With one goblin defeated and retreated into cover, the second goblin prods their remaining companion with a strange device made from junk, sending them in to attack you.";
+			else if GoblinFightCounter is 2:
+				say "     The last goblin tosses down the strange device, which seems to be their improvised net gun, and moves in to deal with you and defend their prize.";
 			challenge "Goblin";
-			if goblinfight is 1:
-				say "     The last goblin tosses down the strange device, which seems to be their improvised net gun, and moves in to deal with you and defend his prize.";
-				challenge "Goblin";
-				if goblinfight is 1:
-					say "     With the last goblin fled, you move over to check on the tigress woman. Using the fight as a distraction, she managed to bite through some of the ropes and pulls herself free as you come up. As she stands, you get a better look at her. She is wearing a short, red top and an even shorter, black skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. She has snowy, white fur that covers her bosom and the front of her shapely waist. As she brushes her red hair back into order, you catch sight of the gold earrings in her feline ears and bracelets on her wrists. She growls as she stomps down hard onto the net launcher, smashing it with her feline paw before sending it flying off into the scrapyard.";
-					say "     Looking at you, she grins and runs her paws over her body. 'Well, sweetie, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweetie,' the feline whore adds, running her paws over your chest. 'I can show you a real good time. Anything you like,' she rumbles with a grin, rubbing her breasts and sheath against you. Shall you accept her tempting offer?";
-					if Player consents:
-						now junknum is 1;
-						[puts Tigress Hooker as lead monster in case of impregnation]
-						repeat with y running from 1 to number of filled rows in Table of Random Critters:
-							choose row y in Table of Random Critters;
-							if Name entry is "Malayan Tiger Herm":
-								now MonsterID is y;
-								break;
-						say "[losetotigress]";
-						now junknum is 0;
-						say "     Your romp with the feline over, she gives you one last kiss before telling you she needs to get back to work. She points off towards the seedier part of town and tells you of a route leading you there, should you want to find her and her sisters for more fun.";
-						AddNavPoint Entrance to the Red Light District;
-						increase score by 10;
-						now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
-					else:
-						say "     The tigress hooker hisses and pushes you away. 'You don't know a good thing when you see it,' she growls and turns away, heading back the way the goblins came.";
-						increase score by 1;
-						now Resolution of Raiding Party is 2; [won, refused Tigress Hooker]
-		else if goblinfight is 2:
+			increase GoblinFightCounter by 1;
+		if fightoutcome < 20: [player won]
+			say "     With the last goblin fled, you move over to check on the tigress woman. Using the fight as a distraction, she managed to bite through some of the ropes and pulls herself free as you come up. As she stands, you get a better look at her. She is wearing a short, red top and an even shorter, black skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. She has snowy, white fur that covers her bosom and the front of her shapely waist. As she brushes her red hair back into order, you catch sight of the gold earrings in her feline ears and bracelets on her wrists. She growls as she stomps down hard onto the net launcher, smashing it with her feline paw before sending it flying off into the scrapyard.";
+			say "     Looking at you, she grins and runs her paws over her body. 'Well, sweetie, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweetie,' the feline whore adds, running her paws over your chest. 'I can show you a real good time. Anything you like,' she rumbles with a grin, rubbing her breasts and sheath against you. Shall you accept her tempting offer?";
+			if Player consents:
+				now junknum is 1;
+				[puts Tigress Hooker as lead monster in case of impregnation]
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
+					if Name entry is "Malayan Tiger Herm":
+						now MonsterID is y;
+						break;
+				say "[losetotigress]";
+				now junknum is 0;
+				say "     Your romp with the feline over, she gives you one last kiss before telling you she needs to get back to work. She points off towards the seedier part of town and tells you of a route leading you there, should you want to find her and her sisters for more fun.";
+				AddNavPoint Entrance to the Red Light District;
+				increase score by 10;
+				now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
+			else:
+				say "     The tigress hooker hisses and pushes you away. 'You don't know a good thing when you see it,' she growls and turns away, heading back the way the goblins came.";
+				increase score by 1;
+				now Resolution of Raiding Party is 2; [won, refused Tigress Hooker]
+		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Beaten by the goblins, they close in you around and smack you a few times. They then send you on your way with more cackling before continuing on with their prize. You should perhaps consider yourself lucky that they already have one prize and can't take you with them as well.";
 			now Resolution of Raiding Party is 3; [lost, goblins ran off with their captive]
-		else:
+		else if fightoutcome is 30: [fled]		
 			say "     Deciding that it is, in the end, not your problem, you hightail it out of there.";
 			now Resolution of Raiding Party is 99; [disinterest]
 	else:

@@ -20,64 +20,59 @@ to say giantdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.";
-		say "     He hasn't spotted you yet, giving you time to consider your options in the face of such a situation. It seems you could always just [bold type]ignore the giant man and get out of there[roman type] before he has the chance to see you. However, if you're interested in [bold type]observing him[roman type], there are a few areas with tall vegetation where you can conceal yourself in to watch what he's doing from a safe distance. Alternatively, if you're brave enough, you can just [bold type]go talk to him[roman type], but if you think words won't work with him, you can always attempt to [bold type]fight[roman type] the towering, forty feet tall of a burly muscular man that could probably stomp you flat with one strike... Ill-advised, unless you're into being crushed and instigating aggression.";
+	say "     You find yourself faced with a giant of a man standing well over forty feet tall. This makes him nearly as tall as the biggest trees decorating the area, though most only come up to his waist. The towering man has a burly, muscled body to help support his massive height, but not unhandsomely so. He still looks completely human, just grown to a dizzying height. Worn loosely over his chest is huge tan jacket indicating that he may have once been part of the zoo staff. Somehow enlarged or transformed to be a part of him, it is rather worse for wear and hangs loose over his chest, but is still wearable and is the only clothes he has on. He has a gruff expression on his face and has dirty blond hair atop his distant. He carries [one of]a broken telephone pole[or]a metal girder[or]a streetlight[or]an uprooted tree[at random] like a massive club. Between his legs he has another large club, this one of meaty flesh to more than match his enormous size.";
+	say "     He hasn't spotted you yet, giving you time to consider your options in the face of such a situation. It seems you could always just [bold type]ignore the giant man and get out of there[roman type] before he has the chance to see you. However, if you're interested in [bold type]observing him[roman type], there are a few areas with tall vegetation where you can conceal yourself in to watch what he's doing from a safe distance. Alternatively, if you're brave enough, you can just [bold type]go talk to him[roman type], but if you think words won't work with him, you can always attempt to [bold type]fight[roman type] the towering, forty feet tall of a burly muscular man that could probably stomp you flat with one strike... Ill-advised, unless you're into being crushed and instigating aggression.";
+	if carried of zookeeper ring > 0:
+		say "     [bold type]You seem to be carrying the giant zookeeper's ring with you, making it possibly safe to approach him as long as you show it.[roman type][line break]";
+	LineBreak;
+	say "     [link](1)[as]1[end link] - Walk away.";
+	say "     [link](2)[as]2[end link] - Hide and watch.";
+	say "     [link](3)[as]3[end link] - Approach him.";
+	say "     [link](4)[as]4[end link] - Fight the Giant.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to walk away, [link]2[end link] to hide and observe the giant, [link]3[end link] to approach him or [link]4[end link] to enter a fight.";
+	if calcnumber is 1: [walk away]
+		say "     Seeing how threatening he looks, you don't want to run into any risky situation that could pose a serious threat to your general integrity. With that in mind, you seek a path that you can safely walk through without being seen by the giant as he continues doing whatever he's so focused on. Past some trees and bushes, it's not so difficult to avoid this encounter at all! As small as you are compared to him, it's just a matter of being quiet enough and he doesn't notice you leaving.";
+		now combat abort is 1;
+	else if calcnumber is 2:
+		say "     You think it would be interesting to observe the giant from a safe place. Having spotted just the perfect spot to remain hidden, you quietly and quickly make haste to said area, concealing yourself behind the tall grass and between the trees. Now you have a good angle of view, able to see whatever the overgrown human is up to...";
+		WaitLineBreak;
+		now combat abort is 1;
+		say "[WatchTheGiant]";
+	else if calcnumber is 3:
 		if carried of zookeeper ring > 0:
-			say "     [bold type]You seem to be carrying the giant zookeeper's ring with you, making it possibly safe to approach him as long as you show it.[roman type][line break]";
-		LineBreak;
-		say "     [link](1)[as]1[end link] - Walk away.";
-		say "     [link](2)[as]2[end link] - Hide and watch.";
-		say "     [link](3)[as]3[end link] - Approach him.";
-		say "     [link](4)[as]4[end link] - Fight the Giant.";
-		now calcnumber is 0;
-		while calcnumber < 1 or calcnumber > 4:
-			say "Choice? (1-4)>[run paragraph on]";
-			get a number;
-			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
-				break;
-			else:
-				say "Invalid choice. Type [link]1[end link] to walk away, [link]2[end link] to hide and observe the giant, [link]3[end link] to approach him or [link]4[end link] to enter a fight.";
-		if calcnumber is 1: [walk away]
-			say "     Seeing how threatening he looks, you don't want to run into any risky situation that could pose a serious threat to your general integrity. With that in mind, you seek a path that you can safely walk through without being seen by the giant as he continues doing whatever he's so focused on. Past some trees and bushes, it's not so difficult to avoid this encounter at all! As small as you are compared to him, it's just a matter of being quiet enough and he doesn't notice you leaving.";
-			now combat abort is 1;
-		else if calcnumber is 2:
-			say "     You think it would be interesting to observe the giant from a safe place. Having spotted just the perfect spot to remain hidden, you quietly and quickly make haste to said area, concealing yourself behind the tall grass and between the trees. Now you have a good angle of view, able to see whatever the overgrown human is up to...";
-			WaitLineBreak;
-			now combat abort is 1;
-			say "[WatchTheGiant]";
-		else if calcnumber is 3:
-			if carried of zookeeper ring > 0:
-				say "     He is still a human, and you happen to have something he might like. Would you want to show the giant the ring you found?";
+			say "     He is still a human, and you happen to have something he might like. Would you want to show the giant the ring you found?";
+			Linebreak;
+			say "     ([link]Y[as]y[end link]) - Yes, show him the ring.";
+			say "     ([link]N[as]n[end link]) - No need for that.";
+			if Player consents:
 				Linebreak;
-				say "     ([link]Y[as]y[end link]) - Yes, show him the ring.";
-				say "     ([link]N[as]n[end link]) - No need for that.";
-				if Player consents:
-					Linebreak;
-					now combat abort is 1;
-					say "[ApproachTheGiant]";
-				else:
-					LineBreak;
-					say "     You have decided to not show him the ring and just continue to approach him like you usually would. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
-					say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
-					WaitLineBreak;
-					now combat abort is 1;
-					say "[WalkToGiant]";
+				now combat abort is 1;
+				say "[ApproachTheGiant]";
 			else:
-				say "     He is still a human. Even though he grew several feet tall, he must be capable of communication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+				LineBreak;
+				say "     You have decided to not show him the ring and just continue to approach him like you usually would. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
 				say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
 				WaitLineBreak;
 				now combat abort is 1;
 				say "[WalkToGiant]";
-		else if calcnumber is 4:
-			say "     He will never be expecting you to come out of nowhere and attack, as you have the element of surprise! Bolstering up all your courage, bravado and enormous will to fight, you leap out of hiding and rush straight into the giant, delivering a totally unpredictable strike to his heel! You keep your flurry of attacks steady, in hopes to bring your enemy down swiftly. But as the giant looks over you while frowning his eyebrows, you realize this isn't being very effective. Having finally detected your presence, the giant [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks loudly, saying that you're being bad and will regret trying to smack him -[at random] and attempts to grab you with one of his meaty fists! Luckily you're able to dodge him, but he doesn't sound very happy...";
+		else:
+			say "     He is still a human. Even though he grew several feet tall, he must be capable of communication and the sort... Or so you think. Half-confident of your chances, you proceed to walk up to him, trying to call his attention by waving around. He's not hearing you so well, though, so you have to get more creative, maybe by running around him and trying to get within his eyesight. Having finally gotten a reaction out of the giant man, who spots you after your incessant attempts to make your presence noticeable, he [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks softly, saying he'll take care of you, inching forward by a several yards at a time -[at random] and makes a sudden grab for you with one of his meaty fists!";
+			say "     It seems your attempt to communicate with the human giant ended up with you being snatched away by him. Maybe you should have thought this through...";
+			WaitLineBreak;
+			now combat abort is 1;
+			say "[WalkToGiant]";
+	else if calcnumber is 4:
+		say "     He will never be expecting you to come out of nowhere and attack, as you have the element of surprise! Bolstering up all your courage, bravado and enormous will to fight, you leap out of hiding and rush straight into the giant, delivering a totally unpredictable strike to his heel! You keep your flurry of attacks steady, in hopes to bring your enemy down swiftly. But as the giant looks over you while frowning his eyebrows, you realize this isn't being very effective. Having finally detected your presence, the giant [one of]gives a rough, coarse laugh[or]grumbles about animals getting out of their cages again[or]says you look like a fun playtoy[or]speaks loudly, saying that you're being bad and will regret trying to smack him -[at random] and attempts to grab you with one of his meaty fists! Luckily you're able to dodge him, but he doesn't sound very happy...";
 
 to say losetogiant:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else if HP of Player > 0:
+	if HP of Player > 0:
 		say "     Unwilling to continue fighting against the giant, you surrender to him. Noticing that you just gave up, he laughs while grabbing you with both his huge hands and grips you painfully tight. Bringing you closer to his face, you expect him to start talking soon... 'So you come attack me and think I'll just let you go as if it was nothing?! No one messes with my zoo! Not even you!' he shouts, making your entire existence shake with the booming sound of his deep voice. It seems he's well aware that you are an intruder, since you attacked him on sight. Now all you can do is hope that he won't do anything to end your life miserably...";
 		WaitLineBreak;
 		say "[SubmitToGiant]";
@@ -88,62 +83,59 @@ to say losetogiant:
 		say "     'You're still here?! Let me help you, then!' he shouts, grabbing you with one of his huge hands with a painfully hard grip, then throws you past several trees, away from him. You're left sore, bruised, and hurting all over, needing some time to recover from the physical punishment you've just received.";
 
 to say beatthegiant:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     It seems that during the heat of battle, the giant shows a deep anger for you, preparing for a [bold type]super hard stomp[roman type] on you! But there is a chance you could use this to your advantage...";
+	say "     It seems that during the heat of battle, the giant shows a deep anger for you, preparing for a [bold type]super hard stomp[roman type] on you! But there is a chance you could use this to your advantage...";
+	Linebreak;
+	say "     ([link]Y[as]y[end link]) - Simply dodge it. His move is very predictable.";
+	say "     ([link]N[as]n[end link]) - Make him come for you. Chances are that he trips and falls, as weakened as he is.";
+	if Player consents:
 		Linebreak;
-		say "     ([link]Y[as]y[end link]) - Simply dodge it. His move is very predictable.";
-		say "     ([link]N[as]n[end link]) - Make him come for you. Chances are that he trips and falls, as weakened as he is.";
-		if Player consents:
-			Linebreak;
-			say "     The giant stomps his feet angrily after your final blow, making the ground shake and sending all the nearby creatures in hiding scattering to the four winds. 'You're too much trouble to deal with right now. [one of]I'll catch you later[or]I'll deal with you after I catch them[or]I've got a stampede on my hands[at random],' he booms, charging off in a random direction after the fleeing animals. Glad to be rid of him, you head off, hoping to avoid his attention in the future.";
-		else:
-			Linebreak;
-			say "     It is a crazy plan, but a clever one nonetheless. Amidst his fury, the giant risks a step too long, even for himself, and that causes him to lose balance! You watch the titanic human fall flat on the ground, right on his back, and ceases to move. You still hear his deep, heavy breath, so apparently he just lost his senses.";
-			WaitLineBreak;
-			say "     Perhaps you could take advantage of this situation...";
-			Linebreak;
-			now sextablerun is 0;
-			blank out the whole of table of fucking options;
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Play with his massive cock";
-			now sortorder entry is 1;
-			now description entry is "Climb his body and have your way with his manhood";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Gather some essence from the giant";
-			now sortorder entry is 2;
-			now description entry is "Milk him for some of his fluids";
-			[]
-			sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]0 - Nevermind[as]0[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if Player consents:
-						let nam be title entry;
-						now sextablerun is 1;
-						if (nam is "Play with his massive cock"):
-							say "[GiantLosesCockPlay]";
-						if (nam is "Gather some essence from the giant"):
-							say "[GiantLosesCumMilk]";
-						wait for any key;
-				else if calcnumber is 0:
+		say "     The giant stomps his feet angrily after your final blow, making the ground shake and sending all the nearby creatures in hiding scattering to the four winds. 'You're too much trouble to deal with right now. [one of]I'll catch you later[or]I'll deal with you after I catch them[or]I've got a stampede on my hands[at random],' he booms, charging off in a random direction after the fleeing animals. Glad to be rid of him, you head off, hoping to avoid his attention in the future.";
+	else:
+		Linebreak;
+		say "     It is a crazy plan, but a clever one nonetheless. Amidst his fury, the giant risks a step too long, even for himself, and that causes him to lose balance! You watch the titanic human fall flat on the ground, right on his back, and ceases to move. You still hear his deep, heavy breath, so apparently he just lost his senses.";
+		WaitLineBreak;
+		say "     Perhaps you could take advantage of this situation...";
+		Linebreak;
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Play with his massive cock";
+		now sortorder entry is 1;
+		now description entry is "Climb his body and have your way with his manhood";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Gather some essence from the giant";
+		now sortorder entry is 2;
+		now description entry is "Milk him for some of his fluids";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
 					now sextablerun is 1;
-					say "     Perhaps it would be best to drop it here. No way to know the risks messing with a slumbering giant could pose to you, and it is better to be safe than sorry.";
+					if (nam is "Play with his massive cock"):
+						say "[GiantLosesCockPlay]";
+					if (nam is "Gather some essence from the giant"):
+						say "[GiantLosesCumMilk]";
 					wait for any key;
-				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-			clear the screen and hyperlink list;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     Perhaps it would be best to drop it here. No way to know the risks messing with a slumbering giant could pose to you, and it is better to be safe than sorry.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 
 to say GiantLosesCockPlay:
 	say "     The huge man is fully exposed to you, and he won't be able to offer any resistance in this condition, thrown into such a deep slumber. This proves to be a great opportunity to explore his body, but of course, with one thing in mind... That enormous shaft, laying soft across one of his huge thighs, accompanied by a massive, heavy sack with two full orbs dandling inside. Putting thoughts into actions, you make an attempt to climb his legs up, slowly and carefully, reaching for a holding point on his ankle and balancing your body upwards with all your might, lifting one leg over as you bring yourself on top of his foot, or a little before that. Then, you are finally ready to make your way towards his crotch. You can already sense the manly musk coming from his junk as you approach, sending the good kind of shivers down your spine.";

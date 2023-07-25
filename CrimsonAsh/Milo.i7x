@@ -213,22 +213,13 @@ to say FledFromMilo:
 Section 2 - Infection
 
 to say BeatMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say LoseToMilo:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 to say MiloDesc:
-	if inasituation is true:
-		say ""; [taken care of in the event]
-	else:
-		say ""; [nothing in here so far, only one event fight]
+	say ""; [nothing in here so far, only one event fight]
 
 Section 2 - Creature Insertion
 

@@ -4,11 +4,8 @@ Version 1 of Cougar by Stripes begins here.
 
 Section 1 - Creature Responses
 
-cougarfight is a number that varies.
-
 to say losetocougar:
 	project Figure of Cougar_naked_icon;
-	now cougarfight is 2;
 	say "     Falling to your knees in front of the cougar herm, she growls triumphantly and climbs atop you. Her strong body holds you down as she rubs herself against you. Her soft fur and lovely breasts slide against your chest, and you can feel the firm press of her throbbing cock on your skin.";
 	if wslevel is 3 and a random chance of 2 in 5 succeeds:
 		say "     She rubs herself against you as she moves forward, bringing her crotch to your face. Sitting up with her legs across your arms, she slaps your cheek with her dark brown cock. Expecting her to want you to suck her off, you open your mouth. But instead of a mouthful of cock, you get a mouthful of her hot piss as she releases her bladder with a chuckle. Coughing and sputtering at the acrid surprise, she sprays more across your face before forcing her penis into your mouth to empty the rest down your throat. After your hot drink is done, she moves on to satisfying her lusts.";
@@ -34,7 +31,6 @@ to say cougartop:
 
 to say beatthecougar:
 	project Figure of Cougar_naked_icon;
-	now cougarfight is 1;
 	say "     Managing to beat the cougar herm, you stand over her slumped, panting form. The fight has gone out of her, but she still looks quite aroused. ";
 	if a random number between 30 and 125 < Libido of Player:
 		say "You ponder having a little fun with the aroused feline, now that she's calmed down a little.";

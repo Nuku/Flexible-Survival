@@ -48,44 +48,39 @@ Section 1 - Creature Responses
 
 to say NerdyMouseDesc:
 	setmongender 3; [creature is male]
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else:
-		project Figure of Nerdy Mouse_clothed_icon;
-		choose a row with name of "Nerdy Mouse" in the Table of Random Critters;
-		if enemy type entry is 1 and "Player-Bullied" is not listed in Traits of Wesley: [Player doesn't know him]
-			say "     As you're exploring the Campus Quad you almost run into a four foot tall anthro brown mouse, tightly clutching a messenger bag to his side, which is hanging from a strap over his shoulder. He's got a pair of  thick circular glasses with a silver-rimmed frame on his nose, giving him the appearance of having fairly large eyes. Further, he's wearing a t-shirt with a large D20 dice on it, and a pair of blue jeans - given his small size, these must have been children's clothes, possibly even girl's children clothes for the pants, as they're not quite fitting the frame of the rodent. Being proportioned like an adult despite the small stature really makes him far more slender than a little human would be. Letting out a startled squeak and jumping back as if he touched a searing-hot stove, the mouse almost hyperventilates, staring wildly at you from behind his large glasses. Clearly, he's a tightly wound ball of anxiety, and you can almost see the fight or flight impulses battle in him, by the way his gaze sweeps left and right, trying to analyze the situation.";
-			say "     With you standing in his way forward, and some other passersby not too far in the other direction, he seems to be stuck between impulses, and then he screams, 'I... I'll not stand for bullying anymore! Get out of my way!' With that said, he rushes forward, arms flailing wildly in a pathetic attempt of a threat display - which would be more effective if he didn't squeeze his eyes shut at the same time. As you easily side-step him, the nerd stumbles over the edge of the walkway and falls flat on his face, scraping his arm against and making the glasses go tumbling off his nose, landing on the ground nearby. This just exasperates his frantic state, as he grabs for them like a drowning man and puts the glasses back on hastily, then jumps back to his feet. With you still being far too close still, and him getting hurt, he snaps to a fairly comical fighting stance, arms raised like a caricature of a boxer. 'You shall not put a hand on me, villain!' he shouts, then throws himself at you in a fatalistic attack.";
-		else if "Beat Up Player" is listed in Traits of Wesley:
-			say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh, it's you. You want some more, eh loser?!' he says in a hostile tone, then throws himself at you, ready to fight.";
-		else if "Player-Bullied" is listed in Traits of Wesley:
-			if PlayerFucked of Wesley is true: [raped him before]
-				say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh my god,' he screams, eyes frantic as he seeks a way of escape, then snaps to trying to doge past you at a run. With a chuckle at the pathetic showing bubbling up inside you, your arm almost automatically shoots out, making him basically clothesline himself, falling on his ass as he runs face-first into an immovable object. Letting out a cruel laugh as you see him fall down and hit his head, almost rolling over backwards. Stepping closer as you watch the show, you're ready to pounce as he gets back up, with a fight ensuing between the two of you.";
-			else:
-				say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh, it's you,' he says in a hostile tone, then adopts an almost comical boxing stance before shouting, 'You bully! No more! I... I'll show you this time!' With that said, he charges in with his arms flailing, throwing himself at you in fatalistic desperation.";
-		else if enemy type entry is 2: [Player knows him by name]
-			say "     As you're on your way along one of the walkways of the campus, you see Wesley speed-walking ahead of you, his head down and messenger bag clutched to his side. Raising a hand in a wave to greet him, you're about to say something when he literally just walks into you, not having looked up in time to actually see you standing right in front of him. As he bounces off you with a thud and a squeak, the nerdy mouse stares at you from behind his large glasses for a second, then says, 'Oh! Hey, it's you! Sorry about, you know, running into you.' He seems slightly ashamed at the lame greeting, but is still markedly nervous about standing still out in the open, glancing left and right warily.";
-			say "     [bold type]What do you want to do now?[roman type][line break]";
-			let Wesley_Peaceful_Choices be a list of text;
-			add "Have a friendly talk with Wesley." to Wesley_Peaceful_Choices;
-			add "Escort him to where he's going." to Wesley_Peaceful_Choices;
-			add "Shrug it off and wish him a good day." to Wesley_Peaceful_Choices;
-			let Wesley_Peaceful_Choice be what the player chooses from Wesley_Peaceful_Choices;
-			if Wesley_Peaceful_Choice is:
-				-- "Have a friendly talk with Wesley.":
-					say "     Raising a hand in a calming gesture, you try to get Wesley to wind down a little, and tell him that you'd like to talk to him. After another quick glance all around, he lets out a relieved breath and relaxes, adjusting his glasses as he attentively waits for you to speak.";
-					TraitGain "Second Talk" for Wesley;
-					say "[WesleyTalkMenu]";
-				-- "Escort him to where he's going.":
-					say "     You offer to accompany Wesley for a little while, and he gladly accepts. 'Safety in numbers!' he says with a knowing smile, then points forward in a faux-heroic pose, 'Onwards ho!' With the anthro mouse keeping close to your side as you move ahead, his slender paws having to quickly pad forwards to keep pace, you make good headway towards the lecture hall he's bound for. When you arrive at your destination soon after, the now-smiling nerd raises his right hand to lay it over his heart, then gives you a half-bow, intoning the words, 'Your assistance was greatly appreciated, gentlebeing.' Wiggling his nose and letting out a happy chuckle at being able to deliver what you assume is some quote, he then adds a little wave and quickly vanishes in the building.";
-				-- "Shrug it off and wish him a good day.":
-					say "     Smiling and commenting that the little bump was nothing to worry about, you wish Wesley a good day, leaving him to give you a friendly nod before moving on in a wary dash. Hopefully he'll be able to avoid running into any of the bullies that have been plaguing his existence lately.";
-			now combat abort is 1; [he won't fight people he knows]
+	project Figure of Nerdy Mouse_clothed_icon;
+	choose a row with name of "Nerdy Mouse" in the Table of Random Critters;
+	if enemy type entry is 1 and "Player-Bullied" is not listed in Traits of Wesley: [Player doesn't know him]
+		say "     As you're exploring the Campus Quad you almost run into a four foot tall anthro brown mouse, tightly clutching a messenger bag to his side, which is hanging from a strap over his shoulder. He's got a pair of  thick circular glasses with a silver-rimmed frame on his nose, giving him the appearance of having fairly large eyes. Further, he's wearing a t-shirt with a large D20 dice on it, and a pair of blue jeans - given his small size, these must have been children's clothes, possibly even girl's children clothes for the pants, as they're not quite fitting the frame of the rodent. Being proportioned like an adult despite the small stature really makes him far more slender than a little human would be. Letting out a startled squeak and jumping back as if he touched a searing-hot stove, the mouse almost hyperventilates, staring wildly at you from behind his large glasses. Clearly, he's a tightly wound ball of anxiety, and you can almost see the fight or flight impulses battle in him, by the way his gaze sweeps left and right, trying to analyze the situation.";
+		say "     With you standing in his way forward, and some other passersby not too far in the other direction, he seems to be stuck between impulses, and then he screams, 'I... I'll not stand for bullying anymore! Get out of my way!' With that said, he rushes forward, arms flailing wildly in a pathetic attempt of a threat display - which would be more effective if he didn't squeeze his eyes shut at the same time. As you easily side-step him, the nerd stumbles over the edge of the walkway and falls flat on his face, scraping his arm against and making the glasses go tumbling off his nose, landing on the ground nearby. This just exasperates his frantic state, as he grabs for them like a drowning man and puts the glasses back on hastily, then jumps back to his feet. With you still being far too close still, and him getting hurt, he snaps to a fairly comical fighting stance, arms raised like a caricature of a boxer. 'You shall not put a hand on me, villain!' he shouts, then throws himself at you in a fatalistic attack.";
+	else if "Beat Up Player" is listed in Traits of Wesley:
+		say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh, it's you. You want some more, eh loser?!' he says in a hostile tone, then throws himself at you, ready to fight.";
+	else if "Player-Bullied" is listed in Traits of Wesley:
+		if PlayerFucked of Wesley is true: [raped him before]
+			say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh my god,' he screams, eyes frantic as he seeks a way of escape, then snaps to trying to doge past you at a run. With a chuckle at the pathetic showing bubbling up inside you, your arm almost automatically shoots out, making him basically clothesline himself, falling on his ass as he runs face-first into an immovable object. Letting out a cruel laugh as you see him fall down and hit his head, almost rolling over backwards. Stepping closer as you watch the show, you're ready to pounce as he gets back up, with a fight ensuing between the two of you.";
+		else:
+			say "     Moving along one of the campus walkways, you round the corner of a building, finding yourself face to face with that nerdy mouse you ran into before. He recognizes you immediately in turn, eyebrows drawing together and nose ruffling in disgust. 'Oh, it's you,' he says in a hostile tone, then adopts an almost comical boxing stance before shouting, 'You bully! No more! I... I'll show you this time!' With that said, he charges in with his arms flailing, throwing himself at you in fatalistic desperation.";
+	else if enemy type entry is 2: [Player knows him by name]
+		say "     As you're on your way along one of the walkways of the campus, you see Wesley speed-walking ahead of you, his head down and messenger bag clutched to his side. Raising a hand in a wave to greet him, you're about to say something when he literally just walks into you, not having looked up in time to actually see you standing right in front of him. As he bounces off you with a thud and a squeak, the nerdy mouse stares at you from behind his large glasses for a second, then says, 'Oh! Hey, it's you! Sorry about, you know, running into you.' He seems slightly ashamed at the lame greeting, but is still markedly nervous about standing still out in the open, glancing left and right warily.";
+		say "     [bold type]What do you want to do now?[roman type][line break]";
+		let Wesley_Peaceful_Choices be a list of text;
+		add "Have a friendly talk with Wesley." to Wesley_Peaceful_Choices;
+		add "Escort him to where he's going." to Wesley_Peaceful_Choices;
+		add "Shrug it off and wish him a good day." to Wesley_Peaceful_Choices;
+		let Wesley_Peaceful_Choice be what the player chooses from Wesley_Peaceful_Choices;
+		if Wesley_Peaceful_Choice is:
+			-- "Have a friendly talk with Wesley.":
+				say "     Raising a hand in a calming gesture, you try to get Wesley to wind down a little, and tell him that you'd like to talk to him. After another quick glance all around, he lets out a relieved breath and relaxes, adjusting his glasses as he attentively waits for you to speak.";
+				TraitGain "Second Talk" for Wesley;
+				say "[WesleyTalkMenu]";
+			-- "Escort him to where he's going.":
+				say "     You offer to accompany Wesley for a little while, and he gladly accepts. 'Safety in numbers!' he says with a knowing smile, then points forward in a faux-heroic pose, 'Onwards ho!' With the anthro mouse keeping close to your side as you move ahead, his slender paws having to quickly pad forwards to keep pace, you make good headway towards the lecture hall he's bound for. When you arrive at your destination soon after, the now-smiling nerd raises his right hand to lay it over his heart, then gives you a half-bow, intoning the words, 'Your assistance was greatly appreciated, gentlebeing.' Wiggling his nose and letting out a happy chuckle at being able to deliver what you assume is some quote, he then adds a little wave and quickly vanishes in the building.";
+			-- "Shrug it off and wish him a good day.":
+				say "     Smiling and commenting that the little bump was nothing to worry about, you wish Wesley a good day, leaving him to give you a friendly nod before moving on in a wary dash. Hopefully he'll be able to avoid running into any of the bullies that have been plaguing his existence lately.";
+		now combat abort is 1; [he won't fight people he knows]
 
 to say losetonerdymouse:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if "Player-Bullied" is listed in Traits of Wesley:
+	if "Player-Bullied" is listed in Traits of Wesley:
 		if HP of Player > 0:
 			say "     As you raise your hands and tell him that you surrender, the mouse nerd scrunches his nose at you and growls, 'Guess, I'm just some sort of joke to you, eh?! Someone to beat up and then act like nothing happened afterwards. Go to hell!' Gathering up a wad of spit, he lets it fly to hit you in the chest. He's trembling from the impulse to take things further, but it seems his nerve runs out, and storms off before you can retaliate, running away at a not unimpressive speed. Looks like he got plenty of cardio from fleeing being his best survival strategy... Hmpf, and that's when you even tried to be somewhat nicer this time. [bold type]Almost seems like he doesn't trust you. Seems he can't handle a little bit of ribbing or [if PlayerFucked of Wesley is true]some sexual attention (not like he'd ever have gotten any on his own)[else]something[end if].[roman type][line break]";
 		else:
@@ -122,9 +117,7 @@ to say losetonerdymouse:
 				say "     'You're the loser now. Jerk!' The mouse, empowered with his victory over you, grows bold and spits on you. Having had enough of this smarmy little bastard you stagger to your feet with fists balled. He gives a terrified squeak before darting off as fast as he can run.";
 
 to say beatthenerdymouse:
-	if inasituation is true:
-		say ""; [dealt with at the source of the event]
-	else if "Player-Bullied" is listed in Traits of Wesley:
+	if "Player-Bullied" is listed in Traits of Wesley:
 		say "     The defeated nerd slumps to the ground with a whimper. 'You... you're just jealous that I'm smarter than you,' the anthro mouse sniffles as he pushes his glasses back up on his nose.";
 		say "     [bold type]What do you want to do now?[roman type][line break]";
 		let Wesley_Roughed_Choices be a list of text;

@@ -2,6 +2,25 @@ Doctor Mouse by Voidsnaps begins here.
 
 Section 1 - Transplants from Hospital file
 
+DrMouseSlutTest is an action applying to nothing.
+understand "zDrMouseSlutTest" as DrMouseSlutTest.
+
+check DrMouseSlutTest:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DrMouseSlutTest:
+	Choose a blank row from Table of StoredSluts;
+	now name entry is "Doctor Mouse";
+	now PaymentType entry is 2;
+	now WhoredOut entry is false;
+	now Resistant entry is true;
+	now Constraints entry is true;
+	now Sluttyness entry is 1; [resistant]
+	now ProgressPercentage entry is 0;
+	now SexCount entry is 0;
+
 [Winning against Doctor Mouse]
 to say hospvictory:
 	say "     The monstrous Dr. Mouse has been dazed by your final blow and has collapsed against a worktable at the far end of the room. He's overturned the nearby water dish and broken the chemical toilet. As the pair of mismatched chimera poke their heads around behind it, having hidden during the fight, you realize just where he's landed.";
@@ -29,7 +48,7 @@ to say hospvictory:
 	else:
 		move Player to Grey Abbey Library;
 
-to say DoctorMouseChimeraTaken: 
+to say DoctorMouseChimeraTaken:
 	WaitLineBreak;
 	if HP of Doctor Matt is 100:
 		say "     Feeling that the doctor is in good hands, you quickly look around the room, gathering any notes and samples you can find from the doctor's work area into one big pile. Worried that someone may notice the commotion and come up to investigate, you don't take any time to look at the stuff. You toss the contents from the doctor's storage case onto the heap. After tearing open his notebook and breaking his laptop, you add them to it.";
@@ -70,16 +89,24 @@ to say DrMouseSlutStorage:
 		Choose a blank row from Table of StoredSluts;
 		now name entry is "Doctor Mouse";
 		now PaymentType entry is 2;
+		now WhoredOut entry is false;
 		now Resistant entry is true;
+		now Constraints entry is true;
 		now Sluttyness entry is 1; [resistant]
+		now ProgressPercentage entry is 0;
+		now SexCount entry is 0;
 	else:
 		say "     Shaking your head, you state that you're not okay with Mortimer milking his payment out of your new toy. After all, he belongs to you! With that out of the way, you chat with the slimy caretaker, deciding how the hybrid should be stored, mulling over a few decisions before settling on heavy-duty chains and a ceiling fixture to bind him properly. 'Excellent! Leave him in our hands, and we'll have him ready for you in a few hours, tops! You can bring your payment by when you visit him next.' Mortimer surrounds Doctor Mouse with clones and forces him into a nearby unit as one of them flashes you a thumbs up. With nothing else to see until he's settled in, you ready yourself to leave.";
 		now energy of DrMouse is turns;
 		Choose a blank row from Table of StoredSluts;
 		now name entry is "Doctor Mouse";
-		now PaymentType entry is 1;
+		now PaymentType entry is 2;
+		now WhoredOut entry is false;
 		now Resistant entry is true;
+		now Constraints entry is true;
 		now Sluttyness entry is 1; [resistant]
+		now ProgressPercentage entry is 0;
+		now SexCount entry is 0;
 		say "     Now that you think about it, you should also set some ground rules on how you pay for Dr. Mouse's confinement. Do you want Mortimer to milk Doctor Mouse at all? Before you leave, you should tell him your preference!";
 		say "     [link](Y)[as]y[end link] - Allow Mortimer to milk Doctor Mouse weekly.";
 		say "     [link](N)[as]n[end link] - Pay normally.";
@@ -91,6 +118,7 @@ to say DrMouseSlutStorage:
 	now Doctor Mouse is nowhere;
 	move Player to Grey Abbey Library;
 	add "Doctor Mouse" to StoredSluts_Other;
+
 
 Section 3 - Character Declaration
 
@@ -155,7 +183,7 @@ to say Mouse_StorageVisit:
 			ItemLoss Storage Chit by 5;
 	else: 
 		say "     After you tell him that you want to visit Doctor Mouse, Mortimer leads you through the expansive storage facility, past countless almost indistinguishable doors. As you move along, you see several more copies of him either working, guiding other customers, and stepping into or out of various units. Given that you just counted [one of]five[or]six[or]seven[or]eight[or]nine[or]ten[or]eleven[at random] duplicates of the guy, you can't help but idly wonder just how many times he's split like that. 'This is it,' the slimy businessman says with a broad smile, indicating a nearby sliding door and coming to a stop before it. As Mortimer starts to rummage around in himself to retrieve the key ring, you have some time to think...";
-		if sluttyness entry is 1:
+		if Sluttyness entry is 1:
 			say "     'I recommend staying out of range of his legs if he's not locked in. He's not the most polite.' Mortimer says as he unlocks your storage unit and raises the shutter to let you in. Bathed in fluorescent light and nude save for a plain-looking jockstrap Mortimer fitted over his maleness, your scientist-turned-beast awaits you, staring balefully at you and tossing his lion's mane. He's secured to the ceiling by manacles hooked through a chain, and his legs are attached to a spreader bar, pushing his masculinity forward and allowing you to see the dangerous twitch of his tail between his legs, flicking like an annoyed cat's appendage despite its mouse-like appearance. 'I trust you have come to mete out justice?' He taunts, flexing his muscles impotently. 'The conquering hero, holding their morals above all as they attempt to reason with a villainous monster?' The hybrid bares sharpened teeth at you, spitting on the floor at your feet.Pondering the doctor's appearance, you can't help but feel a tingle of satisfaction at bringing him low. He's all bluster now, but his body's clearly on display, and there's a bit of a tremble in his legs from being forced to stay in this position. You could break him and make him your slut, or you could show him what being a good boy will get him.";
 			say "     [bold type]How do you want to go about breaking in Doctor Mouse?[roman type][line break]";
 			LineBreak;
@@ -165,10 +193,13 @@ to say Mouse_StorageVisit:
 			let Mouse_Slut_Choice be what the Player chooses from Mouse_Slut_Choices;
 			if Mouse_Slut_Choice is:
 				-- "Make him love you. Overwhelm him with pleasure until he can't live without your touch.": [Gentle dom. Softer touch.]
+					LineBreak;
 					say "     You catch more flies with honey than vinegar, as they always say! With that in mind, you disrobe, leaving your things in a corner far from Doctor Mouse's reach. Crossing the distance between you, you step in close, trailing your hands over shuddering fur and stopping to caress soft, pink nipples peeking from the yellow that overtook his formerly snow-white coat. Pausing to tweak and massage them, you remark that you don't plan to punish the good doctor. The hybrid tries his best to ignore your efforts, eying you with contempt shining in his calculating gaze, but his manhood tells another story, filling out to press against your bare stomach and leak through the fabric of his black jockstrap. 'Your attempts at bribery are insulting. Why would I allow myself to participate in such debaucherous drivel?' Despite his protests, it's working, and he's subconsciously pressing his chest into your touch as if begging for more.";
 					say "     Slowly, you lower your mouth to the mouse's chest, letting the heat of your breath tease the pebbled mound of his nipple before dragging your tongue along it, delighting in his barely contained moan. You explain that it doesn't matter whether he allows himself to participate- you'll keep it up until he melts, then dive forward, suckling at his muscular pec and rolling your tongue over it in soft circles. It isn't long before the hybrid brute is under your spell, humping forward as his wits fade in favor of desperate need. His jockstrap threatens to rip with the sheer force of his erection, and a river of precum drips from the tip, causing it to cling to the shape of his knotted erection and leaving nothing to the imagination. Still, it isn't enough for you to stop, so you switch sides, weighing his hefty balls in one hand and staring up at him as you lavish care on his lonelier pec.";
+					WaitLineBreak;
 					say "     'Please.' Comes a gasped statement of sheer pleasure, torn from the hybrid brute's throat along with drool that drips from predatory teeth. It seems he's had enough of your teasing, but the look on his softened face tells you exactly how effective it's been. Gone is the look of contempt, replaced by desperate uncertainty. How sweet. You pat the former mouse's heaving stomach as he tries desperately to hump into your hand, pulling back before he can achieve any friction and grabbing hold of the waistband of his jockstrap. Softly, you tell him that there's one more thing you need out of him if he wants to cum. A promise. Exactly three words might mean nothing to him but will imprint into his mind like a brand. Doctor Mouse's eyes widen as you explain what you want from him, and he visibly struggles with his choices, too engrossed in his cock's pulsing and begging for freedom to think things through. With a cracking voice, he looks away and closes his eyes, shaking his head as if denying the words already leaving his mouth. 'I love you.' He states with a hollow, desperate tone, trailing off into a whimper.";
 					say "     Tugging the hulking man's underwear down, you reward his speech with two hands on his pulsing shaft, massaging its slick length with the help of his steady river of pre and squeezing his knot as it grows beneath your palms. He's been such a good boy that you wouldn't feel right keeping him waiting, so you jerk him faster and faster, working the slick juices into a white foam that covers his canine-like shaft in frothy desire. It's easy to tell when he's close- he's willingly humping your hands, and his balls draw up tight against his shaft- but you feel like the doctor could use one more reminder before he gets his treat. Again, you ask him to say the magic words, holding his cock hostage in a gentle but firm grip and feeling his heartbeat race in the rock-hard shaft. It likely almost hurts to be denied when he's this excited, but that only adds to the appeal. Why wouldn't he want to feel good?";
+					WaitLineBreak;
 					say "     'I love you!' This time the mouse's words seem more sincere, mixed with outright begging and a throaty grumble that vibrates to his dick. It's not quite the most convincing, but you're pleased with the results, so you resume your efforts, aiming his cock between your legs and praising him for his honesty. When Doctor Mouse erupts, you can't help but feel a sense of pride at how worked up you've gotten him. A fountain of jizz slaps your lower stomach hard enough that it almost stings, and each rope that follows clings to your [if Player is male]cock[else if Player is female]pussy mound[else] crotch[end if], bathing it in pure masculinity and heat. He's like a firehose, spurting without end, and his eyes have gone glazed, taken over by his orgasm, while his hips shake uncontrollably, trying desperately to ram his knot into a hole that isn't there.";
 					TraitGain "GentleDommed" for DrMouse;
 					NPCSexAftermath DrMouse receives "Stroking" from Player;
@@ -176,6 +207,7 @@ to say Mouse_StorageVisit:
 					now Sluttyness entry is 2;
 					increase SexCount entry by 1;
 				-- "Punish him for his evil deeds. Use him as you see fit.": [Spank him and make him beg to cum]
+					LineBreak;
 					say "     Screw the soft approach. You won, fair and square, and the mouse's inability to resist following you to the storage site proves Dr. Mouse is your property. So what if he's not willing to admit it? You'll MAKE him admit it! Setting your jaw, you meet the hybrid's defiance with a derisive snort. Taunting him as you circle behind him and tug his tail upward, you tell him that you don't think of yourself as the hero of this story nor of him as the villain. He's just a slut that needs punishment, and you just happen to be willing to provide it. 'Punishment? Hah. Your asinine efforts to intimidate are laughably transparent-' Doctor Mouse starts, trailing off into a yelp as your hand comes down on his exposed ass cheek, setting the muscular man-meat jiggling and causing his rodent tail to curl around your other appendage, trying to escape your grasp. 'Your show of barbarism will not-' He tries to say, interrupted again by the rough crack of your palm over his wriggling rump."; 
 					say "     Smirking, you taunt the flustered hybrid, pulling on his tail until his legs spread and his ass is upturned, showing off a fearfully twitching pink hole between yellow-furred cheeks. Casually, you remark that he's being a bad boy, trailing your fingers over the stinging flesh your rough treatment left and delighting in his shivering reaction. He should admit that he wants to be touched- maybe you'll relent and let him have a treat! 'Animalistic brute. I shall not fall for your manipulation-' You punish the mouse again for speaking out of turn, raining another set of blows onto his upturned rump with each attempt to sass you, the resounding clap of your hand on furred cheeks echoing around the concrete space. He bites his lip by the time his ass pulses bright red, his cheeks blushing under their fur, and his tail falling limp in your fist.";
 					WaitLineBreak;
@@ -186,7 +218,7 @@ to say Mouse_StorageVisit:
 					TraitGain "HardDommed" for DrMouse;
 					now Sluttyness entry is 2;
 					NPCSexAftermath DrMouse receives "Stroking" from Player;
-		else if sluttyness entry is 2: [Used once. Repeatable for phase 1.]
+		else if Sluttyness entry is 2: [Used once. Repeatable for phase 1.]
 			if "HardDommed" is listed in Traits of DrMouse:
 				say "     After a short walk, Mortimer brings you to the storage unit that houses Doctor Mouse. You thank him for caring for your slut in your absence, then open the door, greeting the freshly cleaned, still-bound man with a hearty hello. You don't hide your intentions this time, setting aside your gear and disrobing before him, then closing the distance between you, tweaking his pecs, groping and massaging the heaving muscle as you ask whether he missed you. 'Your absence was pleasant.' Doctor Mouse huffs, trying his best to ignore the soft sensations you're forcing on him, even though his cock stands at attention, dribbling its desire. At least his dick knows how to show its affection for its master!";
 				LineBreak;

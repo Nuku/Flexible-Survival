@@ -786,16 +786,14 @@ Music Store is a situation.
 ResolveFunction of Music Store is "[ResolveEvent Music Store]". The level of Music Store is 2.
 Sarea of Music Store is "Outside".
 Music Store is inactive.
-violinspritefight is a truth state that varies.
 
 to say ResolveEvent Music Store:
 	if violinfound is 0 or violinfound is 1:
 		say "     With Leonard's request lingering at the back of your mind as you travel through the city, you stop dead in your tracks when you spot a music store. It seems to have been largely undamaged. You quickly head over to it, failing to notice the signs of activity inside in your eagerness. Pulling the door open, you hear the buzz of little wings from inside the dark store. Suddenly on guard, there's a cry of 'Get [']em, girls!' from a small, high-pitched voice. The volume of the buzzing grows louder and a wave of little, elfin sprites charge out of the doorway, swarming all around you excitedly, forcing you to stumble backwards into the street.";
 	else if violinfound is 2 or violinfound is 3:	[returning]
 		say "     With Leonard's request lingering at the back of your mind, you find yourself back in front of the Music Store you found earlier. Longing to please the handsome lion with a gift, you ready yourself for another fight with the sprites and pull open the door. The buzz inside picks up inside as they notice the intruder. 'Back for more, eh?' one of them giggles playfully before the swarm surges towards you, forcing you back into the street to fight them.";
-	now violinspritefight is true;
+	say "     Swirling around you is a buzzing, flitting mob of naked, elfin females. The tallest of them is two feet tall, many are less. They swarm about you with loud excited giggles and the buzz of their dragonfly wings. They jeer at you for disturbing them, but also seem quite pleased to have had someone to play with stumble into their midst.";
 	challenge "City Sprite";
-	now violinspritefight is false;
 	if fightoutcome < 20: [player won]
 		say "     Having driven off the sprites from their home, you head inside and start looking around eagerly for a violin. There are examples of a lot of other instruments around and it seems like the sprites have been playing around with a lot of them. Most of the inventory does seem to be guitars, drums and keyboards. The drums seem to have gotten the worst of the play, with lots of stick footprints on the skins from them bouncing on them. A few of them even have cum angels smeared onto them. From the glistening on the ends of the drumsticks you see scattered about, you decide it'd be best not to handle those either, [if Libido of Player < 50]preferring not to imagine what uses the diminutive females put them to[else]having a good idea how those naughty female sprites have been putting those smooth, polished sticks to use[end if].";
 		say "     Not really interested right now in the more modern rock and roll instruments, you move on. Spotting the section behind one counter. You see they have their smaller selection of classical instruments. There are several brass and woodwind instruments of different quality. Some of these have been knocked around or played with by the flighty sprites, requiring you to step carefully and sift through those on the floor behind the counter to make sure a violin is not beneath one of the others. You are about to give up hope by the time you make it to the far corner, but luckily manage to find one. It is intact and still displayed on the wall, probably because of its placement at the end of the display area.";

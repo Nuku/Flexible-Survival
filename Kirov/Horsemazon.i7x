@@ -14,10 +14,7 @@ Section 1 - Monster Description
 to say horsemazonDescription:
 	setmongender 4; [creature is female]
 	project Figure of Horsemazon_clothed_icon;
-	if inasituation is true:
-		say "";
-	else:
-		say "     As you make your way down the streets, you hear the clop of hooves and the clinking of metal chains. 'Halt!' a powerful voice commands. You turn to see the towering figure of a woman, but with the features of a horse. She possesses a striking, muscled physique, alongside an equine head and hooves, a coat of short brown fur, and a beautiful, flowing mane of deep brown. The striking Amazon of a horse is dressed in a set of leather chaps and a small corset, though how she managed to find one in her size puzzles you, given how much she towers over the average person. In her hands, she's holding a lasso and a riding crop, which she points aggressively at you. 'Okay, mutant. You won't be getting away to harass people any longer!' It seems she's mistaken you for one of the mindless infected roaming the city!";
+	say "     As you make your way down the streets, you hear the clop of hooves and the clinking of metal chains. 'Halt!' a powerful voice commands. You turn to see the towering figure of a woman, but with the features of a horse. She possesses a striking, muscled physique, alongside an equine head and hooves, a coat of short brown fur, and a beautiful, flowing mane of deep brown. The striking Amazon of a horse is dressed in a set of leather chaps and a small corset, though how she managed to find one in her size puzzles you, given how much she towers over the average person. In her hands, she's holding a lasso and a riding crop, which she points aggressively at you. 'Okay, mutant. You won't be getting away to harass people any longer!' It seems she's mistaken you for one of the mindless infected roaming the city!";
 
 to say horsemazonAttack:
 	say "[one of]The horse-woman strikes out at you with her whip, leaving a red mark that's quickly healed by the nanites.[or]Lowering her lasso and crop, the large woman charges you. You're left with no time to react as she body slams you, barreling you over with her impressive size and mass.[or]The horse-woman pounces at you, lunging forward in an attempt to wrestle you to the floor, which you barely manage to squeeze out of.[or]Swinging the lasso over her head, the horse throws the loop and catches you by the arm. You're barely able to free yourself as she tries to pull you in.[at random]";
@@ -25,88 +22,82 @@ to say horsemazonAttack:
 Section 2 - Monster Victory Scenes
 
 to say horsemazonVictory:          [Scene for when the Horsemazon defeats the player]
-	if inasituation is true:
-		say "";
-	else:
-		project Figure of Horsemazon_clothed_icon;
-		if HP of Player > 0:	[ Submitted ]
-			say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. So focused on winning the fight, she doesn't seem to notice at first, and for a moment, you think you've made a terrible mistake as she swings her lasso around to strike at you. But just before she throws, she notices your gesture and hesitates. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant.' It appears you were convincing, as she lowers her lasso and crop, bringing her hands to her hips with a disapproving glare.";
-			say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters, down at the Stables Hotel.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
-			repeat with y running from 1 to number of filled rows in Table of Random Critters:
-				choose row y in Table of Random Critters;
-				if Name entry is "Horsemazon":
-					now area entry is "Nowhere";
-					break;
-			now HP of Jana is 1;
-			change the East exit of Mares Quarters to Janas Bedroom;
-			now Encountering Jana is resolved;
-		else:	[ Defeated ]
-			say "     Falling down on to one knee, you find that you're no longer able to put up a fight. The horse kicks out at you, knocking you flat on your back. Then she slowly saunters over to you, hooves clacking on the ground. You feel her weight come down on your chest as she presses one of those animalistic feet down upon you. She huffs and snorts out of her equine snout as she gazes into your eyes. You feel utterly powerless beneath the strong, dominant woman as she ponders what your fate will be.";
-			if Player is male:
-				say "[horsemazonCowgirl]";
-			else if Player is female:
-				[Placeholder scene]
-				say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
-			else:
-				[Placeholder scene]
-				say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
-			increase XP of Jana by 1;
+	project Figure of Horsemazon_clothed_icon;
+	if HP of Player > 0:	[ Submitted ]
+		say "     Raising your hands in a friendly gesture of peace, you try to deescalate the situation. So focused on winning the fight, she doesn't seem to notice at first, and for a moment, you think you've made a terrible mistake as she swings her lasso around to strike at you. But just before she throws, she notices your gesture and hesitates. You take the opportunity to speak, putting on a friendly smile. 'I'm not here to fight,' you try to calmly explain. 'And I'm not some crazy mutant.' It appears you were convincing, as she lowers her lasso and crop, bringing her hands to her hips with a disapproving glare.";
+		say "     'Well, you ought to not be wandering the streets like one. Otherwise you might get into trouble with a strong woman like me,' she says a bit jokingly. She stows away her 'weapons' on her belt before striding over to you and holding out her hand in greeting. Seeing as she was so quick to start a fight, you're taken by surprise at the sudden shift in the tone of the situation. She seems to have taken you for your word about being friendly. You reach out and shake her hand, finding her grip unsurprisingly strong and firm. 'I'm Jana, by the way,' she lets you know. The two of you exchange names and pleasantries, and after a little while of chatting, you feel like you've gotten to know Jana a bit. 'Well,' she says. 'It's been nice, but I really ought to head off. Now that I know who you are, you won't have to worry about being jumped. Just make sure you don't go wild on me,' she says with a teasing smile. As she turns to depart, she looks over her shoulder and adds, 'I'd love if you came to stop by and visit me sometime. I've got a room in the Mare's Quarters, down at the Stables Hotel.' Realizing how much time has passed, you wave goodbye and collect yourself before returning to your own explorations.";
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
+			if Name entry is "Horsemazon":
+				now area entry is "Nowhere";
+				break;
+		now HP of Jana is 1;
+		change the East exit of Mares Quarters to Janas Bedroom;
+		now Encountering Jana is resolved;
+	else:	[ Defeated ]
+		say "     Falling down on to one knee, you find that you're no longer able to put up a fight. The horse kicks out at you, knocking you flat on your back. Then she slowly saunters over to you, hooves clacking on the ground. You feel her weight come down on your chest as she presses one of those animalistic feet down upon you. She huffs and snorts out of her equine snout as she gazes into your eyes. You feel utterly powerless beneath the strong, dominant woman as she ponders what your fate will be.";
+		if Player is male:
+			say "[horsemazonCowgirl]";
+		else if Player is female:
+			[Placeholder scene]
+			say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
+		else:
+			[Placeholder scene]
+			say "     Coming to a decision, the towering horse-woman presses harder into your chest, using the tip of her riding crop to inspect your face in a dominant display of victory. 'I guess you weren't so worthy an opponent after all. Maybe next time you'll put up more of a fight.' You're terrified of what she might do with you next, but the warrior mare simply stows her weapons and walks away. You quickly stand back up and grab your stuff to depart before she changes her mind.";
+		increase XP of Jana by 1;
 
 Section 3 - Monster Defeat Scenes
 
 to say horsemazonDefeat:           [Scene for when the player defeats the Horsemazon]
-	if inasituation is true:
-		say "";
-	else:
-		project Figure of Horsemazon_naked_icon;
-		say "     The horsemazon stumbles from your final blow, toppling to the ground in exhaustion. Her crop noisily clatters on the ground as she falls onto all fours. Worn down from the tough fight the Amazon has put up, you can't help but take the opportunity to catch your breath. After a moment of recovery, you ready yourself to fight again, but looking down, you see she's finally given up. It looks like you've finally managed to tire her out.";
-		say "     The smell of arousal makes it clear that the fight has you both a bit excited. If you wanted to, you're certain she would be up for some mutual fun. You might even be able to turn the tables on this usually dominant mare. [bold type]Do you take advantage of the fallen horsemazon?[roman type][line break]";
-		now sextablerun is 0;
-		blank out the whole of table of fucking options;
-		if Player is male:
-			choose a blank row in table of fucking options;
-			now title entry is "Fuck Her";
-			now sortorder entry is 1;
-			now description entry is "Show the horse who's in charge by fucking her pussy";
-			[]
-		if Player is female:
-			choose a blank row in table of fucking options;
-			now title entry is "Receive Oral";
-			now sortorder entry is 3;
-			now description entry is "Force her to eat you out";
-		[]
+	project Figure of Horsemazon_naked_icon;
+	say "     The horsemazon stumbles from your final blow, toppling to the ground in exhaustion. Her crop noisily clatters on the ground as she falls onto all fours. Worn down from the tough fight the Amazon has put up, you can't help but take the opportunity to catch your breath. After a moment of recovery, you ready yourself to fight again, but looking down, you see she's finally given up. It looks like you've finally managed to tire her out.";
+	say "     The smell of arousal makes it clear that the fight has you both a bit excited. If you wanted to, you're certain she would be up for some mutual fun. You might even be able to turn the tables on this usually dominant mare. [bold type]Do you take advantage of the fallen horsemazon?[roman type][line break]";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if Player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Eat Her Out";
-		now sortorder entry is 9;
-		now description entry is "Make up for the fight by licking her pussy";
+		now title entry is "Fuck Her";
+		now sortorder entry is 1;
+		now description entry is "Show the horse who's in charge by fucking her pussy";
 		[]
-		repeat with y running from 1 to number of filled rows in table of fucking options:
-			choose row y from the table of fucking options;
-			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]0 - Let her go[as]0[end link][line break]";
-		now calcnumber is -1;
-		while sextablerun is 0:
-			say "Pick the corresponding number> [run paragraph on]";
-			get a number;
-			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-				now current menu selection is calcnumber;
-				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
-				if Player consents:
-					let nam be title entry;
-					now sextablerun is 1;
-					if nam is "Fuck Her":
-						say "[horsemazonPussyfuck]";
-					else if nam is "Receive Oral":
-						say "[horsemazonReceiveOral]";
-					else if nam is "Eat Her Out":
-						say "[horsemazonGiveOral]";
-					wait for any key;
-			else if calcnumber is 0:
-				say "     Deciding you'd rather not play around with her, you turn your back on the defeated woman to leave her in the shame of her defeat.";
+	if Player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Receive Oral";
+		now sortorder entry is 3;
+		now description entry is "Force her to eat you out";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Eat Her Out";
+	now sortorder entry is 9;
+	now description entry is "Make up for the fight by licking her pussy";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Let her go[as]0[end link][line break]";
+	now calcnumber is -1;
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
 				now sextablerun is 1;
-		clear the screen and hyperlink list;
-		increase XP of Jana by -1;
+				if nam is "Fuck Her":
+					say "[horsemazonPussyfuck]";
+				else if nam is "Receive Oral":
+					say "[horsemazonReceiveOral]";
+				else if nam is "Eat Her Out":
+					say "[horsemazonGiveOral]";
+				wait for any key;
+		else if calcnumber is 0:
+			say "     Deciding you'd rather not play around with her, you turn your back on the defeated woman to leave her in the shame of her defeat.";
+			now sextablerun is 1;
+	clear the screen and hyperlink list;
+	increase XP of Jana by -1;
 
 Section 4 - Monster Sex Scenes
 

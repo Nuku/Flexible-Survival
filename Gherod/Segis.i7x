@@ -2401,16 +2401,10 @@ to say DAMAExploreEnd:
 Section 4 - Creature Insertion
 
 to say Dragon Android wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say ""; [nothing should go in here]
+	say ""; [nothing should go in here]
 
 to say Dragon Android loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say ""; [nothing should go in here]
+	say ""; [nothing should go in here]
 
 to say Dragon Android desc:
 	say "     The person-sized bipedal android has the uncanny appearance of a real dragonmorph, predominantly white with synthetic scales covering its entire body. A keen eye can tell it apart from anything real due to its metallic components that shine in plain view, but concealed well enough to fool a distracted passerby. This robot seems to be able to change parts of its hands and fingers to call devices with a magnitude of different utilities right from inside its scales, and once it lays its eyes on you, they flicker in an unnatural glowing cyan light. With the fluid and swift movement of a humanoid, the android approaches you with the intent of taking you down, no sound nor voice coming out of its solid frame.";

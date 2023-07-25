@@ -7,7 +7,6 @@ Section 1 - Creature Responses
 
 skunkready is a number that varies.
 Skunk_type is a number that varies. [if it is 0 it means to pick a new creature type. if it is a 1 it is a skunk girl, if it's a 2 it's a skunkbeast...]
-skunkfight is a number that varies.
 
 to say skunk_male_desc:
 	choose row MonsterID from the Table of Random Critters;
@@ -83,7 +82,6 @@ to say skunk bodyshift:
 		say "your body becomes more feminine, curves building that make it impossible to define you as anything but female despite what equipment you might have";
 
 to say skunk_female_vict:
-	now skunkfight is 2;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if Player is male and skunkready > 2:
@@ -95,7 +93,6 @@ to say skunk_female_vict:
 	increase skunkready by 1;
 
 to say skunk_female_defeat:
-	now skunkfight is 1;
 	if skunkbeaststatus is 1:	[skunkbeast lord]
 		say "[sblvictorysex]";
 	else if a random number from 1 to 100 > 2:

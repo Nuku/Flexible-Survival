@@ -550,7 +550,6 @@ Garden Veggies	"Garden Veggies"
 Garden Veggies is a scavevent.
 ResolveFunction of Garden Veggies is "[ResolveEvent Garden Veggies]".
 Sarea of Garden Veggies is "Outside".
-veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
@@ -578,15 +577,16 @@ to say ResolveEvent Garden Veggies:
 		now lastgardenveg is turns;
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
-		now veggiegardenfight is 1;
 		if MaleList is banned:
 			challenge "Ewe";
 		else:
 			challenge "Ram";
-		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
 			say "     Having beaten the [if MaleList is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if MaleList is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if MaleList is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
+			if MaleList is banned:
+				say "     'Oh, I've got you now, little thief,' the ewe says with a chuckle, groping your chest and then down to between your legs as she presses you to the ground, rubbing her soft, woolen body against yours. 'I should make you pay me back for taking our vegetables,' she bleats, grabbing your head and pressing it between her thighs. With the arousing scent of her cunt in your face, you can't help but start licking her. She grinds her pussy against your tongue until she has a loud, bleating orgasm.";
+				CreatureSexAftermath "Player" receives "OralPussy" from "Ewe";
 			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if MaleList is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if MaleList is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
 		else if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";

@@ -679,28 +679,25 @@ to WWEnd:
 Section 2 - Creature Responses
 
 to say Dwarf wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     Looking at the short man about to force his way through, you lose the will to fight and pose no resistance towards him, getting on your knees waiting for him to come for you at a much slower and less aggressive pace. 'Seems like you learned your place quicker than I thought you would. No need to beat you until you understand, eh? Unless that's what you're into...' With a sudden move, the dwarf kicks you back on the chest, making you fall back on the ground. He keeps his dirty boot just below your neck, looking down on you with a snarky grin. 'Submitting yourself to me like this... I'm sure you'll do well in servicing me. You're gonna be here for a while, [boygirl]!' He clearly knows he has the upper hand and that you must comply to every order. The dwarf certainly has the ways to make you regret any disobedience[if Player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
-		else: [player loses]
-			say "     Having sustained so much damage from the dwarf's heavy pommeling, you're no longer capable to hold your ground against him. Your strength fails you as you're forced on your knees in front of the short man, his face showing a snarky grin as he looks down at you. 'Beating you to submission was easier than I thought. Look at you now! In your due place, at my full mercy.' With a sudden move, he gives you a kick on the chest, throwing you off balance to the ground. He keeps his dirty boot just below your beck, looking down at you with an amused chuckle. 'Now, if you do what you're told, things will go well for you. If not, then I'll just remind you who's the boss, here...' he says while making a suggestive movement with his hammer, reminding you of how painful his strikes felt. The dwarf certainly has the ways to make you regret any disobedience[if Player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
-		WaitLineBreak;
-		let randomnumber be a random number from 1 to 3;
-		if randomnumber is:
-			-- 1: [facefuck]
-				DwarfFucksOral;
-			-- 2: [fuck]
-				if Player is female: [has a pussy]
-					if a random chance of 1 in 2 succeeds:
-						DwarfFucksAnal;
-					else:
-						DwarfFucksPussy;
-				else: [no pussy]
+	if HP of Player > 0: [player submits]
+		say "     Looking at the short man about to force his way through, you lose the will to fight and pose no resistance towards him, getting on your knees waiting for him to come for you at a much slower and less aggressive pace. 'Seems like you learned your place quicker than I thought you would. No need to beat you until you understand, eh? Unless that's what you're into...' With a sudden move, the dwarf kicks you back on the chest, making you fall back on the ground. He keeps his dirty boot just below your neck, looking down on you with a snarky grin. 'Submitting yourself to me like this... I'm sure you'll do well in servicing me. You're gonna be here for a while, [boygirl]!' He clearly knows he has the upper hand and that you must comply to every order. The dwarf certainly has the ways to make you regret any disobedience[if Player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
+	else: [player loses]
+		say "     Having sustained so much damage from the dwarf's heavy pommeling, you're no longer capable to hold your ground against him. Your strength fails you as you're forced on your knees in front of the short man, his face showing a snarky grin as he looks down at you. 'Beating you to submission was easier than I thought. Look at you now! In your due place, at my full mercy.' With a sudden move, he gives you a kick on the chest, throwing you off balance to the ground. He keeps his dirty boot just below your beck, looking down at you with an amused chuckle. 'Now, if you do what you're told, things will go well for you. If not, then I'll just remind you who's the boss, here...' he says while making a suggestive movement with his hammer, reminding you of how painful his strikes felt. The dwarf certainly has the ways to make you regret any disobedience[if Player is submissive], though your submissive instincts make you so eager to be used by him that he shouldn't worry too much about it[end if].";
+	WaitLineBreak;
+	let randomnumber be a random number from 1 to 3;
+	if randomnumber is:
+		-- 1: [facefuck]
+			DwarfFucksOral;
+		-- 2: [fuck]
+			if Player is female: [has a pussy]
+				if a random chance of 1 in 2 succeeds:
 					DwarfFucksAnal;
-			-- 3: [facesitting]
-				DwarfFacesit;
+				else:
+					DwarfFucksPussy;
+			else: [no pussy]
+				DwarfFucksAnal;
+		-- 3: [facesitting]
+			DwarfFacesit;
 
 to DwarfFucksOral:
 	say "     'Now, time to put your mouth to work. And you better do it right!' he says while positioning himself just above your head, which stands tall enough to reach his still covered bulge. The dwarf makes sure you feel his erection growing larger in his pants by pulling your face straight towards it. 'That's it, be a good [boygirl] for me and smell my junk. Bet you're liking this, aren't you?' the dwarf keeps teasing you as his tool hardens so much that it starts feeling constricted for the short man, as if begging for release out of those pants. 'I think I'm gonna love shoving this down your throat... Making you choke on it as you take it deep down... all the way...!' You sense eagerness in your burly captor's raspy voice [if Player is submissive], making you want to taste his cock even more than you already did, [end if]as he starts undoing his large belt, dropping his gear on the ground followed by the pants.";
@@ -744,11 +741,8 @@ to DwarfFacesit:
 	say "     You're left with your face flushed, catching your breath after this ordeal, and take some time to recover before you can stand up.";
 
 to say Dwarf loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     With one last attack, you manage to bring down the hostile dwarf, who falls down bruised and unable to move. 'Ungh! Y-you're tougher than you look... Alright fine. I... won't bother you anymore. No need to get feisty, alright?' Though you hear what seems to be a plea for mercy, albeit barely so, you do have the short stocky man right there, without a chance to offer any resistance. You could do anything you wanted to him and he'd have no chance to do anything against it. [bold type]How shall you proceed with the defeated dwarf?[roman type][line break]";
-		say "[DwarfSex]";
+	say "     With one last attack, you manage to bring down the hostile dwarf, who falls down bruised and unable to move. 'Ungh! Y-you're tougher than you look... Alright fine. I... won't bother you anymore. No need to get feisty, alright?' Though you hear what seems to be a plea for mercy, albeit barely so, you do have the short stocky man right there, without a chance to offer any resistance. You could do anything you wanted to him and he'd have no chance to do anything against it. [bold type]How shall you proceed with the defeated dwarf?[roman type][line break]";
+	say "[DwarfSex]";
 
 to say DwarfSex:
 	now sextablerun is 0;
@@ -879,34 +873,31 @@ to say DwarfRide:
 
 to say Dwarf Desc:
 	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if debugactive is 1:
-			say "     DEBUG: Resolution of Collapsed Tunnel: [Resolution of Collapsed Tunnel][line break]";
-		if Resolution of Collapsed Tunnel is 3: [dwarf has the greathammer]
-			say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
-			say "     'Heh. Came for the hammer, or for some thick dwarven dick? Guess I'll hit you with both.' With that, he rushes at you. [bold type]That hammer will certainly hurt more![roman type][line break]";
-			choose a row with name of "Dwarf Male" in the Table of Random Critters;
-			now wdam entry is 16; [he has the greathammer]
-		else if Resolution of Collapsed Tunnel is 4 and golden greathammer is owned: [player has the greathammer and is carrying it]
-			say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
-			say "     'Nice weapon you've got there. Mind if I try it out?' he laughs, but soon he's rushing at you with his own arms ready.";
-		else if Resolution of Collapsed Tunnel is 5 or Resolution of Collapsed Tunnel is 6: [player wants to handle their transformation on their own or postponed the plan]
-			say "[DwarfQuest4]";
-			now combat abort is 1;
-		else if Resolution of Collapsed Tunnel >= 7 and Wedding Wreckers is resolved:
-			if daytimer is day:
-				say "     [one of]While wandering around the urban forest, you encounter Yogdrak simply enjoying his usualy ale under a tree's shadow. 'Heyo! You found me just taking some time to relax. How have you been?' he asks, standing up and approaching you.[or]While wandering around the urban forest, you encounter Yogdrak on some hunting. He's being very sneaky, so you wait... Though, he notices you, and instead chooses to approach you. 'Damn rabbits, they're too quick. I just wanted a fancy lunch, for once!' He now stands in front of you with a friendly smile. 'Anyway, came to see me?'[or]While wandering around the urban forest, you encounter Yogdrak cutting some logs with a wood axe. Maybe he's trying to make a campfire. He sees you, and greets you as you approach him. Wiping a sweat drop off his forehead, he says 'Good to see you. Just trying to get myself some wood for the night.'[at random]";
-			else: [night]
-				say "     [one of]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, fiddling with something. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[or]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, roasting something. Probably a rabbit, by the looks of it. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[at random]";
-			say "[YogdrakRoamingTalk]";
-		else: [as normal]
-			say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with a stone hammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
-			if BodyName of Player is "Dwarf" and FaceName of Player is "Dwarf": [player looks like a dwarf]
-				say "     'Did you get exiled from the underground dwarves? Or are you just another like me? Heh, no matter... I'll show you a good time once I'm done beating you up.' With that, he rushes at you.";
-			else:
-				say "     'Time for you to experience what's it like to get beaten by a dwarf. You'll be on your knees and at my mercy!' With that, he rushes at you.";
+	if debugactive is 1:
+		say "     DEBUG: Resolution of Collapsed Tunnel: [Resolution of Collapsed Tunnel][line break]";
+	if Resolution of Collapsed Tunnel is 3: [dwarf has the greathammer]
+		say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
+		say "     'Heh. Came for the hammer, or for some thick dwarven dick? Guess I'll hit you with both.' With that, he rushes at you. [bold type]That hammer will certainly hurt more![roman type][line break]";
+		choose a row with name of "Dwarf Male" in the Table of Random Critters;
+		now wdam entry is 16; [he has the greathammer]
+	else if Resolution of Collapsed Tunnel is 4 and golden greathammer is owned: [player has the greathammer and is carrying it]
+		say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with the golden greathammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
+		say "     'Nice weapon you've got there. Mind if I try it out?' he laughs, but soon he's rushing at you with his own arms ready.";
+	else if Resolution of Collapsed Tunnel is 5 or Resolution of Collapsed Tunnel is 6: [player wants to handle their transformation on their own or postponed the plan]
+		say "[DwarfQuest4]";
+		now combat abort is 1;
+	else if Resolution of Collapsed Tunnel >= 7 and Wedding Wreckers is resolved:
+		if daytimer is day:
+			say "     [one of]While wandering around the urban forest, you encounter Yogdrak simply enjoying his usualy ale under a tree's shadow. 'Heyo! You found me just taking some time to relax. How have you been?' he asks, standing up and approaching you.[or]While wandering around the urban forest, you encounter Yogdrak on some hunting. He's being very sneaky, so you wait... Though, he notices you, and instead chooses to approach you. 'Damn rabbits, they're too quick. I just wanted a fancy lunch, for once!' He now stands in front of you with a friendly smile. 'Anyway, came to see me?'[or]While wandering around the urban forest, you encounter Yogdrak cutting some logs with a wood axe. Maybe he's trying to make a campfire. He sees you, and greets you as you approach him. Wiping a sweat drop off his forehead, he says 'Good to see you. Just trying to get myself some wood for the night.'[at random]";
+		else: [night]
+			say "     [one of]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, fiddling with something. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[or]While wandering around the urban forest at night, you manage to find Yogdrak's campfire. He's sitting next to it, roasting something. Probably a rabbit, by the looks of it. At first, he thinks you're an enemy, and goes for his stonehammer, but as soon as he sees it's just you, he drops his guard and invites you to come closer. 'Come over, friend! Was thinking you were a foe... Came to see me?'[at random]";
+		say "[YogdrakRoamingTalk]";
+	else: [as normal]
+		say "     In front of you is a short middle-aged man, burly and muscular, wearing some kind of leather armor and armed with a stone hammer. Scratching his long full beard, which contrasts with his short dark brown hair adorning the top of his head, he gives you a snarky look before throwing a taunt at you:[line break]";
+		if BodyName of Player is "Dwarf" and FaceName of Player is "Dwarf": [player looks like a dwarf]
+			say "     'Did you get exiled from the underground dwarves? Or are you just another like me? Heh, no matter... I'll show you a good time once I'm done beating you up.' With that, he rushes at you.";
+		else:
+			say "     'Time for you to experience what's it like to get beaten by a dwarf. You'll be on your knees and at my mercy!' With that, he rushes at you.";
 
 to say YogdrakRoamingTalk:
 	Linebreak;
@@ -1100,26 +1091,17 @@ When Play begins:
 [Section 3-1 - Dwarf Knight
 
 to say DwarfKnight wins:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ";
-		else: [player loses]
-			say "     ";
+	if HP of Player > 0: [player submits]
+		say "     ";
+	else: [player loses]
+		say "     ";
 
 to say DwarfKnight loses:
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
+	say "     ";
 
 to say DwarfKnight Desc:
 	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with at the source]
-	else:
-		say "     ";
+	say "     ";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)

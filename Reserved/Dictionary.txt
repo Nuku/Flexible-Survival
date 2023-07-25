@@ -1242,30 +1242,6 @@
 |Kaleem Mcintyre|Apartment 319|20140908213124/7053:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Apartment 319|Apartment 319|situation|
 |Kaleem Mcintyre|Apartment 319|AptAid|value|
-|Kaleem Mcintyre|Reservoir|20140908213124/8279:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Reservoir|Reservoir|room|
-|Kaleem Mcintyre|Reservoir|Reservoir Main Pathway|room|
-|Kaleem Mcintyre|Reservoir|Reservoir Main Pathway entry|door|
-|Kaleem Mcintyre|Reservoir|For Purity's Sake|situation|
-|Kaleem Mcintyre|Reservoir|Technical Assistance|situation|
-|Kaleem Mcintyre|Reservoir|Slightly Sidetracked|situation|
-|Kaleem Mcintyre|Reservoir|Flight of stairs|situation|
-|Kaleem Mcintyre|Reservoir|ThreeDoors|situation|
-|Kaleem Mcintyre|Reservoir|beast of the tainted waters|situation|
-|Kaleem Mcintyre|Reservoir|Fight to remember|situation|
-|Kaleem Mcintyre|Reservoir|PassionAfterTheBattle|situation|
-|Kaleem Mcintyre|Reservoir|Sanctuary|situation|
-|Kaleem Mcintyre|Reservoir|icicle knives|armament|
-|Kaleem Mcintyre|Reservoir|Resevquest|value|
-|Kaleem Mcintyre|Reservoir|bloblost|value|
-|Kaleem Mcintyre|Reservoir|waterworks|value|
-|Kaleem Mcintyre|Reservoir|bookfind|value|
-|Kaleem Mcintyre|Reservoir|ldoor|value|
-|Kaleem Mcintyre|Reservoir|rdoor|value|
-|Kaleem Mcintyre|Reservoir|doorsearch|value|
-|Kaleem Mcintyre|Reservoir|descriptionmessage|value|
-|Kaleem Mcintyre|Reservoir|lastResevoirfix|value|
-|Kaleem Mcintyre|Reservoir|oozing|value|
 |Kaleem Mcintyre|Misc 4|20140908213124/5746:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Misc 4|Anal Probing|situation|
 |Kaleem Mcintyre|Misc 4|Birth|situation|
@@ -1419,14 +1395,12 @@
 |Stripes|Dry Plains Events|Pit Trap|situation|
 |Stripes|Dry Plains Events|Watering Hole|situation|
 |Stripes|Dry Plains Events|Treasure Hunters|situation|
-|Stripes|Dry Plains Events|horsefight|value|
 |Stripes|Junkyard Events|20140908213124/2561:Mon 8 September 2014 21:31|indexing|
 |Stripes|Junkyard Events|Goblin Trap|situation|
 |Stripes|Junkyard Events|Raiding Party|situation|
 |Stripes|Junkyard Events|Stripped Car|situation|
 |Stripes|Junkyard Events|Scattered Trash|situation|
 |Stripes|Junkyard Events|Stray Cat|situation|
-|Stripes|Junkyard Events|goblinfight|value|
 |Stripes|Junkyard Events|junknum|value|
 |Stripes|Campus Events|20140908213124/3524:Mon 8 September 2014 21:31|indexing|
 |Stripes|Campus Events|Marching Band|situation|
@@ -1618,11 +1592,9 @@
 |Stripes|Assorted Events|My Own Zoo Playset|situation|
 |Stripes|Assorted Events|Destroyed Records|situation|
 |Stripes|Assorted Events|snowmeowfight|value|
-|Stripes|Assorted Events|wolffight|value|
 |Stripes|Assorted Events|prankevent|value|
 |Stripes|Assorted Events|loversbench|value|
 |Stripes|Assorted Events|lbcomplist|value|
-|Stripes|Assorted Events|peachtreefight|value|
 |Stripes|Assorted Events|foodvendor|value|
 |Nuku Valente|Food And Water Finding|20140908213124/2241:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Food And Water Finding|Potential Resources|scavevent|
@@ -1647,7 +1619,6 @@
 |Stripes|Scavevents|tightfitcount|value|
 |Stripes|Scavevents|dentedbikecount|value|
 |Stripes|Scavevents|supermarketcount|value|
-|Stripes|Scavevents|veggiegardenfight|value|
 |Stripes|Scavevents|gardenveg|value|
 |Stripes|Scavevents|lastgardenveg|value|
 |Stripes|Scavevents|patrooms|value|
@@ -1715,7 +1686,6 @@
 |Stripes|Central Library|First Aid Manual|Grab Object|
 |Stripes|Central Library|centrallib|value|
 |Stripes|Central Library|libfight|value|
-|Stripes|Central Library|harpyfight|value|
 |Stripes|Central Library|jamesfed|value|
 |Stripes|Central Library|jamessex|value|
 |Stripes|Central Library|libstealth|value|
@@ -1935,7 +1905,6 @@
 |Damaged|Skunk|Skunk Goo|Grab Object|
 |Damaged|Skunk|skunkready|value|
 |Damaged|Skunk|Skunk_type|value|
-|Damaged|Skunk|skunkfight|value|
 |Stripes|Skunkbeast Lord|20140908213124/14395:Mon 8 September 2014 21:31|indexing|
 |Stripes|Skunkbeast Lord|Skunkbeast Battle|situation|
 |Stripes|Skunkbeast Lord|skunkbeaststatus|value|
@@ -2147,7 +2116,6 @@
 |Wahn|Orc Infections|20140908213124/7866:Mon 8 September 2014 21:31|indexing|
 |Wahn|Orc Infections|orc brew|Grab Object|
 |Wahn|Orc Infections|orc cum|Grab Object|
-|Wahn|Orc Infections|OrcSpecialFightNumber|value|
 |Wahn|Orc Infections|OrcCocked|adjective|
 |Stripes|Tiger Cop|20140908213124/14702:Mon 8 September 2014 21:31|indexing|
 |Stripes|Tiger Cop|Policeman|situation|
@@ -2506,8 +2474,6 @@
 |Stripes|Piggy|20140908213124/829:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|20140908213124/3820:Mon 8 September 2014 21:31|indexing|
 |Nuku Valente|Elf|ElfEncounters|value|
-|Stripes|Cougar|20140908213124/2269:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cougar|cougarfight|value|
 |Stripes|Megakitty|20140908213124/3167:Mon 8 September 2014 21:31|indexing|
 |Stripes|Megakitty|MKunleashed|value|
 |Stripes|Megakitty|MKmet|value|
@@ -3285,7 +3251,6 @@
 |Stripes|Leonard|violinfound|value|
 |Stripes|Leonard|Leonardtimer|value|
 |Stripes|Leonard|feline_pride_defeat|value|
-|Stripes|Leonard|violinspritefight|value|
 |Stripes|Leonard|felinefaced|adjective|
 |Stripes|Leonard|felineskinned|adjective|
 |Stripes|Leonard|felinebodied|adjective|

@@ -149,6 +149,7 @@ carry out HuntAction:
 					now inasituation is true;
 					say "You manage to find your way to [bold type][Name entry][roman type]!";
 					say "[ResolveFunction of object entry]";
+					now CreatureArtworkOverride is false;
 					now inasituation is false;
 				else:
 					now inasituation is false;
@@ -158,6 +159,7 @@ carry out HuntAction:
 				now inasituation is true;
 				say "You manage to find your way to [bold type][Name entry][roman type]!";
 				say "[ResolveFunction of object entry]";
+				now CreatureArtworkOverride is false;
 				now inasituation is false;
 	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
 		choose a row with name of HuntId in the Table of Random Critters;
@@ -353,18 +355,20 @@ carry out HuntAction:
 								now inasituation is true;
 								say "You manage to find your way to [bold type][z][roman type]!";
 								say "[ResolveFunction of z]";
-								now inasituation is false;
 							else:
-								now inasituation is false;
 								say "Despite your searches, you fail to find it.[line break]";
 								huntingfightchance;
 								now Found is 35; [event found, perception check fail]
 								if debugactive is 1:
 									say "DEBUG -> Found: [Found], perception check fail.[line break]";
+							now CreatureArtworkOverride is false;
+							now inasituation is false;
 						else:
 							now inasituation is true;
 							say "You manage to find your way to [bold type][z][roman type]!";
 							say "[ResolveFunction of z]";
+							now CreatureArtworkOverride is false;
+							now CreatureArtworkOverride is false;
 							now inasituation is false;
 						break;
 	if the number of entries in PossibleEncounters is not 0 and Found is 10: [got list of creatures in the area & found the target creature]
@@ -542,9 +546,11 @@ This is the explore rule:
 			now something is 1;
 			now inasituation is true;
 			say "[ResolveFunction of L]";
+			now CreatureArtworkOverride is false;
 			now inasituation is false;
 			now battleground is "void";
 			wait for any key;
+	now CreatureArtworkOverride is false;
 	now inasituation is false;
 	[Chance for new locations - increased by perception]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 0:

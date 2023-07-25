@@ -7,22 +7,13 @@ Section 0 - Flags
 Section 1 - Creature Responses
 
 to say DullahanDefeat:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
 
 to say DullahanVictory:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
 
 to say DullahanDesc:
-	if inasituation is true:
-		say "";
-	else:
-		say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
+	say "     You shouldn't be able to encounter the dullahan out of a situation. If you are, please let @Gherod know on the FS Discord.";
 
 
 Section 2 - Creature Insertion

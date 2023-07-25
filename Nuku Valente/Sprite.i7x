@@ -12,10 +12,7 @@ Spriteconsent is a number that varies.
 
 to say spritedesc:
 	setmongender 14; [creatures are female]
-	if violinspritefight is true:
-		say "     Swirling around you is a buzzing, flitting mob of naked, elfin females. The tallest of them is two feet tall, many are less. They swarm about you with loud excited giggles and the buzz of their dragonfly wings. They jeer at you for disturbing them, but also seem quite pleased to have had someone to play with stumble into their midst.";
-	else:
-		say "     A faint sparkling from between the trees catches your eyes. As you turn to look for it, you see it off to the side of you now and high up. Turning again, you hear a high-pitched giggle and another flitter of motion behind you. All of a sudden as you spin around, you are swarmed by a buzzing, flitting mob of naked, elfin females. The tallest of them is two feet tall, many are less. They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";
+	say "     A faint sparkling from between the trees catches your eyes. As you turn to look for it, you see it off to the side of you now and high up. Turning again, you hear a high-pitched giggle and another flitter of motion behind you. All of a sudden as you spin around, you are swarmed by a buzzing, flitting mob of naked, elfin females. The tallest of them is two feet tall, many are less. They swarm about you with loud excited giggles and the buzz of their dragonfly wings.";
 
 
 to say Sprite attack:

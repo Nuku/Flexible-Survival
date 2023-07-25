@@ -14,8 +14,6 @@ to say wolverinedesc:
 		say "     James, the wolverine guard protecting the Central Library, growls angrily at you having turned on him. He is a large, muscular beast. Were he not so tall, you'd call him stocky, nearly as wide as he is tall, but all muscle. He still wears his battered security company jacket, bearing the Wolverine Security logo on it, on his animalistic body. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He has moved himself between you and the steps up to the library, his instincts locked on protecting his post here. Before you can back away, he charges at you with another growl.";
 	else if wrknifefight is false:		[Getting the Knife - Wereraptor]
 		say "     You find yourself facing off with a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company jacket on his animalistic body. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you, clearly intent on keeping you from breaking into the warehouse. You spot the company logo on his clothing - Wolverine Security.";
-	else if inasituation is true:
-		say ""; [Dealt with at event source]
 	else:
 		say "[wolverinelocation]";
 		say "     As you travel through the streets, you are spotted by a large, muscled beast. Were he not so tall, you would call him stocky, nearly as wide as he is tall, but all muscle. He has a battered security company [one of]jacket on his animalistic body[or]hat on his animalistic head[at random]. He is covered in dark fur with a few lighter patches. His face narrows into a dark muzzle with lighter fur above his brow and at his shoulders. He growls angrily as he watches you. You spot the company logo on his clothing - Wolverine Security.";
@@ -63,8 +61,6 @@ to say losetowolverine:
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if HP of Player > 0, now HP of Player is HP of Player / 2;
-	else if inasituation is true:
-		say ""; [Dealt with at the event source]
 	else:
 		[Normal encounter]
 		if Player is female:
@@ -112,8 +108,6 @@ to say beatthewolverine:
 		say "     You manage to knock the wolverine out.";
 	else if wrknifefight is false:
 		say "     You manage to knock the wolverine out, leaving you free to search for a way inside.";
-	else if inasituation is true:
-		say ""; [Dealt with at event source]
 
 Section 2 - Creature Insertion
 

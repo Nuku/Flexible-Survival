@@ -6,29 +6,23 @@ Version 1 of Elk Tribe by Wahn begins here.
 Section 1 - Elk Tribe Bull
 
 to say ElkBullVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
+	if HP of Player > 0: [player submits]
+		say "     ...";
+	else: [player beaten]
+		say "     ...";
 
 to say ElkBullBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
-		say "     [bold type]What now?[roman type][line break]";
+	say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
+	say "     [bold type]What now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
+	say "     ([link]N[as]n[end link]) - Just leave.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkBullSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking him over for loot.";
+		say "[BeatenElkBullSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking him over for loot.";
 
 to say BeatenElkBullSexMenu:
 	LineBreak;
@@ -103,32 +97,29 @@ to say BeatenElkBullSex4:
 
 to say ElkBullDesc:
 	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else: [standard description]
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth barely hiding the bulge of his mighty shaft[or]wears not a stitch of clothing, his mighty shaft swinging proudly between his legs[or]wears a brown loincloth with red stripes barely hiding the bulge of his mighty shaft[or]wears a blue and white striped loincloth barely hiding the bulge of his mighty shaft[or]wears a simple black loincloth barely hiding the bulge of his mighty shaft[at random]. ";
-		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
-		[antlers]
-		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+	say "     As you move through the snowy forest, ";
+	[appearance of the tribesman]
+	if a random chance of 1 in 3 succeeds: [spotted the elk]
+		say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	else: [player was surprised by the elk]
+		say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	[clothing]
+	say "[one of]wears just a simple leather loincloth barely hiding the bulge of his mighty shaft[or]wears not a stitch of clothing, his mighty shaft swinging proudly between his legs[or]wears a brown loincloth with red stripes barely hiding the bulge of his mighty shaft[or]wears a blue and white striped loincloth barely hiding the bulge of his mighty shaft[or]wears a simple black loincloth barely hiding the bulge of his mighty shaft[at random]. ";
+	say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
+	[antlers]
+	say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
+	if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
+		say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
+		[comment]
+		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
+	else:
+		say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -323,29 +314,23 @@ to say elk bull fur use:
 Section 2 - Elk Tribe Cow
 
 to say ElkCowVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
+	if HP of Player > 0: [player submits]
+		say "     ...";
+	else: [player beaten]
+		say "     ...";
 
 to say ElkCowBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
+	say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+	say "     [bold type]What now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
+	say "     ([link]N[as]n[end link]) - Just leave.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkCowSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
+		say "[BeatenElkCowSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking her over for loot.";
 
 
 to say BeatenElkCowSexMenu:
@@ -421,30 +406,27 @@ to say BeatenElkCowSex4:
 
 to say ElkCowDesc:
 	setmongender 4;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
+	say "     As you move through the snowy forest, ";
+	[appearance of the tribesman]
+	if a random chance of 1 in 3 succeeds: [spotted the elk]
+		say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	else: [player was surprised by the elk]
+		say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	[clothing]
+	say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare[or]wears not a stitch of clothing, her female sex as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare[at random]. ";
+	say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
+	if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
+		say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
+		[comment]
+		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
 	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare[or]wears not a stitch of clothing, her female sex as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+		say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -639,29 +621,23 @@ to say elk cow fur use:
 Section 3 - Elk Tribe Herm
 
 to say ElkHermVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
+	if HP of Player > 0: [player submits]
+		say "     ...";
+	else: [player beaten]
+		say "     ...";
 
 to say ElkHermBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
+	say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+	say "     [bold type]What now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
+	say "     ([link]N[as]n[end link]) - Just leave.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkHermSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
+		say "[BeatenElkHermSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking her over for loot.";
 
 
 to say BeatenElkHermSexMenu:
@@ -737,30 +713,27 @@ to say BeatenElkHermSex4:
 
 to say ElkHermDesc:
 	setmongender 5;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
+	say "     As you move through the snowy forest, ";
+	[appearance of the tribesman]
+	if a random chance of 1 in 3 succeeds: [spotted the elk]
+		say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	else: [player was surprised by the elk]
+		say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	[clothing]
+	say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
+	say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
+	if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
+		say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
+		[comment]
+		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
 	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+		say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -955,29 +928,23 @@ to say elk herm fur use:
 Section 4 - Elk Tribe Trans Bull [cuntboy]
 
 to say ElkTransBullVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
+	if HP of Player > 0: [player submits]
+		say "     ...";
+	else: [player beaten]
+		say "     ...";
 
 to say ElkTransBullBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
-		say "     [bold type]What now?[roman type][line break]";
+	say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
+	say "     [bold type]What now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
+	say "     ([link]N[as]n[end link]) - Just leave.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkTransBullSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking him over for loot.";
+		say "[BeatenElkTransBullSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking him over for loot.";
 
 to say BeatenElkTransBullSexMenu:
 	LineBreak;
@@ -1052,32 +1019,29 @@ to say BeatenElkTransBullSex4:
 
 to say ElkTransBullDesc:
 	setmongender 8;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
+	say "     As you move through the snowy forest, ";
+	[appearance of the tribesman]
+	if a random chance of 1 in 3 succeeds: [spotted the elk]
+		say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	else: [player was surprised by the elk]
+		say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	[clothing]
+	say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This doesn't seem to be a regular male elk. ";
+	say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
+	[antlers]
+	say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
+	if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
+		say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
+		[comment]
+		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This doesn't seem to be a regular male elk. ";
-		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
-		[antlers]
-		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+		say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1272,29 +1236,23 @@ to say elk trans bull fur use:
 Section 5 - Elk Tribe Trans Cow
 
 to say ElkTransCowVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
+	if HP of Player > 0: [player submits]
+		say "     ...";
+	else: [player beaten]
+		say "     ...";
 
 to say ElkTransCowBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
+	say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
+	say "     [bold type]What now?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
+	say "     ([link]N[as]n[end link]) - Just leave.";
+	if Player consents:
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkTransCowSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
+		say "[BeatenElkTransCowSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking her over for loot.";
 
 
 to say BeatenElkTransCowSexMenu:
@@ -1370,30 +1328,27 @@ to say BeatenElkTransCowSex4:
 
 to say ElkTransCowDesc:
 	setmongender 6;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
+	say "     As you move through the snowy forest, ";
+	[appearance of the tribesman]
+	if a random chance of 1 in 3 succeeds: [spotted the elk]
+		say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	else: [player was surprised by the elk]
+		say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
+		[physical details]
+		say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
+		say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
+	[clothing]
+	say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears not a stitch of clothing, revealing a thick cock hanging between her legs as openly as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[at random]. This is not a regular female elk it seems. ";
+	say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
+	if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
+		say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
+		[comment]
+		say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
 	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears not a stitch of clothing, revealing a thick cock hanging between her legs as openly as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[at random]. This is not a regular female elk it seems. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+		say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	SeductionImmune	Libido	Loot	Lootchance	TrophyFunction	MilkItem	CumItem	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
